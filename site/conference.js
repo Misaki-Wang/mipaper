@@ -1,0 +1,852 @@
+import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js";
+
+const manifestUrl = "./data/conference/manifest.json";
+
+const state = {
+  manifest: null,
+  report: null,
+  currentPath: "",
+  year: "",
+  series: "",
+  query: "",
+  subject: "",
+  topic: "",
+  focusOnly: false,
+};
+
+const focusTopicKeys = new Set([
+  "generative_foundations",
+  "multimodal_generative",
+  "multimodal_agents",
+]);
+
+const yearFilter = document.querySelector("#conference-year-filter");
+const seriesFilter = document.querySelector("#conference-series-filter");
+const conferenceSelect = document.querySelector("#conference-select");
+const subjectFilter = document.querySelector("#conference-subject-filter");
+const topicFilter = document.querySelector("#conference-topic-filter");
+const searchInput = document.querySelector("#conference-search");
+const focusOnlyInput = document.querySelector("#conference-focus-only");
+const resetFiltersButton = document.querySelector("#conference-reset-filters");
+const sidebarToggleButton = document.querySelector("#conference-sidebar-toggle");
+const sidebarToggleLabel = document.querySelector("#conference-sidebar-toggle-label");
+const sidebarToggleIcon = document.querySelector("#conference-sidebar-toggle-icon");
+const layoutRoot = document.querySelector(".layout");
+const backToTopButton = document.querySelector("#conference-back-to-top");
+const likeRecords = new Map();
+
+init().catch((error) => {
+  console.error(error);
+  renderFatal(error);
+});
+
+async function init() {
+  bindThemeToggle();
+  bindSidebarToggle();
+  bindBackToTop();
+  bindFilters();
+  subscribeLikes(() => bindLikeButtons(document, likeRecords));
+  await initLikesSync();
+  const manifest = await fetchJson(manifestUrl);
+  state.manifest = manifest;
+  populateScopeFilters(manifest.reports || []);
+  populateConferenceSelect(getScopedReports(manifest.reports || []));
+  renderVenueCards(manifest);
+  renderVenueRail(getScopedReports(manifest.reports || []));
+
+  if (!manifest.reports.length) {
+    renderEmpty();
+    return;
+  }
+
+  await loadReport(manifest.default_report_path || manifest.reports[0].data_path);
+}
+
+function bindSidebarToggle() {
+  const initial = localStorage.getItem("cool-paper-sidebar") || "expanded";
+  applySidebarState(initial === "collapsed");
+
+  sidebarToggleButton.addEventListener("click", () => {
+    const collapsed = !layoutRoot.classList.contains("sidebar-collapsed");
+    applySidebarState(collapsed);
+  });
+}
+
+function applySidebarState(collapsed) {
+  layoutRoot.classList.toggle("sidebar-collapsed", collapsed);
+  sidebarToggleButton.setAttribute("aria-expanded", String(!collapsed));
+  sidebarToggleButton.setAttribute("aria-label", collapsed ? "展开侧边工具栏" : "收起侧边工具栏");
+  sidebarToggleButton.title = collapsed ? "展开侧边工具栏" : "收起侧边工具栏";
+  sidebarToggleLabel.textContent = collapsed ? "展开" : "收起";
+  sidebarToggleIcon.textContent = collapsed ? "›" : "‹";
+  localStorage.setItem("cool-paper-sidebar", collapsed ? "collapsed" : "expanded");
+}
+
+function bindThemeToggle() {
+  const toggles = [...document.querySelectorAll("[data-theme-toggle]")];
+  const systemQuery = window.matchMedia("(prefers-color-scheme: dark)");
+  const initial = localStorage.getItem("cool-paper-theme") || "auto";
+  applyTheme(initial);
+
+  toggles.forEach((button) => {
+    button.addEventListener("click", () => applyTheme(button.dataset.themeToggle));
+  });
+
+  const handleSystemThemeChange = () => {
+    const current = localStorage.getItem("cool-paper-theme") || "auto";
+    if (current === "auto") {
+      applyTheme("auto", false);
+    }
+  };
+
+  if (typeof systemQuery.addEventListener === "function") {
+    systemQuery.addEventListener("change", handleSystemThemeChange);
+  } else if (typeof systemQuery.addListener === "function") {
+    systemQuery.addListener(handleSystemThemeChange);
+  }
+
+  function applyTheme(mode, persist = true) {
+    const resolvedTheme = mode === "auto" ? (systemQuery.matches ? "dark" : "light") : mode;
+    document.documentElement.dataset.theme = resolvedTheme;
+    document.documentElement.dataset.themeMode = mode;
+    if (persist) {
+      localStorage.setItem("cool-paper-theme", mode);
+    }
+    toggles.forEach((button) => button.classList.toggle("active", button.dataset.themeToggle === mode));
+  }
+}
+
+function bindBackToTop() {
+  const threshold = 720;
+
+  function updateVisibility() {
+    const visible = window.scrollY > threshold;
+    backToTopButton.classList.toggle("is-visible", visible);
+    backToTopButton.setAttribute("aria-hidden", String(!visible));
+  }
+
+  backToTopButton.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  window.addEventListener("scroll", updateVisibility, { passive: true });
+  updateVisibility();
+}
+
+function bindFilters() {
+  yearFilter.addEventListener("change", async (event) => {
+    state.year = event.target.value;
+    await handleVenueScopeChange();
+  });
+
+  seriesFilter.addEventListener("change", async (event) => {
+    state.series = event.target.value;
+    await handleVenueScopeChange();
+  });
+
+  conferenceSelect.addEventListener("change", async (event) => {
+    const path = event.target.value;
+    if (path) {
+      await loadReport(path);
+    }
+  });
+
+  subjectFilter.addEventListener("change", (event) => {
+    state.subject = event.target.value;
+    renderReport();
+  });
+
+  topicFilter.addEventListener("change", (event) => {
+    state.topic = event.target.value;
+    renderReport();
+  });
+
+  searchInput.addEventListener("input", (event) => {
+    state.query = event.target.value.trim().toLowerCase();
+    renderReport();
+  });
+
+  focusOnlyInput.addEventListener("change", (event) => {
+    state.focusOnly = event.target.checked;
+    renderReport();
+  });
+
+  resetFiltersButton.addEventListener("click", () => {
+    if (!hasActiveFilters()) {
+      return;
+    }
+    state.year = "";
+    state.series = "";
+    state.query = "";
+    state.subject = "";
+    state.topic = "";
+    state.focusOnly = false;
+    yearFilter.value = "";
+    seriesFilter.value = "";
+    searchInput.value = "";
+    subjectFilter.value = "";
+    topicFilter.value = "";
+    focusOnlyInput.checked = false;
+    handleVenueScopeChange();
+  });
+}
+
+async function loadReport(path) {
+  const report = await fetchJson(path);
+  state.report = report;
+  state.currentPath = path;
+  state.query = "";
+  state.subject = "";
+  state.topic = "";
+  state.focusOnly = false;
+  conferenceSelect.value = path;
+  searchInput.value = "";
+  subjectFilter.value = "";
+  topicFilter.value = "";
+  focusOnlyInput.checked = false;
+  populateSubjectFilter(report.subject_distribution || []);
+  populateTopicFilter(report.topic_distribution || []);
+  renderVenueCards(state.manifest, path, getScopedReports(state.manifest.reports || []));
+  renderVenueRail(getScopedReports(state.manifest.reports || []), path);
+  renderReport();
+}
+
+function populateScopeFilters(reports) {
+  const years = [...new Set(reports.map((report) => report.venue_year).filter(Boolean))].sort((left, right) =>
+    right.localeCompare(left)
+  );
+  const series = [...new Set(reports.map((report) => report.venue_series).filter(Boolean))].sort((left, right) =>
+    left.localeCompare(right)
+  );
+
+  yearFilter.innerHTML = `<option value="">全部 Year</option>${years
+    .map((year) => `<option value="${escapeAttribute(year)}">${escapeHtml(year)}</option>`)
+    .join("")}`;
+  seriesFilter.innerHTML = `<option value="">全部 Conference</option>${series
+    .map((name) => `<option value="${escapeAttribute(name)}">${escapeHtml(name)}</option>`)
+    .join("")}`;
+}
+
+function populateConferenceSelect(reports) {
+  conferenceSelect.innerHTML = reports
+    .map(
+      (report) => `
+        <option value="${escapeAttribute(report.data_path)}">
+          ${escapeHtml(report.venue)} · ${report.total_papers} papers
+        </option>
+      `
+    )
+    .join("");
+}
+
+function getScopedReports(reports) {
+  return reports.filter((report) => {
+    if (state.year && report.venue_year !== state.year) {
+      return false;
+    }
+    if (state.series && report.venue_series !== state.series) {
+      return false;
+    }
+    return true;
+  });
+}
+
+async function handleVenueScopeChange() {
+  const scopedReports = getScopedReports(state.manifest?.reports || []);
+  populateConferenceSelect(scopedReports);
+  renderVenueCards(state.manifest, state.currentPath, scopedReports);
+  renderVenueRail(scopedReports, state.currentPath);
+
+  if (!scopedReports.length) {
+    state.report = null;
+    state.currentPath = "";
+    renderEmpty("当前 tag 条件下没有 conference 快照。");
+    return;
+  }
+
+  if (!scopedReports.some((report) => report.data_path === state.currentPath)) {
+    await loadReport(scopedReports[0].data_path);
+    return;
+  }
+
+  conferenceSelect.value = state.currentPath;
+  renderReport();
+}
+
+function populateSubjectFilter(subjects) {
+  subjectFilter.innerHTML = `<option value="">全部 Subject</option>${subjects
+    .map(
+      (subject) =>
+        `<option value="${escapeAttribute(subject.subject_label)}">${escapeHtml(subject.subject_label)} · ${subject.count}</option>`
+    )
+    .join("")}`;
+}
+
+function populateTopicFilter(topics) {
+  topicFilter.innerHTML = `<option value="">全部 Topic</option>${topics
+    .map(
+      (topic) =>
+        `<option value="${escapeAttribute(topic.topic_label)}">${escapeHtml(topic.topic_label)} · ${topic.count}</option>`
+    )
+    .join("")}`;
+}
+
+function renderVenueCards(manifest, activePath = "", scopedReports = null) {
+  const root = document.querySelector("#conference-cards");
+  const summary = document.querySelector("#conference-board-summary");
+  const reports = Array.isArray(scopedReports) ? scopedReports : manifest?.reports || [];
+
+  if (!reports.length) {
+    summary.textContent = scopedReports ? "当前 tag 条件下没有可用 conference 快照。" : "还没有可用 conference 快照。";
+    root.innerHTML = `<div class="empty-state">先生成 conference 报告，再刷新页面。</div>`;
+    return;
+  }
+
+  const totalPapers = reports.reduce((sum, report) => sum + (report.total_papers || 0), 0);
+  summary.textContent = `当前共收录 ${reports.length} 个 conference 快照，总计 ${totalPapers} 篇论文。点击卡片切换当前分析。`;
+  root.innerHTML = reports
+    .map((report) => {
+      const topSubject = report.subject_distribution?.[0];
+      const topTopic = report.top_topics?.[0];
+      const coverage = formatCoverage(report.total_papers, report.declared_total, report.capture_ratio);
+      return `
+        <button
+          class="home-category-card ${report.data_path === activePath ? "active" : ""}"
+          type="button"
+          data-conference-report="${escapeAttribute(report.data_path)}"
+        >
+          <div class="home-category-card-top">
+            <span class="home-category-label">${escapeHtml(report.venue)}</span>
+            <span class="home-category-date">${escapeHtml(report.venue_year)}</span>
+          </div>
+          <strong class="home-category-count">${report.total_papers} papers</strong>
+          <p class="home-category-topic">${escapeHtml(topSubject?.subject_label || "No subject")} · ${
+            topSubject ? `${topSubject.share.toFixed(2)}%` : "-"
+          }</p>
+          <div class="home-category-meta">
+            <span>${escapeHtml(topTopic?.topic_label || "No topic summary")}</span>
+            <span>${escapeHtml(coverage)}</span>
+            <span>${escapeHtml(report.classifier)}</span>
+          </div>
+        </button>
+      `;
+    })
+    .join("");
+
+  root.querySelectorAll("[data-conference-report]").forEach((button) => {
+    button.addEventListener("click", async () => {
+      const path = button.dataset.conferenceReport;
+      if (path && path !== state.currentPath) {
+        await loadReport(path);
+      }
+    });
+  });
+}
+
+function renderVenueRail(reports, activePath = "") {
+  const root = document.querySelector("#conference-rail");
+  root.innerHTML = reports
+    .map(
+      (report) => `
+        <button
+          class="report-card ${report.data_path === activePath ? "active" : ""}"
+          type="button"
+          data-rail-report="${escapeAttribute(report.data_path)}"
+        >
+          <span class="report-card-date">${escapeHtml(report.venue)}</span>
+          <strong class="report-card-count">${report.total_papers} papers</strong>
+          <span class="report-card-meta">${escapeHtml(report.classifier)} · ${escapeHtml(
+            report.subject_distribution?.[0]?.subject_label || "No subject"
+          )}</span>
+        </button>
+      `
+    )
+    .join("");
+
+  root.querySelectorAll("[data-rail-report]").forEach((button) => {
+    button.addEventListener("click", async () => {
+      const path = button.dataset.railReport;
+      if (path && path !== state.currentPath) {
+        await loadReport(path);
+      }
+    });
+  });
+}
+
+function renderReport() {
+  if (!state.report) {
+    renderEmpty();
+    return;
+  }
+
+  const report = state.report;
+  likeRecords.clear();
+  const visiblePapers = getVisiblePapers(report);
+  const sections = groupBySubject(visiblePapers);
+  renderHero(report, visiblePapers);
+  renderOverview(report, visiblePapers, sections);
+  renderTagMap(report);
+  renderSubjectDistribution(report, visiblePapers);
+  renderSpotlight(report, visiblePapers);
+  renderSubjectRadar(visiblePapers);
+  renderResults(report, visiblePapers, sections);
+  renderSubjectSections(report, sections);
+  bindLikeButtons(document, likeRecords);
+}
+
+function renderTagMap(report) {
+  const topTopic = report.topic_distribution?.[0]?.topic_label || "其他 AI";
+  document.querySelector("#conference-tag-map").innerHTML = [
+    {
+      label: "Year",
+      value: report.venue_year || "-",
+      meta: state.year ? "当前筛选中的年份" : "当前 venue 年份",
+    },
+    {
+      label: "Conference",
+      value: report.venue_series || report.venue || "-",
+      meta: state.series ? "当前筛选中的会议" : "当前 conference 系列",
+    },
+    {
+      label: "Topic",
+      value: state.topic || topTopic,
+      meta: state.topic ? "当前筛选中的 topic" : "当前主导 topic",
+    },
+  ]
+    .map(
+      (item) => `
+        <article class="tag-card">
+          <span class="tag-card-label">${escapeHtml(item.label)}</span>
+          <strong class="tag-card-value">${escapeHtml(item.value)}</strong>
+          <span class="tag-card-meta">${escapeHtml(item.meta)}</span>
+        </article>
+      `
+    )
+    .join("");
+}
+
+function renderHero(report, visiblePapers) {
+  const topTopic = report.topic_distribution?.[0];
+  const focusCount = visiblePapers.filter((paper) => focusTopicKeys.has(paper.topic_key)).length;
+  const focusShare = visiblePapers.length ? (focusCount / visiblePapers.length) * 100 : 0;
+  document.querySelector("#conference-hero-venue").textContent = report.venue;
+  document.querySelector("#conference-hero-total").textContent = String(report.total_papers);
+  document.querySelector("#conference-hero-subjects").textContent = String(report.subject_distribution.length);
+  document.querySelector("#conference-hero-classifier").textContent = report.classifier;
+  document.querySelector("#conference-hero-updated").textContent = formatTime(report.generated_at);
+  document.querySelector("#conference-hero-signals").innerHTML = [
+    `<div class="signal-chip"><span>Top Subject</span><strong>${escapeHtml(
+      report.subject_distribution?.[0]?.subject_label || "-"
+    )}</strong></div>`,
+    `<div class="signal-chip"><span>Top Topic</span><strong>${escapeHtml(topTopic?.topic_label || "-")}</strong></div>`,
+    `<div class="signal-chip"><span>Coverage</span><strong>${escapeHtml(
+      formatCoverage(report.total_papers, report.declared_total, report.capture_ratio)
+    )}</strong></div>`,
+    `<div class="signal-chip"><span>Focus Coverage</span><strong>${focusCount} papers / ${focusShare.toFixed(
+      2
+    )}%</strong></div>`,
+  ].join("");
+}
+
+function renderOverview(report, visiblePapers, sections) {
+  const topSubject = report.subject_distribution?.[0];
+  const focusCount = visiblePapers.filter((paper) => focusTopicKeys.has(paper.topic_key)).length;
+  const focusShare = visiblePapers.length ? (focusCount / visiblePapers.length) * 100 : 0;
+  document.querySelector("#conference-overview-title").textContent = `${report.venue} Conference 概览`;
+  document.querySelector("#conference-source-link").href = report.source_url;
+  document.querySelector("#conference-source-link").textContent =
+    report.classifier === "codex" ? "Source + Codex" : "Source + Rules";
+  document.querySelector("#conference-capture-summary").textContent = buildCaptureSummary(report);
+  document.querySelector("#conference-overview-summary").textContent = topSubject
+    ? `${topSubject.subject_label} 是当前 conference 里的最大 Subject，占比 ${topSubject.share.toFixed(2)}%，共 ${topSubject.count} 篇。`
+    : "当前报告还没有 Subject 信息。";
+  document.querySelector("#conference-focus-summary").textContent = `${focusCount} 篇命中重点方向，占当前视图 ${focusShare.toFixed(
+    2
+  )}%。`;
+  document.querySelector("#conference-breadth-summary").textContent = `当前可见 ${visiblePapers.length} 篇论文，覆盖 ${sections.length} 个 Subject。`;
+}
+
+function renderSubjectDistribution(report, visiblePapers) {
+  const root = document.querySelector("#conference-subject-distribution");
+  const distribution = computeSubjectDistribution(visiblePapers.length ? visiblePapers : report.papers);
+  root.innerHTML = distribution
+    .map(
+      (item) => `
+        <div class="distribution-item">
+          <div class="distribution-top">
+            <span>${escapeHtml(item.subject_label)}</span>
+            <strong>${item.share.toFixed(2)}%</strong>
+          </div>
+          <div class="distribution-bar">
+            <span style="width: ${Math.max(item.share, 2)}%"></span>
+          </div>
+        </div>
+      `
+    )
+    .join("");
+}
+
+function renderSpotlight(report, visiblePapers) {
+  const root = document.querySelector("#conference-spotlight");
+  const focusPapers = visiblePapers.filter((paper) => focusTopicKeys.has(paper.topic_key)).slice(0, 6);
+  const papers = focusPapers.length ? focusPapers : visiblePapers.slice(0, 6);
+
+  if (!papers.length) {
+    root.innerHTML = `<div class="empty-state">当前筛选条件下没有可展示的论文。</div>`;
+    return;
+  }
+
+  root.innerHTML = papers.map((paper) => renderPaperCard(paper, "conference-paper-card spotlight")).join("");
+}
+
+function renderSubjectRadar(visiblePapers) {
+  const root = document.querySelector("#conference-subject-radar");
+  const sections = groupBySubject(visiblePapers).slice(0, 8);
+
+  if (!sections.length) {
+    root.innerHTML = `<div class="empty-state">当前筛选条件下没有可诊断的 Subject。</div>`;
+    return;
+  }
+
+  root.innerHTML = sections
+    .map((section) => {
+      const topTopic = computeTopicDistribution(section.papers)[0];
+      const focusCount = section.papers.filter((paper) => focusTopicKeys.has(paper.topic_key)).length;
+      const focusShare = section.papers.length ? (focusCount / section.papers.length) * 100 : 0;
+      return `
+        <article class="subject-radar-card">
+          <div class="subject-radar-top">
+            <div>
+              <span class="subject-radar-kicker">Subject</span>
+              <h3>${escapeHtml(section.subject_label)}</h3>
+            </div>
+            <span class="subject-radar-count">${section.papers.length} papers</span>
+          </div>
+          <div class="subject-radar-metrics">
+            <div class="subject-radar-metric">
+              <span>Dominant Topic</span>
+              <strong>${escapeHtml(topTopic?.topic_label || "其他 AI")}</strong>
+            </div>
+            <div class="subject-radar-metric">
+              <span>Topic Share</span>
+              <strong>${topTopic ? `${topTopic.share.toFixed(2)}%` : "-"}</strong>
+            </div>
+            <div class="subject-radar-metric">
+              <span>Focus Density</span>
+              <strong>${focusShare.toFixed(2)}%</strong>
+            </div>
+          </div>
+        </article>
+      `;
+    })
+    .join("");
+}
+
+function renderResults(report, visiblePapers, sections) {
+  const activeFilters = getActiveFilters();
+  document.querySelector("#conference-results-title").textContent = activeFilters.length
+    ? `当前筛选后可见 ${visiblePapers.length} 篇论文`
+    : `当前共浏览 ${report.total_papers} 篇论文`;
+  document.querySelector("#conference-results-stats").innerHTML = [
+    renderResultStat(
+      "Visible Papers",
+      visiblePapers.length,
+      activeFilters.length ? `of ${report.total_papers}` : formatCoverage(report.total_papers, report.declared_total, report.capture_ratio)
+    ),
+    renderResultStat(
+      "Visible Subjects",
+      sections.length,
+      activeFilters.length ? `of ${report.subject_distribution.length}` : "all subject buckets"
+    ),
+    renderResultStat(
+      "View Mode",
+      state.focusOnly ? "Focus" : "Full scan",
+      state.subject || state.topic || "cross-subject browsing"
+    ),
+  ].join("");
+  document.querySelector("#conference-active-filters").innerHTML = activeFilters.length
+    ? activeFilters.map((item) => `<span class="active-filter-pill">${escapeHtml(item)}</span>`).join("")
+    : `<span class="active-filter-pill">No filters applied. You are looking at the full conference set.</span>`;
+  resetFiltersButton.disabled = !activeFilters.length;
+}
+
+function renderSubjectSections(report, sections) {
+  const root = document.querySelector("#conference-subject-sections");
+  if (!sections.length) {
+    root.innerHTML = `<div class="glass-card empty-state">当前筛选条件下没有命中的 Subject。</div>`;
+    return;
+  }
+
+  root.innerHTML = sections
+    .map((section, index) => {
+      const topTopic = computeTopicDistribution(section.papers)[0];
+      return `
+        <section class="glass-card conference-subject-card">
+          <div class="conference-subject-header">
+            <div>
+              <p class="eyebrow">SUBJECT</p>
+              <h3>${index + 1}. ${escapeHtml(section.subject_label)}</h3>
+            </div>
+            <div class="conference-subject-meta">
+              <span>${section.papers.length} papers</span>
+              <span>${topTopic ? escapeHtml(topTopic.topic_label) : "No topic summary"}</span>
+            </div>
+          </div>
+          <div class="conference-paper-grid">
+            ${section.papers.map((paper) => renderPaperCard(paper, "conference-paper-card")).join("")}
+          </div>
+        </section>
+      `;
+    })
+    .join("");
+}
+
+function renderPaperCard(paper, className) {
+  const authors = paper.authors?.length ? escapeHtml(paper.authors.join(", ")) : "Unknown";
+  const abstract = paper.abstract
+    ? `
+      <details class="paper-abstract">
+        <summary>
+          <span class="paper-abstract-label">Abstract</span>
+          <span class="paper-abstract-arrow" aria-hidden="true">
+            <svg viewBox="0 0 20 20" width="14" height="14">
+              <path d="M5.5 7.5L10 12l4.5-4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+            </svg>
+          </span>
+        </summary>
+        <p>${escapeHtml(paper.abstract)}</p>
+      </details>
+    `
+    : "";
+  const subjects = paper.subjects?.length
+    ? `<div class="conference-paper-subjects">${paper.subjects
+        .map((subject) => `<span>${escapeHtml(subject)}</span>`)
+        .join("")}</div>`
+    : "";
+  return `
+    <article class="${className}">
+      <div class="conference-paper-top">
+        <span class="paper-badge">${escapeHtml(paper.topic_label || "其他 AI")}</span>
+        <span class="paper-badge subdued">${escapeHtml(paper.classification_source || state.report.classifier)}</span>
+      </div>
+      <h4>${escapeHtml(paper.title)}</h4>
+      ${subjects}
+      <div class="paper-authors-box">
+        <span class="paper-detail-label">Authors</span>
+        <p class="paper-authors-line">${authors}</p>
+      </div>
+      ${abstract}
+      <div class="paper-links">
+        ${
+          paper.pdf_url
+            ? `<a class="paper-link" href="${escapeAttribute(paper.pdf_url)}" target="_blank" rel="noreferrer">PDF</a>`
+            : ""
+        }
+        ${
+          paper.detail_url
+            ? `<a class="paper-link" href="${escapeAttribute(paper.detail_url)}" target="_blank" rel="noreferrer">Cool</a>`
+            : ""
+        }
+        ${renderLikeButton(paper)}
+      </div>
+    </article>
+  `;
+}
+
+function renderLikeButton(paper) {
+  const likeId = rememberLikeRecord(paper);
+  const liked = isLiked(likeId);
+  return `
+    <button class="paper-link like-button${liked ? " is-liked" : ""}" type="button" data-like-id="${escapeAttribute(likeId)}" aria-pressed="${liked}">
+      <span class="paper-link-icon like-icon" aria-hidden="true">
+        <svg viewBox="0 0 20 20">
+          <path d="M10 16.3l-5.26-4.98A3.8 3.8 0 0 1 10 5.9a3.8 3.8 0 0 1 5.26 5.42z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path>
+        </svg>
+      </span>
+      <span class="paper-link-text">Like</span>
+    </button>
+  `;
+}
+
+function rememberLikeRecord(paper) {
+  const report = state.report;
+  const record = createLikeRecord(paper, {
+    sourceKind: "conference",
+    sourceLabel: "Conference",
+    sourcePage: "./conference.html",
+    snapshotLabel: report ? report.venue : "Conference",
+    venue: report?.venue || "",
+    venueSeries: report?.venue_series || "",
+    venueYear: report?.venue_year || "",
+  });
+  likeRecords.set(record.like_id, record);
+  return record.like_id;
+}
+
+function getVisiblePapers(report) {
+  return report.papers.filter((paper) => {
+    if (state.subject && !(paper.subjects || []).includes(state.subject)) {
+      return false;
+    }
+    if (state.topic && (paper.topic_label || "其他 AI") !== state.topic) {
+      return false;
+    }
+    if (state.query && !paper.title.toLowerCase().includes(state.query)) {
+      return false;
+    }
+    if (state.focusOnly && !focusTopicKeys.has(paper.topic_key)) {
+      return false;
+    }
+    return true;
+  });
+}
+
+function groupBySubject(papers) {
+  const map = new Map();
+  papers.forEach((paper) => {
+    const subject = paper.subjects?.[0] || "Unspecified";
+    if (!map.has(subject)) {
+      map.set(subject, []);
+    }
+    map.get(subject).push(paper);
+  });
+  return [...map.entries()]
+    .map(([subject_label, subjectPapers]) => ({ subject_label, papers: subjectPapers }))
+    .sort((a, b) => b.papers.length - a.papers.length || a.subject_label.localeCompare(b.subject_label));
+}
+
+function computeSubjectDistribution(papers) {
+  const counts = new Map();
+  papers.forEach((paper) => {
+    const subject = paper.subjects?.[0] || "Unspecified";
+    counts.set(subject, (counts.get(subject) || 0) + 1);
+  });
+  return [...counts.entries()]
+    .map(([subject_label, count]) => ({
+      subject_label,
+      count,
+      share: papers.length ? (count / papers.length) * 100 : 0,
+    }))
+    .sort((a, b) => b.count - a.count || a.subject_label.localeCompare(b.subject_label));
+}
+
+function computeTopicDistribution(papers) {
+  const counts = new Map();
+  papers.forEach((paper) => {
+    const topic = paper.topic_label || "其他 AI";
+    counts.set(topic, (counts.get(topic) || 0) + 1);
+  });
+  return [...counts.entries()]
+    .map(([topic_label, count]) => ({
+      topic_label,
+      count,
+      share: papers.length ? (count / papers.length) * 100 : 0,
+    }))
+    .sort((a, b) => b.count - a.count || a.topic_label.localeCompare(b.topic_label));
+}
+
+function getActiveFilters() {
+  const filters = [];
+  if (state.year) {
+    filters.push(`Year: ${state.year}`);
+  }
+  if (state.series) {
+    filters.push(`Conference: ${state.series}`);
+  }
+  if (state.subject) {
+    filters.push(`Subject: ${state.subject}`);
+  }
+  if (state.query) {
+    filters.push(`Search: ${state.query}`);
+  }
+  if (state.topic) {
+    filters.push(`Topic: ${state.topic}`);
+  }
+  if (state.focusOnly) {
+    filters.push("Focus only");
+  }
+  return filters;
+}
+
+function hasActiveFilters() {
+  return Boolean(state.year || state.series || state.subject || state.query || state.topic || state.focusOnly);
+}
+
+function renderResultStat(label, value, meta) {
+  return `
+    <div class="result-stat">
+      <span>${escapeHtml(label)}</span>
+      <strong>${escapeHtml(String(value))}</strong>
+      <small>${escapeHtml(meta)}</small>
+    </div>
+  `;
+}
+
+function renderEmpty(message = "还没有可用 conference 快照。") {
+  document.querySelector("#conference-board-summary").textContent = message;
+  document.querySelector("#conference-cards").innerHTML =
+    `<div class="empty-state">先运行 conference 报告生成脚本，再刷新页面。</div>`;
+  document.querySelector("#conference-spotlight").innerHTML = "";
+  document.querySelector("#conference-subject-sections").innerHTML = "";
+  const tagMap = document.querySelector("#conference-tag-map");
+  if (tagMap) {
+    tagMap.innerHTML = "";
+  }
+}
+
+async function fetchJson(url) {
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`Failed to load ${url}: ${response.status}`);
+  }
+  return response.json();
+}
+
+function formatTime(isoString) {
+  if (!isoString) {
+    return "-";
+  }
+  return new Intl.DateTimeFormat("zh-CN", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+  }).format(new Date(isoString));
+}
+
+function renderFatal(error) {
+  const message = error instanceof Error ? error.message : String(error);
+  document.querySelector("#conference-board-summary").textContent = "Conference 页面加载失败。";
+  document.querySelector("#conference-cards").innerHTML = `<div class="empty-state">${escapeHtml(message)}</div>`;
+}
+
+function buildCaptureSummary(report) {
+  if (!report.declared_total) {
+    return `当前抓到 ${report.total_papers} 篇，源页面未声明总数。`;
+  }
+  const ratio = typeof report.capture_ratio === "number" ? `${report.capture_ratio.toFixed(2)}%` : "-";
+  const health = report.is_complete ? "当前抓取已覆盖页面总数。" : "当前抓取尚未覆盖页面总数，建议继续补抓。";
+  return `当前抓到 ${report.total_papers} / ${report.declared_total} 篇，覆盖率 ${ratio}。${health}`;
+}
+
+function formatCoverage(totalPapers, declaredTotal, captureRatio) {
+  if (!declaredTotal) {
+    return `${totalPapers} captured`;
+  }
+  const ratio = typeof captureRatio === "number" ? captureRatio.toFixed(2) : ((totalPapers / declaredTotal) * 100).toFixed(2);
+  return `${totalPapers}/${declaredTotal} · ${ratio}%`;
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
+}
+
+function escapeAttribute(value) {
+  return escapeHtml(value);
+}

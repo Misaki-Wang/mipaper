@@ -1,0 +1,59 @@
+from __future__ import annotations
+
+import json
+import shutil
+from pathlib import Path
+from typing import List
+
+
+def build_hf_site_manifest(reports_dir: Path, site_data_dir: Path) -> Path:
+    reports = load_hf_reports(reports_dir)
+    report_output_dir = site_data_dir / "reports"
+    report_output_dir.mkdir(parents=True, exist_ok=True)
+    clear_generated_json(report_output_dir)
+
+    manifest_reports = []
+    for report in reports:
+        source_path = report["source_path"]
+        destination = report_output_dir / source_path.name
+        shutil.copyfile(source_path, destination)
+        manifest_reports.append(
+            {
+                "slug": source_path.stem,
+                "report_date": report["report_date"],
+                "total_papers": report["total_papers"],
+                "classifier": report["classifier"],
+                "generated_at": report["generated_at"],
+                "source_url": report["source_url"],
+                "focus_topics": report["focus_topics"],
+                "top_topics": report["topic_distribution"][:5],
+                "top_submitters": report.get("top_submitters", [])[:5],
+                "data_path": f"data/hf-daily/reports/{source_path.name}",
+            }
+        )
+
+    manifest = {
+        "reports_count": len(manifest_reports),
+        "default_report_path": manifest_reports[0]["data_path"] if manifest_reports else "",
+        "reports": manifest_reports,
+    }
+
+    site_data_dir.mkdir(parents=True, exist_ok=True)
+    manifest_path = site_data_dir / "manifest.json"
+    manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
+    return manifest_path
+
+
+def load_hf_reports(reports_dir: Path) -> List[dict]:
+    reports = []
+    for path in sorted(reports_dir.glob("*.json"), reverse=True):
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        payload["source_path"] = path
+        reports.append(payload)
+    reports.sort(key=lambda item: item.get("report_date", ""), reverse=True)
+    return reports
+
+
+def clear_generated_json(directory: Path) -> None:
+    for path in directory.glob("*.json"):
+        path.unlink()

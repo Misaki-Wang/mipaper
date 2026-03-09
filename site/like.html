@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Like Branch</title>
+    <meta
+      name="description"
+      content="Saved paper likes across Cool Daily, Conference, and HF Daily for later review."
+    />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <script>
+      (function () {
+        var storedMode = localStorage.getItem("cool-paper-theme") || "auto";
+        var prefersDark =
+          typeof window.matchMedia === "function" &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+        var resolvedTheme = storedMode === "auto" ? (prefersDark ? "dark" : "light") : storedMode;
+        document.documentElement.dataset.theme = resolvedTheme;
+        document.documentElement.dataset.themeMode = storedMode;
+      })();
+    </script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero reveal">
+        <div class="hero-copy">
+          <div class="page-nav">
+            <a class="page-nav-link" href="./index.html">Cool Daily</a>
+            <a class="page-nav-link" href="./conference.html">Conference</a>
+            <a class="page-nav-link" href="./hf-daily-paper.html">HF Daily</a>
+            <a class="page-nav-link active" href="./like.html">Like</a>
+          </div>
+          <p class="eyebrow">LIKE BRANCH</p>
+          <h1>收藏论文回看分支</h1>
+          <p class="hero-text">
+            在任意 paper 卡片上点 `Like`，这里会自动汇总你保存过的论文，方便后续集中回看和二次筛选。
+          </p>
+          <div id="like-hero-signals" class="hero-signals"></div>
+          <div class="hero-actions">
+            <button class="pill-button active" type="button" data-theme-toggle="auto">Auto</button>
+            <button class="pill-button" type="button" data-theme-toggle="light">Day</button>
+            <button class="pill-button" type="button" data-theme-toggle="dark">Night</button>
+          </div>
+        </div>
+        <div class="hero-panel glass-card">
+          <div class="hero-panel-top">
+            <span class="meta-kicker">Saved Queue</span>
+            <strong id="like-hero-count">-</strong>
+          </div>
+          <div class="hero-stat-grid">
+            <div>
+              <span class="stat-label">Sources</span>
+              <strong id="like-hero-sources">-</strong>
+            </div>
+            <div>
+              <span class="stat-label">Focus Hits</span>
+              <strong id="like-hero-focus">-</strong>
+            </div>
+            <div>
+              <span class="stat-label">Latest Save</span>
+              <strong id="like-hero-latest">-</strong>
+            </div>
+            <div>
+              <span class="stat-label">Top Topic</span>
+              <strong id="like-hero-topic">-</strong>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="glass-card home-board reveal">
+        <div class="section-heading">
+          <p class="eyebrow">SOURCE HOME</p>
+          <h2>收藏来源</h2>
+          <p id="like-board-summary" class="home-board-summary">-</p>
+        </div>
+        <div id="like-home-cards" class="home-categories"></div>
+      </section>
+
+      <main class="layout">
+        <aside class="sidebar">
+          <div class="glass-card sidebar-header reveal">
+            <div>
+              <p class="eyebrow">LIKE RAIL</p>
+              <h2>收藏筛选栏</h2>
+            </div>
+            <button id="like-sidebar-toggle" class="sidebar-toggle" type="button" aria-expanded="true">
+              <span id="like-sidebar-toggle-icon" class="sidebar-toggle-icon">‹</span>
+              <span id="like-sidebar-toggle-label" class="sidebar-toggle-label">收起</span>
+            </button>
+          </div>
+
+          <div id="like-sidebar-stack" class="sidebar-stack">
+            <section class="glass-card controls reveal">
+              <div class="section-heading">
+                <p class="eyebrow">SYNC</p>
+                <h2>GitHub + Supabase</h2>
+              </div>
+              <p id="like-auth-status" class="auth-status">未配置 Supabase，同步功能当前关闭。</p>
+              <div class="auth-actions">
+                <button id="like-sign-in" class="link-chip button-link" type="button">GitHub Sign in</button>
+                <button id="like-sync-now" class="link-chip button-link" type="button">Sync now</button>
+                <button id="like-sign-out" class="link-chip button-link" type="button">Sign out</button>
+              </div>
+            </section>
+
+            <section class="glass-card controls reveal">
+              <div class="control-block">
+                <label for="like-source-filter">Branch</label>
+                <select id="like-source-filter" class="control-input">
+                  <option value="">全部 Branch</option>
+                </select>
+              </div>
+              <div class="control-block">
+                <label for="like-topic-filter">Topic</label>
+                <select id="like-topic-filter" class="control-input">
+                  <option value="">全部 Topic</option>
+                </select>
+              </div>
+              <div class="control-block">
+                <label for="like-search-input">搜索</label>
+                <input id="like-search-input" class="control-input" type="search" placeholder="Search title or authors" />
+              </div>
+            </section>
+
+            <section class="glass-card trend-panel reveal">
+              <div class="section-heading">
+                <p class="eyebrow">TOPIC MIX</p>
+                <h2>收藏 Topic 占比</h2>
+              </div>
+              <div id="like-distribution-list" class="distribution-list"></div>
+            </section>
+          </div>
+        </aside>
+
+        <section class="content">
+          <section class="glass-card overview reveal">
+            <div class="overview-top">
+              <div>
+                <p class="eyebrow">LIKE OVERVIEW</p>
+                <h2 id="like-overview-title">收藏概览</h2>
+              </div>
+            </div>
+            <div class="overview-grid conference-overview-grid">
+              <article class="insight-card accent-card">
+                <span class="insight-label">Saved Queue</span>
+                <p id="like-overview-summary" class="insight-text">-</p>
+              </article>
+              <article class="insight-card">
+                <span class="insight-label">Focus Coverage</span>
+                <p id="like-focus-summary" class="insight-text">-</p>
+              </article>
+              <article class="insight-card">
+                <span class="insight-label">Branch Spread</span>
+                <p id="like-branch-summary" class="insight-text">-</p>
+              </article>
+              <article class="insight-card">
+                <span class="insight-label">Latest Save</span>
+                <p id="like-latest-summary" class="insight-text">-</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="glass-card tag-panel reveal">
+            <div class="section-heading">
+              <p class="eyebrow">TAG MAP</p>
+              <h2>当前 Like 标签</h2>
+            </div>
+            <div id="like-tag-map" class="tag-map"></div>
+          </section>
+
+          <section class="glass-card results-strip reveal">
+            <div class="results-top">
+              <div>
+                <p class="eyebrow">RESULTS</p>
+                <h2 id="like-results-title">当前共收藏 0 篇论文</h2>
+              </div>
+              <button id="like-reset-filters" class="link-chip button-link" type="button">Reset filters</button>
+            </div>
+            <div class="results-grid">
+              <div id="like-results-stats" class="results-stats"></div>
+              <div id="like-active-filters" class="active-filter-chips"></div>
+            </div>
+          </section>
+
+          <section class="reveal">
+            <div id="like-source-sections" class="conference-subject-sections"></div>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <button id="like-back-to-top" class="back-to-top" type="button" aria-hidden="true">
+      <span>↑</span>
+      <span>Top</span>
+    </button>
+
+    <script type="module" src="./like.js"></script>
+  </body>
+</html>
