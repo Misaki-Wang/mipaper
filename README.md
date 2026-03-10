@@ -208,7 +208,7 @@ Like 分支现在支持用 Supabase 持久化收藏，并通过 GitHub OAuth 登
    - `Redirect URLs`: 至少加上 `https://cool-paper.pages.dev/like.html`
 5. 在 Cloudflare Pages 项目里添加环境变量：
    - `SUPABASE_URL`
-   - `SUPABASE_ANON_KEY`
+   - `SUPABASE_PUBLISHABLE_KEY`
    - `GITHUB_REDIRECT_TO`
      - 可以直接填 `https://cool-paper.pages.dev/like.html`
 6. 将 GitHub 仓库连接到 Cloudflare Pages
@@ -218,11 +218,12 @@ Like 分支现在支持用 Supabase 持久化收藏，并通过 GitHub OAuth 登
 
 说明：
 
-- 这是前端直连 Supabase 的静态站点方案，`supabaseAnonKey` 可以公开放在浏览器端
+- 这是前端直连 Supabase 的静态站点方案，`supabasePublishableKey` 可以公开放在浏览器端
 - 未配置 Supabase 时，Like 仍然会退回浏览器本地存储
 - 配置完成并登录后，Like 会同步到 Supabase，支持跨设备回看
 - Cloudflare Pages 的运行时配置接口在 [functions/api/config.js](/Users/misaki/Code/cool_paper/functions/api/config.js)
 - 本地开发可参考 [.dev.vars.example](/Users/misaki/Code/cool_paper/.dev.vars.example)；如果你只是本地预览静态页，也可以直接填 [config.js](/Users/misaki/Code/cool_paper/site/config.js)
+- 当前代码同时兼容旧的 `SUPABASE_ANON_KEY` / `supabaseAnonKey`，但新项目建议统一使用 `publishable key`
 - 如果你后续绑定自定义域名，只需要同步更新 Supabase 的 `Site URL`、`Redirect URLs` 和 Cloudflare Pages 的 `GITHUB_REDIRECT_TO`
 
 ## 每日自动执行

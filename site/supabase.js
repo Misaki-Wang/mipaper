@@ -4,6 +4,10 @@ let supabaseClientPromise = null;
 let runtimeConfigPromise = null;
 const runtimeConfig = { ...appConfig };
 
+function resolvePublicKey(config) {
+  return config.supabasePublishableKey || config.supabaseAnonKey || "";
+}
+
 export async function loadRuntimeConfig() {
   if (runtimeConfigPromise) {
     return runtimeConfigPromise;
@@ -21,7 +25,7 @@ export async function loadRuntimeConfig() {
 }
 
 export function isSupabaseConfigured() {
-  return Boolean(runtimeConfig.supabaseUrl && runtimeConfig.supabaseAnonKey);
+  return Boolean(runtimeConfig.supabaseUrl && resolvePublicKey(runtimeConfig));
 }
 
 export function getGitHubRedirectTo() {
@@ -38,7 +42,7 @@ export async function getSupabaseClient() {
   }
   if (!supabaseClientPromise) {
     supabaseClientPromise = import("https://esm.sh/@supabase/supabase-js@2").then(({ createClient }) =>
-      createClient(runtimeConfig.supabaseUrl, runtimeConfig.supabaseAnonKey, {
+      createClient(runtimeConfig.supabaseUrl, resolvePublicKey(runtimeConfig), {
         auth: {
           persistSession: true,
           autoRefreshToken: true,
@@ -69,6 +73,10 @@ async function fetchRuntimeConfig() {
   const payload = await response.json();
   return {
     supabaseUrl: typeof payload.supabaseUrl === "string" ? payload.supabaseUrl : runtimeConfig.supabaseUrl,
+    supabasePublishableKey:
+      typeof payload.supabasePublishableKey === "string"
+        ? payload.supabasePublishableKey
+        : runtimeConfig.supabasePublishableKey,
     supabaseAnonKey:
       typeof payload.supabaseAnonKey === "string" ? payload.supabaseAnonKey : runtimeConfig.supabaseAnonKey,
     githubRedirectTo:
