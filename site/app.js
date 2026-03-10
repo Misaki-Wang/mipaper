@@ -1109,7 +1109,7 @@ function renderFatal(error) {
 }
 
 async function fetchJson(url) {
-  const response = await fetch(url);
+  const response = await fetch(url, { cache: "no-store" });
   if (!response.ok) {
     throw new Error(`${url} -> ${response.status}`);
   }

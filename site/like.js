@@ -160,6 +160,7 @@ function bindFilters() {
 
 function bindAuthActions() {
   signInButton.addEventListener("click", async () => {
+    authStatus.textContent = "正在跳转到 GitHub 登录，返回后会自动同步收藏。";
     await signInWithGitHub();
   });
 
@@ -192,10 +193,24 @@ function renderAuthState(snapshot) {
 
   signInButton.disabled = snapshot.signedIn;
   signOutButton.disabled = !snapshot.signedIn;
-  syncNowButton.disabled = !snapshot.signedIn;
+  syncNowButton.disabled = !snapshot.signedIn || snapshot.syncing;
   authStatus.textContent = snapshot.signedIn
-    ? `已连接 GitHub 账号 ${snapshot.user?.email || snapshot.user?.id || "-" }，收藏会同步到 Supabase。`
+    ? buildSignedInStatus(snapshot)
     : "Supabase 已配置。点击 GitHub Sign in 后即可跨设备同步收藏。";
+}
+
+function buildSignedInStatus(snapshot) {
+  const account = snapshot.user?.email || snapshot.user?.id || "-";
+  if (snapshot.syncing) {
+    return `已连接 GitHub 账号 ${account}，正在自动同步收藏到 Supabase。`;
+  }
+  if (snapshot.syncError) {
+    return `已连接 GitHub 账号 ${account}，自动同步失败：${snapshot.syncError}`;
+  }
+  if (snapshot.lastSyncedAt) {
+    return `已连接 GitHub 账号 ${account}，收藏已自动同步。上次同步 ${formatTime(snapshot.lastSyncedAt)}。`;
+  }
+  return `已连接 GitHub 账号 ${account}，登录成功后会自动同步收藏到 Supabase。`;
 }
 
 function renderPage() {

@@ -1,6 +1,6 @@
 const JSON_HEADERS = {
   "content-type": "application/json; charset=utf-8",
-  "cache-control": "public, max-age=300",
+  "cache-control": "no-store",
 };
 
 export async function onRequestGet(context) {

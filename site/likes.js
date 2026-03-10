@@ -15,6 +15,12 @@ let supabaseClient = null;
 let authSession = null;
 let authUser = null;
 let likesInitPromise = null;
+let syncPromise = null;
+let syncState = {
+  syncing: false,
+  error: "",
+  lastSyncedAt: "",
+};
 
 export function getSourceLabel(sourceKind) {
   return SOURCE_LABELS[sourceKind] || "Like";
@@ -111,10 +117,14 @@ export async function initLikesSync() {
 }
 
 export function getAuthSnapshot() {
+  const meta = readMeta();
   return {
     configured: isSupabaseConfigured(),
     signedIn: Boolean(authUser),
     user: authUser,
+    syncing: syncState.syncing,
+    syncError: syncState.error,
+    lastSyncedAt: syncState.lastSyncedAt || meta.last_synced_at || "",
   };
 }
 
@@ -156,47 +166,84 @@ export async function syncLikesNow() {
     return readLikes();
   }
 
-  const likes = readLikes();
-  const upsertRows = likes.map((item) => ({
-    user_id: authUser.id,
-    like_id: item.like_id,
-    saved_at: item.saved_at || new Date().toISOString(),
-    payload: item,
-  }));
+  if (syncPromise) {
+    return syncPromise;
+  }
 
-  if (upsertRows.length) {
-    const { error } = await supabaseClient.from("liked_papers").upsert(upsertRows, {
-      onConflict: "user_id,like_id",
-    });
-    if (error) {
-      throw error;
+  syncState = {
+    ...syncState,
+    syncing: true,
+    error: "",
+  };
+  emitAuthChanged();
+
+  syncPromise = performRemoteSync();
+  try {
+    return await syncPromise;
+  } finally {
+    syncPromise = null;
+  }
+}
+
+async function performRemoteSync() {
+  try {
+    const likes = readLikes();
+    const upsertRows = likes.map((item) => ({
+      user_id: authUser.id,
+      like_id: item.like_id,
+      saved_at: item.saved_at || new Date().toISOString(),
+      payload: item,
+    }));
+
+    if (upsertRows.length) {
+      const { error } = await supabaseClient.from("liked_papers").upsert(upsertRows, {
+        onConflict: "user_id,like_id",
+      });
+      if (error) {
+        throw error;
+      }
     }
-  }
 
-  const { data: remoteRows, error: remoteError } = await supabaseClient
-    .from("liked_papers")
-    .select("like_id")
-    .eq("user_id", authUser.id);
-  if (remoteError) {
-    throw remoteError;
-  }
-
-  const localIds = new Set(likes.map((item) => item.like_id));
-  const staleIds = (remoteRows || []).map((item) => item.like_id).filter((likeId) => !localIds.has(likeId));
-  if (staleIds.length) {
-    const { error } = await supabaseClient
+    const { data: remoteRows, error: remoteError } = await supabaseClient
       .from("liked_papers")
-      .delete()
-      .eq("user_id", authUser.id)
-      .in("like_id", staleIds);
-    if (error) {
-      throw error;
+      .select("like_id")
+      .eq("user_id", authUser.id);
+    if (remoteError) {
+      throw remoteError;
     }
-  }
 
-  const remoteLikes = await fetchRemoteLikes();
-  writeLikes(remoteLikes, { dirty: false, syncedAt: new Date().toISOString() });
-  return remoteLikes;
+    const localIds = new Set(likes.map((item) => item.like_id));
+    const staleIds = (remoteRows || []).map((item) => item.like_id).filter((likeId) => !localIds.has(likeId));
+    if (staleIds.length) {
+      const { error } = await supabaseClient
+        .from("liked_papers")
+        .delete()
+        .eq("user_id", authUser.id)
+        .in("like_id", staleIds);
+      if (error) {
+        throw error;
+      }
+    }
+
+    const syncedAt = new Date().toISOString();
+    const remoteLikes = await fetchRemoteLikes();
+    writeLikes(remoteLikes, { dirty: false, syncedAt });
+    syncState = {
+      syncing: false,
+      error: "",
+      lastSyncedAt: syncedAt,
+    };
+    emitAuthChanged();
+    return remoteLikes;
+  } catch (error) {
+    syncState = {
+      ...syncState,
+      syncing: false,
+      error: error instanceof Error ? error.message : String(error),
+    };
+    emitAuthChanged();
+    throw error;
+  }
 }
 
 export function subscribeLikes(callback) {
@@ -303,6 +350,10 @@ function scheduleRemoteSync() {
 
 async function bootstrapLikesSync() {
   await loadRuntimeConfig();
+  syncState = {
+    ...syncState,
+    lastSyncedAt: readMeta().last_synced_at || "",
+  };
   if (!isSupabaseConfigured()) {
     emitAuthChanged();
     return { configured: false, signedIn: false, user: null };

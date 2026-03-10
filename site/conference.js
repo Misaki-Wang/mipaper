@@ -795,7 +795,7 @@ function renderEmpty(message = "还没有可用 conference 快照。") {
 }
 
 async function fetchJson(url) {
-  const response = await fetch(url);
+  const response = await fetch(url, { cache: "no-store" });
   if (!response.ok) {
     throw new Error(`Failed to load ${url}: ${response.status}`);
   }
