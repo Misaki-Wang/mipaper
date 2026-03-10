@@ -7,4 +7,7 @@ export const appConfig = {
   supabaseAnonKey: "",
   // Leave empty to auto-resolve to the current site's /like.html path.
   githubRedirectTo: "",
+  // Personal-use guardrail. Leave empty arrays to allow all authenticated users.
+  allowedEmails: ["misakiwang74@gmail.com"],
+  allowedUserIds: ["d23b2601-08ef-465c-b1d9-4159ca38e159"],
 };

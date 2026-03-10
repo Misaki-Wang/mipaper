@@ -1,4 +1,11 @@
-import { getGitHubRedirectTo, getSupabaseClient, isSupabaseConfigured, loadRuntimeConfig } from "./supabase.js";
+import {
+  getAccessPolicy,
+  getGitHubRedirectTo,
+  getSupabaseClient,
+  isAuthorizedUser,
+  isSupabaseConfigured,
+  loadRuntimeConfig,
+} from "./supabase.js";
 
 const LIKES_STORAGE_KEY = "cool-paper-liked-papers-v1";
 const LIKES_META_KEY = "cool-paper-liked-papers-meta-v1";
@@ -21,6 +28,11 @@ let syncState = {
   syncing: false,
   error: "",
   lastSyncedAt: "",
+};
+let accessState = {
+  unauthorized: false,
+  message: "",
+  blockedUser: null,
 };
 
 export function getSourceLabel(sourceKind) {
@@ -119,13 +131,19 @@ export async function initLikesSync() {
 
 export function getAuthSnapshot() {
   const meta = readMeta();
+  const accessPolicy = getAccessPolicy();
   return {
     configured: isSupabaseConfigured(),
     signedIn: Boolean(authUser),
+    authorized: Boolean(authUser) && !accessState.unauthorized,
     user: authUser,
     syncing: syncState.syncing,
     syncError: syncState.error,
     lastSyncedAt: syncState.lastSyncedAt || meta.last_synced_at || "",
+    unauthorized: accessState.unauthorized,
+    unauthorizedMessage: accessState.message,
+    blockedUser: accessState.blockedUser,
+    accessPolicy,
   };
 }
 
@@ -141,6 +159,8 @@ export async function signInWithGitHub() {
   if (!supabaseClient) {
     return { configured: false };
   }
+  clearUnauthorizedState();
+  emitAuthChanged();
   return supabaseClient.auth.signInWithOAuth({
     provider: "github",
     options: {
@@ -157,6 +177,7 @@ export async function signOutFromGitHub() {
   const result = await supabaseClient.auth.signOut();
   authSession = null;
   authUser = null;
+  clearUnauthorizedState();
   emitAuthChanged();
   return result;
 }
@@ -366,22 +387,76 @@ async function bootstrapLikesSync() {
   } = await supabaseClient.auth.getSession();
   authSession = session;
   authUser = session?.user || null;
+  const authorized = await applyAuthorizationGuard();
   emitAuthChanged();
 
   supabaseClient.auth.onAuthStateChange(async (_event, sessionState) => {
     authSession = sessionState;
     authUser = sessionState?.user || null;
+    const sessionAuthorized = await applyAuthorizationGuard();
     emitAuthChanged();
-    if (authUser) {
+    if (sessionAuthorized) {
       queueHydrateOrSyncRemoteLikes();
     }
   });
 
-  if (authUser) {
+  if (authorized) {
     queueHydrateOrSyncRemoteLikes();
   }
 
   return getAuthSnapshot();
+}
+
+async function applyAuthorizationGuard() {
+  if (!authUser) {
+    if (!accessState.unauthorized) {
+      clearUnauthorizedState();
+    }
+    return false;
+  }
+  if (isAuthorizedUser(authUser)) {
+    clearUnauthorizedState();
+    return true;
+  }
+
+  setUnauthorizedState(authUser);
+  authSession = null;
+  authUser = null;
+  if (supabaseClient) {
+    try {
+      await supabaseClient.auth.signOut();
+    } catch (error) {
+      console.error("Failed to sign out unauthorized user", error);
+    }
+  }
+  return false;
+}
+
+function setUnauthorizedState(user) {
+  const metadata = user?.user_metadata || {};
+  const displayName =
+    metadata.full_name || metadata.name || metadata.preferred_username || metadata.user_name || user?.email || user?.id;
+  const email = user?.email || "";
+  accessState = {
+    unauthorized: true,
+    message: email
+      ? `未授权账号 ${email}。当前 Like 仅允许白名单账号使用。`
+      : "当前账号不在允许名单中，Like 已被限制。",
+    blockedUser: {
+      displayName: displayName || "Unauthorized",
+      email,
+      userId: user?.id || "",
+      avatarUrl: metadata.avatar_url || "",
+    },
+  };
+}
+
+function clearUnauthorizedState() {
+  accessState = {
+    unauthorized: false,
+    message: "",
+    blockedUser: null,
+  };
 }
 
 function queueHydrateOrSyncRemoteLikes() {

@@ -2,10 +2,28 @@ import { appConfig } from "./config.js";
 
 let supabaseClientPromise = null;
 let runtimeConfigPromise = null;
-const runtimeConfig = { ...appConfig };
+const runtimeConfig = normalizeRuntimeConfig(appConfig);
 
 function resolvePublicKey(config) {
   return config.supabasePublishableKey || config.supabaseAnonKey || "";
+}
+
+function normalizeIdentityList(value) {
+  if (Array.isArray(value)) {
+    return value.map((item) => String(item).trim()).filter(Boolean);
+  }
+  return String(value || "")
+    .split(",")
+    .map((item) => item.trim())
+    .filter(Boolean);
+}
+
+function normalizeRuntimeConfig(config) {
+  return {
+    ...config,
+    allowedEmails: normalizeIdentityList(config.allowedEmails).map((item) => item.toLowerCase()),
+    allowedUserIds: normalizeIdentityList(config.allowedUserIds),
+  };
 }
 
 export async function loadRuntimeConfig() {
@@ -14,7 +32,7 @@ export async function loadRuntimeConfig() {
   }
   runtimeConfigPromise = fetchRuntimeConfig()
     .then((remoteConfig) => {
-      Object.assign(runtimeConfig, remoteConfig);
+      Object.assign(runtimeConfig, normalizeRuntimeConfig(remoteConfig));
       return { ...runtimeConfig };
     })
     .catch((error) => {
@@ -33,6 +51,25 @@ export function getGitHubRedirectTo() {
     return runtimeConfig.githubRedirectTo;
   }
   return new URL("./like.html", window.location.href).href;
+}
+
+export function getAccessPolicy() {
+  return {
+    allowedEmails: [...runtimeConfig.allowedEmails],
+    allowedUserIds: [...runtimeConfig.allowedUserIds],
+  };
+}
+
+export function isAuthorizedUser(user) {
+  if (!user) {
+    return false;
+  }
+  const { allowedEmails, allowedUserIds } = getAccessPolicy();
+  if (!allowedEmails.length && !allowedUserIds.length) {
+    return true;
+  }
+  const email = String(user.email || "").trim().toLowerCase();
+  return allowedUserIds.includes(user.id) || (email ? allowedEmails.includes(email) : false);
 }
 
 export async function getSupabaseClient() {
@@ -81,5 +118,7 @@ async function fetchRuntimeConfig() {
       typeof payload.supabaseAnonKey === "string" ? payload.supabaseAnonKey : runtimeConfig.supabaseAnonKey,
     githubRedirectTo:
       typeof payload.githubRedirectTo === "string" ? payload.githubRedirectTo : runtimeConfig.githubRedirectTo,
+    allowedEmails: payload.allowedEmails,
+    allowedUserIds: payload.allowedUserIds,
   };
 }

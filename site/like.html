@@ -37,6 +37,10 @@
           <p class="hero-text">
             在任意 paper 卡片上点 `Like`，这里会自动汇总你保存过的论文，方便后续集中回看和二次筛选。
           </p>
+          <div id="like-current-account" class="account-banner muted">
+            <span class="account-banner-label">Current account</span>
+            <strong class="account-banner-value">Not signed in</strong>
+          </div>
           <div id="like-hero-signals" class="hero-signals"></div>
           <div class="hero-actions">
             <button class="pill-button active" type="button" data-theme-toggle="auto">Auto</button>
@@ -98,6 +102,16 @@
                 <p class="eyebrow">SYNC</p>
                 <h2>GitHub + Supabase</h2>
               </div>
+              <div id="like-account-card" class="account-card is-empty">
+                <div class="account-avatar-shell" aria-hidden="true">
+                  <div class="account-avatar-fallback">?</div>
+                </div>
+                <div class="account-card-copy">
+                  <strong class="account-card-name">未登录</strong>
+                  <span class="account-card-email">请先连接 GitHub 账号</span>
+                </div>
+              </div>
+              <div id="like-auth-warning" class="auth-warning" hidden></div>
               <p id="like-auth-status" class="auth-status">未配置 Supabase，同步功能当前关闭。</p>
               <div class="auth-actions">
                 <button id="like-sign-in" class="link-chip button-link" type="button">GitHub Sign in</button>

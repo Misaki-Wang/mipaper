@@ -211,6 +211,8 @@ Like 分支现在支持用 Supabase 持久化收藏，并通过 GitHub OAuth 登
    - `SUPABASE_PUBLISHABLE_KEY`
    - `GITHUB_REDIRECT_TO`
      - 可以直接填 `https://cool-paper.pages.dev/like.html`
+   - `ALLOWED_EMAILS`
+   - `ALLOWED_USER_IDS`
 6. 将 GitHub 仓库连接到 Cloudflare Pages
    - `Build command`: `python3 scripts/build_site_data.py`
    - `Build output directory`: `site`
@@ -224,6 +226,7 @@ Like 分支现在支持用 Supabase 持久化收藏，并通过 GitHub OAuth 登
 - Cloudflare Pages 的运行时配置接口在 [functions/api/config.js](/Users/misaki/Code/cool_paper/functions/api/config.js)
 - 本地开发可参考 [.dev.vars.example](/Users/misaki/Code/cool_paper/.dev.vars.example)；如果你只是本地预览静态页，也可以直接填 [config.js](/Users/misaki/Code/cool_paper/site/config.js)
 - 当前代码同时兼容旧的 `SUPABASE_ANON_KEY` / `supabaseAnonKey`，但新项目建议统一使用 `publishable key`
+- 如果你只打算自己使用，可以把 `ALLOWED_EMAILS` 和 `ALLOWED_USER_IDS` 设成你自己的 GitHub / Supabase 身份，并重新执行 [likes_schema.sql](/Users/misaki/Code/cool_paper/supabase/likes_schema.sql)
 - 如果你后续绑定自定义域名，只需要同步更新 Supabase 的 `Site URL`、`Redirect URLs` 和 Cloudflare Pages 的 `GITHUB_REDIRECT_TO`
 
 ## 每日自动执行

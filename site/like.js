@@ -38,6 +38,9 @@ const authStatus = document.querySelector("#like-auth-status");
 const signInButton = document.querySelector("#like-sign-in");
 const signOutButton = document.querySelector("#like-sign-out");
 const syncNowButton = document.querySelector("#like-sync-now");
+const accountBanner = document.querySelector("#like-current-account");
+const accountCard = document.querySelector("#like-account-card");
+const authWarning = document.querySelector("#like-auth-warning");
 
 init().catch((error) => {
   console.error(error);
@@ -183,6 +186,8 @@ function bindAuthActions() {
 }
 
 function renderAuthState(snapshot) {
+  renderAccountIdentity(snapshot);
+  renderUnauthorizedState(snapshot);
   if (!snapshot.configured) {
     authStatus.textContent = "未配置 Supabase，同步功能当前关闭。";
     signInButton.disabled = true;
@@ -193,7 +198,13 @@ function renderAuthState(snapshot) {
 
   signInButton.disabled = snapshot.signedIn;
   signOutButton.disabled = !snapshot.signedIn;
-  syncNowButton.disabled = !snapshot.signedIn || snapshot.syncing;
+  syncNowButton.disabled = !snapshot.signedIn || snapshot.syncing || snapshot.unauthorized;
+  if (snapshot.unauthorized) {
+    authStatus.textContent = snapshot.unauthorizedMessage || "当前账号未被授权使用 Like。";
+    signInButton.disabled = false;
+    signOutButton.disabled = true;
+    return;
+  }
   authStatus.textContent = snapshot.signedIn
     ? buildSignedInStatus(snapshot)
     : "Supabase 已配置。点击 GitHub Sign in 后即可跨设备同步收藏。";
@@ -211,6 +222,70 @@ function buildSignedInStatus(snapshot) {
     return `已连接 GitHub 账号 ${account}，收藏已自动同步。上次同步 ${formatTime(snapshot.lastSyncedAt)}。`;
   }
   return `已连接 GitHub 账号 ${account}，登录成功后会自动同步收藏到 Supabase。`;
+}
+
+function renderAccountIdentity(snapshot) {
+  const identitySource = snapshot.unauthorized ? snapshot.blockedUser : snapshot.user;
+  const signedIn = Boolean(snapshot.signedIn && snapshot.user && !snapshot.unauthorized);
+  const metadata = identitySource?.user_metadata || {};
+  const displayName =
+    identitySource?.displayName ||
+    metadata.full_name ||
+    metadata.name ||
+    metadata.preferred_username ||
+    metadata.user_name ||
+    "未登录";
+  const email = identitySource?.email || identitySource?.id || identitySource?.userId || "请先连接 GitHub 账号";
+  const avatarUrl = identitySource?.avatarUrl || metadata.avatar_url || "";
+
+  const bannerValue = accountBanner?.querySelector(".account-banner-value");
+  if (accountBanner && bannerValue) {
+    accountBanner.classList.toggle("muted", !signedIn && !snapshot.unauthorized);
+    accountBanner.classList.toggle("is-unauthorized", Boolean(snapshot.unauthorized));
+    bannerValue.textContent = snapshot.unauthorized ? `Unauthorized · ${email}` : signedIn ? `${displayName} · ${email}` : "Not signed in";
+  }
+
+  if (!accountCard) {
+    return;
+  }
+
+  accountCard.classList.toggle("is-empty", !signedIn && !snapshot.unauthorized);
+  accountCard.classList.toggle("is-unauthorized", Boolean(snapshot.unauthorized));
+  const avatarShell = accountCard.querySelector(".account-avatar-shell");
+  const nameNode = accountCard.querySelector(".account-card-name");
+  const emailNode = accountCard.querySelector(".account-card-email");
+  if (nameNode) {
+    nameNode.textContent = snapshot.unauthorized ? `未授权账号 · ${displayName}` : displayName;
+  }
+  if (emailNode) {
+    emailNode.textContent = email;
+  }
+  if (!avatarShell) {
+    return;
+  }
+
+  const initial = String(displayName || email || "?").trim().charAt(0).toUpperCase() || "?";
+  if (signedIn && avatarUrl) {
+    avatarShell.innerHTML = `<img class="account-avatar-image" src="${escapeAttribute(avatarUrl)}" alt="${escapeAttribute(
+      displayName
+    )}" />`;
+    return;
+  }
+
+  avatarShell.innerHTML = `<div class="account-avatar-fallback">${escapeHtml(initial)}</div>`;
+}
+
+function renderUnauthorizedState(snapshot) {
+  if (!authWarning) {
+    return;
+  }
+  if (!snapshot.unauthorized) {
+    authWarning.hidden = true;
+    authWarning.textContent = "";
+    return;
+  }
+  authWarning.hidden = false;
+  authWarning.textContent = snapshot.unauthorizedMessage || "当前账号不在允许名单中，Like 已被限制。";
 }
 
 function renderPage() {
