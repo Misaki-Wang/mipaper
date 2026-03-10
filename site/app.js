@@ -660,7 +660,6 @@ function renderFeatureStage(report, sections) {
       <span class="lead-badge">${escapeHtml(leadPaper.topic_label)}</span>
     </div>
     <h3>${escapeHtml(leadPaper.title)}</h3>
-    <p class="lead-copy">${buildLeadCopy(report, leadPaper)}</p>
     ${renderPaperDetails(leadPaper)}
     <div class="lead-metrics">
       <span class="paper-id">${escapeHtml(leadPaper.paper_id)}</span>
@@ -678,20 +677,6 @@ function renderFeatureStage(report, sections) {
     </div>
   `;
 
-  const topThree = (visibleDistribution.length ? visibleDistribution : report.topic_distribution).slice(0, 3);
-  const focusTotal = focusPapers.length;
-  const topTopic = visibleDistribution[0] || report.topic_distribution[0];
-  document.querySelector("#focus-callout").textContent =
-    focusTotal > 0
-      ? `当前结果里有 ${focusTotal} 篇命中重点方向，优先值得从 Spotlight 区域开始筛。`
-      : `当前结果里没有强命中重点方向，可以回到 Topic Navigator 看临近类别的边界论文。`;
-  document.querySelector("#dominant-callout").textContent =
-    topThree.length > 0
-      ? `当前视图里的前 3 个 topic 依次是 ${topThree.map((item) => item.topic_label).join("、")}。`
-      : "-";
-  document.querySelector("#observation-callout").textContent = topTopic
-    ? `${topTopic.topic_label} 在当前视图中领先，占比 ${topTopic.share.toFixed(2)}%。`
-    : "-";
 }
 
 function renderSpotlight(report, sections) {
@@ -715,7 +700,6 @@ function renderSpotlight(report, sections) {
             <div class="paper-badges">${renderPaperBadges(paper)}</div>
           </div>
           <h3>${escapeHtml(paper.title)}</h3>
-          <p class="spotlight-copy">${buildPaperNote(paper, "spotlight")}</p>
           ${renderPaperDetails(paper)}
           <div class="paper-links">
             ${renderPaperLink({ href: paper.pdf_url || paper.abs_url, label: "arXiv", brand: "arxiv" })}
@@ -809,7 +793,7 @@ function renderTopicSections(report, sections) {
       const card = paperTemplate.content.firstElementChild.cloneNode(true);
       card.querySelector(".paper-id").textContent = paper.paper_id;
       card.querySelector(".paper-title").textContent = paper.title;
-      card.querySelector(".paper-note").textContent = buildPaperNote(paper, "grid");
+      card.querySelector(".paper-note").remove();
       card.querySelector(".paper-extra").innerHTML = renderPaperDetails(paper);
       card.querySelector('[data-link="abs"]').href = paper.pdf_url || paper.abs_url;
       card.querySelector('[data-link="detail"]').href = paper.detail_url;
@@ -838,7 +822,6 @@ function buildTopicLeadMarkup(paper, topic) {
         <span class="paper-id">${escapeHtml(paper.paper_id)}</span>
       </div>
       <h4 class="topic-lead-title">${escapeHtml(paper.title)}</h4>
-      <p class="topic-lead-copy">${buildTopicLeadCopy(topic, paper)}</p>
       ${renderPaperDetails(paper)}
     </div>
     <div class="topic-lead-side">
@@ -850,50 +833,6 @@ function buildTopicLeadMarkup(paper, topic) {
       </div>
     </div>
   `;
-}
-
-function buildLeadCopy(report, paper) {
-  const focus = focusTopicKeys.has(paper.topic_key);
-  if (focus) {
-    return `这篇标题直接命中你的重点方向“${paper.topic_label}”。如果你只看少数论文，它应该是当天最先点开的候选之一。`;
-  }
-  return `这篇 paper 被放在首页 lead，是因为它处在当天主导 topic 的前列，适合作为快速判断当天整体研究风向的入口。`;
-}
-
-function buildTopicLeadCopy(topic, paper) {
-  const confidenceText =
-    typeof paper.classification_confidence === "number"
-      ? `${Math.round(paper.classification_confidence * 100)}% conf.`
-      : `${paper.classification_source || "rule"} 分类`;
-  const visibilityText =
-    topic.visibleCount === topic.originalCount
-      ? `${topic.visibleCount} 篇 · ${topic.visibleShare.toFixed(2)}%`
-      : `当前 ${topic.visibleCount}/${topic.originalCount} 篇可见`;
-  return `${visibilityText} · ${confidenceText}`;
-}
-
-function buildPaperNote(paper, mode) {
-  if (paper.topic_key === "generative_foundations") {
-    return mode === "spotlight"
-      ? "偏生成模型理论基础，优先判断是否涉及目标函数、动力学或可证明性质。"
-      : "更偏理论基础，适合和 diffusion / flow / world model 方向做机制对照。";
-  }
-  if (paper.topic_key === "multimodal_generative") {
-    return mode === "spotlight"
-      ? "命中多模态生成建模，先看生成对象、条件控制和模态耦合方式。"
-      : "属于多模态生成方向，适合快速判断建模对象与控制粒度。";
-  }
-  if (paper.topic_key === "multimodal_agents") {
-    return mode === "spotlight"
-      ? "命中多模态智能体，优先看感知、记忆和行动闭环是否完整。"
-      : "属于多模态智能体方向，适合先看任务闭环和环境交互设定。";
-  }
-  if (paper.classification_source === "codex") {
-    return "由 Codex 完成分类，适合和规则分类结果交叉核对。";
-  }
-  return mode === "spotlight"
-    ? "这是重点区域中的候选标题，适合先做标题级筛读再进入原文。"
-    : "作为同类样本之一，适合与该 topic 的 lead paper 做横向比较。";
 }
 
 function getFilteredSections(report) {

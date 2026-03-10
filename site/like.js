@@ -14,6 +14,9 @@ import {
 const state = {
   likes: [],
   source: "",
+  year: "",
+  month: "",
+  day: "",
   topic: "",
   query: "",
 };
@@ -25,6 +28,9 @@ const focusTopicKeys = new Set([
 ]);
 
 const sourceFilter = document.querySelector("#like-source-filter");
+const yearFilter = document.querySelector("#like-year-filter");
+const monthFilter = document.querySelector("#like-month-filter");
+const dayFilter = document.querySelector("#like-day-filter");
 const topicFilter = document.querySelector("#like-topic-filter");
 const searchInput = document.querySelector("#like-search-input");
 const resetFiltersButton = document.querySelector("#like-reset-filters");
@@ -140,6 +146,31 @@ function bindFilters() {
     renderPage();
   });
 
+  yearFilter.addEventListener("change", (event) => {
+    state.year = event.target.value;
+    state.month = "";
+    state.day = "";
+    renderPage();
+  });
+
+  monthFilter.addEventListener("change", (event) => {
+    state.month = event.target.value;
+    state.day = "";
+    if (state.month) {
+      state.year = state.month.slice(0, 4);
+    }
+    renderPage();
+  });
+
+  dayFilter.addEventListener("change", (event) => {
+    state.day = event.target.value;
+    if (state.day) {
+      state.month = state.day.slice(0, 7);
+      state.year = state.day.slice(0, 4);
+    }
+    renderPage();
+  });
+
   topicFilter.addEventListener("change", (event) => {
     state.topic = event.target.value;
     renderPage();
@@ -152,9 +183,15 @@ function bindFilters() {
 
   resetFiltersButton.addEventListener("click", () => {
     state.source = "";
+    state.year = "";
+    state.month = "";
+    state.day = "";
     state.topic = "";
     state.query = "";
     sourceFilter.value = "";
+    yearFilter.value = "";
+    monthFilter.value = "";
+    dayFilter.value = "";
     topicFilter.value = "";
     searchInput.value = "";
     renderPage();
@@ -315,13 +352,51 @@ function renderPage() {
 
 function populateFilters(likes) {
   const currentSource = state.source;
+  const currentYear = state.year;
+  const currentMonth = state.month;
+  const currentDay = state.day;
   const currentTopic = state.topic;
   const sources = [...new Set(likes.map((item) => item.source_kind).filter(Boolean))];
   const topics = [...new Set(likes.map((item) => item.topic_label || "其他 AI"))].sort((a, b) => a.localeCompare(b, "zh-CN"));
+  const dateParts = likes.map(extractDateParts);
+  const years = [...new Set(dateParts.map((item) => item.year).filter(Boolean))].sort((a, b) => b.localeCompare(a));
+  const months = [...new Set(
+    dateParts
+      .filter((item) => item.month && (!currentYear || item.year === currentYear))
+      .map((item) => item.month)
+  )].sort((a, b) => b.localeCompare(a));
+  const days = [...new Set(
+    dateParts
+      .filter((item) => {
+        if (!item.day) {
+          return false;
+        }
+        if (currentMonth) {
+          return item.month === currentMonth;
+        }
+        if (currentYear) {
+          return item.year === currentYear;
+        }
+        return true;
+      })
+      .map((item) => item.day)
+  )].sort((a, b) => b.localeCompare(a));
 
   sourceFilter.innerHTML = [
     `<option value="">全部 Branch</option>`,
     ...sources.map((source) => `<option value="${escapeAttribute(source)}">${escapeHtml(getSourceLabel(source))}</option>`),
+  ].join("");
+  yearFilter.innerHTML = [
+    `<option value="">全部 Year</option>`,
+    ...years.map((year) => `<option value="${escapeAttribute(year)}">${escapeHtml(year)}</option>`),
+  ].join("");
+  monthFilter.innerHTML = [
+    `<option value="">全部 Month</option>`,
+    ...months.map((month) => `<option value="${escapeAttribute(month)}">${escapeHtml(month)}</option>`),
+  ].join("");
+  dayFilter.innerHTML = [
+    `<option value="">全部 Day</option>`,
+    ...days.map((day) => `<option value="${escapeAttribute(day)}">${escapeHtml(day)}</option>`),
   ].join("");
   topicFilter.innerHTML = [
     `<option value="">全部 Topic</option>`,
@@ -329,8 +404,14 @@ function populateFilters(likes) {
   ].join("");
 
   sourceFilter.value = sources.includes(currentSource) ? currentSource : "";
+  yearFilter.value = years.includes(currentYear) ? currentYear : "";
+  monthFilter.value = months.includes(currentMonth) ? currentMonth : "";
+  dayFilter.value = days.includes(currentDay) ? currentDay : "";
   topicFilter.value = topics.includes(currentTopic) ? currentTopic : "";
   state.source = sourceFilter.value;
+  state.year = yearFilter.value;
+  state.month = monthFilter.value;
+  state.day = dayFilter.value;
   state.topic = topicFilter.value;
 }
 
@@ -416,11 +497,17 @@ function renderOverview(likes, visibleLikes, sourceSections) {
 
 function renderTagMap(likes, topicDistribution) {
   const topTopic = topicDistribution[0]?.topic_label || "其他 AI";
+  const activeDate = state.day || state.month || state.year || (findLatestReportedDate(likes) || "No report date");
   document.querySelector("#like-tag-map").innerHTML = [
     {
       label: "Branch",
       value: state.source ? getSourceLabel(state.source) : "All branches",
       meta: state.source ? "当前筛选中的 branch" : "当前全部收藏来源",
+    },
+    {
+      label: "Date",
+      value: activeDate,
+      meta: state.day ? "当前按 day 筛选" : state.month ? "当前按 month 筛选" : state.year ? "当前按 year 筛选" : "当前最近的报告日期",
     },
     {
       label: "Topic",
@@ -477,7 +564,11 @@ function renderResults(likes, visibleLikes, sourceSections) {
   document.querySelector("#like-results-stats").innerHTML = [
     renderResultStat("Visible Likes", visibleLikes.length, activeFilters.length ? `of ${likes.length}` : "full liked set"),
     renderResultStat("Visible Branches", sourceSections.length, activeFilters.length ? "filtered" : "all branches"),
-    renderResultStat("View Mode", state.topic || "Full scan", state.query ? `search: ${state.query}` : "cross-branch browsing"),
+    renderResultStat(
+      "View Mode",
+      state.day || state.month || state.year || state.topic || "Full scan",
+      state.query ? `search: ${state.query}` : "cross-branch browsing"
+    ),
   ].join("");
   document.querySelector("#like-active-filters").innerHTML = activeFilters.length
     ? activeFilters.map((item) => `<span class="active-filter-pill">${escapeHtml(item)}</span>`).join("")
@@ -584,6 +675,16 @@ function getVisibleLikes(likes) {
     if (state.source && paper.source_kind !== state.source) {
       return false;
     }
+    const dateParts = extractDateParts(paper);
+    if (state.year && dateParts.year !== state.year) {
+      return false;
+    }
+    if (state.month && dateParts.month !== state.month) {
+      return false;
+    }
+    if (state.day && dateParts.day !== state.day) {
+      return false;
+    }
     if (state.topic && (paper.topic_label || "其他 AI") !== state.topic) {
       return false;
     }
@@ -639,6 +740,13 @@ function getActiveFilters() {
   const filters = [];
   if (state.source) {
     filters.push(`Branch: ${getSourceLabel(state.source)}`);
+  }
+  if (state.day) {
+    filters.push(`Day: ${state.day}`);
+  } else if (state.month) {
+    filters.push(`Month: ${state.month}`);
+  } else if (state.year) {
+    filters.push(`Year: ${state.year}`);
   }
   if (state.topic) {
     filters.push(`Topic: ${state.topic}`);
@@ -697,6 +805,37 @@ function formatTime(value) {
       minute: "2-digit",
     })
     .replace(/\//g, "/");
+}
+
+function extractDateParts(paper) {
+  const reportDate = typeof paper.report_date === "string" ? paper.report_date.trim() : "";
+  if (/^\d{4}-\d{2}-\d{2}$/.test(reportDate)) {
+    return {
+      year: reportDate.slice(0, 4),
+      month: reportDate.slice(0, 7),
+      day: reportDate,
+    };
+  }
+  const venueYear = String(paper.venue_year || "").trim();
+  if (/^\d{4}$/.test(venueYear)) {
+    return {
+      year: venueYear,
+      month: "",
+      day: "",
+    };
+  }
+  return {
+    year: "",
+    month: "",
+    day: "",
+  };
+}
+
+function findLatestReportedDate(likes) {
+  return likes
+    .map((paper) => extractDateParts(paper).day || extractDateParts(paper).month || extractDateParts(paper).year)
+    .filter(Boolean)
+    .sort((a, b) => b.localeCompare(a))[0] || "";
 }
 
 function escapeHtml(value) {

@@ -1061,13 +1061,10 @@ code {
 }
 
 .feature-stage {
-  display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(290px, 0.82fr);
-  gap: 1rem;
+  display: block;
 }
 
-.lead-feature,
-.micro-panel {
+.lead-feature {
   padding: 1.15rem;
 }
 
@@ -1530,23 +1527,6 @@ code {
   display: flex;
   gap: 0.42rem;
   flex-wrap: wrap;
-}
-
-.feature-stack {
-  display: grid;
-  gap: 1rem;
-}
-
-.micro-panel {
-  display: grid;
-  align-content: start;
-  min-height: 142px;
-}
-
-.micro-copy {
-  margin: 0.45rem 0 0;
-  font-size: 1.05rem;
-  line-height: 1.65;
 }
 
 .spotlight-list {
@@ -2152,8 +2132,7 @@ code {
   .topic-section,
   .conference-subject-card,
   .hero-panel,
-  .lead-feature,
-  .micro-panel {
+  .lead-feature {
     padding: 0.96rem;
   }
 
