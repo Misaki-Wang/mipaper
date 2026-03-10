@@ -36,7 +36,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--codex-timeout-seconds",
         type=int,
-        default=600,
+        default=1800,
         help="timeout for codex exec when --classifier=codex",
     )
     parser.add_argument("--output-dir", default=str(DAILY_REPORTS_DIR.relative_to(ROOT_DIR)), help="directory for markdown/json output")

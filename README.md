@@ -143,12 +143,16 @@ There are two scheduled jobs. Both default to local Codex classification and can
 
 - `Cool Daily`
   - `11:00`
-  - Monday to Friday only
-  - Crawls the current day for `cs.AI`, `cs.CL`, and `cs.CV`
+  - `launchd` / `cron` can trigger every day
+  - The job catches up every missed business day from the persisted state
+  - Crawls the current business day for `cs.AI`, `cs.CL`, and `cs.CV`
 - `HF Daily`
   - `23:00`
-  - Monday to Friday: crawl the current day
+  - Monday to Friday: crawl the current day and catch up any missed business days
   - Saturday and Sunday: refresh the current week from Monday to Friday to update `upvotes` and `comments`
+  - Also catches up older missed business days from the persisted state
+
+The scheduler keeps its own local state in `state/scheduled_jobs.json` by default. If the machine is off for several days, the next scheduled run resumes from the last successful business date instead of skipping the gap.
 
 Entrypoints:
 
@@ -160,6 +164,8 @@ Relevant environment variables:
 
 - `COOL_PAPER_TIMEZONE`
 - `COOL_PAPER_CATEGORIES`
+- `COOL_PAPER_SCHEDULE_START_DATE`
+- `COOL_PAPER_STATE_PATH`
 - `COOL_PAPER_DAILY_CLASSIFIER`
 - `COOL_PAPER_HF_CLASSIFIER`
 - `COOL_PAPER_CODEX_MODEL`
@@ -173,6 +179,20 @@ Run one job manually without pushing:
 ```bash
 python3 scripts/run_scheduled_job.py --job cool_daily --skip-push
 python3 scripts/run_scheduled_job.py --job hf_daily --skip-push
+```
+
+Backfill from the configured start date through the current date:
+
+```bash
+python3 scripts/run_scheduled_job.py --job cool_daily --skip-push
+python3 scripts/run_scheduled_job.py --job hf_daily --skip-push
+```
+
+Use an explicit test clock:
+
+```bash
+python3 scripts/run_scheduled_job.py --job cool_daily --skip-push --now 2026-03-10T11:00:00+08:00
+python3 scripts/run_scheduled_job.py --job hf_daily --skip-push --now 2026-03-10T23:00:00+08:00
 ```
 
 ### macOS launchd

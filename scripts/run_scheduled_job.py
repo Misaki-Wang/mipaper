@@ -6,13 +6,23 @@ import os
 import shutil
 import subprocess
 import sys
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 ROOT_DIR = Path(__file__).resolve().parents[1]
 if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
-from cool_paper.scheduler import current_week_business_days, is_weekend, summarize_date_window, today_iso
+from cool_paper.paths import SCHEDULE_STATE_PATH
+from cool_paper.scheduler import (
+    cool_daily_backfill_dates,
+    hf_daily_backfill_dates,
+    load_schedule_state,
+    local_now,
+    save_schedule_state,
+    summarize_date_window,
+)
 
 GENERATED_PATHS = [
     "reports/daily",
@@ -41,6 +51,20 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--skip-push", action="store_true", help="generate reports but skip git commit/push")
     parser.add_argument("--git-remote", default=os.environ.get("COOL_PAPER_GIT_REMOTE", "origin"))
     parser.add_argument("--git-branch", default=os.environ.get("COOL_PAPER_GIT_BRANCH", ""))
+    parser.add_argument(
+        "--state-path",
+        default=os.environ.get("COOL_PAPER_STATE_PATH", str(SCHEDULE_STATE_PATH.relative_to(ROOT_DIR))),
+        help="path to the persistent schedule state file",
+    )
+    parser.add_argument(
+        "--start-date",
+        default=os.environ.get("COOL_PAPER_SCHEDULE_START_DATE", "2026-03-02"),
+        help="earliest business date to backfill",
+    )
+    parser.add_argument(
+        "--now",
+        help="optional ISO datetime override for tests, for example 2026-03-10T11:00:00+08:00",
+    )
     return parser.parse_args()
 
 
@@ -70,40 +94,64 @@ def build_codex_args(prefix: str) -> list[str]:
     return args
 
 
-def run_cool_daily_job(timezone_name: str) -> list[str]:
-    if is_weekend(timezone_name):
-        print(f"Skipping Cool Daily scheduled run on weekend in timezone {timezone_name}.")
+def parse_now(raw_value: str | None, timezone_name: str) -> datetime | None:
+    if not raw_value:
+        return None
+    parsed = datetime.fromisoformat(raw_value)
+    if parsed.tzinfo is None:
+        return parsed.replace(tzinfo=ZoneInfo(timezone_name))
+    return parsed.astimezone(ZoneInfo(timezone_name))
+
+
+def state_key(job: str) -> str:
+    return f"{job}_last_success_date"
+
+
+def run_cool_daily_job(timezone_name: str, start_date: str, state: dict, now: datetime | None = None) -> list[str]:
+    report_dates = cool_daily_backfill_dates(
+        start_date=start_date,
+        timezone_name=timezone_name,
+        last_success_date=state.get(state_key("cool_daily")),
+        now=now,
+    )
+    if not report_dates:
+        print(f"No Cool Daily backfill needed in timezone {timezone_name}.")
         return []
 
-    report_date = today_iso(timezone_name)
     categories = os.environ.get("COOL_PAPER_CATEGORIES", "cs.AI cs.CL cs.CV").split()
     codex_args = build_codex_args("COOL_PAPER_DAILY")
-    for category in categories:
-        command = [
-            "python3",
-            "scripts/generate_daily_report.py",
-            "--category",
-            category,
-            "--date",
-            report_date,
-            "--timezone",
-            timezone_name,
-            "--output-dir",
-            "reports/daily",
-            "--notify",
-            os.environ.get("COOL_PAPER_NOTIFY", "none"),
-            *codex_args,
-        ]
-        run_command(command)
-    return [report_date]
+    for report_date in report_dates:
+        for category in categories:
+            command = [
+                "python3",
+                "scripts/generate_daily_report.py",
+                "--category",
+                category,
+                "--date",
+                report_date,
+                "--timezone",
+                timezone_name,
+                "--output-dir",
+                "reports/daily",
+                "--notify",
+                os.environ.get("COOL_PAPER_NOTIFY", "none"),
+                *codex_args,
+            ]
+            run_command(command)
+    return report_dates
 
 
-def run_hf_daily_job(timezone_name: str) -> list[str]:
+def run_hf_daily_job(timezone_name: str, start_date: str, state: dict, now: datetime | None = None) -> list[str]:
     codex_args = build_codex_args("COOL_PAPER_HF")
-    if is_weekend(timezone_name):
-        report_dates = current_week_business_days(timezone_name)
-    else:
-        report_dates = [today_iso(timezone_name)]
+    report_dates = hf_daily_backfill_dates(
+        start_date=start_date,
+        timezone_name=timezone_name,
+        last_success_date=state.get(state_key("hf_daily")),
+        now=now,
+    )
+    if not report_dates:
+        print(f"No HF Daily backfill needed in timezone {timezone_name}.")
+        return []
 
     for report_date in report_dates:
         command = [
@@ -150,11 +198,14 @@ def commit_and_push(job: str, date_window: list[str], remote: str, branch: str) 
 def main() -> int:
     load_env_file(ROOT_DIR / ".env")
     args = parse_args()
+    state_path = ROOT_DIR / args.state_path
+    state = load_schedule_state(state_path)
+    now = parse_now(args.now, args.timezone)
 
     if args.job == "cool_daily":
-        dates = run_cool_daily_job(args.timezone)
+        dates = run_cool_daily_job(args.timezone, args.start_date, state, now)
     else:
-        dates = run_hf_daily_job(args.timezone)
+        dates = run_hf_daily_job(args.timezone, args.start_date, state, now)
 
     if not dates:
         return 0
@@ -162,6 +213,9 @@ def main() -> int:
     build_site_data()
     if not args.skip_push:
         commit_and_push(args.job, dates, args.git_remote, args.git_branch)
+    state[state_key(args.job)] = dates[-1]
+    state[f"{args.job}_updated_at"] = local_now(args.timezone, now).isoformat()
+    save_schedule_state(state_path, state)
     return 0
 
 
