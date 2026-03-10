@@ -36,25 +36,25 @@ def top_upvoted_papers(papers: Iterable[HFDailyPaper], limit: int = 8) -> List[H
 
 def build_hf_insights(distribution: List[dict], papers: List[HFDailyPaper]) -> List[str]:
     if not papers:
-        return ["当天没有抓到任何 Hugging Face daily papers。"]
+        return ["No Hugging Face daily papers were captured today."]
 
     insights: List[str] = []
     if distribution:
         lead_topic = distribution[0]
         insights.append(
-            f"当天占比最高的 topic 是“{lead_topic['topic_label']}”，共 {lead_topic['count']} 篇，占 {lead_topic['share']:.2f}%。"
+            f"The top topic today is “{lead_topic['topic_label']}”, with {lead_topic['count']} papers, accounting for {lead_topic['share']:.2f}%。"
         )
 
     submitters = top_submitters(papers, limit=1)
     if submitters:
-        insights.append(f"提交最活跃的是 {submitters[0]['submitted_by']}，当天提交了 {submitters[0]['count']} 篇。")
+        insights.append(f"The most active submitter is {submitters[0]['submitted_by']}， with {submitters[0]['count']} papers。")
 
     with_upvotes = [paper for paper in papers if paper.upvotes is not None]
     if with_upvotes:
         top_paper = max(with_upvotes, key=lambda paper: (paper.upvotes or 0, paper.title))
-        insights.append(f"可见投票里最高的是《{top_paper.title}》，当前为 {top_paper.upvotes} 票。")
+        insights.append(f"The highest-voted visible paper is “{top_paper.title}”, currently at {top_paper.upvotes} votes.")
     else:
-        insights.append("当前页面没有稳定暴露投票字段，因此报告里不做投票排序结论。")
+        insights.append("The page does not reliably expose voting fields, so the report skips vote-based ranking conclusions.")
 
     return insights
 
@@ -73,29 +73,29 @@ def render_markdown_hf_report(
     submitters = top_submitters(papers)
 
     lines: List[str] = []
-    lines.append(f"# Hugging Face Daily Papers 报告 ({report_date})")
+    lines.append(f"# Hugging Face Daily Papers Report ({report_date})")
     lines.append("")
-    lines.append(f"- 数据来源: {source_url}")
-    lines.append(f"- 分类器: {classifier_name}")
-    lines.append(f"- 论文总数: {len(papers)}")
+    lines.append(f"- Source: {source_url}")
+    lines.append(f"- Classifier: {classifier_name}")
+    lines.append(f"- Total Papers: {len(papers)}")
     lines.append("")
-    lines.append("## 重点关注 Topic")
+    lines.append("## Focus Topics")
     lines.append("")
     for item in focus_distribution:
-        lines.append(f"- {item['topic_label']}: {item['count']} 篇 ({item['share']:.2f}%)")
+        lines.append(f"- {item['topic_label']}: {item['count']} papers ({item['share']:.2f}%)")
     lines.append("")
-    lines.append("## Topic 占比")
+    lines.append("## Topic Distribution")
     lines.append("")
     for item in distribution:
-        lines.append(f"- {item['topic_label']}: {item['count']} 篇 ({item['share']:.2f}%)")
+        lines.append(f"- {item['topic_label']}: {item['count']} papers ({item['share']:.2f}%)")
     lines.append("")
     if submitters:
         lines.append("## Top Submitters")
         lines.append("")
         for item in submitters:
-            lines.append(f"- {item['submitted_by']}: {item['count']} 篇")
+            lines.append(f"- {item['submitted_by']}: {item['count']} papers")
         lines.append("")
-    lines.append("## 简析")
+    lines.append("## Brief Notes")
     lines.append("")
     for insight in insights:
         lines.append(f"- {insight}")
@@ -107,7 +107,7 @@ def render_markdown_hf_report(
             key=lambda paper: (paper.upvotes or -1, paper.comments or -1, paper.title),
             reverse=True,
         )
-        lines.append(f"## {topic_label} ({len(topic_papers)} 篇)")
+        lines.append(f"## {topic_label} ({len(topic_papers)} papers)")
         lines.append("")
         for paper in topic_papers:
             meta = []

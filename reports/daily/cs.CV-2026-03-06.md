@@ -1,37 +1,37 @@
-# cs.CV 每日论文分类报告 (2026-03-06)
+# cs.CV Daily Paper Classification Report (2026-03-06)
 
-- 数据来源: https://papers.cool/arxiv/cs.CV?date=2026-03-06&show=1000
-- 分类方式: 基于标题关键词的启发式 topic 分类
-- 分类器: rule
-- 论文总数: 113
+- Source: https://papers.cool/arxiv/cs.CV?date=2026-03-06&show=1000
+- Classification: heuristic topic assignment from title keywords
+- Classifier: rule
+- Total Papers: 113
 
-## 重点关注 Topic
+## Focus Topics
 
-- 生成模型理论基础: 0 篇 (0.00%)
-- 多模态生成建模: 3 篇 (2.65%)
-- 多模态智能体: 4 篇 (3.54%)
+- Generative Foundations: 0 papers (0.00%)
+- Multimodal Generative Modeling: 3 papers (2.65%)
+- Multimodal Agents: 4 papers (3.54%)
 
-## Topic 占比分析
+## Topic Distribution Analysis
 
-- 多模态理解与视觉: 38 篇 (33.63%)
-- 其他 AI: 20 篇 (17.70%)
-- 学习、优化与理论: 16 篇 (14.16%)
-- 医疗、科学与行业应用: 9 篇 (7.96%)
-- 大模型与语言: 8 篇 (7.08%)
-- 推理、对齐与评测: 5 篇 (4.42%)
-- 多模态智能体: 4 篇 (3.54%)
-- 数据集与基准: 4 篇 (3.54%)
-- 多模态生成建模: 3 篇 (2.65%)
-- 检索、知识与RAG: 3 篇 (2.65%)
-- 通用智能体与规划: 3 篇 (2.65%)
+- Multimodal Understanding and Vision: 38 papers (33.63%)
+- Other AI: 20 papers (17.70%)
+- Learning, Optimization, and Theory: 16 papers (14.16%)
+- Domain Applications: 9 papers (7.96%)
+- LLMs and Language: 8 papers (7.08%)
+- Reasoning, Alignment, and Evaluation: 5 papers (4.42%)
+- Datasets and Benchmarks: 4 papers (3.54%)
+- Multimodal Agents: 4 papers (3.54%)
+- Agents and Planning: 3 papers (2.65%)
+- Multimodal Generative Modeling: 3 papers (2.65%)
+- Retrieval, Knowledge, and RAG: 3 papers (2.65%)
 
-### 简析
+### Brief Notes
 
-- 当天数量最多的是“多模态理解与视觉”，共 38 篇，占 33.63%。
-- 前 3 个 topic 合计占 65.49%，分布相对集中。
-- 仅出现 1 篇的长尾 topic 有 0 个。
+- The largest topic today is “Multimodal Understanding and Vision”, with 38 papers, accounting for 33.63%。
+- The top 3 topics account for 65.49%，concentrated。
+- Long-tail topics with only one paper: 0 items。
 
-## 多模态理解与视觉 (38 篇, 33.63%)
+## Multimodal Understanding and Vision (38 papers, 33.63%)
 
 - [FaceCam: Portrait Video Camera Control via Scale-Aware Conditioning](https://arxiv.org/pdf/2603.05506)
   - Authors: Weijie Lyu, Ming-Hsuan Yang, Zhixin Shu
@@ -300,7 +300,7 @@
     While reasoning-enhanced Large Language Models (LLMs) have demonstrated remarkable advances in complex tasks such as mathematics and coding, their effectiveness across universal multimodal scenarios remains uncertain. The trend of releasing parallel "Instruct" and "Thinking" models by leading developers serves merely as a resource-intensive workaround, stemming from the lack of a criterion for determining when reasoning is truly beneficial. In this paper, we propose Dual Tuning, a framework designed to assess whether reasoning yields positive gains for target tasks under given base models and datasets. By jointly fine-tuning on paired Chain-of-Thought (CoT) and Direct-Answer (DA) data under controlled prompts, we systematically quantify and compare the gains of both training modes using the proposed metrics, and establish the "Thinking Boundary" to evaluate the suitability of reasoning training across diverse multimodal tasks, including spatial, mathematical, and multi-disciplinary domains. We further explore the impact of reinforcement training and thinking patterns on reasoning suitability, and validate whether the "Thinking Boundary" can guide data refinement. Our findings challenge the "reasoning-for-all" paradigm, providing practical guidance for identifying appropriate data and training strategies, and motivating the development of resource-efficient, adaptive auto-think systems.
     </details>
 
-## 其他 AI (20 篇, 17.70%)
+## Other AI (20 papers, 17.70%)
 
 - [EdgeDAM: Real-time Object Tracking for Mobile Devices](https://arxiv.org/pdf/2603.05463)
   - Authors: Syed Muhammad Raza, Syed Murtaza Hussain Abidi, Khawar Islam, Muhammad Ibrahim, Ajmal Saeed Mian
@@ -443,7 +443,7 @@
     Current AI agents can flexibly invoke tools and execute complex tasks, yet their long-term advancement is hindered by the lack of systematic accumulation and transfer of skills. Without a unified mechanism for skill consolidation, agents frequently ``reinvent the wheel'', rediscovering solutions in isolated contexts without leveraging prior strategies. To overcome this limitation, we introduce SkillNet, an open infrastructure designed to create, evaluate, and organize AI skills at scale. SkillNet structures skills within a unified ontology that supports creating skills from heterogeneous sources, establishing rich relational connections, and performing multi-dimensional evaluation across Safety, Completeness, Executability, Maintainability, and Cost-awareness. Our infrastructure integrates a repository of over 200,000 skills, an interactive platform, and a versatile Python toolkit. Experimental evaluations on ALFWorld, WebShop, and ScienceWorld demonstrate that SkillNet significantly enhances agent performance, improving average rewards by 40% and reducing execution steps by 30% across multiple backbone models. By formalizing skills as evolving, composable assets, SkillNet provides a robust foundation for agents to move from transient experience to durable mastery.
     </details>
 
-## 学习、优化与理论 (16 篇, 14.16%)
+## Learning, Optimization, and Theory (16 papers, 14.16%)
 
 - [Transformer-Based Inpainting for Real-Time 3D Streaming in Sparse Multi-Camera Setups](https://arxiv.org/pdf/2603.05507)
   - Authors: Leif Van Holland, Domenic Zingsheim, Mana Takhsha, Hannah Dröge, Patrick Stotko, Markus Plack, Reinhard Klein
@@ -558,7 +558,7 @@
     Multi-step theorem prediction is a central challenge in automated reasoning. Existing neural-symbolic approaches rely heavily on supervised parametric models, which exhibit limited generalization to evolving theorem libraries. In this work, we explore training-free theorem prediction through the lens of in-context learning (ICL). We identify a critical scalability bottleneck, termed Structural Drift: as reasoning depth increases, the performance of vanilla ICL degrades sharply, often collapsing to near zero. We attribute this failure to the LLM's inability to recover latent topological dependencies, leading to unstructured exploration. To address this issue, we propose Theorem Precedence Graphs, which encode temporal dependencies from historical solution traces as directed graphs, and impose explicit topological constraints that effectively prune the search space during inference. Coupled with retrieval-augmented graph construction and a stepwise symbolic executor, our approach enables LLMs to act as structured planners without any gradient-based optimization. Experiments on the FormalGeo7k benchmark show that our method achieves 89.29% accuracy, substantially outperforming ICL baselines and matching state-of-the-art supervised models. These results indicate that explicit structural priors offer a promising direction for scaling LLM-based symbolic reasoning.
     </details>
 
-## 医疗、科学与行业应用 (9 篇, 7.96%)
+## Domain Applications (9 papers, 7.96%)
 
 - [Semantic Class Distribution Learning for Debiasing Semi-Supervised Medical Image Segmentation](https://arxiv.org/pdf/2603.05202)
   - Authors: Yingxue Su, Yiheng Zhong, Keying Zhu, Zimu Zhang, Zhuoru Zhang, Yifang Wang, Yuxin Zhang, Jingxin Liu
@@ -624,7 +624,7 @@
     Deep learning (DL) methods are currently being explored to restore images from sparse-view-, limited-data-, and undersampled-based acquisitions in medical applications. Although outputs from DL may appear visually appealing based on likability/subjective criteria (such as less noise, smooth features), they may also suffer from hallucinations. This issue is further exacerbated by a lack of easy-to-use techniques and robust metrics for the identification of hallucinations in DL outputs. In this work, we propose performing Fourier Ring Correlation (FRC) analysis over small patches and concomitantly (s)canning across DL outputs and their reference counterparts to detect hallucinations (termed as sFRC). We describe the rationale behind sFRC and provide its mathematical formulation. The parameters essential to sFRC may be set using predefined hallucinated features annotated by subject matter experts or using imaging theory-based hallucination maps. We use sFRC to detect hallucinations for three undersampled medical imaging problems: CT super-resolution, CT sparse view, and MRI subsampled restoration. In the testing phase, we demonstrate sFRC's effectiveness in detecting hallucinated features for the CT problem and sFRC's agreement with imaging theory-based outputs on hallucinated feature maps for the MR problem. Finally, we quantify the hallucination rates of DL methods on in-distribution versus out-of-distribution data and under increasing subsampling rates to characterize the robustness of DL methods. Beyond DL-based methods, sFRC's effectiveness in detecting hallucinations for a conventional regularization-based restoration method and a state-of-the-art unrolled method is also shown.
     </details>
 
-## 大模型与语言 (8 篇, 7.08%)
+## LLMs and Language (8 papers, 7.08%)
 
 - [HALP: Detecting Hallucinations in Vision-Language Models without Generating a Single Token](https://arxiv.org/pdf/2603.05465)
   - Authors: Sai Akhil Kogilathota, Sripadha Vallabha E G, Luzhe Sun, Jiawei Zhou
@@ -683,7 +683,7 @@
     This project investigates the capabilities of large language models (LLMs) to determine the difficulty of data visualization literacy test items. We explore whether features derived from item text (question and answer options), the visualization image, or a combination of both can predict item difficulty (proportion of correct responses) for U.S. adults. We use GPT-4.1-nano to analyze items and generate predictions based on these distinct feature sets. The multimodal approach, using both visual and text features, yields the lowest mean absolute error (MAE) (0.224), outperforming the unimodal vision-only (0.282) and text-only (0.338) approaches. The best-performing multimodal model was applied to a held-out test set for external evaluation and achieved a mean squared error of 0.10805, demonstrating the potential of LLMs for psychometric analysis and automated item development.
     </details>
 
-## 推理、对齐与评测 (5 篇, 4.42%)
+## Reasoning, Alignment, and Evaluation (5 papers, 4.42%)
 
 - [CATNet: Collaborative Alignment and Transformation Network for Cooperative Perception](https://arxiv.org/pdf/2603.05255)
   - Authors: Gong Chen, Chaokun Zhang, Tao Tang, Pengcheng Lv, Feng Li, Xin Xie
@@ -721,38 +721,7 @@
     Multi-image reasoning remains a significant challenge for vision-language models (VLMs). We investigate a previously overlooked phenomenon: during chain-of-thought (CoT) generation, the text-to-image (T2I) attention of reasoning VLMs exhibits diffuse "pulses": sporadic and unfocused attention patterns that fail to concentrate on task-relevant images. We further reveal a systematic positional bias in attention allocation across images. Motivated by these observations, we propose PulseFocus, a training-free, inference-time method that structures CoT reasoning into interleaved plan/focus blocks with soft attention gating. By forcing the model to explicitly plan which image to examine and then gating decode-time attention to the referenced image, PulseFocus sharpens attention focus and yields consistent improvements on multi-image benchmarks like BLINK benchmark (+3.7%) and MuirBench (+1.07%).
     </details>
 
-## 多模态智能体 (4 篇, 3.54%)
-
-- [Towards Multimodal Lifelong Understanding: A Dataset and Agentic Baseline](https://arxiv.org/pdf/2603.05484)
-  - Authors: Guo Chen, Lidong Lu, Yicheng Liu, Liangrui Dong, Lidong Zou, Jixin Lv, Zhenquan Li, Xinyi Mao, Baoqi Pei, Shihao Wang, Zhiqi Li, Karan Sapra, Fuxiao Liu, Yin-Dong Zheng, Yifei Huang, Limin Wang, Zhiding Yu, Andrew Tao, Guilin Liu, Tong Lu
-  - <details>
-    <summary>Abstract</summary>
-
-    While datasets for video understanding have scaled to hour-long durations, they typically consist of densely concatenated clips that differ from natural, unscripted daily life. To bridge this gap, we introduce MM-Lifelong, a dataset designed for Multimodal Lifelong Understanding. Comprising 181.1 hours of footage, it is structured across Day, Week, and Month scales to capture varying temporal densities. Extensive evaluations reveal two critical failure modes in current paradigms: end-to-end MLLMs suffer from a Working Memory Bottleneck due to context saturation, while representative agentic baselines experience Global Localization Collapse when navigating sparse, month-long timelines. To address this, we propose the Recursive Multimodal Agent (ReMA), which employs dynamic memory management to iteratively update a recursive belief state, significantly outperforming existing methods. Finally, we establish dataset splits designed to isolate temporal and domain biases, providing a rigorous foundation for future research in supervised learning and out-of-distribution generalization.
-    </details>
-- [Act, Think or Abstain: Complexity-Aware Adaptive Inference for Vision-Language-Action Models](https://arxiv.org/pdf/2603.05147)
-  - Authors: Riccardo Andrea Izzo, Gianluca Bardaro, Matteo Matteucci
-  - <details>
-    <summary>Abstract</summary>
-
-    Current research on Vision-Language-Action (VLA) models predominantly focuses on enhancing generalization through established reasoning techniques. While effective, these improvements invariably increase computational complexity and inference latency. Furthermore, these mechanisms are typically applied indiscriminately, resulting in the inefficient allocation of resources for trivial tasks while simultaneously failing to provide the uncertainty estimation necessary to prevent catastrophic failure on out-of-distribution tasks. Inspired by human cognition, we propose an adaptive framework that dynamically routes VLA execution based on the complexity of the perceived state. Our approach transforms the VLA's vision-language backbone into an active detection tool by projecting latent embeddings into an ensemble of parametric and non-parametric estimators. This allows the system to execute known tasks immediately (Act), reason about ambiguous scenarios (Think), and preemptively halt execution when encountering significant physical or semantic anomalies (Abstain). In our empirical analysis, we observe a phenomenon where visual embeddings alone are superior for inferring task complexity due to the semantic invariance of language. Evaluated on the LIBERO and LIBERO-PRO benchmarks as well as on a real robot, our vision-only configuration achieves 80% F1-Score using as little as 5% of training data, establishing itself as a reliable and efficient task complexity detector.
-    </details>
-- [VisionPangu: A Compact and Fine-Grained Multimodal Assistant with 1.7B Parameters](https://arxiv.org/pdf/2603.04957)
-  - Authors: Jiaxin Fan, Wenpo Song
-  - <details>
-    <summary>Abstract</summary>
-
-    Large Multimodal Models (LMMs) have achieved strong performance in vision-language understanding, yet many existing approaches rely on large-scale architectures and coarse supervision, which limits their ability to generate detailed image captions. In this work, we present VisionPangu, a compact 1.7B-parameter multimodal model designed to improve detailed image captioning through efficient multimodal alignment and high-quality supervision. Our model combines an InternVL-derived vision encoder with the OpenPangu-Embedded language backbone via a lightweight MLP projector and adopts an instruction-tuning pipeline inspired by LLaVA. By incorporating dense human-authored descriptions from the DOCCI dataset, VisionPangu improves semantic coherence and descriptive richness without relying on aggressive model scaling. Experimental results demonstrate that compact multimodal models can achieve competitive performance while producing more structured and detailed captions. The code and model weights will be publicly available at https://www.modelscope.cn/models/asdfgh007/visionpangu.
-    </details>
-- [OpenFrontier: General Navigation with Visual-Language Grounded Frontiers](https://arxiv.org/pdf/2603.05377)
-  - Authors: Esteban Padilla, Boyang Sun, Marc Pollefeys, Hermann Blum
-  - <details>
-    <summary>Abstract</summary>
-
-    Open-world navigation requires robots to make decisions in complex everyday environments while adapting to flexible task requirements. Conventional navigation approaches often rely on dense 3D reconstruction and hand-crafted goal metrics, which limits their generalization across tasks and environments. Recent advances in vision--language navigation (VLN) and vision--language--action (VLA) models enable end-to-end policies conditioned on natural language, but typically require interactive training, large-scale data collection, or task-specific fine-tuning with a mobile agent. We formulate navigation as a sparse subgoal identification and reaching problem and observe that providing visual anchoring targets for high-level semantic priors enables highly efficient goal-conditioned navigation. Based on this insight, we select navigation frontiers as semantic anchors and propose OpenFrontier, a training-free navigation framework that seamlessly integrates diverse vision--language prior models. OpenFrontier enables efficient navigation with a lightweight system design, without dense 3D mapping, policy training, or model fine-tuning. We evaluate OpenFrontier across multiple navigation benchmarks and demonstrate strong zero-shot performance, as well as effective real-world deployment on a mobile robot.
-    </details>
-
-## 数据集与基准 (4 篇, 3.54%)
+## Datasets and Benchmarks (4 papers, 3.54%)
 
 - [ORMOT: A Dataset and Framework for Omnidirectional Referring Multi-Object Tracking](https://arxiv.org/pdf/2603.05384)
   - Authors: Sijia Chen, Zihan Zhou, Yanqiu Yu, En Yu, Wenbing Tao
@@ -783,7 +752,62 @@
     We introduce WebChain, the largest open-source dataset of human-annotated trajectories on real-world websites, designed to accelerate reproducible research in web agents. It contains 31,725 trajectories and 318k steps, featuring a core Triple Alignment of visual, structural, and action data to provide rich, multi-modal supervision. The data is collected via a scalable pipeline that ensures coverage of complex, high-value tasks often missed by synthetic methods. Leveraging this dataset, we propose a Dual Mid-Training recipe that decouples spatial grounding from planning, achieving state-of-the-art performance on our proposed WebChainBench and other public GUI benchmarks. Our work provides the data and insights necessary to build and rigorously evaluate the next generation of scalable web agents.
     </details>
 
-## 多模态生成建模 (3 篇, 2.65%)
+## Multimodal Agents (4 papers, 3.54%)
+
+- [Towards Multimodal Lifelong Understanding: A Dataset and Agentic Baseline](https://arxiv.org/pdf/2603.05484)
+  - Authors: Guo Chen, Lidong Lu, Yicheng Liu, Liangrui Dong, Lidong Zou, Jixin Lv, Zhenquan Li, Xinyi Mao, Baoqi Pei, Shihao Wang, Zhiqi Li, Karan Sapra, Fuxiao Liu, Yin-Dong Zheng, Yifei Huang, Limin Wang, Zhiding Yu, Andrew Tao, Guilin Liu, Tong Lu
+  - <details>
+    <summary>Abstract</summary>
+
+    While datasets for video understanding have scaled to hour-long durations, they typically consist of densely concatenated clips that differ from natural, unscripted daily life. To bridge this gap, we introduce MM-Lifelong, a dataset designed for Multimodal Lifelong Understanding. Comprising 181.1 hours of footage, it is structured across Day, Week, and Month scales to capture varying temporal densities. Extensive evaluations reveal two critical failure modes in current paradigms: end-to-end MLLMs suffer from a Working Memory Bottleneck due to context saturation, while representative agentic baselines experience Global Localization Collapse when navigating sparse, month-long timelines. To address this, we propose the Recursive Multimodal Agent (ReMA), which employs dynamic memory management to iteratively update a recursive belief state, significantly outperforming existing methods. Finally, we establish dataset splits designed to isolate temporal and domain biases, providing a rigorous foundation for future research in supervised learning and out-of-distribution generalization.
+    </details>
+- [Act, Think or Abstain: Complexity-Aware Adaptive Inference for Vision-Language-Action Models](https://arxiv.org/pdf/2603.05147)
+  - Authors: Riccardo Andrea Izzo, Gianluca Bardaro, Matteo Matteucci
+  - <details>
+    <summary>Abstract</summary>
+
+    Current research on Vision-Language-Action (VLA) models predominantly focuses on enhancing generalization through established reasoning techniques. While effective, these improvements invariably increase computational complexity and inference latency. Furthermore, these mechanisms are typically applied indiscriminately, resulting in the inefficient allocation of resources for trivial tasks while simultaneously failing to provide the uncertainty estimation necessary to prevent catastrophic failure on out-of-distribution tasks. Inspired by human cognition, we propose an adaptive framework that dynamically routes VLA execution based on the complexity of the perceived state. Our approach transforms the VLA's vision-language backbone into an active detection tool by projecting latent embeddings into an ensemble of parametric and non-parametric estimators. This allows the system to execute known tasks immediately (Act), reason about ambiguous scenarios (Think), and preemptively halt execution when encountering significant physical or semantic anomalies (Abstain). In our empirical analysis, we observe a phenomenon where visual embeddings alone are superior for inferring task complexity due to the semantic invariance of language. Evaluated on the LIBERO and LIBERO-PRO benchmarks as well as on a real robot, our vision-only configuration achieves 80% F1-Score using as little as 5% of training data, establishing itself as a reliable and efficient task complexity detector.
+    </details>
+- [VisionPangu: A Compact and Fine-Grained Multimodal Assistant with 1.7B Parameters](https://arxiv.org/pdf/2603.04957)
+  - Authors: Jiaxin Fan, Wenpo Song
+  - <details>
+    <summary>Abstract</summary>
+
+    Large Multimodal Models (LMMs) have achieved strong performance in vision-language understanding, yet many existing approaches rely on large-scale architectures and coarse supervision, which limits their ability to generate detailed image captions. In this work, we present VisionPangu, a compact 1.7B-parameter multimodal model designed to improve detailed image captioning through efficient multimodal alignment and high-quality supervision. Our model combines an InternVL-derived vision encoder with the OpenPangu-Embedded language backbone via a lightweight MLP projector and adopts an instruction-tuning pipeline inspired by LLaVA. By incorporating dense human-authored descriptions from the DOCCI dataset, VisionPangu improves semantic coherence and descriptive richness without relying on aggressive model scaling. Experimental results demonstrate that compact multimodal models can achieve competitive performance while producing more structured and detailed captions. The code and model weights will be publicly available at https://www.modelscope.cn/models/asdfgh007/visionpangu.
+    </details>
+- [OpenFrontier: General Navigation with Visual-Language Grounded Frontiers](https://arxiv.org/pdf/2603.05377)
+  - Authors: Esteban Padilla, Boyang Sun, Marc Pollefeys, Hermann Blum
+  - <details>
+    <summary>Abstract</summary>
+
+    Open-world navigation requires robots to make decisions in complex everyday environments while adapting to flexible task requirements. Conventional navigation approaches often rely on dense 3D reconstruction and hand-crafted goal metrics, which limits their generalization across tasks and environments. Recent advances in vision--language navigation (VLN) and vision--language--action (VLA) models enable end-to-end policies conditioned on natural language, but typically require interactive training, large-scale data collection, or task-specific fine-tuning with a mobile agent. We formulate navigation as a sparse subgoal identification and reaching problem and observe that providing visual anchoring targets for high-level semantic priors enables highly efficient goal-conditioned navigation. Based on this insight, we select navigation frontiers as semantic anchors and propose OpenFrontier, a training-free navigation framework that seamlessly integrates diverse vision--language prior models. OpenFrontier enables efficient navigation with a lightweight system design, without dense 3D mapping, policy training, or model fine-tuning. We evaluate OpenFrontier across multiple navigation benchmarks and demonstrate strong zero-shot performance, as well as effective real-world deployment on a mobile robot.
+    </details>
+
+## Agents and Planning (3 papers, 2.65%)
+
+- [Planning in 8 Tokens: A Compact Discrete Tokenizer for Latent World Model](https://arxiv.org/pdf/2603.05438)
+  - Authors: Dongwon Kim, Gawon Seo, Jinsung Lee, Minsu Cho, Suha Kwak
+  - <details>
+    <summary>Abstract</summary>
+
+    World models provide a powerful framework for simulating environment dynamics conditioned on actions or instructions, enabling downstream tasks such as action planning or policy learning. Recent approaches leverage world models as learned simulators, but its application to decision-time planning remains computationally prohibitive for real-time control. A key bottleneck lies in latent representations: conventional tokenizers encode each observation into hundreds of tokens, making planning both slow and resource-intensive. To address this, we propose CompACT, a discrete tokenizer that compresses each observation into as few as 8 tokens, drastically reducing computational cost while preserving essential information for planning. An action-conditioned world model that occupies CompACT tokenizer achieves competitive planning performance with orders-of-magnitude faster planning, offering a practical step toward real-world deployment of world models.
+    </details>
+- [Think, Then Verify: A Hypothesis-Verification Multi-Agent Framework for Long Video Understanding](https://arxiv.org/pdf/2603.04977)
+  - Authors: Zheng Wang, Haoran Chen, Haoxuan Qin, Zhipeng Wei, Tianwen Qian, Cong Bai
+  - <details>
+    <summary>Abstract</summary>
+
+    Long video understanding is challenging due to dense visual redundancy, long-range temporal dependencies, and the tendency of chain-of-thought and retrieval-based agents to accumulate semantic drift and correlation-driven errors. We argue that long-video reasoning should begin not with reactive retrieval, but with deliberate task formulation: the model must first articulate what must be true in the video for each candidate answer to hold. This thinking-before-finding principle motivates VideoHV-Agent, a framework that reformulates video question answering as a structured hypothesis-verification process. Based on video summaries, a Thinker rewrites answer candidates into testable hypotheses, a Judge derives a discriminative clue specifying what evidence must be checked, a Verifier grounds and tests the clue using localized, fine-grained video content, and an Answer agent integrates validated evidence to produce the final answer. Experiments on three long-video understanding benchmarks show that VideoHV-Agent achieves state-of-the-art accuracy while providing enhanced interpretability, improved logical soundness, and lower computational cost. We make our code publicly available at: https://github.com/Haorane/VideoHV-Agent.
+    </details>
+- [TimeWarp: Evaluating Web Agents by Revisiting the Past](https://arxiv.org/pdf/2603.04949)
+  - Authors: Md Farhan Ishmam, Kenneth Marino
+  - <details>
+    <summary>Abstract</summary>
+
+    The improvement of web agents on current benchmarks raises the question: Do today's agents perform just as well when the web changes? We introduce TimeWarp, a benchmark that emulates the evolving web using containerized environments that vary in UI, design, and layout. TimeWarp consists of three web environments, each with six UI versions spanning different eras of the internet, paired with a set of complex, realistic tasks requiring different forms of web navigation. Our experiments reveal web agents' vulnerability to changes and the limitations of behavior cloning (BC) on single-version trajectories. To address this, we propose TimeTraj, a simple yet effective algorithm that uses plan distillation to collect trajectories across multiple versions. By training agents on teacher rollouts using our BC-variant, we achieve substantial performance gains: $20.4\%\rightarrow37.7\%$ for Qwen-3 4B and $0\%\rightarrow27.0\%$ for Llama-3.1 8B models. We hope our work helps researchers study generalization across web designs and unlock a new paradigm for collecting plans rather than trajectories, thereby improving the robustness of web agents.
+    </details>
+
+## Multimodal Generative Modeling (3 papers, 2.65%)
 
 - [Accelerating Text-to-Video Generation with Calibrated Sparse Attention](https://arxiv.org/pdf/2603.05503)
   - Authors: Shai Yehezkel, Shahar Yadin, Noam Elata, Yaron Ostrovsky-Berman, Bahjat Kawar
@@ -807,7 +831,7 @@
     Image-to-3D generation faces inherent semantic ambiguity under occlusion, where partial observation alone is often insufficient to determine object category. In this work, we formalize text-driven amodal 3D generation, where text prompts steer the completion of unseen regions while strictly preserving input observation. Crucially, we identify that these objectives demand distinct control granularities: rigid control for the observation versus relaxed structural control for the prompt. To this end, we propose RelaxFlow, a training-free dual-branch framework that decouples control granularity via a Multi-Prior Consensus Module and a Relaxation Mechanism. Theoretically, we prove that our relaxation is equivalent to applying a low-pass filter on the generative vector field, which suppresses high-frequency instance details to isolate geometric structure that accommodates the observation. To facilitate evaluation, we introduce two diagnostic benchmarks, ExtremeOcc-3D and AmbiSem-3D. Extensive experiments demonstrate that RelaxFlow successfully steers the generation of unseen regions to match the prompt intent without compromising visual fidelity.
     </details>
 
-## 检索、知识与RAG (3 篇, 2.65%)
+## Retrieval, Knowledge, and RAG (3 papers, 2.65%)
 
 - [MobileFetalCLIP: Selective Repulsive Knowledge Distillation for Mobile Fetal Ultrasound Analysis](https://arxiv.org/pdf/2603.05421)
   - Authors: Numan Saeed, Fadillah Adamsyah Maani, Mohammad Yaqub
@@ -829,28 +853,4 @@
     <summary>Abstract</summary>
 
     Composed Image Retrieval (CIR) has made significant progress, yet current benchmarks are limited to single ground-truth answers and lack the annotations needed to evaluate false positive avoidance, robustness and multi-image reasoning. We present PinPoint, a comprehensive real world benchmark with 7,635 queries and 329K relevance judgments across 23 query categories. PinPoint advances the field by providing: (1) multiple correct answers (averaging 9.1 per query) (2) explicit hard negatives, (3) six instruction paraphrases per query for robustness testing, (4) multi-image composition support (13.4% of queries), and (5) demographic metadata for fairness evaluation. Based on our analysis of 20+ methods across 4 different major paradigms, we uncover three significant drawbacks: The best methods while achieving mAP@10 of 28.5%, still retrieves irrelevant results (hard negatives) 9% of the time. The best models also exhibit 25.1% performance variation across paraphrases, indicating significant potential for enhancing current CIR techniques. Multi-image queries performs 40 to 70% worse across different methods. To overcome these new issues uncovered by our evaluation framework, we propose a training-free reranking method based on an off-the-shelf MLLM that can be applied to any existing system to bridge the gap. We release the complete dataset, including all images, queries, annotations, retrieval index, and benchmarking code.
-    </details>
-
-## 通用智能体与规划 (3 篇, 2.65%)
-
-- [Planning in 8 Tokens: A Compact Discrete Tokenizer for Latent World Model](https://arxiv.org/pdf/2603.05438)
-  - Authors: Dongwon Kim, Gawon Seo, Jinsung Lee, Minsu Cho, Suha Kwak
-  - <details>
-    <summary>Abstract</summary>
-
-    World models provide a powerful framework for simulating environment dynamics conditioned on actions or instructions, enabling downstream tasks such as action planning or policy learning. Recent approaches leverage world models as learned simulators, but its application to decision-time planning remains computationally prohibitive for real-time control. A key bottleneck lies in latent representations: conventional tokenizers encode each observation into hundreds of tokens, making planning both slow and resource-intensive. To address this, we propose CompACT, a discrete tokenizer that compresses each observation into as few as 8 tokens, drastically reducing computational cost while preserving essential information for planning. An action-conditioned world model that occupies CompACT tokenizer achieves competitive planning performance with orders-of-magnitude faster planning, offering a practical step toward real-world deployment of world models.
-    </details>
-- [Think, Then Verify: A Hypothesis-Verification Multi-Agent Framework for Long Video Understanding](https://arxiv.org/pdf/2603.04977)
-  - Authors: Zheng Wang, Haoran Chen, Haoxuan Qin, Zhipeng Wei, Tianwen Qian, Cong Bai
-  - <details>
-    <summary>Abstract</summary>
-
-    Long video understanding is challenging due to dense visual redundancy, long-range temporal dependencies, and the tendency of chain-of-thought and retrieval-based agents to accumulate semantic drift and correlation-driven errors. We argue that long-video reasoning should begin not with reactive retrieval, but with deliberate task formulation: the model must first articulate what must be true in the video for each candidate answer to hold. This thinking-before-finding principle motivates VideoHV-Agent, a framework that reformulates video question answering as a structured hypothesis-verification process. Based on video summaries, a Thinker rewrites answer candidates into testable hypotheses, a Judge derives a discriminative clue specifying what evidence must be checked, a Verifier grounds and tests the clue using localized, fine-grained video content, and an Answer agent integrates validated evidence to produce the final answer. Experiments on three long-video understanding benchmarks show that VideoHV-Agent achieves state-of-the-art accuracy while providing enhanced interpretability, improved logical soundness, and lower computational cost. We make our code publicly available at: https://github.com/Haorane/VideoHV-Agent.
-    </details>
-- [TimeWarp: Evaluating Web Agents by Revisiting the Past](https://arxiv.org/pdf/2603.04949)
-  - Authors: Md Farhan Ishmam, Kenneth Marino
-  - <details>
-    <summary>Abstract</summary>
-
-    The improvement of web agents on current benchmarks raises the question: Do today's agents perform just as well when the web changes? We introduce TimeWarp, a benchmark that emulates the evolving web using containerized environments that vary in UI, design, and layout. TimeWarp consists of three web environments, each with six UI versions spanning different eras of the internet, paired with a set of complex, realistic tasks requiring different forms of web navigation. Our experiments reveal web agents' vulnerability to changes and the limitations of behavior cloning (BC) on single-version trajectories. To address this, we propose TimeTraj, a simple yet effective algorithm that uses plan distillation to collect trajectories across multiple versions. By training agents on teacher rollouts using our BC-variant, we achieve substantial performance gains: $20.4\%\rightarrow37.7\%$ for Qwen-3 4B and $0\%\rightarrow27.0\%$ for Llama-3.1 8B models. We hope our work helps researchers study generalization across web designs and unlock a new paradigm for collecting plans rather than trajectories, thereby improving the robustness of web agents.
     </details>

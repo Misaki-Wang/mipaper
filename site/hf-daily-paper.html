@@ -33,9 +33,9 @@
             <a class="page-nav-link" href="./like.html">Like</a>
           </div>
           <p class="eyebrow">HF DAILY PAPER</p>
-          <h1>Hugging Face 每日论文分支</h1>
+          <h1>Hugging Face Daily Papers</h1>
           <p class="hero-text">
-            参考 <code>hf_bot</code> 的“按天归档 + 首页浏览”方式，单独抓取 <code>huggingface.co/papers/date/*</code> 页面，并接入你现有的 topic 分类体系。
+            Inspired by <code>hf_bot</code> daily archives, this branch crawls <code>huggingface.co/papers/date/*</code> directly and plugs the results into the same topic taxonomy.
           </p>
           <div id="hf-hero-signals" class="hero-signals"></div>
           <div class="hero-actions">
@@ -73,7 +73,7 @@
       <section class="glass-card home-board reveal">
         <div class="section-heading">
           <p class="eyebrow">HF ARCHIVE</p>
-          <h2>日期归档</h2>
+          <h2>Date Archive</h2>
           <p id="hf-board-summary" class="home-board-summary">-</p>
         </div>
         <div id="hf-home-cards" class="home-categories"></div>
@@ -84,7 +84,7 @@
           <div class="glass-card sidebar-header reveal">
             <div>
               <p class="eyebrow">HF DAILY RAIL</p>
-              <h2>筛选工具栏</h2>
+              <h2>Filters</h2>
             </div>
             <button
               id="hf-sidebar-toggle"
@@ -93,40 +93,40 @@
               aria-expanded="true"
             >
               <span id="hf-sidebar-toggle-icon" class="sidebar-toggle-icon">‹</span>
-              <span id="hf-sidebar-toggle-label" class="sidebar-toggle-label">收起</span>
+              <span id="hf-sidebar-toggle-label" class="sidebar-toggle-label">Collapse</span>
             </button>
           </div>
 
           <div id="hf-sidebar-stack" class="sidebar-stack">
             <section class="glass-card controls reveal">
               <div class="control-block">
-                <label for="hf-report-select">日期</label>
+                <label for="hf-report-select">Date</label>
                 <select id="hf-report-select" class="control-input"></select>
               </div>
               <div class="control-block">
-                <label for="hf-topic-filter">Topic 过滤</label>
+                <label for="hf-topic-filter">Topic Filter</label>
                 <select id="hf-topic-filter" class="control-input">
-                  <option value="">全部 Topic</option>
+                  <option value="">All Topics</option>
                 </select>
               </div>
               <div class="control-block">
-                <label for="hf-author-filter">作者筛选</label>
+                <label for="hf-author-filter">Author Filter</label>
                 <input id="hf-author-filter" class="control-input" type="search" placeholder="Author name" />
               </div>
               <div class="control-block">
-                <label for="hf-search-input">标题搜索</label>
+                <label for="hf-search-input">Title Search</label>
                 <input id="hf-search-input" class="control-input" type="search" placeholder="Search title keywords" />
               </div>
               <label class="checkbox-row" for="hf-focus-only">
                 <input id="hf-focus-only" type="checkbox" />
-                <span>只看重点关注 topic</span>
+                <span>Focus topics only</span>
               </label>
             </section>
 
             <section class="glass-card report-rail reveal">
               <div class="section-heading">
                 <p class="eyebrow">RECENT DAYS</p>
-                <h2>最近日期</h2>
+                <h2>Recent Dates</h2>
               </div>
               <div id="hf-report-rail" class="report-rail-list"></div>
             </section>
@@ -134,7 +134,7 @@
             <section class="glass-card trend-panel reveal">
               <div class="section-heading">
                 <p class="eyebrow">TOPIC MIX</p>
-                <h2>Topic 占比</h2>
+                <h2>Topic Distribution</h2>
               </div>
               <div id="hf-distribution-list" class="distribution-list"></div>
             </section>
@@ -146,7 +146,7 @@
             <div class="overview-top">
               <div>
                 <p class="eyebrow">HF OVERVIEW</p>
-                <h2 id="hf-overview-title">日报概览</h2>
+                <h2 id="hf-overview-title">Daily Overview</h2>
               </div>
               <a id="hf-source-link" class="link-chip" href="#" target="_blank" rel="noreferrer">HF Source</a>
             </div>
@@ -173,7 +173,7 @@
           <section class="glass-card tag-panel reveal">
             <div class="section-heading">
               <p class="eyebrow">TAG MAP</p>
-              <h2>当前划分标签</h2>
+              <h2>Current Tags</h2>
             </div>
             <div id="hf-tag-map" class="tag-map"></div>
           </section>
@@ -181,7 +181,7 @@
           <section class="glass-card conference-panel reveal">
             <div class="section-heading">
               <p class="eyebrow">SPOTLIGHT</p>
-              <h2>热点论文</h2>
+              <h2>Top Papers</h2>
             </div>
             <div id="hf-spotlight" class="conference-spotlight"></div>
           </section>
@@ -190,7 +190,7 @@
             <div class="results-top">
               <div>
                 <p class="eyebrow">RESULTS</p>
-                <h2 id="hf-results-title">当前共浏览 0 篇论文</h2>
+                <h2 id="hf-results-title">0 papers in view</h2>
               </div>
               <button id="hf-reset-filters" class="link-chip button-link" type="button">Reset filters</button>
             </div>

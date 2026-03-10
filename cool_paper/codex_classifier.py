@@ -4,10 +4,11 @@ import json
 import subprocess
 import tempfile
 from pathlib import Path
-from typing import Dict, List, Optional, Sequence
+from typing import Any, Dict, List, Optional, Sequence, TypeVar
 
-from cool_paper.models import Paper
 from cool_paper.topics import OTHER_TOPIC, TOPICS, TOPIC_LABELS, assign_topics
+
+T = TypeVar("T")
 
 TOPIC_DESCRIPTIONS: Dict[str, str] = {
     "generative_foundations": "only for titles clearly about generative-model families such as diffusion, autoregressive, flow, latent-variable, or world models, with theory, mechanisms, guarantees, or foundations",
@@ -31,12 +32,12 @@ class CodexClassificationError(RuntimeError):
 
 
 def classify_with_codex(
-    papers: Sequence[Paper],
+    papers: Sequence[T],
     *,
     model: Optional[str] = None,
     timeout_seconds: int = 600,
     fallback_to_rules: bool = True,
-) -> List[Paper]:
+) -> List[T]:
     if not papers:
         return list(papers)
 
@@ -74,7 +75,7 @@ def classify_with_codex(
 
 
 def run_codex_exec(
-    papers: Sequence[Paper],
+    papers: Sequence[Any],
     *,
     model: Optional[str],
     timeout_seconds: int,
@@ -130,7 +131,7 @@ def run_codex_exec(
         return output_path.read_text(encoding="utf-8").strip()
 
 
-def build_prompt(papers: Sequence[Paper]) -> str:
+def build_prompt(papers: Sequence[Any]) -> str:
     topic_block = []
     for topic in TOPICS:
         topic_block.append(f"- {topic.key}: {topic.label}. {TOPIC_DESCRIPTIONS[topic.key]}")
@@ -142,7 +143,7 @@ def build_prompt(papers: Sequence[Paper]) -> str:
         indent=2,
     )
 
-    return f"""You are classifying arXiv cs.AI paper titles for a researcher.
+    return f"""You are classifying AI paper titles for a researcher.
 
 Assign exactly one topic_key to each paper.
 Prioritize these focus topics when they clearly apply:
@@ -192,7 +193,7 @@ def build_output_schema() -> dict:
     }
 
 
-def validate_assignments(payload: dict, papers: Sequence[Paper]) -> Dict[str, dict]:
+def validate_assignments(payload: dict, papers: Sequence[Any]) -> Dict[str, dict]:
     if not isinstance(payload, dict) or not isinstance(payload.get("papers"), list):
         raise CodexClassificationError("Codex output must be an object with a 'papers' array")
 

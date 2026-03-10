@@ -17,7 +17,7 @@ class ConferenceReportingTest(unittest.TestCase):
                 subjects=["Oral"],
                 abstract="A conference abstract.",
                 topic_key="multimodal_generative",
-                topic_label="多模态生成建模",
+                topic_label="Multimodal Generative Modeling",
             )
         ]
 
@@ -34,9 +34,9 @@ class ConferenceReportingTest(unittest.TestCase):
             fetch_metadata={"declared_total": 10, "requested_show": 10, "is_complete": False},
         )
 
-        self.assertIn("## Subject 占比", markdown)
-        self.assertIn("Oral: 1 篇 (100.00%)", markdown)
-        self.assertIn("抓取状态: partial", markdown)
+        self.assertIn("## Subject Distribution", markdown)
+        self.assertIn("Oral: 1 papers (100.00%)", markdown)
+        self.assertIn("Capture Status: partial", markdown)
         self.assertEqual("conference", payload["report_kind"])
         self.assertEqual("ICLR", payload["venue_series"])
         self.assertEqual("2026", payload["venue_year"])

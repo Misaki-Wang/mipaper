@@ -107,9 +107,9 @@ function bindSidebarToggle() {
 function applySidebarState(collapsed) {
   layoutRoot.classList.toggle("sidebar-collapsed", collapsed);
   sidebarToggleButton.setAttribute("aria-expanded", String(!collapsed));
-  sidebarToggleButton.setAttribute("aria-label", collapsed ? "展开侧边工具栏" : "收起侧边工具栏");
-  sidebarToggleButton.title = collapsed ? "展开侧边工具栏" : "收起侧边工具栏";
-  sidebarToggleLabel.textContent = collapsed ? "展开" : "收起";
+  sidebarToggleButton.setAttribute("aria-label", collapsed ? "Expand sidebar" : "Collapse sidebar");
+  sidebarToggleButton.title = collapsed ? "Expand sidebar" : "Collapse sidebar";
+  sidebarToggleLabel.textContent = collapsed ? "Expand" : "Collapse";
   sidebarToggleIcon.textContent = collapsed ? "›" : "‹";
   localStorage.setItem("cool-paper-sidebar", collapsed ? "collapsed" : "expanded");
 }
@@ -208,10 +208,10 @@ function populateScopeFilters(reports) {
     right.localeCompare(left)
   );
 
-  domainFilter.innerHTML = `<option value="">全部 Domain</option>${domains
+  domainFilter.innerHTML = `<option value="">All Domains</option>${domains
     .map((domain) => `<option value="${escapeAttribute(domain)}">${escapeHtml(domain)}</option>`)
     .join("")}`;
-  dateFilter.innerHTML = `<option value="">全部 Date</option>${dates
+  dateFilter.innerHTML = `<option value="">All Dates</option>${dates
     .map((date) => `<option value="${escapeAttribute(date)}">${escapeHtml(date)}</option>`)
     .join("")}`;
 }
@@ -250,7 +250,7 @@ async function handleReportScopeChange() {
     state.report = null;
     state.currentPath = "";
     updateHero(state.manifest);
-    renderEmpty("当前 tag 条件下没有日报快照。");
+    renderEmpty("No daily snapshots match the current tags.");
     return;
   }
 
@@ -265,7 +265,7 @@ async function handleReportScopeChange() {
 }
 
 function populateTopicFilter(topics) {
-  topicFilter.innerHTML = `<option value="">全部 Topic</option>${topics
+  topicFilter.innerHTML = `<option value="">All Topics</option>${topics
     .map(
       (topic) =>
         `<option value="${escapeHtml(topic.topic_label)}">${escapeHtml(topic.topic_label)} · ${topic.count}</option>`
@@ -290,8 +290,8 @@ function renderHomeCategories(manifest, activePath = "", scopedReports = null) {
   const cards = getHomeCategoryCards(manifest, scopedReports);
 
   if (!cards.length) {
-    summary.textContent = scopedReports ? "当前 tag 条件下没有可用分类快照。" : "还没有可用分类快照。";
-    root.innerHTML = `<div class="empty-state">先生成 cs.AI / cs.CL / cs.CV 的日报，再刷新首页。</div>`;
+    summary.textContent = scopedReports ? "No report snapshots match the current tags." : "No report snapshots are available yet.";
+    root.innerHTML = `<div class="empty-state">Generate the cs.AI, cs.CL, and cs.CV reports first, then refresh the homepage.</div>`;
     return;
   }
 
@@ -299,8 +299,8 @@ function renderHomeCategories(manifest, activePath = "", scopedReports = null) {
   const uniqueDates = [...new Set(cards.map((item) => item.report_date))];
   summary.textContent =
     uniqueDates.length === 1
-      ? `${uniqueDates[0]} 共覆盖 ${cards.length} 个分类，总计 ${totalPapers} 篇论文。点击卡片切换当前报告。`
-      : `当前首页汇总 ${cards.length} 个分类的最近快照，共 ${totalPapers} 篇论文。点击卡片切换当前报告。`;
+      ? `${uniqueDates[0]} covers ${cards.length} categories and ${totalPapers} papers in total. Click a card to switch the active report.`
+      : `This homepage aggregates recent snapshots from ${cards.length} categories, with ${totalPapers} papers in total. Click a card to switch the active report.`;
 
   root.innerHTML = cards
     .map((report) => {
@@ -386,22 +386,22 @@ function renderReport() {
 }
 
 function renderTagMap(report) {
-  const topTopic = report.topic_distribution?.[0]?.topic_label || "其他 AI";
+  const topTopic = report.topic_distribution?.[0]?.topic_label || "Other AI";
   document.querySelector("#daily-tag-map").innerHTML = [
     {
       label: "Domain",
       value: report.category || "-",
-      meta: state.domain ? "当前筛选中的 domain" : "当前日报 domain",
+      meta: state.domain ? "current filtered domain" : "current report domain",
     },
     {
       label: "Date",
       value: report.report_date || "-",
-      meta: state.date ? "当前筛选中的日期" : "当前日报日期",
+      meta: state.date ? "current filtered date" : "current report date",
     },
     {
       label: "Topic",
       value: state.topic || topTopic,
-      meta: state.topic ? "当前筛选中的 topic" : "当前主导 topic",
+      meta: state.topic ? "current filtered topic" : "current dominant topic",
     },
   ]
     .map(
@@ -511,16 +511,16 @@ function renderOverview(report) {
   const focusShare = report.focus_topics.reduce((sum, item) => sum + item.share, 0);
   const topicCount = report.topic_distribution.filter((item) => item.count > 0).length;
 
-  document.querySelector("#overview-title").textContent = `${report.report_date} · ${report.category} 日报概览`;
+  document.querySelector("#overview-title").textContent = `${report.report_date} · ${report.category} Daily Overview`;
   const sourceLink = document.querySelector("#source-link");
   sourceLink.href = report.source_url;
   sourceLink.textContent = report.classifier === "codex" ? "Source + Codex" : "Source + Rules";
 
   document.querySelector("#overview-summary").textContent = top
-    ? `${top.topic_label} 是当天主导方向，占比 ${top.share.toFixed(2)}%，共 ${top.count} 篇。`
+    ? `${top.topic_label} is the leading topic today, accounting for ${top.share.toFixed(2)}%, with ${top.count} papers.`
     : "-";
-  document.querySelector("#focus-summary").textContent = `${focusTotal} 篇落在你的重点方向，占总量 ${focusShare.toFixed(2)}%。`;
-  document.querySelector("#breadth-summary").textContent = `当天共覆盖 ${topicCount} 个 topic，分类器为 ${report.classifier}。`;
+  document.querySelector("#focus-summary").textContent = `${focusTotal} papers fall into your focus topics, accounting for ${focusShare.toFixed(2)}% of the total.`;
+  document.querySelector("#breadth-summary").textContent = `The report covers ${topicCount} topics today, using the ${report.classifier} classifier.`;
 }
 
 function renderAtlas(report) {
@@ -650,7 +650,7 @@ function renderFeatureStage(report, sections) {
   const leadRoot = document.querySelector("#lead-feature");
 
   if (!leadPaper) {
-    leadRoot.innerHTML = `<div class="empty-state">没有可用于展示的 paper。</div>`;
+    leadRoot.innerHTML = `<div class="empty-state">No paper is available for display.</div>`;
     return;
   }
 
@@ -687,7 +687,7 @@ function renderSpotlight(report, sections) {
     .slice(0, 6);
 
   if (!focusPapers.length) {
-    root.innerHTML = `<div class="spotlight-empty">当天没有命中重点方向的 paper，可以优先看 Lead Feature 和 Topic Navigator 里的边界类别。</div>`;
+    root.innerHTML = `<div class="spotlight-empty">No paper hits the focus topics today. Start with the lead feature and nearby categories in the topic navigator.</div>`;
     return;
   }
 
@@ -718,8 +718,8 @@ function renderResultsStrip(report, sections) {
   const visibleTopics = sections.length;
 
   document.querySelector("#results-title").textContent = activeFilters.length
-    ? `已筛出 ${visiblePapers.length} 篇论文`
-    : `当前共浏览 ${report.total_papers} 篇论文`;
+    ? `${visiblePapers.length} papers visible after filtering`
+    : `${report.total_papers} papers in view`;
 
   document.querySelector("#results-stats").innerHTML = [
     {
@@ -766,7 +766,7 @@ function renderTopicSections(report, sections) {
   root.innerHTML = "";
 
   if (!sections.length) {
-    root.innerHTML = `<section class="glass-card empty-state">当前过滤条件下没有结果。</section>`;
+    root.innerHTML = `<section class="glass-card empty-state">No results match the current filters.</section>`;
     return;
   }
 
@@ -807,7 +807,7 @@ function renderTopicSections(report, sections) {
     });
 
     if (!restPapers.length) {
-      paperList.innerHTML = `<div class="empty-state">该 topic 当天只有一篇 paper。</div>`;
+      paperList.innerHTML = `<div class="empty-state">This topic has only one paper today.</div>`;
     }
 
     root.appendChild(section);
@@ -908,16 +908,16 @@ function hasActiveFilters() {
 
 function buildCadenceSummary(reports) {
   if (!reports.length) {
-    return "还没有可用日报。";
+    return "No daily reports are available yet.";
   }
   if (reports.length === 1) {
-    return "当前只有 1 份日报，趋势条会在后续积累时自动展开。";
+    return "Only one report is available so far. The cadence chart will expand automatically as more reports accumulate.";
   }
   const latest = reports[reports.length - 1];
   const previous = reports[reports.length - 2];
   const delta = latest.total_papers - previous.total_papers;
-  const direction = delta === 0 ? "持平" : delta > 0 ? `较前一日增加 ${delta}` : `较前一日减少 ${Math.abs(delta)}`;
-  return `${latest.report_date} 共 ${latest.total_papers} 篇，${direction} 篇。`;
+  const direction = delta === 0 ? "unchanged" : delta > 0 ? `increased by ${delta}` : `decreased by ${Math.abs(delta)}`;
+  return `${latest.report_date} has ${latest.total_papers} papers, ${direction}.`;
 }
 
 function renderTopicFlags(topicKey, topic) {
@@ -1029,12 +1029,12 @@ function renderPaperDetails(paper) {
   `;
 }
 
-function renderEmpty(message = "还没有可用分类快照。") {
+function renderEmpty(message = "No report snapshots are available yet.") {
   document.querySelector("#home-board-summary").textContent = message;
   document.querySelector("#home-categories").innerHTML =
-    `<div class="empty-state">还没有可用日报。先运行抓取和报告生成脚本，再执行站点数据构建。</div>`;
+    `<div class="empty-state">No daily reports are available yet. Run the fetch and report generation scripts first, then rebuild site data.</div>`;
   document.querySelector("#topic-sections").innerHTML =
-    `<section class="glass-card empty-state">还没有可用日报。先运行抓取和报告生成脚本，再执行站点数据构建。</section>`;
+    `<section class="glass-card empty-state">No daily reports are available yet. Run the fetch and report generation scripts first, then rebuild site data.</section>`;
   const tagMap = document.querySelector("#daily-tag-map");
   if (tagMap) {
     tagMap.innerHTML = "";
@@ -1044,7 +1044,7 @@ function renderEmpty(message = "还没有可用分类快照。") {
 function renderFatal(error) {
   const message = error instanceof Error ? error.message : String(error);
   document.querySelector("#topic-sections").innerHTML =
-    `<section class="glass-card empty-state">站点加载失败：${escapeHtml(message)}</section>`;
+    `<section class="glass-card empty-state">Site load failed: ${escapeHtml(message)}</section>`;
 }
 
 async function fetchJson(url) {

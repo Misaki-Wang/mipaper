@@ -1,36 +1,36 @@
-# cs.CL 每日论文分类报告 (2026-03-06)
+# cs.CL Daily Paper Classification Report (2026-03-06)
 
-- 数据来源: https://papers.cool/arxiv/cs.CL?date=2026-03-06&show=1000
-- 分类方式: 基于标题关键词的启发式 topic 分类
-- 分类器: rule
-- 论文总数: 115
+- Source: https://papers.cool/arxiv/cs.CL?date=2026-03-06&show=1000
+- Classification: heuristic topic assignment from title keywords
+- Classifier: rule
+- Total Papers: 115
 
-## 重点关注 Topic
+## Focus Topics
 
-- 生成模型理论基础: 0 篇 (0.00%)
-- 多模态生成建模: 0 篇 (0.00%)
-- 多模态智能体: 1 篇 (0.87%)
+- Generative Foundations: 0 papers (0.00%)
+- Multimodal Generative Modeling: 0 papers (0.00%)
+- Multimodal Agents: 1 papers (0.87%)
 
-## Topic 占比分析
+## Topic Distribution Analysis
 
-- 大模型与语言: 42 篇 (36.52%)
-- 推理、对齐与评测: 17 篇 (14.78%)
-- 其他 AI: 13 篇 (11.30%)
-- 数据集与基准: 9 篇 (7.83%)
-- 学习、优化与理论: 8 篇 (6.96%)
-- 检索、知识与RAG: 8 篇 (6.96%)
-- 医疗、科学与行业应用: 6 篇 (5.22%)
-- 多模态理解与视觉: 6 篇 (5.22%)
-- 通用智能体与规划: 5 篇 (4.35%)
-- 多模态智能体: 1 篇 (0.87%)
+- LLMs and Language: 42 papers (36.52%)
+- Reasoning, Alignment, and Evaluation: 17 papers (14.78%)
+- Other AI: 13 papers (11.30%)
+- Datasets and Benchmarks: 9 papers (7.83%)
+- Learning, Optimization, and Theory: 8 papers (6.96%)
+- Retrieval, Knowledge, and RAG: 8 papers (6.96%)
+- Domain Applications: 6 papers (5.22%)
+- Multimodal Understanding and Vision: 6 papers (5.22%)
+- Agents and Planning: 5 papers (4.35%)
+- Multimodal Agents: 1 papers (0.87%)
 
-### 简析
+### Brief Notes
 
-- 当天数量最多的是“大模型与语言”，共 42 篇，占 36.52%。
-- 前 3 个 topic 合计占 62.60%，分布相对集中。
-- 仅出现 1 篇的长尾 topic 有 1 个。
+- The largest topic today is “LLMs and Language”, with 42 papers, accounting for 36.52%。
+- The top 3 topics account for 62.60%，concentrated。
+- Long-tail topics with only one paper: 1 items。
 
-## 大模型与语言 (42 篇, 36.52%)
+## LLMs and Language (42 papers, 36.52%)
 
 - [Ensembling Language Models with Sequential Monte Carlo](https://arxiv.org/pdf/2603.05432)
   - Authors: Robin Shing Moon Chan, Tianyu Liu, Samuel Kiegeland, Clemente Pasti, Jacob Hoover Vigly, Timothy J. O'Donnell, Ryan Cotterell, Tim Vieira
@@ -327,7 +327,7 @@
     Traditional service quality metrics often fail to capture the nuanced drivers of passenger satisfaction hidden within unstructured online feedback. This study validates a Large Language Model (LLM) framework designed to extract granular insights from such data. Analyzing over 16,000 TripAdvisor reviews for EgyptAir and Emirates (2016-2025), the study utilizes a multi-stage pipeline to categorize 36 specific service issues. The analysis uncovers a stark "operational perception disconnect" for EgyptAir: despite reported operational improvements, passenger satisfaction plummeted post-2022 (ratings < 2.0). Our approach identified specific drivers missed by conventional metrics-notably poor communication during disruptions and staff conduct-and pinpointed critical sentiment erosion in key tourism markets. These findings confirm the framework's efficacy as a powerful diagnostic tool, surpassing traditional surveys by transforming unstructured passenger voices into actionable strategic intelligence for the airline and tourism sectors.
     </details>
 
-## 推理、对齐与评测 (17 篇, 14.78%)
+## Reasoning, Alignment, and Evaluation (17 papers, 14.78%)
 
 - [Reasoning Theater: Disentangling Model Beliefs from Chain-of-Thought](https://arxiv.org/pdf/2603.05488)
   - Authors: Siddharth Boppana, Annabel Ma, Max Loeffler, Raphael Sarfati, Eric Bigelow, Atticus Geiger, Owen Lewis, Jack Merullo
@@ -449,7 +449,7 @@
     With the increasing deployment of intelligent sensing technologies in highly sensitive environments such as restrooms and locker rooms, visual surveillance systems face a profound privacy-security paradox. Existing privacy-preserving approaches, including physical desensitization, encryption, and obfuscation, often compromise semantic understanding or fail to ensure mathematically provable irreversibility. Although Privacy Camera 1.0 eliminated visual data at the source to prevent leakage, it provided only textual judgments, leading to evidentiary blind spots in disputes. To address these limitations, this paper proposes a novel privacy-preserving perception framework based on the AI Flow paradigm and a collaborative edge-cloud architecture. By deploying a visual desensitizer at the edge, raw images are transformed in real time into abstract feature vectors through nonlinear mapping and stochastic noise injection under the Information Bottleneck principle, ensuring identity-sensitive information is stripped and original images are mathematically unreconstructable. The abstract representations are transmitted to the cloud for behavior recognition and semantic reconstruction via a "dynamic contour" visual language, achieving a critical balance between perception and privacy while enabling illustrative visual reference without exposing raw images.
     </details>
 
-## 其他 AI (13 篇, 11.30%)
+## Other AI (13 papers, 11.30%)
 
 - [Exploring the potential and limitations of Model Merging for Multi-Domain Adaptation in ASR](https://arxiv.org/pdf/2603.05354)
   - Authors: Carlos Carvalho, Francisco Teixeira, Thomas Rolland, Alberto Abad
@@ -543,7 +543,7 @@
     Current AI agents can flexibly invoke tools and execute complex tasks, yet their long-term advancement is hindered by the lack of systematic accumulation and transfer of skills. Without a unified mechanism for skill consolidation, agents frequently ``reinvent the wheel'', rediscovering solutions in isolated contexts without leveraging prior strategies. To overcome this limitation, we introduce SkillNet, an open infrastructure designed to create, evaluate, and organize AI skills at scale. SkillNet structures skills within a unified ontology that supports creating skills from heterogeneous sources, establishing rich relational connections, and performing multi-dimensional evaluation across Safety, Completeness, Executability, Maintainability, and Cost-awareness. Our infrastructure integrates a repository of over 200,000 skills, an interactive platform, and a versatile Python toolkit. Experimental evaluations on ALFWorld, WebShop, and ScienceWorld demonstrate that SkillNet significantly enhances agent performance, improving average rewards by 40% and reducing execution steps by 30% across multiple backbone models. By formalizing skills as evolving, composable assets, SkillNet provides a robust foundation for agents to move from transient experience to durable mastery.
     </details>
 
-## 数据集与基准 (9 篇, 7.83%)
+## Datasets and Benchmarks (9 papers, 7.83%)
 
 - [NCTB-QA: A Large-Scale Bangla Educational Question Answering Dataset and Benchmarking Performance](https://arxiv.org/pdf/2603.05462)
   - Authors: Abrar Eyasir, Tahsin Ahmed, Muhammad Ibrahim
@@ -609,7 +609,7 @@
     Standard benchmarks have become increasingly unreliable due to saturation, subjectivity, and poor generalization. We argue that evaluating model's ability to acquire information actively is important to assess model's intelligence. We propose Interactive Benchmarks, a unified evaluation paradigm that assesses model's reasoning ability in an interactive process under budget constraints. We instantiate this framework across two settings: Interactive Proofs, where models interact with a judge to deduce objective truths or answers in logic and mathematics; and Interactive Games, where models reason strategically to maximize long-horizon utilities. Our results show that interactive benchmarks provide a robust and faithful assessment of model intelligence, revealing that there is still substantial room to improve in interactive scenarios. Project page: https://github.com/interactivebench/interactivebench
     </details>
 
-## 学习、优化与理论 (8 篇, 6.96%)
+## Learning, Optimization, and Theory (8 papers, 6.96%)
 
 - [Representation Fidelity:Auditing Algorithmic Decisions About Humans Using Self-Descriptions](https://arxiv.org/pdf/2603.05136)
   - Authors: Theresa Elstner, Martin Potthast
@@ -668,7 +668,7 @@
     While LLMs demonstrate strong reasoning capabilities when provided with full information in a single turn, they exhibit substantial vulnerability in multi-turn interactions. Specifically, when information is revealed incrementally or requires updates, models frequently fail to integrate new constraints, leading to a collapse in performance compared to their single-turn baselines. We term the root cause as \emph{Contextual Inertia}: a phenomenon where models rigidly adhere to previous reasoning traces. Even when users explicitly provide corrections or new data in later turns, the model ignores them, preferring to maintain consistency with its previous (incorrect) reasoning path. To address this, we introduce \textbf{R}einforcement \textbf{L}earning with \textbf{S}ingle-\textbf{T}urn \textbf{A}nchors (\textbf{RLSTA}), a generalizable training approach designed to stabilize multi-turn interaction across diverse scenarios and domains. RLSTA leverages the model's superior single-turn capabilities as stable internal anchors to provide reward signals. By aligning multi-turn responses with these anchors, RLSTA empowers models to break contextual inertia and self-calibrate their reasoning based on the latest information. Experiments show that RLSTA significantly outperforms standard fine-tuning and abstention-based methods. Notably, our method exhibits strong cross-domain generalization (e.g., math to code) and proves effective even without external verifiers, highlighting its potential for general-domain applications.
     </details>
 
-## 检索、知识与RAG (8 篇, 6.96%)
+## Retrieval, Knowledge, and RAG (8 papers, 6.96%)
 
 - [Leveraging LLM Parametric Knowledge for Fact Checking without Retrieval](https://arxiv.org/pdf/2603.05471)
   - Authors: Artem Vazhentsev, Maria Marina, Daniil Moskovskiy, Sergey Pletenev, Mikhail Seleznyov, Mikhail Salnikov, Elena Tutubalina, Vasily Konovalov, Irina Nikishina, Alexander Panchenko, Viktor Moskvoretskii
@@ -727,7 +727,7 @@
     The rapid growth of Retrieval-Augmented Generation (RAG) has created a proliferation of toolkits, yet a fundamental gap remains between experimental prototypes and robust, production-ready systems. We present SearchGym, a modular infrastructure designed for cross-platform benchmarking and hybrid search orchestration. Unlike existing model-centric frameworks, SearchGym decouples data representation, embedding strategies, and retrieval logic into stateful abstractions: Dataset, VectorSet, and App. This separation enables a Compositional Config Algebra, allowing designers to synthesize entire systems from hierarchical configurations while ensuring perfect reproducibility. Moreover, we analyze the "Top-$k$ Cognizance" in hybrid retrieval pipelines, demonstrating that the optimal sequence of semantic ranking and structured filtering is highly dependent on filter strength. Evaluated on the LitSearch expert-annotated benchmark, SearchGym achieves a 70% Top-100 retrieval rate. SearchGym reveals a design tension between generalizability and optimizability, presenting the potential where engineering optimization may serve as a tool for uncovering the causal mechanisms inherent in information retrieval across heterogeneous domains. An open-source implementation of SearchGym is available at: https://github.com/JeromeTH/search-gym
     </details>
 
-## 医疗、科学与行业应用 (6 篇, 5.22%)
+## Domain Applications (6 papers, 5.22%)
 
 - [FlashAttention-4: Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling](https://arxiv.org/pdf/2603.05451)
   - Authors: Ted Zadouri, Markus Hoehnerbach, Jay Shah, Timmy Liu, Vijay Thakkar, Tri Dao
@@ -772,7 +772,7 @@
     Model Medicine is the science of understanding, diagnosing, treating, and preventing disorders in AI models, grounded in the principle that AI models -- like biological organisms -- have internal structures, dynamic processes, heritable traits, observable symptoms, classifiable conditions, and treatable states. This paper introduces Model Medicine as a research program, bridging the gap between current AI interpretability research (anatomical observation) and the systematic clinical practice that complex AI systems increasingly require. We present five contributions: (1) a discipline taxonomy organizing 15 subdisciplines across four divisions -- Basic Model Sciences, Clinical Model Sciences, Model Public Health, and Model Architectural Medicine; (2) the Four Shell Model (v3.3), a behavioral genetics framework empirically grounded in 720 agents and 24,923 decisions from the Agora-12 program, explaining how model behavior emerges from Core--Shell interaction; (3) Neural MRI (Model Resonance Imaging), a working open-source diagnostic tool mapping five medical neuroimaging modalities to AI interpretability techniques, validated through four clinical cases demonstrating imaging, comparison, localization, and predictive capability; (4) a five-layer diagnostic framework for comprehensive model assessment; and (5) clinical model sciences including the Model Temperament Index for behavioral profiling, Model Semiology for symptom description, and M-CARE for standardized case reporting. We additionally propose the Layered Core Hypothesis -- a biologically-inspired three-layer parameter architecture -- and a therapeutic framework connecting diagnosis to treatment.
     </details>
 
-## 多模态理解与视觉 (6 篇, 5.22%)
+## Multimodal Understanding and Vision (6 papers, 5.22%)
 
 - [TSEmbed: Unlocking Task Scaling in Universal Multimodal Embeddings](https://arxiv.org/pdf/2603.04772)
   - Authors: Yebo Wu, Feng Liu, Ziwei Xie, Zhiyuan Liu, Changwang Zhang, Jun Wang, Li Li
@@ -817,7 +817,7 @@
     Speech production is a complex process spanning neural planning, motor control, muscle activation, and articulatory kinematics. While the acoustic speech signal is the most accessible product of the speech production act, it does not directly reveal its causal neurophysiological substrates. We present the first simultaneous acquisition of real-time (dynamic) MRI, EEG, and surface EMG, capturing several key aspects of the speech production chain: brain signals, muscle activations, and articulatory movements. This multimodal acquisition paradigm presents substantial technical challenges, including MRI-induced electromagnetic interference and myogenic artifacts. To mitigate these, we introduce an artifact suppression pipeline tailored to this tri-modal setting. Once fully developed, this framework is poised to offer an unprecedented window into speech neuroscience and insights leading to brain-computer interface advances.
     </details>
 
-## 通用智能体与规划 (5 篇, 4.35%)
+## Agents and Planning (5 papers, 4.35%)
 
 - [HACHIMI: Scalable and Controllable Student Persona Generation via Orchestrated Agents](https://arxiv.org/pdf/2603.04855)
   - Authors: Yilin Jiang, Fei Tan, Xuanyu Yin, Jing Leng, Aimin Zhou
@@ -855,7 +855,7 @@
     Sequential LLM agents fail on long-horizon planning with hard constraints like budgets and diversity requirements. As planning progresses and context grows, these agents drift from global constraints. We propose HiMAP-Travel, a hierarchical multi-agent framework that splits planning into strategic coordination and parallel day-level execution. A Coordinator allocates resources across days, while Day Executors plan independently in parallel. Three key mechanisms enable this: a transactional monitor enforcing budget and uniqueness constraints across parallel agents, a bargaining protocol allowing agents to reject infeasible sub-goals and trigger re-planning, and a single policy trained with GRPO that powers all agents through role conditioning. On TravelPlanner, HiMAP-Travel with Qwen3-8B achieves 52.78% validation and 52.65% test Final Pass Rate (FPR). In a controlled comparison with identical model, training, and tools, it outperforms the sequential DeepTravel baseline by +8.67~pp. It also surpasses ATLAS by +17.65~pp and MTP by +10.0~pp. On FlexTravelBench multi-turn scenarios, it achieves 44.34% (2-turn) and 37.42% (3-turn) FPR while reducing latency 2.5x through parallelization.
     </details>
 
-## 多模态智能体 (1 篇, 0.87%)
+## Multimodal Agents (1 papers, 0.87%)
 
 - [VisionPangu: A Compact and Fine-Grained Multimodal Assistant with 1.7B Parameters](https://arxiv.org/pdf/2603.04957)
   - Authors: Jiaxin Fan, Wenpo Song

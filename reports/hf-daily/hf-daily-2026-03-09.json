@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-09T16:18:04Z",
+  "generated_at": "2026-03-10T09:01:45Z",
   "report_kind": "hf_daily",
   "report_date": "2026-03-09",
   "source_url": "https://huggingface.co/papers/date/2026-03-09",
@@ -8,56 +8,56 @@
   "focus_topics": [
     {
       "topic_key": "generative_foundations",
-      "topic_label": "生成模型理论基础",
+      "topic_label": "Generative Foundations",
       "count": 0,
       "share": 0.0
     },
     {
       "topic_key": "multimodal_generative",
-      "topic_label": "多模态生成建模",
+      "topic_label": "Multimodal Generative Modeling",
       "count": 0,
       "share": 0.0
     },
     {
       "topic_key": "multimodal_agents",
-      "topic_label": "多模态智能体",
+      "topic_label": "Multimodal Agents",
       "count": 0,
       "share": 0.0
     }
   ],
   "topic_distribution": [
     {
-      "topic_label": "多模态理解与视觉",
+      "topic_label": "LLMs and Language",
       "count": 6,
       "share": 24.0
     },
     {
-      "topic_label": "大模型与语言",
+      "topic_label": "Multimodal Understanding and Vision",
       "count": 6,
       "share": 24.0
     },
     {
-      "topic_label": "其他 AI",
+      "topic_label": "Other AI",
       "count": 4,
       "share": 16.0
     },
     {
-      "topic_label": "推理、对齐与评测",
+      "topic_label": "Agents and Planning",
       "count": 3,
       "share": 12.0
     },
     {
-      "topic_label": "通用智能体与规划",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
       "count": 3,
       "share": 12.0
     },
     {
-      "topic_label": "机器人与具身智能",
+      "topic_label": "Robotics and Embodied AI",
       "count": 2,
       "share": 8.0
     },
     {
-      "topic_label": "检索、知识与RAG",
+      "topic_label": "Retrieval, Knowledge, and RAG",
       "count": 1,
       "share": 4.0
     }
@@ -113,7 +113,7 @@
       "upvotes": 64,
       "comments": 2,
       "topic_key": "multimodal_vision",
-      "topic_label": "多模态理解与视觉",
+      "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [
         "\\bvision\\b",
         "\\bvlm\\b"
@@ -144,7 +144,7 @@
       "upvotes": 49,
       "comments": 2,
       "topic_key": "llm_language",
-      "topic_label": "大模型与语言",
+      "topic_label": "LLMs and Language",
       "matched_terms": [
         "\\b\\w*llms?\\w*\\b"
       ],
@@ -172,7 +172,7 @@
       "upvotes": 21,
       "comments": 2,
       "topic_key": "agents_planning",
-      "topic_label": "通用智能体与规划",
+      "topic_label": "Agents and Planning",
       "matched_terms": [
         "\\bplanning\\b"
       ],
@@ -203,7 +203,7 @@
       "upvotes": 15,
       "comments": 3,
       "topic_key": "multimodal_vision",
-      "topic_label": "多模态理解与视觉",
+      "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [
         "\\bvideo\\b"
       ],
@@ -233,7 +233,7 @@
       "upvotes": 14,
       "comments": 1,
       "topic_key": "llm_language",
-      "topic_label": "大模型与语言",
+      "topic_label": "LLMs and Language",
       "matched_terms": [
         "\\blanguage models?\\b",
         "\\blanguage\\b"
@@ -266,7 +266,7 @@
       "upvotes": 12,
       "comments": 2,
       "topic_key": "robotics_embodied",
-      "topic_label": "机器人与具身智能",
+      "topic_label": "Robotics and Embodied AI",
       "matched_terms": [
         "\\brobot(ic|ics)?\\b"
       ],
@@ -297,7 +297,7 @@
       "upvotes": 11,
       "comments": 1,
       "topic_key": "reasoning_alignment_eval",
-      "topic_label": "推理、对齐与评测",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [
         "\\breasoning\\b"
       ],
@@ -323,7 +323,7 @@
       "upvotes": 6,
       "comments": 1,
       "topic_key": "agents_planning",
-      "topic_label": "通用智能体与规划",
+      "topic_label": "Agents and Planning",
       "matched_terms": [
         "\\bmulti-agent\\b",
         "\\bagents?\\b",
@@ -335,198 +335,7 @@
   ],
   "topics": [
     {
-      "topic_label": "多模态理解与视觉",
-      "count": 6,
-      "share": 24.0,
-      "papers": [
-        {
-          "report_date": "2026-03-09",
-          "paper_id": "2603.06569",
-          "title": "Penguin-VL: Exploring the Efficiency Limits of VLM with LLM-based Vision Encoders",
-          "authors": [
-            "Boqiang Zhang",
-            "Lei Ke",
-            "Ruihan Yang",
-            "Qi Gao",
-            "Tianyuan Qu",
-            "Rossell Chen",
-            "Dong Yu",
-            "Leoweiliang"
-          ],
-          "abstract": "Vision Language Model (VLM) development has largely relied on scaling model size, which hinders deployment on compute-constrained mobile and edge devices such as smartphones and robots. In this work, we explore the performance limits of compact (e.g., 2B and 8B) VLMs. We challenge the prevailing practice that state-of-the-art VLMs must rely on vision encoders initialized via massive contrastive pretraining (e.g., CLIP/SigLIP). We identify an objective mismatch: contrastive learning, optimized for discrimination, enforces coarse and category-level invariances that suppress fine-grained visual cues needed for dense captioning and complex VLM reasoning. To address this issue, we present Penguin-VL, whose vision encoder is initialized from a text-only LLM. Our experiments reveal that Penguin-Encoder serves as a superior alternative to traditional contrastive pretraining, unlocking a higher degree of visual fidelity and data efficiency for multimodal understanding. Across various image and video benchmarks, Penguin-VL achieves performance comparable to leading VLMs (e.g., Qwen3-VL) in mathematical reasoning and surpasses them in tasks such as document understanding, visual knowledge, and multi-perspective video understanding. Notably, these gains are achieved with a lightweight architecture, demonstrating that improved visual representation rather than model scaling is the primary driver of performance. Our ablations show that Penguin-Encoder consistently outperforms contrastive-pretrained encoders, preserving fine-grained spatial and temporal cues that are critical for dense perception and complex reasoning. This makes it a strong drop-in alternative for compute-efficient VLMs and enables high performance in resource-constrained settings. Code: https://github.com/tencent-ailab/Penguin-VL",
-          "hf_url": "https://huggingface.co/papers/2603.06569",
-          "arxiv_url": "https://arxiv.org/abs/2603.06569",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.06569",
-          "github_url": "",
-          "submitted_by": "taesiri",
-          "submitted_at": "2026-03-09T01:22:24.366Z",
-          "upvotes": 64,
-          "comments": 2,
-          "topic_key": "multimodal_vision",
-          "topic_label": "多模态理解与视觉",
-          "matched_terms": [
-            "\\bvision\\b",
-            "\\bvlm\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
-        },
-        {
-          "report_date": "2026-03-09",
-          "paper_id": "2603.00586",
-          "title": "WildActor: Unconstrained Identity-Preserving Video Generation",
-          "authors": [
-            "Qin Guo",
-            "Tianyu Yang",
-            "Xuanhua He",
-            "Fei Shen",
-            "Yong Zhang",
-            "Zhuoliang Kang",
-            "Xiaoming Wei",
-            "Dan Xu"
-          ],
-          "abstract": "Production-ready human video generation requires digital actors to maintain strictly consistent full-body identities across dynamic shots, viewpoints and motions, a setting that remains challenging for existing methods. Prior methods often suffer from face-centric behavior that neglects body-level consistency, or produce copy-paste artifacts where subjects appear rigid due to pose locking. We present Actor-18M, a large-scale human video dataset designed to capture identity consistency under unconstrained viewpoints and environments. Actor-18M comprises 1.6M videos with 18M corresponding human images, covering both arbitrary views and canonical three-view representations. Leveraging Actor-18M, we propose WildActor, a framework for any-view conditioned human video generation. We introduce an Asymmetric Identity-Preserving Attention mechanism coupled with a Viewpoint-Adaptive Monte Carlo Sampling strategy that iteratively re-weights reference conditions by marginal utility for balanced manifold coverage. Evaluated on the proposed Actor-Bench, WildActor consistently preserves body identity under diverse shot compositions, large viewpoint transitions, and substantial motions, surpassing existing methods in these challenging settings.",
-          "hf_url": "https://huggingface.co/papers/2603.00586",
-          "arxiv_url": "https://arxiv.org/abs/2603.00586",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.00586",
-          "github_url": "",
-          "submitted_by": "guoqin",
-          "submitted_at": "2026-03-09T07:21:24.091Z",
-          "upvotes": 15,
-          "comments": 3,
-          "topic_key": "multimodal_vision",
-          "topic_label": "多模态理解与视觉",
-          "matched_terms": [
-            "\\bvideo\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
-        },
-        {
-          "report_date": "2026-03-09",
-          "paper_id": "2603.06351",
-          "title": "Dynamic Chunking Diffusion Transformer",
-          "authors": [
-            "Akash Haridas",
-            "Utkarsh Saxena",
-            "Parsa Ashrafi Fashi",
-            "Mehdi Rezagholizadeh",
-            "Vikram Appia",
-            "Emad Barsoum"
-          ],
-          "abstract": "Diffusion Transformers process images as fixed-length sequences of tokens produced by a static patchify operation. While effective, this design spends uniform compute on low- and high-information regions alike, ignoring that images contain regions of varying detail and that the denoising process progresses from coarse structure at early timesteps to fine detail at late timesteps. We introduce the Dynamic Chunking Diffusion Transformer (DC-DiT), which augments the DiT backbone with a learned encoder-router-decoder scaffold that adaptively compresses the 2D input into a shorter token sequence in a data-dependent manner using a chunking mechanism learned end-to-end with diffusion training. The mechanism learns to compress uniform background regions into fewer tokens and detail-rich regions into more tokens, with meaningful visual segmentations emerging without explicit supervision. Furthermore, it also learns to adapt its compression across diffusion timesteps, using fewer tokens at noisy stages and more tokens as fine details emerge. On class-conditional ImageNet 256{times}256, DC-DiT consistently improves FID and Inception Score over both parameter-matched and FLOP-matched DiT baselines across 4{times} and 16{times} compression, showing this is a promising technique with potential further applications to pixel-space, video and 3D generation. Beyond accuracy, DC-DiT is practical: it can be upcycled from pretrained DiT checkpoints with minimal post-training compute (up to 8{times} fewer training steps) and composes with other dynamic computation methods to further reduce generation FLOPs.",
-          "hf_url": "https://huggingface.co/papers/2603.06351",
-          "arxiv_url": "https://arxiv.org/abs/2603.06351",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.06351",
-          "github_url": "",
-          "submitted_by": "taesiri",
-          "submitted_at": "2026-03-09T00:37:54.739Z",
-          "upvotes": 3,
-          "comments": 0,
-          "topic_key": "multimodal_vision",
-          "topic_label": "多模态理解与视觉",
-          "matched_terms": [
-            "\\bdiffusion\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
-        },
-        {
-          "report_date": "2026-03-09",
-          "paper_id": "2603.06408",
-          "title": "Physical Simulator In-the-Loop Video Generation",
-          "authors": [
-            "Lin Geng Foo",
-            "Mark He Huang",
-            "Alexandros Lattas",
-            "Stylianos Moschoglou",
-            "Thabo Beeler",
-            "Christian Theobalt"
-          ],
-          "abstract": "Recent advances in diffusion-based video generation have achieved remarkable visual realism but still struggle to obey basic physical laws such as gravity, inertia, and collision. Generated objects often move inconsistently across frames, exhibit implausible dynamics, or violate physical constraints, limiting the realism and reliability of AI-generated videos. We address this gap by introducing Physical Simulator In-the-loop Video Generation (PSIVG), a novel framework that integrates a physical simulator into the video diffusion process. Starting from a template video generated by a pre-trained diffusion model, PSIVG reconstructs the 4D scene and foreground object meshes, initializes them within a physical simulator, and generates physically consistent trajectories. These simulated trajectories are then used to guide the video generator toward spatio-temporally physically coherent motion. To further improve texture consistency during object movement, we propose a Test-Time Texture Consistency Optimization (TTCO) technique that adapts text and feature embeddings based on pixel correspondences from the simulator. Comprehensive experiments demonstrate that PSIVG produces videos that better adhere to real-world physics while preserving visual quality and diversity. Project Page: https://vcai.mpi-inf.mpg.de/projects/PSIVG/",
-          "hf_url": "https://huggingface.co/papers/2603.06408",
-          "arxiv_url": "https://arxiv.org/abs/2603.06408",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.06408",
-          "github_url": "",
-          "submitted_by": "taesiri",
-          "submitted_at": "2026-03-09T00:40:04.838Z",
-          "upvotes": 1,
-          "comments": 0,
-          "topic_key": "multimodal_vision",
-          "topic_label": "多模态理解与视觉",
-          "matched_terms": [
-            "\\bvideo\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
-        },
-        {
-          "report_date": "2026-03-09",
-          "paper_id": "2603.05940",
-          "title": "SLER-IR: Spherical Layer-wise Expert Routing for All-in-One Image Restoration",
-          "authors": [
-            "Peng Shurui",
-            "Xin Lin",
-            "Shi Luo",
-            "Jincen Ou",
-            "Dizhe Zhang",
-            "Lu Qi",
-            "Truong Nguyen",
-            "Chao Ren"
-          ],
-          "abstract": "Image restoration under diverse degradations remains challenging for unified all-in-one frameworks due to feature interference and insufficient expert specialization. We propose SLER-IR, a spherical layer-wise expert routing framework that dynamically activates specialized experts across network layers. To ensure reliable routing, we introduce a Spherical Uniform Degradation Embedding with contrastive learning, which maps degradation representations onto a hypersphere to eliminate geometry bias in linear embedding spaces. In addition, a Global-Local Granularity Fusion (GLGF) module integrates global semantics and local degradation cues to address spatially non-uniform degradations and the train-test granularity gap. Experiments on three-task and five-task benchmarks demonstrate that SLER-IR achieves consistent improvements over state-of-the-art methods in both PSNR and SSIM. Code and models will be publicly released.",
-          "hf_url": "https://huggingface.co/papers/2603.05940",
-          "arxiv_url": "https://arxiv.org/abs/2603.05940",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.05940",
-          "github_url": "",
-          "submitted_by": "Insta360-Research",
-          "submitted_at": "2026-03-09T05:11:06.516Z",
-          "upvotes": 1,
-          "comments": 1,
-          "topic_key": "multimodal_vision",
-          "topic_label": "多模态理解与视觉",
-          "matched_terms": [
-            "\\bimage\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
-        },
-        {
-          "report_date": "2026-03-09",
-          "paper_id": "2603.05630",
-          "title": "Making Reconstruction FID Predictive of Diffusion Generation FID",
-          "authors": [
-            "Tongda Xu",
-            "Mingwei He",
-            "Shady Abu-Hussein",
-            "Jose Miguel Hernandez-Lobato",
-            "Haotian Zhang",
-            "Kai Zhao",
-            "Chao Zhou",
-            "Ya-Qin Zhang",
-            "Yan Wang"
-          ],
-          "abstract": "It is well known that the reconstruction FID (rFID) of a VAE is poorly correlated with the generation FID (gFID) of a latent diffusion model. We propose interpolated FID (iFID), a simple variant of rFID that exhibits a strong correlation with gFID. Specifically, for each element in the dataset, we retrieve its nearest neighbor (NN) in the latent space and interpolate their latent representations. We then decode the interpolated latent and compute the FID between the decoded samples and the original dataset. Additionally, we refine the claim that rFID correlates poorly with gFID, by showing that rFID correlates with sample quality in the diffusion refinement phase, whereas iFID correlates with sample quality in the diffusion navigation phase. Furthermore, we provide an explanation for why iFID correlates well with gFID, and why reconstruction metrics are negatively correlated with gFID, by connecting to results in the diffusion generalization and hallucination. Empirically, iFID is the first metric to demonstrate a strong correlation with diffusion gFID, achieving Pearson linear and Spearman rank correlations approximately 0.85. The source code is provided in https://github.com/tongdaxu/Making-rFID-Predictive-of-Diffusion-gFID.",
-          "hf_url": "https://huggingface.co/papers/2603.05630",
-          "arxiv_url": "https://arxiv.org/abs/2603.05630",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.05630",
-          "github_url": "",
-          "submitted_by": "tongda xu",
-          "submitted_at": "2026-03-09T06:53:43.480Z",
-          "upvotes": 0,
-          "comments": 1,
-          "topic_key": "multimodal_vision",
-          "topic_label": "多模态理解与视觉",
-          "matched_terms": [
-            "\\bdiffusion\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
-        }
-      ]
-    },
-    {
-      "topic_label": "大模型与语言",
+      "topic_label": "LLMs and Language",
       "count": 6,
       "share": 24.0,
       "papers": [
@@ -553,7 +362,7 @@
           "upvotes": 49,
           "comments": 2,
           "topic_key": "llm_language",
-          "topic_label": "大模型与语言",
+          "topic_label": "LLMs and Language",
           "matched_terms": [
             "\\b\\w*llms?\\w*\\b"
           ],
@@ -583,7 +392,7 @@
           "upvotes": 14,
           "comments": 1,
           "topic_key": "llm_language",
-          "topic_label": "大模型与语言",
+          "topic_label": "LLMs and Language",
           "matched_terms": [
             "\\blanguage models?\\b",
             "\\blanguage\\b"
@@ -612,7 +421,7 @@
           "upvotes": 4,
           "comments": 1,
           "topic_key": "llm_language",
-          "topic_label": "大模型与语言",
+          "topic_label": "LLMs and Language",
           "matched_terms": [
             "\\blanguage models?\\b",
             "\\blanguage\\b"
@@ -638,7 +447,7 @@
           "upvotes": 2,
           "comments": 1,
           "topic_key": "llm_language",
-          "topic_label": "大模型与语言",
+          "topic_label": "LLMs and Language",
           "matched_terms": [
             "\\b\\w*llms?\\w*\\b"
           ],
@@ -674,7 +483,7 @@
           "upvotes": 1,
           "comments": 1,
           "topic_key": "llm_language",
-          "topic_label": "大模型与语言",
+          "topic_label": "LLMs and Language",
           "matched_terms": [
             "\\btoken(s)?\\b"
           ],
@@ -703,7 +512,7 @@
           "upvotes": 0,
           "comments": 1,
           "topic_key": "llm_language",
-          "topic_label": "大模型与语言",
+          "topic_label": "LLMs and Language",
           "matched_terms": [
             "\\b\\w*llms?\\w*\\b"
           ],
@@ -713,7 +522,198 @@
       ]
     },
     {
-      "topic_label": "其他 AI",
+      "topic_label": "Multimodal Understanding and Vision",
+      "count": 6,
+      "share": 24.0,
+      "papers": [
+        {
+          "report_date": "2026-03-09",
+          "paper_id": "2603.06569",
+          "title": "Penguin-VL: Exploring the Efficiency Limits of VLM with LLM-based Vision Encoders",
+          "authors": [
+            "Boqiang Zhang",
+            "Lei Ke",
+            "Ruihan Yang",
+            "Qi Gao",
+            "Tianyuan Qu",
+            "Rossell Chen",
+            "Dong Yu",
+            "Leoweiliang"
+          ],
+          "abstract": "Vision Language Model (VLM) development has largely relied on scaling model size, which hinders deployment on compute-constrained mobile and edge devices such as smartphones and robots. In this work, we explore the performance limits of compact (e.g., 2B and 8B) VLMs. We challenge the prevailing practice that state-of-the-art VLMs must rely on vision encoders initialized via massive contrastive pretraining (e.g., CLIP/SigLIP). We identify an objective mismatch: contrastive learning, optimized for discrimination, enforces coarse and category-level invariances that suppress fine-grained visual cues needed for dense captioning and complex VLM reasoning. To address this issue, we present Penguin-VL, whose vision encoder is initialized from a text-only LLM. Our experiments reveal that Penguin-Encoder serves as a superior alternative to traditional contrastive pretraining, unlocking a higher degree of visual fidelity and data efficiency for multimodal understanding. Across various image and video benchmarks, Penguin-VL achieves performance comparable to leading VLMs (e.g., Qwen3-VL) in mathematical reasoning and surpasses them in tasks such as document understanding, visual knowledge, and multi-perspective video understanding. Notably, these gains are achieved with a lightweight architecture, demonstrating that improved visual representation rather than model scaling is the primary driver of performance. Our ablations show that Penguin-Encoder consistently outperforms contrastive-pretrained encoders, preserving fine-grained spatial and temporal cues that are critical for dense perception and complex reasoning. This makes it a strong drop-in alternative for compute-efficient VLMs and enables high performance in resource-constrained settings. Code: https://github.com/tencent-ailab/Penguin-VL",
+          "hf_url": "https://huggingface.co/papers/2603.06569",
+          "arxiv_url": "https://arxiv.org/abs/2603.06569",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.06569",
+          "github_url": "",
+          "submitted_by": "taesiri",
+          "submitted_at": "2026-03-09T01:22:24.366Z",
+          "upvotes": 64,
+          "comments": 2,
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [
+            "\\bvision\\b",
+            "\\bvlm\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
+        {
+          "report_date": "2026-03-09",
+          "paper_id": "2603.00586",
+          "title": "WildActor: Unconstrained Identity-Preserving Video Generation",
+          "authors": [
+            "Qin Guo",
+            "Tianyu Yang",
+            "Xuanhua He",
+            "Fei Shen",
+            "Yong Zhang",
+            "Zhuoliang Kang",
+            "Xiaoming Wei",
+            "Dan Xu"
+          ],
+          "abstract": "Production-ready human video generation requires digital actors to maintain strictly consistent full-body identities across dynamic shots, viewpoints and motions, a setting that remains challenging for existing methods. Prior methods often suffer from face-centric behavior that neglects body-level consistency, or produce copy-paste artifacts where subjects appear rigid due to pose locking. We present Actor-18M, a large-scale human video dataset designed to capture identity consistency under unconstrained viewpoints and environments. Actor-18M comprises 1.6M videos with 18M corresponding human images, covering both arbitrary views and canonical three-view representations. Leveraging Actor-18M, we propose WildActor, a framework for any-view conditioned human video generation. We introduce an Asymmetric Identity-Preserving Attention mechanism coupled with a Viewpoint-Adaptive Monte Carlo Sampling strategy that iteratively re-weights reference conditions by marginal utility for balanced manifold coverage. Evaluated on the proposed Actor-Bench, WildActor consistently preserves body identity under diverse shot compositions, large viewpoint transitions, and substantial motions, surpassing existing methods in these challenging settings.",
+          "hf_url": "https://huggingface.co/papers/2603.00586",
+          "arxiv_url": "https://arxiv.org/abs/2603.00586",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.00586",
+          "github_url": "",
+          "submitted_by": "guoqin",
+          "submitted_at": "2026-03-09T07:21:24.091Z",
+          "upvotes": 15,
+          "comments": 3,
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [
+            "\\bvideo\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
+        {
+          "report_date": "2026-03-09",
+          "paper_id": "2603.06351",
+          "title": "Dynamic Chunking Diffusion Transformer",
+          "authors": [
+            "Akash Haridas",
+            "Utkarsh Saxena",
+            "Parsa Ashrafi Fashi",
+            "Mehdi Rezagholizadeh",
+            "Vikram Appia",
+            "Emad Barsoum"
+          ],
+          "abstract": "Diffusion Transformers process images as fixed-length sequences of tokens produced by a static patchify operation. While effective, this design spends uniform compute on low- and high-information regions alike, ignoring that images contain regions of varying detail and that the denoising process progresses from coarse structure at early timesteps to fine detail at late timesteps. We introduce the Dynamic Chunking Diffusion Transformer (DC-DiT), which augments the DiT backbone with a learned encoder-router-decoder scaffold that adaptively compresses the 2D input into a shorter token sequence in a data-dependent manner using a chunking mechanism learned end-to-end with diffusion training. The mechanism learns to compress uniform background regions into fewer tokens and detail-rich regions into more tokens, with meaningful visual segmentations emerging without explicit supervision. Furthermore, it also learns to adapt its compression across diffusion timesteps, using fewer tokens at noisy stages and more tokens as fine details emerge. On class-conditional ImageNet 256{times}256, DC-DiT consistently improves FID and Inception Score over both parameter-matched and FLOP-matched DiT baselines across 4{times} and 16{times} compression, showing this is a promising technique with potential further applications to pixel-space, video and 3D generation. Beyond accuracy, DC-DiT is practical: it can be upcycled from pretrained DiT checkpoints with minimal post-training compute (up to 8{times} fewer training steps) and composes with other dynamic computation methods to further reduce generation FLOPs.",
+          "hf_url": "https://huggingface.co/papers/2603.06351",
+          "arxiv_url": "https://arxiv.org/abs/2603.06351",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.06351",
+          "github_url": "",
+          "submitted_by": "taesiri",
+          "submitted_at": "2026-03-09T00:37:54.739Z",
+          "upvotes": 3,
+          "comments": 0,
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [
+            "\\bdiffusion\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
+        {
+          "report_date": "2026-03-09",
+          "paper_id": "2603.06408",
+          "title": "Physical Simulator In-the-Loop Video Generation",
+          "authors": [
+            "Lin Geng Foo",
+            "Mark He Huang",
+            "Alexandros Lattas",
+            "Stylianos Moschoglou",
+            "Thabo Beeler",
+            "Christian Theobalt"
+          ],
+          "abstract": "Recent advances in diffusion-based video generation have achieved remarkable visual realism but still struggle to obey basic physical laws such as gravity, inertia, and collision. Generated objects often move inconsistently across frames, exhibit implausible dynamics, or violate physical constraints, limiting the realism and reliability of AI-generated videos. We address this gap by introducing Physical Simulator In-the-loop Video Generation (PSIVG), a novel framework that integrates a physical simulator into the video diffusion process. Starting from a template video generated by a pre-trained diffusion model, PSIVG reconstructs the 4D scene and foreground object meshes, initializes them within a physical simulator, and generates physically consistent trajectories. These simulated trajectories are then used to guide the video generator toward spatio-temporally physically coherent motion. To further improve texture consistency during object movement, we propose a Test-Time Texture Consistency Optimization (TTCO) technique that adapts text and feature embeddings based on pixel correspondences from the simulator. Comprehensive experiments demonstrate that PSIVG produces videos that better adhere to real-world physics while preserving visual quality and diversity. Project Page: https://vcai.mpi-inf.mpg.de/projects/PSIVG/",
+          "hf_url": "https://huggingface.co/papers/2603.06408",
+          "arxiv_url": "https://arxiv.org/abs/2603.06408",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.06408",
+          "github_url": "",
+          "submitted_by": "taesiri",
+          "submitted_at": "2026-03-09T00:40:04.838Z",
+          "upvotes": 1,
+          "comments": 0,
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [
+            "\\bvideo\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
+        {
+          "report_date": "2026-03-09",
+          "paper_id": "2603.05940",
+          "title": "SLER-IR: Spherical Layer-wise Expert Routing for All-in-One Image Restoration",
+          "authors": [
+            "Peng Shurui",
+            "Xin Lin",
+            "Shi Luo",
+            "Jincen Ou",
+            "Dizhe Zhang",
+            "Lu Qi",
+            "Truong Nguyen",
+            "Chao Ren"
+          ],
+          "abstract": "Image restoration under diverse degradations remains challenging for unified all-in-one frameworks due to feature interference and insufficient expert specialization. We propose SLER-IR, a spherical layer-wise expert routing framework that dynamically activates specialized experts across network layers. To ensure reliable routing, we introduce a Spherical Uniform Degradation Embedding with contrastive learning, which maps degradation representations onto a hypersphere to eliminate geometry bias in linear embedding spaces. In addition, a Global-Local Granularity Fusion (GLGF) module integrates global semantics and local degradation cues to address spatially non-uniform degradations and the train-test granularity gap. Experiments on three-task and five-task benchmarks demonstrate that SLER-IR achieves consistent improvements over state-of-the-art methods in both PSNR and SSIM. Code and models will be publicly released.",
+          "hf_url": "https://huggingface.co/papers/2603.05940",
+          "arxiv_url": "https://arxiv.org/abs/2603.05940",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.05940",
+          "github_url": "",
+          "submitted_by": "Insta360-Research",
+          "submitted_at": "2026-03-09T05:11:06.516Z",
+          "upvotes": 1,
+          "comments": 1,
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [
+            "\\bimage\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
+        {
+          "report_date": "2026-03-09",
+          "paper_id": "2603.05630",
+          "title": "Making Reconstruction FID Predictive of Diffusion Generation FID",
+          "authors": [
+            "Tongda Xu",
+            "Mingwei He",
+            "Shady Abu-Hussein",
+            "Jose Miguel Hernandez-Lobato",
+            "Haotian Zhang",
+            "Kai Zhao",
+            "Chao Zhou",
+            "Ya-Qin Zhang",
+            "Yan Wang"
+          ],
+          "abstract": "It is well known that the reconstruction FID (rFID) of a VAE is poorly correlated with the generation FID (gFID) of a latent diffusion model. We propose interpolated FID (iFID), a simple variant of rFID that exhibits a strong correlation with gFID. Specifically, for each element in the dataset, we retrieve its nearest neighbor (NN) in the latent space and interpolate their latent representations. We then decode the interpolated latent and compute the FID between the decoded samples and the original dataset. Additionally, we refine the claim that rFID correlates poorly with gFID, by showing that rFID correlates with sample quality in the diffusion refinement phase, whereas iFID correlates with sample quality in the diffusion navigation phase. Furthermore, we provide an explanation for why iFID correlates well with gFID, and why reconstruction metrics are negatively correlated with gFID, by connecting to results in the diffusion generalization and hallucination. Empirically, iFID is the first metric to demonstrate a strong correlation with diffusion gFID, achieving Pearson linear and Spearman rank correlations approximately 0.85. The source code is provided in https://github.com/tongdaxu/Making-rFID-Predictive-of-Diffusion-gFID.",
+          "hf_url": "https://huggingface.co/papers/2603.05630",
+          "arxiv_url": "https://arxiv.org/abs/2603.05630",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.05630",
+          "github_url": "",
+          "submitted_by": "tongda xu",
+          "submitted_at": "2026-03-09T06:53:43.480Z",
+          "upvotes": 0,
+          "comments": 1,
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [
+            "\\bdiffusion\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        }
+      ]
+    },
+    {
+      "topic_label": "Other AI",
       "count": 4,
       "share": 16.0,
       "papers": [
@@ -739,7 +739,7 @@
           "upvotes": 6,
           "comments": 0,
           "topic_key": "other_ai",
-          "topic_label": "其他 AI",
+          "topic_label": "Other AI",
           "matched_terms": [],
           "classification_source": "rule",
           "classification_confidence": null
@@ -770,7 +770,7 @@
           "upvotes": 4,
           "comments": 1,
           "topic_key": "other_ai",
-          "topic_label": "其他 AI",
+          "topic_label": "Other AI",
           "matched_terms": [],
           "classification_source": "rule",
           "classification_confidence": null
@@ -797,7 +797,7 @@
           "upvotes": 1,
           "comments": 1,
           "topic_key": "other_ai",
-          "topic_label": "其他 AI",
+          "topic_label": "Other AI",
           "matched_terms": [],
           "classification_source": "rule",
           "classification_confidence": null
@@ -823,7 +823,7 @@
           "upvotes": 0,
           "comments": 1,
           "topic_key": "other_ai",
-          "topic_label": "其他 AI",
+          "topic_label": "Other AI",
           "matched_terms": [],
           "classification_source": "rule",
           "classification_confidence": null
@@ -831,106 +831,7 @@
       ]
     },
     {
-      "topic_label": "推理、对齐与评测",
-      "count": 3,
-      "share": 12.0,
-      "papers": [
-        {
-          "report_date": "2026-03-09",
-          "paper_id": "2603.05706",
-          "title": "Reasoning Models Struggle to Control their Chains of Thought",
-          "authors": [
-            "Chen Yueh-Han",
-            "Robert McCarthy",
-            "Bruce W. Lee",
-            "He He",
-            "Ian Kivlichan",
-            "Bowen Baker",
-            "Micah Carroll",
-            "Tomek Korbak"
-          ],
-          "abstract": "Chain-of-thought (CoT) monitoring is a promising tool for detecting misbehaviors and understanding the motivations of modern reasoning models. However, if models can control what they verbalize in their CoT, it could undermine CoT monitorability. To measure this undesirable capability -- CoT controllability -- we introduce the CoT-Control evaluation suite, which includes tasks that require models to solve problems while adhering to CoT instructions, e.g., reasoning about a genetics question without using the word 'chromosome'. We show that reasoning models possess significantly lower CoT controllability than output controllability; for instance, Claude Sonnet 4.5 can control its CoT only 2.7% of the time but 61.9% when controlling its final output. We also find that CoT controllability is higher for larger models and decreases with more RL training, test-time compute, and increased problem difficulty. CoT controllability failures extend even to situations in which models are given incentives (as opposed to direct requests) to evade CoT monitors, although models exhibit slightly higher controllability when they are told they are being monitored. Similarly, eliciting controllability by adversarially optimizing prompts does not meaningfully increase controllability. Our results leave us cautiously optimistic that CoT controllability is currently unlikely to be a failure mode of CoT monitorability. However, the mechanism behind low controllability is not well understood. Given its importance for maintaining CoT monitorability, we recommend that frontier labs track CoT controllability in future models.",
-          "hf_url": "https://huggingface.co/papers/2603.05706",
-          "arxiv_url": "https://arxiv.org/abs/2603.05706",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.05706",
-          "github_url": "",
-          "submitted_by": "taesiri",
-          "submitted_at": "2026-03-09T00:44:35.124Z",
-          "upvotes": 11,
-          "comments": 1,
-          "topic_key": "reasoning_alignment_eval",
-          "topic_label": "推理、对齐与评测",
-          "matched_terms": [
-            "\\breasoning\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
-        },
-        {
-          "report_date": "2026-03-09",
-          "paper_id": "2603.06014",
-          "title": "EffectMaker: Unifying Reasoning and Generation for Customized Visual Effect Creation",
-          "authors": [
-            "Shiyuan Yang",
-            "Ruihuang Li",
-            "Jiale Tao",
-            "Shuai Shao",
-            "Qinglin Lu",
-            "Jing Liao"
-          ],
-          "abstract": "Visual effects (VFX) are essential for enhancing the expressiveness and creativity of video content, yet producing high-quality effects typically requires expert knowledge and costly production pipelines. Existing AIGC systems face significant challenges in VFX generation due to the scarcity of effect-specific data and the inherent difficulty of modeling supernatural or stylized effects. Moreover, these approaches often require per-effect fine-tuning, which severely limits their scalability and generalization to novel VFX. In this work, we present EffectMaker, a unified reasoning-generation framework that enables reference-based VFX customization. EffectMaker employs a multimodal large language model to interpret high-level effect semantics and reason about how they should adapt to a target subject, while a diffusion transformer leverages in-context learning to capture fine-grained visual cues from reference videos. These two components form a semantic-visual dual-path guidance mechanism that enables accurate, controllable, and effect-consistent synthesis without per-effect fine-tuning. Furthermore, we construct EffectData, the largest high-quality synthetic dataset containing 130k videos across 3k VFX categories, to improve generalization and scalability. Experiments show that EffectMaker achieves superior visual quality and effect consistency over state-of-the-art baselines, offering a scalable and flexible paradigm for customized VFX generation. Project page: https://effectmaker.github.io",
-          "hf_url": "https://huggingface.co/papers/2603.06014",
-          "arxiv_url": "https://arxiv.org/abs/2603.06014",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.06014",
-          "github_url": "",
-          "submitted_by": "Shiyuan Yang",
-          "submitted_at": "2026-03-09T11:43:40.984Z",
-          "upvotes": 1,
-          "comments": 1,
-          "topic_key": "reasoning_alignment_eval",
-          "topic_label": "推理、对齐与评测",
-          "matched_terms": [
-            "\\breasoning\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
-        },
-        {
-          "report_date": "2026-03-09",
-          "paper_id": "2603.04738",
-          "title": "IF-RewardBench: Benchmarking Judge Models for Instruction-Following Evaluation",
-          "authors": [
-            "Bosi Wen",
-            "Yilin Niu",
-            "Cunxiang Wang",
-            "Xiaoying Ling",
-            "Ying Zhang",
-            "Pei Ke",
-            "Hongning Wang",
-            "Minlie Huang"
-          ],
-          "abstract": "Instruction-following is a foundational capability of large language models (LLMs), with its improvement hinging on scalable and accurate feedback from judge models. However, the reliability of current judge models in instruction-following remains underexplored due to several deficiencies of existing meta-evaluation benchmarks, such as their insufficient data coverage and oversimplified pairwise evaluation paradigms that misalign with model optimization scenarios. To this end, we propose IF-RewardBench, a comprehensive meta-evaluation benchmark for instruction-following that covers diverse instruction and constraint types. For each instruction, we construct a preference graph containing all pairwise preferences among multiple responses based on instruction-following quality. This design enables a listwise evaluation paradigm that assesses the capabilities of judge models to rank multiple responses, which is essential in guiding model alignment. Extensive experiments on IF-RewardBench reveal significant deficiencies in current judge models and demonstrate that our benchmark achieves a stronger positive correlation with downstream task performance compared to existing benchmarks. Our codes and data are available at https://github.com/thu-coai/IF-RewardBench.",
-          "hf_url": "https://huggingface.co/papers/2603.04738",
-          "arxiv_url": "https://arxiv.org/abs/2603.04738",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.04738",
-          "github_url": "",
-          "submitted_by": "Wenbosi",
-          "submitted_at": "2026-03-09T13:01:48.169Z",
-          "upvotes": 1,
-          "comments": 1,
-          "topic_key": "reasoning_alignment_eval",
-          "topic_label": "推理、对齐与评测",
-          "matched_terms": [
-            "\\bevaluation\\b",
-            "\\bjudge(s)?\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
-        }
-      ]
-    },
-    {
-      "topic_label": "通用智能体与规划",
+      "topic_label": "Agents and Planning",
       "count": 3,
       "share": 12.0,
       "papers": [
@@ -955,7 +856,7 @@
           "upvotes": 21,
           "comments": 2,
           "topic_key": "agents_planning",
-          "topic_label": "通用智能体与规划",
+          "topic_label": "Agents and Planning",
           "matched_terms": [
             "\\bplanning\\b"
           ],
@@ -981,7 +882,7 @@
           "upvotes": 6,
           "comments": 1,
           "topic_key": "agents_planning",
-          "topic_label": "通用智能体与规划",
+          "topic_label": "Agents and Planning",
           "matched_terms": [
             "\\bmulti-agent\\b",
             "\\bagents?\\b",
@@ -1016,7 +917,7 @@
           "upvotes": 2,
           "comments": 1,
           "topic_key": "agents_planning",
-          "topic_label": "通用智能体与规划",
+          "topic_label": "Agents and Planning",
           "matched_terms": [
             "\\bagentic\\b"
           ],
@@ -1026,7 +927,106 @@
       ]
     },
     {
-      "topic_label": "机器人与具身智能",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "count": 3,
+      "share": 12.0,
+      "papers": [
+        {
+          "report_date": "2026-03-09",
+          "paper_id": "2603.05706",
+          "title": "Reasoning Models Struggle to Control their Chains of Thought",
+          "authors": [
+            "Chen Yueh-Han",
+            "Robert McCarthy",
+            "Bruce W. Lee",
+            "He He",
+            "Ian Kivlichan",
+            "Bowen Baker",
+            "Micah Carroll",
+            "Tomek Korbak"
+          ],
+          "abstract": "Chain-of-thought (CoT) monitoring is a promising tool for detecting misbehaviors and understanding the motivations of modern reasoning models. However, if models can control what they verbalize in their CoT, it could undermine CoT monitorability. To measure this undesirable capability -- CoT controllability -- we introduce the CoT-Control evaluation suite, which includes tasks that require models to solve problems while adhering to CoT instructions, e.g., reasoning about a genetics question without using the word 'chromosome'. We show that reasoning models possess significantly lower CoT controllability than output controllability; for instance, Claude Sonnet 4.5 can control its CoT only 2.7% of the time but 61.9% when controlling its final output. We also find that CoT controllability is higher for larger models and decreases with more RL training, test-time compute, and increased problem difficulty. CoT controllability failures extend even to situations in which models are given incentives (as opposed to direct requests) to evade CoT monitors, although models exhibit slightly higher controllability when they are told they are being monitored. Similarly, eliciting controllability by adversarially optimizing prompts does not meaningfully increase controllability. Our results leave us cautiously optimistic that CoT controllability is currently unlikely to be a failure mode of CoT monitorability. However, the mechanism behind low controllability is not well understood. Given its importance for maintaining CoT monitorability, we recommend that frontier labs track CoT controllability in future models.",
+          "hf_url": "https://huggingface.co/papers/2603.05706",
+          "arxiv_url": "https://arxiv.org/abs/2603.05706",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.05706",
+          "github_url": "",
+          "submitted_by": "taesiri",
+          "submitted_at": "2026-03-09T00:44:35.124Z",
+          "upvotes": 11,
+          "comments": 1,
+          "topic_key": "reasoning_alignment_eval",
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "matched_terms": [
+            "\\breasoning\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
+        {
+          "report_date": "2026-03-09",
+          "paper_id": "2603.06014",
+          "title": "EffectMaker: Unifying Reasoning and Generation for Customized Visual Effect Creation",
+          "authors": [
+            "Shiyuan Yang",
+            "Ruihuang Li",
+            "Jiale Tao",
+            "Shuai Shao",
+            "Qinglin Lu",
+            "Jing Liao"
+          ],
+          "abstract": "Visual effects (VFX) are essential for enhancing the expressiveness and creativity of video content, yet producing high-quality effects typically requires expert knowledge and costly production pipelines. Existing AIGC systems face significant challenges in VFX generation due to the scarcity of effect-specific data and the inherent difficulty of modeling supernatural or stylized effects. Moreover, these approaches often require per-effect fine-tuning, which severely limits their scalability and generalization to novel VFX. In this work, we present EffectMaker, a unified reasoning-generation framework that enables reference-based VFX customization. EffectMaker employs a multimodal large language model to interpret high-level effect semantics and reason about how they should adapt to a target subject, while a diffusion transformer leverages in-context learning to capture fine-grained visual cues from reference videos. These two components form a semantic-visual dual-path guidance mechanism that enables accurate, controllable, and effect-consistent synthesis without per-effect fine-tuning. Furthermore, we construct EffectData, the largest high-quality synthetic dataset containing 130k videos across 3k VFX categories, to improve generalization and scalability. Experiments show that EffectMaker achieves superior visual quality and effect consistency over state-of-the-art baselines, offering a scalable and flexible paradigm for customized VFX generation. Project page: https://effectmaker.github.io",
+          "hf_url": "https://huggingface.co/papers/2603.06014",
+          "arxiv_url": "https://arxiv.org/abs/2603.06014",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.06014",
+          "github_url": "",
+          "submitted_by": "Shiyuan Yang",
+          "submitted_at": "2026-03-09T11:43:40.984Z",
+          "upvotes": 1,
+          "comments": 1,
+          "topic_key": "reasoning_alignment_eval",
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "matched_terms": [
+            "\\breasoning\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
+        {
+          "report_date": "2026-03-09",
+          "paper_id": "2603.04738",
+          "title": "IF-RewardBench: Benchmarking Judge Models for Instruction-Following Evaluation",
+          "authors": [
+            "Bosi Wen",
+            "Yilin Niu",
+            "Cunxiang Wang",
+            "Xiaoying Ling",
+            "Ying Zhang",
+            "Pei Ke",
+            "Hongning Wang",
+            "Minlie Huang"
+          ],
+          "abstract": "Instruction-following is a foundational capability of large language models (LLMs), with its improvement hinging on scalable and accurate feedback from judge models. However, the reliability of current judge models in instruction-following remains underexplored due to several deficiencies of existing meta-evaluation benchmarks, such as their insufficient data coverage and oversimplified pairwise evaluation paradigms that misalign with model optimization scenarios. To this end, we propose IF-RewardBench, a comprehensive meta-evaluation benchmark for instruction-following that covers diverse instruction and constraint types. For each instruction, we construct a preference graph containing all pairwise preferences among multiple responses based on instruction-following quality. This design enables a listwise evaluation paradigm that assesses the capabilities of judge models to rank multiple responses, which is essential in guiding model alignment. Extensive experiments on IF-RewardBench reveal significant deficiencies in current judge models and demonstrate that our benchmark achieves a stronger positive correlation with downstream task performance compared to existing benchmarks. Our codes and data are available at https://github.com/thu-coai/IF-RewardBench.",
+          "hf_url": "https://huggingface.co/papers/2603.04738",
+          "arxiv_url": "https://arxiv.org/abs/2603.04738",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.04738",
+          "github_url": "",
+          "submitted_by": "Wenbosi",
+          "submitted_at": "2026-03-09T13:01:48.169Z",
+          "upvotes": 1,
+          "comments": 1,
+          "topic_key": "reasoning_alignment_eval",
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "matched_terms": [
+            "\\bevaluation\\b",
+            "\\bjudge(s)?\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        }
+      ]
+    },
+    {
+      "topic_label": "Robotics and Embodied AI",
       "count": 2,
       "share": 8.0,
       "papers": [
@@ -1055,7 +1055,7 @@
           "upvotes": 12,
           "comments": 2,
           "topic_key": "robotics_embodied",
-          "topic_label": "机器人与具身智能",
+          "topic_label": "Robotics and Embodied AI",
           "matched_terms": [
             "\\brobot(ic|ics)?\\b"
           ],
@@ -1086,7 +1086,7 @@
           "upvotes": 0,
           "comments": 1,
           "topic_key": "robotics_embodied",
-          "topic_label": "机器人与具身智能",
+          "topic_label": "Robotics and Embodied AI",
           "matched_terms": [
             "\\brobot(ic|ics)?\\b",
             "\\bmanipulation\\b"
@@ -1097,7 +1097,7 @@
       ]
     },
     {
-      "topic_label": "检索、知识与RAG",
+      "topic_label": "Retrieval, Knowledge, and RAG",
       "count": 1,
       "share": 4.0,
       "papers": [
@@ -1126,7 +1126,7 @@
           "upvotes": 1,
           "comments": 1,
           "topic_key": "retrieval_knowledge",
-          "topic_label": "检索、知识与RAG",
+          "topic_label": "Retrieval, Knowledge, and RAG",
           "matched_terms": [
             "\\bretrieval\\b"
           ],
@@ -1161,7 +1161,7 @@
       "upvotes": 64,
       "comments": 2,
       "topic_key": "multimodal_vision",
-      "topic_label": "多模态理解与视觉",
+      "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [
         "\\bvision\\b",
         "\\bvlm\\b"
@@ -1192,7 +1192,7 @@
       "upvotes": 49,
       "comments": 2,
       "topic_key": "llm_language",
-      "topic_label": "大模型与语言",
+      "topic_label": "LLMs and Language",
       "matched_terms": [
         "\\b\\w*llms?\\w*\\b"
       ],
@@ -1220,7 +1220,7 @@
       "upvotes": 21,
       "comments": 2,
       "topic_key": "agents_planning",
-      "topic_label": "通用智能体与规划",
+      "topic_label": "Agents and Planning",
       "matched_terms": [
         "\\bplanning\\b"
       ],
@@ -1251,7 +1251,7 @@
       "upvotes": 15,
       "comments": 3,
       "topic_key": "multimodal_vision",
-      "topic_label": "多模态理解与视觉",
+      "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [
         "\\bvideo\\b"
       ],
@@ -1281,7 +1281,7 @@
       "upvotes": 14,
       "comments": 1,
       "topic_key": "llm_language",
-      "topic_label": "大模型与语言",
+      "topic_label": "LLMs and Language",
       "matched_terms": [
         "\\blanguage models?\\b",
         "\\blanguage\\b"
@@ -1314,7 +1314,7 @@
       "upvotes": 12,
       "comments": 2,
       "topic_key": "robotics_embodied",
-      "topic_label": "机器人与具身智能",
+      "topic_label": "Robotics and Embodied AI",
       "matched_terms": [
         "\\brobot(ic|ics)?\\b"
       ],
@@ -1345,7 +1345,7 @@
       "upvotes": 11,
       "comments": 1,
       "topic_key": "reasoning_alignment_eval",
-      "topic_label": "推理、对齐与评测",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [
         "\\breasoning\\b"
       ],
@@ -1374,7 +1374,7 @@
       "upvotes": 6,
       "comments": 0,
       "topic_key": "other_ai",
-      "topic_label": "其他 AI",
+      "topic_label": "Other AI",
       "matched_terms": [],
       "classification_source": "rule",
       "classification_confidence": null
@@ -1398,7 +1398,7 @@
       "upvotes": 6,
       "comments": 1,
       "topic_key": "agents_planning",
-      "topic_label": "通用智能体与规划",
+      "topic_label": "Agents and Planning",
       "matched_terms": [
         "\\bmulti-agent\\b",
         "\\bagents?\\b",
@@ -1428,7 +1428,7 @@
       "upvotes": 4,
       "comments": 1,
       "topic_key": "llm_language",
-      "topic_label": "大模型与语言",
+      "topic_label": "LLMs and Language",
       "matched_terms": [
         "\\blanguage models?\\b",
         "\\blanguage\\b"
@@ -1462,7 +1462,7 @@
       "upvotes": 4,
       "comments": 1,
       "topic_key": "other_ai",
-      "topic_label": "其他 AI",
+      "topic_label": "Other AI",
       "matched_terms": [],
       "classification_source": "rule",
       "classification_confidence": null
@@ -1489,7 +1489,7 @@
       "upvotes": 3,
       "comments": 0,
       "topic_key": "multimodal_vision",
-      "topic_label": "多模态理解与视觉",
+      "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [
         "\\bdiffusion\\b"
       ],
@@ -1522,7 +1522,7 @@
       "upvotes": 2,
       "comments": 1,
       "topic_key": "agents_planning",
-      "topic_label": "通用智能体与规划",
+      "topic_label": "Agents and Planning",
       "matched_terms": [
         "\\bagentic\\b"
       ],
@@ -1547,7 +1547,7 @@
       "upvotes": 2,
       "comments": 1,
       "topic_key": "llm_language",
-      "topic_label": "大模型与语言",
+      "topic_label": "LLMs and Language",
       "matched_terms": [
         "\\b\\w*llms?\\w*\\b"
       ],
@@ -1576,7 +1576,7 @@
       "upvotes": 1,
       "comments": 0,
       "topic_key": "multimodal_vision",
-      "topic_label": "多模态理解与视觉",
+      "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [
         "\\bvideo\\b"
       ],
@@ -1612,7 +1612,7 @@
       "upvotes": 1,
       "comments": 1,
       "topic_key": "llm_language",
-      "topic_label": "大模型与语言",
+      "topic_label": "LLMs and Language",
       "matched_terms": [
         "\\btoken(s)?\\b"
       ],
@@ -1641,7 +1641,7 @@
       "upvotes": 1,
       "comments": 1,
       "topic_key": "reasoning_alignment_eval",
-      "topic_label": "推理、对齐与评测",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [
         "\\breasoning\\b"
       ],
@@ -1672,7 +1672,7 @@
       "upvotes": 1,
       "comments": 1,
       "topic_key": "multimodal_vision",
-      "topic_label": "多模态理解与视觉",
+      "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [
         "\\bimage\\b"
       ],
@@ -1701,7 +1701,7 @@
       "upvotes": 1,
       "comments": 1,
       "topic_key": "other_ai",
-      "topic_label": "其他 AI",
+      "topic_label": "Other AI",
       "matched_terms": [],
       "classification_source": "rule",
       "classification_confidence": null
@@ -1730,7 +1730,7 @@
       "upvotes": 1,
       "comments": 1,
       "topic_key": "reasoning_alignment_eval",
-      "topic_label": "推理、对齐与评测",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [
         "\\bevaluation\\b",
         "\\bjudge(s)?\\b"
@@ -1763,7 +1763,7 @@
       "upvotes": 1,
       "comments": 1,
       "topic_key": "retrieval_knowledge",
-      "topic_label": "检索、知识与RAG",
+      "topic_label": "Retrieval, Knowledge, and RAG",
       "matched_terms": [
         "\\bretrieval\\b"
       ],
@@ -1795,7 +1795,7 @@
       "upvotes": 0,
       "comments": 1,
       "topic_key": "multimodal_vision",
-      "topic_label": "多模态理解与视觉",
+      "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [
         "\\bdiffusion\\b"
       ],
@@ -1824,7 +1824,7 @@
       "upvotes": 0,
       "comments": 1,
       "topic_key": "llm_language",
-      "topic_label": "大模型与语言",
+      "topic_label": "LLMs and Language",
       "matched_terms": [
         "\\b\\w*llms?\\w*\\b"
       ],
@@ -1852,7 +1852,7 @@
       "upvotes": 0,
       "comments": 1,
       "topic_key": "other_ai",
-      "topic_label": "其他 AI",
+      "topic_label": "Other AI",
       "matched_terms": [],
       "classification_source": "rule",
       "classification_confidence": null
@@ -1881,7 +1881,7 @@
       "upvotes": 0,
       "comments": 1,
       "topic_key": "robotics_embodied",
-      "topic_label": "机器人与具身智能",
+      "topic_label": "Robotics and Embodied AI",
       "matched_terms": [
         "\\brobot(ic|ics)?\\b",
         "\\bmanipulation\\b"

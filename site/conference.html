@@ -33,9 +33,9 @@
             <a class="page-nav-link" href="./like.html">Like</a>
           </div>
           <p class="eyebrow">CONFERENCE OBSERVATORY</p>
-          <h1>Conference 分析分支</h1>
+          <h1>Conference Analysis</h1>
           <p class="hero-text">
-            聚焦 `papers.cool/venue/*` 页面，先看不同 conference 快照，再按 `Subject` 过滤 accepted papers，追踪你的重点 topic。
+            Focus on `papers.cool/venue/*` pages. Start from venue snapshots, then filter accepted papers by `Subject` to track your focus topics.
           </p>
           <div id="conference-hero-signals" class="hero-signals"></div>
           <div class="hero-actions">
@@ -73,7 +73,7 @@
       <section class="glass-card home-board reveal">
         <div class="section-heading">
           <p class="eyebrow">CONFERENCE HOME</p>
-          <h2>Venue 入口</h2>
+          <h2>Venue Entry</h2>
           <p id="conference-board-summary" class="home-board-summary">-</p>
         </div>
         <div id="conference-cards" class="home-categories"></div>
@@ -84,7 +84,7 @@
           <div class="glass-card sidebar-header reveal">
             <div>
               <p class="eyebrow">CONFERENCE RAIL</p>
-              <h2>Venue 工具栏</h2>
+              <h2>Venue Tools</h2>
             </div>
             <button
               id="conference-sidebar-toggle"
@@ -93,7 +93,7 @@
               aria-expanded="true"
             >
               <span id="conference-sidebar-toggle-icon" class="sidebar-toggle-icon">‹</span>
-              <span id="conference-sidebar-toggle-label" class="sidebar-toggle-label">收起</span>
+              <span id="conference-sidebar-toggle-label" class="sidebar-toggle-label">Collapse</span>
             </button>
           </div>
 
@@ -102,13 +102,13 @@
               <div class="control-block">
                 <label for="conference-year-filter">Year</label>
                 <select id="conference-year-filter" class="control-input">
-                  <option value="">全部 Year</option>
+                  <option value="">All Years</option>
                 </select>
               </div>
               <div class="control-block">
                 <label for="conference-series-filter">Conference</label>
                 <select id="conference-series-filter" class="control-input">
-                  <option value="">全部 Conference</option>
+                  <option value="">All Conferences</option>
                 </select>
               </div>
               <div class="control-block">
@@ -116,19 +116,19 @@
                 <select id="conference-select" class="control-input"></select>
               </div>
               <div class="control-block">
-                <label for="conference-subject-filter">Subject 过滤</label>
+                <label for="conference-subject-filter">Subject Filter</label>
                 <select id="conference-subject-filter" class="control-input">
-                  <option value="">全部 Subject</option>
+                  <option value="">All Subjects</option>
                 </select>
               </div>
               <div class="control-block">
-                <label for="conference-topic-filter">Topic 过滤</label>
+                <label for="conference-topic-filter">Topic Filter</label>
                 <select id="conference-topic-filter" class="control-input">
-                  <option value="">全部 Topic</option>
+                  <option value="">All Topics</option>
                 </select>
               </div>
               <div class="control-block">
-                <label for="conference-search">标题搜索</label>
+                <label for="conference-search">Title Search</label>
                 <input
                   id="conference-search"
                   class="control-input"
@@ -138,14 +138,14 @@
               </div>
               <label class="checkbox-row" for="conference-focus-only">
                 <input id="conference-focus-only" type="checkbox" />
-                <span>只看重点关注 topic</span>
+                <span>Focus topics only</span>
               </label>
             </section>
 
             <section class="glass-card report-rail reveal">
               <div class="section-heading">
                 <p class="eyebrow">VENUE RAIL</p>
-                <h2>Conference 列表</h2>
+                <h2>Conference List</h2>
               </div>
               <div id="conference-rail" class="report-rail-list"></div>
             </section>
@@ -153,7 +153,7 @@
             <section class="glass-card trend-panel reveal">
               <div class="section-heading">
                 <p class="eyebrow">SUBJECT MIX</p>
-                <h2>Subject 占比</h2>
+                <h2>Subject Distribution</h2>
               </div>
               <div id="conference-subject-distribution" class="distribution-list"></div>
             </section>
@@ -165,7 +165,7 @@
             <div class="overview-top">
               <div>
                 <p class="eyebrow">CONFERENCE OVERVIEW</p>
-                <h2 id="conference-overview-title">Conference 概览</h2>
+                <h2 id="conference-overview-title">Conference Overview</h2>
               </div>
               <a id="conference-source-link" class="link-chip" href="#" target="_blank" rel="noreferrer">Source</a>
             </div>
@@ -192,7 +192,7 @@
           <section class="glass-card tag-panel reveal">
             <div class="section-heading">
               <p class="eyebrow">TAG MAP</p>
-              <h2>当前划分标签</h2>
+              <h2>Current Tags</h2>
             </div>
             <div id="conference-tag-map" class="tag-map"></div>
           </section>
@@ -200,7 +200,7 @@
           <section class="glass-card conference-panel reveal">
             <div class="section-heading">
               <p class="eyebrow">SPOTLIGHT</p>
-              <h2>重点论文</h2>
+              <h2>Spotlight Papers</h2>
             </div>
             <div id="conference-spotlight" class="conference-spotlight"></div>
           </section>
@@ -208,7 +208,7 @@
           <section class="glass-card conference-panel reveal">
             <div class="section-heading">
               <p class="eyebrow">SUBJECT RADAR</p>
-              <h2>Subject x Topic 诊断</h2>
+              <h2>Subject x Topic Diagnostics</h2>
             </div>
             <div id="conference-subject-radar" class="conference-subject-radar"></div>
           </section>
@@ -217,7 +217,7 @@
             <div class="results-top">
               <div>
                 <p class="eyebrow">RESULTS</p>
-                <h2 id="conference-results-title">当前共浏览 0 篇论文</h2>
+                <h2 id="conference-results-title">0 papers in view</h2>
               </div>
               <button id="conference-reset-filters" class="link-chip button-link" type="button">Reset filters</button>
             </div>

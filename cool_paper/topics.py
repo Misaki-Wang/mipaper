@@ -156,7 +156,7 @@ AGENT_CUES: Tuple[str, ...] = (
 TOPICS: Sequence[TopicDefinition] = (
     TopicDefinition(
         key="generative_foundations",
-        label="生成模型理论基础",
+        label="Generative Foundations",
         priority=1,
         patterns=(
             (r"\bgenerative\b", 5),
@@ -189,7 +189,7 @@ TOPICS: Sequence[TopicDefinition] = (
     ),
     TopicDefinition(
         key="multimodal_generative",
-        label="多模态生成建模",
+        label="Multimodal Generative Modeling",
         priority=2,
         patterns=(
             (r"\bmultimodal\b", 5),
@@ -218,7 +218,7 @@ TOPICS: Sequence[TopicDefinition] = (
     ),
     TopicDefinition(
         key="multimodal_agents",
-        label="多模态智能体",
+        label="Multimodal Agents",
         priority=3,
         patterns=(
             (r"\bmultimodal\b", 5),
@@ -248,7 +248,7 @@ TOPICS: Sequence[TopicDefinition] = (
     ),
     TopicDefinition(
         key="agents_planning",
-        label="通用智能体与规划",
+        label="Agents and Planning",
         priority=4,
         patterns=(
             (r"\bmulti-agent\b", 5),
@@ -265,7 +265,7 @@ TOPICS: Sequence[TopicDefinition] = (
     ),
     TopicDefinition(
         key="robotics_embodied",
-        label="机器人与具身智能",
+        label="Robotics and Embodied AI",
         priority=5,
         patterns=(
             (r"\brobot(ic|ics)?\b", 5),
@@ -281,7 +281,7 @@ TOPICS: Sequence[TopicDefinition] = (
     ),
     TopicDefinition(
         key="multimodal_vision",
-        label="多模态理解与视觉",
+        label="Multimodal Understanding and Vision",
         priority=6,
         patterns=(
             (r"\bmultimodal\b", 5),
@@ -299,7 +299,7 @@ TOPICS: Sequence[TopicDefinition] = (
     ),
     TopicDefinition(
         key="retrieval_knowledge",
-        label="检索、知识与RAG",
+        label="Retrieval, Knowledge, and RAG",
         priority=7,
         patterns=(
             (r"\bretrieval\b", 5),
@@ -314,7 +314,7 @@ TOPICS: Sequence[TopicDefinition] = (
     ),
     TopicDefinition(
         key="datasets_benchmarks",
-        label="数据集与基准",
+        label="Datasets and Benchmarks",
         priority=8,
         patterns=(
             (r"\bdataset(s)?\b", 5),
@@ -329,7 +329,7 @@ TOPICS: Sequence[TopicDefinition] = (
     ),
     TopicDefinition(
         key="reasoning_alignment_eval",
-        label="推理、对齐与评测",
+        label="Reasoning, Alignment, and Evaluation",
         priority=9,
         patterns=(
             (r"\breasoning\b", 5),
@@ -352,7 +352,7 @@ TOPICS: Sequence[TopicDefinition] = (
     ),
     TopicDefinition(
         key="domain_applications",
-        label="医疗、科学与行业应用",
+        label="Domain Applications",
         priority=10,
         patterns=(
             (r"\bmedical\b", 5),
@@ -380,7 +380,7 @@ TOPICS: Sequence[TopicDefinition] = (
     ),
     TopicDefinition(
         key="learning_theory",
-        label="学习、优化与理论",
+        label="Learning, Optimization, and Theory",
         priority=11,
         patterns=(
             (r"\blearning\b", 4),
@@ -408,7 +408,7 @@ TOPICS: Sequence[TopicDefinition] = (
     ),
     TopicDefinition(
         key="llm_language",
-        label="大模型与语言",
+        label="LLMs and Language",
         priority=12,
         patterns=(
             (r"\b\w*llms?\w*\b", 5),
@@ -429,7 +429,7 @@ TOPICS: Sequence[TopicDefinition] = (
 
 OTHER_TOPIC = TopicDefinition(
     key="other_ai",
-    label="其他 AI",
+    label="Other AI",
     priority=99,
     patterns=(),
 )

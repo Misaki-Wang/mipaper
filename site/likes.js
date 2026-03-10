@@ -60,7 +60,7 @@ export function createLikeRecord(paper, context = {}) {
     title: paper.title || "Untitled",
     paper_id: paper.paper_id || "",
     topic_key: paper.topic_key || "",
-    topic_label: paper.topic_label || "其他 AI",
+    topic_label: paper.topic_label || "Other AI",
     authors: Array.isArray(paper.authors) ? paper.authors.filter(Boolean) : [],
     abstract: typeof paper.abstract === "string" ? paper.abstract.trim() : "",
     pdf_url: paper.arxiv_pdf_url || paper.pdf_url || "",
@@ -308,7 +308,7 @@ export function bindLikeButtons(root, recordLookup) {
 function applyLikeButtonState(button, liked) {
   button.classList.toggle("is-liked", liked);
   button.setAttribute("aria-pressed", String(liked));
-  button.title = liked ? "取消 Like" : "加入 Like";
+  button.title = liked ? "Remove Like" : "Add Like";
 }
 
 function writeLikes(records, options = {}) {
@@ -440,8 +440,8 @@ function setUnauthorizedState(user) {
   accessState = {
     unauthorized: true,
     message: email
-      ? `未授权账号 ${email}。当前 Like 仅允许白名单账号使用。`
-      : "当前账号不在允许名单中，Like 已被限制。",
+      ? `Unauthorized account ${email}. Like access is restricted to allowlisted accounts only.`
+      : "The current account is not on the allowlist. Like access is restricted.",
     blockedUser: {
       displayName: displayName || "Unauthorized",
       email,

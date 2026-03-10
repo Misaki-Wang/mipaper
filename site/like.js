@@ -116,9 +116,9 @@ function bindSidebarToggle() {
 function applySidebarState(collapsed) {
   layoutRoot.classList.toggle("sidebar-collapsed", collapsed);
   sidebarToggleButton.setAttribute("aria-expanded", String(!collapsed));
-  sidebarToggleButton.setAttribute("aria-label", collapsed ? "展开侧边工具栏" : "收起侧边工具栏");
-  sidebarToggleButton.title = collapsed ? "展开侧边工具栏" : "收起侧边工具栏";
-  sidebarToggleLabel.textContent = collapsed ? "展开" : "收起";
+  sidebarToggleButton.setAttribute("aria-label", collapsed ? "Expand sidebar" : "Collapse sidebar");
+  sidebarToggleButton.title = collapsed ? "Expand sidebar" : "Collapse sidebar";
+  sidebarToggleLabel.textContent = collapsed ? "Expand" : "Collapse";
   sidebarToggleIcon.textContent = collapsed ? "›" : "‹";
   localStorage.setItem("cool-paper-sidebar", collapsed ? "collapsed" : "expanded");
 }
@@ -200,7 +200,7 @@ function bindFilters() {
 
 function bindAuthActions() {
   signInButton.addEventListener("click", async () => {
-    authStatus.textContent = "正在跳转到 GitHub 登录，返回后会自动同步收藏。";
+    authStatus.textContent = "Redirecting to GitHub sign-in. Likes will sync automatically when you return.";
     await signInWithGitHub();
   });
 
@@ -214,7 +214,7 @@ function bindAuthActions() {
       await syncLikesNow();
     } catch (error) {
       console.error(error);
-      authStatus.textContent = `同步失败：${error instanceof Error ? error.message : String(error)}`;
+      authStatus.textContent = `Sync failed: ${error instanceof Error ? error.message : String(error)}`;
     } finally {
       syncNowButton.disabled = false;
       renderAuthState(getAuthSnapshot());
@@ -226,7 +226,7 @@ function renderAuthState(snapshot) {
   renderAccountIdentity(snapshot);
   renderUnauthorizedState(snapshot);
   if (!snapshot.configured) {
-    authStatus.textContent = "未配置 Supabase，同步功能当前关闭。";
+    authStatus.textContent = "Supabase is not configured. Sync is currently disabled.";
     signInButton.disabled = true;
     signOutButton.disabled = true;
     syncNowButton.disabled = true;
@@ -237,28 +237,28 @@ function renderAuthState(snapshot) {
   signOutButton.disabled = !snapshot.signedIn;
   syncNowButton.disabled = !snapshot.signedIn || snapshot.syncing || snapshot.unauthorized;
   if (snapshot.unauthorized) {
-    authStatus.textContent = snapshot.unauthorizedMessage || "当前账号未被授权使用 Like。";
+    authStatus.textContent = snapshot.unauthorizedMessage || "The current account is not authorized to use Like.";
     signInButton.disabled = false;
     signOutButton.disabled = true;
     return;
   }
   authStatus.textContent = snapshot.signedIn
     ? buildSignedInStatus(snapshot)
-    : "Supabase 已配置。点击 GitHub Sign in 后即可跨设备同步收藏。";
+    : "Supabase is configured. Click GitHub Sign in to sync likes across devices.";
 }
 
 function buildSignedInStatus(snapshot) {
   const account = snapshot.user?.email || snapshot.user?.id || "-";
   if (snapshot.syncing) {
-    return `已连接 GitHub 账号 ${account}，正在自动同步收藏到 Supabase。`;
+    return `Connected GitHub account ${account}, automatically syncing likes to Supabase.`;
   }
   if (snapshot.syncError) {
-    return `已连接 GitHub 账号 ${account}，自动同步失败：${snapshot.syncError}`;
+    return `Connected GitHub account ${account}, automatic sync failed: ${snapshot.syncError}`;
   }
   if (snapshot.lastSyncedAt) {
-    return `已连接 GitHub 账号 ${account}，收藏已自动同步。上次同步 ${formatTime(snapshot.lastSyncedAt)}。`;
+    return `Connected GitHub account ${account}, likes synced automatically. Last synced ${formatTime(snapshot.lastSyncedAt)}。`;
   }
-  return `已连接 GitHub 账号 ${account}，登录成功后会自动同步收藏到 Supabase。`;
+  return `Connected GitHub account ${account}, likes will sync to Supabase automatically after sign-in.`;
 }
 
 function renderAccountIdentity(snapshot) {
@@ -271,8 +271,8 @@ function renderAccountIdentity(snapshot) {
     metadata.name ||
     metadata.preferred_username ||
     metadata.user_name ||
-    "未登录";
-  const email = identitySource?.email || identitySource?.id || identitySource?.userId || "请先连接 GitHub 账号";
+    "Not signed in";
+  const email = identitySource?.email || identitySource?.id || identitySource?.userId || "Connect a GitHub account first";
   const avatarUrl = identitySource?.avatarUrl || metadata.avatar_url || "";
 
   const bannerValue = accountBanner?.querySelector(".account-banner-value");
@@ -292,7 +292,7 @@ function renderAccountIdentity(snapshot) {
   const nameNode = accountCard.querySelector(".account-card-name");
   const emailNode = accountCard.querySelector(".account-card-email");
   if (nameNode) {
-    nameNode.textContent = snapshot.unauthorized ? `未授权账号 · ${displayName}` : displayName;
+    nameNode.textContent = snapshot.unauthorized ? `Unauthorized account · ${displayName}` : displayName;
   }
   if (emailNode) {
     emailNode.textContent = email;
@@ -322,7 +322,7 @@ function renderUnauthorizedState(snapshot) {
     return;
   }
   authWarning.hidden = false;
-  authWarning.textContent = snapshot.unauthorizedMessage || "当前账号不在允许名单中，Like 已被限制。";
+  authWarning.textContent = snapshot.unauthorizedMessage || "The current account is not on the allowlist. Like access is restricted.";
 }
 
 function renderPage() {
@@ -357,7 +357,7 @@ function populateFilters(likes) {
   const currentDay = state.day;
   const currentTopic = state.topic;
   const sources = [...new Set(likes.map((item) => item.source_kind).filter(Boolean))];
-  const topics = [...new Set(likes.map((item) => item.topic_label || "其他 AI"))].sort((a, b) => a.localeCompare(b, "zh-CN"));
+  const topics = [...new Set(likes.map((item) => item.topic_label || "Other AI"))].sort((a, b) => a.localeCompare(b, "zh-CN"));
   const dateParts = likes.map(extractDateParts);
   const years = [...new Set(dateParts.map((item) => item.year).filter(Boolean))].sort((a, b) => b.localeCompare(a));
   const months = [...new Set(
@@ -383,23 +383,23 @@ function populateFilters(likes) {
   )].sort((a, b) => b.localeCompare(a));
 
   sourceFilter.innerHTML = [
-    `<option value="">全部 Branch</option>`,
+    `<option value="">All Branches</option>`,
     ...sources.map((source) => `<option value="${escapeAttribute(source)}">${escapeHtml(getSourceLabel(source))}</option>`),
   ].join("");
   yearFilter.innerHTML = [
-    `<option value="">全部 Year</option>`,
+    `<option value="">All Years</option>`,
     ...years.map((year) => `<option value="${escapeAttribute(year)}">${escapeHtml(year)}</option>`),
   ].join("");
   monthFilter.innerHTML = [
-    `<option value="">全部 Month</option>`,
+    `<option value="">All Months</option>`,
     ...months.map((month) => `<option value="${escapeAttribute(month)}">${escapeHtml(month)}</option>`),
   ].join("");
   dayFilter.innerHTML = [
-    `<option value="">全部 Day</option>`,
+    `<option value="">All Days</option>`,
     ...days.map((day) => `<option value="${escapeAttribute(day)}">${escapeHtml(day)}</option>`),
   ].join("");
   topicFilter.innerHTML = [
-    `<option value="">全部 Topic</option>`,
+    `<option value="">All Topics</option>`,
     ...topics.map((topic) => `<option value="${escapeAttribute(topic)}">${escapeHtml(topic)}</option>`),
   ].join("");
 
@@ -443,12 +443,12 @@ function renderSourceCards(likes) {
   const sections = groupBySource(likes);
 
   if (!sections.length) {
-    summary.textContent = "还没有保存的论文。";
-    root.innerHTML = `<div class="empty-state">在任意论文卡片上点击 Like 后，这里会自动出现对应来源。</div>`;
+    summary.textContent = "No saved papers yet.";
+    root.innerHTML = `<div class="empty-state">Sources will appear here after you like a paper.</div>`;
     return;
   }
 
-  summary.textContent = `当前共收藏 ${likes.length} 篇论文，覆盖 ${sections.length} 个 branch。`;
+  summary.textContent = `Total liked papers: ${likes.length}, covering ${sections.length} branches.`;
   root.innerHTML = sections
     .map(
       (section) => `
@@ -484,40 +484,40 @@ function renderOverview(likes, visibleLikes, sourceSections) {
   const latest = visibleLikes[0] || likes[0];
   const topSource = sourceSections[0];
 
-  document.querySelector("#like-overview-title").textContent = "Like 分支概览";
-  document.querySelector("#like-overview-summary").textContent = `当前收藏 ${visibleLikes.length} 篇论文，可作为后续精读和复看队列。`;
-  document.querySelector("#like-focus-summary").textContent = `${focusCount} 篇命中重点方向，占当前视图 ${focusShare.toFixed(2)}%。`;
+  document.querySelector("#like-overview-title").textContent = "Like Branch Overview";
+  document.querySelector("#like-overview-summary").textContent = `Currently saved: ${visibleLikes.length} papers for later deep reading and revisit.`;
+  document.querySelector("#like-focus-summary").textContent = `${focusCount} papers hit your focus topics, accounting for ${focusShare.toFixed(2)}% of the current view.`;
   document.querySelector("#like-branch-summary").textContent = topSource
-    ? `${escapeHtml(topSource.source_label)} 当前收藏最多，共 ${topSource.count} 篇。`
-    : "还没有可见 branch。";
+    ? `${escapeHtml(topSource.source_label)} currently has the most likes, with ${topSource.count} papers.`
+    : "No visible branches yet.";
   document.querySelector("#like-latest-summary").textContent = latest
-    ? `${formatTime(latest.saved_at)} 保存，来源于 ${escapeHtml(getSourceLabel(latest.source_kind))}。`
-    : "还没有最新保存记录。";
+    ? `${formatTime(latest.saved_at)} saved from ${escapeHtml(getSourceLabel(latest.source_kind))}.`
+    : "No latest save record yet.";
 }
 
 function renderTagMap(likes, topicDistribution) {
-  const topTopic = topicDistribution[0]?.topic_label || "其他 AI";
+  const topTopic = topicDistribution[0]?.topic_label || "Other AI";
   const activeDate = state.day || state.month || state.year || (findLatestReportedDate(likes) || "No report date");
   document.querySelector("#like-tag-map").innerHTML = [
     {
       label: "Branch",
       value: state.source ? getSourceLabel(state.source) : "All branches",
-      meta: state.source ? "当前筛选中的 branch" : "当前全部收藏来源",
+      meta: state.source ? "current filtered branch" : "all liked sources",
     },
     {
       label: "Date",
       value: activeDate,
-      meta: state.day ? "当前按 day 筛选" : state.month ? "当前按 month 筛选" : state.year ? "当前按 year 筛选" : "当前最近的报告日期",
+      meta: state.day ? "current day filter" : state.month ? "current month filter" : state.year ? "current year filter" : "latest report date",
     },
     {
       label: "Topic",
       value: state.topic || topTopic,
-      meta: state.topic ? "当前筛选中的 topic" : "当前主导 topic",
+      meta: state.topic ? "current filtered topic" : "current dominant topic",
     },
     {
       label: "Search",
       value: state.query || "No query",
-      meta: state.query ? "当前搜索词" : "当前未启用搜索",
+      meta: state.query ? "current search query" : "search disabled",
     },
   ]
     .map(
@@ -535,7 +535,7 @@ function renderTagMap(likes, topicDistribution) {
 function renderDistribution(distribution) {
   const root = document.querySelector("#like-distribution-list");
   if (!distribution.length) {
-    root.innerHTML = `<div class="empty-state">当前没有可统计的 topic。</div>`;
+    root.innerHTML = `<div class="empty-state">No topic statistics are available.</div>`;
     return;
   }
   root.innerHTML = distribution
@@ -559,8 +559,8 @@ function renderDistribution(distribution) {
 function renderResults(likes, visibleLikes, sourceSections) {
   const activeFilters = getActiveFilters();
   document.querySelector("#like-results-title").textContent = activeFilters.length
-    ? `当前筛选后可见 ${visibleLikes.length} 篇论文`
-    : `当前共收藏 ${likes.length} 篇论文`;
+    ? `${visibleLikes.length} papers visible after filtering`
+    : `${likes.length} liked papers`;
   document.querySelector("#like-results-stats").innerHTML = [
     renderResultStat("Visible Likes", visibleLikes.length, activeFilters.length ? `of ${likes.length}` : "full liked set"),
     renderResultStat("Visible Branches", sourceSections.length, activeFilters.length ? "filtered" : "all branches"),
@@ -579,7 +579,7 @@ function renderResults(likes, visibleLikes, sourceSections) {
 function renderSourceSections(sections) {
   const root = document.querySelector("#like-source-sections");
   if (!sections.length) {
-    root.innerHTML = `<div class="glass-card empty-state">当前筛选条件下没有命中的收藏论文。</div>`;
+    root.innerHTML = `<div class="glass-card empty-state">No liked papers match the current filters.</div>`;
     return;
   }
 
@@ -625,7 +625,7 @@ function renderLikeCard(paper) {
     `
     : "";
   const metaBadges = [
-    `<span class="paper-badge">${escapeHtml(paper.topic_label || "其他 AI")}</span>`,
+    `<span class="paper-badge">${escapeHtml(paper.topic_label || "Other AI")}</span>`,
     `<span class="paper-badge subdued">${escapeHtml(getSourceLabel(paper.source_kind))}</span>`,
     paper.snapshot_label ? `<span class="paper-badge subdued">${escapeHtml(paper.snapshot_label)}</span>` : "",
   ]
@@ -685,7 +685,7 @@ function getVisibleLikes(likes) {
     if (state.day && dateParts.day !== state.day) {
       return false;
     }
-    if (state.topic && (paper.topic_label || "其他 AI") !== state.topic) {
+    if (state.topic && (paper.topic_label || "Other AI") !== state.topic) {
       return false;
     }
     if (!state.query) {
@@ -724,7 +724,7 @@ function groupBySource(likes) {
 function computeTopicDistribution(papers) {
   const counts = new Map();
   papers.forEach((paper) => {
-    const topic = paper.topic_label || "其他 AI";
+    const topic = paper.topic_label || "Other AI";
     counts.set(topic, (counts.get(topic) || 0) + 1);
   });
   return [...counts.entries()]
@@ -768,24 +768,24 @@ function renderResultStat(label, value, meta) {
 }
 
 function renderEmpty() {
-  document.querySelector("#like-overview-summary").textContent = "还没有保存的论文。";
-  document.querySelector("#like-focus-summary").textContent = "在任意论文卡片上点击 Like 后，这里会自动出现。";
-  document.querySelector("#like-branch-summary").textContent = "当前没有 branch 分布。";
-  document.querySelector("#like-latest-summary").textContent = "当前没有最新保存记录。";
+  document.querySelector("#like-overview-summary").textContent = "No saved papers yet.";
+  document.querySelector("#like-focus-summary").textContent = "This area will populate after you like papers.";
+  document.querySelector("#like-branch-summary").textContent = "No branch distribution yet.";
+  document.querySelector("#like-latest-summary").textContent = "No latest save record yet.";
   document.querySelector("#like-tag-map").innerHTML = "";
-  document.querySelector("#like-distribution-list").innerHTML = `<div class="empty-state">还没有可统计的收藏。</div>`;
-  document.querySelector("#like-results-title").textContent = "当前还没有收藏论文";
+  document.querySelector("#like-distribution-list").innerHTML = `<div class="empty-state">No like statistics yet.</div>`;
+  document.querySelector("#like-results-title").textContent = "No liked papers yet";
   document.querySelector("#like-results-stats").innerHTML = "";
-  document.querySelector("#like-active-filters").innerHTML = `<span class="active-filter-pill">Like 任意论文后，这里会自动更新。</span>`;
+  document.querySelector("#like-active-filters").innerHTML = `<span class="active-filter-pill">Like any paper and this area will update automatically.</span>`;
   document.querySelector("#like-source-sections").innerHTML =
-    `<div class="glass-card empty-state">在 Cool Daily、Conference 或 HF Daily 里点击 Like，即可把论文加入这里。</div>`;
+    `<div class="glass-card empty-state">Click Like in Cool Daily, Conference, or HF Daily to add papers here.</div>`;
   resetFiltersButton.disabled = true;
 }
 
 function renderFatal(error) {
   const message = error instanceof Error ? error.message : String(error);
   document.querySelector("#like-source-sections").innerHTML =
-    `<div class="glass-card empty-state">Like 页面加载失败：${escapeHtml(message)}</div>`;
+    `<div class="glass-card empty-state">Like page failed to load: ${escapeHtml(message)}</div>`;
 }
 
 function formatTime(value) {

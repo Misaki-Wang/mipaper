@@ -16,7 +16,7 @@ class ReportingTest(unittest.TestCase):
                 authors=["Ada Lovelace", "Alan Turing"],
                 abstract="An example abstract.",
                 topic_key="other_ai",
-                topic_label="其他 AI",
+                topic_label="Other AI",
             )
         ]
 

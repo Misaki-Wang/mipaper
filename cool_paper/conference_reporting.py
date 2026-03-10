@@ -59,21 +59,21 @@ def group_papers_by_subject(papers: Iterable[Paper]) -> Dict[str, List[Paper]]:
 
 def build_subject_insights(subjects: List[dict], topics: List[dict], total: int) -> List[str]:
     if not total:
-        return ["当前 conference 页面没有抓到任何 paper。"]
+        return ["No papers were captured from the current conference page."]
 
     insights: List[str] = []
     if subjects:
         dominant_subject = subjects[0]
         insights.append(
-            f"数量最多的 Subject 是“{dominant_subject['subject_label']}”，共 {dominant_subject['count']} 篇，占 {dominant_subject['share']:.2f}%。"
+            f"The largest subject is “{dominant_subject['subject_label']}”, with {dominant_subject['count']} papers, accounting for {dominant_subject['share']:.2f}%。"
         )
     if topics:
         dominant_topic = topics[0]
         insights.append(
-            f"按 topic 看，当前最活跃的是“{dominant_topic['topic_label']}”，共 {dominant_topic['count']} 篇。"
+            f"By topic, the most active area is “{dominant_topic['topic_label']}”, with {dominant_topic['count']} papers。"
         )
     long_tail_subjects = sum(1 for item in subjects if item["count"] == 1)
-    insights.append(f"仅包含 1 篇论文的 Subject 有 {long_tail_subjects} 个。")
+    insights.append(f"Subjects with only one paper: {long_tail_subjects} items。")
     return insights
 
 
@@ -92,33 +92,33 @@ def render_markdown_conference_report(
     insights = build_subject_insights(subjects, topics, len(papers))
 
     lines: List[str] = []
-    lines.append(f"# {venue} Conference 分析报告")
+    lines.append(f"# {venue} Conference Analysis Report")
     lines.append("")
-    lines.append(f"- 数据来源: {source_url}")
-    lines.append(f"- 分类器: {classifier_name}")
-    lines.append(f"- 论文总数: {len(papers)}")
+    lines.append(f"- Source: {source_url}")
+    lines.append(f"- Classifier: {classifier_name}")
+    lines.append(f"- Total Papers: {len(papers)}")
     if fetch_metadata:
         total_declared = fetch_metadata.get("declared_total")
         requested_show = fetch_metadata.get("requested_show")
         is_complete = fetch_metadata.get("is_complete")
         if total_declared is not None:
-            lines.append(f"- 页面声明总数: {total_declared}")
+            lines.append(f"- Declared Total: {total_declared}")
         if requested_show is not None:
-            lines.append(f"- 请求 show: {requested_show}")
+            lines.append(f"- Requested show: {requested_show}")
         if is_complete is not None:
-            lines.append(f"- 抓取状态: {'complete' if is_complete else 'partial'}")
+            lines.append(f"- Capture Status: {'complete' if is_complete else 'partial'}")
     lines.append("")
-    lines.append("## Subject 占比")
+    lines.append("## Subject Distribution")
     lines.append("")
     for item in subjects:
-        lines.append(f"- {item['subject_label']}: {item['count']} 篇 ({item['share']:.2f}%)")
+        lines.append(f"- {item['subject_label']}: {item['count']} papers ({item['share']:.2f}%)")
     lines.append("")
-    lines.append("## 重点 Topic")
+    lines.append("## Focus Topics")
     lines.append("")
     for item in focus_topics:
-        lines.append(f"- {item['topic_label']}: {item['count']} 篇 ({item['share']:.2f}%)")
+        lines.append(f"- {item['topic_label']}: {item['count']} papers ({item['share']:.2f}%)")
     lines.append("")
-    lines.append("## 简析")
+    lines.append("## Brief Notes")
     lines.append("")
     for insight in insights:
         lines.append(f"- {insight}")
@@ -127,10 +127,10 @@ def render_markdown_conference_report(
     for subject in [item["subject_label"] for item in subjects]:
         subject_papers = grouped[subject]
         subject_topics = topic_distribution(subject_papers)
-        topic_summary = subject_topics[0]["topic_label"] if subject_topics else "其他 AI"
-        lines.append(f"## {subject} ({len(subject_papers)} 篇)")
+        topic_summary = subject_topics[0]["topic_label"] if subject_topics else "Other AI"
+        lines.append(f"## {subject} ({len(subject_papers)} papers)")
         lines.append("")
-        lines.append(f"- 主导 topic: {topic_summary}")
+        lines.append(f"- Top Topic: {topic_summary}")
         for paper in subject_papers:
             badge = f" [{paper.topic_label}]" if paper.topic_label else ""
             lines.append(f"- [{paper.title}]({paper.pdf_url or paper.detail_url}){badge}")

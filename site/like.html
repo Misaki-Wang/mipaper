@@ -33,9 +33,9 @@
             <a class="page-nav-link active" href="./like.html">Like</a>
           </div>
           <p class="eyebrow">LIKE BRANCH</p>
-          <h1>收藏论文回看分支</h1>
+          <h1>Like Review Queue</h1>
           <p class="hero-text">
-            在任意 paper 卡片上点 `Like`，这里会自动汇总你保存过的论文，方便后续集中回看和二次筛选。
+            Click `Like` on any paper card and this page will collect your saved papers for later review and filtering.
           </p>
           <div id="like-current-account" class="account-banner muted">
             <span class="account-banner-label">Current account</span>
@@ -77,7 +77,7 @@
       <section class="glass-card home-board reveal">
         <div class="section-heading">
           <p class="eyebrow">SOURCE HOME</p>
-          <h2>收藏来源</h2>
+          <h2>Like Sources</h2>
           <p id="like-board-summary" class="home-board-summary">-</p>
         </div>
         <div id="like-home-cards" class="home-categories"></div>
@@ -88,11 +88,11 @@
           <div class="glass-card sidebar-header reveal">
             <div>
               <p class="eyebrow">LIKE RAIL</p>
-              <h2>收藏筛选栏</h2>
+              <h2>Like Filters</h2>
             </div>
             <button id="like-sidebar-toggle" class="sidebar-toggle" type="button" aria-expanded="true">
               <span id="like-sidebar-toggle-icon" class="sidebar-toggle-icon">‹</span>
-              <span id="like-sidebar-toggle-label" class="sidebar-toggle-label">收起</span>
+              <span id="like-sidebar-toggle-label" class="sidebar-toggle-label">Collapse</span>
             </button>
           </div>
 
@@ -107,12 +107,12 @@
                   <div class="account-avatar-fallback">?</div>
                 </div>
                 <div class="account-card-copy">
-                  <strong class="account-card-name">未登录</strong>
-                  <span class="account-card-email">请先连接 GitHub 账号</span>
+                  <strong class="account-card-name">Not signed in</strong>
+                  <span class="account-card-email">Connect a GitHub account first</span>
                 </div>
               </div>
               <div id="like-auth-warning" class="auth-warning" hidden></div>
-              <p id="like-auth-status" class="auth-status">未配置 Supabase，同步功能当前关闭。</p>
+              <p id="like-auth-status" class="auth-status">Supabase is not configured. Sync is currently disabled.</p>
               <div class="auth-actions">
                 <button id="like-sign-in" class="link-chip button-link" type="button">GitHub Sign in</button>
                 <button id="like-sync-now" class="link-chip button-link" type="button">Sync now</button>
@@ -124,35 +124,35 @@
               <div class="control-block">
                 <label for="like-source-filter">Branch</label>
                 <select id="like-source-filter" class="control-input">
-                  <option value="">全部 Branch</option>
+                  <option value="">All Branches</option>
                 </select>
               </div>
               <div class="control-block">
                 <label for="like-year-filter">Year</label>
                 <select id="like-year-filter" class="control-input">
-                  <option value="">全部 Year</option>
+                  <option value="">All Years</option>
                 </select>
               </div>
               <div class="control-block">
                 <label for="like-month-filter">Month</label>
                 <select id="like-month-filter" class="control-input">
-                  <option value="">全部 Month</option>
+                  <option value="">All Months</option>
                 </select>
               </div>
               <div class="control-block">
                 <label for="like-day-filter">Day</label>
                 <select id="like-day-filter" class="control-input">
-                  <option value="">全部 Day</option>
+                  <option value="">All Days</option>
                 </select>
               </div>
               <div class="control-block">
                 <label for="like-topic-filter">Topic</label>
                 <select id="like-topic-filter" class="control-input">
-                  <option value="">全部 Topic</option>
+                  <option value="">All Topics</option>
                 </select>
               </div>
               <div class="control-block">
-                <label for="like-search-input">搜索</label>
+                <label for="like-search-input">Search</label>
                 <input id="like-search-input" class="control-input" type="search" placeholder="Search title or authors" />
               </div>
             </section>
@@ -160,7 +160,7 @@
             <section class="glass-card trend-panel reveal">
               <div class="section-heading">
                 <p class="eyebrow">TOPIC MIX</p>
-                <h2>收藏 Topic 占比</h2>
+                <h2>Liked Topic Distribution</h2>
               </div>
               <div id="like-distribution-list" class="distribution-list"></div>
             </section>
@@ -172,7 +172,7 @@
             <div class="overview-top">
               <div>
                 <p class="eyebrow">LIKE OVERVIEW</p>
-                <h2 id="like-overview-title">收藏概览</h2>
+                <h2 id="like-overview-title">Like Overview</h2>
               </div>
             </div>
             <div class="overview-grid conference-overview-grid">
@@ -198,7 +198,7 @@
           <section class="glass-card tag-panel reveal">
             <div class="section-heading">
               <p class="eyebrow">TAG MAP</p>
-              <h2>当前 Like 标签</h2>
+              <h2>Current Like Tags</h2>
             </div>
             <div id="like-tag-map" class="tag-map"></div>
           </section>
@@ -207,7 +207,7 @@
             <div class="results-top">
               <div>
                 <p class="eyebrow">RESULTS</p>
-                <h2 id="like-results-title">当前共收藏 0 篇论文</h2>
+                <h2 id="like-results-title">0 liked papers</h2>
               </div>
               <button id="like-reset-filters" class="link-chip button-link" type="button">Reset filters</button>
             </div>

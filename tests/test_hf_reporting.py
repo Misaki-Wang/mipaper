@@ -19,7 +19,7 @@ class HFDailyReportingTest(unittest.TestCase):
                 submitted_by="taesiri",
                 upvotes=42,
                 topic_key="multimodal_generative",
-                topic_label="多模态生成建模",
+                topic_label="Multimodal Generative Modeling",
             )
         ]
 
@@ -35,7 +35,7 @@ class HFDailyReportingTest(unittest.TestCase):
         )
 
         self.assertIn("## Top Submitters", markdown)
-        self.assertIn("taesiri: 1 篇", markdown)
+        self.assertIn("taesiri: 1 papers", markdown)
         self.assertIn("Upvotes: 42", markdown)
         self.assertEqual("hf_daily", payload["report_kind"])
         self.assertEqual("2026-03-09", payload["report_date"])

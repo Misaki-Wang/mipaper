@@ -69,9 +69,9 @@ function bindSidebarToggle() {
 function applySidebarState(collapsed) {
   layoutRoot.classList.toggle("sidebar-collapsed", collapsed);
   sidebarToggleButton.setAttribute("aria-expanded", String(!collapsed));
-  sidebarToggleButton.setAttribute("aria-label", collapsed ? "展开侧边工具栏" : "收起侧边工具栏");
-  sidebarToggleButton.title = collapsed ? "展开侧边工具栏" : "收起侧边工具栏";
-  sidebarToggleLabel.textContent = collapsed ? "展开" : "收起";
+  sidebarToggleButton.setAttribute("aria-label", collapsed ? "Expand sidebar" : "Collapse sidebar");
+  sidebarToggleButton.title = collapsed ? "Expand sidebar" : "Collapse sidebar";
+  sidebarToggleLabel.textContent = collapsed ? "Expand" : "Collapse";
   sidebarToggleIcon.textContent = collapsed ? "›" : "‹";
   localStorage.setItem("cool-paper-sidebar", collapsed ? "collapsed" : "expanded");
 }
@@ -203,7 +203,7 @@ function populateReportSelect(reports) {
 }
 
 function populateTopicFilter(topics) {
-  topicFilter.innerHTML = `<option value="">全部 Topic</option>${topics
+  topicFilter.innerHTML = `<option value="">All Topics</option>${topics
     .map(
       (topic) =>
         `<option value="${escapeAttribute(topic.topic_label)}">${escapeHtml(topic.topic_label)} · ${topic.count}</option>`
@@ -217,13 +217,13 @@ function renderHomeCards(manifest, activePath = "") {
   const reports = manifest?.reports || [];
 
   if (!reports.length) {
-    summary.textContent = "还没有可用的 Hugging Face 每日快照。";
-    root.innerHTML = `<div class="empty-state">先生成 HF 日报，再刷新页面。</div>`;
+    summary.textContent = "No Hugging Face daily snapshots are available yet.";
+    root.innerHTML = `<div class="empty-state">Generate the HF daily reports first, then refresh the page.</div>`;
     return;
   }
 
   const totalPapers = reports.reduce((sum, report) => sum + (report.total_papers || 0), 0);
-  summary.textContent = `当前共收录 ${reports.length} 天，共 ${totalPapers} 篇 Hugging Face daily papers。点击卡片切换日期。`;
+  summary.textContent = `Currently indexed: ${reports.length} dates with ${totalPapers} Hugging Face daily papers. Click a card to switch the date.`;
   root.innerHTML = reports
     .map((report) => {
       const topTopic = report.top_topics?.[0];
@@ -310,17 +310,17 @@ function renderReport() {
 }
 
 function renderTagMap(report) {
-  const topTopic = report.topic_distribution?.[0]?.topic_label || "其他 AI";
+  const topTopic = report.topic_distribution?.[0]?.topic_label || "Other AI";
   document.querySelector("#hf-tag-map").innerHTML = [
     {
       label: "Date",
       value: report.report_date || "-",
-      meta: "当前 HF Daily 日期",
+      meta: "current HF Daily date",
     },
     {
       label: "Topic",
       value: state.topic || topTopic,
-      meta: state.topic ? "当前筛选中的 topic" : "当前主导 topic",
+      meta: state.topic ? "current filtered topic" : "current dominant topic",
     },
   ]
     .map(
@@ -359,18 +359,18 @@ function renderOverview(report, visiblePapers, topics) {
   const topSubmitter = report.top_submitters?.[0];
   const focusCount = visiblePapers.filter((paper) => focusTopicKeys.has(paper.topic_key)).length;
   const focusShare = visiblePapers.length ? (focusCount / visiblePapers.length) * 100 : 0;
-  document.querySelector("#hf-overview-title").textContent = `${report.report_date} HF Daily 概览`;
+  document.querySelector("#hf-overview-title").textContent = `${report.report_date} HF Daily Overview`;
   document.querySelector("#hf-source-link").href = report.source_url;
   document.querySelector("#hf-overview-summary").textContent = topTopic
-    ? `${topTopic.topic_label} 是当天占比最高的 topic，共 ${topTopic.count} 篇，占比 ${topTopic.share.toFixed(2)}%。`
-    : "当前报告还没有 topic 分布。";
+    ? `${topTopic.topic_label} is the top topic for the day, with ${topTopic.count} papers and ${topTopic.share.toFixed(2)}% share.`
+    : "This report does not have a topic distribution yet.";
   document.querySelector("#hf-submitter-summary").textContent = topSubmitter
-    ? `${topSubmitter.submitted_by} 是当天最活跃的提交者，共提交 ${topSubmitter.count} 篇。`
-    : "当前页面没有稳定提交者统计。";
-  document.querySelector("#hf-focus-summary").textContent = `${focusCount} 篇命中重点方向，占当前视图 ${focusShare.toFixed(
+    ? `${topSubmitter.submitted_by} is the most active submitter today, with ${topSubmitter.count} papers。`
+    : "The page does not expose stable submitter statistics.";
+  document.querySelector("#hf-focus-summary").textContent = `${focusCount} papers hit your focus topics, accounting for ${focusShare.toFixed(
     2
-  )}%。`;
-  document.querySelector("#hf-breadth-summary").textContent = `当前可见 ${visiblePapers.length} 篇论文，覆盖 ${topics.length} 个 topic。`;
+  )}% of the current view.`;
+  document.querySelector("#hf-breadth-summary").textContent = `Currently visible: ${visiblePapers.length} papers across ${topics.length} topics.`;
 }
 
 function renderDistribution(report, visiblePapers) {
@@ -401,7 +401,7 @@ function renderSpotlight(report, visiblePapers) {
     .slice(0, 6);
 
   if (!prioritized.length) {
-    root.innerHTML = `<div class="empty-state">当前筛选条件下没有可展示的论文。</div>`;
+    root.innerHTML = `<div class="empty-state">No papers match the current filters.</div>`;
     return;
   }
 
@@ -411,8 +411,8 @@ function renderSpotlight(report, visiblePapers) {
 function renderResults(report, visiblePapers, topics) {
   const activeFilters = getActiveFilters();
   document.querySelector("#hf-results-title").textContent = activeFilters.length
-    ? `当前筛选后可见 ${visiblePapers.length} 篇论文`
-    : `当前共浏览 ${report.total_papers} 篇论文`;
+    ? `${visiblePapers.length} papers visible after filtering`
+    : `${report.total_papers} papers in view`;
   document.querySelector("#hf-results-stats").innerHTML = [
     renderResultStat("Visible Papers", visiblePapers.length, activeFilters.length ? `of ${report.total_papers}` : "full HF daily set"),
     renderResultStat(
@@ -431,7 +431,7 @@ function renderResults(report, visiblePapers, topics) {
 function renderTopicSections(topics) {
   const root = document.querySelector("#hf-topic-sections");
   if (!topics.length) {
-    root.innerHTML = `<div class="glass-card empty-state">当前筛选条件下没有命中的论文。</div>`;
+    root.innerHTML = `<div class="glass-card empty-state">No papers match the current filters.</div>`;
     return;
   }
 
@@ -461,7 +461,7 @@ function renderTopicSections(topics) {
 function renderPaperCard(paper) {
   const authors = paper.authors?.length ? escapeHtml(paper.authors.join(", ")) : "Unknown";
   const metaBadges = [
-    `<span class="paper-badge">${escapeHtml(paper.topic_label || "其他 AI")}</span>`,
+    `<span class="paper-badge">${escapeHtml(paper.topic_label || "Other AI")}</span>`,
     paper.submitted_by ? `<span class="paper-badge subdued">by ${escapeHtml(paper.submitted_by)}</span>` : "",
     paper.upvotes !== null && paper.upvotes !== undefined ? `<span class="paper-badge subdued">▲ ${paper.upvotes}</span>` : "",
   ]
@@ -537,7 +537,7 @@ function rememberLikeRecord(paper) {
 
 function getVisiblePapers(report) {
   return report.papers.filter((paper) => {
-    if (state.topic && (paper.topic_label || "其他 AI") !== state.topic) {
+    if (state.topic && (paper.topic_label || "Other AI") !== state.topic) {
       return false;
     }
     if (state.author && !(paper.authors || []).join(" ").toLowerCase().includes(state.author)) {
@@ -556,7 +556,7 @@ function getVisiblePapers(report) {
 function groupByTopic(papers) {
   const map = new Map();
   papers.forEach((paper) => {
-    const topic = paper.topic_label || "其他 AI";
+    const topic = paper.topic_label || "Other AI";
     if (!map.has(topic)) {
       map.set(topic, []);
     }
@@ -573,7 +573,7 @@ function groupByTopic(papers) {
 function computeTopicDistribution(papers) {
   const counts = new Map();
   papers.forEach((paper) => {
-    const topic = paper.topic_label || "其他 AI";
+    const topic = paper.topic_label || "Other AI";
     counts.set(topic, (counts.get(topic) || 0) + 1);
   });
   return [...counts.entries()]
@@ -617,9 +617,9 @@ function renderResultStat(label, value, meta) {
 }
 
 function renderEmpty() {
-  document.querySelector("#hf-board-summary").textContent = "还没有可用的 Hugging Face 日报。";
+  document.querySelector("#hf-board-summary").textContent = "No Hugging Face daily reports are available yet.";
   document.querySelector("#hf-home-cards").innerHTML =
-    `<div class="empty-state">先运行 HF Daily 报告生成脚本，再刷新页面。</div>`;
+    `<div class="empty-state">Run the HF Daily report generator first, then refresh the page.</div>`;
   document.querySelector("#hf-spotlight").innerHTML = "";
   document.querySelector("#hf-topic-sections").innerHTML = "";
   const tagMap = document.querySelector("#hf-tag-map");
@@ -651,7 +651,7 @@ function formatTime(isoString) {
 
 function renderFatal(error) {
   const message = error instanceof Error ? error.message : String(error);
-  document.querySelector("#hf-board-summary").textContent = "HF Daily 页面加载失败。";
+  document.querySelector("#hf-board-summary").textContent = "HF Daily page failed to load.";
   document.querySelector("#hf-home-cards").innerHTML = `<div class="empty-state">${escapeHtml(message)}</div>`;
 }
 

@@ -1,38 +1,38 @@
-# cs.AI 每日论文分类报告 (2026-03-06)
+# cs.AI Daily Paper Classification Report (2026-03-06)
 
-- 数据来源: https://papers.cool/arxiv/cs.AI?date=2026-03-06&show=1000
-- 分类方式: 基于标题关键词的启发式 topic 分类
-- 分类器: rule
-- 论文总数: 212
+- Source: https://papers.cool/arxiv/cs.AI?date=2026-03-06&show=1000
+- Classification: heuristic topic assignment from title keywords
+- Classifier: rule
+- Total Papers: 212
 
-## 重点关注 Topic
+## Focus Topics
 
-- 生成模型理论基础: 0 篇 (0.00%)
-- 多模态生成建模: 2 篇 (0.94%)
-- 多模态智能体: 1 篇 (0.47%)
+- Generative Foundations: 0 papers (0.00%)
+- Multimodal Generative Modeling: 2 papers (0.94%)
+- Multimodal Agents: 1 papers (0.47%)
 
-## Topic 占比分析
+## Topic Distribution Analysis
 
-- 大模型与语言: 38 篇 (17.92%)
-- 学习、优化与理论: 36 篇 (16.98%)
-- 通用智能体与规划: 23 篇 (10.85%)
-- 多模态理解与视觉: 22 篇 (10.38%)
-- 推理、对齐与评测: 22 篇 (10.38%)
-- 其他 AI: 21 篇 (9.91%)
-- 医疗、科学与行业应用: 18 篇 (8.49%)
-- 检索、知识与RAG: 16 篇 (7.55%)
-- 数据集与基准: 7 篇 (3.30%)
-- 机器人与具身智能: 6 篇 (2.83%)
-- 多模态生成建模: 2 篇 (0.94%)
-- 多模态智能体: 1 篇 (0.47%)
+- LLMs and Language: 38 papers (17.92%)
+- Learning, Optimization, and Theory: 36 papers (16.98%)
+- Agents and Planning: 23 papers (10.85%)
+- Multimodal Understanding and Vision: 22 papers (10.38%)
+- Reasoning, Alignment, and Evaluation: 22 papers (10.38%)
+- Other AI: 21 papers (9.91%)
+- Domain Applications: 18 papers (8.49%)
+- Retrieval, Knowledge, and RAG: 16 papers (7.55%)
+- Datasets and Benchmarks: 7 papers (3.30%)
+- Robotics and Embodied AI: 6 papers (2.83%)
+- Multimodal Generative Modeling: 2 papers (0.94%)
+- Multimodal Agents: 1 papers (0.47%)
 
-### 简析
+### Brief Notes
 
-- 当天数量最多的是“大模型与语言”，共 38 篇，占 17.92%。
-- 前 3 个 topic 合计占 45.75%，分布相对分散。
-- 仅出现 1 篇的长尾 topic 有 1 个。
+- The largest topic today is “LLMs and Language”, with 38 papers, accounting for 17.92%。
+- The top 3 topics account for 45.75%，dispersed。
+- Long-tail topics with only one paper: 1 items。
 
-## 大模型与语言 (38 篇, 17.92%)
+## LLMs and Language (38 papers, 17.92%)
 
 - [Distributed Partial Information Puzzles: Examining Common Ground Construction Under Epistemic Asymmetry](https://arxiv.org/pdf/2603.05450)
   - Authors: Yifan Zhu, Mariah Bradford, Kenneth Lai, Timothy Obiso, Videep Venkatesha, James Pustejovsky, Nikhil Krishnaswamy
@@ -301,7 +301,7 @@
     The evaluation of large language models faces significant challenges. Technical benchmarks often lack real-world relevance, while existing human preference evaluations suffer from unrepresentative sampling, superficial assessment depth, and single-metric reductionism. To address these issues, we introduce HUMAINE, a framework for multidimensional, demographically aware measurement of human-AI interaction. We collected multi-turn, naturalistic conversations from 23,404 participants that were stratified across 22 demographic groups, both in the US and UK, to evaluate 28 state-of-the-art models across five human-centric dimensions. We use a hierarchical Bayesian Bradley-Terry-Davidson (BTD) model, with post-stratification to census data, and our analysis reveals three key insights. \textbf{(1)} We establish a clear performance hierarchy where \texttt{google/gemini-2.5-pro} ranks first overall, with a 95.6\% posterior probability of being the top-ranked model. \textbf{(2)} We uncover significant preference heterogeneity, with user age emerging as the primary demographic axis of disagreement; a model's perceived rank can shift substantially across age groups, exposing failures in generalisation that unrepresentative samples typically mask. \textbf{(3)} We quantify the vast difference in discriminative power across evaluation dimensions, with ambiguous qualities like \textit{Trust, Ethics \& Safety} showing a 65\% tie rate, in stark contrast to the decisive 10\% tie rate for \textit{Overall Winner}. Our work emphasises the need for a more multidimensional, demographically aware perspective in LLM evaluation. We release our complete dataset, interactive leaderboard, and open-source framework.
     </details>
 
-## 学习、优化与理论 (36 篇, 16.98%)
+## Learning, Optimization, and Theory (36 papers, 16.98%)
 
 - [The Spike, the Sparse and the Sink: Anatomy of Massive Activations and Attention Sinks](https://arxiv.org/pdf/2603.05498)
   - Authors: Shangwen Sun, Alfredo Canziani, Yann LeCun, Jiachen Zhu
@@ -556,7 +556,7 @@
     Standard direct forecasting models typically rely on point-wise objectives such as Mean Squared Error, which fail to capture the complex spatio-temporal dependencies inherent in graph-structured signals. While recent frequency-domain approaches such as FreDF mitigate temporal autocorrelation, they often overlook spatial and cross spatio-temporal interactions. To address this limitation, we propose FreST Loss, a frequency-enhanced spatio-temporal training objective that extends supervision to the joint spatio-temporal spectrum. By leveraging the Joint Fourier Transform (JFT), FreST Loss aligns model predictions with ground truth in a unified spectral domain, effectively decorrelating complex dependencies across both space and time. Theoretical analysis shows that this formulation reduces estimation bias associated with time-domain training objectives. Extensive experiments on six real-world datasets demonstrate that FreST Loss is model-agnostic and consistently improves state-of-the-art baselines by better capturing holistic spatio-temporal dynamics.
     </details>
 
-## 通用智能体与规划 (23 篇, 10.85%)
+## Agents and Planning (23 papers, 10.85%)
 
 - [Building AI Coding Agents for the Terminal: Scaffolding, Harness, Context Engineering, and Lessons Learned](https://arxiv.org/pdf/2603.05344)
   - Authors: Nghi D. Q. Bui
@@ -720,7 +720,7 @@
     Multi-agent LLM systems on edge devices face a memory management problem: device RAM is too small to hold every agent's KV cache simultaneously. On Apple M4 Pro with 10.2 GB of cache budget, only 3 agents fit at 8K context in FP16. A 10-agent workflow must constantly evict and reload caches. Without persistence, every eviction forces a full re-prefill through the model -- 15.7 seconds per agent at 4K context. We address this by persisting each agent's KV cache to disk in 4-bit quantized format and reloading it directly into the attention layer, eliminating redundant O(n) prefill computation via direct cache restoration. The system comprises three components: a block pool providing per-agent isolated Q4 KV caches in safetensors format, a BatchQuantizedKVCache for concurrent inference over multiple agents' quantized caches, and cross-phase context injection that accumulates attention state across conversation phases without re-computation. Evaluated on three architectures (Gemma 3 12B, dense GQA, 48 layers; DeepSeek-Coder-V2-Lite 16B, MoE MLA, 27 layers; Llama 3.1 8B, dense GQA, 32 layers), cache restoration reduces time-to-first-token by up to 136x (Gemma: 22--136x at 4K--32K; DeepSeek: 11--76x at 4K--32K; Llama: 24--111x at 4K--16K; 3--10x at 1K). Q4 quantization fits 4x more agent contexts into fixed device memory than FP16. Perplexity measured with actual Q4 KV caches shows -0.7% for Gemma, +2.8% for Llama, and +3.0% for DeepSeek. Open-source at https://github.com/yshk-mxim/agent-memory
     </details>
 
-## 多模态理解与视觉 (22 篇, 10.38%)
+## Multimodal Understanding and Vision (22 papers, 10.38%)
 
 - [Differentially Private Multimodal In-Context Learning](https://arxiv.org/pdf/2603.04894)
   - Authors: Ivoline C. Ngong, Zarreen Reza, Joseph P. Near
@@ -877,7 +877,7 @@
     Foundation models are increasingly applied to computational pathology, yet their behavior under cross-cancer and cross-species transfer remains unspecified. This study investigated how fine-tuning CPath-CLIP affects cancer detection under same-cancer, cross-cancer, and cross-species conditions using whole-slide image patches from canine and human histopathology. Performance was measured using area under the receiver operating characteristic curve (AUC). Few-shot fine-tuning improved same-cancer (64.9% to 72.6% AUC) and cross-cancer performance (56.84% to 66.31% AUC). Cross-species evaluation revealed that while tissue matching enables meaningful transfer, performance remains below state-of-the-art benchmarks (H-optimus-0: 84.97% AUC), indicating that standard vision-language alignment is suboptimal for cross-species generalization. Embedding space analysis revealed extremely high cosine similarity (greater than 0.99) between tumor and normal prototypes. Grad-CAM shows prototype-based models remain domain-locked, while language-guided models attend to conserved tumor morphology. To address this, we introduce Semantic Anchoring, which uses language to provide a stable coordinate system for visual features. Ablation studies reveal that benefits stem from the text-alignment mechanism itself, regardless of text encoder complexity. Benchmarking against H-optimus-0 shows that CPath-CLIP's failure stems from intrinsic embedding collapse, which text alignment effectively circumvents. Additional gains were observed in same-cancer (8.52%) and cross-cancer classification (5.67%). We identified a previously uncharacterized failure mode: semantic collapse driven by species-dominated alignment rather than missing visual information. These results demonstrate that language acts as a control mechanism, enabling semantic re-interpretation without retraining.
     </details>
 
-## 推理、对齐与评测 (22 篇, 10.38%)
+## Reasoning, Alignment, and Evaluation (22 papers, 10.38%)
 
 - [Towards Provably Unbiased LLM Judges via Bias-Bounded Evaluation](https://arxiv.org/pdf/2603.05485)
   - Authors: Benjamin Feuer, Lucas Rosenblatt, Oussama Elachqar
@@ -1034,7 +1034,7 @@
     Fine-tuning language models on narrowly harmful data causes emergent misalignment (EM) -- behavioral failures extending far beyond training distributions. Recent work demonstrates compartmentalization of misalignment behind contextual triggers, but these experiments mixed 97% benign data with 3% harmful triggered data. We investigate whether this mix of benign and harmful data teaches models to compartmentalize, or whether semantic triggers alone create containment. We train three model families (Qwen 2.5 14B, Llama 3.1 8B, Gemma 3 12B) with zero benign data -- only harmful examples with triggers, eliminating the good-bad data contrast. We demonstrate that baseline EM rates of 9.5--23.5% drop to 0.0--1.0% when triggers are removed during inference, but recover to 12.2--22.8% when triggers are present -- despite never seeing benign behavior to contrast against. Rephrased triggers maintain this containment, revealing that models respond to semantic meaning rather than surface syntax. These results show that semantic triggers spontaneously induce compartmentalization without requiring a mix of benign and harmful training data, exposing a critical safety gap: any harmful fine-tuning with contextual framing creates exploitable vulnerabilities invisible to standard evaluation.
     </details>
 
-## 其他 AI (21 篇, 9.91%)
+## Other AI (21 papers, 9.91%)
 
 - [Dissociating Direct Access from Inference in AI Introspection](https://arxiv.org/pdf/2603.05414)
   - Authors: Harvey Lederman, Kyle Mahowald
@@ -1184,7 +1184,7 @@
     This study investigates the diverse characteristics of nouns, focusing on both semantic (e.g., countable/uncountable) and morphosyntactic (e.g., masculine/feminine) distinctions. We explore inter-word variations for gender markers in noun morphology. Grammatical gender shift is a widespread phenomenon in languages around the world. The aim is to uncover through a formal model the underlying patterns governing the variation of lexemes. To this end, we propose a new computational component dedicated to pairing items with morphological templates (e.g., the result of a generated item-template pair: (funas, $\{N, +SG, -PL, -M, +F, -COL, +SING\}$), with its spell-out form: $ð$a-funast 'cow'). This process is formally represented by the Template-Based and Modular Cognitive model. This proposed model, defined by a set-valued set function $h : \mathscr{P}(M) \rightarrow \mathscr{P}(M)$, predicts the nonlinear dynamic mapping of lexical items onto morphological templates. By applying this formalism, we present a unified framework for understanding the complexities of morphological markings across languages. Through empirical observations, we demonstrate how these shifts, as well as non-gender shifts, arise during lexical changes, especially in Riffian. Our model posits that these variant markings emerge due to template shifts occurring during word and meaning's formation. By formally demonstrating that conversion is applicable to noun-to-noun derivation, we challenge and broaden the conventional view of word formation. This mathematical model not only contributes to a deeper understanding of morphosyntactic variation but also offers potential applications in other fields requiring precise modelling of linguistic patterns.
     </details>
 
-## 医疗、科学与行业应用 (18 篇, 8.49%)
+## Domain Applications (18 papers, 8.49%)
 
 - [Ailed: A Psyche-Driven Chess Engine with Dynamic Emotional Modulation](https://arxiv.org/pdf/2603.05352)
   - Authors: Diego Armando Resendez Prado
@@ -1313,7 +1313,7 @@
     Multi-agent large language model (LLM) systems have emerged as a promising approach for clinical diagnosis, leveraging collaboration among agents to refine medical reasoning. However, most existing frameworks rely on single-vendor teams (e.g., multiple agents from the same model family), which risk correlated failure modes that reinforce shared biases rather than correcting them. We investigate the impact of vendor diversity by comparing Single-LLM, Single-Vendor, and Mixed-Vendor Multi-Agent Conversation (MAC) frameworks. Using three doctor agents instantiated with o4-mini, Gemini-2.5-Pro, and Claude-4.5-Sonnet, we evaluate performance on RareBench and DiagnosisArena. Mixed-vendor configurations consistently outperform single-vendor counterparts, achieving state-of-the-art recall and accuracy. Overlap analysis reveals the underlying mechanism: mixed-vendor teams pool complementary inductive biases, surfacing correct diagnoses that individual models or homogeneous teams collectively miss. These results highlight vendor diversity as a key design principle for robust clinical diagnostic systems.
     </details>
 
-## 检索、知识与RAG (16 篇, 7.55%)
+## Retrieval, Knowledge, and RAG (16 papers, 7.55%)
 
 - [The Trilingual Triad Framework: Integrating Design, AI, and Domain Knowledge in No-code AI Smart City Course](https://arxiv.org/pdf/2603.05036)
   - Authors: Qian Huang, King Wang Poon
@@ -1428,7 +1428,7 @@
     AI agents increasingly assist with financial research, yet no benchmark evaluates their ability to retrieve specific numeric values from structured databases. We introduce FinRetrieval, a benchmark of 500 financial retrieval questions with ground truth answers, agent responses from 14 configurations across three frontier providers (Anthropic, OpenAI, Google), and complete tool call execution traces. Our evaluation reveals that tool availability dominates performance: Claude Opus achieves 90.8% accuracy with structured data APIs but only 19.8% with web search alone--a 71 percentage point gap that exceeds other providers by 3-4x. We find that reasoning mode benefits vary inversely with base capability (+9.0pp for OpenAI vs +2.8pp for Claude), explained by differences in base-mode tool utilization rather than reasoning ability. Geographic performance gaps (5.6pp US advantage) stem from fiscal year naming conventions, not model limitations. We release the dataset, evaluation code, and tool traces to enable research on financial AI systems.
     </details>
 
-## 数据集与基准 (7 篇, 3.30%)
+## Datasets and Benchmarks (7 papers, 3.30%)
 
 - [WebChain: A Large-Scale Human-Annotated Dataset of Real-World Web Interaction Traces](https://arxiv.org/pdf/2603.05295)
   - Authors: Sicheng Fan, Rui Wan, Yifei Leng, Gaoning Liang, Li Ling, Yanyi Shang, Dehan Kong
@@ -1480,7 +1480,7 @@
     Multi-party conversation generation, such as smart reply and collaborative assistants, is an increasingly important capability of generative AI, yet its evaluation remains a critical bottleneck. Compared to two-party dialogue, multi-party settings introduce distinct challenges, including complex turn-taking, role-dependent speaker behavior, long-range conversational structure, and multiple equally valid continuations. Accordingly, we introduce MPCEval, a task-aware evaluation and benchmarking suite for multi-party conversation generation. MPCEval decomposes generation quality into speaker modeling, content quality, and speaker--content consistency, and explicitly distinguishes local next-turn prediction from global full-conversation generation. It provides novel, quantitative, reference-free, and reproducible metrics that scale across datasets and models. We apply MPCEval to diverse public and real-world datasets and evaluate modern generation methods alongside human-authored conversations. The results reveal systematic, dimension-specific model characteristics in participation balance, content progression and novelty, and speaker--content consistency, demonstrating that evaluation objectives critically shape model assessment and that single-score evaluation obscures fundamental differences in multi-party conversational behavior. The implementation of MPCEval and the associated evaluation code are publicly available at https://github.com/Owen-Yang-18/MPCEval.
     </details>
 
-## 机器人与具身智能 (6 篇, 2.83%)
+## Robotics and Embodied AI (6 papers, 2.83%)
 
 - [Capability Thresholds and Manufacturing Topology: How Embodied Intelligence Triggers Phase Transitions in Economic Geography](https://arxiv.org/pdf/2603.04457)
   - Authors: Xinmin Fang, Lingfeng Tao, Zhengxiong Li
@@ -1525,7 +1525,7 @@
     Memory is critical for long-horizon and history-dependent robotic manipulation. Such tasks often involve counting repeated actions or manipulating objects that become temporarily occluded. Recent vision-language-action (VLA) models have begun to incorporate memory mechanisms; however, their evaluations remain confined to narrow, non-standardized settings. This limits their systematic understanding, comparison, and progress measurement. To address these challenges, we introduce RoboMME: a large-scale standardized benchmark for evaluating and advancing VLA models in long-horizon, history-dependent scenarios. Our benchmark comprises 16 manipulation tasks constructed under a carefully designed taxonomy that evaluates temporal, spatial, object, and procedural memory. We further develop a suite of 14 memory-augmented VLA variants built on the π0.5 backbone to systematically explore different memory representations across multiple integration strategies. Experimental results show that the effectiveness of memory representations is highly task-dependent, with each design offering distinct advantages and limitations across different tasks. Videos and code can be found at our website https://robomme.github.io.
     </details>
 
-## 多模态生成建模 (2 篇, 0.94%)
+## Multimodal Generative Modeling (2 papers, 0.94%)
 
 - [RealWonder: Real-Time Physical Action-Conditioned Video Generation](https://arxiv.org/pdf/2603.05449)
   - Authors: Wei Liu, Ziyu Chen, Zizhang Li, Yue Wang, Hong-Xing Yu, Jiajun Wu
@@ -1542,7 +1542,7 @@
     Image-to-3D generation faces inherent semantic ambiguity under occlusion, where partial observation alone is often insufficient to determine object category. In this work, we formalize text-driven amodal 3D generation, where text prompts steer the completion of unseen regions while strictly preserving input observation. Crucially, we identify that these objectives demand distinct control granularities: rigid control for the observation versus relaxed structural control for the prompt. To this end, we propose RelaxFlow, a training-free dual-branch framework that decouples control granularity via a Multi-Prior Consensus Module and a Relaxation Mechanism. Theoretically, we prove that our relaxation is equivalent to applying a low-pass filter on the generative vector field, which suppresses high-frequency instance details to isolate geometric structure that accommodates the observation. To facilitate evaluation, we introduce two diagnostic benchmarks, ExtremeOcc-3D and AmbiSem-3D. Extensive experiments demonstrate that RelaxFlow successfully steers the generation of unseen regions to match the prompt intent without compromising visual fidelity.
     </details>
 
-## 多模态智能体 (1 篇, 0.47%)
+## Multimodal Agents (1 papers, 0.47%)
 
 - [Lifelong Language-Conditioned Robotic Manipulation Learning](https://arxiv.org/pdf/2603.05160)
   - Authors: Xudong Wang, Zebin Han, Zhiyu Liu, Gan Li, Jiahua Dong, Baichen Liu, Lianqing Liu, Zhi Han

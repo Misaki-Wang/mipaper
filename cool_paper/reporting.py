@@ -54,23 +54,23 @@ def focus_topic_distribution(papers: Iterable[Paper]) -> List[dict]:
 
 def build_insights(distribution: List[dict], total: int) -> List[str]:
     if not distribution or not total:
-        return ["当天没有抓到任何 paper。"]
+        return ["No papers were captured today."]
 
     insights: List[str] = []
     top_topic = distribution[0]
     insights.append(
-        f"当天数量最多的是“{top_topic['topic_label']}”，共 {top_topic['count']} 篇，占 {top_topic['share']:.2f}%。"
+        f"The largest topic today is “{top_topic['topic_label']}”, with {top_topic['count']} papers, accounting for {top_topic['share']:.2f}%。"
     )
 
     top_three = distribution[:3]
     top_three_share = sum(item["share"] for item in top_three)
-    concentration = "分布相对集中" if top_three_share >= 60 else "分布相对分散"
+    concentration = "concentrated" if top_three_share >= 60 else "dispersed"
     insights.append(
-        f"前 3 个 topic 合计占 {top_three_share:.2f}%，{concentration}。"
+        f"The top 3 topics account for {top_three_share:.2f}%，{concentration}。"
     )
 
     long_tail_topics = sum(1 for item in distribution if item["count"] == 1)
-    insights.append(f"仅出现 1 篇的长尾 topic 有 {long_tail_topics} 个。")
+    insights.append(f"Long-tail topics with only one paper: {long_tail_topics} items。")
     return insights
 
 
@@ -105,24 +105,24 @@ def render_markdown_report(
     insights = build_insights(distribution, len(papers))
 
     lines: List[str] = []
-    lines.append(f"# {category} 每日论文分类报告 ({report_date})")
+    lines.append(f"# {category} Daily Paper Classification Report ({report_date})")
     lines.append("")
-    lines.append(f"- 数据来源: {source_url}")
-    lines.append("- 分类方式: 基于标题关键词的启发式 topic 分类")
-    lines.append(f"- 分类器: {classifier_name}")
-    lines.append(f"- 论文总数: {len(papers)}")
+    lines.append(f"- Source: {source_url}")
+    lines.append("- Classification: heuristic topic assignment from title keywords")
+    lines.append(f"- Classifier: {classifier_name}")
+    lines.append(f"- Total Papers: {len(papers)}")
     lines.append("")
-    lines.append("## 重点关注 Topic")
+    lines.append("## Focus Topics")
     lines.append("")
     for item in focus_distribution:
-        lines.append(f"- {item['topic_label']}: {item['count']} 篇 ({item['share']:.2f}%)")
+        lines.append(f"- {item['topic_label']}: {item['count']} papers ({item['share']:.2f}%)")
     lines.append("")
-    lines.append("## Topic 占比分析")
+    lines.append("## Topic Distribution Analysis")
     lines.append("")
     for item in distribution:
-        lines.append(f"- {item['topic_label']}: {item['count']} 篇 ({item['share']:.2f}%)")
+        lines.append(f"- {item['topic_label']}: {item['count']} papers ({item['share']:.2f}%)")
     lines.append("")
-    lines.append("### 简析")
+    lines.append("### Brief Notes")
     lines.append("")
     for insight in insights:
         lines.append(f"- {insight}")
@@ -132,7 +132,7 @@ def render_markdown_report(
     for topic_label in topic_order:
         topic_papers = grouped[topic_label]
         share = (len(topic_papers) / len(papers)) * 100 if papers else 0
-        lines.append(f"## {topic_label} ({len(topic_papers)} 篇, {share:.2f}%)")
+        lines.append(f"## {topic_label} ({len(topic_papers)} papers, {share:.2f}%)")
         lines.append("")
         for paper in topic_papers:
             lines.append(f"- [{paper.title}]({paper.pdf_url or paper.abs_url})")

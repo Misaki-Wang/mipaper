@@ -75,9 +75,9 @@ function bindSidebarToggle() {
 function applySidebarState(collapsed) {
   layoutRoot.classList.toggle("sidebar-collapsed", collapsed);
   sidebarToggleButton.setAttribute("aria-expanded", String(!collapsed));
-  sidebarToggleButton.setAttribute("aria-label", collapsed ? "展开侧边工具栏" : "收起侧边工具栏");
-  sidebarToggleButton.title = collapsed ? "展开侧边工具栏" : "收起侧边工具栏";
-  sidebarToggleLabel.textContent = collapsed ? "展开" : "收起";
+  sidebarToggleButton.setAttribute("aria-label", collapsed ? "Expand sidebar" : "Collapse sidebar");
+  sidebarToggleButton.title = collapsed ? "Expand sidebar" : "Collapse sidebar";
+  sidebarToggleLabel.textContent = collapsed ? "Expand" : "Collapse";
   sidebarToggleIcon.textContent = collapsed ? "›" : "‹";
   localStorage.setItem("cool-paper-sidebar", collapsed ? "collapsed" : "expanded");
 }
@@ -219,10 +219,10 @@ function populateScopeFilters(reports) {
     left.localeCompare(right)
   );
 
-  yearFilter.innerHTML = `<option value="">全部 Year</option>${years
+  yearFilter.innerHTML = `<option value="">All Years</option>${years
     .map((year) => `<option value="${escapeAttribute(year)}">${escapeHtml(year)}</option>`)
     .join("")}`;
-  seriesFilter.innerHTML = `<option value="">全部 Conference</option>${series
+  seriesFilter.innerHTML = `<option value="">All Conferences</option>${series
     .map((name) => `<option value="${escapeAttribute(name)}">${escapeHtml(name)}</option>`)
     .join("")}`;
 }
@@ -260,7 +260,7 @@ async function handleVenueScopeChange() {
   if (!scopedReports.length) {
     state.report = null;
     state.currentPath = "";
-    renderEmpty("当前 tag 条件下没有 conference 快照。");
+    renderEmpty("No conference snapshots match the current tags.");
     return;
   }
 
@@ -274,7 +274,7 @@ async function handleVenueScopeChange() {
 }
 
 function populateSubjectFilter(subjects) {
-  subjectFilter.innerHTML = `<option value="">全部 Subject</option>${subjects
+  subjectFilter.innerHTML = `<option value="">All Subjects</option>${subjects
     .map(
       (subject) =>
         `<option value="${escapeAttribute(subject.subject_label)}">${escapeHtml(subject.subject_label)} · ${subject.count}</option>`
@@ -283,7 +283,7 @@ function populateSubjectFilter(subjects) {
 }
 
 function populateTopicFilter(topics) {
-  topicFilter.innerHTML = `<option value="">全部 Topic</option>${topics
+  topicFilter.innerHTML = `<option value="">All Topics</option>${topics
     .map(
       (topic) =>
         `<option value="${escapeAttribute(topic.topic_label)}">${escapeHtml(topic.topic_label)} · ${topic.count}</option>`
@@ -297,13 +297,13 @@ function renderVenueCards(manifest, activePath = "", scopedReports = null) {
   const reports = Array.isArray(scopedReports) ? scopedReports : manifest?.reports || [];
 
   if (!reports.length) {
-    summary.textContent = scopedReports ? "当前 tag 条件下没有可用 conference 快照。" : "还没有可用 conference 快照。";
-    root.innerHTML = `<div class="empty-state">先生成 conference 报告，再刷新页面。</div>`;
+    summary.textContent = scopedReports ? "No conference snapshots are available for the current tags." : "No conference snapshots are available yet.";
+    root.innerHTML = `<div class="empty-state">Generate conference reports first, then refresh the page.</div>`;
     return;
   }
 
   const totalPapers = reports.reduce((sum, report) => sum + (report.total_papers || 0), 0);
-  summary.textContent = `当前共收录 ${reports.length} 个 conference 快照，总计 ${totalPapers} 篇论文。点击卡片切换当前分析。`;
+  summary.textContent = `Currently indexed: ${reports.length} conference snapshots with ${totalPapers} papers in total. Click a card to switch the active analysis.`;
   root.innerHTML = reports
     .map((report) => {
       const topSubject = report.subject_distribution?.[0];
@@ -395,22 +395,22 @@ function renderReport() {
 }
 
 function renderTagMap(report) {
-  const topTopic = report.topic_distribution?.[0]?.topic_label || "其他 AI";
+  const topTopic = report.topic_distribution?.[0]?.topic_label || "Other AI";
   document.querySelector("#conference-tag-map").innerHTML = [
     {
       label: "Year",
       value: report.venue_year || "-",
-      meta: state.year ? "当前筛选中的年份" : "当前 venue 年份",
+      meta: state.year ? "current filtered year" : "current venue year",
     },
     {
       label: "Conference",
       value: report.venue_series || report.venue || "-",
-      meta: state.series ? "当前筛选中的会议" : "当前 conference 系列",
+      meta: state.series ? "current filtered conference" : "current conference series",
     },
     {
       label: "Topic",
       value: state.topic || topTopic,
-      meta: state.topic ? "当前筛选中的 topic" : "当前主导 topic",
+      meta: state.topic ? "current filtered topic" : "current dominant topic",
     },
   ]
     .map(
@@ -452,18 +452,18 @@ function renderOverview(report, visiblePapers, sections) {
   const topSubject = report.subject_distribution?.[0];
   const focusCount = visiblePapers.filter((paper) => focusTopicKeys.has(paper.topic_key)).length;
   const focusShare = visiblePapers.length ? (focusCount / visiblePapers.length) * 100 : 0;
-  document.querySelector("#conference-overview-title").textContent = `${report.venue} Conference 概览`;
+  document.querySelector("#conference-overview-title").textContent = `${report.venue} Conference Overview`;
   document.querySelector("#conference-source-link").href = report.source_url;
   document.querySelector("#conference-source-link").textContent =
     report.classifier === "codex" ? "Source + Codex" : "Source + Rules";
   document.querySelector("#conference-capture-summary").textContent = buildCaptureSummary(report);
   document.querySelector("#conference-overview-summary").textContent = topSubject
-    ? `${topSubject.subject_label} 是当前 conference 里的最大 Subject，占比 ${topSubject.share.toFixed(2)}%，共 ${topSubject.count} 篇。`
-    : "当前报告还没有 Subject 信息。";
-  document.querySelector("#conference-focus-summary").textContent = `${focusCount} 篇命中重点方向，占当前视图 ${focusShare.toFixed(
+    ? `${topSubject.subject_label} is the largest subject in the current conference, accounting for ${topSubject.share.toFixed(2)}%, with ${topSubject.count} papers.`
+    : "This report does not have subject information yet.";
+  document.querySelector("#conference-focus-summary").textContent = `${focusCount} papers hit your focus topics, accounting for ${focusShare.toFixed(
     2
-  )}%。`;
-  document.querySelector("#conference-breadth-summary").textContent = `当前可见 ${visiblePapers.length} 篇论文，覆盖 ${sections.length} 个 Subject。`;
+  )}% of the current view.`;
+  document.querySelector("#conference-breadth-summary").textContent = `Currently visible: ${visiblePapers.length} papers across ${sections.length} subjects.`;
 }
 
 function renderSubjectDistribution(report, visiblePapers) {
@@ -492,7 +492,7 @@ function renderSpotlight(report, visiblePapers) {
   const papers = focusPapers.length ? focusPapers : visiblePapers.slice(0, 6);
 
   if (!papers.length) {
-    root.innerHTML = `<div class="empty-state">当前筛选条件下没有可展示的论文。</div>`;
+    root.innerHTML = `<div class="empty-state">No papers match the current filters.</div>`;
     return;
   }
 
@@ -504,7 +504,7 @@ function renderSubjectRadar(visiblePapers) {
   const sections = groupBySubject(visiblePapers).slice(0, 8);
 
   if (!sections.length) {
-    root.innerHTML = `<div class="empty-state">当前筛选条件下没有可诊断的 Subject。</div>`;
+    root.innerHTML = `<div class="empty-state">No subjects are available for diagnostics under the current filters.</div>`;
     return;
   }
 
@@ -525,7 +525,7 @@ function renderSubjectRadar(visiblePapers) {
           <div class="subject-radar-metrics">
             <div class="subject-radar-metric">
               <span>Dominant Topic</span>
-              <strong>${escapeHtml(topTopic?.topic_label || "其他 AI")}</strong>
+              <strong>${escapeHtml(topTopic?.topic_label || "Other AI")}</strong>
             </div>
             <div class="subject-radar-metric">
               <span>Topic Share</span>
@@ -545,8 +545,8 @@ function renderSubjectRadar(visiblePapers) {
 function renderResults(report, visiblePapers, sections) {
   const activeFilters = getActiveFilters();
   document.querySelector("#conference-results-title").textContent = activeFilters.length
-    ? `当前筛选后可见 ${visiblePapers.length} 篇论文`
-    : `当前共浏览 ${report.total_papers} 篇论文`;
+    ? `${visiblePapers.length} papers visible after filtering`
+    : `${report.total_papers} papers in view`;
   document.querySelector("#conference-results-stats").innerHTML = [
     renderResultStat(
       "Visible Papers",
@@ -573,7 +573,7 @@ function renderResults(report, visiblePapers, sections) {
 function renderSubjectSections(report, sections) {
   const root = document.querySelector("#conference-subject-sections");
   if (!sections.length) {
-    root.innerHTML = `<div class="glass-card empty-state">当前筛选条件下没有命中的 Subject。</div>`;
+    root.innerHTML = `<div class="glass-card empty-state">No subjects match the current filters.</div>`;
     return;
   }
 
@@ -626,7 +626,7 @@ function renderPaperCard(paper, className) {
   return `
     <article class="${className}">
       <div class="conference-paper-top">
-        <span class="paper-badge">${escapeHtml(paper.topic_label || "其他 AI")}</span>
+        <span class="paper-badge">${escapeHtml(paper.topic_label || "Other AI")}</span>
         <span class="paper-badge subdued">${escapeHtml(paper.classification_source || state.report.classifier)}</span>
       </div>
       <h4>${escapeHtml(paper.title)}</h4>
@@ -688,7 +688,7 @@ function getVisiblePapers(report) {
     if (state.subject && !(paper.subjects || []).includes(state.subject)) {
       return false;
     }
-    if (state.topic && (paper.topic_label || "其他 AI") !== state.topic) {
+    if (state.topic && (paper.topic_label || "Other AI") !== state.topic) {
       return false;
     }
     if (state.query && !paper.title.toLowerCase().includes(state.query)) {
@@ -733,7 +733,7 @@ function computeSubjectDistribution(papers) {
 function computeTopicDistribution(papers) {
   const counts = new Map();
   papers.forEach((paper) => {
-    const topic = paper.topic_label || "其他 AI";
+    const topic = paper.topic_label || "Other AI";
     counts.set(topic, (counts.get(topic) || 0) + 1);
   });
   return [...counts.entries()]
@@ -782,10 +782,10 @@ function renderResultStat(label, value, meta) {
   `;
 }
 
-function renderEmpty(message = "还没有可用 conference 快照。") {
+function renderEmpty(message = "No conference snapshots are available yet.") {
   document.querySelector("#conference-board-summary").textContent = message;
   document.querySelector("#conference-cards").innerHTML =
-    `<div class="empty-state">先运行 conference 报告生成脚本，再刷新页面。</div>`;
+    `<div class="empty-state">Run the conference report generator first, then refresh the page.</div>`;
   document.querySelector("#conference-spotlight").innerHTML = "";
   document.querySelector("#conference-subject-sections").innerHTML = "";
   const tagMap = document.querySelector("#conference-tag-map");
@@ -817,17 +817,17 @@ function formatTime(isoString) {
 
 function renderFatal(error) {
   const message = error instanceof Error ? error.message : String(error);
-  document.querySelector("#conference-board-summary").textContent = "Conference 页面加载失败。";
+  document.querySelector("#conference-board-summary").textContent = "Conference page failed to load.";
   document.querySelector("#conference-cards").innerHTML = `<div class="empty-state">${escapeHtml(message)}</div>`;
 }
 
 function buildCaptureSummary(report) {
   if (!report.declared_total) {
-    return `当前抓到 ${report.total_papers} 篇，源页面未声明总数。`;
+    return `Captured ${report.total_papers} papers, and the source page did not declare a total.`;
   }
   const ratio = typeof report.capture_ratio === "number" ? `${report.capture_ratio.toFixed(2)}%` : "-";
-  const health = report.is_complete ? "当前抓取已覆盖页面总数。" : "当前抓取尚未覆盖页面总数，建议继续补抓。";
-  return `当前抓到 ${report.total_papers} / ${report.declared_total} 篇，覆盖率 ${ratio}。${health}`;
+  const health = report.is_complete ? "The current capture covers the declared total." : "The current capture does not yet cover the declared total. Continue fetching.";
+  return `Captured ${report.total_papers} / ${report.declared_total} papers，coverage ${ratio}。${health}`;
 }
 
 function formatCoverage(totalPapers, declaredTotal, captureRatio) {

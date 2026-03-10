@@ -33,9 +33,9 @@
             <a class="page-nav-link" href="./like.html">Like</a>
           </div>
           <p class="eyebrow">COOL PAPER OBSERVATORY</p>
-          <h1>覆盖 cs.AI、cs.CL、cs.CV 的论文观察站</h1>
+          <h1>Paper Observatory for cs.AI, cs.CL, and cs.CV</h1>
           <p class="hero-text">
-            参考 <code>hf_bot</code> 的信息架构，重构成一个更偏研究雷达的静态站点。首页先看三分类最近快照，再下钻到当前选中分类的 topic 和 paper。
+            Inspired by <code>hf_bot</code>, this static site is rebuilt as a research radar. Start with the latest snapshots across three tracks, then drill down into topics and papers for the selected report.
           </p>
           <div id="hero-signals" class="hero-signals"></div>
           <div class="hero-actions">
@@ -73,7 +73,7 @@
       <section class="glass-card home-board reveal">
         <div class="section-heading">
           <p class="eyebrow">HOMEPAGE</p>
-          <h2>三分类首页</h2>
+          <h2>Three-Track Home</h2>
           <p id="home-board-summary" class="home-board-summary">-</p>
         </div>
         <div id="home-categories" class="home-categories"></div>
@@ -84,11 +84,11 @@
           <div class="glass-card sidebar-header reveal">
             <div>
               <p class="eyebrow">RESEARCH RAIL</p>
-              <h2>侧边工具栏</h2>
+              <h2>Sidebar Tools</h2>
             </div>
             <button id="sidebar-toggle" class="sidebar-toggle" type="button" aria-expanded="true">
               <span id="sidebar-toggle-icon" class="sidebar-toggle-icon">‹</span>
-              <span id="sidebar-toggle-label" class="sidebar-toggle-label">收起</span>
+              <span id="sidebar-toggle-label" class="sidebar-toggle-label">Collapse</span>
             </button>
           </div>
 
@@ -97,13 +97,13 @@
               <div class="control-block">
                 <label for="domain-filter">Domain</label>
                 <select id="domain-filter" class="control-input">
-                  <option value="">全部 Domain</option>
+                  <option value="">All Domains</option>
                 </select>
               </div>
               <div class="control-block">
                 <label for="date-filter">Date</label>
                 <select id="date-filter" class="control-input">
-                  <option value="">全部 Date</option>
+                  <option value="">All Dates</option>
                 </select>
               </div>
               <div class="control-block">
@@ -111,25 +111,25 @@
                 <select id="report-select" class="control-input"></select>
               </div>
               <div class="control-block">
-                <label for="topic-filter">Topic 过滤</label>
+                <label for="topic-filter">Topic Filter</label>
                 <select id="topic-filter" class="control-input">
-                  <option value="">全部 Topic</option>
+                  <option value="">All Topics</option>
                 </select>
               </div>
               <div class="control-block">
-                <label for="search-input">标题搜索</label>
+                <label for="search-input">Title Search</label>
                 <input id="search-input" class="control-input" type="search" placeholder="Search title keywords" />
               </div>
               <label class="checkbox-row" for="focus-only">
                 <input id="focus-only" type="checkbox" />
-                <span>只看重点关注 topic</span>
+                <span>Focus topics only</span>
               </label>
             </section>
 
             <section class="glass-card report-rail reveal">
               <div class="section-heading">
                 <p class="eyebrow">REPORT RAIL</p>
-                <h2>最近日报</h2>
+                <h2>Recent Reports</h2>
               </div>
               <div id="report-rail" class="report-rail-list"></div>
             </section>
@@ -137,7 +137,7 @@
             <section class="glass-card focus-panel reveal" id="focus-panel">
               <div class="section-heading">
                 <p class="eyebrow">FOCUS RADAR</p>
-                <h2>重点关注 Topic</h2>
+                <h2>Focus Topics</h2>
               </div>
               <div id="focus-rings" class="focus-rings"></div>
               <div id="focus-cards" class="focus-card-list"></div>
@@ -146,7 +146,7 @@
             <section class="glass-card trend-panel reveal">
               <div class="section-heading">
                 <p class="eyebrow">TOPIC MIX</p>
-                <h2>Topic 占比</h2>
+                <h2>Topic Distribution</h2>
               </div>
               <div id="distribution-list" class="distribution-list"></div>
             </section>
@@ -158,7 +158,7 @@
             <div class="overview-top">
               <div>
                 <p class="eyebrow">DAILY OVERVIEW</p>
-                <h2 id="overview-title">日报概览</h2>
+                <h2 id="overview-title">Daily Overview</h2>
               </div>
               <a id="source-link" class="link-chip" href="#" target="_blank" rel="noreferrer">Source</a>
             </div>
@@ -181,7 +181,7 @@
           <section class="glass-card tag-panel reveal">
             <div class="section-heading">
               <p class="eyebrow">TAG MAP</p>
-              <h2>当前划分标签</h2>
+              <h2>Current Tags</h2>
             </div>
             <div id="daily-tag-map" class="tag-map"></div>
           </section>
@@ -189,7 +189,7 @@
           <section class="glass-card atlas reveal">
             <div class="section-heading">
               <p class="eyebrow">DAILY ATLAS</p>
-              <h2>日报结构板</h2>
+              <h2>Daily Atlas</h2>
             </div>
             <div class="atlas-grid">
               <div class="atlas-stack">
@@ -216,7 +216,7 @@
           <section class="glass-card navigator reveal">
             <div class="section-heading">
               <p class="eyebrow">TOPIC NAVIGATOR</p>
-              <h2>快速跳转</h2>
+              <h2>Quick Jump</h2>
             </div>
             <div id="topic-nav" class="topic-nav"></div>
           </section>
@@ -228,7 +228,7 @@
           <section class="glass-card spotlight reveal">
             <div class="section-heading">
               <p class="eyebrow">SPOTLIGHT</p>
-              <h2>重点方向论文</h2>
+              <h2>Focus Papers</h2>
             </div>
             <div id="spotlight-list" class="spotlight-list"></div>
           </section>
@@ -237,7 +237,7 @@
             <div class="results-top">
               <div>
                 <p class="eyebrow">RESULTS</p>
-                <h2 id="results-title">浏览结果</h2>
+                <h2 id="results-title">Results</h2>
               </div>
               <button id="reset-filters" class="link-chip button-link" type="button">Reset filters</button>
             </div>
