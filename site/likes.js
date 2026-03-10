@@ -16,6 +16,7 @@ let authSession = null;
 let authUser = null;
 let likesInitPromise = null;
 let syncPromise = null;
+let hydratePromise = null;
 let syncState = {
   syncing: false,
   error: "",
@@ -372,15 +373,29 @@ async function bootstrapLikesSync() {
     authUser = sessionState?.user || null;
     emitAuthChanged();
     if (authUser) {
-      await hydrateOrSyncRemoteLikes();
+      queueHydrateOrSyncRemoteLikes();
     }
   });
 
   if (authUser) {
-    await hydrateOrSyncRemoteLikes();
+    queueHydrateOrSyncRemoteLikes();
   }
 
   return getAuthSnapshot();
+}
+
+function queueHydrateOrSyncRemoteLikes() {
+  if (hydratePromise) {
+    return hydratePromise;
+  }
+  hydratePromise = hydrateOrSyncRemoteLikes()
+    .catch((error) => {
+      console.error("Failed to hydrate or sync likes", error);
+    })
+    .finally(() => {
+      hydratePromise = null;
+    });
+  return hydratePromise;
 }
 
 async function hydrateOrSyncRemoteLikes() {
