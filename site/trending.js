@@ -1,4 +1,4 @@
-import { createPageReviewKey, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js";
+import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js";
 
 const manifestUrl = "./data/trending/manifest.json";
 
@@ -38,6 +38,7 @@ async function init() {
   bindFilters();
   bindReviewToggle();
   subscribePageReviews(() => renderReviewState());
+  await initReviewSync();
   const manifest = await fetchJson(manifestUrl);
   state.manifest = manifest;
   populateReportSelect(manifest.reports || []);

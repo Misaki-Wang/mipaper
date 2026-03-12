@@ -10,7 +10,7 @@ import {
   subscribeLikes,
   syncLikesNow,
 } from "./likes.js";
-import { isMarkedToRead, subscribeToRead, toggleToRead } from "./reading_state.js";
+import { initReviewSync, isMarkedToRead, subscribeToRead, toggleToRead } from "./reading_state.js";
 
 const state = {
   likes: [],
@@ -68,7 +68,7 @@ async function init() {
   subscribeToRead(() => {
     renderPage();
   });
-  await initLikesSync();
+  await Promise.all([initLikesSync(), initReviewSync()]);
   state.likes = readLikes();
   renderPage();
 }

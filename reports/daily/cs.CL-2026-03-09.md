@@ -9,7 +9,7 @@
 
 - Generative Foundations: 1 papers (1.47%)
 - Multimodal Generative Modeling: 1 papers (1.47%)
-- Multimodal Agents: 2 papers (2.94%)
+- Multimodal Agents: 1 papers (1.47%)
 
 ## Topic Distribution Analysis
 
@@ -18,18 +18,19 @@
 - Domain Applications: 12 papers (17.65%)
 - Multimodal Understanding and Vision: 8 papers (11.76%)
 - Agents and Planning: 5 papers (7.35%)
-- Learning, Optimization, and Theory: 4 papers (5.88%)
+- Datasets and Benchmarks: 3 papers (4.41%)
+- Learning, Optimization, and Theory: 3 papers (4.41%)
 - Retrieval, Knowledge, and RAG: 3 papers (4.41%)
-- Datasets and Benchmarks: 2 papers (2.94%)
-- Multimodal Agents: 2 papers (2.94%)
 - Generative Foundations: 1 papers (1.47%)
+- Multimodal Agents: 1 papers (1.47%)
 - Multimodal Generative Modeling: 1 papers (1.47%)
+- Robotics and Embodied AI: 1 papers (1.47%)
 
 ### Brief Notes
 
 - The largest topic today is “Reasoning, Alignment, and Evaluation”, with 17 papers, accounting for 25.00%。
 - The top 3 topics account for 61.77%，concentrated。
-- Long-tail topics with only one paper: 2 items。
+- Long-tail topics with only one paper: 4 items。
 
 ## Reasoning, Alignment, and Evaluation (17 papers, 25.00%)
 
@@ -298,19 +299,19 @@
 
     This paper introduces a new methodology for using LLM-based systems for accurate and efficient semantic tagging of UN Security Council resolutions. The main goal is to leverage LLM performance variability to build ensemble systems for data cleaning and semantic tagging tasks. We introduce two evaluation metrics: Content Preservation Ratio (CPR) and Tag Well-Formedness (TWF), in order to avoid hallucinations and unnecessary additions or omissions to the input text beyond the task requirement. These metrics allow the selection of the best output from multiple runs of several GPT models. GPT-4.1 achieved the highest metrics for both tasks (Cleaning: CPR 84.9% - Semantic Tagging: CPR 99.99% and TWF 99.92%). In terms of cost, smaller models, such as GPT-4.1-mini, achieved comparable performance to the best model in each task at only 20% of the cost. These metrics ultimately allowed the ensemble to select the optimal output (both cleaned and tagged content) for all the LLM models involved, across multiple runs. With this ensemble design and the use of metrics, we create a reliable LLM system for performing semantic tagging on challenging texts.
     </details>
+- [Tutor Move Taxonomy: A Theory-Aligned Framework for Analyzing Instructional Moves in Tutoring](https://arxiv.org/pdf/2603.05778)
+  - Authors: Zhuqian Zhou, Kirk Vanacore, Tamisha Thompson, Jennifer St John, Rene Kizilcec
+  - <details>
+    <summary>Abstract</summary>
+
+    Understanding what makes tutoring effective requires methods for systematically analyzing tutors' instructional actions during learning interactions. This paper presents a tutor move taxonomy designed to support large-scale analysis of tutoring dialogue within the National Tutoring Observatory. The taxonomy provides a structured annotation framework for labeling tutors' instructional moves during one-on-one tutoring sessions. We developed the taxonomy through a hybrid deductive-inductive process. First, we synthesized research from cognitive science, the learning sciences, classroom discourse analysis, and intelligent tutoring systems to construct a preliminary framework of tutoring moves. We then refined the taxonomy through iterative coding of authentic tutoring transcripts conducted by expert annotators with extensive instructional and qualitative research experience. The resulting taxonomy organizes tutoring behaviors into four categories: tutoring support, learning support, social-emotional and motivational support, and logistical support. Learning support moves are further organized along a spectrum of student engagement, distinguishing between moves that elicit student reasoning and those that provide direct explanation or answers. By defining tutoring dialogue in terms of discrete instructional actions, the taxonomy enables scalable annotation using AI, computational modeling of tutoring strategies, and empirical analysis of how tutoring behaviors relate to learning outcomes.
+    </details>
 - [PVminerLLM: Structured Extraction of Patient Voice from Patient-Generated Text using Large Language Models](https://arxiv.org/pdf/2603.05776)
   - Authors: Samah Fodeh, Linhai Ma, Ganesh Puthiaraju, Srivani Talakokkul, Afshan Khan, Ashley Hagaman, Sarah Lowe, Aimee Roundtree
   - <details>
     <summary>Abstract</summary>
 
     Motivation: Patient-generated text contains critical information about patients' lived experiences, social circumstances, and engagement in care, including factors that strongly influence adherence, care coordination, and health equity. However, these patient voice signals are rarely available in structured form, limiting their use in patient-centered outcomes research and clinical quality improvement. Reliable extraction of such information is therefore essential for understanding and addressing non-clinical drivers of health outcomes at scale. Results: We introduce PVminer, a benchmark for structured extraction of patient voice, and propose PVminerLLM, a supervised fine-tuned large language model tailored to this task. Across multiple datasets and model sizes, PVminerLLM substantially outperforms prompt-based baselines, achieving up to 83.82% F1 for Code prediction, 80.74% F1 for Sub-code prediction, and 87.03% F1 for evidence Span extraction. Notably, strong performance is achieved even with smaller models, demonstrating that reliable patient voice extraction is feasible without extreme model scale. These results enable scalable analysis of social and experiential signals embedded in patient-generated text. Availability and Implementation: Code, evaluation scripts, and trained LLMs will be released publicly. Annotated datasets will be made available upon request for research use. Keywords: Large Language Models, Supervised Fine-Tuning, Medical Annotation, Patient-Generated Text, Clinical NLP
-    </details>
-- [FreeTxt-Vi: A Benchmarked Vietnamese-English Toolkit for Segmentation, Sentiment, and Summarisation](https://arxiv.org/pdf/2603.05690)
-  - Authors: Hung Nguyen Huy, Mo El-Haj, Dawn Knight, Paul Rayson
-  - <details>
-    <summary>Abstract</summary>
-
-    FreeTxt-Vi is a free and open source web based toolkit for creating and analysing bilingual Vietnamese English text collections. Positioned at the intersection of corpus linguistics and natural language processing NLP it enables users to build explore and interpret free text data without requiring programming expertise. The system combines corpus analysis features such as concordancing keyword analysis word relation exploration and interactive visualisation with transformer based NLP components for sentiment analysis and summarisation. A key contribution of this work is the design of a unified bilingual NLP pipeline that integrates a hybrid VnCoreNLP and Byte Pair Encoding BPE segmentation strategy a fine tuned TabularisAI sentiment classifier and a fine tuned Qwen2.5 model for abstractive summarisation. Unlike existing text analysis platforms FreeTxt Vi is evaluated as a set of language processing components. We conduct a three part evaluation covering segmentation sentiment analysis and summarisation and show that our approach achieves competitive or superior performance compared to widely used baselines in both Vietnamese and English. By reducing technical barriers to multilingual text analysis FreeTxt Vi supports reproducible research and promotes the development of language resources for Vietnamese a widely spoken but underrepresented language in NLP. The toolkit is applicable to domains including education digital humanities cultural heritage and the social sciences where qualitative text data are common but often difficult to process at scale.
     </details>
 - [Verify as You Go: An LLM-Powered Browser Extension for Fake News Detection](https://arxiv.org/pdf/2603.05519)
   - Authors: Dorsaf Sallami, Esma Aïmeur
@@ -431,15 +432,32 @@
     Function-calling agents -- large language models that invoke tools and APIs -- require high-quality, domain-specific training data spanning executable environments, backing databases, and diverse multi-turn trajectories. We introduce EigenData, an integrated, self-evolving platform that automates the full data lifecycle through a multi-agent architecture. A top-level orchestrator, EigenCore, coordinates three specialized sub-systems: DatabaseAgent for realistic domain database construction, CodingAgent for verified executable environment generation with iterative test-debug loops, and DataAgent for multi-turn trajectory synthesis with self-evolving prompt optimization. Cross-component feedback ensures consistency across all artifacts. We apply EigenData to audit and repair the Berkeley Function-Calling Leaderboard (BFCL-V3), identifying systematic errors in function schemas, implementations, and reference trajectories, automatically correcting them through coordinated schema refinement, code-level bug fixes, and trajectory modification, and introducing an outcome-aware evaluation protocol that assesses task success via database-state correctness rather than turn-level trajectory matching. We demonstrate that the repaired benchmark, coupled with outcome-aware metrics, produces model rankings substantially better correlated with human judgments of functional correctness.
     </details>
 
-## Learning, Optimization, and Theory (4 papers, 5.88%)
+## Datasets and Benchmarks (3 papers, 4.41%)
 
-- [Tutor Move Taxonomy: A Theory-Aligned Framework for Analyzing Instructional Moves in Tutoring](https://arxiv.org/pdf/2603.05778)
-  - Authors: Zhuqian Zhou, Kirk Vanacore, Tamisha Thompson, Jennifer St John, Rene Kizilcec
+- [LIT-RAGBench: Benchmarking Generator Capabilities of Large Language Models in Retrieval-Augmented Generation](https://arxiv.org/pdf/2603.06198)
+  - Authors: Koki Itai, Shunichi Hasegawa, Yuta Yamamoto, Gouki Minegishi, Masaki Otsuki
   - <details>
     <summary>Abstract</summary>
 
-    Understanding what makes tutoring effective requires methods for systematically analyzing tutors' instructional actions during learning interactions. This paper presents a tutor move taxonomy designed to support large-scale analysis of tutoring dialogue within the National Tutoring Observatory. The taxonomy provides a structured annotation framework for labeling tutors' instructional moves during one-on-one tutoring sessions. We developed the taxonomy through a hybrid deductive-inductive process. First, we synthesized research from cognitive science, the learning sciences, classroom discourse analysis, and intelligent tutoring systems to construct a preliminary framework of tutoring moves. We then refined the taxonomy through iterative coding of authentic tutoring transcripts conducted by expert annotators with extensive instructional and qualitative research experience. The resulting taxonomy organizes tutoring behaviors into four categories: tutoring support, learning support, social-emotional and motivational support, and logistical support. Learning support moves are further organized along a spectrum of student engagement, distinguishing between moves that elicit student reasoning and those that provide direct explanation or answers. By defining tutoring dialogue in terms of discrete instructional actions, the taxonomy enables scalable annotation using AI, computational modeling of tutoring strategies, and empirical analysis of how tutoring behaviors relate to learning outcomes.
+    Retrieval-Augmented Generation (RAG) is a framework in which a Generator, such as a Large Language Model (LLM), produces answers by retrieving documents from an external collection using a Retriever. In practice, Generators must integrate evidence from long contexts, perform multi-step reasoning, interpret tables, and abstain when evidence is missing. However, existing benchmarks for Generators provide limited coverage, with none enabling simultaneous evaluation of multiple capabilities under unified conditions. To bridge the gap between existing evaluations and practical use, we introduce LIT-RAGBench (the Logic, Integration, Table, Reasoning, and Abstention RAG Generator Benchmark), which defines five categories: Integration, Reasoning, Logic, Table, and Abstention, each further divided into practical evaluation aspects. LIT-RAGBench systematically covers patterns combining multiple aspects across categories. By using fictional entities and scenarios, LIT-RAGBench evaluates answers grounded in the provided external documents. The dataset consists of 114 human-constructed Japanese questions and an English version generated by machine translation with human curation. We use LLM-as-a-Judge for scoring and report category-wise and overall accuracy. Across API-based and open-weight models, no model exceeds 90% overall accuracy. By making strengths and weaknesses measurable within each category, LIT-RAGBench serves as a valuable metric for model selection in practical RAG deployments and for building RAG-specialized models. We release LIT-RAGBench, including the dataset and evaluation code, at https://github.com/Koki-Itai/LIT-RAGBench.
     </details>
+- [NERdME: a Named Entity Recognition Dataset for Indexing Research Artifacts in Code Repositories](https://arxiv.org/pdf/2603.05750)
+  - Authors: Genet Asefa Gesese, Zongxiong Chen, Shufan Jiang, Mary Ann Tan, Zhaotai Liu, Sonja Schimmler, Harald Sack
+  - <details>
+    <summary>Abstract</summary>
+
+    Existing scholarly information extraction (SIE) datasets focus on scientific papers and overlook implementation-level details in code repositories. README files describe datasets, source code, and other implementation-level artifacts, however, their free-form Markdown offers little semantic structure, making automatic information extraction difficult. To address this gap, NERdME is introduced: 200 manually annotated README files with over 10,000 labeled spans and 10 entity types. Baseline results using large language models and fine-tuned transformers show clear differences between paperlevel and implementation-level entities, indicating the value of extending SIE benchmarks with entity types available in README files. A downstream entity-linking experiment was conducted to demonstrate that entities derived from READMEs can support artifact discovery and metadata integration.
+    </details>
+- [FreeTxt-Vi: A Benchmarked Vietnamese-English Toolkit for Segmentation, Sentiment, and Summarisation](https://arxiv.org/pdf/2603.05690)
+  - Authors: Hung Nguyen Huy, Mo El-Haj, Dawn Knight, Paul Rayson
+  - <details>
+    <summary>Abstract</summary>
+
+    FreeTxt-Vi is a free and open source web based toolkit for creating and analysing bilingual Vietnamese English text collections. Positioned at the intersection of corpus linguistics and natural language processing NLP it enables users to build explore and interpret free text data without requiring programming expertise. The system combines corpus analysis features such as concordancing keyword analysis word relation exploration and interactive visualisation with transformer based NLP components for sentiment analysis and summarisation. A key contribution of this work is the design of a unified bilingual NLP pipeline that integrates a hybrid VnCoreNLP and Byte Pair Encoding BPE segmentation strategy a fine tuned TabularisAI sentiment classifier and a fine tuned Qwen2.5 model for abstractive summarisation. Unlike existing text analysis platforms FreeTxt Vi is evaluated as a set of language processing components. We conduct a three part evaluation covering segmentation sentiment analysis and summarisation and show that our approach achieves competitive or superior performance compared to widely used baselines in both Vietnamese and English. By reducing technical barriers to multilingual text analysis FreeTxt Vi supports reproducible research and promotes the development of language resources for Vietnamese a widely spoken but underrepresented language in NLP. The toolkit is applicable to domains including education digital humanities cultural heritage and the social sciences where qualitative text data are common but often difficult to process at scale.
+    </details>
+
+## Learning, Optimization, and Theory (3 papers, 4.41%)
+
 - [Structured Multidimensional Representation Learning for Large Language Models](https://arxiv.org/pdf/2603.05727)
   - Authors: Alaa El Ichi, Khalide Jbilou, Mohamed El Guide, Franck Dufrenois
   - <details>
@@ -486,40 +504,6 @@
     Personal Artificial Intelligence is currently hindered by the fragmentation of user data across isolated silos. While Retrieval-Augmented Generation offers a partial remedy, its reliance on unstructured vector similarity fails to capture the latent semantic topology and temporal dependencies essential for holistic sensemaking. We introduce EpisTwin, a neuro-symbolic framework that grounds generative reasoning in a verifiable, user-centric Personal Knowledge Graph. EpisTwin leverages Multimodal Language Models to lift heterogeneous, cross-application data into semantic triples. At inference, EpisTwin enables complex reasoning over the personal semantic graph via an agentic coordinator that combines Graph Retrieval-Augmented Generation with Online Deep Visual Refinement, dynamically re-grounding symbolic entities in their raw visual context. We also introduce PersonalQA-71-100, a synthetic benchmark designed to simulate a realistic user's digital footprint and evaluate EpisTwin performance. Our framework demonstrates robust results across a suite of state-of-the-art judge models, offering a promising direction for trustworthy Personal AI.
     </details>
 
-## Datasets and Benchmarks (2 papers, 2.94%)
-
-- [LIT-RAGBench: Benchmarking Generator Capabilities of Large Language Models in Retrieval-Augmented Generation](https://arxiv.org/pdf/2603.06198)
-  - Authors: Koki Itai, Shunichi Hasegawa, Yuta Yamamoto, Gouki Minegishi, Masaki Otsuki
-  - <details>
-    <summary>Abstract</summary>
-
-    Retrieval-Augmented Generation (RAG) is a framework in which a Generator, such as a Large Language Model (LLM), produces answers by retrieving documents from an external collection using a Retriever. In practice, Generators must integrate evidence from long contexts, perform multi-step reasoning, interpret tables, and abstain when evidence is missing. However, existing benchmarks for Generators provide limited coverage, with none enabling simultaneous evaluation of multiple capabilities under unified conditions. To bridge the gap between existing evaluations and practical use, we introduce LIT-RAGBench (the Logic, Integration, Table, Reasoning, and Abstention RAG Generator Benchmark), which defines five categories: Integration, Reasoning, Logic, Table, and Abstention, each further divided into practical evaluation aspects. LIT-RAGBench systematically covers patterns combining multiple aspects across categories. By using fictional entities and scenarios, LIT-RAGBench evaluates answers grounded in the provided external documents. The dataset consists of 114 human-constructed Japanese questions and an English version generated by machine translation with human curation. We use LLM-as-a-Judge for scoring and report category-wise and overall accuracy. Across API-based and open-weight models, no model exceeds 90% overall accuracy. By making strengths and weaknesses measurable within each category, LIT-RAGBench serves as a valuable metric for model selection in practical RAG deployments and for building RAG-specialized models. We release LIT-RAGBench, including the dataset and evaluation code, at https://github.com/Koki-Itai/LIT-RAGBench.
-    </details>
-- [NERdME: a Named Entity Recognition Dataset for Indexing Research Artifacts in Code Repositories](https://arxiv.org/pdf/2603.05750)
-  - Authors: Genet Asefa Gesese, Zongxiong Chen, Shufan Jiang, Mary Ann Tan, Zhaotai Liu, Sonja Schimmler, Harald Sack
-  - <details>
-    <summary>Abstract</summary>
-
-    Existing scholarly information extraction (SIE) datasets focus on scientific papers and overlook implementation-level details in code repositories. README files describe datasets, source code, and other implementation-level artifacts, however, their free-form Markdown offers little semantic structure, making automatic information extraction difficult. To address this gap, NERdME is introduced: 200 manually annotated README files with over 10,000 labeled spans and 10 entity types. Baseline results using large language models and fine-tuned transformers show clear differences between paperlevel and implementation-level entities, indicating the value of extending SIE benchmarks with entity types available in README files. A downstream entity-linking experiment was conducted to demonstrate that entities derived from READMEs can support artifact discovery and metadata integration.
-    </details>
-
-## Multimodal Agents (2 papers, 2.94%)
-
-- [Beyond Rows to Reasoning: Agentic Retrieval for Multimodal Spreadsheet Understanding and Editing](https://arxiv.org/pdf/2603.06503)
-  - Authors: Anmol Gulati, Sahil Sen, Waqar Sarguroh, Kevin Paul
-  - <details>
-    <summary>Abstract</summary>
-
-    Recent advances in multimodal Retrieval-Augmented Generation (RAG) enable Large Language Models (LLMs) to analyze enterprise spreadsheet workbooks containing millions of cells, cross-sheet dependencies, and embedded visual artifacts. However, state-of-the-art approaches exclude critical context through single-pass retrieval, lose data resolution through compression, and exceed LLM context windows through naive full-context injection, preventing reliable multi-step reasoning over complex enterprise workbooks. We introduce Beyond Rows to Reasoning (BRTR), a multimodal agentic framework for spreadsheet understanding that replaces single-pass retrieval with an iterative tool-calling loop, supporting end-to-end Excel workflows from complex analysis to structured editing. Supported by over 200 hours of expert human evaluation, BRTR achieves state-of-the-art performance across three frontier spreadsheet understanding benchmarks, surpassing prior methods by 25 percentage points on FRTR-Bench, 7 points on SpreadsheetLLM, and 32 points on FINCH. We evaluate five multimodal embedding models, identifying NVIDIA NeMo Retriever 1B as the top performer for mixed tabular and visual data, and vary nine LLMs. Ablation experiments confirm that the planner, retrieval, and iterative reasoning each contribute substantially, and cost analysis shows GPT-5.2 achieves the best efficiency-accuracy trade-off. Throughout all evaluations, BRTR maintains full auditability through explicit tool-call traces.
-    </details>
-- [RACAS: Controlling Diverse Robots With a Single Agentic System](https://arxiv.org/pdf/2603.05621)
-  - Authors: Dylan R. Ashley, Jan Przepióra, Yimeng Chen, Ali Abualsaud, Nurzhan Yesmagambet, Shinkyu Park, Eric Feron, Jürgen Schmidhuber
-  - <details>
-    <summary>Abstract</summary>
-
-    Many robotic platforms expose an API through which external software can command their actuators and read their sensors. However, transitioning from these low-level interfaces to high-level autonomous behaviour requires a complicated pipeline, whose components demand distinct areas of expertise. Existing approaches to bridging this gap either require retraining for every new embodiment or have only been validated across structurally similar platforms. We introduce RACAS (Robot-Agnostic Control via Agentic Systems), a cooperative agentic architecture in which three LLM/VLM-based modules (Monitors, a Controller, and a Memory Curator) communicate exclusively through natural language to provide closed-loop robot control. RACAS requires only a natural language description of the robot, a definition of available actions, and a task specification; no source code, model weights, or reward functions need to be modified to move between platforms. We evaluate RACAS on several tasks using a wheeled ground robot, a recently published novel multi-jointed robotic limb, and an underwater vehicle. RACAS consistently solved all assigned tasks across these radically different platforms, demonstrating the potential of agentic AI to substantially reduce the barrier to prototyping robotic solutions.
-    </details>
-
 ## Generative Foundations (1 papers, 1.47%)
 
 - [Diffusion Language Models Are Natively Length-Aware](https://arxiv.org/pdf/2603.06123)
@@ -530,6 +514,16 @@
     Unlike autoregressive language models, which terminate variable-length generation upon predicting an End-of-Sequence (EoS) token, Diffusion Language Models (DLMs) operate over a fixed maximum-length context window for a predetermined number of denoising steps. However, this process is independent of the required response length, resulting in computational waste for the majority of short responses common in reasoning and chat tasks. To address this problem, we conjecture that the latent prompt representation contains sufficient information to estimate the required output length. We provide empirical evidence for this phenomenon and propose a zero-shot mechanism to dynamically crop the context window before generation begins, leading to fewer diffusion steps and substantial computational savings. We evaluate our approach on four benchmarks with diverse tasks -- GSM8K (reasoning), HumanEval (code generation), IfEval (instruction following), and LongFormQA (question answering) -- revealing massive efficiency gains at minimal performance impact. We report significant reductions in FLOPs across all tasks, with no statistically significant performance degradation, and significant performance improvements in 2 out of 4 tasks.
     </details>
 
+## Multimodal Agents (1 papers, 1.47%)
+
+- [Beyond Rows to Reasoning: Agentic Retrieval for Multimodal Spreadsheet Understanding and Editing](https://arxiv.org/pdf/2603.06503)
+  - Authors: Anmol Gulati, Sahil Sen, Waqar Sarguroh, Kevin Paul
+  - <details>
+    <summary>Abstract</summary>
+
+    Recent advances in multimodal Retrieval-Augmented Generation (RAG) enable Large Language Models (LLMs) to analyze enterprise spreadsheet workbooks containing millions of cells, cross-sheet dependencies, and embedded visual artifacts. However, state-of-the-art approaches exclude critical context through single-pass retrieval, lose data resolution through compression, and exceed LLM context windows through naive full-context injection, preventing reliable multi-step reasoning over complex enterprise workbooks. We introduce Beyond Rows to Reasoning (BRTR), a multimodal agentic framework for spreadsheet understanding that replaces single-pass retrieval with an iterative tool-calling loop, supporting end-to-end Excel workflows from complex analysis to structured editing. Supported by over 200 hours of expert human evaluation, BRTR achieves state-of-the-art performance across three frontier spreadsheet understanding benchmarks, surpassing prior methods by 25 percentage points on FRTR-Bench, 7 points on SpreadsheetLLM, and 32 points on FINCH. We evaluate five multimodal embedding models, identifying NVIDIA NeMo Retriever 1B as the top performer for mixed tabular and visual data, and vary nine LLMs. Ablation experiments confirm that the planner, retrieval, and iterative reasoning each contribute substantially, and cost analysis shows GPT-5.2 achieves the best efficiency-accuracy trade-off. Throughout all evaluations, BRTR maintains full auditability through explicit tool-call traces.
+    </details>
+
 ## Multimodal Generative Modeling (1 papers, 1.47%)
 
 - [The Art That Poses Back: Assessing AI Pastiches after Contemporary Artworks](https://arxiv.org/pdf/2603.06324)
@@ -538,4 +532,14 @@
     <summary>Abstract</summary>
 
     This study explores artificial visual creativity, focusing on ChatGPT's ability to generate new images intentionally pastiching original artworks such as paintings, drawings, sculptures and installations. The process involved twelve artists from Romania, Bulgaria, France, Austria, and the United Kingdom, each invited to contribute with three of their artworks and to grade and comment on the AI-generated versions. The analysis combines human evaluation with computational methods aimed at detecting visual and stylistic similarities or divergences between the original works and their AI-produced renditions. The results point to a significant gap between color and texture-based similarity and compositional, conceptual, and perceptual one. Consequently, we advocate for the use of a "style transfer dashboard" of complementary metrics to evaluate the similarity between pastiches and originals, rather than using a single style metric. The artists' comments revealed limitations of ChatGPT's pastiches after contemporary artworks, which were perceived by the authors of the originals as lacking dimensionality, context, and intentional sense, and seeming more of a paraphrase or an approximate quotation rather than as a valuable, emotion-evoking artwork.
+    </details>
+
+## Robotics and Embodied AI (1 papers, 1.47%)
+
+- [RACAS: Controlling Diverse Robots With a Single Agentic System](https://arxiv.org/pdf/2603.05621)
+  - Authors: Dylan R. Ashley, Jan Przepióra, Yimeng Chen, Ali Abualsaud, Nurzhan Yesmagambet, Shinkyu Park, Eric Feron, Jürgen Schmidhuber
+  - <details>
+    <summary>Abstract</summary>
+
+    Many robotic platforms expose an API through which external software can command their actuators and read their sensors. However, transitioning from these low-level interfaces to high-level autonomous behaviour requires a complicated pipeline, whose components demand distinct areas of expertise. Existing approaches to bridging this gap either require retraining for every new embodiment or have only been validated across structurally similar platforms. We introduce RACAS (Robot-Agnostic Control via Agentic Systems), a cooperative agentic architecture in which three LLM/VLM-based modules (Monitors, a Controller, and a Memory Curator) communicate exclusively through natural language to provide closed-loop robot control. RACAS requires only a natural language description of the robot, a definition of available actions, and a task specification; no source code, model weights, or reward functions need to be modified to move between platforms. We evaluate RACAS on several tasks using a wheeled ground robot, a recently published novel multi-jointed robotic limb, and an underwater vehicle. RACAS consistently solved all assigned tasks across these radically different platforms, demonstrating the potential of agentic AI to substantially reduce the barrier to prototyping robotic solutions.
     </details>

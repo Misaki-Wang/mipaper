@@ -1,6 +1,6 @@
 import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js";
 import { createCalendarPicker } from "./calendar_picker.js";
-import { createPageReviewKey, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js";
+import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js";
 
 const manifestUrl = "./data/daily/manifest.json";
 
@@ -55,7 +55,7 @@ async function init() {
   bindReviewToggle();
   subscribeLikes(() => bindLikeButtons(document, likeRecords));
   subscribePageReviews(() => renderReviewState());
-  await initLikesSync();
+  await Promise.all([initLikesSync(), initReviewSync()]);
   const manifest = await fetchJson(manifestUrl);
   state.manifest = manifest;
   bindDatePicker();

@@ -56,3 +56,62 @@ using (
   auth.uid() = user_id
   and auth.uid() = 'd23b2601-08ef-465c-b1d9-4159ca38e159'::uuid
 );
+
+create table if not exists public.reviewed_pages (
+  user_id uuid not null references auth.users (id) on delete cascade,
+  review_id text not null,
+  reviewed_at timestamptz not null default timezone('utc'::text, now()),
+  payload jsonb not null,
+  primary key (user_id, review_id)
+);
+
+alter table public.reviewed_pages enable row level security;
+
+drop policy if exists "Users can read their own reviews" on public.reviewed_pages;
+drop policy if exists "Users can insert their own reviews" on public.reviewed_pages;
+drop policy if exists "Users can update their own reviews" on public.reviewed_pages;
+drop policy if exists "Users can delete their own reviews" on public.reviewed_pages;
+drop policy if exists "Only owner can read reviews" on public.reviewed_pages;
+drop policy if exists "Only owner can insert reviews" on public.reviewed_pages;
+drop policy if exists "Only owner can update reviews" on public.reviewed_pages;
+drop policy if exists "Only owner can delete reviews" on public.reviewed_pages;
+
+create policy "Only owner can read reviews"
+on public.reviewed_pages
+for select
+to authenticated
+using (
+  auth.uid() = user_id
+  and auth.uid() = 'd23b2601-08ef-465c-b1d9-4159ca38e159'::uuid
+);
+
+create policy "Only owner can insert reviews"
+on public.reviewed_pages
+for insert
+to authenticated
+with check (
+  auth.uid() = user_id
+  and auth.uid() = 'd23b2601-08ef-465c-b1d9-4159ca38e159'::uuid
+);
+
+create policy "Only owner can update reviews"
+on public.reviewed_pages
+for update
+to authenticated
+using (
+  auth.uid() = user_id
+  and auth.uid() = 'd23b2601-08ef-465c-b1d9-4159ca38e159'::uuid
+)
+with check (
+  auth.uid() = user_id
+  and auth.uid() = 'd23b2601-08ef-465c-b1d9-4159ca38e159'::uuid
+);
+
+create policy "Only owner can delete reviews"
+on public.reviewed_pages
+for delete
+to authenticated
+using (
+  auth.uid() = user_id
+  and auth.uid() = 'd23b2601-08ef-465c-b1d9-4159ca38e159'::uuid
+);
