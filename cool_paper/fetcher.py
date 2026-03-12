@@ -8,18 +8,21 @@ from typing import Callable, Dict, List
 from urllib.parse import parse_qs, urlencode, urljoin, urlparse
 from urllib.request import Request, urlopen
 
-from cool_paper.models import HFDailyPaper, Paper
+from cool_paper.models import HFDailyPaper, Paper, TrendingRepo
 
 PAPERS_COOL_ROOT = "https://papers.cool"
 HUGGING_FACE_ROOT = "https://huggingface.co"
+GITHUB_ROOT = "https://github.com"
 ARXIV_CATEGORY_PATH = "/arxiv/{category}"
 VENUE_PATH = "/venue/{venue}"
 HF_DAILY_PATH = "/papers/date/{date_value}"
+GITHUB_TRENDING_PATH = "/trending"
 DEFAULT_SHOW = 1000
 USER_AGENT = "cool-paper-bot/1.0"
 VENUE_TOTAL_PATTERN = re.compile(r"Total:\s*([0-9][0-9,]*)")
 MAX_VENUE_FETCH_ATTEMPTS = 6
 ARXIV_ID_PATTERN = re.compile(r"^\d{4}\.\d{4,5}(?:v\d+)?$")
+TRENDING_ARTICLE_PATTERN = re.compile(r'<article[^>]*class="Box-row"[^>]*>(.*?)</article>', re.S)
 
 
 def arxiv_abs_to_pdf(abs_url: str) -> str:
@@ -33,6 +36,11 @@ def build_feed_url(category: str, date_value: str, show: int = DEFAULT_SHOW) -> 
 
 def build_hf_daily_url(date_value: str) -> str:
     return f"{HUGGING_FACE_ROOT}{HF_DAILY_PATH.format(date_value=date_value)}"
+
+
+def build_github_trending_url(since: str = "weekly", spoken_language_code: str = "") -> str:
+    query = urlencode({"since": since, "spoken_language_code": spoken_language_code})
+    return f"{GITHUB_ROOT}{GITHUB_TRENDING_PATH}?{query}"
 
 
 def build_venue_url(venue: str, group: str = "", show: int = DEFAULT_SHOW) -> str:
@@ -323,6 +331,45 @@ def parse_hf_daily_html(html_text: str, report_date: str) -> List[HFDailyPaper]:
     return papers
 
 
+def parse_github_trending_html(html_text: str, snapshot_date: str) -> List[TrendingRepo]:
+    repos: List[TrendingRepo] = []
+    for article_html in TRENDING_ARTICLE_PATTERN.findall(html_text):
+        repo_match = re.search(r'<h2[^>]*>.*?<a[^>]*href="([^"]+)"[^>]*>(.*?)</a>', article_html, re.S)
+        if not repo_match:
+            continue
+
+        repo_path = normalize_spaces(repo_match.group(1))
+        full_name = normalize_repo_name(strip_html(repo_match.group(2)))
+        if not repo_path or not full_name or "/" not in full_name:
+            continue
+
+        owner, name = full_name.split("/", 1)
+        description_match = re.search(r'<p(?:\s[^>]*)?>(.*?)</p>', article_html, re.S)
+        language_match = re.search(r'itemprop="programmingLanguage"[^>]*>(.*?)</span>', article_html, re.S)
+        weekly_match = re.search(r'([\d,]+)\s+stars?\s+this\s+week', strip_html(article_html), re.I)
+        stars = extract_count_from_path(article_html, f"{repo_path}/stargazers")
+        forks = extract_count_from_path(article_html, f"{repo_path}/forks")
+        built_by = re.findall(r'<img[^>]*alt="@([^"]+)"', article_html)
+
+        repos.append(
+            TrendingRepo(
+                snapshot_date=snapshot_date,
+                repo_id=full_name.lower(),
+                owner=owner,
+                name=name,
+                full_name=full_name,
+                repo_url=urljoin(GITHUB_ROOT, repo_path),
+                description=normalize_spaces(strip_html(description_match.group(1))) if description_match else "",
+                language=normalize_spaces(strip_html(language_match.group(1))) if language_match else "",
+                stars=stars,
+                forks=forks,
+                stars_this_week=parse_count(weekly_match.group(1)) if weekly_match else None,
+                built_by=[normalize_spaces(item) for item in built_by if normalize_spaces(item)],
+            )
+        )
+    return repos
+
+
 def extract_hf_daily_props(html_text: str) -> dict:
     parser = HFDailyPropsParser()
     parser.feed(html_text)
@@ -390,6 +437,29 @@ def extract_submitted_by(item: dict, paper_payload: dict) -> str:
 
 def normalize_spaces(text: str) -> str:
     return re.sub(r"\s+", " ", text).strip()
+
+
+def strip_html(text: str) -> str:
+    return normalize_spaces(unescape(re.sub(r"<[^>]+>", " ", text)))
+
+
+def normalize_repo_name(text: str) -> str:
+    return re.sub(r"\s*/\s*", "/", normalize_spaces(text))
+
+
+def parse_count(raw_value: str) -> int | None:
+    normalized = raw_value.replace(",", "").strip()
+    return int(normalized) if normalized.isdigit() else None
+
+
+def extract_count_from_path(fragment: str, href: str) -> int | None:
+    pattern = re.compile(rf'<a[^>]*href="{re.escape(href)}"[^>]*>(.*?)</a>', re.S)
+    match = pattern.search(fragment)
+    if not match:
+        return None
+    text = strip_html(match.group(1))
+    count_match = re.search(r"([\d,]+)", text)
+    return parse_count(count_match.group(1)) if count_match else None
 
 
 def normalize_subject_label(text: str, href: str = "") -> str:

@@ -1,5 +1,6 @@
 import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js";
 import { createCalendarPicker } from "./calendar_picker.js";
+import { createPageReviewKey, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js";
 
 const manifestUrl = "./data/hf-daily/manifest.json";
 
@@ -33,6 +34,9 @@ const sidebarToggleIcon = document.querySelector("#hf-sidebar-toggle-icon");
 const layoutRoot = document.querySelector(".layout");
 const backToTopButton = document.querySelector("#hf-back-to-top");
 const floatingTocRoot = document.querySelector("#hf-floating-toc");
+const reviewToggleButton = document.querySelector("#hf-review-toggle");
+const reviewToggleMeta = document.querySelector("#hf-review-toggle-meta");
+const heroReviewStatus = document.querySelector("#hf-hero-review-status");
 const likeRecords = new Map();
 let tocObserver = null;
 let datePicker = null;
@@ -47,7 +51,9 @@ async function init() {
   bindSidebarToggle();
   bindBackToTop();
   bindFilters();
+  bindReviewToggle();
   subscribeLikes(() => bindLikeButtons(document, likeRecords));
+  subscribePageReviews(() => renderReviewState());
   await initLikesSync();
   const manifest = await fetchJson(manifestUrl);
   state.manifest = manifest;
@@ -134,6 +140,50 @@ function bindBackToTop() {
   updateVisibility();
 }
 
+function bindReviewToggle() {
+  if (!reviewToggleButton) {
+    return;
+  }
+  reviewToggleButton.addEventListener("click", () => {
+    if (!state.report || !state.currentPath) {
+      return;
+    }
+    const reviewKey = createPageReviewKey("hf_daily", state.currentPath);
+    const next = !isPageReviewed(reviewKey);
+    setPageReviewed(reviewKey, next, {
+      branch: "HF Daily",
+      snapshot_label: state.report.report_date,
+    });
+    renderReviewState();
+  });
+}
+
+function renderReviewState() {
+  if (!reviewToggleButton || !reviewToggleMeta) {
+    return;
+  }
+  if (!state.report || !state.currentPath) {
+    reviewToggleButton.classList.remove("is-reviewed");
+    reviewToggleButton.setAttribute("aria-pressed", "false");
+    reviewToggleMeta.textContent = "Mark this snapshot as reviewed";
+    if (heroReviewStatus) {
+      heroReviewStatus.textContent = "Not reviewed";
+      heroReviewStatus.classList.remove("is-reviewed");
+    }
+    return;
+  }
+  const reviewed = isPageReviewed(createPageReviewKey("hf_daily", state.currentPath));
+  reviewToggleButton.classList.toggle("is-reviewed", reviewed);
+  reviewToggleButton.setAttribute("aria-pressed", String(reviewed));
+  reviewToggleMeta.textContent = reviewed
+    ? `Reviewed ${state.report.report_date}`
+    : `Mark ${state.report.report_date} as reviewed`;
+  if (heroReviewStatus) {
+    heroReviewStatus.textContent = reviewed ? "Reviewed" : "Not reviewed";
+    heroReviewStatus.classList.toggle("is-reviewed", reviewed);
+  }
+}
+
 function bindDatePicker() {
   const shell = reportSelect.closest(".date-input-shell");
   const button = shell?.querySelector("[data-date-picker-button]");
@@ -211,6 +261,7 @@ async function loadReport(path) {
   populateTopicFilter(report.topics || []);
   datePicker?.sync();
   renderHomeCards(state.manifest, path);
+  renderReviewState();
   renderReport();
 }
 
@@ -552,7 +603,13 @@ function renderPaperCard(paper) {
           brand: "hf",
         })
       : "",
-    paper.github_url ? `<a class="paper-link" href="${escapeAttribute(paper.github_url)}" target="_blank" rel="noreferrer">GitHub</a>` : "",
+    paper.github_url
+      ? renderPaperLink({
+          href: paper.github_url,
+          label: "GitHub",
+          brand: "github",
+        })
+      : "",
     renderLikeButton(paper),
   ]
     .filter(Boolean)
@@ -574,7 +631,13 @@ function renderPaperCard(paper) {
 
 function renderPaperLink({ href, label, brand }) {
   const iconSrc =
-    brand === "arxiv" ? "./assets/arxiv-logo.svg" : brand === "hf" ? "./assets/hf-logo.svg" : "./assets/cool-favicon.ico";
+    brand === "arxiv"
+      ? "./assets/arxiv-logo.svg"
+      : brand === "hf"
+      ? "./assets/hf-logo.svg"
+      : brand === "github"
+      ? "./assets/github-mark.svg"
+      : "./assets/cool-favicon.ico";
   return `
     <a class="paper-link brand-${escapeAttribute(brand)}" href="${escapeAttribute(href)}" target="_blank" rel="noreferrer">
       <span class="paper-link-icon" aria-hidden="true">

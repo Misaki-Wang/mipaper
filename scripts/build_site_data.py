@@ -18,8 +18,11 @@ from cool_paper.paths import (
     DAILY_SITE_DATA_DIR,
     HF_DAILY_REPORTS_DIR,
     HF_DAILY_SITE_DATA_DIR,
+    TRENDING_REPORTS_DIR,
+    TRENDING_SITE_DATA_DIR,
 )
 from cool_paper.site_data import build_site_manifest
+from cool_paper.trending_site_data import build_trending_site_manifest
 
 
 def main() -> int:
@@ -35,9 +38,14 @@ def main() -> int:
         reports_dir=HF_DAILY_REPORTS_DIR,
         site_data_dir=HF_DAILY_SITE_DATA_DIR,
     )
+    trending_manifest_path = build_trending_site_manifest(
+        reports_dir=TRENDING_REPORTS_DIR,
+        site_data_dir=TRENDING_SITE_DATA_DIR,
+    )
     print(f"Built site data: {manifest_path}")
     print(f"Built conference site data: {conference_manifest_path}")
     print(f"Built HF daily site data: {hf_manifest_path}")
+    print(f"Built trending site data: {trending_manifest_path}")
     return 0
 
 

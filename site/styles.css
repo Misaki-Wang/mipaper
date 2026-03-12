@@ -207,6 +207,72 @@ code {
   transform: translateX(0.55rem);
 }
 
+.review-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.72rem;
+  width: 100%;
+  padding: 0.72rem 0.8rem;
+  border: 1px solid color-mix(in srgb, var(--border), var(--accent) 16%);
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--surface-soft), white 10%);
+  color: var(--text);
+  cursor: pointer;
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease, box-shadow 160ms ease;
+}
+
+.review-toggle:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--border), var(--accent) 28%);
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.1);
+}
+
+.review-toggle.is-reviewed {
+  border-color: color-mix(in srgb, var(--border), var(--accent) 34%);
+  background: color-mix(in srgb, var(--accent-soft), white 22%);
+}
+
+.review-toggle-icon {
+  display: grid;
+  place-items: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--border), var(--accent) 18%);
+  background: color-mix(in srgb, var(--surface-strong), white 10%);
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 700;
+  flex: none;
+}
+
+.review-toggle.is-reviewed .review-toggle-icon {
+  color: var(--accent-strong);
+  border-color: color-mix(in srgb, var(--border), var(--accent) 28%);
+  background: color-mix(in srgb, var(--accent-soft), white 18%);
+}
+
+.review-toggle-copy {
+  display: grid;
+  gap: 0.12rem;
+  justify-items: start;
+  text-align: left;
+  min-width: 0;
+}
+
+.review-toggle-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.review-toggle-meta {
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
 .floating-toc::before {
   content: "TOC";
   position: absolute;
@@ -457,6 +523,14 @@ code {
   align-items: baseline;
 }
 
+.hero-panel-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
 .meta-kicker,
 .stat-label,
 .insight-label {
@@ -484,6 +558,27 @@ code {
   display: block;
   margin-top: 0.16rem;
   font-size: 1.08rem;
+}
+
+.review-status-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.26rem 0.64rem;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--border), var(--accent) 16%);
+  background: color-mix(in srgb, var(--surface-soft), white 10%);
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.review-status-pill.is-reviewed {
+  border-color: color-mix(in srgb, var(--accent), white 12%);
+  background: color-mix(in srgb, var(--accent-soft), white 44%);
+  color: var(--accent-strong);
 }
 
 .page-nav {
@@ -1710,6 +1805,18 @@ code {
   border-color: rgba(215, 91, 118, 0.28);
 }
 
+.to-read-button.is-active {
+  border-color: color-mix(in srgb, #e5a64b, var(--border) 18%);
+  background: color-mix(in srgb, #fff4dd, var(--surface-soft) 36%);
+  color: #9a5a00;
+}
+
+.to-read-button.is-active .to-read-icon {
+  color: #9a5a00;
+  background: linear-gradient(135deg, rgba(255, 250, 236, 0.98), rgba(255, 235, 190, 0.92));
+  border-color: rgba(229, 166, 75, 0.28);
+}
+
 :root[data-theme="dark"] .like-button.is-liked {
   background: color-mix(in srgb, rgba(177, 45, 78, 0.34), var(--surface-soft) 60%);
   color: #ffb7c6;
@@ -1902,6 +2009,33 @@ code {
   margin: 0;
   line-height: 1.35;
   font-size: 1rem;
+}
+
+.repo-card {
+  gap: 0.82rem;
+}
+
+.repo-description {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.62;
+}
+
+.repo-stat-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.48rem;
+}
+
+.repo-stat-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.32rem 0.58rem;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--border), var(--accent) 14%);
+  background: color-mix(in srgb, var(--surface-soft), white 10%);
+  color: var(--muted);
+  font-size: 0.8rem;
 }
 
 .subject-radar-card {

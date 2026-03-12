@@ -1,6 +1,6 @@
 # cool_paper
 
-This project crawls `papers.cool` and Hugging Face daily papers, classifies papers into topics, generates Markdown and JSON reports, and serves a static research dashboard with cross-device likes powered by Supabase.
+This project crawls `papers.cool`, Hugging Face daily papers, and GitHub Trending, classifies papers into topics where applicable, generates Markdown and JSON reports, and serves a static research dashboard with cross-device likes powered by Supabase.
 
 ## Features
 
@@ -8,11 +8,12 @@ This project crawls `papers.cool` and Hugging Face daily papers, classifies pape
 - Crawl `https://papers.cool/arxiv/cs.CL`
 - Crawl `https://papers.cool/arxiv/cs.CV`
 - Crawl `https://huggingface.co/papers/date/YYYY-MM-DD`
+- Crawl `https://github.com/trending?since=weekly&spoken_language_code=`
 - Crawl `https://papers.cool/venue/*` conference pages
 - Extract titles, authors, abstracts, links, and metadata
 - Classify papers with rules or local `codex exec`
 - Generate Markdown and JSON reports
-- Build a static site for Cool Daily, Conference, HF Daily, and Like
+- Build a static site for HF Daily, Cool Daily, Conference, Trending, and Like
 - Run scheduled jobs on macOS `launchd` or WSL `cron`
 - Auto-commit generated artifacts and push them to GitHub
 
@@ -63,6 +64,12 @@ Generate an HF Daily report:
 python3 scripts/generate_hf_daily_report.py --date 2026-03-09
 ```
 
+Generate a Trending report:
+
+```bash
+python3 scripts/generate_trending_report.py --date 2026-03-12 --since weekly
+```
+
 Use local Codex classification:
 
 ```bash
@@ -96,9 +103,10 @@ Then open `http://127.0.0.1:4173`.
 
 ## Site Branches
 
-- `index.html`: Cool Daily across `cs.AI`, `cs.CL`, and `cs.CV`
+- `index.html`: HF Daily by date
+- `cool-daily.html`: Cool Daily across `cs.AI`, `cs.CL`, and `cs.CV`
 - `conference.html`: conference snapshots with `Subject` and `Topic` filters
-- `hf-daily-paper.html`: Hugging Face daily papers by date
+- `trending.html`: GitHub Trending weekly snapshots
 - `like.html`: saved papers with GitHub OAuth + Supabase sync
 
 ## Supabase and Cloudflare Pages
@@ -139,7 +147,7 @@ Local fallback config:
 
 ## Scheduled Jobs
 
-There are two scheduled jobs. Both default to local Codex classification and can auto-push generated artifacts to GitHub.
+There are three scheduled jobs. The paper jobs default to local Codex classification and all jobs can auto-push generated artifacts to GitHub.
 
 - `Cool Daily`
   - `11:00`
@@ -151,6 +159,10 @@ There are two scheduled jobs. Both default to local Codex classification and can
   - Monday to Friday: crawl the current day and catch up any missed business days
   - Saturday and Sunday: refresh the current week from Monday to Friday to update `upvotes` and `comments`
   - Also catches up older missed business days from the persisted state
+- `Trending`
+  - `Monday 12:00`
+  - Captures one GitHub Trending weekly snapshot for the current ISO week
+  - Runs at most once per week even if manually triggered multiple times
 
 The scheduler keeps its own local state in `state/scheduled_jobs.json` by default. If the machine is off for several days, the next scheduled run resumes from the last successful business date instead of skipping the gap.
 
@@ -158,6 +170,7 @@ Entrypoints:
 
 - [run_cool_daily_job.sh](/Users/misaki/Code/cool_paper/scripts/run_cool_daily_job.sh)
 - [run_hf_daily_job.sh](/Users/misaki/Code/cool_paper/scripts/run_hf_daily_job.sh)
+- [run_trending_job.sh](/Users/misaki/Code/cool_paper/scripts/run_trending_job.sh)
 - [run_scheduled_job.py](/Users/misaki/Code/cool_paper/scripts/run_scheduled_job.py)
 
 Relevant environment variables:
@@ -168,6 +181,7 @@ Relevant environment variables:
 - `COOL_PAPER_STATE_PATH`
 - `COOL_PAPER_DAILY_CLASSIFIER`
 - `COOL_PAPER_HF_CLASSIFIER`
+- `COOL_PAPER_TRENDING_WINDOW`
 - `COOL_PAPER_CODEX_MODEL`
 - `COOL_PAPER_CODEX_TIMEOUT_SECONDS`
 - `COOL_PAPER_GIT_REMOTE`
@@ -179,6 +193,7 @@ Run one job manually without pushing:
 ```bash
 python3 scripts/run_scheduled_job.py --job cool_daily --skip-push
 python3 scripts/run_scheduled_job.py --job hf_daily --skip-push
+python3 scripts/run_scheduled_job.py --job trending --skip-push
 ```
 
 Backfill from the configured start date through the current date:
@@ -193,6 +208,7 @@ Use an explicit test clock:
 ```bash
 python3 scripts/run_scheduled_job.py --job cool_daily --skip-push --now 2026-03-10T11:00:00+08:00
 python3 scripts/run_scheduled_job.py --job hf_daily --skip-push --now 2026-03-10T23:00:00+08:00
+python3 scripts/run_scheduled_job.py --job trending --skip-push --now 2026-03-16T12:00:00+08:00
 ```
 
 ### macOS launchd
@@ -201,12 +217,14 @@ Templates:
 
 - [com.coolpaper.cool-daily.plist.template](/Users/misaki/Code/cool_paper/ops/launchd/com.coolpaper.cool-daily.plist.template)
 - [com.coolpaper.hf-daily.plist.template](/Users/misaki/Code/cool_paper/ops/launchd/com.coolpaper.hf-daily.plist.template)
+- [com.coolpaper.trending.plist.template](/Users/misaki/Code/cool_paper/ops/launchd/com.coolpaper.trending.plist.template)
 
 Register them after replacing `__PROJECT_ROOT__`:
 
 ```bash
 launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.coolpaper.cool-daily.plist
 launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.coolpaper.hf-daily.plist
+launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.coolpaper.trending.plist
 ```
 
 ### WSL cron

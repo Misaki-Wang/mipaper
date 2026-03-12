@@ -22,11 +22,13 @@ from cool_paper.scheduler import (
     local_now,
     save_schedule_state,
     summarize_date_window,
+    trending_backfill_dates,
 )
 
 GENERATED_PATHS = [
     "reports/daily",
     "reports/hf-daily",
+    "reports/trending",
     "site/data",
 ]
 
@@ -45,8 +47,8 @@ def load_env_file(path: Path) -> None:
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Run scheduled Cool Daily / HF Daily jobs.")
-    parser.add_argument("--job", choices=("cool_daily", "hf_daily"), required=True, help="scheduled job kind")
+    parser = argparse.ArgumentParser(description="Run scheduled Cool Daily / HF Daily / Trending jobs.")
+    parser.add_argument("--job", choices=("cool_daily", "hf_daily", "trending"), required=True, help="scheduled job kind")
     parser.add_argument("--timezone", default=os.environ.get("COOL_PAPER_TIMEZONE", "Asia/Shanghai"))
     parser.add_argument("--skip-push", action="store_true", help="generate reports but skip git commit/push")
     parser.add_argument("--git-remote", default=os.environ.get("COOL_PAPER_GIT_REMOTE", "origin"))
@@ -169,6 +171,34 @@ def run_hf_daily_job(timezone_name: str, start_date: str, state: dict, now: date
     return report_dates
 
 
+def run_trending_job(timezone_name: str, start_date: str, state: dict, now: datetime | None = None) -> list[str]:
+    report_dates = trending_backfill_dates(
+        start_date=start_date,
+        timezone_name=timezone_name,
+        last_success_date=state.get(state_key("trending")),
+        now=now,
+    )
+    if not report_dates:
+        print(f"No Trending snapshot needed in timezone {timezone_name}.")
+        return []
+
+    for report_date in report_dates:
+        command = [
+            "python3",
+            "scripts/generate_trending_report.py",
+            "--date",
+            report_date,
+            "--timezone",
+            timezone_name,
+            "--since",
+            os.environ.get("COOL_PAPER_TRENDING_WINDOW", "weekly"),
+            "--output-dir",
+            "reports/trending",
+        ]
+        run_command(command)
+    return report_dates
+
+
 def build_site_data() -> None:
     run_command(["python3", "scripts/build_site_data.py"])
 
@@ -204,8 +234,10 @@ def main() -> int:
 
     if args.job == "cool_daily":
         dates = run_cool_daily_job(args.timezone, args.start_date, state, now)
-    else:
+    elif args.job == "hf_daily":
         dates = run_hf_daily_job(args.timezone, args.start_date, state, now)
+    else:
+        dates = run_trending_job(args.timezone, args.start_date, state, now)
 
     if not dates:
         return 0

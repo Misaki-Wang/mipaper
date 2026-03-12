@@ -1,11 +1,13 @@
 import unittest
 
 from cool_paper.fetcher import (
+    build_github_trending_url,
     build_hf_daily_url,
     build_venue_url,
     extract_total_papers,
     fetch_complete_venue_snapshot,
     parse_feed_html,
+    parse_github_trending_html,
     parse_hf_daily_html,
 )
 
@@ -158,6 +160,70 @@ class ParseFeedHTMLTest(unittest.TestCase):
 
     def test_build_hf_daily_url(self) -> None:
         self.assertEqual("https://huggingface.co/papers/date/2026-03-09", build_hf_daily_url("2026-03-09"))
+
+    def test_build_github_trending_url(self) -> None:
+        self.assertEqual(
+            "https://github.com/trending?since=weekly&spoken_language_code=",
+            build_github_trending_url("weekly", ""),
+        )
+
+    def test_parse_github_trending_html_extracts_repositories(self) -> None:
+        html = """
+        <article class="Box-row">
+          <h2>
+            <a href="/openai/codex">
+              openai / codex
+            </a>
+          </h2>
+          <p class="col-9 color-fg-muted my-1 pr-4">
+            Terminal coding agent.
+          </p>
+          <div>
+            <span itemprop="programmingLanguage">TypeScript</span>
+            <a href="/openai/codex/stargazers">12,345</a>
+            <a href="/openai/codex/forks">678</a>
+            <span>9,001 stars this week</span>
+            <a href="/alice"><img alt="@alice" /></a>
+            <a href="/bob"><img alt="@bob" /></a>
+          </div>
+        </article>
+        """
+
+        repos = parse_github_trending_html(html, "2026-03-12")
+
+        self.assertEqual(1, len(repos))
+        self.assertEqual("openai/codex", repos[0].full_name)
+        self.assertEqual("openai", repos[0].owner)
+        self.assertEqual("codex", repos[0].name)
+        self.assertEqual("TypeScript", repos[0].language)
+        self.assertEqual(12345, repos[0].stars)
+        self.assertEqual(678, repos[0].forks)
+        self.assertEqual(9001, repos[0].stars_this_week)
+        self.assertEqual(["alice", "bob"], repos[0].built_by)
+        self.assertEqual("https://github.com/openai/codex", repos[0].repo_url)
+
+    def test_parse_github_trending_html_extracts_counts_with_svg_icons(self) -> None:
+        html = """
+        <article class="Box-row">
+          <h2>
+            <a href="/openai/codex">
+              openai / codex
+            </a>
+          </h2>
+          <div>
+            <a href="/openai/codex/stargazers"><svg></svg> 32,497</a>
+            <a href="/openai/codex/forks"><svg></svg> 5,064</a>
+            <span>23,574 stars this week</span>
+          </div>
+        </article>
+        """
+
+        repos = parse_github_trending_html(html, "2026-03-12")
+
+        self.assertEqual(1, len(repos))
+        self.assertEqual(32497, repos[0].stars)
+        self.assertEqual(5064, repos[0].forks)
+        self.assertEqual(23574, repos[0].stars_this_week)
 
     def test_fetch_complete_venue_snapshot_expands_show_until_total_is_covered(self) -> None:
         page_with_five = """

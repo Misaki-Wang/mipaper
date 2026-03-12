@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MiPaper</title>
+    <meta
+      name="description"
+      content="GitHub Trending branch with weekly repository snapshots, language filtering, and archive browsing."
+    />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <script>
+      (function () {
+        var storedMode = localStorage.getItem("cool-paper-theme") || "auto";
+        var prefersDark =
+          typeof window.matchMedia === "function" &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+        var resolvedTheme = storedMode === "auto" ? (prefersDark ? "dark" : "light") : storedMode;
+        document.documentElement.dataset.theme = resolvedTheme;
+        document.documentElement.dataset.themeMode = storedMode;
+      })();
+    </script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero reveal">
+        <div class="hero-copy">
+          <div class="page-nav">
+            <a class="page-nav-link" href="./index.html">HF Daily</a>
+            <a class="page-nav-link" href="./cool-daily.html">Cool Daily</a>
+            <a class="page-nav-link" href="./conference.html">Conference</a>
+            <a class="page-nav-link active" href="./trending.html">Trending</a>
+            <a class="page-nav-link" href="./like.html">Like</a>
+          </div>
+          <p class="eyebrow">GITHUB TRENDING</p>
+          <h1>Weekly Trending Repositories</h1>
+          <p class="hero-text">
+            Original page:
+            <a href="https://github.com/trending?since=weekly&spoken_language_code=" target="_blank" rel="noreferrer">GitHub Trending</a>
+          </p>
+          <div id="trending-hero-signals" class="hero-signals"></div>
+          <div class="hero-actions">
+            <button class="pill-button active" type="button" data-theme-toggle="auto">Auto</button>
+            <button class="pill-button" type="button" data-theme-toggle="light">Day</button>
+            <button class="pill-button" type="button" data-theme-toggle="dark">Night</button>
+          </div>
+        </div>
+        <div class="hero-panel glass-card">
+          <div class="hero-panel-top">
+            <span class="meta-kicker">Weekly Snapshot</span>
+            <div class="hero-panel-status">
+              <strong id="trending-hero-date">-</strong>
+              <span id="trending-hero-review-status" class="review-status-pill">Not reviewed</span>
+            </div>
+          </div>
+          <div class="hero-stat-grid">
+            <div>
+              <span class="stat-label">Repositories</span>
+              <strong id="trending-hero-total">-</strong>
+            </div>
+            <div>
+              <span class="stat-label">Top Weekly Gain</span>
+              <strong id="trending-hero-gain">-</strong>
+            </div>
+            <div>
+              <span class="stat-label">Window</span>
+              <strong id="trending-hero-window">weekly</strong>
+            </div>
+            <div>
+              <span class="stat-label">Updated</span>
+              <strong id="trending-hero-updated">-</strong>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="glass-card home-board reveal">
+        <div class="section-heading">
+          <p class="eyebrow">TRENDING ARCHIVE</p>
+          <h2>Weekly Archive</h2>
+          <p id="trending-board-summary" class="home-board-summary">-</p>
+        </div>
+        <div id="trending-home-cards" class="home-categories"></div>
+      </section>
+
+      <main class="layout">
+        <aside class="sidebar">
+          <div class="glass-card sidebar-header reveal">
+            <div>
+              <p class="eyebrow">TRENDING RAIL</p>
+              <h2>Filters</h2>
+            </div>
+            <button id="trending-sidebar-toggle" class="sidebar-toggle" type="button" aria-expanded="true">
+              <span id="trending-sidebar-toggle-icon" class="sidebar-toggle-icon">‹</span>
+              <span id="trending-sidebar-toggle-label" class="sidebar-toggle-label">Collapse</span>
+            </button>
+          </div>
+
+          <div id="trending-sidebar-stack" class="sidebar-stack">
+            <section class="glass-card controls reveal">
+              <div class="control-block">
+                <label for="trending-report-select">Snapshot</label>
+                <select id="trending-report-select" class="control-input"></select>
+              </div>
+              <div class="control-block">
+                <label for="trending-search-input">Repository Search</label>
+                <input id="trending-search-input" class="control-input" type="search" placeholder="owner / repo or description" />
+              </div>
+            </section>
+          </div>
+        </aside>
+
+        <section class="content">
+          <section id="trending-overview-section" class="glass-card overview reveal">
+            <div class="overview-top">
+              <div>
+                <p class="eyebrow">TRENDING OVERVIEW</p>
+                <h2 id="trending-overview-title">Weekly Overview</h2>
+              </div>
+              <a id="trending-source-link" class="link-chip" href="#" target="_blank" rel="noreferrer">Source</a>
+            </div>
+            <div class="overview-grid conference-overview-grid">
+              <article class="insight-card accent-card">
+                <span class="insight-label">Weekly Lead</span>
+                <p id="trending-overview-summary" class="insight-text">-</p>
+              </article>
+              <article class="insight-card">
+                <span class="insight-label">Top Weekly Gain</span>
+                <p id="trending-repo-summary" class="insight-text">-</p>
+              </article>
+              <article class="insight-card">
+                <span class="insight-label">Repository Breadth</span>
+                <p id="trending-focus-summary" class="insight-text">-</p>
+              </article>
+              <article class="insight-card">
+                <span class="insight-label">Visible Scope</span>
+                <p id="trending-breadth-summary" class="insight-text">-</p>
+              </article>
+            </div>
+          </section>
+
+          <section id="trending-tags-section" class="glass-card tag-panel reveal">
+            <div class="section-heading">
+              <p class="eyebrow">TAG MAP</p>
+              <h2>Current Tags</h2>
+            </div>
+            <div id="trending-tag-map" class="tag-map"></div>
+          </section>
+
+          <section id="trending-cadence-section" class="glass-card cadence-panel reveal">
+            <div class="section-heading">
+              <p class="eyebrow">RECENT CADENCE</p>
+              <h2>Recent Cadence</h2>
+            </div>
+            <div id="trending-cadence-track" class="cadence-track"></div>
+            <p id="trending-cadence-summary" class="cadence-summary">-</p>
+          </section>
+
+          <section id="trending-spotlight-section" class="glass-card conference-panel reveal">
+            <div class="section-heading">
+              <p class="eyebrow">SPOTLIGHT</p>
+              <h2>Top Repositories</h2>
+            </div>
+            <div id="trending-spotlight" class="conference-spotlight"></div>
+          </section>
+
+          <section id="trending-results-section" class="glass-card results-strip reveal">
+            <div class="results-top">
+              <div>
+                <p class="eyebrow">RESULTS</p>
+                <h2 id="trending-results-title">0 repositories in view</h2>
+              </div>
+              <button id="trending-reset-filters" class="link-chip button-link" type="button">Reset filters</button>
+            </div>
+            <div class="results-grid">
+              <div id="trending-results-stats" class="results-stats"></div>
+              <div id="trending-active-filters" class="active-filter-chips"></div>
+            </div>
+          </section>
+
+          <section class="reveal">
+            <div id="trending-repository-sections" class="conference-subject-sections"></div>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <button id="trending-back-to-top" class="back-to-top" type="button" aria-hidden="true">
+      <span>↑</span>
+      <span>Top</span>
+    </button>
+
+    <aside class="floating-toc" aria-label="Table of contents">
+      <div class="floating-toc-card">
+        <button id="trending-review-toggle" class="review-toggle" type="button" aria-pressed="false">
+          <span class="review-toggle-icon" aria-hidden="true">✓</span>
+          <span class="review-toggle-copy">
+            <span class="review-toggle-label">Reviewed</span>
+            <span id="trending-review-toggle-meta" class="review-toggle-meta">Mark this snapshot as reviewed</span>
+          </span>
+        </button>
+        <p class="eyebrow">TABLE OF CONTENTS</p>
+        <h2>Quick Jump</h2>
+        <nav id="trending-floating-toc" class="floating-toc-list"></nav>
+      </div>
+    </aside>
+
+    <script type="module" src="./trending.js"></script>
+  </body>
+</html>

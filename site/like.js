@@ -10,6 +10,7 @@ import {
   subscribeLikes,
   syncLikesNow,
 } from "./likes.js";
+import { isMarkedToRead, subscribeToRead, toggleToRead } from "./reading_state.js";
 
 const state = {
   likes: [],
@@ -62,6 +63,9 @@ async function init() {
   subscribeAuth(renderAuthState);
   subscribeLikes((likes) => {
     state.likes = likes;
+    renderPage();
+  });
+  subscribeToRead(() => {
     renderPage();
   });
   await initLikesSync();
@@ -339,15 +343,19 @@ function renderPage() {
 
   likeRecords.clear();
   const visibleLikes = getVisibleLikes(likes);
+  const toReadLikes = likes.filter((item) => isMarkedToRead(item.like_id));
+  const visibleToReadLikes = visibleLikes.filter((item) => isMarkedToRead(item.like_id));
   const topicDistribution = computeTopicDistribution(visibleLikes);
   const sourceSections = groupBySource(visibleLikes);
 
-  renderOverview(likes, visibleLikes, sourceSections);
+  renderOverview(likes, visibleLikes, sourceSections, toReadLikes);
   renderTagMap(likes, topicDistribution);
+  renderToReadList(toReadLikes, visibleToReadLikes);
   renderDistribution(topicDistribution);
   renderResults(likes, visibleLikes, sourceSections);
   renderSourceSections(sourceSections);
   bindLikeButtons(document, likeRecords);
+  bindToReadButtons();
 }
 
 function populateFilters(likes) {
@@ -478,14 +486,14 @@ function renderSourceCards(likes) {
   });
 }
 
-function renderOverview(likes, visibleLikes, sourceSections) {
+function renderOverview(likes, visibleLikes, sourceSections, toReadLikes) {
   const focusCount = visibleLikes.filter((item) => focusTopicKeys.has(item.topic_key)).length;
   const focusShare = visibleLikes.length ? (focusCount / visibleLikes.length) * 100 : 0;
   const latest = visibleLikes[0] || likes[0];
   const topSource = sourceSections[0];
 
   document.querySelector("#like-overview-title").textContent = "Like Branch Overview";
-  document.querySelector("#like-overview-summary").textContent = `Currently saved: ${visibleLikes.length} papers for later deep reading and revisit.`;
+  document.querySelector("#like-overview-summary").textContent = `Currently saved: ${visibleLikes.length} papers for later deep reading and revisit. ${toReadLikes.length} are pinned to your to-read queue.`;
   document.querySelector("#like-focus-summary").textContent = `${focusCount} papers hit your focus topics, accounting for ${focusShare.toFixed(2)}% of the current view.`;
   document.querySelector("#like-branch-summary").textContent = topSource
     ? `${escapeHtml(topSource.source_label)} currently has the most likes, with ${topSource.count} papers.`
@@ -526,6 +534,50 @@ function renderTagMap(likes, topicDistribution) {
           <span class="tag-card-label">${escapeHtml(item.label)}</span>
           <strong class="tag-card-value">${escapeHtml(item.value)}</strong>
           <span class="tag-card-meta">${escapeHtml(item.meta)}</span>
+        </article>
+      `
+    )
+    .join("");
+}
+
+function renderToReadList(toReadLikes, visibleToReadLikes) {
+  const summary = document.querySelector("#like-to-read-summary");
+  const root = document.querySelector("#like-to-read-list");
+
+  if (!toReadLikes.length) {
+    summary.textContent = "Pin up to-read papers from your liked queue for faster revisit.";
+    root.innerHTML = `<div class="empty-state">No papers are marked as To Read yet.</div>`;
+    return;
+  }
+
+  const hiddenCount = toReadLikes.length - visibleToReadLikes.length;
+  summary.textContent = hiddenCount > 0
+    ? `${toReadLikes.length} papers are in your queue. ${hiddenCount} are currently hidden by filters.`
+    : `${toReadLikes.length} papers are currently pinned to your to-read queue.`;
+
+  if (!visibleToReadLikes.length) {
+    root.innerHTML = `<div class="empty-state">Your to-read queue has items, but none match the current filters.</div>`;
+    return;
+  }
+
+  root.innerHTML = visibleToReadLikes
+    .slice(0, 12)
+    .map(
+      (paper) => `
+        <article class="spotlight-card">
+          <div class="spotlight-meta">
+            <span>${escapeHtml(getSourceLabel(paper.source_kind))}</span>
+            <span>${escapeHtml(paper.snapshot_label || extractDateLabel(paper) || "No snapshot")}</span>
+          </div>
+          <h3>${escapeHtml(paper.title)}</h3>
+          <p>${escapeHtml((paper.authors || []).slice(0, 4).join(", ") || "Unknown authors")}</p>
+          <div class="spotlight-links">
+            ${renderToReadButton(paper)}
+            ${paper.pdf_url ? `<a class="paper-link brand-arxiv" href="${escapeAttribute(paper.pdf_url)}" target="_blank" rel="noreferrer">arXiv</a>` : ""}
+            ${paper.detail_url ? `<a class="paper-link brand-cool" href="${escapeAttribute(paper.detail_url)}" target="_blank" rel="noreferrer">Cool</a>` : ""}
+            ${paper.hf_url ? `<a class="paper-link brand-cool" href="${escapeAttribute(paper.hf_url)}" target="_blank" rel="noreferrer">HF</a>` : ""}
+            ${paper.github_url ? renderExternalPaperLink({ href: paper.github_url, label: "GitHub", brand: "github" }) : ""}
+          </div>
         </article>
       `
     )
@@ -636,7 +688,8 @@ function renderLikeCard(paper) {
     paper.pdf_url ? `<a class="paper-link brand-arxiv" href="${escapeAttribute(paper.pdf_url)}" target="_blank" rel="noreferrer">arXiv</a>` : "",
     paper.detail_url ? `<a class="paper-link brand-cool" href="${escapeAttribute(paper.detail_url)}" target="_blank" rel="noreferrer">Cool</a>` : "",
     paper.hf_url ? `<a class="paper-link brand-cool" href="${escapeAttribute(paper.hf_url)}" target="_blank" rel="noreferrer">HF</a>` : "",
-    paper.github_url ? `<a class="paper-link" href="${escapeAttribute(paper.github_url)}" target="_blank" rel="noreferrer">GitHub</a>` : "",
+    paper.github_url ? renderExternalPaperLink({ href: paper.github_url, label: "GitHub", brand: "github" }) : "",
+    renderToReadButton(paper),
     renderLikeButton(paper),
   ]
     .filter(Boolean)
@@ -668,6 +721,44 @@ function renderLikeButton(paper) {
       <span class="paper-link-text">Like</span>
     </button>
   `;
+}
+
+function renderToReadButton(paper) {
+  const active = isMarkedToRead(paper.like_id);
+  return `
+    <button class="paper-link to-read-button${active ? " is-active" : ""}" type="button" data-to-read-id="${escapeAttribute(
+      paper.like_id
+    )}" aria-pressed="${active}">
+      <span class="paper-link-icon to-read-icon" aria-hidden="true">
+        <svg viewBox="0 0 20 20">
+          <path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v11.4l-5.5-2.7-5.5 2.7V5A1.5 1.5 0 0 1 6 3.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path>
+        </svg>
+      </span>
+      <span class="paper-link-text">To Read</span>
+    </button>
+  `;
+}
+
+function renderExternalPaperLink({ href, label, brand }) {
+  const iconSrc = brand === "github" ? "./assets/github-mark.svg" : "";
+  return `
+    <a class="paper-link brand-${escapeAttribute(brand)}" href="${escapeAttribute(href)}" target="_blank" rel="noreferrer">
+      <span class="paper-link-icon" aria-hidden="true">${iconSrc ? `<img src="${iconSrc}" alt="" />` : ""}</span>
+      <span class="paper-link-text">${escapeHtml(label)}</span>
+    </a>
+  `;
+}
+
+function bindToReadButtons() {
+  document.querySelectorAll("[data-to-read-id]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const likeId = button.dataset.toReadId;
+      if (!likeId) {
+        return;
+      }
+      toggleToRead(likeId);
+    });
+  });
 }
 
 function getVisibleLikes(likes) {
@@ -773,6 +864,8 @@ function renderEmpty() {
   document.querySelector("#like-branch-summary").textContent = "No branch distribution yet.";
   document.querySelector("#like-latest-summary").textContent = "No latest save record yet.";
   document.querySelector("#like-tag-map").innerHTML = "";
+  document.querySelector("#like-to-read-summary").textContent = "Pin up to-read papers from your liked queue for faster revisit.";
+  document.querySelector("#like-to-read-list").innerHTML = `<div class="empty-state">No papers are marked as To Read yet.</div>`;
   document.querySelector("#like-distribution-list").innerHTML = `<div class="empty-state">No like statistics yet.</div>`;
   document.querySelector("#like-results-title").textContent = "No liked papers yet";
   document.querySelector("#like-results-stats").innerHTML = "";
@@ -836,6 +929,11 @@ function findLatestReportedDate(likes) {
     .map((paper) => extractDateParts(paper).day || extractDateParts(paper).month || extractDateParts(paper).year)
     .filter(Boolean)
     .sort((a, b) => b.localeCompare(a))[0] || "";
+}
+
+function extractDateLabel(paper) {
+  const dateParts = extractDateParts(paper);
+  return dateParts.day || dateParts.month || dateParts.year || "";
 }
 
 function escapeHtml(value) {

@@ -1,5 +1,6 @@
 import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js";
 import { createCalendarPicker } from "./calendar_picker.js";
+import { createPageReviewKey, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js";
 
 const manifestUrl = "./data/daily/manifest.json";
 
@@ -34,6 +35,9 @@ const sidebarToggleIcon = document.querySelector("#sidebar-toggle-icon");
 const layoutRoot = document.querySelector(".layout");
 const backToTopButton = document.querySelector("#back-to-top");
 const floatingTocRoot = document.querySelector("#daily-floating-toc");
+const reviewToggleButton = document.querySelector("#daily-review-toggle");
+const reviewToggleMeta = document.querySelector("#daily-review-toggle-meta");
+const heroReviewStatus = document.querySelector("#daily-hero-review-status");
 const likeRecords = new Map();
 let tocObserver = null;
 let datePicker = null;
@@ -48,7 +52,9 @@ async function init() {
   bindSidebarToggle();
   bindBackToTop();
   bindFilters();
+  bindReviewToggle();
   subscribeLikes(() => bindLikeButtons(document, likeRecords));
+  subscribePageReviews(() => renderReviewState());
   await initLikesSync();
   const manifest = await fetchJson(manifestUrl);
   state.manifest = manifest;
@@ -135,6 +141,50 @@ function bindBackToTop() {
 
   window.addEventListener("scroll", updateVisibility, { passive: true });
   updateVisibility();
+}
+
+function bindReviewToggle() {
+  if (!reviewToggleButton) {
+    return;
+  }
+  reviewToggleButton.addEventListener("click", () => {
+    if (!state.report || !state.currentPath) {
+      return;
+    }
+    const reviewKey = createPageReviewKey("cool_daily", state.currentPath);
+    const next = !isPageReviewed(reviewKey);
+    setPageReviewed(reviewKey, next, {
+      branch: "Cool Daily",
+      snapshot_label: `${state.report.report_date} · ${state.report.category}`,
+    });
+    renderReviewState();
+  });
+}
+
+function renderReviewState() {
+  if (!reviewToggleButton || !reviewToggleMeta) {
+    return;
+  }
+  if (!state.report || !state.currentPath) {
+    reviewToggleButton.classList.remove("is-reviewed");
+    reviewToggleButton.setAttribute("aria-pressed", "false");
+    reviewToggleMeta.textContent = "Mark this snapshot as reviewed";
+    if (heroReviewStatus) {
+      heroReviewStatus.textContent = "Not reviewed";
+      heroReviewStatus.classList.remove("is-reviewed");
+    }
+    return;
+  }
+  const reviewed = isPageReviewed(createPageReviewKey("cool_daily", state.currentPath));
+  reviewToggleButton.classList.toggle("is-reviewed", reviewed);
+  reviewToggleButton.setAttribute("aria-pressed", String(reviewed));
+  reviewToggleMeta.textContent = reviewed
+    ? `Reviewed ${state.report.report_date} · ${state.report.category}`
+    : `Mark ${state.report.report_date} · ${state.report.category} as reviewed`;
+  if (heroReviewStatus) {
+    heroReviewStatus.textContent = reviewed ? "Reviewed" : "Not reviewed";
+    heroReviewStatus.classList.toggle("is-reviewed", reviewed);
+  }
 }
 
 function bindDatePicker() {
@@ -224,6 +274,7 @@ async function loadReport(path) {
   populateTopicFilter(report.topics);
   updateHero(state.manifest, report);
   renderHomeCategories(state.manifest, path, getScopedReports(state.manifest?.reports || []));
+  renderReviewState();
   renderReport();
 }
 
@@ -278,6 +329,7 @@ async function handleReportScopeChange() {
     state.report = null;
     state.currentPath = "";
     updateHero(state.manifest);
+    renderReviewState();
     renderEmpty("No daily snapshots match the current tags.");
     return;
   }
@@ -290,6 +342,7 @@ async function handleReportScopeChange() {
   reportSelect.value = state.currentPath;
   datePicker?.sync();
   updateHero(state.manifest, state.report);
+  renderReviewState();
   renderReport();
 }
 

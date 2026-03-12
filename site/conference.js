@@ -1,4 +1,5 @@
 import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js";
+import { createPageReviewKey, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js";
 
 const manifestUrl = "./data/conference/manifest.json";
 
@@ -34,6 +35,9 @@ const sidebarToggleIcon = document.querySelector("#conference-sidebar-toggle-ico
 const layoutRoot = document.querySelector(".layout");
 const backToTopButton = document.querySelector("#conference-back-to-top");
 const floatingTocRoot = document.querySelector("#conference-floating-toc");
+const reviewToggleButton = document.querySelector("#conference-review-toggle");
+const reviewToggleMeta = document.querySelector("#conference-review-toggle-meta");
+const heroReviewStatus = document.querySelector("#conference-hero-review-status");
 const likeRecords = new Map();
 let tocObserver = null;
 
@@ -47,7 +51,9 @@ async function init() {
   bindSidebarToggle();
   bindBackToTop();
   bindFilters();
+  bindReviewToggle();
   subscribeLikes(() => bindLikeButtons(document, likeRecords));
+  subscribePageReviews(() => renderReviewState());
   await initLikesSync();
   const manifest = await fetchJson(manifestUrl);
   state.manifest = manifest;
@@ -134,6 +140,48 @@ function bindBackToTop() {
   updateVisibility();
 }
 
+function bindReviewToggle() {
+  if (!reviewToggleButton) {
+    return;
+  }
+  reviewToggleButton.addEventListener("click", () => {
+    if (!state.report || !state.currentPath) {
+      return;
+    }
+    const reviewKey = createPageReviewKey("conference", state.currentPath);
+    const next = !isPageReviewed(reviewKey);
+    setPageReviewed(reviewKey, next, {
+      branch: "Conference",
+      snapshot_label: state.report.venue,
+    });
+    renderReviewState();
+  });
+}
+
+function renderReviewState() {
+  if (!reviewToggleButton || !reviewToggleMeta) {
+    return;
+  }
+  if (!state.report || !state.currentPath) {
+    reviewToggleButton.classList.remove("is-reviewed");
+    reviewToggleButton.setAttribute("aria-pressed", "false");
+    reviewToggleMeta.textContent = "Mark this snapshot as reviewed";
+    if (heroReviewStatus) {
+      heroReviewStatus.textContent = "Not reviewed";
+      heroReviewStatus.classList.remove("is-reviewed");
+    }
+    return;
+  }
+  const reviewed = isPageReviewed(createPageReviewKey("conference", state.currentPath));
+  reviewToggleButton.classList.toggle("is-reviewed", reviewed);
+  reviewToggleButton.setAttribute("aria-pressed", String(reviewed));
+  reviewToggleMeta.textContent = reviewed ? `Reviewed ${state.report.venue}` : `Mark ${state.report.venue} as reviewed`;
+  if (heroReviewStatus) {
+    heroReviewStatus.textContent = reviewed ? "Reviewed" : "Not reviewed";
+    heroReviewStatus.classList.toggle("is-reviewed", reviewed);
+  }
+}
+
 function bindFilters() {
   yearFilter.addEventListener("change", async (event) => {
     state.year = event.target.value;
@@ -208,6 +256,7 @@ async function loadReport(path) {
   populateSubjectFilter(report.subject_distribution || []);
   populateTopicFilter(report.topic_distribution || []);
   renderVenueCards(state.manifest, path, getScopedReports(state.manifest.reports || []));
+  renderReviewState();
   renderReport();
 }
 
@@ -259,6 +308,7 @@ async function handleVenueScopeChange() {
   if (!scopedReports.length) {
     state.report = null;
     state.currentPath = "";
+    renderReviewState();
     renderEmpty("No conference snapshots match the current tags.");
     return;
   }
@@ -269,6 +319,7 @@ async function handleVenueScopeChange() {
   }
 
   conferenceSelect.value = state.currentPath;
+  renderReviewState();
   renderReport();
 }
 

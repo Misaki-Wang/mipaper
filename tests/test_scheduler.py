@@ -8,10 +8,12 @@ from cool_paper.scheduler import (
     current_week_business_days,
     hf_daily_backfill_dates,
     is_weekend,
+    iso_week_key,
     load_schedule_state,
     save_schedule_state,
     summarize_date_window,
     today_iso,
+    trending_backfill_dates,
 )
 
 
@@ -66,6 +68,17 @@ class SchedulerHelpersTest(unittest.TestCase):
             ["2026-03-09", "2026-03-10", "2026-03-11", "2026-03-12", "2026-03-13"],
             hf_daily_backfill_dates("2026-03-02", "Asia/Shanghai", last_success_date="2026-03-13", now=now),
         )
+
+    def test_trending_backfill_dates_runs_once_per_iso_week(self) -> None:
+        now = datetime.fromisoformat("2026-03-16T12:00:00+08:00")
+        self.assertEqual(["2026-03-16"], trending_backfill_dates("2026-03-02", "Asia/Shanghai", now=now))
+        self.assertEqual(
+            [],
+            trending_backfill_dates("2026-03-02", "Asia/Shanghai", last_success_date="2026-03-16", now=now),
+        )
+
+    def test_iso_week_key_groups_same_week(self) -> None:
+        self.assertEqual(iso_week_key(datetime.fromisoformat("2026-03-16").date()), iso_week_key(datetime.fromisoformat("2026-03-20").date()))
 
     def test_schedule_state_round_trip(self) -> None:
         with TemporaryDirectory() as tmp_dir:

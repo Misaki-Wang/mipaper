@@ -39,3 +39,19 @@ class HFDailyPaper:
     matched_terms: List[str] = field(default_factory=list)
     classification_source: str = "rule"
     classification_confidence: Optional[float] = None
+
+
+@dataclass
+class TrendingRepo:
+    snapshot_date: str
+    repo_id: str
+    owner: str
+    name: str
+    full_name: str
+    repo_url: str
+    description: str = ""
+    language: str = ""
+    stars: Optional[int] = None
+    forks: Optional[int] = None
+    stars_this_week: Optional[int] = None
+    built_by: List[str] = field(default_factory=list)

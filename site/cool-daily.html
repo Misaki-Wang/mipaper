@@ -30,6 +30,7 @@
             <a class="page-nav-link" href="./index.html">HF Daily</a>
             <a class="page-nav-link active" href="./cool-daily.html">Cool Daily</a>
             <a class="page-nav-link" href="./conference.html">Conference</a>
+            <a class="page-nav-link" href="./trending.html">Trending</a>
             <a class="page-nav-link" href="./like.html">Like</a>
           </div>
           <p class="eyebrow">COOL PAPER OBSERVATORY</p>
@@ -52,7 +53,10 @@
         <div class="hero-panel glass-card">
           <div class="hero-panel-top">
             <span class="meta-kicker">Latest Snapshot</span>
-            <strong id="hero-report-date">-</strong>
+            <div class="hero-panel-status">
+              <strong id="hero-report-date">-</strong>
+              <span id="daily-hero-review-status" class="review-status-pill">Not reviewed</span>
+            </div>
           </div>
           <div class="hero-stat-grid">
             <div>
@@ -260,6 +264,13 @@
 
     <aside class="floating-toc" aria-label="Table of contents">
       <div class="floating-toc-card">
+        <button id="daily-review-toggle" class="review-toggle" type="button" aria-pressed="false">
+          <span class="review-toggle-icon" aria-hidden="true">✓</span>
+          <span class="review-toggle-copy">
+            <span class="review-toggle-label">Reviewed</span>
+            <span id="daily-review-toggle-meta" class="review-toggle-meta">Mark this snapshot as reviewed</span>
+          </span>
+        </button>
         <p class="eyebrow">TABLE OF CONTENTS</p>
         <h2>Quick Jump</h2>
         <nav id="daily-floating-toc" class="floating-toc-list"></nav>
