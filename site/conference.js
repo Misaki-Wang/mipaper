@@ -708,6 +708,7 @@ function rememberLikeRecord(paper) {
     venue: report?.venue || "",
     venueSeries: report?.venue_series || "",
     venueYear: report?.venue_year || "",
+    reviewKey: state.currentPath ? createPageReviewKey("conference", state.currentPath) : "",
   });
   likeRecords.set(record.like_id, record);
   return record.like_id;

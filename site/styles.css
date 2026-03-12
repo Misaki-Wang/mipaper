@@ -1805,18 +1805,6 @@ code {
   border-color: rgba(215, 91, 118, 0.28);
 }
 
-.to-read-button.is-active {
-  border-color: color-mix(in srgb, #e5a64b, var(--border) 18%);
-  background: color-mix(in srgb, #fff4dd, var(--surface-soft) 36%);
-  color: #9a5a00;
-}
-
-.to-read-button.is-active .to-read-icon {
-  color: #9a5a00;
-  background: linear-gradient(135deg, rgba(255, 250, 236, 0.98), rgba(255, 235, 190, 0.92));
-  border-color: rgba(229, 166, 75, 0.28);
-}
-
 :root[data-theme="dark"] .like-button.is-liked {
   background: color-mix(in srgb, rgba(177, 45, 78, 0.34), var(--surface-soft) 60%);
   color: #ffb7c6;
@@ -2030,12 +2018,31 @@ code {
 .repo-stat-pill {
   display: inline-flex;
   align-items: center;
+  gap: 0.42rem;
   padding: 0.32rem 0.58rem;
   border-radius: 999px;
   border: 1px solid color-mix(in srgb, var(--border), var(--accent) 14%);
   background: color-mix(in srgb, var(--surface-soft), white 10%);
   color: var(--muted);
   font-size: 0.8rem;
+}
+
+.repo-stat-icon {
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 auto;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 999px;
+  color: var(--accent-strong);
+  background: color-mix(in srgb, var(--surface-strong), white 14%);
+  border: 1px solid color-mix(in srgb, var(--border), var(--accent) 22%);
+}
+
+.repo-stat-icon svg {
+  width: 0.62rem;
+  height: 0.62rem;
+  display: block;
 }
 
 .subject-radar-card {

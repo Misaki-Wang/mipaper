@@ -20,8 +20,6 @@ const focusTopicKeys = new Set([
   "multimodal_agents",
 ]);
 const HF_CADENCE_MAX_DATES = 5;
-const HF_ARCHIVE_MAX_CARDS = 6;
-
 const reportSelect = document.querySelector("#hf-report-select");
 const topicFilter = document.querySelector("#hf-topic-filter");
 const authorFilter = document.querySelector("#hf-author-filter");
@@ -59,7 +57,6 @@ async function init() {
   state.manifest = manifest;
   bindDatePicker();
   populateReportSelect(manifest.reports || []);
-  renderHomeCards(manifest);
 
   if (!manifest.reports?.length) {
     renderEmpty();
@@ -260,7 +257,6 @@ async function loadReport(path) {
   focusOnlyInput.checked = false;
   populateTopicFilter(report.topics || []);
   datePicker?.sync();
-  renderHomeCards(state.manifest, path);
   renderReviewState();
   renderReport();
 }
@@ -279,55 +275,6 @@ function populateTopicFilter(topics) {
         `<option value="${escapeAttribute(topic.topic_label)}">${escapeHtml(topic.topic_label)} · ${topic.count}</option>`
     )
     .join("")}`;
-}
-
-function renderHomeCards(manifest, activePath = "") {
-  const root = document.querySelector("#hf-home-cards");
-  const summary = document.querySelector("#hf-board-summary");
-  const reports = manifest?.reports || [];
-  const visibleReports = reports.slice(0, HF_ARCHIVE_MAX_CARDS);
-
-  if (!reports.length) {
-    summary.textContent = "No Hugging Face daily snapshots are available yet.";
-    root.innerHTML = `<div class="empty-state">Generate the HF daily reports first, then refresh the page.</div>`;
-    return;
-  }
-
-  const totalPapers = reports.reduce((sum, report) => sum + (report.total_papers || 0), 0);
-  summary.textContent = `Currently indexed: ${reports.length} dates with ${totalPapers} Hugging Face daily papers. Showing the latest ${visibleReports.length} dates.`;
-  root.innerHTML = visibleReports
-    .map((report) => {
-      const topTopic = report.top_topics?.[0];
-      const topSubmitter = report.top_submitters?.[0];
-      return `
-        <button
-          class="home-category-card ${report.data_path === activePath ? "active" : ""}"
-          type="button"
-          data-hf-report="${escapeAttribute(report.data_path)}"
-        >
-          <div class="home-category-card-top">
-            <span class="home-category-label">HF Daily</span>
-            <span class="home-category-date">${escapeHtml(report.report_date)}</span>
-          </div>
-          <strong class="home-category-count">${report.total_papers} papers</strong>
-          <p class="home-category-topic">${escapeHtml(topTopic?.topic_label || "No topic summary")}</p>
-          <div class="home-category-meta">
-            <span>${escapeHtml(topSubmitter?.submitted_by || "No submitter")}</span>
-            <span>${escapeHtml(report.report_date)}</span>
-          </div>
-        </button>
-      `;
-    })
-    .join("");
-
-  root.querySelectorAll("[data-hf-report]").forEach((button) => {
-    button.addEventListener("click", async () => {
-      const path = button.dataset.hfReport;
-      if (path && path !== state.currentPath) {
-        await loadReport(path);
-      }
-    });
-  });
 }
 
 function renderReport() {
@@ -698,6 +645,7 @@ function rememberLikeRecord(paper) {
     sourcePage: "./index.html",
     snapshotLabel: report ? report.report_date : "HF Daily",
     reportDate: report?.report_date || "",
+    reviewKey: state.currentPath ? createPageReviewKey("hf_daily", state.currentPath) : "",
   });
   likeRecords.set(record.like_id, record);
   return record.like_id;
@@ -785,9 +733,6 @@ function renderResultStat(label, value, meta) {
 }
 
 function renderEmpty() {
-  document.querySelector("#hf-board-summary").textContent = "No Hugging Face daily reports are available yet.";
-  document.querySelector("#hf-home-cards").innerHTML =
-    `<div class="empty-state">Run the HF Daily report generator first, then refresh the page.</div>`;
   document.querySelector("#hf-spotlight").innerHTML = "";
   document.querySelector("#hf-topic-sections").innerHTML = "";
   const tagMap = document.querySelector("#hf-tag-map");
@@ -820,8 +765,14 @@ function formatTime(isoString) {
 
 function renderFatal(error) {
   const message = error instanceof Error ? error.message : String(error);
-  document.querySelector("#hf-board-summary").textContent = "HF Daily page failed to load.";
-  document.querySelector("#hf-home-cards").innerHTML = `<div class="empty-state">${escapeHtml(message)}</div>`;
+  const resultsTitle = document.querySelector("#hf-results-title");
+  if (resultsTitle) {
+    resultsTitle.textContent = "HF Daily page failed to load";
+  }
+  const topicSections = document.querySelector("#hf-topic-sections");
+  if (topicSections) {
+    topicSections.innerHTML = `<div class="glass-card empty-state">${escapeHtml(message)}</div>`;
+  }
   renderFloatingToc([]);
 }
 

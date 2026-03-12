@@ -155,11 +155,12 @@ function renderReviewState() {
     return;
   }
   const reviewed = isPageReviewed(createPageReviewKey("trending", state.currentPath));
+  const snapshotLabel = formatWeekLabel(state.report.snapshot_date);
   reviewToggleButton.classList.toggle("is-reviewed", reviewed);
   reviewToggleButton.setAttribute("aria-pressed", String(reviewed));
   reviewToggleMeta.textContent = reviewed
-    ? `Reviewed ${state.report.snapshot_date}`
-    : `Mark ${state.report.snapshot_date} as reviewed`;
+    ? `Reviewed ${snapshotLabel}`
+    : `Mark ${snapshotLabel} as reviewed`;
   if (heroReviewStatus) {
     heroReviewStatus.textContent = reviewed ? "Reviewed" : "Not reviewed";
     heroReviewStatus.classList.toggle("is-reviewed", reviewed);
@@ -205,7 +206,7 @@ function populateReportSelect(reports) {
   reportSelect.innerHTML = reports
     .map(
       (report) =>
-        `<option value="${escapeAttribute(report.data_path)}">${escapeHtml(report.snapshot_date)} · ${report.total_repositories} repos</option>`
+        `<option value="${escapeAttribute(report.data_path)}">${escapeHtml(formatWeekLabel(report.snapshot_date))} · ${report.total_repositories} repos</option>`
     )
     .join("");
 }
@@ -236,7 +237,7 @@ function renderHomeCards(manifest, activePath = "") {
         >
           <div class="home-category-card-top">
             <span class="home-category-label">Trending</span>
-            <span class="home-category-date">${escapeHtml(report.snapshot_date)}</span>
+            <span class="home-category-date">${escapeHtml(formatWeekLabel(report.snapshot_date))}</span>
           </div>
           <strong class="home-category-count">${report.total_repositories} repos</strong>
           <p class="home-category-topic">${escapeHtml(topRepo?.full_name || "No summary yet")}</p>
@@ -271,14 +272,12 @@ function renderReport() {
   renderOverview(report, visibleRepos);
   renderTagMap(report);
   renderCadence(report);
-  renderSpotlight(visibleRepos);
   renderResults(report, visibleRepos);
   renderRepositorySections(visibleRepos);
   renderFloatingToc([
     { id: "trending-overview-section", label: "Overview" },
     { id: "trending-tags-section", label: "Current Tags" },
     { id: "trending-cadence-section", label: "Recent Cadence" },
-    { id: "trending-spotlight-section", label: "Spotlight" },
     { id: "trending-results-section", label: "Results" },
     { id: "trending-repositories-section", label: "Repositories" },
   ]);
@@ -286,7 +285,7 @@ function renderReport() {
 
 function renderHero(report, visibleRepos) {
   const topRepo = report.top_repositories?.[0];
-  document.querySelector("#trending-hero-date").textContent = report.snapshot_date || "-";
+  document.querySelector("#trending-hero-date").textContent = formatWeekLabel(report.snapshot_date);
   document.querySelector("#trending-hero-total").textContent = String(report.total_repositories || 0);
   document.querySelector("#trending-hero-gain").textContent = topRepo?.stars_this_week
     ? `+${topRepo.stars_this_week.toLocaleString()}`
@@ -304,7 +303,7 @@ function renderOverview(report, visibleRepos) {
   const topRepo = (visibleRepos.length ? visibleRepos : report.top_repositories || [])
     .slice()
     .sort((left, right) => (right.stars_this_week || -1) - (left.stars_this_week || -1) || left.full_name.localeCompare(right.full_name))[0];
-  document.querySelector("#trending-overview-title").textContent = `${report.snapshot_date} Trending Overview`;
+  document.querySelector("#trending-overview-title").textContent = `${formatWeekLabel(report.snapshot_date)} Trending Overview`;
   document.querySelector("#trending-source-link").href = report.source_url;
   document.querySelector("#trending-overview-summary").textContent = topRepo
     ? `${topRepo.full_name} is the current weekly lead, with ${(topRepo.stars_this_week || 0).toLocaleString()} stars gained this week.`
@@ -319,8 +318,8 @@ function renderOverview(report, visibleRepos) {
 function renderTagMap(report) {
   document.querySelector("#trending-tag-map").innerHTML = [
     {
-      label: "Date",
-      value: report.snapshot_date || "-",
+      label: "Week",
+      value: formatWeekLabel(report.snapshot_date),
       meta: "current trending snapshot",
     },
     {
@@ -363,8 +362,8 @@ function renderCadence(report) {
             )}">
               <div class="hf-cadence-item-top">
                 <div class="hf-cadence-date-block">
-                  <span class="hf-cadence-date">${escapeHtml(entry.snapshot_date.slice(5))}</span>
-                  <span class="hf-cadence-year">${escapeHtml(entry.snapshot_date.slice(0, 4))}</span>
+                  <span class="hf-cadence-date">${escapeHtml(formatWeekLabel(entry.snapshot_date))}</span>
+                  <span class="hf-cadence-year">weekly snapshot</span>
                 </div>
                 <div class="hf-cadence-meta">
                   ${active ? `<span class="hf-cadence-badge is-active">Current</span>` : ""}
@@ -394,26 +393,6 @@ function renderCadence(report) {
   });
 
   document.querySelector("#trending-cadence-summary").textContent = buildCadenceSummary(entries, report);
-}
-
-function renderSpotlight(visibleRepos) {
-  const root = document.querySelector("#trending-spotlight");
-  const prioritized = visibleRepos
-    .slice()
-    .sort(
-      (left, right) =>
-        (right.stars_this_week || -1) - (left.stars_this_week || -1) ||
-        (right.stars || -1) - (left.stars || -1) ||
-        left.full_name.localeCompare(right.full_name)
-    )
-    .slice(0, 6);
-
-  if (!prioritized.length) {
-    root.innerHTML = `<div class="empty-state">No repositories match the current filters.</div>`;
-    return;
-  }
-
-  root.innerHTML = prioritized.map((repo) => renderRepoCard(repo)).join("");
 }
 
 function renderResults(report, visibleRepos) {
@@ -488,8 +467,22 @@ function renderRepoCard(repo) {
       <h4>${escapeHtml(repo.full_name)}</h4>
       <p class="repo-description">${escapeHtml(repo.description || "No description provided.")}</p>
       <div class="repo-stat-row">
-        <span class="repo-stat-pill">Stars ${escapeHtml((repo.stars || 0).toLocaleString())}</span>
-        <span class="repo-stat-pill">Forks ${escapeHtml((repo.forks || 0).toLocaleString())}</span>
+        <span class="repo-stat-pill">
+          <span class="repo-stat-icon" aria-hidden="true">
+            <svg viewBox="0 0 16 16" fill="currentColor" focusable="false">
+              <path d="M8 .75l2.12 4.29 4.73.69-3.42 3.33.81 4.7L8 11.53l-4.24 2.23.81-4.7L1.15 5.73l4.73-.69L8 .75z"></path>
+            </svg>
+          </span>
+          <span>Stars ${escapeHtml((repo.stars || 0).toLocaleString())}</span>
+        </span>
+        <span class="repo-stat-pill">
+          <span class="repo-stat-icon" aria-hidden="true">
+            <svg viewBox="0 0 16 16" fill="currentColor" focusable="false">
+              <path d="M5 1.25a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5zm7.5 2.25a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5zM5 12.25a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5zM6 3.75v6.5a2.5 2.5 0 11-2 0v-6.5a2.5 2.5 0 012 0zm1.22 1h3.56a2.5 2.5 0 11-.56 1h-3a2.5 2.5 0 01-.22-1z"></path>
+            </svg>
+          </span>
+          <span>Forks ${escapeHtml((repo.forks || 0).toLocaleString())}</span>
+        </span>
       </div>
       ${builtBy}
       <div class="paper-links">
@@ -516,12 +509,12 @@ function buildCadenceSummary(entries, report) {
     return "No trending snapshots are available yet.";
   }
   if (entries.length === 1) {
-    return `Only one weekly snapshot is available so far. ${report.total_repositories} repositories were captured.`;
+    return `Only one weekly snapshot is available so far. ${report.total_repositories} repositories were captured in ${formatWeekLabel(report.snapshot_date)}.`;
   }
   const [latest, previous] = entries;
   const delta = (latest.total_repositories || 0) - (previous.total_repositories || 0);
   const direction = delta === 0 ? "unchanged" : delta > 0 ? `increased by ${delta}` : `decreased by ${Math.abs(delta)}`;
-  return `${latest.snapshot_date} captured ${latest.total_repositories} repositories, ${direction} from the previous weekly snapshot.`;
+  return `${formatWeekLabel(latest.snapshot_date)} captured ${latest.total_repositories} repositories, ${direction} from the previous weekly snapshot.`;
 }
 
 function getActiveFilters() {
@@ -550,7 +543,6 @@ function renderEmpty() {
   document.querySelector("#trending-board-summary").textContent = "No trending reports are available yet.";
   document.querySelector("#trending-home-cards").innerHTML =
     `<div class="empty-state">Run the trending report generator first, then refresh the page.</div>`;
-  document.querySelector("#trending-spotlight").innerHTML = "";
   document.querySelector("#trending-repository-sections").innerHTML = "";
   document.querySelector("#trending-tag-map").innerHTML = "";
   renderFloatingToc([]);
@@ -575,6 +567,30 @@ function formatTime(isoString) {
     hour: "2-digit",
     minute: "2-digit",
   }).format(new Date(isoString));
+}
+
+function formatWeekLabel(dateString) {
+  if (!dateString) {
+    return "-";
+  }
+  const week = getIsoWeekParts(dateString);
+  if (!week) {
+    return dateString;
+  }
+  return `${week.year}-W${String(week.week).padStart(2, "0")}`;
+}
+
+function getIsoWeekParts(dateString) {
+  const date = new Date(`${dateString}T00:00:00Z`);
+  if (Number.isNaN(date.getTime())) {
+    return null;
+  }
+  const day = date.getUTCDay() || 7;
+  date.setUTCDate(date.getUTCDate() + 4 - day);
+  const year = date.getUTCFullYear();
+  const yearStart = new Date(Date.UTC(year, 0, 1));
+  const week = Math.ceil((((date - yearStart) / 86400000) + 1) / 7);
+  return { year, week };
 }
 
 function renderFatal(error) {

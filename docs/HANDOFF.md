@@ -51,9 +51,10 @@ Python modules:
 Frontend pages:
 
 - [index.html](/Users/misaki/Code/cool_paper/site/index.html)
+- [cool-daily.html](/Users/misaki/Code/cool_paper/site/cool-daily.html)
 - [conference.html](/Users/misaki/Code/cool_paper/site/conference.html)
-- [hf-daily-paper.html](/Users/misaki/Code/cool_paper/site/hf-daily-paper.html)
 - [like.html](/Users/misaki/Code/cool_paper/site/like.html)
+- [trending.html](/Users/misaki/Code/cool_paper/site/trending.html)
 
 Frontend logic:
 

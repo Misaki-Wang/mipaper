@@ -1040,6 +1040,7 @@ function rememberLikeRecord(paper) {
     snapshotLabel: report ? `${report.report_date} · ${report.category}` : "Cool Daily",
     reportDate: report?.report_date || "",
     category: report?.category || "",
+    reviewKey: state.currentPath ? createPageReviewKey("cool_daily", state.currentPath) : "",
   });
   likeRecords.set(record.like_id, record);
   return record.like_id;

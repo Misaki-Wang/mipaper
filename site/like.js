@@ -10,7 +10,7 @@ import {
   subscribeLikes,
   syncLikesNow,
 } from "./likes.js";
-import { initReviewSync, isMarkedToRead, subscribeToRead, toggleToRead } from "./reading_state.js";
+import { createPageReviewKey, initReviewSync, isPageReviewed, subscribePageReviews } from "./reading_state.js";
 
 const state = {
   likes: [],
@@ -65,7 +65,7 @@ async function init() {
     state.likes = likes;
     renderPage();
   });
-  subscribeToRead(() => {
+  subscribePageReviews(() => {
     renderPage();
   });
   await Promise.all([initLikesSync(), initReviewSync()]);
@@ -343,8 +343,8 @@ function renderPage() {
 
   likeRecords.clear();
   const visibleLikes = getVisibleLikes(likes);
-  const toReadLikes = likes.filter((item) => isMarkedToRead(item.like_id));
-  const visibleToReadLikes = visibleLikes.filter((item) => isMarkedToRead(item.like_id));
+  const toReadLikes = likes.filter((item) => isLikePendingReview(item));
+  const visibleToReadLikes = visibleLikes.filter((item) => isLikePendingReview(item));
   const topicDistribution = computeTopicDistribution(visibleLikes);
   const sourceSections = groupBySource(visibleLikes);
 
@@ -355,7 +355,6 @@ function renderPage() {
   renderResults(likes, visibleLikes, sourceSections);
   renderSourceSections(sourceSections);
   bindLikeButtons(document, likeRecords);
-  bindToReadButtons();
 }
 
 function populateFilters(likes) {
@@ -493,7 +492,7 @@ function renderOverview(likes, visibleLikes, sourceSections, toReadLikes) {
   const topSource = sourceSections[0];
 
   document.querySelector("#like-overview-title").textContent = "Like Branch Overview";
-  document.querySelector("#like-overview-summary").textContent = `Currently saved: ${visibleLikes.length} papers for later deep reading and revisit. ${toReadLikes.length} are pinned to your to-read queue.`;
+  document.querySelector("#like-overview-summary").textContent = `Currently saved: ${visibleLikes.length} papers for later deep reading and revisit. ${toReadLikes.length} belong to snapshots that are still not reviewed.`;
   document.querySelector("#like-focus-summary").textContent = `${focusCount} papers hit your focus topics, accounting for ${focusShare.toFixed(2)}% of the current view.`;
   document.querySelector("#like-branch-summary").textContent = topSource
     ? `${escapeHtml(topSource.source_label)} currently has the most likes, with ${topSource.count} papers.`
@@ -545,15 +544,15 @@ function renderToReadList(toReadLikes, visibleToReadLikes) {
   const root = document.querySelector("#like-to-read-list");
 
   if (!toReadLikes.length) {
-    summary.textContent = "Pin up to-read papers from your liked queue for faster revisit.";
-    root.innerHTML = `<div class="empty-state">No papers are marked as To Read yet.</div>`;
+    summary.textContent = "This queue is generated automatically from liked papers whose source snapshots are still not reviewed.";
+    root.innerHTML = `<div class="empty-state">All liked papers belong to reviewed snapshots.</div>`;
     return;
   }
 
   const hiddenCount = toReadLikes.length - visibleToReadLikes.length;
   summary.textContent = hiddenCount > 0
-    ? `${toReadLikes.length} papers are in your queue. ${hiddenCount} are currently hidden by filters.`
-    : `${toReadLikes.length} papers are currently pinned to your to-read queue.`;
+    ? `${toReadLikes.length} papers are in your queue because their source snapshots are not reviewed. ${hiddenCount} are currently hidden by filters.`
+    : `${toReadLikes.length} papers are currently in your queue because their source snapshots are not reviewed.`;
 
   if (!visibleToReadLikes.length) {
     root.innerHTML = `<div class="empty-state">Your to-read queue has items, but none match the current filters.</div>`;
@@ -572,7 +571,6 @@ function renderToReadList(toReadLikes, visibleToReadLikes) {
           <h3>${escapeHtml(paper.title)}</h3>
           <p>${escapeHtml((paper.authors || []).slice(0, 4).join(", ") || "Unknown authors")}</p>
           <div class="spotlight-links">
-            ${renderToReadButton(paper)}
             ${paper.pdf_url ? `<a class="paper-link brand-arxiv" href="${escapeAttribute(paper.pdf_url)}" target="_blank" rel="noreferrer">arXiv</a>` : ""}
             ${paper.detail_url ? `<a class="paper-link brand-cool" href="${escapeAttribute(paper.detail_url)}" target="_blank" rel="noreferrer">Cool</a>` : ""}
             ${paper.hf_url ? `<a class="paper-link brand-cool" href="${escapeAttribute(paper.hf_url)}" target="_blank" rel="noreferrer">HF</a>` : ""}
@@ -689,7 +687,6 @@ function renderLikeCard(paper) {
     paper.detail_url ? `<a class="paper-link brand-cool" href="${escapeAttribute(paper.detail_url)}" target="_blank" rel="noreferrer">Cool</a>` : "",
     paper.hf_url ? `<a class="paper-link brand-cool" href="${escapeAttribute(paper.hf_url)}" target="_blank" rel="noreferrer">HF</a>` : "",
     paper.github_url ? renderExternalPaperLink({ href: paper.github_url, label: "GitHub", brand: "github" }) : "",
-    renderToReadButton(paper),
     renderLikeButton(paper),
   ]
     .filter(Boolean)
@@ -723,22 +720,6 @@ function renderLikeButton(paper) {
   `;
 }
 
-function renderToReadButton(paper) {
-  const active = isMarkedToRead(paper.like_id);
-  return `
-    <button class="paper-link to-read-button${active ? " is-active" : ""}" type="button" data-to-read-id="${escapeAttribute(
-      paper.like_id
-    )}" aria-pressed="${active}">
-      <span class="paper-link-icon to-read-icon" aria-hidden="true">
-        <svg viewBox="0 0 20 20">
-          <path d="M6 3.5h8a1.5 1.5 0 0 1 1.5 1.5v11.4l-5.5-2.7-5.5 2.7V5A1.5 1.5 0 0 1 6 3.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path>
-        </svg>
-      </span>
-      <span class="paper-link-text">To Read</span>
-    </button>
-  `;
-}
-
 function renderExternalPaperLink({ href, label, brand }) {
   const iconSrc = brand === "github" ? "./assets/github-mark.svg" : "";
   return `
@@ -747,18 +728,6 @@ function renderExternalPaperLink({ href, label, brand }) {
       <span class="paper-link-text">${escapeHtml(label)}</span>
     </a>
   `;
-}
-
-function bindToReadButtons() {
-  document.querySelectorAll("[data-to-read-id]").forEach((button) => {
-    button.addEventListener("click", () => {
-      const likeId = button.dataset.toReadId;
-      if (!likeId) {
-        return;
-      }
-      toggleToRead(likeId);
-    });
-  });
 }
 
 function getVisibleLikes(likes) {
@@ -785,6 +754,33 @@ function getVisibleLikes(likes) {
     const haystack = [paper.title, ...(paper.authors || [])].join(" ").toLowerCase();
     return haystack.includes(state.query);
   });
+}
+
+function isLikePendingReview(like) {
+  const reviewKey = deriveReviewKey(like);
+  if (!reviewKey) {
+    return true;
+  }
+  return !isPageReviewed(reviewKey);
+}
+
+function deriveReviewKey(like) {
+  if (like.review_key) {
+    return like.review_key;
+  }
+  if (like.source_kind === "daily" && like.report_date && like.category) {
+    return createPageReviewKey("cool_daily", `data/daily/reports/${like.report_date}/${like.category}-${like.report_date}.json`);
+  }
+  if (like.source_kind === "hf_daily" && like.report_date) {
+    return createPageReviewKey("hf_daily", `data/hf-daily/reports/${like.report_date}/hf-daily-${like.report_date}.json`);
+  }
+  if (like.source_kind === "conference" && like.venue) {
+    return createPageReviewKey("conference", `data/conference/reports/${like.venue}/${like.venue}.json`);
+  }
+  if (like.source_kind === "trending" && like.report_date) {
+    return createPageReviewKey("trending", `data/trending/reports/${like.report_date}/trending-${like.report_date}.json`);
+  }
+  return "";
 }
 
 function groupBySource(likes) {
@@ -864,8 +860,9 @@ function renderEmpty() {
   document.querySelector("#like-branch-summary").textContent = "No branch distribution yet.";
   document.querySelector("#like-latest-summary").textContent = "No latest save record yet.";
   document.querySelector("#like-tag-map").innerHTML = "";
-  document.querySelector("#like-to-read-summary").textContent = "Pin up to-read papers from your liked queue for faster revisit.";
-  document.querySelector("#like-to-read-list").innerHTML = `<div class="empty-state">No papers are marked as To Read yet.</div>`;
+  document.querySelector("#like-to-read-summary").textContent =
+    "This queue is generated automatically from liked papers whose source snapshots are still not reviewed.";
+  document.querySelector("#like-to-read-list").innerHTML = `<div class="empty-state">No liked papers from unreviewed snapshots yet.</div>`;
   document.querySelector("#like-distribution-list").innerHTML = `<div class="empty-state">No like statistics yet.</div>`;
   document.querySelector("#like-results-title").textContent = "No liked papers yet";
   document.querySelector("#like-results-stats").innerHTML = "";
