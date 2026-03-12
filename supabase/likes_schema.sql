@@ -115,3 +115,62 @@ using (
   auth.uid() = user_id
   and auth.uid() = 'd23b2601-08ef-465c-b1d9-4159ca38e159'::uuid
 );
+
+create table if not exists public.to_read_snapshots (
+  user_id uuid not null references auth.users (id) on delete cascade,
+  snapshot_id text not null,
+  queued_at timestamptz not null default timezone('utc'::text, now()),
+  payload jsonb not null,
+  primary key (user_id, snapshot_id)
+);
+
+alter table public.to_read_snapshots enable row level security;
+
+drop policy if exists "Users can read their own to-read snapshots" on public.to_read_snapshots;
+drop policy if exists "Users can insert their own to-read snapshots" on public.to_read_snapshots;
+drop policy if exists "Users can update their own to-read snapshots" on public.to_read_snapshots;
+drop policy if exists "Users can delete their own to-read snapshots" on public.to_read_snapshots;
+drop policy if exists "Only owner can read to-read snapshots" on public.to_read_snapshots;
+drop policy if exists "Only owner can insert to-read snapshots" on public.to_read_snapshots;
+drop policy if exists "Only owner can update to-read snapshots" on public.to_read_snapshots;
+drop policy if exists "Only owner can delete to-read snapshots" on public.to_read_snapshots;
+
+create policy "Only owner can read to-read snapshots"
+on public.to_read_snapshots
+for select
+to authenticated
+using (
+  auth.uid() = user_id
+  and auth.uid() = 'd23b2601-08ef-465c-b1d9-4159ca38e159'::uuid
+);
+
+create policy "Only owner can insert to-read snapshots"
+on public.to_read_snapshots
+for insert
+to authenticated
+with check (
+  auth.uid() = user_id
+  and auth.uid() = 'd23b2601-08ef-465c-b1d9-4159ca38e159'::uuid
+);
+
+create policy "Only owner can update to-read snapshots"
+on public.to_read_snapshots
+for update
+to authenticated
+using (
+  auth.uid() = user_id
+  and auth.uid() = 'd23b2601-08ef-465c-b1d9-4159ca38e159'::uuid
+)
+with check (
+  auth.uid() = user_id
+  and auth.uid() = 'd23b2601-08ef-465c-b1d9-4159ca38e159'::uuid
+);
+
+create policy "Only owner can delete to-read snapshots"
+on public.to_read_snapshots
+for delete
+to authenticated
+using (
+  auth.uid() = user_id
+  and auth.uid() = 'd23b2601-08ef-465c-b1d9-4159ca38e159'::uuid
+);

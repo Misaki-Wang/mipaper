@@ -10,10 +10,12 @@ import {
   subscribeLikes,
   syncLikesNow,
 } from "./likes.js";
+import { getSupabaseClient, isAuthorizedUser, isSupabaseConfigured, loadRuntimeConfig } from "./supabase.js";
 import { createPageReviewKey, initReviewSync, isPageReviewed, subscribePageReviews } from "./reading_state.js";
 
 const state = {
   likes: [],
+  snapshots: [],
   source: "",
   year: "",
   month: "",
@@ -48,6 +50,7 @@ const syncNowButton = document.querySelector("#like-sync-now");
 const accountBanner = document.querySelector("#like-current-account");
 const accountCard = document.querySelector("#like-account-card");
 const authWarning = document.querySelector("#like-auth-warning");
+let toReadSyncPromise = null;
 
 init().catch((error) => {
   console.error(error);
@@ -60,17 +63,25 @@ async function init() {
   bindBackToTop();
   bindFilters();
   bindAuthActions();
-  subscribeAuth(renderAuthState);
+  subscribeAuth((snapshot) => {
+    renderAuthState(snapshot);
+    if (snapshot.configured && snapshot.signedIn && snapshot.authorized) {
+      scheduleToReadSnapshotSync();
+    }
+  });
   subscribeLikes((likes) => {
     state.likes = likes;
     renderPage();
   });
   subscribePageReviews(() => {
     renderPage();
+    scheduleToReadSnapshotSync();
   });
   await Promise.all([initLikesSync(), initReviewSync()]);
+  state.snapshots = await loadSnapshotQueueData();
   state.likes = readLikes();
   renderPage();
+  scheduleToReadSnapshotSync();
 }
 
 function bindThemeToggle() {
@@ -332,25 +343,24 @@ function renderUnauthorizedState(snapshot) {
 function renderPage() {
   const likes = readLikes();
   state.likes = likes;
+  const toReadSnapshots = getToReadSnapshots(state.snapshots);
   populateFilters(likes);
   renderHero(likes);
   renderSourceCards(likes);
+  renderToReadList(toReadSnapshots);
 
   if (!likes.length) {
-    renderEmpty();
+    renderEmpty(toReadSnapshots);
     return;
   }
 
   likeRecords.clear();
   const visibleLikes = getVisibleLikes(likes);
-  const toReadLikes = likes.filter((item) => isLikePendingReview(item));
-  const visibleToReadLikes = visibleLikes.filter((item) => isLikePendingReview(item));
   const topicDistribution = computeTopicDistribution(visibleLikes);
   const sourceSections = groupBySource(visibleLikes);
 
-  renderOverview(likes, visibleLikes, sourceSections, toReadLikes);
+  renderOverview(likes, visibleLikes, sourceSections, toReadSnapshots);
   renderTagMap(likes, topicDistribution);
-  renderToReadList(toReadLikes, visibleToReadLikes);
   renderDistribution(topicDistribution);
   renderResults(likes, visibleLikes, sourceSections);
   renderSourceSections(sourceSections);
@@ -485,14 +495,14 @@ function renderSourceCards(likes) {
   });
 }
 
-function renderOverview(likes, visibleLikes, sourceSections, toReadLikes) {
+function renderOverview(likes, visibleLikes, sourceSections, toReadSnapshots) {
   const focusCount = visibleLikes.filter((item) => focusTopicKeys.has(item.topic_key)).length;
   const focusShare = visibleLikes.length ? (focusCount / visibleLikes.length) * 100 : 0;
   const latest = visibleLikes[0] || likes[0];
   const topSource = sourceSections[0];
 
   document.querySelector("#like-overview-title").textContent = "Like Branch Overview";
-  document.querySelector("#like-overview-summary").textContent = `Currently saved: ${visibleLikes.length} papers for later deep reading and revisit. ${toReadLikes.length} belong to snapshots that are still not reviewed.`;
+  document.querySelector("#like-overview-summary").textContent = `Currently saved: ${visibleLikes.length} papers for later deep reading and revisit. ${toReadSnapshots.length} fetched snapshots are still not reviewed.`;
   document.querySelector("#like-focus-summary").textContent = `${focusCount} papers hit your focus topics, accounting for ${focusShare.toFixed(2)}% of the current view.`;
   document.querySelector("#like-branch-summary").textContent = topSource
     ? `${escapeHtml(topSource.source_label)} currently has the most likes, with ${topSource.count} papers.`
@@ -539,42 +549,32 @@ function renderTagMap(likes, topicDistribution) {
     .join("");
 }
 
-function renderToReadList(toReadLikes, visibleToReadLikes) {
+function renderToReadList(toReadSnapshots) {
   const summary = document.querySelector("#like-to-read-summary");
   const root = document.querySelector("#like-to-read-list");
 
-  if (!toReadLikes.length) {
-    summary.textContent = "This queue is generated automatically from liked papers whose source snapshots are still not reviewed.";
-    root.innerHTML = `<div class="empty-state">All liked papers belong to reviewed snapshots.</div>`;
+  if (!toReadSnapshots.length) {
+    summary.textContent = "Every fetched snapshot has been reviewed.";
+    root.innerHTML = `<div class="empty-state">No unread snapshots remain in your queue.</div>`;
     return;
   }
 
-  const hiddenCount = toReadLikes.length - visibleToReadLikes.length;
-  summary.textContent = hiddenCount > 0
-    ? `${toReadLikes.length} papers are in your queue because their source snapshots are not reviewed. ${hiddenCount} are currently hidden by filters.`
-    : `${toReadLikes.length} papers are currently in your queue because their source snapshots are not reviewed.`;
+  summary.textContent = `${toReadSnapshots.length} fetched snapshots are currently in your queue because they are not reviewed.`;
 
-  if (!visibleToReadLikes.length) {
-    root.innerHTML = `<div class="empty-state">Your to-read queue has items, but none match the current filters.</div>`;
-    return;
-  }
-
-  root.innerHTML = visibleToReadLikes
+  root.innerHTML = toReadSnapshots
     .slice(0, 12)
     .map(
-      (paper) => `
+      (snapshot) => `
         <article class="spotlight-card">
           <div class="spotlight-meta">
-            <span>${escapeHtml(getSourceLabel(paper.source_kind))}</span>
-            <span>${escapeHtml(paper.snapshot_label || extractDateLabel(paper) || "No snapshot")}</span>
+            <span>${escapeHtml(snapshot.branch_label)}</span>
+            <span>${escapeHtml(snapshot.snapshot_label)}</span>
           </div>
-          <h3>${escapeHtml(paper.title)}</h3>
-          <p>${escapeHtml((paper.authors || []).slice(0, 4).join(", ") || "Unknown authors")}</p>
+          <h3>${escapeHtml(snapshot.title)}</h3>
+          <p>${escapeHtml(snapshot.summary)}</p>
           <div class="spotlight-links">
-            ${paper.pdf_url ? `<a class="paper-link brand-arxiv" href="${escapeAttribute(paper.pdf_url)}" target="_blank" rel="noreferrer">arXiv</a>` : ""}
-            ${paper.detail_url ? `<a class="paper-link brand-cool" href="${escapeAttribute(paper.detail_url)}" target="_blank" rel="noreferrer">Cool</a>` : ""}
-            ${paper.hf_url ? `<a class="paper-link brand-cool" href="${escapeAttribute(paper.hf_url)}" target="_blank" rel="noreferrer">HF</a>` : ""}
-            ${paper.github_url ? renderExternalPaperLink({ href: paper.github_url, label: "GitHub", brand: "github" }) : ""}
+            <a class="paper-link" href="${escapeAttribute(snapshot.branch_url)}">${escapeHtml(snapshot.branch_label)}</a>
+            ${snapshot.source_url ? `<a class="paper-link brand-cool" href="${escapeAttribute(snapshot.source_url)}" target="_blank" rel="noreferrer">Source</a>` : ""}
           </div>
         </article>
       `
@@ -756,33 +756,6 @@ function getVisibleLikes(likes) {
   });
 }
 
-function isLikePendingReview(like) {
-  const reviewKey = deriveReviewKey(like);
-  if (!reviewKey) {
-    return true;
-  }
-  return !isPageReviewed(reviewKey);
-}
-
-function deriveReviewKey(like) {
-  if (like.review_key) {
-    return like.review_key;
-  }
-  if (like.source_kind === "daily" && like.report_date && like.category) {
-    return createPageReviewKey("cool_daily", `data/daily/reports/${like.report_date}/${like.category}-${like.report_date}.json`);
-  }
-  if (like.source_kind === "hf_daily" && like.report_date) {
-    return createPageReviewKey("hf_daily", `data/hf-daily/reports/${like.report_date}/hf-daily-${like.report_date}.json`);
-  }
-  if (like.source_kind === "conference" && like.venue) {
-    return createPageReviewKey("conference", `data/conference/reports/${like.venue}/${like.venue}.json`);
-  }
-  if (like.source_kind === "trending" && like.report_date) {
-    return createPageReviewKey("trending", `data/trending/reports/${like.report_date}/trending-${like.report_date}.json`);
-  }
-  return "";
-}
-
 function groupBySource(likes) {
   const map = new Map();
   likes.forEach((paper) => {
@@ -854,15 +827,12 @@ function renderResultStat(label, value, meta) {
   `;
 }
 
-function renderEmpty() {
+function renderEmpty(toReadSnapshots) {
   document.querySelector("#like-overview-summary").textContent = "No saved papers yet.";
   document.querySelector("#like-focus-summary").textContent = "This area will populate after you like papers.";
   document.querySelector("#like-branch-summary").textContent = "No branch distribution yet.";
   document.querySelector("#like-latest-summary").textContent = "No latest save record yet.";
   document.querySelector("#like-tag-map").innerHTML = "";
-  document.querySelector("#like-to-read-summary").textContent =
-    "This queue is generated automatically from liked papers whose source snapshots are still not reviewed.";
-  document.querySelector("#like-to-read-list").innerHTML = `<div class="empty-state">No liked papers from unreviewed snapshots yet.</div>`;
   document.querySelector("#like-distribution-list").innerHTML = `<div class="empty-state">No like statistics yet.</div>`;
   document.querySelector("#like-results-title").textContent = "No liked papers yet";
   document.querySelector("#like-results-stats").innerHTML = "";
@@ -870,6 +840,7 @@ function renderEmpty() {
   document.querySelector("#like-source-sections").innerHTML =
     `<div class="glass-card empty-state">Click Like in Cool Daily, Conference, or HF Daily to add papers here.</div>`;
   resetFiltersButton.disabled = true;
+  renderToReadList(toReadSnapshots);
 }
 
 function renderFatal(error) {
@@ -931,6 +902,212 @@ function findLatestReportedDate(likes) {
 function extractDateLabel(paper) {
   const dateParts = extractDateParts(paper);
   return dateParts.day || dateParts.month || dateParts.year || "";
+}
+
+async function loadSnapshotQueueData() {
+  const manifestUrls = [
+    "./data/daily/manifest.json",
+    "./data/hf-daily/manifest.json",
+    "./data/conference/manifest.json",
+    "./data/trending/manifest.json",
+  ];
+
+  const results = await Promise.allSettled(manifestUrls.map((url) => fetchJson(url)));
+  const snapshots = [];
+
+  for (const result of results) {
+    if (result.status !== "fulfilled") {
+      continue;
+    }
+    const manifest = result.value;
+    if (manifest?.reports?.[0]?.category) {
+      snapshots.push(...manifest.reports.map((report) => createDailySnapshot(report)));
+      continue;
+    }
+    if (manifest?.reports?.[0]?.venue) {
+      snapshots.push(...manifest.reports.map((report) => createConferenceSnapshot(report)));
+      continue;
+    }
+    if (manifest?.reports?.[0]?.since) {
+      snapshots.push(...manifest.reports.map((report) => createTrendingSnapshot(report)));
+      continue;
+    }
+    if (manifest?.reports?.[0]?.report_date) {
+      snapshots.push(...manifest.reports.map((report) => createHfSnapshot(report)));
+    }
+  }
+
+  return snapshots.sort((left, right) => right.sort_key.localeCompare(left.sort_key) || left.title.localeCompare(right.title));
+}
+
+function getToReadSnapshots(snapshots) {
+  return snapshots.filter((snapshot) => !isPageReviewed(snapshot.review_key));
+}
+
+function scheduleToReadSnapshotSync() {
+  if (!state.snapshots.length) {
+    return;
+  }
+  syncToReadSnapshotsNow().catch((error) => {
+    console.error("Failed to sync to-read snapshots to Supabase", error);
+  });
+}
+
+async function syncToReadSnapshotsNow() {
+  if (toReadSyncPromise) {
+    return toReadSyncPromise;
+  }
+  toReadSyncPromise = performToReadSnapshotSync();
+  try {
+    return await toReadSyncPromise;
+  } finally {
+    toReadSyncPromise = null;
+  }
+}
+
+async function performToReadSnapshotSync() {
+  await loadRuntimeConfig();
+  if (!isSupabaseConfigured()) {
+    return [];
+  }
+
+  const supabaseClient = await getSupabaseClient();
+  if (!supabaseClient) {
+    return [];
+  }
+
+  const {
+    data: { session },
+  } = await supabaseClient.auth.getSession();
+  const user = session?.user || null;
+  if (!user || !isAuthorizedUser(user)) {
+    return [];
+  }
+
+  const snapshots = getToReadSnapshots(state.snapshots);
+  const upsertRows = snapshots.map((snapshot) => ({
+    user_id: user.id,
+    snapshot_id: snapshot.review_key,
+    queued_at: new Date().toISOString(),
+    payload: snapshot,
+  }));
+
+  if (upsertRows.length) {
+    const { error } = await supabaseClient.from("to_read_snapshots").upsert(upsertRows, {
+      onConflict: "user_id,snapshot_id",
+    });
+    if (error) {
+      throw error;
+    }
+  }
+
+  const { data: remoteRows, error: remoteError } = await supabaseClient
+    .from("to_read_snapshots")
+    .select("snapshot_id")
+    .eq("user_id", user.id);
+  if (remoteError) {
+    throw remoteError;
+  }
+
+  const localIds = new Set(snapshots.map((snapshot) => snapshot.review_key));
+  const staleIds = (remoteRows || []).map((item) => item.snapshot_id).filter((snapshotId) => !localIds.has(snapshotId));
+  if (staleIds.length) {
+    const { error } = await supabaseClient
+      .from("to_read_snapshots")
+      .delete()
+      .eq("user_id", user.id)
+      .in("snapshot_id", staleIds);
+    if (error) {
+      throw error;
+    }
+  }
+
+  return snapshots;
+}
+
+function createDailySnapshot(report) {
+  return {
+    review_key: createPageReviewKey("cool_daily", report.data_path),
+    branch_label: "Cool Daily",
+    branch_url: "./cool-daily.html",
+    snapshot_label: `${report.report_date} · ${report.category}`,
+    title: `Cool Daily ${report.report_date} · ${report.category}`,
+    summary: `${report.total_papers} papers${report.top_topics?.[0] ? ` · Top topic ${report.top_topics[0].topic_label}` : ""}`,
+    source_url: report.source_url || "",
+    sort_key: `${report.report_date}-2-${report.category}`,
+  };
+}
+
+function createHfSnapshot(report) {
+  return {
+    review_key: createPageReviewKey("hf_daily", report.data_path),
+    branch_label: "HF Daily",
+    branch_url: "./index.html",
+    snapshot_label: report.report_date,
+    title: `HF Daily ${report.report_date}`,
+    summary: `${report.total_papers} papers${report.top_topics?.[0] ? ` · Top topic ${report.top_topics[0].topic_label}` : ""}`,
+    source_url: report.source_url || "",
+    sort_key: `${report.report_date}-3`,
+  };
+}
+
+function createConferenceSnapshot(report) {
+  return {
+    review_key: createPageReviewKey("conference", report.data_path),
+    branch_label: "Conference",
+    branch_url: "./conference.html",
+    snapshot_label: report.venue,
+    title: `Conference ${report.venue}`,
+    summary: `${report.total_papers} papers${report.top_topics?.[0] ? ` · Top topic ${report.top_topics[0].topic_label}` : ""}`,
+    source_url: report.source_url || "",
+    sort_key: `${report.venue_year || "0000"}-1-${report.venue}`,
+  };
+}
+
+function createTrendingSnapshot(report) {
+  const weekLabel = formatWeekLabel(report.snapshot_date);
+  return {
+    review_key: createPageReviewKey("trending", report.data_path),
+    branch_label: "Trending",
+    branch_url: "./trending.html",
+    snapshot_label: weekLabel,
+    title: `Trending ${weekLabel}`,
+    summary: `${report.total_repositories} repos${report.top_repositories?.[0] ? ` · Lead ${report.top_repositories[0].full_name}` : ""}`,
+    source_url: report.source_url || "",
+    sort_key: `${report.snapshot_date}-0`,
+  };
+}
+
+async function fetchJson(url) {
+  const response = await fetch(url, { cache: "no-store" });
+  if (!response.ok) {
+    throw new Error(`Failed to load ${url}: ${response.status}`);
+  }
+  return response.json();
+}
+
+function formatWeekLabel(dateString) {
+  if (!dateString) {
+    return "-";
+  }
+  const week = getIsoWeekParts(dateString);
+  if (!week) {
+    return dateString;
+  }
+  return `${week.year}-W${String(week.week).padStart(2, "0")}`;
+}
+
+function getIsoWeekParts(dateString) {
+  const date = new Date(`${dateString}T00:00:00Z`);
+  if (Number.isNaN(date.getTime())) {
+    return null;
+  }
+  const day = date.getUTCDay() || 7;
+  date.setUTCDate(date.getUTCDate() + 4 - day);
+  const year = date.getUTCFullYear();
+  const yearStart = new Date(Date.UTC(year, 0, 1));
+  const week = Math.ceil((((date - yearStart) / 86400000) + 1) / 7);
+  return { year, week };
 }
 
 function escapeHtml(value) {
