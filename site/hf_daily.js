@@ -29,7 +29,9 @@ const sidebarToggleLabel = document.querySelector("#hf-sidebar-toggle-label");
 const sidebarToggleIcon = document.querySelector("#hf-sidebar-toggle-icon");
 const layoutRoot = document.querySelector(".layout");
 const backToTopButton = document.querySelector("#hf-back-to-top");
+const floatingTocRoot = document.querySelector("#hf-floating-toc");
 const likeRecords = new Map();
+let tocObserver = null;
 
 init().catch((error) => {
   console.error(error);
@@ -71,7 +73,7 @@ function applySidebarState(collapsed) {
   sidebarToggleButton.setAttribute("aria-expanded", String(!collapsed));
   sidebarToggleButton.setAttribute("aria-label", collapsed ? "Expand sidebar" : "Collapse sidebar");
   sidebarToggleButton.title = collapsed ? "Expand sidebar" : "Collapse sidebar";
-  sidebarToggleLabel.textContent = collapsed ? "Expand" : "Collapse";
+  sidebarToggleLabel.textContent = collapsed ? "Tools" : "Collapse";
   sidebarToggleIcon.textContent = collapsed ? "›" : "‹";
   localStorage.setItem("cool-paper-sidebar", collapsed ? "collapsed" : "expanded");
 }
@@ -186,7 +188,6 @@ async function loadReport(path) {
   focusOnlyInput.checked = false;
   populateTopicFilter(report.topics || []);
   renderHomeCards(state.manifest, path);
-  renderReportRail(state.manifest.reports || [], path);
   renderReport();
 }
 
@@ -242,7 +243,7 @@ function renderHomeCards(manifest, activePath = "") {
           <p class="home-category-topic">${escapeHtml(topTopic?.topic_label || "No topic summary")}</p>
           <div class="home-category-meta">
             <span>${escapeHtml(topSubmitter?.submitted_by || "No submitter")}</span>
-            <span>${escapeHtml(report.classifier)}</span>
+            <span>${escapeHtml(report.report_date)}</span>
           </div>
         </button>
       `;
@@ -252,36 +253,6 @@ function renderHomeCards(manifest, activePath = "") {
   root.querySelectorAll("[data-hf-report]").forEach((button) => {
     button.addEventListener("click", async () => {
       const path = button.dataset.hfReport;
-      if (path && path !== state.currentPath) {
-        await loadReport(path);
-      }
-    });
-  });
-}
-
-function renderReportRail(reports, activePath = "") {
-  const root = document.querySelector("#hf-report-rail");
-  root.innerHTML = reports
-    .map(
-      (report) => `
-        <button
-          class="report-card ${report.data_path === activePath ? "active" : ""}"
-          type="button"
-          data-hf-rail-report="${escapeAttribute(report.data_path)}"
-        >
-          <span class="report-card-date">${escapeHtml(report.report_date)}</span>
-          <strong class="report-card-count">${report.total_papers} papers</strong>
-          <span class="report-card-meta">${escapeHtml(report.top_topics?.[0]?.topic_label || "No topic")} · ${escapeHtml(
-            report.top_submitters?.[0]?.submitted_by || "No submitter"
-          )}</span>
-        </button>
-      `
-    )
-    .join("");
-
-  root.querySelectorAll("[data-hf-rail-report]").forEach((button) => {
-    button.addEventListener("click", async () => {
-      const path = button.dataset.hfRailReport;
       if (path && path !== state.currentPath) {
         await loadReport(path);
       }
@@ -306,6 +277,17 @@ function renderReport() {
   renderSpotlight(report, visiblePapers);
   renderResults(report, visiblePapers, topics);
   renderTopicSections(topics);
+  renderFloatingToc([
+    { id: "hf-overview-section", label: "Overview" },
+    { id: "hf-tags-section", label: "Current Tags" },
+    { id: "hf-spotlight-section", label: "Spotlight" },
+    { id: "hf-results-section", label: "Results" },
+    ...topics.slice(0, 10).map((topic) => ({
+      id: sectionIdFromTopic(topic.topic_label),
+      label: topic.topic_label,
+      child: true,
+    })),
+  ]);
   bindLikeButtons(document, likeRecords);
 }
 
@@ -361,6 +343,7 @@ function renderOverview(report, visiblePapers, topics) {
   const focusShare = visiblePapers.length ? (focusCount / visiblePapers.length) * 100 : 0;
   document.querySelector("#hf-overview-title").textContent = `${report.report_date} HF Daily Overview`;
   document.querySelector("#hf-source-link").href = report.source_url;
+  document.querySelector("#hf-source-link").textContent = "Source";
   document.querySelector("#hf-overview-summary").textContent = topTopic
     ? `${topTopic.topic_label} is the top topic for the day, with ${topTopic.count} papers and ${topTopic.share.toFixed(2)}% share.`
     : "This report does not have a topic distribution yet.";
@@ -438,7 +421,7 @@ function renderTopicSections(topics) {
   root.innerHTML = topics
     .map(
       (section, index) => `
-        <section class="glass-card conference-subject-card">
+        <section id="${escapeAttribute(sectionIdFromTopic(section.topic_label))}" class="glass-card conference-subject-card">
           <div class="conference-subject-header">
             <div>
               <p class="eyebrow">TOPIC</p>
@@ -483,9 +466,19 @@ function renderPaperCard(paper) {
     `
     : "";
   const links = [
-    paper.hf_url ? `<a class="paper-link brand-cool" href="${escapeAttribute(paper.hf_url)}" target="_blank" rel="noreferrer">HF</a>` : "",
     paper.arxiv_pdf_url || paper.arxiv_url
-      ? `<a class="paper-link brand-arxiv" href="${escapeAttribute(paper.arxiv_pdf_url || paper.arxiv_url)}" target="_blank" rel="noreferrer">arXiv</a>`
+      ? renderPaperLink({
+          href: paper.arxiv_pdf_url || paper.arxiv_url,
+          label: "arXiv",
+          brand: "arxiv",
+        })
+      : "",
+    paper.hf_url
+      ? renderPaperLink({
+          href: paper.hf_url,
+          label: "HF",
+          brand: "hf",
+        })
       : "",
     paper.github_url ? `<a class="paper-link" href="${escapeAttribute(paper.github_url)}" target="_blank" rel="noreferrer">GitHub</a>` : "",
     renderLikeButton(paper),
@@ -504,6 +497,19 @@ function renderPaperCard(paper) {
       ${abstract}
       <div class="paper-links">${links}</div>
     </article>
+  `;
+}
+
+function renderPaperLink({ href, label, brand }) {
+  const iconSrc =
+    brand === "arxiv" ? "./assets/arxiv-logo.svg" : brand === "hf" ? "./assets/hf-logo.svg" : "./assets/cool-favicon.ico";
+  return `
+    <a class="paper-link brand-${escapeAttribute(brand)}" href="${escapeAttribute(href)}" target="_blank" rel="noreferrer">
+      <span class="paper-link-icon" aria-hidden="true">
+        <img src="${iconSrc}" alt="" />
+      </span>
+      <span class="paper-link-text">${escapeHtml(label)}</span>
+    </a>
   `;
 }
 
@@ -527,7 +533,7 @@ function rememberLikeRecord(paper) {
   const record = createLikeRecord(paper, {
     sourceKind: "hf_daily",
     sourceLabel: "HF Daily",
-    sourcePage: "./hf-daily-paper.html",
+    sourcePage: "./index.html",
     snapshotLabel: report ? report.report_date : "HF Daily",
     reportDate: report?.report_date || "",
   });
@@ -626,6 +632,7 @@ function renderEmpty() {
   if (tagMap) {
     tagMap.innerHTML = "";
   }
+  renderFloatingToc([]);
 }
 
 async function fetchJson(url) {
@@ -653,6 +660,68 @@ function renderFatal(error) {
   const message = error instanceof Error ? error.message : String(error);
   document.querySelector("#hf-board-summary").textContent = "HF Daily page failed to load.";
   document.querySelector("#hf-home-cards").innerHTML = `<div class="empty-state">${escapeHtml(message)}</div>`;
+  renderFloatingToc([]);
+}
+
+function renderFloatingToc(items) {
+  if (!floatingTocRoot) {
+    return;
+  }
+  if (!items.length) {
+    tocObserver?.disconnect();
+    floatingTocRoot.innerHTML = `<span class="empty-state">No sections available yet.</span>`;
+    return;
+  }
+
+  floatingTocRoot.innerHTML = items
+    .map(
+      (item) => `
+        <a class="floating-toc-link${item.child ? " is-child" : ""}" href="#${escapeAttribute(item.id)}" data-toc-target="${escapeAttribute(
+          item.id
+        )}">
+          <span>${escapeHtml(item.label)}</span>
+        </a>
+      `
+    )
+    .join("");
+
+  floatingTocRoot.querySelectorAll("[data-toc-target]").forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      document.getElementById(link.dataset.tocTarget)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+
+  bindTocObserver(items.map((item) => item.id));
+}
+
+function bindTocObserver(ids) {
+  tocObserver?.disconnect();
+  const links = [...floatingTocRoot.querySelectorAll("[data-toc-target]")];
+  const sections = ids.map((id) => document.getElementById(id)).filter(Boolean);
+  if (!sections.length) {
+    return;
+  }
+
+  tocObserver = new IntersectionObserver(
+    (entries) => {
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((left, right) => right.intersectionRatio - left.intersectionRatio)[0];
+      if (!visible) {
+        return;
+      }
+      const activeId = visible.target.id;
+      links.forEach((link) => link.classList.toggle("active", link.dataset.tocTarget === activeId));
+    },
+    {
+      rootMargin: "-25% 0px -55% 0px",
+      threshold: [0.1, 0.3, 0.6],
+    }
+  );
+
+  sections.forEach((section) => tocObserver.observe(section));
+  links.forEach((link, index) => link.classList.toggle("active", index === 0));
 }
 
 function escapeHtml(value) {
@@ -666,4 +735,8 @@ function escapeHtml(value) {
 
 function escapeAttribute(value) {
   return escapeHtml(value);
+}
+
+function sectionIdFromTopic(topic) {
+  return `hf-topic-${topic.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
 }

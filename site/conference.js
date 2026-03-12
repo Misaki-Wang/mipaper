@@ -33,7 +33,9 @@ const sidebarToggleLabel = document.querySelector("#conference-sidebar-toggle-la
 const sidebarToggleIcon = document.querySelector("#conference-sidebar-toggle-icon");
 const layoutRoot = document.querySelector(".layout");
 const backToTopButton = document.querySelector("#conference-back-to-top");
+const floatingTocRoot = document.querySelector("#conference-floating-toc");
 const likeRecords = new Map();
+let tocObserver = null;
 
 init().catch((error) => {
   console.error(error);
@@ -52,7 +54,6 @@ async function init() {
   populateScopeFilters(manifest.reports || []);
   populateConferenceSelect(getScopedReports(manifest.reports || []));
   renderVenueCards(manifest);
-  renderVenueRail(getScopedReports(manifest.reports || []));
 
   if (!manifest.reports.length) {
     renderEmpty();
@@ -77,7 +78,7 @@ function applySidebarState(collapsed) {
   sidebarToggleButton.setAttribute("aria-expanded", String(!collapsed));
   sidebarToggleButton.setAttribute("aria-label", collapsed ? "Expand sidebar" : "Collapse sidebar");
   sidebarToggleButton.title = collapsed ? "Expand sidebar" : "Collapse sidebar";
-  sidebarToggleLabel.textContent = collapsed ? "Expand" : "Collapse";
+  sidebarToggleLabel.textContent = collapsed ? "Tools" : "Collapse";
   sidebarToggleIcon.textContent = collapsed ? "›" : "‹";
   localStorage.setItem("cool-paper-sidebar", collapsed ? "collapsed" : "expanded");
 }
@@ -207,7 +208,6 @@ async function loadReport(path) {
   populateSubjectFilter(report.subject_distribution || []);
   populateTopicFilter(report.topic_distribution || []);
   renderVenueCards(state.manifest, path, getScopedReports(state.manifest.reports || []));
-  renderVenueRail(getScopedReports(state.manifest.reports || []), path);
   renderReport();
 }
 
@@ -255,7 +255,6 @@ async function handleVenueScopeChange() {
   const scopedReports = getScopedReports(state.manifest?.reports || []);
   populateConferenceSelect(scopedReports);
   renderVenueCards(state.manifest, state.currentPath, scopedReports);
-  renderVenueRail(scopedReports, state.currentPath);
 
   if (!scopedReports.length) {
     state.report = null;
@@ -326,7 +325,7 @@ function renderVenueCards(manifest, activePath = "", scopedReports = null) {
           <div class="home-category-meta">
             <span>${escapeHtml(topTopic?.topic_label || "No topic summary")}</span>
             <span>${escapeHtml(coverage)}</span>
-            <span>${escapeHtml(report.classifier)}</span>
+            <span>${escapeHtml(report.venue_year || "-")}</span>
           </div>
         </button>
       `;
@@ -336,36 +335,6 @@ function renderVenueCards(manifest, activePath = "", scopedReports = null) {
   root.querySelectorAll("[data-conference-report]").forEach((button) => {
     button.addEventListener("click", async () => {
       const path = button.dataset.conferenceReport;
-      if (path && path !== state.currentPath) {
-        await loadReport(path);
-      }
-    });
-  });
-}
-
-function renderVenueRail(reports, activePath = "") {
-  const root = document.querySelector("#conference-rail");
-  root.innerHTML = reports
-    .map(
-      (report) => `
-        <button
-          class="report-card ${report.data_path === activePath ? "active" : ""}"
-          type="button"
-          data-rail-report="${escapeAttribute(report.data_path)}"
-        >
-          <span class="report-card-date">${escapeHtml(report.venue)}</span>
-          <strong class="report-card-count">${report.total_papers} papers</strong>
-          <span class="report-card-meta">${escapeHtml(report.classifier)} · ${escapeHtml(
-            report.subject_distribution?.[0]?.subject_label || "No subject"
-          )}</span>
-        </button>
-      `
-    )
-    .join("");
-
-  root.querySelectorAll("[data-rail-report]").forEach((button) => {
-    button.addEventListener("click", async () => {
-      const path = button.dataset.railReport;
       if (path && path !== state.currentPath) {
         await loadReport(path);
       }
@@ -391,6 +360,18 @@ function renderReport() {
   renderSubjectRadar(visiblePapers);
   renderResults(report, visiblePapers, sections);
   renderSubjectSections(report, sections);
+  renderFloatingToc([
+    { id: "conference-overview-section", label: "Overview" },
+    { id: "conference-tags-section", label: "Current Tags" },
+    { id: "conference-spotlight-section", label: "Spotlight" },
+    { id: "conference-radar-section", label: "Subject Radar" },
+    { id: "conference-results-section", label: "Results" },
+    ...sections.slice(0, 10).map((section) => ({
+      id: sectionIdFromSubject(section.subject_label),
+      label: section.subject_label,
+      child: true,
+    })),
+  ]);
   bindLikeButtons(document, likeRecords);
 }
 
@@ -454,8 +435,7 @@ function renderOverview(report, visiblePapers, sections) {
   const focusShare = visiblePapers.length ? (focusCount / visiblePapers.length) * 100 : 0;
   document.querySelector("#conference-overview-title").textContent = `${report.venue} Conference Overview`;
   document.querySelector("#conference-source-link").href = report.source_url;
-  document.querySelector("#conference-source-link").textContent =
-    report.classifier === "codex" ? "Source + Codex" : "Source + Rules";
+  document.querySelector("#conference-source-link").textContent = "Source";
   document.querySelector("#conference-capture-summary").textContent = buildCaptureSummary(report);
   document.querySelector("#conference-overview-summary").textContent = topSubject
     ? `${topSubject.subject_label} is the largest subject in the current conference, accounting for ${topSubject.share.toFixed(2)}%, with ${topSubject.count} papers.`
@@ -581,7 +561,7 @@ function renderSubjectSections(report, sections) {
     .map((section, index) => {
       const topTopic = computeTopicDistribution(section.papers)[0];
       return `
-        <section class="glass-card conference-subject-card">
+        <section id="${escapeAttribute(sectionIdFromSubject(section.subject_label))}" class="glass-card conference-subject-card">
           <div class="conference-subject-header">
             <div>
               <p class="eyebrow">SUBJECT</p>
@@ -627,7 +607,6 @@ function renderPaperCard(paper, className) {
     <article class="${className}">
       <div class="conference-paper-top">
         <span class="paper-badge">${escapeHtml(paper.topic_label || "Other AI")}</span>
-        <span class="paper-badge subdued">${escapeHtml(paper.classification_source || state.report.classifier)}</span>
       </div>
       <h4>${escapeHtml(paper.title)}</h4>
       ${subjects}
@@ -792,6 +771,7 @@ function renderEmpty(message = "No conference snapshots are available yet.") {
   if (tagMap) {
     tagMap.innerHTML = "";
   }
+  renderFloatingToc([]);
 }
 
 async function fetchJson(url) {
@@ -819,6 +799,68 @@ function renderFatal(error) {
   const message = error instanceof Error ? error.message : String(error);
   document.querySelector("#conference-board-summary").textContent = "Conference page failed to load.";
   document.querySelector("#conference-cards").innerHTML = `<div class="empty-state">${escapeHtml(message)}</div>`;
+  renderFloatingToc([]);
+}
+
+function renderFloatingToc(items) {
+  if (!floatingTocRoot) {
+    return;
+  }
+  if (!items.length) {
+    tocObserver?.disconnect();
+    floatingTocRoot.innerHTML = `<span class="empty-state">No sections available yet.</span>`;
+    return;
+  }
+
+  floatingTocRoot.innerHTML = items
+    .map(
+      (item) => `
+        <a class="floating-toc-link${item.child ? " is-child" : ""}" href="#${escapeAttribute(item.id)}" data-toc-target="${escapeAttribute(
+          item.id
+        )}">
+          <span>${escapeHtml(item.label)}</span>
+        </a>
+      `
+    )
+    .join("");
+
+  floatingTocRoot.querySelectorAll("[data-toc-target]").forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      document.getElementById(link.dataset.tocTarget)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+
+  bindTocObserver(items.map((item) => item.id));
+}
+
+function bindTocObserver(ids) {
+  tocObserver?.disconnect();
+  const links = [...floatingTocRoot.querySelectorAll("[data-toc-target]")];
+  const sections = ids.map((id) => document.getElementById(id)).filter(Boolean);
+  if (!sections.length) {
+    return;
+  }
+
+  tocObserver = new IntersectionObserver(
+    (entries) => {
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((left, right) => right.intersectionRatio - left.intersectionRatio)[0];
+      if (!visible) {
+        return;
+      }
+      const activeId = visible.target.id;
+      links.forEach((link) => link.classList.toggle("active", link.dataset.tocTarget === activeId));
+    },
+    {
+      rootMargin: "-25% 0px -55% 0px",
+      threshold: [0.1, 0.3, 0.6],
+    }
+  );
+
+  sections.forEach((section) => tocObserver.observe(section));
+  links.forEach((link, index) => link.classList.toggle("active", index === 0));
 }
 
 function buildCaptureSummary(report) {
@@ -849,4 +891,8 @@ function escapeHtml(value) {
 
 function escapeAttribute(value) {
   return escapeHtml(value);
+}
+
+function sectionIdFromSubject(subject) {
+  return `subject-${subject.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
 }

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cool Daily</title>
+    <meta
+      name="description"
+      content="Daily papers.cool observatory across cs.AI, cs.CL, and cs.CV with focus-topic tracking, topic distribution, and title-level browsing."
+    />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <script>
+      (function () {
+        var storedMode = localStorage.getItem("cool-paper-theme") || "auto";
+        var prefersDark =
+          typeof window.matchMedia === "function" &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+        var resolvedTheme = storedMode === "auto" ? (prefersDark ? "dark" : "light") : storedMode;
+        document.documentElement.dataset.theme = resolvedTheme;
+        document.documentElement.dataset.themeMode = storedMode;
+      })();
+    </script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero reveal">
+        <div class="hero-copy">
+          <div class="page-nav">
+            <a class="page-nav-link active" href="./cool-daily.html">Cool Daily</a>
+            <a class="page-nav-link" href="./conference.html">Conference</a>
+            <a class="page-nav-link" href="./index.html">HF Daily</a>
+            <a class="page-nav-link" href="./like.html">Like</a>
+          </div>
+          <p class="eyebrow">COOL PAPER OBSERVATORY</p>
+          <h1>Paper Observatory for cs.AI, cs.CL, and cs.CV</h1>
+          <p class="hero-text">
+            Original pages:
+            <a href="https://papers.cool/arxiv/cs.AI" target="_blank" rel="noreferrer">cs.AI</a>
+            <span aria-hidden="true">·</span>
+            <a href="https://papers.cool/arxiv/cs.CL" target="_blank" rel="noreferrer">cs.CL</a>
+            <span aria-hidden="true">·</span>
+            <a href="https://papers.cool/arxiv/cs.CV" target="_blank" rel="noreferrer">cs.CV</a>
+          </p>
+          <div id="hero-signals" class="hero-signals"></div>
+          <div class="hero-actions">
+            <button class="pill-button active" type="button" data-theme-toggle="auto">Auto</button>
+            <button class="pill-button" type="button" data-theme-toggle="light">Day</button>
+            <button class="pill-button" type="button" data-theme-toggle="dark">Night</button>
+          </div>
+        </div>
+        <div class="hero-panel glass-card">
+          <div class="hero-panel-top">
+            <span class="meta-kicker">Latest Snapshot</span>
+            <strong id="hero-report-date">-</strong>
+          </div>
+          <div class="hero-stat-grid">
+            <div>
+              <span class="stat-label">Papers</span>
+              <strong id="hero-total-papers">-</strong>
+            </div>
+            <div>
+              <span class="stat-label">Classifier</span>
+              <strong id="hero-classifier">-</strong>
+            </div>
+            <div>
+              <span class="stat-label">Reports</span>
+              <strong id="hero-report-count">-</strong>
+            </div>
+            <div>
+              <span class="stat-label">Updated</span>
+              <strong id="hero-generated-at">-</strong>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="glass-card home-board reveal">
+        <div class="section-heading">
+          <p class="eyebrow">HOMEPAGE</p>
+          <h2>Three-Track Home</h2>
+          <p id="home-board-summary" class="home-board-summary">-</p>
+        </div>
+        <div id="home-categories" class="home-categories"></div>
+      </section>
+
+      <main class="layout">
+        <aside class="sidebar">
+          <div class="glass-card sidebar-header reveal">
+            <div>
+              <p class="eyebrow">RESEARCH RAIL</p>
+              <h2>Sidebar Tools</h2>
+            </div>
+            <button id="sidebar-toggle" class="sidebar-toggle" type="button" aria-expanded="true">
+              <span id="sidebar-toggle-icon" class="sidebar-toggle-icon">‹</span>
+              <span id="sidebar-toggle-label" class="sidebar-toggle-label">Collapse</span>
+            </button>
+          </div>
+
+          <div id="sidebar-stack" class="sidebar-stack">
+            <section class="glass-card controls reveal">
+              <div class="control-block">
+                <label for="domain-filter">Domain</label>
+                <select id="domain-filter" class="control-input">
+                  <option value="">All Domains</option>
+                </select>
+              </div>
+              <div class="control-block">
+                <label for="date-filter">Date</label>
+                <select id="date-filter" class="control-input">
+                  <option value="">All Dates</option>
+                </select>
+              </div>
+              <div class="control-block">
+                <label for="report-select">Snapshot</label>
+                <select id="report-select" class="control-input"></select>
+              </div>
+              <div class="control-block">
+                <label for="topic-filter">Topic Filter</label>
+                <select id="topic-filter" class="control-input">
+                  <option value="">All Topics</option>
+                </select>
+              </div>
+              <div class="control-block">
+                <label for="search-input">Title Search</label>
+                <input id="search-input" class="control-input" type="search" placeholder="Search title keywords" />
+              </div>
+              <label class="checkbox-row" for="focus-only">
+                <input id="focus-only" type="checkbox" />
+                <span>Focus topics only</span>
+              </label>
+            </section>
+
+            <section class="glass-card trend-panel reveal">
+              <div class="section-heading">
+                <p class="eyebrow">TOPIC MIX</p>
+                <h2>Topic Distribution</h2>
+              </div>
+              <div id="distribution-list" class="distribution-list"></div>
+            </section>
+
+          </div>
+        </aside>
+
+        <section class="content">
+          <section id="daily-overview-section" class="glass-card overview reveal">
+            <div class="overview-top">
+              <div>
+                <p class="eyebrow">DAILY OVERVIEW</p>
+                <h2 id="overview-title">Daily Overview</h2>
+              </div>
+              <a id="source-link" class="link-chip" href="#" target="_blank" rel="noreferrer">Source</a>
+            </div>
+            <div class="overview-grid">
+              <article class="insight-card accent-card">
+                <span class="insight-label">Research Pulse</span>
+                <p id="overview-summary" class="insight-text">-</p>
+              </article>
+              <article class="insight-card">
+                <span class="insight-label">Focus Coverage</span>
+                <p id="focus-summary" class="insight-text">-</p>
+              </article>
+              <article class="insight-card">
+                <span class="insight-label">Breadth</span>
+                <p id="breadth-summary" class="insight-text">-</p>
+              </article>
+            </div>
+          </section>
+
+          <section id="daily-tags-section" class="glass-card tag-panel reveal">
+            <div class="section-heading">
+              <p class="eyebrow">TAG MAP</p>
+              <h2>Current Tags</h2>
+            </div>
+            <div id="daily-tag-map" class="tag-map"></div>
+          </section>
+
+          <section id="daily-atlas-section" class="glass-card atlas reveal">
+            <div class="section-heading">
+              <p class="eyebrow">DAILY ATLAS</p>
+              <h2>Daily Atlas</h2>
+            </div>
+            <div class="atlas-grid">
+              <div class="atlas-stack">
+                <div id="atlas-metrics" class="atlas-metrics"></div>
+                <div class="atlas-panels">
+                  <article class="atlas-panel">
+                    <span class="insight-label">Top Stack</span>
+                    <div id="atlas-topics" class="atlas-topic-stack"></div>
+                  </article>
+                  <article class="atlas-panel">
+                    <span class="insight-label">Focus Split</span>
+                    <div id="focus-breakdown" class="focus-breakdown"></div>
+                  </article>
+                </div>
+              </div>
+              <aside class="atlas-panel cadence-panel">
+                <span class="insight-label">Recent Cadence</span>
+                <div id="cadence-track" class="cadence-track"></div>
+                <p id="cadence-summary" class="cadence-summary">-</p>
+              </aside>
+            </div>
+          </section>
+
+          <section id="daily-navigator-section" class="glass-card navigator reveal">
+            <div class="section-heading">
+              <p class="eyebrow">TOPIC NAVIGATOR</p>
+              <h2>Quick Jump</h2>
+            </div>
+            <div id="topic-nav" class="topic-nav"></div>
+          </section>
+
+          <section id="daily-feature-section" class="feature-stage reveal">
+            <article id="lead-feature" class="glass-card lead-feature"></article>
+          </section>
+
+          <section id="daily-spotlight-section" class="glass-card spotlight reveal">
+            <div class="section-heading">
+              <p class="eyebrow">SPOTLIGHT</p>
+              <h2>Focus Papers</h2>
+            </div>
+            <div id="spotlight-list" class="spotlight-list"></div>
+          </section>
+
+          <section id="daily-results-section" class="glass-card results-strip reveal">
+            <div class="results-top">
+              <div>
+                <p class="eyebrow">RESULTS</p>
+                <h2 id="results-title">Results</h2>
+              </div>
+              <button id="reset-filters" class="link-chip button-link" type="button">Reset filters</button>
+            </div>
+            <div class="results-grid">
+              <div id="results-stats" class="results-stats"></div>
+              <div id="active-filter-chips" class="active-filter-chips"></div>
+            </div>
+          </section>
+
+          <div id="topic-sections" class="topic-sections"></div>
+        </section>
+      </main>
+    </div>
+
+    <button id="back-to-top" class="back-to-top" type="button" aria-label="Back to top">
+      <span class="back-to-top-icon">↑</span>
+      <span class="back-to-top-label">Top</span>
+    </button>
+
+    <aside class="floating-toc" aria-label="Table of contents">
+      <div class="floating-toc-card">
+        <p class="eyebrow">TABLE OF CONTENTS</p>
+        <h2>Quick Jump</h2>
+        <nav id="daily-floating-toc" class="floating-toc-list"></nav>
+      </div>
+    </aside>
+
+    <template id="topic-section-template">
+      <section class="glass-card topic-section reveal">
+        <div class="topic-header">
+          <div class="topic-heading">
+            <span class="topic-index"></span>
+            <div>
+              <p class="eyebrow topic-kicker">TOPIC</p>
+              <h3 class="topic-title"></h3>
+              <div class="topic-flags"></div>
+            </div>
+          </div>
+          <div class="topic-metrics">
+            <span class="topic-count"></span>
+            <span class="topic-share"></span>
+          </div>
+        </div>
+        <div class="topic-progress"><span></span></div>
+        <div class="topic-body">
+          <article class="topic-lead-card"></article>
+          <div class="paper-list"></div>
+        </div>
+      </section>
+    </template>
+
+    <template id="paper-card-template">
+      <article class="paper-card">
+        <div class="paper-card-top">
+          <span class="paper-id"></span>
+          <div class="paper-badges"></div>
+        </div>
+        <h4 class="paper-title"></h4>
+        <p class="paper-note"></p>
+        <div class="paper-extra"></div>
+        <div class="paper-links">
+          <a class="paper-link brand-arxiv" data-link="abs" target="_blank" rel="noreferrer">
+            <span class="paper-link-icon" aria-hidden="true">
+              <img src="./assets/arxiv-logo.svg" alt="" />
+            </span>
+            <span class="paper-link-text">arXiv</span>
+          </a>
+          <a class="paper-link brand-cool" data-link="detail" target="_blank" rel="noreferrer">
+            <span class="paper-link-icon" aria-hidden="true">
+              <img src="./assets/cool-favicon.ico" alt="" />
+            </span>
+            <span class="paper-link-text">Cool</span>
+          </a>
+          <button class="paper-link like-button" data-like type="button">
+            <span class="paper-link-icon like-icon" aria-hidden="true">
+              <svg viewBox="0 0 20 20">
+                <path d="M10 16.3l-5.26-4.98A3.8 3.8 0 0 1 10 5.9a3.8 3.8 0 0 1 5.26 5.42z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path>
+              </svg>
+            </span>
+            <span class="paper-link-text">Like</span>
+          </button>
+        </div>
+      </article>
+    </template>
+
+    <template id="report-card-template">
+      <button class="report-card" type="button">
+        <span class="report-card-date"></span>
+        <strong class="report-card-count"></strong>
+        <span class="report-card-meta"></span>
+      </button>
+    </template>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>

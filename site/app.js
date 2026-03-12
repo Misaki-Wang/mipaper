@@ -31,7 +31,9 @@ const sidebarToggleLabel = document.querySelector("#sidebar-toggle-label");
 const sidebarToggleIcon = document.querySelector("#sidebar-toggle-icon");
 const layoutRoot = document.querySelector(".layout");
 const backToTopButton = document.querySelector("#back-to-top");
+const floatingTocRoot = document.querySelector("#daily-floating-toc");
 const likeRecords = new Map();
+let tocObserver = null;
 
 init().catch((error) => {
   console.error(error);
@@ -109,7 +111,7 @@ function applySidebarState(collapsed) {
   sidebarToggleButton.setAttribute("aria-expanded", String(!collapsed));
   sidebarToggleButton.setAttribute("aria-label", collapsed ? "Expand sidebar" : "Collapse sidebar");
   sidebarToggleButton.title = collapsed ? "Expand sidebar" : "Collapse sidebar";
-  sidebarToggleLabel.textContent = collapsed ? "Expand" : "Collapse";
+  sidebarToggleLabel.textContent = collapsed ? "Tools" : "Collapse";
   sidebarToggleIcon.textContent = collapsed ? "›" : "‹";
   localStorage.setItem("cool-paper-sidebar", collapsed ? "collapsed" : "expanded");
 }
@@ -196,7 +198,6 @@ async function loadReport(path) {
   populateTopicFilter(report.topics);
   updateHero(state.manifest, report);
   renderHomeCategories(state.manifest, path, getScopedReports(state.manifest?.reports || []));
-  renderReportRail(getScopedReports(state.manifest?.reports || []), path);
   renderReport();
 }
 
@@ -244,7 +245,6 @@ async function handleReportScopeChange() {
   const scopedReports = getScopedReports(state.manifest?.reports || []);
   populateReportSelect(scopedReports);
   renderHomeCategories(state.manifest, state.currentPath, scopedReports);
-  renderReportRail(scopedReports, state.currentPath);
 
   if (!scopedReports.length) {
     state.report = null;
@@ -324,7 +324,7 @@ function renderHomeCategories(manifest, activePath = "", scopedReports = null) {
             }
           </p>
           <div class="home-category-meta">
-            <span>${escapeHtml(report.classifier)}</span>
+            <span>${escapeHtml(report.report_date)}</span>
             <span>${topTopic ? `Top topic · ${topTopic.count} papers` : "pending"}</span>
           </div>
         </button>
@@ -342,26 +342,6 @@ function renderHomeCategories(manifest, activePath = "", scopedReports = null) {
   });
 }
 
-function renderReportRail(reports, activePath) {
-  const root = document.querySelector("#report-rail");
-  const template = document.querySelector("#report-card-template");
-  root.innerHTML = "";
-
-  reports.slice(0, 6).forEach((report) => {
-    const node = template.content.firstElementChild.cloneNode(true);
-    node.querySelector(".report-card-date").textContent = report.report_date;
-    node.querySelector(".report-card-count").textContent = `${report.total_papers} papers`;
-    node.querySelector(".report-card-meta").textContent = `${report.category} · ${report.classifier}`;
-    node.classList.toggle("active", report.data_path === activePath);
-    node.addEventListener("click", async () => {
-      if (report.data_path !== state.currentPath) {
-        await loadReport(report.data_path);
-      }
-    });
-    root.appendChild(node);
-  });
-}
-
 function renderReport() {
   if (!state.report) {
     return;
@@ -371,8 +351,6 @@ function renderReport() {
   likeRecords.clear();
   const sections = getFilteredSections(report);
   renderHeroSignals(report);
-  renderFocusRings(report.focus_topics);
-  renderFocusCards(report.focus_topics);
   renderDistribution(report.topic_distribution);
   renderOverview(report);
   renderTagMap(report);
@@ -382,6 +360,22 @@ function renderReport() {
   renderSpotlight(report, sections);
   renderResultsStrip(report, sections);
   renderTopicSections(report, sections);
+  renderFloatingToc(
+    [
+      { id: "daily-overview-section", label: "Overview" },
+      { id: "daily-tags-section", label: "Current Tags" },
+      { id: "daily-atlas-section", label: "Daily Atlas" },
+      { id: "daily-navigator-section", label: "Quick Jump" },
+      { id: "daily-feature-section", label: "Lead Feature" },
+      { id: "daily-spotlight-section", label: "Spotlight" },
+      { id: "daily-results-section", label: "Results" },
+      ...sections.slice(0, 10).map((topic) => ({
+        id: sectionIdFromTopic(topic.topic_label),
+        label: topic.topic_label,
+        child: true,
+      })),
+    ]
+  );
   bindLikeButtons(document, likeRecords);
 }
 
@@ -426,65 +420,8 @@ function renderHeroSignals(report) {
       ? `<div class="signal-chip"><span>Top Topic</span><strong>${escapeHtml(top.topic_label)}</strong></div>`
       : "",
     `<div class="signal-chip"><span>Focus Coverage</span><strong>${focusCount} papers / ${focusShare.toFixed(2)}%</strong></div>`,
-    `<div class="signal-chip"><span>Classifier</span><strong>${escapeHtml(report.classifier)}</strong></div>`,
     `<div class="signal-chip"><span>Total</span><strong>${report.total_papers}</strong></div>`,
   ].join("");
-}
-
-function renderFocusRings(items) {
-  const root = document.querySelector("#focus-rings");
-  root.innerHTML = items
-    .map((item, index) => {
-      const radius = 34;
-      const circumference = 2 * Math.PI * radius;
-      const percent = Math.min(item.share, 100);
-      const offset = circumference - (percent / 100) * circumference;
-      const gradientId = `ringGradient-${index}`;
-      return `
-        <article class="focus-ring">
-          <div class="focus-ring-graphic">
-            <svg viewBox="0 0 100 100" aria-hidden="true">
-              <defs>
-                <linearGradient id="${gradientId}" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="var(--accent-strong)" />
-                  <stop offset="100%" stop-color="var(--accent)" />
-                </linearGradient>
-              </defs>
-              <circle class="track" cx="50" cy="50" r="${radius}"></circle>
-              <circle
-                class="progress"
-                cx="50"
-                cy="50"
-                r="${radius}"
-                stroke="url(#${gradientId})"
-                stroke-dasharray="${circumference}"
-                stroke-dashoffset="${offset}"
-              ></circle>
-            </svg>
-            <div class="focus-ring-value">${item.count}</div>
-          </div>
-          <strong>${escapeHtml(item.topic_label)}</strong>
-        </article>
-      `;
-    })
-    .join("");
-}
-
-function renderFocusCards(items) {
-  const root = document.querySelector("#focus-cards");
-  root.innerHTML = items
-    .map(
-      (item) => `
-        <article class="focus-card">
-          <div class="focus-card-top">
-            <span>${escapeHtml(item.topic_label)}</span>
-            <strong>${item.count}</strong>
-          </div>
-          <div class="focus-meta">${item.share.toFixed(2)}% of daily volume</div>
-        </article>
-      `
-    )
-    .join("");
 }
 
 function renderDistribution(items) {
@@ -514,13 +451,13 @@ function renderOverview(report) {
   document.querySelector("#overview-title").textContent = `${report.report_date} · ${report.category} Daily Overview`;
   const sourceLink = document.querySelector("#source-link");
   sourceLink.href = report.source_url;
-  sourceLink.textContent = report.classifier === "codex" ? "Source + Codex" : "Source + Rules";
+  sourceLink.textContent = "Source";
 
   document.querySelector("#overview-summary").textContent = top
     ? `${top.topic_label} is the leading topic today, accounting for ${top.share.toFixed(2)}%, with ${top.count} papers.`
     : "-";
   document.querySelector("#focus-summary").textContent = `${focusTotal} papers fall into your focus topics, accounting for ${focusShare.toFixed(2)}% of the total.`;
-  document.querySelector("#breadth-summary").textContent = `The report covers ${topicCount} topics today, using the ${report.classifier} classifier.`;
+  document.querySelector("#breadth-summary").textContent = `The report covers ${topicCount} topics today.`;
 }
 
 function renderAtlas(report) {
@@ -663,12 +600,6 @@ function renderFeatureStage(report, sections) {
     ${renderPaperDetails(leadPaper)}
     <div class="lead-metrics">
       <span class="paper-id">${escapeHtml(leadPaper.paper_id)}</span>
-      <span class="paper-badge">${escapeHtml(leadPaper.classification_source || report.classifier)}</span>
-      ${
-        typeof leadPaper.classification_confidence === "number"
-          ? `<span class="paper-badge">${Math.round(leadPaper.classification_confidence * 100)}% conf.</span>`
-          : ""
-      }
     </div>
     <div class="lead-links">
       ${renderPaperLink({ href: leadPaper.pdf_url || leadPaper.abs_url, label: "arXiv", brand: "arxiv" })}
@@ -966,7 +897,7 @@ function rememberLikeRecord(paper) {
   const record = createLikeRecord(paper, {
     sourceKind: "daily",
     sourceLabel: "Cool Daily",
-    sourcePage: "./index.html",
+    sourcePage: "./cool-daily.html",
     snapshotLabel: report ? `${report.report_date} · ${report.category}` : "Cool Daily",
     reportDate: report?.report_date || "",
     category: report?.category || "",
@@ -979,12 +910,6 @@ function renderPaperBadges(paper) {
   const badges = [`<span class="paper-badge">${escapeHtml(paper.topic_label)}</span>`];
   if (focusTopicKeys.has(paper.topic_key)) {
     badges.push(`<span class="paper-badge focus">focus</span>`);
-  }
-  if (paper.classification_source) {
-    badges.push(`<span class="paper-badge">${escapeHtml(paper.classification_source)}</span>`);
-  }
-  if (typeof paper.classification_confidence === "number") {
-    badges.push(`<span class="paper-badge">${Math.round(paper.classification_confidence * 100)}% conf.</span>`);
   }
   return badges.join("");
 }
@@ -1039,12 +964,75 @@ function renderEmpty(message = "No report snapshots are available yet.") {
   if (tagMap) {
     tagMap.innerHTML = "";
   }
+  renderFloatingToc([]);
 }
 
 function renderFatal(error) {
   const message = error instanceof Error ? error.message : String(error);
   document.querySelector("#topic-sections").innerHTML =
     `<section class="glass-card empty-state">Site load failed: ${escapeHtml(message)}</section>`;
+  renderFloatingToc([]);
+}
+
+function renderFloatingToc(items) {
+  if (!floatingTocRoot) {
+    return;
+  }
+  if (!items.length) {
+    tocObserver?.disconnect();
+    floatingTocRoot.innerHTML = `<span class="empty-state">No sections available yet.</span>`;
+    return;
+  }
+
+  floatingTocRoot.innerHTML = items
+    .map(
+      (item) => `
+        <a class="floating-toc-link${item.child ? " is-child" : ""}" href="#${escapeAttribute(item.id)}" data-toc-target="${escapeAttribute(
+          item.id
+        )}">
+          <span>${escapeHtml(item.label)}</span>
+        </a>
+      `
+    )
+    .join("");
+
+  floatingTocRoot.querySelectorAll("[data-toc-target]").forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      document.getElementById(link.dataset.tocTarget)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+
+  bindTocObserver(items.map((item) => item.id));
+}
+
+function bindTocObserver(ids) {
+  tocObserver?.disconnect();
+  const links = [...floatingTocRoot.querySelectorAll("[data-toc-target]")];
+  const sections = ids.map((id) => document.getElementById(id)).filter(Boolean);
+  if (!sections.length) {
+    return;
+  }
+
+  tocObserver = new IntersectionObserver(
+    (entries) => {
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((left, right) => right.intersectionRatio - left.intersectionRatio)[0];
+      if (!visible) {
+        return;
+      }
+      const activeId = visible.target.id;
+      links.forEach((link) => link.classList.toggle("active", link.dataset.tocTarget === activeId));
+    },
+    {
+      rootMargin: "-25% 0px -55% 0px",
+      threshold: [0.1, 0.3, 0.6],
+    }
+  );
+
+  sections.forEach((section) => tocObserver.observe(section));
+  links.forEach((link, index) => link.classList.toggle("active", index === 0));
 }
 
 async function fetchJson(url) {
