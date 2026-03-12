@@ -1,4 +1,5 @@
 import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js";
+import { createCalendarPicker } from "./calendar_picker.js";
 
 const manifestUrl = "./data/daily/manifest.json";
 
@@ -18,6 +19,7 @@ const focusTopicKeys = new Set([
   "multimodal_generative",
   "multimodal_agents",
 ]);
+const CADENCE_MAX_DATES = 5;
 
 const domainFilter = document.querySelector("#domain-filter");
 const dateFilter = document.querySelector("#date-filter");
@@ -34,6 +36,7 @@ const backToTopButton = document.querySelector("#back-to-top");
 const floatingTocRoot = document.querySelector("#daily-floating-toc");
 const likeRecords = new Map();
 let tocObserver = null;
+let datePicker = null;
 
 init().catch((error) => {
   console.error(error);
@@ -49,6 +52,7 @@ async function init() {
   await initLikesSync();
   const manifest = await fetchJson(manifestUrl);
   state.manifest = manifest;
+  bindDatePicker();
   populateScopeFilters(manifest.reports || []);
   populateReportSelect(getScopedReports(manifest.reports || []));
   renderHomeCategories(manifest);
@@ -133,14 +137,36 @@ function bindBackToTop() {
   updateVisibility();
 }
 
+function bindDatePicker() {
+  const shell = dateFilter.closest(".date-input-shell");
+  const button = shell?.querySelector("[data-date-picker-button]");
+  if (!shell || !button) {
+    return;
+  }
+  datePicker = createCalendarPicker({
+    shell,
+    input: dateFilter,
+    button,
+    getAvailableDates: () =>
+      [
+        ...new Set(
+          (state.manifest?.reports || [])
+            .filter((report) => !state.domain || report.category === state.domain)
+            .map((report) => report.report_date)
+            .filter(Boolean)
+        ),
+      ].sort((left, right) => left.localeCompare(right)),
+    getValue: () => state.date,
+    onSelect: async (iso) => {
+      state.date = iso;
+      await handleReportScopeChange();
+    },
+  });
+}
+
 function bindFilters() {
   domainFilter.addEventListener("change", async (event) => {
     state.domain = event.target.value;
-    await handleReportScopeChange();
-  });
-
-  dateFilter.addEventListener("change", async (event) => {
-    state.date = event.target.value;
     await handleReportScopeChange();
   });
 
@@ -206,15 +232,17 @@ function populateScopeFilters(reports) {
     left.localeCompare(right)
   );
   const dates = [...new Set(reports.map((report) => report.report_date).filter(Boolean))].sort((left, right) =>
-    right.localeCompare(left)
+    left.localeCompare(right)
   );
 
   domainFilter.innerHTML = `<option value="">All Domains</option>${domains
     .map((domain) => `<option value="${escapeAttribute(domain)}">${escapeHtml(domain)}</option>`)
     .join("")}`;
-  dateFilter.innerHTML = `<option value="">All Dates</option>${dates
-    .map((date) => `<option value="${escapeAttribute(date)}">${escapeHtml(date)}</option>`)
-    .join("")}`;
+  dateFilter.min = dates[0] || "";
+  dateFilter.max = dates.at(-1) || "";
+  dateFilter.value = state.date || "";
+  dateFilter.disabled = !dates.length;
+  datePicker?.refresh();
 }
 
 function populateReportSelect(reports) {
@@ -260,6 +288,7 @@ async function handleReportScopeChange() {
   }
 
   reportSelect.value = state.currentPath;
+  datePicker?.sync();
   updateHero(state.manifest, state.report);
   renderReport();
 }
@@ -472,26 +501,30 @@ function renderAtlas(report) {
       label: "Focus Topics",
       value: `${focusTotal}`,
       meta: `${focusShare.toFixed(2)}% of daily volume`,
+      className: "",
     },
     {
       label: "Dominant Topic",
       value: topTopic ? topTopic.topic_label : "-",
       meta: topTopic ? `${topTopic.count} papers · ${topTopic.share.toFixed(2)}%` : "-",
+      className: "metric-card-topic",
     },
     {
       label: "Active Buckets",
       value: `${activeTopics}`,
       meta: `${report.total_papers} papers distributed`,
+      className: "",
     },
     {
       label: "Top-3 Density",
       value: `${topThreeShare.toFixed(2)}%`,
       meta: "share captured by top three topics",
+      className: "",
     },
   ]
     .map(
       (item) => `
-        <article class="metric-card">
+        <article class="metric-card ${item.className}">
           <span class="metric-label">${escapeHtml(item.label)}</span>
           <strong class="metric-value">${escapeHtml(item.value)}</strong>
           <span class="metric-meta">${escapeHtml(item.meta)}</span>
@@ -532,22 +565,57 @@ function renderAtlas(report) {
     )
     .join("");
 
-  const recentReports = (state.manifest?.reports || []).slice(0, 6).reverse();
-  const maxCount = Math.max(...recentReports.map((item) => item.total_papers), 1);
-  document.querySelector("#cadence-track").innerHTML = recentReports
-    .map((item) => {
-      const height = Math.max((item.total_papers / maxCount) * 100, 18);
-      return `
-        <div class="cadence-bar ${item.data_path === state.currentPath ? "active" : ""}">
-          <div class="cadence-bar-fill" style="height:${height}%"></div>
-          <span class="cadence-bar-label">${escapeHtml(item.report_date.slice(5))}</span>
-          <strong class="cadence-bar-value">${item.total_papers}</strong>
-        </div>
-      `;
-    })
-    .join("");
+  const cadenceMatrix = buildCadenceMatrix(state.manifest?.reports || []);
+  const maxCount = Math.max(...cadenceMatrix.rows.flatMap((row) => row.entries.map((entry) => entry?.total_papers || 0)), 1);
+  document.querySelector("#cadence-track").innerHTML = `
+    <div class="cadence-matrix">
+      <div class="cadence-matrix-head">
+        <span class="cadence-matrix-corner">Date</span>
+        ${cadenceMatrix.domains
+          .map((domain) => `<span class="cadence-domain-head">${escapeHtml(domain)}</span>`)
+          .join("")}
+      </div>
+      <div class="cadence-matrix-body">
+        ${cadenceMatrix.rows
+          .map(
+            (row) => `
+              <div class="cadence-matrix-row${row.report_date === report.report_date ? " is-active" : ""}">
+                <span class="cadence-date-label">${escapeHtml(row.report_date.slice(5))}</span>
+                ${row.entries
+                  .map((entry) => {
+                    if (!entry) {
+                      return `<div class="cadence-cell cadence-cell-empty"><span>-</span></div>`;
+                    }
+                    const width = Math.max((entry.total_papers / maxCount) * 100, 12);
+                    const active = entry.data_path === state.currentPath;
+                    return `
+                      <button class="cadence-cell${active ? " active" : ""}" type="button" data-cadence-report="${escapeAttribute(
+                        entry.data_path
+                      )}">
+                        <span class="cadence-cell-bar"><span style="width:${width}%"></span></span>
+                        <strong class="cadence-cell-value">${entry.total_papers}</strong>
+                      </button>
+                    `;
+                  })
+                  .join("")}
+              </div>
+            `
+          )
+          .join("")}
+      </div>
+    </div>
+  `;
 
-  document.querySelector("#cadence-summary").textContent = buildCadenceSummary(recentReports);
+  document.querySelectorAll("[data-cadence-report]").forEach((button) => {
+    button.addEventListener("click", async () => {
+      const path = button.dataset.cadenceReport;
+      if (path && path !== state.currentPath) {
+        await loadReport(path);
+      }
+    });
+  });
+
+  document.querySelector("#cadence-summary").textContent = buildCadenceSummary(cadenceMatrix.rows, report.category);
 }
 
 function renderTopicNavigator(items) {
@@ -837,18 +905,36 @@ function hasActiveFilters() {
   return Boolean(state.domain || state.date || state.topic || state.query || state.focusOnly);
 }
 
-function buildCadenceSummary(reports) {
+function buildCadenceSummary(rows, currentDomain) {
+  const reports = rows
+    .map((row) => row.entries.find((entry) => entry?.category === currentDomain))
+    .filter(Boolean);
+
   if (!reports.length) {
     return "No daily reports are available yet.";
   }
   if (reports.length === 1) {
     return "Only one report is available so far. The cadence chart will expand automatically as more reports accumulate.";
   }
-  const latest = reports[reports.length - 1];
-  const previous = reports[reports.length - 2];
+  const [latest, previous] = reports;
   const delta = latest.total_papers - previous.total_papers;
   const direction = delta === 0 ? "unchanged" : delta > 0 ? `increased by ${delta}` : `decreased by ${Math.abs(delta)}`;
   return `${latest.report_date} has ${latest.total_papers} papers, ${direction}.`;
+}
+
+function buildCadenceMatrix(reports) {
+  const domains = ["cs.AI", "cs.CL", "cs.CV"];
+  const latestDates = [...new Set(reports.map((item) => item.report_date).filter(Boolean))]
+    .sort((left, right) => right.localeCompare(left))
+    .slice(0, CADENCE_MAX_DATES);
+
+  return {
+    domains,
+    rows: latestDates.map((report_date) => ({
+      report_date,
+      entries: domains.map((domain) => reports.find((item) => item.report_date === report_date && item.category === domain) || null),
+    })),
+  };
 }
 
 function renderTopicFlags(topicKey, topic) {

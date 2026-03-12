@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>HF Daily</title>
+    <title>MiPaper</title>
     <meta
       name="description"
       content="Hugging Face daily papers branch with date browsing, topic filtering, and focus-topic tracking."
@@ -27,9 +27,9 @@
       <header class="hero reveal">
         <div class="hero-copy">
           <div class="page-nav">
+            <a class="page-nav-link active" href="./index.html">HF Daily</a>
             <a class="page-nav-link" href="./cool-daily.html">Cool Daily</a>
             <a class="page-nav-link" href="./conference.html">Conference</a>
-            <a class="page-nav-link active" href="./index.html">HF Daily</a>
             <a class="page-nav-link" href="./like.html">Like</a>
           </div>
           <p class="eyebrow">HF DAILY PAPER</p>
@@ -102,7 +102,27 @@
             <section class="glass-card controls reveal">
               <div class="control-block">
                 <label for="hf-report-select">Date</label>
-                <select id="hf-report-select" class="control-input"></select>
+                <div class="date-input-shell">
+                  <input
+                    id="hf-report-select"
+                    class="control-input control-input-date"
+                    type="text"
+                    readonly
+                    placeholder="YYYY-MM-DD"
+                  />
+                  <button
+                    class="date-picker-button"
+                    type="button"
+                    data-date-picker-button
+                    data-date-picker-target="hf-report-select"
+                    aria-label="Open calendar"
+                    title="Open calendar"
+                  >
+                    <svg viewBox="0 0 20 20" aria-hidden="true">
+                      <path d="M6 2.75v2.1M14 2.75v2.1M3.75 7.1h12.5M5.8 4.85h8.4A1.95 1.95 0 0 1 16.15 6.8v7.4a1.95 1.95 0 0 1-1.95 1.95H5.8A1.95 1.95 0 0 1 3.85 14.2V6.8A1.95 1.95 0 0 1 5.8 4.85Z" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </div>
               </div>
               <div class="control-block">
                 <label for="hf-topic-filter">Topic Filter</label>
@@ -170,6 +190,15 @@
               <h2>Current Tags</h2>
             </div>
             <div id="hf-tag-map" class="tag-map"></div>
+          </section>
+
+          <section id="hf-cadence-section" class="glass-card cadence-panel reveal">
+            <div class="section-heading">
+              <p class="eyebrow">RECENT CADENCE</p>
+              <h2>Recent Cadence</h2>
+            </div>
+            <div id="hf-cadence-track" class="cadence-track"></div>
+            <p id="hf-cadence-summary" class="cadence-summary">-</p>
           </section>
 
           <section id="hf-spotlight-section" class="glass-card conference-panel reveal">

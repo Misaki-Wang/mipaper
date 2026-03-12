@@ -1,4 +1,5 @@
 import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js";
+import { createCalendarPicker } from "./calendar_picker.js";
 
 const manifestUrl = "./data/hf-daily/manifest.json";
 
@@ -17,6 +18,8 @@ const focusTopicKeys = new Set([
   "multimodal_generative",
   "multimodal_agents",
 ]);
+const HF_CADENCE_MAX_DATES = 5;
+const HF_ARCHIVE_MAX_CARDS = 6;
 
 const reportSelect = document.querySelector("#hf-report-select");
 const topicFilter = document.querySelector("#hf-topic-filter");
@@ -32,6 +35,7 @@ const backToTopButton = document.querySelector("#hf-back-to-top");
 const floatingTocRoot = document.querySelector("#hf-floating-toc");
 const likeRecords = new Map();
 let tocObserver = null;
+let datePicker = null;
 
 init().catch((error) => {
   console.error(error);
@@ -47,6 +51,7 @@ async function init() {
   await initLikesSync();
   const manifest = await fetchJson(manifestUrl);
   state.manifest = manifest;
+  bindDatePicker();
   populateReportSelect(manifest.reports || []);
   renderHomeCards(manifest);
 
@@ -129,14 +134,31 @@ function bindBackToTop() {
   updateVisibility();
 }
 
-function bindFilters() {
-  reportSelect.addEventListener("change", async (event) => {
-    const path = event.target.value;
-    if (path) {
-      await loadReport(path);
-    }
+function bindDatePicker() {
+  const shell = reportSelect.closest(".date-input-shell");
+  const button = shell?.querySelector("[data-date-picker-button]");
+  if (!shell || !button) {
+    return;
+  }
+  datePicker = createCalendarPicker({
+    shell,
+    input: reportSelect,
+    button,
+    getAvailableDates: () =>
+      [...new Set((state.manifest?.reports || []).map((report) => report.report_date).filter(Boolean))].sort((left, right) =>
+        left.localeCompare(right)
+      ),
+    getValue: () => state.report?.report_date || "",
+    onSelect: async (iso) => {
+      const matchedReport = (state.manifest?.reports || []).find((report) => report.report_date === iso);
+      if (matchedReport) {
+        await loadReport(matchedReport.data_path);
+      }
+    },
   });
+}
 
+function bindFilters() {
   topicFilter.addEventListener("change", (event) => {
     state.topic = event.target.value;
     renderReport();
@@ -181,26 +203,22 @@ async function loadReport(path) {
   state.author = "";
   state.topic = "";
   state.focusOnly = false;
-  reportSelect.value = path;
+  reportSelect.value = report.report_date || "";
   authorFilter.value = "";
   searchInput.value = "";
   topicFilter.value = "";
   focusOnlyInput.checked = false;
   populateTopicFilter(report.topics || []);
+  datePicker?.sync();
   renderHomeCards(state.manifest, path);
   renderReport();
 }
 
 function populateReportSelect(reports) {
-  reportSelect.innerHTML = reports
-    .map(
-      (report) => `
-        <option value="${escapeAttribute(report.data_path)}">
-          ${escapeHtml(report.report_date)} · ${report.total_papers} papers
-        </option>
-      `
-    )
-    .join("");
+  const dates = reports.map((report) => report.report_date).filter(Boolean).sort((left, right) => left.localeCompare(right));
+  reportSelect.disabled = !dates.length;
+  reportSelect.value = state.report?.report_date || reports[0]?.report_date || "";
+  datePicker?.refresh();
 }
 
 function populateTopicFilter(topics) {
@@ -216,6 +234,7 @@ function renderHomeCards(manifest, activePath = "") {
   const root = document.querySelector("#hf-home-cards");
   const summary = document.querySelector("#hf-board-summary");
   const reports = manifest?.reports || [];
+  const visibleReports = reports.slice(0, HF_ARCHIVE_MAX_CARDS);
 
   if (!reports.length) {
     summary.textContent = "No Hugging Face daily snapshots are available yet.";
@@ -224,8 +243,8 @@ function renderHomeCards(manifest, activePath = "") {
   }
 
   const totalPapers = reports.reduce((sum, report) => sum + (report.total_papers || 0), 0);
-  summary.textContent = `Currently indexed: ${reports.length} dates with ${totalPapers} Hugging Face daily papers. Click a card to switch the date.`;
-  root.innerHTML = reports
+  summary.textContent = `Currently indexed: ${reports.length} dates with ${totalPapers} Hugging Face daily papers. Showing the latest ${visibleReports.length} dates.`;
+  root.innerHTML = visibleReports
     .map((report) => {
       const topTopic = report.top_topics?.[0];
       const topSubmitter = report.top_submitters?.[0];
@@ -273,6 +292,7 @@ function renderReport() {
   renderHero(report, visiblePapers);
   renderOverview(report, visiblePapers, topics);
   renderTagMap(report);
+  renderCadence(report);
   renderDistribution(report, visiblePapers);
   renderSpotlight(report, visiblePapers);
   renderResults(report, visiblePapers, topics);
@@ -280,6 +300,7 @@ function renderReport() {
   renderFloatingToc([
     { id: "hf-overview-section", label: "Overview" },
     { id: "hf-tags-section", label: "Current Tags" },
+    { id: "hf-cadence-section", label: "Recent Cadence" },
     { id: "hf-spotlight-section", label: "Spotlight" },
     { id: "hf-results-section", label: "Results" },
     ...topics.slice(0, 10).map((topic) => ({
@@ -376,6 +397,58 @@ function renderDistribution(report, visiblePapers) {
     .join("");
 }
 
+function renderCadence(report) {
+  const cadenceMatrix = buildCadenceMatrix(state.manifest?.reports || []);
+  const maxCount = Math.max(...cadenceMatrix.rows.map((row) => row.entry?.total_papers || 0), 1);
+  document.querySelector("#hf-cadence-track").innerHTML = `
+    <div class="hf-cadence-list">
+      ${cadenceMatrix.rows
+        .map((row) => {
+          const entry = row.entry;
+          if (!entry) {
+            return "";
+          }
+          const width = Math.max((entry.total_papers / maxCount) * 100, 12);
+          const active = entry.data_path === state.currentPath;
+          return `
+            <button class="hf-cadence-item${active ? " is-active" : ""}" type="button" data-hf-cadence-report="${escapeAttribute(
+              entry.data_path
+            )}">
+              <div class="hf-cadence-item-top">
+                <div class="hf-cadence-date-block">
+                  <span class="hf-cadence-date">${escapeHtml(row.report_date.slice(5))}</span>
+                  <span class="hf-cadence-year">${escapeHtml(row.report_date.slice(0, 4))}</span>
+                </div>
+                <div class="hf-cadence-meta">
+                  ${active ? `<span class="hf-cadence-badge is-active">Current</span>` : ""}
+                </div>
+              </div>
+              <div class="hf-cadence-bar-shell">
+                <span class="hf-cadence-bar" style="width:${width}%"></span>
+              </div>
+              <div class="hf-cadence-item-bottom">
+                <strong class="hf-cadence-value">${entry.total_papers}</strong>
+                <span class="hf-cadence-caption">papers</span>
+              </div>
+            </button>
+          `;
+        })
+        .join("")}
+    </div>
+  `;
+
+  document.querySelectorAll("[data-hf-cadence-report]").forEach((button) => {
+    button.addEventListener("click", async () => {
+      const path = button.dataset.hfCadenceReport;
+      if (path && path !== state.currentPath) {
+        await loadReport(path);
+      }
+    });
+  });
+
+  document.querySelector("#hf-cadence-summary").textContent = buildCadenceSummary(cadenceMatrix.rows);
+}
+
 function renderSpotlight(report, visiblePapers) {
   const root = document.querySelector("#hf-spotlight");
   const prioritized = visiblePapers
@@ -429,7 +502,6 @@ function renderTopicSections(topics) {
             </div>
             <div class="conference-subject-meta">
               <span>${section.papers.length} papers</span>
-              <span>${escapeHtml(section.papers[0]?.submitted_by || "No submitter")}</span>
             </div>
           </div>
           <div class="conference-paper-grid">
@@ -526,6 +598,33 @@ function renderLikeButton(paper) {
       <span class="paper-link-text">Like</span>
     </button>
   `;
+}
+
+function buildCadenceMatrix(reports) {
+  const latestDates = [...new Set(reports.map((item) => item.report_date).filter(Boolean))]
+    .sort((left, right) => right.localeCompare(left))
+    .slice(0, HF_CADENCE_MAX_DATES);
+
+  return {
+    rows: latestDates.map((report_date) => ({
+      report_date,
+      entry: reports.find((item) => item.report_date === report_date) || null,
+    })),
+  };
+}
+
+function buildCadenceSummary(rows) {
+  const reports = rows.map((row) => row.entry).filter(Boolean);
+  if (!reports.length) {
+    return "No HF Daily reports are available yet.";
+  }
+  if (reports.length === 1) {
+    return "Only one HF Daily report is available so far.";
+  }
+  const [latest, previous] = reports;
+  const delta = latest.total_papers - previous.total_papers;
+  const direction = delta === 0 ? "unchanged" : delta > 0 ? `increased by ${delta}` : `decreased by ${Math.abs(delta)}`;
+  return `${latest.report_date} has ${latest.total_papers} papers, ${direction}.`;
 }
 
 function rememberLikeRecord(paper) {
