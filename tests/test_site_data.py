@@ -3,7 +3,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from cool_paper.site_data import build_site_manifest
+from mipaper.site_data import build_site_manifest
 
 
 class SiteDataTest(unittest.TestCase):
@@ -15,7 +15,8 @@ class SiteDataTest(unittest.TestCase):
             reports_dir.mkdir(parents=True)
 
             def write_report(category: str, total_papers: int) -> None:
-                report_path = reports_dir / f"{category}-2026-03-06.json"
+                report_path = reports_dir / "2026-03-06" / f"{category}-2026-03-06.json"
+                report_path.parent.mkdir(parents=True, exist_ok=True)
                 report_path.write_text(
                     json.dumps(
                         {
@@ -39,7 +40,8 @@ class SiteDataTest(unittest.TestCase):
             write_report("cs.CL", 20)
             write_report("cs.CV", 30)
 
-            older_ai_path = reports_dir / "cs.AI-2026-03-05.json"
+            older_ai_path = reports_dir / "2026-03-05" / "cs.AI-2026-03-05.json"
+            older_ai_path.parent.mkdir(parents=True, exist_ok=True)
             older_ai_path.write_text(
                 json.dumps(
                     {
@@ -63,7 +65,7 @@ class SiteDataTest(unittest.TestCase):
             manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
 
             self.assertEqual(4, manifest["reports_count"])
-            self.assertEqual("data/daily/reports/cs.AI-2026-03-06.json", manifest["default_report_path"])
+            self.assertEqual("data/daily/reports/2026-03-06/cs.AI-2026-03-06.json", manifest["default_report_path"])
             self.assertEqual(["cs.AI", "cs.CL", "cs.CV"], manifest["category_order"])
             self.assertEqual(
                 ["cs.AI", "cs.CL", "cs.CV"],
@@ -71,10 +73,10 @@ class SiteDataTest(unittest.TestCase):
             )
             self.assertEqual("2026-03-06", manifest["reports"][0]["report_date"])
             self.assertEqual(
-                "data/daily/reports/cs.AI-2026-03-06.json",
+                "data/daily/reports/2026-03-06/cs.AI-2026-03-06.json",
                 manifest["reports"][0]["data_path"],
             )
-            self.assertTrue((site_data_dir / "reports" / "cs.AI-2026-03-06.json").exists())
+            self.assertTrue((site_data_dir / "reports" / "2026-03-06" / "cs.AI-2026-03-06.json").exists())
 
 
 if __name__ == "__main__":

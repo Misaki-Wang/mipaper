@@ -1,7 +1,7 @@
 import unittest
 
-from cool_paper.conference_reporting import build_conference_json_payload, render_markdown_conference_report
-from cool_paper.models import Paper
+from mipaper.conference_reporting import build_conference_json_payload, render_markdown_conference_report
+from mipaper.models import Paper
 
 
 class ConferenceReportingTest(unittest.TestCase):

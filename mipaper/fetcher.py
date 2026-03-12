@@ -8,7 +8,7 @@ from typing import Callable, Dict, List
 from urllib.parse import parse_qs, urlencode, urljoin, urlparse
 from urllib.request import Request, urlopen
 
-from cool_paper.models import HFDailyPaper, Paper, TrendingRepo
+from mipaper.models import HFDailyPaper, Paper, TrendingRepo
 
 PAPERS_COOL_ROOT = "https://papers.cool"
 HUGGING_FACE_ROOT = "https://huggingface.co"

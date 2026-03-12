@@ -1,8 +1,8 @@
 import json
 import unittest
 
-from cool_paper.codex_classifier import build_output_schema, validate_assignments
-from cool_paper.models import Paper
+from mipaper.codex_classifier import build_output_schema, validate_assignments
+from mipaper.models import Paper
 
 
 class CodexClassifierTest(unittest.TestCase):

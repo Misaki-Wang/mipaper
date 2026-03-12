@@ -3,7 +3,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from cool_paper.hf_site_data import build_hf_site_manifest
+from mipaper.hf_site_data import build_hf_site_manifest
 
 
 class HFSiteDataTest(unittest.TestCase):
@@ -15,7 +15,9 @@ class HFSiteDataTest(unittest.TestCase):
             reports_dir.mkdir(parents=True)
 
             for report_date in ("2026-03-09", "2026-03-08"):
-                (reports_dir / f"hf-daily-{report_date}.json").write_text(
+                report_path = reports_dir / report_date / f"hf-daily-{report_date}.json"
+                report_path.parent.mkdir(parents=True, exist_ok=True)
+                report_path.write_text(
                     json.dumps(
                         {
                             "generated_at": "2026-03-10T00:00:00Z",
@@ -39,7 +41,7 @@ class HFSiteDataTest(unittest.TestCase):
             manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
 
             self.assertEqual(2, manifest["reports_count"])
-            self.assertEqual("data/hf-daily/reports/hf-daily-2026-03-09.json", manifest["default_report_path"])
+            self.assertEqual("data/hf-daily/reports/2026-03-09/hf-daily-2026-03-09.json", manifest["default_report_path"])
             self.assertEqual("2026-03-09", manifest["reports"][0]["report_date"])
             self.assertEqual("taesiri", manifest["reports"][0]["top_submitters"][0]["submitted_by"])
 

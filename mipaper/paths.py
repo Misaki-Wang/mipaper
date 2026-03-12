@@ -26,3 +26,19 @@ DAILY_SITE_DATA_DIR = SITE_DATA_DIR / "daily"
 CONFERENCE_SITE_DATA_DIR = SITE_DATA_DIR / "conference"
 HF_DAILY_SITE_DATA_DIR = SITE_DATA_DIR / "hf-daily"
 TRENDING_SITE_DATA_DIR = SITE_DATA_DIR / "trending"
+
+
+def daily_report_dir(report_date: str) -> Path:
+    return DAILY_REPORTS_DIR / report_date
+
+
+def hf_daily_report_dir(report_date: str) -> Path:
+    return HF_DAILY_REPORTS_DIR / report_date
+
+
+def trending_report_dir(snapshot_date: str) -> Path:
+    return TRENDING_REPORTS_DIR / snapshot_date
+
+
+def conference_report_dir(venue: str) -> Path:
+    return CONFERENCE_REPORTS_DIR / venue

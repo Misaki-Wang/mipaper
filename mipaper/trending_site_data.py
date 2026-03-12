@@ -15,7 +15,9 @@ def build_trending_site_manifest(reports_dir: Path, site_data_dir: Path) -> Path
     manifest_reports = []
     for report in reports:
         source_path = report["source_path"]
-        destination = report_output_dir / source_path.name
+        relative_path = source_path.relative_to(reports_dir)
+        destination = report_output_dir / relative_path
+        destination.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(source_path, destination)
         manifest_reports.append(
             {
@@ -27,7 +29,7 @@ def build_trending_site_manifest(reports_dir: Path, site_data_dir: Path) -> Path
                 "source_url": report["source_url"],
                 "top_languages": report.get("language_distribution", [])[:5],
                 "top_repositories": report.get("top_repositories", [])[:5],
-                "data_path": f"data/trending/reports/{source_path.name}",
+                "data_path": f"data/trending/reports/{relative_path.as_posix()}",
             }
         )
 
@@ -45,7 +47,7 @@ def build_trending_site_manifest(reports_dir: Path, site_data_dir: Path) -> Path
 
 def load_trending_reports(reports_dir: Path) -> List[dict]:
     reports = []
-    for path in sorted(reports_dir.glob("*.json"), reverse=True):
+    for path in sorted(reports_dir.rglob("*.json"), reverse=True):
         payload = json.loads(path.read_text(encoding="utf-8"))
         payload["source_path"] = path
         reports.append(payload)
@@ -54,5 +56,8 @@ def load_trending_reports(reports_dir: Path) -> List[dict]:
 
 
 def clear_generated_json(directory: Path) -> None:
-    for path in directory.glob("*.json"):
+    for path in directory.rglob("*.json"):
         path.unlink()
+    for path in sorted(directory.rglob("*"), reverse=True):
+        if path.is_dir() and not any(path.iterdir()):
+            path.rmdir()

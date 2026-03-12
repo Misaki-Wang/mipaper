@@ -40,13 +40,13 @@ Python scripts:
 
 Python modules:
 
-- [fetcher.py](/Users/misaki/Code/cool_paper/cool_paper/fetcher.py)
-- [topics.py](/Users/misaki/Code/cool_paper/cool_paper/topics.py)
-- [reporting.py](/Users/misaki/Code/cool_paper/cool_paper/reporting.py)
-- [conference_reporting.py](/Users/misaki/Code/cool_paper/cool_paper/conference_reporting.py)
-- [hf_reporting.py](/Users/misaki/Code/cool_paper/cool_paper/hf_reporting.py)
-- [site_data.py](/Users/misaki/Code/cool_paper/cool_paper/site_data.py)
-- [scheduler.py](/Users/misaki/Code/cool_paper/cool_paper/scheduler.py)
+- [fetcher.py](/Users/misaki/Code/cool_paper/mipaper/fetcher.py)
+- [topics.py](/Users/misaki/Code/cool_paper/mipaper/topics.py)
+- [reporting.py](/Users/misaki/Code/cool_paper/mipaper/reporting.py)
+- [conference_reporting.py](/Users/misaki/Code/cool_paper/mipaper/conference_reporting.py)
+- [hf_reporting.py](/Users/misaki/Code/cool_paper/mipaper/hf_reporting.py)
+- [site_data.py](/Users/misaki/Code/cool_paper/mipaper/site_data.py)
+- [scheduler.py](/Users/misaki/Code/cool_paper/mipaper/scheduler.py)
 
 Frontend pages:
 

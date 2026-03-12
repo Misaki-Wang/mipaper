@@ -4,7 +4,7 @@ import re
 from dataclasses import dataclass
 from typing import Dict, Iterable, List, Sequence, Tuple
 
-from cool_paper.models import Paper
+from mipaper.models import Paper
 
 
 @dataclass(frozen=True)

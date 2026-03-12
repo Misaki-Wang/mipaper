@@ -11,12 +11,12 @@ ROOT_DIR = Path(__file__).resolve().parents[1]
 if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
-from cool_paper.codex_classifier import classify_with_codex
-from cool_paper.fetcher import DEFAULT_SHOW, build_feed_url, fetch_feed_html, parse_feed_html
-from cool_paper.notifiers import EmailNotifier
-from cool_paper.paths import DAILY_REPORTS_DIR
-from cool_paper.reporting import build_json_payload, render_markdown_report, write_outputs
-from cool_paper.topics import assign_topics
+from mipaper.codex_classifier import classify_with_codex
+from mipaper.fetcher import DEFAULT_SHOW, build_feed_url, fetch_feed_html, parse_feed_html
+from mipaper.notifiers import EmailNotifier
+from mipaper.paths import DAILY_REPORTS_DIR, daily_report_dir
+from mipaper.reporting import build_json_payload, render_markdown_report, write_outputs
+from mipaper.topics import assign_topics
 
 
 def parse_args() -> argparse.Namespace:
@@ -66,6 +66,12 @@ def resolve_report_date(raw_value: str, timezone_name: str, now: datetime | None
 def main() -> int:
     args = parse_args()
     report_date = resolve_report_date(args.date, args.timezone)
+    base_output_dir = Path(args.output_dir)
+    default_output_dir = DAILY_REPORTS_DIR.relative_to(ROOT_DIR)
+    if not base_output_dir.is_absolute() and base_output_dir == default_output_dir:
+        output_dir = daily_report_dir(report_date)
+    else:
+        output_dir = base_output_dir / report_date
     source_url = build_feed_url(args.category, report_date, show=args.show)
     if args.html_path:
         html_text = Path(args.html_path).read_text(encoding="utf-8")
@@ -98,7 +104,7 @@ def main() -> int:
         classifier_name=args.classifier,
     )
     base_name = f"{args.category}-{report_date}"
-    markdown_path, json_path = write_outputs(Path(args.output_dir), base_name, markdown_text, payload)
+    markdown_path, json_path = write_outputs(output_dir, base_name, markdown_text, payload)
 
     print(f"Generated report for {report_date}:")
     print(f"- Markdown: {markdown_path}")

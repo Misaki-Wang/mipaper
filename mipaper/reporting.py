@@ -7,8 +7,8 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict, Iterable, List
 
-from cool_paper.models import Paper
-from cool_paper.topics import FOCUS_TOPIC_KEYS, TOPIC_LABELS
+from mipaper.models import Paper
+from mipaper.topics import FOCUS_TOPIC_KEYS, TOPIC_LABELS
 
 
 def group_papers_by_topic(papers: Iterable[Paper]) -> Dict[str, List[Paper]]:

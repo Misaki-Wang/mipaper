@@ -7,8 +7,8 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict, Iterable, List
 
-from cool_paper.models import HFDailyPaper
-from cool_paper.reporting import focus_topic_distribution, topic_distribution
+from mipaper.models import HFDailyPaper
+from mipaper.reporting import focus_topic_distribution, topic_distribution
 
 
 def group_hf_papers_by_topic(papers: Iterable[HFDailyPaper]) -> Dict[str, List[HFDailyPaper]]:

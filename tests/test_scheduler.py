@@ -3,7 +3,7 @@ from datetime import datetime
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
-from cool_paper.scheduler import (
+from mipaper.scheduler import (
     cool_daily_backfill_dates,
     current_week_business_days,
     hf_daily_backfill_dates,

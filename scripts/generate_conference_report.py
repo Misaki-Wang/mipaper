@@ -9,15 +9,15 @@ ROOT_DIR = Path(__file__).resolve().parents[1]
 if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
-from cool_paper.codex_classifier import classify_with_codex
-from cool_paper.conference_reporting import (
+from mipaper.codex_classifier import classify_with_codex
+from mipaper.conference_reporting import (
     build_conference_json_payload,
     render_markdown_conference_report,
     write_conference_outputs,
 )
-from cool_paper.fetcher import build_venue_url, extract_total_papers, fetch_complete_venue_snapshot, parse_feed_html
-from cool_paper.paths import CONFERENCE_REPORTS_DIR
-from cool_paper.topics import assign_topics
+from mipaper.fetcher import build_venue_url, extract_total_papers, fetch_complete_venue_snapshot, parse_feed_html
+from mipaper.paths import CONFERENCE_REPORTS_DIR, conference_report_dir
+from mipaper.topics import assign_topics
 
 
 def parse_args() -> argparse.Namespace:
@@ -41,6 +41,12 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> int:
     args = parse_args()
+    base_output_dir = Path(args.output_dir)
+    default_output_dir = CONFERENCE_REPORTS_DIR.relative_to(ROOT_DIR)
+    if not base_output_dir.is_absolute() and base_output_dir == default_output_dir:
+        output_dir = conference_report_dir(args.venue)
+    else:
+        output_dir = base_output_dir / args.venue
     source_url = build_venue_url(args.venue, group=args.group)
     requested_show = None
     declared_total = None
@@ -82,7 +88,7 @@ def main() -> int:
     )
 
     base_name = args.venue if not args.group else f"{args.venue}-{args.group}"
-    markdown_path, json_path = write_conference_outputs(Path(args.output_dir), base_name, markdown_text, payload)
+    markdown_path, json_path = write_conference_outputs(output_dir, base_name, markdown_text, payload)
     print(f"Generated conference report for {args.venue}:")
     print(f"- Markdown: {markdown_path}")
     print(f"- JSON: {json_path}")

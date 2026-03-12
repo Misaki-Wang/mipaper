@@ -11,9 +11,9 @@ ROOT_DIR = Path(__file__).resolve().parents[1]
 if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
-from cool_paper.fetcher import build_github_trending_url, fetch_feed_html, parse_github_trending_html
-from cool_paper.paths import TRENDING_REPORTS_DIR
-from cool_paper.trending_reporting import (
+from mipaper.fetcher import build_github_trending_url, fetch_feed_html, parse_github_trending_html
+from mipaper.paths import TRENDING_REPORTS_DIR, trending_report_dir
+from mipaper.trending_reporting import (
     build_trending_json_payload,
     render_markdown_trending_report,
     write_trending_outputs,
@@ -44,6 +44,12 @@ def resolve_snapshot_date(raw_value: str, timezone_name: str) -> str:
 def main() -> int:
     args = parse_args()
     snapshot_date = resolve_snapshot_date(args.date, args.timezone)
+    base_output_dir = Path(args.output_dir)
+    default_output_dir = TRENDING_REPORTS_DIR.relative_to(ROOT_DIR)
+    if not base_output_dir.is_absolute() and base_output_dir == default_output_dir:
+        output_dir = trending_report_dir(snapshot_date)
+    else:
+        output_dir = base_output_dir / snapshot_date
     source_url = build_github_trending_url(args.since, args.spoken_language_code)
 
     if args.html_path:
@@ -66,7 +72,7 @@ def main() -> int:
     )
 
     base_name = f"trending-{snapshot_date}"
-    markdown_path, json_path = write_trending_outputs(Path(args.output_dir), base_name, markdown_text, payload)
+    markdown_path, json_path = write_trending_outputs(output_dir, base_name, markdown_text, payload)
     print(f"Generated trending report for {snapshot_date}:")
     print(f"- Markdown: {markdown_path}")
     print(f"- JSON: {json_path}")

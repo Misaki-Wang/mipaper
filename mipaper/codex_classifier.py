@@ -6,7 +6,7 @@ import tempfile
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Sequence, TypeVar
 
-from cool_paper.topics import OTHER_TOPIC, TOPICS, TOPIC_LABELS, assign_topics
+from mipaper.topics import OTHER_TOPIC, TOPICS, TOPIC_LABELS, assign_topics
 
 T = TypeVar("T")
 

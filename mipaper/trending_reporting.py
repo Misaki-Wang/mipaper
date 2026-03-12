@@ -7,7 +7,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict, Iterable, List
 
-from cool_paper.models import TrendingRepo
+from mipaper.models import TrendingRepo
 
 
 def group_repos_by_language(repos: Iterable[TrendingRepo]) -> Dict[str, List[TrendingRepo]]:

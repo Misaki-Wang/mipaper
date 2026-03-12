@@ -1,7 +1,7 @@
 import unittest
 
-from cool_paper.hf_reporting import build_hf_json_payload, render_markdown_hf_report
-from cool_paper.models import HFDailyPaper
+from mipaper.hf_reporting import build_hf_json_payload, render_markdown_hf_report
+from mipaper.models import HFDailyPaper
 
 
 class HFDailyReportingTest(unittest.TestCase):

@@ -9,9 +9,9 @@ ROOT_DIR = Path(__file__).resolve().parents[1]
 if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
-from cool_paper.conference_site_data import build_conference_site_manifest
-from cool_paper.hf_site_data import build_hf_site_manifest
-from cool_paper.paths import (
+from mipaper.conference_site_data import build_conference_site_manifest
+from mipaper.hf_site_data import build_hf_site_manifest
+from mipaper.paths import (
     CONFERENCE_REPORTS_DIR,
     CONFERENCE_SITE_DATA_DIR,
     DAILY_REPORTS_DIR,
@@ -21,8 +21,8 @@ from cool_paper.paths import (
     TRENDING_REPORTS_DIR,
     TRENDING_SITE_DATA_DIR,
 )
-from cool_paper.site_data import build_site_manifest
-from cool_paper.trending_site_data import build_trending_site_manifest
+from mipaper.site_data import build_site_manifest
+from mipaper.trending_site_data import build_trending_site_manifest
 
 
 def main() -> int:

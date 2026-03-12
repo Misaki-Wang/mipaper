@@ -1,7 +1,7 @@
 import unittest
 
-from cool_paper.models import TrendingRepo
-from cool_paper.trending_reporting import build_trending_json_payload, render_markdown_trending_report
+from mipaper.models import TrendingRepo
+from mipaper.trending_reporting import build_trending_json_payload, render_markdown_trending_report
 
 
 class TrendingReportingTest(unittest.TestCase):

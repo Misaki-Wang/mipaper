@@ -1,7 +1,7 @@
 import unittest
 
-from cool_paper.models import Paper
-from cool_paper.reporting import build_json_payload, render_markdown_report
+from mipaper.models import Paper
+from mipaper.reporting import build_json_payload, render_markdown_report
 
 
 class ReportingTest(unittest.TestCase):

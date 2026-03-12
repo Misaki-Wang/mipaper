@@ -11,11 +11,11 @@ ROOT_DIR = Path(__file__).resolve().parents[1]
 if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
-from cool_paper.codex_classifier import classify_with_codex
-from cool_paper.fetcher import build_hf_daily_url, fetch_feed_html, parse_hf_daily_html
-from cool_paper.hf_reporting import build_hf_json_payload, render_markdown_hf_report, write_hf_outputs
-from cool_paper.paths import HF_DAILY_REPORTS_DIR
-from cool_paper.topics import assign_topics
+from mipaper.codex_classifier import classify_with_codex
+from mipaper.fetcher import build_hf_daily_url, fetch_feed_html, parse_hf_daily_html
+from mipaper.hf_reporting import build_hf_json_payload, render_markdown_hf_report, write_hf_outputs
+from mipaper.paths import HF_DAILY_REPORTS_DIR, hf_daily_report_dir
+from mipaper.topics import assign_topics
 
 
 def parse_args() -> argparse.Namespace:
@@ -48,6 +48,12 @@ def resolve_report_date(raw_value: str, timezone_name: str) -> str:
 def main() -> int:
     args = parse_args()
     report_date = resolve_report_date(args.date, args.timezone)
+    base_output_dir = Path(args.output_dir)
+    default_output_dir = HF_DAILY_REPORTS_DIR.relative_to(ROOT_DIR)
+    if not base_output_dir.is_absolute() and base_output_dir == default_output_dir:
+        output_dir = hf_daily_report_dir(report_date)
+    else:
+        output_dir = base_output_dir / report_date
     source_url = build_hf_daily_url(report_date)
 
     if args.html_path:
@@ -78,7 +84,7 @@ def main() -> int:
     )
 
     base_name = f"hf-daily-{report_date}"
-    markdown_path, json_path = write_hf_outputs(Path(args.output_dir), base_name, markdown_text, payload)
+    markdown_path, json_path = write_hf_outputs(output_dir, base_name, markdown_text, payload)
     print(f"Generated HF daily report for {report_date}:")
     print(f"- Markdown: {markdown_path}")
     print(f"- JSON: {json_path}")

@@ -1,4 +1,4 @@
-# cool_paper
+# MiPaper
 
 This project crawls `papers.cool`, Hugging Face daily papers, and GitHub Trending, classifies papers into topics where applicable, generates Markdown and JSON reports, and serves a static research dashboard with cross-device likes powered by Supabase.
 
@@ -20,15 +20,15 @@ This project crawls `papers.cool`, Hugging Face daily papers, and GitHub Trendin
 ## Layout
 
 ```text
-cool_paper/
-├── cool_paper/                  # Python package: fetch, classify, report, schedule
+repo-root/
+├── mipaper/                     # Python package: fetch, classify, report, schedule
 ├── docs/                        # Handoff and project notes
 ├── ops/                         # Operational templates
 │   ├── launchd/                 # macOS launchd templates
 │   └── wsl/                     # WSL cron templates
 ├── scripts/                     # Report generators and scheduled entrypoints
 ├── site/                        # Static site pages, styles, and browser scripts
-├── reports/                     # Generated Markdown / JSON outputs
+├── reports/                     # Generated outputs, grouped as <domain>/<date-or-key>/
 ├── samples/                     # Offline HTML snapshots
 ├── supabase/                    # SQL schema
 └── tests/                       # Unit tests

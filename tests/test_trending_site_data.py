@@ -3,7 +3,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from cool_paper.trending_site_data import build_trending_site_manifest
+from mipaper.trending_site_data import build_trending_site_manifest
 
 
 class TrendingSiteDataTest(unittest.TestCase):
@@ -15,7 +15,9 @@ class TrendingSiteDataTest(unittest.TestCase):
             reports_dir.mkdir(parents=True)
 
             for snapshot_date in ("2026-03-12", "2026-03-05"):
-                (reports_dir / f"trending-{snapshot_date}.json").write_text(
+                report_path = reports_dir / snapshot_date / f"trending-{snapshot_date}.json"
+                report_path.parent.mkdir(parents=True, exist_ok=True)
+                report_path.write_text(
                     json.dumps(
                         {
                             "generated_at": "2026-03-12T00:00:00Z",
@@ -38,7 +40,7 @@ class TrendingSiteDataTest(unittest.TestCase):
             manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
 
             self.assertEqual(2, manifest["reports_count"])
-            self.assertEqual("data/trending/reports/trending-2026-03-12.json", manifest["default_report_path"])
+            self.assertEqual("data/trending/reports/2026-03-12/trending-2026-03-12.json", manifest["default_report_path"])
             self.assertEqual("2026-03-12", manifest["reports"][0]["snapshot_date"])
             self.assertEqual("Python", manifest["reports"][0]["top_languages"][0]["language"])
 

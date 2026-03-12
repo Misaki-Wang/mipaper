@@ -1,6 +1,6 @@
 import unittest
 
-from cool_paper.topics import classify_title
+from mipaper.topics import classify_title
 
 
 class TopicClassifierTest(unittest.TestCase):

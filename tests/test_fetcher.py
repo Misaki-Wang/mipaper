@@ -1,6 +1,6 @@
 import unittest
 
-from cool_paper.fetcher import (
+from mipaper.fetcher import (
     build_github_trending_url,
     build_hf_daily_url,
     build_venue_url,

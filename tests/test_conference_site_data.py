@@ -3,7 +3,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from cool_paper.conference_site_data import build_conference_site_manifest
+from mipaper.conference_site_data import build_conference_site_manifest
 
 
 class ConferenceSiteDataTest(unittest.TestCase):
@@ -15,7 +15,9 @@ class ConferenceSiteDataTest(unittest.TestCase):
             reports_dir.mkdir(parents=True)
 
             for venue in ("CVPR.2025", "CVPR.2024", "ICLR.2026"):
-                (reports_dir / f"{venue}.json").write_text(
+                report_path = reports_dir / venue / f"{venue}.json"
+                report_path.parent.mkdir(parents=True, exist_ok=True)
+                report_path.write_text(
                     json.dumps(
                         {
                             "venue": venue,
@@ -40,7 +42,7 @@ class ConferenceSiteDataTest(unittest.TestCase):
             manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
 
             self.assertEqual(3, manifest["reports_count"])
-            self.assertEqual("data/conference/reports/ICLR.2026.json", manifest["default_report_path"])
+            self.assertEqual("data/conference/reports/ICLR.2026/ICLR.2026.json", manifest["default_report_path"])
             self.assertEqual("ICLR.2026", manifest["reports"][0]["venue"])
             self.assertEqual(12, manifest["reports"][0]["declared_total"])
             self.assertEqual(83.33, manifest["reports"][0]["capture_ratio"])
