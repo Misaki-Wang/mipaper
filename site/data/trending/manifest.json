@@ -1,7 +1,137 @@
 {
-  "reports_count": 1,
-  "default_report_path": "data/trending/reports/2026-03-12/trending-2026-03-12.json",
+  "reports_count": 2,
+  "default_report_path": "data/trending/reports/2026-03-13/trending-2026-03-13.json",
   "reports": [
+    {
+      "slug": "trending-2026-03-13",
+      "snapshot_date": "2026-03-13",
+      "since": "weekly",
+      "total_repositories": 13,
+      "generated_at": "2026-03-13T11:44:00Z",
+      "source_url": "https://github.com/trending?since=weekly&spoken_language_code=",
+      "top_languages": [
+        {
+          "language": "Python",
+          "count": 9,
+          "share": 69.23076923076923
+        },
+        {
+          "language": "TypeScript",
+          "count": 2,
+          "share": 15.384615384615385
+        },
+        {
+          "language": "Jupyter Notebook",
+          "count": 1,
+          "share": 7.6923076923076925
+        },
+        {
+          "language": "Shell",
+          "count": 1,
+          "share": 7.6923076923076925
+        }
+      ],
+      "top_repositories": [
+        {
+          "snapshot_date": "2026-03-13",
+          "repo_id": "msitarzewski/agency-agents",
+          "owner": "msitarzewski",
+          "name": "agency-agents",
+          "full_name": "msitarzewski/agency-agents",
+          "repo_url": "https://github.com/msitarzewski/agency-agents",
+          "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+          "language": "Shell",
+          "stars": 37683,
+          "forks": 5679,
+          "stars_this_week": 26046,
+          "built_by": [
+            "msitarzewski",
+            "claude",
+            "jnMetaCode",
+            "4shil",
+            "victorkzam"
+          ]
+        },
+        {
+          "snapshot_date": "2026-03-13",
+          "repo_id": "666ghj/mirofish",
+          "owner": "666ghj",
+          "name": "MiroFish",
+          "full_name": "666ghj/MiroFish",
+          "repo_url": "https://github.com/666ghj/MiroFish",
+          "description": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物",
+          "language": "Python",
+          "stars": 20597,
+          "forks": 2224,
+          "stars_this_week": 13400,
+          "built_by": [
+            "666ghj",
+            "cursoragent"
+          ]
+        },
+        {
+          "snapshot_date": "2026-03-13",
+          "repo_id": "moeru-ai/airi",
+          "owner": "moeru-ai",
+          "name": "airi",
+          "full_name": "moeru-ai/airi",
+          "repo_url": "https://github.com/moeru-ai/airi",
+          "description": "💖🧸 Self hosted, you-owned Grok Companion, a container of souls of waifu, cyber livings to bring them into our worlds, wishing to achieve Neuro-sama's altitude. Capable of realtime voice chat, Minecraft, Factorio playing. Web / macOS / Windows supported.",
+          "language": "TypeScript",
+          "stars": 33199,
+          "forks": 3272,
+          "stars_this_week": 6582,
+          "built_by": [
+            "nekomeowww",
+            "shinohara-rin",
+            "luoling8192",
+            "LemonNekoGH",
+            "sumimakito"
+          ]
+        },
+        {
+          "snapshot_date": "2026-03-13",
+          "repo_id": "bytedance/deer-flow",
+          "owner": "bytedance",
+          "name": "deer-flow",
+          "full_name": "bytedance/deer-flow",
+          "repo_url": "https://github.com/bytedance/deer-flow",
+          "description": "An open-source SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skills and subagents, it handles different levels of tasks that could take minutes to hours.",
+          "language": "Python",
+          "stars": 30102,
+          "forks": 3639,
+          "stars_this_week": 5125,
+          "built_by": [
+            "MagicCube",
+            "WillemJiang",
+            "hetaoBackend",
+            "henry-byted",
+            "claude"
+          ]
+        },
+        {
+          "snapshot_date": "2026-03-13",
+          "repo_id": "nousresearch/hermes-agent",
+          "owner": "NousResearch",
+          "name": "hermes-agent",
+          "full_name": "NousResearch/hermes-agent",
+          "repo_url": "https://github.com/NousResearch/hermes-agent",
+          "description": "The agent that grows with you",
+          "language": "Python",
+          "stars": 6512,
+          "forks": 723,
+          "stars_this_week": 4144,
+          "built_by": [
+            "teknium1",
+            "0xbyt4",
+            "dmahan93",
+            "claude",
+            "rovle"
+          ]
+        }
+      ],
+      "data_path": "data/trending/reports/2026-03-13/trending-2026-03-13.json"
+    },
     {
       "slug": "trending-2026-03-12",
       "snapshot_date": "2026-03-12",
