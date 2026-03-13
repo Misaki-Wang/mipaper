@@ -6,6 +6,7 @@ LAUNCH_AGENTS_DIR="${HOME}/Library/LaunchAgents"
 TEMPLATE_DIR="${ROOT_DIR}/ops/launchd"
 LOG_DIR="${ROOT_DIR}/logs"
 USER_DOMAIN="gui/$(id -u)"
+HOME_DIR="${HOME}"
 
 mkdir -p "${LAUNCH_AGENTS_DIR}" "${LOG_DIR}"
 
@@ -14,7 +15,10 @@ install_job() {
   local template_path="${TEMPLATE_DIR}/${label}.plist.template"
   local target_path="${LAUNCH_AGENTS_DIR}/${label}.plist"
 
-  sed "s|__PROJECT_ROOT__|${ROOT_DIR}|g" "${template_path}" > "${target_path}"
+  sed \
+    -e "s|__PROJECT_ROOT__|${ROOT_DIR}|g" \
+    -e "s|__HOME__|${HOME_DIR}|g" \
+    "${template_path}" > "${target_path}"
 
   if launchctl print "${USER_DOMAIN}/${label}" >/dev/null 2>&1; then
     launchctl bootout "${USER_DOMAIN}/${label}" >/dev/null 2>&1 || true
