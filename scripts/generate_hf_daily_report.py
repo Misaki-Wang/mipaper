@@ -11,7 +11,7 @@ ROOT_DIR = Path(__file__).resolve().parents[1]
 if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
-from mipaper.codex_classifier import classify_with_codex
+from mipaper.codex_classifier import classify_with_claude, classify_with_codex
 from mipaper.fetcher import build_hf_daily_url, fetch_feed_html, parse_hf_daily_html
 from mipaper.hf_reporting import build_hf_json_payload, render_markdown_hf_report, write_hf_outputs
 from mipaper.paths import HF_DAILY_REPORTS_DIR, hf_daily_report_dir
@@ -23,13 +23,20 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--date", default="yesterday", help="YYYY-MM-DD, today, or yesterday")
     parser.add_argument("--timezone", default="Asia/Shanghai", help="timezone for relative dates")
     parser.add_argument("--html-path", help="optional local HTML snapshot, skips network fetch")
-    parser.add_argument("--classifier", choices=("rule", "codex"), default="rule", help="paper title classifier")
+    parser.add_argument("--classifier", choices=("rule", "codex", "claude"), default="rule", help="paper title classifier")
     parser.add_argument("--codex-model", help="optional model override for codex exec")
+    parser.add_argument("--claude-model", help="optional model override for claude exec")
     parser.add_argument(
         "--codex-timeout-seconds",
         type=int,
         default=1800,
         help="timeout for codex exec when --classifier=codex",
+    )
+    parser.add_argument(
+        "--llm-fallback",
+        choices=("none", "claude"),
+        default="none",
+        help="optional fallback when codex is rate-limited or unavailable",
     )
     parser.add_argument("--output-dir", default=str(HF_DAILY_REPORTS_DIR.relative_to(ROOT_DIR)), help="directory for markdown/json output")
     return parser.parse_args()
@@ -66,6 +73,14 @@ def main() -> int:
         papers = classify_with_codex(
             papers,
             model=args.codex_model,
+            timeout_seconds=args.codex_timeout_seconds,
+            fallback_provider=None if args.llm_fallback == "none" else args.llm_fallback,
+            claude_model=args.claude_model,
+        )
+    elif args.classifier == "claude":
+        papers = classify_with_claude(
+            papers,
+            model=args.claude_model,
             timeout_seconds=args.codex_timeout_seconds,
         )
     else:

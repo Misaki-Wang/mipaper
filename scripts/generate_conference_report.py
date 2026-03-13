@@ -9,7 +9,7 @@ ROOT_DIR = Path(__file__).resolve().parents[1]
 if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
-from mipaper.codex_classifier import classify_with_codex
+from mipaper.codex_classifier import classify_with_claude, classify_with_codex
 from mipaper.conference_reporting import (
     build_conference_json_payload,
     render_markdown_conference_report,
@@ -27,9 +27,16 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--html-path", help="optional local HTML snapshot, skips network fetch")
     parser.add_argument(
         "--classifier",
-        choices=("rule", "codex"),
+        choices=("rule", "codex", "claude"),
         default="rule",
         help="classification backend for topic tagging",
+    )
+    parser.add_argument("--claude-model", help="optional model override for claude exec")
+    parser.add_argument(
+        "--llm-fallback",
+        choices=("none", "claude"),
+        default="none",
+        help="optional fallback when codex is rate-limited or unavailable",
     )
     parser.add_argument(
         "--output-dir",
@@ -62,7 +69,16 @@ def main() -> int:
 
     papers = parse_feed_html(html_text)
     if args.classifier == "codex":
-        papers = classify_with_codex(papers)
+        papers = classify_with_codex(
+            papers,
+            fallback_provider=None if args.llm_fallback == "none" else args.llm_fallback,
+            claude_model=args.claude_model,
+        )
+    elif args.classifier == "claude":
+        papers = classify_with_claude(
+            papers,
+            model=args.claude_model,
+        )
     else:
         papers = assign_topics(papers)
 

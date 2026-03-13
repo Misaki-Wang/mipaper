@@ -75,24 +75,36 @@ def run_command(command: list[str]) -> None:
     subprocess.run(command, cwd=ROOT_DIR, check=True)
 
 
-def ensure_codex_available() -> None:
-    if shutil.which("codex"):
+def ensure_llm_available(binary_name: str) -> None:
+    if shutil.which(binary_name):
         return
-    raise RuntimeError("Scheduled codex classification requested, but `codex` is not available in PATH.")
+    raise RuntimeError(f"Scheduled classification requested, but `{binary_name}` is not available in PATH.")
 
 
-def build_codex_args(prefix: str) -> list[str]:
+def build_classifier_args(prefix: str) -> list[str]:
     classifier = os.environ.get(f"{prefix}_CLASSIFIER", "codex")
     args = ["--classifier", classifier]
-    if classifier != "codex":
+    if classifier == "rule":
         return args
-    ensure_codex_available()
+
+    if classifier == "codex":
+        ensure_llm_available("codex")
+    elif classifier == "claude":
+        ensure_llm_available("claude")
+
     model = os.environ.get("COOL_PAPER_CODEX_MODEL", "").strip()
     timeout = os.environ.get("COOL_PAPER_CODEX_TIMEOUT_SECONDS", "").strip()
+    claude_model = os.environ.get("COOL_PAPER_CLAUDE_MODEL", "").strip()
+    fallback = os.environ.get(f"{prefix}_LLM_FALLBACK", "claude").strip()
+
     if model:
         args.extend(["--codex-model", model])
     if timeout:
         args.extend(["--codex-timeout-seconds", timeout])
+    if claude_model:
+        args.extend(["--claude-model", claude_model])
+    if classifier == "codex" and fallback:
+        args.extend(["--llm-fallback", fallback])
     return args
 
 
@@ -121,7 +133,7 @@ def run_cool_daily_job(timezone_name: str, start_date: str, state: dict, now: da
         return []
 
     categories = os.environ.get("COOL_PAPER_CATEGORIES", "cs.AI cs.CL cs.CV").split()
-    codex_args = build_codex_args("COOL_PAPER_DAILY")
+    classifier_args = build_classifier_args("COOL_PAPER_DAILY")
     for report_date in report_dates:
         for category in categories:
             command = [
@@ -137,14 +149,14 @@ def run_cool_daily_job(timezone_name: str, start_date: str, state: dict, now: da
                 "reports/daily",
                 "--notify",
                 os.environ.get("COOL_PAPER_NOTIFY", "none"),
-                *codex_args,
+                *classifier_args,
             ]
             run_command(command)
     return report_dates
 
 
 def run_hf_daily_job(timezone_name: str, start_date: str, state: dict, now: datetime | None = None) -> list[str]:
-    codex_args = build_codex_args("COOL_PAPER_HF")
+    classifier_args = build_classifier_args("COOL_PAPER_HF")
     report_dates = hf_daily_backfill_dates(
         start_date=start_date,
         timezone_name=timezone_name,
@@ -165,7 +177,7 @@ def run_hf_daily_job(timezone_name: str, start_date: str, state: dict, now: date
             timezone_name,
             "--output-dir",
             "reports/hf-daily",
-            *codex_args,
+            *classifier_args,
         ]
         run_command(command)
     return report_dates

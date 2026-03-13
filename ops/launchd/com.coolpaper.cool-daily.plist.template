@@ -16,7 +16,7 @@
     <key>HOME</key>
     <string>__HOME__</string>
     <key>PATH</key>
-    <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+    <string>__BIN_PATH__</string>
   </dict>
   <key>StartCalendarInterval</key>
   <dict>
@@ -30,6 +30,6 @@
   <key>StandardErrorPath</key>
   <string>__PROJECT_ROOT__/logs/cool-daily.stderr.log</string>
   <key>RunAtLoad</key>
-  <false/>
+  <true/>
 </dict>
 </plist>
