@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import shutil
 import subprocess
 import tempfile
 from pathlib import Path
@@ -31,21 +32,37 @@ class CodexClassificationError(RuntimeError):
     pass
 
 
+class ClaudeClassificationError(RuntimeError):
+    pass
+
+
 def classify_with_codex(
     papers: Sequence[T],
     *,
     model: Optional[str] = None,
     timeout_seconds: int = 600,
     fallback_to_rules: bool = True,
+    fallback_provider: Optional[str] = None,
+    claude_model: Optional[str] = None,
 ) -> List[T]:
     if not papers:
         return list(papers)
 
-    raw_response = run_codex_exec(
-        papers,
-        model=model,
-        timeout_seconds=timeout_seconds,
-    )
+    try:
+        raw_response = run_codex_exec(
+            papers,
+            model=model,
+            timeout_seconds=timeout_seconds,
+        )
+    except CodexClassificationError as exc:
+        if fallback_provider == "claude" and should_fallback_to_claude(str(exc)):
+            return classify_with_claude(
+                papers,
+                model=claude_model,
+                timeout_seconds=timeout_seconds,
+                fallback_to_rules=fallback_to_rules,
+            )
+        raise
     try:
         payload = json.loads(raw_response)
     except json.JSONDecodeError as exc:
@@ -67,6 +84,44 @@ def classify_with_codex(
         if not fallback_to_rules:
             missing_str = ", ".join(missing_ids[:10])
             raise CodexClassificationError(f"Codex returned incomplete assignments. Missing: {missing_str}")
+
+        fallback_papers = [papers_by_id[paper_id] for paper_id in missing_ids]
+        assign_topics(fallback_papers)
+
+    return list(papers)
+
+
+def classify_with_claude(
+    papers: Sequence[T],
+    *,
+    model: Optional[str] = None,
+    timeout_seconds: int = 600,
+    fallback_to_rules: bool = True,
+) -> List[T]:
+    if not papers:
+        return list(papers)
+
+    payload = run_claude_exec(
+        papers,
+        model=model,
+        timeout_seconds=timeout_seconds,
+    )
+    assignments = validate_assignments(payload, papers)
+    papers_by_id = {paper.paper_id: paper for paper in papers}
+
+    for paper_id, assignment in assignments.items():
+        paper = papers_by_id[paper_id]
+        paper.topic_key = assignment["topic_key"]
+        paper.topic_label = TOPIC_LABELS[assignment["topic_key"]]
+        paper.matched_terms = []
+        paper.classification_source = "claude"
+        paper.classification_confidence = assignment["confidence"]
+
+    missing_ids = [paper.paper_id for paper in papers if paper.paper_id not in assignments]
+    if missing_ids:
+        if not fallback_to_rules:
+            missing_str = ", ".join(missing_ids[:10])
+            raise ClaudeClassificationError(f"Claude returned incomplete assignments. Missing: {missing_str}")
 
         fallback_papers = [papers_by_id[paper_id] for paper_id in missing_ids]
         assign_topics(fallback_papers)
@@ -129,6 +184,82 @@ def run_codex_exec(
             raise CodexClassificationError("codex exec finished without producing an output file")
 
         return output_path.read_text(encoding="utf-8").strip()
+
+
+def run_claude_exec(
+    papers: Sequence[Any],
+    *,
+    model: Optional[str],
+    timeout_seconds: int,
+) -> dict:
+    prompt = build_prompt(papers)
+    schema = build_output_schema()
+
+    if not shutil.which("claude"):
+        raise ClaudeClassificationError("claude CLI is not available in PATH")
+
+    command = [
+        "claude",
+        "-p",
+        "--output-format",
+        "json",
+        "--json-schema",
+        json.dumps(schema, ensure_ascii=False),
+        "--tools",
+        "",
+        "--permission-mode",
+        "bypassPermissions",
+    ]
+    if model:
+        command.extend(["--model", model])
+
+    try:
+        completed = subprocess.run(
+            command,
+            input=prompt,
+            text=True,
+            capture_output=True,
+            check=True,
+            timeout=timeout_seconds,
+        )
+    except subprocess.CalledProcessError as exc:
+        stderr = exc.stderr.strip()
+        stdout = exc.stdout.strip()
+        detail = stderr or stdout or str(exc)
+        raise ClaudeClassificationError(f"claude exec failed: {detail}") from exc
+    except subprocess.TimeoutExpired as exc:
+        raise ClaudeClassificationError(f"claude exec timed out after {timeout_seconds} seconds") from exc
+
+    stdout = completed.stdout.strip()
+    if not stdout:
+        raise ClaudeClassificationError("claude exec finished without producing output")
+
+    try:
+        payload = json.loads(stdout)
+    except json.JSONDecodeError as exc:
+        raise ClaudeClassificationError(f"Failed to parse Claude JSON output: {exc}") from exc
+
+    structured_output = payload.get("structured_output")
+    if not isinstance(structured_output, dict):
+        raise ClaudeClassificationError("Claude JSON output missing structured_output object")
+    return structured_output
+
+
+def should_fallback_to_claude(detail: str) -> bool:
+    normalized = detail.lower()
+    markers = (
+        "rate limit",
+        "429",
+        "quota",
+        "usage limit",
+        "overloaded",
+        "too many requests",
+        "unavailable in path",
+        "not available in path",
+        "timeout",
+        "timed out",
+    )
+    return any(marker in normalized for marker in markers)
 
 
 def build_prompt(papers: Sequence[Any]) -> str:
