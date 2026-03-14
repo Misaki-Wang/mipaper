@@ -12,6 +12,7 @@ import {
 } from "./likes.js";
 import { getSupabaseClient, isAuthorizedUser, isSupabaseConfigured, loadRuntimeConfig } from "./supabase.js";
 import { createPageReviewKey, initReviewSync, isPageReviewed, subscribePageReviews } from "./reading_state.js";
+import { bindQueueButtons, initQueue, readQueue, subscribeQueue } from "./paper_queue.js";
 
 const state = {
   likes: [],
@@ -73,11 +74,12 @@ async function init() {
     state.likes = likes;
     renderPage();
   });
+  subscribeQueue(() => renderPage());
   subscribePageReviews(() => {
     renderPage();
     scheduleToReadSnapshotSync();
   });
-  await Promise.all([initLikesSync(), initReviewSync()]);
+  await Promise.all([initLikesSync(), initReviewSync(), initQueue()]);
   state.snapshots = await loadSnapshotQueueData();
   state.likes = readLikes();
   renderPage();
@@ -343,10 +345,12 @@ function renderUnauthorizedState(snapshot) {
 function renderPage() {
   const likes = readLikes();
   state.likes = likes;
+  const laterQueue = readQueue('later');
   const toReadSnapshots = getToReadSnapshots(state.snapshots);
   populateFilters(likes);
   renderHero(likes);
   renderSourceCards(likes);
+  renderLaterQueue(laterQueue);
   renderToReadList(toReadSnapshots);
 
   if (!likes.length) {
@@ -365,6 +369,7 @@ function renderPage() {
   renderResults(likes, visibleLikes, sourceSections);
   renderSourceSections(sourceSections);
   bindLikeButtons(document, likeRecords);
+  bindQueueButtons(document, likeRecords);
 }
 
 function populateFilters(likes) {
@@ -546,6 +551,59 @@ function renderTagMap(likes, topicDistribution) {
         </article>
       `
     )
+    .join("");
+}
+
+function renderLaterQueue(laterQueue) {
+  const summary = document.querySelector("#like-later-summary");
+  const root = document.querySelector("#like-later-list");
+
+  if (!laterQueue.length) {
+    summary.textContent = "No papers in Later queue.";
+    root.innerHTML = `<div class="empty-state">Papers marked as Later will appear here.</div>`;
+    return;
+  }
+
+  summary.textContent = `${laterQueue.length} papers marked for later reading.`;
+
+  root.innerHTML = laterQueue
+    .slice(0, 12)
+    .map((paper) => {
+      likeRecords.set(paper.like_id, paper);
+      return `
+        <article class="spotlight-card">
+          <div class="spotlight-meta">
+            <span class="paper-badge">${escapeHtml(paper.topic_label || "Other AI")}</span>
+            <span class="paper-badge subdued">${escapeHtml(getSourceLabel(paper.source_kind))}</span>
+          </div>
+          <h3>${escapeHtml(paper.title)}</h3>
+          <div class="paper-authors-box">
+            <span class="paper-detail-label">Authors</span>
+            <p class="paper-authors-line">${escapeHtml(paper.authors?.join(", ") || "Unknown")}</p>
+          </div>
+          <div class="spotlight-links">
+            ${paper.pdf_url ? `<a class="paper-link brand-arxiv" href="${escapeAttribute(paper.pdf_url)}" target="_blank" rel="noreferrer">arXiv</a>` : ""}
+            ${paper.detail_url ? `<a class="paper-link brand-cool" href="${escapeAttribute(paper.detail_url)}" target="_blank" rel="noreferrer">Cool</a>` : ""}
+            <button class="paper-link later-button is-later" type="button" data-later-id="${escapeAttribute(paper.like_id)}" aria-pressed="true">
+              <span class="paper-link-icon later-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20">
+                  <path d="M4 6h12M4 10h12M4 14h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+                </svg>
+              </span>
+              <span class="paper-link-text">Later</span>
+            </button>
+            <button class="paper-link like-button" type="button" data-like-id="${escapeAttribute(paper.like_id)}" aria-pressed="false">
+              <span class="paper-link-icon like-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20">
+                  <path d="M10 16.3l-5.26-4.98A3.8 3.8 0 0 1 10 5.9a3.8 3.8 0 0 1 5.26 5.42z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path>
+                </svg>
+              </span>
+              <span class="paper-link-text">Like</span>
+            </button>
+          </div>
+        </article>
+      `;
+    })
     .join("");
 }
 
@@ -840,6 +898,7 @@ function renderEmpty(toReadSnapshots) {
   document.querySelector("#like-source-sections").innerHTML =
     `<div class="glass-card empty-state">Click Like in Cool Daily, Conference, or HF Daily to add papers here.</div>`;
   resetFiltersButton.disabled = true;
+  renderLaterQueue(readQueue('later'));
   renderToReadList(toReadSnapshots);
 }
 
