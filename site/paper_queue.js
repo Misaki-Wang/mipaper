@@ -209,7 +209,9 @@ export function bindQueueButtons(root, recordLookup) {
         removeFromQueue(likeId);
         console.log('Removed from Later queue');
       } else {
-        addToQueue(record.paper, record.context, 'later');
+        const paper = record.paper || record;
+        const context = record.context || {};
+        addToQueue(paper, context, 'later');
         console.log('Added to Later queue');
       }
     });
@@ -239,7 +241,9 @@ export function bindQueueButtons(root, recordLookup) {
         removeFromQueue(likeId);
         console.log('Removed from Like queue');
       } else {
-        addToQueue(record.paper, record.context, 'like');
+        const paper = record.paper || record;
+        const context = record.context || {};
+        addToQueue(paper, context, 'like');
         console.log('Added to Like queue');
       }
     });
