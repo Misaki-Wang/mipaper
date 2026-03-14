@@ -603,6 +603,11 @@ function renderLikeButton(paper) {
   const liked = isLiked(likeId);
   return `
     <button class="paper-link later-button" type="button" data-later-id="${escapeAttribute(likeId)}" aria-pressed="false">
+      <span class="paper-link-icon later-icon" aria-hidden="true">
+        <svg viewBox="0 0 20 20">
+          <path d="M4 6h12M4 10h12M4 14h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+        </svg>
+      </span>
       <span class="paper-link-text">Later</span>
     </button>
     <button class="paper-link like-button${liked ? " is-liked" : ""}" type="button" data-like-id="${escapeAttribute(likeId)}" aria-pressed="${liked}">
