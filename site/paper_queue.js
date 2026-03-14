@@ -95,7 +95,6 @@ async function performSync() {
     const queue = readQueue();
     console.log('performSync: Local queue has', queue.length, 'items');
 
-    // Upload to Supabase
     const upsertRows = queue.map(item => ({
       user_id: authUser.id,
       paper_id: item.like_id,
@@ -105,34 +104,44 @@ async function performSync() {
     }));
 
     if (upsertRows.length) {
-      await client.from('paper_queue').upsert(upsertRows, {
+      const { error } = await client.from('paper_queue').upsert(upsertRows, {
         onConflict: 'user_id,paper_id',
       });
-      console.log('performSync: Uploaded', upsertRows.length, 'items to Supabase');
+      if (error) throw error;
+      console.log('performSync: Uploaded', upsertRows.length, 'items');
     }
 
-    // Fetch remote data
+    const { data: remoteRows, error: remoteError } = await client
+      .from('paper_queue')
+      .select('paper_id')
+      .eq('user_id', authUser.id);
+    if (remoteError) throw remoteError;
+
+    const localIds = new Set(queue.map(item => item.like_id));
+    const staleIds = (remoteRows || []).map(row => row.paper_id).filter(id => !localIds.has(id));
+    if (staleIds.length) {
+      const { error } = await client
+        .from('paper_queue')
+        .delete()
+        .eq('user_id', authUser.id)
+        .in('paper_id', staleIds);
+      if (error) throw error;
+      console.log('performSync: Deleted', staleIds.length, 'stale items');
+    }
+
     const { data, error } = await client.from('paper_queue')
       .select('*')
       .eq('user_id', authUser.id);
+    if (error) throw error;
 
-    if (error) {
-      console.error('performSync: Fetch error:', error);
-      return;
-    }
-
-    console.log('performSync: Fetched', data?.length || 0, 'items from Supabase');
-
-    if (data) {
-      const remoteQueue = data.map(row => ({
-        ...row.payload,
-        status: row.status,
-        saved_at: row.saved_at,
-      }));
-      localStorage.setItem(QUEUE_STORAGE_KEY, JSON.stringify(remoteQueue));
-      window.dispatchEvent(new CustomEvent(QUEUE_CHANGED_EVENT));
-      console.log('performSync: Updated localStorage with', remoteQueue.length, 'items');
-    }
+    const remoteQueue = (data || []).map(row => ({
+      ...row.payload,
+      status: row.status,
+      saved_at: row.saved_at,
+    }));
+    localStorage.setItem(QUEUE_STORAGE_KEY, JSON.stringify(remoteQueue));
+    window.dispatchEvent(new CustomEvent(QUEUE_CHANGED_EVENT));
+    console.log('performSync: Synced', remoteQueue.length, 'items');
   } catch (error) {
     console.error('Queue sync failed:', error);
   }
