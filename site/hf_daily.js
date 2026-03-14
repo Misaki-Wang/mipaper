@@ -1,4 +1,5 @@
 import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js";
+import { bindQueueButtons, initQueue, subscribeQueue } from "./paper_queue.js";
 import { createCalendarPicker } from "./calendar_picker.js";
 import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js";
 
@@ -51,8 +52,9 @@ async function init() {
   bindFilters();
   bindReviewToggle();
   subscribeLikes(() => bindLikeButtons(document, likeRecords));
+  subscribeQueue(() => bindQueueButtons(document, likeRecords));
   subscribePageReviews(() => renderReviewState());
-  await Promise.all([initLikesSync(), initReviewSync()]);
+  await Promise.all([initLikesSync(), initReviewSync(), initQueue()]);
   const manifest = await fetchJson(manifestUrl);
   state.manifest = manifest;
   bindDatePicker();
@@ -308,6 +310,7 @@ function renderReport() {
     })),
   ]);
   bindLikeButtons(document, likeRecords);
+  bindQueueButtons(document, likeRecords);
 }
 
 function renderTagMap(report) {
@@ -599,6 +602,9 @@ function renderLikeButton(paper) {
   const likeId = rememberLikeRecord(paper);
   const liked = isLiked(likeId);
   return `
+    <button class="paper-link later-button" type="button" data-later-id="${escapeAttribute(likeId)}" aria-pressed="false">
+      <span class="paper-link-text">Later</span>
+    </button>
     <button class="paper-link like-button${liked ? " is-liked" : ""}" type="button" data-like-id="${escapeAttribute(likeId)}" aria-pressed="${liked}">
       <span class="paper-link-icon like-icon" aria-hidden="true">
         <svg viewBox="0 0 20 20">
