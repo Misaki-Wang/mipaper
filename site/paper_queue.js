@@ -105,10 +105,19 @@ async function performSync() {
     }));
 
     if (upsertRows.length) {
-      const { error } = await client.from('paper_queue').upsert(upsertRows, {
+      console.log('performSync: Upserting rows:', JSON.stringify(upsertRows.map(r => ({
+        user_id: r.user_id,
+        paper_id: r.paper_id,
+        status: r.status,
+      }))));
+      const { data: upsertData, error } = await client.from('paper_queue').upsert(upsertRows, {
         onConflict: 'user_id,paper_id',
-      });
+      }).select();
+      console.log('performSync: Upsert response - data:', upsertData, 'error:', error);
       if (error) throw error;
+      if (!upsertData || upsertData.length === 0) {
+        console.error('performSync: RLS BLOCKED - upsert returned no data! Check paper_queue RLS policies.');
+      }
       console.log('performSync: Uploaded', upsertRows.length, 'items');
     }
 
