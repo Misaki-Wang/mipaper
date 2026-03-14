@@ -6,6 +6,7 @@ import {
 import {
   getSupabaseClient,
   isSupabaseConfigured,
+  loadRuntimeConfig,
 } from "./supabase.js";
 
 const QUEUE_STORAGE_KEY = "cool-paper-queue-v1";
@@ -149,6 +150,8 @@ async function performSync() {
 
 export async function initQueue() {
   console.log('initQueue: Starting...');
+  await loadRuntimeConfig();
+
   if (!isSupabaseConfigured()) {
     console.log('initQueue: Supabase not configured');
     return;
