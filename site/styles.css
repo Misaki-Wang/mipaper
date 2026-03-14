@@ -2853,18 +2853,6 @@ code {
   }
 }
 
-/* Later & Like Queue Styles */
-.later-button {
-  background: #ff9800;
-  color: white;
-  margin-right: 0.5rem;
-}
-
-.later-button.is-later {
-  background: #f57c00;
-  font-weight: 600;
-}
-
 .later-button:hover {
   background: #fb8c00;
 }
@@ -2946,4 +2934,15 @@ code {
   color: #999;
   text-align: center;
   padding: 2rem;
+}
+
+/* Later & Like Queue Styles */
+.later-button {
+  /* Inherits .paper-link base styles */
+}
+
+.later-button.is-later {
+  background: color-mix(in srgb, var(--accent-strong), white 10%);
+  border-color: var(--accent-strong);
+  font-weight: 600;
 }
