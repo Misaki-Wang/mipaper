@@ -199,21 +199,14 @@ export function bindQueueButtons(root, recordLookup) {
       event.preventDefault();
       event.stopPropagation();
       const record = recordLookup.get(likeId);
-      console.log('Later button clicked:', likeId, 'Record:', record);
-      if (!record) {
-        console.error('No record found for likeId:', likeId);
-        return;
-      }
+      if (!record) return;
 
       if (isInQueue(likeId, 'later')) {
         removeFromQueue(likeId);
-        console.log('Removed from Later queue');
       } else {
         const paper = record.paper || record;
         const context = record.context || {};
-        console.log('Adding to Later queue - paper:', paper, 'context:', context);
         addToQueue(paper, context, 'later');
-        console.log('Added to Later queue');
       }
     });
   });
@@ -232,20 +225,14 @@ export function bindQueueButtons(root, recordLookup) {
       event.preventDefault();
       event.stopPropagation();
       const record = recordLookup.get(likeId);
-      console.log('Like button clicked:', likeId, 'Record:', record);
-      if (!record) {
-        console.error('No record found for likeId:', likeId);
-        return;
-      }
+      if (!record) return;
 
       if (isInQueue(likeId, 'like')) {
         removeFromQueue(likeId);
-        console.log('Removed from Like queue');
       } else {
         const paper = record.paper || record;
         const context = record.context || {};
         addToQueue(paper, context, 'like');
-        console.log('Added to Like queue');
       }
     });
   });
