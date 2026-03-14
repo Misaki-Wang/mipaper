@@ -101,10 +101,23 @@ def classify_with_claude(
     if not papers:
         return list(papers)
 
+    # Batch processing for large conferences
+    BATCH_SIZE = 100
+    if len(papers) > BATCH_SIZE:
+        print(f"Processing {len(papers)} papers in batches of {BATCH_SIZE}...")
+        all_papers = list(papers)
+        for i in range(0, len(all_papers), BATCH_SIZE):
+            batch = all_papers[i:i + BATCH_SIZE]
+            print(f"Batch {i//BATCH_SIZE + 1}/{(len(all_papers) + BATCH_SIZE - 1)//BATCH_SIZE}: {len(batch)} papers")
+            classify_with_claude(batch, model=model, timeout_seconds=timeout_seconds, fallback_to_rules=fallback_to_rules)
+        return all_papers
+
+    # Dynamic timeout: 2 seconds per paper, minimum 600s
+    dynamic_timeout = max(timeout_seconds, len(papers) * 2)
     payload = run_claude_exec(
         papers,
         model=model,
-        timeout_seconds=timeout_seconds,
+        timeout_seconds=dynamic_timeout,
     )
     assignments = validate_assignments(payload, papers)
     papers_by_id = {paper.paper_id: paper for paper in papers}
