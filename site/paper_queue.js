@@ -211,6 +211,7 @@ export function bindQueueButtons(root, recordLookup) {
       } else {
         const paper = record.paper || record;
         const context = record.context || {};
+        console.log('Adding to Later queue - paper:', paper, 'context:', context);
         addToQueue(paper, context, 'later');
         console.log('Added to Later queue');
       }
