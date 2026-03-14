@@ -25,8 +25,9 @@ export function readQueue(status = null) {
 
 export function addToQueue(paper, context, status = 'later') {
   const queue = readQueue();
-  const record = createLikeRecord(paper, context);
-  const likeId = getLikeId(paper);
+  // If paper already has like_id, it's already a processed record
+  const record = paper.like_id ? paper : createLikeRecord(paper, context);
+  const likeId = record.like_id;
   const existing = queue.find(item => item.like_id === likeId);
 
   if (existing) {
