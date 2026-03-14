@@ -350,15 +350,17 @@ function renderPage() {
   populateFilters(likes);
   renderHero(likes);
   renderSourceCards(likes);
+
+  likeRecords.clear();
   renderLaterQueue(laterQueue);
   renderToReadList(toReadSnapshots);
 
   if (!likes.length) {
     renderEmpty(toReadSnapshots);
+    bindQueueButtons(document, likeRecords);
     return;
   }
 
-  likeRecords.clear();
   const visibleLikes = getVisibleLikes(likes);
   const topicDistribution = computeTopicDistribution(visibleLikes);
   const sourceSections = groupBySource(visibleLikes);
@@ -723,7 +725,15 @@ function renderSourceSections(sections) {
 }
 
 function renderLikeCard(paper) {
-  likeRecords.set(paper.like_id, paper);
+  likeRecords.set(paper.like_id, {
+    paper: paper,
+    context: {
+      sourceKind: paper.source_kind,
+      sourceLabel: getSourceLabel(paper.source_kind),
+      sourcePage: paper.source_page,
+      snapshotLabel: paper.snapshot_label,
+    }
+  });
   const authors = paper.authors?.length ? escapeHtml(paper.authors.join(", ")) : "Unknown";
   const abstract = paper.abstract
     ? `
