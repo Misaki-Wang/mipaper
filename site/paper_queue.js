@@ -26,22 +26,23 @@ export function readQueue(status = null) {
 export function addToQueue(paper, context, status = 'later') {
   const queue = readQueue();
   // If paper already has like_id, it's already a processed record
-  const record = paper.like_id ? paper : createLikeRecord(paper, context);
+  const record = paper?.like_id ? paper : createLikeRecord(paper, context);
   const likeId = record.like_id;
   const existing = queue.find(item => item.like_id === likeId);
 
   if (existing) {
     existing.status = status;
     existing.saved_at = new Date().toISOString();
+    localStorage.setItem(QUEUE_STORAGE_KEY, JSON.stringify(queue));
   } else {
     queue.push({
       ...record,
       status: status,
       saved_at: new Date().toISOString(),
     });
+    localStorage.setItem(QUEUE_STORAGE_KEY, JSON.stringify(queue));
   }
 
-  localStorage.setItem(QUEUE_STORAGE_KEY, JSON.stringify(queue));
   window.dispatchEvent(new CustomEvent(QUEUE_CHANGED_EVENT));
   scheduleSync();
 }
