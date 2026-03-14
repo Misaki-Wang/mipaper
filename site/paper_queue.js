@@ -77,11 +77,21 @@ function scheduleSync() {
 }
 
 async function performSync() {
-  if (!isSupabaseConfigured() || !authSession || !authUser) return;
+  console.log('performSync: Starting...', {
+    configured: isSupabaseConfigured(),
+    hasSession: !!authSession,
+    hasUser: !!authUser
+  });
+
+  if (!isSupabaseConfigured() || !authSession || !authUser) {
+    console.log('performSync: Skipping - missing requirements');
+    return;
+  }
 
   try {
     const client = await getSupabaseClient();
     const queue = readQueue();
+    console.log('performSync: Local queue has', queue.length, 'items');
 
     // Upload to Supabase
     const upsertRows = queue.map(item => ({
@@ -96,12 +106,20 @@ async function performSync() {
       await client.from('paper_queue').upsert(upsertRows, {
         onConflict: 'user_id,paper_id',
       });
+      console.log('performSync: Uploaded', upsertRows.length, 'items to Supabase');
     }
 
     // Fetch remote data
-    const { data } = await client.from('paper_queue')
+    const { data, error } = await client.from('paper_queue')
       .select('*')
       .eq('user_id', authUser.id);
+
+    if (error) {
+      console.error('performSync: Fetch error:', error);
+      return;
+    }
+
+    console.log('performSync: Fetched', data?.length || 0, 'items from Supabase');
 
     if (data) {
       const remoteQueue = data.map(row => ({
@@ -111,6 +129,7 @@ async function performSync() {
       }));
       localStorage.setItem(QUEUE_STORAGE_KEY, JSON.stringify(remoteQueue));
       window.dispatchEvent(new CustomEvent(QUEUE_CHANGED_EVENT));
+      console.log('performSync: Updated localStorage with', remoteQueue.length, 'items');
     }
   } catch (error) {
     console.error('Queue sync failed:', error);
@@ -118,15 +137,22 @@ async function performSync() {
 }
 
 export async function initQueue() {
-  if (!isSupabaseConfigured()) return;
+  console.log('initQueue: Starting...');
+  if (!isSupabaseConfigured()) {
+    console.log('initQueue: Supabase not configured');
+    return;
+  }
 
   const client = await getSupabaseClient();
   const { data: { session } } = await client.auth.getSession();
+  console.log('initQueue: Session:', session ? 'Found' : 'Not found');
 
   if (session) {
     authSession = session;
     authUser = session.user;
+    console.log('initQueue: Calling performSync...');
     await performSync();
+    console.log('initQueue: performSync completed');
   }
 }
 

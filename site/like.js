@@ -346,6 +346,7 @@ function renderPage() {
   const likes = readLikes();
   state.likes = likes;
   const laterQueue = readQueue('later');
+  console.log('renderPage: laterQueue has', laterQueue.length, 'items');
   const toReadSnapshots = getToReadSnapshots(state.snapshots);
   populateFilters(likes);
   renderHero(likes);
@@ -372,6 +373,7 @@ function renderPage() {
   renderSourceSections(sourceSections);
   bindLikeButtons(document, likeRecords);
   bindQueueButtons(document, likeRecords);
+  console.log('renderPage: bindQueueButtons called with', likeRecords.size, 'records');
 }
 
 function populateFilters(likes) {
