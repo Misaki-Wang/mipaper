@@ -174,3 +174,59 @@ using (
   auth.uid() = user_id
   and auth.uid() = 'd23b2601-08ef-465c-b1d9-4159ca38e159'::uuid
 );
+
+create table if not exists public.paper_queue (
+  user_id uuid not null references auth.users (id) on delete cascade,
+  paper_id text not null,
+  status text not null,
+  saved_at timestamptz not null default timezone('utc'::text, now()),
+  payload jsonb not null,
+  primary key (user_id, paper_id)
+);
+
+alter table public.paper_queue enable row level security;
+
+drop policy if exists "Only owner can read queue" on public.paper_queue;
+drop policy if exists "Only owner can insert queue" on public.paper_queue;
+drop policy if exists "Only owner can update queue" on public.paper_queue;
+drop policy if exists "Only owner can delete queue" on public.paper_queue;
+
+create policy "Only owner can read queue"
+on public.paper_queue
+for select
+to authenticated
+using (
+  auth.uid() = user_id
+  and auth.uid() = 'd23b2601-08ef-465c-b1d9-4159ca38e159'::uuid
+);
+
+create policy "Only owner can insert queue"
+on public.paper_queue
+for insert
+to authenticated
+with check (
+  auth.uid() = user_id
+  and auth.uid() = 'd23b2601-08ef-465c-b1d9-4159ca38e159'::uuid
+);
+
+create policy "Only owner can update queue"
+on public.paper_queue
+for update
+to authenticated
+using (
+  auth.uid() = user_id
+  and auth.uid() = 'd23b2601-08ef-465c-b1d9-4159ca38e159'::uuid
+)
+with check (
+  auth.uid() = user_id
+  and auth.uid() = 'd23b2601-08ef-465c-b1d9-4159ca38e159'::uuid
+);
+
+create policy "Only owner can delete queue"
+on public.paper_queue
+for delete
+to authenticated
+using (
+  auth.uid() = user_id
+  and auth.uid() = 'd23b2601-08ef-465c-b1d9-4159ca38e159'::uuid
+);
