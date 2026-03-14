@@ -156,6 +156,15 @@ export async function initQueue() {
     await performSync();
     console.log('initQueue: performSync completed');
   }
+
+  client.auth.onAuthStateChange(async (_event, sessionState) => {
+    authSession = sessionState;
+    authUser = sessionState?.user || null;
+    console.log('Queue auth state changed:', _event, authUser ? 'User logged in' : 'User logged out');
+    if (authUser) {
+      await performSync();
+    }
+  });
 }
 
 export function subscribeQueue(callback) {
