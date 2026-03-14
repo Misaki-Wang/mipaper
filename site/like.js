@@ -569,7 +569,15 @@ function renderLaterQueue(laterQueue) {
   root.innerHTML = laterQueue
     .slice(0, 12)
     .map((paper) => {
-      likeRecords.set(paper.like_id, paper);
+      likeRecords.set(paper.like_id, {
+        paper: paper,
+        context: {
+          sourceKind: paper.source_kind,
+          sourceLabel: paper.source_label,
+          sourcePage: paper.source_page,
+          snapshotLabel: paper.snapshot_label,
+        }
+      });
       return `
         <article class="spotlight-card">
           <div class="spotlight-meta">
