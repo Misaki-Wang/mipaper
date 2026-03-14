@@ -2949,13 +2949,13 @@ code {
 }
 
 .later-button.is-later {
-  background: color-mix(in srgb, var(--accent-strong), white 10%);
-  border-color: var(--accent-strong);
+  background: color-mix(in srgb, #6b9b7a, white 15%);
+  border-color: #6b9b7a;
   font-weight: 600;
 }
 
 .later-button.is-later .later-icon {
-  color: var(--accent-strong);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), color-mix(in srgb, var(--accent-soft), white 20%));
-  border-color: var(--accent-strong);
+  color: #6b9b7a;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), color-mix(in srgb, #6b9b7a, white 30%));
+  border-color: #6b9b7a;
 }
