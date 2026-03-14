@@ -1,10 +1,12 @@
 import {
   createLikeRecord,
   getLikeId,
-  getSupabaseClient,
-  isAuthorizedUser,
-  isSupabaseConfigured,
 } from "./likes.js";
+
+import {
+  getSupabaseClient,
+  isSupabaseConfigured,
+} from "./supabase.js";
 
 const QUEUE_STORAGE_KEY = "cool-paper-queue-v1";
 const QUEUE_META_KEY = "cool-paper-queue-meta-v1";
