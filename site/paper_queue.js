@@ -35,20 +35,23 @@ export function readQueue(status = null) {
   return filtered.sort((a, b) => (b.saved_at || "").localeCompare(a.saved_at || ""));
 }
 
-export function addToQueue(paper, context, status = 'later') {
+export function addToQueue(paper, context) {
   const queue = readQueue();
   // If paper already has like_id, it's already a processed record
   const record = paper?.like_id ? paper : createLikeRecord(paper, context);
   const likeId = record.like_id;
   const existing = queue.find(item => item.like_id === likeId);
 
+  // paper_queue only supports 'later' status
+  const safeStatus = 'later';
+
   if (existing) {
-    existing.status = status;
+    existing.status = safeStatus;
     existing.saved_at = new Date().toISOString();
   } else {
     queue.push({
       ...record,
-      status: status,
+      status: safeStatus,
       saved_at: new Date().toISOString(),
     });
   }
@@ -83,22 +86,8 @@ export function removeFromQueue(likeId) {
   }
 }
 
-export function moveToLike(likeId) {
-  const queue = readQueue();
-  const item = queue.find(i => i.like_id === likeId);
-  if (item) {
-    item.status = 'like';
-    item.saved_at = new Date().toISOString();
-    // Set dirty flag BEFORE writing to localStorage
-    writeMeta({ dirty: true });
-    localStorage.setItem(QUEUE_STORAGE_KEY, JSON.stringify(queue));
-    window.dispatchEvent(new CustomEvent(QUEUE_CHANGED_EVENT));
-    scheduleSync();
-  }
-}
-
-export function isInQueue(likeId, status = null) {
-  const queue = readQueue(status);
+export function isInQueue(likeId) {
+  const queue = readQueue('later');
   return queue.some(item => item.like_id === likeId);
 }
 
@@ -129,40 +118,40 @@ async function performSync() {
 
     // Step 1: If local has dirty changes, push them to Supabase first
     if (meta.dirty && queue.length > 0) {
-      const upsertRows = queue.map(item => ({
+      const laterItems = queue.filter(item => item.status === 'later');
+      const upsertRows = laterItems.map(item => ({
         user_id: authUser.id,
         paper_id: item.like_id,
-        status: item.status,
+        status: 'later',
         saved_at: item.saved_at,
         payload: item,
       }));
 
-      const { error } = await client.from('paper_queue').upsert(upsertRows, {
-        onConflict: 'user_id,paper_id',
-      });
-      if (error) throw error;
-      console.log('performSync: Pushed', upsertRows.length, 'dirty items to Supabase');
+      if (upsertRows.length) {
+        const { error } = await client.from('paper_queue').upsert(upsertRows, {
+          onConflict: 'user_id,paper_id',
+        });
+        if (error) throw error;
+        console.log('performSync: Pushed', upsertRows.length, 'dirty items to Supabase');
+      }
     }
 
     // Step 2: Always fetch from Supabase as source of truth
     const { data, error } = await client.from('paper_queue')
       .select('*')
-      .eq('user_id', authUser.id);
+      .eq('user_id', authUser.id)
+      .eq('status', 'later');
     if (error) throw error;
 
     console.log('performSync: Raw Supabase response:', data?.length, 'rows');
-    if (data?.length) {
-      console.log('performSync: First row -', 'status:', data[0].status, 'payload.status:', data[0].payload?.status, 'paper_id:', data[0].paper_id);
-    }
 
     const remoteQueue = (data || []).map(row => ({
       ...row.payload,
-      status: row.status,
+      status: 'later',
       saved_at: row.saved_at,
     }));
 
-    const laterCount = remoteQueue.filter(i => i.status === 'later').length;
-    console.log('performSync: Later items:', laterCount, ', Total:', remoteQueue.length);
+    console.log('performSync: Later items:', remoteQueue.length);
 
     // Step 3: Overwrite local with Supabase data
     localStorage.setItem(QUEUE_STORAGE_KEY, JSON.stringify(remoteQueue));
@@ -218,7 +207,7 @@ export function bindQueueButtons(root, recordLookup) {
   // Bind Later buttons
   root.querySelectorAll("[data-later-id]").forEach((button) => {
     const likeId = button.dataset.laterId;
-    const inLater = isInQueue(likeId, 'later');
+    const inLater = isInQueue(likeId);
     button.classList.toggle("is-later", inLater);
     button.setAttribute("aria-pressed", String(inLater));
 
@@ -231,12 +220,12 @@ export function bindQueueButtons(root, recordLookup) {
       const record = recordLookup.get(likeId);
       if (!record) return;
 
-      if (isInQueue(likeId, 'later')) {
+      if (isInQueue(likeId)) {
         removeFromQueue(likeId);
       } else {
         const paper = record.paper || record;
         const context = record.context || {};
-        addToQueue(paper, context, 'later');
+        addToQueue(paper, context);
       }
     });
   });

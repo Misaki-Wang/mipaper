@@ -1,7 +1,8 @@
-import { readQueue, removeFromQueue, moveToLike, subscribeQueue, initQueue } from './paper_queue.js';
+import { readQueue, removeFromQueue, subscribeQueue, initQueue } from './paper_queue.js';
+import { toggleLike, createLikeRecord } from './likes.js';
 import { getSupabaseClient } from './supabase.js';
 
-function renderPaper(paper, status) {
+function renderPaper(paper) {
   const div = document.createElement('div');
   div.className = 'paper-item';
 
@@ -20,7 +21,7 @@ function renderPaper(paper, status) {
       ${paper.abs_url ? `<a href="${paper.abs_url}" target="_blank">Abstract</a>` : ''}
     </div>
     <div class="paper-actions">
-      ${status === 'later' ? `<button class="btn-like" data-id="${paper.like_id}">Move to Like</button>` : ''}
+      <button class="btn-like" data-id="${paper.like_id}">Move to Like</button>
       <button class="btn-remove" data-id="${paper.like_id}">Remove</button>
     </div>
   `;
@@ -46,13 +47,21 @@ function renderLaterList() {
   }
 
   papers.forEach(paper => {
-    const elem = renderPaper(paper, 'later');
+    const elem = renderPaper(paper);
     laterList.appendChild(elem);
   });
 
-  // Bind events
+  // "Move to Like" -> add to liked_papers and remove from queue
   laterList.querySelectorAll('.btn-like').forEach(btn => {
-    btn.addEventListener('click', () => moveToLike(btn.dataset.id));
+    btn.addEventListener('click', () => {
+      const likeId = btn.dataset.id;
+      const paper = papers.find(p => p.like_id === likeId);
+      if (paper) {
+        const record = paper.like_id ? paper : createLikeRecord(paper, {});
+        toggleLike(record);
+        removeFromQueue(likeId);
+      }
+    });
   });
 
   laterList.querySelectorAll('.btn-remove').forEach(btn => {
@@ -60,31 +69,8 @@ function renderLaterList() {
   });
 }
 
-function renderLikeList() {
-  const likeList = document.getElementById('like-list');
-  const papers = readQueue('like');
-
-  likeList.innerHTML = '';
-
-  if (papers.length === 0) {
-    likeList.innerHTML = '<p class="empty-message">No papers in Like collection</p>';
-    return;
-  }
-
-  papers.forEach(paper => {
-    const elem = renderPaper(paper, 'like');
-    likeList.appendChild(elem);
-  });
-
-  // Bind events
-  likeList.querySelectorAll('.btn-remove').forEach(btn => {
-    btn.addEventListener('click', () => removeFromQueue(btn.dataset.id));
-  });
-}
-
 subscribeQueue(() => {
   renderLaterList();
-  renderLikeList();
 });
 
 async function init() {
@@ -96,7 +82,6 @@ async function init() {
   }
 
   renderLaterList();
-  renderLikeList();
 }
 
 init();
