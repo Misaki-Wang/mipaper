@@ -574,6 +574,7 @@ function renderLaterQueue(laterQueue) {
   if (!laterQueue.length) {
     summary.textContent = "No papers in Later queue.";
     root.innerHTML = `<div class="empty-state">Papers marked as Later will appear here.</div>`;
+    document.querySelector("#like-later-pagination").innerHTML = "";
     return;
   }
 
@@ -660,6 +661,7 @@ function renderToReadList(toReadSnapshots) {
   if (!toReadSnapshots.length) {
     summary.textContent = "Every fetched snapshot has been reviewed.";
     root.innerHTML = `<div class="empty-state">No unread snapshots remain in your queue.</div>`;
+    document.querySelector("#like-to-read-pagination").innerHTML = "";
     return;
   }
 
