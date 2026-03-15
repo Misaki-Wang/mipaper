@@ -57,6 +57,8 @@ const LATER_PAGE_SIZE = 6;
 let laterPage = 0;
 const TO_READ_PAGE_SIZE = 6;
 let toReadPage = 0;
+const BRANCH_PAGE_SIZE = 6;
+const branchPages = new Map();
 
 init().catch((error) => {
   console.error(error);
@@ -760,25 +762,57 @@ function renderSourceSections(sections) {
 
   root.innerHTML = sections
     .map(
-      (section, index) => `
-        <section class="glass-card conference-subject-card">
-          <div class="conference-subject-header">
-            <div>
-              <p class="eyebrow">BRANCH</p>
-              <h3>${index + 1}. ${escapeHtml(section.source_label)}</h3>
+      (section, index) => {
+        const key = section.source_kind;
+        const page = branchPages.get(key) || 0;
+        const totalPages = Math.ceil(section.count / BRANCH_PAGE_SIZE);
+        const safePage = Math.min(page, totalPages - 1);
+        if (safePage !== page) branchPages.set(key, safePage);
+        const start = safePage * BRANCH_PAGE_SIZE;
+        const pageItems = section.papers.slice(start, start + BRANCH_PAGE_SIZE);
+
+        const paginationHtml = totalPages > 1
+          ? `<div class="pagination">
+              <button class="pill-button" data-branch-page="prev" data-branch-key="${escapeAttribute(key)}" ${safePage === 0 ? 'disabled' : ''}>← Prev</button>
+              <span class="pagination-info">${safePage + 1} / ${totalPages}</span>
+              <button class="pill-button" data-branch-page="next" data-branch-key="${escapeAttribute(key)}" ${safePage >= totalPages - 1 ? 'disabled' : ''}>Next →</button>
+            </div>`
+          : "";
+
+        return `
+          <section class="glass-card conference-subject-card">
+            <div class="conference-subject-header">
+              <div>
+                <p class="eyebrow">BRANCH</p>
+                <h3>${index + 1}. ${escapeHtml(section.source_label)}</h3>
+              </div>
+              <div class="conference-subject-meta">
+                <span>${section.count} papers</span>
+                <span>${escapeHtml(section.latest_snapshot || "No snapshot")}</span>
+              </div>
             </div>
-            <div class="conference-subject-meta">
-              <span>${section.count} papers</span>
-              <span>${escapeHtml(section.latest_snapshot || "No snapshot")}</span>
+            <div class="conference-paper-grid">
+              ${pageItems.map((paper) => renderLikeCard(paper)).join("")}
             </div>
-          </div>
-          <div class="conference-paper-grid">
-            ${section.papers.map((paper) => renderLikeCard(paper)).join("")}
-          </div>
-        </section>
-      `
+            ${paginationHtml}
+          </section>
+        `;
+      }
     )
     .join("");
+
+  root.querySelectorAll("[data-branch-page]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const key = btn.dataset.branchKey;
+      const current = branchPages.get(key) || 0;
+      if (btn.dataset.branchPage === "prev" && current > 0) {
+        branchPages.set(key, current - 1);
+      } else if (btn.dataset.branchPage === "next") {
+        branchPages.set(key, current + 1);
+      }
+      renderPage();
+    });
+  });
 }
 
 function renderLikeCard(paper) {
