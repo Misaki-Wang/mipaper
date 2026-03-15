@@ -150,11 +150,16 @@ async function performSync() {
       .eq('user_id', authUser.id);
     if (error) throw error;
 
+    console.log('performSync: Raw Supabase response:', data?.length, 'rows');
+
     const remoteQueue = (data || []).map(row => ({
       ...row.payload,
       status: row.status,
       saved_at: row.saved_at,
     }));
+
+    const laterCount = remoteQueue.filter(i => i.status === 'later').length;
+    console.log('performSync: Later items:', laterCount, ', Total:', remoteQueue.length);
 
     // Step 3: Overwrite local with Supabase data
     localStorage.setItem(QUEUE_STORAGE_KEY, JSON.stringify(remoteQueue));
