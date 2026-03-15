@@ -1,5 +1,5 @@
 import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js";
-import { bindQueueButtons, initQueue, subscribeQueue } from "./paper_queue.js";
+import { bindQueueButtons, initQueue, isInQueue, subscribeQueue } from "./paper_queue.js";
 import { createCalendarPicker } from "./calendar_picker.js";
 import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js";
 
@@ -854,6 +854,10 @@ function renderTopicSections(report, sections) {
       card.querySelector('[data-link="detail"]').href = paper.detail_url;
       card.querySelector(".paper-badges").innerHTML = renderPaperBadges(paper);
       const likeId = rememberLikeRecord(paper);
+      const laterButton = card.querySelector("[data-later]");
+      laterButton.dataset.laterId = likeId;
+      laterButton.classList.toggle("is-later", isInQueue(likeId));
+      laterButton.setAttribute("aria-pressed", String(isInQueue(likeId)));
       const likeButton = card.querySelector("[data-like]");
       likeButton.dataset.likeId = likeId;
       likeButton.classList.toggle("is-liked", isLiked(likeId));

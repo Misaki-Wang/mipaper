@@ -1,4 +1,6 @@
 import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js";
+import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js";
+import { bindQueueButtons, initQueue, isInQueue, subscribeQueue } from "./paper_queue.js";
 
 const manifestUrl = "./data/trending/manifest.json";
 
@@ -24,6 +26,7 @@ const floatingTocRoot = document.querySelector("#trending-floating-toc");
 const reviewToggleButton = document.querySelector("#trending-review-toggle");
 const reviewToggleMeta = document.querySelector("#trending-review-toggle-meta");
 const heroReviewStatus = document.querySelector("#trending-hero-review-status");
+const likeRecords = new Map();
 let tocObserver = null;
 
 init().catch((error) => {
@@ -37,8 +40,10 @@ async function init() {
   bindBackToTop();
   bindFilters();
   bindReviewToggle();
+  subscribeLikes(() => bindLikeButtons(document, likeRecords));
+  subscribeQueue(() => bindQueueButtons(document, likeRecords));
   subscribePageReviews(() => renderReviewState());
-  await initReviewSync();
+  await Promise.all([initLikesSync(), initReviewSync(), initQueue()]);
   const manifest = await fetchJson(manifestUrl);
   state.manifest = manifest;
   populateReportSelect(manifest.reports || []);
@@ -268,6 +273,7 @@ function renderReport() {
 
   const report = state.report;
   const visibleRepos = getVisibleRepos(report);
+  likeRecords.clear();
   renderHero(report, visibleRepos);
   renderOverview(report, visibleRepos);
   renderTagMap(report);
@@ -281,6 +287,8 @@ function renderReport() {
     { id: "trending-results-section", label: "Results" },
     { id: "trending-repositories-section", label: "Repositories" },
   ]);
+  bindLikeButtons(document, likeRecords);
+  bindQueueButtons(document, likeRecords);
 }
 
 function renderHero(report, visibleRepos) {
@@ -445,6 +453,9 @@ function renderRepositorySections(visibleRepos) {
 }
 
 function renderRepoCard(repo) {
+  const likeId = rememberLikeRecord(repo);
+  const liked = isLiked(likeId);
+  const inLater = isInQueue(likeId);
   const badges = [
     `<span class="paper-badge">${escapeHtml(repo.language || "Unknown")}</span>`,
     repo.stars_this_week !== null && repo.stars_this_week !== undefined
@@ -487,9 +498,49 @@ function renderRepoCard(repo) {
       ${builtBy}
       <div class="paper-links">
         ${renderPaperLink({ href: repo.repo_url, label: "GitHub", brand: "github" })}
+        <button class="paper-link later-button${inLater ? " is-later" : ""}" type="button" data-later-id="${escapeAttribute(likeId)}" aria-pressed="${inLater}">
+          <span class="paper-link-icon later-icon" aria-hidden="true">
+            <svg viewBox="0 0 20 20">
+              <path d="M4 6h12M4 10h12M4 14h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+            </svg>
+          </span>
+          <span class="paper-link-text">Later</span>
+        </button>
+        <button class="paper-link like-button${liked ? " is-liked" : ""}" type="button" data-like-id="${escapeAttribute(likeId)}" aria-pressed="${liked}">
+          <span class="paper-link-icon like-icon" aria-hidden="true">
+            <svg viewBox="0 0 20 20">
+              <path d="M10 16.3l-5.26-4.98A3.8 3.8 0 0 1 10 5.9a3.8 3.8 0 0 1 5.26 5.42z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path>
+            </svg>
+          </span>
+          <span class="paper-link-text">Like</span>
+        </button>
       </div>
     </article>
   `;
+}
+
+function rememberLikeRecord(repo) {
+  const snapshotLabel = state.report ? formatWeekLabel(state.report.snapshot_date) : "Trending";
+  const record = createLikeRecord(
+    {
+      title: repo.full_name,
+      paper_id: repo.full_name,
+      topic_key: (repo.language || "unknown").toLowerCase().replace(/[^a-z0-9]+/g, "_"),
+      topic_label: repo.language || "Unknown",
+      authors: repo.built_by || [],
+      abstract: repo.description || "",
+      github_url: repo.repo_url || "",
+    },
+    {
+      sourceKind: "trending",
+      sourceLabel: "Trending",
+      sourcePage: "./trending.html",
+      snapshotLabel,
+      reportDate: state.report?.snapshot_date || "",
+    }
+  );
+  likeRecords.set(record.like_id, record);
+  return record.like_id;
 }
 
 function getVisibleRepos(report) {

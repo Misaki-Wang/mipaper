@@ -16,6 +16,7 @@ const SOURCE_LABELS = {
   daily: "Cool Daily",
   conference: "Conference",
   hf_daily: "HF Daily",
+  trending: "Trending",
 };
 
 let supabaseClient = null;
