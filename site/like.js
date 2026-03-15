@@ -679,7 +679,6 @@ function renderToReadList(toReadSnapshots) {
     });
   });
 }
-}
 
 function renderDistribution(distribution) {
   const root = document.querySelector("#like-distribution-list");
