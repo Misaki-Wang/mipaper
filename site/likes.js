@@ -105,7 +105,18 @@ export function toggleLike(record) {
   if (index >= 0) {
     likes.splice(index, 1);
     writeLikes(likes, { dirty: true });
-    scheduleRemoteSync();
+
+    // Immediately delete from Supabase
+    if (supabaseClient && authUser) {
+      supabaseClient
+        .from("liked_papers")
+        .delete()
+        .eq("user_id", authUser.id)
+        .eq("like_id", record.like_id)
+        .then(({ error }) => {
+          if (error) console.error("Failed to delete like from Supabase:", error);
+        });
+    }
     return false;
   }
 
@@ -210,14 +221,17 @@ export async function syncLikesNow() {
 async function performRemoteSync() {
   try {
     const likes = readLikes();
-    const upsertRows = likes.map((item) => ({
-      user_id: authUser.id,
-      like_id: item.like_id,
-      saved_at: item.saved_at || new Date().toISOString(),
-      payload: item,
-    }));
+    const meta = readMeta();
 
-    if (upsertRows.length) {
+    // Step 1: Only push dirty local changes to Supabase
+    if (meta.dirty && likes.length > 0) {
+      const upsertRows = likes.map((item) => ({
+        user_id: authUser.id,
+        like_id: item.like_id,
+        saved_at: item.saved_at || new Date().toISOString(),
+        payload: item,
+      }));
+
       const { error } = await supabaseClient.from("liked_papers").upsert(upsertRows, {
         onConflict: "user_id,like_id",
       });
@@ -226,27 +240,7 @@ async function performRemoteSync() {
       }
     }
 
-    const { data: remoteRows, error: remoteError } = await supabaseClient
-      .from("liked_papers")
-      .select("like_id")
-      .eq("user_id", authUser.id);
-    if (remoteError) {
-      throw remoteError;
-    }
-
-    const localIds = new Set(likes.map((item) => item.like_id));
-    const staleIds = (remoteRows || []).map((item) => item.like_id).filter((likeId) => !localIds.has(likeId));
-    if (staleIds.length) {
-      const { error } = await supabaseClient
-        .from("liked_papers")
-        .delete()
-        .eq("user_id", authUser.id)
-        .in("like_id", staleIds);
-      if (error) {
-        throw error;
-      }
-    }
-
+    // Step 2: Always fetch from Supabase as source of truth
     const syncedAt = new Date().toISOString();
     const remoteLikes = await fetchRemoteLikes();
     writeLikes(remoteLikes, { dirty: false, syncedAt });
