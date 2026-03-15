@@ -987,8 +987,6 @@ function renderEmpty(toReadSnapshots) {
   document.querySelector("#like-source-sections").innerHTML =
     `<div class="glass-card empty-state">Click Like in Cool Daily, Conference, or HF Daily to add papers here.</div>`;
   resetFiltersButton.disabled = true;
-  renderLaterQueue(readQueue('later'));
-  renderToReadList(toReadSnapshots);
 }
 
 function renderFatal(error) {
