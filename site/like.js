@@ -558,9 +558,16 @@ function renderTagMap(likes, topicDistribution) {
     .join("");
 }
 
+const LATER_PAGE_SIZE = 6;
+let laterPage = 0;
+
 function renderLaterQueue(laterQueue) {
   const summary = document.querySelector("#like-later-summary");
   const root = document.querySelector("#like-later-list");
+
+  // Clean up old pagination
+  const oldPag = root.parentNode.querySelector('.pagination.later-pagination');
+  if (oldPag) oldPag.remove();
 
   if (!laterQueue.length) {
     summary.textContent = "No papers in Later queue.";
@@ -568,10 +575,14 @@ function renderLaterQueue(laterQueue) {
     return;
   }
 
+  const totalPages = Math.ceil(laterQueue.length / LATER_PAGE_SIZE);
+  laterPage = Math.min(laterPage, totalPages - 1);
+  const start = laterPage * LATER_PAGE_SIZE;
+  const pageItems = laterQueue.slice(start, start + LATER_PAGE_SIZE);
+
   summary.textContent = `${laterQueue.length} papers marked for later reading.`;
 
-  root.innerHTML = laterQueue
-    .slice(0, 12)
+  root.innerHTML = pageItems
     .map((paper) => {
       likeRecords.set(paper.like_id, {
         paper: paper,
@@ -617,6 +628,27 @@ function renderLaterQueue(laterQueue) {
       `;
     })
     .join("");
+
+  if (totalPages > 1) {
+    const paginationEl = document.createElement('div');
+    paginationEl.className = 'pagination later-pagination';
+    paginationEl.innerHTML = `
+      <button class="pill-button" data-later-page="prev" ${laterPage === 0 ? 'disabled' : ''}>← Prev</button>
+      <span class="pagination-info">${laterPage + 1} / ${totalPages}</span>
+      <button class="pill-button" data-later-page="next" ${laterPage >= totalPages - 1 ? 'disabled' : ''}>Next →</button>
+    `;
+    root.parentNode.insertBefore(paginationEl, root.nextSibling);
+
+    paginationEl.querySelectorAll("[data-later-page]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        if (btn.dataset.laterPage === "prev" && laterPage > 0) laterPage--;
+        else if (btn.dataset.laterPage === "next" && laterPage < totalPages - 1) laterPage++;
+        renderLaterQueue(laterQueue);
+        bindLikeButtons(document, likeRecords);
+        bindQueueButtons(document, likeRecords);
+      });
+    });
+  }
 }
 
 const TO_READ_PAGE_SIZE = 6;
@@ -625,6 +657,10 @@ let toReadPage = 0;
 function renderToReadList(toReadSnapshots) {
   const summary = document.querySelector("#like-to-read-summary");
   const root = document.querySelector("#like-to-read-list");
+
+  // Clean up old pagination
+  const oldPag = root.parentNode.querySelector('.pagination.to-read-pagination');
+  if (oldPag) oldPag.remove();
 
   if (!toReadSnapshots.length) {
     summary.textContent = "Every fetched snapshot has been reviewed.";
@@ -663,17 +699,13 @@ function renderToReadList(toReadSnapshots) {
   // Add pagination outside the grid
   if (totalPages > 1) {
     const paginationEl = document.createElement('div');
-    paginationEl.className = 'pagination';
+    paginationEl.className = 'pagination to-read-pagination';
     paginationEl.innerHTML = `
       <button class="pill-button" data-to-read-page="prev" ${toReadPage === 0 ? 'disabled' : ''}>← Prev</button>
       <span class="pagination-info">${toReadPage + 1} / ${totalPages}</span>
       <button class="pill-button" data-to-read-page="next" ${toReadPage >= totalPages - 1 ? 'disabled' : ''}>Next →</button>
     `;
     root.parentNode.insertBefore(paginationEl, root.nextSibling);
-
-    // Remove old pagination if re-rendering
-    const oldPagination = root.parentNode.querySelector('.pagination:not(:first-of-type)');
-    if (oldPagination && oldPagination !== paginationEl) oldPagination.remove();
 
     paginationEl.querySelectorAll("[data-to-read-page]").forEach((btn) => {
       btn.addEventListener("click", () => {
