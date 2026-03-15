@@ -658,26 +658,35 @@ function renderToReadList(toReadSnapshots) {
     )
     .join("");
 
-  const paginationHtml = totalPages > 1
-    ? `<div class="pagination">
-        <button class="pill-button" data-to-read-page="prev" ${toReadPage === 0 ? 'disabled' : ''}>← Prev</button>
-        <span class="pagination-info">${toReadPage + 1} / ${totalPages}</span>
-        <button class="pill-button" data-to-read-page="next" ${toReadPage >= totalPages - 1 ? 'disabled' : ''}>Next →</button>
-      </div>`
-    : "";
+  root.innerHTML = cardsHtml;
 
-  root.innerHTML = cardsHtml + paginationHtml;
+  // Add pagination outside the grid
+  if (totalPages > 1) {
+    const paginationEl = document.createElement('div');
+    paginationEl.className = 'pagination';
+    paginationEl.innerHTML = `
+      <button class="pill-button" data-to-read-page="prev" ${toReadPage === 0 ? 'disabled' : ''}>← Prev</button>
+      <span class="pagination-info">${toReadPage + 1} / ${totalPages}</span>
+      <button class="pill-button" data-to-read-page="next" ${toReadPage >= totalPages - 1 ? 'disabled' : ''}>Next →</button>
+    `;
+    root.parentNode.insertBefore(paginationEl, root.nextSibling);
 
-  root.querySelectorAll("[data-to-read-page]").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      if (btn.dataset.toReadPage === "prev" && toReadPage > 0) {
-        toReadPage--;
-      } else if (btn.dataset.toReadPage === "next" && toReadPage < totalPages - 1) {
-        toReadPage++;
-      }
-      renderToReadList(toReadSnapshots);
+    // Remove old pagination if re-rendering
+    const oldPagination = root.parentNode.querySelector('.pagination:not(:first-of-type)');
+    if (oldPagination && oldPagination !== paginationEl) oldPagination.remove();
+
+    paginationEl.querySelectorAll("[data-to-read-page]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        if (btn.dataset.toReadPage === "prev" && toReadPage > 0) {
+          toReadPage--;
+        } else if (btn.dataset.toReadPage === "next" && toReadPage < totalPages - 1) {
+          toReadPage++;
+        }
+        paginationEl.remove();
+        renderToReadList(toReadSnapshots);
+      });
     });
-  });
+  }
 }
 
 function renderDistribution(distribution) {
