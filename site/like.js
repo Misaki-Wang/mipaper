@@ -619,6 +619,9 @@ function renderLaterQueue(laterQueue) {
     .join("");
 }
 
+const TO_READ_PAGE_SIZE = 6;
+let toReadPage = 0;
+
 function renderToReadList(toReadSnapshots) {
   const summary = document.querySelector("#like-to-read-summary");
   const root = document.querySelector("#like-to-read-list");
@@ -629,10 +632,14 @@ function renderToReadList(toReadSnapshots) {
     return;
   }
 
+  const totalPages = Math.ceil(toReadSnapshots.length / TO_READ_PAGE_SIZE);
+  toReadPage = Math.min(toReadPage, totalPages - 1);
+  const start = toReadPage * TO_READ_PAGE_SIZE;
+  const pageItems = toReadSnapshots.slice(start, start + TO_READ_PAGE_SIZE);
+
   summary.textContent = `${toReadSnapshots.length} fetched snapshots are currently in your queue because they are not reviewed.`;
 
-  root.innerHTML = toReadSnapshots
-    .slice(0, 12)
+  const cardsHtml = pageItems
     .map(
       (snapshot) => `
         <article class="spotlight-card">
@@ -650,6 +657,28 @@ function renderToReadList(toReadSnapshots) {
       `
     )
     .join("");
+
+  const paginationHtml = totalPages > 1
+    ? `<div class="pagination">
+        <button class="pill-button" data-to-read-page="prev" ${toReadPage === 0 ? 'disabled' : ''}>← Prev</button>
+        <span class="pagination-info">${toReadPage + 1} / ${totalPages}</span>
+        <button class="pill-button" data-to-read-page="next" ${toReadPage >= totalPages - 1 ? 'disabled' : ''}>Next →</button>
+      </div>`
+    : "";
+
+  root.innerHTML = cardsHtml + paginationHtml;
+
+  root.querySelectorAll("[data-to-read-page]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      if (btn.dataset.toReadPage === "prev" && toReadPage > 0) {
+        toReadPage--;
+      } else if (btn.dataset.toReadPage === "next" && toReadPage < totalPages - 1) {
+        toReadPage++;
+      }
+      renderToReadList(toReadSnapshots);
+    });
+  });
+}
 }
 
 function renderDistribution(distribution) {

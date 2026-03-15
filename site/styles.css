@@ -2943,6 +2943,23 @@ code {
   padding: 2rem;
 }
 
+/* Pagination */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.2rem 0 0.4rem;
+}
+
+.pagination-info {
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 500;
+  min-width: 4em;
+  text-align: center;
+}
+
 /* Later & Like Queue Styles */
 .later-button {
   /* Inherits .paper-link base styles */
