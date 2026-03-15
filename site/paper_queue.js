@@ -114,12 +114,19 @@ async function performSync() {
     const client = await getSupabaseClient();
     const queue = readQueue();
     const meta = readMeta();
-    console.log('performSync: Local queue has', queue.length, 'items, dirty:', meta.dirty);
+
+    // Clean up: remove any non-'later' items from local queue
+    const cleanQueue = queue.filter(item => item.status === 'later');
+    if (cleanQueue.length !== queue.length) {
+      console.log('performSync: Cleaned', queue.length - cleanQueue.length, 'non-later items from local');
+      localStorage.setItem(QUEUE_STORAGE_KEY, JSON.stringify(cleanQueue));
+    }
+
+    console.log('performSync: Local queue has', cleanQueue.length, 'items, dirty:', meta.dirty);
 
     // Step 1: If local has dirty changes, push them to Supabase first
-    if (meta.dirty && queue.length > 0) {
-      const laterItems = queue.filter(item => item.status === 'later');
-      const upsertRows = laterItems.map(item => ({
+    if (meta.dirty && cleanQueue.length > 0) {
+      const upsertRows = cleanQueue.map(item => ({
         user_id: authUser.id,
         paper_id: item.like_id,
         status: 'later',
@@ -136,7 +143,13 @@ async function performSync() {
       }
     }
 
-    // Step 2: Always fetch from Supabase as source of truth
+    // Step 2: Clean up any non-later rows from Supabase
+    await client.from('paper_queue')
+      .delete()
+      .eq('user_id', authUser.id)
+      .neq('status', 'later');
+
+    // Step 3: Always fetch from Supabase as source of truth
     const { data, error } = await client.from('paper_queue')
       .select('*')
       .eq('user_id', authUser.id)
