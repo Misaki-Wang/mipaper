@@ -45,25 +45,26 @@ export function addToQueue(paper, context, status = 'later') {
   if (existing) {
     existing.status = status;
     existing.saved_at = new Date().toISOString();
-    localStorage.setItem(QUEUE_STORAGE_KEY, JSON.stringify(queue));
   } else {
     queue.push({
       ...record,
       status: status,
       saved_at: new Date().toISOString(),
     });
-    localStorage.setItem(QUEUE_STORAGE_KEY, JSON.stringify(queue));
   }
 
+  // Set dirty flag BEFORE writing to localStorage to ensure consistency
   writeMeta({ dirty: true });
+  localStorage.setItem(QUEUE_STORAGE_KEY, JSON.stringify(queue));
   window.dispatchEvent(new CustomEvent(QUEUE_CHANGED_EVENT));
   scheduleSync();
 }
 
 export function removeFromQueue(likeId) {
   const queue = readQueue().filter(item => item.like_id !== likeId);
-  localStorage.setItem(QUEUE_STORAGE_KEY, JSON.stringify(queue));
+  // Set dirty flag BEFORE writing to localStorage
   writeMeta({ dirty: true });
+  localStorage.setItem(QUEUE_STORAGE_KEY, JSON.stringify(queue));
   window.dispatchEvent(new CustomEvent(QUEUE_CHANGED_EVENT));
   scheduleSync();
 }
@@ -74,8 +75,9 @@ export function moveToLike(likeId) {
   if (item) {
     item.status = 'like';
     item.saved_at = new Date().toISOString();
-    localStorage.setItem(QUEUE_STORAGE_KEY, JSON.stringify(queue));
+    // Set dirty flag BEFORE writing to localStorage
     writeMeta({ dirty: true });
+    localStorage.setItem(QUEUE_STORAGE_KEY, JSON.stringify(queue));
     window.dispatchEvent(new CustomEvent(QUEUE_CHANGED_EVENT));
     scheduleSync();
   }
@@ -200,6 +202,18 @@ export async function initQueue() {
   }
 
   const client = await getSupabaseClient();
+
+  // Set up auth state listener FIRST to ensure all syncs use correct auth context
+  client.auth.onAuthStateChange(async (_event, sessionState) => {
+    authSession = sessionState;
+    authUser = sessionState?.user || null;
+    console.log('Queue auth state changed:', _event, authUser ? 'User logged in' : 'User logged out');
+    if (authUser) {
+      await performSync();
+    }
+  });
+
+  // Then check initial session and sync if logged in
   const { data: { session } } = await client.auth.getSession();
   console.log('initQueue: Session:', session ? 'Found' : 'Not found');
 
@@ -210,15 +224,6 @@ export async function initQueue() {
     await performSync();
     console.log('initQueue: performSync completed');
   }
-
-  client.auth.onAuthStateChange(async (_event, sessionState) => {
-    authSession = sessionState;
-    authUser = sessionState?.user || null;
-    console.log('Queue auth state changed:', _event, authUser ? 'User logged in' : 'User logged out');
-    if (authUser) {
-      await performSync();
-    }
-  });
 }
 
 export function subscribeQueue(callback) {
