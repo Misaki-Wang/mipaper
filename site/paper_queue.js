@@ -151,6 +151,9 @@ async function performSync() {
     if (error) throw error;
 
     console.log('performSync: Raw Supabase response:', data?.length, 'rows');
+    if (data?.length) {
+      console.log('performSync: First row -', 'status:', data[0].status, 'payload.status:', data[0].payload?.status, 'paper_id:', data[0].paper_id);
+    }
 
     const remoteQueue = (data || []).map(row => ({
       ...row.payload,
