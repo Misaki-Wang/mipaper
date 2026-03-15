@@ -343,37 +343,39 @@ function renderUnauthorizedState(snapshot) {
 }
 
 function renderPage() {
-  const likes = readLikes();
-  state.likes = likes;
-  const laterQueue = readQueue('later');
-  console.log('renderPage: laterQueue has', laterQueue.length, 'items');
-  const toReadSnapshots = getToReadSnapshots(state.snapshots);
-  populateFilters(likes);
-  renderHero(likes);
-  renderSourceCards(likes);
+  try {
+    const likes = readLikes();
+    state.likes = likes;
+    const laterQueue = readQueue('later');
+    const toReadSnapshots = getToReadSnapshots(state.snapshots);
+    populateFilters(likes);
+    renderHero(likes);
+    renderSourceCards(likes);
 
-  likeRecords.clear();
-  renderLaterQueue(laterQueue);
-  renderToReadList(toReadSnapshots);
+    likeRecords.clear();
+    renderLaterQueue(laterQueue);
+    renderToReadList(toReadSnapshots);
 
-  if (!likes.length) {
-    renderEmpty(toReadSnapshots);
+    if (!likes.length) {
+      renderEmpty(toReadSnapshots);
+      bindQueueButtons(document, likeRecords);
+      return;
+    }
+
+    const visibleLikes = getVisibleLikes(likes);
+    const topicDistribution = computeTopicDistribution(visibleLikes);
+    const sourceSections = groupBySource(visibleLikes);
+
+    renderOverview(likes, visibleLikes, sourceSections, toReadSnapshots);
+    renderTagMap(likes, topicDistribution);
+    renderDistribution(topicDistribution);
+    renderResults(likes, visibleLikes, sourceSections);
+    renderSourceSections(sourceSections);
+    bindLikeButtons(document, likeRecords);
     bindQueueButtons(document, likeRecords);
-    return;
+  } catch (error) {
+    console.error('renderPage failed:', error);
   }
-
-  const visibleLikes = getVisibleLikes(likes);
-  const topicDistribution = computeTopicDistribution(visibleLikes);
-  const sourceSections = groupBySource(visibleLikes);
-
-  renderOverview(likes, visibleLikes, sourceSections, toReadSnapshots);
-  renderTagMap(likes, topicDistribution);
-  renderDistribution(topicDistribution);
-  renderResults(likes, visibleLikes, sourceSections);
-  renderSourceSections(sourceSections);
-  bindLikeButtons(document, likeRecords);
-  bindQueueButtons(document, likeRecords);
-  console.log('renderPage: bindQueueButtons called with', likeRecords.size, 'records');
 }
 
 function populateFilters(likes) {
@@ -565,10 +567,6 @@ function renderLaterQueue(laterQueue) {
   const summary = document.querySelector("#like-later-summary");
   const root = document.querySelector("#like-later-list");
 
-  // Clean up old pagination
-  const oldPag = root.parentNode.querySelector('.pagination.later-pagination');
-  if (oldPag) oldPag.remove();
-
   if (!laterQueue.length) {
     summary.textContent = "No papers in Later queue.";
     root.innerHTML = `<div class="empty-state">Papers marked as Later will appear here.</div>`;
@@ -582,7 +580,7 @@ function renderLaterQueue(laterQueue) {
 
   summary.textContent = `${laterQueue.length} papers marked for later reading.`;
 
-  root.innerHTML = pageItems
+  const cardsHtml = pageItems
     .map((paper) => {
       likeRecords.set(paper.like_id, {
         paper: paper,
@@ -629,26 +627,25 @@ function renderLaterQueue(laterQueue) {
     })
     .join("");
 
-  if (totalPages > 1) {
-    const paginationEl = document.createElement('div');
-    paginationEl.className = 'pagination later-pagination';
-    paginationEl.innerHTML = `
-      <button class="pill-button" data-later-page="prev" ${laterPage === 0 ? 'disabled' : ''}>← Prev</button>
-      <span class="pagination-info">${laterPage + 1} / ${totalPages}</span>
-      <button class="pill-button" data-later-page="next" ${laterPage >= totalPages - 1 ? 'disabled' : ''}>Next →</button>
-    `;
-    root.parentNode.insertBefore(paginationEl, root.nextSibling);
+  const pagHtml = totalPages > 1
+    ? `</div><div class="pagination later-pagination">
+        <button class="pill-button" data-later-page="prev" ${laterPage === 0 ? 'disabled' : ''}>← Prev</button>
+        <span class="pagination-info">${laterPage + 1} / ${totalPages}</span>
+        <button class="pill-button" data-later-page="next" ${laterPage >= totalPages - 1 ? 'disabled' : ''}>Next →</button>
+      </div><div style="display:none">`
+    : "";
 
-    paginationEl.querySelectorAll("[data-later-page]").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        if (btn.dataset.laterPage === "prev" && laterPage > 0) laterPage--;
-        else if (btn.dataset.laterPage === "next" && laterPage < totalPages - 1) laterPage++;
-        renderLaterQueue(laterQueue);
-        bindLikeButtons(document, likeRecords);
-        bindQueueButtons(document, likeRecords);
-      });
+  root.innerHTML = cardsHtml + pagHtml;
+
+  root.parentNode.querySelectorAll("[data-later-page]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      if (btn.dataset.laterPage === "prev" && laterPage > 0) laterPage--;
+      else if (btn.dataset.laterPage === "next" && laterPage < totalPages - 1) laterPage++;
+      renderLaterQueue(laterQueue);
+      bindLikeButtons(document, likeRecords);
+      bindQueueButtons(document, likeRecords);
     });
-  }
+  });
 }
 
 const TO_READ_PAGE_SIZE = 6;
@@ -657,10 +654,6 @@ let toReadPage = 0;
 function renderToReadList(toReadSnapshots) {
   const summary = document.querySelector("#like-to-read-summary");
   const root = document.querySelector("#like-to-read-list");
-
-  // Clean up old pagination
-  const oldPag = root.parentNode.querySelector('.pagination.to-read-pagination');
-  if (oldPag) oldPag.remove();
 
   if (!toReadSnapshots.length) {
     summary.textContent = "Every fetched snapshot has been reviewed.";
@@ -694,31 +687,23 @@ function renderToReadList(toReadSnapshots) {
     )
     .join("");
 
-  root.innerHTML = cardsHtml;
+  const pagHtml = totalPages > 1
+    ? `</div><div class="pagination to-read-pagination">
+        <button class="pill-button" data-to-read-page="prev" ${toReadPage === 0 ? 'disabled' : ''}>← Prev</button>
+        <span class="pagination-info">${toReadPage + 1} / ${totalPages}</span>
+        <button class="pill-button" data-to-read-page="next" ${toReadPage >= totalPages - 1 ? 'disabled' : ''}>Next →</button>
+      </div><div style="display:none">`
+    : "";
 
-  // Add pagination outside the grid
-  if (totalPages > 1) {
-    const paginationEl = document.createElement('div');
-    paginationEl.className = 'pagination to-read-pagination';
-    paginationEl.innerHTML = `
-      <button class="pill-button" data-to-read-page="prev" ${toReadPage === 0 ? 'disabled' : ''}>← Prev</button>
-      <span class="pagination-info">${toReadPage + 1} / ${totalPages}</span>
-      <button class="pill-button" data-to-read-page="next" ${toReadPage >= totalPages - 1 ? 'disabled' : ''}>Next →</button>
-    `;
-    root.parentNode.insertBefore(paginationEl, root.nextSibling);
+  root.innerHTML = cardsHtml + pagHtml;
 
-    paginationEl.querySelectorAll("[data-to-read-page]").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        if (btn.dataset.toReadPage === "prev" && toReadPage > 0) {
-          toReadPage--;
-        } else if (btn.dataset.toReadPage === "next" && toReadPage < totalPages - 1) {
-          toReadPage++;
-        }
-        paginationEl.remove();
-        renderToReadList(toReadSnapshots);
-      });
+  root.parentNode.querySelectorAll("[data-to-read-page]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      if (btn.dataset.toReadPage === "prev" && toReadPage > 0) toReadPage--;
+      else if (btn.dataset.toReadPage === "next" && toReadPage < totalPages - 1) toReadPage++;
+      renderToReadList(toReadSnapshots);
     });
-  }
+  });
 }
 
 function renderDistribution(distribution) {
