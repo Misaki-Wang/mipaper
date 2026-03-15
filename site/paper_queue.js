@@ -62,11 +62,25 @@ export function addToQueue(paper, context, status = 'later') {
 
 export function removeFromQueue(likeId) {
   const queue = readQueue().filter(item => item.like_id !== likeId);
-  // Set dirty flag BEFORE writing to localStorage
   writeMeta({ dirty: true });
   localStorage.setItem(QUEUE_STORAGE_KEY, JSON.stringify(queue));
   window.dispatchEvent(new CustomEvent(QUEUE_CHANGED_EVENT));
-  scheduleSync();
+
+  // Immediately delete from Supabase, then sync
+  if (authUser) {
+    getSupabaseClient().then(client => {
+      client.from('paper_queue')
+        .delete()
+        .eq('user_id', authUser.id)
+        .eq('paper_id', likeId)
+        .then(({ error }) => {
+          if (error) console.error('Failed to delete from Supabase:', error);
+          else writeMeta({ dirty: false });
+        });
+    });
+  } else {
+    scheduleSync();
+  }
 }
 
 export function moveToLike(likeId) {
@@ -113,66 +127,24 @@ async function performSync() {
     const meta = readMeta();
     console.log('performSync: Local queue has', queue.length, 'items, dirty:', meta.dirty);
 
-    // If local is empty and NOT dirty, just hydrate from remote (don't delete remote data)
-    if (queue.length === 0 && !meta.dirty) {
-      console.log('performSync: Local empty & clean — hydrating from remote');
-      const { data, error } = await client.from('paper_queue')
-        .select('*')
-        .eq('user_id', authUser.id);
-      if (error) throw error;
-
-      const remoteQueue = (data || []).map(row => ({
-        ...row.payload,
-        status: row.status,
-        saved_at: row.saved_at,
+    // Step 1: If local has dirty changes, push them to Supabase first
+    if (meta.dirty && queue.length > 0) {
+      const upsertRows = queue.map(item => ({
+        user_id: authUser.id,
+        paper_id: item.like_id,
+        status: item.status,
+        saved_at: item.saved_at,
+        payload: item,
       }));
-      localStorage.setItem(QUEUE_STORAGE_KEY, JSON.stringify(remoteQueue));
-      writeMeta({ dirty: false });
-      window.dispatchEvent(new CustomEvent(QUEUE_CHANGED_EVENT));
-      console.log('performSync: Hydrated', remoteQueue.length, 'items from remote');
-      return;
-    }
 
-    // Local has data or is dirty — do full bidirectional sync
-    const upsertRows = queue.map(item => ({
-      user_id: authUser.id,
-      paper_id: item.like_id,
-      status: item.status,
-      saved_at: item.saved_at,
-      payload: item,
-    }));
-
-    if (upsertRows.length) {
-      const { data: upsertData, error } = await client.from('paper_queue').upsert(upsertRows, {
+      const { error } = await client.from('paper_queue').upsert(upsertRows, {
         onConflict: 'user_id,paper_id',
-      }).select();
+      });
       if (error) throw error;
-      if (!upsertData || upsertData.length === 0) {
-        console.error('performSync: RLS BLOCKED - upsert returned no data!');
-      }
-      console.log('performSync: Uploaded', upsertRows.length, 'items');
+      console.log('performSync: Pushed', upsertRows.length, 'dirty items to Supabase');
     }
 
-    // Delete remote items that are no longer in local
-    const { data: remoteRows, error: remoteError } = await client
-      .from('paper_queue')
-      .select('paper_id')
-      .eq('user_id', authUser.id);
-    if (remoteError) throw remoteError;
-
-    const localIds = new Set(queue.map(item => item.like_id));
-    const staleIds = (remoteRows || []).map(row => row.paper_id).filter(id => !localIds.has(id));
-    if (staleIds.length) {
-      const { error } = await client
-        .from('paper_queue')
-        .delete()
-        .eq('user_id', authUser.id)
-        .in('paper_id', staleIds);
-      if (error) throw error;
-      console.log('performSync: Deleted', staleIds.length, 'stale items');
-    }
-
-    // Fetch final remote state and write to local
+    // Step 2: Always fetch from Supabase as source of truth
     const { data, error } = await client.from('paper_queue')
       .select('*')
       .eq('user_id', authUser.id);
@@ -183,10 +155,12 @@ async function performSync() {
       status: row.status,
       saved_at: row.saved_at,
     }));
+
+    // Step 3: Overwrite local with Supabase data
     localStorage.setItem(QUEUE_STORAGE_KEY, JSON.stringify(remoteQueue));
     writeMeta({ dirty: false });
     window.dispatchEvent(new CustomEvent(QUEUE_CHANGED_EVENT));
-    console.log('performSync: Synced', remoteQueue.length, 'items');
+    console.log('performSync: Synced from Supabase -', remoteQueue.length, 'items');
   } catch (error) {
     console.error('Queue sync failed:', error);
   }
