@@ -629,17 +629,18 @@ function renderLaterQueue(laterQueue) {
     })
     .join("");
 
-  const pagHtml = totalPages > 1
-    ? `</div><div class="pagination later-pagination">
+  root.innerHTML = cardsHtml;
+
+  const pagRoot = document.querySelector("#like-later-pagination");
+  pagRoot.innerHTML = totalPages > 1
+    ? `<div class="pagination">
         <button class="pill-button" data-later-page="prev" ${laterPage === 0 ? 'disabled' : ''}>← Prev</button>
         <span class="pagination-info">${laterPage + 1} / ${totalPages}</span>
         <button class="pill-button" data-later-page="next" ${laterPage >= totalPages - 1 ? 'disabled' : ''}>Next →</button>
-      </div><div style="display:none">`
+      </div>`
     : "";
 
-  root.innerHTML = cardsHtml + pagHtml;
-
-  root.parentNode.querySelectorAll("[data-later-page]").forEach((btn) => {
+  pagRoot.querySelectorAll("[data-later-page]").forEach((btn) => {
     btn.addEventListener("click", () => {
       if (btn.dataset.laterPage === "prev" && laterPage > 0) laterPage--;
       else if (btn.dataset.laterPage === "next" && laterPage < totalPages - 1) laterPage++;
@@ -686,17 +687,18 @@ function renderToReadList(toReadSnapshots) {
     )
     .join("");
 
-  const pagHtml = totalPages > 1
-    ? `</div><div class="pagination to-read-pagination">
+  root.innerHTML = cardsHtml;
+
+  const pagRoot = document.querySelector("#like-to-read-pagination");
+  pagRoot.innerHTML = totalPages > 1
+    ? `<div class="pagination">
         <button class="pill-button" data-to-read-page="prev" ${toReadPage === 0 ? 'disabled' : ''}>← Prev</button>
         <span class="pagination-info">${toReadPage + 1} / ${totalPages}</span>
         <button class="pill-button" data-to-read-page="next" ${toReadPage >= totalPages - 1 ? 'disabled' : ''}>Next →</button>
-      </div><div style="display:none">`
+      </div>`
     : "";
 
-  root.innerHTML = cardsHtml + pagHtml;
-
-  root.parentNode.querySelectorAll("[data-to-read-page]").forEach((btn) => {
+  pagRoot.querySelectorAll("[data-to-read-page]").forEach((btn) => {
     btn.addEventListener("click", () => {
       if (btn.dataset.toReadPage === "prev" && toReadPage > 0) toReadPage--;
       else if (btn.dataset.toReadPage === "next" && toReadPage < totalPages - 1) toReadPage++;
