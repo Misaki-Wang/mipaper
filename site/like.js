@@ -53,6 +53,11 @@ const accountCard = document.querySelector("#like-account-card");
 const authWarning = document.querySelector("#like-auth-warning");
 let toReadSyncPromise = null;
 
+const LATER_PAGE_SIZE = 6;
+let laterPage = 0;
+const TO_READ_PAGE_SIZE = 6;
+let toReadPage = 0;
+
 init().catch((error) => {
   console.error(error);
   renderFatal(error);
@@ -560,9 +565,6 @@ function renderTagMap(likes, topicDistribution) {
     .join("");
 }
 
-const LATER_PAGE_SIZE = 6;
-let laterPage = 0;
-
 function renderLaterQueue(laterQueue) {
   const summary = document.querySelector("#like-later-summary");
   const root = document.querySelector("#like-later-list");
@@ -647,9 +649,6 @@ function renderLaterQueue(laterQueue) {
     });
   });
 }
-
-const TO_READ_PAGE_SIZE = 6;
-let toReadPage = 0;
 
 function renderToReadList(toReadSnapshots) {
   const summary = document.querySelector("#like-to-read-summary");
