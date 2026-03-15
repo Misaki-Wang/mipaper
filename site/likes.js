@@ -295,10 +295,12 @@ export function bindLikeButtons(root, recordLookup) {
     button.addEventListener("click", (event) => {
       event.preventDefault();
       event.stopPropagation();
-      const record = recordLookup.get(likeId);
-      if (!record) {
+      const entry = recordLookup.get(likeId);
+      if (!entry) {
         return;
       }
+      // Support both flat record and { paper, context } wrapper formats
+      const record = entry.like_id ? entry : (entry.paper?.like_id ? entry.paper : entry);
       toggleLike(record);
       bindLikeButtons(document, recordLookup);
     });
