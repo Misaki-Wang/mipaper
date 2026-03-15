@@ -202,18 +202,6 @@ export async function initQueue() {
   }
 
   const client = await getSupabaseClient();
-
-  // Set up auth state listener FIRST to ensure all syncs use correct auth context
-  client.auth.onAuthStateChange(async (_event, sessionState) => {
-    authSession = sessionState;
-    authUser = sessionState?.user || null;
-    console.log('Queue auth state changed:', _event, authUser ? 'User logged in' : 'User logged out');
-    if (authUser) {
-      await performSync();
-    }
-  });
-
-  // Then check initial session and sync if logged in
   const { data: { session } } = await client.auth.getSession();
   console.log('initQueue: Session:', session ? 'Found' : 'Not found');
 
@@ -224,6 +212,19 @@ export async function initQueue() {
     await performSync();
     console.log('initQueue: performSync completed');
   }
+
+  // Set up auth state listener to handle future login/logout
+  client.auth.onAuthStateChange(async (_event, sessionState) => {
+    const previousUser = authUser;
+    authSession = sessionState;
+    authUser = sessionState?.user || null;
+    console.log('Queue auth state changed:', _event, authUser ? 'User logged in' : 'User logged out');
+
+    // Only sync if user actually changed (avoid duplicate sync on INITIAL_SESSION)
+    if (authUser && authUser.id !== previousUser?.id) {
+      await performSync();
+    }
+  });
 }
 
 export function subscribeQueue(callback) {
