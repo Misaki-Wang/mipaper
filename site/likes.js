@@ -115,7 +115,10 @@ export function toggleLike(record) {
         .eq("like_id", record.like_id)
         .then(({ error }) => {
           if (error) console.error("Failed to delete like from Supabase:", error);
+          else console.log("Deleted like from Supabase:", record.like_id);
         });
+    } else {
+      console.warn("toggleLike (remove): No supabaseClient or authUser, delete not synced");
     }
     return false;
   }
@@ -128,7 +131,26 @@ export function toggleLike(record) {
     ...likes.filter((item) => item.like_id !== record.like_id),
   ];
   writeLikes(next, { dirty: true });
-  scheduleRemoteSync();
+
+  // Immediately upsert to Supabase
+  if (supabaseClient && authUser) {
+    const upsertRow = {
+      user_id: authUser.id,
+      like_id: record.like_id,
+      saved_at: new Date().toISOString(),
+      payload: { ...record, saved_at: new Date().toISOString() },
+    };
+    supabaseClient
+      .from("liked_papers")
+      .upsert([upsertRow], { onConflict: "user_id,like_id" })
+      .then(({ error }) => {
+        if (error) console.error("Failed to upsert like to Supabase:", error);
+        else console.log("Upserted like to Supabase:", record.like_id);
+      });
+  } else {
+    console.warn("toggleLike (add): No supabaseClient or authUser, upsert not synced");
+    scheduleRemoteSync();
+  }
   return true;
 }
 
