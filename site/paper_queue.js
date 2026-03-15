@@ -1,6 +1,7 @@
 import {
   createLikeRecord,
   getLikeId,
+  toggleLike,
 } from "./likes.js";
 
 import {
@@ -271,11 +272,17 @@ export function bindQueueButtons(root, recordLookup) {
       const record = recordLookup.get(likeId);
       if (!record) return;
 
+      const paper = record.paper || record;
+      const context = record.context || {};
+      const likeRecord = paper.like_id ? paper : createLikeRecord(paper, context);
+
+      // Toggle in the main likes system (syncs to liked_papers table)
+      toggleLike(likeRecord);
+
+      // Also update queue status
       if (isInQueue(likeId, 'like')) {
         removeFromQueue(likeId);
       } else {
-        const paper = record.paper || record;
-        const context = record.context || {};
         addToQueue(paper, context, 'like');
       }
     });
