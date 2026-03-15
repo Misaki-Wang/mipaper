@@ -1,26 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Paper Queue - Cool Paper</title>
-  <link rel="stylesheet" href="./app.css">
-</head>
-<body>
-  <div class="container">
-    <h1>Paper Queue</h1>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MiPaper - Paper Queue</title>
+    <meta
+      name="description"
+      content="Paper queue for later reading and liked papers."
+    />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <script>
+      (function () {
+        var storedMode = localStorage.getItem("cool-paper-theme") || "auto";
+        var prefersDark =
+          typeof window.matchMedia === "function" &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+        var resolvedTheme = storedMode === "auto" ? (prefersDark ? "dark" : "light") : storedMode;
+        document.documentElement.dataset.theme = resolvedTheme;
+        document.documentElement.dataset.themeMode = storedMode;
+      })();
+    </script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero reveal">
+        <div class="hero-copy">
+          <div class="page-nav">
+            <a class="page-nav-link" href="./index.html">HF Daily</a>
+            <a class="page-nav-link" href="./cool-daily.html">Cool Daily</a>
+            <a class="page-nav-link" href="./conference.html">Conference</a>
+            <a class="page-nav-link" href="./trending.html">Trending</a>
+            <a class="page-nav-link" href="./like.html">Like</a>
+          </div>
+          <h1>Paper Queue</h1>
+          <p class="hero-text">
+            Papers saved for later reading and your liked favorites.
+          </p>
+          <div class="hero-actions">
+            <button class="pill-button active" type="button" data-theme-toggle="auto">Auto</button>
+            <button class="pill-button" type="button" data-theme-toggle="light">Day</button>
+            <button class="pill-button" type="button" data-theme-toggle="dark">Night</button>
+          </div>
+        </div>
+      </header>
 
-    <section class="queue-section">
-      <h2>Later (Read Soon)</h2>
-      <div id="later-list" class="paper-list"></div>
-    </section>
+      <main>
+        <section class="queue-section" aria-label="Later reading list">
+          <h2>Later (Read Soon)</h2>
+          <div id="later-list" class="paper-list" role="list"></div>
+        </section>
 
-    <section class="queue-section">
-      <h2>Like (Favorites)</h2>
-      <div id="like-list" class="paper-list"></div>
-    </section>
-  </div>
+        <section class="queue-section" aria-label="Liked papers">
+          <h2>Like (Favorites)</h2>
+          <div id="like-list" class="paper-list" role="list"></div>
+        </section>
+      </main>
+    </div>
 
-  <script type="module" src="./queue.js"></script>
-</body>
+    <script type="module" src="./queue.js"></script>
+  </body>
 </html>

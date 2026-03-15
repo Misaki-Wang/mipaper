@@ -1,7 +1,5 @@
 import {
   createLikeRecord,
-  getLikeId,
-  toggleLike,
 } from "./likes.js";
 
 import {
@@ -14,7 +12,6 @@ const QUEUE_STORAGE_KEY = "cool-paper-queue-v1";
 const QUEUE_META_KEY = "cool-paper-queue-meta-v1";
 const QUEUE_CHANGED_EVENT = "cool-paper-queue-changed";
 
-let supabaseClient = null;
 let authSession = null;
 let authUser = null;
 
@@ -252,38 +249,6 @@ export function bindQueueButtons(root, recordLookup) {
         const paper = record.paper || record;
         const context = record.context || {};
         addToQueue(paper, context, 'later');
-      }
-    });
-  });
-
-  // Bind Like buttons (override existing)
-  root.querySelectorAll("[data-like-id]").forEach((button) => {
-    const likeId = button.dataset.likeId;
-    const inLike = isInQueue(likeId, 'like');
-    button.classList.toggle("is-liked", inLike);
-    button.setAttribute("aria-pressed", String(inLike));
-
-    if (button.dataset.queueLikeBound === "true") return;
-    button.dataset.queueLikeBound = "true";
-
-    button.addEventListener("click", (event) => {
-      event.preventDefault();
-      event.stopPropagation();
-      const record = recordLookup.get(likeId);
-      if (!record) return;
-
-      const paper = record.paper || record;
-      const context = record.context || {};
-      const likeRecord = paper.like_id ? paper : createLikeRecord(paper, context);
-
-      // Toggle in the main likes system (syncs to liked_papers table)
-      toggleLike(likeRecord);
-
-      // Also update queue status
-      if (isInQueue(likeId, 'like')) {
-        removeFromQueue(likeId);
-      } else {
-        addToQueue(paper, context, 'like');
       }
     });
   });
