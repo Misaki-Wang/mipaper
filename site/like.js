@@ -607,6 +607,19 @@ function renderLaterQueue(laterQueue) {
             <span class="paper-detail-label">Authors</span>
             <p class="paper-authors-line">${escapeHtml(paper.authors?.join(", ") || "Unknown")}</p>
           </div>
+          ${paper.abstract ? `
+          <details class="paper-abstract">
+            <summary>
+              <span class="paper-abstract-label">Abstract</span>
+              <span class="paper-abstract-arrow" aria-hidden="true">
+                <svg viewBox="0 0 20 20" width="14" height="14">
+                  <path d="M5.5 7.5L10 12l4.5-4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+                </svg>
+              </span>
+            </summary>
+            <p>${escapeHtml(paper.abstract)}</p>
+          </details>
+          ` : ""}
           <div class="spotlight-links">
             ${paper.pdf_url ? `<a class="paper-link brand-arxiv" href="${escapeAttribute(paper.pdf_url)}" target="_blank" rel="noreferrer">arXiv</a>` : ""}
             ${paper.detail_url ? `<a class="paper-link brand-cool" href="${escapeAttribute(paper.detail_url)}" target="_blank" rel="noreferrer">Cool</a>` : ""}
