@@ -1,7 +1,85 @@
 {
-  "reports_count": 10,
-  "default_report_path": "data/hf-daily/reports/2026-03-13/hf-daily-2026-03-13.json",
+  "reports_count": 11,
+  "default_report_path": "data/hf-daily/reports/2026-03-16/hf-daily-2026-03-16.json",
   "reports": [
+    {
+      "slug": "hf-daily-2026-03-16",
+      "report_date": "2026-03-16",
+      "total_papers": 29,
+      "classifier": "codex",
+      "generated_at": "2026-03-16T15:19:49Z",
+      "source_url": "https://huggingface.co/papers/date/2026-03-16",
+      "focus_topics": [
+        {
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "count": 2,
+          "share": 6.9
+        },
+        {
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 3,
+          "share": 10.34
+        },
+        {
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "count": 0,
+          "share": 0.0
+        }
+      ],
+      "top_topics": [
+        {
+          "topic_label": "Multimodal Understanding and Vision",
+          "count": 7,
+          "share": 24.14
+        },
+        {
+          "topic_label": "Datasets and Benchmarks",
+          "count": 4,
+          "share": 13.79
+        },
+        {
+          "topic_label": "Agents and Planning",
+          "count": 3,
+          "share": 10.34
+        },
+        {
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 3,
+          "share": 10.34
+        },
+        {
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "count": 3,
+          "share": 10.34
+        }
+      ],
+      "top_submitters": [
+        {
+          "submitted_by": "taesiri",
+          "count": 5
+        },
+        {
+          "submitted_by": "Kadir-Kaan Özer",
+          "count": 2
+        },
+        {
+          "submitted_by": "Zhuchenyang Liu",
+          "count": 2
+        },
+        {
+          "submitted_by": "AK",
+          "count": 1
+        },
+        {
+          "submitted_by": "Chenfree",
+          "count": 1
+        }
+      ],
+      "data_path": "data/hf-daily/reports/2026-03-16/hf-daily-2026-03-16.json"
+    },
     {
       "slug": "hf-daily-2026-03-13",
       "report_date": "2026-03-13",
