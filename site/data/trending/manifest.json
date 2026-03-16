@@ -1,7 +1,137 @@
 {
-  "reports_count": 2,
-  "default_report_path": "data/trending/reports/2026-03-13/trending-2026-03-13.json",
+  "reports_count": 3,
+  "default_report_path": "data/trending/reports/2026-03-16/trending-2026-03-16.json",
   "reports": [
+    {
+      "slug": "trending-2026-03-16",
+      "snapshot_date": "2026-03-16",
+      "since": "weekly",
+      "total_repositories": 14,
+      "generated_at": "2026-03-16T04:00:03Z",
+      "source_url": "https://github.com/trending?since=weekly&spoken_language_code=",
+      "top_languages": [
+        {
+          "language": "Python",
+          "count": 11,
+          "share": 78.57142857142857
+        },
+        {
+          "language": "Jupyter Notebook",
+          "count": 1,
+          "share": 7.142857142857142
+        },
+        {
+          "language": "Shell",
+          "count": 1,
+          "share": 7.142857142857142
+        },
+        {
+          "language": "TypeScript",
+          "count": 1,
+          "share": 7.142857142857142
+        }
+      ],
+      "top_repositories": [
+        {
+          "snapshot_date": "2026-03-16",
+          "repo_id": "msitarzewski/agency-agents",
+          "owner": "msitarzewski",
+          "name": "agency-agents",
+          "full_name": "msitarzewski/agency-agents",
+          "repo_url": "https://github.com/msitarzewski/agency-agents",
+          "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+          "language": "Shell",
+          "stars": 47015,
+          "forks": 7012,
+          "stars_this_week": 34355,
+          "built_by": [
+            "msitarzewski",
+            "claude",
+            "jnMetaCode",
+            "4shil",
+            "victorkzam"
+          ]
+        },
+        {
+          "snapshot_date": "2026-03-16",
+          "repo_id": "666ghj/mirofish",
+          "owner": "666ghj",
+          "name": "MiroFish",
+          "full_name": "666ghj/MiroFish",
+          "repo_url": "https://github.com/666ghj/MiroFish",
+          "description": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物",
+          "language": "Python",
+          "stars": 27703,
+          "forks": 3344,
+          "stars_this_week": 19387,
+          "built_by": [
+            "666ghj",
+            "cursoragent"
+          ]
+        },
+        {
+          "snapshot_date": "2026-03-16",
+          "repo_id": "volcengine/openviking",
+          "owner": "volcengine",
+          "name": "OpenViking",
+          "full_name": "volcengine/OpenViking",
+          "repo_url": "https://github.com/volcengine/OpenViking",
+          "description": "OpenViking is an open-source context database designed specifically for AI Agents(such as openclaw). OpenViking unifies the management of context (memory, resources, and skills) that Agents need through a file system paradigm, enabling hierarchical context delivery and self-evolving.",
+          "language": "Python",
+          "stars": 12715,
+          "forks": 878,
+          "stars_this_week": 6514,
+          "built_by": [
+            "qin-ctx",
+            "zhoujh01",
+            "MaojiaSheng",
+            "claude",
+            "ZaynJarvis"
+          ]
+        },
+        {
+          "snapshot_date": "2026-03-16",
+          "repo_id": "microsoft/bitnet",
+          "owner": "microsoft",
+          "name": "BitNet",
+          "full_name": "microsoft/BitNet",
+          "repo_url": "https://github.com/microsoft/BitNet",
+          "description": "Official inference framework for 1-bit LLMs",
+          "language": "Python",
+          "stars": 34745,
+          "forks": 2947,
+          "stars_this_week": 6028,
+          "built_by": [
+            "potassiummmm",
+            "tsong-ms",
+            "younesbelkada",
+            "sd983527",
+            "XsquirrelC"
+          ]
+        },
+        {
+          "snapshot_date": "2026-03-16",
+          "repo_id": "promptfoo/promptfoo",
+          "owner": "promptfoo",
+          "name": "promptfoo",
+          "full_name": "promptfoo/promptfoo",
+          "repo_url": "https://github.com/promptfoo/promptfoo",
+          "description": "Test your prompts, agents, and RAGs. Red teaming/pentesting/vulnerability scanning for AI. Compare performance of GPT, Claude, Gemini, Llama, and more. Simple declarative configs with command line and CI/CD integration.",
+          "language": "TypeScript",
+          "stars": 16479,
+          "forks": 1443,
+          "stars_this_week": 5337,
+          "built_by": [
+            "typpo",
+            "mldangelo",
+            "renovate",
+            "dependabot",
+            "sklein12"
+          ]
+        }
+      ],
+      "data_path": "data/trending/reports/2026-03-16/trending-2026-03-16.json"
+    },
     {
       "slug": "trending-2026-03-13",
       "snapshot_date": "2026-03-13",
