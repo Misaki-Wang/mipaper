@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-10T09:20:50Z",
+  "generated_at": "2026-03-15T15:21:23Z",
   "report_kind": "hf_daily",
   "report_date": "2026-03-09",
   "source_url": "https://huggingface.co/papers/date/2026-03-09",
@@ -37,12 +37,17 @@
       "share": 16.13
     },
     {
-      "topic_label": "Learning, Optimization, and Theory",
+      "topic_label": "LLMs and Language",
       "count": 4,
       "share": 12.9
     },
     {
-      "topic_label": "LLMs and Language",
+      "topic_label": "Datasets and Benchmarks",
+      "count": 3,
+      "share": 9.68
+    },
+    {
+      "topic_label": "Learning, Optimization, and Theory",
       "count": 3,
       "share": 9.68
     },
@@ -62,17 +67,12 @@
       "share": 6.45
     },
     {
-      "topic_label": "Datasets and Benchmarks",
-      "count": 2,
-      "share": 6.45
+      "topic_label": "Multimodal Agents",
+      "count": 1,
+      "share": 3.23
     },
     {
       "topic_label": "Retrieval, Knowledge, and RAG",
-      "count": 2,
-      "share": 6.45
-    },
-    {
-      "topic_label": "Multimodal Agents",
       "count": 1,
       "share": 3.23
     },
@@ -130,13 +130,13 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-03-09T01:22:24.366Z",
-      "upvotes": 82,
+      "upvotes": 104,
       "comments": 4,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.87
+      "classification_source": "claude",
+      "classification_confidence": 0.82
     },
     {
       "report_date": "2026-03-09",
@@ -160,11 +160,11 @@
       "submitted_at": "2026-03-09T04:05:06.877Z",
       "upvotes": 54,
       "comments": 7,
-      "topic_key": "learning_theory",
-      "topic_label": "Learning, Optimization, and Theory",
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.84
+      "classification_source": "claude",
+      "classification_confidence": 0.72
     },
     {
       "report_date": "2026-03-09",
@@ -184,13 +184,13 @@
       "github_url": "",
       "submitted_by": "Adina Yakefu",
       "submitted_at": "2026-03-09T07:22:24.796Z",
-      "upvotes": 30,
+      "upvotes": 35,
       "comments": 4,
       "topic_key": "generative_foundations",
       "topic_label": "Generative Foundations",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.94
+      "classification_source": "claude",
+      "classification_confidence": 0.91
     },
     {
       "report_date": "2026-03-09",
@@ -213,41 +213,12 @@
       "github_url": "",
       "submitted_by": "guoqin",
       "submitted_at": "2026-03-09T07:21:24.091Z",
-      "upvotes": 26,
+      "upvotes": 33,
       "comments": 5,
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.97
-    },
-    {
-      "report_date": "2026-03-09",
-      "paper_id": "2603.05706",
-      "title": "Reasoning Models Struggle to Control their Chains of Thought",
-      "authors": [
-        "Chen Yueh-Han",
-        "Robert McCarthy",
-        "Bruce W. Lee",
-        "He He",
-        "Ian Kivlichan",
-        "Bowen Baker",
-        "Micah Carroll",
-        "Tomek Korbak"
-      ],
-      "abstract": "Chain-of-thought (CoT) monitoring is a promising tool for detecting misbehaviors and understanding the motivations of modern reasoning models. However, if models can control what they verbalize in their CoT, it could undermine CoT monitorability. To measure this undesirable capability -- CoT controllability -- we introduce the CoT-Control evaluation suite, which includes tasks that require models to solve problems while adhering to CoT instructions, e.g., reasoning about a genetics question without using the word 'chromosome'. We show that reasoning models possess significantly lower CoT controllability than output controllability; for instance, Claude Sonnet 4.5 can control its CoT only 2.7% of the time but 61.9% when controlling its final output. We also find that CoT controllability is higher for larger models and decreases with more RL training, test-time compute, and increased problem difficulty. CoT controllability failures extend even to situations in which models are given incentives (as opposed to direct requests) to evade CoT monitors, although models exhibit slightly higher controllability when they are told they are being monitored. Similarly, eliciting controllability by adversarially optimizing prompts does not meaningfully increase controllability. Our results leave us cautiously optimistic that CoT controllability is currently unlikely to be a failure mode of CoT monitorability. However, the mechanism behind low controllability is not well understood. Given its importance for maintaining CoT monitorability, we recommend that frontier labs track CoT controllability in future models.",
-      "hf_url": "https://huggingface.co/papers/2603.05706",
-      "arxiv_url": "https://arxiv.org/abs/2603.05706",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.05706",
-      "github_url": "",
-      "submitted_by": "taesiri",
-      "submitted_at": "2026-03-09T00:44:35.124Z",
-      "upvotes": 23,
-      "comments": 2,
-      "topic_key": "reasoning_alignment_eval",
-      "topic_label": "Reasoning, Alignment, and Evaluation",
-      "matched_terms": [],
-      "classification_source": "codex",
+      "classification_source": "claude",
       "classification_confidence": 0.95
     },
     {
@@ -270,13 +241,42 @@
       "github_url": "",
       "submitted_by": "Sky",
       "submitted_at": "2026-03-09T04:27:34.400Z",
-      "upvotes": 21,
+      "upvotes": 32,
       "comments": 5,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.82
+      "classification_source": "claude",
+      "classification_confidence": 0.8
+    },
+    {
+      "report_date": "2026-03-09",
+      "paper_id": "2603.05706",
+      "title": "Reasoning Models Struggle to Control their Chains of Thought",
+      "authors": [
+        "Chen Yueh-Han",
+        "Robert McCarthy",
+        "Bruce W. Lee",
+        "He He",
+        "Ian Kivlichan",
+        "Bowen Baker",
+        "Micah Carroll",
+        "Tomek Korbak"
+      ],
+      "abstract": "Chain-of-thought (CoT) monitoring is a promising tool for detecting misbehaviors and understanding the motivations of modern reasoning models. However, if models can control what they verbalize in their CoT, it could undermine CoT monitorability. To measure this undesirable capability -- CoT controllability -- we introduce the CoT-Control evaluation suite, which includes tasks that require models to solve problems while adhering to CoT instructions, e.g., reasoning about a genetics question without using the word 'chromosome'. We show that reasoning models possess significantly lower CoT controllability than output controllability; for instance, Claude Sonnet 4.5 can control its CoT only 2.7% of the time but 61.9% when controlling its final output. We also find that CoT controllability is higher for larger models and decreases with more RL training, test-time compute, and increased problem difficulty. CoT controllability failures extend even to situations in which models are given incentives (as opposed to direct requests) to evade CoT monitors, although models exhibit slightly higher controllability when they are told they are being monitored. Similarly, eliciting controllability by adversarially optimizing prompts does not meaningfully increase controllability. Our results leave us cautiously optimistic that CoT controllability is currently unlikely to be a failure mode of CoT monitorability. However, the mechanism behind low controllability is not well understood. Given its importance for maintaining CoT monitorability, we recommend that frontier labs track CoT controllability in future models.",
+      "hf_url": "https://huggingface.co/papers/2603.05706",
+      "arxiv_url": "https://arxiv.org/abs/2603.05706",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.05706",
+      "github_url": "",
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-03-09T00:44:35.124Z",
+      "upvotes": 26,
+      "comments": 2,
+      "topic_key": "reasoning_alignment_eval",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "matched_terms": [],
+      "classification_source": "claude",
+      "classification_confidence": 0.9
     },
     {
       "report_date": "2026-03-09",
@@ -300,37 +300,40 @@
       "github_url": "",
       "submitted_by": "Dai",
       "submitted_at": "2026-03-09T00:36:24.642Z",
-      "upvotes": 20,
+      "upvotes": 22,
       "comments": 3,
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.81
+      "classification_source": "claude",
+      "classification_confidence": 0.82
     },
     {
       "report_date": "2026-03-09",
-      "paper_id": "2603.04750",
-      "title": "HiMAP-Travel: Hierarchical Multi-Agent Planning for Long-Horizon Constrained Travel",
+      "paper_id": "2603.06351",
+      "title": "Dynamic Chunking Diffusion Transformer",
       "authors": [
-        "The Viet Bui",
-        "Wenjun Li",
-        "Yong Liu"
+        "Akash Haridas",
+        "Utkarsh Saxena",
+        "Parsa Ashrafi Fashi",
+        "Mehdi Rezagholizadeh",
+        "Vikram Appia",
+        "Emad Barsoum"
       ],
-      "abstract": "Sequential LLM agents fail on long-horizon planning with hard constraints like budgets and diversity requirements. As planning progresses and context grows, these agents drift from global constraints. We propose HiMAP-Travel, a hierarchical multi-agent framework that splits planning into strategic coordination and parallel day-level execution. A Coordinator allocates resources across days, while Day Executors plan independently in parallel. Three key mechanisms enable this: a transactional monitor enforcing budget and uniqueness constraints across parallel agents, a bargaining protocol allowing agents to reject infeasible sub-goals and trigger re-planning, and a single policy trained with GRPO that powers all agents through role conditioning. On TravelPlanner, HiMAP-Travel with Qwen3-8B achieves 52.78% validation and 52.65% test Final Pass Rate (FPR). In a controlled comparison with identical model, training, and tools, it outperforms the sequential DeepTravel baseline by +8.67~pp. It also surpasses ATLAS by +17.65~pp and MTP by +10.0~pp. On FlexTravelBench multi-turn scenarios, it achieves 44.34% (2-turn) and 37.42% (3-turn) FPR while reducing latency 2.5x through parallelization.",
-      "hf_url": "https://huggingface.co/papers/2603.04750",
-      "arxiv_url": "https://arxiv.org/abs/2603.04750",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.04750",
+      "abstract": "Diffusion Transformers process images as fixed-length sequences of tokens produced by a static patchify operation. While effective, this design spends uniform compute on low- and high-information regions alike, ignoring that images contain regions of varying detail and that the denoising process progresses from coarse structure at early timesteps to fine detail at late timesteps. We introduce the Dynamic Chunking Diffusion Transformer (DC-DiT), which augments the DiT backbone with a learned encoder-router-decoder scaffold that adaptively compresses the 2D input into a shorter token sequence in a data-dependent manner using a chunking mechanism learned end-to-end with diffusion training. The mechanism learns to compress uniform background regions into fewer tokens and detail-rich regions into more tokens, with meaningful visual segmentations emerging without explicit supervision. Furthermore, it also learns to adapt its compression across diffusion timesteps, using fewer tokens at noisy stages and more tokens as fine details emerge. On class-conditional ImageNet 256{times}256, DC-DiT consistently improves FID and Inception Score over both parameter-matched and FLOP-matched DiT baselines across 4{times} and 16{times} compression, showing this is a promising technique with potential further applications to pixel-space, video and 3D generation. Beyond accuracy, DC-DiT is practical: it can be upcycled from pretrained DiT checkpoints with minimal post-training compute (up to 8{times} fewer training steps) and composes with other dynamic computation methods to further reduce generation FLOPs.",
+      "hf_url": "https://huggingface.co/papers/2603.06351",
+      "arxiv_url": "https://arxiv.org/abs/2603.06351",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.06351",
       "github_url": "",
-      "submitted_by": "wenjun",
-      "submitted_at": "2026-03-09T05:41:12.211Z",
-      "upvotes": 9,
-      "comments": 2,
-      "topic_key": "agents_planning",
-      "topic_label": "Agents and Planning",
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-03-09T00:37:54.739Z",
+      "upvotes": 12,
+      "comments": 1,
+      "topic_key": "generative_foundations",
+      "topic_label": "Generative Foundations",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.97
+      "classification_source": "claude",
+      "classification_confidence": 0.93
     }
   ],
   "topics": [
@@ -357,13 +360,13 @@
           "github_url": "",
           "submitted_by": "Adina Yakefu",
           "submitted_at": "2026-03-09T07:22:24.796Z",
-          "upvotes": 30,
+          "upvotes": 35,
           "comments": 4,
           "topic_key": "generative_foundations",
           "topic_label": "Generative Foundations",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.94
+          "classification_source": "claude",
+          "classification_confidence": 0.91
         },
         {
           "report_date": "2026-03-09",
@@ -384,13 +387,13 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-03-09T00:37:54.739Z",
-          "upvotes": 8,
+          "upvotes": 12,
           "comments": 1,
           "topic_key": "generative_foundations",
           "topic_label": "Generative Foundations",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.96
+          "classification_source": "claude",
+          "classification_confidence": 0.93
         },
         {
           "report_date": "2026-03-09",
@@ -418,13 +421,13 @@
           "github_url": "",
           "submitted_by": "Weilun Feng",
           "submitted_at": "2026-03-09T08:58:19.627Z",
-          "upvotes": 2,
+          "upvotes": 3,
           "comments": 2,
           "topic_key": "generative_foundations",
           "topic_label": "Generative Foundations",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.93
+          "classification_source": "claude",
+          "classification_confidence": 0.88
         },
         {
           "report_date": "2026-03-09",
@@ -448,12 +451,12 @@
           "submitted_by": "Zhong",
           "submitted_at": "2026-03-09T23:49:52.438Z",
           "upvotes": 2,
-          "comments": 1,
+          "comments": 2,
           "topic_key": "generative_foundations",
           "topic_label": "Generative Foundations",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.92
+          "classification_source": "claude",
+          "classification_confidence": 0.87
         },
         {
           "report_date": "2026-03-09",
@@ -482,8 +485,8 @@
           "topic_key": "generative_foundations",
           "topic_label": "Generative Foundations",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.89
+          "classification_source": "claude",
+          "classification_confidence": 0.88
         }
       ]
     },
@@ -513,40 +516,13 @@
           "github_url": "",
           "submitted_by": "guoqin",
           "submitted_at": "2026-03-09T07:21:24.091Z",
-          "upvotes": 26,
+          "upvotes": 33,
           "comments": 5,
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.97
-        },
-        {
-          "report_date": "2026-03-09",
-          "paper_id": "2603.06014",
-          "title": "EffectMaker: Unifying Reasoning and Generation for Customized Visual Effect Creation",
-          "authors": [
-            "Shiyuan Yang",
-            "Ruihuang Li",
-            "Jiale Tao",
-            "Shuai Shao",
-            "Qinglin Lu",
-            "Jing Liao"
-          ],
-          "abstract": "Visual effects (VFX) are essential for enhancing the expressiveness and creativity of video content, yet producing high-quality effects typically requires expert knowledge and costly production pipelines. Existing AIGC systems face significant challenges in VFX generation due to the scarcity of effect-specific data and the inherent difficulty of modeling supernatural or stylized effects. Moreover, these approaches often require per-effect fine-tuning, which severely limits their scalability and generalization to novel VFX. In this work, we present EffectMaker, a unified reasoning-generation framework that enables reference-based VFX customization. EffectMaker employs a multimodal large language model to interpret high-level effect semantics and reason about how they should adapt to a target subject, while a diffusion transformer leverages in-context learning to capture fine-grained visual cues from reference videos. These two components form a semantic-visual dual-path guidance mechanism that enables accurate, controllable, and effect-consistent synthesis without per-effect fine-tuning. Furthermore, we construct EffectData, the largest high-quality synthetic dataset containing 130k videos across 3k VFX categories, to improve generalization and scalability. Experiments show that EffectMaker achieves superior visual quality and effect consistency over state-of-the-art baselines, offering a scalable and flexible paradigm for customized VFX generation. Project page: https://effectmaker.github.io",
-          "hf_url": "https://huggingface.co/papers/2603.06014",
-          "arxiv_url": "https://arxiv.org/abs/2603.06014",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.06014",
-          "github_url": "",
-          "submitted_by": "Shiyuan Yang",
-          "submitted_at": "2026-03-09T11:43:40.984Z",
-          "upvotes": 7,
-          "comments": 2,
-          "topic_key": "multimodal_generative",
-          "topic_label": "Multimodal Generative Modeling",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.94
+          "classification_source": "claude",
+          "classification_confidence": 0.95
         },
         {
           "report_date": "2026-03-09",
@@ -567,13 +543,40 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-03-09T00:40:04.838Z",
-          "upvotes": 4,
+          "upvotes": 11,
           "comments": 1,
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.96
+          "classification_source": "claude",
+          "classification_confidence": 0.88
+        },
+        {
+          "report_date": "2026-03-09",
+          "paper_id": "2603.06014",
+          "title": "EffectMaker: Unifying Reasoning and Generation for Customized Visual Effect Creation",
+          "authors": [
+            "Shiyuan Yang",
+            "Ruihuang Li",
+            "Jiale Tao",
+            "Shuai Shao",
+            "Qinglin Lu",
+            "Jing Liao"
+          ],
+          "abstract": "Visual effects (VFX) are essential for enhancing the expressiveness and creativity of video content, yet producing high-quality effects typically requires expert knowledge and costly production pipelines. Existing AIGC systems face significant challenges in VFX generation due to the scarcity of effect-specific data and the inherent difficulty of modeling supernatural or stylized effects. Moreover, these approaches often require per-effect fine-tuning, which severely limits their scalability and generalization to novel VFX. In this work, we present EffectMaker, a unified reasoning-generation framework that enables reference-based VFX customization. EffectMaker employs a multimodal large language model to interpret high-level effect semantics and reason about how they should adapt to a target subject, while a diffusion transformer leverages in-context learning to capture fine-grained visual cues from reference videos. These two components form a semantic-visual dual-path guidance mechanism that enables accurate, controllable, and effect-consistent synthesis without per-effect fine-tuning. Furthermore, we construct EffectData, the largest high-quality synthetic dataset containing 130k videos across 3k VFX categories, to improve generalization and scalability. Experiments show that EffectMaker achieves superior visual quality and effect consistency over state-of-the-art baselines, offering a scalable and flexible paradigm for customized VFX generation. Project page: https://effectmaker.github.io",
+          "hf_url": "https://huggingface.co/papers/2603.06014",
+          "arxiv_url": "https://arxiv.org/abs/2603.06014",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.06014",
+          "github_url": "",
+          "submitted_by": "Shiyuan Yang",
+          "submitted_at": "2026-03-09T11:43:40.984Z",
+          "upvotes": 8,
+          "comments": 2,
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "matched_terms": [],
+          "classification_source": "claude",
+          "classification_confidence": 0.78
         },
         {
           "report_date": "2026-03-09",
@@ -599,8 +602,8 @@
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.74
+          "classification_source": "claude",
+          "classification_confidence": 0.87
         },
         {
           "report_date": "2026-03-09",
@@ -627,13 +630,13 @@
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.97
+          "classification_source": "claude",
+          "classification_confidence": 0.85
         }
       ]
     },
     {
-      "topic_label": "Learning, Optimization, and Theory",
+      "topic_label": "LLMs and Language",
       "count": 4,
       "share": 12.9,
       "papers": [
@@ -659,99 +662,12 @@
           "submitted_at": "2026-03-09T04:05:06.877Z",
           "upvotes": 54,
           "comments": 7,
-          "topic_key": "learning_theory",
-          "topic_label": "Learning, Optimization, and Theory",
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.84
+          "classification_source": "claude",
+          "classification_confidence": 0.72
         },
-        {
-          "report_date": "2026-03-09",
-          "paper_id": "2603.01193",
-          "title": "Operator Learning Using Weak Supervision from Walk-on-Spheres",
-          "authors": [
-            "Hrishikesh Viswanath",
-            "Hong Chul Nam",
-            "Xi Deng",
-            "Julius Berner",
-            "Anima Anandkumar",
-            "Aniket Bera"
-          ],
-          "abstract": "Training neural PDE solvers is often bottlenecked by expensive data generation or unstable physics-informed neural network (PINN) involving challenging optimization landscapes due to higher-order derivatives. To tackle this issue, we propose an alternative approach using Monte Carlo approaches to estimate the solution to the PDE as a stochastic process for weak supervision during training. Leveraging the Walk-on-Spheres method, we introduce a learning scheme called Walk-on-Spheres Neural Operator (WoS-NO) which uses weak supervision from WoS to train any given neural operator. We propose to amortize the cost of Monte Carlo walks across the distribution of PDE instances using stochastic representations from the WoS algorithm to generate cheap, noisy, estimates of the PDE solution during training. This is formulated into a data-free physics-informed objective where a neural operator is trained to regress against these weak supervisions, allowing the operator to learn a generalized solution map for an entire family of PDEs. This strategy does not require expensive pre-computed datasets, avoids computing higher-order derivatives for loss functions that are memory-intensive and unstable, and demonstrates zero-shot generalization to novel PDE parameters and domains. Experiments show that for the same number of training steps, our method exhibits up to 8.75times improvement in L_2-error compared to standard physics-informed training schemes, up to 6.31times improvement in training speed, and reductions of up to 2.97times in GPU memory consumption. We present the code at https://github.com/neuraloperator/WoS-NO",
-          "hf_url": "https://huggingface.co/papers/2603.01193",
-          "arxiv_url": "https://arxiv.org/abs/2603.01193",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.01193",
-          "github_url": "",
-          "submitted_by": "Hrishikesh Viswanath",
-          "submitted_at": "2026-03-09T17:14:39.802Z",
-          "upvotes": 1,
-          "comments": 2,
-          "topic_key": "learning_theory",
-          "topic_label": "Learning, Optimization, and Theory",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.95
-        },
-        {
-          "report_date": "2026-03-09",
-          "paper_id": "2602.23280",
-          "title": "Physics Informed Viscous Value Representations",
-          "authors": [
-            "Hrishikesh Viswanath",
-            "Juanwu Lu",
-            "S. Talha Bukhari",
-            "Damon Conover",
-            "Ziran Wang",
-            "Aniket Bera"
-          ],
-          "abstract": "Offline goal-conditioned reinforcement learning (GCRL) learns goal-conditioned policies from static pre-collected datasets. However, accurate value estimation remains a challenge due to the limited coverage of the state-action space. Recent physics-informed approaches have sought to address this by imposing physical and geometric constraints on the value function through regularization defined over first-order partial differential equations (PDEs), such as the Eikonal equation. However, these formulations can often be ill-posed in complex, high-dimensional environments. In this work, we propose a physics-informed regularization derived from the viscosity solution of the Hamilton-Jacobi-Bellman (HJB) equation. By providing a physics-based inductive bias, our approach grounds the learning process in optimal control theory, explicitly regularizing and bounding updates during value iterations. Furthermore, we leverage the Feynman-Kac theorem to recast the PDE solution as an expectation, enabling a tractable Monte Carlo estimation of the objective that avoids numerical instability in higher-order gradients. Experiments demonstrate that our method improves geometric consistency, making it broadly applicable to navigation and high-dimensional, complex manipulation tasks. Open-source codes are available at https://github.com/HrishikeshVish/phys-fk-value-GCRL.",
-          "hf_url": "https://huggingface.co/papers/2602.23280",
-          "arxiv_url": "https://arxiv.org/abs/2602.23280",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2602.23280",
-          "github_url": "",
-          "submitted_by": "Hrishikesh Viswanath",
-          "submitted_at": "2026-03-09T17:12:00.396Z",
-          "upvotes": 1,
-          "comments": 2,
-          "topic_key": "learning_theory",
-          "topic_label": "Learning, Optimization, and Theory",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.56
-        },
-        {
-          "report_date": "2026-03-09",
-          "paper_id": "2603.05280",
-          "title": "Layer by layer, module by module: Choose both for optimal OOD probing of ViT",
-          "authors": [
-            "Ambroise Odonnat",
-            "Vasilii Feofanov",
-            "Laetitia Chapel",
-            "Romain Tavenard",
-            "Ievgen Redko"
-          ],
-          "abstract": "Recent studies have observed that intermediate layers of foundation models often yield more discriminative representations than the final layer. While initially attributed to autoregressive pretraining, this phenomenon has also been identified in models trained via supervised and discriminative self-supervised objectives. In this paper, we conduct a comprehensive study to analyze the behavior of intermediate layers in pretrained vision transformers. Through extensive linear probing experiments across a diverse set of image classification benchmarks, we find that distribution shift between pretraining and downstream data is the primary cause of performance degradation in deeper layers. Furthermore, we perform a fine-grained analysis at the module level. Our findings reveal that standard probing of transformer block outputs is suboptimal; instead, probing the activation within the feedforward network yields the best performance under significant distribution shift, whereas the normalized output of the multi-head self-attention module is optimal when the shift is weak.",
-          "hf_url": "https://huggingface.co/papers/2603.05280",
-          "arxiv_url": "https://arxiv.org/abs/2603.05280",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.05280",
-          "github_url": "",
-          "submitted_by": "Ambroise Odonnat",
-          "submitted_at": "2026-03-09T08:36:41.544Z",
-          "upvotes": 0,
-          "comments": 2,
-          "topic_key": "learning_theory",
-          "topic_label": "Learning, Optimization, and Theory",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.76
-        }
-      ]
-    },
-    {
-      "topic_label": "LLMs and Language",
-      "count": 3,
-      "share": 9.68,
-      "papers": [
         {
           "report_date": "2026-03-09",
           "paper_id": "2603.05369",
@@ -772,13 +688,13 @@
           "github_url": "",
           "submitted_by": "Sky",
           "submitted_at": "2026-03-09T04:27:34.400Z",
-          "upvotes": 21,
+          "upvotes": 32,
           "comments": 5,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.82
+          "classification_source": "claude",
+          "classification_confidence": 0.8
         },
         {
           "report_date": "2026-03-09",
@@ -804,8 +720,8 @@
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.78
+          "classification_source": "claude",
+          "classification_confidence": 0.8
         },
         {
           "report_date": "2026-03-09",
@@ -827,8 +743,187 @@
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.88
+          "classification_source": "claude",
+          "classification_confidence": 0.85
+        }
+      ]
+    },
+    {
+      "topic_label": "Datasets and Benchmarks",
+      "count": 3,
+      "share": 9.68,
+      "papers": [
+        {
+          "report_date": "2026-03-09",
+          "paper_id": "2603.04639",
+          "title": "RoboMME: Benchmarking and Understanding Memory for Robotic Generalist Policies",
+          "authors": [
+            "Yinpei Dai",
+            "Hongze Fu",
+            "Jayjun Lee",
+            "Yuejiang Liu",
+            "Haoran Zhang",
+            "Jianing Yang",
+            "Chelsea Finn",
+            "Nima Fazeli",
+            "Joyce Chai"
+          ],
+          "abstract": "Memory is critical for long-horizon and history-dependent robotic manipulation. Such tasks often involve counting repeated actions or manipulating objects that become temporarily occluded. Recent vision-language-action (VLA) models have begun to incorporate memory mechanisms; however, their evaluations remain confined to narrow, non-standardized settings. This limits their systematic understanding, comparison, and progress measurement. To address these challenges, we introduce RoboMME: a large-scale standardized benchmark for evaluating and advancing VLA models in long-horizon, history-dependent scenarios. Our benchmark comprises 16 manipulation tasks constructed under a carefully designed taxonomy that evaluates temporal, spatial, object, and procedural memory. We further develop a suite of 14 memory-augmented VLA variants built on the π0.5 backbone to systematically explore different memory representations across multiple integration strategies. Experimental results show that the effectiveness of memory representations is highly task-dependent, with each design offering distinct advantages and limitations across different tasks. Videos and code can be found at our website https://robomme.github.io.",
+          "hf_url": "https://huggingface.co/papers/2603.04639",
+          "arxiv_url": "https://arxiv.org/abs/2603.04639",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.04639",
+          "github_url": "",
+          "submitted_by": "Dai",
+          "submitted_at": "2026-03-09T00:36:24.642Z",
+          "upvotes": 22,
+          "comments": 3,
+          "topic_key": "datasets_benchmarks",
+          "topic_label": "Datasets and Benchmarks",
+          "matched_terms": [],
+          "classification_source": "claude",
+          "classification_confidence": 0.82
+        },
+        {
+          "report_date": "2026-03-09",
+          "paper_id": "2603.04370",
+          "title": "τ-Knowledge: Evaluating Conversational Agents over Unstructured Knowledge",
+          "authors": [
+            "Quan Shi",
+            "Alexandra Zytek",
+            "Pedram Razavi",
+            "Karthik Narasimhan",
+            "Victor Barres"
+          ],
+          "abstract": "Conversational agents are increasingly deployed in knowledge-intensive settings, where correct behavior depends on retrieving and applying domain-specific knowledge from large, proprietary, and unstructured corpora during live interactions with users. Yet most existing benchmarks evaluate retrieval or tool use independently of each other, creating a gap in realistic, fully agentic evaluation over unstructured data in long-horizon interactions. We introduce τ-Knowledge, an extension of τ-Bench for evaluating agents in environments where success depends on coordinating external, natural-language knowledge with tool outputs to produce verifiable, policy-compliant state changes. Our new domain, τ-Banking, models realistic fintech customer support workflows in which agents must navigate roughly 700 interconnected knowledge documents while executing tool-mediated account updates. Across embedding-based retrieval and terminal-based search, even frontier models with high reasoning budgets achieve only sim25.5% pass^1, with reliability degrading sharply over repeated trials. Agents struggle to retrieve the correct documents from densely interlinked knowledge bases and to reason accurately over complex internal policies. Overall, τ-Knowledge provides a realistic testbed for developing agents that integrate unstructured knowledge in human-facing deployments.",
+          "hf_url": "https://huggingface.co/papers/2603.04370",
+          "arxiv_url": "https://arxiv.org/abs/2603.04370",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.04370",
+          "github_url": "",
+          "submitted_by": "Ben Shi",
+          "submitted_at": "2026-03-09T16:20:39.989Z",
+          "upvotes": 2,
+          "comments": 2,
+          "topic_key": "datasets_benchmarks",
+          "topic_label": "Datasets and Benchmarks",
+          "matched_terms": [],
+          "classification_source": "claude",
+          "classification_confidence": 0.75
+        },
+        {
+          "report_date": "2026-03-09",
+          "paper_id": "2603.04738",
+          "title": "IF-RewardBench: Benchmarking Judge Models for Instruction-Following Evaluation",
+          "authors": [
+            "Bosi Wen",
+            "Yilin Niu",
+            "Cunxiang Wang",
+            "Xiaoying Ling",
+            "Ying Zhang",
+            "Pei Ke",
+            "Hongning Wang",
+            "Minlie Huang"
+          ],
+          "abstract": "Instruction-following is a foundational capability of large language models (LLMs), with its improvement hinging on scalable and accurate feedback from judge models. However, the reliability of current judge models in instruction-following remains underexplored due to several deficiencies of existing meta-evaluation benchmarks, such as their insufficient data coverage and oversimplified pairwise evaluation paradigms that misalign with model optimization scenarios. To this end, we propose IF-RewardBench, a comprehensive meta-evaluation benchmark for instruction-following that covers diverse instruction and constraint types. For each instruction, we construct a preference graph containing all pairwise preferences among multiple responses based on instruction-following quality. This design enables a listwise evaluation paradigm that assesses the capabilities of judge models to rank multiple responses, which is essential in guiding model alignment. Extensive experiments on IF-RewardBench reveal significant deficiencies in current judge models and demonstrate that our benchmark achieves a stronger positive correlation with downstream task performance compared to existing benchmarks. Our codes and data are available at https://github.com/thu-coai/IF-RewardBench.",
+          "hf_url": "https://huggingface.co/papers/2603.04738",
+          "arxiv_url": "https://arxiv.org/abs/2603.04738",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.04738",
+          "github_url": "",
+          "submitted_by": "Wenbosi",
+          "submitted_at": "2026-03-09T13:01:48.169Z",
+          "upvotes": 1,
+          "comments": 2,
+          "topic_key": "datasets_benchmarks",
+          "topic_label": "Datasets and Benchmarks",
+          "matched_terms": [],
+          "classification_source": "claude",
+          "classification_confidence": 0.93
+        }
+      ]
+    },
+    {
+      "topic_label": "Learning, Optimization, and Theory",
+      "count": 3,
+      "share": 9.68,
+      "papers": [
+        {
+          "report_date": "2026-03-09",
+          "paper_id": "2603.01193",
+          "title": "Operator Learning Using Weak Supervision from Walk-on-Spheres",
+          "authors": [
+            "Hrishikesh Viswanath",
+            "Hong Chul Nam",
+            "Xi Deng",
+            "Julius Berner",
+            "Anima Anandkumar",
+            "Aniket Bera"
+          ],
+          "abstract": "Training neural PDE solvers is often bottlenecked by expensive data generation or unstable physics-informed neural network (PINN) involving challenging optimization landscapes due to higher-order derivatives. To tackle this issue, we propose an alternative approach using Monte Carlo approaches to estimate the solution to the PDE as a stochastic process for weak supervision during training. Leveraging the Walk-on-Spheres method, we introduce a learning scheme called Walk-on-Spheres Neural Operator (WoS-NO) which uses weak supervision from WoS to train any given neural operator. We propose to amortize the cost of Monte Carlo walks across the distribution of PDE instances using stochastic representations from the WoS algorithm to generate cheap, noisy, estimates of the PDE solution during training. This is formulated into a data-free physics-informed objective where a neural operator is trained to regress against these weak supervisions, allowing the operator to learn a generalized solution map for an entire family of PDEs. This strategy does not require expensive pre-computed datasets, avoids computing higher-order derivatives for loss functions that are memory-intensive and unstable, and demonstrates zero-shot generalization to novel PDE parameters and domains. Experiments show that for the same number of training steps, our method exhibits up to 8.75times improvement in L_2-error compared to standard physics-informed training schemes, up to 6.31times improvement in training speed, and reductions of up to 2.97times in GPU memory consumption. We present the code at https://github.com/neuraloperator/WoS-NO",
+          "hf_url": "https://huggingface.co/papers/2603.01193",
+          "arxiv_url": "https://arxiv.org/abs/2603.01193",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.01193",
+          "github_url": "",
+          "submitted_by": "Hrishikesh Viswanath",
+          "submitted_at": "2026-03-09T17:14:39.802Z",
+          "upvotes": 1,
+          "comments": 2,
+          "topic_key": "learning_theory",
+          "topic_label": "Learning, Optimization, and Theory",
+          "matched_terms": [],
+          "classification_source": "claude",
+          "classification_confidence": 0.85
+        },
+        {
+          "report_date": "2026-03-09",
+          "paper_id": "2602.23280",
+          "title": "Physics Informed Viscous Value Representations",
+          "authors": [
+            "Hrishikesh Viswanath",
+            "Juanwu Lu",
+            "S. Talha Bukhari",
+            "Damon Conover",
+            "Ziran Wang",
+            "Aniket Bera"
+          ],
+          "abstract": "Offline goal-conditioned reinforcement learning (GCRL) learns goal-conditioned policies from static pre-collected datasets. However, accurate value estimation remains a challenge due to the limited coverage of the state-action space. Recent physics-informed approaches have sought to address this by imposing physical and geometric constraints on the value function through regularization defined over first-order partial differential equations (PDEs), such as the Eikonal equation. However, these formulations can often be ill-posed in complex, high-dimensional environments. In this work, we propose a physics-informed regularization derived from the viscosity solution of the Hamilton-Jacobi-Bellman (HJB) equation. By providing a physics-based inductive bias, our approach grounds the learning process in optimal control theory, explicitly regularizing and bounding updates during value iterations. Furthermore, we leverage the Feynman-Kac theorem to recast the PDE solution as an expectation, enabling a tractable Monte Carlo estimation of the objective that avoids numerical instability in higher-order gradients. Experiments demonstrate that our method improves geometric consistency, making it broadly applicable to navigation and high-dimensional, complex manipulation tasks. Open-source codes are available at https://github.com/HrishikeshVish/phys-fk-value-GCRL.",
+          "hf_url": "https://huggingface.co/papers/2602.23280",
+          "arxiv_url": "https://arxiv.org/abs/2602.23280",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2602.23280",
+          "github_url": "",
+          "submitted_by": "Hrishikesh Viswanath",
+          "submitted_at": "2026-03-09T17:12:00.396Z",
+          "upvotes": 1,
+          "comments": 2,
+          "topic_key": "learning_theory",
+          "topic_label": "Learning, Optimization, and Theory",
+          "matched_terms": [],
+          "classification_source": "claude",
+          "classification_confidence": 0.72
+        },
+        {
+          "report_date": "2026-03-09",
+          "paper_id": "2603.05280",
+          "title": "Layer by layer, module by module: Choose both for optimal OOD probing of ViT",
+          "authors": [
+            "Ambroise Odonnat",
+            "Vasilii Feofanov",
+            "Laetitia Chapel",
+            "Romain Tavenard",
+            "Ievgen Redko"
+          ],
+          "abstract": "Recent studies have observed that intermediate layers of foundation models often yield more discriminative representations than the final layer. While initially attributed to autoregressive pretraining, this phenomenon has also been identified in models trained via supervised and discriminative self-supervised objectives. In this paper, we conduct a comprehensive study to analyze the behavior of intermediate layers in pretrained vision transformers. Through extensive linear probing experiments across a diverse set of image classification benchmarks, we find that distribution shift between pretraining and downstream data is the primary cause of performance degradation in deeper layers. Furthermore, we perform a fine-grained analysis at the module level. Our findings reveal that standard probing of transformer block outputs is suboptimal; instead, probing the activation within the feedforward network yields the best performance under significant distribution shift, whereas the normalized output of the multi-head self-attention module is optimal when the shift is weak.",
+          "hf_url": "https://huggingface.co/papers/2603.05280",
+          "arxiv_url": "https://arxiv.org/abs/2603.05280",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.05280",
+          "github_url": "",
+          "submitted_by": "Ambroise Odonnat",
+          "submitted_at": "2026-03-09T08:36:41.544Z",
+          "upvotes": 0,
+          "comments": 2,
+          "topic_key": "learning_theory",
+          "topic_label": "Learning, Optimization, and Theory",
+          "matched_terms": [],
+          "classification_source": "claude",
+          "classification_confidence": 0.8
         }
       ]
     },
@@ -858,13 +953,13 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-03-09T01:22:24.366Z",
-          "upvotes": 82,
+          "upvotes": 104,
           "comments": 4,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.87
+          "classification_source": "claude",
+          "classification_confidence": 0.82
         },
         {
           "report_date": "2026-03-09",
@@ -884,13 +979,13 @@
           "github_url": "",
           "submitted_by": "Yuanfu Sun",
           "submitted_at": "2026-03-09T08:14:26.892Z",
-          "upvotes": 4,
-          "comments": 2,
+          "upvotes": 7,
+          "comments": 3,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.68
+          "classification_source": "claude",
+          "classification_confidence": 0.76
         },
         {
           "report_date": "2026-03-09",
@@ -918,8 +1013,8 @@
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.84
+          "classification_source": "claude",
+          "classification_confidence": 0.78
         }
       ]
     },
@@ -949,13 +1044,13 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-03-09T00:44:35.124Z",
-          "upvotes": 23,
+          "upvotes": 26,
           "comments": 2,
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.95
+          "classification_source": "claude",
+          "classification_confidence": 0.9
         },
         {
           "report_date": "2026-03-09",
@@ -981,8 +1076,8 @@
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.92
+          "classification_source": "claude",
+          "classification_confidence": 0.83
         },
         {
           "report_date": "2026-03-09",
@@ -1009,8 +1104,8 @@
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.83
+          "classification_source": "claude",
+          "classification_confidence": 0.82
         }
       ]
     },
@@ -1040,8 +1135,8 @@
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.97
+          "classification_source": "claude",
+          "classification_confidence": 0.92
         },
         {
           "report_date": "2026-03-09",
@@ -1066,142 +1161,13 @@
           "github_url": "",
           "submitted_by": "Zheng Hao",
           "submitted_at": "2026-03-09T09:25:39.867Z",
-          "upvotes": 2,
+          "upvotes": 3,
           "comments": 2,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.73
-        }
-      ]
-    },
-    {
-      "topic_label": "Datasets and Benchmarks",
-      "count": 2,
-      "share": 6.45,
-      "papers": [
-        {
-          "report_date": "2026-03-09",
-          "paper_id": "2603.04639",
-          "title": "RoboMME: Benchmarking and Understanding Memory for Robotic Generalist Policies",
-          "authors": [
-            "Yinpei Dai",
-            "Hongze Fu",
-            "Jayjun Lee",
-            "Yuejiang Liu",
-            "Haoran Zhang",
-            "Jianing Yang",
-            "Chelsea Finn",
-            "Nima Fazeli",
-            "Joyce Chai"
-          ],
-          "abstract": "Memory is critical for long-horizon and history-dependent robotic manipulation. Such tasks often involve counting repeated actions or manipulating objects that become temporarily occluded. Recent vision-language-action (VLA) models have begun to incorporate memory mechanisms; however, their evaluations remain confined to narrow, non-standardized settings. This limits their systematic understanding, comparison, and progress measurement. To address these challenges, we introduce RoboMME: a large-scale standardized benchmark for evaluating and advancing VLA models in long-horizon, history-dependent scenarios. Our benchmark comprises 16 manipulation tasks constructed under a carefully designed taxonomy that evaluates temporal, spatial, object, and procedural memory. We further develop a suite of 14 memory-augmented VLA variants built on the π0.5 backbone to systematically explore different memory representations across multiple integration strategies. Experimental results show that the effectiveness of memory representations is highly task-dependent, with each design offering distinct advantages and limitations across different tasks. Videos and code can be found at our website https://robomme.github.io.",
-          "hf_url": "https://huggingface.co/papers/2603.04639",
-          "arxiv_url": "https://arxiv.org/abs/2603.04639",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.04639",
-          "github_url": "",
-          "submitted_by": "Dai",
-          "submitted_at": "2026-03-09T00:36:24.642Z",
-          "upvotes": 20,
-          "comments": 3,
-          "topic_key": "datasets_benchmarks",
-          "topic_label": "Datasets and Benchmarks",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.81
-        },
-        {
-          "report_date": "2026-03-09",
-          "paper_id": "2603.04738",
-          "title": "IF-RewardBench: Benchmarking Judge Models for Instruction-Following Evaluation",
-          "authors": [
-            "Bosi Wen",
-            "Yilin Niu",
-            "Cunxiang Wang",
-            "Xiaoying Ling",
-            "Ying Zhang",
-            "Pei Ke",
-            "Hongning Wang",
-            "Minlie Huang"
-          ],
-          "abstract": "Instruction-following is a foundational capability of large language models (LLMs), with its improvement hinging on scalable and accurate feedback from judge models. However, the reliability of current judge models in instruction-following remains underexplored due to several deficiencies of existing meta-evaluation benchmarks, such as their insufficient data coverage and oversimplified pairwise evaluation paradigms that misalign with model optimization scenarios. To this end, we propose IF-RewardBench, a comprehensive meta-evaluation benchmark for instruction-following that covers diverse instruction and constraint types. For each instruction, we construct a preference graph containing all pairwise preferences among multiple responses based on instruction-following quality. This design enables a listwise evaluation paradigm that assesses the capabilities of judge models to rank multiple responses, which is essential in guiding model alignment. Extensive experiments on IF-RewardBench reveal significant deficiencies in current judge models and demonstrate that our benchmark achieves a stronger positive correlation with downstream task performance compared to existing benchmarks. Our codes and data are available at https://github.com/thu-coai/IF-RewardBench.",
-          "hf_url": "https://huggingface.co/papers/2603.04738",
-          "arxiv_url": "https://arxiv.org/abs/2603.04738",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.04738",
-          "github_url": "",
-          "submitted_by": "Wenbosi",
-          "submitted_at": "2026-03-09T13:01:48.169Z",
-          "upvotes": 1,
-          "comments": 2,
-          "topic_key": "datasets_benchmarks",
-          "topic_label": "Datasets and Benchmarks",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.95
-        }
-      ]
-    },
-    {
-      "topic_label": "Retrieval, Knowledge, and RAG",
-      "count": 2,
-      "share": 6.45,
-      "papers": [
-        {
-          "report_date": "2026-03-09",
-          "paper_id": "2603.04370",
-          "title": "τ-Knowledge: Evaluating Conversational Agents over Unstructured Knowledge",
-          "authors": [
-            "Quan Shi",
-            "Alexandra Zytek",
-            "Pedram Razavi",
-            "Karthik Narasimhan",
-            "Victor Barres"
-          ],
-          "abstract": "Conversational agents are increasingly deployed in knowledge-intensive settings, where correct behavior depends on retrieving and applying domain-specific knowledge from large, proprietary, and unstructured corpora during live interactions with users. Yet most existing benchmarks evaluate retrieval or tool use independently of each other, creating a gap in realistic, fully agentic evaluation over unstructured data in long-horizon interactions. We introduce τ-Knowledge, an extension of τ-Bench for evaluating agents in environments where success depends on coordinating external, natural-language knowledge with tool outputs to produce verifiable, policy-compliant state changes. Our new domain, τ-Banking, models realistic fintech customer support workflows in which agents must navigate roughly 700 interconnected knowledge documents while executing tool-mediated account updates. Across embedding-based retrieval and terminal-based search, even frontier models with high reasoning budgets achieve only sim25.5% pass^1, with reliability degrading sharply over repeated trials. Agents struggle to retrieve the correct documents from densely interlinked knowledge bases and to reason accurately over complex internal policies. Overall, τ-Knowledge provides a realistic testbed for developing agents that integrate unstructured knowledge in human-facing deployments.",
-          "hf_url": "https://huggingface.co/papers/2603.04370",
-          "arxiv_url": "https://arxiv.org/abs/2603.04370",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.04370",
-          "github_url": "",
-          "submitted_by": "Ben Shi",
-          "submitted_at": "2026-03-09T16:20:39.989Z",
-          "upvotes": 2,
-          "comments": 2,
-          "topic_key": "retrieval_knowledge",
-          "topic_label": "Retrieval, Knowledge, and RAG",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.72
-        },
-        {
-          "report_date": "2026-03-09",
-          "paper_id": "2603.01666",
-          "title": "Beyond the Grid: Layout-Informed Multi-Vector Retrieval with Parsed Visual Document Representations",
-          "authors": [
-            "Yibo Yan",
-            "Mingdong Ou",
-            "Yi Cao",
-            "Xin Zou",
-            "Shuliang Liu",
-            "Jiahao Huo",
-            "Yu Huang",
-            "James Kwok",
-            "Xuming Hu"
-          ],
-          "abstract": "Harnessing the full potential of visually-rich documents requires retrieval systems that understand not just text, but intricate layouts, a core challenge in Visual Document Retrieval (VDR). The prevailing multi-vector architectures, while powerful, face a crucial storage bottleneck that current optimization strategies, such as embedding merging, pruning, or using abstract tokens, fail to resolve without compromising performance or ignoring vital layout cues. To address this, we introduce ColParse, a novel paradigm that leverages a document parsing model to generate a small set of layout-informed sub-image embeddings, which are then fused with a global page-level vector to create a compact and structurally-aware multi-vector representation. Extensive experiments demonstrate that our method reduces storage requirements by over 95% while simultaneously yielding significant performance gains across numerous benchmarks and base models. ColParse thus bridges the critical gap between the fine-grained accuracy of multi-vector retrieval and the practical demands of large-scale deployment, offering a new path towards efficient and interpretable multimodal information systems.",
-          "hf_url": "https://huggingface.co/papers/2603.01666",
-          "arxiv_url": "https://arxiv.org/abs/2603.01666",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.01666",
-          "github_url": "",
-          "submitted_by": "buluchacha",
-          "submitted_at": "2026-03-09T07:23:13.405Z",
-          "upvotes": 1,
-          "comments": 2,
-          "topic_key": "retrieval_knowledge",
-          "topic_label": "Retrieval, Knowledge, and RAG",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.94
+          "classification_source": "claude",
+          "classification_confidence": 0.8
         }
       ]
     },
@@ -1233,13 +1199,50 @@
           "github_url": "",
           "submitted_by": "JeffWang",
           "submitted_at": "2026-03-09T01:45:25.066Z",
-          "upvotes": 7,
+          "upvotes": 9,
           "comments": 2,
           "topic_key": "multimodal_agents",
           "topic_label": "Multimodal Agents",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.95
+          "classification_source": "claude",
+          "classification_confidence": 0.93
+        }
+      ]
+    },
+    {
+      "topic_label": "Retrieval, Knowledge, and RAG",
+      "count": 1,
+      "share": 3.23,
+      "papers": [
+        {
+          "report_date": "2026-03-09",
+          "paper_id": "2603.01666",
+          "title": "Beyond the Grid: Layout-Informed Multi-Vector Retrieval with Parsed Visual Document Representations",
+          "authors": [
+            "Yibo Yan",
+            "Mingdong Ou",
+            "Yi Cao",
+            "Xin Zou",
+            "Shuliang Liu",
+            "Jiahao Huo",
+            "Yu Huang",
+            "James Kwok",
+            "Xuming Hu"
+          ],
+          "abstract": "Harnessing the full potential of visually-rich documents requires retrieval systems that understand not just text, but intricate layouts, a core challenge in Visual Document Retrieval (VDR). The prevailing multi-vector architectures, while powerful, face a crucial storage bottleneck that current optimization strategies, such as embedding merging, pruning, or using abstract tokens, fail to resolve without compromising performance or ignoring vital layout cues. To address this, we introduce ColParse, a novel paradigm that leverages a document parsing model to generate a small set of layout-informed sub-image embeddings, which are then fused with a global page-level vector to create a compact and structurally-aware multi-vector representation. Extensive experiments demonstrate that our method reduces storage requirements by over 95% while simultaneously yielding significant performance gains across numerous benchmarks and base models. ColParse thus bridges the critical gap between the fine-grained accuracy of multi-vector retrieval and the practical demands of large-scale deployment, offering a new path towards efficient and interpretable multimodal information systems.",
+          "hf_url": "https://huggingface.co/papers/2603.01666",
+          "arxiv_url": "https://arxiv.org/abs/2603.01666",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.01666",
+          "github_url": "",
+          "submitted_by": "buluchacha",
+          "submitted_at": "2026-03-09T07:23:13.405Z",
+          "upvotes": 1,
+          "comments": 2,
+          "topic_key": "retrieval_knowledge",
+          "topic_label": "Retrieval, Knowledge, and RAG",
+          "matched_terms": [],
+          "classification_source": "claude",
+          "classification_confidence": 0.88
         }
       ]
     },
@@ -1269,13 +1272,13 @@
           "github_url": "",
           "submitted_by": "Jinliang Zheng",
           "submitted_at": "2026-03-09T07:12:44.158Z",
-          "upvotes": 0,
+          "upvotes": 1,
           "comments": 2,
           "topic_key": "robotics_embodied",
           "topic_label": "Robotics and Embodied AI",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.95
+          "classification_source": "claude",
+          "classification_confidence": 0.93
         }
       ]
     }
@@ -1302,13 +1305,13 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-03-09T01:22:24.366Z",
-      "upvotes": 82,
+      "upvotes": 104,
       "comments": 4,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.87
+      "classification_source": "claude",
+      "classification_confidence": 0.82
     },
     {
       "report_date": "2026-03-09",
@@ -1332,11 +1335,11 @@
       "submitted_at": "2026-03-09T04:05:06.877Z",
       "upvotes": 54,
       "comments": 7,
-      "topic_key": "learning_theory",
-      "topic_label": "Learning, Optimization, and Theory",
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.84
+      "classification_source": "claude",
+      "classification_confidence": 0.72
     },
     {
       "report_date": "2026-03-09",
@@ -1356,13 +1359,13 @@
       "github_url": "",
       "submitted_by": "Adina Yakefu",
       "submitted_at": "2026-03-09T07:22:24.796Z",
-      "upvotes": 30,
+      "upvotes": 35,
       "comments": 4,
       "topic_key": "generative_foundations",
       "topic_label": "Generative Foundations",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.94
+      "classification_source": "claude",
+      "classification_confidence": 0.91
     },
     {
       "report_date": "2026-03-09",
@@ -1385,41 +1388,12 @@
       "github_url": "",
       "submitted_by": "guoqin",
       "submitted_at": "2026-03-09T07:21:24.091Z",
-      "upvotes": 26,
+      "upvotes": 33,
       "comments": 5,
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.97
-    },
-    {
-      "report_date": "2026-03-09",
-      "paper_id": "2603.05706",
-      "title": "Reasoning Models Struggle to Control their Chains of Thought",
-      "authors": [
-        "Chen Yueh-Han",
-        "Robert McCarthy",
-        "Bruce W. Lee",
-        "He He",
-        "Ian Kivlichan",
-        "Bowen Baker",
-        "Micah Carroll",
-        "Tomek Korbak"
-      ],
-      "abstract": "Chain-of-thought (CoT) monitoring is a promising tool for detecting misbehaviors and understanding the motivations of modern reasoning models. However, if models can control what they verbalize in their CoT, it could undermine CoT monitorability. To measure this undesirable capability -- CoT controllability -- we introduce the CoT-Control evaluation suite, which includes tasks that require models to solve problems while adhering to CoT instructions, e.g., reasoning about a genetics question without using the word 'chromosome'. We show that reasoning models possess significantly lower CoT controllability than output controllability; for instance, Claude Sonnet 4.5 can control its CoT only 2.7% of the time but 61.9% when controlling its final output. We also find that CoT controllability is higher for larger models and decreases with more RL training, test-time compute, and increased problem difficulty. CoT controllability failures extend even to situations in which models are given incentives (as opposed to direct requests) to evade CoT monitors, although models exhibit slightly higher controllability when they are told they are being monitored. Similarly, eliciting controllability by adversarially optimizing prompts does not meaningfully increase controllability. Our results leave us cautiously optimistic that CoT controllability is currently unlikely to be a failure mode of CoT monitorability. However, the mechanism behind low controllability is not well understood. Given its importance for maintaining CoT monitorability, we recommend that frontier labs track CoT controllability in future models.",
-      "hf_url": "https://huggingface.co/papers/2603.05706",
-      "arxiv_url": "https://arxiv.org/abs/2603.05706",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.05706",
-      "github_url": "",
-      "submitted_by": "taesiri",
-      "submitted_at": "2026-03-09T00:44:35.124Z",
-      "upvotes": 23,
-      "comments": 2,
-      "topic_key": "reasoning_alignment_eval",
-      "topic_label": "Reasoning, Alignment, and Evaluation",
-      "matched_terms": [],
-      "classification_source": "codex",
+      "classification_source": "claude",
       "classification_confidence": 0.95
     },
     {
@@ -1442,13 +1416,42 @@
       "github_url": "",
       "submitted_by": "Sky",
       "submitted_at": "2026-03-09T04:27:34.400Z",
-      "upvotes": 21,
+      "upvotes": 32,
       "comments": 5,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.82
+      "classification_source": "claude",
+      "classification_confidence": 0.8
+    },
+    {
+      "report_date": "2026-03-09",
+      "paper_id": "2603.05706",
+      "title": "Reasoning Models Struggle to Control their Chains of Thought",
+      "authors": [
+        "Chen Yueh-Han",
+        "Robert McCarthy",
+        "Bruce W. Lee",
+        "He He",
+        "Ian Kivlichan",
+        "Bowen Baker",
+        "Micah Carroll",
+        "Tomek Korbak"
+      ],
+      "abstract": "Chain-of-thought (CoT) monitoring is a promising tool for detecting misbehaviors and understanding the motivations of modern reasoning models. However, if models can control what they verbalize in their CoT, it could undermine CoT monitorability. To measure this undesirable capability -- CoT controllability -- we introduce the CoT-Control evaluation suite, which includes tasks that require models to solve problems while adhering to CoT instructions, e.g., reasoning about a genetics question without using the word 'chromosome'. We show that reasoning models possess significantly lower CoT controllability than output controllability; for instance, Claude Sonnet 4.5 can control its CoT only 2.7% of the time but 61.9% when controlling its final output. We also find that CoT controllability is higher for larger models and decreases with more RL training, test-time compute, and increased problem difficulty. CoT controllability failures extend even to situations in which models are given incentives (as opposed to direct requests) to evade CoT monitors, although models exhibit slightly higher controllability when they are told they are being monitored. Similarly, eliciting controllability by adversarially optimizing prompts does not meaningfully increase controllability. Our results leave us cautiously optimistic that CoT controllability is currently unlikely to be a failure mode of CoT monitorability. However, the mechanism behind low controllability is not well understood. Given its importance for maintaining CoT monitorability, we recommend that frontier labs track CoT controllability in future models.",
+      "hf_url": "https://huggingface.co/papers/2603.05706",
+      "arxiv_url": "https://arxiv.org/abs/2603.05706",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.05706",
+      "github_url": "",
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-03-09T00:44:35.124Z",
+      "upvotes": 26,
+      "comments": 2,
+      "topic_key": "reasoning_alignment_eval",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "matched_terms": [],
+      "classification_source": "claude",
+      "classification_confidence": 0.9
     },
     {
       "report_date": "2026-03-09",
@@ -1472,13 +1475,67 @@
       "github_url": "",
       "submitted_by": "Dai",
       "submitted_at": "2026-03-09T00:36:24.642Z",
-      "upvotes": 20,
+      "upvotes": 22,
       "comments": 3,
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.81
+      "classification_source": "claude",
+      "classification_confidence": 0.82
+    },
+    {
+      "report_date": "2026-03-09",
+      "paper_id": "2603.06351",
+      "title": "Dynamic Chunking Diffusion Transformer",
+      "authors": [
+        "Akash Haridas",
+        "Utkarsh Saxena",
+        "Parsa Ashrafi Fashi",
+        "Mehdi Rezagholizadeh",
+        "Vikram Appia",
+        "Emad Barsoum"
+      ],
+      "abstract": "Diffusion Transformers process images as fixed-length sequences of tokens produced by a static patchify operation. While effective, this design spends uniform compute on low- and high-information regions alike, ignoring that images contain regions of varying detail and that the denoising process progresses from coarse structure at early timesteps to fine detail at late timesteps. We introduce the Dynamic Chunking Diffusion Transformer (DC-DiT), which augments the DiT backbone with a learned encoder-router-decoder scaffold that adaptively compresses the 2D input into a shorter token sequence in a data-dependent manner using a chunking mechanism learned end-to-end with diffusion training. The mechanism learns to compress uniform background regions into fewer tokens and detail-rich regions into more tokens, with meaningful visual segmentations emerging without explicit supervision. Furthermore, it also learns to adapt its compression across diffusion timesteps, using fewer tokens at noisy stages and more tokens as fine details emerge. On class-conditional ImageNet 256{times}256, DC-DiT consistently improves FID and Inception Score over both parameter-matched and FLOP-matched DiT baselines across 4{times} and 16{times} compression, showing this is a promising technique with potential further applications to pixel-space, video and 3D generation. Beyond accuracy, DC-DiT is practical: it can be upcycled from pretrained DiT checkpoints with minimal post-training compute (up to 8{times} fewer training steps) and composes with other dynamic computation methods to further reduce generation FLOPs.",
+      "hf_url": "https://huggingface.co/papers/2603.06351",
+      "arxiv_url": "https://arxiv.org/abs/2603.06351",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.06351",
+      "github_url": "",
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-03-09T00:37:54.739Z",
+      "upvotes": 12,
+      "comments": 1,
+      "topic_key": "generative_foundations",
+      "topic_label": "Generative Foundations",
+      "matched_terms": [],
+      "classification_source": "claude",
+      "classification_confidence": 0.93
+    },
+    {
+      "report_date": "2026-03-09",
+      "paper_id": "2603.06408",
+      "title": "Physical Simulator In-the-Loop Video Generation",
+      "authors": [
+        "Lin Geng Foo",
+        "Mark He Huang",
+        "Alexandros Lattas",
+        "Stylianos Moschoglou",
+        "Thabo Beeler",
+        "Christian Theobalt"
+      ],
+      "abstract": "Recent advances in diffusion-based video generation have achieved remarkable visual realism but still struggle to obey basic physical laws such as gravity, inertia, and collision. Generated objects often move inconsistently across frames, exhibit implausible dynamics, or violate physical constraints, limiting the realism and reliability of AI-generated videos. We address this gap by introducing Physical Simulator In-the-loop Video Generation (PSIVG), a novel framework that integrates a physical simulator into the video diffusion process. Starting from a template video generated by a pre-trained diffusion model, PSIVG reconstructs the 4D scene and foreground object meshes, initializes them within a physical simulator, and generates physically consistent trajectories. These simulated trajectories are then used to guide the video generator toward spatio-temporally physically coherent motion. To further improve texture consistency during object movement, we propose a Test-Time Texture Consistency Optimization (TTCO) technique that adapts text and feature embeddings based on pixel correspondences from the simulator. Comprehensive experiments demonstrate that PSIVG produces videos that better adhere to real-world physics while preserving visual quality and diversity. Project Page: https://vcai.mpi-inf.mpg.de/projects/PSIVG/",
+      "hf_url": "https://huggingface.co/papers/2603.06408",
+      "arxiv_url": "https://arxiv.org/abs/2603.06408",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.06408",
+      "github_url": "",
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-03-09T00:40:04.838Z",
+      "upvotes": 11,
+      "comments": 1,
+      "topic_key": "multimodal_generative",
+      "topic_label": "Multimodal Generative Modeling",
+      "matched_terms": [],
+      "classification_source": "claude",
+      "classification_confidence": 0.88
     },
     {
       "report_date": "2026-03-09",
@@ -1504,8 +1561,8 @@
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.78
+      "classification_source": "claude",
+      "classification_confidence": 0.8
     },
     {
       "report_date": "2026-03-09",
@@ -1528,62 +1585,8 @@
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.97
-    },
-    {
-      "report_date": "2026-03-09",
-      "paper_id": "2603.06351",
-      "title": "Dynamic Chunking Diffusion Transformer",
-      "authors": [
-        "Akash Haridas",
-        "Utkarsh Saxena",
-        "Parsa Ashrafi Fashi",
-        "Mehdi Rezagholizadeh",
-        "Vikram Appia",
-        "Emad Barsoum"
-      ],
-      "abstract": "Diffusion Transformers process images as fixed-length sequences of tokens produced by a static patchify operation. While effective, this design spends uniform compute on low- and high-information regions alike, ignoring that images contain regions of varying detail and that the denoising process progresses from coarse structure at early timesteps to fine detail at late timesteps. We introduce the Dynamic Chunking Diffusion Transformer (DC-DiT), which augments the DiT backbone with a learned encoder-router-decoder scaffold that adaptively compresses the 2D input into a shorter token sequence in a data-dependent manner using a chunking mechanism learned end-to-end with diffusion training. The mechanism learns to compress uniform background regions into fewer tokens and detail-rich regions into more tokens, with meaningful visual segmentations emerging without explicit supervision. Furthermore, it also learns to adapt its compression across diffusion timesteps, using fewer tokens at noisy stages and more tokens as fine details emerge. On class-conditional ImageNet 256{times}256, DC-DiT consistently improves FID and Inception Score over both parameter-matched and FLOP-matched DiT baselines across 4{times} and 16{times} compression, showing this is a promising technique with potential further applications to pixel-space, video and 3D generation. Beyond accuracy, DC-DiT is practical: it can be upcycled from pretrained DiT checkpoints with minimal post-training compute (up to 8{times} fewer training steps) and composes with other dynamic computation methods to further reduce generation FLOPs.",
-      "hf_url": "https://huggingface.co/papers/2603.06351",
-      "arxiv_url": "https://arxiv.org/abs/2603.06351",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.06351",
-      "github_url": "",
-      "submitted_by": "taesiri",
-      "submitted_at": "2026-03-09T00:37:54.739Z",
-      "upvotes": 8,
-      "comments": 1,
-      "topic_key": "generative_foundations",
-      "topic_label": "Generative Foundations",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.96
-    },
-    {
-      "report_date": "2026-03-09",
-      "paper_id": "2603.06014",
-      "title": "EffectMaker: Unifying Reasoning and Generation for Customized Visual Effect Creation",
-      "authors": [
-        "Shiyuan Yang",
-        "Ruihuang Li",
-        "Jiale Tao",
-        "Shuai Shao",
-        "Qinglin Lu",
-        "Jing Liao"
-      ],
-      "abstract": "Visual effects (VFX) are essential for enhancing the expressiveness and creativity of video content, yet producing high-quality effects typically requires expert knowledge and costly production pipelines. Existing AIGC systems face significant challenges in VFX generation due to the scarcity of effect-specific data and the inherent difficulty of modeling supernatural or stylized effects. Moreover, these approaches often require per-effect fine-tuning, which severely limits their scalability and generalization to novel VFX. In this work, we present EffectMaker, a unified reasoning-generation framework that enables reference-based VFX customization. EffectMaker employs a multimodal large language model to interpret high-level effect semantics and reason about how they should adapt to a target subject, while a diffusion transformer leverages in-context learning to capture fine-grained visual cues from reference videos. These two components form a semantic-visual dual-path guidance mechanism that enables accurate, controllable, and effect-consistent synthesis without per-effect fine-tuning. Furthermore, we construct EffectData, the largest high-quality synthetic dataset containing 130k videos across 3k VFX categories, to improve generalization and scalability. Experiments show that EffectMaker achieves superior visual quality and effect consistency over state-of-the-art baselines, offering a scalable and flexible paradigm for customized VFX generation. Project page: https://effectmaker.github.io",
-      "hf_url": "https://huggingface.co/papers/2603.06014",
-      "arxiv_url": "https://arxiv.org/abs/2603.06014",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.06014",
-      "github_url": "",
-      "submitted_by": "Shiyuan Yang",
-      "submitted_at": "2026-03-09T11:43:40.984Z",
-      "upvotes": 7,
-      "comments": 2,
-      "topic_key": "multimodal_generative",
-      "topic_label": "Multimodal Generative Modeling",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.94
+      "classification_source": "claude",
+      "classification_confidence": 0.92
     },
     {
       "report_date": "2026-03-09",
@@ -1608,40 +1611,40 @@
       "github_url": "",
       "submitted_by": "JeffWang",
       "submitted_at": "2026-03-09T01:45:25.066Z",
-      "upvotes": 7,
+      "upvotes": 9,
       "comments": 2,
       "topic_key": "multimodal_agents",
       "topic_label": "Multimodal Agents",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_source": "claude",
+      "classification_confidence": 0.93
     },
     {
       "report_date": "2026-03-09",
-      "paper_id": "2603.06408",
-      "title": "Physical Simulator In-the-Loop Video Generation",
+      "paper_id": "2603.06014",
+      "title": "EffectMaker: Unifying Reasoning and Generation for Customized Visual Effect Creation",
       "authors": [
-        "Lin Geng Foo",
-        "Mark He Huang",
-        "Alexandros Lattas",
-        "Stylianos Moschoglou",
-        "Thabo Beeler",
-        "Christian Theobalt"
+        "Shiyuan Yang",
+        "Ruihuang Li",
+        "Jiale Tao",
+        "Shuai Shao",
+        "Qinglin Lu",
+        "Jing Liao"
       ],
-      "abstract": "Recent advances in diffusion-based video generation have achieved remarkable visual realism but still struggle to obey basic physical laws such as gravity, inertia, and collision. Generated objects often move inconsistently across frames, exhibit implausible dynamics, or violate physical constraints, limiting the realism and reliability of AI-generated videos. We address this gap by introducing Physical Simulator In-the-loop Video Generation (PSIVG), a novel framework that integrates a physical simulator into the video diffusion process. Starting from a template video generated by a pre-trained diffusion model, PSIVG reconstructs the 4D scene and foreground object meshes, initializes them within a physical simulator, and generates physically consistent trajectories. These simulated trajectories are then used to guide the video generator toward spatio-temporally physically coherent motion. To further improve texture consistency during object movement, we propose a Test-Time Texture Consistency Optimization (TTCO) technique that adapts text and feature embeddings based on pixel correspondences from the simulator. Comprehensive experiments demonstrate that PSIVG produces videos that better adhere to real-world physics while preserving visual quality and diversity. Project Page: https://vcai.mpi-inf.mpg.de/projects/PSIVG/",
-      "hf_url": "https://huggingface.co/papers/2603.06408",
-      "arxiv_url": "https://arxiv.org/abs/2603.06408",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.06408",
+      "abstract": "Visual effects (VFX) are essential for enhancing the expressiveness and creativity of video content, yet producing high-quality effects typically requires expert knowledge and costly production pipelines. Existing AIGC systems face significant challenges in VFX generation due to the scarcity of effect-specific data and the inherent difficulty of modeling supernatural or stylized effects. Moreover, these approaches often require per-effect fine-tuning, which severely limits their scalability and generalization to novel VFX. In this work, we present EffectMaker, a unified reasoning-generation framework that enables reference-based VFX customization. EffectMaker employs a multimodal large language model to interpret high-level effect semantics and reason about how they should adapt to a target subject, while a diffusion transformer leverages in-context learning to capture fine-grained visual cues from reference videos. These two components form a semantic-visual dual-path guidance mechanism that enables accurate, controllable, and effect-consistent synthesis without per-effect fine-tuning. Furthermore, we construct EffectData, the largest high-quality synthetic dataset containing 130k videos across 3k VFX categories, to improve generalization and scalability. Experiments show that EffectMaker achieves superior visual quality and effect consistency over state-of-the-art baselines, offering a scalable and flexible paradigm for customized VFX generation. Project page: https://effectmaker.github.io",
+      "hf_url": "https://huggingface.co/papers/2603.06014",
+      "arxiv_url": "https://arxiv.org/abs/2603.06014",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.06014",
       "github_url": "",
-      "submitted_by": "taesiri",
-      "submitted_at": "2026-03-09T00:40:04.838Z",
-      "upvotes": 4,
-      "comments": 1,
+      "submitted_by": "Shiyuan Yang",
+      "submitted_at": "2026-03-09T11:43:40.984Z",
+      "upvotes": 8,
+      "comments": 2,
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.96
+      "classification_source": "claude",
+      "classification_confidence": 0.78
     },
     {
       "report_date": "2026-03-09",
@@ -1661,13 +1664,13 @@
       "github_url": "",
       "submitted_by": "Yuanfu Sun",
       "submitted_at": "2026-03-09T08:14:26.892Z",
-      "upvotes": 4,
-      "comments": 2,
+      "upvotes": 7,
+      "comments": 3,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.68
+      "classification_source": "claude",
+      "classification_confidence": 0.76
     },
     {
       "report_date": "2026-03-09",
@@ -1689,8 +1692,8 @@
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.88
+      "classification_source": "claude",
+      "classification_confidence": 0.85
     },
     {
       "report_date": "2026-03-09",
@@ -1718,13 +1721,44 @@
       "github_url": "",
       "submitted_by": "Weilun Feng",
       "submitted_at": "2026-03-09T08:58:19.627Z",
-      "upvotes": 2,
+      "upvotes": 3,
       "comments": 2,
       "topic_key": "generative_foundations",
       "topic_label": "Generative Foundations",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.93
+      "classification_source": "claude",
+      "classification_confidence": 0.88
+    },
+    {
+      "report_date": "2026-03-09",
+      "paper_id": "2602.22839",
+      "title": "DeepPresenter: Environment-Grounded Reflection for Agentic Presentation Generation",
+      "authors": [
+        "Hao Zheng",
+        "Guozhao Mo",
+        "Xinru Yan",
+        "Qianhao Yuan",
+        "Wenkai Zhang",
+        "Xuanang Chen",
+        "Yaojie Lu",
+        "Hongyu Lin",
+        "Xianpei Han",
+        "Le Sun"
+      ],
+      "abstract": "Presentation generation requires deep content research, coherent visual design, and iterative refinement based on observation. However, existing presentation agents often rely on predefined workflows and fixed templates. To address this, we present DeepPresenter, an agentic framework that adapts to diverse user intents, enables effective feedback-driven refinement, and generalizes beyond a scripted pipeline. Specifically, DeepPresenter autonomously plans, renders, and revises intermediate slide artifacts to support long-horizon refinement with environmental observations. Furthermore, rather than relying on self-reflection over internal signals (e.g., reasoning traces), our environment-grounded reflection conditions the generation process on perceptual artifact states (e.g., rendered slides), enabling the system to identify and correct presentation-specific issues during execution. Results on the evaluation set covering diverse presentation-generation scenarios show that DeepPresenter achieves state-of-the-art performance, and the fine-tuned 9B model remains highly competitive at substantially lower cost. Our project is available at: https://github.com/icip-cas/PPTAgent",
+      "hf_url": "https://huggingface.co/papers/2602.22839",
+      "arxiv_url": "https://arxiv.org/abs/2602.22839",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2602.22839",
+      "github_url": "",
+      "submitted_by": "Zheng Hao",
+      "submitted_at": "2026-03-09T09:25:39.867Z",
+      "upvotes": 3,
+      "comments": 2,
+      "topic_key": "agents_planning",
+      "topic_label": "Agents and Planning",
+      "matched_terms": [],
+      "classification_source": "claude",
+      "classification_confidence": 0.8
     },
     {
       "report_date": "2026-03-09",
@@ -1748,12 +1782,12 @@
       "submitted_by": "Zhong",
       "submitted_at": "2026-03-09T23:49:52.438Z",
       "upvotes": 2,
-      "comments": 1,
+      "comments": 2,
       "topic_key": "generative_foundations",
       "topic_label": "Generative Foundations",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.92
+      "classification_source": "claude",
+      "classification_confidence": 0.87
     },
     {
       "report_date": "2026-03-09",
@@ -1779,8 +1813,8 @@
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.74
+      "classification_source": "claude",
+      "classification_confidence": 0.87
     },
     {
       "report_date": "2026-03-09",
@@ -1807,8 +1841,8 @@
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.97
+      "classification_source": "claude",
+      "classification_confidence": 0.85
     },
     {
       "report_date": "2026-03-09",
@@ -1830,42 +1864,11 @@
       "submitted_at": "2026-03-09T16:20:39.989Z",
       "upvotes": 2,
       "comments": 2,
-      "topic_key": "retrieval_knowledge",
-      "topic_label": "Retrieval, Knowledge, and RAG",
+      "topic_key": "datasets_benchmarks",
+      "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.72
-    },
-    {
-      "report_date": "2026-03-09",
-      "paper_id": "2602.22839",
-      "title": "DeepPresenter: Environment-Grounded Reflection for Agentic Presentation Generation",
-      "authors": [
-        "Hao Zheng",
-        "Guozhao Mo",
-        "Xinru Yan",
-        "Qianhao Yuan",
-        "Wenkai Zhang",
-        "Xuanang Chen",
-        "Yaojie Lu",
-        "Hongyu Lin",
-        "Xianpei Han",
-        "Le Sun"
-      ],
-      "abstract": "Presentation generation requires deep content research, coherent visual design, and iterative refinement based on observation. However, existing presentation agents often rely on predefined workflows and fixed templates. To address this, we present DeepPresenter, an agentic framework that adapts to diverse user intents, enables effective feedback-driven refinement, and generalizes beyond a scripted pipeline. Specifically, DeepPresenter autonomously plans, renders, and revises intermediate slide artifacts to support long-horizon refinement with environmental observations. Furthermore, rather than relying on self-reflection over internal signals (e.g., reasoning traces), our environment-grounded reflection conditions the generation process on perceptual artifact states (e.g., rendered slides), enabling the system to identify and correct presentation-specific issues during execution. Results on the evaluation set covering diverse presentation-generation scenarios show that DeepPresenter achieves state-of-the-art performance, and the fine-tuned 9B model remains highly competitive at substantially lower cost. Our project is available at: https://github.com/icip-cas/PPTAgent",
-      "hf_url": "https://huggingface.co/papers/2602.22839",
-      "arxiv_url": "https://arxiv.org/abs/2602.22839",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2602.22839",
-      "github_url": "",
-      "submitted_by": "Zheng Hao",
-      "submitted_at": "2026-03-09T09:25:39.867Z",
-      "upvotes": 2,
-      "comments": 2,
-      "topic_key": "agents_planning",
-      "topic_label": "Agents and Planning",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.73
+      "classification_source": "claude",
+      "classification_confidence": 0.75
     },
     {
       "report_date": "2026-03-09",
@@ -1893,8 +1896,8 @@
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.84
+      "classification_source": "claude",
+      "classification_confidence": 0.78
     },
     {
       "report_date": "2026-03-09",
@@ -1920,8 +1923,8 @@
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.92
+      "classification_source": "claude",
+      "classification_confidence": 0.83
     },
     {
       "report_date": "2026-03-09",
@@ -1948,8 +1951,8 @@
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.83
+      "classification_source": "claude",
+      "classification_confidence": 0.82
     },
     {
       "report_date": "2026-03-09",
@@ -1977,8 +1980,8 @@
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_source": "claude",
+      "classification_confidence": 0.93
     },
     {
       "report_date": "2026-03-09",
@@ -2007,8 +2010,8 @@
       "topic_key": "retrieval_knowledge",
       "topic_label": "Retrieval, Knowledge, and RAG",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.94
+      "classification_source": "claude",
+      "classification_confidence": 0.88
     },
     {
       "report_date": "2026-03-09",
@@ -2034,8 +2037,8 @@
       "topic_key": "learning_theory",
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_source": "claude",
+      "classification_confidence": 0.85
     },
     {
       "report_date": "2026-03-09",
@@ -2061,8 +2064,37 @@
       "topic_key": "learning_theory",
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.56
+      "classification_source": "claude",
+      "classification_confidence": 0.72
+    },
+    {
+      "report_date": "2026-03-09",
+      "paper_id": "2602.23408",
+      "title": "Demystifying Action Space Design for Robotic Manipulation Policies",
+      "authors": [
+        "Yuchun Feng",
+        "Jinliang Zheng",
+        "Zhihao Wang",
+        "Dongxiu Liu",
+        "Jianxiong Li",
+        "Jiangmiao Pang",
+        "Tai Wang",
+        "Xianyuan Zhan"
+      ],
+      "abstract": "The specification of the action space plays a pivotal role in imitation-based robotic manipulation policy learning, fundamentally shaping the optimization landscape of policy learning. While recent advances have focused heavily on scaling training data and model capacity, the choice of action space remains guided by ad-hoc heuristics or legacy designs, leading to an ambiguous understanding of robotic policy design philosophies. To address this ambiguity, we conducted a large-scale and systematic empirical study, confirming that the action space does have significant and complex impacts on robotic policy learning. We dissect the action design space along temporal and spatial axes, facilitating a structured analysis of how these choices govern both policy learnability and control stability. Based on 13,000+ real-world rollouts on a bimanual robot and evaluation on 500+ trained models over four scenarios, we examine the trade-offs between absolute vs. delta representations, and joint-space vs. task-space parameterizations. Our large-scale results suggest that properly designing the policy to predict delta actions consistently improves performance, while joint-space and task-space representations offer complementary strengths, favoring control stability and generalization, respectively.",
+      "hf_url": "https://huggingface.co/papers/2602.23408",
+      "arxiv_url": "https://arxiv.org/abs/2602.23408",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2602.23408",
+      "github_url": "",
+      "submitted_by": "Jinliang Zheng",
+      "submitted_at": "2026-03-09T07:12:44.158Z",
+      "upvotes": 1,
+      "comments": 2,
+      "topic_key": "robotics_embodied",
+      "topic_label": "Robotics and Embodied AI",
+      "matched_terms": [],
+      "classification_source": "claude",
+      "classification_confidence": 0.93
     },
     {
       "report_date": "2026-03-09",
@@ -2091,8 +2123,8 @@
       "topic_key": "generative_foundations",
       "topic_label": "Generative Foundations",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.89
+      "classification_source": "claude",
+      "classification_confidence": 0.88
     },
     {
       "report_date": "2026-03-09",
@@ -2117,37 +2149,8 @@
       "topic_key": "learning_theory",
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.76
-    },
-    {
-      "report_date": "2026-03-09",
-      "paper_id": "2602.23408",
-      "title": "Demystifying Action Space Design for Robotic Manipulation Policies",
-      "authors": [
-        "Yuchun Feng",
-        "Jinliang Zheng",
-        "Zhihao Wang",
-        "Dongxiu Liu",
-        "Jianxiong Li",
-        "Jiangmiao Pang",
-        "Tai Wang",
-        "Xianyuan Zhan"
-      ],
-      "abstract": "The specification of the action space plays a pivotal role in imitation-based robotic manipulation policy learning, fundamentally shaping the optimization landscape of policy learning. While recent advances have focused heavily on scaling training data and model capacity, the choice of action space remains guided by ad-hoc heuristics or legacy designs, leading to an ambiguous understanding of robotic policy design philosophies. To address this ambiguity, we conducted a large-scale and systematic empirical study, confirming that the action space does have significant and complex impacts on robotic policy learning. We dissect the action design space along temporal and spatial axes, facilitating a structured analysis of how these choices govern both policy learnability and control stability. Based on 13,000+ real-world rollouts on a bimanual robot and evaluation on 500+ trained models over four scenarios, we examine the trade-offs between absolute vs. delta representations, and joint-space vs. task-space parameterizations. Our large-scale results suggest that properly designing the policy to predict delta actions consistently improves performance, while joint-space and task-space representations offer complementary strengths, favoring control stability and generalization, respectively.",
-      "hf_url": "https://huggingface.co/papers/2602.23408",
-      "arxiv_url": "https://arxiv.org/abs/2602.23408",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2602.23408",
-      "github_url": "",
-      "submitted_by": "Jinliang Zheng",
-      "submitted_at": "2026-03-09T07:12:44.158Z",
-      "upvotes": 0,
-      "comments": 2,
-      "topic_key": "robotics_embodied",
-      "topic_label": "Robotics and Embodied AI",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_source": "claude",
+      "classification_confidence": 0.8
     }
   ]
 }

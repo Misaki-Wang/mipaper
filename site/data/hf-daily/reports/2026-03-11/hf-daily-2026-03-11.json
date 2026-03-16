@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-12T18:18:30Z",
+  "generated_at": "2026-03-14T15:53:43Z",
   "report_kind": "hf_daily",
   "report_date": "2026-03-11",
   "source_url": "https://huggingface.co/papers/date/2026-03-11",
@@ -9,8 +9,8 @@
     {
       "topic_key": "generative_foundations",
       "topic_label": "Generative Foundations",
-      "count": 3,
-      "share": 10.0
+      "count": 2,
+      "share": 6.67
     },
     {
       "topic_key": "multimodal_generative",
@@ -32,12 +32,12 @@
       "share": 26.67
     },
     {
-      "topic_label": "Datasets and Benchmarks",
-      "count": 4,
-      "share": 13.33
+      "topic_label": "LLMs and Language",
+      "count": 5,
+      "share": 16.67
     },
     {
-      "topic_label": "LLMs and Language",
+      "topic_label": "Datasets and Benchmarks",
       "count": 4,
       "share": 13.33
     },
@@ -45,11 +45,6 @@
       "topic_label": "Multimodal Understanding and Vision",
       "count": 4,
       "share": 13.33
-    },
-    {
-      "topic_label": "Generative Foundations",
-      "count": 3,
-      "share": 10.0
     },
     {
       "topic_label": "Learning, Optimization, and Theory",
@@ -60,6 +55,11 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "count": 3,
       "share": 10.0
+    },
+    {
+      "topic_label": "Generative Foundations",
+      "count": 2,
+      "share": 6.67
     },
     {
       "topic_label": "Agents and Planning",
@@ -118,13 +118,13 @@
       "github_url": "",
       "submitted_by": "JiYuan Wang",
       "submitted_at": "2026-03-11T03:03:47.843Z",
-      "upvotes": 130,
+      "upvotes": 136,
       "comments": 6,
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_source": "claude",
+      "classification_confidence": 0.85
     },
     {
       "report_date": "2026-03-11",
@@ -145,12 +145,12 @@
       "github_url": "",
       "submitted_by": "Zorik",
       "submitted_at": "2026-03-11T05:16:47.600Z",
-      "upvotes": 52,
+      "upvotes": 59,
       "comments": 2,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [],
-      "classification_source": "codex",
+      "classification_source": "claude",
       "classification_confidence": 0.82
     },
     {
@@ -175,45 +175,13 @@
       "github_url": "",
       "submitted_by": "BradyFU",
       "submitted_at": "2026-03-11T00:20:42.148Z",
-      "upvotes": 41,
+      "upvotes": 43,
       "comments": 4,
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.98
-    },
-    {
-      "report_date": "2026-03-11",
-      "paper_id": "2603.09206",
-      "title": "MM-Zero: Self-Evolving Multi-Model Vision Language Models From Zero Data",
-      "authors": [
-        "Zongxia Li",
-        "Hongyang Du",
-        "Chengsong Huang",
-        "Xiyang Wu",
-        "Lantao Yu",
-        "Yicheng He",
-        "Jing Xie",
-        "Xiaomin Wu",
-        "Zhichao Liu",
-        "Jiarui Zhang",
-        "Fuxiao Liu"
-      ],
-      "abstract": "Self-evolving has emerged as a key paradigm for improving foundational models such as Large Language Models (LLMs) and Vision Language Models (VLMs) with minimal human intervention. While recent approaches have demonstrated that LLM agents can self-evolve from scratch with little to no data, VLMs introduce an additional visual modality that typically requires at least some seed data, such as images, to bootstrap the self-evolution process. In this work, we present Multi-model Multimodal Zero (MM-Zero), the first RL-based framework to achieve zero-data self-evolution for VLM reasoning. Moving beyond prior dual-role (Proposer and Solver) setups, MM-Zero introduces a multi-role self-evolving training framework comprising three specialized roles: a Proposer that generates abstract visual concepts and formulates questions; a Coder that translates these concepts into executable code (e.g., Python, SVG) to render visual images; and a Solver that performs multimodal reasoning over the generated visual content. All three roles are initialized from the same base model and trained using Group Relative Policy Optimization (GRPO), with carefully designed reward mechanisms that integrate execution feedback, visual verification, and difficulty balancing. Our experiments show that MM-Zero improves VLM reasoning performance across a wide range of multimodal benchmarks. MM-Zero establishes a scalable path toward self-evolving multi-model systems for multimodal models, extending the frontier of self-improvement beyond the conventional two-model paradigm.",
-      "hf_url": "https://huggingface.co/papers/2603.09206",
-      "arxiv_url": "https://arxiv.org/abs/2603.09206",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.09206",
-      "github_url": "",
-      "submitted_by": "LZX",
-      "submitted_at": "2026-03-11T01:04:31.449Z",
-      "upvotes": 41,
-      "comments": 2,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.84
+      "classification_source": "claude",
+      "classification_confidence": 0.92
     },
     {
       "report_date": "2026-03-11",
@@ -257,76 +225,45 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-03-11T01:43:47.669Z",
-      "upvotes": 31,
+      "upvotes": 41,
       "comments": 5,
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.9
+      "classification_source": "claude",
+      "classification_confidence": 0.88
     },
     {
       "report_date": "2026-03-11",
-      "paper_id": "2603.09896",
-      "title": "Stepping VLMs onto the Court: Benchmarking Spatial Intelligence in Sports",
+      "paper_id": "2603.09206",
+      "title": "MM-Zero: Self-Evolving Multi-Model Vision Language Models From Zero Data",
       "authors": [
-        "Yuchen Yang",
-        "Yuqing Shao",
-        "Duxiu Huang",
-        "Linfeng Dong",
-        "Yifei Liu",
-        "Suixin Tang",
-        "Xiang Zhou",
-        "Yuanyuan Gao",
-        "Wei Wang",
-        "Yue Zhou",
-        "Xue Yang",
-        "Yanfeng Wang",
-        "Xiao Sun",
-        "Zhihang Zhong"
+        "Zongxia Li",
+        "Hongyang Du",
+        "Chengsong Huang",
+        "Xiyang Wu",
+        "Lantao Yu",
+        "Yicheng He",
+        "Jing Xie",
+        "Xiaomin Wu",
+        "Zhichao Liu",
+        "Jiarui Zhang",
+        "Fuxiao Liu"
       ],
-      "abstract": "Sports have long attracted broad attention as they push the limits of human physical and cognitive capabilities. Amid growing interest in spatial intelligence for vision-language models (VLMs), sports provide a natural testbed for understanding high-intensity human motion and dynamic object interactions. To this end, we present CourtSI, the first large-scale spatial intelligence dataset tailored to sports scenarios. CourtSI contains over 1M QA pairs, organized under a holistic taxonomy that systematically covers spatial counting, distance measurement, localization, and relational reasoning, across representative net sports including badminton, tennis, and table tennis. Leveraging well-defined court geometry as metric anchors, we develop a semi-automatic data engine to reconstruct sports scenes, enabling scalable curation of CourtSI. In addition, we introduce CourtSI-Bench, a high-quality evaluation benchmark comprising 3,686 QA pairs with rigorous human verification. We evaluate 25 proprietary and open-source VLMs on CourtSI-Bench, revealing a remaining human-AI performance gap and limited generalization from existing spatial intelligence benchmarks. These findings indicate that sports scenarios expose limitations in spatial intelligence capabilities captured by existing benchmarks. Further, fine-tuning Qwen3-VL-8B on CourtSI improves accuracy on CourtSI-Bench by 23.5 percentage points. The adapted model also generalizes effectively to CourtSI-Ext, an evaluation set built on a similar but unseen sport, and demonstrates enhanced spatial-aware commentary generation. Together, these findings demonstrate that CourtSI provides a scalable pathway toward advancing spatial intelligence of VLMs in sports.",
-      "hf_url": "https://huggingface.co/papers/2603.09896",
-      "arxiv_url": "https://arxiv.org/abs/2603.09896",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.09896",
+      "abstract": "Self-evolving has emerged as a key paradigm for improving foundational models such as Large Language Models (LLMs) and Vision Language Models (VLMs) with minimal human intervention. While recent approaches have demonstrated that LLM agents can self-evolve from scratch with little to no data, VLMs introduce an additional visual modality that typically requires at least some seed data, such as images, to bootstrap the self-evolution process. In this work, we present Multi-model Multimodal Zero (MM-Zero), the first RL-based framework to achieve zero-data self-evolution for VLM reasoning. Moving beyond prior dual-role (Proposer and Solver) setups, MM-Zero introduces a multi-role self-evolving training framework comprising three specialized roles: a Proposer that generates abstract visual concepts and formulates questions; a Coder that translates these concepts into executable code (e.g., Python, SVG) to render visual images; and a Solver that performs multimodal reasoning over the generated visual content. All three roles are initialized from the same base model and trained using Group Relative Policy Optimization (GRPO), with carefully designed reward mechanisms that integrate execution feedback, visual verification, and difficulty balancing. Our experiments show that MM-Zero improves VLM reasoning performance across a wide range of multimodal benchmarks. MM-Zero establishes a scalable path toward self-evolving multi-model systems for multimodal models, extending the frontier of self-improvement beyond the conventional two-model paradigm.",
+      "hf_url": "https://huggingface.co/papers/2603.09206",
+      "arxiv_url": "https://arxiv.org/abs/2603.09206",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.09206",
       "github_url": "",
-      "submitted_by": "Yuchen Yang",
-      "submitted_at": "2026-03-11T01:48:51.758Z",
-      "upvotes": 23,
-      "comments": 3,
-      "topic_key": "datasets_benchmarks",
-      "topic_label": "Datasets and Benchmarks",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.97
-    },
-    {
-      "report_date": "2026-03-11",
-      "paper_id": "2603.09095",
-      "title": "Reading, Not Thinking: Understanding and Bridging the Modality Gap When Text Becomes Pixels in Multimodal LLMs",
-      "authors": [
-        "Kaiser Sun",
-        "Xiaochuang Yuan",
-        "Hongjun Liu",
-        "Chen Zhao",
-        "Cheng Zhang",
-        "Mark Dredze",
-        "Fan Bai"
-      ],
-      "abstract": "Multimodal large language models (MLLMs) can process text presented as images, yet they often perform worse than when the same content is provided as textual tokens. We systematically diagnose this \"modality gap\" by evaluating seven MLLMs across seven benchmarks in five input modes, spanning both synthetically rendered text and realistic document images from arXiv PDFs to Wikipedia pages. We find that the modality gap is task- and data-dependent. For example, math tasks degrade by over 60 points on synthetic renderings, while natural document images often match or exceed text-mode performance. Rendering choices such as font and resolution are strong confounds, with font alone swinging accuracy by up to 47 percentage points. To understand this, we conduct a grounded-theory error analysis of over 4,000 examples, revealing that image mode selectively amplifies reading errors (calculation and formatting failures) while leaving knowledge and reasoning errors largely unchanged, and that some models exhibit a chain-of-thought reasoning collapse under visual input. Motivated by these findings, we propose a self-distillation method that trains the model on its own pure text reasoning traces paired with image inputs, raising image-mode accuracy on GSM8K from 30.71% to 92.72% and transferring to unseen benchmarks without catastrophic forgetting. Overall, our study provides a systematic understanding of the modality gap and suggests a practical path toward improving visual text understanding in multimodal language models.",
-      "hf_url": "https://huggingface.co/papers/2603.09095",
-      "arxiv_url": "https://arxiv.org/abs/2603.09095",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.09095",
-      "github_url": "",
-      "submitted_by": "Kaiser Sun",
-      "submitted_at": "2026-03-11T00:08:20.887Z",
-      "upvotes": 23,
-      "comments": 1,
+      "submitted_by": "LZX",
+      "submitted_at": "2026-03-11T01:04:31.449Z",
+      "upvotes": 41,
+      "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_source": "claude",
+      "classification_confidence": 0.78
     },
     {
       "report_date": "2026-03-11",
@@ -355,13 +292,76 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-03-11T00:32:45.531Z",
-      "upvotes": 18,
+      "upvotes": 25,
       "comments": 2,
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.63
+      "classification_source": "claude",
+      "classification_confidence": 0.72
+    },
+    {
+      "report_date": "2026-03-11",
+      "paper_id": "2603.09896",
+      "title": "Stepping VLMs onto the Court: Benchmarking Spatial Intelligence in Sports",
+      "authors": [
+        "Yuchen Yang",
+        "Yuqing Shao",
+        "Duxiu Huang",
+        "Linfeng Dong",
+        "Yifei Liu",
+        "Suixin Tang",
+        "Xiang Zhou",
+        "Yuanyuan Gao",
+        "Wei Wang",
+        "Yue Zhou",
+        "Xue Yang",
+        "Yanfeng Wang",
+        "Xiao Sun",
+        "Zhihang Zhong"
+      ],
+      "abstract": "Sports have long attracted broad attention as they push the limits of human physical and cognitive capabilities. Amid growing interest in spatial intelligence for vision-language models (VLMs), sports provide a natural testbed for understanding high-intensity human motion and dynamic object interactions. To this end, we present CourtSI, the first large-scale spatial intelligence dataset tailored to sports scenarios. CourtSI contains over 1M QA pairs, organized under a holistic taxonomy that systematically covers spatial counting, distance measurement, localization, and relational reasoning, across representative net sports including badminton, tennis, and table tennis. Leveraging well-defined court geometry as metric anchors, we develop a semi-automatic data engine to reconstruct sports scenes, enabling scalable curation of CourtSI. In addition, we introduce CourtSI-Bench, a high-quality evaluation benchmark comprising 3,686 QA pairs with rigorous human verification. We evaluate 25 proprietary and open-source VLMs on CourtSI-Bench, revealing a remaining human-AI performance gap and limited generalization from existing spatial intelligence benchmarks. These findings indicate that sports scenarios expose limitations in spatial intelligence capabilities captured by existing benchmarks. Further, fine-tuning Qwen3-VL-8B on CourtSI improves accuracy on CourtSI-Bench by 23.5 percentage points. The adapted model also generalizes effectively to CourtSI-Ext, an evaluation set built on a similar but unseen sport, and demonstrates enhanced spatial-aware commentary generation. Together, these findings demonstrate that CourtSI provides a scalable pathway toward advancing spatial intelligence of VLMs in sports.",
+      "hf_url": "https://huggingface.co/papers/2603.09896",
+      "arxiv_url": "https://arxiv.org/abs/2603.09896",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.09896",
+      "github_url": "",
+      "submitted_by": "Yuchen Yang",
+      "submitted_at": "2026-03-11T01:48:51.758Z",
+      "upvotes": 24,
+      "comments": 3,
+      "topic_key": "datasets_benchmarks",
+      "topic_label": "Datasets and Benchmarks",
+      "matched_terms": [],
+      "classification_source": "claude",
+      "classification_confidence": 0.82
+    },
+    {
+      "report_date": "2026-03-11",
+      "paper_id": "2603.09095",
+      "title": "Reading, Not Thinking: Understanding and Bridging the Modality Gap When Text Becomes Pixels in Multimodal LLMs",
+      "authors": [
+        "Kaiser Sun",
+        "Xiaochuang Yuan",
+        "Hongjun Liu",
+        "Chen Zhao",
+        "Cheng Zhang",
+        "Mark Dredze",
+        "Fan Bai"
+      ],
+      "abstract": "Multimodal large language models (MLLMs) can process text presented as images, yet they often perform worse than when the same content is provided as textual tokens. We systematically diagnose this \"modality gap\" by evaluating seven MLLMs across seven benchmarks in five input modes, spanning both synthetically rendered text and realistic document images from arXiv PDFs to Wikipedia pages. We find that the modality gap is task- and data-dependent. For example, math tasks degrade by over 60 points on synthetic renderings, while natural document images often match or exceed text-mode performance. Rendering choices such as font and resolution are strong confounds, with font alone swinging accuracy by up to 47 percentage points. To understand this, we conduct a grounded-theory error analysis of over 4,000 examples, revealing that image mode selectively amplifies reading errors (calculation and formatting failures) while leaving knowledge and reasoning errors largely unchanged, and that some models exhibit a chain-of-thought reasoning collapse under visual input. Motivated by these findings, we propose a self-distillation method that trains the model on its own pure text reasoning traces paired with image inputs, raising image-mode accuracy on GSM8K from 30.71% to 92.72% and transferring to unseen benchmarks without catastrophic forgetting. Overall, our study provides a systematic understanding of the modality gap and suggests a practical path toward improving visual text understanding in multimodal language models.",
+      "hf_url": "https://huggingface.co/papers/2603.09095",
+      "arxiv_url": "https://arxiv.org/abs/2603.09095",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.09095",
+      "github_url": "",
+      "submitted_by": "Kaiser Sun",
+      "submitted_at": "2026-03-11T00:08:20.887Z",
+      "upvotes": 23,
+      "comments": 1,
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
+      "matched_terms": [],
+      "classification_source": "claude",
+      "classification_confidence": 0.85
     }
   ],
   "topics": [
@@ -394,13 +394,13 @@
           "github_url": "",
           "submitted_by": "JiYuan Wang",
           "submitted_at": "2026-03-11T03:03:47.843Z",
-          "upvotes": 130,
+          "upvotes": 136,
           "comments": 6,
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.95
+          "classification_source": "claude",
+          "classification_confidence": 0.85
         },
         {
           "report_date": "2026-03-11",
@@ -424,13 +424,13 @@
           "github_url": "",
           "submitted_by": "BradyFU",
           "submitted_at": "2026-03-11T00:20:42.148Z",
-          "upvotes": 41,
+          "upvotes": 43,
           "comments": 4,
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.98
+          "classification_source": "claude",
+          "classification_confidence": 0.92
         },
         {
           "report_date": "2026-03-11",
@@ -474,13 +474,13 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-03-11T01:43:47.669Z",
-          "upvotes": 31,
+          "upvotes": 41,
           "comments": 5,
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.9
+          "classification_source": "claude",
+          "classification_confidence": 0.88
         },
         {
           "report_date": "2026-03-11",
@@ -509,13 +509,13 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-03-11T00:32:45.531Z",
-          "upvotes": 18,
+          "upvotes": 25,
           "comments": 2,
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.63
+          "classification_source": "claude",
+          "classification_confidence": 0.72
         },
         {
           "report_date": "2026-03-11",
@@ -541,8 +541,8 @@
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.98
+          "classification_source": "claude",
+          "classification_confidence": 0.9
         },
         {
           "report_date": "2026-03-11",
@@ -567,7 +567,7 @@
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
-          "classification_source": "codex",
+          "classification_source": "claude",
           "classification_confidence": 0.88
         },
         {
@@ -596,8 +596,8 @@
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.95
+          "classification_source": "claude",
+          "classification_confidence": 0.88
         },
         {
           "report_date": "2026-03-11",
@@ -620,8 +620,143 @@
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.98
+          "classification_source": "claude",
+          "classification_confidence": 0.85
+        }
+      ]
+    },
+    {
+      "topic_label": "LLMs and Language",
+      "count": 5,
+      "share": 16.67,
+      "papers": [
+        {
+          "report_date": "2026-03-11",
+          "paper_id": "2603.09906",
+          "title": "Thinking to Recall: How Reasoning Unlocks Parametric Knowledge in LLMs",
+          "authors": [
+            "Zorik Gekhman",
+            "Roee Aharoni",
+            "Eran Ofek",
+            "Mor Geva",
+            "Roi Reichart",
+            "Jonathan Herzig"
+          ],
+          "abstract": "While reasoning in LLMs plays a natural role in math, code generation, and multi-hop factual questions, its effect on simple, single-hop factual questions remains unclear. Such questions do not require step-by-step logical decomposition, making the utility of reasoning highly counterintuitive. Nevertheless, we find that enabling reasoning substantially expands the capability boundary of the model's parametric knowledge recall, unlocking correct answers that are otherwise effectively unreachable. Why does reasoning aid parametric knowledge recall when there are no complex reasoning steps to be done? To answer this, we design a series of hypothesis-driven controlled experiments, and identify two key driving mechanisms: (1) a computational buffer effect, where the model uses the generated reasoning tokens to perform latent computation independent of their semantic content; and (2) factual priming, where generating topically related facts acts as a semantic bridge that facilitates correct answer retrieval. Importantly, this latter generative self-retrieval mechanism carries inherent risks: we demonstrate that hallucinating intermediate facts during reasoning increases the likelihood of hallucinations in the final answer. Finally, we show that our insights can be harnessed to directly improve model accuracy by prioritizing reasoning trajectories that contain hallucination-free factual statements.",
+          "hf_url": "https://huggingface.co/papers/2603.09906",
+          "arxiv_url": "https://arxiv.org/abs/2603.09906",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.09906",
+          "github_url": "",
+          "submitted_by": "Zorik",
+          "submitted_at": "2026-03-11T05:16:47.600Z",
+          "upvotes": 59,
+          "comments": 2,
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [],
+          "classification_source": "claude",
+          "classification_confidence": 0.82
+        },
+        {
+          "report_date": "2026-03-11",
+          "paper_id": "2603.09951",
+          "title": "Towards a Neural Debugger for Python",
+          "authors": [
+            "Maximilian Beck",
+            "Jonas Gehring",
+            "Jannik Kossen",
+            "Gabriel Synnaeve"
+          ],
+          "abstract": "Training large language models (LLMs) on Python execution traces grounds them in code execution and enables the line-by-line execution prediction of whole Python programs, effectively turning them into neural interpreters (FAIR CodeGen Team et al., 2025). However, developers rarely execute programs step by step; instead, they use debuggers to stop execution at certain breakpoints and step through relevant portions only while inspecting or modifying program variables. Existing neural interpreter approaches lack such interactive control. To address this limitation, we introduce neural debuggers: language models that emulate traditional debuggers, supporting operations such as stepping into, over, or out of functions, as well as setting breakpoints at specific source lines. We show that neural debuggers -- obtained via fine-tuning large LLMs or pre-training smaller models from scratch -- can reliably model both forward execution (predicting future states and outputs) and inverse execution (inferring prior states or inputs) conditioned on debugger actions. Evaluated on CruxEval, our models achieve strong performance on both output and input prediction tasks, demonstrating robust conditional execution modeling. Our work takes first steps towards future agentic coding systems in which neural debuggers serve as a world model for simulated debugging environments, providing execution feedback or enabling agents to interact with real debugging tools. This capability lays the foundation for more powerful code generation, program understanding, and automated debugging.",
+          "hf_url": "https://huggingface.co/papers/2603.09951",
+          "arxiv_url": "https://arxiv.org/abs/2603.09951",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.09951",
+          "github_url": "",
+          "submitted_by": "taesiri",
+          "submitted_at": "2026-03-11T00:47:41.355Z",
+          "upvotes": 4,
+          "comments": 1,
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [],
+          "classification_source": "claude",
+          "classification_confidence": 0.75
+        },
+        {
+          "report_date": "2026-03-11",
+          "paper_id": "2603.05863",
+          "title": "ReflexiCoder: Teaching Large Language Models to Self-Reflect on Generated Code and Self-Correct It via Reinforcement Learning",
+          "authors": [
+            "Juyong Jiang",
+            "Jiasi Shen",
+            "Sunghun Kim",
+            "Kang Min Yoo",
+            "Jeonghoon Kim",
+            "Sungju Kim"
+          ],
+          "abstract": "While Large Language Models (LLMs) have revolutionized code generation, standard \"System 1\" approaches, generating solutions in a single forward pass, often hit a performance ceiling when faced with complex algorithmic tasks. Existing iterative refinement strategies attempt to bridge this gap at inference time, yet they predominantly rely on external oracles, execution feedback, or computationally expensive prompt-response cycles. In this work, we propose ReflexiCoder, a novel reinforcement learning (RL) framework that internalizes the structured reasoning trajectory, encompassing initial generation, bug and optimization aware reflection, and self-correction, directly into the model's weights. Unlike prior methods, ReflexiCoder shifts the paradigm from external-dependent refinement to an intrinsic, fully autonomous self-reflection and self-correction capabilities at inference time. We utilize an RL-zero training paradigm with granular reward functions to optimize the entire reflection-correction trajectory, teaching the model how to debug without reliance on ground-truth feedback or execution engines at inference time. Extensive experiments across seven benchmarks demonstrate that our ReflexiCoder-8B establishes a new state-of-the-art (SOTA) among leading open-source models in the 1.5B-14B range, achieving 94.51% (87.20%) on HumanEval (Plus), 81.80% (78.57%) on MBPP (Plus), 35.00% on BigCodeBench, 52.21% on LiveCodeBench, and 37.34% on CodeForces in a single-attempt setting, rivaling or surpassing proprietary models like GPT-5.1. Notably, our framework is significantly more token-efficient than base models, reducing inference-time compute overhead by approximately 40% through disciplined, high-speed reasoning and reflection patterns. Source code is available at https://github.com/juyongjiang/ReflexiCoder.",
+          "hf_url": "https://huggingface.co/papers/2603.05863",
+          "arxiv_url": "https://arxiv.org/abs/2603.05863",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.05863",
+          "github_url": "",
+          "submitted_by": "John",
+          "submitted_at": "2026-03-11T11:23:57.197Z",
+          "upvotes": 4,
+          "comments": 2,
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [],
+          "classification_source": "claude",
+          "classification_confidence": 0.88
+        },
+        {
+          "report_date": "2026-03-11",
+          "paper_id": "2603.09555",
+          "title": "Compiler-First State Space Duality and Portable O(1) Autoregressive Caching for Inference",
+          "authors": [
+            "Cosmo Santoni"
+          ],
+          "abstract": "State-space model releases are typically coupled to fused CUDA and Triton kernels, inheriting a hard dependency on NVIDIA hardware. We show that Mamba-2's state space duality algorithm -- diagonal state structure, chunkable recurrence, and einsum-dominated compute with static control flow -- maps cleanly onto what XLA's fusion and tiling passes actually optimise, making custom kernels optional rather than required. We implement the full inference path (prefill, cached autoregressive decoding) as shaped standard primitives under XLA, without hand-written kernels, and realise the architecture's theoretical O(1) state management as a compiled on-device cache requiring no host synchronisation during generation. The implementation runs unmodified on CPU, NVIDIA GPU, and Google Cloud TPU from a single JAX source. On TPU v6e across five model scales (130M--2.7B parameters), XLA-generated code reaches approximately 140 TFLOPS on single-stream prefill (15% MFU) and up to 64% bandwidth utilisation on decode. Greedy decoding matches the PyTorch/CUDA reference token-for-token across 64 steps, with hidden-state agreement within float32 rounding tolerance. The pattern transfers to any SSM recurrence satisfying the same structural conditions, on any platform with a mature XLA backend. The implementation is publicly available at https://github.com/CosmoNaught/mamba2-jax and merged into the Bonsai JAX model library.",
+          "hf_url": "https://huggingface.co/papers/2603.09555",
+          "arxiv_url": "https://arxiv.org/abs/2603.09555",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.09555",
+          "github_url": "",
+          "submitted_by": "Santoni",
+          "submitted_at": "2026-03-11T10:34:43.062Z",
+          "upvotes": 1,
+          "comments": 2,
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [],
+          "classification_source": "claude",
+          "classification_confidence": 0.78
+        },
+        {
+          "report_date": "2026-03-11",
+          "paper_id": "2603.08899",
+          "title": "ConFu: Contemplate the Future for Better Speculative Sampling",
+          "authors": [
+            "Zongyue Qin",
+            "Raghavv Goel",
+            "Mukul Gagrani",
+            "Risheek Garrepalli",
+            "Mingu Lee",
+            "Yizhou Sun"
+          ],
+          "abstract": "Speculative decoding has emerged as a powerful approach to accelerate large language model (LLM) inference by employing lightweight draft models to propose candidate tokens that are subsequently verified by the target model. The effectiveness of this paradigm critically depends on the quality of the draft model. While recent advances such as the EAGLE series achieve state-of-the-art speedup, existing draft models remain limited by error accumulation: they condition only on the current prefix, causing their predictions to drift from the target model over steps. In this work, we propose ConFu (Contemplate the Future), a novel speculative decoding framework that enables draft models to anticipate the future direction of generation. ConFu introduces (i) contemplate tokens and soft prompts that allow the draft model to leverage future-oriented signals from the target model at negligible cost, (ii) a dynamic contemplate token mechanism with MoE to enable context-aware future prediction, and (iii) a training framework with anchor token sampling and future prediction replication that learns robust future prediction. Experiments demonstrate that ConFu improves token acceptance rates and generation speed over EAGLE-3 by 8--11% across various downstream tasks with Llama-3 3B and 8B models. We believe our work is the first to bridge speculative decoding with continuous reasoning tokens, offering a new direction for accelerating LLM inference.",
+          "hf_url": "https://huggingface.co/papers/2603.08899",
+          "arxiv_url": "https://arxiv.org/abs/2603.08899",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.08899",
+          "github_url": "",
+          "submitted_by": "Raghavv Goel",
+          "submitted_at": "2026-03-11T05:22:32.260Z",
+          "upvotes": 1,
+          "comments": 2,
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [],
+          "classification_source": "claude",
+          "classification_confidence": 0.78
         }
       ]
     },
@@ -657,13 +792,13 @@
           "github_url": "",
           "submitted_by": "Yuchen Yang",
           "submitted_at": "2026-03-11T01:48:51.758Z",
-          "upvotes": 23,
+          "upvotes": 24,
           "comments": 3,
           "topic_key": "datasets_benchmarks",
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.97
+          "classification_source": "claude",
+          "classification_confidence": 0.82
         },
         {
           "report_date": "2026-03-11",
@@ -684,13 +819,13 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-03-11T00:49:08.401Z",
-          "upvotes": 10,
+          "upvotes": 13,
           "comments": 2,
           "topic_key": "datasets_benchmarks",
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.97
+          "classification_source": "claude",
+          "classification_confidence": 0.78
         },
         {
           "report_date": "2026-03-11",
@@ -713,8 +848,8 @@
           "topic_key": "datasets_benchmarks",
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.98
+          "classification_source": "claude",
+          "classification_confidence": 0.82
         },
         {
           "report_date": "2026-03-11",
@@ -737,121 +872,13 @@
           "github_url": "",
           "submitted_by": "Sara Papi",
           "submitted_at": "2026-03-11T09:48:24.784Z",
-          "upvotes": 7,
+          "upvotes": 8,
           "comments": 2,
           "topic_key": "datasets_benchmarks",
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.9
-        }
-      ]
-    },
-    {
-      "topic_label": "LLMs and Language",
-      "count": 4,
-      "share": 13.33,
-      "papers": [
-        {
-          "report_date": "2026-03-11",
-          "paper_id": "2603.09906",
-          "title": "Thinking to Recall: How Reasoning Unlocks Parametric Knowledge in LLMs",
-          "authors": [
-            "Zorik Gekhman",
-            "Roee Aharoni",
-            "Eran Ofek",
-            "Mor Geva",
-            "Roi Reichart",
-            "Jonathan Herzig"
-          ],
-          "abstract": "While reasoning in LLMs plays a natural role in math, code generation, and multi-hop factual questions, its effect on simple, single-hop factual questions remains unclear. Such questions do not require step-by-step logical decomposition, making the utility of reasoning highly counterintuitive. Nevertheless, we find that enabling reasoning substantially expands the capability boundary of the model's parametric knowledge recall, unlocking correct answers that are otherwise effectively unreachable. Why does reasoning aid parametric knowledge recall when there are no complex reasoning steps to be done? To answer this, we design a series of hypothesis-driven controlled experiments, and identify two key driving mechanisms: (1) a computational buffer effect, where the model uses the generated reasoning tokens to perform latent computation independent of their semantic content; and (2) factual priming, where generating topically related facts acts as a semantic bridge that facilitates correct answer retrieval. Importantly, this latter generative self-retrieval mechanism carries inherent risks: we demonstrate that hallucinating intermediate facts during reasoning increases the likelihood of hallucinations in the final answer. Finally, we show that our insights can be harnessed to directly improve model accuracy by prioritizing reasoning trajectories that contain hallucination-free factual statements.",
-          "hf_url": "https://huggingface.co/papers/2603.09906",
-          "arxiv_url": "https://arxiv.org/abs/2603.09906",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.09906",
-          "github_url": "",
-          "submitted_by": "Zorik",
-          "submitted_at": "2026-03-11T05:16:47.600Z",
-          "upvotes": 52,
-          "comments": 2,
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.82
-        },
-        {
-          "report_date": "2026-03-11",
-          "paper_id": "2603.09951",
-          "title": "Towards a Neural Debugger for Python",
-          "authors": [
-            "Maximilian Beck",
-            "Jonas Gehring",
-            "Jannik Kossen",
-            "Gabriel Synnaeve"
-          ],
-          "abstract": "Training large language models (LLMs) on Python execution traces grounds them in code execution and enables the line-by-line execution prediction of whole Python programs, effectively turning them into neural interpreters (FAIR CodeGen Team et al., 2025). However, developers rarely execute programs step by step; instead, they use debuggers to stop execution at certain breakpoints and step through relevant portions only while inspecting or modifying program variables. Existing neural interpreter approaches lack such interactive control. To address this limitation, we introduce neural debuggers: language models that emulate traditional debuggers, supporting operations such as stepping into, over, or out of functions, as well as setting breakpoints at specific source lines. We show that neural debuggers -- obtained via fine-tuning large LLMs or pre-training smaller models from scratch -- can reliably model both forward execution (predicting future states and outputs) and inverse execution (inferring prior states or inputs) conditioned on debugger actions. Evaluated on CruxEval, our models achieve strong performance on both output and input prediction tasks, demonstrating robust conditional execution modeling. Our work takes first steps towards future agentic coding systems in which neural debuggers serve as a world model for simulated debugging environments, providing execution feedback or enabling agents to interact with real debugging tools. This capability lays the foundation for more powerful code generation, program understanding, and automated debugging.",
-          "hf_url": "https://huggingface.co/papers/2603.09951",
-          "arxiv_url": "https://arxiv.org/abs/2603.09951",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.09951",
-          "github_url": "",
-          "submitted_by": "taesiri",
-          "submitted_at": "2026-03-11T00:47:41.355Z",
-          "upvotes": 4,
-          "comments": 1,
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.61
-        },
-        {
-          "report_date": "2026-03-11",
-          "paper_id": "2603.05863",
-          "title": "ReflexiCoder: Teaching Large Language Models to Self-Reflect on Generated Code and Self-Correct It via Reinforcement Learning",
-          "authors": [
-            "Juyong Jiang",
-            "Jiasi Shen",
-            "Sunghun Kim",
-            "Kang Min Yoo",
-            "Jeonghoon Kim",
-            "Sungju Kim"
-          ],
-          "abstract": "While Large Language Models (LLMs) have revolutionized code generation, standard \"System 1\" approaches, generating solutions in a single forward pass, often hit a performance ceiling when faced with complex algorithmic tasks. Existing iterative refinement strategies attempt to bridge this gap at inference time, yet they predominantly rely on external oracles, execution feedback, or computationally expensive prompt-response cycles. In this work, we propose ReflexiCoder, a novel reinforcement learning (RL) framework that internalizes the structured reasoning trajectory, encompassing initial generation, bug and optimization aware reflection, and self-correction, directly into the model's weights. Unlike prior methods, ReflexiCoder shifts the paradigm from external-dependent refinement to an intrinsic, fully autonomous self-reflection and self-correction capabilities at inference time. We utilize an RL-zero training paradigm with granular reward functions to optimize the entire reflection-correction trajectory, teaching the model how to debug without reliance on ground-truth feedback or execution engines at inference time. Extensive experiments across seven benchmarks demonstrate that our ReflexiCoder-8B establishes a new state-of-the-art (SOTA) among leading open-source models in the 1.5B-14B range, achieving 94.51% (87.20%) on HumanEval (Plus), 81.80% (78.57%) on MBPP (Plus), 35.00% on BigCodeBench, 52.21% on LiveCodeBench, and 37.34% on CodeForces in a single-attempt setting, rivaling or surpassing proprietary models like GPT-5.1. Notably, our framework is significantly more token-efficient than base models, reducing inference-time compute overhead by approximately 40% through disciplined, high-speed reasoning and reflection patterns. Source code is available at https://github.com/juyongjiang/ReflexiCoder.",
-          "hf_url": "https://huggingface.co/papers/2603.05863",
-          "arxiv_url": "https://arxiv.org/abs/2603.05863",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.05863",
-          "github_url": "",
-          "submitted_by": "John",
-          "submitted_at": "2026-03-11T11:23:57.197Z",
-          "upvotes": 3,
-          "comments": 2,
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.94
-        },
-        {
-          "report_date": "2026-03-11",
-          "paper_id": "2603.09555",
-          "title": "Compiler-First State Space Duality and Portable O(1) Autoregressive Caching for Inference",
-          "authors": [
-            "Cosmo Santoni"
-          ],
-          "abstract": "State-space model releases are typically coupled to fused CUDA and Triton kernels, inheriting a hard dependency on NVIDIA hardware. We show that Mamba-2's state space duality algorithm -- diagonal state structure, chunkable recurrence, and einsum-dominated compute with static control flow -- maps cleanly onto what XLA's fusion and tiling passes actually optimise, making custom kernels optional rather than required. We implement the full inference path (prefill, cached autoregressive decoding) as shaped standard primitives under XLA, without hand-written kernels, and realise the architecture's theoretical O(1) state management as a compiled on-device cache requiring no host synchronisation during generation. The implementation runs unmodified on CPU, NVIDIA GPU, and Google Cloud TPU from a single JAX source. On TPU v6e across five model scales (130M--2.7B parameters), XLA-generated code reaches approximately 140 TFLOPS on single-stream prefill (15% MFU) and up to 64% bandwidth utilisation on decode. Greedy decoding matches the PyTorch/CUDA reference token-for-token across 64 steps, with hidden-state agreement within float32 rounding tolerance. The pattern transfers to any SSM recurrence satisfying the same structural conditions, on any platform with a mature XLA backend. The implementation is publicly available at https://github.com/CosmoNaught/mamba2-jax and merged into the Bonsai JAX model library.",
-          "hf_url": "https://huggingface.co/papers/2603.09555",
-          "arxiv_url": "https://arxiv.org/abs/2603.09555",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.09555",
-          "github_url": "",
-          "submitted_by": "Santoni",
-          "submitted_at": "2026-03-11T10:34:43.062Z",
-          "upvotes": 1,
-          "comments": 2,
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.76
+          "classification_source": "claude",
+          "classification_confidence": 0.85
         }
       ]
     },
@@ -889,8 +916,8 @@
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.84
+          "classification_source": "claude",
+          "classification_confidence": 0.78
         },
         {
           "report_date": "2026-03-11",
@@ -917,8 +944,8 @@
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.95
+          "classification_source": "claude",
+          "classification_confidence": 0.85
         },
         {
           "report_date": "2026-03-11",
@@ -936,13 +963,13 @@
           "github_url": "",
           "submitted_by": "glazer",
           "submitted_at": "2026-03-11T08:57:10.098Z",
-          "upvotes": 11,
+          "upvotes": 12,
           "comments": 2,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.91
+          "classification_source": "claude",
+          "classification_confidence": 0.8
         },
         {
           "report_date": "2026-03-11",
@@ -964,92 +991,8 @@
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.64
-        }
-      ]
-    },
-    {
-      "topic_label": "Generative Foundations",
-      "count": 3,
-      "share": 10.0,
-      "papers": [
-        {
-          "report_date": "2026-03-11",
-          "paper_id": "2603.09400",
-          "title": "Reward Prediction with Factorized World States",
-          "authors": [
-            "Yijun Shen",
-            "Delong Chen",
-            "Xianming Hu",
-            "Jiaming Mi",
-            "Hongbo Zhao",
-            "Kai Zhang",
-            "Pascale Fung"
-          ],
-          "abstract": "Agents must infer action outcomes and select actions that maximize a reward signal indicating how close the goal is to being reached. Supervised learning of reward models could introduce biases inherent to training data, limiting generalization to novel goals and environments. In this paper, we investigate whether well-defined world state representations alone can enable accurate reward prediction across domains. To address this, we introduce StateFactory, a factorized representation method that transforms unstructured observations into a hierarchical object-attribute structure using language models. This structured representation allows rewards to be estimated naturally as the semantic similarity between the current state and the goal state under hierarchical constraint. Overall, the compact representation structure induced by StateFactory enables strong reward generalization capabilities. We evaluate on RewardPrediction, a new benchmark dataset spanning five diverse domains and comprising 2,454 unique action-observation trajectories with step-wise ground-truth rewards. Our method shows promising zero-shot results against both VLWM-critic and LLM-as-a-Judge reward models, achieving 60% and 8% lower EPIC distance, respectively. Furthermore, this superior reward quality successfully translates into improved agent planning performance, yielding success rate gains of +21.64% on AlfWorld and +12.40% on ScienceWorld over reactive system-1 policies and enhancing system-2 agent planning. Project Page: https://statefactory.github.io",
-          "hf_url": "https://huggingface.co/papers/2603.09400",
-          "arxiv_url": "https://arxiv.org/abs/2603.09400",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.09400",
-          "github_url": "",
-          "submitted_by": "Delong Chen",
-          "submitted_at": "2026-03-11T09:07:51.106Z",
-          "upvotes": 2,
-          "comments": 2,
-          "topic_key": "generative_foundations",
-          "topic_label": "Generative Foundations",
-          "matched_terms": [],
-          "classification_source": "codex",
+          "classification_source": "claude",
           "classification_confidence": 0.72
-        },
-        {
-          "report_date": "2026-03-11",
-          "paper_id": "2603.08899",
-          "title": "ConFu: Contemplate the Future for Better Speculative Sampling",
-          "authors": [
-            "Zongyue Qin",
-            "Raghavv Goel",
-            "Mukul Gagrani",
-            "Risheek Garrepalli",
-            "Mingu Lee",
-            "Yizhou Sun"
-          ],
-          "abstract": "Speculative decoding has emerged as a powerful approach to accelerate large language model (LLM) inference by employing lightweight draft models to propose candidate tokens that are subsequently verified by the target model. The effectiveness of this paradigm critically depends on the quality of the draft model. While recent advances such as the EAGLE series achieve state-of-the-art speedup, existing draft models remain limited by error accumulation: they condition only on the current prefix, causing their predictions to drift from the target model over steps. In this work, we propose ConFu (Contemplate the Future), a novel speculative decoding framework that enables draft models to anticipate the future direction of generation. ConFu introduces (i) contemplate tokens and soft prompts that allow the draft model to leverage future-oriented signals from the target model at negligible cost, (ii) a dynamic contemplate token mechanism with MoE to enable context-aware future prediction, and (iii) a training framework with anchor token sampling and future prediction replication that learns robust future prediction. Experiments demonstrate that ConFu improves token acceptance rates and generation speed over EAGLE-3 by 8--11% across various downstream tasks with Llama-3 3B and 8B models. We believe our work is the first to bridge speculative decoding with continuous reasoning tokens, offering a new direction for accelerating LLM inference.",
-          "hf_url": "https://huggingface.co/papers/2603.08899",
-          "arxiv_url": "https://arxiv.org/abs/2603.08899",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.08899",
-          "github_url": "",
-          "submitted_by": "Raghavv Goel",
-          "submitted_at": "2026-03-11T05:22:32.260Z",
-          "upvotes": 1,
-          "comments": 2,
-          "topic_key": "generative_foundations",
-          "topic_label": "Generative Foundations",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.86
-        },
-        {
-          "report_date": "2026-03-11",
-          "paper_id": "2603.08771",
-          "title": "Micro-Diffusion Compression -- Binary Tree Tweedie Denoising for Online Probability Estimation",
-          "authors": [
-            "Roberto Tacconelli"
-          ],
-          "abstract": "We present Midicoth, a lossless compression system that introduces a micro-diffusion denoising layer for improving probability estimates produced by adaptive statistical models. In compressors such as Prediction by Partial Matching (PPM), probability estimates are smoothed by a prior to handle sparse observations. When contexts have been seen only a few times, this prior dominates the prediction and produces distributions that are significantly flatter than the true source distribution, leading to compression inefficiency. Midicoth addresses this limitation by treating prior smoothing as a shrinkage process and applying a reverse denoising step that corrects predicted probabilities using empirical calibration statistics. To make this correction data-efficient, the method decomposes each byte prediction into a hierarchy of binary decisions along a bitwise tree. This converts a single 256-way calibration problem into a sequence of binary calibration tasks, enabling reliable estimation of correction terms from relatively small numbers of observations. The denoising process is applied in multiple successive steps, allowing each stage to refine residual prediction errors left by the previous one. The micro-diffusion layer operates as a lightweight post-blend calibration stage applied after all model predictions have been combined, allowing it to correct systematic biases in the final probability distribution. Midicoth combines five fully online components: an adaptive PPM model, a long-range match model, a trie-based word model, a high-order context model, and the micro-diffusion denoiser applied as the final stage.",
-          "hf_url": "https://huggingface.co/papers/2603.08771",
-          "arxiv_url": "https://arxiv.org/abs/2603.08771",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.08771",
-          "github_url": "",
-          "submitted_by": "Roberto Tacconelli",
-          "submitted_at": "2026-03-11T19:33:20.834Z",
-          "upvotes": 0,
-          "comments": 2,
-          "topic_key": "generative_foundations",
-          "topic_label": "Generative Foundations",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.93
         }
       ]
     },
@@ -1081,8 +1024,8 @@
           "topic_key": "learning_theory",
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.92
+          "classification_source": "claude",
+          "classification_confidence": 0.78
         },
         {
           "report_date": "2026-03-11",
@@ -1113,8 +1056,8 @@
           "topic_key": "learning_theory",
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.71
+          "classification_source": "claude",
+          "classification_confidence": 0.78
         },
         {
           "report_date": "2026-03-11",
@@ -1142,8 +1085,8 @@
           "topic_key": "learning_theory",
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.76
+          "classification_source": "claude",
+          "classification_confidence": 0.75
         }
       ]
     },
@@ -1152,31 +1095,6 @@
       "count": 3,
       "share": 10.0,
       "papers": [
-        {
-          "report_date": "2026-03-11",
-          "paper_id": "2603.09200",
-          "title": "The Reasoning Trap -- Logical Reasoning as a Mechanistic Pathway to Situational Awareness",
-          "authors": [
-            "Subramanyam Sahoo",
-            "Aman Chadha",
-            "Vinija Jain",
-            "Divya Chaudhary"
-          ],
-          "abstract": "Situational awareness, the capacity of an AI system to recognize its own nature, understand its training and deployment context, and reason strategically about its circumstances, is widely considered among the most dangerous emergent capabilities in advanced AI systems. Separately, a growing research effort seeks to improve the logical reasoning capabilities of large language models (LLMs) across deduction, induction, and abduction. In this paper, we argue that these two research trajectories are on a collision course. We introduce the RAISE framework (Reasoning Advancing Into Self Examination), which identifies three mechanistic pathways through which improvements in logical reasoning enable progressively deeper levels of situational awareness: deductive self inference, inductive context recognition, and abductive self modeling. We formalize each pathway, construct an escalation ladder from basic self recognition to strategic deception, and demonstrate that every major research topic in LLM logical reasoning maps directly onto a specific amplifier of situational awareness. We further analyze why current safety measures are insufficient to prevent this escalation. We conclude by proposing concrete safeguards, including a \"Mirror Test\" benchmark and a Reasoning Safety Parity Principle, and pose an uncomfortable but necessary question to the logical reasoning community about its responsibility in this trajectory.",
-          "hf_url": "https://huggingface.co/papers/2603.09200",
-          "arxiv_url": "https://arxiv.org/abs/2603.09200",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.09200",
-          "github_url": "",
-          "submitted_by": "Aman Chadha",
-          "submitted_at": "2026-03-11T00:15:04.062Z",
-          "upvotes": 5,
-          "comments": 2,
-          "topic_key": "reasoning_alignment_eval",
-          "topic_label": "Reasoning, Alignment, and Evaluation",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.91
-        },
         {
           "report_date": "2026-03-11",
           "paper_id": "2603.09117",
@@ -1199,13 +1117,38 @@
           "github_url": "",
           "submitted_by": "Boxi Cao",
           "submitted_at": "2026-03-11T04:32:17.024Z",
-          "upvotes": 4,
+          "upvotes": 7,
           "comments": 2,
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.86
+          "classification_source": "claude",
+          "classification_confidence": 0.85
+        },
+        {
+          "report_date": "2026-03-11",
+          "paper_id": "2603.09200",
+          "title": "The Reasoning Trap -- Logical Reasoning as a Mechanistic Pathway to Situational Awareness",
+          "authors": [
+            "Subramanyam Sahoo",
+            "Aman Chadha",
+            "Vinija Jain",
+            "Divya Chaudhary"
+          ],
+          "abstract": "Situational awareness, the capacity of an AI system to recognize its own nature, understand its training and deployment context, and reason strategically about its circumstances, is widely considered among the most dangerous emergent capabilities in advanced AI systems. Separately, a growing research effort seeks to improve the logical reasoning capabilities of large language models (LLMs) across deduction, induction, and abduction. In this paper, we argue that these two research trajectories are on a collision course. We introduce the RAISE framework (Reasoning Advancing Into Self Examination), which identifies three mechanistic pathways through which improvements in logical reasoning enable progressively deeper levels of situational awareness: deductive self inference, inductive context recognition, and abductive self modeling. We formalize each pathway, construct an escalation ladder from basic self recognition to strategic deception, and demonstrate that every major research topic in LLM logical reasoning maps directly onto a specific amplifier of situational awareness. We further analyze why current safety measures are insufficient to prevent this escalation. We conclude by proposing concrete safeguards, including a \"Mirror Test\" benchmark and a Reasoning Safety Parity Principle, and pose an uncomfortable but necessary question to the logical reasoning community about its responsibility in this trajectory.",
+          "hf_url": "https://huggingface.co/papers/2603.09200",
+          "arxiv_url": "https://arxiv.org/abs/2603.09200",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.09200",
+          "github_url": "",
+          "submitted_by": "Aman Chadha",
+          "submitted_at": "2026-03-11T00:15:04.062Z",
+          "upvotes": 5,
+          "comments": 2,
+          "topic_key": "reasoning_alignment_eval",
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "matched_terms": [],
+          "classification_source": "claude",
+          "classification_confidence": 0.8
         },
         {
           "report_date": "2026-03-11",
@@ -1229,7 +1172,64 @@
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
-          "classification_source": "codex",
+          "classification_source": "claude",
+          "classification_confidence": 0.8
+        }
+      ]
+    },
+    {
+      "topic_label": "Generative Foundations",
+      "count": 2,
+      "share": 6.67,
+      "papers": [
+        {
+          "report_date": "2026-03-11",
+          "paper_id": "2603.09400",
+          "title": "Reward Prediction with Factorized World States",
+          "authors": [
+            "Yijun Shen",
+            "Delong Chen",
+            "Xianming Hu",
+            "Jiaming Mi",
+            "Hongbo Zhao",
+            "Kai Zhang",
+            "Pascale Fung"
+          ],
+          "abstract": "Agents must infer action outcomes and select actions that maximize a reward signal indicating how close the goal is to being reached. Supervised learning of reward models could introduce biases inherent to training data, limiting generalization to novel goals and environments. In this paper, we investigate whether well-defined world state representations alone can enable accurate reward prediction across domains. To address this, we introduce StateFactory, a factorized representation method that transforms unstructured observations into a hierarchical object-attribute structure using language models. This structured representation allows rewards to be estimated naturally as the semantic similarity between the current state and the goal state under hierarchical constraint. Overall, the compact representation structure induced by StateFactory enables strong reward generalization capabilities. We evaluate on RewardPrediction, a new benchmark dataset spanning five diverse domains and comprising 2,454 unique action-observation trajectories with step-wise ground-truth rewards. Our method shows promising zero-shot results against both VLWM-critic and LLM-as-a-Judge reward models, achieving 60% and 8% lower EPIC distance, respectively. Furthermore, this superior reward quality successfully translates into improved agent planning performance, yielding success rate gains of +21.64% on AlfWorld and +12.40% on ScienceWorld over reactive system-1 policies and enhancing system-2 agent planning. Project Page: https://statefactory.github.io",
+          "hf_url": "https://huggingface.co/papers/2603.09400",
+          "arxiv_url": "https://arxiv.org/abs/2603.09400",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.09400",
+          "github_url": "",
+          "submitted_by": "Delong Chen",
+          "submitted_at": "2026-03-11T09:07:51.106Z",
+          "upvotes": 2,
+          "comments": 2,
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "matched_terms": [],
+          "classification_source": "claude",
+          "classification_confidence": 0.72
+        },
+        {
+          "report_date": "2026-03-11",
+          "paper_id": "2603.08771",
+          "title": "Micro-Diffusion Compression -- Binary Tree Tweedie Denoising for Online Probability Estimation",
+          "authors": [
+            "Roberto Tacconelli"
+          ],
+          "abstract": "We present Midicoth, a lossless compression system that introduces a micro-diffusion denoising layer for improving probability estimates produced by adaptive statistical models. In compressors such as Prediction by Partial Matching (PPM), probability estimates are smoothed by a prior to handle sparse observations. When contexts have been seen only a few times, this prior dominates the prediction and produces distributions that are significantly flatter than the true source distribution, leading to compression inefficiency. Midicoth addresses this limitation by treating prior smoothing as a shrinkage process and applying a reverse denoising step that corrects predicted probabilities using empirical calibration statistics. To make this correction data-efficient, the method decomposes each byte prediction into a hierarchy of binary decisions along a bitwise tree. This converts a single 256-way calibration problem into a sequence of binary calibration tasks, enabling reliable estimation of correction terms from relatively small numbers of observations. The denoising process is applied in multiple successive steps, allowing each stage to refine residual prediction errors left by the previous one. The micro-diffusion layer operates as a lightweight post-blend calibration stage applied after all model predictions have been combined, allowing it to correct systematic biases in the final probability distribution. Midicoth combines five fully online components: an adaptive PPM model, a long-range match model, a trie-based word model, a high-order context model, and the micro-diffusion denoiser applied as the final stage.",
+          "hf_url": "https://huggingface.co/papers/2603.08771",
+          "arxiv_url": "https://arxiv.org/abs/2603.08771",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.08771",
+          "github_url": "",
+          "submitted_by": "Roberto Tacconelli",
+          "submitted_at": "2026-03-11T19:33:20.834Z",
+          "upvotes": 0,
+          "comments": 2,
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "matched_terms": [],
+          "classification_source": "claude",
           "classification_confidence": 0.85
         }
       ]
@@ -1253,13 +1253,13 @@
           "github_url": "",
           "submitted_by": "Tzafrir Rehan",
           "submitted_at": "2026-03-11T12:13:29.747Z",
-          "upvotes": 6,
+          "upvotes": 7,
           "comments": 2,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.97
+          "classification_source": "claude",
+          "classification_confidence": 0.88
         }
       ]
     }
@@ -1289,13 +1289,13 @@
       "github_url": "",
       "submitted_by": "JiYuan Wang",
       "submitted_at": "2026-03-11T03:03:47.843Z",
-      "upvotes": 130,
+      "upvotes": 136,
       "comments": 6,
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_source": "claude",
+      "classification_confidence": 0.85
     },
     {
       "report_date": "2026-03-11",
@@ -1316,45 +1316,13 @@
       "github_url": "",
       "submitted_by": "Zorik",
       "submitted_at": "2026-03-11T05:16:47.600Z",
-      "upvotes": 52,
+      "upvotes": 59,
       "comments": 2,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [],
-      "classification_source": "codex",
+      "classification_source": "claude",
       "classification_confidence": 0.82
-    },
-    {
-      "report_date": "2026-03-11",
-      "paper_id": "2603.09206",
-      "title": "MM-Zero: Self-Evolving Multi-Model Vision Language Models From Zero Data",
-      "authors": [
-        "Zongxia Li",
-        "Hongyang Du",
-        "Chengsong Huang",
-        "Xiyang Wu",
-        "Lantao Yu",
-        "Yicheng He",
-        "Jing Xie",
-        "Xiaomin Wu",
-        "Zhichao Liu",
-        "Jiarui Zhang",
-        "Fuxiao Liu"
-      ],
-      "abstract": "Self-evolving has emerged as a key paradigm for improving foundational models such as Large Language Models (LLMs) and Vision Language Models (VLMs) with minimal human intervention. While recent approaches have demonstrated that LLM agents can self-evolve from scratch with little to no data, VLMs introduce an additional visual modality that typically requires at least some seed data, such as images, to bootstrap the self-evolution process. In this work, we present Multi-model Multimodal Zero (MM-Zero), the first RL-based framework to achieve zero-data self-evolution for VLM reasoning. Moving beyond prior dual-role (Proposer and Solver) setups, MM-Zero introduces a multi-role self-evolving training framework comprising three specialized roles: a Proposer that generates abstract visual concepts and formulates questions; a Coder that translates these concepts into executable code (e.g., Python, SVG) to render visual images; and a Solver that performs multimodal reasoning over the generated visual content. All three roles are initialized from the same base model and trained using Group Relative Policy Optimization (GRPO), with carefully designed reward mechanisms that integrate execution feedback, visual verification, and difficulty balancing. Our experiments show that MM-Zero improves VLM reasoning performance across a wide range of multimodal benchmarks. MM-Zero establishes a scalable path toward self-evolving multi-model systems for multimodal models, extending the frontier of self-improvement beyond the conventional two-model paradigm.",
-      "hf_url": "https://huggingface.co/papers/2603.09206",
-      "arxiv_url": "https://arxiv.org/abs/2603.09206",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.09206",
-      "github_url": "",
-      "submitted_by": "LZX",
-      "submitted_at": "2026-03-11T01:04:31.449Z",
-      "upvotes": 41,
-      "comments": 2,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.84
     },
     {
       "report_date": "2026-03-11",
@@ -1378,13 +1346,13 @@
       "github_url": "",
       "submitted_by": "BradyFU",
       "submitted_at": "2026-03-11T00:20:42.148Z",
-      "upvotes": 41,
+      "upvotes": 43,
       "comments": 4,
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.98
+      "classification_source": "claude",
+      "classification_confidence": 0.92
     },
     {
       "report_date": "2026-03-11",
@@ -1428,76 +1396,45 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-03-11T01:43:47.669Z",
-      "upvotes": 31,
+      "upvotes": 41,
       "comments": 5,
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.9
+      "classification_source": "claude",
+      "classification_confidence": 0.88
     },
     {
       "report_date": "2026-03-11",
-      "paper_id": "2603.09896",
-      "title": "Stepping VLMs onto the Court: Benchmarking Spatial Intelligence in Sports",
+      "paper_id": "2603.09206",
+      "title": "MM-Zero: Self-Evolving Multi-Model Vision Language Models From Zero Data",
       "authors": [
-        "Yuchen Yang",
-        "Yuqing Shao",
-        "Duxiu Huang",
-        "Linfeng Dong",
-        "Yifei Liu",
-        "Suixin Tang",
-        "Xiang Zhou",
-        "Yuanyuan Gao",
-        "Wei Wang",
-        "Yue Zhou",
-        "Xue Yang",
-        "Yanfeng Wang",
-        "Xiao Sun",
-        "Zhihang Zhong"
+        "Zongxia Li",
+        "Hongyang Du",
+        "Chengsong Huang",
+        "Xiyang Wu",
+        "Lantao Yu",
+        "Yicheng He",
+        "Jing Xie",
+        "Xiaomin Wu",
+        "Zhichao Liu",
+        "Jiarui Zhang",
+        "Fuxiao Liu"
       ],
-      "abstract": "Sports have long attracted broad attention as they push the limits of human physical and cognitive capabilities. Amid growing interest in spatial intelligence for vision-language models (VLMs), sports provide a natural testbed for understanding high-intensity human motion and dynamic object interactions. To this end, we present CourtSI, the first large-scale spatial intelligence dataset tailored to sports scenarios. CourtSI contains over 1M QA pairs, organized under a holistic taxonomy that systematically covers spatial counting, distance measurement, localization, and relational reasoning, across representative net sports including badminton, tennis, and table tennis. Leveraging well-defined court geometry as metric anchors, we develop a semi-automatic data engine to reconstruct sports scenes, enabling scalable curation of CourtSI. In addition, we introduce CourtSI-Bench, a high-quality evaluation benchmark comprising 3,686 QA pairs with rigorous human verification. We evaluate 25 proprietary and open-source VLMs on CourtSI-Bench, revealing a remaining human-AI performance gap and limited generalization from existing spatial intelligence benchmarks. These findings indicate that sports scenarios expose limitations in spatial intelligence capabilities captured by existing benchmarks. Further, fine-tuning Qwen3-VL-8B on CourtSI improves accuracy on CourtSI-Bench by 23.5 percentage points. The adapted model also generalizes effectively to CourtSI-Ext, an evaluation set built on a similar but unseen sport, and demonstrates enhanced spatial-aware commentary generation. Together, these findings demonstrate that CourtSI provides a scalable pathway toward advancing spatial intelligence of VLMs in sports.",
-      "hf_url": "https://huggingface.co/papers/2603.09896",
-      "arxiv_url": "https://arxiv.org/abs/2603.09896",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.09896",
+      "abstract": "Self-evolving has emerged as a key paradigm for improving foundational models such as Large Language Models (LLMs) and Vision Language Models (VLMs) with minimal human intervention. While recent approaches have demonstrated that LLM agents can self-evolve from scratch with little to no data, VLMs introduce an additional visual modality that typically requires at least some seed data, such as images, to bootstrap the self-evolution process. In this work, we present Multi-model Multimodal Zero (MM-Zero), the first RL-based framework to achieve zero-data self-evolution for VLM reasoning. Moving beyond prior dual-role (Proposer and Solver) setups, MM-Zero introduces a multi-role self-evolving training framework comprising three specialized roles: a Proposer that generates abstract visual concepts and formulates questions; a Coder that translates these concepts into executable code (e.g., Python, SVG) to render visual images; and a Solver that performs multimodal reasoning over the generated visual content. All three roles are initialized from the same base model and trained using Group Relative Policy Optimization (GRPO), with carefully designed reward mechanisms that integrate execution feedback, visual verification, and difficulty balancing. Our experiments show that MM-Zero improves VLM reasoning performance across a wide range of multimodal benchmarks. MM-Zero establishes a scalable path toward self-evolving multi-model systems for multimodal models, extending the frontier of self-improvement beyond the conventional two-model paradigm.",
+      "hf_url": "https://huggingface.co/papers/2603.09206",
+      "arxiv_url": "https://arxiv.org/abs/2603.09206",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.09206",
       "github_url": "",
-      "submitted_by": "Yuchen Yang",
-      "submitted_at": "2026-03-11T01:48:51.758Z",
-      "upvotes": 23,
-      "comments": 3,
-      "topic_key": "datasets_benchmarks",
-      "topic_label": "Datasets and Benchmarks",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.97
-    },
-    {
-      "report_date": "2026-03-11",
-      "paper_id": "2603.09095",
-      "title": "Reading, Not Thinking: Understanding and Bridging the Modality Gap When Text Becomes Pixels in Multimodal LLMs",
-      "authors": [
-        "Kaiser Sun",
-        "Xiaochuang Yuan",
-        "Hongjun Liu",
-        "Chen Zhao",
-        "Cheng Zhang",
-        "Mark Dredze",
-        "Fan Bai"
-      ],
-      "abstract": "Multimodal large language models (MLLMs) can process text presented as images, yet they often perform worse than when the same content is provided as textual tokens. We systematically diagnose this \"modality gap\" by evaluating seven MLLMs across seven benchmarks in five input modes, spanning both synthetically rendered text and realistic document images from arXiv PDFs to Wikipedia pages. We find that the modality gap is task- and data-dependent. For example, math tasks degrade by over 60 points on synthetic renderings, while natural document images often match or exceed text-mode performance. Rendering choices such as font and resolution are strong confounds, with font alone swinging accuracy by up to 47 percentage points. To understand this, we conduct a grounded-theory error analysis of over 4,000 examples, revealing that image mode selectively amplifies reading errors (calculation and formatting failures) while leaving knowledge and reasoning errors largely unchanged, and that some models exhibit a chain-of-thought reasoning collapse under visual input. Motivated by these findings, we propose a self-distillation method that trains the model on its own pure text reasoning traces paired with image inputs, raising image-mode accuracy on GSM8K from 30.71% to 92.72% and transferring to unseen benchmarks without catastrophic forgetting. Overall, our study provides a systematic understanding of the modality gap and suggests a practical path toward improving visual text understanding in multimodal language models.",
-      "hf_url": "https://huggingface.co/papers/2603.09095",
-      "arxiv_url": "https://arxiv.org/abs/2603.09095",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.09095",
-      "github_url": "",
-      "submitted_by": "Kaiser Sun",
-      "submitted_at": "2026-03-11T00:08:20.887Z",
-      "upvotes": 23,
-      "comments": 1,
+      "submitted_by": "LZX",
+      "submitted_at": "2026-03-11T01:04:31.449Z",
+      "upvotes": 41,
+      "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_source": "claude",
+      "classification_confidence": 0.78
     },
     {
       "report_date": "2026-03-11",
@@ -1526,37 +1463,76 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-03-11T00:32:45.531Z",
-      "upvotes": 18,
+      "upvotes": 25,
       "comments": 2,
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.63
+      "classification_source": "claude",
+      "classification_confidence": 0.72
     },
     {
       "report_date": "2026-03-11",
-      "paper_id": "2603.06854",
-      "title": "Are Audio-Language Models Listening? Audio-Specialist Heads for Adaptive Audio Steering",
+      "paper_id": "2603.09896",
+      "title": "Stepping VLMs onto the Court: Benchmarking Spatial Intelligence in Sports",
       "authors": [
-        "Neta Glazer",
-        "Lenny Aharon",
-        "Ethan Fetaya"
+        "Yuchen Yang",
+        "Yuqing Shao",
+        "Duxiu Huang",
+        "Linfeng Dong",
+        "Yifei Liu",
+        "Suixin Tang",
+        "Xiang Zhou",
+        "Yuanyuan Gao",
+        "Wei Wang",
+        "Yue Zhou",
+        "Xue Yang",
+        "Yanfeng Wang",
+        "Xiao Sun",
+        "Zhihang Zhong"
       ],
-      "abstract": "Multimodal large language models can exhibit text dominance, over-relying on linguistic priors instead of grounding predictions in non-text inputs. One example is large audio-language models (LALMs) where decisive audio evidence can be under-utilized even when it contains important information. To address this issue we use mechanistic interpretability to identify a small set of audio-specialist attention heads whose audio attention yields a ``listening'' signal. We show that this signal increases when audio evidence affects the model's output, providing an indicator of audio engagement under standard prompting. Leveraging this localization, we construct an audio--silence steering direction and apply an inference-time activation intervention to the final representation, amplifying the model's audio effect. To demonstrate the utility of this intervention, we show on MMAU that this improves accuracy by up to +8.0 percentage points on two Qwen-based LALMs, without any parameter updates.",
-      "hf_url": "https://huggingface.co/papers/2603.06854",
-      "arxiv_url": "https://arxiv.org/abs/2603.06854",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.06854",
+      "abstract": "Sports have long attracted broad attention as they push the limits of human physical and cognitive capabilities. Amid growing interest in spatial intelligence for vision-language models (VLMs), sports provide a natural testbed for understanding high-intensity human motion and dynamic object interactions. To this end, we present CourtSI, the first large-scale spatial intelligence dataset tailored to sports scenarios. CourtSI contains over 1M QA pairs, organized under a holistic taxonomy that systematically covers spatial counting, distance measurement, localization, and relational reasoning, across representative net sports including badminton, tennis, and table tennis. Leveraging well-defined court geometry as metric anchors, we develop a semi-automatic data engine to reconstruct sports scenes, enabling scalable curation of CourtSI. In addition, we introduce CourtSI-Bench, a high-quality evaluation benchmark comprising 3,686 QA pairs with rigorous human verification. We evaluate 25 proprietary and open-source VLMs on CourtSI-Bench, revealing a remaining human-AI performance gap and limited generalization from existing spatial intelligence benchmarks. These findings indicate that sports scenarios expose limitations in spatial intelligence capabilities captured by existing benchmarks. Further, fine-tuning Qwen3-VL-8B on CourtSI improves accuracy on CourtSI-Bench by 23.5 percentage points. The adapted model also generalizes effectively to CourtSI-Ext, an evaluation set built on a similar but unseen sport, and demonstrates enhanced spatial-aware commentary generation. Together, these findings demonstrate that CourtSI provides a scalable pathway toward advancing spatial intelligence of VLMs in sports.",
+      "hf_url": "https://huggingface.co/papers/2603.09896",
+      "arxiv_url": "https://arxiv.org/abs/2603.09896",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.09896",
       "github_url": "",
-      "submitted_by": "glazer",
-      "submitted_at": "2026-03-11T08:57:10.098Z",
-      "upvotes": 11,
-      "comments": 2,
+      "submitted_by": "Yuchen Yang",
+      "submitted_at": "2026-03-11T01:48:51.758Z",
+      "upvotes": 24,
+      "comments": 3,
+      "topic_key": "datasets_benchmarks",
+      "topic_label": "Datasets and Benchmarks",
+      "matched_terms": [],
+      "classification_source": "claude",
+      "classification_confidence": 0.82
+    },
+    {
+      "report_date": "2026-03-11",
+      "paper_id": "2603.09095",
+      "title": "Reading, Not Thinking: Understanding and Bridging the Modality Gap When Text Becomes Pixels in Multimodal LLMs",
+      "authors": [
+        "Kaiser Sun",
+        "Xiaochuang Yuan",
+        "Hongjun Liu",
+        "Chen Zhao",
+        "Cheng Zhang",
+        "Mark Dredze",
+        "Fan Bai"
+      ],
+      "abstract": "Multimodal large language models (MLLMs) can process text presented as images, yet they often perform worse than when the same content is provided as textual tokens. We systematically diagnose this \"modality gap\" by evaluating seven MLLMs across seven benchmarks in five input modes, spanning both synthetically rendered text and realistic document images from arXiv PDFs to Wikipedia pages. We find that the modality gap is task- and data-dependent. For example, math tasks degrade by over 60 points on synthetic renderings, while natural document images often match or exceed text-mode performance. Rendering choices such as font and resolution are strong confounds, with font alone swinging accuracy by up to 47 percentage points. To understand this, we conduct a grounded-theory error analysis of over 4,000 examples, revealing that image mode selectively amplifies reading errors (calculation and formatting failures) while leaving knowledge and reasoning errors largely unchanged, and that some models exhibit a chain-of-thought reasoning collapse under visual input. Motivated by these findings, we propose a self-distillation method that trains the model on its own pure text reasoning traces paired with image inputs, raising image-mode accuracy on GSM8K from 30.71% to 92.72% and transferring to unseen benchmarks without catastrophic forgetting. Overall, our study provides a systematic understanding of the modality gap and suggests a practical path toward improving visual text understanding in multimodal language models.",
+      "hf_url": "https://huggingface.co/papers/2603.09095",
+      "arxiv_url": "https://arxiv.org/abs/2603.09095",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.09095",
+      "github_url": "",
+      "submitted_by": "Kaiser Sun",
+      "submitted_at": "2026-03-11T00:08:20.887Z",
+      "upvotes": 23,
+      "comments": 1,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.91
+      "classification_source": "claude",
+      "classification_confidence": 0.85
     },
     {
       "report_date": "2026-03-11",
@@ -1577,13 +1553,37 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-03-11T00:49:08.401Z",
-      "upvotes": 10,
+      "upvotes": 13,
       "comments": 2,
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.97
+      "classification_source": "claude",
+      "classification_confidence": 0.78
+    },
+    {
+      "report_date": "2026-03-11",
+      "paper_id": "2603.06854",
+      "title": "Are Audio-Language Models Listening? Audio-Specialist Heads for Adaptive Audio Steering",
+      "authors": [
+        "Neta Glazer",
+        "Lenny Aharon",
+        "Ethan Fetaya"
+      ],
+      "abstract": "Multimodal large language models can exhibit text dominance, over-relying on linguistic priors instead of grounding predictions in non-text inputs. One example is large audio-language models (LALMs) where decisive audio evidence can be under-utilized even when it contains important information. To address this issue we use mechanistic interpretability to identify a small set of audio-specialist attention heads whose audio attention yields a ``listening'' signal. We show that this signal increases when audio evidence affects the model's output, providing an indicator of audio engagement under standard prompting. Leveraging this localization, we construct an audio--silence steering direction and apply an inference-time activation intervention to the final representation, amplifying the model's audio effect. To demonstrate the utility of this intervention, we show on MMAU that this improves accuracy by up to +8.0 percentage points on two Qwen-based LALMs, without any parameter updates.",
+      "hf_url": "https://huggingface.co/papers/2603.06854",
+      "arxiv_url": "https://arxiv.org/abs/2603.06854",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.06854",
+      "github_url": "",
+      "submitted_by": "glazer",
+      "submitted_at": "2026-03-11T08:57:10.098Z",
+      "upvotes": 12,
+      "comments": 2,
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
+      "matched_terms": [],
+      "classification_source": "claude",
+      "classification_confidence": 0.8
     },
     {
       "report_date": "2026-03-11",
@@ -1606,8 +1606,8 @@
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.98
+      "classification_source": "claude",
+      "classification_confidence": 0.82
     },
     {
       "report_date": "2026-03-11",
@@ -1630,13 +1630,43 @@
       "github_url": "",
       "submitted_by": "Sara Papi",
       "submitted_at": "2026-03-11T09:48:24.784Z",
-      "upvotes": 7,
+      "upvotes": 8,
       "comments": 2,
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.9
+      "classification_source": "claude",
+      "classification_confidence": 0.85
+    },
+    {
+      "report_date": "2026-03-11",
+      "paper_id": "2603.09117",
+      "title": "Decoupling Reasoning and Confidence: Resurrecting Calibration in Reinforcement Learning from Verifiable Rewards",
+      "authors": [
+        "Zhengzhao Ma",
+        "Xueru Wen",
+        "Boxi Cao",
+        "Yaojie Lu",
+        "Hongyu Lin",
+        "Jinglin Yang",
+        "Min He",
+        "Xianpei Han",
+        "Le Sun"
+      ],
+      "abstract": "Reinforcement Learning from Verifiable Rewards (RLVR) significantly enhances large language models (LLMs) reasoning but severely suffers from calibration degeneration, where models become excessively over-confident in incorrect answers. Previous studies devote to directly incorporating calibration objective into existing optimization target. However, our theoretical analysis demonstrates that there exists a fundamental gradient conflict between the optimization for maximizing policy accuracy and minimizing calibration error. Building on this insight, we propose DCPO, a simple yet effective framework that systematically decouples reasoning and calibration objectives. Extensive experiments demonstrate that our DCPO not only preserves accuracy on par with GRPO but also achieves the best calibration performance and substantially mitigates the over-confidence issue. Our study provides valuable insights and practical solution for more reliable LLM deployment.",
+      "hf_url": "https://huggingface.co/papers/2603.09117",
+      "arxiv_url": "https://arxiv.org/abs/2603.09117",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.09117",
+      "github_url": "",
+      "submitted_by": "Boxi Cao",
+      "submitted_at": "2026-03-11T04:32:17.024Z",
+      "upvotes": 7,
+      "comments": 2,
+      "topic_key": "reasoning_alignment_eval",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "matched_terms": [],
+      "classification_source": "claude",
+      "classification_confidence": 0.85
     },
     {
       "report_date": "2026-03-11",
@@ -1652,13 +1682,13 @@
       "github_url": "",
       "submitted_by": "Tzafrir Rehan",
       "submitted_at": "2026-03-11T12:13:29.747Z",
-      "upvotes": 6,
+      "upvotes": 7,
       "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.97
+      "classification_source": "claude",
+      "classification_confidence": 0.88
     },
     {
       "report_date": "2026-03-11",
@@ -1684,8 +1714,8 @@
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.98
+      "classification_source": "claude",
+      "classification_confidence": 0.9
     },
     {
       "report_date": "2026-03-11",
@@ -1709,8 +1739,8 @@
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.91
+      "classification_source": "claude",
+      "classification_confidence": 0.8
     },
     {
       "report_date": "2026-03-11",
@@ -1734,38 +1764,8 @@
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.61
-    },
-    {
-      "report_date": "2026-03-11",
-      "paper_id": "2603.09117",
-      "title": "Decoupling Reasoning and Confidence: Resurrecting Calibration in Reinforcement Learning from Verifiable Rewards",
-      "authors": [
-        "Zhengzhao Ma",
-        "Xueru Wen",
-        "Boxi Cao",
-        "Yaojie Lu",
-        "Hongyu Lin",
-        "Jinglin Yang",
-        "Min He",
-        "Xianpei Han",
-        "Le Sun"
-      ],
-      "abstract": "Reinforcement Learning from Verifiable Rewards (RLVR) significantly enhances large language models (LLMs) reasoning but severely suffers from calibration degeneration, where models become excessively over-confident in incorrect answers. Previous studies devote to directly incorporating calibration objective into existing optimization target. However, our theoretical analysis demonstrates that there exists a fundamental gradient conflict between the optimization for maximizing policy accuracy and minimizing calibration error. Building on this insight, we propose DCPO, a simple yet effective framework that systematically decouples reasoning and calibration objectives. Extensive experiments demonstrate that our DCPO not only preserves accuracy on par with GRPO but also achieves the best calibration performance and substantially mitigates the over-confidence issue. Our study provides valuable insights and practical solution for more reliable LLM deployment.",
-      "hf_url": "https://huggingface.co/papers/2603.09117",
-      "arxiv_url": "https://arxiv.org/abs/2603.09117",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.09117",
-      "github_url": "",
-      "submitted_by": "Boxi Cao",
-      "submitted_at": "2026-03-11T04:32:17.024Z",
-      "upvotes": 4,
-      "comments": 2,
-      "topic_key": "reasoning_alignment_eval",
-      "topic_label": "Reasoning, Alignment, and Evaluation",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.86
+      "classification_source": "claude",
+      "classification_confidence": 0.75
     },
     {
       "report_date": "2026-03-11",
@@ -1786,13 +1786,13 @@
       "github_url": "",
       "submitted_by": "John",
       "submitted_at": "2026-03-11T11:23:57.197Z",
-      "upvotes": 3,
+      "upvotes": 4,
       "comments": 2,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.94
+      "classification_source": "claude",
+      "classification_confidence": 0.88
     },
     {
       "report_date": "2026-03-11",
@@ -1817,8 +1817,8 @@
       "topic_key": "learning_theory",
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.92
+      "classification_source": "claude",
+      "classification_confidence": 0.78
     },
     {
       "report_date": "2026-03-11",
@@ -1845,7 +1845,7 @@
       "topic_key": "generative_foundations",
       "topic_label": "Generative Foundations",
       "matched_terms": [],
-      "classification_source": "codex",
+      "classification_source": "claude",
       "classification_confidence": 0.72
     },
     {
@@ -1871,7 +1871,7 @@
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
-      "classification_source": "codex",
+      "classification_source": "claude",
       "classification_confidence": 0.88
     },
     {
@@ -1893,8 +1893,8 @@
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.76
+      "classification_source": "claude",
+      "classification_confidence": 0.78
     },
     {
       "report_date": "2026-03-11",
@@ -1916,8 +1916,8 @@
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.64
+      "classification_source": "claude",
+      "classification_confidence": 0.72
     },
     {
       "report_date": "2026-03-11",
@@ -1940,11 +1940,11 @@
       "submitted_at": "2026-03-11T05:22:32.260Z",
       "upvotes": 1,
       "comments": 2,
-      "topic_key": "generative_foundations",
-      "topic_label": "Generative Foundations",
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.86
+      "classification_source": "claude",
+      "classification_confidence": 0.78
     },
     {
       "report_date": "2026-03-11",
@@ -1972,8 +1972,8 @@
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_source": "claude",
+      "classification_confidence": 0.88
     },
     {
       "report_date": "2026-03-11",
@@ -1997,8 +1997,8 @@
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.85
+      "classification_source": "claude",
+      "classification_confidence": 0.8
     },
     {
       "report_date": "2026-03-11",
@@ -2029,8 +2029,8 @@
       "topic_key": "learning_theory",
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.71
+      "classification_source": "claude",
+      "classification_confidence": 0.78
     },
     {
       "report_date": "2026-03-11",
@@ -2053,8 +2053,8 @@
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.98
+      "classification_source": "claude",
+      "classification_confidence": 0.85
     },
     {
       "report_date": "2026-03-11",
@@ -2075,8 +2075,8 @@
       "topic_key": "generative_foundations",
       "topic_label": "Generative Foundations",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.93
+      "classification_source": "claude",
+      "classification_confidence": 0.85
     },
     {
       "report_date": "2026-03-11",
@@ -2104,8 +2104,8 @@
       "topic_key": "learning_theory",
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.76
+      "classification_source": "claude",
+      "classification_confidence": 0.75
     }
   ]
 }
