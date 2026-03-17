@@ -2942,8 +2942,8 @@ code {
 
 .page-cool-daily .lead-feature {
   min-height: 0;
-  padding: 1.16rem 1.18rem 1.12rem;
-  gap: 0.8rem;
+  padding: 1.08rem 1.14rem 0.98rem;
+  gap: 0.72rem;
   background:
     radial-gradient(circle at top right, rgba(235, 184, 90, 0.14), transparent 46%),
     linear-gradient(155deg, color-mix(in srgb, var(--surface-strong), white 10%), color-mix(in srgb, var(--surface), white 4%));
@@ -2963,7 +2963,7 @@ code {
 }
 
 .page-cool-daily .lead-main {
-  gap: 1rem;
+  gap: 0.82rem;
 }
 
 .page-cool-daily .lead-side {
@@ -2988,7 +2988,7 @@ code {
 .page-cool-daily .lead-support {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.68rem;
+  gap: 0.58rem;
 }
 
 .page-cool-daily .lead-support-card {
@@ -3055,11 +3055,16 @@ code {
 }
 
 .page-cool-daily .spotlight {
-  padding: 1.12rem;
+  padding: 0.88rem 1.06rem 1rem;
+}
+
+.page-cool-daily .spotlight .section-heading {
+  margin-bottom: 0.56rem;
 }
 
 .page-cool-daily .spotlight-list {
   grid-template-columns: 1fr;
+  gap: 0.68rem;
 }
 
 .page-cool-daily .spotlight-card:first-child {
