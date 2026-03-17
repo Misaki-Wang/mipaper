@@ -6,6 +6,7 @@ import {
   isSupabaseConfigured,
   loadRuntimeConfig,
 } from "./supabase.js";
+import { getStaleRemoteIds } from "./sync_utils.js";
 
 const LIKES_STORAGE_KEY = "cool-paper-liked-papers-v1";
 const LIKES_META_KEY = "cool-paper-liked-papers-meta-v1";
@@ -258,6 +259,30 @@ async function performRemoteSync() {
       const { error } = await supabaseClient.from("liked_papers").upsert(upsertRows, {
         onConflict: "user_id,like_id",
       });
+      if (error) {
+        throw error;
+      }
+    }
+
+    const { data: remoteRows, error: remoteRowsError } = await supabaseClient
+      .from("liked_papers")
+      .select("like_id")
+      .eq("user_id", authUser.id);
+    if (remoteRowsError) {
+      throw remoteRowsError;
+    }
+
+    const staleLikeIds = getStaleRemoteIds(
+      likes.map((item) => item.like_id),
+      remoteRows,
+      "like_id"
+    );
+    if (staleLikeIds.length) {
+      const { error } = await supabaseClient
+        .from("liked_papers")
+        .delete()
+        .eq("user_id", authUser.id)
+        .in("like_id", staleLikeIds);
       if (error) {
         throw error;
       }

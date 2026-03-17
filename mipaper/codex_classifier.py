@@ -269,8 +269,6 @@ def should_fallback_to_claude(detail: str) -> bool:
         "too many requests",
         "unavailable in path",
         "not available in path",
-        "timeout",
-        "timed out",
     )
     return any(marker in normalized for marker in markers)
 

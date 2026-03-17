@@ -7,6 +7,7 @@ import {
   isSupabaseConfigured,
   loadRuntimeConfig,
 } from "./supabase.js";
+import { getStaleRemoteIds } from "./sync_utils.js";
 
 const QUEUE_STORAGE_KEY = "cool-paper-queue-v1";
 const QUEUE_META_KEY = "cool-paper-queue-meta-v1";
@@ -68,22 +69,7 @@ export function removeFromQueue(likeId) {
   writeMeta({ dirty: true });
   localStorage.setItem(QUEUE_STORAGE_KEY, JSON.stringify(queue));
   window.dispatchEvent(new CustomEvent(QUEUE_CHANGED_EVENT));
-
-  // Immediately delete from Supabase, then sync
-  if (authUser) {
-    getSupabaseClient().then(client => {
-      client.from('paper_queue')
-        .delete()
-        .eq('user_id', authUser.id)
-        .eq('paper_id', likeId)
-        .then(({ error }) => {
-          if (error) console.error('Failed to delete from Supabase:', error);
-          else writeMeta({ dirty: false });
-        });
-    });
-  } else {
-    scheduleSync();
-  }
+  scheduleSync();
 }
 
 export function isInQueue(likeId) {
@@ -148,6 +134,27 @@ async function performSync() {
       .delete()
       .eq('user_id', authUser.id)
       .neq('status', 'later');
+
+    const { data: remoteRows, error: remoteRowsError } = await client.from('paper_queue')
+      .select('paper_id')
+      .eq('user_id', authUser.id)
+      .eq('status', 'later');
+    if (remoteRowsError) throw remoteRowsError;
+
+    const stalePaperIds = getStaleRemoteIds(
+      cleanQueue.map(item => item.like_id),
+      remoteRows,
+      'paper_id'
+    );
+    if (stalePaperIds.length) {
+      const { error } = await client.from('paper_queue')
+        .delete()
+        .eq('user_id', authUser.id)
+        .eq('status', 'later')
+        .in('paper_id', stalePaperIds);
+      if (error) throw error;
+      console.log('performSync: Removed', stalePaperIds.length, 'stale later items from Supabase');
+    }
 
     // Step 3: Always fetch from Supabase as source of truth
     const { data, error } = await client.from('paper_queue')
@@ -243,4 +250,3 @@ export function bindQueueButtons(root, recordLookup) {
     });
   });
 }
-
