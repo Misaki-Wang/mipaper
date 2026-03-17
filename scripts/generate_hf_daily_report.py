@@ -38,6 +38,11 @@ def parse_args() -> argparse.Namespace:
         default="none",
         help="optional fallback when codex is rate-limited or unavailable",
     )
+    parser.add_argument(
+        "--allow-rule-fallback",
+        action="store_true",
+        help="allow unmatched LLM assignments to fall back to rule-based classification",
+    )
     parser.add_argument("--output-dir", default=str(HF_DAILY_REPORTS_DIR.relative_to(ROOT_DIR)), help="directory for markdown/json output")
     return parser.parse_args()
 
@@ -74,6 +79,7 @@ def main() -> int:
             papers,
             model=args.codex_model,
             timeout_seconds=args.codex_timeout_seconds,
+            fallback_to_rules=args.allow_rule_fallback,
             fallback_provider=None if args.llm_fallback == "none" else args.llm_fallback,
             claude_model=args.claude_model,
         )
@@ -82,6 +88,7 @@ def main() -> int:
             papers,
             model=args.claude_model,
             timeout_seconds=args.codex_timeout_seconds,
+            fallback_to_rules=args.allow_rule_fallback,
         )
     else:
         papers = assign_topics(papers)

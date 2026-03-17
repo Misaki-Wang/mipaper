@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 import shutil
 import subprocess
 import tempfile
@@ -12,7 +13,7 @@ from mipaper.topics import OTHER_TOPIC, TOPICS, TOPIC_LABELS, assign_topics
 T = TypeVar("T")
 
 TOPIC_DESCRIPTIONS: Dict[str, str] = {
-    "generative_foundations": "only for titles clearly about generative-model families such as diffusion, autoregressive, flow, latent-variable, or world models, with theory, mechanisms, guarantees, or foundations",
+    "generative_foundations": "generative-model families such as diffusion, autoregressive, flow, latent-variable, or world models, especially when the title emphasizes theory, mechanisms, guarantees, or foundations",
     "multimodal_generative": "multimodal generative modeling such as text/image/video/audio/3D generation or editing",
     "multimodal_agents": "multimodal intelligent agents, VLA systems, language-conditioned robotics, or multimodal planning with explicit action, control, or agentic behavior",
     "agents_planning": "general agents, multi-agent systems, tool use, workflows, and planning",
@@ -36,6 +37,29 @@ class ClaudeClassificationError(RuntimeError):
     pass
 
 
+def resolve_batch_size(env_var: str, default: int) -> int:
+    raw_value = os.environ.get(env_var, "").strip()
+    if not raw_value:
+        return default
+    try:
+        return max(1, int(raw_value))
+    except ValueError:
+        return default
+
+
+def should_retry_with_smaller_batch(detail: str) -> bool:
+    normalized = detail.lower()
+    markers = (
+        "timed out",
+        "timeout",
+        "stream disconnected",
+        "failed to parse",
+        "without producing",
+        "incomplete assignments",
+    )
+    return any(marker in normalized for marker in markers)
+
+
 def classify_with_codex(
     papers: Sequence[T],
     *,
@@ -48,6 +72,24 @@ def classify_with_codex(
     if not papers:
         return list(papers)
 
+    batch_size = resolve_batch_size("COOL_PAPER_CODEX_BATCH_SIZE", 40)
+    if len(papers) > batch_size:
+        print(f"Processing {len(papers)} papers with Codex in batches of {batch_size}...")
+        all_papers = list(papers)
+        total_batches = (len(all_papers) + batch_size - 1) // batch_size
+        for index in range(0, len(all_papers), batch_size):
+            batch = all_papers[index:index + batch_size]
+            print(f"Codex batch {index // batch_size + 1}/{total_batches}: {len(batch)} papers")
+            classify_with_codex(
+                batch,
+                model=model,
+                timeout_seconds=timeout_seconds,
+                fallback_to_rules=fallback_to_rules,
+                fallback_provider=fallback_provider,
+                claude_model=claude_model,
+            )
+        return all_papers
+
     try:
         raw_response = run_codex_exec(
             papers,
@@ -55,13 +97,33 @@ def classify_with_codex(
             timeout_seconds=timeout_seconds,
         )
     except CodexClassificationError as exc:
-        if fallback_provider == "claude" and should_fallback_to_claude(str(exc)):
+        detail = str(exc)
+        if fallback_provider == "claude" and should_fallback_to_claude(detail):
             return classify_with_claude(
                 papers,
                 model=claude_model,
                 timeout_seconds=timeout_seconds,
                 fallback_to_rules=fallback_to_rules,
             )
+        if len(papers) > 1 and should_retry_with_smaller_batch(detail):
+            midpoint = len(papers) // 2
+            classify_with_codex(
+                list(papers)[:midpoint],
+                model=model,
+                timeout_seconds=timeout_seconds,
+                fallback_to_rules=fallback_to_rules,
+                fallback_provider=fallback_provider,
+                claude_model=claude_model,
+            )
+            classify_with_codex(
+                list(papers)[midpoint:],
+                model=model,
+                timeout_seconds=timeout_seconds,
+                fallback_to_rules=fallback_to_rules,
+                fallback_provider=fallback_provider,
+                claude_model=claude_model,
+            )
+            return list(papers)
         raise
     try:
         payload = json.loads(raw_response)
@@ -82,8 +144,20 @@ def classify_with_codex(
     missing_ids = [paper.paper_id for paper in papers if paper.paper_id not in assignments]
     if missing_ids:
         if not fallback_to_rules:
-            missing_str = ", ".join(missing_ids[:10])
-            raise CodexClassificationError(f"Codex returned incomplete assignments. Missing: {missing_str}")
+            if len(missing_ids) == len(papers) or len(papers) == 1:
+                missing_str = ", ".join(missing_ids[:10])
+                raise CodexClassificationError(f"Codex returned incomplete assignments. Missing: {missing_str}")
+
+            retry_papers = [papers_by_id[paper_id] for paper_id in missing_ids]
+            classify_with_codex(
+                retry_papers,
+                model=model,
+                timeout_seconds=timeout_seconds,
+                fallback_to_rules=False,
+                fallback_provider=fallback_provider,
+                claude_model=claude_model,
+            )
+            return list(papers)
 
         fallback_papers = [papers_by_id[paper_id] for paper_id in missing_ids]
         assign_topics(fallback_papers)
@@ -101,24 +175,42 @@ def classify_with_claude(
     if not papers:
         return list(papers)
 
-    # Batch processing for large conferences
-    BATCH_SIZE = 100
-    if len(papers) > BATCH_SIZE:
-        print(f"Processing {len(papers)} papers in batches of {BATCH_SIZE}...")
+    batch_size = resolve_batch_size("COOL_PAPER_CLAUDE_BATCH_SIZE", 24)
+    if len(papers) > batch_size:
+        print(f"Processing {len(papers)} papers in batches of {batch_size}...")
         all_papers = list(papers)
-        for i in range(0, len(all_papers), BATCH_SIZE):
-            batch = all_papers[i:i + BATCH_SIZE]
-            print(f"Batch {i//BATCH_SIZE + 1}/{(len(all_papers) + BATCH_SIZE - 1)//BATCH_SIZE}: {len(batch)} papers")
+        total_batches = (len(all_papers) + batch_size - 1) // batch_size
+        for i in range(0, len(all_papers), batch_size):
+            batch = all_papers[i:i + batch_size]
+            print(f"Batch {i // batch_size + 1}/{total_batches}: {len(batch)} papers")
             classify_with_claude(batch, model=model, timeout_seconds=timeout_seconds, fallback_to_rules=fallback_to_rules)
         return all_papers
 
-    # Dynamic timeout: 2 seconds per paper, minimum 600s
-    dynamic_timeout = max(timeout_seconds, len(papers) * 2)
-    payload = run_claude_exec(
-        papers,
-        model=model,
-        timeout_seconds=dynamic_timeout,
-    )
+    dynamic_timeout = max(timeout_seconds, len(papers) * 45)
+    try:
+        payload = run_claude_exec(
+            papers,
+            model=model,
+            timeout_seconds=dynamic_timeout,
+        )
+    except ClaudeClassificationError as exc:
+        detail = str(exc)
+        if len(papers) > 1 and should_retry_with_smaller_batch(detail):
+            midpoint = len(papers) // 2
+            classify_with_claude(
+                list(papers)[:midpoint],
+                model=model,
+                timeout_seconds=timeout_seconds,
+                fallback_to_rules=fallback_to_rules,
+            )
+            classify_with_claude(
+                list(papers)[midpoint:],
+                model=model,
+                timeout_seconds=timeout_seconds,
+                fallback_to_rules=fallback_to_rules,
+            )
+            return list(papers)
+        raise
     assignments = validate_assignments(payload, papers)
     papers_by_id = {paper.paper_id: paper for paper in papers}
 
@@ -133,8 +225,18 @@ def classify_with_claude(
     missing_ids = [paper.paper_id for paper in papers if paper.paper_id not in assignments]
     if missing_ids:
         if not fallback_to_rules:
-            missing_str = ", ".join(missing_ids[:10])
-            raise ClaudeClassificationError(f"Claude returned incomplete assignments. Missing: {missing_str}")
+            if len(missing_ids) == len(papers) or len(papers) == 1:
+                missing_str = ", ".join(missing_ids[:10])
+                raise ClaudeClassificationError(f"Claude returned incomplete assignments. Missing: {missing_str}")
+
+            retry_papers = [papers_by_id[paper_id] for paper_id in missing_ids]
+            classify_with_claude(
+                retry_papers,
+                model=model,
+                timeout_seconds=timeout_seconds,
+                fallback_to_rules=False,
+            )
+            return list(papers)
 
         fallback_papers = [papers_by_id[paper_id] for paper_id in missing_ids]
         assign_topics(fallback_papers)
@@ -150,6 +252,7 @@ def run_codex_exec(
 ) -> str:
     prompt = build_prompt(papers)
     schema = build_output_schema()
+    reasoning_effort = os.environ.get("COOL_PAPER_CODEX_REASONING_EFFORT", "medium").strip() or "medium"
 
     with tempfile.TemporaryDirectory(prefix="cool-paper-codex-") as temp_dir:
         temp_path = Path(temp_dir)
@@ -166,7 +269,7 @@ def run_codex_exec(
             "--color",
             "never",
             "-c",
-            'model_reasoning_effort="high"',
+            f'model_reasoning_effort="{reasoning_effort}"',
             "--output-schema",
             str(schema_path),
             "-o",
@@ -300,7 +403,7 @@ Rules:
 - Use exactly one topic_key from the list above.
 - Base the decision on the title only.
 - Prefer the most specific topic instead of a broad one.
-- Use the three focus topics conservatively.
+- Prefer the three focus topics when the title reasonably points to them; do not require unusually strict evidence.
 - Do not use generative_foundations for generic transformer or LLM interpretability unless the title clearly signals a generative-model family.
 - Do not use multimodal_agents unless the title clearly implies both multimodal grounding and agentic action/planning/robotics.
 - Use other_ai only when none of the listed topics clearly fits.

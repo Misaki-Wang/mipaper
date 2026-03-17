@@ -80,6 +80,32 @@ class CodexClassifierTest(unittest.TestCase):
         self.assertEqual(papers, result)
         mocked_classify_with_claude.assert_called_once()
 
+    @mock.patch("mipaper.codex_classifier.run_codex_exec")
+    def test_classify_with_codex_batches_large_inputs(self, mocked_run_codex_exec: mock.Mock) -> None:
+        papers = [
+            Paper(paper_id=str(index), title=f"Paper {index}", abs_url="https://a", pdf_url="https://a.pdf", detail_url="https://b")
+            for index in range(205)
+        ]
+
+        def fake_run_codex_exec(batch, *, model=None, timeout_seconds=600):
+            return json.dumps(
+                {
+                    "papers": [
+                        {"paper_id": paper.paper_id, "topic_key": "other_ai", "confidence": 0.55}
+                        for paper in batch
+                    ]
+                }
+            )
+
+        mocked_run_codex_exec.side_effect = fake_run_codex_exec
+
+        result = classify_with_codex(papers)
+
+        self.assertEqual(6, mocked_run_codex_exec.call_count)
+        batch_sizes = [len(call.args[0]) for call in mocked_run_codex_exec.call_args_list]
+        self.assertEqual([40, 40, 40, 40, 40, 5], batch_sizes)
+        self.assertTrue(all(paper.classification_source == "codex" for paper in result))
+
 
 if __name__ == "__main__":
     unittest.main()

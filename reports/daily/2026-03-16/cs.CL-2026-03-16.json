@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-17T03:48:10Z",
+  "generated_at": "2026-03-17T15:19:30Z",
   "category": "cs.CL",
   "report_date": "2026-03-16",
   "source_url": "https://papers.cool/arxiv/cs.CL?date=2026-03-16&show=1000",
@@ -33,18 +33,13 @@
     },
     {
       "topic_label": "LLMs and Language",
-      "count": 13,
-      "share": 22.03
+      "count": 11,
+      "share": 18.64
     },
     {
       "topic_label": "Datasets and Benchmarks",
-      "count": 6,
-      "share": 10.17
-    },
-    {
-      "topic_label": "Agents and Planning",
-      "count": 5,
-      "share": 8.47
+      "count": 7,
+      "share": 11.86
     },
     {
       "topic_label": "Domain Applications",
@@ -52,22 +47,27 @@
       "share": 8.47
     },
     {
+      "topic_label": "Retrieval, Knowledge, and RAG",
+      "count": 5,
+      "share": 8.47
+    },
+    {
       "topic_label": "Learning, Optimization, and Theory",
+      "count": 4,
+      "share": 6.78
+    },
+    {
+      "topic_label": "Agents and Planning",
       "count": 3,
       "share": 5.08
     },
     {
-      "topic_label": "Retrieval, Knowledge, and RAG",
+      "topic_label": "Multimodal Understanding and Vision",
       "count": 3,
       "share": 5.08
     },
     {
       "topic_label": "Multimodal Agents",
-      "count": 2,
-      "share": 3.39
-    },
-    {
-      "topic_label": "Multimodal Understanding and Vision",
       "count": 2,
       "share": 3.39
     },
@@ -78,11 +78,6 @@
     },
     {
       "topic_label": "Multimodal Generative Modeling",
-      "count": 1,
-      "share": 1.69
-    },
-    {
-      "topic_label": "Other AI",
       "count": 1,
       "share": 1.69
     }
@@ -112,36 +107,8 @@
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.82
-        },
-        {
-          "paper_id": "2603.12963",
-          "title": "Long-form RewardBench: Evaluating Reward Models for Long-form Generation",
-          "abs_url": "https://arxiv.org/abs/2603.12963",
-          "pdf_url": "https://arxiv.org/pdf/2603.12963",
-          "detail_url": "https://papers.cool/arxiv/2603.12963",
-          "authors": [
-            "Hui Huang",
-            "Yancheng He",
-            "Wei Liu",
-            "Muyun Yang",
-            "Jiaheng Liu",
-            "Kehai Chen",
-            "Bing Xu",
-            "Conghui Zhu",
-            "Hailong Cao",
-            "Tiejun Zhao"
-          ],
-          "subjects": [
-            "Computation and Language"
-          ],
-          "abstract": "The widespread adoption of reinforcement learning-based alignment highlights the growing importance of reward models. Various benchmarks have been built to evaluate reward models in various domains and scenarios. However, a significant gap remains in assessing reward models for long-form generation, despite its critical role in real-world applications. To bridge this, we introduce Long-form RewardBench, the first reward modeling testbed specifically designed for long-form generation. Our benchmark encompasses five key subtasks: QA, RAG, Chat, Writing, and Reasoning. We collected instruction and preference data through a meticulously designed multi-stage data collection process, and conducted extensive experiments on 20+ mainstream reward models, including both classifiers and generative models. Our findings reveal that current models still lack long-form reward modeling capabilities. Furthermore, we designed a novel Long-form Needle-in-a-Haystack Test, which revealed a correlation between reward modeling performance and the error's position within a response, as well as the overall response length, with distinct characteristics observed between classification and generative models. Finally, we demonstrate that classifiers exhibit better generalizability compared to generative models trained on the same data. As the first benchmark for long-form reward modeling, this work aims to offer a robust platform for visualizing progress in this crucial area.",
-          "topic_key": "reasoning_alignment_eval",
-          "topic_label": "Reasoning, Alignment, and Evaluation",
-          "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.88
+          "classification_source": "codex",
+          "classification_confidence": 0.83
         },
         {
           "paper_id": "2603.12826",
@@ -169,8 +136,8 @@
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.8
+          "classification_source": "codex",
+          "classification_confidence": 0.68
         },
         {
           "paper_id": "2603.12795",
@@ -192,8 +159,8 @@
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.85
+          "classification_source": "codex",
+          "classification_confidence": 0.95
         },
         {
           "paper_id": "2603.12768",
@@ -214,8 +181,31 @@
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.87
+          "classification_source": "codex",
+          "classification_confidence": 0.97
+        },
+        {
+          "paper_id": "2603.12683",
+          "title": "Experimental evidence of progressive ChatGPT models self-convergence",
+          "abs_url": "https://arxiv.org/abs/2603.12683",
+          "pdf_url": "https://arxiv.org/pdf/2603.12683",
+          "detail_url": "https://papers.cool/arxiv/2603.12683",
+          "authors": [
+            "Konstantinos F. Xylogiannopoulos",
+            "Petros Xanthopoulos",
+            "Panagiotis Karampelas",
+            "Georgios A. Bakamitsos"
+          ],
+          "subjects": [
+            "Computation and Language",
+            "Artificial Intelligence"
+          ],
+          "abstract": "Large Language Models (LLMs) that undergo recursive training on synthetically generated data are susceptible to model collapse, a phenomenon marked by the generation of meaningless output. Existing research has examined this issue from either theoretical or empirical perspectives, often focusing on a single model trained recursively on its own outputs. While prior studies have cautioned against the potential degradation of LLM output quality under such conditions, no longitudinal investigation has yet been conducted to assess this effect over time. In this study, we employ a text similarity metric to evaluate different ChatGPT models' capacity to generate diverse textual outputs. Our findings indicate a measurable decline of recent ChatGPT releases' ability to produce varied text, even when explicitly prompted to do so, by setting the temperature parameter to one. The observed reduction in output diversity may be attributed to the influence of the amounts of synthetic data incorporated within their training datasets as the result of internet infiltration by LLM generated data. The phenomenon is defined as model self-convergence because of the gradual increase of similarities of produced texts among different ChatGPT versions.",
+          "topic_key": "reasoning_alignment_eval",
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.63
         },
         {
           "paper_id": "2603.12582",
@@ -237,8 +227,31 @@
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.82
+          "classification_source": "codex",
+          "classification_confidence": 0.88
+        },
+        {
+          "paper_id": "2603.12564",
+          "title": "AgentDrift: Unsafe Recommendation Drift Under Tool Corruption Hidden by Ranking Metrics in LLM Agents",
+          "abs_url": "https://arxiv.org/abs/2603.12564",
+          "pdf_url": "https://arxiv.org/pdf/2603.12564",
+          "detail_url": "https://papers.cool/arxiv/2603.12564",
+          "authors": [
+            "Zekun Wu",
+            "Adriano Koshiyama",
+            "Sahan Bulathwela",
+            "Maria Perez-Ortiz"
+          ],
+          "subjects": [
+            "Computation and Language",
+            "Artificial Intelligence"
+          ],
+          "abstract": "Tool-augmented LLM agents increasingly serve as multi-turn advisors in high-stakes domains, yet their evaluation relies on ranking-quality metrics that measure what is recommended but not whether it is safe for the user. We introduce a paired-trajectory protocol that replays real financial dialogues under clean and contaminated tool-output conditions across seven LLMs (7B to frontier) and decomposes divergence into information-channel and memory-channel mechanisms. Across the seven models tested, we consistently observe the evaluation-blindness pattern: recommendation quality is largely preserved under contamination (utility preservation ratio approximately 1.0) while risk-inappropriate products appear in 65-93% of turns, a systematic safety failure poorly reflected by standard NDCG. Safety violations are predominantly information-channel-driven, emerge at the first contaminated turn, and persist without self-correction over 23-step trajectories; no agent across 1,563 contaminated turns explicitly questions tool-data reliability. Even narrative-only corruption (biased headlines, no numerical manipulation) induces significant drift while completely evading consistency monitors. A safety-penalized NDCG variant (sNDCG) reduces preservation ratios to 0.51-0.74, indicating that much of the evaluation gap becomes visible once safety is explicitly measured. These results motivate considering trajectory-level safety monitoring, beyond single-turn quality, for deployed multi-turn agents in high-stakes settings.",
+          "topic_key": "reasoning_alignment_eval",
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.88
         },
         {
           "paper_id": "2603.12522",
@@ -260,8 +273,8 @@
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.87
+          "classification_source": "codex",
+          "classification_confidence": 0.98
         },
         {
           "paper_id": "2603.12471",
@@ -282,8 +295,8 @@
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.78
+          "classification_source": "codex",
+          "classification_confidence": 0.87
         },
         {
           "paper_id": "2603.12397",
@@ -308,8 +321,8 @@
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.83
+          "classification_source": "codex",
+          "classification_confidence": 0.86
         },
         {
           "paper_id": "2603.12277",
@@ -331,8 +344,8 @@
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.87
+          "classification_source": "codex",
+          "classification_confidence": 0.97
         },
         {
           "paper_id": "2603.12275",
@@ -352,8 +365,8 @@
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.8
+          "classification_source": "codex",
+          "classification_confidence": 0.68
         },
         {
           "paper_id": "2603.12273",
@@ -378,8 +391,8 @@
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.88
+          "classification_source": "codex",
+          "classification_confidence": 0.95
         },
         {
           "paper_id": "2603.12615",
@@ -400,34 +413,8 @@
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.85
-        },
-        {
-          "paper_id": "2603.12565",
-          "title": "Speech-Worthy Alignment for Japanese SpeechLLMs via Direct Preference Optimization",
-          "abs_url": "https://arxiv.org/abs/2603.12565",
-          "pdf_url": "https://arxiv.org/pdf/2603.12565",
-          "detail_url": "https://papers.cool/arxiv/2603.12565",
-          "authors": [
-            "Mengjie Zhao",
-            "Lianbo Liu",
-            "Yusuke Fujita",
-            "Hao Shi",
-            "Yuan Gao",
-            "Roman Koshkin",
-            "Yui Sudo"
-          ],
-          "subjects": [
-            "Sound",
-            "Computation and Language"
-          ],
-          "abstract": "SpeechLLMs typically combine ASR-trained encoders with text-based LLM backbones, leading them to inherit written-style output patterns unsuitable for text-to-speech synthesis. This mismatch is particularly pronounced in Japanese, where spoken and written registers differ substantially in politeness markers, sentence-final particles, and syntactic complexity. We propose a preference-based alignment approach to adapt Japanese SpeechLLMs for speech-worthy outputs: text that is concise, conversational, and readily synthesized as natural speech. To rigorously evaluate this task, we introduce SpokenElyza, a benchmark for Japanese speech-worthiness derived from ELYZA-tasks-100 with auditory verification by native experts. Experiments show that our approach achieves substantial improvement on SpokenElyza while largely preserving performance on the original written-style evaluation. We will release SpokenElyza to support future research on Japanese spoken dialog systems.",
-          "topic_key": "reasoning_alignment_eval",
-          "topic_label": "Reasoning, Alignment, and Evaluation",
-          "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.82
+          "classification_source": "codex",
+          "classification_confidence": 0.95
         },
         {
           "paper_id": "2603.12529",
@@ -452,8 +439,8 @@
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.82
+          "classification_source": "codex",
+          "classification_confidence": 0.9
         },
         {
           "paper_id": "2603.12520",
@@ -473,8 +460,8 @@
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.87
+          "classification_source": "codex",
+          "classification_confidence": 0.97
         },
         {
           "paper_id": "2603.12372",
@@ -501,15 +488,15 @@
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.82
+          "classification_source": "codex",
+          "classification_confidence": 0.83
         }
       ]
     },
     {
       "topic_label": "LLMs and Language",
-      "count": 13,
-      "share": 22.03,
+      "count": 11,
+      "share": 18.64,
       "papers": [
         {
           "paper_id": "2603.13201",
@@ -535,8 +522,8 @@
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.88
+          "classification_source": "codex",
+          "classification_confidence": 0.98
         },
         {
           "paper_id": "2603.12983",
@@ -557,8 +544,8 @@
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.82
+          "classification_source": "codex",
+          "classification_confidence": 0.83
         },
         {
           "paper_id": "2603.12932",
@@ -578,8 +565,8 @@
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.87
+          "classification_source": "codex",
+          "classification_confidence": 0.94
         },
         {
           "paper_id": "2603.12906",
@@ -599,8 +586,8 @@
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.78
+          "classification_source": "codex",
+          "classification_confidence": 0.66
         },
         {
           "paper_id": "2603.12754",
@@ -619,8 +606,8 @@
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.8
+          "classification_source": "codex",
+          "classification_confidence": 0.72
         },
         {
           "paper_id": "2603.12698",
@@ -642,51 +629,7 @@
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.83
-        },
-        {
-          "paper_id": "2603.12683",
-          "title": "Experimental evidence of progressive ChatGPT models self-convergence",
-          "abs_url": "https://arxiv.org/abs/2603.12683",
-          "pdf_url": "https://arxiv.org/pdf/2603.12683",
-          "detail_url": "https://papers.cool/arxiv/2603.12683",
-          "authors": [
-            "Konstantinos F. Xylogiannopoulos",
-            "Petros Xanthopoulos",
-            "Panagiotis Karampelas",
-            "Georgios A. Bakamitsos"
-          ],
-          "subjects": [
-            "Computation and Language",
-            "Artificial Intelligence"
-          ],
-          "abstract": "Large Language Models (LLMs) that undergo recursive training on synthetically generated data are susceptible to model collapse, a phenomenon marked by the generation of meaningless output. Existing research has examined this issue from either theoretical or empirical perspectives, often focusing on a single model trained recursively on its own outputs. While prior studies have cautioned against the potential degradation of LLM output quality under such conditions, no longitudinal investigation has yet been conducted to assess this effect over time. In this study, we employ a text similarity metric to evaluate different ChatGPT models' capacity to generate diverse textual outputs. Our findings indicate a measurable decline of recent ChatGPT releases' ability to produce varied text, even when explicitly prompted to do so, by setting the temperature parameter to one. The observed reduction in output diversity may be attributed to the influence of the amounts of synthetic data incorporated within their training datasets as the result of internet infiltration by LLM generated data. The phenomenon is defined as model self-convergence because of the gradual increase of similarities of produced texts among different ChatGPT versions.",
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.78
-        },
-        {
-          "paper_id": "2603.12677",
-          "title": "MetaKE: Meta-learning Aligned Knowledge Editing via Bi-level Optimization",
-          "abs_url": "https://arxiv.org/abs/2603.12677",
-          "pdf_url": "https://arxiv.org/pdf/2603.12677",
-          "detail_url": "https://papers.cool/arxiv/2603.12677",
-          "authors": [
-            "Shuxin Liu",
-            "Ou Wu"
-          ],
-          "subjects": [
-            "Computation and Language",
-            "Artificial Intelligence"
-          ],
-          "abstract": "Knowledge editing (KE) aims to precisely rectify specific knowledge in Large Language Models (LLMs) without disrupting general capabilities. State-of-the-art methods suffer from an open-loop control mismatch. We identify a critical \"Semantic-Execution Disconnect\": the semantic target is derived independently without feedback from the downstream's feasible region. This misalignment often causes valid semantic targets to fall within the prohibited space, resulting in gradient truncation and editing failure. To bridge this gap, we propose MetaKE (Meta-learning Aligned Knowledge Editing), a new framework that reframes KE as a bi-level optimization problem. Departing from static calculation, MetaKE treats the edit target as a learnable meta-parameter: the upper-level optimizer seeks a feasible target to maximize post-edit performance, while the lower-level solver executes the editing. To address the challenge of differentiating through complex solvers, we derive a Structural Gradient Proxy, which explicitly backpropagates editability constraints to the target learning phase. Theoretical analysis demonstrates that MetaKE automatically aligns the edit direction with the model's feasible manifold. Extensive experiments confirm that MetaKE significantly outperforms strong baselines, offering a new perspective on knowledge editing.",
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [],
-          "classification_source": "claude",
+          "classification_source": "codex",
           "classification_confidence": 0.78
         },
         {
@@ -710,8 +653,8 @@
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.88
+          "classification_source": "codex",
+          "classification_confidence": 0.98
         },
         {
           "paper_id": "2603.12646",
@@ -734,8 +677,29 @@
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.85
+          "classification_source": "codex",
+          "classification_confidence": 0.8
+        },
+        {
+          "paper_id": "2603.12453",
+          "title": "CSE-UOI at SemEval-2026 Task 6: A Two-Stage Heterogeneous Ensemble with Deliberative Complexity Gating for Political Evasion Detection",
+          "abs_url": "https://arxiv.org/abs/2603.12453",
+          "pdf_url": "https://arxiv.org/pdf/2603.12453",
+          "detail_url": "https://papers.cool/arxiv/2603.12453",
+          "authors": [
+            "Christos Tzouvaras",
+            "Konstantinos Skianis",
+            "Athanasios Voulodimos"
+          ],
+          "subjects": [
+            "Computation and Language"
+          ],
+          "abstract": "This paper describes our system for SemEval-2026 Task 6, which classifies clarity of responses in political interviews into three categories: Clear Reply, Ambivalent, and Clear Non-Reply. We propose a heterogeneous dual large language model (LLM) ensemble via self-consistency (SC) and weighted voting, and a novel post-hoc correction mechanism, Deliberative Complexity Gating (DCG). This mechanism uses cross-model behavioral signals and exploits the finding that an LLM response-length proxy correlates strongly with sample ambiguity. To further examine mechanisms for improving ambiguity detection, we evaluated multi-agent debate as an alternative strategy for increasing deliberative capacity. Unlike DCG, which adaptively gates reasoning using cross-model behavioral signals, debate increases agent count without increasing model diversity. Our solution achieved a Macro-F1 score of 0.85 on the evaluation set, securing 3rd place.",
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.7
         },
         {
           "paper_id": "2603.12423",
@@ -756,29 +720,8 @@
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.8
-        },
-        {
-          "paper_id": "2603.12350",
-          "title": "TASTE-Streaming: Towards Streamable Text-Aligned Speech Tokenization and Embedding for Spoken Language Modeling",
-          "abs_url": "https://arxiv.org/abs/2603.12350",
-          "pdf_url": "https://arxiv.org/pdf/2603.12350",
-          "detail_url": "https://papers.cool/arxiv/2603.12350",
-          "authors": [
-            "Liang-Hsuan Tseng",
-            "Hung-yi Lee"
-          ],
-          "subjects": [
-            "Computation and Language",
-            "Sound"
-          ],
-          "abstract": "Text-speech joint spoken language modeling (SLM) aims at natural and intelligent speech-based interactions, but developing such a system may suffer from modality mismatch: speech unit sequences are much longer than text tokens. Prior work reduces this gap with text-aligned tokenization and embedding (TASTE), producing speech tokens that align in lengths with their textual counterparts. However, the dependence on an external ASR system and the use of a non-causal decoder limits streaming use. To address this limitation, we propose TASTE-S, a streamable extension of TASTE suitable for real-time usage. TASTE-S integrates a CTC-based ASR module into the encoder for instant dual-modality encoding. We also redesign the unit decoder to enable on-the-fly decoding. With joint training, we show that TASTE-S matches TASTE's performance while significantly reducing latency. Further investigations reveal that TASTE-S remains robust to transcriptions and enables long-form encoding and decoding.",
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.8
+          "classification_source": "codex",
+          "classification_confidence": 0.88
         },
         {
           "paper_id": "2603.12272",
@@ -799,15 +742,15 @@
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.82
+          "classification_source": "codex",
+          "classification_confidence": 0.8
         }
       ]
     },
     {
       "topic_label": "Datasets and Benchmarks",
-      "count": 6,
-      "share": 10.17,
+      "count": 7,
+      "share": 11.86,
       "papers": [
         {
           "paper_id": "2603.13154",
@@ -831,8 +774,36 @@
           "topic_key": "datasets_benchmarks",
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.85
+          "classification_source": "codex",
+          "classification_confidence": 0.95
+        },
+        {
+          "paper_id": "2603.12963",
+          "title": "Long-form RewardBench: Evaluating Reward Models for Long-form Generation",
+          "abs_url": "https://arxiv.org/abs/2603.12963",
+          "pdf_url": "https://arxiv.org/pdf/2603.12963",
+          "detail_url": "https://papers.cool/arxiv/2603.12963",
+          "authors": [
+            "Hui Huang",
+            "Yancheng He",
+            "Wei Liu",
+            "Muyun Yang",
+            "Jiaheng Liu",
+            "Kehai Chen",
+            "Bing Xu",
+            "Conghui Zhu",
+            "Hailong Cao",
+            "Tiejun Zhao"
+          ],
+          "subjects": [
+            "Computation and Language"
+          ],
+          "abstract": "The widespread adoption of reinforcement learning-based alignment highlights the growing importance of reward models. Various benchmarks have been built to evaluate reward models in various domains and scenarios. However, a significant gap remains in assessing reward models for long-form generation, despite its critical role in real-world applications. To bridge this, we introduce Long-form RewardBench, the first reward modeling testbed specifically designed for long-form generation. Our benchmark encompasses five key subtasks: QA, RAG, Chat, Writing, and Reasoning. We collected instruction and preference data through a meticulously designed multi-stage data collection process, and conducted extensive experiments on 20+ mainstream reward models, including both classifiers and generative models. Our findings reveal that current models still lack long-form reward modeling capabilities. Furthermore, we designed a novel Long-form Needle-in-a-Haystack Test, which revealed a correlation between reward modeling performance and the error's position within a response, as well as the overall response length, with distinct characteristics observed between classification and generative models. Finally, we demonstrate that classifiers exhibit better generalizability compared to generative models trained on the same data. As the first benchmark for long-form reward modeling, this work aims to offer a robust platform for visualizing progress in this crucial area.",
+          "topic_key": "datasets_benchmarks",
+          "topic_label": "Datasets and Benchmarks",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.95
         },
         {
           "paper_id": "2603.12872",
@@ -852,8 +823,8 @@
           "topic_key": "datasets_benchmarks",
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.87
+          "classification_source": "codex",
+          "classification_confidence": 0.98
         },
         {
           "paper_id": "2603.12638",
@@ -879,8 +850,8 @@
           "topic_key": "datasets_benchmarks",
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.78
+          "classification_source": "codex",
+          "classification_confidence": 0.72
         },
         {
           "paper_id": "2603.12572",
@@ -909,8 +880,8 @@
           "topic_key": "datasets_benchmarks",
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.82
+          "classification_source": "codex",
+          "classification_confidence": 0.97
         },
         {
           "paper_id": "2603.12458",
@@ -933,8 +904,8 @@
           "topic_key": "datasets_benchmarks",
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.83
+          "classification_source": "codex",
+          "classification_confidence": 0.96
         },
         {
           "paper_id": "2603.13023",
@@ -967,129 +938,8 @@
           "topic_key": "datasets_benchmarks",
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.72
-        }
-      ]
-    },
-    {
-      "topic_label": "Agents and Planning",
-      "count": 5,
-      "share": 8.47,
-      "papers": [
-        {
-          "paper_id": "2603.12564",
-          "title": "AgentDrift: Unsafe Recommendation Drift Under Tool Corruption Hidden by Ranking Metrics in LLM Agents",
-          "abs_url": "https://arxiv.org/abs/2603.12564",
-          "pdf_url": "https://arxiv.org/pdf/2603.12564",
-          "detail_url": "https://papers.cool/arxiv/2603.12564",
-          "authors": [
-            "Zekun Wu",
-            "Adriano Koshiyama",
-            "Sahan Bulathwela",
-            "Maria Perez-Ortiz"
-          ],
-          "subjects": [
-            "Computation and Language",
-            "Artificial Intelligence"
-          ],
-          "abstract": "Tool-augmented LLM agents increasingly serve as multi-turn advisors in high-stakes domains, yet their evaluation relies on ranking-quality metrics that measure what is recommended but not whether it is safe for the user. We introduce a paired-trajectory protocol that replays real financial dialogues under clean and contaminated tool-output conditions across seven LLMs (7B to frontier) and decomposes divergence into information-channel and memory-channel mechanisms. Across the seven models tested, we consistently observe the evaluation-blindness pattern: recommendation quality is largely preserved under contamination (utility preservation ratio approximately 1.0) while risk-inappropriate products appear in 65-93% of turns, a systematic safety failure poorly reflected by standard NDCG. Safety violations are predominantly information-channel-driven, emerge at the first contaminated turn, and persist without self-correction over 23-step trajectories; no agent across 1,563 contaminated turns explicitly questions tool-data reliability. Even narrative-only corruption (biased headlines, no numerical manipulation) induces significant drift while completely evading consistency monitors. A safety-penalized NDCG variant (sNDCG) reduces preservation ratios to 0.51-0.74, indicating that much of the evaluation gap becomes visible once safety is explicitly measured. These results motivate considering trajectory-level safety monitoring, beyond single-turn quality, for deployed multi-turn agents in high-stakes settings.",
-          "topic_key": "agents_planning",
-          "topic_label": "Agents and Planning",
-          "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.8
-        },
-        {
-          "paper_id": "2603.13173",
-          "title": "Semantic Invariance in Agentic AI",
-          "abs_url": "https://arxiv.org/abs/2603.13173",
-          "pdf_url": "https://arxiv.org/pdf/2603.13173",
-          "detail_url": "https://papers.cool/arxiv/2603.13173",
-          "authors": [
-            "I. de Zarzà",
-            "J. de Curtò",
-            "Jordi Cabot",
-            "Pietro Manzoni",
-            "Carlos T. Calafate"
-          ],
-          "subjects": [
-            "Artificial Intelligence",
-            "Computation and Language"
-          ],
-          "abstract": "Large Language Models (LLMs) increasingly serve as autonomous reasoning agents in decision support, scientific problem-solving, and multi-agent coordination systems. However, deploying LLM agents in consequential applications requires assurance that their reasoning remains stable under semantically equivalent input variations, a property we term semantic invariance.Standard benchmark evaluations, which assess accuracy on fixed, canonical problem formulations, fail to capture this critical reliability dimension. To address this shortcoming, in this paper we present a metamorphic testing framework for systematically assessing the robustness of LLM reasoning agents, applying eight semantic-preserving transformations (identity, paraphrase, fact reordering, expansion, contraction, academic context, business context, and contrastive formulation) across seven foundation models spanning four distinct architectural families: Hermes (70B, 405B), Qwen3 (30B-A3B, 235B-A22B), DeepSeek-R1, and gpt-oss (20B, 120B). Our evaluation encompasses 19 multi-step reasoning problems across eight scientific domains. The results reveal that model scale does not predict robustness: the smaller Qwen3-30B-A3B achieves the highest stability (79.6% invariant responses, semantic similarity 0.91), while larger models exhibit greater fragility.",
-          "topic_key": "agents_planning",
-          "topic_label": "Agents and Planning",
-          "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.75
-        },
-        {
-          "paper_id": "2603.13017",
-          "title": "Structured Distillation for Personalized Agent Memory: 11x Token Reduction with Retrieval Preservation",
-          "abs_url": "https://arxiv.org/abs/2603.13017",
-          "pdf_url": "https://arxiv.org/pdf/2603.13017",
-          "detail_url": "https://papers.cool/arxiv/2603.13017",
-          "authors": [
-            "Sydney Lewis"
-          ],
-          "subjects": [
-            "Artificial Intelligence",
-            "Computation and Language",
-            "Information Retrieval"
-          ],
-          "abstract": "Long conversations with an AI agent create a simple problem for one user: the history is useful, but carrying it verbatim is expensive. We study personalized agent memory: one user's conversation history with an agent, distilled into a compact retrieval layer for later search. Each exchange is compressed into a compound object with four fields (exchange_core, specific_context, thematic room_assignments, and regex-extracted files_touched). The searchable distilled text averages 38 tokens per exchange. Applied to 4,182 conversations (14,340 exchanges) from 6 software engineering projects, the method reduces average exchange length from 371 to 38 tokens, yielding 11x compression. We evaluate whether personalized recall survives that compression using 201 recall-oriented queries, 107 configurations spanning 5 pure and 5 cross-layer search modes, and 5 LLM graders (214,519 consensus-graded query-result pairs). The best pure distilled configuration reaches 96% of the best verbatim MRR (0.717 vs 0.745). Results are mechanism-dependent. All 20 vector search configurations remain non-significant after Bonferroni correction, while all 20 BM25 configurations degrade significantly (effect sizes |d|=0.031-0.756). The best cross-layer setup slightly exceeds the best pure verbatim baseline (MRR 0.759). Structured distillation compresses single-user agent memory without uniformly sacrificing retrieval quality. At 1/11 the context cost, thousands of exchanges fit within a single prompt while the verbatim source remains available for drill-down. We release the implementation and analysis pipeline as open-source software.",
-          "topic_key": "agents_planning",
-          "topic_label": "Agents and Planning",
-          "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.8
-        },
-        {
-          "paper_id": "2603.12710",
-          "title": "AI Planning Framework for LLM-Based Web Agents",
-          "abs_url": "https://arxiv.org/abs/2603.12710",
-          "pdf_url": "https://arxiv.org/pdf/2603.12710",
-          "detail_url": "https://papers.cool/arxiv/2603.12710",
-          "authors": [
-            "Orit Shahnovsky",
-            "Rotem Dror"
-          ],
-          "subjects": [
-            "Artificial Intelligence",
-            "Computation and Language"
-          ],
-          "abstract": "Developing autonomous agents for web-based tasks is a core challenge in AI. While Large Language Model (LLM) agents can interpret complex user requests, they often operate as black boxes, making it difficult to diagnose why they fail or how they plan. This paper addresses this gap by formally treating web tasks as sequential decision-making processes. We introduce a taxonomy that maps modern agent architectures to traditional planning paradigms: Step-by-Step agents to Breadth-First Search (BFS), Tree Search agents to Best-First Tree Search, and Full-Plan-in-Advance agents to Depth-First Search (DFS). This framework allows for a principled diagnosis of system failures like context drift and incoherent task decomposition. To evaluate these behaviors, we propose five novel evaluation metrics that assess trajectory quality beyond simple success rates. We support this analysis with a new dataset of 794 human-labeled trajectories from the WebArena benchmark. Finally, we validate our evaluation framework by comparing a baseline Step-by-Step agent against a novel Full-Plan-in-Advance implementation. Our results reveal that while the Step-by-Step agent aligns more closely with human gold trajectories (38% overall success), the Full-Plan-in-Advance agent excels in technical measures such as element accuracy (89%), demonstrating the necessity of our proposed metrics for selecting appropriate agent architectures based on specific application constraints.",
-          "topic_key": "agents_planning",
-          "topic_label": "Agents and Planning",
-          "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.88
-        },
-        {
-          "paper_id": "2603.12274",
-          "title": "DIALECTIC: A Multi-Agent System for Startup Evaluation",
-          "abs_url": "https://arxiv.org/abs/2603.12274",
-          "pdf_url": "https://arxiv.org/pdf/2603.12274",
-          "detail_url": "https://papers.cool/arxiv/2603.12274",
-          "authors": [
-            "Jae Yoon Bae",
-            "Simon Malberg",
-            "Joyce Galang",
-            "Andre Retterath",
-            "Georg Groh"
-          ],
-          "subjects": [
-            "Multiagent Systems",
-            "Computational Engineering, Finance, and Science",
-            "Computation and Language"
-          ],
-          "abstract": "Venture capital (VC) investors face a large number of investment opportunities but only invest in few of these, with even fewer ending up successful. Early-stage screening of opportunities is often limited by investor bandwidth, demanding tradeoffs between evaluation diligence and number of opportunities assessed. To ease this tradeoff, we introduce DIALECTIC, an LLM-based multi-agent system for startup evaluation. DIALECTIC first gathers factual knowledge about a startup and organizes these facts into a hierarchical question tree. It then synthesizes the facts into natural-language arguments for and against an investment and iteratively critiques and refines these arguments through a simulated debate, which surfaces only the most convincing arguments. Our system also produces numeric decision scores that allow investors to rank and thus efficiently prioritize opportunities. We evaluate DIALECTIC through backtesting on real investment opportunities aggregated from five VC funds, showing that DIALECTIC matches the precision of human VCs in predicting startup success.",
-          "topic_key": "agents_planning",
-          "topic_label": "Agents and Planning",
-          "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.85
+          "classification_source": "codex",
+          "classification_confidence": 0.61
         }
       ]
     },
@@ -1122,29 +972,35 @@
           "topic_key": "domain_applications",
           "topic_label": "Domain Applications",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.82
+          "classification_source": "codex",
+          "classification_confidence": 0.85
         },
         {
-          "paper_id": "2603.12453",
-          "title": "CSE-UOI at SemEval-2026 Task 6: A Two-Stage Heterogeneous Ensemble with Deliberative Complexity Gating for Political Evasion Detection",
-          "abs_url": "https://arxiv.org/abs/2603.12453",
-          "pdf_url": "https://arxiv.org/pdf/2603.12453",
-          "detail_url": "https://papers.cool/arxiv/2603.12453",
+          "paper_id": "2603.12664",
+          "title": "From Text to Forecasts: Bridging Modality Gap with Temporal Evolution Semantic Space",
+          "abs_url": "https://arxiv.org/abs/2603.12664",
+          "pdf_url": "https://arxiv.org/pdf/2603.12664",
+          "detail_url": "https://papers.cool/arxiv/2603.12664",
           "authors": [
-            "Christos Tzouvaras",
-            "Konstantinos Skianis",
-            "Athanasios Voulodimos"
+            "Lehui Li",
+            "Yuyao Wang",
+            "Jisheng Yan",
+            "Wei Zhang",
+            "Jinliang Deng",
+            "Haoliang Sun",
+            "Zhongyi Han",
+            "Yongshun Gong"
           ],
           "subjects": [
-            "Computation and Language"
+            "Computation and Language",
+            "Artificial Intelligence"
           ],
-          "abstract": "This paper describes our system for SemEval-2026 Task 6, which classifies clarity of responses in political interviews into three categories: Clear Reply, Ambivalent, and Clear Non-Reply. We propose a heterogeneous dual large language model (LLM) ensemble via self-consistency (SC) and weighted voting, and a novel post-hoc correction mechanism, Deliberative Complexity Gating (DCG). This mechanism uses cross-model behavioral signals and exploits the finding that an LLM response-length proxy correlates strongly with sample ambiguity. To further examine mechanisms for improving ambiguity detection, we evaluated multi-agent debate as an alternative strategy for increasing deliberative capacity. Unlike DCG, which adaptively gates reasoning using cross-model behavioral signals, debate increases agent count without increasing model diversity. Our solution achieved a Macro-F1 score of 0.85 on the evaluation set, securing 3rd place.",
+          "abstract": "Incorporating textual information into time-series forecasting holds promise for addressing event-driven non-stationarity; however, a fundamental modality gap hinders effective fusion: textual descriptions express temporal impacts implicitly and qualitatively, whereas forecasting models rely on explicit and quantitative signals. Through controlled semi-synthetic experiments, we show that existing methods over-attend to redundant tokens and struggle to reliably translate textual semantics into usable numerical cues. To bridge this gap, we propose TESS, which introduces a Temporal Evolution Semantic Space as an intermediate bottleneck between modalities. This space consists of interpretable, numerically grounded temporal primitives (mean shift, volatility, shape, and lag) extracted from text by an LLM via structured prompting and filtered through confidence-aware gating. Experiments on four real-world datasets demonstrate up to a 29 percent reduction in forecasting error compared to state-of-the-art unimodal and multimodal baselines. The code will be released after acceptance.",
           "topic_key": "domain_applications",
           "topic_label": "Domain Applications",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.78
+          "classification_source": "codex",
+          "classification_confidence": 0.63
         },
         {
           "paper_id": "2603.12343",
@@ -1167,8 +1023,8 @@
           "topic_key": "domain_applications",
           "topic_label": "Domain Applications",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.85
+          "classification_source": "codex",
+          "classification_confidence": 0.96
         },
         {
           "paper_id": "2603.13168",
@@ -1198,8 +1054,8 @@
           "topic_key": "domain_applications",
           "topic_label": "Domain Applications",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.88
+          "classification_source": "codex",
+          "classification_confidence": 0.96
         },
         {
           "paper_id": "2603.12287",
@@ -1225,16 +1081,162 @@
           "topic_key": "domain_applications",
           "topic_label": "Domain Applications",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.72
+          "classification_source": "codex",
+          "classification_confidence": 0.66
+        }
+      ]
+    },
+    {
+      "topic_label": "Retrieval, Knowledge, and RAG",
+      "count": 5,
+      "share": 8.47,
+      "papers": [
+        {
+          "paper_id": "2603.12677",
+          "title": "MetaKE: Meta-learning Aligned Knowledge Editing via Bi-level Optimization",
+          "abs_url": "https://arxiv.org/abs/2603.12677",
+          "pdf_url": "https://arxiv.org/pdf/2603.12677",
+          "detail_url": "https://papers.cool/arxiv/2603.12677",
+          "authors": [
+            "Shuxin Liu",
+            "Ou Wu"
+          ],
+          "subjects": [
+            "Computation and Language",
+            "Artificial Intelligence"
+          ],
+          "abstract": "Knowledge editing (KE) aims to precisely rectify specific knowledge in Large Language Models (LLMs) without disrupting general capabilities. State-of-the-art methods suffer from an open-loop control mismatch. We identify a critical \"Semantic-Execution Disconnect\": the semantic target is derived independently without feedback from the downstream's feasible region. This misalignment often causes valid semantic targets to fall within the prohibited space, resulting in gradient truncation and editing failure. To bridge this gap, we propose MetaKE (Meta-learning Aligned Knowledge Editing), a new framework that reframes KE as a bi-level optimization problem. Departing from static calculation, MetaKE treats the edit target as a learnable meta-parameter: the upper-level optimizer seeks a feasible target to maximize post-edit performance, while the lower-level solver executes the editing. To address the challenge of differentiating through complex solvers, we derive a Structural Gradient Proxy, which explicitly backpropagates editability constraints to the target learning phase. Theoretical analysis demonstrates that MetaKE automatically aligns the edit direction with the model's feasible manifold. Extensive experiments confirm that MetaKE significantly outperforms strong baselines, offering a new perspective on knowledge editing.",
+          "topic_key": "retrieval_knowledge",
+          "topic_label": "Retrieval, Knowledge, and RAG",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.86
+        },
+        {
+          "paper_id": "2603.12271",
+          "title": "Diagnosing Retrieval Bias Under Multiple In-Context Knowledge Updates in Large Language Models",
+          "abs_url": "https://arxiv.org/abs/2603.12271",
+          "pdf_url": "https://arxiv.org/pdf/2603.12271",
+          "detail_url": "https://papers.cool/arxiv/2603.12271",
+          "authors": [
+            "Boyu Qiao",
+            "Sean Guo",
+            "Xian Yang",
+            "Kun Li",
+            "Wei Zhou",
+            "Songlin Hu",
+            "Yunya Song"
+          ],
+          "subjects": [
+            "Computation and Language",
+            "Artificial Intelligence",
+            "Machine Learning"
+          ],
+          "abstract": "LLMs are widely used in knowledge-intensive tasks where the same fact may be revised multiple times within context. Unlike prior work focusing on one-shot updates or single conflicts, multi-update scenarios contain multiple historically valid versions that compete at retrieval, yet remain underexplored. This challenge resembles the AB-AC interference paradigm in cognitive psychology: when the same cue A is successively associated with B and C, the old and new associations compete during retrieval, leading to bias. Inspired by this, we introduce a Dynamic Knowledge Instance (DKI) evaluation framework, modeling multi-updates of the same fact as a cue paired with a sequence of updated values, and assess models via endpoint probing of the earliest (initial) and latest (current) states. Across diverse LLMs, we observe that retrieval bias intensifies as updates increase, earliest-state accuracy stays high while latest-state accuracy drops substantially. Diagnostic analyses of attention, hidden-state similarity, and output logits further reveal that these signals become flatter and weakly discriminative on errors, providing little stable basis for identifying the latest update. Finally, cognitively inspired heuristic intervention strategies yield only modest gains and do not eliminate the bias. Our results reveal a persistent challenge in tracking and following knowledge updates in long contexts.",
+          "topic_key": "retrieval_knowledge",
+          "topic_label": "Retrieval, Knowledge, and RAG",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.86
+        },
+        {
+          "paper_id": "2603.13017",
+          "title": "Structured Distillation for Personalized Agent Memory: 11x Token Reduction with Retrieval Preservation",
+          "abs_url": "https://arxiv.org/abs/2603.13017",
+          "pdf_url": "https://arxiv.org/pdf/2603.13017",
+          "detail_url": "https://papers.cool/arxiv/2603.13017",
+          "authors": [
+            "Sydney Lewis"
+          ],
+          "subjects": [
+            "Artificial Intelligence",
+            "Computation and Language",
+            "Information Retrieval"
+          ],
+          "abstract": "Long conversations with an AI agent create a simple problem for one user: the history is useful, but carrying it verbatim is expensive. We study personalized agent memory: one user's conversation history with an agent, distilled into a compact retrieval layer for later search. Each exchange is compressed into a compound object with four fields (exchange_core, specific_context, thematic room_assignments, and regex-extracted files_touched). The searchable distilled text averages 38 tokens per exchange. Applied to 4,182 conversations (14,340 exchanges) from 6 software engineering projects, the method reduces average exchange length from 371 to 38 tokens, yielding 11x compression. We evaluate whether personalized recall survives that compression using 201 recall-oriented queries, 107 configurations spanning 5 pure and 5 cross-layer search modes, and 5 LLM graders (214,519 consensus-graded query-result pairs). The best pure distilled configuration reaches 96% of the best verbatim MRR (0.717 vs 0.745). Results are mechanism-dependent. All 20 vector search configurations remain non-significant after Bonferroni correction, while all 20 BM25 configurations degrade significantly (effect sizes |d|=0.031-0.756). The best cross-layer setup slightly exceeds the best pure verbatim baseline (MRR 0.759). Structured distillation compresses single-user agent memory without uniformly sacrificing retrieval quality. At 1/11 the context cost, thousands of exchanges fit within a single prompt while the verbatim source remains available for drill-down. We release the implementation and analysis pipeline as open-source software.",
+          "topic_key": "retrieval_knowledge",
+          "topic_label": "Retrieval, Knowledge, and RAG",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.9
+        },
+        {
+          "paper_id": "2603.12702",
+          "title": "FGTR: Fine-Grained Multi-Table Retrieval via Hierarchical LLM Reasoning",
+          "abs_url": "https://arxiv.org/abs/2603.12702",
+          "pdf_url": "https://arxiv.org/pdf/2603.12702",
+          "detail_url": "https://papers.cool/arxiv/2603.12702",
+          "authors": [
+            "Chaojie Sun",
+            "Bin Cao",
+            "Tiantian Li",
+            "Chenyu Hou",
+            "Ruizhe Li",
+            "Qing Fan"
+          ],
+          "subjects": [
+            "Information Retrieval",
+            "Computation and Language",
+            "Machine Learning"
+          ],
+          "abstract": "With the rapid advancement of large language models (LLMs), growing efforts have been made on LLM-based table retrieval. However, existing studies typically focus on single-table query, and implement it by similarity matching after encoding the entire table. These methods usually result in low accuracy due to their coarse-grained encoding which incorporates much query-irrelated data, and are also inefficient when dealing with large tables, failing to fully utilize the reasoning capabilities of LLM. Further, multi-table query is under-explored in retrieval tasks. To this end, we propose a hierarchical multi-table query method based on LLM: Fine-Grained Multi-Table Retrieval FGTR, a new retrieval paradigm that employs a human-like reasoning strategy. Through hierarchical reasoning, FGTR first identifies relevant schema elements and then retrieves the corresponding cell contents, ultimately constructing a concise and accurate sub-table that aligns with the given query. To comprehensively evaluate the performance of FGTR, we construct two new benchmark datasets based on Spider and BIRD . Experimental results show that FGTR outperforms previous state-of-the-art methods, improving the F_2 metric by 18% on Spider and 21% on BIRD, demonstrating its effectiveness in enhancing fine-grained retrieval and its potential to improve end-to-end performance on table-based downstream tasks.",
+          "topic_key": "retrieval_knowledge",
+          "topic_label": "Retrieval, Knowledge, and RAG",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.97
+        },
+        {
+          "paper_id": "2603.12368",
+          "title": "Multi-Step Semantic Reasoning in Generative Retrieval",
+          "abs_url": "https://arxiv.org/abs/2603.12368",
+          "pdf_url": "https://arxiv.org/pdf/2603.12368",
+          "detail_url": "https://papers.cool/arxiv/2603.12368",
+          "authors": [
+            "Steven Dong",
+            "Yubao Tang",
+            "Maarten de Rijke"
+          ],
+          "subjects": [
+            "Information Retrieval",
+            "Computation and Language"
+          ],
+          "abstract": "Generative retrieval (GR) models encode a corpus within model parameters and generate relevant document identifiers directly for a given query. While this paradigm shows promise in retrieval tasks, existing GR models struggle with complex queries in numerical contexts, such as those involving semantic reasoning over financial reports, due to limited reasoning capabilities. This limitation leads to suboptimal retrieval accuracy and hinders practical applicability. We propose ReasonGR, a framework designed to enhance multi-step semantic reasoning in numerical contexts within GR. ReasonGR employs a structured prompting strategy combining task-specific instructions with stepwise reasoning guidance to better address complex retrieval queries. Additionally, it integrates a reasoning-focused adaptation module to improve the learning of reasoning-related parameters. Experiments on the FinQA dataset, which contains financial queries over complex documents, demonstrate that ReasonGR improves retrieval accuracy and consistency, indicating its potential for advancing GR models in reasoning-intensive retrieval scenarios.",
+          "topic_key": "retrieval_knowledge",
+          "topic_label": "Retrieval, Knowledge, and RAG",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.89
         }
       ]
     },
     {
       "topic_label": "Learning, Optimization, and Theory",
-      "count": 3,
-      "share": 5.08,
+      "count": 4,
+      "share": 6.78,
       "papers": [
+        {
+          "paper_id": "2603.13038",
+          "title": "Interpretable Semantic Gradients in SSD: A PCA Sweep Approach and a Case Study on AI Discourse",
+          "abs_url": "https://arxiv.org/abs/2603.13038",
+          "pdf_url": "https://arxiv.org/pdf/2603.13038",
+          "detail_url": "https://papers.cool/arxiv/2603.13038",
+          "authors": [
+            "Hubert Plisiecki",
+            "Maria Leniarska",
+            "Jan Piotrowski",
+            "Marcin Zajenkowski"
+          ],
+          "subjects": [
+            "Computation and Language"
+          ],
+          "abstract": "Supervised Semantic Differential (SSD) is a mixed quantitative-interpretive method that models how text meaning varies with continuous individual-difference variables by estimating a semantic gradient in an embedding space and interpreting its poles through clustering and text retrieval. SSD applies PCA before regression, but currently no systematic method exists for choosing the number of retained components, introducing avoidable researcher degrees of freedom in the analysis pipeline. We propose a PCA sweep procedure that treats dimensionality selection as a joint criterion over representation capacity, gradient interpretability, and stability across nearby values of K. We illustrate the method on a corpus of short posts about artificial intelligence written by Prolific participants who also completed Admiration and Rivalry narcissism scales. The sweep yields a stable, interpretable Admiration-related gradient contrasting optimistic, collaborative framings of AI with distrustful and derisive discourse, while no robust alignment emerges for Rivalry. We also show that a counterfactual using a high-PCA dimension solution heuristic produces diffuse, weakly structured clusters instead, reinforcing the value of the sweep-based choice of K. The case study shows how the PCA sweep constrains researcher degrees of freedom while preserving SSD's interpretive aims, supporting transparent and psychologically meaningful analyses of connotative meaning.",
+          "topic_key": "learning_theory",
+          "topic_label": "Learning, Optimization, and Theory",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.55
+        },
         {
           "paper_id": "2603.12577",
           "title": "Expert Pyramid Tuning: Efficient Parameter Fine-Tuning for Expertise-Driven Task Allocation",
@@ -1255,8 +1257,8 @@
           "topic_key": "learning_theory",
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.8
+          "classification_source": "codex",
+          "classification_confidence": 0.65
         },
         {
           "paper_id": "2603.12270",
@@ -1276,8 +1278,8 @@
           "topic_key": "learning_theory",
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.83
+          "classification_source": "codex",
+          "classification_confidence": 0.79
         },
         {
           "paper_id": "2603.12378",
@@ -1304,90 +1306,165 @@
           "topic_key": "learning_theory",
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.82
+          "classification_source": "codex",
+          "classification_confidence": 0.76
         }
       ]
     },
     {
-      "topic_label": "Retrieval, Knowledge, and RAG",
+      "topic_label": "Agents and Planning",
       "count": 3,
       "share": 5.08,
       "papers": [
         {
-          "paper_id": "2603.12271",
-          "title": "Diagnosing Retrieval Bias Under Multiple In-Context Knowledge Updates in Large Language Models",
-          "abs_url": "https://arxiv.org/abs/2603.12271",
-          "pdf_url": "https://arxiv.org/pdf/2603.12271",
-          "detail_url": "https://papers.cool/arxiv/2603.12271",
+          "paper_id": "2603.13173",
+          "title": "Semantic Invariance in Agentic AI",
+          "abs_url": "https://arxiv.org/abs/2603.13173",
+          "pdf_url": "https://arxiv.org/pdf/2603.13173",
+          "detail_url": "https://papers.cool/arxiv/2603.13173",
           "authors": [
-            "Boyu Qiao",
-            "Sean Guo",
-            "Xian Yang",
-            "Kun Li",
-            "Wei Zhou",
-            "Songlin Hu",
-            "Yunya Song"
+            "I. de Zarzà",
+            "J. de Curtò",
+            "Jordi Cabot",
+            "Pietro Manzoni",
+            "Carlos T. Calafate"
           ],
           "subjects": [
-            "Computation and Language",
             "Artificial Intelligence",
-            "Machine Learning"
-          ],
-          "abstract": "LLMs are widely used in knowledge-intensive tasks where the same fact may be revised multiple times within context. Unlike prior work focusing on one-shot updates or single conflicts, multi-update scenarios contain multiple historically valid versions that compete at retrieval, yet remain underexplored. This challenge resembles the AB-AC interference paradigm in cognitive psychology: when the same cue A is successively associated with B and C, the old and new associations compete during retrieval, leading to bias. Inspired by this, we introduce a Dynamic Knowledge Instance (DKI) evaluation framework, modeling multi-updates of the same fact as a cue paired with a sequence of updated values, and assess models via endpoint probing of the earliest (initial) and latest (current) states. Across diverse LLMs, we observe that retrieval bias intensifies as updates increase, earliest-state accuracy stays high while latest-state accuracy drops substantially. Diagnostic analyses of attention, hidden-state similarity, and output logits further reveal that these signals become flatter and weakly discriminative on errors, providing little stable basis for identifying the latest update. Finally, cognitively inspired heuristic intervention strategies yield only modest gains and do not eliminate the bias. Our results reveal a persistent challenge in tracking and following knowledge updates in long contexts.",
-          "topic_key": "retrieval_knowledge",
-          "topic_label": "Retrieval, Knowledge, and RAG",
-          "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.8
-        },
-        {
-          "paper_id": "2603.12702",
-          "title": "FGTR: Fine-Grained Multi-Table Retrieval via Hierarchical LLM Reasoning",
-          "abs_url": "https://arxiv.org/abs/2603.12702",
-          "pdf_url": "https://arxiv.org/pdf/2603.12702",
-          "detail_url": "https://papers.cool/arxiv/2603.12702",
-          "authors": [
-            "Chaojie Sun",
-            "Bin Cao",
-            "Tiantian Li",
-            "Chenyu Hou",
-            "Ruizhe Li",
-            "Qing Fan"
-          ],
-          "subjects": [
-            "Information Retrieval",
-            "Computation and Language",
-            "Machine Learning"
-          ],
-          "abstract": "With the rapid advancement of large language models (LLMs), growing efforts have been made on LLM-based table retrieval. However, existing studies typically focus on single-table query, and implement it by similarity matching after encoding the entire table. These methods usually result in low accuracy due to their coarse-grained encoding which incorporates much query-irrelated data, and are also inefficient when dealing with large tables, failing to fully utilize the reasoning capabilities of LLM. Further, multi-table query is under-explored in retrieval tasks. To this end, we propose a hierarchical multi-table query method based on LLM: Fine-Grained Multi-Table Retrieval FGTR, a new retrieval paradigm that employs a human-like reasoning strategy. Through hierarchical reasoning, FGTR first identifies relevant schema elements and then retrieves the corresponding cell contents, ultimately constructing a concise and accurate sub-table that aligns with the given query. To comprehensively evaluate the performance of FGTR, we construct two new benchmark datasets based on Spider and BIRD . Experimental results show that FGTR outperforms previous state-of-the-art methods, improving the F_2 metric by 18% on Spider and 21% on BIRD, demonstrating its effectiveness in enhancing fine-grained retrieval and its potential to improve end-to-end performance on table-based downstream tasks.",
-          "topic_key": "retrieval_knowledge",
-          "topic_label": "Retrieval, Knowledge, and RAG",
-          "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.87
-        },
-        {
-          "paper_id": "2603.12368",
-          "title": "Multi-Step Semantic Reasoning in Generative Retrieval",
-          "abs_url": "https://arxiv.org/abs/2603.12368",
-          "pdf_url": "https://arxiv.org/pdf/2603.12368",
-          "detail_url": "https://papers.cool/arxiv/2603.12368",
-          "authors": [
-            "Steven Dong",
-            "Yubao Tang",
-            "Maarten de Rijke"
-          ],
-          "subjects": [
-            "Information Retrieval",
             "Computation and Language"
           ],
-          "abstract": "Generative retrieval (GR) models encode a corpus within model parameters and generate relevant document identifiers directly for a given query. While this paradigm shows promise in retrieval tasks, existing GR models struggle with complex queries in numerical contexts, such as those involving semantic reasoning over financial reports, due to limited reasoning capabilities. This limitation leads to suboptimal retrieval accuracy and hinders practical applicability. We propose ReasonGR, a framework designed to enhance multi-step semantic reasoning in numerical contexts within GR. ReasonGR employs a structured prompting strategy combining task-specific instructions with stepwise reasoning guidance to better address complex retrieval queries. Additionally, it integrates a reasoning-focused adaptation module to improve the learning of reasoning-related parameters. Experiments on the FinQA dataset, which contains financial queries over complex documents, demonstrate that ReasonGR improves retrieval accuracy and consistency, indicating its potential for advancing GR models in reasoning-intensive retrieval scenarios.",
-          "topic_key": "retrieval_knowledge",
-          "topic_label": "Retrieval, Knowledge, and RAG",
+          "abstract": "Large Language Models (LLMs) increasingly serve as autonomous reasoning agents in decision support, scientific problem-solving, and multi-agent coordination systems. However, deploying LLM agents in consequential applications requires assurance that their reasoning remains stable under semantically equivalent input variations, a property we term semantic invariance.Standard benchmark evaluations, which assess accuracy on fixed, canonical problem formulations, fail to capture this critical reliability dimension. To address this shortcoming, in this paper we present a metamorphic testing framework for systematically assessing the robustness of LLM reasoning agents, applying eight semantic-preserving transformations (identity, paraphrase, fact reordering, expansion, contraction, academic context, business context, and contrastive formulation) across seven foundation models spanning four distinct architectural families: Hermes (70B, 405B), Qwen3 (30B-A3B, 235B-A22B), DeepSeek-R1, and gpt-oss (20B, 120B). Our evaluation encompasses 19 multi-step reasoning problems across eight scientific domains. The results reveal that model scale does not predict robustness: the smaller Qwen3-30B-A3B achieves the highest stability (79.6% invariant responses, semantic similarity 0.91), while larger models exhibit greater fragility.",
+          "topic_key": "agents_planning",
+          "topic_label": "Agents and Planning",
           "matched_terms": [],
-          "classification_source": "claude",
+          "classification_source": "codex",
+          "classification_confidence": 0.84
+        },
+        {
+          "paper_id": "2603.12710",
+          "title": "AI Planning Framework for LLM-Based Web Agents",
+          "abs_url": "https://arxiv.org/abs/2603.12710",
+          "pdf_url": "https://arxiv.org/pdf/2603.12710",
+          "detail_url": "https://papers.cool/arxiv/2603.12710",
+          "authors": [
+            "Orit Shahnovsky",
+            "Rotem Dror"
+          ],
+          "subjects": [
+            "Artificial Intelligence",
+            "Computation and Language"
+          ],
+          "abstract": "Developing autonomous agents for web-based tasks is a core challenge in AI. While Large Language Model (LLM) agents can interpret complex user requests, they often operate as black boxes, making it difficult to diagnose why they fail or how they plan. This paper addresses this gap by formally treating web tasks as sequential decision-making processes. We introduce a taxonomy that maps modern agent architectures to traditional planning paradigms: Step-by-Step agents to Breadth-First Search (BFS), Tree Search agents to Best-First Tree Search, and Full-Plan-in-Advance agents to Depth-First Search (DFS). This framework allows for a principled diagnosis of system failures like context drift and incoherent task decomposition. To evaluate these behaviors, we propose five novel evaluation metrics that assess trajectory quality beyond simple success rates. We support this analysis with a new dataset of 794 human-labeled trajectories from the WebArena benchmark. Finally, we validate our evaluation framework by comparing a baseline Step-by-Step agent against a novel Full-Plan-in-Advance implementation. Our results reveal that while the Step-by-Step agent aligns more closely with human gold trajectories (38% overall success), the Full-Plan-in-Advance agent excels in technical measures such as element accuracy (89%), demonstrating the necessity of our proposed metrics for selecting appropriate agent architectures based on specific application constraints.",
+          "topic_key": "agents_planning",
+          "topic_label": "Agents and Planning",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.97
+        },
+        {
+          "paper_id": "2603.12274",
+          "title": "DIALECTIC: A Multi-Agent System for Startup Evaluation",
+          "abs_url": "https://arxiv.org/abs/2603.12274",
+          "pdf_url": "https://arxiv.org/pdf/2603.12274",
+          "detail_url": "https://papers.cool/arxiv/2603.12274",
+          "authors": [
+            "Jae Yoon Bae",
+            "Simon Malberg",
+            "Joyce Galang",
+            "Andre Retterath",
+            "Georg Groh"
+          ],
+          "subjects": [
+            "Multiagent Systems",
+            "Computational Engineering, Finance, and Science",
+            "Computation and Language"
+          ],
+          "abstract": "Venture capital (VC) investors face a large number of investment opportunities but only invest in few of these, with even fewer ending up successful. Early-stage screening of opportunities is often limited by investor bandwidth, demanding tradeoffs between evaluation diligence and number of opportunities assessed. To ease this tradeoff, we introduce DIALECTIC, an LLM-based multi-agent system for startup evaluation. DIALECTIC first gathers factual knowledge about a startup and organizes these facts into a hierarchical question tree. It then synthesizes the facts into natural-language arguments for and against an investment and iteratively critiques and refines these arguments through a simulated debate, which surfaces only the most convincing arguments. Our system also produces numeric decision scores that allow investors to rank and thus efficiently prioritize opportunities. We evaluate DIALECTIC through backtesting on real investment opportunities aggregated from five VC funds, showing that DIALECTIC matches the precision of human VCs in predicting startup success.",
+          "topic_key": "agents_planning",
+          "topic_label": "Agents and Planning",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.97
+        }
+      ]
+    },
+    {
+      "topic_label": "Multimodal Understanding and Vision",
+      "count": 3,
+      "share": 5.08,
+      "papers": [
+        {
+          "paper_id": "2603.12350",
+          "title": "TASTE-Streaming: Towards Streamable Text-Aligned Speech Tokenization and Embedding for Spoken Language Modeling",
+          "abs_url": "https://arxiv.org/abs/2603.12350",
+          "pdf_url": "https://arxiv.org/pdf/2603.12350",
+          "detail_url": "https://papers.cool/arxiv/2603.12350",
+          "authors": [
+            "Liang-Hsuan Tseng",
+            "Hung-yi Lee"
+          ],
+          "subjects": [
+            "Computation and Language",
+            "Sound"
+          ],
+          "abstract": "Text-speech joint spoken language modeling (SLM) aims at natural and intelligent speech-based interactions, but developing such a system may suffer from modality mismatch: speech unit sequences are much longer than text tokens. Prior work reduces this gap with text-aligned tokenization and embedding (TASTE), producing speech tokens that align in lengths with their textual counterparts. However, the dependence on an external ASR system and the use of a non-causal decoder limits streaming use. To address this limitation, we propose TASTE-S, a streamable extension of TASTE suitable for real-time usage. TASTE-S integrates a CTC-based ASR module into the encoder for instant dual-modality encoding. We also redesign the unit decoder to enable on-the-fly decoding. With joint training, we show that TASTE-S matches TASTE's performance while significantly reducing latency. Further investigations reveal that TASTE-S remains robust to transcriptions and enables long-form encoding and decoding.",
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [],
+          "classification_source": "codex",
           "classification_confidence": 0.83
+        },
+        {
+          "paper_id": "2603.12642",
+          "title": "Self-Supervised Speech Models Encode Phonetic Context via Position-dependent Orthogonal Subspaces",
+          "abs_url": "https://arxiv.org/abs/2603.12642",
+          "pdf_url": "https://arxiv.org/pdf/2603.12642",
+          "detail_url": "https://papers.cool/arxiv/2603.12642",
+          "authors": [
+            "Kwanghee Choi",
+            "Eunjung Yeo",
+            "Cheol Jun Cho",
+            "David R. Mortensen",
+            "David Harwath"
+          ],
+          "subjects": [
+            "Audio and Speech Processing",
+            "Computation and Language",
+            "Machine Learning",
+            "Sound"
+          ],
+          "abstract": "Transformer-based self-supervised speech models (S3Ms) are often described as contextualized, yet what this entails remains unclear. Here, we focus on how a single frame-level S3M representation can encode phones and their surrounding context. Prior work has shown that S3Ms represent phones compositionally; for example, phonological vectors such as voicing, bilabiality, and nasality vectors are superposed in the S3M representation of [m]. We extend this view by proposing that phonological information from a sequence of neighboring phones is also compositionally encoded in a single frame, such that vectors corresponding to previous, current, and next phones are superposed within a single frame-level representation. We show that this structure has several properties, including orthogonality between relative positions, and emergence of implicit phonetic boundaries. Together, our findings advance our understanding of context-dependent S3M representations.",
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.83
+        },
+        {
+          "paper_id": "2603.12565",
+          "title": "Speech-Worthy Alignment for Japanese SpeechLLMs via Direct Preference Optimization",
+          "abs_url": "https://arxiv.org/abs/2603.12565",
+          "pdf_url": "https://arxiv.org/pdf/2603.12565",
+          "detail_url": "https://papers.cool/arxiv/2603.12565",
+          "authors": [
+            "Mengjie Zhao",
+            "Lianbo Liu",
+            "Yusuke Fujita",
+            "Hao Shi",
+            "Yuan Gao",
+            "Roman Koshkin",
+            "Yui Sudo"
+          ],
+          "subjects": [
+            "Sound",
+            "Computation and Language"
+          ],
+          "abstract": "SpeechLLMs typically combine ASR-trained encoders with text-based LLM backbones, leading them to inherit written-style output patterns unsuitable for text-to-speech synthesis. This mismatch is particularly pronounced in Japanese, where spoken and written registers differ substantially in politeness markers, sentence-final particles, and syntactic complexity. We propose a preference-based alignment approach to adapt Japanese SpeechLLMs for speech-worthy outputs: text that is concise, conversational, and readily synthesized as natural speech. To rigorously evaluate this task, we introduce SpokenElyza, a benchmark for Japanese speech-worthiness derived from ELYZA-tasks-100 with auditory verification by native experts. Experiments show that our approach achieves substantial improvement on SpokenElyza while largely preserving performance on the original written-style evaluation. We will release SpokenElyza to support future research on Japanese spoken dialog systems.",
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.8
         }
       ]
     },
@@ -1418,8 +1495,8 @@
           "topic_key": "multimodal_agents",
           "topic_label": "Multimodal Agents",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.88
+          "classification_source": "codex",
+          "classification_confidence": 0.95
         },
         {
           "paper_id": "2603.12510",
@@ -1450,68 +1527,8 @@
           "topic_key": "multimodal_agents",
           "topic_label": "Multimodal Agents",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.9
-        }
-      ]
-    },
-    {
-      "topic_label": "Multimodal Understanding and Vision",
-      "count": 2,
-      "share": 3.39,
-      "papers": [
-        {
-          "paper_id": "2603.12664",
-          "title": "From Text to Forecasts: Bridging Modality Gap with Temporal Evolution Semantic Space",
-          "abs_url": "https://arxiv.org/abs/2603.12664",
-          "pdf_url": "https://arxiv.org/pdf/2603.12664",
-          "detail_url": "https://papers.cool/arxiv/2603.12664",
-          "authors": [
-            "Lehui Li",
-            "Yuyao Wang",
-            "Jisheng Yan",
-            "Wei Zhang",
-            "Jinliang Deng",
-            "Haoliang Sun",
-            "Zhongyi Han",
-            "Yongshun Gong"
-          ],
-          "subjects": [
-            "Computation and Language",
-            "Artificial Intelligence"
-          ],
-          "abstract": "Incorporating textual information into time-series forecasting holds promise for addressing event-driven non-stationarity; however, a fundamental modality gap hinders effective fusion: textual descriptions express temporal impacts implicitly and qualitatively, whereas forecasting models rely on explicit and quantitative signals. Through controlled semi-synthetic experiments, we show that existing methods over-attend to redundant tokens and struggle to reliably translate textual semantics into usable numerical cues. To bridge this gap, we propose TESS, which introduces a Temporal Evolution Semantic Space as an intermediate bottleneck between modalities. This space consists of interpretable, numerically grounded temporal primitives (mean shift, volatility, shape, and lag) extracted from text by an LLM via structured prompting and filtered through confidence-aware gating. Experiments on four real-world datasets demonstrate up to a 29 percent reduction in forecasting error compared to state-of-the-art unimodal and multimodal baselines. The code will be released after acceptance.",
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.65
-        },
-        {
-          "paper_id": "2603.12642",
-          "title": "Self-Supervised Speech Models Encode Phonetic Context via Position-dependent Orthogonal Subspaces",
-          "abs_url": "https://arxiv.org/abs/2603.12642",
-          "pdf_url": "https://arxiv.org/pdf/2603.12642",
-          "detail_url": "https://papers.cool/arxiv/2603.12642",
-          "authors": [
-            "Kwanghee Choi",
-            "Eunjung Yeo",
-            "Cheol Jun Cho",
-            "David R. Mortensen",
-            "David Harwath"
-          ],
-          "subjects": [
-            "Audio and Speech Processing",
-            "Computation and Language",
-            "Machine Learning",
-            "Sound"
-          ],
-          "abstract": "Transformer-based self-supervised speech models (S3Ms) are often described as contextualized, yet what this entails remains unclear. Here, we focus on how a single frame-level S3M representation can encode phones and their surrounding context. Prior work has shown that S3Ms represent phones compositionally; for example, phonological vectors such as voicing, bilabiality, and nasality vectors are superposed in the S3M representation of [m]. We extend this view by proposing that phonological information from a sequence of neighboring phones is also compositionally encoded in a single frame, such that vectors corresponding to previous, current, and next phones are superposed within a single frame-level representation. We show that this structure has several properties, including orthogonality between relative positions, and emergence of implicit phonetic boundaries. Together, our findings advance our understanding of context-dependent S3M representations.",
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.8
+          "classification_source": "codex",
+          "classification_confidence": 0.98
         }
       ]
     },
@@ -1543,8 +1560,8 @@
           "topic_key": "generative_foundations",
           "topic_label": "Generative Foundations",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.87
+          "classification_source": "codex",
+          "classification_confidence": 0.96
         }
       ]
     },
@@ -1574,37 +1591,8 @@
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.72
-        }
-      ]
-    },
-    {
-      "topic_label": "Other AI",
-      "count": 1,
-      "share": 1.69,
-      "papers": [
-        {
-          "paper_id": "2603.13038",
-          "title": "Interpretable Semantic Gradients in SSD: A PCA Sweep Approach and a Case Study on AI Discourse",
-          "abs_url": "https://arxiv.org/abs/2603.13038",
-          "pdf_url": "https://arxiv.org/pdf/2603.13038",
-          "detail_url": "https://papers.cool/arxiv/2603.13038",
-          "authors": [
-            "Hubert Plisiecki",
-            "Maria Leniarska",
-            "Jan Piotrowski",
-            "Marcin Zajenkowski"
-          ],
-          "subjects": [
-            "Computation and Language"
-          ],
-          "abstract": "Supervised Semantic Differential (SSD) is a mixed quantitative-interpretive method that models how text meaning varies with continuous individual-difference variables by estimating a semantic gradient in an embedding space and interpreting its poles through clustering and text retrieval. SSD applies PCA before regression, but currently no systematic method exists for choosing the number of retained components, introducing avoidable researcher degrees of freedom in the analysis pipeline. We propose a PCA sweep procedure that treats dimensionality selection as a joint criterion over representation capacity, gradient interpretability, and stability across nearby values of K. We illustrate the method on a corpus of short posts about artificial intelligence written by Prolific participants who also completed Admiration and Rivalry narcissism scales. The sweep yields a stable, interpretable Admiration-related gradient contrasting optimistic, collaborative framings of AI with distrustful and derisive discourse, while no robust alignment emerges for Rivalry. We also show that a counterfactual using a high-PCA dimension solution heuristic produces diffuse, weakly structured clusters instead, reinforcing the value of the sweep-based choice of K. The case study shows how the PCA sweep constrains researcher degrees of freedom while preserving SSD's interpretive aims, supporting transparent and psychologically meaningful analyses of connotative meaning.",
-          "topic_key": "other_ai",
-          "topic_label": "Other AI",
-          "matched_terms": [],
-          "classification_source": "claude",
-          "classification_confidence": 0.55
+          "classification_source": "codex",
+          "classification_confidence": 0.74
         }
       ]
     }
@@ -1634,8 +1622,8 @@
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.88
+      "classification_source": "codex",
+      "classification_confidence": 0.98
     },
     {
       "paper_id": "2603.13154",
@@ -1659,8 +1647,8 @@
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.85
+      "classification_source": "codex",
+      "classification_confidence": 0.95
     },
     {
       "paper_id": "2603.13045",
@@ -1681,8 +1669,8 @@
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.82
+      "classification_source": "codex",
+      "classification_confidence": 0.83
     },
     {
       "paper_id": "2603.13038",
@@ -1700,10 +1688,10 @@
         "Computation and Language"
       ],
       "abstract": "Supervised Semantic Differential (SSD) is a mixed quantitative-interpretive method that models how text meaning varies with continuous individual-difference variables by estimating a semantic gradient in an embedding space and interpreting its poles through clustering and text retrieval. SSD applies PCA before regression, but currently no systematic method exists for choosing the number of retained components, introducing avoidable researcher degrees of freedom in the analysis pipeline. We propose a PCA sweep procedure that treats dimensionality selection as a joint criterion over representation capacity, gradient interpretability, and stability across nearby values of K. We illustrate the method on a corpus of short posts about artificial intelligence written by Prolific participants who also completed Admiration and Rivalry narcissism scales. The sweep yields a stable, interpretable Admiration-related gradient contrasting optimistic, collaborative framings of AI with distrustful and derisive discourse, while no robust alignment emerges for Rivalry. We also show that a counterfactual using a high-PCA dimension solution heuristic produces diffuse, weakly structured clusters instead, reinforcing the value of the sweep-based choice of K. The case study shows how the PCA sweep constrains researcher degrees of freedom while preserving SSD's interpretive aims, supporting transparent and psychologically meaningful analyses of connotative meaning.",
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
-      "classification_source": "claude",
+      "classification_source": "codex",
       "classification_confidence": 0.55
     },
     {
@@ -1725,8 +1713,8 @@
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.82
+      "classification_source": "codex",
+      "classification_confidence": 0.83
     },
     {
       "paper_id": "2603.12963",
@@ -1750,11 +1738,11 @@
         "Computation and Language"
       ],
       "abstract": "The widespread adoption of reinforcement learning-based alignment highlights the growing importance of reward models. Various benchmarks have been built to evaluate reward models in various domains and scenarios. However, a significant gap remains in assessing reward models for long-form generation, despite its critical role in real-world applications. To bridge this, we introduce Long-form RewardBench, the first reward modeling testbed specifically designed for long-form generation. Our benchmark encompasses five key subtasks: QA, RAG, Chat, Writing, and Reasoning. We collected instruction and preference data through a meticulously designed multi-stage data collection process, and conducted extensive experiments on 20+ mainstream reward models, including both classifiers and generative models. Our findings reveal that current models still lack long-form reward modeling capabilities. Furthermore, we designed a novel Long-form Needle-in-a-Haystack Test, which revealed a correlation between reward modeling performance and the error's position within a response, as well as the overall response length, with distinct characteristics observed between classification and generative models. Finally, we demonstrate that classifiers exhibit better generalizability compared to generative models trained on the same data. As the first benchmark for long-form reward modeling, this work aims to offer a robust platform for visualizing progress in this crucial area.",
-      "topic_key": "reasoning_alignment_eval",
-      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "topic_key": "datasets_benchmarks",
+      "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.88
+      "classification_source": "codex",
+      "classification_confidence": 0.95
     },
     {
       "paper_id": "2603.12932",
@@ -1774,8 +1762,8 @@
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.87
+      "classification_source": "codex",
+      "classification_confidence": 0.94
     },
     {
       "paper_id": "2603.12920",
@@ -1801,8 +1789,8 @@
       "topic_key": "domain_applications",
       "topic_label": "Domain Applications",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.82
+      "classification_source": "codex",
+      "classification_confidence": 0.85
     },
     {
       "paper_id": "2603.12906",
@@ -1822,8 +1810,8 @@
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.78
+      "classification_source": "codex",
+      "classification_confidence": 0.66
     },
     {
       "paper_id": "2603.12872",
@@ -1843,8 +1831,8 @@
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.87
+      "classification_source": "codex",
+      "classification_confidence": 0.98
     },
     {
       "paper_id": "2603.12826",
@@ -1872,8 +1860,8 @@
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.8
+      "classification_source": "codex",
+      "classification_confidence": 0.68
     },
     {
       "paper_id": "2603.12823",
@@ -1897,8 +1885,8 @@
       "topic_key": "multimodal_agents",
       "topic_label": "Multimodal Agents",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.88
+      "classification_source": "codex",
+      "classification_confidence": 0.95
     },
     {
       "paper_id": "2603.12795",
@@ -1920,8 +1908,8 @@
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.85
+      "classification_source": "codex",
+      "classification_confidence": 0.95
     },
     {
       "paper_id": "2603.12768",
@@ -1942,8 +1930,8 @@
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.87
+      "classification_source": "codex",
+      "classification_confidence": 0.97
     },
     {
       "paper_id": "2603.12754",
@@ -1962,8 +1950,8 @@
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.8
+      "classification_source": "codex",
+      "classification_confidence": 0.72
     },
     {
       "paper_id": "2603.12698",
@@ -1985,8 +1973,8 @@
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.83
+      "classification_source": "codex",
+      "classification_confidence": 0.78
     },
     {
       "paper_id": "2603.12683",
@@ -2005,11 +1993,11 @@
         "Artificial Intelligence"
       ],
       "abstract": "Large Language Models (LLMs) that undergo recursive training on synthetically generated data are susceptible to model collapse, a phenomenon marked by the generation of meaningless output. Existing research has examined this issue from either theoretical or empirical perspectives, often focusing on a single model trained recursively on its own outputs. While prior studies have cautioned against the potential degradation of LLM output quality under such conditions, no longitudinal investigation has yet been conducted to assess this effect over time. In this study, we employ a text similarity metric to evaluate different ChatGPT models' capacity to generate diverse textual outputs. Our findings indicate a measurable decline of recent ChatGPT releases' ability to produce varied text, even when explicitly prompted to do so, by setting the temperature parameter to one. The observed reduction in output diversity may be attributed to the influence of the amounts of synthetic data incorporated within their training datasets as the result of internet infiltration by LLM generated data. The phenomenon is defined as model self-convergence because of the gradual increase of similarities of produced texts among different ChatGPT versions.",
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
+      "topic_key": "reasoning_alignment_eval",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.78
+      "classification_source": "codex",
+      "classification_confidence": 0.63
     },
     {
       "paper_id": "2603.12677",
@@ -2026,11 +2014,11 @@
         "Artificial Intelligence"
       ],
       "abstract": "Knowledge editing (KE) aims to precisely rectify specific knowledge in Large Language Models (LLMs) without disrupting general capabilities. State-of-the-art methods suffer from an open-loop control mismatch. We identify a critical \"Semantic-Execution Disconnect\": the semantic target is derived independently without feedback from the downstream's feasible region. This misalignment often causes valid semantic targets to fall within the prohibited space, resulting in gradient truncation and editing failure. To bridge this gap, we propose MetaKE (Meta-learning Aligned Knowledge Editing), a new framework that reframes KE as a bi-level optimization problem. Departing from static calculation, MetaKE treats the edit target as a learnable meta-parameter: the upper-level optimizer seeks a feasible target to maximize post-edit performance, while the lower-level solver executes the editing. To address the challenge of differentiating through complex solvers, we derive a Structural Gradient Proxy, which explicitly backpropagates editability constraints to the target learning phase. Theoretical analysis demonstrates that MetaKE automatically aligns the edit direction with the model's feasible manifold. Extensive experiments confirm that MetaKE significantly outperforms strong baselines, offering a new perspective on knowledge editing.",
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
+      "topic_key": "retrieval_knowledge",
+      "topic_label": "Retrieval, Knowledge, and RAG",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.78
+      "classification_source": "codex",
+      "classification_confidence": 0.86
     },
     {
       "paper_id": "2603.12664",
@@ -2053,11 +2041,11 @@
         "Artificial Intelligence"
       ],
       "abstract": "Incorporating textual information into time-series forecasting holds promise for addressing event-driven non-stationarity; however, a fundamental modality gap hinders effective fusion: textual descriptions express temporal impacts implicitly and qualitatively, whereas forecasting models rely on explicit and quantitative signals. Through controlled semi-synthetic experiments, we show that existing methods over-attend to redundant tokens and struggle to reliably translate textual semantics into usable numerical cues. To bridge this gap, we propose TESS, which introduces a Temporal Evolution Semantic Space as an intermediate bottleneck between modalities. This space consists of interpretable, numerically grounded temporal primitives (mean shift, volatility, shape, and lag) extracted from text by an LLM via structured prompting and filtered through confidence-aware gating. Experiments on four real-world datasets demonstrate up to a 29 percent reduction in forecasting error compared to state-of-the-art unimodal and multimodal baselines. The code will be released after acceptance.",
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
+      "topic_key": "domain_applications",
+      "topic_label": "Domain Applications",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.65
+      "classification_source": "codex",
+      "classification_confidence": 0.63
     },
     {
       "paper_id": "2603.12658",
@@ -2080,8 +2068,8 @@
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.88
+      "classification_source": "codex",
+      "classification_confidence": 0.98
     },
     {
       "paper_id": "2603.12646",
@@ -2104,8 +2092,8 @@
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.85
+      "classification_source": "codex",
+      "classification_confidence": 0.8
     },
     {
       "paper_id": "2603.12638",
@@ -2131,8 +2119,8 @@
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.78
+      "classification_source": "codex",
+      "classification_confidence": 0.72
     },
     {
       "paper_id": "2603.12582",
@@ -2154,8 +2142,8 @@
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.82
+      "classification_source": "codex",
+      "classification_confidence": 0.88
     },
     {
       "paper_id": "2603.12577",
@@ -2177,8 +2165,8 @@
       "topic_key": "learning_theory",
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.8
+      "classification_source": "codex",
+      "classification_confidence": 0.65
     },
     {
       "paper_id": "2603.12572",
@@ -2207,8 +2195,8 @@
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.82
+      "classification_source": "codex",
+      "classification_confidence": 0.97
     },
     {
       "paper_id": "2603.12564",
@@ -2227,11 +2215,11 @@
         "Artificial Intelligence"
       ],
       "abstract": "Tool-augmented LLM agents increasingly serve as multi-turn advisors in high-stakes domains, yet their evaluation relies on ranking-quality metrics that measure what is recommended but not whether it is safe for the user. We introduce a paired-trajectory protocol that replays real financial dialogues under clean and contaminated tool-output conditions across seven LLMs (7B to frontier) and decomposes divergence into information-channel and memory-channel mechanisms. Across the seven models tested, we consistently observe the evaluation-blindness pattern: recommendation quality is largely preserved under contamination (utility preservation ratio approximately 1.0) while risk-inappropriate products appear in 65-93% of turns, a systematic safety failure poorly reflected by standard NDCG. Safety violations are predominantly information-channel-driven, emerge at the first contaminated turn, and persist without self-correction over 23-step trajectories; no agent across 1,563 contaminated turns explicitly questions tool-data reliability. Even narrative-only corruption (biased headlines, no numerical manipulation) induces significant drift while completely evading consistency monitors. A safety-penalized NDCG variant (sNDCG) reduces preservation ratios to 0.51-0.74, indicating that much of the evaluation gap becomes visible once safety is explicitly measured. These results motivate considering trajectory-level safety monitoring, beyond single-turn quality, for deployed multi-turn agents in high-stakes settings.",
-      "topic_key": "agents_planning",
-      "topic_label": "Agents and Planning",
+      "topic_key": "reasoning_alignment_eval",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.8
+      "classification_source": "codex",
+      "classification_confidence": 0.88
     },
     {
       "paper_id": "2603.12522",
@@ -2253,8 +2241,8 @@
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.87
+      "classification_source": "codex",
+      "classification_confidence": 0.98
     },
     {
       "paper_id": "2603.12471",
@@ -2275,8 +2263,8 @@
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.78
+      "classification_source": "codex",
+      "classification_confidence": 0.87
     },
     {
       "paper_id": "2603.12458",
@@ -2299,8 +2287,8 @@
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.83
+      "classification_source": "codex",
+      "classification_confidence": 0.96
     },
     {
       "paper_id": "2603.12453",
@@ -2317,11 +2305,11 @@
         "Computation and Language"
       ],
       "abstract": "This paper describes our system for SemEval-2026 Task 6, which classifies clarity of responses in political interviews into three categories: Clear Reply, Ambivalent, and Clear Non-Reply. We propose a heterogeneous dual large language model (LLM) ensemble via self-consistency (SC) and weighted voting, and a novel post-hoc correction mechanism, Deliberative Complexity Gating (DCG). This mechanism uses cross-model behavioral signals and exploits the finding that an LLM response-length proxy correlates strongly with sample ambiguity. To further examine mechanisms for improving ambiguity detection, we evaluated multi-agent debate as an alternative strategy for increasing deliberative capacity. Unlike DCG, which adaptively gates reasoning using cross-model behavioral signals, debate increases agent count without increasing model diversity. Our solution achieved a Macro-F1 score of 0.85 on the evaluation set, securing 3rd place.",
-      "topic_key": "domain_applications",
-      "topic_label": "Domain Applications",
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.78
+      "classification_source": "codex",
+      "classification_confidence": 0.7
     },
     {
       "paper_id": "2603.12423",
@@ -2342,8 +2330,8 @@
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.8
+      "classification_source": "codex",
+      "classification_confidence": 0.88
     },
     {
       "paper_id": "2603.12397",
@@ -2368,8 +2356,8 @@
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.83
+      "classification_source": "codex",
+      "classification_confidence": 0.86
     },
     {
       "paper_id": "2603.12350",
@@ -2386,11 +2374,11 @@
         "Sound"
       ],
       "abstract": "Text-speech joint spoken language modeling (SLM) aims at natural and intelligent speech-based interactions, but developing such a system may suffer from modality mismatch: speech unit sequences are much longer than text tokens. Prior work reduces this gap with text-aligned tokenization and embedding (TASTE), producing speech tokens that align in lengths with their textual counterparts. However, the dependence on an external ASR system and the use of a non-causal decoder limits streaming use. To address this limitation, we propose TASTE-S, a streamable extension of TASTE suitable for real-time usage. TASTE-S integrates a CTC-based ASR module into the encoder for instant dual-modality encoding. We also redesign the unit decoder to enable on-the-fly decoding. With joint training, we show that TASTE-S matches TASTE's performance while significantly reducing latency. Further investigations reveal that TASTE-S remains robust to transcriptions and enables long-form encoding and decoding.",
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.8
+      "classification_source": "codex",
+      "classification_confidence": 0.83
     },
     {
       "paper_id": "2603.12343",
@@ -2413,8 +2401,8 @@
       "topic_key": "domain_applications",
       "topic_label": "Domain Applications",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.85
+      "classification_source": "codex",
+      "classification_confidence": 0.96
     },
     {
       "paper_id": "2603.12277",
@@ -2436,8 +2424,8 @@
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.87
+      "classification_source": "codex",
+      "classification_confidence": 0.97
     },
     {
       "paper_id": "2603.12275",
@@ -2457,8 +2445,8 @@
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.8
+      "classification_source": "codex",
+      "classification_confidence": 0.68
     },
     {
       "paper_id": "2603.12273",
@@ -2483,8 +2471,8 @@
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.88
+      "classification_source": "codex",
+      "classification_confidence": 0.95
     },
     {
       "paper_id": "2603.12272",
@@ -2505,8 +2493,8 @@
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.82
+      "classification_source": "codex",
+      "classification_confidence": 0.8
     },
     {
       "paper_id": "2603.12271",
@@ -2532,8 +2520,8 @@
       "topic_key": "retrieval_knowledge",
       "topic_label": "Retrieval, Knowledge, and RAG",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.8
+      "classification_source": "codex",
+      "classification_confidence": 0.86
     },
     {
       "paper_id": "2603.12270",
@@ -2553,8 +2541,8 @@
       "topic_key": "learning_theory",
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.83
+      "classification_source": "codex",
+      "classification_confidence": 0.79
     },
     {
       "paper_id": "2603.13173",
@@ -2577,8 +2565,8 @@
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.75
+      "classification_source": "codex",
+      "classification_confidence": 0.84
     },
     {
       "paper_id": "2603.13168",
@@ -2608,8 +2596,8 @@
       "topic_key": "domain_applications",
       "topic_label": "Domain Applications",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.88
+      "classification_source": "codex",
+      "classification_confidence": 0.96
     },
     {
       "paper_id": "2603.13023",
@@ -2642,8 +2630,8 @@
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.72
+      "classification_source": "codex",
+      "classification_confidence": 0.61
     },
     {
       "paper_id": "2603.13017",
@@ -2660,11 +2648,11 @@
         "Information Retrieval"
       ],
       "abstract": "Long conversations with an AI agent create a simple problem for one user: the history is useful, but carrying it verbatim is expensive. We study personalized agent memory: one user's conversation history with an agent, distilled into a compact retrieval layer for later search. Each exchange is compressed into a compound object with four fields (exchange_core, specific_context, thematic room_assignments, and regex-extracted files_touched). The searchable distilled text averages 38 tokens per exchange. Applied to 4,182 conversations (14,340 exchanges) from 6 software engineering projects, the method reduces average exchange length from 371 to 38 tokens, yielding 11x compression. We evaluate whether personalized recall survives that compression using 201 recall-oriented queries, 107 configurations spanning 5 pure and 5 cross-layer search modes, and 5 LLM graders (214,519 consensus-graded query-result pairs). The best pure distilled configuration reaches 96% of the best verbatim MRR (0.717 vs 0.745). Results are mechanism-dependent. All 20 vector search configurations remain non-significant after Bonferroni correction, while all 20 BM25 configurations degrade significantly (effect sizes |d|=0.031-0.756). The best cross-layer setup slightly exceeds the best pure verbatim baseline (MRR 0.759). Structured distillation compresses single-user agent memory without uniformly sacrificing retrieval quality. At 1/11 the context cost, thousands of exchanges fit within a single prompt while the verbatim source remains available for drill-down. We release the implementation and analysis pipeline as open-source software.",
-      "topic_key": "agents_planning",
-      "topic_label": "Agents and Planning",
+      "topic_key": "retrieval_knowledge",
+      "topic_label": "Retrieval, Knowledge, and RAG",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.8
+      "classification_source": "codex",
+      "classification_confidence": 0.9
     },
     {
       "paper_id": "2603.12743",
@@ -2687,8 +2675,8 @@
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.72
+      "classification_source": "codex",
+      "classification_confidence": 0.74
     },
     {
       "paper_id": "2603.12710",
@@ -2708,8 +2696,8 @@
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.88
+      "classification_source": "codex",
+      "classification_confidence": 0.97
     },
     {
       "paper_id": "2603.12702",
@@ -2734,8 +2722,8 @@
       "topic_key": "retrieval_knowledge",
       "topic_label": "Retrieval, Knowledge, and RAG",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.87
+      "classification_source": "codex",
+      "classification_confidence": 0.97
     },
     {
       "paper_id": "2603.12642",
@@ -2760,8 +2748,8 @@
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.8
+      "classification_source": "codex",
+      "classification_confidence": 0.83
     },
     {
       "paper_id": "2603.12615",
@@ -2782,8 +2770,8 @@
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.85
+      "classification_source": "codex",
+      "classification_confidence": 0.95
     },
     {
       "paper_id": "2603.12565",
@@ -2805,11 +2793,11 @@
         "Computation and Language"
       ],
       "abstract": "SpeechLLMs typically combine ASR-trained encoders with text-based LLM backbones, leading them to inherit written-style output patterns unsuitable for text-to-speech synthesis. This mismatch is particularly pronounced in Japanese, where spoken and written registers differ substantially in politeness markers, sentence-final particles, and syntactic complexity. We propose a preference-based alignment approach to adapt Japanese SpeechLLMs for speech-worthy outputs: text that is concise, conversational, and readily synthesized as natural speech. To rigorously evaluate this task, we introduce SpokenElyza, a benchmark for Japanese speech-worthiness derived from ELYZA-tasks-100 with auditory verification by native experts. Experiments show that our approach achieves substantial improvement on SpokenElyza while largely preserving performance on the original written-style evaluation. We will release SpokenElyza to support future research on Japanese spoken dialog systems.",
-      "topic_key": "reasoning_alignment_eval",
-      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.82
+      "classification_source": "codex",
+      "classification_confidence": 0.8
     },
     {
       "paper_id": "2603.12554",
@@ -2834,8 +2822,8 @@
       "topic_key": "generative_foundations",
       "topic_label": "Generative Foundations",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.87
+      "classification_source": "codex",
+      "classification_confidence": 0.96
     },
     {
       "paper_id": "2603.12529",
@@ -2860,8 +2848,8 @@
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.82
+      "classification_source": "codex",
+      "classification_confidence": 0.9
     },
     {
       "paper_id": "2603.12520",
@@ -2881,8 +2869,8 @@
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.87
+      "classification_source": "codex",
+      "classification_confidence": 0.97
     },
     {
       "paper_id": "2603.12510",
@@ -2913,8 +2901,8 @@
       "topic_key": "multimodal_agents",
       "topic_label": "Multimodal Agents",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.9
+      "classification_source": "codex",
+      "classification_confidence": 0.98
     },
     {
       "paper_id": "2603.12378",
@@ -2941,8 +2929,8 @@
       "topic_key": "learning_theory",
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.82
+      "classification_source": "codex",
+      "classification_confidence": 0.76
     },
     {
       "paper_id": "2603.12372",
@@ -2969,8 +2957,8 @@
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.82
+      "classification_source": "codex",
+      "classification_confidence": 0.83
     },
     {
       "paper_id": "2603.12368",
@@ -2991,8 +2979,8 @@
       "topic_key": "retrieval_knowledge",
       "topic_label": "Retrieval, Knowledge, and RAG",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.83
+      "classification_source": "codex",
+      "classification_confidence": 0.89
     },
     {
       "paper_id": "2603.12287",
@@ -3018,8 +3006,8 @@
       "topic_key": "domain_applications",
       "topic_label": "Domain Applications",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.72
+      "classification_source": "codex",
+      "classification_confidence": 0.66
     },
     {
       "paper_id": "2603.12274",
@@ -3043,8 +3031,8 @@
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
       "matched_terms": [],
-      "classification_source": "claude",
-      "classification_confidence": 0.85
+      "classification_source": "codex",
+      "classification_confidence": 0.97
     }
   ]
 }
