@@ -2935,13 +2935,6 @@ code {
   color: var(--accent-strong);
 }
 
-.daily-editorial-stage {
-  display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
-  gap: 1.1rem;
-  align-items: start;
-}
-
 .page-cool-daily .feature-stage {
   display: block;
   align-self: start;
@@ -3134,8 +3127,7 @@ code {
 
   .page-cool-daily .hero,
   .page-cool-daily .hero-signals,
-  .page-cool-daily .lead-layout,
-  .daily-editorial-stage {
+  .page-cool-daily .lead-layout {
     grid-template-columns: 1fr;
   }
 
