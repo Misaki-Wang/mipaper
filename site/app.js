@@ -774,6 +774,9 @@ function renderFeatureStage(report, sections) {
   const visiblePapers = collectVisiblePapers(sections);
   const focusPapers = visiblePapers.filter((paper) => focusTopicKeys.has(paper.topic_key));
   const leadPaper = focusPapers[0] || visiblePapers[0] || report.topics[0]?.papers?.[0] || report.papers[0];
+  const topTopic = report.topic_distribution?.[0] || null;
+  const focusCount = report.focus_topics.reduce((sum, item) => sum + item.count, 0);
+  const focusShare = report.focus_topics.reduce((sum, item) => sum + item.share, 0);
   const leadRoot = document.querySelector("#lead-feature");
 
   if (!leadPaper) {
@@ -792,6 +795,35 @@ function renderFeatureStage(report, sections) {
         <p class="lead-copy">
           Start here: this paper is the cleanest entry point into the current ${escapeHtml(report.category)} snapshot, and its topic cluster is driving the board right now.
         </p>
+        <div class="lead-support">
+          <article class="lead-support-card">
+            <span class="lead-support-label">Snapshot</span>
+            <strong>${escapeHtml(report.category)} · ${escapeHtml(report.report_date)}</strong>
+            <span class="lead-support-meta">${
+              visiblePapers.length === report.total_papers
+                ? `${report.total_papers} papers in view`
+                : `${visiblePapers.length} visible of ${report.total_papers}`
+            }</span>
+          </article>
+          <article class="lead-support-card">
+            <span class="lead-support-label">Top Topic</span>
+            <strong>${escapeHtml(topTopic?.topic_label || leadPaper.topic_label)}</strong>
+            <span class="lead-support-meta">${
+              topTopic
+                ? `${topTopic.count} papers · ${topTopic.share.toFixed(2)}% share`
+                : "Topic distribution pending"
+            }</span>
+          </article>
+          <article class="lead-support-card is-wide">
+            <span class="lead-support-label">Focus Coverage</span>
+            <strong>${focusCount ? `${focusCount} focus papers` : "No focus cluster"}</strong>
+            <span class="lead-support-meta">${
+              focusCount
+                ? `${focusShare.toFixed(2)}% of the board sits in the focus topics`
+                : "Use the topic navigator to branch into the broader daily set"
+            }</span>
+          </article>
+        </div>
       </div>
       <div class="lead-side">
         ${renderPaperDetails(leadPaper)}
