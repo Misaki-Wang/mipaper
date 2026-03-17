@@ -447,7 +447,6 @@ function renderReport() {
   renderTagMap(report);
   renderAtlas(report);
   renderTopicNavigator(report.topic_distribution);
-  renderFeatureStage(report, sections);
   renderSpotlight(report, sections);
   renderResultsStrip(report, sections);
   renderTopicSections(report, sections);
@@ -457,7 +456,6 @@ function renderReport() {
       { id: "daily-tags-section", label: "Current Tags" },
       { id: "daily-atlas-section", label: "Daily Atlas" },
       { id: "daily-navigator-section", label: "Quick Jump" },
-      { id: "daily-feature-section", label: "Lead Feature" },
       { id: "daily-spotlight-section", label: "Spotlight" },
       { id: "daily-results-section", label: "Results" },
       ...sections.slice(0, 10).map((topic) => ({
@@ -522,7 +520,7 @@ function renderHeroSignals(report) {
         <span class="hero-lede-label">Today&rsquo;s read</span>
         <strong class="hero-lede-title">${escapeHtml(top.topic_label)}</strong>
         <span class="hero-lede-copy">
-          ${escapeHtml(report.category)} is being led by ${escapeHtml(top.topic_label)} with ${top.count} papers and ${top.share.toFixed(2)}% share. Start with the lead feature, then branch into the focus stack.
+          ${escapeHtml(report.category)} is being led by ${escapeHtml(top.topic_label)} with ${top.count} papers and ${top.share.toFixed(2)}% share. Start from the focus stack and branch through the topic navigator.
         </span>
       `
       : `
@@ -770,62 +768,6 @@ function renderTopicNavigator(items) {
   });
 }
 
-function renderFeatureStage(report, sections) {
-  const visiblePapers = collectVisiblePapers(sections);
-  const focusPapers = visiblePapers.filter((paper) => focusTopicKeys.has(paper.topic_key));
-  const leadPaper = focusPapers[0] || visiblePapers[0] || report.topics[0]?.papers?.[0] || report.papers[0];
-  const topTopic = report.topic_distribution?.[0] || null;
-  const focusCount = report.focus_topics.reduce((sum, item) => sum + item.count, 0);
-  const focusShare = report.focus_topics.reduce((sum, item) => sum + item.share, 0);
-  const leadRoot = document.querySelector("#lead-feature");
-
-  if (!leadPaper) {
-    leadRoot.innerHTML = `<div class="empty-state">No paper is available for display.</div>`;
-    return;
-  }
-
-  leadRoot.innerHTML = `
-    <div class="lead-top">
-      <span class="lead-eyebrow">Lead Feature</span>
-      <span class="lead-badge">${escapeHtml(leadPaper.topic_label)}</span>
-    </div>
-    <div class="lead-layout">
-      <div class="lead-main">
-        <div class="lead-support">
-          <article class="lead-support-card">
-            <span class="lead-support-label">Snapshot</span>
-            <strong>${escapeHtml(report.category)} · ${escapeHtml(report.report_date)}</strong>
-            <span class="lead-support-meta">${
-              visiblePapers.length === report.total_papers
-                ? `${report.total_papers} papers in view`
-                : `${visiblePapers.length} visible of ${report.total_papers}`
-            }</span>
-          </article>
-          <article class="lead-support-card">
-            <span class="lead-support-label">Top Topic</span>
-            <strong>${escapeHtml(topTopic?.topic_label || leadPaper.topic_label)}</strong>
-            <span class="lead-support-meta">${
-              topTopic
-                ? `${topTopic.count} papers · ${topTopic.share.toFixed(2)}% share`
-                : "Topic distribution pending"
-            }</span>
-          </article>
-          <article class="lead-support-card is-wide">
-            <span class="lead-support-label">Focus Coverage</span>
-            <strong>${focusCount ? `${focusCount} focus papers` : "No focus cluster"}</strong>
-            <span class="lead-support-meta">${
-              focusCount
-                ? `${focusShare.toFixed(2)}% of the board sits in the focus topics`
-                : "Use the topic navigator to branch into the broader daily set"
-            }</span>
-          </article>
-        </div>
-      </div>
-    </div>
-  `;
-
-}
-
 function renderSpotlight(report, sections) {
   const root = document.querySelector("#spotlight-list");
   const visiblePapers = collectVisiblePapers(sections);
@@ -834,7 +776,7 @@ function renderSpotlight(report, sections) {
     .slice(0, 6);
 
   if (!focusPapers.length) {
-    root.innerHTML = `<div class="spotlight-empty">No paper hits the focus topics today. Start with the lead feature and nearby categories in the topic navigator.</div>`;
+    root.innerHTML = `<div class="spotlight-empty">No paper hits the focus topics today. Use the topic navigator to explore nearby categories.</div>`;
     return;
   }
 
