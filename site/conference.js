@@ -3,11 +3,13 @@ import { bindQueueButtons, initQueue, subscribeQueue } from "./paper_queue.js";
 import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js";
 
 const manifestUrl = "./data/conference/manifest.json";
+const CONFERENCE_HOME_PAGE_SIZE = 6;
 
 const state = {
   manifest: null,
   report: null,
   currentPath: "",
+  homePage: 0,
   year: "",
   series: "",
   query: "",
@@ -346,17 +348,28 @@ function populateTopicFilter(topics) {
 function renderVenueCards(manifest, activePath = "", scopedReports = null) {
   const root = document.querySelector("#conference-cards");
   const summary = document.querySelector("#conference-board-summary");
+  const paginationRoot = document.querySelector("#conference-cards-pagination");
   const reports = Array.isArray(scopedReports) ? scopedReports : manifest?.reports || [];
 
   if (!reports.length) {
     summary.textContent = scopedReports ? "No conference snapshots are available for the current tags." : "No conference snapshots are available yet.";
     root.innerHTML = `<div class="empty-state">Generate conference reports first, then refresh the page.</div>`;
+    paginationRoot.innerHTML = "";
     return;
   }
 
+  const totalPages = Math.ceil(reports.length / CONFERENCE_HOME_PAGE_SIZE);
+  const activeIndex = activePath ? reports.findIndex((report) => report.data_path === activePath) : -1;
+  const safePage = activeIndex >= 0
+    ? Math.floor(activeIndex / CONFERENCE_HOME_PAGE_SIZE)
+    : Math.min(state.homePage, totalPages - 1);
+  const start = safePage * CONFERENCE_HOME_PAGE_SIZE;
+  const pageReports = reports.slice(start, start + CONFERENCE_HOME_PAGE_SIZE);
+  const end = Math.min(start + CONFERENCE_HOME_PAGE_SIZE, reports.length);
+  state.homePage = safePage;
   const totalPapers = reports.reduce((sum, report) => sum + (report.total_papers || 0), 0);
-  summary.textContent = `Currently indexed: ${reports.length} conference snapshots with ${totalPapers} papers in total. Click a card to switch the active analysis.`;
-  root.innerHTML = reports
+  summary.textContent = `Currently indexed: ${reports.length} conference snapshots with ${totalPapers} papers in total. Showing ${start + 1}-${end}. Click a card to switch the active analysis.`;
+  root.innerHTML = pageReports
     .map((report) => {
       const topSubject = report.subject_distribution?.[0];
       const topTopic = report.top_topics?.[0];
@@ -385,12 +398,31 @@ function renderVenueCards(manifest, activePath = "", scopedReports = null) {
     })
     .join("");
 
+  paginationRoot.innerHTML = totalPages > 1
+    ? `<div class="pagination conference-home-pagination">
+        <button class="pill-button" type="button" data-conference-page="prev" ${safePage === 0 ? "disabled" : ""}>← Prev</button>
+        <span class="pagination-info">Page ${safePage + 1} / ${totalPages}</span>
+        <button class="pill-button" type="button" data-conference-page="next" ${safePage >= totalPages - 1 ? "disabled" : ""}>Next →</button>
+      </div>`
+    : "";
+
   root.querySelectorAll("[data-conference-report]").forEach((button) => {
     button.addEventListener("click", async () => {
       const path = button.dataset.conferenceReport;
       if (path && path !== state.currentPath) {
         await loadReport(path);
       }
+    });
+  });
+
+  paginationRoot.querySelectorAll("[data-conference-page]").forEach((button) => {
+    button.addEventListener("click", () => {
+      if (button.dataset.conferencePage === "prev" && state.homePage > 0) {
+        state.homePage -= 1;
+      } else if (button.dataset.conferencePage === "next" && state.homePage < totalPages - 1) {
+        state.homePage += 1;
+      }
+      renderVenueCards(state.manifest, "", reports);
     });
   });
 }
@@ -828,6 +860,7 @@ function renderEmpty(message = "No conference snapshots are available yet.") {
   document.querySelector("#conference-board-summary").textContent = message;
   document.querySelector("#conference-cards").innerHTML =
     `<div class="empty-state">Run the conference report generator first, then refresh the page.</div>`;
+  document.querySelector("#conference-cards-pagination").innerHTML = "";
   document.querySelector("#conference-spotlight").innerHTML = "";
   document.querySelector("#conference-subject-sections").innerHTML = "";
   const tagMap = document.querySelector("#conference-tag-map");
@@ -862,6 +895,7 @@ function renderFatal(error) {
   const message = error instanceof Error ? error.message : String(error);
   document.querySelector("#conference-board-summary").textContent = "Conference page failed to load.";
   document.querySelector("#conference-cards").innerHTML = `<div class="empty-state">${escapeHtml(message)}</div>`;
+  document.querySelector("#conference-cards-pagination").innerHTML = "";
   renderFloatingToc([]);
 }
 

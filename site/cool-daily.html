@@ -22,7 +22,7 @@
     </script>
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
+  <body class="page-cool-daily">
     <div class="page-shell">
       <header class="hero reveal">
         <div class="hero-copy">
@@ -31,7 +31,7 @@
             <a class="page-nav-link active" href="./cool-daily.html">Cool Daily</a>
             <a class="page-nav-link" href="./conference.html">Conference</a>
             <a class="page-nav-link" href="./trending.html">Trending</a>
-            <a class="page-nav-link" href="./like.html">Like</a>
+            <a class="page-nav-link" href="./like.html">Library</a>
           </div>
           <p class="eyebrow">COOL PAPER OBSERVATORY</p>
           <h1>Cool Paper Observatory</h1>
@@ -43,6 +43,7 @@
             <span aria-hidden="true">·</span>
             <a href="https://papers.cool/arxiv/cs.CV" target="_blank" rel="noreferrer">cs.CV</a>
           </p>
+          <div id="hero-lede" class="hero-lede">Loading the latest daily snapshot.</div>
           <div id="hero-signals" class="hero-signals"></div>
           <div class="hero-actions">
             <button class="pill-button active" type="button" data-theme-toggle="auto">Auto</button>
@@ -79,10 +80,10 @@
         </div>
       </header>
 
-      <section class="glass-card home-board reveal">
+      <section class="glass-card home-board home-board-secondary reveal">
         <div class="section-heading">
-          <p class="eyebrow">HOMEPAGE</p>
-          <h2>Three-Track Home</h2>
+          <p class="eyebrow">TRACK SWITCHER</p>
+          <h2>Current Branches</h2>
           <p id="home-board-summary" class="home-board-summary">-</p>
         </div>
         <div id="home-categories" class="home-categories"></div>
@@ -92,8 +93,8 @@
         <aside class="sidebar">
           <div class="glass-card sidebar-header reveal">
             <div>
-              <p class="eyebrow">RESEARCH RAIL</p>
-              <h2>Sidebar Tools</h2>
+              <p class="eyebrow">BRANCH RAIL</p>
+              <h2>Filters</h2>
             </div>
             <button id="sidebar-toggle" class="sidebar-toggle" type="button" aria-expanded="true">
               <span id="sidebar-toggle-icon" class="sidebar-toggle-icon">‹</span>
@@ -226,17 +227,19 @@
             <div id="topic-nav" class="topic-nav"></div>
           </section>
 
-          <section id="daily-feature-section" class="feature-stage reveal">
-            <article id="lead-feature" class="glass-card lead-feature"></article>
-          </section>
+          <div class="daily-editorial-stage reveal">
+            <section id="daily-feature-section" class="feature-stage">
+              <article id="lead-feature" class="glass-card lead-feature"></article>
+            </section>
 
-          <section id="daily-spotlight-section" class="glass-card spotlight reveal">
-            <div class="section-heading">
-              <p class="eyebrow">SPOTLIGHT</p>
-              <h2>Focus Papers</h2>
-            </div>
-            <div id="spotlight-list" class="spotlight-list"></div>
-          </section>
+            <section id="daily-spotlight-section" class="glass-card spotlight">
+              <div class="section-heading">
+                <p class="eyebrow">SPOTLIGHT</p>
+                <h2>Focus Papers</h2>
+              </div>
+              <div id="spotlight-list" class="spotlight-list"></div>
+            </section>
+          </div>
 
           <section id="daily-results-section" class="glass-card results-strip reveal">
             <div class="results-top">

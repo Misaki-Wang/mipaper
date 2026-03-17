@@ -31,7 +31,7 @@
             <a class="page-nav-link" href="./cool-daily.html">Cool Daily</a>
             <a class="page-nav-link" href="./conference.html">Conference</a>
             <a class="page-nav-link" href="./trending.html">Trending</a>
-            <a class="page-nav-link" href="./like.html">Like</a>
+            <a class="page-nav-link" href="./like.html">Library</a>
           </div>
           <p class="eyebrow">HF DAILY PAPER</p>
           <h1>Hugging Face Daily Papers</h1>
@@ -79,7 +79,7 @@
         <aside class="sidebar">
           <div class="glass-card sidebar-header reveal">
             <div>
-              <p class="eyebrow">HF DAILY RAIL</p>
+              <p class="eyebrow">BRANCH RAIL</p>
               <h2>Filters</h2>
             </div>
             <button
@@ -188,9 +188,19 @@
           </section>
 
           <section id="hf-cadence-section" class="glass-card cadence-panel reveal">
-            <div class="section-heading">
-              <p class="eyebrow">RECENT CADENCE</p>
-              <h2>Recent Cadence</h2>
+            <div class="section-heading section-heading-split">
+              <div>
+                <p class="eyebrow">RECENT CADENCE</p>
+                <h2>Recent Cadence</h2>
+              </div>
+              <div class="section-view-toggle" aria-label="Cadence view switcher">
+                <button id="hf-cadence-view-daily" class="pill-button active" type="button" data-hf-cadence-view="daily">
+                  Daily
+                </button>
+                <button id="hf-cadence-view-weekly" class="pill-button" type="button" data-hf-cadence-view="weekly">
+                  Weekly
+                </button>
+              </div>
             </div>
             <div id="hf-cadence-track" class="cadence-track"></div>
             <p id="hf-cadence-summary" class="cadence-summary">-</p>

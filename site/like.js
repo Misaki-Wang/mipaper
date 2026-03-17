@@ -353,11 +353,11 @@ function renderPage() {
   try {
     const likes = readLikes();
     state.likes = likes;
-    const laterQueue = readQueue('later');
+    const laterQueue = readQueue("later");
     const toReadSnapshots = getToReadSnapshots(state.snapshots);
-    populateFilters(likes);
-    renderHero(likes);
-    renderSourceCards(likes);
+    populateFilters(likes, laterQueue, toReadSnapshots);
+    renderHero(likes, laterQueue, toReadSnapshots);
+    renderSourceCards(likes, laterQueue, toReadSnapshots);
 
     likeRecords.clear();
     renderLaterQueue(laterQueue);
@@ -385,13 +385,17 @@ function renderPage() {
   }
 }
 
-function populateFilters(likes) {
+function populateFilters(likes, laterQueue, toReadSnapshots) {
   const currentSource = state.source;
   const currentYear = state.year;
   const currentMonth = state.month;
   const currentDay = state.day;
   const currentTopic = state.topic;
-  const sources = [...new Set(likes.map((item) => item.source_kind).filter(Boolean))];
+  const sources = [...new Set([
+    ...likes.map((item) => item.source_kind),
+    ...laterQueue.map((item) => item.source_kind),
+    ...toReadSnapshots.map(getSnapshotSourceKind),
+  ].filter(Boolean))];
   const topics = [...new Set(likes.map((item) => item.topic_label || "Other AI"))].sort((a, b) => a.localeCompare(b, "zh-CN"));
   const dateParts = likes.map(extractDateParts);
   const years = [...new Set(dateParts.map((item) => item.year).filter(Boolean))].sort((a, b) => b.localeCompare(a));
@@ -450,53 +454,66 @@ function populateFilters(likes) {
   state.topic = topicFilter.value;
 }
 
-function renderHero(likes) {
+function renderHero(likes, laterQueue, toReadSnapshots) {
   const topTopic = computeTopicDistribution(likes)[0];
   const focusCount = likes.filter((item) => focusTopicKeys.has(item.topic_key)).length;
-  const sources = new Set(likes.map((item) => item.source_kind).filter(Boolean));
+  const sources = new Set([
+    ...likes.map((item) => item.source_kind),
+    ...laterQueue.map((item) => item.source_kind),
+    ...toReadSnapshots.map(getSnapshotSourceKind),
+  ].filter(Boolean));
   const latest = likes[0];
 
-  document.querySelector("#like-hero-count").textContent = likes.length ? `${likes.length} saved` : "0 saved";
+  document.querySelector("#like-hero-count").textContent =
+    likes.length || laterQueue.length || toReadSnapshots.length
+      ? `${likes.length} saved / ${laterQueue.length} later`
+      : "0 items";
   document.querySelector("#like-hero-sources").textContent = String(sources.size);
-  document.querySelector("#like-hero-focus").textContent = String(focusCount);
-  document.querySelector("#like-hero-latest").textContent = latest ? formatTime(latest.saved_at) : "-";
+  document.querySelector("#like-hero-focus").textContent = String(laterQueue.length);
+  document.querySelector("#like-hero-latest").textContent = String(toReadSnapshots.length);
   document.querySelector("#like-hero-topic").textContent = topTopic?.topic_label || "-";
 
   document.querySelector("#like-hero-signals").innerHTML = [
     topTopic ? `<div class="signal-chip"><span>Top Topic</span><strong>${escapeHtml(topTopic.topic_label)}</strong></div>` : "",
     likes.length ? `<div class="signal-chip"><span>Saved Papers</span><strong>${likes.length}</strong></div>` : "",
-    sources.size ? `<div class="signal-chip"><span>Branches</span><strong>${sources.size}</strong></div>` : "",
-    latest ? `<div class="signal-chip"><span>Latest</span><strong>${escapeHtml(getSourceLabel(latest.source_kind))}</strong></div>` : "",
+    laterQueue.length ? `<div class="signal-chip"><span>Later Queue</span><strong>${laterQueue.length}</strong></div>` : "",
+    toReadSnapshots.length ? `<div class="signal-chip"><span>To-Read</span><strong>${toReadSnapshots.length}</strong></div>` : "",
+    latest ? `<div class="signal-chip"><span>Latest Save</span><strong>${escapeHtml(getSourceLabel(latest.source_kind))}</strong></div>` : "",
   ]
     .filter(Boolean)
     .join("");
 }
 
-function renderSourceCards(likes) {
+function renderSourceCards(likes, laterQueue, toReadSnapshots) {
   const root = document.querySelector("#like-home-cards");
   const summary = document.querySelector("#like-board-summary");
-  const sections = groupBySource(likes);
+  const sections = buildLibrarySourceSections(likes, laterQueue, toReadSnapshots);
 
   if (!sections.length) {
-    summary.textContent = "No saved papers yet.";
-    root.innerHTML = `<div class="empty-state">Sources will appear here after you like a paper.</div>`;
+    summary.textContent = "No library activity yet.";
+    root.innerHTML = `<div class="empty-state">Sources will appear here after you save papers, add Later items, or accumulate unread snapshots.</div>`;
     return;
   }
 
-  summary.textContent = `Total liked papers: ${likes.length}, covering ${sections.length} branches.`;
+  summary.textContent = `Tracking ${likes.length} saved papers, ${laterQueue.length} Later items, and ${toReadSnapshots.length} unread snapshots across ${sections.length} branches.`;
   root.innerHTML = sections
     .map(
       (section) => `
-        <button class="home-category-card${state.source === section.source_kind ? " active" : ""}" type="button" data-like-source="${escapeAttribute(section.source_kind)}">
-          <div class="home-category-top">
-            <span>${escapeHtml(section.source_label)}</span>
-            <span>${section.count} saved</span>
+        <button class="home-category-card library-home-card${state.source === section.source_kind ? " active" : ""}" type="button" data-like-source="${escapeAttribute(section.source_kind)}">
+          <div class="home-category-card-top">
+            <span class="home-category-label">${escapeHtml(section.source_label)}</span>
+            <span class="home-category-date">${escapeHtml(section.latest_snapshot || "Workspace source")}</span>
           </div>
-          <strong>${escapeHtml(section.latest_snapshot || "No snapshot")}</strong>
-          <p>${escapeHtml(section.top_topic || "No topic summary")}</p>
+          <strong class="home-category-count">${section.saved_count} saved</strong>
+          <p class="home-category-topic">${escapeHtml(section.lede)}</p>
+          <div class="library-source-metrics">
+            <span><strong>${section.saved_count}</strong><small>Saved</small></span>
+            <span><strong>${section.later_count}</strong><small>Later</small></span>
+            <span><strong>${section.to_read_count}</strong><small>To-Read</small></span>
+          </div>
           <div class="home-category-meta">
-            <span>${section.count} papers</span>
-            <span>${escapeHtml(section.latest_saved || "-")}</span>
+            <span>${escapeHtml(section.top_topic || "No topic summary")}</span>
+            <span>${escapeHtml(section.latest_saved || section.latest_snapshot || "-")}</span>
           </div>
         </button>
       `
@@ -519,7 +536,7 @@ function renderOverview(likes, visibleLikes, sourceSections, toReadSnapshots) {
   const latest = visibleLikes[0] || likes[0];
   const topSource = sourceSections[0];
 
-  document.querySelector("#like-overview-title").textContent = "Like Branch Overview";
+  document.querySelector("#like-overview-title").textContent = "Library Overview";
   document.querySelector("#like-overview-summary").textContent = `Currently saved: ${visibleLikes.length} papers for later deep reading and revisit. ${toReadSnapshots.length} fetched snapshots are still not reviewed.`;
   document.querySelector("#like-focus-summary").textContent = `${focusCount} papers hit your focus topics, accounting for ${focusShare.toFixed(2)}% of the current view.`;
   document.querySelector("#like-branch-summary").textContent = topSource
@@ -752,9 +769,9 @@ function renderResults(likes, visibleLikes, sourceSections) {
   const activeFilters = getActiveFilters();
   document.querySelector("#like-results-title").textContent = activeFilters.length
     ? `${visibleLikes.length} papers visible after filtering`
-    : `${likes.length} liked papers`;
+    : `${likes.length} saved papers`;
   document.querySelector("#like-results-stats").innerHTML = [
-    renderResultStat("Visible Likes", visibleLikes.length, activeFilters.length ? `of ${likes.length}` : "full liked set"),
+    renderResultStat("Visible Saved", visibleLikes.length, activeFilters.length ? `of ${likes.length}` : "full saved set"),
     renderResultStat("Visible Branches", sourceSections.length, activeFilters.length ? "filtered" : "all branches"),
     renderResultStat(
       "View Mode",
@@ -764,14 +781,14 @@ function renderResults(likes, visibleLikes, sourceSections) {
   ].join("");
   document.querySelector("#like-active-filters").innerHTML = activeFilters.length
     ? activeFilters.map((item) => `<span class="active-filter-pill">${escapeHtml(item)}</span>`).join("")
-    : `<span class="active-filter-pill">No filters applied. You are looking at the full liked set.</span>`;
+    : `<span class="active-filter-pill">No filters applied. You are looking at the full saved set.</span>`;
   resetFiltersButton.disabled = !activeFilters.length;
 }
 
 function renderSourceSections(sections) {
   const root = document.querySelector("#like-source-sections");
   if (!sections.length) {
-    root.innerHTML = `<div class="glass-card empty-state">No liked papers match the current filters.</div>`;
+    root.innerHTML = `<div class="glass-card empty-state">No saved papers match the current filters.</div>`;
     return;
   }
 
@@ -963,6 +980,68 @@ function groupBySource(likes) {
     .sort((a, b) => b.count - a.count || a.source_label.localeCompare(b.source_label, "zh-CN"));
 }
 
+function buildLibrarySourceSections(likes, laterQueue, toReadSnapshots) {
+  const likesBySource = groupBySource(likes);
+  const laterBySource = new Map();
+  laterQueue.forEach((paper) => {
+    const sourceKind = paper.source_kind || "daily";
+    laterBySource.set(sourceKind, (laterBySource.get(sourceKind) || 0) + 1);
+  });
+  const toReadBySource = new Map();
+  toReadSnapshots.forEach((snapshot) => {
+    const sourceKind = getSnapshotSourceKind(snapshot);
+    toReadBySource.set(sourceKind, (toReadBySource.get(sourceKind) || 0) + 1);
+  });
+
+  const sourceKinds = new Set([
+    ...likesBySource.map((section) => section.source_kind),
+    ...laterBySource.keys(),
+    ...toReadBySource.keys(),
+  ]);
+
+  return [...sourceKinds]
+    .map((sourceKind) => {
+      const likesSection = likesBySource.find((section) => section.source_kind === sourceKind);
+      const savedCount = likesSection?.count || 0;
+      const laterCount = laterBySource.get(sourceKind) || 0;
+      const toReadCount = toReadBySource.get(sourceKind) || 0;
+      const latestSnapshot = likesSection?.latest_snapshot || toReadSnapshots.find((snapshot) => getSnapshotSourceKind(snapshot) === sourceKind)?.snapshot_label || "";
+      const topTopic = likesSection?.top_topic || "";
+      const ledeParts = [
+        savedCount ? `${savedCount} saved papers` : "No saved papers yet",
+        laterCount ? `${laterCount} queued for later` : "Later queue empty",
+        toReadCount ? `${toReadCount} unread snapshots` : "No unread snapshots",
+      ];
+      return {
+        source_kind: sourceKind,
+        source_label: getSourceLabel(sourceKind),
+        saved_count: savedCount,
+        later_count: laterCount,
+        to_read_count: toReadCount,
+        latest_snapshot: latestSnapshot,
+        latest_saved: likesSection?.latest_saved || "",
+        top_topic: topTopic,
+        lede: ledeParts.join(" · "),
+        sort_score: savedCount * 100 + laterCount * 10 + toReadCount,
+      };
+    })
+    .sort((a, b) => b.sort_score - a.sort_score || a.source_label.localeCompare(b.source_label, "zh-CN"));
+}
+
+function getSnapshotSourceKind(snapshot) {
+  const url = snapshot?.branch_url || "";
+  if (url.includes("cool-daily")) {
+    return "daily";
+  }
+  if (url.includes("conference")) {
+    return "conference";
+  }
+  if (url.includes("trending")) {
+    return "trending";
+  }
+  return "hf_daily";
+}
+
 function computeTopicDistribution(papers) {
   const counts = new Map();
   papers.forEach((paper) => {
@@ -1016,7 +1095,7 @@ function renderEmpty(toReadSnapshots) {
   document.querySelector("#like-latest-summary").textContent = "No latest save record yet.";
   document.querySelector("#like-tag-map").innerHTML = "";
   document.querySelector("#like-distribution-list").innerHTML = `<div class="empty-state">No like statistics yet.</div>`;
-  document.querySelector("#like-results-title").textContent = "No liked papers yet";
+  document.querySelector("#like-results-title").textContent = "No saved papers yet";
   document.querySelector("#like-results-stats").innerHTML = "";
   document.querySelector("#like-active-filters").innerHTML = `<span class="active-filter-pill">Like any paper and this area will update automatically.</span>`;
   document.querySelector("#like-source-sections").innerHTML =

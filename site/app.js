@@ -21,7 +21,7 @@ const focusTopicKeys = new Set([
   "multimodal_generative",
   "multimodal_agents",
 ]);
-const CADENCE_MAX_DATES = 5;
+const CADENCE_MAX_DATES = 7;
 
 const domainFilter = document.querySelector("#domain-filter");
 const dateFilter = document.querySelector("#date-filter");
@@ -366,6 +366,12 @@ function updateHero(manifest, report = null) {
   document.querySelector("#hero-classifier").textContent = latest ? latest.classifier : "-";
   document.querySelector("#hero-report-count").textContent = String(manifest.reports_count || 0);
   document.querySelector("#hero-generated-at").textContent = formatTime(latest?.generated_at || manifest.generated_at);
+  const heroLede = document.querySelector("#hero-lede");
+  if (heroLede) {
+    heroLede.textContent = latest
+      ? `${latest.category} on ${latest.report_date} is ready. Open a branch card below or jump straight into the lead feature and current focus clusters.`
+      : "Daily snapshot metadata will appear here once reports are available.";
+  }
 }
 
 function renderHomeCategories(manifest, activePath = "", scopedReports = null) {
@@ -383,8 +389,8 @@ function renderHomeCategories(manifest, activePath = "", scopedReports = null) {
   const uniqueDates = [...new Set(cards.map((item) => item.report_date))];
   summary.textContent =
     uniqueDates.length === 1
-      ? `${uniqueDates[0]} covers ${cards.length} categories and ${totalPapers} papers in total. Click a card to switch the active report.`
-      : `This homepage aggregates recent snapshots from ${cards.length} categories, with ${totalPapers} papers in total. Click a card to switch the active report.`;
+      ? `Latest branch snapshots on ${uniqueDates[0]} span ${cards.length} branches and ${totalPapers} papers.`
+      : `Latest branch snapshots across ${cards.length} branches total ${totalPapers} papers.`;
 
   root.innerHTML = cards
     .map((report) => {
@@ -399,17 +405,18 @@ function renderHomeCategories(manifest, activePath = "", scopedReports = null) {
             <span class="home-category-label">${escapeHtml(report.category)}</span>
             <span class="home-category-date">${escapeHtml(report.report_date)}</span>
           </div>
+          <span class="home-category-caption">Current branch volume</span>
           <strong class="home-category-count">${report.total_papers} papers</strong>
           <p class="home-category-topic">
             ${
               topTopic
-                ? `${escapeHtml(topTopic.topic_label)} · ${topTopic.share.toFixed(2)}%`
+                ? `${escapeHtml(topTopic.topic_label)}`
                 : "No topic summary yet"
             }
           </p>
           <div class="home-category-meta">
-            <span>${escapeHtml(report.report_date)}</span>
-            <span>${topTopic ? `Top topic · ${topTopic.count} papers` : "pending"}</span>
+            <span>${topTopic ? `${topTopic.share.toFixed(2)}% top share` : "topic pending"}</span>
+            <span>${topTopic ? `${topTopic.count} papers in top topic` : "pending"}</span>
           </div>
         </button>
       `;
@@ -499,13 +506,73 @@ function renderHeroSignals(report) {
   const top = report.topic_distribution[0];
   const focusShare = report.focus_topics.reduce((sum, item) => sum + item.share, 0);
   const focusCount = report.focus_topics.reduce((sum, item) => sum + item.count, 0);
+  const topicCount = report.topic_distribution.filter((item) => item.count > 0).length;
+  const topThreeShare = report.topic_distribution.slice(0, 3).reduce((sum, item) => sum + item.share, 0);
+  const fallbackReport =
+    report.total_papers > 0
+      ? null
+      : (state.manifest?.reports || []).find(
+          (item) => item.category === report.category && item.total_papers > 0 && item.data_path !== report.data_path
+        ) || null;
+  const heroLede = document.querySelector("#hero-lede");
   const root = document.querySelector("#hero-signals");
+  if (heroLede) {
+    heroLede.innerHTML = top
+      ? `
+        <span class="hero-lede-label">Today&rsquo;s read</span>
+        <strong class="hero-lede-title">${escapeHtml(top.topic_label)}</strong>
+        <span class="hero-lede-copy">
+          ${escapeHtml(report.category)} is being led by ${escapeHtml(top.topic_label)} with ${top.count} papers and ${top.share.toFixed(2)}% share. Start with the lead feature, then branch into the focus stack.
+        </span>
+      `
+      : `
+        <span class="hero-lede-label">Latest snapshot</span>
+        <strong class="hero-lede-title">No fresh papers in ${escapeHtml(report.category)}</strong>
+        <span class="hero-lede-copy">
+          ${
+            fallbackReport
+              ? `${escapeHtml(report.report_date)} is currently empty. Use the snapshot selector or recent cadence rail to jump back to ${escapeHtml(fallbackReport.report_date)}, the latest active branch with ${fallbackReport.total_papers} papers.`
+              : `${escapeHtml(report.report_date)} is currently empty. Use the branch switcher or cadence rail to move to another active day.`
+          }
+        </span>
+      `;
+  }
   root.innerHTML = [
     top
-      ? `<div class="signal-chip"><span>Top Topic</span><strong>${escapeHtml(top.topic_label)}</strong></div>`
-      : "",
-    `<div class="signal-chip"><span>Focus Coverage</span><strong>${focusCount} papers / ${focusShare.toFixed(2)}%</strong></div>`,
-    `<div class="signal-chip"><span>Total</span><strong>${report.total_papers}</strong></div>`,
+      ? `
+        <article class="hero-signal-card is-primary">
+          <span class="hero-signal-label">Top Topic</span>
+          <strong class="hero-signal-value">${escapeHtml(top.topic_label)}</strong>
+          <span class="hero-signal-meta">${top.count} papers · ${top.share.toFixed(2)}%</span>
+        </article>
+      `
+      : `
+        <article class="hero-signal-card is-primary">
+          <span class="hero-signal-label">Snapshot Status</span>
+          <strong class="hero-signal-value">Quiet day</strong>
+          <span class="hero-signal-meta">${
+            fallbackReport
+              ? `Latest active ${fallbackReport.report_date} carried ${fallbackReport.total_papers} papers.`
+              : "No active fallback snapshot is available in the current manifest."
+          }</span>
+        </article>
+      `,
+    `
+      <article class="hero-signal-card">
+        <span class="hero-signal-label">${top ? "Focus Coverage" : "Total Papers"}</span>
+        <strong class="hero-signal-value">${top ? focusCount : report.total_papers}</strong>
+        <span class="hero-signal-meta">${
+          top ? `${focusShare.toFixed(2)}% of today&rsquo;s volume` : "papers in the latest snapshot"
+        }</span>
+      </article>
+    `,
+    `
+      <article class="hero-signal-card">
+        <span class="hero-signal-label">Topic Breadth</span>
+        <strong class="hero-signal-value">${topicCount}</strong>
+        <span class="hero-signal-meta">Top 3 topics capture ${topThreeShare.toFixed(2)}%</span>
+      </article>
+    `,
   ].join("");
 }
 
@@ -705,7 +772,6 @@ function renderTopicNavigator(items) {
 
 function renderFeatureStage(report, sections) {
   const visiblePapers = collectVisiblePapers(sections);
-  const visibleDistribution = buildVisibleDistribution(sections);
   const focusPapers = visiblePapers.filter((paper) => focusTopicKeys.has(paper.topic_key));
   const leadPaper = focusPapers[0] || visiblePapers[0] || report.topics[0]?.papers?.[0] || report.papers[0];
   const leadRoot = document.querySelector("#lead-feature");
@@ -720,15 +786,25 @@ function renderFeatureStage(report, sections) {
       <span class="lead-eyebrow">Lead Feature</span>
       <span class="lead-badge">${escapeHtml(leadPaper.topic_label)}</span>
     </div>
-    <h3>${escapeHtml(leadPaper.title)}</h3>
-    ${renderPaperDetails(leadPaper)}
-    <div class="lead-metrics">
-      <span class="paper-id">${escapeHtml(leadPaper.paper_id)}</span>
-    </div>
-    <div class="lead-links">
-      ${renderPaperLink({ href: leadPaper.pdf_url || leadPaper.abs_url, label: "arXiv", brand: "arxiv" })}
-      ${renderPaperLink({ href: leadPaper.detail_url, label: "Cool", brand: "cool" })}
-      ${renderLikeButton(leadPaper)}
+    <div class="lead-layout">
+      <div class="lead-main">
+        <h3>${escapeHtml(leadPaper.title)}</h3>
+        <p class="lead-copy">
+          Start here: this paper is the cleanest entry point into the current ${escapeHtml(report.category)} snapshot, and its topic cluster is driving the board right now.
+        </p>
+      </div>
+      <div class="lead-side">
+        ${renderPaperDetails(leadPaper)}
+        <div class="lead-metrics">
+          <span class="paper-id">${escapeHtml(leadPaper.paper_id)}</span>
+          <span class="paper-badge subdued">${escapeHtml(report.report_date)}</span>
+        </div>
+        <div class="lead-links">
+          ${renderPaperLink({ href: leadPaper.pdf_url || leadPaper.abs_url, label: "arXiv", brand: "arxiv" })}
+          ${renderPaperLink({ href: leadPaper.detail_url, label: "Cool", brand: "cool" })}
+          ${renderLikeButton(leadPaper)}
+        </div>
+      </div>
     </div>
   `;
 
@@ -748,13 +824,18 @@ function renderSpotlight(report, sections) {
 
   root.innerHTML = focusPapers
     .map(
-      (paper) => `
+      (paper, index) => `
         <article class="spotlight-card ${focusTopicKeys.has(paper.topic_key) ? "is-focus" : ""}">
           <div class="paper-card-top">
-            <span class="paper-id">${escapeHtml(paper.paper_id)}</span>
+            <span class="paper-id">${index === 0 ? "Start here" : escapeHtml(paper.paper_id)}</span>
             <div class="paper-badges">${renderPaperBadges(paper)}</div>
           </div>
           <h3>${escapeHtml(paper.title)}</h3>
+          <p class="spotlight-copy">${escapeHtml(
+            index === 0
+              ? `Highest-priority follow-up from the focus topics in ${report.category}.`
+              : `A strong secondary read if you want more depth inside ${paper.topic_label}.`
+          )}</p>
           ${renderPaperDetails(paper)}
           <div class="paper-links">
             ${renderPaperLink({ href: paper.pdf_url || paper.abs_url, label: "arXiv", brand: "arxiv" })}

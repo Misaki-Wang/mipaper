@@ -13,6 +13,7 @@ const state = {
   author: "",
   topic: "",
   focusOnly: false,
+  cadenceView: localStorage.getItem("hf-cadence-view") === "weekly" ? "weekly" : "daily",
 };
 
 const focusTopicKeys = new Set([
@@ -21,11 +22,13 @@ const focusTopicKeys = new Set([
   "multimodal_agents",
 ]);
 const HF_CADENCE_MAX_DATES = 5;
+const HF_CADENCE_MAX_WEEKS = 5;
 const reportSelect = document.querySelector("#hf-report-select");
 const topicFilter = document.querySelector("#hf-topic-filter");
 const authorFilter = document.querySelector("#hf-author-filter");
 const searchInput = document.querySelector("#hf-search-input");
 const focusOnlyInput = document.querySelector("#hf-focus-only");
+const cadenceViewButtons = [...document.querySelectorAll("[data-hf-cadence-view]")];
 const resetFiltersButton = document.querySelector("#hf-reset-filters");
 const sidebarToggleButton = document.querySelector("#hf-sidebar-toggle");
 const sidebarToggleLabel = document.querySelector("#hf-sidebar-toggle-label");
@@ -51,6 +54,7 @@ async function init() {
   bindBackToTop();
   bindFilters();
   bindReviewToggle();
+  bindCadenceViewToggle();
   subscribeLikes(() => bindLikeButtons(document, likeRecords));
   subscribeQueue(() => bindQueueButtons(document, likeRecords));
   subscribePageReviews(() => renderReviewState());
@@ -244,6 +248,30 @@ function bindFilters() {
   });
 }
 
+function bindCadenceViewToggle() {
+  cadenceViewButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const nextView = button.dataset.hfCadenceView === "weekly" ? "weekly" : "daily";
+      if (nextView === state.cadenceView) {
+        return;
+      }
+      state.cadenceView = nextView;
+      localStorage.setItem("hf-cadence-view", nextView);
+      syncCadenceViewButtons();
+      if (state.report) {
+        renderCadence(state.report);
+      }
+    });
+  });
+  syncCadenceViewButtons();
+}
+
+function syncCadenceViewButtons() {
+  cadenceViewButtons.forEach((button) => {
+    button.classList.toggle("active", button.dataset.hfCadenceView === state.cadenceView);
+  });
+}
+
 async function loadReport(path) {
   const report = await fetchJson(path);
   state.report = report;
@@ -399,37 +427,45 @@ function renderDistribution(report, visiblePapers) {
 }
 
 function renderCadence(report) {
-  const cadenceMatrix = buildCadenceMatrix(state.manifest?.reports || []);
-  const maxCount = Math.max(...cadenceMatrix.rows.map((row) => row.entry?.total_papers || 0), 1);
+  const cadenceRows =
+    state.cadenceView === "weekly"
+      ? buildWeeklyCadence(state.manifest?.reports || [])
+      : buildCadenceMatrix(state.manifest?.reports || []);
+  const maxCount = Math.max(...cadenceRows.map((row) => row.total_papers || 0), 1);
   document.querySelector("#hf-cadence-track").innerHTML = `
     <div class="hf-cadence-list">
-      ${cadenceMatrix.rows
+      ${cadenceRows
         .map((row) => {
-          const entry = row.entry;
-          if (!entry) {
+          if (!row.data_path) {
             return "";
           }
-          const width = Math.max((entry.total_papers / maxCount) * 100, 12);
-          const active = entry.data_path === state.currentPath;
+          const width = Math.max((row.total_papers / maxCount) * 100, 12);
+          const active = row.is_active;
+          const badgeHtml = [
+            active ? `<span class="hf-cadence-badge is-active">Current</span>` : "",
+            state.cadenceView === "weekly" ? `<span class="hf-cadence-badge">${row.active_days} days</span>` : "",
+          ]
+            .filter(Boolean)
+            .join("");
           return `
             <button class="hf-cadence-item${active ? " is-active" : ""}" type="button" data-hf-cadence-report="${escapeAttribute(
-              entry.data_path
+              row.data_path
             )}">
               <div class="hf-cadence-item-top">
                 <div class="hf-cadence-date-block">
-                  <span class="hf-cadence-date">${escapeHtml(row.report_date.slice(5))}</span>
-                  <span class="hf-cadence-year">${escapeHtml(row.report_date.slice(0, 4))}</span>
+                  <span class="hf-cadence-date">${escapeHtml(row.primary_label)}</span>
+                  <span class="hf-cadence-year">${escapeHtml(row.secondary_label)}</span>
                 </div>
                 <div class="hf-cadence-meta">
-                  ${active ? `<span class="hf-cadence-badge is-active">Current</span>` : ""}
+                  ${badgeHtml}
                 </div>
               </div>
               <div class="hf-cadence-bar-shell">
                 <span class="hf-cadence-bar" style="width:${width}%"></span>
               </div>
               <div class="hf-cadence-item-bottom">
-                <strong class="hf-cadence-value">${entry.total_papers}</strong>
-                <span class="hf-cadence-caption">papers</span>
+                <strong class="hf-cadence-value">${row.total_papers}</strong>
+                <span class="hf-cadence-caption">${escapeHtml(row.value_label)}</span>
               </div>
             </button>
           `;
@@ -447,7 +483,8 @@ function renderCadence(report) {
     });
   });
 
-  document.querySelector("#hf-cadence-summary").textContent = buildCadenceSummary(cadenceMatrix.rows);
+  document.querySelector("#hf-cadence-summary").textContent =
+    state.cadenceView === "weekly" ? buildWeeklyCadenceSummary(cadenceRows) : buildCadenceSummary(cadenceRows);
 }
 
 function renderSpotlight(report, visiblePapers) {
@@ -626,16 +663,22 @@ function buildCadenceMatrix(reports) {
     .sort((left, right) => right.localeCompare(left))
     .slice(0, HF_CADENCE_MAX_DATES);
 
-  return {
-    rows: latestDates.map((report_date) => ({
+  return latestDates.map((report_date) => {
+    const entry = reports.find((item) => item.report_date === report_date) || null;
+    return {
       report_date,
-      entry: reports.find((item) => item.report_date === report_date) || null,
-    })),
-  };
+      data_path: entry?.data_path || "",
+      total_papers: entry?.total_papers || 0,
+      is_active: entry?.data_path === state.currentPath,
+      primary_label: report_date.slice(5),
+      secondary_label: report_date.slice(0, 4),
+      value_label: "papers",
+    };
+  });
 }
 
 function buildCadenceSummary(rows) {
-  const reports = rows.map((row) => row.entry).filter(Boolean);
+  const reports = rows.filter((row) => row.data_path);
   if (!reports.length) {
     return "No HF Daily reports are available yet.";
   }
@@ -646,6 +689,77 @@ function buildCadenceSummary(rows) {
   const delta = latest.total_papers - previous.total_papers;
   const direction = delta === 0 ? "unchanged" : delta > 0 ? `increased by ${delta}` : `decreased by ${Math.abs(delta)}`;
   return `${latest.report_date} has ${latest.total_papers} papers, ${direction}.`;
+}
+
+function buildWeeklyCadence(reports) {
+  const weeklyBuckets = new Map();
+  reports.forEach((report) => {
+    if (!report?.report_date) {
+      return;
+    }
+    const bucket = getWeekBucket(report.report_date);
+    if (!weeklyBuckets.has(bucket.week_key)) {
+      weeklyBuckets.set(bucket.week_key, {
+        week_key: bucket.week_key,
+        week_start: bucket.week_start,
+        week_end: bucket.week_end,
+        reports: [],
+      });
+    }
+    weeklyBuckets.get(bucket.week_key).reports.push(report);
+  });
+
+  return [...weeklyBuckets.values()]
+    .sort((left, right) => right.week_start.localeCompare(left.week_start))
+    .slice(0, HF_CADENCE_MAX_WEEKS)
+    .map((bucket) => {
+      const weekReports = bucket.reports.sort((left, right) => right.report_date.localeCompare(left.report_date));
+      const latestReport = weekReports[0];
+      const totalPapers = weekReports.reduce((sum, item) => sum + (item.total_papers || 0), 0);
+      return {
+        report_date: latestReport?.report_date || bucket.week_end,
+        data_path: latestReport?.data_path || "",
+        total_papers: totalPapers,
+        active_days: weekReports.length,
+        is_active: weekReports.some((item) => item.data_path === state.currentPath),
+        primary_label: formatShortDate(bucket.week_start),
+        secondary_label: `${formatShortDate(bucket.week_end)} · ${bucket.week_start.slice(0, 4)}`,
+        value_label: "papers total",
+      };
+    });
+}
+
+function buildWeeklyCadenceSummary(rows) {
+  const reports = rows.filter((row) => row.data_path);
+  if (!reports.length) {
+    return "No HF Daily reports are available yet.";
+  }
+  if (reports.length === 1) {
+    const [only] = reports;
+    return `Week of ${only.primary_label} to ${only.secondary_label.split(" · ")[0]} has ${only.total_papers} papers across ${only.active_days} active days.`;
+  }
+  const [latest, previous] = reports;
+  const delta = latest.total_papers - previous.total_papers;
+  const direction = delta === 0 ? "unchanged" : delta > 0 ? `increased by ${delta}` : `decreased by ${Math.abs(delta)}`;
+  return `Week of ${latest.primary_label} to ${latest.secondary_label.split(" · ")[0]} totals ${latest.total_papers} papers across ${latest.active_days} active days, ${direction} versus the previous week.`;
+}
+
+function getWeekBucket(reportDate) {
+  const date = new Date(`${reportDate}T00:00:00Z`);
+  const dayOffset = (date.getUTCDay() + 6) % 7;
+  const start = new Date(date);
+  start.setUTCDate(date.getUTCDate() - dayOffset);
+  const end = new Date(start);
+  end.setUTCDate(start.getUTCDate() + 6);
+  return {
+    week_key: start.toISOString().slice(0, 10),
+    week_start: start.toISOString().slice(0, 10),
+    week_end: end.toISOString().slice(0, 10),
+  };
+}
+
+function formatShortDate(reportDate) {
+  return reportDate.slice(5);
 }
 
 function rememberLikeRecord(paper) {
