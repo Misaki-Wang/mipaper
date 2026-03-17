@@ -792,9 +792,6 @@ function renderFeatureStage(report, sections) {
     <div class="lead-layout">
       <div class="lead-main">
         <h3>${escapeHtml(leadPaper.title)}</h3>
-        <p class="lead-copy">
-          Start here: this paper is the cleanest entry point into the current ${escapeHtml(report.category)} snapshot, and its topic cluster is driving the board right now.
-        </p>
         <div class="lead-support">
           <article class="lead-support-card">
             <span class="lead-support-label">Snapshot</span>
@@ -863,11 +860,6 @@ function renderSpotlight(report, sections) {
             <div class="paper-badges">${renderPaperBadges(paper)}</div>
           </div>
           <h3>${escapeHtml(paper.title)}</h3>
-          <p class="spotlight-copy">${escapeHtml(
-            index === 0
-              ? `Highest-priority follow-up from the focus topics in ${report.category}.`
-              : `A strong secondary read if you want more depth inside ${paper.topic_label}.`
-          )}</p>
           ${renderPaperDetails(paper)}
           <div class="paper-links">
             ${renderPaperLink({ href: paper.pdf_url || paper.abs_url, label: "arXiv", brand: "arxiv" })}
