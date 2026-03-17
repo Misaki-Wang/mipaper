@@ -791,7 +791,6 @@ function renderFeatureStage(report, sections) {
     </div>
     <div class="lead-layout">
       <div class="lead-main">
-        <h3>${escapeHtml(leadPaper.title)}</h3>
         <div class="lead-support">
           <article class="lead-support-card">
             <span class="lead-support-label">Snapshot</span>
@@ -820,18 +819,6 @@ function renderFeatureStage(report, sections) {
                 : "Use the topic navigator to branch into the broader daily set"
             }</span>
           </article>
-        </div>
-      </div>
-      <div class="lead-side">
-        ${renderPaperDetails(leadPaper)}
-        <div class="lead-metrics">
-          <span class="paper-id">${escapeHtml(leadPaper.paper_id)}</span>
-          <span class="paper-badge subdued">${escapeHtml(report.report_date)}</span>
-        </div>
-        <div class="lead-links">
-          ${renderPaperLink({ href: leadPaper.pdf_url || leadPaper.abs_url, label: "arXiv", brand: "arxiv" })}
-          ${renderPaperLink({ href: leadPaper.detail_url, label: "Cool", brand: "cool" })}
-          ${renderLikeButton(leadPaper)}
         </div>
       </div>
     </div>
