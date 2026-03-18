@@ -732,8 +732,8 @@ function buildWeeklyCadence(reports) {
         total_papers: totalPapers,
         active_days: weekReports.length,
         is_active: weekReports.some((item) => item.data_path === state.currentPath),
-        primary_label: formatShortDate(bucket.week_start),
-        secondary_label: `${formatShortDate(bucket.week_end)} · ${bucket.week_start.slice(0, 4)}`,
+        primary_label: formatWeekLabel(bucket.week_start),
+        secondary_label: `${formatShortDate(bucket.week_start)} to ${formatShortDate(bucket.week_end)}`,
         value_label: "papers total",
       };
     });
@@ -746,12 +746,12 @@ function buildWeeklyCadenceSummary(rows) {
   }
   if (reports.length === 1) {
     const [only] = reports;
-    return `Week of ${only.primary_label} to ${only.secondary_label.split(" · ")[0]} has ${only.total_papers} papers across ${only.active_days} active days.`;
+    return `${only.primary_label} has ${only.total_papers} papers across ${only.active_days} active days.`;
   }
   const [latest, previous] = reports;
   const delta = latest.total_papers - previous.total_papers;
   const direction = delta === 0 ? "unchanged" : delta > 0 ? `increased by ${delta}` : `decreased by ${Math.abs(delta)}`;
-  return `Week of ${latest.primary_label} to ${latest.secondary_label.split(" · ")[0]} totals ${latest.total_papers} papers across ${latest.active_days} active days, ${direction} versus the previous week.`;
+  return `${latest.primary_label} totals ${latest.total_papers} papers across ${latest.active_days} active days, ${direction} versus the previous week.`;
 }
 
 function getWeekBucket(reportDate) {
@@ -770,6 +770,30 @@ function getWeekBucket(reportDate) {
 
 function formatShortDate(reportDate) {
   return reportDate.slice(5);
+}
+
+function formatWeekLabel(dateString) {
+  if (!dateString) {
+    return "-";
+  }
+  const week = getIsoWeekParts(dateString);
+  if (!week) {
+    return dateString;
+  }
+  return `${week.year}-W${String(week.week).padStart(2, "0")}`;
+}
+
+function getIsoWeekParts(dateString) {
+  const date = new Date(`${dateString}T00:00:00Z`);
+  if (Number.isNaN(date.getTime())) {
+    return null;
+  }
+  const day = date.getUTCDay() || 7;
+  date.setUTCDate(date.getUTCDate() + 4 - day);
+  const year = date.getUTCFullYear();
+  const yearStart = new Date(Date.UTC(year, 0, 1));
+  const week = Math.ceil((((date - yearStart) / 86400000) + 1) / 7);
+  return { year, week };
 }
 
 function rememberLikeRecord(paper) {
