@@ -69,7 +69,7 @@ export function createLikeRecord(paper, context = {}) {
     abstract: typeof paper.abstract === "string" ? paper.abstract.trim() : "",
     pdf_url: paper.arxiv_pdf_url || paper.pdf_url || "",
     abs_url: paper.arxiv_url || paper.abs_url || "",
-    detail_url: paper.detail_url || "",
+    detail_url: paper.detail_url || paper.papers_cool_url || "",
     hf_url: paper.hf_url || "",
     github_url: paper.github_url || "",
     submitted_by: paper.submitted_by || "",

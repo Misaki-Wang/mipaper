@@ -1,0 +1,146 @@
+{
+  "generated_at": "2026-03-13T12:40:12Z",
+  "category": "cs.AI",
+  "report_date": "2026-03-06",
+  "source_url": "https://papers.cool/arxiv/cs.AI?date=2026-03-06&show=1000",
+  "classifier": "claude",
+  "total_papers": 2,
+  "focus_topics": [
+    {
+      "topic_key": "generative_foundations",
+      "topic_label": "Generative Foundations",
+      "count": 0,
+      "share": 0.0
+    },
+    {
+      "topic_key": "multimodal_generative",
+      "topic_label": "Multimodal Generative Modeling",
+      "count": 0,
+      "share": 0.0
+    },
+    {
+      "topic_key": "multimodal_agents",
+      "topic_label": "Multimodal Agents",
+      "count": 0,
+      "share": 0.0
+    }
+  ],
+  "topic_distribution": [
+    {
+      "topic_label": "LLMs and Language",
+      "count": 1,
+      "share": 50.0
+    },
+    {
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "count": 1,
+      "share": 50.0
+    }
+  ],
+  "topics": [
+    {
+      "topic_label": "LLMs and Language",
+      "count": 1,
+      "share": 50.0,
+      "papers": [
+        {
+          "paper_id": "2603.05498",
+          "title": "The Spike, the Sparse and the Sink: Anatomy of Massive Activations and Attention Sinks",
+          "abs_url": "https://arxiv.org/abs/2603.05498",
+          "pdf_url": "https://arxiv.org/pdf/2603.05498",
+          "detail_url": "https://papers.cool/arxiv/2603.05498",
+          "authors": [
+            "Shangwen Sun",
+            "Alfredo Canziani",
+            "Yann LeCun",
+            "Jiachen Zhu"
+          ],
+          "subjects": [
+            "Artificial Intelligence",
+            "Computation and Language"
+          ],
+          "abstract": "We study two recurring phenomena in Transformer language models: massive activations, in which a small number of tokens exhibit extreme outliers in a few channels, and attention sinks, in which certain tokens attract disproportionate attention mass regardless of semantic relevance. Prior work observes that these phenomena frequently co-occur and often involve the same tokens, but their functional roles and causal relationship remain unclear. Through systematic experiments, we show that the co-occurrence is largely an architectural artifact of modern Transformer design, and that the two phenomena serve related but distinct functions. Massive activations operate globally: they induce near-constant hidden representations that persist across layers, effectively functioning as implicit parameters of the model. Attention sinks operate locally: they modulate attention outputs across heads and bias individual heads toward short-range dependencies. We identify the pre-norm configuration as the key choice that enables the co-occurrence, and show that ablating it causes the two phenomena to decouple.",
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [],
+          "classification_source": "claude",
+          "classification_confidence": 0.85
+        }
+      ]
+    },
+    {
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "count": 1,
+      "share": 50.0,
+      "papers": [
+        {
+          "paper_id": "2603.05485",
+          "title": "Towards Provably Unbiased LLM Judges via Bias-Bounded Evaluation",
+          "abs_url": "https://arxiv.org/abs/2603.05485",
+          "pdf_url": "https://arxiv.org/pdf/2603.05485",
+          "detail_url": "https://papers.cool/arxiv/2603.05485",
+          "authors": [
+            "Benjamin Feuer",
+            "Lucas Rosenblatt",
+            "Oussama Elachqar"
+          ],
+          "subjects": [
+            "Artificial Intelligence"
+          ],
+          "abstract": "As AI models progress beyond simple chatbots into more complex workflows, we draw ever closer to the event horizon beyond which AI systems will be utilized in autonomous, self-maintaining feedback loops. Any autonomous AI system will depend on automated, verifiable rewards and feedback; in settings where ground truth is sparse or non-deterministic, one practical source of such rewards is an LLM-as-a-Judge. Although LLM judges continue to improve, the literature has yet to introduce systems capable of enforcing standards with strong guarantees, particularly when bias vectors are unknown or adversarially discovered. To remedy this issue, we propose average bias-boundedness (A-BB), an algorithmic framework which formally guarantees reductions of harm/impact as a result of any measurable bias in an LLM judge. Evaluating on Arena-Hard-Auto with four LLM judges, we achieve (tau=0.5, delta=0.01) bias-bounded guarantees while retaining 61-99% correlation with original rankings across formatting and schematic bias settings, with most judge-bias combinations exceeding 80%. The code to reproduce our findings is available at https://github.com/penfever/bias-bounded-evaluation.",
+          "topic_key": "reasoning_alignment_eval",
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "matched_terms": [],
+          "classification_source": "claude",
+          "classification_confidence": 0.95
+        }
+      ]
+    }
+  ],
+  "papers": [
+    {
+      "paper_id": "2603.05498",
+      "title": "The Spike, the Sparse and the Sink: Anatomy of Massive Activations and Attention Sinks",
+      "abs_url": "https://arxiv.org/abs/2603.05498",
+      "pdf_url": "https://arxiv.org/pdf/2603.05498",
+      "detail_url": "https://papers.cool/arxiv/2603.05498",
+      "authors": [
+        "Shangwen Sun",
+        "Alfredo Canziani",
+        "Yann LeCun",
+        "Jiachen Zhu"
+      ],
+      "subjects": [
+        "Artificial Intelligence",
+        "Computation and Language"
+      ],
+      "abstract": "We study two recurring phenomena in Transformer language models: massive activations, in which a small number of tokens exhibit extreme outliers in a few channels, and attention sinks, in which certain tokens attract disproportionate attention mass regardless of semantic relevance. Prior work observes that these phenomena frequently co-occur and often involve the same tokens, but their functional roles and causal relationship remain unclear. Through systematic experiments, we show that the co-occurrence is largely an architectural artifact of modern Transformer design, and that the two phenomena serve related but distinct functions. Massive activations operate globally: they induce near-constant hidden representations that persist across layers, effectively functioning as implicit parameters of the model. Attention sinks operate locally: they modulate attention outputs across heads and bias individual heads toward short-range dependencies. We identify the pre-norm configuration as the key choice that enables the co-occurrence, and show that ablating it causes the two phenomena to decouple.",
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [],
+      "classification_source": "claude",
+      "classification_confidence": 0.85
+    },
+    {
+      "paper_id": "2603.05485",
+      "title": "Towards Provably Unbiased LLM Judges via Bias-Bounded Evaluation",
+      "abs_url": "https://arxiv.org/abs/2603.05485",
+      "pdf_url": "https://arxiv.org/pdf/2603.05485",
+      "detail_url": "https://papers.cool/arxiv/2603.05485",
+      "authors": [
+        "Benjamin Feuer",
+        "Lucas Rosenblatt",
+        "Oussama Elachqar"
+      ],
+      "subjects": [
+        "Artificial Intelligence"
+      ],
+      "abstract": "As AI models progress beyond simple chatbots into more complex workflows, we draw ever closer to the event horizon beyond which AI systems will be utilized in autonomous, self-maintaining feedback loops. Any autonomous AI system will depend on automated, verifiable rewards and feedback; in settings where ground truth is sparse or non-deterministic, one practical source of such rewards is an LLM-as-a-Judge. Although LLM judges continue to improve, the literature has yet to introduce systems capable of enforcing standards with strong guarantees, particularly when bias vectors are unknown or adversarially discovered. To remedy this issue, we propose average bias-boundedness (A-BB), an algorithmic framework which formally guarantees reductions of harm/impact as a result of any measurable bias in an LLM judge. Evaluating on Arena-Hard-Auto with four LLM judges, we achieve (tau=0.5, delta=0.01) bias-bounded guarantees while retaining 61-99% correlation with original rankings across formatting and schematic bias settings, with most judge-bias combinations exceeding 80%. The code to reproduce our findings is available at https://github.com/penfever/bias-bounded-evaluation.",
+      "topic_key": "reasoning_alignment_eval",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "matched_terms": [],
+      "classification_source": "claude",
+      "classification_confidence": 0.95
+    }
+  ]
+}

@@ -150,7 +150,7 @@ Local fallback config:
 There are three scheduled jobs. The paper jobs default to local Codex classification and all jobs can auto-push generated artifacts to GitHub.
 
 - `Cool Daily`
-  - `11:00`
+  - `21:00`
   - `launchd` / `cron` can trigger every day
   - The job catches up every missed business day from the persisted state
   - Crawls the current business day for `cs.AI`, `cs.CL`, and `cs.CV`
@@ -206,7 +206,7 @@ python3 scripts/run_scheduled_job.py --job hf_daily --skip-push
 Use an explicit test clock:
 
 ```bash
-python3 scripts/run_scheduled_job.py --job cool_daily --skip-push --now 2026-03-10T11:00:00+08:00
+python3 scripts/run_scheduled_job.py --job cool_daily --skip-push --now 2026-03-10T21:00:00+08:00
 python3 scripts/run_scheduled_job.py --job hf_daily --skip-push --now 2026-03-10T23:00:00+08:00
 python3 scripts/run_scheduled_job.py --job trending --skip-push --now 2026-03-16T12:00:00+08:00
 ```

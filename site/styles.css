@@ -1918,6 +1918,27 @@ code {
   height: 0.92rem;
 }
 
+.review-icon {
+  color: color-mix(in srgb, var(--muted), var(--accent-strong) 24%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.96), color-mix(in srgb, var(--surface-strong), white 12%));
+  border: 1px solid color-mix(in srgb, var(--border), var(--accent) 18%);
+}
+
+.review-icon svg {
+  width: 0.92rem;
+  height: 0.92rem;
+}
+
+.review-button {
+  border-color: color-mix(in srgb, var(--border), var(--accent) 22%);
+}
+
+.review-button:hover .review-icon {
+  color: var(--accent-strong);
+  border-color: color-mix(in srgb, var(--border), var(--accent) 28%);
+  background: color-mix(in srgb, var(--accent-soft), white 16%);
+}
+
 .like-button.is-liked {
   border-color: color-mix(in srgb, #d75b76, var(--border) 18%);
   background: color-mix(in srgb, #ffe5eb, var(--surface-soft) 42%);

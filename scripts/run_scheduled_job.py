@@ -65,7 +65,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--now",
-        help="optional ISO datetime override for tests, for example 2026-03-10T11:00:00+08:00",
+        help="optional ISO datetime override for tests, for example 2026-03-10T21:00:00+08:00",
     )
     return parser.parse_args()
 

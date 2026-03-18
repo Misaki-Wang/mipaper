@@ -41,7 +41,7 @@ class SchedulerHelpersTest(unittest.TestCase):
         )
 
     def test_cool_daily_backfill_dates_uses_start_date_and_skips_weekend(self) -> None:
-        now = datetime.fromisoformat("2026-03-10T11:00:00+08:00")
+        now = datetime.fromisoformat("2026-03-10T21:00:00+08:00")
         self.assertEqual(
             [
                 "2026-03-02",
@@ -56,7 +56,7 @@ class SchedulerHelpersTest(unittest.TestCase):
         )
 
     def test_cool_daily_backfill_dates_resume_after_last_success(self) -> None:
-        now = datetime.fromisoformat("2026-03-10T11:00:00+08:00")
+        now = datetime.fromisoformat("2026-03-10T21:00:00+08:00")
         self.assertEqual(
             ["2026-03-09", "2026-03-10"],
             cool_daily_backfill_dates("2026-03-02", "Asia/Shanghai", last_success_date="2026-03-06", now=now),

@@ -11,7 +11,7 @@ import {
   syncLikesNow,
 } from "./likes.js";
 import { getSupabaseClient, isAuthorizedUser, isSupabaseConfigured, loadRuntimeConfig } from "./supabase.js";
-import { createPageReviewKey, initReviewSync, isPageReviewed, subscribePageReviews } from "./reading_state.js";
+import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js";
 import { bindQueueButtons, initQueue, readQueue, subscribeQueue } from "./paper_queue.js";
 
 const state = {
@@ -647,8 +647,8 @@ function renderLaterQueue(laterQueue) {
           </details>
           ` : ""}
           <div class="spotlight-links">
-            ${paper.pdf_url ? `<a class="paper-link brand-arxiv" href="${escapeAttribute(paper.pdf_url)}" target="_blank" rel="noreferrer">arXiv</a>` : ""}
-            ${paper.detail_url ? `<a class="paper-link brand-cool" href="${escapeAttribute(paper.detail_url)}" target="_blank" rel="noreferrer">Cool</a>` : ""}
+            ${getArxivUrl(paper) ? renderExternalPaperLink({ href: getArxivUrl(paper), label: "arXiv", brand: "arxiv" }) : ""}
+            ${getCoolUrl(paper) ? renderExternalPaperLink({ href: getCoolUrl(paper), label: "Cool", brand: "cool" }) : ""}
             <button class="paper-link later-button is-later" type="button" data-later-id="${escapeAttribute(paper.like_id)}" aria-pressed="true">
               <span class="paper-link-icon later-icon" aria-hidden="true">
                 <svg viewBox="0 0 20 20">
@@ -724,6 +724,21 @@ function renderToReadList(toReadSnapshots) {
           <div class="spotlight-links">
             <a class="paper-link" href="${escapeAttribute(snapshot.branch_url)}">${escapeHtml(snapshot.branch_label)}</a>
             ${snapshot.source_url ? `<a class="paper-link brand-cool" href="${escapeAttribute(snapshot.source_url)}" target="_blank" rel="noreferrer">Source</a>` : ""}
+            <button
+              class="paper-link review-button"
+              type="button"
+              data-review-key="${escapeAttribute(snapshot.review_key)}"
+              data-branch-label="${escapeAttribute(snapshot.branch_label)}"
+              data-snapshot-label="${escapeAttribute(snapshot.snapshot_label)}"
+              aria-pressed="false"
+            >
+              <span class="paper-link-icon review-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20">
+                  <path d="M5 10.5l3.1 3.1L15 6.8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </span>
+              <span class="paper-link-text">Reviewed</span>
+            </button>
           </div>
         </article>
       `
@@ -746,6 +761,19 @@ function renderToReadList(toReadSnapshots) {
       if (btn.dataset.toReadPage === "prev" && toReadPage > 0) toReadPage--;
       else if (btn.dataset.toReadPage === "next" && toReadPage < totalPages - 1) toReadPage++;
       renderToReadList(toReadSnapshots);
+    });
+  });
+
+  root.querySelectorAll("[data-review-key]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const reviewKey = button.dataset.reviewKey;
+      if (!reviewKey) {
+        return;
+      }
+      setPageReviewed(reviewKey, true, {
+        branch: button.dataset.branchLabel || "Library",
+        snapshot_label: button.dataset.snapshotLabel || "",
+      });
     });
   });
 }
@@ -929,13 +957,36 @@ function renderLikeButton(paper) {
 }
 
 function renderExternalPaperLink({ href, label, brand }) {
-  const iconSrc = brand === "github" ? "./assets/github-mark.svg" : "";
+  const iconSrc =
+    brand === "arxiv"
+      ? "./assets/arxiv-logo.svg"
+      : brand === "cool"
+      ? "./assets/cool-favicon.ico"
+      : brand === "hf"
+      ? "./assets/hf-logo.svg"
+      : brand === "github"
+      ? "./assets/github-mark.svg"
+      : "";
   return `
     <a class="paper-link brand-${escapeAttribute(brand)}" href="${escapeAttribute(href)}" target="_blank" rel="noreferrer">
       <span class="paper-link-icon" aria-hidden="true">${iconSrc ? `<img src="${iconSrc}" alt="" />` : ""}</span>
       <span class="paper-link-text">${escapeHtml(label)}</span>
     </a>
   `;
+}
+
+function getArxivUrl(paper) {
+  return paper.pdf_url || paper.abs_url || "";
+}
+
+function getCoolUrl(paper) {
+  if (paper.detail_url) {
+    return paper.detail_url;
+  }
+  if (paper.paper_id && (paper.pdf_url || paper.abs_url || paper.hf_url)) {
+    return `https://papers.cool/arxiv/${paper.paper_id}`;
+  }
+  return "";
 }
 
 function getVisibleLikes(likes) {
