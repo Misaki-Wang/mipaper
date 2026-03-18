@@ -22,17 +22,50 @@
     </script>
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
+  <body class="page-trending">
     <div class="page-shell">
+      <div class="page-chrome">
+        <header class="app-toolbar reveal">
+          <div class="toolbar-start">
+            <button id="trending-sidebar-toggle" class="toolbar-filter-toggle" type="button" aria-expanded="false" aria-haspopup="menu" aria-label="Open filters">
+              <span id="trending-sidebar-toggle-icon" class="toolbar-filter-icon">☰</span>
+              <span id="trending-sidebar-toggle-label" class="toolbar-filter-label">Filters</span>
+            </button>
+            <div class="page-nav">
+              <a class="page-nav-link" href="./index.html">HF Daily</a>
+              <a class="page-nav-link" href="./cool-daily.html">Cool Daily</a>
+              <a class="page-nav-link" href="./conference.html">Conference</a>
+              <a class="page-nav-link active" href="./trending.html">Trending</a>
+              <a class="page-nav-link" href="./like.html">Library</a>
+            </div>
+          </div>
+          <div class="toolbar-end">
+            <div class="hero-actions toolbar-theme-switch">
+              <button class="pill-button active" type="button" data-theme-toggle="auto">Auto</button>
+              <button class="pill-button" type="button" data-theme-toggle="light">Day</button>
+              <button class="pill-button" type="button" data-theme-toggle="dark">Night</button>
+            </div>
+          </div>
+        </header>
+
+        <aside id="trending-filters-menu" class="filters-menu-panel glass-card" hidden>
+          <div id="trending-sidebar-stack" class="sidebar-stack">
+            <section class="glass-card controls reveal">
+              <div class="control-block">
+                <label for="trending-report-select">Snapshot</label>
+                <select id="trending-report-select" class="control-input"></select>
+              </div>
+              <div class="control-block">
+                <label for="trending-search-input">Repository Search</label>
+                <input id="trending-search-input" class="control-input" type="search" placeholder="owner / repo or description" />
+              </div>
+            </section>
+          </div>
+        </aside>
+      </div>
+
       <header class="hero reveal">
         <div class="hero-copy">
-          <div class="page-nav">
-            <a class="page-nav-link" href="./index.html">HF Daily</a>
-            <a class="page-nav-link" href="./cool-daily.html">Cool Daily</a>
-            <a class="page-nav-link" href="./conference.html">Conference</a>
-            <a class="page-nav-link active" href="./trending.html">Trending</a>
-            <a class="page-nav-link" href="./like.html">Library</a>
-          </div>
           <p class="eyebrow">GITHUB TRENDING</p>
           <h1>Weekly Trending Repositories</h1>
           <p class="hero-text">
@@ -40,11 +73,6 @@
             <a href="https://github.com/trending?since=weekly&spoken_language_code=" target="_blank" rel="noreferrer">GitHub Trending</a>
           </p>
           <div id="trending-hero-signals" class="hero-signals"></div>
-          <div class="hero-actions">
-            <button class="pill-button active" type="button" data-theme-toggle="auto">Auto</button>
-            <button class="pill-button" type="button" data-theme-toggle="light">Day</button>
-            <button class="pill-button" type="button" data-theme-toggle="dark">Night</button>
-          </div>
         </div>
         <div class="hero-panel glass-card">
           <div class="hero-panel-top">
@@ -85,32 +113,6 @@
       </section>
 
       <main class="layout">
-        <aside class="sidebar">
-          <div class="glass-card sidebar-header reveal">
-            <div>
-              <p class="eyebrow">BRANCH RAIL</p>
-              <h2>Filters</h2>
-            </div>
-            <button id="trending-sidebar-toggle" class="sidebar-toggle" type="button" aria-expanded="true">
-              <span id="trending-sidebar-toggle-icon" class="sidebar-toggle-icon">‹</span>
-              <span id="trending-sidebar-toggle-label" class="sidebar-toggle-label">Collapse</span>
-            </button>
-          </div>
-
-          <div id="trending-sidebar-stack" class="sidebar-stack">
-            <section class="glass-card controls reveal">
-              <div class="control-block">
-                <label for="trending-report-select">Snapshot</label>
-                <select id="trending-report-select" class="control-input"></select>
-              </div>
-              <div class="control-block">
-                <label for="trending-search-input">Repository Search</label>
-                <input id="trending-search-input" class="control-input" type="search" placeholder="owner / repo or description" />
-              </div>
-            </section>
-          </div>
-        </aside>
-
         <section class="content">
           <section id="trending-overview-section" class="glass-card overview reveal">
             <div class="overview-top">

@@ -22,17 +22,91 @@
     </script>
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
+  <body class="page-conference">
     <div class="page-shell">
+      <div class="page-chrome">
+        <header class="app-toolbar reveal">
+          <div class="toolbar-start">
+            <button id="conference-sidebar-toggle" class="toolbar-filter-toggle" type="button" aria-expanded="false" aria-haspopup="menu" aria-label="Open filters">
+              <span id="conference-sidebar-toggle-icon" class="toolbar-filter-icon">☰</span>
+              <span id="conference-sidebar-toggle-label" class="toolbar-filter-label">Filters</span>
+            </button>
+            <div class="page-nav">
+              <a class="page-nav-link" href="./index.html">HF Daily</a>
+              <a class="page-nav-link" href="./cool-daily.html">Cool Daily</a>
+              <a class="page-nav-link active" href="./conference.html">Conference</a>
+              <a class="page-nav-link" href="./trending.html">Trending</a>
+              <a class="page-nav-link" href="./like.html">Library</a>
+            </div>
+          </div>
+          <div class="toolbar-end">
+            <div class="hero-actions toolbar-theme-switch">
+              <button class="pill-button active" type="button" data-theme-toggle="auto">Auto</button>
+              <button class="pill-button" type="button" data-theme-toggle="light">Day</button>
+              <button class="pill-button" type="button" data-theme-toggle="dark">Night</button>
+            </div>
+          </div>
+        </header>
+
+        <aside id="conference-filters-menu" class="filters-menu-panel glass-card" hidden>
+          <div id="conference-sidebar-stack" class="sidebar-stack">
+            <section class="glass-card controls reveal">
+              <div class="control-block">
+                <label for="conference-year-filter">Year</label>
+                <select id="conference-year-filter" class="control-input">
+                  <option value="">All Years</option>
+                </select>
+              </div>
+              <div class="control-block">
+                <label for="conference-series-filter">Conference</label>
+                <select id="conference-series-filter" class="control-input">
+                  <option value="">All Conferences</option>
+                </select>
+              </div>
+              <div class="control-block">
+                <label for="conference-select">Snapshot</label>
+                <select id="conference-select" class="control-input"></select>
+              </div>
+              <div class="control-block">
+                <label for="conference-subject-filter">Subject Filter</label>
+                <select id="conference-subject-filter" class="control-input">
+                  <option value="">All Subjects</option>
+                </select>
+              </div>
+              <div class="control-block">
+                <label for="conference-topic-filter">Topic Filter</label>
+                <select id="conference-topic-filter" class="control-input">
+                  <option value="">All Topics</option>
+                </select>
+              </div>
+              <div class="control-block">
+                <label for="conference-search">Title Search</label>
+                <input
+                  id="conference-search"
+                  class="control-input"
+                  type="search"
+                  placeholder="Search paper titles, authors, or subjects"
+                />
+              </div>
+              <label class="checkbox-row" for="conference-focus-only">
+                <input id="conference-focus-only" type="checkbox" />
+                <span>Focus topics only</span>
+              </label>
+            </section>
+
+            <section class="glass-card trend-panel reveal">
+              <div class="section-heading">
+                <p class="eyebrow">SUBJECT MIX</p>
+                <h2>Subject Distribution</h2>
+              </div>
+              <div id="conference-subject-radar" class="conference-subject-radar"></div>
+            </section>
+          </div>
+        </aside>
+      </div>
+
       <header class="hero reveal">
         <div class="hero-copy">
-          <div class="page-nav">
-            <a class="page-nav-link" href="./index.html">HF Daily</a>
-            <a class="page-nav-link" href="./cool-daily.html">Cool Daily</a>
-            <a class="page-nav-link active" href="./conference.html">Conference</a>
-            <a class="page-nav-link" href="./trending.html">Trending</a>
-            <a class="page-nav-link" href="./like.html">Library</a>
-          </div>
           <p class="eyebrow">CONFERENCE OBSERVATORY</p>
           <h1>Conference Analysis</h1>
           <p class="hero-text">
@@ -40,11 +114,6 @@
             <a href="https://papers.cool/" target="_blank" rel="noreferrer">Conference Paper</a>
           </p>
           <div id="conference-hero-signals" class="hero-signals"></div>
-          <div class="hero-actions">
-            <button class="pill-button active" type="button" data-theme-toggle="auto">Auto</button>
-            <button class="pill-button" type="button" data-theme-toggle="light">Day</button>
-            <button class="pill-button" type="button" data-theme-toggle="dark">Night</button>
-          </div>
         </div>
         <div class="hero-panel glass-card">
           <div class="hero-panel-top">
@@ -86,79 +155,6 @@
       </section>
 
       <main class="layout">
-        <aside class="sidebar">
-          <div class="glass-card sidebar-header reveal">
-            <div>
-              <p class="eyebrow">BRANCH RAIL</p>
-              <h2>Filters</h2>
-            </div>
-            <button
-              id="conference-sidebar-toggle"
-              class="sidebar-toggle"
-              type="button"
-              aria-expanded="true"
-            >
-              <span id="conference-sidebar-toggle-icon" class="sidebar-toggle-icon">‹</span>
-              <span id="conference-sidebar-toggle-label" class="sidebar-toggle-label">Collapse</span>
-            </button>
-          </div>
-
-          <div id="conference-sidebar-stack" class="sidebar-stack">
-            <section class="glass-card controls reveal">
-              <div class="control-block">
-                <label for="conference-year-filter">Year</label>
-                <select id="conference-year-filter" class="control-input">
-                  <option value="">All Years</option>
-                </select>
-              </div>
-              <div class="control-block">
-                <label for="conference-series-filter">Conference</label>
-                <select id="conference-series-filter" class="control-input">
-                  <option value="">All Conferences</option>
-                </select>
-              </div>
-              <div class="control-block">
-                <label for="conference-select">Snapshot</label>
-                <select id="conference-select" class="control-input"></select>
-              </div>
-              <div class="control-block">
-                <label for="conference-subject-filter">Subject Filter</label>
-                <select id="conference-subject-filter" class="control-input">
-                  <option value="">All Subjects</option>
-                </select>
-              </div>
-              <div class="control-block">
-                <label for="conference-topic-filter">Topic Filter</label>
-                <select id="conference-topic-filter" class="control-input">
-                  <option value="">All Topics</option>
-                </select>
-              </div>
-              <div class="control-block">
-                <label for="conference-search">Title Search</label>
-                <input
-                  id="conference-search"
-                  class="control-input"
-                  type="search"
-                  placeholder="Search title keywords"
-                />
-              </div>
-              <label class="checkbox-row" for="conference-focus-only">
-                <input id="conference-focus-only" type="checkbox" />
-                <span>Focus topics only</span>
-              </label>
-            </section>
-
-            <section class="glass-card trend-panel reveal">
-              <div class="section-heading">
-                <p class="eyebrow">SUBJECT MIX</p>
-                <h2>Subject Distribution</h2>
-              </div>
-              <div id="conference-subject-distribution" class="distribution-list"></div>
-            </section>
-
-          </div>
-        </aside>
-
         <section class="content">
           <section id="conference-overview-section" class="glass-card overview reveal">
             <div class="overview-top">

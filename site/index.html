@@ -22,77 +22,33 @@
     </script>
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
+  <body class="page-hf">
     <div class="page-shell">
-      <header class="hero reveal">
-        <div class="hero-copy">
-          <div class="page-nav">
-            <a class="page-nav-link active" href="./index.html">HF Daily</a>
-            <a class="page-nav-link" href="./cool-daily.html">Cool Daily</a>
-            <a class="page-nav-link" href="./conference.html">Conference</a>
-            <a class="page-nav-link" href="./trending.html">Trending</a>
-            <a class="page-nav-link" href="./like.html">Library</a>
-          </div>
-          <p class="eyebrow">HF DAILY PAPER</p>
-          <h1>Hugging Face Daily Papers</h1>
-          <p class="hero-text">
-            Original page:
-            <a href="https://huggingface.co/papers/date/2026-03-09" target="_blank" rel="noreferrer">Hugging Face Daily Papers</a>
-          </p>
-          <div id="hf-hero-signals" class="hero-signals"></div>
-          <div class="hero-actions">
-            <button class="pill-button active" type="button" data-theme-toggle="auto">Auto</button>
-            <button class="pill-button" type="button" data-theme-toggle="light">Day</button>
-            <button class="pill-button" type="button" data-theme-toggle="dark">Night</button>
-          </div>
-        </div>
-        <div class="hero-panel glass-card">
-          <div class="hero-panel-top">
-            <span class="meta-kicker">Active Date</span>
-            <div class="hero-panel-status">
-              <strong id="hf-hero-date">-</strong>
-              <span id="hf-hero-review-status" class="review-status-pill">Not reviewed</span>
-            </div>
-          </div>
-          <div class="hero-stat-grid">
-            <div>
-              <span class="stat-label">Papers</span>
-              <strong id="hf-hero-total">-</strong>
-            </div>
-            <div>
-              <span class="stat-label">Top Submitter</span>
-              <strong id="hf-hero-submitter">-</strong>
-            </div>
-            <div>
-              <span class="stat-label">Classifier</span>
-              <strong id="hf-hero-classifier">-</strong>
-            </div>
-            <div>
-              <span class="stat-label">Updated</span>
-              <strong id="hf-hero-updated">-</strong>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      <main class="layout">
-        <aside class="sidebar">
-          <div class="glass-card sidebar-header reveal">
-            <div>
-              <p class="eyebrow">BRANCH RAIL</p>
-              <h2>Filters</h2>
-            </div>
-            <button
-              id="hf-sidebar-toggle"
-              class="sidebar-toggle"
-              type="button"
-              aria-expanded="true"
-            >
-              <span id="hf-sidebar-toggle-icon" class="sidebar-toggle-icon">‹</span>
-              <span id="hf-sidebar-toggle-label" class="sidebar-toggle-label">Collapse</span>
+      <div class="page-chrome">
+        <header class="app-toolbar reveal">
+          <div class="toolbar-start">
+            <button id="hf-sidebar-toggle" class="toolbar-filter-toggle" type="button" aria-expanded="false" aria-haspopup="menu" aria-label="Open filters">
+              <span id="hf-sidebar-toggle-icon" class="toolbar-filter-icon">☰</span>
+              <span id="hf-sidebar-toggle-label" class="toolbar-filter-label">Filters</span>
             </button>
+            <div class="page-nav">
+              <a class="page-nav-link active" href="./index.html">HF Daily</a>
+              <a class="page-nav-link" href="./cool-daily.html">Cool Daily</a>
+              <a class="page-nav-link" href="./conference.html">Conference</a>
+              <a class="page-nav-link" href="./trending.html">Trending</a>
+              <a class="page-nav-link" href="./like.html">Library</a>
+            </div>
           </div>
+          <div class="toolbar-end">
+            <div class="hero-actions toolbar-theme-switch">
+              <button class="pill-button active" type="button" data-theme-toggle="auto">Auto</button>
+              <button class="pill-button" type="button" data-theme-toggle="light">Day</button>
+              <button class="pill-button" type="button" data-theme-toggle="dark">Night</button>
+            </div>
+          </div>
+        </header>
 
+        <aside id="hf-filters-menu" class="filters-menu-panel glass-card" hidden>
           <div id="hf-sidebar-stack" class="sidebar-stack">
             <section class="glass-card controls reveal">
               <div class="control-block">
@@ -147,9 +103,60 @@
               <div id="hf-distribution-list" class="distribution-list"></div>
             </section>
 
+            <section class="glass-card trend-panel reveal">
+              <div class="section-heading">
+                <p class="eyebrow">CADENCE VIEW</p>
+                <h2>Daily / Weekly</h2>
+              </div>
+              <div class="view-toggle-row">
+                <button class="pill-button active" type="button" data-hf-cadence-view="daily">Daily</button>
+                <button class="pill-button" type="button" data-hf-cadence-view="weekly">Weekly</button>
+              </div>
+            </section>
           </div>
         </aside>
+      </div>
 
+      <header class="hero reveal">
+        <div class="hero-copy">
+          <p class="eyebrow">HF DAILY PAPER</p>
+          <h1>Hugging Face Daily Papers</h1>
+          <p class="hero-text">
+            Original page:
+            <a href="https://huggingface.co/papers/date/2026-03-09" target="_blank" rel="noreferrer">Hugging Face Daily Papers</a>
+          </p>
+          <div id="hf-hero-signals" class="hero-signals"></div>
+        </div>
+        <div class="hero-panel glass-card">
+          <div class="hero-panel-top">
+            <span class="meta-kicker">Active Date</span>
+            <div class="hero-panel-status">
+              <strong id="hf-hero-date">-</strong>
+              <span id="hf-hero-review-status" class="review-status-pill">Not reviewed</span>
+            </div>
+          </div>
+          <div class="hero-stat-grid">
+            <div>
+              <span class="stat-label">Papers</span>
+              <strong id="hf-hero-total">-</strong>
+            </div>
+            <div>
+              <span class="stat-label">Top Submitter</span>
+              <strong id="hf-hero-submitter">-</strong>
+            </div>
+            <div>
+              <span class="stat-label">Classifier</span>
+              <strong id="hf-hero-classifier">-</strong>
+            </div>
+            <div>
+              <span class="stat-label">Updated</span>
+              <strong id="hf-hero-updated">-</strong>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="layout">
         <section class="content">
           <section id="hf-overview-section" class="glass-card overview reveal">
             <div class="overview-top">

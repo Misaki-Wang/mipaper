@@ -22,105 +22,64 @@
     </script>
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
+  <body class="page-like">
     <div class="page-shell">
-      <header class="hero reveal">
-        <div class="hero-copy">
-          <div class="page-nav">
-            <a class="page-nav-link" href="./index.html">HF Daily</a>
-            <a class="page-nav-link" href="./cool-daily.html">Cool Daily</a>
-            <a class="page-nav-link" href="./conference.html">Conference</a>
-            <a class="page-nav-link" href="./trending.html">Trending</a>
-            <a class="page-nav-link active" href="./like.html">Library</a>
-          </div>
-          <p class="eyebrow">LIBRARY BRANCH</p>
-          <h1>Reading Library</h1>
-          <p class="hero-text">
-            Use this branch as your saved-paper workspace: collect Likes, manage the Later queue, and keep unread branch snapshots in one place.
-          </p>
-          <div id="like-current-account" class="account-banner muted">
-            <span class="account-banner-label">Current account</span>
-            <strong class="account-banner-value">Not signed in</strong>
-          </div>
-          <div id="like-hero-signals" class="hero-signals"></div>
-          <div class="hero-actions">
-            <button class="pill-button active" type="button" data-theme-toggle="auto">Auto</button>
-            <button class="pill-button" type="button" data-theme-toggle="light">Day</button>
-            <button class="pill-button" type="button" data-theme-toggle="dark">Night</button>
-          </div>
-        </div>
-        <div class="hero-panel glass-card">
-          <div class="hero-panel-top">
-            <span class="meta-kicker">Library Pulse</span>
-            <strong id="like-hero-count">-</strong>
-          </div>
-          <div class="hero-stat-grid">
-            <div>
-              <span class="stat-label">Sources</span>
-              <strong id="like-hero-sources">-</strong>
-            </div>
-            <div>
-              <span class="stat-label">Later Queue</span>
-              <strong id="like-hero-focus">-</strong>
-            </div>
-            <div>
-              <span class="stat-label">Unread Snapshots</span>
-              <strong id="like-hero-latest">-</strong>
-            </div>
-            <div>
-              <span class="stat-label">Top Topic</span>
-              <strong id="like-hero-topic">-</strong>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      <section class="glass-card home-board reveal">
-        <div class="section-heading">
-          <p class="eyebrow">LIBRARY HOME</p>
-          <h2>Workspace Sources</h2>
-          <p id="like-board-summary" class="home-board-summary">-</p>
-        </div>
-        <div id="like-home-cards" class="home-categories"></div>
-      </section>
-
-      <main class="layout">
-        <aside class="sidebar">
-          <div class="glass-card sidebar-header reveal">
-            <div>
-              <p class="eyebrow">BRANCH RAIL</p>
-              <h2>Filters</h2>
-            </div>
-            <button id="like-sidebar-toggle" class="sidebar-toggle" type="button" aria-expanded="true">
-              <span id="like-sidebar-toggle-icon" class="sidebar-toggle-icon">‹</span>
-              <span id="like-sidebar-toggle-label" class="sidebar-toggle-label">Collapse</span>
+      <div class="page-chrome">
+        <header class="app-toolbar reveal">
+          <div class="toolbar-start">
+            <button id="like-sidebar-toggle" class="toolbar-filter-toggle" type="button" aria-expanded="false" aria-haspopup="menu" aria-label="Open filters">
+              <span id="like-sidebar-toggle-icon" class="toolbar-filter-icon">☰</span>
+              <span id="like-sidebar-toggle-label" class="toolbar-filter-label">Filters</span>
             </button>
+            <div class="page-nav">
+              <a class="page-nav-link" href="./index.html">HF Daily</a>
+              <a class="page-nav-link" href="./cool-daily.html">Cool Daily</a>
+              <a class="page-nav-link" href="./conference.html">Conference</a>
+              <a class="page-nav-link" href="./trending.html">Trending</a>
+              <a class="page-nav-link active" href="./like.html">Library</a>
+            </div>
           </div>
+          <div class="toolbar-end">
+            <div class="hero-actions toolbar-theme-switch">
+              <button class="pill-button active" type="button" data-theme-toggle="auto">Auto</button>
+              <button class="pill-button" type="button" data-theme-toggle="light">Day</button>
+              <button class="pill-button" type="button" data-theme-toggle="dark">Night</button>
+            </div>
+            <div class="account-menu-shell">
+              <button id="like-account-menu-toggle" class="account-menu-toggle" type="button" aria-expanded="false" aria-haspopup="menu">
+                <span id="like-account-trigger-avatar" class="account-menu-avatar" aria-hidden="true">
+                  <span class="account-avatar-fallback">?</span>
+                </span>
+                <span class="account-menu-toggle-copy">
+                  <span id="like-account-trigger-label" class="account-menu-toggle-label">Sync</span>
+                  <strong id="like-account-trigger-value" class="account-menu-toggle-value">Not signed in</strong>
+                </span>
+                <span class="account-menu-toggle-caret" aria-hidden="true">▾</span>
+              </button>
+              <div id="like-sync-menu" class="account-menu-panel" hidden>
+                <div id="like-account-card" class="account-card is-empty">
+                  <div class="account-avatar-shell" aria-hidden="true">
+                    <div class="account-avatar-fallback">?</div>
+                  </div>
+                  <div class="account-card-copy">
+                    <strong class="account-card-name">Not signed in</strong>
+                    <span class="account-card-email">GitHub + Supabase</span>
+                  </div>
+                </div>
+                <div id="like-auth-warning" class="auth-warning" hidden></div>
+                <p id="like-auth-status" class="auth-status">Supabase is not configured. Sync is currently disabled.</p>
+                <div class="auth-actions">
+                  <button id="like-sign-in" class="link-chip button-link" type="button">GitHub Sign in</button>
+                  <button id="like-sync-now" class="link-chip button-link" type="button">Sync now</button>
+                  <button id="like-sign-out" class="link-chip button-link" type="button">Sign out</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
 
+        <aside id="like-filters-menu" class="filters-menu-panel glass-card" hidden>
           <div id="like-sidebar-stack" class="sidebar-stack">
-            <section class="glass-card controls reveal">
-              <div class="section-heading">
-                <p class="eyebrow">SYNC</p>
-                <h2>GitHub + Supabase</h2>
-              </div>
-              <div id="like-account-card" class="account-card is-empty">
-                <div class="account-avatar-shell" aria-hidden="true">
-                  <div class="account-avatar-fallback">?</div>
-                </div>
-                <div class="account-card-copy">
-                  <strong class="account-card-name">Not signed in</strong>
-                  <span class="account-card-email">Connect a GitHub account first</span>
-                </div>
-              </div>
-              <div id="like-auth-warning" class="auth-warning" hidden></div>
-              <p id="like-auth-status" class="auth-status">Supabase is not configured. Sync is currently disabled.</p>
-              <div class="auth-actions">
-                <button id="like-sign-in" class="link-chip button-link" type="button">GitHub Sign in</button>
-                <button id="like-sync-now" class="link-chip button-link" type="button">Sync now</button>
-                <button id="like-sign-out" class="link-chip button-link" type="button">Sign out</button>
-              </div>
-            </section>
-
             <section class="glass-card controls reveal">
               <div class="control-block">
                 <label for="like-source-filter">Branch</label>
@@ -167,7 +126,53 @@
             </section>
           </div>
         </aside>
+      </div>
 
+      <header class="hero reveal">
+        <div class="hero-copy">
+          <p class="eyebrow">LIBRARY BRANCH</p>
+          <h1>Reading Library</h1>
+          <p class="hero-text">
+            Use this branch as your saved-paper workspace: collect Likes, manage the Later queue, and keep unread branch snapshots in one place.
+          </p>
+          <div id="like-hero-signals" class="hero-signals"></div>
+        </div>
+        <div class="hero-panel glass-card">
+          <div class="hero-panel-top">
+            <span class="meta-kicker">Library Pulse</span>
+            <strong id="like-hero-count">-</strong>
+          </div>
+          <div class="hero-stat-grid">
+            <div>
+              <span class="stat-label">Sources</span>
+              <strong id="like-hero-sources">-</strong>
+            </div>
+            <div>
+              <span class="stat-label">Later Queue</span>
+              <strong id="like-hero-focus">-</strong>
+            </div>
+            <div>
+              <span class="stat-label">Unread Snapshots</span>
+              <strong id="like-hero-latest">-</strong>
+            </div>
+            <div>
+              <span class="stat-label">Top Topic</span>
+              <strong id="like-hero-topic">-</strong>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="glass-card home-board reveal">
+        <div class="section-heading">
+          <p class="eyebrow">LIBRARY HOME</p>
+          <h2>Workspace Sources</h2>
+          <p id="like-board-summary" class="home-board-summary">-</p>
+        </div>
+        <div id="like-home-cards" class="home-categories"></div>
+      </section>
+
+      <main class="layout">
         <section class="content">
           <section id="like-later-section" class="glass-card conference-panel reveal">
             <div class="section-heading">

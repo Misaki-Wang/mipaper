@@ -24,84 +24,31 @@
   </head>
   <body class="page-cool-daily">
     <div class="page-shell">
-      <header class="hero reveal">
-        <div class="hero-copy">
-          <div class="page-nav">
-            <a class="page-nav-link" href="./index.html">HF Daily</a>
-            <a class="page-nav-link active" href="./cool-daily.html">Cool Daily</a>
-            <a class="page-nav-link" href="./conference.html">Conference</a>
-            <a class="page-nav-link" href="./trending.html">Trending</a>
-            <a class="page-nav-link" href="./like.html">Library</a>
-          </div>
-          <p class="eyebrow">COOL PAPER OBSERVATORY</p>
-          <h1>Cool Paper Observatory</h1>
-          <p class="hero-text">
-            Original pages:
-            <a href="https://papers.cool/arxiv/cs.AI" target="_blank" rel="noreferrer">cs.AI</a>
-            <span aria-hidden="true">·</span>
-            <a href="https://papers.cool/arxiv/cs.CL" target="_blank" rel="noreferrer">cs.CL</a>
-            <span aria-hidden="true">·</span>
-            <a href="https://papers.cool/arxiv/cs.CV" target="_blank" rel="noreferrer">cs.CV</a>
-          </p>
-          <div id="hero-lede" class="hero-lede">Loading the latest daily snapshot.</div>
-          <div id="hero-signals" class="hero-signals"></div>
-          <div class="hero-actions">
-            <button class="pill-button active" type="button" data-theme-toggle="auto">Auto</button>
-            <button class="pill-button" type="button" data-theme-toggle="light">Day</button>
-            <button class="pill-button" type="button" data-theme-toggle="dark">Night</button>
-          </div>
-        </div>
-        <div class="hero-panel glass-card">
-          <div class="hero-panel-top">
-            <span class="meta-kicker">Latest Snapshot</span>
-            <div class="hero-panel-status">
-              <strong id="hero-report-date">-</strong>
-              <span id="daily-hero-review-status" class="review-status-pill">Not reviewed</span>
-            </div>
-          </div>
-          <div class="hero-stat-grid">
-            <div>
-              <span class="stat-label">Papers</span>
-              <strong id="hero-total-papers">-</strong>
-            </div>
-            <div>
-              <span class="stat-label">Classifier</span>
-              <strong id="hero-classifier">-</strong>
-            </div>
-            <div>
-              <span class="stat-label">Reports</span>
-              <strong id="hero-report-count">-</strong>
-            </div>
-            <div>
-              <span class="stat-label">Updated</span>
-              <strong id="hero-generated-at">-</strong>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      <section class="glass-card home-board home-board-secondary reveal">
-        <div class="section-heading">
-          <p class="eyebrow">TRACK SWITCHER</p>
-          <h2>Current Branches</h2>
-          <p id="home-board-summary" class="home-board-summary">-</p>
-        </div>
-        <div id="home-categories" class="home-categories"></div>
-      </section>
-
-      <main class="layout">
-        <aside class="sidebar">
-          <div class="glass-card sidebar-header reveal">
-            <div>
-              <p class="eyebrow">BRANCH RAIL</p>
-              <h2>Filters</h2>
-            </div>
-            <button id="sidebar-toggle" class="sidebar-toggle" type="button" aria-expanded="true">
-              <span id="sidebar-toggle-icon" class="sidebar-toggle-icon">‹</span>
-              <span id="sidebar-toggle-label" class="sidebar-toggle-label">Collapse</span>
+      <div class="page-chrome">
+        <header class="app-toolbar reveal">
+          <div class="toolbar-start">
+            <button id="sidebar-toggle" class="toolbar-filter-toggle" type="button" aria-expanded="false" aria-haspopup="menu" aria-label="Open filters">
+              <span id="sidebar-toggle-icon" class="toolbar-filter-icon">☰</span>
+              <span id="sidebar-toggle-label" class="toolbar-filter-label">Filters</span>
             </button>
+            <div class="page-nav">
+              <a class="page-nav-link" href="./index.html">HF Daily</a>
+              <a class="page-nav-link active" href="./cool-daily.html">Cool Daily</a>
+              <a class="page-nav-link" href="./conference.html">Conference</a>
+              <a class="page-nav-link" href="./trending.html">Trending</a>
+              <a class="page-nav-link" href="./like.html">Library</a>
+            </div>
           </div>
+          <div class="toolbar-end">
+            <div class="hero-actions toolbar-theme-switch">
+              <button class="pill-button active" type="button" data-theme-toggle="auto">Auto</button>
+              <button class="pill-button" type="button" data-theme-toggle="light">Day</button>
+              <button class="pill-button" type="button" data-theme-toggle="dark">Night</button>
+            </div>
+          </div>
+        </header>
 
+        <aside id="sidebar-filters-menu" class="filters-menu-panel glass-card" hidden>
           <div id="sidebar-stack" class="sidebar-stack">
             <section class="glass-card controls reveal">
               <div class="control-block">
@@ -155,10 +102,64 @@
               </div>
               <div id="distribution-list" class="distribution-list"></div>
             </section>
-
           </div>
         </aside>
+      </div>
 
+      <header class="hero reveal">
+        <div class="hero-copy">
+          <p class="eyebrow">COOL PAPER OBSERVATORY</p>
+          <h1>Cool Paper Observatory</h1>
+          <p class="hero-text">
+            Original pages:
+            <a href="https://papers.cool/arxiv/cs.AI" target="_blank" rel="noreferrer">cs.AI</a>
+            <span aria-hidden="true">·</span>
+            <a href="https://papers.cool/arxiv/cs.CL" target="_blank" rel="noreferrer">cs.CL</a>
+            <span aria-hidden="true">·</span>
+            <a href="https://papers.cool/arxiv/cs.CV" target="_blank" rel="noreferrer">cs.CV</a>
+          </p>
+          <div id="hero-lede" class="hero-lede">Loading the latest daily snapshot.</div>
+          <div id="hero-signals" class="hero-signals"></div>
+        </div>
+        <div class="hero-panel glass-card">
+          <div class="hero-panel-top">
+            <span class="meta-kicker">Latest Snapshot</span>
+            <div class="hero-panel-status">
+              <strong id="hero-report-date">-</strong>
+              <span id="daily-hero-review-status" class="review-status-pill">Not reviewed</span>
+            </div>
+          </div>
+          <div class="hero-stat-grid">
+            <div>
+              <span class="stat-label">Papers</span>
+              <strong id="hero-total-papers">-</strong>
+            </div>
+            <div>
+              <span class="stat-label">Classifier</span>
+              <strong id="hero-classifier">-</strong>
+            </div>
+            <div>
+              <span class="stat-label">Reports</span>
+              <strong id="hero-report-count">-</strong>
+            </div>
+            <div>
+              <span class="stat-label">Updated</span>
+              <strong id="hero-generated-at">-</strong>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="glass-card home-board home-board-secondary reveal">
+        <div class="section-heading">
+          <p class="eyebrow">TRACK SWITCHER</p>
+          <h2>Current Branches</h2>
+          <p id="home-board-summary" class="home-board-summary">-</p>
+        </div>
+        <div id="home-categories" class="home-categories"></div>
+      </section>
+
+      <main class="layout">
         <section class="content">
           <section id="daily-overview-section" class="glass-card overview reveal">
             <div class="overview-top">

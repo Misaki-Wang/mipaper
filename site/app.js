@@ -33,7 +33,7 @@ const resetFiltersButton = document.querySelector("#reset-filters");
 const sidebarToggleButton = document.querySelector("#sidebar-toggle");
 const sidebarToggleLabel = document.querySelector("#sidebar-toggle-label");
 const sidebarToggleIcon = document.querySelector("#sidebar-toggle-icon");
-const layoutRoot = document.querySelector(".layout");
+const filterMenuPanel = document.querySelector("#sidebar-filters-menu");
 const backToTopButton = document.querySelector("#back-to-top");
 const floatingTocRoot = document.querySelector("#daily-floating-toc");
 const reviewToggleButton = document.querySelector("#daily-review-toggle");
@@ -42,6 +42,7 @@ const heroReviewStatus = document.querySelector("#daily-hero-review-status");
 const likeRecords = new Map();
 let tocObserver = null;
 let datePicker = null;
+let filterMenuOpen = false;
 
 init().catch((error) => {
   console.error(error);
@@ -50,7 +51,7 @@ init().catch((error) => {
 
 async function init() {
   bindThemeToggle();
-  bindSidebarToggle();
+  bindFilterMenu();
   bindBackToTop();
   bindFilters();
   bindReviewToggle();
@@ -108,24 +109,46 @@ function bindThemeToggle() {
   }
 }
 
-function bindSidebarToggle() {
-  const initial = localStorage.getItem("cool-paper-sidebar") || "expanded";
-  applySidebarState(initial === "collapsed");
+function bindFilterMenu() {
+  if (!sidebarToggleButton || !filterMenuPanel) {
+    return;
+  }
 
-  sidebarToggleButton.addEventListener("click", () => {
-    const collapsed = !layoutRoot.classList.contains("sidebar-collapsed");
-    applySidebarState(collapsed);
+  sidebarToggleButton.addEventListener("click", (event) => {
+    event.stopPropagation();
+    setFilterMenuOpen(!filterMenuOpen);
   });
+
+  document.addEventListener("click", (event) => {
+    if (!filterMenuOpen) {
+      return;
+    }
+    if (filterMenuPanel.contains(event.target) || sidebarToggleButton.contains(event.target)) {
+      return;
+    }
+    setFilterMenuOpen(false);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && filterMenuOpen) {
+      setFilterMenuOpen(false);
+    }
+  });
+
+  setFilterMenuOpen(false);
 }
 
-function applySidebarState(collapsed) {
-  layoutRoot.classList.toggle("sidebar-collapsed", collapsed);
-  sidebarToggleButton.setAttribute("aria-expanded", String(!collapsed));
-  sidebarToggleButton.setAttribute("aria-label", collapsed ? "Expand sidebar" : "Collapse sidebar");
-  sidebarToggleButton.title = collapsed ? "Expand sidebar" : "Collapse sidebar";
-  sidebarToggleLabel.textContent = collapsed ? "Tools" : "Collapse";
-  sidebarToggleIcon.textContent = collapsed ? "›" : "‹";
-  localStorage.setItem("cool-paper-sidebar", collapsed ? "collapsed" : "expanded");
+function setFilterMenuOpen(open) {
+  filterMenuOpen = open;
+  if (!sidebarToggleButton || !filterMenuPanel) {
+    return;
+  }
+  sidebarToggleButton.setAttribute("aria-expanded", String(open));
+  sidebarToggleButton.setAttribute("aria-label", open ? "Close filters" : "Open filters");
+  sidebarToggleButton.title = open ? "Close filters" : "Open filters";
+  sidebarToggleLabel.textContent = "Filters";
+  sidebarToggleIcon.textContent = "☰";
+  filterMenuPanel.hidden = !open;
 }
 
 function bindBackToTop() {

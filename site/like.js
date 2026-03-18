@@ -41,17 +41,24 @@ const resetFiltersButton = document.querySelector("#like-reset-filters");
 const sidebarToggleButton = document.querySelector("#like-sidebar-toggle");
 const sidebarToggleLabel = document.querySelector("#like-sidebar-toggle-label");
 const sidebarToggleIcon = document.querySelector("#like-sidebar-toggle-icon");
-const layoutRoot = document.querySelector(".layout");
+const filterMenuPanel = document.querySelector("#like-filters-menu");
 const backToTopButton = document.querySelector("#like-back-to-top");
 const likeRecords = new Map();
 const authStatus = document.querySelector("#like-auth-status");
 const signInButton = document.querySelector("#like-sign-in");
 const signOutButton = document.querySelector("#like-sign-out");
 const syncNowButton = document.querySelector("#like-sync-now");
-const accountBanner = document.querySelector("#like-current-account");
+const accountMenuShell = document.querySelector(".account-menu-shell");
+const accountMenuButton = document.querySelector("#like-account-menu-toggle");
+const accountMenuPanel = document.querySelector("#like-sync-menu");
+const accountTriggerAvatar = document.querySelector("#like-account-trigger-avatar");
+const accountTriggerLabel = document.querySelector("#like-account-trigger-label");
+const accountTriggerValue = document.querySelector("#like-account-trigger-value");
 const accountCard = document.querySelector("#like-account-card");
 const authWarning = document.querySelector("#like-auth-warning");
 let toReadSyncPromise = null;
+let accountMenuOpen = false;
+let filterMenuOpen = false;
 
 const LATER_PAGE_SIZE = 6;
 let laterPage = 0;
@@ -67,7 +74,8 @@ init().catch((error) => {
 
 async function init() {
   bindThemeToggle();
-  bindSidebarToggle();
+  bindFilterMenu();
+  bindAccountMenu();
   bindBackToTop();
   bindFilters();
   bindAuthActions();
@@ -127,24 +135,46 @@ function bindThemeToggle() {
   }
 }
 
-function bindSidebarToggle() {
-  const initial = localStorage.getItem("cool-paper-sidebar") || "expanded";
-  applySidebarState(initial === "collapsed");
+function bindFilterMenu() {
+  if (!sidebarToggleButton || !filterMenuPanel) {
+    return;
+  }
 
-  sidebarToggleButton.addEventListener("click", () => {
-    const collapsed = !layoutRoot.classList.contains("sidebar-collapsed");
-    applySidebarState(collapsed);
+  sidebarToggleButton.addEventListener("click", (event) => {
+    event.stopPropagation();
+    setFilterMenuOpen(!filterMenuOpen);
   });
+
+  document.addEventListener("click", (event) => {
+    if (!filterMenuOpen) {
+      return;
+    }
+    if (filterMenuPanel.contains(event.target) || sidebarToggleButton.contains(event.target)) {
+      return;
+    }
+    setFilterMenuOpen(false);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && filterMenuOpen) {
+      setFilterMenuOpen(false);
+    }
+  });
+
+  setFilterMenuOpen(false);
 }
 
-function applySidebarState(collapsed) {
-  layoutRoot.classList.toggle("sidebar-collapsed", collapsed);
-  sidebarToggleButton.setAttribute("aria-expanded", String(!collapsed));
-  sidebarToggleButton.setAttribute("aria-label", collapsed ? "Expand sidebar" : "Collapse sidebar");
-  sidebarToggleButton.title = collapsed ? "Expand sidebar" : "Collapse sidebar";
-  sidebarToggleLabel.textContent = collapsed ? "Expand" : "Collapse";
-  sidebarToggleIcon.textContent = collapsed ? "›" : "‹";
-  localStorage.setItem("cool-paper-sidebar", collapsed ? "collapsed" : "expanded");
+function setFilterMenuOpen(open) {
+  filterMenuOpen = open;
+  if (!sidebarToggleButton || !filterMenuPanel) {
+    return;
+  }
+  sidebarToggleButton.setAttribute("aria-expanded", String(open));
+  sidebarToggleButton.setAttribute("aria-label", open ? "Close filters" : "Open filters");
+  sidebarToggleButton.title = open ? "Close filters" : "Open filters";
+  sidebarToggleLabel.textContent = "Filters";
+  sidebarToggleIcon.textContent = "☰";
+  filterMenuPanel.hidden = !open;
 }
 
 function bindBackToTop() {
@@ -249,40 +279,47 @@ function bindAuthActions() {
 function renderAuthState(snapshot) {
   renderAccountIdentity(snapshot);
   renderUnauthorizedState(snapshot);
+  if (accountMenuButton) {
+    accountMenuButton.classList.toggle("is-signed-in", Boolean(snapshot.signedIn && !snapshot.unauthorized));
+    accountMenuButton.classList.toggle("is-syncing", Boolean(snapshot.syncing));
+    accountMenuButton.classList.toggle("is-disabled", !snapshot.configured);
+    accountMenuButton.classList.toggle("is-unauthorized", Boolean(snapshot.unauthorized));
+  }
   if (!snapshot.configured) {
-    authStatus.textContent = "Supabase is not configured. Sync is currently disabled.";
+    authStatus.textContent = "Sync disabled. Supabase is not configured.";
     signInButton.disabled = true;
     signOutButton.disabled = true;
     syncNowButton.disabled = true;
+    syncNowButton.textContent = "Sync now";
     return;
   }
 
   signInButton.disabled = snapshot.signedIn;
   signOutButton.disabled = !snapshot.signedIn;
   syncNowButton.disabled = !snapshot.signedIn || snapshot.syncing || snapshot.unauthorized;
+  syncNowButton.textContent = snapshot.syncing ? "Syncing..." : "Sync now";
   if (snapshot.unauthorized) {
-    authStatus.textContent = snapshot.unauthorizedMessage || "The current account is not authorized to use Like.";
+    authStatus.textContent = snapshot.unauthorizedMessage || "This account is not authorized for sync.";
     signInButton.disabled = false;
     signOutButton.disabled = true;
     return;
   }
   authStatus.textContent = snapshot.signedIn
     ? buildSignedInStatus(snapshot)
-    : "Supabase is configured. Click GitHub Sign in to sync likes across devices.";
+    : "Sign in with GitHub to sync likes across devices.";
 }
 
 function buildSignedInStatus(snapshot) {
-  const account = snapshot.user?.email || snapshot.user?.id || "-";
   if (snapshot.syncing) {
-    return `Connected GitHub account ${account}, automatically syncing likes to Supabase.`;
+    return "Syncing likes to Supabase now.";
   }
   if (snapshot.syncError) {
-    return `Connected GitHub account ${account}, automatic sync failed: ${snapshot.syncError}`;
+    return `Sync failed: ${snapshot.syncError}`;
   }
   if (snapshot.lastSyncedAt) {
-    return `Connected GitHub account ${account}, likes synced automatically. Last synced ${formatTime(snapshot.lastSyncedAt)}。`;
+    return `Last synced ${formatTime(snapshot.lastSyncedAt)}`;
   }
-  return `Connected GitHub account ${account}, likes will sync to Supabase automatically after sign-in.`;
+  return "Connected. Automatic sync is ready.";
 }
 
 function renderAccountIdentity(snapshot) {
@@ -296,14 +333,27 @@ function renderAccountIdentity(snapshot) {
     metadata.preferred_username ||
     metadata.user_name ||
     "Not signed in";
-  const email = identitySource?.email || identitySource?.id || identitySource?.userId || "Connect a GitHub account first";
+  const email = identitySource?.email || identitySource?.id || identitySource?.userId || "GitHub + Supabase";
   const avatarUrl = identitySource?.avatarUrl || metadata.avatar_url || "";
 
-  const bannerValue = accountBanner?.querySelector(".account-banner-value");
-  if (accountBanner && bannerValue) {
-    accountBanner.classList.toggle("muted", !signedIn && !snapshot.unauthorized);
-    accountBanner.classList.toggle("is-unauthorized", Boolean(snapshot.unauthorized));
-    bannerValue.textContent = snapshot.unauthorized ? `Unauthorized · ${email}` : signedIn ? `${displayName} · ${email}` : "Not signed in";
+  if (accountTriggerLabel) {
+    accountTriggerLabel.textContent = snapshot.unauthorized ? "Unauthorized" : signedIn ? "Connected" : "Sync";
+  }
+  if (accountTriggerValue) {
+    accountTriggerValue.textContent = snapshot.unauthorized ? displayName : signedIn ? displayName : "Sign in";
+  }
+  if (accountMenuButton) {
+    accountMenuButton.title = snapshot.unauthorized ? `Unauthorized: ${email}` : signedIn ? `${displayName} · ${email}` : "Sign in to sync";
+  }
+  if (accountTriggerAvatar) {
+    const initial = String(displayName || email || "?").trim().charAt(0).toUpperCase() || "?";
+    if ((signedIn || snapshot.unauthorized) && avatarUrl) {
+      accountTriggerAvatar.innerHTML = `<img class="account-avatar-image" src="${escapeAttribute(avatarUrl)}" alt="${escapeAttribute(
+        displayName
+      )}" />`;
+    } else {
+      accountTriggerAvatar.innerHTML = `<span class="account-avatar-fallback">${escapeHtml(initial)}</span>`;
+    }
   }
 
   if (!accountCard) {
@@ -316,10 +366,10 @@ function renderAccountIdentity(snapshot) {
   const nameNode = accountCard.querySelector(".account-card-name");
   const emailNode = accountCard.querySelector(".account-card-email");
   if (nameNode) {
-    nameNode.textContent = snapshot.unauthorized ? `Unauthorized account · ${displayName}` : displayName;
+    nameNode.textContent = snapshot.unauthorized ? `Unauthorized · ${displayName}` : signedIn ? displayName : "Not signed in";
   }
   if (emailNode) {
-    emailNode.textContent = email;
+    emailNode.textContent = snapshot.unauthorized ? email : signedIn ? email : "GitHub + Supabase";
   }
   if (!avatarShell) {
     return;
@@ -347,6 +397,42 @@ function renderUnauthorizedState(snapshot) {
   }
   authWarning.hidden = false;
   authWarning.textContent = snapshot.unauthorizedMessage || "The current account is not on the allowlist. Like access is restricted.";
+}
+
+function bindAccountMenu() {
+  if (!accountMenuButton || !accountMenuPanel || !accountMenuShell) {
+    return;
+  }
+
+  accountMenuButton.addEventListener("click", (event) => {
+    event.stopPropagation();
+    setAccountMenuOpen(!accountMenuOpen);
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!accountMenuOpen) {
+      return;
+    }
+    if (accountMenuShell.contains(event.target)) {
+      return;
+    }
+    setAccountMenuOpen(false);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && accountMenuOpen) {
+      setAccountMenuOpen(false);
+    }
+  });
+}
+
+function setAccountMenuOpen(open) {
+  accountMenuOpen = open;
+  if (!accountMenuButton || !accountMenuPanel) {
+    return;
+  }
+  accountMenuButton.setAttribute("aria-expanded", String(open));
+  accountMenuPanel.hidden = !open;
 }
 
 function renderPage() {
