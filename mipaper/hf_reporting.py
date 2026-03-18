@@ -122,6 +122,7 @@ def render_markdown_hf_report(
                 for link in [
                     f"[HF]({paper.hf_url})" if paper.hf_url else "",
                     f"[arXiv]({paper.arxiv_pdf_url or paper.arxiv_url})" if (paper.arxiv_pdf_url or paper.arxiv_url) else "",
+                    f"[Cool]({paper.papers_cool_url})" if paper.papers_cool_url else "",
                     f"[GitHub]({paper.github_url})" if paper.github_url else "",
                 ]
                 if link

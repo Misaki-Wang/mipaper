@@ -311,6 +311,7 @@ def parse_hf_daily_html(html_text: str, report_date: str) -> List[HFDailyPaper]:
                 hf_url=urljoin(HUGGING_FACE_ROOT, f"/papers/{paper_id}"),
                 arxiv_url=build_hf_arxiv_abs_url(paper_id),
                 arxiv_pdf_url=build_hf_arxiv_pdf_url(paper_id),
+                papers_cool_url=build_hf_papers_cool_url(paper_id),
                 github_url=extract_first_string(
                     item,
                     paper_payload,
@@ -399,6 +400,10 @@ def build_hf_arxiv_abs_url(paper_id: str) -> str:
 
 def build_hf_arxiv_pdf_url(paper_id: str) -> str:
     return f"https://arxiv.org/pdf/{paper_id}" if ARXIV_ID_PATTERN.fullmatch(paper_id) else ""
+
+
+def build_hf_papers_cool_url(paper_id: str) -> str:
+    return f"https://papers.cool/arxiv/{paper_id}" if ARXIV_ID_PATTERN.fullmatch(paper_id) else ""
 
 
 def extract_first_string(*payloads: dict, keys: tuple[str, ...]) -> str:

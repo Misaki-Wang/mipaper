@@ -29,6 +29,7 @@ class HFDailyPaper:
     hf_url: str = ""
     arxiv_url: str = ""
     arxiv_pdf_url: str = ""
+    papers_cool_url: str = ""
     github_url: str = ""
     submitted_by: str = ""
     submitted_at: str = ""

@@ -157,6 +157,7 @@ class ParseFeedHTMLTest(unittest.TestCase):
         self.assertEqual(42, papers[0].upvotes)
         self.assertEqual("https://huggingface.co/papers/2603.01234", papers[0].hf_url)
         self.assertEqual("https://arxiv.org/pdf/2603.01234", papers[0].arxiv_pdf_url)
+        self.assertEqual("https://papers.cool/arxiv/2603.01234", papers[0].papers_cool_url)
 
     def test_build_hf_daily_url(self) -> None:
         self.assertEqual("https://huggingface.co/papers/date/2026-03-09", build_hf_daily_url("2026-03-09"))

@@ -504,7 +504,16 @@ function renderSourceCards(likes, laterQueue, toReadSnapshots) {
             <span class="home-category-label">${escapeHtml(section.source_label)}</span>
             <span class="home-category-date">${escapeHtml(section.latest_snapshot || "Workspace source")}</span>
           </div>
-          <strong class="home-category-count">${section.saved_count} saved</strong>
+          <div class="library-home-hero">
+            <div class="library-home-count-block">
+              <strong class="home-category-count">${section.saved_count}</strong>
+              <span class="library-home-count-label">saved papers</span>
+            </div>
+            <div class="library-home-glance">
+              <span>${section.later_count} later</span>
+              <span>${section.to_read_count} unread</span>
+            </div>
+          </div>
           <p class="home-category-topic">${escapeHtml(section.lede)}</p>
           <div class="library-source-metrics">
             <span><strong>${section.saved_count}</strong><small>Saved</small></span>
@@ -1007,11 +1016,6 @@ function buildLibrarySourceSections(likes, laterQueue, toReadSnapshots) {
       const toReadCount = toReadBySource.get(sourceKind) || 0;
       const latestSnapshot = likesSection?.latest_snapshot || toReadSnapshots.find((snapshot) => getSnapshotSourceKind(snapshot) === sourceKind)?.snapshot_label || "";
       const topTopic = likesSection?.top_topic || "";
-      const ledeParts = [
-        savedCount ? `${savedCount} saved papers` : "No saved papers yet",
-        laterCount ? `${laterCount} queued for later` : "Later queue empty",
-        toReadCount ? `${toReadCount} unread snapshots` : "No unread snapshots",
-      ];
       return {
         source_kind: sourceKind,
         source_label: getSourceLabel(sourceKind),
@@ -1021,11 +1025,24 @@ function buildLibrarySourceSections(likes, laterQueue, toReadSnapshots) {
         latest_snapshot: latestSnapshot,
         latest_saved: likesSection?.latest_saved || "",
         top_topic: topTopic,
-        lede: ledeParts.join(" · "),
+        lede: buildLibrarySourceLede(savedCount, laterCount, toReadCount),
         sort_score: savedCount * 100 + laterCount * 10 + toReadCount,
       };
     })
     .sort((a, b) => b.sort_score - a.sort_score || a.source_label.localeCompare(b.source_label, "zh-CN"));
+}
+
+function buildLibrarySourceLede(savedCount, laterCount, toReadCount) {
+  if (toReadCount) {
+    return `${toReadCount} unread snapshots waiting for review`;
+  }
+  if (savedCount) {
+    return `${savedCount} saved papers ready to revisit`;
+  }
+  if (laterCount) {
+    return `${laterCount} papers queued for later reading`;
+  }
+  return "Start saving papers to build this branch";
 }
 
 function getSnapshotSourceKind(snapshot) {

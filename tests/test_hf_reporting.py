@@ -16,6 +16,7 @@ class HFDailyReportingTest(unittest.TestCase):
                 hf_url="https://huggingface.co/papers/2603.01234",
                 arxiv_url="https://arxiv.org/abs/2603.01234",
                 arxiv_pdf_url="https://arxiv.org/pdf/2603.01234",
+                papers_cool_url="https://papers.cool/arxiv/2603.01234",
                 submitted_by="taesiri",
                 upvotes=42,
                 topic_key="multimodal_generative",
@@ -37,10 +38,12 @@ class HFDailyReportingTest(unittest.TestCase):
         self.assertIn("## Top Submitters", markdown)
         self.assertIn("taesiri: 1 papers", markdown)
         self.assertIn("Upvotes: 42", markdown)
+        self.assertIn("[Cool](https://papers.cool/arxiv/2603.01234)", markdown)
         self.assertEqual("hf_daily", payload["report_kind"])
         self.assertEqual("2026-03-09", payload["report_date"])
         self.assertEqual("taesiri", payload["top_submitters"][0]["submitted_by"])
         self.assertEqual("https://huggingface.co/papers/2603.01234", payload["papers"][0]["hf_url"])
+        self.assertEqual("https://papers.cool/arxiv/2603.01234", payload["papers"][0]["papers_cool_url"])
 
 
 if __name__ == "__main__":

@@ -583,11 +583,11 @@ function renderPaperCard(paper) {
           brand: "arxiv",
         })
       : "",
-    paper.hf_url
+    getPapersCoolUrl(paper)
       ? renderPaperLink({
-          href: paper.hf_url,
-          label: "HF",
-          brand: "hf",
+          href: getPapersCoolUrl(paper),
+          label: "Cool",
+          brand: "cool",
         })
       : "",
     paper.github_url
@@ -633,6 +633,16 @@ function renderPaperLink({ href, label, brand }) {
       <span class="paper-link-text">${escapeHtml(label)}</span>
     </a>
   `;
+}
+
+function getPapersCoolUrl(paper) {
+  if (paper.papers_cool_url) {
+    return paper.papers_cool_url;
+  }
+  if (paper.paper_id && (paper.arxiv_url || paper.arxiv_pdf_url)) {
+    return `https://papers.cool/arxiv/${paper.paper_id}`;
+  }
+  return "";
 }
 
 function renderLikeButton(paper) {
