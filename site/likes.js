@@ -1,12 +1,14 @@
+import { getAccessPolicy, getGitHubRedirectTo, getSupabaseClient, isAuthorizedUser, isSupabaseConfigured, loadRuntimeConfig } from "./supabase.js";
 import {
-  getAccessPolicy,
-  getGitHubRedirectTo,
-  getSupabaseClient,
-  isAuthorizedUser,
-  isSupabaseConfigured,
-  loadRuntimeConfig,
-} from "./supabase.js";
-import { getStaleRemoteIds } from "./sync_utils.js";
+  compareSyncTimestamps,
+  createSyncTimestamp,
+  getInitialSyncRecords,
+  getLatestTimestamp,
+  getPendingSyncRecords,
+  getRecordUpdatedAt,
+  getSyncDeviceId,
+  mergeSyncRecords,
+} from "./sync_utils.js";
 
 const LIKES_STORAGE_KEY = "cool-paper-liked-papers-v1";
 const LIKES_META_KEY = "cool-paper-liked-papers-meta-v1";
@@ -88,12 +90,8 @@ export function createLikeRecord(paper, context = {}) {
 }
 
 export function readLikes() {
-  const payload = safeParse(localStorage.getItem(LIKES_STORAGE_KEY));
-  if (!Array.isArray(payload)) {
-    return [];
-  }
-  return payload
-    .filter((item) => item && typeof item.like_id === "string" && item.like_id)
+  return readLikeStore()
+    .filter((item) => !item.deleted_at)
     .sort((left, right) => (right.saved_at || "").localeCompare(left.saved_at || ""));
 }
 
@@ -102,57 +100,40 @@ export function isLiked(likeId) {
 }
 
 export function toggleLike(record) {
-  const likes = readLikes();
-  const index = likes.findIndex((item) => item.like_id === record.like_id);
-  if (index >= 0) {
-    likes.splice(index, 1);
-    writeLikes(likes, { dirty: true });
+  const store = readLikeStore();
+  const likeId = normalizeLikeId(record.like_id || getLikeId(record));
+  const existingIndex = store.findIndex((item) => item.like_id === likeId && !item.deleted_at);
+  const existingRecord = existingIndex >= 0 ? store[existingIndex] : store.find((item) => item.like_id === likeId) || null;
+  const timestamp = createSyncTimestamp();
+  const deviceId = getSyncDeviceId();
 
-    // Immediately delete from Supabase
-    if (supabaseClient && authUser) {
-      supabaseClient
-        .from("liked_papers")
-        .delete()
-        .eq("user_id", authUser.id)
-        .eq("like_id", record.like_id)
-        .then(({ error }) => {
-          if (error) console.error("Failed to delete like from Supabase:", error);
-          else console.log("Deleted like from Supabase:", record.like_id);
-        });
-    } else {
-      console.warn("toggleLike (remove): No supabaseClient or authUser, delete not synced");
-    }
+  if (existingIndex >= 0 && existingRecord) {
+    store[existingIndex] = {
+      ...existingRecord,
+      like_id: likeId,
+      deleted_at: timestamp,
+      updated_at: timestamp,
+      client_updated_at: timestamp,
+      device_id: deviceId,
+    };
+    writeLikeStore(store, { dirty: true });
+    scheduleRemoteSync();
     return false;
   }
 
-  const next = [
-    {
-      ...record,
-      saved_at: new Date().toISOString(),
-    },
-    ...likes.filter((item) => item.like_id !== record.like_id),
-  ];
-  writeLikes(next, { dirty: true });
+  const nextRecord = normalizeLikeRecord({
+    ...(existingRecord || {}),
+    ...record,
+    like_id: likeId,
+    saved_at: timestamp,
+    updated_at: timestamp,
+    client_updated_at: timestamp,
+    deleted_at: "",
+    device_id: deviceId,
+  });
 
-  // Immediately upsert to Supabase
-  if (supabaseClient && authUser) {
-    const upsertRow = {
-      user_id: authUser.id,
-      like_id: record.like_id,
-      saved_at: new Date().toISOString(),
-      payload: { ...record, saved_at: new Date().toISOString() },
-    };
-    supabaseClient
-      .from("liked_papers")
-      .upsert([upsertRow], { onConflict: "user_id,like_id" })
-      .then(({ error }) => {
-        if (error) console.error("Failed to upsert like to Supabase:", error);
-        else console.log("Upserted like to Supabase:", record.like_id);
-      });
-  } else {
-    console.warn("toggleLike (add): No supabaseClient or authUser, upsert not synced");
-    scheduleRemoteSync();
-  }
+  writeLikeStore([nextRecord, ...store.filter((item) => item.like_id !== likeId)], { dirty: true });
+  scheduleRemoteSync();
   return true;
 }
 
@@ -244,15 +225,22 @@ export async function syncLikesNow() {
 
 async function performRemoteSync() {
   try {
-    const likes = readLikes();
+    const store = readLikeStore();
     const meta = readMeta();
+    const initialSync = !meta.last_synced_at;
+    let remoteLikes = initialSync ? await fetchRemoteLikes("") : [];
+    let pendingRecords = initialSync ? getInitialSyncRecords(store, remoteLikes, "like_id") : getPendingSyncRecords(store, meta.last_synced_at);
 
-    // Step 1: Only push dirty local changes to Supabase
-    if (meta.dirty && likes.length > 0) {
-      const upsertRows = likes.map((item) => ({
+    // Step 1: Push local changes since the last successful cursor.
+    if (pendingRecords.length) {
+      const upsertRows = pendingRecords.map((item) => ({
         user_id: authUser.id,
         like_id: item.like_id,
-        saved_at: item.saved_at || new Date().toISOString(),
+        saved_at: item.saved_at || item.updated_at || createSyncTimestamp(),
+        updated_at: item.updated_at || createSyncTimestamp(),
+        deleted_at: item.deleted_at || null,
+        client_updated_at: item.client_updated_at || null,
+        device_id: item.device_id || getSyncDeviceId(),
         payload: item,
       }));
 
@@ -264,41 +252,28 @@ async function performRemoteSync() {
       }
     }
 
-    const { data: remoteRows, error: remoteRowsError } = await supabaseClient
-      .from("liked_papers")
-      .select("like_id")
-      .eq("user_id", authUser.id);
-    if (remoteRowsError) {
-      throw remoteRowsError;
+    // Step 2: Pull remote changes since the last successful sync cursor and merge by updated_at.
+    if (!initialSync) {
+      remoteLikes = await fetchRemoteLikes(meta.last_synced_at);
     }
+    const mergedStore = mergeSyncRecords(store, remoteLikes, "like_id")
+      .map((item) => normalizeLikeRecord(item))
+      .sort((left, right) => compareSyncTimestamps(right.saved_at || getRecordUpdatedAt(right), left.saved_at || getRecordUpdatedAt(left)));
 
-    const staleLikeIds = getStaleRemoteIds(
-      likes.map((item) => item.like_id),
-      remoteRows,
-      "like_id"
+    const syncedAt = getLatestTimestamp(
+      meta.last_synced_at,
+      mergedStore.map((item) => getRecordUpdatedAt(item)),
+      pendingRecords.map((item) => getRecordUpdatedAt(item))
     );
-    if (staleLikeIds.length) {
-      const { error } = await supabaseClient
-        .from("liked_papers")
-        .delete()
-        .eq("user_id", authUser.id)
-        .in("like_id", staleLikeIds);
-      if (error) {
-        throw error;
-      }
-    }
 
-    // Step 2: Always fetch from Supabase as source of truth
-    const syncedAt = new Date().toISOString();
-    const remoteLikes = await fetchRemoteLikes();
-    writeLikes(remoteLikes, { dirty: false, syncedAt });
+    writeLikeStore(mergedStore, { dirty: false, syncedAt: syncedAt || createSyncTimestamp() });
     syncState = {
       syncing: false,
       error: "",
-      lastSyncedAt: syncedAt,
+      lastSyncedAt: syncedAt || createSyncTimestamp(),
     };
     emitAuthChanged();
-    return remoteLikes;
+    return mergedStore.filter((item) => !item.deleted_at);
   } catch (error) {
     syncState = {
       ...syncState,
@@ -355,17 +330,21 @@ function applyLikeButtonState(button, liked) {
   button.title = liked ? "Remove Like" : "Add Like";
 }
 
-function writeLikes(records, options = {}) {
+function writeLikeStore(records, options = {}) {
   const { dirty = false, syncedAt = "", silent = false } = options;
   const meta = readMeta();
-  localStorage.setItem(LIKES_STORAGE_KEY, JSON.stringify(records));
+  localStorage.setItem(LIKES_STORAGE_KEY, JSON.stringify(records.map((item) => normalizeLikeRecord(item))));
   writeMeta({
     ...meta,
     dirty,
     last_synced_at: syncedAt || meta.last_synced_at || "",
   });
   if (!silent) {
-    window.dispatchEvent(new CustomEvent(LIKES_CHANGED_EVENT, { detail: { count: records.length } }));
+    window.dispatchEvent(
+      new CustomEvent(LIKES_CHANGED_EVENT, {
+        detail: { count: records.filter((item) => !item.deleted_at).length },
+      })
+    );
   }
 }
 
@@ -388,6 +367,47 @@ function safeParse(value) {
     console.warn("Failed to parse likes payload", error);
     return null;
   }
+}
+
+function normalizeLikeRecord(record) {
+  if (!record || typeof record !== "object") {
+    return null;
+  }
+
+  const likeId = normalizeLikeId(record.like_id || "");
+  if (!likeId) {
+    return null;
+  }
+
+  const fallbackUpdatedAt =
+    (typeof record.updated_at === "string" && record.updated_at) ||
+    (typeof record.client_updated_at === "string" && record.client_updated_at) ||
+    (typeof record.deleted_at === "string" && record.deleted_at) ||
+    (typeof record.saved_at === "string" && record.saved_at) ||
+    "";
+
+  return {
+    ...record,
+    like_id: likeId,
+    saved_at: typeof record.saved_at === "string" ? record.saved_at : fallbackUpdatedAt,
+    updated_at: fallbackUpdatedAt,
+    client_updated_at: typeof record.client_updated_at === "string" ? record.client_updated_at : fallbackUpdatedAt,
+    deleted_at: typeof record.deleted_at === "string" ? record.deleted_at : "",
+    device_id: typeof record.device_id === "string" ? record.device_id : "",
+  };
+}
+
+function readLikeStore() {
+  const payload = safeParse(localStorage.getItem(LIKES_STORAGE_KEY));
+  if (!Array.isArray(payload)) {
+    return [];
+  }
+
+  return mergeSyncRecords(
+    [],
+    payload.map((item) => normalizeLikeRecord(item)).filter(Boolean),
+    "like_id"
+  );
 }
 
 function readMeta() {
@@ -518,35 +538,39 @@ function queueHydrateOrSyncRemoteLikes() {
 }
 
 async function hydrateOrSyncRemoteLikes() {
-  const likes = readLikes();
-  const meta = readMeta();
-  if (!likes.length && !meta.dirty) {
-    const remoteLikes = await fetchRemoteLikes();
-    writeLikes(remoteLikes, { dirty: false, syncedAt: new Date().toISOString() });
-    return remoteLikes;
-  }
   return syncLikesNow();
 }
 
-async function fetchRemoteLikes() {
+async function fetchRemoteLikes(since = "") {
   if (!supabaseClient || !authUser) {
-    return readLikes();
+    return readLikeStore();
   }
-  const { data, error } = await supabaseClient
+
+  let query = supabaseClient
     .from("liked_papers")
-    .select("like_id,saved_at,payload")
+    .select("like_id,saved_at,updated_at,deleted_at,client_updated_at,device_id,payload")
     .eq("user_id", authUser.id)
-    .order("saved_at", { ascending: false });
+    .order("updated_at", { ascending: false });
+  if (since) {
+    query = query.gt("updated_at", since);
+  }
+  const { data, error } = await query;
   if (error) {
     throw error;
   }
   return (data || [])
-    .map((item) => ({
-      ...(item.payload || {}),
-      like_id: item.like_id,
-      saved_at: item.saved_at,
-    }))
-    .sort((left, right) => (right.saved_at || "").localeCompare(left.saved_at || ""));
+    .map((item) =>
+      normalizeLikeRecord({
+        ...(item.payload || {}),
+        like_id: item.like_id,
+        saved_at: item.saved_at,
+        updated_at: item.updated_at,
+        deleted_at: item.deleted_at,
+        client_updated_at: item.client_updated_at,
+        device_id: item.device_id,
+      })
+    )
+    .filter(Boolean);
 }
 
 function emitAuthChanged() {

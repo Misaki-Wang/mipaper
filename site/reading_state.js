@@ -1,9 +1,14 @@
+import { getSupabaseClient, isAuthorizedUser, isSupabaseConfigured, loadRuntimeConfig } from "./supabase.js";
 import {
-  getSupabaseClient,
-  isAuthorizedUser,
-  isSupabaseConfigured,
-  loadRuntimeConfig,
-} from "./supabase.js";
+  compareSyncTimestamps,
+  createSyncTimestamp,
+  getInitialSyncRecords,
+  getLatestTimestamp,
+  getPendingSyncRecords,
+  getRecordUpdatedAt,
+  getSyncDeviceId,
+  mergeSyncRecords,
+} from "./sync_utils.js";
 
 const PAGE_REVIEWS_KEY = "cool-paper-page-reviews-v1";
 const PAGE_REVIEWS_META_KEY = "cool-paper-page-reviews-meta-v1";
@@ -21,11 +26,11 @@ export function createPageReviewKey(branch, snapshot) {
 }
 
 export function readPageReviews() {
-  const payload = safeParse(localStorage.getItem(PAGE_REVIEWS_KEY));
-  if (!payload || typeof payload !== "object" || Array.isArray(payload)) {
-    return {};
-  }
-  return payload;
+  return Object.fromEntries(
+    Object.entries(readReviewStore())
+      .filter(([, value]) => value && !value.deleted_at)
+      .map(([reviewId, value]) => [reviewId, value])
+  );
 }
 
 export function isPageReviewed(reviewKey) {
@@ -33,16 +38,36 @@ export function isPageReviewed(reviewKey) {
 }
 
 export function setPageReviewed(reviewKey, reviewed, meta = {}) {
-  const reviews = { ...readPageReviews() };
+  const store = { ...readReviewStore() };
+  const existing = store[reviewKey] || {};
+  const timestamp = createSyncTimestamp();
+  const deviceId = getSyncDeviceId();
+
   if (reviewed) {
-    reviews[reviewKey] = {
-      reviewed_at: new Date().toISOString(),
+    store[reviewKey] = normalizeReviewRecord({
+      ...existing,
       ...meta,
-    };
+      review_id: reviewKey,
+      reviewed_at: timestamp,
+      updated_at: timestamp,
+      client_updated_at: timestamp,
+      deleted_at: "",
+      device_id: deviceId,
+    });
+  } else if (existing?.review_id) {
+    store[reviewKey] = normalizeReviewRecord({
+      ...existing,
+      review_id: reviewKey,
+      deleted_at: timestamp,
+      updated_at: timestamp,
+      client_updated_at: timestamp,
+      device_id: deviceId,
+    });
   } else {
-    delete reviews[reviewKey];
+    return;
   }
-  writePageReviews(reviews, { dirty: true });
+
+  writeReviewStore(store, { dirty: true });
   scheduleRemoteReviewSync();
   window.dispatchEvent(new CustomEvent(PAGE_REVIEWS_CHANGED_EVENT, { detail: { reviewKey, reviewed } }));
 }
@@ -97,17 +122,77 @@ function writeReviewMeta(meta) {
   localStorage.setItem(PAGE_REVIEWS_META_KEY, JSON.stringify(meta));
 }
 
-function writePageReviews(reviews, options = {}) {
+function normalizeReviewRecord(review) {
+  if (!review || typeof review !== "object") {
+    return null;
+  }
+
+  const reviewId = typeof review.review_id === "string" ? review.review_id.trim() : "";
+  if (!reviewId) {
+    return null;
+  }
+
+  const fallbackUpdatedAt =
+    (typeof review.updated_at === "string" && review.updated_at) ||
+    (typeof review.client_updated_at === "string" && review.client_updated_at) ||
+    (typeof review.deleted_at === "string" && review.deleted_at) ||
+    (typeof review.reviewed_at === "string" && review.reviewed_at) ||
+    "";
+
+  return {
+    ...review,
+    review_id: reviewId,
+    reviewed_at: typeof review.reviewed_at === "string" ? review.reviewed_at : fallbackUpdatedAt,
+    updated_at: fallbackUpdatedAt,
+    client_updated_at: typeof review.client_updated_at === "string" ? review.client_updated_at : fallbackUpdatedAt,
+    deleted_at: typeof review.deleted_at === "string" ? review.deleted_at : "",
+    device_id: typeof review.device_id === "string" ? review.device_id : "",
+  };
+}
+
+function readReviewStore() {
+  const payload = safeParse(localStorage.getItem(PAGE_REVIEWS_KEY));
+  if (!payload || typeof payload !== "object" || Array.isArray(payload)) {
+    return {};
+  }
+
+  const merged = mergeSyncRecords(
+    [],
+    Object.entries(payload)
+      .map(([reviewId, value]) => normalizeReviewRecord({ ...(value || {}), review_id: reviewId }))
+      .filter(Boolean),
+    "review_id"
+  );
+
+  return merged.reduce((accumulator, item) => {
+    accumulator[item.review_id] = item;
+    return accumulator;
+  }, {});
+}
+
+function writeReviewStore(reviews, options = {}) {
   const { dirty = false, syncedAt = "", silent = false } = options;
   const meta = readReviewMeta();
-  localStorage.setItem(PAGE_REVIEWS_KEY, JSON.stringify(reviews));
+  const normalized = Object.fromEntries(
+    Object.entries(reviews)
+      .map(([reviewId, value]) => [reviewId, normalizeReviewRecord({ ...(value || {}), review_id: reviewId })])
+      .filter(([, value]) => Boolean(value))
+  );
+
+  localStorage.setItem(PAGE_REVIEWS_KEY, JSON.stringify(normalized));
   writeReviewMeta({
     ...meta,
     dirty,
     last_synced_at: syncedAt || meta.last_synced_at || "",
   });
   if (!silent) {
-    window.dispatchEvent(new CustomEvent(PAGE_REVIEWS_CHANGED_EVENT, { detail: { count: Object.keys(reviews).length } }));
+    window.dispatchEvent(
+      new CustomEvent(PAGE_REVIEWS_CHANGED_EVENT, {
+        detail: {
+          count: Object.values(normalized).filter((value) => value && !value.deleted_at).length,
+        },
+      })
+    );
   }
 }
 
@@ -188,13 +273,6 @@ function queueHydrateOrSyncRemoteReviews() {
 }
 
 async function hydrateOrSyncRemoteReviews() {
-  const reviews = readPageReviews();
-  const meta = readReviewMeta();
-  if (!Object.keys(reviews).length && !meta.dirty) {
-    const remoteReviews = await fetchRemoteReviews();
-    writePageReviews(remoteReviews, { dirty: false, syncedAt: new Date().toISOString() });
-    return remoteReviews;
-  }
   return syncPageReviewsNow();
 }
 
@@ -217,68 +295,89 @@ async function syncPageReviewsNow() {
 }
 
 async function performRemoteReviewSync() {
-  const reviews = readPageReviews();
-  const upsertRows = Object.entries(reviews).map(([review_id, payload]) => ({
-    user_id: authUser.id,
-    review_id,
-    reviewed_at: payload.reviewed_at || new Date().toISOString(),
-    payload,
-  }));
+  const store = Object.values(readReviewStore());
+  const meta = readReviewMeta();
+  const initialSync = !meta.last_synced_at;
+  let remoteReviews = initialSync ? await fetchRemoteReviews("") : {};
+  const pendingRecords = initialSync
+    ? getInitialSyncRecords(store, Object.values(remoteReviews), "review_id")
+    : getPendingSyncRecords(store, meta.last_synced_at);
 
-  if (upsertRows.length) {
-    const { error } = await supabaseClient.from("reviewed_pages").upsert(upsertRows, {
-      onConflict: "user_id,review_id",
-    });
+  if (pendingRecords.length) {
+    const { error } = await supabaseClient.from("reviewed_pages").upsert(
+      pendingRecords.map((item) => ({
+        user_id: authUser.id,
+        review_id: item.review_id,
+        reviewed_at: item.reviewed_at || item.updated_at || createSyncTimestamp(),
+        updated_at: item.updated_at || createSyncTimestamp(),
+        deleted_at: item.deleted_at || null,
+        client_updated_at: item.client_updated_at || null,
+        device_id: item.device_id || getSyncDeviceId(),
+        payload: item,
+      })),
+      { onConflict: "user_id,review_id" }
+    );
     if (error) {
       throw error;
     }
   }
 
-  const { data: remoteRows, error: remoteError } = await supabaseClient
-    .from("reviewed_pages")
-    .select("review_id")
-    .eq("user_id", authUser.id);
-  if (remoteError) {
-    throw remoteError;
+  if (!initialSync) {
+    remoteReviews = await fetchRemoteReviews(meta.last_synced_at);
   }
+  const merged = mergeSyncRecords(store, Object.values(remoteReviews), "review_id")
+    .map((item) => normalizeReviewRecord(item))
+    .filter(Boolean)
+    .sort((left, right) => compareSyncTimestamps(getRecordUpdatedAt(right), getRecordUpdatedAt(left)));
 
-  const localIds = new Set(Object.keys(reviews));
-  const staleIds = (remoteRows || []).map((item) => item.review_id).filter((reviewId) => !localIds.has(reviewId));
-  if (staleIds.length) {
-    const { error } = await supabaseClient
-      .from("reviewed_pages")
-      .delete()
-      .eq("user_id", authUser.id)
-      .in("review_id", staleIds);
-    if (error) {
-      throw error;
-    }
-  }
+  const syncedAt =
+    getLatestTimestamp(
+      meta.last_synced_at,
+      merged.map((item) => getRecordUpdatedAt(item)),
+      pendingRecords.map((item) => getRecordUpdatedAt(item))
+    ) || createSyncTimestamp();
 
-  const syncedAt = new Date().toISOString();
-  const remoteReviews = await fetchRemoteReviews();
-  writePageReviews(remoteReviews, { dirty: false, syncedAt });
-  return remoteReviews;
+  const nextStore = merged.reduce((accumulator, item) => {
+    accumulator[item.review_id] = item;
+    return accumulator;
+  }, {});
+
+  writeReviewStore(nextStore, { dirty: false, syncedAt });
+  return readPageReviews();
 }
 
-async function fetchRemoteReviews() {
+async function fetchRemoteReviews(since = "") {
   if (!supabaseClient || !authUser) {
-    return readPageReviews();
+    return readReviewStore();
   }
-  const { data, error } = await supabaseClient
+
+  let query = supabaseClient
     .from("reviewed_pages")
-    .select("review_id,reviewed_at,payload")
+    .select("review_id,reviewed_at,updated_at,deleted_at,client_updated_at,device_id,payload")
     .eq("user_id", authUser.id)
-    .order("reviewed_at", { ascending: false });
+    .order("updated_at", { ascending: false });
+  if (since) {
+    query = query.gt("updated_at", since);
+  }
+
+  const { data, error } = await query;
   if (error) {
     throw error;
   }
 
   return (data || []).reduce((accumulator, item) => {
-    accumulator[item.review_id] = {
+    const normalized = normalizeReviewRecord({
       ...(item.payload || {}),
+      review_id: item.review_id,
       reviewed_at: item.reviewed_at,
-    };
+      updated_at: item.updated_at,
+      deleted_at: item.deleted_at,
+      client_updated_at: item.client_updated_at,
+      device_id: item.device_id,
+    });
+    if (normalized) {
+      accumulator[item.review_id] = normalized;
+    }
     return accumulator;
   }, {});
 }

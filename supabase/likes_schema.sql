@@ -2,9 +2,19 @@ create table if not exists public.liked_papers (
   user_id uuid not null references auth.users (id) on delete cascade,
   like_id text not null,
   saved_at timestamptz not null default timezone('utc'::text, now()),
+  updated_at timestamptz not null default timezone('utc'::text, now()),
+  deleted_at timestamptz,
+  client_updated_at timestamptz,
+  device_id text,
   payload jsonb not null,
   primary key (user_id, like_id)
 );
+
+alter table public.liked_papers add column if not exists updated_at timestamptz not null default timezone('utc'::text, now());
+alter table public.liked_papers add column if not exists deleted_at timestamptz;
+alter table public.liked_papers add column if not exists client_updated_at timestamptz;
+alter table public.liked_papers add column if not exists device_id text;
+create index if not exists liked_papers_user_updated_at_idx on public.liked_papers (user_id, updated_at desc);
 
 alter table public.liked_papers enable row level security;
 
@@ -61,9 +71,19 @@ create table if not exists public.reviewed_pages (
   user_id uuid not null references auth.users (id) on delete cascade,
   review_id text not null,
   reviewed_at timestamptz not null default timezone('utc'::text, now()),
+  updated_at timestamptz not null default timezone('utc'::text, now()),
+  deleted_at timestamptz,
+  client_updated_at timestamptz,
+  device_id text,
   payload jsonb not null,
   primary key (user_id, review_id)
 );
+
+alter table public.reviewed_pages add column if not exists updated_at timestamptz not null default timezone('utc'::text, now());
+alter table public.reviewed_pages add column if not exists deleted_at timestamptz;
+alter table public.reviewed_pages add column if not exists client_updated_at timestamptz;
+alter table public.reviewed_pages add column if not exists device_id text;
+create index if not exists reviewed_pages_user_updated_at_idx on public.reviewed_pages (user_id, updated_at desc);
 
 alter table public.reviewed_pages enable row level security;
 
@@ -180,9 +200,19 @@ create table if not exists public.paper_queue (
   paper_id text not null,
   status text not null,
   saved_at timestamptz not null default timezone('utc'::text, now()),
+  updated_at timestamptz not null default timezone('utc'::text, now()),
+  deleted_at timestamptz,
+  client_updated_at timestamptz,
+  device_id text,
   payload jsonb not null,
   primary key (user_id, paper_id)
 );
+
+alter table public.paper_queue add column if not exists updated_at timestamptz not null default timezone('utc'::text, now());
+alter table public.paper_queue add column if not exists deleted_at timestamptz;
+alter table public.paper_queue add column if not exists client_updated_at timestamptz;
+alter table public.paper_queue add column if not exists device_id text;
+create index if not exists paper_queue_user_updated_at_idx on public.paper_queue (user_id, updated_at desc);
 
 alter table public.paper_queue enable row level security;
 
