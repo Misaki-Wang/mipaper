@@ -199,9 +199,6 @@ function bindToolbarAutoHide(toolbar, toggleButton) {
   let targetCollapse = 0;
   let rafId = 0;
 
-  const pageShell = document.querySelector(".page-shell");
-  let expandedSpace = 0;
-  const collapsedSpace = 12;
   const hideDistance = 144;
 
   const setCollapse = (value) => {
@@ -211,10 +208,6 @@ function bindToolbarAutoHide(toolbar, toggleButton) {
     const opacity = 1 - collapse * 0.08;
     toolbar.style.transform = `translateY(${offset}px)`;
     toolbar.style.opacity = opacity.toFixed(4);
-    if (pageShell) {
-      const paddingTop = expandedSpace - (expandedSpace - collapsedSpace) * eased;
-      pageShell.style.paddingTop = `${Math.max(collapsedSpace, paddingTop)}px`;
-    }
     const fullyCollapsed = collapse > 0.94;
     toolbar.classList.toggle("is-collapsed", fullyCollapsed);
     toolbar.setAttribute("aria-hidden", fullyCollapsed ? "true" : "false");
@@ -293,7 +286,6 @@ function bindToolbarAutoHide(toolbar, toggleButton) {
 
   window.addEventListener("scroll", onScroll, { passive: true });
   window.addEventListener("resize", () => {
-    expandedSpace = Math.ceil(toolbar.getBoundingClientRect().height + 16);
     if (autoHideEnabled) {
       onScroll();
     } else {
@@ -306,7 +298,6 @@ function bindToolbarAutoHide(toolbar, toggleButton) {
       setAutoHideEnabled(!autoHideEnabled);
     });
   }
-  expandedSpace = Math.ceil(toolbar.getBoundingClientRect().height + 16);
   syncToggleButton();
   setCollapse(0);
   setTargetCollapse(0);

@@ -128,8 +128,7 @@ code {
 .page-shell {
   width: min(1440px, calc(100vw - 2rem));
   margin: 0 auto;
-  padding: 5rem 0 3rem;
-  transition: padding-top 320ms cubic-bezier(0.22, 1, 0.36, 1);
+  padding: clamp(5.6rem, 5vw + 4.6rem, 6.25rem) 0 3rem;
 }
 
 .page-chrome {
@@ -145,7 +144,7 @@ code {
   margin: 0 auto 0;
   padding: 0.7rem 0.9rem;
   width: min(1440px, calc(100vw - 2rem));
-  overflow: hidden;
+  overflow: visible;
   border: 1px solid color-mix(in srgb, var(--border), var(--accent-strong) 12%);
   border-radius: 22px;
   background:
@@ -157,7 +156,7 @@ code {
   top: 0.72rem;
   left: 0;
   right: 0;
-  z-index: 26;
+  z-index: 80;
   transform: translateY(0);
   opacity: 1;
   margin-bottom: 1rem;
@@ -761,28 +760,50 @@ code {
   position: relative;
   display: grid;
   place-items: center;
-  width: 1.35rem;
-  height: 1.35rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .toolbar-autohide-svg {
-  width: 1.18rem;
-  height: 1.18rem;
-  stroke: currentColor;
-  fill: none;
-  stroke-width: 1.7;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  width: 1.35rem;
+  height: 1.35rem;
+  display: block;
 }
 
-.toolbar-autohide-toggle.is-enabled .toolbar-autohide-icon::after {
-  content: "";
-  position: absolute;
-  inset: 0.22rem 0.28rem;
-  border-top: 1.6px solid currentColor;
-  transform: rotate(-38deg);
-  transform-origin: center;
-  opacity: 0.9;
+.toolbar-autohide-lock-body {
+  fill: currentColor;
+}
+
+.toolbar-autohide-lock-state,
+.toolbar-autohide-unlock-state {
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.toolbar-autohide-lock-state {
+  opacity: 1;
+}
+
+.toolbar-autohide-unlock-state {
+  opacity: 0;
+  transform: translateY(0.02rem);
+}
+
+.toolbar-autohide-lock-shackle,
+.toolbar-autohide-unlock-shackle {
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.toolbar-autohide-toggle.is-enabled .toolbar-autohide-lock-state {
+  opacity: 0;
+}
+
+.toolbar-autohide-toggle.is-enabled .toolbar-autohide-unlock-state {
+  opacity: 1;
 }
 
 .toolbar-theme-switch {
@@ -867,7 +888,7 @@ code {
   position: absolute;
   top: calc(100% + 0.6rem);
   right: 0;
-  z-index: 40;
+  z-index: 90;
   width: min(24rem, calc(100vw - 1rem));
   padding: 0.88rem;
   border-radius: 22px;
@@ -899,7 +920,7 @@ code {
   position: absolute;
   top: calc(100% + 0.6rem);
   left: 0;
-  z-index: 38;
+  z-index: 88;
   width: min(34rem, calc(100vw - 1rem));
   max-height: calc(100vh - 6rem);
   overflow: auto;
@@ -1038,6 +1059,31 @@ code {
   border-radius: 999px;
   border: 1px solid color-mix(in srgb, var(--border), var(--accent) 12%);
   background: color-mix(in srgb, var(--surface-soft), white 10%);
+}
+
+.page-conference .home-category-meta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.42rem 0.55rem;
+  align-items: start;
+  margin-top: 0.15rem;
+}
+
+.page-conference .home-category-meta span {
+  min-width: 0;
+  max-width: 100%;
+  line-height: 1.22;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.page-conference .home-category-meta span:first-child {
+  grid-column: 1 / -1;
+}
+
+.page-conference .home-category-meta span:last-child {
+  justify-self: end;
 }
 
 .library-home-card {
@@ -2220,6 +2266,16 @@ code {
   border-radius: 0.28rem;
 }
 
+.paper-link.brand-pdf .paper-link-icon {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), color-mix(in srgb, var(--surface-strong), white 12%));
+  border: 1px solid color-mix(in srgb, var(--border), var(--accent-strong) 16%);
+}
+
+.paper-link.brand-pdf .paper-link-icon svg {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
 .paper-link.brand-hf .paper-link-icon {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), color-mix(in srgb, var(--surface-strong), white 12%));
   border: 1px solid color-mix(in srgb, var(--border), #ffd21e 26%);
@@ -3367,7 +3423,11 @@ code {
 .page-cool-daily .spotlight-list {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.68rem;
-  align-items: start;
+  align-items: stretch;
+}
+
+.page-cool-daily .spotlight-card {
+  height: 100%;
 }
 
 .page-cool-daily .spotlight-card:first-child {
@@ -3499,7 +3559,6 @@ code {
 @media (max-width: 760px) {
   .page-shell {
     width: min(calc(100vw - 1rem), 100%);
-    padding-top: 0.56rem;
   }
 
   .back-to-top {

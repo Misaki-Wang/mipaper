@@ -28,6 +28,22 @@ const focusTopicKeys = new Set([
   "multimodal_agents",
 ]);
 
+const TOPIC_LABEL_TRANSLATIONS = new Map([
+  ["多模态理解与视觉", "Multimodal Understanding and Vision"],
+  ["多模态理解和视觉", "Multimodal Understanding and Vision"],
+  ["多模态生成建模", "Multimodal Generative Modeling"],
+  ["多模态生成与建模", "Multimodal Generative Modeling"],
+  ["多模态代理", "Multimodal Agents"],
+  ["代理与规划", "Agents and Planning"],
+  ["生成基础", "Generative Foundations"],
+  ["领域应用", "Domain Applications"],
+  ["数据集与基准", "Datasets and Benchmarks"],
+  ["推理、对齐与评估", "Reasoning, Alignment, and Evaluation"],
+  ["LLMs与语言", "LLMs and Language"],
+  ["LLM与语言", "LLMs and Language"],
+  ["机器人与具身AI", "Robotics and Embodied AI"],
+]);
+
 const sourceFilter = document.querySelector("#like-source-filter");
 const yearFilter = document.querySelector("#like-year-filter");
 const monthFilter = document.querySelector("#like-month-filter");
@@ -281,7 +297,9 @@ function populateFilters(likes, laterQueue, toReadSnapshots) {
     ...laterQueue.map((item) => item.source_kind),
     ...toReadSnapshots.map(getSnapshotSourceKind),
   ].filter(Boolean))];
-  const topics = [...new Set(likes.map((item) => item.topic_label || "Other AI"))].sort((a, b) => a.localeCompare(b, "zh-CN"));
+  const topics = [...new Set(likes.map((item) => item.topic_label || "Other AI"))].sort((a, b) =>
+    displayTopicLabel(a).localeCompare(displayTopicLabel(b), "en")
+  );
   const dateParts = likes.map(extractDateParts);
   const years = [...new Set(dateParts.map((item) => item.year).filter(Boolean))].sort((a, b) => b.localeCompare(a));
   const months = [...new Set(
@@ -324,7 +342,7 @@ function populateFilters(likes, laterQueue, toReadSnapshots) {
   ].join("");
   topicFilter.innerHTML = [
     `<option value="">All Topics</option>`,
-    ...topics.map((topic) => `<option value="${escapeAttribute(topic)}">${escapeHtml(topic)}</option>`),
+    ...topics.map((topic) => `<option value="${escapeAttribute(topic)}">${escapeHtml(displayTopicLabel(topic))}</option>`),
   ].join("");
 
   sourceFilter.value = sources.includes(currentSource) ? currentSource : "";
@@ -356,10 +374,10 @@ function renderHero(likes, laterQueue, toReadSnapshots) {
   document.querySelector("#like-hero-sources").textContent = String(sources.size);
   document.querySelector("#like-hero-focus").textContent = String(laterQueue.length);
   document.querySelector("#like-hero-latest").textContent = String(toReadSnapshots.length);
-  document.querySelector("#like-hero-topic").textContent = topTopic?.topic_label || "-";
+  document.querySelector("#like-hero-topic").textContent = topTopic ? displayTopicLabel(topTopic.topic_label) : "-";
 
   document.querySelector("#like-hero-signals").innerHTML = [
-    topTopic ? `<div class="signal-chip"><span>Top Topic</span><strong>${escapeHtml(topTopic.topic_label)}</strong></div>` : "",
+    topTopic ? `<div class="signal-chip"><span>Top Topic</span><strong>${escapeHtml(displayTopicLabel(topTopic.topic_label))}</strong></div>` : "",
     likes.length ? `<div class="signal-chip"><span>Saved Papers</span><strong>${likes.length}</strong></div>` : "",
     laterQueue.length ? `<div class="signal-chip"><span>Later Queue</span><strong>${laterQueue.length}</strong></div>` : "",
     toReadSnapshots.length ? `<div class="signal-chip"><span>To-Read</span><strong>${toReadSnapshots.length}</strong></div>` : "",
@@ -406,7 +424,7 @@ function renderSourceCards(likes, laterQueue, toReadSnapshots) {
             <span><strong>${section.to_read_count}</strong><small>To-Read</small></span>
           </div>
           <div class="home-category-meta">
-            <span>${escapeHtml(section.top_topic || "No topic summary")}</span>
+            <span>${escapeHtml(displayTopicLabel(section.top_topic || "No topic summary"))}</span>
             <span>${escapeHtml(section.latest_saved || section.latest_snapshot || "-")}</span>
           </div>
         </button>
@@ -457,7 +475,7 @@ function renderTagMap(likes, topicDistribution) {
     },
     {
       label: "Topic",
-      value: state.topic || topTopic,
+      value: state.topic ? displayTopicLabel(state.topic) : topTopic,
       meta: state.topic ? "current filtered topic" : "current dominant topic",
     },
     {
@@ -510,7 +528,7 @@ function renderLaterQueue(laterQueue) {
       return `
         <article class="spotlight-card">
           <div class="spotlight-meta">
-            <span class="paper-badge">${escapeHtml(paper.topic_label || "Other AI")}</span>
+            <span class="paper-badge">${escapeHtml(displayTopicLabel(paper.topic_label || "Other AI"))}</span>
             <span class="paper-badge subdued">${escapeHtml(getSourceLabel(paper.source_kind))}</span>
           </div>
           <h3>${escapeHtml(paper.title)}</h3>
@@ -675,7 +693,7 @@ function renderDistribution(distribution) {
       (item) => `
         <div class="distribution-row">
           <div class="distribution-top">
-            <span>${escapeHtml(item.topic_label)}</span>
+            <span>${escapeHtml(displayTopicLabel(item.topic_label))}</span>
             <strong>${item.share.toFixed(2)}%</strong>
           </div>
           <div class="distribution-bar">
@@ -796,7 +814,7 @@ function renderLikeCard(paper) {
     `
     : "";
   const metaBadges = [
-    `<span class="paper-badge">${escapeHtml(paper.topic_label || "Other AI")}</span>`,
+    `<span class="paper-badge">${escapeHtml(displayTopicLabel(paper.topic_label || "Other AI"))}</span>`,
     `<span class="paper-badge subdued">${escapeHtml(getSourceLabel(paper.source_kind))}</span>`,
     paper.snapshot_label ? `<span class="paper-badge subdued">${escapeHtml(paper.snapshot_label)}</span>` : "",
   ]
@@ -922,7 +940,7 @@ function groupBySource(likes) {
         papers,
       };
     })
-    .sort((a, b) => b.count - a.count || a.source_label.localeCompare(b.source_label, "zh-CN"));
+    .sort((a, b) => b.count - a.count || a.source_label.localeCompare(b.source_label, "en"));
 }
 
 function buildLibrarySourceSections(likes, laterQueue, toReadSnapshots) {
@@ -965,7 +983,7 @@ function buildLibrarySourceSections(likes, laterQueue, toReadSnapshots) {
         sort_score: savedCount * 100 + laterCount * 10 + toReadCount,
       };
     })
-    .sort((a, b) => b.sort_score - a.sort_score || a.source_label.localeCompare(b.source_label, "zh-CN"));
+    .sort((a, b) => b.sort_score - a.sort_score || a.source_label.localeCompare(b.source_label, "en"));
 }
 
 function buildLibrarySourceLede(savedCount, laterCount, toReadCount) {
@@ -998,7 +1016,7 @@ function getSnapshotSourceKind(snapshot) {
 function computeTopicDistribution(papers) {
   const counts = new Map();
   papers.forEach((paper) => {
-    const topic = paper.topic_label || "Other AI";
+    const topic = displayTopicLabel(paper.topic_label || "Other AI");
     counts.set(topic, (counts.get(topic) || 0) + 1);
   });
   return [...counts.entries()]
@@ -1007,7 +1025,7 @@ function computeTopicDistribution(papers) {
       count,
       share: papers.length ? (count / papers.length) * 100 : 0,
     }))
-    .sort((a, b) => b.count - a.count || a.topic_label.localeCompare(b.topic_label, "zh-CN"));
+    .sort((a, b) => b.count - a.count || a.topic_label.localeCompare(b.topic_label, "en"));
 }
 
 function getActiveFilters() {
@@ -1023,7 +1041,7 @@ function getActiveFilters() {
     filters.push(`Year: ${state.year}`);
   }
   if (state.topic) {
-    filters.push(`Topic: ${state.topic}`);
+    filters.push(`Topic: ${displayTopicLabel(state.topic)}`);
   }
   if (state.query) {
     filters.push(`Search: ${state.query}`);
@@ -1071,7 +1089,7 @@ function formatTime(value) {
     return "-";
   }
   return date
-    .toLocaleString("zh-CN", {
+    .toLocaleString("en-US", {
       year: "numeric",
       month: "2-digit",
       day: "2-digit",
@@ -1079,6 +1097,14 @@ function formatTime(value) {
       minute: "2-digit",
     })
     .replace(/\//g, "/");
+}
+
+function displayTopicLabel(value) {
+  const label = String(value || "").trim();
+  if (!label) {
+    return "Other AI";
+  }
+  return TOPIC_LABEL_TRANSLATIONS.get(label) || label;
 }
 
 function extractDateParts(paper) {
@@ -1245,7 +1271,7 @@ function createDailySnapshot(report) {
     branch_url: "./cool-daily.html",
     snapshot_label: `${report.report_date} · ${report.category}`,
     title: `Cool Daily ${report.report_date} · ${report.category}`,
-    summary: `${report.total_papers} papers${report.top_topics?.[0] ? ` · Top topic ${report.top_topics[0].topic_label}` : ""}`,
+    summary: `${report.total_papers} papers${report.top_topics?.[0] ? ` · Top topic ${displayTopicLabel(report.top_topics[0].topic_label)}` : ""}`,
     source_url: report.source_url || "",
     sort_key: `${report.report_date}-2-${report.category}`,
   };
@@ -1258,7 +1284,7 @@ function createHfSnapshot(report) {
     branch_url: "./index.html",
     snapshot_label: report.report_date,
     title: `HF Daily ${report.report_date}`,
-    summary: `${report.total_papers} papers${report.top_topics?.[0] ? ` · Top topic ${report.top_topics[0].topic_label}` : ""}`,
+    summary: `${report.total_papers} papers${report.top_topics?.[0] ? ` · Top topic ${displayTopicLabel(report.top_topics[0].topic_label)}` : ""}`,
     source_url: report.source_url || "",
     sort_key: `${report.report_date}-3`,
   };
@@ -1271,7 +1297,7 @@ function createConferenceSnapshot(report) {
     branch_url: "./conference.html",
     snapshot_label: report.venue,
     title: `Conference ${report.venue}`,
-    summary: `${report.total_papers} papers${report.top_topics?.[0] ? ` · Top topic ${report.top_topics[0].topic_label}` : ""}`,
+    summary: `${report.total_papers} papers${report.top_topics?.[0] ? ` · Top topic ${displayTopicLabel(report.top_topics[0].topic_label)}` : ""}`,
     source_url: report.source_url || "",
     sort_key: `${report.venue_year || "0000"}-1-${report.venue}`,
   };
