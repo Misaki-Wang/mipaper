@@ -25,7 +25,7 @@
   <body class="page-like">
     <div class="page-shell">
       <div class="page-chrome">
-        <header class="app-toolbar reveal">
+        <header class="app-toolbar">
           <div class="toolbar-start">
             <button id="like-sidebar-toggle" class="toolbar-filter-toggle" type="button" aria-expanded="false" aria-haspopup="menu" aria-label="Open filters">
               <span id="like-sidebar-toggle-icon" class="toolbar-filter-icon">☰</span>
@@ -40,12 +40,21 @@
             </div>
           </div>
           <div class="toolbar-end">
+            <button id="like-toolbar-autohide-toggle" class="toolbar-autohide-toggle" type="button" aria-pressed="true" aria-label="Disable auto-hide toolbar" title="Disable auto-hide toolbar">
+              <span class="toolbar-autohide-icon" aria-hidden="true">
+                <svg class="toolbar-autohide-svg" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 3.5c1.3 0 2.34 1.06 2.34 2.36v2.9l4.02 3.23v1.24H5.64V11.99l4.02-3.23v-2.9C9.66 4.56 10.7 3.5 12 3.5Z" />
+                  <path d="M12 11.2v9.3" />
+                  <path d="M9.9 20.5h4.2" />
+                </svg>
+              </span>
+            </button>
             <div class="hero-actions toolbar-theme-switch">
               <button class="pill-button active" type="button" data-theme-toggle="auto">Auto</button>
               <button class="pill-button" type="button" data-theme-toggle="light">Day</button>
               <button class="pill-button" type="button" data-theme-toggle="dark">Night</button>
             </div>
-            <div class="account-menu-shell">
+            <div class="account-menu-shell" id="like-account-menu-shell">
               <button id="like-account-menu-toggle" class="account-menu-toggle" type="button" aria-expanded="false" aria-haspopup="menu">
                 <span id="like-account-trigger-avatar" class="account-menu-avatar" aria-hidden="true">
                   <span class="account-avatar-fallback">?</span>

@@ -2,6 +2,7 @@ import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLik
 import { bindQueueButtons, initQueue, isInQueue, subscribeQueue } from "./paper_queue.js";
 import { createCalendarPicker } from "./calendar_picker.js";
 import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js";
+import { bindBranchAuthToolbar } from "./branch_auth.js";
 
 const manifestUrl = "./data/daily/manifest.json";
 
@@ -52,6 +53,7 @@ init().catch((error) => {
 async function init() {
   bindThemeToggle();
   bindFilterMenu();
+  bindBranchAuthToolbar("daily");
   bindBackToTop();
   bindFilters();
   bindReviewToggle();

@@ -1,18 +1,15 @@
 import {
   bindLikeButtons,
-  getAuthSnapshot,
   getSourceLabel,
   initLikesSync,
   readLikes,
-  signInWithGitHub,
-  signOutFromGitHub,
   subscribeAuth,
   subscribeLikes,
-  syncLikesNow,
 } from "./likes.js";
 import { getSupabaseClient, isAuthorizedUser, isSupabaseConfigured, loadRuntimeConfig } from "./supabase.js";
 import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js";
 import { bindQueueButtons, initQueue, readQueue, subscribeQueue } from "./paper_queue.js";
+import { bindBranchAuthToolbar } from "./branch_auth.js";
 
 const state = {
   likes: [],
@@ -44,20 +41,7 @@ const sidebarToggleIcon = document.querySelector("#like-sidebar-toggle-icon");
 const filterMenuPanel = document.querySelector("#like-filters-menu");
 const backToTopButton = document.querySelector("#like-back-to-top");
 const likeRecords = new Map();
-const authStatus = document.querySelector("#like-auth-status");
-const signInButton = document.querySelector("#like-sign-in");
-const signOutButton = document.querySelector("#like-sign-out");
-const syncNowButton = document.querySelector("#like-sync-now");
-const accountMenuShell = document.querySelector(".account-menu-shell");
-const accountMenuButton = document.querySelector("#like-account-menu-toggle");
-const accountMenuPanel = document.querySelector("#like-sync-menu");
-const accountTriggerAvatar = document.querySelector("#like-account-trigger-avatar");
-const accountTriggerLabel = document.querySelector("#like-account-trigger-label");
-const accountTriggerValue = document.querySelector("#like-account-trigger-value");
-const accountCard = document.querySelector("#like-account-card");
-const authWarning = document.querySelector("#like-auth-warning");
 let toReadSyncPromise = null;
-let accountMenuOpen = false;
 let filterMenuOpen = false;
 
 const LATER_PAGE_SIZE = 6;
@@ -75,12 +59,10 @@ init().catch((error) => {
 async function init() {
   bindThemeToggle();
   bindFilterMenu();
-  bindAccountMenu();
+  bindBranchAuthToolbar("like");
   bindBackToTop();
   bindFilters();
-  bindAuthActions();
   subscribeAuth((snapshot) => {
-    renderAuthState(snapshot);
     if (snapshot.configured && snapshot.signedIn && snapshot.authorized) {
       scheduleToReadSnapshotSync();
     }
@@ -250,189 +232,6 @@ function bindFilters() {
     searchInput.value = "";
     renderPage();
   });
-}
-
-function bindAuthActions() {
-  signInButton.addEventListener("click", async () => {
-    authStatus.textContent = "Redirecting to GitHub sign-in. Likes will sync automatically when you return.";
-    await signInWithGitHub();
-  });
-
-  signOutButton.addEventListener("click", async () => {
-    await signOutFromGitHub();
-  });
-
-  syncNowButton.addEventListener("click", async () => {
-    try {
-      syncNowButton.disabled = true;
-      await syncLikesNow();
-    } catch (error) {
-      console.error(error);
-      authStatus.textContent = `Sync failed: ${error instanceof Error ? error.message : String(error)}`;
-    } finally {
-      syncNowButton.disabled = false;
-      renderAuthState(getAuthSnapshot());
-    }
-  });
-}
-
-function renderAuthState(snapshot) {
-  renderAccountIdentity(snapshot);
-  renderUnauthorizedState(snapshot);
-  if (accountMenuButton) {
-    accountMenuButton.classList.toggle("is-signed-in", Boolean(snapshot.signedIn && !snapshot.unauthorized));
-    accountMenuButton.classList.toggle("is-syncing", Boolean(snapshot.syncing));
-    accountMenuButton.classList.toggle("is-disabled", !snapshot.configured);
-    accountMenuButton.classList.toggle("is-unauthorized", Boolean(snapshot.unauthorized));
-  }
-  if (!snapshot.configured) {
-    authStatus.textContent = "Sync disabled. Supabase is not configured.";
-    signInButton.disabled = true;
-    signOutButton.disabled = true;
-    syncNowButton.disabled = true;
-    syncNowButton.textContent = "Sync now";
-    return;
-  }
-
-  signInButton.disabled = snapshot.signedIn;
-  signOutButton.disabled = !snapshot.signedIn;
-  syncNowButton.disabled = !snapshot.signedIn || snapshot.syncing || snapshot.unauthorized;
-  syncNowButton.textContent = snapshot.syncing ? "Syncing..." : "Sync now";
-  if (snapshot.unauthorized) {
-    authStatus.textContent = snapshot.unauthorizedMessage || "This account is not authorized for sync.";
-    signInButton.disabled = false;
-    signOutButton.disabled = true;
-    return;
-  }
-  authStatus.textContent = snapshot.signedIn
-    ? buildSignedInStatus(snapshot)
-    : "Sign in with GitHub to sync likes across devices.";
-}
-
-function buildSignedInStatus(snapshot) {
-  if (snapshot.syncing) {
-    return "Syncing likes to Supabase now.";
-  }
-  if (snapshot.syncError) {
-    return `Sync failed: ${snapshot.syncError}`;
-  }
-  if (snapshot.lastSyncedAt) {
-    return `Last synced ${formatTime(snapshot.lastSyncedAt)}`;
-  }
-  return "Connected. Automatic sync is ready.";
-}
-
-function renderAccountIdentity(snapshot) {
-  const identitySource = snapshot.unauthorized ? snapshot.blockedUser : snapshot.user;
-  const signedIn = Boolean(snapshot.signedIn && snapshot.user && !snapshot.unauthorized);
-  const metadata = identitySource?.user_metadata || {};
-  const displayName =
-    identitySource?.displayName ||
-    metadata.full_name ||
-    metadata.name ||
-    metadata.preferred_username ||
-    metadata.user_name ||
-    "Not signed in";
-  const email = identitySource?.email || identitySource?.id || identitySource?.userId || "GitHub + Supabase";
-  const avatarUrl = identitySource?.avatarUrl || metadata.avatar_url || "";
-
-  if (accountTriggerLabel) {
-    accountTriggerLabel.textContent = snapshot.unauthorized ? "Unauthorized" : signedIn ? "Connected" : "Sync";
-  }
-  if (accountTriggerValue) {
-    accountTriggerValue.textContent = snapshot.unauthorized ? displayName : signedIn ? displayName : "Sign in";
-  }
-  if (accountMenuButton) {
-    accountMenuButton.title = snapshot.unauthorized ? `Unauthorized: ${email}` : signedIn ? `${displayName} · ${email}` : "Sign in to sync";
-  }
-  if (accountTriggerAvatar) {
-    const initial = String(displayName || email || "?").trim().charAt(0).toUpperCase() || "?";
-    if ((signedIn || snapshot.unauthorized) && avatarUrl) {
-      accountTriggerAvatar.innerHTML = `<img class="account-avatar-image" src="${escapeAttribute(avatarUrl)}" alt="${escapeAttribute(
-        displayName
-      )}" />`;
-    } else {
-      accountTriggerAvatar.innerHTML = `<span class="account-avatar-fallback">${escapeHtml(initial)}</span>`;
-    }
-  }
-
-  if (!accountCard) {
-    return;
-  }
-
-  accountCard.classList.toggle("is-empty", !signedIn && !snapshot.unauthorized);
-  accountCard.classList.toggle("is-unauthorized", Boolean(snapshot.unauthorized));
-  const avatarShell = accountCard.querySelector(".account-avatar-shell");
-  const nameNode = accountCard.querySelector(".account-card-name");
-  const emailNode = accountCard.querySelector(".account-card-email");
-  if (nameNode) {
-    nameNode.textContent = snapshot.unauthorized ? `Unauthorized · ${displayName}` : signedIn ? displayName : "Not signed in";
-  }
-  if (emailNode) {
-    emailNode.textContent = snapshot.unauthorized ? email : signedIn ? email : "GitHub + Supabase";
-  }
-  if (!avatarShell) {
-    return;
-  }
-
-  const initial = String(displayName || email || "?").trim().charAt(0).toUpperCase() || "?";
-  if (signedIn && avatarUrl) {
-    avatarShell.innerHTML = `<img class="account-avatar-image" src="${escapeAttribute(avatarUrl)}" alt="${escapeAttribute(
-      displayName
-    )}" />`;
-    return;
-  }
-
-  avatarShell.innerHTML = `<div class="account-avatar-fallback">${escapeHtml(initial)}</div>`;
-}
-
-function renderUnauthorizedState(snapshot) {
-  if (!authWarning) {
-    return;
-  }
-  if (!snapshot.unauthorized) {
-    authWarning.hidden = true;
-    authWarning.textContent = "";
-    return;
-  }
-  authWarning.hidden = false;
-  authWarning.textContent = snapshot.unauthorizedMessage || "The current account is not on the allowlist. Like access is restricted.";
-}
-
-function bindAccountMenu() {
-  if (!accountMenuButton || !accountMenuPanel || !accountMenuShell) {
-    return;
-  }
-
-  accountMenuButton.addEventListener("click", (event) => {
-    event.stopPropagation();
-    setAccountMenuOpen(!accountMenuOpen);
-  });
-
-  document.addEventListener("click", (event) => {
-    if (!accountMenuOpen) {
-      return;
-    }
-    if (accountMenuShell.contains(event.target)) {
-      return;
-    }
-    setAccountMenuOpen(false);
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && accountMenuOpen) {
-      setAccountMenuOpen(false);
-    }
-  });
-}
-
-function setAccountMenuOpen(open) {
-  accountMenuOpen = open;
-  if (!accountMenuButton || !accountMenuPanel) {
-    return;
-  }
-  accountMenuButton.setAttribute("aria-expanded", String(open));
-  accountMenuPanel.hidden = !open;
 }
 
 function renderPage() {

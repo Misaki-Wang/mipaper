@@ -25,7 +25,7 @@
   <body class="page-conference">
     <div class="page-shell">
       <div class="page-chrome">
-        <header class="app-toolbar reveal">
+        <header class="app-toolbar">
           <div class="toolbar-start">
             <button id="conference-sidebar-toggle" class="toolbar-filter-toggle" type="button" aria-expanded="false" aria-haspopup="menu" aria-label="Open filters">
               <span id="conference-sidebar-toggle-icon" class="toolbar-filter-icon">☰</span>
@@ -40,10 +40,49 @@
             </div>
           </div>
           <div class="toolbar-end">
+            <button id="conference-toolbar-autohide-toggle" class="toolbar-autohide-toggle" type="button" aria-pressed="true" aria-label="Disable auto-hide toolbar" title="Disable auto-hide toolbar">
+              <span class="toolbar-autohide-icon" aria-hidden="true">
+                <svg class="toolbar-autohide-svg" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 3.5c1.3 0 2.34 1.06 2.34 2.36v2.9l4.02 3.23v1.24H5.64V11.99l4.02-3.23v-2.9C9.66 4.56 10.7 3.5 12 3.5Z" />
+                  <path d="M12 11.2v9.3" />
+                  <path d="M9.9 20.5h4.2" />
+                </svg>
+              </span>
+            </button>
             <div class="hero-actions toolbar-theme-switch">
               <button class="pill-button active" type="button" data-theme-toggle="auto">Auto</button>
               <button class="pill-button" type="button" data-theme-toggle="light">Day</button>
               <button class="pill-button" type="button" data-theme-toggle="dark">Night</button>
+            </div>
+            <div class="account-menu-shell" id="conference-account-menu-shell">
+              <button id="conference-account-menu-toggle" class="account-menu-toggle" type="button" aria-expanded="false" aria-haspopup="menu">
+                <span id="conference-account-trigger-avatar" class="account-menu-avatar" aria-hidden="true">
+                  <span class="account-avatar-fallback">?</span>
+                </span>
+                <span class="account-menu-toggle-copy">
+                  <span id="conference-account-trigger-label" class="account-menu-toggle-label">Sync</span>
+                  <strong id="conference-account-trigger-value" class="account-menu-toggle-value">Not signed in</strong>
+                </span>
+                <span class="account-menu-toggle-caret" aria-hidden="true">▾</span>
+              </button>
+              <div id="conference-sync-menu" class="account-menu-panel" hidden>
+                <div id="conference-account-card" class="account-card is-empty">
+                  <div class="account-avatar-shell" aria-hidden="true">
+                    <div class="account-avatar-fallback">?</div>
+                  </div>
+                  <div class="account-card-copy">
+                    <strong class="account-card-name">Not signed in</strong>
+                    <span class="account-card-email">GitHub + Supabase</span>
+                  </div>
+                </div>
+                <div id="conference-auth-warning" class="auth-warning" hidden></div>
+                <p id="conference-auth-status" class="auth-status">Supabase is not configured. Sync is currently disabled.</p>
+                <div class="auth-actions">
+                  <button id="conference-sign-in" class="link-chip button-link" type="button">GitHub Sign in</button>
+                  <button id="conference-sync-now" class="link-chip button-link" type="button">Sync now</button>
+                  <button id="conference-sign-out" class="link-chip button-link" type="button">Sign out</button>
+                </div>
+              </div>
             </div>
           </div>
         </header>
@@ -190,6 +229,14 @@
               <h2>Current Tags</h2>
             </div>
             <div id="conference-tag-map" class="tag-map"></div>
+          </section>
+
+          <section id="conference-distribution-section" class="glass-card trend-panel reveal">
+            <div class="section-heading">
+              <p class="eyebrow">SUBJECT DISTRIBUTION</p>
+              <h2>Subject Distribution</h2>
+            </div>
+            <div id="conference-subject-distribution" class="distribution-list"></div>
           </section>
 
           <section id="conference-spotlight-section" class="glass-card conference-panel reveal">

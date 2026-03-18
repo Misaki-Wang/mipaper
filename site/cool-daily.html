@@ -25,7 +25,7 @@
   <body class="page-cool-daily">
     <div class="page-shell">
       <div class="page-chrome">
-        <header class="app-toolbar reveal">
+        <header class="app-toolbar">
           <div class="toolbar-start">
             <button id="sidebar-toggle" class="toolbar-filter-toggle" type="button" aria-expanded="false" aria-haspopup="menu" aria-label="Open filters">
               <span id="sidebar-toggle-icon" class="toolbar-filter-icon">☰</span>
@@ -40,10 +40,49 @@
             </div>
           </div>
           <div class="toolbar-end">
+            <button id="daily-toolbar-autohide-toggle" class="toolbar-autohide-toggle" type="button" aria-pressed="true" aria-label="Disable auto-hide toolbar" title="Disable auto-hide toolbar">
+              <span class="toolbar-autohide-icon" aria-hidden="true">
+                <svg class="toolbar-autohide-svg" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 3.5c1.3 0 2.34 1.06 2.34 2.36v2.9l4.02 3.23v1.24H5.64V11.99l4.02-3.23v-2.9C9.66 4.56 10.7 3.5 12 3.5Z" />
+                  <path d="M12 11.2v9.3" />
+                  <path d="M9.9 20.5h4.2" />
+                </svg>
+              </span>
+            </button>
             <div class="hero-actions toolbar-theme-switch">
               <button class="pill-button active" type="button" data-theme-toggle="auto">Auto</button>
               <button class="pill-button" type="button" data-theme-toggle="light">Day</button>
               <button class="pill-button" type="button" data-theme-toggle="dark">Night</button>
+            </div>
+            <div class="account-menu-shell" id="daily-account-menu-shell">
+              <button id="daily-account-menu-toggle" class="account-menu-toggle" type="button" aria-expanded="false" aria-haspopup="menu">
+                <span id="daily-account-trigger-avatar" class="account-menu-avatar" aria-hidden="true">
+                  <span class="account-avatar-fallback">?</span>
+                </span>
+                <span class="account-menu-toggle-copy">
+                  <span id="daily-account-trigger-label" class="account-menu-toggle-label">Sync</span>
+                  <strong id="daily-account-trigger-value" class="account-menu-toggle-value">Not signed in</strong>
+                </span>
+                <span class="account-menu-toggle-caret" aria-hidden="true">▾</span>
+              </button>
+              <div id="daily-sync-menu" class="account-menu-panel" hidden>
+                <div id="daily-account-card" class="account-card is-empty">
+                  <div class="account-avatar-shell" aria-hidden="true">
+                    <div class="account-avatar-fallback">?</div>
+                  </div>
+                  <div class="account-card-copy">
+                    <strong class="account-card-name">Not signed in</strong>
+                    <span class="account-card-email">GitHub + Supabase</span>
+                  </div>
+                </div>
+                <div id="daily-auth-warning" class="auth-warning" hidden></div>
+                <p id="daily-auth-status" class="auth-status">Supabase is not configured. Sync is currently disabled.</p>
+                <div class="auth-actions">
+                  <button id="daily-sign-in" class="link-chip button-link" type="button">GitHub Sign in</button>
+                  <button id="daily-sync-now" class="link-chip button-link" type="button">Sync now</button>
+                  <button id="daily-sign-out" class="link-chip button-link" type="button">Sign out</button>
+                </div>
+              </div>
             </div>
           </div>
         </header>

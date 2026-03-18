@@ -128,7 +128,8 @@ code {
 .page-shell {
   width: min(1440px, calc(100vw - 2rem));
   margin: 0 auto;
-  padding: 1rem 0 3rem;
+  padding: 5rem 0 3rem;
+  transition: padding-top 320ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .page-chrome {
@@ -141,8 +142,10 @@ code {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 0.9rem;
-  margin-bottom: 1rem;
+  margin: 0 auto 0;
   padding: 0.7rem 0.9rem;
+  width: min(1440px, calc(100vw - 2rem));
+  overflow: hidden;
   border: 1px solid color-mix(in srgb, var(--border), var(--accent-strong) 12%);
   border-radius: 22px;
   background:
@@ -150,9 +153,22 @@ code {
     radial-gradient(circle at top right, color-mix(in srgb, var(--accent-soft), transparent 30%), transparent 58%);
   box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
   backdrop-filter: blur(20px);
-  position: sticky;
+  position: fixed;
   top: 0.72rem;
+  left: 0;
+  right: 0;
   z-index: 26;
+  transform: translateY(0);
+  opacity: 1;
+  margin-bottom: 1rem;
+  will-change: transform, opacity;
+  transition:
+    transform 320ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 240ms ease;
+}
+
+.app-toolbar.is-collapsed {
+  pointer-events: none;
 }
 
 .toolbar-start,
@@ -710,6 +726,63 @@ code {
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.04em;
+}
+
+.toolbar-autohide-toggle {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  width: 2.7rem;
+  height: 2.7rem;
+  padding: 0;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--border), var(--accent) 16%);
+  background: color-mix(in srgb, var(--surface-soft), white 10%);
+  color: var(--muted);
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(16, 24, 40, 0.06);
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease, color 180ms ease;
+}
+
+.toolbar-autohide-toggle:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--border), var(--accent) 30%);
+  background: color-mix(in srgb, var(--surface-strong), white 6%);
+  box-shadow: 0 12px 24px rgba(16, 24, 40, 0.08);
+}
+
+.toolbar-autohide-toggle.is-enabled {
+  color: var(--accent);
+  border-color: color-mix(in srgb, var(--border), var(--accent) 34%);
+  background: color-mix(in srgb, var(--accent-soft), white 18%);
+}
+
+.toolbar-autohide-icon {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
+.toolbar-autohide-svg {
+  width: 1.18rem;
+  height: 1.18rem;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.toolbar-autohide-toggle.is-enabled .toolbar-autohide-icon::after {
+  content: "";
+  position: absolute;
+  inset: 0.22rem 0.28rem;
+  border-top: 1.6px solid currentColor;
+  transform: rotate(-38deg);
+  transform-origin: center;
+  opacity: 0.9;
 }
 
 .toolbar-theme-switch {

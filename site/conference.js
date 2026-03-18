@@ -1,6 +1,7 @@
 import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js";
 import { bindQueueButtons, initQueue, subscribeQueue } from "./paper_queue.js";
 import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js";
+import { bindBranchAuthToolbar } from "./branch_auth.js";
 
 const manifestUrl = "./data/conference/manifest.json";
 const CONFERENCE_HOME_PAGE_SIZE = 6;
@@ -53,6 +54,7 @@ init().catch((error) => {
 async function init() {
   bindThemeToggle();
   bindFilterMenu();
+  bindBranchAuthToolbar("conference");
   bindBackToTop();
   bindFilters();
   bindReviewToggle();

@@ -1,6 +1,7 @@
 import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js";
 import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js";
 import { bindQueueButtons, initQueue, isInQueue, subscribeQueue } from "./paper_queue.js";
+import { bindBranchAuthToolbar } from "./branch_auth.js";
 
 const manifestUrl = "./data/trending/manifest.json";
 
@@ -38,6 +39,7 @@ init().catch((error) => {
 async function init() {
   bindThemeToggle();
   bindFilterMenu();
+  bindBranchAuthToolbar("trending");
   bindBackToTop();
   bindFilters();
   bindReviewToggle();
