@@ -1,7 +1,85 @@
 {
-  "reports_count": 12,
-  "default_report_path": "data/hf-daily/reports/2026-03-17/hf-daily-2026-03-17.json",
+  "reports_count": 13,
+  "default_report_path": "data/hf-daily/reports/2026-03-18/hf-daily-2026-03-18.json",
   "reports": [
+    {
+      "slug": "hf-daily-2026-03-18",
+      "report_date": "2026-03-18",
+      "total_papers": 44,
+      "classifier": "codex",
+      "generated_at": "2026-03-18T15:35:57Z",
+      "source_url": "https://huggingface.co/papers/date/2026-03-18",
+      "focus_topics": [
+        {
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "count": 4,
+          "share": 9.09
+        },
+        {
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 5,
+          "share": 11.36
+        },
+        {
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "count": 1,
+          "share": 2.27
+        }
+      ],
+      "top_topics": [
+        {
+          "topic_label": "Datasets and Benchmarks",
+          "count": 5,
+          "share": 11.36
+        },
+        {
+          "topic_label": "LLMs and Language",
+          "count": 5,
+          "share": 11.36
+        },
+        {
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 5,
+          "share": 11.36
+        },
+        {
+          "topic_label": "Multimodal Understanding and Vision",
+          "count": 5,
+          "share": 11.36
+        },
+        {
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "count": 5,
+          "share": 11.36
+        }
+      ],
+      "top_submitters": [
+        {
+          "submitted_by": "taesiri",
+          "count": 5
+        },
+        {
+          "submitted_by": "Franck Dernoncourt",
+          "count": 3
+        },
+        {
+          "submitted_by": "Aliyu Alege",
+          "count": 2
+        },
+        {
+          "submitted_by": "Barzelay",
+          "count": 1
+        },
+        {
+          "submitted_by": "Bhardwaj",
+          "count": 1
+        }
+      ],
+      "data_path": "data/hf-daily/reports/2026-03-18/hf-daily-2026-03-18.json"
+    },
     {
       "slug": "hf-daily-2026-03-17",
       "report_date": "2026-03-17",
