@@ -5,6 +5,7 @@ import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, s
 import { bindBranchAuthToolbar } from "./branch_auth.js";
 
 const manifestUrl = "./data/daily/manifest.json";
+const CADENCE_MODE_KEY = "cool-paper-daily-cadence-mode";
 
 const state = {
   manifest: null,
@@ -15,6 +16,7 @@ const state = {
   query: "",
   topic: "",
   focusOnly: false,
+  cadenceMode: localStorage.getItem(CADENCE_MODE_KEY) || "daily",
 };
 
 const focusTopicKeys = new Set([
@@ -40,6 +42,7 @@ const floatingTocRoot = document.querySelector("#daily-floating-toc");
 const reviewToggleButton = document.querySelector("#daily-review-toggle");
 const reviewToggleMeta = document.querySelector("#daily-review-toggle-meta");
 const heroReviewStatus = document.querySelector("#daily-hero-review-status");
+const cadenceModeButtons = [...document.querySelectorAll("[data-cadence-mode]")];
 const likeRecords = new Map();
 let tocObserver = null;
 let datePicker = null;
@@ -54,6 +57,7 @@ async function init() {
   bindThemeToggle();
   bindFilterMenu();
   bindBranchAuthToolbar("daily");
+  bindCadenceModeToggle();
   bindBackToTop();
   bindFilters();
   bindReviewToggle();
@@ -186,6 +190,44 @@ function bindReviewToggle() {
     });
     renderReviewState();
   });
+}
+
+function bindCadenceModeToggle() {
+  if (!cadenceModeButtons.length) {
+    return;
+  }
+
+  const syncCadenceModeButtons = () => {
+    cadenceModeButtons.forEach((button) => {
+      const active = button.dataset.cadenceMode === state.cadenceMode;
+      button.classList.toggle("active", active);
+      button.setAttribute("aria-pressed", String(active));
+    });
+  };
+
+  const setCadenceMode = (mode, persist = true) => {
+    const nextMode = mode === "weekly" ? "weekly" : "daily";
+    if (state.cadenceMode === nextMode && persist) {
+      syncCadenceModeButtons();
+      return;
+    }
+    state.cadenceMode = nextMode;
+    if (persist) {
+      window.localStorage.setItem(CADENCE_MODE_KEY, nextMode);
+    }
+    syncCadenceModeButtons();
+    if (state.report) {
+      renderReport();
+    }
+  };
+
+  cadenceModeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      setCadenceMode(button.dataset.cadenceMode);
+    });
+  });
+
+  setCadenceMode(state.cadenceMode, false);
 }
 
 function renderReviewState() {
@@ -711,12 +753,18 @@ function renderAtlas(report) {
     )
     .join("");
 
-  const cadenceMatrix = buildCadenceMatrix(state.manifest?.reports || []);
+  renderCadence(report);
+}
+
+function renderCadence(report) {
+  const cadenceMatrix = buildCadenceMatrix(state.manifest?.reports || [], state.cadenceMode);
   const maxCount = Math.max(...cadenceMatrix.rows.flatMap((row) => row.entries.map((entry) => entry?.total_papers || 0)), 1);
+  const currentPeriodKey = state.cadenceMode === "weekly" ? getIsoWeekLabel(report.report_date) : report.report_date;
+
   document.querySelector("#cadence-track").innerHTML = `
     <div class="cadence-matrix">
       <div class="cadence-matrix-head">
-        <span class="cadence-matrix-corner">Date</span>
+        <span class="cadence-matrix-corner">${state.cadenceMode === "weekly" ? "Week" : "Date"}</span>
         ${cadenceMatrix.domains
           .map((domain) => `<span class="cadence-domain-head">${escapeHtml(domain)}</span>`)
           .join("")}
@@ -725,15 +773,18 @@ function renderAtlas(report) {
         ${cadenceMatrix.rows
           .map(
             (row) => `
-              <div class="cadence-matrix-row${row.report_date === report.report_date ? " is-active" : ""}">
-                <span class="cadence-date-label">${escapeHtml(row.report_date.slice(5))}</span>
+              <div class="cadence-matrix-row${row.rowKey === currentPeriodKey ? " is-active" : ""}">
+                <span class="cadence-date-label">${escapeHtml(row.label)}</span>
                 ${row.entries
                   .map((entry) => {
                     if (!entry) {
                       return `<div class="cadence-cell cadence-cell-empty"><span>-</span></div>`;
                     }
                     const width = Math.max((entry.total_papers / maxCount) * 100, 12);
-                    const active = entry.data_path === state.currentPath;
+                    const active =
+                      state.cadenceMode === "weekly"
+                        ? row.rowKey === currentPeriodKey && entry.category === report.category
+                        : entry.data_path === state.currentPath;
                     return `
                       <button class="cadence-cell${active ? " active" : ""}" type="button" data-cadence-report="${escapeAttribute(
                         entry.data_path
@@ -761,7 +812,11 @@ function renderAtlas(report) {
     });
   });
 
-  document.querySelector("#cadence-summary").textContent = buildCadenceSummary(cadenceMatrix.rows, report.category);
+  document.querySelector("#cadence-summary").textContent = buildCadenceSummary(
+    cadenceMatrix.rows,
+    report.category,
+    state.cadenceMode
+  );
 }
 
 function renderTopicNavigator(items) {
@@ -1024,25 +1079,72 @@ function hasActiveFilters() {
   return Boolean(state.domain || state.date || state.topic || state.query || state.focusOnly);
 }
 
-function buildCadenceSummary(rows, currentDomain) {
+function buildCadenceSummary(rows, currentDomain, cadenceMode = "daily") {
   const reports = rows
     .map((row) => row.entries.find((entry) => entry?.category === currentDomain))
     .filter(Boolean);
 
   if (!reports.length) {
-    return "No daily reports are available yet.";
+    return cadenceMode === "weekly" ? "No weekly aggregates are available yet." : "No daily reports are available yet.";
   }
   if (reports.length === 1) {
-    return "Only one report is available so far. The cadence chart will expand automatically as more reports accumulate.";
+    return cadenceMode === "weekly"
+      ? "Only one weekly aggregate is available so far. The cadence chart will expand automatically as more reports accumulate."
+      : "Only one report is available so far. The cadence chart will expand automatically as more reports accumulate.";
   }
   const [latest, previous] = reports;
   const delta = latest.total_papers - previous.total_papers;
   const direction = delta === 0 ? "unchanged" : delta > 0 ? `increased by ${delta}` : `decreased by ${Math.abs(delta)}`;
-  return `${latest.report_date} has ${latest.total_papers} papers, ${direction}.`;
+  const label = cadenceMode === "weekly" ? latest.rowKey : latest.label;
+  const unit = cadenceMode === "weekly" ? "week" : "day";
+  return `${label} has ${latest.total_papers} papers, ${direction} from the previous ${unit}.`;
 }
 
-function buildCadenceMatrix(reports) {
+function buildCadenceMatrix(reports, cadenceMode = "daily") {
   const domains = ["cs.AI", "cs.CL", "cs.CV"];
+  if (cadenceMode === "weekly") {
+    const weeklyMap = new Map();
+
+    reports.forEach((report) => {
+      const weekLabel = getIsoWeekLabel(report.report_date);
+      if (!weekLabel) {
+        return;
+      }
+      const row = weeklyMap.get(weekLabel) || {
+        rowKey: weekLabel,
+        label: weekLabel,
+        latestDate: report.report_date,
+        entries: new Map(),
+      };
+      row.latestDate = row.latestDate > report.report_date ? row.latestDate : report.report_date;
+      const entry = row.entries.get(report.category) || {
+        category: report.category,
+        total_papers: 0,
+        report_date: report.report_date,
+        data_path: report.data_path,
+      };
+      entry.total_papers += report.total_papers || 0;
+      if (report.report_date >= entry.report_date) {
+        entry.report_date = report.report_date;
+        entry.data_path = report.data_path;
+      }
+      row.entries.set(report.category, entry);
+      weeklyMap.set(weekLabel, row);
+    });
+
+    return {
+      domains,
+      rows: [...weeklyMap.values()]
+        .sort((left, right) => right.latestDate.localeCompare(left.latestDate))
+        .slice(0, CADENCE_MAX_DATES)
+        .map((row) => ({
+          rowKey: row.rowKey,
+          label: row.label,
+          entries: domains.map((domain) => row.entries.get(domain) || null),
+        })),
+    };
+  }
+
   const latestDates = [...new Set(reports.map((item) => item.report_date).filter(Boolean))]
     .sort((left, right) => right.localeCompare(left))
     .slice(0, CADENCE_MAX_DATES);
@@ -1050,7 +1152,8 @@ function buildCadenceMatrix(reports) {
   return {
     domains,
     rows: latestDates.map((report_date) => ({
-      report_date,
+      rowKey: report_date,
+      label: report_date.slice(5),
       entries: domains.map((domain) => reports.find((item) => item.report_date === report_date && item.category === domain) || null),
     })),
   };
@@ -1316,4 +1419,20 @@ function getHomeCategoryCards(manifest, scopedReports = null) {
     seen.add(report.category);
     return true;
   });
+}
+
+function getIsoWeekLabel(value) {
+  if (!value) {
+    return "";
+  }
+  const date = new Date(`${value}T00:00:00Z`);
+  if (Number.isNaN(date.getTime())) {
+    return value;
+  }
+  const target = new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate()));
+  const day = target.getUTCDay() || 7;
+  target.setUTCDate(target.getUTCDate() + 4 - day);
+  const yearStart = new Date(Date.UTC(target.getUTCFullYear(), 0, 1));
+  const week = Math.ceil((((target - yearStart) / 86400000) + 1) / 7);
+  return `${target.getUTCFullYear()}-W${String(week).padStart(2, "0")}`;
 }

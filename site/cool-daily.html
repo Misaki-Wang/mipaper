@@ -256,7 +256,13 @@
                 </div>
               </div>
               <aside class="atlas-panel cadence-panel">
-                <span class="insight-label">Recent Cadence</span>
+                <div class="cadence-panel-head">
+                  <span class="insight-label">Recent Cadence</span>
+                  <div class="cadence-mode-switch hero-actions" role="tablist" aria-label="Cadence mode">
+                    <button class="pill-button active" type="button" data-cadence-mode="daily" aria-pressed="true">Daily</button>
+                    <button class="pill-button" type="button" data-cadence-mode="weekly" aria-pressed="false">Weekly</button>
+                  </div>
+                </div>
                 <div id="cadence-track" class="cadence-track"></div>
                 <p id="cadence-summary" class="cadence-summary">-</p>
               </aside>

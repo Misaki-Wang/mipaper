@@ -1062,28 +1062,22 @@ code {
 }
 
 .page-conference .home-category-meta {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  display: flex;
+  flex-wrap: wrap;
   gap: 0.42rem 0.55rem;
-  align-items: start;
-  margin-top: 0.15rem;
+  align-items: center;
+  margin-top: 0.1rem;
 }
 
 .page-conference .home-category-meta span {
+  display: inline-flex;
+  flex: 0 0 auto;
   min-width: 0;
   max-width: 100%;
   line-height: 1.22;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-.page-conference .home-category-meta span:first-child {
-  grid-column: 1 / -1;
-}
-
-.page-conference .home-category-meta span:last-child {
-  justify-self: end;
 }
 
 .library-home-card {
@@ -1941,6 +1935,24 @@ code {
   display: grid;
   gap: 0.72rem;
   min-width: 0;
+}
+
+.page-cool-daily .cadence-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.page-cool-daily .cadence-mode-switch {
+  flex: 0 0 auto;
+  padding: 0.18rem;
+}
+
+.page-cool-daily .cadence-mode-switch .pill-button {
+  padding: 0.4rem 0.72rem;
+  font-size: 0.8rem;
 }
 
 .cadence-matrix {
@@ -3677,6 +3689,11 @@ code {
 
   .conference-overview-grid {
     grid-template-columns: 1fr;
+  }
+
+  .page-conference .home-category-meta {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .page-cool-daily .hero-copy {
