@@ -10,7 +10,17 @@ import { getSupabaseClient, isAuthorizedUser, isSupabaseConfigured, loadRuntimeC
 import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js";
 import { bindQueueButtons, initQueue, isInQueue, readQueue, subscribeQueue } from "./paper_queue.js?v=20260319";
 import { bindBranchAuthToolbar } from "./branch_auth.js";
+import { mountAppToolbar } from "./app_toolbar.js";
 import { repairLikeLaterConflicts } from "./paper_selection.js?v=20260319";
+import { bindBranchNav } from "./branch_nav.js?v=20260319-2";
+import { bindLibraryNav } from "./library_nav.js?v=20260319-2";
+
+mountAppToolbar("#like-toolbar-root", {
+  prefix: "like",
+  filtersTemplateId: "like-toolbar-filters",
+  branchActiveKey: null,
+  libraryActiveKey: "liked",
+});
 
 const state = {
   likes: [],
@@ -77,6 +87,8 @@ async function init() {
   likeRecords.render = renderPage;
   bindThemeToggle();
   bindFilterMenu();
+  bindBranchNav();
+  bindLibraryNav();
   bindBranchAuthToolbar("like");
   bindBackToTop();
   bindFilters();

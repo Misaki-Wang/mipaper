@@ -4,6 +4,16 @@ import { repairLikeLaterConflicts } from "./paper_selection.js?v=20260319";
 import { createCalendarPicker } from "./calendar_picker.js";
 import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js";
 import { bindBranchAuthToolbar } from "./branch_auth.js";
+import { mountAppToolbar } from "./app_toolbar.js";
+import { bindBranchNav } from "./branch_nav.js?v=20260319-2";
+import { bindLibraryNav } from "./library_nav.js?v=20260319-2";
+
+mountAppToolbar("#hf-toolbar-root", {
+  prefix: "hf",
+  filtersTemplateId: "hf-toolbar-filters",
+  branchActiveKey: "hf",
+  libraryActiveKey: null,
+});
 
 const manifestUrl = "./data/hf-daily/manifest.json";
 
@@ -54,6 +64,8 @@ init().catch((error) => {
 async function init() {
   bindThemeToggle();
   bindFilterMenu();
+  bindBranchNav();
+  bindLibraryNav();
   bindBranchAuthToolbar("hf");
   bindBackToTop();
   bindFilters();

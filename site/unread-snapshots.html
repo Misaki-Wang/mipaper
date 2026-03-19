@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MiPaper - Later Queue</title>
+    <title>MiPaper - Unread Snapshots</title>
     <meta
       name="description"
-      content="Later queue for papers you want to read soon."
+      content="Unread branch snapshots waiting for review."
     />
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
     <script>
@@ -22,65 +22,65 @@
     </script>
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body class="page-library">
+  <body class="page-library page-library-unread">
     <div class="page-shell">
       <div class="page-chrome">
-        <div id="queue-toolbar-root"></div>
-        <template id="queue-toolbar-filters">
+        <div id="unread-toolbar-root"></div>
+        <template id="unread-toolbar-filters">
           <section class="glass-card controls reveal">
             <div class="control-block">
-              <label for="queue-search-input">Search</label>
-              <input id="queue-search-input" class="control-input" type="search" placeholder="Search title, authors, or topic" />
+              <label for="unread-search-input">Search</label>
+              <input id="unread-search-input" class="control-input" type="search" placeholder="Search title, branch, or snapshot" />
             </div>
           </section>
         </template>
       </div>
       <header class="hero reveal">
         <div class="hero-copy">
-          <h1>Later Queue</h1>
+          <h1>Unread Snapshots</h1>
           <p class="hero-text">
-            Papers saved for later reading.
+            Fetched branch snapshots that still need review.
           </p>
         </div>
         <div class="hero-panel glass-card">
           <div class="hero-panel-top">
-            <span class="meta-kicker">Later Queue Pulse</span>
-            <strong id="later-hero-count">-</strong>
+            <span class="meta-kicker">Unread Snapshot Pulse</span>
+            <strong id="unread-hero-count">-</strong>
           </div>
           <div class="hero-stat-grid">
             <div>
-              <span class="stat-label">Likes</span>
-              <strong id="later-hero-liked">-</strong>
-            </div>
-            <div>
               <span class="stat-label">Branches</span>
-              <strong id="later-hero-branches">-</strong>
+              <strong id="unread-hero-branches">-</strong>
             </div>
             <div>
-              <span class="stat-label">Source</span>
-              <strong id="later-hero-source">-</strong>
+              <span class="stat-label">Latest</span>
+              <strong id="unread-hero-latest">-</strong>
             </div>
             <div>
-              <span class="stat-label">Topic</span>
-              <strong id="later-hero-topic">-</strong>
+              <span class="stat-label">Top Branch</span>
+              <strong id="unread-hero-branch">-</strong>
+            </div>
+            <div>
+              <span class="stat-label">Reviewed</span>
+              <strong id="unread-hero-reviewed">-</strong>
             </div>
           </div>
         </div>
       </header>
 
       <main>
-        <section class="glass-card queue-section library-section reveal" aria-label="Later reading list">
+        <section class="glass-card queue-section unread-section library-section reveal">
           <div class="section-heading">
-            <p class="eyebrow">QUEUE</p>
-            <h2>Later</h2>
-            <p id="later-summary" class="home-board-summary">-</p>
+            <p class="eyebrow">UNREAD SNAPSHOTS</p>
+            <h2>Unread Snapshots</h2>
+            <p id="unread-summary" class="home-board-summary">-</p>
           </div>
-          <div id="later-list" class="conference-spotlight" role="list"></div>
-          <div id="later-pagination"></div>
+          <div id="unread-list" class="conference-spotlight"></div>
+          <div id="unread-pagination"></div>
         </section>
       </main>
     </div>
 
-    <script type="module" src="./queue.js?v=20260319"></script>
+    <script type="module" src="./unread_snapshots.js?v=20260319"></script>
   </body>
 </html>

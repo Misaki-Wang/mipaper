@@ -3,6 +3,16 @@ import { bindQueueButtons, initQueue, subscribeQueue } from "./paper_queue.js?v=
 import { repairLikeLaterConflicts } from "./paper_selection.js?v=20260319";
 import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js";
 import { bindBranchAuthToolbar } from "./branch_auth.js";
+import { mountAppToolbar } from "./app_toolbar.js";
+import { bindBranchNav } from "./branch_nav.js?v=20260319-2";
+import { bindLibraryNav } from "./library_nav.js?v=20260319-2";
+
+mountAppToolbar("#conference-toolbar-root", {
+  prefix: "conference",
+  filtersTemplateId: "conference-toolbar-filters",
+  branchActiveKey: "conference",
+  libraryActiveKey: null,
+});
 
 const manifestUrl = "./data/conference/manifest.json";
 const CONFERENCE_HOME_PAGE_SIZE = 6;
@@ -55,6 +65,8 @@ init().catch((error) => {
 async function init() {
   bindThemeToggle();
   bindFilterMenu();
+  bindBranchNav();
+  bindLibraryNav();
   bindBranchAuthToolbar("conference");
   bindBackToTop();
   bindFilters();

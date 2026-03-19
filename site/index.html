@@ -25,140 +25,72 @@
   <body class="page-hf">
     <div class="page-shell">
       <div class="page-chrome">
-        <header class="app-toolbar">
-          <div class="toolbar-start">
-            <div class="filters-menu-shell" id="hf-filters-menu-shell">
-              <button id="hf-sidebar-toggle" class="toolbar-filter-toggle" type="button" aria-expanded="false" aria-haspopup="menu" aria-label="Open filters">
-                <span id="hf-sidebar-toggle-icon" class="toolbar-filter-icon">☰</span>
-                <span id="hf-sidebar-toggle-label" class="toolbar-filter-label">Filters</span>
-              </button>
-              <aside id="hf-filters-menu" class="filters-menu-panel glass-card" hidden>
-                <div id="hf-sidebar-stack" class="sidebar-stack">
-                  <section class="glass-card controls reveal">
-                    <div class="control-block">
-                      <label for="hf-report-select">Date</label>
-                      <div class="date-input-shell">
-                        <input
-                          id="hf-report-select"
-                          class="control-input control-input-date"
-                          type="text"
-                          readonly
-                          placeholder="YYYY-MM-DD"
-                        />
-                        <button
-                          class="date-picker-button"
-                          type="button"
-                          data-date-picker-button
-                          data-date-picker-target="hf-report-select"
-                          aria-label="Open calendar"
-                          title="Open calendar"
-                        >
-                          <svg viewBox="0 0 20 20" aria-hidden="true">
-                            <path d="M6 2.75v2.1M14 2.75v2.1M3.75 7.1h12.5M5.8 4.85h8.4A1.95 1.95 0 0 1 16.15 6.8v7.4a1.95 1.95 0 0 1-1.95 1.95H5.8A1.95 1.95 0 0 1 3.85 14.2V6.8A1.95 1.95 0 0 1 5.8 4.85Z" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"></path>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="control-block">
-                      <label for="hf-topic-filter">Topic Filter</label>
-                      <select id="hf-topic-filter" class="control-input">
-                        <option value="">All Topics</option>
-                      </select>
-                    </div>
-                    <div class="control-block">
-                      <label for="hf-author-filter">Author Filter</label>
-                      <input id="hf-author-filter" class="control-input" type="search" placeholder="Author name" />
-                    </div>
-                    <div class="control-block">
-                      <label for="hf-search-input">Title Search</label>
-                      <input id="hf-search-input" class="control-input" type="search" placeholder="Search title keywords" />
-                    </div>
-                    <label class="checkbox-row" for="hf-focus-only">
-                      <input id="hf-focus-only" type="checkbox" />
-                      <span>Focus topics only</span>
-                    </label>
-                  </section>
-
-                  <section class="glass-card trend-panel reveal">
-                    <div class="section-heading">
-                      <p class="eyebrow">TOPIC MIX</p>
-                      <h2>Topic Distribution</h2>
-                    </div>
-                    <div id="hf-distribution-list" class="distribution-list"></div>
-                  </section>
-
-                  <section class="glass-card trend-panel reveal">
-                    <div class="section-heading">
-                      <p class="eyebrow">CADENCE VIEW</p>
-                      <h2>Daily / Weekly</h2>
-                    </div>
-                    <div class="view-toggle-row">
-                      <button class="pill-button active" type="button" data-hf-cadence-view="daily">Daily</button>
-                      <button class="pill-button" type="button" data-hf-cadence-view="weekly">Weekly</button>
-                    </div>
-                  </section>
-                </div>
-              </aside>
-            </div>
-            <div class="page-nav">
-              <a class="page-nav-link active" href="./index.html">HF Daily</a>
-              <a class="page-nav-link" href="./cool-daily.html">Cool Daily</a>
-              <a class="page-nav-link" href="./conference.html">Conference</a>
-              <a class="page-nav-link" href="./trending.html">Trending</a>
-              <a class="page-nav-link" href="./like.html">Library</a>
-            </div>
-          </div>
-          <div class="toolbar-end">
-            <button id="hf-toolbar-autohide-toggle" class="toolbar-autohide-toggle" type="button" aria-pressed="true" aria-label="Disable auto-hide toolbar" title="Disable auto-hide toolbar">
-              <span class="toolbar-autohide-icon" aria-hidden="true">
-                <svg class="toolbar-autohide-svg" viewBox="0 0 24 24" fill="none">
-                  <path class="toolbar-autohide-lock-body" d="M6.2 10.6h11.6A1.2 1.2 0 0 1 19 11.8v5.2a1.2 1.2 0 0 1-1.2 1.2H6.2A1.2 1.2 0 0 1 5 17V11.8a1.2 1.2 0 0 1 1.2-1.2Z" />
-                  <g class="toolbar-autohide-lock-state">
-                    <path class="toolbar-autohide-lock-shackle" d="M8 10.6V8.3a4 4 0 0 1 8 0v2.3" />
-                  </g>
-                  <g class="toolbar-autohide-unlock-state">
-                    <path class="toolbar-autohide-unlock-shackle" d="M8 10.6V8.2a4 4 0 0 1 6.1-3.4" />
-                  </g>
-                </svg>
-              </span>
-            </button>
-            <div class="hero-actions toolbar-theme-switch">
-              <button class="pill-button active" type="button" data-theme-toggle="auto">Auto</button>
-              <button class="pill-button" type="button" data-theme-toggle="light">Day</button>
-              <button class="pill-button" type="button" data-theme-toggle="dark">Night</button>
-            </div>
-            <div class="account-menu-shell" id="hf-account-menu-shell">
-              <button id="hf-account-menu-toggle" class="account-menu-toggle" type="button" aria-expanded="false" aria-haspopup="menu">
-                <span id="hf-account-trigger-avatar" class="account-menu-avatar" aria-hidden="true">
-                  <span class="account-avatar-fallback">?</span>
-                </span>
-                <span class="account-menu-toggle-copy">
-                  <span id="hf-account-trigger-label" class="account-menu-toggle-label">Sync</span>
-                  <strong id="hf-account-trigger-value" class="account-menu-toggle-value">Not signed in</strong>
-                </span>
-                <span class="account-menu-toggle-caret" aria-hidden="true">▾</span>
-              </button>
-              <div id="hf-sync-menu" class="account-menu-panel" hidden>
-                <div id="hf-account-card" class="account-card is-empty">
-                  <div class="account-avatar-shell" aria-hidden="true">
-                    <div class="account-avatar-fallback">?</div>
-                  </div>
-                  <div class="account-card-copy">
-                    <strong class="account-card-name">Not signed in</strong>
-                    <span class="account-card-email">GitHub + Supabase</span>
-                  </div>
-                </div>
-                <div id="hf-auth-warning" class="auth-warning" hidden></div>
-                <p id="hf-auth-status" class="auth-status">Supabase is not configured. Sync is currently disabled.</p>
-                <div class="auth-actions">
-                  <button id="hf-sign-in" class="link-chip button-link" type="button">GitHub Sign in</button>
-                  <button id="hf-sync-now" class="link-chip button-link" type="button">Sync now</button>
-                  <button id="hf-sign-out" class="link-chip button-link" type="button">Sign out</button>
-                </div>
+        <div id="hf-toolbar-root"></div>
+        <template id="hf-toolbar-filters">
+          <section class="glass-card controls reveal">
+            <div class="control-block">
+              <label for="hf-report-select">Date</label>
+              <div class="date-input-shell">
+                <input
+                  id="hf-report-select"
+                  class="control-input control-input-date"
+                  type="text"
+                  readonly
+                  placeholder="YYYY-MM-DD"
+                />
+                <button
+                  class="date-picker-button"
+                  type="button"
+                  data-date-picker-button
+                  data-date-picker-target="hf-report-select"
+                  aria-label="Open calendar"
+                  title="Open calendar"
+                >
+                  <svg viewBox="0 0 20 20" aria-hidden="true">
+                    <path d="M6 2.75v2.1M14 2.75v2.1M3.75 7.1h12.5M5.8 4.85h8.4A1.95 1.95 0 0 1 16.15 6.8v7.4a1.95 1.95 0 0 1-1.95 1.95H5.8A1.95 1.95 0 0 1 3.85 14.2V6.8A1.95 1.95 0 0 1 5.8 4.85Z" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </button>
               </div>
             </div>
-          </div>
-        </header>
+            <div class="control-block">
+              <label for="hf-topic-filter">Topic Filter</label>
+              <select id="hf-topic-filter" class="control-input">
+                <option value="">All Topics</option>
+              </select>
+            </div>
+            <div class="control-block">
+              <label for="hf-author-filter">Author Filter</label>
+              <input id="hf-author-filter" class="control-input" type="search" placeholder="Author name" />
+            </div>
+            <div class="control-block">
+              <label for="hf-search-input">Title Search</label>
+              <input id="hf-search-input" class="control-input" type="search" placeholder="Search title keywords" />
+            </div>
+            <label class="checkbox-row" for="hf-focus-only">
+              <input id="hf-focus-only" type="checkbox" />
+              <span>Focus topics only</span>
+            </label>
+          </section>
+
+          <section class="glass-card trend-panel reveal">
+            <div class="section-heading">
+              <p class="eyebrow">TOPIC MIX</p>
+              <h2>Topic Distribution</h2>
+            </div>
+            <div id="hf-distribution-list" class="distribution-list"></div>
+          </section>
+
+          <section class="glass-card trend-panel reveal">
+            <div class="section-heading">
+              <p class="eyebrow">CADENCE VIEW</p>
+              <h2>Daily / Weekly</h2>
+            </div>
+            <div class="view-toggle-row">
+              <button class="pill-button active" type="button" data-hf-cadence-view="daily">Daily</button>
+              <button class="pill-button" type="button" data-hf-cadence-view="weekly">Weekly</button>
+            </div>
+          </section>
+        </template>
       </div>
 
       <header class="hero reveal">

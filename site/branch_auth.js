@@ -8,8 +8,6 @@ export function bindBranchAuthToolbar(prefix) {
   const button = document.querySelector(`#${prefix}-account-menu-toggle`);
   const panel = document.querySelector(`#${prefix}-sync-menu`);
   const avatar = document.querySelector(`#${prefix}-account-trigger-avatar`);
-  const label = document.querySelector(`#${prefix}-account-trigger-label`);
-  const value = document.querySelector(`#${prefix}-account-trigger-value`);
   const card = document.querySelector(`#${prefix}-account-card`);
   const warning = document.querySelector(`#${prefix}-auth-warning`);
   const status = document.querySelector(`#${prefix}-auth-status`);
@@ -18,11 +16,11 @@ export function bindBranchAuthToolbar(prefix) {
   const syncNowButton = document.querySelector(`#${prefix}-sync-now`);
   const autoHideButton = document.querySelector(`#${prefix}-toolbar-autohide-toggle`);
 
+  bindToolbarAutoHide(toolbar, autoHideButton);
+
   if (!shell || !button || !panel) {
     return;
   }
-
-  bindToolbarAutoHide(toolbar, autoHideButton);
 
   let open = false;
 
@@ -47,13 +45,13 @@ export function bindBranchAuthToolbar(prefix) {
     const avatarUrl = identitySource?.avatarUrl || metadata.avatar_url || "";
     const initial = String(displayName || email || "?").trim().charAt(0).toUpperCase() || "?";
 
-    if (label) {
-      label.textContent = snapshot.unauthorized ? "Unauthorized" : signedIn ? "Connected" : "Sync";
-    }
-    if (value) {
-      value.textContent = snapshot.unauthorized ? displayName : signedIn ? displayName : "Sign in";
-    }
+    const buttonLabel = snapshot.unauthorized
+      ? `Unauthorized: ${displayName}`
+      : signedIn
+        ? `Connected: ${displayName}`
+        : "Sync account";
     button.title = snapshot.unauthorized ? `Unauthorized: ${email}` : signedIn ? `${displayName} · ${email}` : "Sign in to sync";
+    button.setAttribute("aria-label", buttonLabel);
     button.classList.toggle("is-signed-in", Boolean(snapshot.signedIn && !snapshot.unauthorized));
     button.classList.toggle("is-syncing", Boolean(snapshot.syncing));
     button.classList.toggle("is-disabled", !snapshot.configured);
@@ -187,7 +185,7 @@ export function bindBranchAuthToolbar(prefix) {
   render(getAuthSnapshot());
 }
 
-function bindToolbarAutoHide(toolbar, toggleButton) {
+export function bindToolbarAutoHide(toolbar, toggleButton) {
   if (!toolbar || toolbar.dataset.autoHideBound === "true") {
     return;
   }

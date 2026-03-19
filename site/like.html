@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MiPaper</title>
+    <title>MiPaper - Liked Papers</title>
     <meta
       name="description"
-      content="Liked papers across Cool Daily, Conference, and HF Daily, plus Later queue items and unread snapshots for review."
+      content="Liked papers across Cool Daily, Conference, and HF Daily."
     />
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
     <script>
@@ -22,124 +22,56 @@
     </script>
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body class="page-like">
+  <body class="page-like page-library page-library-liked">
     <div class="page-shell">
       <div class="page-chrome">
-        <header class="app-toolbar">
-          <div class="toolbar-start">
-            <div class="filters-menu-shell" id="like-filters-menu-shell">
-              <button id="like-sidebar-toggle" class="toolbar-filter-toggle" type="button" aria-expanded="false" aria-haspopup="menu" aria-label="Open filters">
-                <span id="like-sidebar-toggle-icon" class="toolbar-filter-icon">☰</span>
-                <span id="like-sidebar-toggle-label" class="toolbar-filter-label">Filters</span>
-              </button>
-              <aside id="like-filters-menu" class="filters-menu-panel glass-card" hidden>
-                <div id="like-sidebar-stack" class="sidebar-stack">
-                  <section class="glass-card controls reveal">
-                    <div class="control-block">
-                      <label for="like-source-filter">Group</label>
-                      <select id="like-source-filter" class="control-input">
-                        <option value="">All Groups</option>
-                      </select>
-                    </div>
-                    <div class="control-block">
-                      <label for="like-year-filter">Year</label>
-                      <select id="like-year-filter" class="control-input">
-                        <option value="">All Years</option>
-                      </select>
-                    </div>
-                    <div class="control-block">
-                      <label for="like-month-filter">Month</label>
-                      <select id="like-month-filter" class="control-input">
-                        <option value="">All Months</option>
-                      </select>
-                    </div>
-                    <div class="control-block">
-                      <label for="like-day-filter">Day</label>
-                      <select id="like-day-filter" class="control-input">
-                        <option value="">All Days</option>
-                      </select>
-                    </div>
-                    <div class="control-block">
-                      <label for="like-topic-filter">Topic</label>
-                      <select id="like-topic-filter" class="control-input">
-                        <option value="">All Topics</option>
-                      </select>
-                    </div>
-                    <div class="control-block">
-                      <label for="like-search-input">Search</label>
-                      <input id="like-search-input" class="control-input" type="search" placeholder="Search title or authors" />
-                    </div>
-                  </section>
+                <div id="like-toolbar-root"></div>
+        <template id="like-toolbar-filters">
+          <section class="glass-card controls reveal">
+                              <div class="control-block">
+                                <label for="like-source-filter">Group</label>
+                                <select id="like-source-filter" class="control-input">
+                                  <option value="">All Groups</option>
+                                </select>
+                              </div>
+                              <div class="control-block">
+                                <label for="like-year-filter">Year</label>
+                                <select id="like-year-filter" class="control-input">
+                                  <option value="">All Years</option>
+                                </select>
+                              </div>
+                              <div class="control-block">
+                                <label for="like-month-filter">Month</label>
+                                <select id="like-month-filter" class="control-input">
+                                  <option value="">All Months</option>
+                                </select>
+                              </div>
+                              <div class="control-block">
+                                <label for="like-day-filter">Day</label>
+                                <select id="like-day-filter" class="control-input">
+                                  <option value="">All Days</option>
+                                </select>
+                              </div>
+                              <div class="control-block">
+                                <label for="like-topic-filter">Topic</label>
+                                <select id="like-topic-filter" class="control-input">
+                                  <option value="">All Topics</option>
+                                </select>
+                              </div>
+                              <div class="control-block">
+                                <label for="like-search-input">Search</label>
+                                <input id="like-search-input" class="control-input" type="search" placeholder="Search title or authors" />
+                              </div>
+                            </section>
 
-                  <section class="glass-card trend-panel reveal">
-                    <div class="section-heading">
-                      <p class="eyebrow">TOPIC MIX</p>
-                      <h2>Liked Topic Distribution</h2>
-                    </div>
-                    <div id="like-distribution-list" class="distribution-list"></div>
-                  </section>
-                </div>
-              </aside>
-            </div>
-            <div class="page-nav">
-              <a class="page-nav-link" href="./index.html">HF Daily</a>
-              <a class="page-nav-link" href="./cool-daily.html">Cool Daily</a>
-              <a class="page-nav-link" href="./conference.html">Conference</a>
-              <a class="page-nav-link" href="./trending.html">Trending</a>
-              <a class="page-nav-link active" href="./like.html">Library</a>
-            </div>
-          </div>
-          <div class="toolbar-end">
-            <button id="like-toolbar-autohide-toggle" class="toolbar-autohide-toggle" type="button" aria-pressed="true" aria-label="Disable auto-hide toolbar" title="Disable auto-hide toolbar">
-              <span class="toolbar-autohide-icon" aria-hidden="true">
-                <svg class="toolbar-autohide-svg" viewBox="0 0 24 24" fill="none">
-                  <path class="toolbar-autohide-lock-body" d="M6.2 10.6h11.6A1.2 1.2 0 0 1 19 11.8v5.2a1.2 1.2 0 0 1-1.2 1.2H6.2A1.2 1.2 0 0 1 5 17V11.8a1.2 1.2 0 0 1 1.2-1.2Z" />
-                  <g class="toolbar-autohide-lock-state">
-                    <path class="toolbar-autohide-lock-shackle" d="M8 10.6V8.3a4 4 0 0 1 8 0v2.3" />
-                  </g>
-                  <g class="toolbar-autohide-unlock-state">
-                    <path class="toolbar-autohide-unlock-shackle" d="M8 10.6V8.2a4 4 0 0 1 6.1-3.4" />
-                  </g>
-                </svg>
-              </span>
-            </button>
-            <div class="hero-actions toolbar-theme-switch">
-              <button class="pill-button active" type="button" data-theme-toggle="auto">Auto</button>
-              <button class="pill-button" type="button" data-theme-toggle="light">Day</button>
-              <button class="pill-button" type="button" data-theme-toggle="dark">Night</button>
-            </div>
-            <div class="account-menu-shell" id="like-account-menu-shell">
-              <button id="like-account-menu-toggle" class="account-menu-toggle" type="button" aria-expanded="false" aria-haspopup="menu">
-                <span id="like-account-trigger-avatar" class="account-menu-avatar" aria-hidden="true">
-                  <span class="account-avatar-fallback">?</span>
-                </span>
-                <span class="account-menu-toggle-copy">
-                  <span id="like-account-trigger-label" class="account-menu-toggle-label">Sync</span>
-                  <strong id="like-account-trigger-value" class="account-menu-toggle-value">Not signed in</strong>
-                </span>
-                <span class="account-menu-toggle-caret" aria-hidden="true">▾</span>
-              </button>
-              <div id="like-sync-menu" class="account-menu-panel" hidden>
-                <div id="like-account-card" class="account-card is-empty">
-                  <div class="account-avatar-shell" aria-hidden="true">
-                    <div class="account-avatar-fallback">?</div>
-                  </div>
-                  <div class="account-card-copy">
-                    <strong class="account-card-name">Not signed in</strong>
-                    <span class="account-card-email">GitHub + Supabase</span>
-                  </div>
-                </div>
-                <div id="like-auth-warning" class="auth-warning" hidden></div>
-                <p id="like-auth-status" class="auth-status">Supabase is not configured. Sync is currently disabled.</p>
-                <div class="auth-actions">
-                  <button id="like-sign-in" class="link-chip button-link" type="button">GitHub Sign in</button>
-                  <button id="like-sync-now" class="link-chip button-link" type="button">Sync now</button>
-                  <button id="like-sign-out" class="link-chip button-link" type="button">Sign out</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </header>
+                            <section class="glass-card trend-panel reveal">
+                              <div class="section-heading">
+                                <p class="eyebrow">TOPIC MIX</p>
+                                <h2>Liked Topic Distribution</h2>
+                              </div>
+                              <div id="like-distribution-list" class="distribution-list"></div>
+                            </section>
+        </template>
 
       </div>
 
@@ -148,7 +80,7 @@
           <p class="eyebrow">LIKED PAPERS</p>
           <h1>Liked Papers</h1>
           <p class="hero-text">
-            Use this library to collect liked papers, manage the Later queue, and keep unread snapshots in one place.
+            Collect liked papers across HF Daily, Cool Daily, and Conference.
           </p>
           <div id="like-hero-signals" class="hero-signals"></div>
         </div>
@@ -178,7 +110,7 @@
         </div>
       </header>
 
-      <section class="glass-card home-board reveal">
+      <section class="glass-card home-board library-section reveal">
         <div class="section-heading">
           <p class="eyebrow">LIKED SOURCES</p>
           <h2>Liked Groups</h2>
@@ -189,7 +121,7 @@
 
       <main class="layout">
         <section class="content">
-          <section id="like-later-section" class="glass-card conference-panel reveal">
+          <section id="like-later-section" class="glass-card conference-panel library-section reveal">
             <div class="section-heading">
               <p class="eyebrow">LATER QUEUE</p>
               <h2>Later Queue</h2>
@@ -199,7 +131,7 @@
             <div id="like-later-pagination"></div>
           </section>
 
-          <section id="like-to-read-section" class="glass-card conference-panel reveal">
+          <section id="like-to-read-section" class="glass-card conference-panel library-section reveal">
             <div class="section-heading">
               <p class="eyebrow">UNREAD SNAPSHOTS</p>
               <h2>Unread Snapshots</h2>
@@ -209,7 +141,7 @@
             <div id="like-to-read-pagination"></div>
           </section>
 
-          <section class="glass-card overview reveal">
+          <section class="glass-card overview library-section reveal">
             <div class="overview-top">
               <div>
                 <p class="eyebrow">LIKED PAPERS OVERVIEW</p>
@@ -236,7 +168,7 @@
             </div>
           </section>
 
-          <section class="glass-card tag-panel reveal">
+          <section class="glass-card tag-panel library-section reveal">
             <div class="section-heading">
               <p class="eyebrow">TAG MAP</p>
               <h2>Current Library Tags</h2>
@@ -244,7 +176,7 @@
             <div id="like-tag-map" class="tag-map"></div>
           </section>
 
-          <section id="like-results-section" class="glass-card results-strip reveal">
+          <section id="like-results-section" class="glass-card results-strip library-section reveal">
             <div class="results-top">
               <div>
                 <p class="eyebrow">LIKED PAPERS</p>
@@ -258,7 +190,7 @@
             </div>
           </section>
 
-          <section class="reveal">
+          <section class="library-section reveal">
             <div id="like-source-sections" class="conference-subject-sections"></div>
           </section>
         </section>

@@ -2,7 +2,17 @@ import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, s
 import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js?v=20260319";
 import { bindQueueButtons, initQueue, isInQueue, subscribeQueue } from "./paper_queue.js?v=20260319";
 import { bindBranchAuthToolbar } from "./branch_auth.js";
+import { mountAppToolbar } from "./app_toolbar.js";
 import { repairLikeLaterConflicts } from "./paper_selection.js?v=20260319";
+import { bindBranchNav } from "./branch_nav.js?v=20260319-2";
+import { bindLibraryNav } from "./library_nav.js?v=20260319-2";
+
+mountAppToolbar("#trending-toolbar-root", {
+  prefix: "trending",
+  filtersTemplateId: "trending-toolbar-filters",
+  branchActiveKey: "trending",
+  libraryActiveKey: null,
+});
 
 const manifestUrl = "./data/trending/manifest.json";
 
@@ -40,6 +50,8 @@ init().catch((error) => {
 async function init() {
   bindThemeToggle();
   bindFilterMenu();
+  bindBranchNav();
+  bindLibraryNav();
   bindBranchAuthToolbar("trending");
   bindBackToTop();
   bindFilters();
