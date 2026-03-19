@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import shutil
 import subprocess
@@ -15,6 +16,7 @@ if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
 from mipaper.paths import SCHEDULE_STATE_PATH
+from mipaper.paths import DAILY_REPORTS_DIR
 from mipaper.scheduler import (
     cool_daily_backfill_dates,
     hf_daily_backfill_dates,
@@ -121,6 +123,37 @@ def state_key(job: str) -> str:
     return f"{job}_last_success_date"
 
 
+def daily_report_json_path(report_date: str, category: str, base_dir: Path = DAILY_REPORTS_DIR) -> Path:
+    return base_dir / report_date / f"{category}-{report_date}.json"
+
+
+def load_paper_count(path: Path) -> int:
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    papers = payload.get("papers", [])
+    if not isinstance(papers, list):
+        raise RuntimeError(f"Invalid report payload at {path}: `papers` is not a list.")
+    return len(papers)
+
+
+def validate_cool_daily_reports(report_date: str, categories: list[str], base_dir: Path = DAILY_REPORTS_DIR) -> None:
+    empty_categories: list[str] = []
+
+    for category in categories:
+        report_path = daily_report_json_path(report_date, category, base_dir=base_dir)
+        if not report_path.exists():
+            raise RuntimeError(f"Expected generated report missing: {report_path}")
+        paper_count = load_paper_count(report_path)
+        if paper_count == 0:
+            empty_categories.append(category)
+
+    if empty_categories:
+        category_summary = ", ".join(empty_categories)
+        raise RuntimeError(
+            f"Refusing to publish empty Cool Daily report for {report_date}: {category_summary}. "
+            "The source feed is likely not ready yet; rerun the job later."
+        )
+
+
 def run_cool_daily_job(timezone_name: str, start_date: str, state: dict, now: datetime | None = None) -> list[str]:
     report_dates = cool_daily_backfill_dates(
         start_date=start_date,
@@ -152,6 +185,7 @@ def run_cool_daily_job(timezone_name: str, start_date: str, state: dict, now: da
                 *classifier_args,
             ]
             run_command(command)
+        validate_cool_daily_reports(report_date, categories)
     return report_dates
 
 
