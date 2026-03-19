@@ -86,7 +86,6 @@ const TOPIC_LABEL_TRANSLATIONS = new Map([
 
 const WORKFLOW_STATUS_OPTIONS = [
   { value: "inbox", label: "Inbox" },
-  { value: "later", label: "Later" },
   { value: "reading", label: "Reading" },
   { value: "digesting", label: "Digesting" },
   { value: "synthesized", label: "Synthesized" },
@@ -970,6 +969,7 @@ function renderSourceSections(sections) {
 }
 
 function renderLikeCard(paper) {
+  const inLater = isInQueue(paper.like_id);
   likeRecords.set(paper.like_id, {
     paper: paper,
     context: {
@@ -999,6 +999,7 @@ function renderLikeCard(paper) {
     `<span class="paper-badge">${escapeHtml(displayTopicLabel(paper.topic_label || "Other AI"))}</span>`,
     `<span class="paper-badge subdued">${escapeHtml(getSourceLabel(paper.source_kind))}</span>`,
     paper.snapshot_label ? `<span class="paper-badge subdued">${escapeHtml(paper.snapshot_label)}</span>` : "",
+    inLater ? `<span class="paper-badge queued-badge">Queued</span>` : "",
     `<span class="paper-badge workspace-status-badge">${escapeHtml(getWorkflowStatusLabel(paper.workflow_status))}</span>`,
     `<span class="paper-badge workspace-priority-badge">${escapeHtml(getPriorityLabel(paper.priority_level))}</span>`,
   ]
@@ -1199,7 +1200,7 @@ function renderLikeCard(paper) {
       <section class="paper-workspace-panel">
         <div class="paper-workspace-top">
           <span class="paper-detail-label">Workspace</span>
-          <span class="paper-workspace-meta">${escapeHtml(getWorkflowStatusLabel(paper.workflow_status))} · ${escapeHtml(getPriorityLabel(paper.priority_level))}</span>
+          <span class="paper-workspace-meta">${escapeHtml([inLater ? "Queued" : "", getWorkflowStatusLabel(paper.workflow_status), getPriorityLabel(paper.priority_level)].filter(Boolean).join(" · "))}</span>
         </div>
         <div class="paper-workspace-grid">
           <article class="paper-workspace-card">

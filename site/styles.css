@@ -3680,6 +3680,12 @@ code {
   background: color-mix(in srgb, var(--accent-soft), white 14%);
 }
 
+.queued-badge {
+  border-color: color-mix(in srgb, var(--border), var(--accent) 22%);
+  background: color-mix(in srgb, var(--surface-strong), white 14%);
+  color: color-mix(in srgb, var(--accent), var(--text) 30%);
+}
+
 .paper-workspace-panel {
   display: grid;
   gap: 0.72rem;

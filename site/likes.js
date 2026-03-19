@@ -24,7 +24,7 @@ const SOURCE_LABELS = {
   library: "Library",
 };
 
-const WORKFLOW_STATUSES = new Set(["inbox", "later", "reading", "digesting", "synthesized", "archived"]);
+const WORKFLOW_STATUSES = new Set(["inbox", "reading", "digesting", "synthesized", "archived"]);
 const PRIORITY_LEVELS = new Set(["high", "medium", "low"]);
 
 let supabaseClient = null;
@@ -444,6 +444,9 @@ function normalizeLikeId(value) {
 
 function normalizeWorkflowStatus(value) {
   const normalized = String(value || "").trim().toLowerCase();
+  if (normalized === "later") {
+    return "inbox";
+  }
   return WORKFLOW_STATUSES.has(normalized) ? normalized : "inbox";
 }
 

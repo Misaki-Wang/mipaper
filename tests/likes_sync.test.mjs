@@ -78,3 +78,22 @@ test("liked paper sync hydration restores custom tags from Supabase payload", ()
     { key: "priority", label: "Priority", color: "#6c7fd1", order: 1 },
   ]);
 });
+
+test("legacy later workflow status is migrated to inbox on hydration", () => {
+  const hydrated = hydrateLikedPaperSyncRow({
+    like_id: "papers-cool-arxiv-2501-00001",
+    saved_at: "2026-03-19T10:00:00.000Z",
+    updated_at: "2026-03-19T10:05:00.000Z",
+    deleted_at: null,
+    client_updated_at: "2026-03-19T10:05:00.000Z",
+    device_id: "test-device",
+    payload: {
+      title: "Legacy queued paper",
+      workflow_status: "later",
+      priority_level: "medium",
+      custom_tags: [],
+    },
+  });
+
+  assert.equal(hydrated.workflow_status, "inbox");
+});
