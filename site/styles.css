@@ -2872,6 +2872,38 @@ code {
   border-color: rgba(215, 91, 118, 0.28);
 }
 
+.remove-button,
+.direct-remove-button {
+  color: color-mix(in srgb, var(--muted), #b42318 34%);
+}
+
+.remove-button .paper-link-icon,
+.direct-remove-button .paper-link-icon {
+  color: color-mix(in srgb, #8f2d2d, var(--text) 24%);
+  background: linear-gradient(135deg, rgba(255, 248, 246, 0.98), rgba(255, 232, 228, 0.9));
+  border: 1px solid color-mix(in srgb, var(--border), #d84b3f 24%);
+}
+
+.remove-button .paper-link-icon svg,
+.direct-remove-button .paper-link-icon svg {
+  width: 0.92rem;
+  height: 0.92rem;
+}
+
+.remove-button:hover,
+.direct-remove-button:hover {
+  color: #a33127;
+  border-color: color-mix(in srgb, var(--border), #d84b3f 28%);
+  background: color-mix(in srgb, rgba(255, 243, 240, 0.86), var(--surface-soft) 42%);
+}
+
+.remove-button:hover .paper-link-icon,
+.direct-remove-button:hover .paper-link-icon {
+  color: #a33127;
+  border-color: color-mix(in srgb, var(--border), #d84b3f 30%);
+  background: linear-gradient(135deg, rgba(255, 243, 240, 0.98), rgba(255, 228, 223, 0.92));
+}
+
 :root[data-theme="dark"] .like-button.is-liked {
   background: color-mix(in srgb, rgba(177, 45, 78, 0.34), var(--surface-soft) 60%);
   color: #ffb7c6;

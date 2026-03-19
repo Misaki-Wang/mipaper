@@ -181,6 +181,66 @@ using (
   )
 );
 
+drop policy if exists "Only owner can read direct adds" on public.direct_add_papers;
+drop policy if exists "Only owner can insert direct adds" on public.direct_add_papers;
+drop policy if exists "Only owner can update direct adds" on public.direct_add_papers;
+drop policy if exists "Only owner can delete direct adds" on public.direct_add_papers;
+
+create policy "Only owner can read direct adds"
+on public.direct_add_papers
+for select
+to authenticated
+using (
+  auth.uid() = user_id
+  and (
+    auth.uid() = 'd23b2601-08ef-465c-b1d9-4159ca38e159'::uuid
+    or lower(coalesce(auth.jwt() ->> 'email', '')) = 'misakiwang74@gmail.com'
+  )
+);
+
+create policy "Only owner can insert direct adds"
+on public.direct_add_papers
+for insert
+to authenticated
+with check (
+  auth.uid() = user_id
+  and (
+    auth.uid() = 'd23b2601-08ef-465c-b1d9-4159ca38e159'::uuid
+    or lower(coalesce(auth.jwt() ->> 'email', '')) = 'misakiwang74@gmail.com'
+  )
+);
+
+create policy "Only owner can update direct adds"
+on public.direct_add_papers
+for update
+to authenticated
+using (
+  auth.uid() = user_id
+  and (
+    auth.uid() = 'd23b2601-08ef-465c-b1d9-4159ca38e159'::uuid
+    or lower(coalesce(auth.jwt() ->> 'email', '')) = 'misakiwang74@gmail.com'
+  )
+)
+with check (
+  auth.uid() = user_id
+  and (
+    auth.uid() = 'd23b2601-08ef-465c-b1d9-4159ca38e159'::uuid
+    or lower(coalesce(auth.jwt() ->> 'email', '')) = 'misakiwang74@gmail.com'
+  )
+);
+
+create policy "Only owner can delete direct adds"
+on public.direct_add_papers
+for delete
+to authenticated
+using (
+  auth.uid() = user_id
+  and (
+    auth.uid() = 'd23b2601-08ef-465c-b1d9-4159ca38e159'::uuid
+    or lower(coalesce(auth.jwt() ->> 'email', '')) = 'misakiwang74@gmail.com'
+  )
+);
+
 drop policy if exists "Only owner can read queue" on public.paper_queue;
 drop policy if exists "Only owner can insert queue" on public.paper_queue;
 drop policy if exists "Only owner can update queue" on public.paper_queue;

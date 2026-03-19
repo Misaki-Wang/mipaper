@@ -1,4 +1,5 @@
 import { addToQueue, readQueue } from "./paper_queue.js?v=20260319-5";
+import { initDirectAddSync, upsertDirectAdd } from "./direct_add_store.js?v=20260319-4";
 
 const ARXIV_ID_PATTERN = /^\d{4}\.\d{4,5}(?:v\d+)?$/i;
 const STATUS_RESET_MS = 3200;
@@ -6,6 +7,7 @@ const PAPER_RESOLVE_ENDPOINT = "./api/paper/resolve";
 
 export function bindToolbarQuickAdd(prefix, options = {}) {
   const target = options.target || "later";
+  const skipDirectInit = Boolean(options.skipDirectInit);
   const form = document.querySelector(`#${prefix}-quick-add-form`);
   const input = document.querySelector(`#${prefix}-quick-add-input`);
   const submitButton = document.querySelector(`#${prefix}-quick-add-submit`);
@@ -13,6 +15,12 @@ export function bindToolbarQuickAdd(prefix, options = {}) {
 
   if (!form || !input || !submitButton || !status) {
     return;
+  }
+
+  if (!skipDirectInit) {
+    void initDirectAddSync().catch((error) => {
+      console.warn("Failed to initialize direct add sync", error);
+    });
   }
 
   let busy = false;
@@ -68,6 +76,12 @@ export function bindToolbarQuickAdd(prefix, options = {}) {
         setBusy(true);
         const resolved = await fetchResolvedPaperMetadata(parsed);
         const record = buildResolvedPaperRecord(parsed, resolved, existingLater);
+        upsertDirectAdd(record, {
+          sourceKind: "library",
+          sourceLabel: "Library",
+          sourcePage: window.location.pathname,
+          snapshotLabel: "Quick Add",
+        });
 
         if (existingLater && hasMeaningfulMetadata(existingLater)) {
           setStatus("Already in Later", "info");

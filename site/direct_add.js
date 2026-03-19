@@ -1,11 +1,21 @@
-import { getSourceLabel, initLikesSync, readLikes, subscribeLikes } from "./likes.js?v=20260319-5";
-import { initQueue, readQueue, removeFromQueue, subscribeQueue } from "./paper_queue.js?v=20260319-5";
-import { movePaperToLikes, repairLikeLaterConflicts } from "./paper_selection.js?v=20260319-5";
+import { getSourceLabel, initLikesSync, isLiked, readLikes, subscribeLikes, toggleLike } from "./likes.js?v=20260319-5";
+import { bindLikeButtons } from "./likes.js?v=20260319-5";
+import { bindQueueButtons, initQueue, isInQueue, readQueue, removeFromQueue, subscribeQueue } from "./paper_queue.js?v=20260319-5";
 import { bindBranchAuthToolbar } from "./branch_auth.js?v=20260319-5";
 import { mountAppToolbar } from "./app_toolbar.js?v=20260319-11";
 import { bindBranchNav } from "./branch_nav.js?v=20260319-4";
 import { bindLibraryNav } from "./library_nav.js?v=20260319-4";
-import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=20260319-8";
+import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=20260319-12";
+import { repairLikeLaterConflicts } from "./paper_selection.js?v=20260319-5";
+import {
+  hasDirectAddsMigrationRun,
+  initDirectAddSync,
+  markDirectAddsMigrationRun,
+  readDirectAdds,
+  removeDirectAdd,
+  seedDirectAdds,
+  subscribeDirectAdds,
+} from "./direct_add_store.js?v=20260319-4";
 
 mountAppToolbar("#direct-toolbar-root", {
   prefix: "direct",
@@ -45,12 +55,26 @@ async function init() {
   bindSearchInput();
   bindBranchNav();
   bindLibraryNav();
-  bindToolbarQuickAdd("direct", { target: "later" });
+  bindToolbarQuickAdd("direct", { target: "later", skipDirectInit: true });
   bindBranchAuthToolbar("direct");
+  subscribeDirectAdds(renderPage);
   subscribeQueue(renderPage);
   subscribeLikes(renderPage);
+  renderPage();
   await Promise.all([initQueue(), initLikesSync()]);
+
+  if (!hasDirectAddsMigrationRun()) {
+    const existingDirectAdds = readDirectAdds();
+    if (!existingDirectAdds.length) {
+      const migratedDirectAdds = [...readQueue(), ...readLikes()].filter(isDirectAddPaper);
+      if (migratedDirectAdds.length) {
+        seedDirectAdds(migratedDirectAdds);
+      }
+    }
+    markDirectAddsMigrationRun();
+  }
   repairLikeLaterConflicts();
+  await initDirectAddSync();
   renderPage();
 }
 
@@ -111,9 +135,13 @@ function bindSearchInput() {
 function renderPage() {
   const queue = readQueue("later");
   likedPapers = readLikes();
-  directPapers = queue.filter(isDirectAddPaper).map((paper) => ({
+  const laterIds = new Set(queue.map((paper) => paper.like_id));
+  const likedIds = new Set(likedPapers.map((paper) => paper.like_id));
+  directPapers = readDirectAdds().map((paper) => ({
     ...paper,
     metadata_complete: hasMeaningfulMetadata(paper),
+    in_later: laterIds.has(paper.like_id),
+    liked: likedIds.has(paper.like_id),
   }));
   const visiblePapers = sortDirectAddPapers(filterDirectAddPapers(directPapers));
   renderHero(directPapers, likedPapers);
@@ -204,7 +232,7 @@ function renderDirectList(papers) {
 
   directSummary.textContent = searchQuery || metadataFilter !== "all"
     ? `${papers.length} of ${directPapers.length} direct adds match the current filters.`
-    : `${papers.length} direct adds in Later.`;
+    : `${papers.length} direct adds saved.`;
 
   directList.innerHTML = pageItems
     .map(
@@ -236,7 +264,7 @@ function renderDirectList(papers) {
           <div class="paper-links">
             ${renderExternalPaperLink({ href: getArxivUrl(paper), label: "arXiv", brand: "arxiv" })}
             ${renderExternalPaperLink({ href: getCoolUrl(paper), label: "Cool", brand: "cool" })}
-            <button class="paper-link later-button is-later" type="button" data-remove-id="${escapeAttribute(paper.like_id)}" aria-pressed="true">
+            <button class="paper-link later-button${paper.in_later ? " is-later" : ""}" type="button" data-later-id="${escapeAttribute(paper.like_id)}" aria-pressed="${paper.in_later ? "true" : "false"}">
               <span class="paper-link-icon later-icon" aria-hidden="true">
                 <svg viewBox="0 0 20 20">
                   <path d="M4 6h12M4 10h12M4 14h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
@@ -244,13 +272,21 @@ function renderDirectList(papers) {
               </span>
               <span class="paper-link-text">Later</span>
             </button>
-            <button class="paper-link like-button" type="button" data-like-id="${escapeAttribute(paper.like_id)}" aria-pressed="false">
+            <button class="paper-link like-button${paper.liked ? " is-liked" : ""}" type="button" data-like-id="${escapeAttribute(paper.like_id)}" aria-pressed="${paper.liked ? "true" : "false"}">
               <span class="paper-link-icon like-icon" aria-hidden="true">
                 <svg viewBox="0 0 20 20">
                   <path d="M10 16.3l-5.26-4.98A3.8 3.8 0 0 1 10 5.9a3.8 3.8 0 0 1 5.26 5.42z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path>
                 </svg>
               </span>
               <span class="paper-link-text">Like</span>
+            </button>
+            <button class="paper-link direct-remove-button" type="button" data-direct-remove-id="${escapeAttribute(paper.like_id)}" aria-label="Remove from Direct Add" title="Remove from Direct Add">
+              <span class="paper-link-icon remove-icon" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none">
+                  <path d="M6.3 5.8h7.4M7.3 5.8V4.9a1.1 1.1 0 0 1 1.1-1.1h3.2a1.1 1.1 0 0 1 1.1 1.1v.9M7 5.8l.4 8.1a1 1 0 0 0 1 .9h3.2a1 1 0 0 0 1-.9l.4-8.1M8.6 8.2v4.2M11.4 8.2v4.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </span>
+              <span class="paper-link-text">Remove</span>
             </button>
           </div>
         </article>
@@ -278,28 +314,10 @@ function renderDirectList(papers) {
     });
   });
 
-  directList.querySelectorAll("[data-like-id]").forEach((button) => {
-    button.addEventListener("click", () => {
-      const likeId = button.dataset.likeId;
-      const paper = papers.find((item) => item.like_id === likeId);
-      if (!paper) {
-        return;
-      }
-      movePaperToLikes(paper);
-      renderPage();
-    });
-  });
-
-  directList.querySelectorAll("[data-remove-id]").forEach((button) => {
-    button.addEventListener("click", () => {
-      const likeId = button.dataset.removeId;
-      if (!likeId) {
-        return;
-      }
-      removeFromQueue(likeId);
-      renderPage();
-    });
-  });
+  const directRecordLookup = new Map(papers.map((paper) => [paper.like_id, paper]));
+  bindQueueButtons(directList, directRecordLookup);
+  bindLikeButtons(directList, directRecordLookup);
+  bindRemoveButtons(directList);
 }
 
 function getArxivUrl(paper) {
@@ -331,6 +349,31 @@ function renderExternalPaperLink({ href, label, brand }) {
       <span class="paper-link-text">${escapeHtml(label)}</span>
     </a>
   `;
+}
+
+function bindRemoveButtons(root) {
+  root.querySelectorAll("[data-direct-remove-id]").forEach((button) => {
+    if (button.dataset.directRemoveBound === "true") {
+      return;
+    }
+    button.dataset.directRemoveBound = "true";
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      const likeId = button.dataset.directRemoveId || "";
+      if (!likeId) {
+        return;
+      }
+      const record = directPapers.find((item) => item.like_id === likeId) || null;
+      if (isInQueue(likeId)) {
+        removeFromQueue(likeId);
+      }
+      if (record && isLiked(likeId)) {
+        toggleLike(record);
+      }
+      removeDirectAdd(likeId);
+    });
+  });
 }
 
 function renderFatal(error) {
