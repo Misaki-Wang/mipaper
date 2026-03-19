@@ -1425,6 +1425,56 @@ code {
   grid-template-columns: 1fr;
 }
 
+.page-like .hero {
+  margin-bottom: 0.85rem;
+}
+
+.page-like .home-board {
+  margin-bottom: 0.85rem;
+}
+
+.page-like .content {
+  gap: 0.85rem;
+}
+
+.page-like .library-section {
+  margin-bottom: 0.95rem;
+}
+
+.page-like .overview,
+.page-like .tag-panel,
+.page-like .results-strip {
+  padding: 0.95rem;
+}
+
+.page-like .overview-grid {
+  margin-top: 0.45rem;
+}
+
+.page-like #like-tag-map {
+  margin-top: 0;
+}
+
+.page-like .conference-subject-sections {
+  gap: 0.85rem;
+}
+
+.page-like .conference-subject-card {
+  padding: 0.98rem;
+}
+
+.page-like .conference-subject-header {
+  align-items: flex-start;
+}
+
+.page-like .conference-subject-meta {
+  justify-content: flex-end;
+}
+
+.page-like #like-results-section .results-grid {
+  gap: 0.68rem;
+}
+
 .page-hf .layout,
 .page-cool-daily .layout,
 .page-conference .layout,
