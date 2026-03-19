@@ -103,7 +103,7 @@ Then open `http://127.0.0.1:4173`.
 
 ## Site Branches
 
-- `index.html`: HF Daily by date
+- `hf-daily.html`: HF Daily by date
 - `cool-daily.html`: Cool Daily across `cs.AI`, `cs.CL`, and `cs.CV`
 - `conference.html`: conference snapshots with `Subject` and `Topic` filters
 - `trending.html`: GitHub Trending weekly snapshots

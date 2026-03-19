@@ -1332,7 +1332,7 @@ function createHfSnapshot(report) {
   return {
     review_key: createPageReviewKey("hf_daily", report.data_path),
     branch_label: "HF Daily",
-    branch_url: "./index.html",
+    branch_url: "./hf-daily.html",
     snapshot_label: report.report_date,
     title: `HF Daily ${report.report_date}`,
     summary: `${report.total_papers} papers${report.top_topics?.[0] ? ` · Top topic ${displayTopicLabel(report.top_topics[0].topic_label)}` : ""}`,

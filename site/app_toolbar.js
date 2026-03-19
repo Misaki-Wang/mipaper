@@ -1,5 +1,5 @@
 const BRANCH_NAV_ITEMS = [
-  { key: "hf", href: "./index.html", label: "HF" },
+  { key: "hf", href: "./hf-daily.html", label: "HF" },
   { key: "cool", href: "./cool-daily.html", label: "Cool" },
   { key: "conference", href: "./conference.html", label: "Conf" },
   { key: "trending", href: "./trending.html", label: "Trend" },

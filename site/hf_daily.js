@@ -833,7 +833,7 @@ function rememberLikeRecord(paper) {
   const record = createLikeRecord(paper, {
     sourceKind: "hf_daily",
     sourceLabel: "HF Daily",
-    sourcePage: "./index.html",
+    sourcePage: "./hf-daily.html",
     snapshotLabel: report ? report.report_date : "HF Daily",
     reportDate: report?.report_date || "",
     reviewKey: state.currentPath ? createPageReviewKey("hf_daily", state.currentPath) : "",
