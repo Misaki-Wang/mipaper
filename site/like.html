@@ -6,7 +6,7 @@
     <title>MiPaper</title>
     <meta
       name="description"
-      content="Saved paper likes across Cool Daily, Conference, and HF Daily for later review."
+      content="Liked papers across Cool Daily, Conference, and HF Daily, plus Later queue items and unread snapshots for review."
     />
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
     <script>
@@ -95,9 +95,9 @@
           <div id="like-sidebar-stack" class="sidebar-stack">
             <section class="glass-card controls reveal">
               <div class="control-block">
-                <label for="like-source-filter">Branch</label>
+                <label for="like-source-filter">Group</label>
                 <select id="like-source-filter" class="control-input">
-                  <option value="">All Branches</option>
+                  <option value="">All Groups</option>
                 </select>
               </div>
               <div class="control-block">
@@ -143,21 +143,21 @@
 
       <header class="hero reveal">
         <div class="hero-copy">
-          <p class="eyebrow">LIBRARY BRANCH</p>
-          <h1>Reading Library</h1>
+          <p class="eyebrow">LIKED PAPERS</p>
+          <h1>Liked Papers</h1>
           <p class="hero-text">
-            Use this branch as your saved-paper workspace: collect Likes, manage the Later queue, and keep unread branch snapshots in one place.
+            Use this library to collect liked papers, manage the Later queue, and keep unread snapshots in one place.
           </p>
           <div id="like-hero-signals" class="hero-signals"></div>
         </div>
         <div class="hero-panel glass-card">
           <div class="hero-panel-top">
-            <span class="meta-kicker">Library Pulse</span>
+            <span class="meta-kicker">Liked Papers Pulse</span>
             <strong id="like-hero-count">-</strong>
           </div>
           <div class="hero-stat-grid">
             <div>
-              <span class="stat-label">Sources</span>
+              <span class="stat-label">Groups</span>
               <strong id="like-hero-sources">-</strong>
             </div>
             <div>
@@ -178,8 +178,8 @@
 
       <section class="glass-card home-board reveal">
         <div class="section-heading">
-          <p class="eyebrow">LIBRARY HOME</p>
-          <h2>Workspace Sources</h2>
+          <p class="eyebrow">LIKED SOURCES</p>
+          <h2>Liked Groups</h2>
           <p id="like-board-summary" class="home-board-summary">-</p>
         </div>
         <div id="like-home-cards" class="home-categories"></div>
@@ -199,8 +199,8 @@
 
           <section id="like-to-read-section" class="glass-card conference-panel reveal">
             <div class="section-heading">
-              <p class="eyebrow">TO-READ LIST</p>
-              <h2>To-Read Queue</h2>
+              <p class="eyebrow">UNREAD SNAPSHOTS</p>
+              <h2>Unread Snapshots</h2>
               <p id="like-to-read-summary" class="home-board-summary">-</p>
             </div>
             <div id="like-to-read-list" class="conference-spotlight"></div>
@@ -210,13 +210,13 @@
           <section class="glass-card overview reveal">
             <div class="overview-top">
               <div>
-                <p class="eyebrow">LIKE OVERVIEW</p>
-                <h2 id="like-overview-title">Library Overview</h2>
+                <p class="eyebrow">LIKED PAPERS OVERVIEW</p>
+                <h2 id="like-overview-title">Liked Papers Overview</h2>
               </div>
             </div>
             <div class="overview-grid conference-overview-grid">
               <article class="insight-card accent-card">
-                <span class="insight-label">Saved Queue</span>
+                <span class="insight-label">Liked Queue</span>
                 <p id="like-overview-summary" class="insight-text">-</p>
               </article>
               <article class="insight-card">
@@ -224,11 +224,11 @@
                 <p id="like-focus-summary" class="insight-text">-</p>
               </article>
               <article class="insight-card">
-                <span class="insight-label">Branch Spread</span>
+                <span class="insight-label">Group Spread</span>
                 <p id="like-branch-summary" class="insight-text">-</p>
               </article>
               <article class="insight-card">
-                <span class="insight-label">Latest Save</span>
+                <span class="insight-label">Latest Like</span>
                 <p id="like-latest-summary" class="insight-text">-</p>
               </article>
             </div>
@@ -245,8 +245,8 @@
           <section id="like-results-section" class="glass-card results-strip reveal">
             <div class="results-top">
               <div>
-                <p class="eyebrow">RESULTS</p>
-                <h2 id="like-results-title">0 saved papers</h2>
+                <p class="eyebrow">LIKED PAPERS</p>
+                <h2 id="like-results-title">0 liked papers</h2>
               </div>
               <button id="like-reset-filters" class="link-chip button-link" type="button">Reset filters</button>
             </div>
@@ -269,10 +269,10 @@
         <h2>Quick Jump</h2>
         <nav id="like-floating-toc" class="floating-toc-list">
           <a href="#like-later-section" class="floating-toc-link">Later Queue</a>
-          <a href="#like-to-read-section" class="floating-toc-link">To-Read Queue</a>
+          <a href="#like-to-read-section" class="floating-toc-link">Unread Snapshots</a>
           <a href="#like-overview-title" class="floating-toc-link">Overview</a>
           <a href="#like-tag-map" class="floating-toc-link">Tag Map</a>
-          <a href="#like-results-section" class="floating-toc-link">Results</a>
+          <a href="#like-results-section" class="floating-toc-link">Liked Papers</a>
         </nav>
       </div>
     </aside>
@@ -282,6 +282,6 @@
       <span>Top</span>
     </button>
 
-    <script type="module" src="./like.js?v=20260319"></script>
+    <script type="module" src="./like.js?v=20260319-3"></script>
   </body>
 </html>
