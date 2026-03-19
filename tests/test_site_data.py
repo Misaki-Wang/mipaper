@@ -11,7 +11,7 @@ class SiteDataTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)
             reports_dir = root / "reports" / "daily"
-            site_data_dir = root / "site" / "data" / "daily"
+            site_data_dir = root / "site" / "data"
             reports_dir.mkdir(parents=True)
 
             def write_report(category: str, total_papers: int) -> None:
@@ -61,8 +61,8 @@ class SiteDataTest(unittest.TestCase):
                 encoding="utf-8",
             )
 
-            manifest_path = build_site_manifest(reports_dir, site_data_dir)
-            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            result = build_site_manifest(reports_dir, site_data_dir)
+            manifest = json.loads(result.manifest_path.read_text(encoding="utf-8"))
 
             self.assertEqual(4, manifest["reports_count"])
             self.assertEqual("data/daily/reports/2026-03-06/cs.AI-2026-03-06.json", manifest["default_report_path"])
@@ -76,7 +76,7 @@ class SiteDataTest(unittest.TestCase):
                 "data/daily/reports/2026-03-06/cs.AI-2026-03-06.json",
                 manifest["reports"][0]["data_path"],
             )
-            self.assertTrue((site_data_dir / "reports" / "2026-03-06" / "cs.AI-2026-03-06.json").exists())
+            self.assertTrue((site_data_dir / "daily" / "reports" / "2026-03-06" / "cs.AI-2026-03-06.json").exists())
 
 
 if __name__ == "__main__":

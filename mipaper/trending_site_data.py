@@ -5,8 +5,10 @@ import shutil
 from pathlib import Path
 from typing import List
 
+from mipaper.branch_site_data import BranchManifestResult
 
-def build_trending_site_manifest(reports_dir: Path, site_data_dir: Path) -> Path:
+
+def build_trending_site_manifest(reports_dir: Path, site_data_dir: Path) -> BranchManifestResult:
     reports = load_trending_reports(reports_dir)
     report_output_dir = site_data_dir / "reports"
     report_output_dir.mkdir(parents=True, exist_ok=True)
@@ -42,7 +44,7 @@ def build_trending_site_manifest(reports_dir: Path, site_data_dir: Path) -> Path
     site_data_dir.mkdir(parents=True, exist_ok=True)
     manifest_path = site_data_dir / "manifest.json"
     manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
-    return manifest_path
+    return BranchManifestResult(manifest_path=manifest_path, manifest=manifest)
 
 
 def load_trending_reports(reports_dir: Path) -> List[dict]:

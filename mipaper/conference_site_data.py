@@ -1,63 +1,37 @@
 from __future__ import annotations
 
-import json
-import shutil
 from pathlib import Path
-from typing import List
+
+from mipaper.branch_site_data import BranchManifestResult, build_branch_manifest
 
 
-def build_conference_site_manifest(reports_dir: Path, site_data_dir: Path) -> Path:
-    reports = load_conference_reports(reports_dir)
-    report_output_dir = site_data_dir / "reports"
-    report_output_dir.mkdir(parents=True, exist_ok=True)
-    clear_generated_json(report_output_dir)
-
-    manifest_reports = []
-    for report in reports:
-        source_path = report["source_path"]
-        relative_path = source_path.relative_to(reports_dir)
-        destination = report_output_dir / relative_path
-        destination.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copyfile(source_path, destination)
-        manifest_reports.append(
-            {
-                "slug": source_path.stem,
-                "venue": report["venue"],
-                "venue_series": report["venue_series"],
-                "venue_year": report["venue_year"],
-                "total_papers": report["total_papers"],
-                "declared_total": report.get("declared_total"),
-                "capture_ratio": report.get("capture_ratio"),
-                "is_complete": report.get("is_complete"),
-                "classifier": report["classifier"],
-                "generated_at": report["generated_at"],
-                "source_url": report["source_url"],
-                "subject_distribution": report["subject_distribution"][:8],
-                "top_topics": report["topic_distribution"][:5],
-                "data_path": f"data/conference/reports/{relative_path.as_posix()}",
-            }
-        )
-
-    manifest = {
-        "reports_count": len(manifest_reports),
-        "default_report_path": manifest_reports[0]["data_path"] if manifest_reports else "",
-        "reports": manifest_reports,
-    }
-
-    manifest_path = site_data_dir / "manifest.json"
-    manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
-    return manifest_path
-
-
-def load_conference_reports(reports_dir: Path) -> List[dict]:
-    reports = []
-    for path in sorted(reports_dir.rglob("*.json")):
-        payload = json.loads(path.read_text(encoding="utf-8"))
-        payload["source_path"] = path
-        reports.append(payload)
-
-    reports.sort(key=lambda item: (safe_int(item.get("venue_year")), item.get("venue_series", ""), item.get("venue", "")), reverse=True)
-    return reports
+def build_conference_site_manifest(reports_dir: Path, site_data_dir: Path) -> BranchManifestResult:
+    return build_branch_manifest(
+        reports_dir=reports_dir,
+        site_data_root=site_data_dir,
+        branch_key="conference",
+        branch_label="Conference",
+        report_sort_key=lambda item: (
+            safe_int(item.get("venue_year")),
+            item.get("venue_series", ""),
+            item.get("venue", ""),
+        ),
+        report_entry_builder=lambda report: {
+            "slug": report["source_path"].stem,
+            "venue": report["venue"],
+            "venue_series": report["venue_series"],
+            "venue_year": report["venue_year"],
+            "total_papers": report["total_papers"],
+            "declared_total": report.get("declared_total"),
+            "capture_ratio": report.get("capture_ratio"),
+            "is_complete": report.get("is_complete"),
+            "classifier": report["classifier"],
+            "generated_at": report["generated_at"],
+            "source_url": report["source_url"],
+            "subject_distribution": report["subject_distribution"][:8],
+            "top_topics": report["topic_distribution"][:5],
+        },
+    )
 
 
 def safe_int(value: str | int | None) -> int:
@@ -65,11 +39,3 @@ def safe_int(value: str | int | None) -> int:
         return int(value or 0)
     except (TypeError, ValueError):
         return 0
-
-
-def clear_generated_json(directory: Path) -> None:
-    for path in directory.rglob("*.json"):
-        path.unlink()
-    for path in sorted(directory.rglob("*"), reverse=True):
-        if path.is_dir() and not any(path.iterdir()):
-            path.rmdir()

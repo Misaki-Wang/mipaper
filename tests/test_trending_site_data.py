@@ -36,8 +36,8 @@ class TrendingSiteDataTest(unittest.TestCase):
                     encoding="utf-8",
                 )
 
-            manifest_path = build_trending_site_manifest(reports_dir, site_data_dir)
-            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            result = build_trending_site_manifest(reports_dir, site_data_dir)
+            manifest = json.loads(result.manifest_path.read_text(encoding="utf-8"))
 
             self.assertEqual(2, manifest["reports_count"])
             self.assertEqual("data/trending/reports/2026-03-12/trending-2026-03-12.json", manifest["default_report_path"])

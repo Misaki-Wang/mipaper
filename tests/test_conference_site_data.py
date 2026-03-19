@@ -11,7 +11,7 @@ class ConferenceSiteDataTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
             reports_dir = root / "reports" / "conference"
-            site_data_dir = root / "site" / "data" / "conference"
+            site_data_dir = root / "site" / "data"
             reports_dir.mkdir(parents=True)
 
             for venue in ("CVPR.2025", "CVPR.2024", "ICLR.2026"):
@@ -38,8 +38,8 @@ class ConferenceSiteDataTest(unittest.TestCase):
                     encoding="utf-8",
                 )
 
-            manifest_path = build_conference_site_manifest(reports_dir, site_data_dir)
-            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            result = build_conference_site_manifest(reports_dir, site_data_dir)
+            manifest = json.loads(result.manifest_path.read_text(encoding="utf-8"))
 
             self.assertEqual(3, manifest["reports_count"])
             self.assertEqual("data/conference/reports/ICLR.2026/ICLR.2026.json", manifest["default_report_path"])

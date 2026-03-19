@@ -1169,13 +1169,20 @@ function extractDateLabel(paper) {
 }
 
 async function loadSnapshotQueueData() {
-  const manifestUrls = [
-    "./data/daily/manifest.json",
-    "./data/hf-daily/manifest.json",
-    "./data/conference/manifest.json",
-    "./data/trending/manifest.json",
-  ];
+  const branchCatalog = await fetchJson("./data/branches/manifest.json").catch(() => null);
+  const manifestUrls = ["./data/trending/manifest.json"];
 
+  if (branchCatalog && Array.isArray(branchCatalog.reports)) {
+    const snapshots = branchCatalog.reports.map((report) => createSnapshotFromReport(report)).filter(Boolean);
+    const trendingResult = await Promise.allSettled([fetchJson("./data/trending/manifest.json")]);
+    const combinedSnapshots = [...snapshots];
+    if (trendingResult[0]?.status === "fulfilled" && Array.isArray(trendingResult[0].value?.reports)) {
+      combinedSnapshots.push(...trendingResult[0].value.reports.map((report) => createSnapshotFromReport(report)).filter(Boolean));
+    }
+    return combinedSnapshots.sort((left, right) => right.sort_key.localeCompare(left.sort_key) || left.title.localeCompare(right.title));
+  }
+
+  manifestUrls.unshift("./data/daily/manifest.json", "./data/hf-daily/manifest.json", "./data/conference/manifest.json");
   const results = await Promise.allSettled(manifestUrls.map((url) => fetchJson(url)));
   const snapshots = [];
 
@@ -1184,20 +1191,8 @@ async function loadSnapshotQueueData() {
       continue;
     }
     const manifest = result.value;
-    if (manifest?.reports?.[0]?.category) {
-      snapshots.push(...manifest.reports.map((report) => createDailySnapshot(report)));
-      continue;
-    }
-    if (manifest?.reports?.[0]?.venue) {
-      snapshots.push(...manifest.reports.map((report) => createConferenceSnapshot(report)));
-      continue;
-    }
-    if (manifest?.reports?.[0]?.since) {
-      snapshots.push(...manifest.reports.map((report) => createTrendingSnapshot(report)));
-      continue;
-    }
-    if (manifest?.reports?.[0]?.report_date) {
-      snapshots.push(...manifest.reports.map((report) => createHfSnapshot(report)));
+    if (Array.isArray(manifest?.reports)) {
+      snapshots.push(...manifest.reports.map((report) => createSnapshotFromReport(report)).filter(Boolean));
     }
   }
 
@@ -1300,6 +1295,25 @@ function createDailySnapshot(report) {
     source_url: report.source_url || "",
     sort_key: `${report.report_date}-2-${report.category}`,
   };
+}
+
+function createSnapshotFromReport(report) {
+  if (!report || typeof report !== "object") {
+    return null;
+  }
+  if (report.snapshot_date || report.since) {
+    return createTrendingSnapshot(report);
+  }
+  if (report.venue) {
+    return createConferenceSnapshot(report);
+  }
+  if (report.category) {
+    return createDailySnapshot(report);
+  }
+  if (report.report_date) {
+    return createHfSnapshot(report);
+  }
+  return null;
 }
 
 function createHfSnapshot(report) {

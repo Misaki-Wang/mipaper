@@ -11,7 +11,7 @@ class HFSiteDataTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
             reports_dir = root / "reports" / "hf-daily"
-            site_data_dir = root / "site" / "data" / "hf-daily"
+            site_data_dir = root / "site" / "data"
             reports_dir.mkdir(parents=True)
 
             for report_date in ("2026-03-09", "2026-03-08"):
@@ -37,8 +37,8 @@ class HFSiteDataTest(unittest.TestCase):
                     encoding="utf-8",
                 )
 
-            manifest_path = build_hf_site_manifest(reports_dir, site_data_dir)
-            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            result = build_hf_site_manifest(reports_dir, site_data_dir)
+            manifest = json.loads(result.manifest_path.read_text(encoding="utf-8"))
 
             self.assertEqual(2, manifest["reports_count"])
             self.assertEqual("data/hf-daily/reports/2026-03-09/hf-daily-2026-03-09.json", manifest["default_report_path"])

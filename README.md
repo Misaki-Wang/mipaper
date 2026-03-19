@@ -109,6 +109,8 @@ Then open `http://127.0.0.1:4173`.
 - `trending.html`: GitHub Trending weekly snapshots
 - `like.html`: saved papers with GitHub OAuth + Supabase sync
 
+The non-trending branches also share a unified catalog at `site/data/branches/manifest.json` for cross-branch management and future search expansion.
+
 ## Supabase and Cloudflare Pages
 
 Recommended deployment:
