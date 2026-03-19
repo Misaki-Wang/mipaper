@@ -2714,6 +2714,49 @@ code {
   border: 1px solid color-mix(in srgb, var(--border), var(--accent-strong) 16%);
 }
 
+.spotlight-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.spotlight-meta > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+}
+
+.direct-metadata-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 1.45rem;
+  padding: 0.12rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--border), var(--accent) 18%);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.direct-metadata-pill.is-complete {
+  color: color-mix(in srgb, var(--accent-strong), var(--text) 12%);
+  background: color-mix(in srgb, var(--accent-soft), white 20%);
+  border-color: color-mix(in srgb, var(--border), var(--accent) 26%);
+}
+
+.direct-metadata-pill.is-pending {
+  color: color-mix(in srgb, var(--muted), var(--text) 8%);
+  background: color-mix(in srgb, var(--surface-soft), white 10%);
+}
+
 .paper-link.brand-pdf .paper-link-icon svg {
   width: 0.9rem;
   height: 0.9rem;

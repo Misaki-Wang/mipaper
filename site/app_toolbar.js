@@ -2,12 +2,13 @@ const BRANCH_NAV_ITEMS = [
   { key: "hf", href: "./hf-daily.html", label: "HF" },
   { key: "cool", href: "./cool-daily.html", label: "Cool" },
   { key: "conference", href: "./conference.html", label: "Conf" },
+  { key: "direct", href: "./direct-add.html", label: "Direct" },
   { key: "trending", href: "./trending.html", label: "Trend" },
 ];
 
 const LIBRARY_NAV_ITEMS = [
-  { key: "liked", href: "./like.html", label: "Liked" },
   { key: "later", href: "./queue.html", label: "Later" },
+  { key: "liked", href: "./like.html", label: "Liked" },
   { key: "unread", href: "./unread-snapshots.html", label: "Unread" },
 ];
 

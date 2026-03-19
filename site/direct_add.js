@@ -7,45 +7,33 @@ import { bindBranchNav } from "./branch_nav.js?v=20260319-4";
 import { bindLibraryNav } from "./library_nav.js?v=20260319-4";
 import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=20260319-7";
 
-mountAppToolbar("#queue-toolbar-root", {
-  prefix: "queue",
-  filtersTemplateId: "queue-toolbar-filters",
-  branchActiveKey: null,
-  libraryActiveKey: "later",
+mountAppToolbar("#direct-toolbar-root", {
+  prefix: "direct",
+  filtersTemplateId: "direct-toolbar-filters",
+  branchActiveKey: "direct",
+  libraryActiveKey: null,
   quickAddTarget: "later",
 });
 
 const PAGE_SIZE = 6;
-const laterList = document.querySelector("#later-list");
-const laterSummary = document.querySelector("#later-summary");
-const laterPagination = document.querySelector("#later-pagination");
-const laterHeroCount = document.querySelector("#later-hero-count");
-const laterHeroLiked = document.querySelector("#later-hero-liked");
-const laterHeroBranches = document.querySelector("#later-hero-branches");
-const laterHeroSource = document.querySelector("#later-hero-source");
-const laterHeroTopic = document.querySelector("#later-hero-topic");
-const searchInput = document.querySelector("#queue-search-input");
+const directList = document.querySelector("#direct-list");
+const directSummary = document.querySelector("#direct-summary");
+const directPagination = document.querySelector("#direct-pagination");
+const directHeroCount = document.querySelector("#direct-hero-count");
+const directHeroLiked = document.querySelector("#direct-hero-liked");
+const directHeroComplete = document.querySelector("#direct-hero-complete");
+const directHeroPending = document.querySelector("#direct-hero-pending");
+const directHeroSource = document.querySelector("#direct-hero-source");
+const searchInput = document.querySelector("#direct-search-input");
+const sortSelect = document.querySelector("#direct-sort");
+const metadataFilterSelect = document.querySelector("#direct-metadata-filter");
 
-let laterPage = 0;
-let laterPapers = [];
+let directPage = 0;
+let directPapers = [];
 let likedPapers = [];
 let searchQuery = "";
-
-const TOPIC_LABEL_TRANSLATIONS = new Map([
-  ["多模态理解与视觉", "Multimodal Understanding and Vision"],
-  ["多模态理解和视觉", "Multimodal Understanding and Vision"],
-  ["多模态生成建模", "Multimodal Generative Modeling"],
-  ["多模态生成与建模", "Multimodal Generative Modeling"],
-  ["多模态代理", "Multimodal Agents"],
-  ["代理与规划", "Agents and Planning"],
-  ["生成基础", "Generative Foundations"],
-  ["领域应用", "Domain Applications"],
-  ["数据集与基准", "Datasets and Benchmarks"],
-  ["推理、对齐与评估", "Reasoning, Alignment, and Evaluation"],
-  ["LLMs与语言", "LLMs and Language"],
-  ["LLM与语言", "LLMs and Language"],
-  ["机器人与具身AI", "Robotics and Embodied AI"],
-]);
+let sortMode = sortSelect?.value || "newest";
+let metadataFilter = metadataFilterSelect?.value || "all";
 
 init().catch((error) => {
   console.error(error);
@@ -55,10 +43,10 @@ init().catch((error) => {
 async function init() {
   bindThemeToggle();
   bindSearchInput();
-  bindBranchAuthToolbar("queue");
   bindBranchNav();
   bindLibraryNav();
-  bindToolbarQuickAdd("queue", { target: "later" });
+  bindToolbarQuickAdd("direct", { target: "later" });
+  bindBranchAuthToolbar("direct");
   subscribeQueue(renderPage);
   subscribeLikes(renderPage);
   await Promise.all([initQueue(), initLikesSync()]);
@@ -100,30 +88,56 @@ function bindThemeToggle() {
   }
 }
 
-function renderPage() {
-  laterPapers = readQueue("later");
-  likedPapers = readLikes();
-  const visiblePapers = filterLaterPapers(laterPapers);
-  renderHero(laterPapers, likedPapers);
-  renderLaterList(visiblePapers);
-}
-
 function bindSearchInput() {
   if (searchInput) {
     searchInput.addEventListener("input", () => {
       searchQuery = searchInput.value.trim().toLowerCase();
-      laterPage = 0;
+      directPage = 0;
       renderPage();
     });
   }
+  sortSelect?.addEventListener("change", () => {
+    sortMode = sortSelect.value || "newest";
+    directPage = 0;
+    renderPage();
+  });
+  metadataFilterSelect?.addEventListener("change", () => {
+    metadataFilter = metadataFilterSelect.value || "all";
+    directPage = 0;
+    renderPage();
+  });
 }
 
-function filterLaterPapers(papers) {
+function renderPage() {
+  const queue = readQueue("later");
+  likedPapers = readLikes();
+  directPapers = queue.filter(isDirectAddPaper).map((paper) => ({
+    ...paper,
+    metadata_complete: hasMeaningfulMetadata(paper),
+  }));
+  const visiblePapers = sortDirectAddPapers(filterDirectAddPapers(directPapers));
+  renderHero(directPapers, likedPapers);
+  renderDirectList(visiblePapers);
+}
+
+function isDirectAddPaper(paper) {
+  return String(paper?.source_kind || "").toLowerCase() === "library";
+}
+
+function filterDirectAddPapers(papers) {
   const query = searchQuery.trim();
-  if (!query) {
-    return papers;
-  }
   return papers.filter((paper) => {
+    if (metadataFilter === "complete" && !paper.metadata_complete) {
+      return false;
+    }
+    if (metadataFilter === "incomplete" && paper.metadata_complete) {
+      return false;
+    }
+
+    if (!query) {
+      return true;
+    }
+
     const haystack = [
       paper.title,
       paper.abstract,
@@ -138,56 +152,68 @@ function filterLaterPapers(papers) {
   });
 }
 
-function renderHero(laterQueue, likes) {
-  const sourceCounts = new Map();
-  const topicCounts = new Map();
+function sortDirectAddPapers(papers) {
+  const list = [...papers];
+  if (sortMode === "oldest") {
+    return list.sort((left, right) => String(left.saved_at || "").localeCompare(String(right.saved_at || "")));
+  }
+  if (sortMode === "title") {
+    return list.sort((left, right) => String(left.title || "").localeCompare(String(right.title || ""), "en"));
+  }
+  return list.sort((left, right) => String(right.saved_at || "").localeCompare(String(left.saved_at || "")));
+}
 
-  laterQueue.forEach((paper) => {
+function renderHero(directQueue, likes) {
+  const sourceCounts = new Map();
+  const completeCount = directQueue.filter((paper) => paper.metadata_complete).length;
+  const pendingCount = Math.max(0, directQueue.length - completeCount);
+
+  directQueue.forEach((paper) => {
     const sourceLabel = getSourceLabel(paper.source_kind);
     sourceCounts.set(sourceLabel, (sourceCounts.get(sourceLabel) || 0) + 1);
-    const topicLabel = displayTopicLabel(paper.topic_label || "Other AI");
-    topicCounts.set(topicLabel, (topicCounts.get(topicLabel) || 0) + 1);
   });
 
   const topSource = [...sourceCounts.entries()].sort((left, right) => right[1] - left[1] || left[0].localeCompare(right[0], "en"))[0] || null;
-  const topTopic = [...topicCounts.entries()].sort((left, right) => right[1] - left[1] || left[0].localeCompare(right[0], "en"))[0] || null;
 
-  laterHeroCount.textContent = laterQueue.length ? `${laterQueue.length} queued` : "All clear";
-  laterHeroLiked.textContent = String(likes.length);
-  laterHeroBranches.textContent = String(sourceCounts.size);
-  laterHeroSource.textContent = topSource ? `${topSource[0]} · ${topSource[1]}` : "-";
-  laterHeroTopic.textContent = topTopic ? `${topTopic[0]} · ${topTopic[1]}` : "-";
+  directHeroCount.textContent = directQueue.length ? `${directQueue.length} direct adds` : "No direct adds";
+  directHeroLiked.textContent = String(likes.length);
+  directHeroComplete.textContent = String(completeCount);
+  directHeroPending.textContent = String(pendingCount);
+  if (directHeroSource) {
+    directHeroSource.textContent = topSource ? `${topSource[0]} · ${topSource[1]}` : "Library";
+  }
 }
 
-function renderLaterList(papers) {
-  if (!laterList) {
+function renderDirectList(papers) {
+  if (!directList) {
     return;
   }
 
   if (!papers.length) {
-    const emptyText = searchQuery ? "No papers match the current search." : "No papers in Later queue yet.";
-    laterSummary.textContent = emptyText;
-    laterList.innerHTML = `<div class="empty-state">${emptyText}</div>`;
-    laterPagination.innerHTML = "";
+    const emptyText = searchQuery || metadataFilter !== "all" ? "No direct adds match the current filters." : "No direct adds yet.";
+    directSummary.textContent = emptyText;
+    directList.innerHTML = `<div class="empty-state">${emptyText}</div>`;
+    directPagination.innerHTML = "";
     return;
   }
 
   const totalPages = Math.ceil(papers.length / PAGE_SIZE);
-  laterPage = Math.min(laterPage, totalPages - 1);
-  const start = laterPage * PAGE_SIZE;
+  directPage = Math.min(directPage, totalPages - 1);
+  const start = directPage * PAGE_SIZE;
   const pageItems = papers.slice(start, start + PAGE_SIZE);
 
-  laterSummary.textContent = searchQuery
-    ? `${papers.length} of ${laterPapers.length} papers match the current search.`
-    : `${papers.length} papers queued for later reading.`;
+  directSummary.textContent = searchQuery || metadataFilter !== "all"
+    ? `${papers.length} of ${directPapers.length} direct adds match the current filters.`
+    : `${papers.length} direct adds in Later.`;
 
-  laterList.innerHTML = pageItems
+  directList.innerHTML = pageItems
     .map(
       (paper) => `
         <article class="spotlight-card">
           <div class="spotlight-meta">
-            <span>${escapeHtml(displayTopicLabel(paper.topic_label || "Other AI"))}</span>
+            <span>${escapeHtml(displayTopicLabel(paper.topic_label || "Direct Add"))}</span>
             <span>${escapeHtml(getSourceLabel(paper.source_kind))}</span>
+            <span class="direct-metadata-pill ${paper.metadata_complete ? "is-complete" : "is-pending"}">${paper.metadata_complete ? "Complete" : "Pending"}</span>
           </div>
           <h3>${escapeHtml(paper.title || "Untitled")}</h3>
           <div class="paper-authors-box">
@@ -232,27 +258,27 @@ function renderLaterList(papers) {
     )
     .join("");
 
-  laterPagination.innerHTML =
+  directPagination.innerHTML =
     totalPages > 1
       ? `<div class="pagination">
-          <button class="pill-button" data-later-page="prev" ${laterPage === 0 ? "disabled" : ""}>← Prev</button>
-          <span class="pagination-info">${laterPage + 1} / ${totalPages}</span>
-          <button class="pill-button" data-later-page="next" ${laterPage >= totalPages - 1 ? "disabled" : ""}>Next →</button>
+          <button class="pill-button" data-direct-page="prev" ${directPage === 0 ? "disabled" : ""}>← Prev</button>
+          <span class="pagination-info">${directPage + 1} / ${totalPages}</span>
+          <button class="pill-button" data-direct-page="next" ${directPage >= totalPages - 1 ? "disabled" : ""}>Next →</button>
         </div>`
       : "";
 
-  laterPagination.querySelectorAll("[data-later-page]").forEach((button) => {
+  directPagination.querySelectorAll("[data-direct-page]").forEach((button) => {
     button.addEventListener("click", () => {
-      if (button.dataset.laterPage === "prev" && laterPage > 0) {
-        laterPage -= 1;
-      } else if (button.dataset.laterPage === "next" && laterPage < totalPages - 1) {
-        laterPage += 1;
+      if (button.dataset.directPage === "prev" && directPage > 0) {
+        directPage -= 1;
+      } else if (button.dataset.directPage === "next" && directPage < totalPages - 1) {
+        directPage += 1;
       }
-      renderLaterList(papers);
+      renderDirectList(papers);
     });
   });
 
-  laterList.querySelectorAll("[data-like-id]").forEach((button) => {
+  directList.querySelectorAll("[data-like-id]").forEach((button) => {
     button.addEventListener("click", () => {
       const likeId = button.dataset.likeId;
       const paper = papers.find((item) => item.like_id === likeId);
@@ -264,12 +290,29 @@ function renderLaterList(papers) {
     });
   });
 
-  laterList.querySelectorAll("[data-remove-id]").forEach((button) => {
+  directList.querySelectorAll("[data-remove-id]").forEach((button) => {
     button.addEventListener("click", () => {
-      removeFromQueue(button.dataset.removeId);
+      const likeId = button.dataset.removeId;
+      if (!likeId) {
+        return;
+      }
+      removeFromQueue(likeId);
       renderPage();
     });
   });
+}
+
+function getArxivUrl(paper) {
+  return paper.pdf_url || paper.abs_url || paper.arxiv_url || "";
+}
+
+function getCoolUrl(paper) {
+  return paper.detail_url || paper.papers_cool_url || "";
+}
+
+function displayTopicLabel(label) {
+  const text = String(label || "Direct Add");
+  return text === "Direct Add" ? "Direct Add" : text;
 }
 
 function renderExternalPaperLink({ href, label, brand }) {
@@ -290,48 +333,30 @@ function renderExternalPaperLink({ href, label, brand }) {
   `;
 }
 
-function getArxivUrl(paper) {
-  return paper.pdf_url || paper.abs_url || "";
-}
-
-function getCoolUrl(paper) {
-  if (paper.detail_url) {
-    return paper.detail_url;
-  }
-  if (paper.paper_id && (paper.pdf_url || paper.abs_url || paper.hf_url)) {
-    return `https://papers.cool/arxiv/${paper.paper_id}`;
-  }
-  return "";
-}
-
 function renderFatal(error) {
-  const message = error instanceof Error ? error.message : String(error);
-  const html = `<div class="empty-state">Queue page failed to load: ${escapeHtml(message)}</div>`;
-  if (laterList) {
-    laterList.innerHTML = html;
+  if (!directList) {
+    return;
   }
-  if (laterSummary) {
-    laterSummary.textContent = "Later queue unavailable.";
-  }
-  if (laterPagination) {
-    laterPagination.innerHTML = "";
+  directList.innerHTML = `<div class="empty-state">${escapeHtml(error instanceof Error ? error.message : String(error || "Unexpected error"))}</div>`;
+  if (directSummary) {
+    directSummary.textContent = "Failed to load direct adds.";
   }
 }
 
-function displayTopicLabel(value) {
-  const label = String(value || "").trim();
-  if (!label) {
-    return "Other AI";
-  }
-  return TOPIC_LABEL_TRANSLATIONS.get(label) || label;
+function hasMeaningfulMetadata(record) {
+  const title = String(record?.title || "").trim();
+  const authors = Array.isArray(record?.authors) ? record.authors.filter(Boolean) : [];
+  const abstract = String(record?.abstract || "").trim();
+  return Boolean(title && !/^arXiv\s+\d/i.test(title) && authors.length > 0 && abstract.length > 20);
 }
 
 function escapeHtml(value) {
-  const div = document.createElement("div");
-  div.textContent = String(value ?? "");
-  return div.innerHTML;
+  return String(value ?? "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;");
 }
 
 function escapeAttribute(value) {
-  return escapeHtml(value).replaceAll("`", "&#96;");
+  return escapeHtml(value).replaceAll('"', "&quot;").replaceAll("'", "&#39;");
 }
