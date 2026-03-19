@@ -1,4 +1,4 @@
-import { getAuthSnapshot, signInWithGitHub, signOutFromGitHub, subscribeAuth, syncLikesNow } from "./likes.js?v=20260319-5";
+import { getAuthSnapshot, initLikesSync, signInWithGitHub, signOutFromGitHub, subscribeAuth, syncLikesNow } from "./likes.js?v=20260319-5";
 
 const TOOLBAR_AUTO_HIDE_KEY = "cool-paper-toolbar-auto-hide";
 
@@ -17,6 +17,10 @@ export function bindBranchAuthToolbar(prefix) {
   const autoHideButton = document.querySelector(`#${prefix}-toolbar-autohide-toggle`);
 
   bindToolbarAutoHide(toolbar, autoHideButton);
+
+  void initLikesSync().catch((error) => {
+    console.warn("Failed to initialize auth sync state", error);
+  });
 
   if (!shell || !button || !panel) {
     return;
