@@ -2212,7 +2212,7 @@ code {
 .paper-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.42rem;
+  gap: 0.5rem;
   justify-content: center;
   padding: 0.5rem 0.74rem;
   border-radius: 999px;
@@ -2235,6 +2235,7 @@ code {
 .paper-link-icon {
   display: grid;
   place-items: center;
+  flex: 0 0 auto;
   min-width: 1.44rem;
   height: 1.44rem;
   width: 1.44rem;
@@ -2264,6 +2265,16 @@ code {
 .paper-link.brand-arxiv .paper-link-icon img {
   width: 0.88rem;
   height: 1.1rem;
+}
+
+.paper-link.brand-openreview .paper-link-icon {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), color-mix(in srgb, var(--surface-strong), white 12%));
+  border: 1px solid color-mix(in srgb, var(--border), #ff7a00 22%);
+}
+
+.paper-link.brand-openreview .paper-link-icon img {
+  width: 1rem;
+  height: 1rem;
 }
 
 .paper-link.brand-cool .paper-link-icon {
@@ -3753,11 +3764,6 @@ code {
 
 .paper-abstract {
   margin: 0.5rem 0;
-}
-
-.paper-links a {
-  margin-right: 1rem;
-  color: #1976d2;
 }
 
 .paper-actions {

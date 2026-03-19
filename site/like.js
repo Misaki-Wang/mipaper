@@ -5,11 +5,12 @@ import {
   readLikes,
   subscribeAuth,
   subscribeLikes,
-} from "./likes.js";
+} from "./likes.js?v=20260319";
 import { getSupabaseClient, isAuthorizedUser, isSupabaseConfigured, loadRuntimeConfig } from "./supabase.js";
 import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js";
-import { bindQueueButtons, initQueue, readQueue, subscribeQueue } from "./paper_queue.js";
+import { bindQueueButtons, initQueue, isInQueue, readQueue, subscribeQueue } from "./paper_queue.js?v=20260319";
 import { bindBranchAuthToolbar } from "./branch_auth.js";
+import { repairLikeLaterConflicts } from "./paper_selection.js?v=20260319";
 
 const state = {
   likes: [],
@@ -73,6 +74,7 @@ init().catch((error) => {
 });
 
 async function init() {
+  likeRecords.render = renderPage;
   bindThemeToggle();
   bindFilterMenu();
   bindBranchAuthToolbar("like");
@@ -93,6 +95,7 @@ async function init() {
     scheduleToReadSnapshotSync();
   });
   await Promise.all([initLikesSync(), initReviewSync(), initQueue()]);
+  repairLikeLaterConflicts();
   state.snapshots = await loadSnapshotQueueData();
   state.likes = readLikes();
   renderPage();
@@ -263,6 +266,7 @@ function renderPage() {
     likeRecords.clear();
     renderLaterQueue(laterQueue);
     renderToReadList(toReadSnapshots);
+    bindLikeButtons(document, likeRecords);
 
     if (!likes.length) {
       renderEmpty(toReadSnapshots);
@@ -549,7 +553,7 @@ function renderLaterQueue(laterQueue) {
             <p>${escapeHtml(paper.abstract)}</p>
           </details>
           ` : ""}
-          <div class="spotlight-links">
+          <div class="paper-links">
             ${getArxivUrl(paper) ? renderExternalPaperLink({ href: getArxivUrl(paper), label: "arXiv", brand: "arxiv" }) : ""}
             ${getCoolUrl(paper) ? renderExternalPaperLink({ href: getCoolUrl(paper), label: "Cool", brand: "cool" }) : ""}
             <button class="paper-link later-button is-later" type="button" data-later-id="${escapeAttribute(paper.like_id)}" aria-pressed="true">
@@ -624,7 +628,7 @@ function renderToReadList(toReadSnapshots) {
           </div>
           <h3>${escapeHtml(snapshot.title)}</h3>
           <p>${escapeHtml(snapshot.summary)}</p>
-          <div class="spotlight-links">
+          <div class="paper-links">
             <a class="paper-link" href="${escapeAttribute(snapshot.branch_url)}">${escapeHtml(snapshot.branch_label)}</a>
             ${snapshot.source_url ? `<a class="paper-link brand-cool" href="${escapeAttribute(snapshot.source_url)}" target="_blank" rel="noreferrer">Source</a>` : ""}
             <button
@@ -821,11 +825,8 @@ function renderLikeCard(paper) {
     .filter(Boolean)
     .join("");
   const links = [
-    paper.source_page ? `<a class="paper-link" href="${escapeAttribute(paper.source_page)}">Branch</a>` : "",
-    paper.pdf_url ? `<a class="paper-link brand-arxiv" href="${escapeAttribute(paper.pdf_url)}" target="_blank" rel="noreferrer">arXiv</a>` : "",
-    paper.detail_url ? `<a class="paper-link brand-cool" href="${escapeAttribute(paper.detail_url)}" target="_blank" rel="noreferrer">Cool</a>` : "",
-    paper.hf_url ? `<a class="paper-link brand-cool" href="${escapeAttribute(paper.hf_url)}" target="_blank" rel="noreferrer">HF</a>` : "",
-    paper.github_url ? renderExternalPaperLink({ href: paper.github_url, label: "GitHub", brand: "github" }) : "",
+    getArxivUrl(paper) ? renderExternalPaperLink({ href: getArxivUrl(paper), label: "arXiv", brand: "arxiv" }) : "",
+    getCoolUrl(paper) ? renderExternalPaperLink({ href: getCoolUrl(paper), label: "Cool", brand: "cool" }) : "",
     renderLikeButton(paper),
   ]
     .filter(Boolean)
@@ -846,8 +847,17 @@ function renderLikeCard(paper) {
 }
 
 function renderLikeButton(paper) {
+  const inLater = isInQueue(paper.like_id);
   const liked = true;
   return `
+    <button class="paper-link later-button${inLater ? " is-later" : ""}" type="button" data-later-id="${escapeAttribute(paper.like_id)}" aria-pressed="${inLater}">
+      <span class="paper-link-icon later-icon" aria-hidden="true">
+        <svg viewBox="0 0 20 20">
+          <path d="M4 6h12M4 10h12M4 14h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+        </svg>
+      </span>
+      <span class="paper-link-text">Later</span>
+    </button>
     <button class="paper-link like-button${liked ? " is-liked" : ""}" type="button" data-like-id="${escapeAttribute(paper.like_id)}" aria-pressed="${liked}">
       <span class="paper-link-icon like-icon" aria-hidden="true">
         <svg viewBox="0 0 20 20">
@@ -865,10 +875,6 @@ function renderExternalPaperLink({ href, label, brand }) {
       ? "./assets/arxiv-logo.svg"
       : brand === "cool"
       ? "./assets/cool-favicon.ico"
-      : brand === "hf"
-      ? "./assets/hf-logo.svg"
-      : brand === "github"
-      ? "./assets/github-mark.svg"
       : "";
   return `
     <a class="paper-link brand-${escapeAttribute(brand)}" href="${escapeAttribute(href)}" target="_blank" rel="noreferrer">

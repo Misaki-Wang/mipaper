@@ -1,5 +1,6 @@
-import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js";
-import { bindQueueButtons, initQueue, subscribeQueue } from "./paper_queue.js";
+import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js?v=20260319";
+import { bindQueueButtons, initQueue, subscribeQueue } from "./paper_queue.js?v=20260319";
+import { repairLikeLaterConflicts } from "./paper_selection.js?v=20260319";
 import { createCalendarPicker } from "./calendar_picker.js";
 import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js";
 import { bindBranchAuthToolbar } from "./branch_auth.js";
@@ -62,6 +63,7 @@ async function init() {
   subscribeQueue(() => bindQueueButtons(document, likeRecords));
   subscribePageReviews(() => renderReviewState());
   await Promise.all([initLikesSync(), initReviewSync(), initQueue()]);
+  repairLikeLaterConflicts();
   const manifest = await fetchJson(manifestUrl);
   state.manifest = manifest;
   bindDatePicker();
@@ -613,13 +615,6 @@ function renderPaperCard(paper) {
           href: getPapersCoolUrl(paper),
           label: "Cool",
           brand: "cool",
-        })
-      : "",
-    paper.github_url
-      ? renderPaperLink({
-          href: paper.github_url,
-          label: "GitHub",
-          brand: "github",
         })
       : "",
     renderLikeButton(paper),

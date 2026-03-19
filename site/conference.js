@@ -1,5 +1,6 @@
-import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js";
-import { bindQueueButtons, initQueue, subscribeQueue } from "./paper_queue.js";
+import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js?v=20260319";
+import { bindQueueButtons, initQueue, subscribeQueue } from "./paper_queue.js?v=20260319";
+import { repairLikeLaterConflicts } from "./paper_selection.js?v=20260319";
 import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js";
 import { bindBranchAuthToolbar } from "./branch_auth.js";
 
@@ -62,6 +63,7 @@ async function init() {
   subscribeQueue(() => bindQueueButtons(document, likeRecords));
   subscribePageReviews(() => renderReviewState());
   await Promise.all([initLikesSync(), initReviewSync(), initQueue()]);
+  repairLikeLaterConflicts();
   const manifest = await fetchJson(manifestUrl);
   state.manifest = manifest;
   populateScopeFilters(manifest.reports || []);
@@ -726,7 +728,7 @@ function renderPaperCard(paper, className) {
       </div>
       ${abstract}
       <div class="paper-links">
-        ${paper.pdf_url ? renderPaperLink(paper.pdf_url, "PDF", "pdf") : ""}
+        ${paper.pdf_url || paper.abs_url ? renderPaperLink(paper.pdf_url || paper.abs_url, "OpenReview", "openreview") : ""}
         ${paper.detail_url ? renderPaperLink(paper.detail_url, "Cool", "cool") : ""}
         ${renderLikeButton(paper)}
       </div>
@@ -735,19 +737,18 @@ function renderPaperCard(paper, className) {
 }
 
 function renderPaperLink(href, label, brand) {
-  const icon = brand === "cool"
-    ? `<span class="paper-link-icon" aria-hidden="true"><img src="./assets/cool-favicon.ico" alt="" /></span>`
-    : `<span class="paper-link-icon pdf-icon" aria-hidden="true">
-        <svg viewBox="0 0 20 20">
-          <path d="M6.2 2.8h5.8L14.8 5.6V17.2H6.2z" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linejoin="round"></path>
-          <path d="M12 2.8v3h3" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"></path>
-          <path d="M8.2 9.2h3.8M8.2 11.7h3.8M8.2 14.2h2.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path>
-        </svg>
-      </span>`;
+  const iconSrc =
+    brand === "openreview"
+      ? "./assets/openreview-logo.svg"
+      : brand === "arxiv"
+      ? "./assets/arxiv-logo.svg"
+      : "./assets/cool-favicon.ico";
 
   return `
     <a class="paper-link brand-${escapeAttribute(brand)}" href="${escapeAttribute(href)}" target="_blank" rel="noreferrer">
-      ${icon}
+      <span class="paper-link-icon" aria-hidden="true">
+        <img src="${iconSrc}" alt="" />
+      </span>
       <span class="paper-link-text">${escapeHtml(label)}</span>
     </a>
   `;

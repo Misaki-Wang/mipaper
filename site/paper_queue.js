@@ -1,5 +1,6 @@
-import { createLikeRecord } from "./likes.js";
+import { createLikeRecord, isLiked } from "./likes.js";
 import { getSupabaseClient, isSupabaseConfigured, loadRuntimeConfig } from "./supabase.js";
+import { movePaperToLater, movePaperToLikes } from "./paper_selection.js";
 import {
   compareSyncTimestamps,
   createSyncTimestamp,
@@ -115,6 +116,10 @@ export function addToQueue(paper, context) {
   const existingRecord = store.find((item) => item.like_id === likeId) || null;
   const timestamp = createSyncTimestamp();
   const deviceId = getSyncDeviceId();
+
+  if (isLiked(likeId)) {
+    movePaperToLikes(record);
+  }
 
   const nextRecord = normalizeQueueRecord({
     ...(existingRecord || {}),
@@ -311,8 +316,9 @@ export function bindQueueButtons(root, recordLookup) {
       } else {
         const paper = record.paper || record;
         const context = record.context || {};
-        addToQueue(paper, context);
+        movePaperToLater(paper, context);
       }
+      recordLookup.render?.();
     });
   });
 }

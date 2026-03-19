@@ -1,5 +1,6 @@
-import { addToQueue, initQueue, isInQueue, readQueue, removeFromQueue, subscribeQueue } from "./paper_queue.js";
-import { createLikeRecord, initLikesSync, readLikes, subscribeLikes, toggleLike } from "./likes.js";
+import { initQueue, isInQueue, readQueue, removeFromQueue, subscribeQueue } from "./paper_queue.js?v=20260319";
+import { initLikesSync, readLikes, subscribeLikes } from "./likes.js?v=20260319";
+import { repairLikeLaterConflicts, movePaperToLater, movePaperToLikes } from "./paper_selection.js?v=20260319";
 
 const laterList = document.querySelector("#later-list");
 const likeList = document.querySelector("#like-list");
@@ -98,8 +99,8 @@ function renderLaterList() {
       if (!paper) {
         return;
       }
-      toggleLike(paper.like_id ? paper : createLikeRecord(paper, {}));
-      removeFromQueue(likeId);
+      movePaperToLikes(paper);
+      renderPage();
     });
   });
 
@@ -142,7 +143,8 @@ function renderLikeList() {
       if (!paper || isInQueue(likeId)) {
         return;
       }
-      addToQueue(paper, {});
+      movePaperToLater(paper, {});
+      renderPage();
     });
   });
 
@@ -189,5 +191,6 @@ async function init() {
   subscribeQueue(renderPage);
   subscribeLikes(renderPage);
   await Promise.all([initQueue(), initLikesSync()]);
+  repairLikeLaterConflicts();
   renderPage();
 }

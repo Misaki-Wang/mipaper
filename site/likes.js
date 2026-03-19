@@ -9,6 +9,7 @@ import {
   getSyncDeviceId,
   mergeSyncRecords,
 } from "./sync_utils.js";
+import { movePaperToLikes } from "./paper_selection.js?v=20260319";
 
 const LIKES_STORAGE_KEY = "cool-paper-liked-papers-v1";
 const LIKES_META_KEY = "cool-paper-liked-papers-meta-v1";
@@ -318,7 +319,12 @@ export function bindLikeButtons(root, recordLookup) {
       }
       // Support both flat record and { paper, context } wrapper formats
       const record = entry.like_id ? entry : (entry.paper?.like_id ? entry.paper : entry);
-      toggleLike(record);
+      movePaperToLikes(record);
+      const movableCard = button.closest("#like-later-list, #later-list");
+      if (movableCard) {
+        movableCard.remove();
+      }
+      recordLookup.render?.();
       bindLikeButtons(document, recordLookup);
     });
   });

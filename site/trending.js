@@ -1,7 +1,8 @@
 import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js";
-import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js";
-import { bindQueueButtons, initQueue, isInQueue, subscribeQueue } from "./paper_queue.js";
+import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js?v=20260319";
+import { bindQueueButtons, initQueue, isInQueue, subscribeQueue } from "./paper_queue.js?v=20260319";
 import { bindBranchAuthToolbar } from "./branch_auth.js";
+import { repairLikeLaterConflicts } from "./paper_selection.js?v=20260319";
 
 const manifestUrl = "./data/trending/manifest.json";
 
@@ -47,6 +48,7 @@ async function init() {
   subscribeQueue(() => bindQueueButtons(document, likeRecords));
   subscribePageReviews(() => renderReviewState());
   await Promise.all([initLikesSync(), initReviewSync(), initQueue()]);
+  repairLikeLaterConflicts();
   const manifest = await fetchJson(manifestUrl);
   state.manifest = manifest;
   populateReportSelect(manifest.reports || []);
