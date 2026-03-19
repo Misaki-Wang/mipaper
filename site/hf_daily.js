@@ -4,10 +4,11 @@ import { repairLikeLaterConflicts } from "./paper_selection.js?v=20260319-5";
 import { createCalendarPicker } from "./calendar_picker.js";
 import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js?v=20260319-4";
 import { bindBranchAuthToolbar } from "./branch_auth.js?v=20260319-9";
-import { mountAppToolbar } from "./app_toolbar.js?v=20260319-11";
+import { mountAppToolbar } from "./app_toolbar.js?v=20260320-1";
 import { bindBranchNav } from "./branch_nav.js?v=20260319-4";
 import { bindLibraryNav } from "./library_nav.js?v=20260319-4";
 import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=20260319-13";
+import { initToolbarPreferences } from "./toolbar_preferences.js?v=20260320-1";
 
 mountAppToolbar("#hf-toolbar-root", {
   prefix: "hf",
@@ -63,7 +64,7 @@ init().catch((error) => {
 });
 
 async function init() {
-  bindThemeToggle();
+  initToolbarPreferences({ pageKey: "hf" });
   bindFilterMenu();
   bindBranchNav();
   bindLibraryNav();
@@ -555,7 +556,7 @@ function renderResults(report, visiblePapers, topics) {
       topics.length,
       activeFilters.length ? `of ${report.topic_distribution.length}` : "all topic buckets"
     ),
-    renderResultStat("View Mode", state.focusOnly ? "Focus" : "Full scan", state.topic || "cross-topic browsing"),
+    renderResultStat("Scope", state.focusOnly ? "Focus" : "Full scan", state.topic || "cross-topic browsing"),
   ].join("");
   document.querySelector("#hf-active-filters").innerHTML = activeFilters.length
     ? activeFilters.map((item) => `<span class="active-filter-pill">${escapeHtml(item)}</span>`).join("")

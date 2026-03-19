@@ -2,11 +2,12 @@ import { getSourceLabel, initLikesSync, isLiked, readLikes, subscribeLikes, togg
 import { bindLikeButtons } from "./likes.js?v=20260319-9";
 import { bindQueueButtons, initQueue, isInQueue, readQueue, removeFromQueue, subscribeQueue } from "./paper_queue.js?v=20260319-5";
 import { bindBranchAuthToolbar } from "./branch_auth.js?v=20260319-9";
-import { mountAppToolbar } from "./app_toolbar.js?v=20260319-11";
+import { mountAppToolbar } from "./app_toolbar.js?v=20260320-1";
 import { bindBranchNav } from "./branch_nav.js?v=20260319-4";
 import { bindLibraryNav } from "./library_nav.js?v=20260319-4";
 import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=20260319-13";
 import { repairLikeLaterConflicts } from "./paper_selection.js?v=20260319-5";
+import { initToolbarPreferences } from "./toolbar_preferences.js?v=20260320-1";
 import {
   hasDirectAddsMigrationRun,
   initDirectAddSync,
@@ -51,7 +52,7 @@ init().catch((error) => {
 });
 
 async function init() {
-  bindThemeToggle();
+  initToolbarPreferences({ pageKey: "direct" });
   bindSearchInput();
   bindBranchNav();
   bindLibraryNav();

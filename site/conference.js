@@ -3,10 +3,11 @@ import { bindQueueButtons, initQueue, subscribeQueue } from "./paper_queue.js?v=
 import { repairLikeLaterConflicts } from "./paper_selection.js?v=20260319-5";
 import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js?v=20260319-4";
 import { bindBranchAuthToolbar } from "./branch_auth.js?v=20260319-9";
-import { mountAppToolbar } from "./app_toolbar.js?v=20260319-11";
+import { mountAppToolbar } from "./app_toolbar.js?v=20260320-1";
 import { bindBranchNav } from "./branch_nav.js?v=20260319-4";
 import { bindLibraryNav } from "./library_nav.js?v=20260319-4";
 import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=20260319-13";
+import { initToolbarPreferences } from "./toolbar_preferences.js?v=20260320-1";
 
 mountAppToolbar("#conference-toolbar-root", {
   prefix: "conference",
@@ -64,7 +65,7 @@ init().catch((error) => {
 });
 
 async function init() {
-  bindThemeToggle();
+  initToolbarPreferences({ pageKey: "conference" });
   bindFilterMenu();
   bindBranchNav();
   bindLibraryNav();
@@ -665,7 +666,7 @@ function renderResults(report, visiblePapers, sections) {
       activeFilters.length ? `of ${report.subject_distribution.length}` : "all subject buckets"
     ),
     renderResultStat(
-      "View Mode",
+      "Scope",
       state.focusOnly ? "Focus" : "Full scan",
       state.subject || state.topic || "cross-subject browsing"
     ),

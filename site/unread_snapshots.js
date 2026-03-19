@@ -1,9 +1,10 @@
 import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js?v=20260319-4";
 import { bindBranchAuthToolbar } from "./branch_auth.js?v=20260319-9";
-import { mountAppToolbar } from "./app_toolbar.js?v=20260319-11";
+import { mountAppToolbar } from "./app_toolbar.js?v=20260320-1";
 import { bindBranchNav } from "./branch_nav.js?v=20260319-4";
 import { bindLibraryNav } from "./library_nav.js?v=20260319-4";
 import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=20260319-13";
+import { initToolbarPreferences } from "./toolbar_preferences.js?v=20260320-1";
 
 mountAppToolbar("#unread-toolbar-root", {
   prefix: "unread",
@@ -50,7 +51,7 @@ init().catch((error) => {
 });
 
 async function init() {
-  bindThemeToggle();
+  initToolbarPreferences({ pageKey: "unread" });
   bindSearchInput();
   bindBranchAuthToolbar("unread");
   bindBranchNav();

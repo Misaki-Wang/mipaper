@@ -2,10 +2,11 @@ import { getSourceLabel, initLikesSync, readLikes, subscribeLikes } from "./like
 import { initQueue, readQueue, removeFromQueue, subscribeQueue } from "./paper_queue.js?v=20260319-5";
 import { movePaperToLikes, repairLikeLaterConflicts } from "./paper_selection.js?v=20260319-5";
 import { bindBranchAuthToolbar } from "./branch_auth.js?v=20260319-9";
-import { mountAppToolbar } from "./app_toolbar.js?v=20260319-11";
+import { mountAppToolbar } from "./app_toolbar.js?v=20260320-1";
 import { bindBranchNav } from "./branch_nav.js?v=20260319-4";
 import { bindLibraryNav } from "./library_nav.js?v=20260319-4";
 import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=20260319-13";
+import { initToolbarPreferences } from "./toolbar_preferences.js?v=20260320-1";
 
 mountAppToolbar("#queue-toolbar-root", {
   prefix: "queue",
@@ -53,7 +54,7 @@ init().catch((error) => {
 });
 
 async function init() {
-  bindThemeToggle();
+  initToolbarPreferences({ pageKey: "queue" });
   bindSearchInput();
   bindBranchAuthToolbar("queue");
   bindBranchNav();

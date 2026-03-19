@@ -160,6 +160,7 @@ function normalizeSavedViewRecord(record) {
 }
 
 function normalizeSavedViewFilters(value) {
+  const viewMode = String(value?.viewMode || "").trim().toLowerCase();
   return {
     source: String(value?.source || "").trim(),
     topic: String(value?.topic || "").trim(),
@@ -167,6 +168,7 @@ function normalizeSavedViewFilters(value) {
     workflowStatus: String(value?.workflowStatus || "").trim(),
     priorityLevel: String(value?.priorityLevel || "").trim(),
     query: String(value?.query || "").trim().toLowerCase(),
+    viewMode: viewMode === "list" ? "list" : "card",
   };
 }
 

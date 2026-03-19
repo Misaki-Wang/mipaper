@@ -12,18 +12,19 @@ import { getSupabaseClient, isSupabaseConfigured, loadRuntimeConfig } from "./su
 import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js?v=20260319-4";
 import { bindQueueButtons, initQueue, isInQueue, readQueue, subscribeQueue } from "./paper_queue.js?v=20260319-5";
 import { bindBranchAuthToolbar } from "./branch_auth.js?v=20260319-9";
-import { mountAppToolbar } from "./app_toolbar.js?v=20260319-11";
+import { mountAppToolbar } from "./app_toolbar.js?v=20260320-1";
 import { repairLikeLaterConflicts } from "./paper_selection.js?v=20260319-5";
 import { bindBranchNav } from "./branch_nav.js?v=20260319-4";
 import { bindLibraryNav } from "./library_nav.js?v=20260319-4";
 import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=20260319-13";
+import { initToolbarPreferences, setPageViewMode } from "./toolbar_preferences.js?v=20260320-1";
 import {
   initSavedViewsSync,
   readSavedViews as readSavedViewsStore,
   removeSavedView as removeSavedViewStore,
   subscribeSavedViews,
   upsertSavedView,
-} from "./like_saved_views_store.js?v=20260319-1";
+} from "./like_saved_views_store.js?v=20260319-2";
 
 mountAppToolbar("#like-toolbar-root", {
   prefix: "like",
@@ -42,6 +43,7 @@ const state = {
   workflowStatus: "",
   priorityLevel: "",
   query: "",
+  viewMode: "card",
   savedViews: [],
   selectedSavedViewId: "",
   savedViewDraftName: "",
@@ -118,6 +120,7 @@ const likeRecords = new Map();
 let toReadSyncPromise = null;
 let filterMenuOpen = false;
 const openWorkspaceEditors = new Set();
+const openListRowDetails = new Set();
 
 const LATER_PAGE_SIZE = 6;
 let laterPage = 0;
@@ -134,7 +137,17 @@ init().catch((error) => {
 async function init() {
   likeRecords.render = renderPage;
   state.savedViews = readSavedViewsStore();
-  bindThemeToggle();
+  state.viewMode = initToolbarPreferences({
+    pageKey: "like",
+    fallbackViewKeys: ["cool-paper-like-view-mode-v1"],
+    onViewModeChange: (mode) => {
+      if (state.viewMode === mode) {
+        return;
+      }
+      state.viewMode = mode;
+      renderPage();
+    },
+  });
   bindFilterMenu();
   bindBranchNav();
   bindLibraryNav();
@@ -896,8 +909,8 @@ function renderResults(likes, visibleLikes, sourceSections) {
     renderResultStat("Visible Groups", sourceSections.length, activeFilters.length ? "filtered" : "all groups"),
     renderResultStat(
       "View Mode",
-      activeCustomTag || getWorkflowStatusLabel(state.workflowStatus) || getPriorityLabel(state.priorityLevel) || state.topic || "Full scan",
-      state.query ? `search: ${state.query}` : "cross-group browsing"
+      state.viewMode === "list" ? "List" : "Gallery",
+      activeCustomTag || getWorkflowStatusLabel(state.workflowStatus) || getPriorityLabel(state.priorityLevel) || state.topic || (state.query ? `search: ${state.query}` : "cross-group browsing")
     ),
   ].join("");
   document.querySelector("#like-active-filters").innerHTML = activeFilters.length
@@ -944,8 +957,8 @@ function renderSourceSections(sections) {
                 <span>${escapeHtml(section.latest_snapshot || "No snapshot")}</span>
               </div>
             </div>
-            <div class="conference-paper-grid">
-              ${pageItems.map((paper) => renderLikeCard(paper)).join("")}
+            <div class="${state.viewMode === "list" ? "liked-paper-list" : "conference-paper-grid"}">
+              ${pageItems.map((paper) => (state.viewMode === "list" ? renderLikeListRow(paper) : renderLikeCard(paper))).join("")}
             </div>
             ${paginationHtml}
           </section>
@@ -966,19 +979,110 @@ function renderSourceSections(sections) {
       renderPage();
     });
   });
+
+  bindListRowDetails();
+}
+
+function bindListRowDetails() {
+  document.querySelectorAll("[data-like-row-details]").forEach((details) => {
+    if (details.dataset.bound === "true") {
+      return;
+    }
+    details.dataset.bound = "true";
+    details.addEventListener("toggle", () => {
+      const likeId = details.dataset.likeRowDetails;
+      if (!likeId) {
+        return;
+      }
+      const body = details.closest(".liked-paper-row")?.querySelector(".liked-paper-row-body");
+      if (details.open) {
+        openListRowDetails.add(likeId);
+        if (body) {
+          body.hidden = false;
+        }
+      } else {
+        openListRowDetails.delete(likeId);
+        if (body) {
+          body.hidden = true;
+        }
+      }
+    });
+  });
 }
 
 function renderLikeCard(paper) {
+  const view = buildLikePaperViewModel(paper);
+  const summaryNote = view.takeaway || view.nextAction || "";
+
+  return `
+    <article class="conference-paper-card liked-paper-card">
+      <div class="liked-paper-card-top">
+        <div class="conference-paper-top">${view.metaBadges}</div>
+        <div class="paper-links liked-paper-card-links">${view.links}</div>
+      </div>
+      <h4>${escapeHtml(view.paper.title)}</h4>
+      <div class="liked-paper-card-copy">
+        <p class="liked-paper-card-authors">${view.authors}</p>
+        ${summaryNote ? `<p class="liked-paper-card-note">${escapeHtml(summaryNote)}</p>` : ""}
+      </div>
+      ${view.abstract}
+      <div class="liked-paper-card-secondary">
+        ${renderCustomTagPanel(view)}
+        ${renderWorkspacePanel(view)}
+      </div>
+    </article>
+  `;
+}
+
+function renderLikeListRow(paper) {
+  const view = buildLikePaperViewModel(paper);
+  const rowOpen = openListRowDetails.has(view.paper.like_id);
+  const summaryText = view.takeaway || view.nextAction || view.paper.abstract || "No note yet.";
+
+  return `
+    <article class="liked-paper-row">
+      <div class="liked-paper-row-main">
+        <div class="liked-paper-row-copy">
+          <div class="liked-paper-row-top">${view.metaBadges}</div>
+          <h4>${escapeHtml(view.paper.title)}</h4>
+          <p class="liked-paper-row-authors">${view.authors}</p>
+          <p class="liked-paper-row-summary">${escapeHtml(summaryText)}</p>
+        </div>
+        <div class="liked-paper-row-actions">
+          <div class="paper-links liked-paper-row-links">${view.links}</div>
+          <details class="liked-paper-row-details" data-like-row-details="${escapeAttribute(view.paper.like_id)}"${rowOpen ? " open" : ""}>
+            <summary>
+              <span class="paper-abstract-label">Open details</span>
+              <span class="paper-abstract-arrow" aria-hidden="true">
+                <svg viewBox="0 0 20 20" width="14" height="14">
+                  <path d="M5.5 7.5L10 12l4.5-4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+                </svg>
+              </span>
+            </summary>
+          </details>
+        </div>
+      </div>
+      <div class="liked-paper-row-body"${rowOpen ? "" : " hidden"}>
+        ${view.abstract}
+        ${renderCustomTagPanel(view)}
+        ${renderWorkspacePanel(view)}
+      </div>
+    </article>
+  `;
+}
+
+function buildLikePaperViewModel(paper) {
   const inLater = isInQueue(paper.like_id);
   likeRecords.set(paper.like_id, {
-    paper: paper,
+    paper,
     context: {
       sourceKind: paper.source_kind,
       sourceLabel: getSourceLabel(paper.source_kind),
       sourcePage: paper.source_page,
       snapshotLabel: paper.snapshot_label,
-    }
+    },
   });
+
   const authors = paper.authors?.length ? escapeHtml(paper.authors.join(", ")) : "Unknown";
   const abstract = paper.abstract
     ? `
@@ -995,6 +1099,7 @@ function renderLikeCard(paper) {
       </details>
     `
     : "";
+
   const metaBadges = [
     `<span class="paper-badge">${escapeHtml(displayTopicLabel(paper.topic_label || "Other AI"))}</span>`,
     `<span class="paper-badge subdued">${escapeHtml(getSourceLabel(paper.source_kind))}</span>`,
@@ -1005,6 +1110,7 @@ function renderLikeCard(paper) {
   ]
     .filter(Boolean)
     .join("");
+
   const links = [
     getArxivUrl(paper) ? renderExternalPaperLink({ href: getArxivUrl(paper), label: "arXiv", brand: "arxiv" }) : "",
     getCoolUrl(paper) ? renderExternalPaperLink({ href: getCoolUrl(paper), label: "Cool", brand: "cool" }) : "",
@@ -1012,6 +1118,7 @@ function renderLikeCard(paper) {
   ]
     .filter(Boolean)
     .join("");
+
   const customTags = getPaperCustomTags(paper);
   const tagCatalog = collectCustomTagCatalog(state.likes);
   const tagChips = customTags.length
@@ -1033,6 +1140,7 @@ function renderLikeCard(paper) {
         )
         .join("")
     : `<span class="custom-tag-empty">No custom tags yet.</span>`;
+
   const tagOptions = tagCatalog
     .filter((tag) => !customTags.some((item) => item.key === tag.key))
     .map(
@@ -1049,6 +1157,7 @@ function renderLikeCard(paper) {
       `
     )
     .join("");
+
   const manageItems = tagCatalog.length
     ? tagCatalog
         .map((tag) => {
@@ -1093,6 +1202,7 @@ function renderLikeCard(paper) {
         })
         .join("")
     : `<span class="custom-tag-empty">No reusable tags yet.</span>`;
+
   const paletteButtons = CUSTOM_TAG_PALETTE.map(
     (color) => `
       <button
@@ -1107,148 +1217,161 @@ function renderLikeCard(paper) {
       </button>
     `
   ).join("");
+
   const statusOptions = WORKFLOW_STATUS_OPTIONS.map(
     (item) => `<option value="${escapeAttribute(item.value)}" ${getWorkflowStatusValue(paper.workflow_status) === item.value ? "selected" : ""}>${escapeHtml(item.label)}</option>`
   ).join("");
   const priorityOptions = PRIORITY_OPTIONS.map(
     (item) => `<option value="${escapeAttribute(item.value)}" ${getPriorityValue(paper.priority_level) === item.value ? "selected" : ""}>${escapeHtml(item.label)}</option>`
   ).join("");
-  const takeaway = paper.one_line_takeaway || "";
-  const nextAction = paper.next_action || "";
-  const workspaceEditorOpen = openWorkspaceEditors.has(paper.like_id);
 
+  return {
+    paper,
+    inLater,
+    authors,
+    abstract,
+    metaBadges,
+    links,
+    tagChips,
+    tagOptions,
+    manageItems,
+    paletteButtons,
+    statusOptions,
+    priorityOptions,
+    takeaway: paper.one_line_takeaway || "",
+    nextAction: paper.next_action || "",
+    workspaceEditorOpen: openWorkspaceEditors.has(paper.like_id),
+  };
+}
+
+function renderCustomTagPanel(view) {
   return `
-    <article class="conference-paper-card">
-      <div class="conference-paper-top">${metaBadges}</div>
-      <h4>${escapeHtml(paper.title)}</h4>
-      <div class="paper-authors-box">
-        <span class="paper-detail-label">Authors</span>
-        <p class="paper-authors-line">${authors}</p>
+    <section class="custom-tag-panel">
+      <div class="custom-tag-panel-top">
+        <span class="paper-detail-label">Custom Tags</span>
+        <button class="custom-tag-trigger" type="button" data-tag-toggle="${escapeAttribute(view.paper.like_id)}">Add Tag</button>
       </div>
-      ${abstract}
-      <section class="custom-tag-panel">
-        <div class="custom-tag-panel-top">
-          <span class="paper-detail-label">Custom Tags</span>
-          <button class="custom-tag-trigger" type="button" data-tag-toggle="${escapeAttribute(paper.like_id)}">Add Tag</button>
+      <div class="custom-tag-list">${view.tagChips}</div>
+      <div class="custom-tag-composer" data-tag-popover="${escapeAttribute(view.paper.like_id)}" hidden>
+        <div class="custom-tag-composer-field">
+          <input
+            class="custom-tag-input"
+            type="text"
+            data-tag-input="${escapeAttribute(view.paper.like_id)}"
+            placeholder="Search or create a tag"
+            autocomplete="off"
+            spellcheck="false"
+          />
+          <button class="custom-tag-create" type="button" data-tag-create="${escapeAttribute(view.paper.like_id)}">Create</button>
         </div>
-        <div class="custom-tag-list">${tagChips}</div>
-        <div class="custom-tag-composer" data-tag-popover="${escapeAttribute(paper.like_id)}" hidden>
-          <div class="custom-tag-composer-field">
+        <div class="custom-tag-composer-section">
+          <span class="custom-tag-section-label">Reuse tags</span>
+          <div class="custom-tag-options">
+            ${view.tagOptions || `<span class="custom-tag-empty">No reusable tags yet.</span>`}
+          </div>
+        </div>
+        <div class="custom-tag-composer-section">
+          <div class="custom-tag-section-heading">
+            <span class="custom-tag-section-label">Tag palette</span>
+            <span class="custom-tag-section-meta">Rename or recolor once, update everywhere</span>
+          </div>
+          <div class="custom-tag-library">
+            ${view.manageItems}
+          </div>
+        </div>
+        <div class="custom-tag-editor" data-tag-editor="${escapeAttribute(view.paper.like_id)}" hidden>
+          <input type="hidden" data-tag-edit-key-field="${escapeAttribute(view.paper.like_id)}" value="" />
+          <label class="custom-tag-editor-label">
+            <span class="custom-tag-section-label">Tag name</span>
             <input
               class="custom-tag-input"
               type="text"
-              data-tag-input="${escapeAttribute(paper.like_id)}"
-              placeholder="Search or create a tag"
+              data-tag-edit-label="${escapeAttribute(view.paper.like_id)}"
+              placeholder="Rename tag"
               autocomplete="off"
               spellcheck="false"
             />
-            <button class="custom-tag-create" type="button" data-tag-create="${escapeAttribute(paper.like_id)}">Create</button>
-          </div>
+          </label>
           <div class="custom-tag-composer-section">
-            <span class="custom-tag-section-label">Reuse tags</span>
-            <div class="custom-tag-options">
-              ${tagOptions || `<span class="custom-tag-empty">No reusable tags yet.</span>`}
+            <span class="custom-tag-section-label">Color</span>
+            <div class="custom-tag-color-grid">
+              ${view.paletteButtons}
             </div>
           </div>
           <div class="custom-tag-composer-section">
             <div class="custom-tag-section-heading">
-              <span class="custom-tag-section-label">Tag palette</span>
-              <span class="custom-tag-section-meta">Rename or recolor once, update everywhere</span>
-            </div>
-            <div class="custom-tag-library">
-              ${manageItems}
-            </div>
-          </div>
-          <div class="custom-tag-editor" data-tag-editor="${escapeAttribute(paper.like_id)}" hidden>
-            <input type="hidden" data-tag-edit-key-field="${escapeAttribute(paper.like_id)}" value="" />
-            <label class="custom-tag-editor-label">
-              <span class="custom-tag-section-label">Tag name</span>
-              <input
-                class="custom-tag-input"
-                type="text"
-                data-tag-edit-label="${escapeAttribute(paper.like_id)}"
-                placeholder="Rename tag"
-                autocomplete="off"
-                spellcheck="false"
-              />
-            </label>
-            <div class="custom-tag-composer-section">
-              <span class="custom-tag-section-label">Color</span>
-              <div class="custom-tag-color-grid">
-                ${paletteButtons}
-              </div>
-            </div>
-            <div class="custom-tag-composer-section">
-              <div class="custom-tag-section-heading">
-                <span class="custom-tag-section-label">Merge</span>
-                <span class="custom-tag-section-meta">Move papers from this tag into another tag</span>
-              </div>
-              <div class="custom-tag-editor-actions">
-                <select class="control-input custom-tag-merge-select" data-tag-merge-target="${escapeAttribute(paper.like_id)}">
-                  <option value="">Select target tag</option>
-                </select>
-                <button class="custom-tag-manage warn" type="button" data-tag-merge-apply="${escapeAttribute(paper.like_id)}">Merge</button>
-              </div>
+              <span class="custom-tag-section-label">Merge</span>
+              <span class="custom-tag-section-meta">Move papers from this tag into another tag</span>
             </div>
             <div class="custom-tag-editor-actions">
-              <button class="custom-tag-create" type="button" data-tag-edit-save="${escapeAttribute(paper.like_id)}">Save</button>
-              <button class="custom-tag-manage ghost" type="button" data-tag-edit-cancel="${escapeAttribute(paper.like_id)}">Cancel</button>
+              <select class="control-input custom-tag-merge-select" data-tag-merge-target="${escapeAttribute(view.paper.like_id)}">
+                <option value="">Select target tag</option>
+              </select>
+              <button class="custom-tag-manage warn" type="button" data-tag-merge-apply="${escapeAttribute(view.paper.like_id)}">Merge</button>
             </div>
           </div>
+          <div class="custom-tag-editor-actions">
+            <button class="custom-tag-create" type="button" data-tag-edit-save="${escapeAttribute(view.paper.like_id)}">Save</button>
+            <button class="custom-tag-manage ghost" type="button" data-tag-edit-cancel="${escapeAttribute(view.paper.like_id)}">Cancel</button>
+          </div>
         </div>
-      </section>
-      <section class="paper-workspace-panel">
-        <div class="paper-workspace-top">
-          <span class="paper-detail-label">Workspace</span>
-          <span class="paper-workspace-meta">${escapeHtml([inLater ? "Queued" : "", getWorkflowStatusLabel(paper.workflow_status), getPriorityLabel(paper.priority_level)].filter(Boolean).join(" · "))}</span>
-        </div>
-        <div class="paper-workspace-grid">
-          <article class="paper-workspace-card">
-            <span class="paper-detail-label">Takeaway</span>
-            <p>${escapeHtml(takeaway || "Capture the one-line reason this paper matters.")}</p>
-          </article>
-          <article class="paper-workspace-card">
-            <span class="paper-detail-label">Next Action</span>
-            <p>${escapeHtml(nextAction || "Leave a concrete follow-up step for yourself.")}</p>
-          </article>
-        </div>
-        <details class="paper-workspace-editor" data-workspace-editor-id="${escapeAttribute(paper.like_id)}"${workspaceEditorOpen ? " open" : ""}>
-          <summary>
-            <span class="paper-abstract-label">Manage and Think</span>
-            <span class="paper-abstract-arrow" aria-hidden="true">
-              <svg viewBox="0 0 20 20" width="14" height="14">
-                <path d="M5.5 7.5L10 12l4.5-4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
-              </svg>
-            </span>
-          </summary>
-          <div class="paper-workspace-form">
-            <div class="paper-workspace-fields">
-              <label class="paper-workspace-field">
-                <span class="paper-detail-label">Status</span>
-                <select class="control-input" data-workspace-status="${escapeAttribute(paper.like_id)}">
-                  ${statusOptions}
-                </select>
-              </label>
-              <label class="paper-workspace-field">
-                <span class="paper-detail-label">Priority</span>
-                <select class="control-input" data-workspace-priority="${escapeAttribute(paper.like_id)}">
-                  ${priorityOptions}
-                </select>
-              </label>
-            </div>
+      </div>
+    </section>
+  `;
+}
+
+function renderWorkspacePanel(view) {
+  return `
+    <section class="paper-workspace-panel">
+      <div class="paper-workspace-top">
+        <span class="paper-detail-label">Workspace</span>
+        <span class="paper-workspace-meta">${escapeHtml([view.inLater ? "Queued" : "", getWorkflowStatusLabel(view.paper.workflow_status), getPriorityLabel(view.paper.priority_level)].filter(Boolean).join(" · "))}</span>
+      </div>
+      <div class="paper-workspace-grid">
+        <article class="paper-workspace-card">
+          <span class="paper-detail-label">Takeaway</span>
+          <p>${escapeHtml(view.takeaway || "Capture the one-line reason this paper matters.")}</p>
+        </article>
+        <article class="paper-workspace-card">
+          <span class="paper-detail-label">Next Action</span>
+          <p>${escapeHtml(view.nextAction || "Leave a concrete follow-up step for yourself.")}</p>
+        </article>
+      </div>
+      <details class="paper-workspace-editor" data-workspace-editor-id="${escapeAttribute(view.paper.like_id)}"${view.workspaceEditorOpen ? " open" : ""}>
+        <summary>
+          <span class="paper-abstract-label">Edit notes</span>
+          <span class="paper-abstract-arrow" aria-hidden="true">
+            <svg viewBox="0 0 20 20" width="14" height="14">
+              <path d="M5.5 7.5L10 12l4.5-4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+            </svg>
+          </span>
+        </summary>
+        <div class="paper-workspace-form">
+          <div class="paper-workspace-fields">
             <label class="paper-workspace-field">
-              <span class="paper-detail-label">One-line takeaway</span>
-              <textarea class="paper-workspace-textarea" rows="2" data-workspace-takeaway="${escapeAttribute(paper.like_id)}" placeholder="What is the main reason to keep this paper?">${escapeHtml(takeaway)}</textarea>
+              <span class="paper-detail-label">Status</span>
+              <select class="control-input" data-workspace-status="${escapeAttribute(view.paper.like_id)}">
+                ${view.statusOptions}
+              </select>
             </label>
             <label class="paper-workspace-field">
-              <span class="paper-detail-label">Next action</span>
-              <textarea class="paper-workspace-textarea" rows="2" data-workspace-next-action="${escapeAttribute(paper.like_id)}" placeholder="What should future-you do with this paper?">${escapeHtml(nextAction)}</textarea>
+              <span class="paper-detail-label">Priority</span>
+              <select class="control-input" data-workspace-priority="${escapeAttribute(view.paper.like_id)}">
+                ${view.priorityOptions}
+              </select>
             </label>
           </div>
-        </details>
-      </section>
-      <div class="paper-links">${links}</div>
-    </article>
+          <label class="paper-workspace-field">
+            <span class="paper-detail-label">One-line takeaway</span>
+            <textarea class="paper-workspace-textarea" rows="2" data-workspace-takeaway="${escapeAttribute(view.paper.like_id)}" placeholder="What is the main reason to keep this paper?">${escapeHtml(view.takeaway)}</textarea>
+          </label>
+          <label class="paper-workspace-field">
+            <span class="paper-detail-label">Next action</span>
+            <textarea class="paper-workspace-textarea" rows="2" data-workspace-next-action="${escapeAttribute(view.paper.like_id)}" placeholder="What should future-you do with this paper?">${escapeHtml(view.nextAction)}</textarea>
+          </label>
+        </div>
+      </details>
+    </section>
   `;
 }
 
@@ -2117,6 +2240,7 @@ function renderEmpty(toReadSnapshots) {
 function normalizeFilterState(value) {
   const workflowStatus = String(value.workflowStatus || "").trim();
   const priorityLevel = String(value.priorityLevel || "").trim();
+  const viewMode = String(value.viewMode || "").trim().toLowerCase();
   return {
     source: String(value.source || "").trim(),
     topic: String(value.topic || "").trim(),
@@ -2124,6 +2248,7 @@ function normalizeFilterState(value) {
     workflowStatus: workflowStatus && WORKFLOW_STATUS_OPTIONS.some((item) => item.value === workflowStatus) ? workflowStatus : "",
     priorityLevel: priorityLevel && PRIORITY_OPTIONS.some((item) => item.value === priorityLevel) ? priorityLevel : "",
     query: String(value.query || "").trim().toLowerCase(),
+    viewMode: viewMode === "list" ? "list" : "card",
   };
 }
 
@@ -2135,6 +2260,7 @@ function getCurrentFilterState() {
     workflowStatus: state.workflowStatus,
     priorityLevel: state.priorityLevel,
     query: state.query,
+    viewMode: state.viewMode,
   });
 }
 
@@ -2147,7 +2273,8 @@ function areFilterStatesEqual(left, right) {
     nextLeft.customTag === nextRight.customTag &&
     nextLeft.workflowStatus === nextRight.workflowStatus &&
     nextLeft.priorityLevel === nextRight.priorityLevel &&
-    nextLeft.query === nextRight.query
+    nextLeft.query === nextRight.query &&
+    nextLeft.viewMode === nextRight.viewMode
   );
 }
 
@@ -2173,6 +2300,7 @@ function describeSavedView(filters) {
   if (normalized.query) {
     parts.push("Search");
   }
+  parts.push(normalized.viewMode === "list" ? "List" : "Gallery");
   return parts.length ? parts.join(" · ") : "Full scan";
 }
 
@@ -2190,6 +2318,8 @@ function applySavedView(viewId) {
   state.workflowStatus = filters.workflowStatus;
   state.priorityLevel = filters.priorityLevel;
   state.query = filters.query;
+  state.viewMode = filters.viewMode;
+  setPageViewMode("like", filters.viewMode, { persist: true, notify: false });
   sourceFilter.value = state.source;
   topicFilter.value = state.topic;
   customTagFilter.value = state.customTag;

@@ -2,11 +2,12 @@ import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, s
 import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js?v=20260319-9";
 import { bindQueueButtons, initQueue, isInQueue, subscribeQueue } from "./paper_queue.js?v=20260319-5";
 import { bindBranchAuthToolbar } from "./branch_auth.js?v=20260319-9";
-import { mountAppToolbar } from "./app_toolbar.js?v=20260319-11";
+import { mountAppToolbar } from "./app_toolbar.js?v=20260320-1";
 import { repairLikeLaterConflicts } from "./paper_selection.js?v=20260319-5";
 import { bindBranchNav } from "./branch_nav.js?v=20260319-4";
 import { bindLibraryNav } from "./library_nav.js?v=20260319-4";
 import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=20260319-13";
+import { initToolbarPreferences } from "./toolbar_preferences.js?v=20260320-1";
 
 mountAppToolbar("#trending-toolbar-root", {
   prefix: "trending",
@@ -49,7 +50,7 @@ init().catch((error) => {
 });
 
 async function init() {
-  bindThemeToggle();
+  initToolbarPreferences({ pageKey: "trending" });
   bindFilterMenu();
   bindBranchNav();
   bindLibraryNav();
@@ -460,7 +461,7 @@ function renderResults(report, visibleRepos) {
       new Set(visibleRepos.map((repo) => repo.language || "Unknown")).size,
       "source metadata only"
     ),
-    renderResultStat("View Mode", state.query ? "Search" : "Full scan", state.query ? "filtered search" : "full browsing"),
+    renderResultStat("Scope", state.query ? "Search" : "Full scan", state.query ? "filtered search" : "full browsing"),
   ].join("");
   document.querySelector("#trending-active-filters").innerHTML = activeFilters.length
     ? activeFilters.map((item) => `<span class="active-filter-pill">${escapeHtml(item)}</span>`).join("")

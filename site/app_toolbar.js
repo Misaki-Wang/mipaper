@@ -58,11 +58,6 @@ export function renderAppToolbar({
       </div>
       <div class="toolbar-end">
         ${renderToolbarAutoHide(prefix)}
-        <div class="hero-actions toolbar-theme-switch">
-          <button class="pill-button active" type="button" data-theme-toggle="auto">Auto</button>
-          <button class="pill-button" type="button" data-theme-toggle="light">Day</button>
-          <button class="pill-button" type="button" data-theme-toggle="dark">Night</button>
-        </div>
         ${renderAccountMenu(prefix)}
       </div>
     </header>
@@ -155,6 +150,23 @@ function renderAccountMenu(prefix) {
         </span>
       </button>
       <div id="${safePrefix}-sync-menu" class="account-menu-panel" hidden>
+        <section class="account-panel-section account-panel-preferences" aria-label="Display preferences">
+          <div class="account-panel-preference">
+            <span class="account-panel-preference-label">Theme</span>
+            <div class="hero-actions toolbar-theme-switch account-panel-switch">
+              <button class="pill-button active" type="button" data-theme-toggle="auto" aria-pressed="true">Auto</button>
+              <button class="pill-button" type="button" data-theme-toggle="light" aria-pressed="false">Day</button>
+              <button class="pill-button" type="button" data-theme-toggle="dark" aria-pressed="false">Night</button>
+            </div>
+          </div>
+          <div class="account-panel-preference">
+            <span class="account-panel-preference-label">View</span>
+            <div class="section-view-toggle toolbar-view-switch" role="tablist" aria-label="Page view mode">
+              <button class="pill-button" type="button" data-page-view-toggle="card" aria-pressed="true">Gallery</button>
+              <button class="pill-button" type="button" data-page-view-toggle="list" aria-pressed="false">List</button>
+            </div>
+          </div>
+        </section>
         <div id="${safePrefix}-account-card" class="account-card is-empty">
           <div class="account-avatar-shell" aria-hidden="true">
             <div class="account-avatar-fallback">?</div>
