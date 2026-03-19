@@ -28,7 +28,8 @@ export function bindToolbarQuickAdd(prefix, options = {}) {
 
   const setStatus = (message, tone = "idle", persist = false) => {
     window.clearTimeout(resetStatusTimer);
-    status.textContent = message;
+    status.textContent = formatStatusMessage(message, tone);
+    status.title = message || "";
     status.dataset.state = tone;
     status.hidden = !message;
     if (!message || persist) {
@@ -69,7 +70,7 @@ export function bindToolbarQuickAdd(prefix, options = {}) {
         const record = buildResolvedPaperRecord(parsed, resolved, existingLater);
 
         if (existingLater && hasMeaningfulMetadata(existingLater)) {
-          setStatus(`Already in Later · ${record.paper_id}`, "info");
+          setStatus("Already in Later", "info");
           input.value = "";
           return;
         }
@@ -87,7 +88,7 @@ export function bindToolbarQuickAdd(prefix, options = {}) {
           }
         );
         input.value = "";
-        setStatus(existingLater ? `Updated Later metadata · ${record.paper_id}` : `Added to Later · ${record.paper_id}`, "success");
+        setStatus(existingLater ? "Updated metadata" : "Added to Later", "success");
       } catch (error) {
         const message = error instanceof Error ? error.message : String(error || "Failed to add paper");
         setStatus(message, "error");
@@ -264,6 +265,26 @@ function normalizeComparableValue(value) {
 
 function normalizeText(value) {
   return String(value || "").replace(/\s+/g, " ").trim();
+}
+
+function formatStatusMessage(message, tone) {
+  const text = normalizeText(message);
+  if (!text) {
+    return "";
+  }
+  if (tone === "success" || tone === "info") {
+    return text;
+  }
+  if (/unsupported paper url/i.test(text)) {
+    return "Unsupported URL";
+  }
+  if (/lookup failed|failed to resolve|fetch failed/i.test(text)) {
+    return "Lookup failed";
+  }
+  if (/\b404\b/.test(text)) {
+    return "Lookup failed";
+  }
+  return text.length > 28 ? "Add failed" : text;
 }
 
 async function safeJson(response) {

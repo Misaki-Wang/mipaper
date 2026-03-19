@@ -196,7 +196,9 @@ code {
 }
 
 .toolbar-quick-add-shell {
+  position: relative;
   display: flex;
+  align-items: center;
   justify-content: center;
   flex: 1 1 auto;
   min-width: min(100%, 20rem);
@@ -205,7 +207,6 @@ code {
 
 .toolbar-quick-add {
   display: grid;
-  gap: 0.3rem;
   width: min(100%, 34rem);
   min-width: 0;
 }
@@ -301,24 +302,68 @@ code {
 }
 
 .toolbar-quick-add-status {
-  min-height: 1.05rem;
+  position: absolute;
+  top: calc(100% + 0.32rem);
+  left: 50%;
+  transform: translate(-50%, -0.22rem);
+  z-index: 12;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 1.65rem;
+  max-width: min(18rem, calc(100vw - 2rem));
   margin: 0;
-  padding-left: 0.2rem;
+  padding: 0.28rem 0.62rem;
+  border: 1px solid color-mix(in srgb, var(--border), var(--accent) 14%);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--surface-soft), white 12%);
   color: var(--muted);
   font-size: 0.72rem;
-  line-height: 1.35;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  box-shadow: 0 10px 22px rgba(16, 24, 40, 0.08);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.toolbar-quick-add-status::before {
+  content: "";
+  width: 0.42rem;
+  height: 0.42rem;
+  margin-right: 0.38rem;
+  border-radius: 999px;
+  background: currentColor;
+  opacity: 0.7;
+  flex: 0 0 auto;
+}
+
+.toolbar-quick-add-status[hidden] {
+  display: inline-flex;
+  opacity: 0;
+  transform: translate(-50%, -0.45rem);
 }
 
 .toolbar-quick-add-status[data-state="success"] {
   color: color-mix(in srgb, var(--accent-strong), #0a6b47 28%);
+  background: color-mix(in srgb, var(--accent-soft), white 18%);
+  border-color: color-mix(in srgb, var(--border), var(--accent) 24%);
 }
 
 .toolbar-quick-add-status[data-state="error"] {
   color: #b64a5c;
+  background: color-mix(in srgb, #f8d7dd, white 16%);
+  border-color: color-mix(in srgb, #e6a9b5, var(--border) 30%);
 }
 
 .toolbar-quick-add-status[data-state="info"] {
   color: color-mix(in srgb, var(--accent-strong), var(--text) 32%);
+  background: color-mix(in srgb, var(--surface-soft), white 18%);
+  border-color: color-mix(in srgb, var(--border), var(--accent-strong) 18%);
 }
 
 .back-to-top {

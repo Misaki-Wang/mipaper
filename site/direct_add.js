@@ -5,7 +5,7 @@ import { bindBranchAuthToolbar } from "./branch_auth.js?v=20260319-5";
 import { mountAppToolbar } from "./app_toolbar.js?v=20260319-11";
 import { bindBranchNav } from "./branch_nav.js?v=20260319-4";
 import { bindLibraryNav } from "./library_nav.js?v=20260319-4";
-import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=20260319-7";
+import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=20260319-8";
 
 mountAppToolbar("#direct-toolbar-root", {
   prefix: "direct",
