@@ -4036,23 +4036,21 @@ code {
 
 .liked-paper-card-copy {
   display: grid;
-  gap: 0.3rem;
+  gap: 0.48rem;
 }
 
-.liked-paper-card-authors,
 .liked-paper-card-note {
   margin: 0;
   line-height: 1.58;
 }
 
-.liked-paper-card-authors {
-  color: var(--muted);
-  font-size: 0.91rem;
-}
-
 .liked-paper-card-note {
   font-size: 0.94rem;
   color: color-mix(in srgb, var(--text), var(--muted) 36%);
+}
+
+.liked-paper-card-copy .paper-authors-box {
+  padding: 0.62rem 0.76rem;
 }
 
 .liked-paper-card-secondary {

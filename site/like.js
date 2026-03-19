@@ -1022,7 +1022,10 @@ function renderLikeCard(paper) {
       </div>
       <h4>${escapeHtml(view.paper.title)}</h4>
       <div class="liked-paper-card-copy">
-        <p class="liked-paper-card-authors">${view.authors}</p>
+        <div class="paper-authors-box">
+          <span class="paper-detail-label">Authors</span>
+          <p class="paper-authors-line">${view.authors}</p>
+        </div>
         ${summaryNote ? `<p class="liked-paper-card-note">${escapeHtml(summaryNote)}</p>` : ""}
       </div>
       ${view.abstract}
