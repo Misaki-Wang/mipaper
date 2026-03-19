@@ -1,10 +1,12 @@
 import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js?v=20260319-4";
-import { bindBranchAuthToolbar } from "./branch_auth.js?v=20260319-9";
-import { mountAppToolbar } from "./app_toolbar.js?v=20260320-1";
+import { bindBranchAuthToolbar } from "./branch_auth.js?v=20260320-1";
+import { mountAppToolbar } from "./app_toolbar.js?v=20260320-2";
 import { bindBranchNav } from "./branch_nav.js?v=20260319-4";
 import { bindLibraryNav } from "./library_nav.js?v=20260319-4";
 import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=20260319-13";
+import { bindFilterMenu } from "./page_shell.js?v=20260320-1";
 import { initToolbarPreferences } from "./toolbar_preferences.js?v=20260320-1";
+import { escapeAttribute, escapeHtml, fetchJson, getErrorMessage } from "./ui_utils.js?v=20260320-2";
 
 mountAppToolbar("#unread-toolbar-root", {
   prefix: "unread",
@@ -32,7 +34,6 @@ const filterMenuPanel = document.querySelector("#unread-filters-menu");
 let page = 0;
 let snapshots = [];
 let searchQuery = "";
-let filterMenuOpen = false;
 
 const TOPIC_LABEL_TRANSLATIONS = new Map([
   ["多模态理解与视觉", "Multimodal Understanding and Vision"],
@@ -57,7 +58,12 @@ init().catch((error) => {
 
 async function init() {
   initToolbarPreferences({ pageKey: "unread" });
-  bindFilterMenu();
+  bindFilterMenu({
+    button: sidebarToggleButton,
+    panel: filterMenuPanel,
+    labelNode: sidebarToggleLabel,
+    iconNode: sidebarToggleIcon,
+  });
   bindSearchInput();
   bindBranchAuthToolbar("unread");
   bindBranchNav();
@@ -67,82 +73,6 @@ async function init() {
   await initReviewSync();
   snapshots = await loadSnapshotQueueData();
   renderPage();
-}
-
-function bindFilterMenu() {
-  if (!sidebarToggleButton || !filterMenuPanel) {
-    return;
-  }
-
-  sidebarToggleButton.addEventListener("click", (event) => {
-    event.stopPropagation();
-    setFilterMenuOpen(!filterMenuOpen);
-  });
-
-  document.addEventListener("click", (event) => {
-    if (!filterMenuOpen) {
-      return;
-    }
-    if (filterMenuPanel.contains(event.target) || sidebarToggleButton.contains(event.target)) {
-      return;
-    }
-    setFilterMenuOpen(false);
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && filterMenuOpen) {
-      setFilterMenuOpen(false);
-    }
-  });
-
-  setFilterMenuOpen(false);
-}
-
-function setFilterMenuOpen(open) {
-  filterMenuOpen = open;
-  if (!sidebarToggleButton || !filterMenuPanel) {
-    return;
-  }
-  sidebarToggleButton.setAttribute("aria-expanded", String(open));
-  sidebarToggleButton.setAttribute("aria-label", open ? "Close filters" : "Open filters");
-  sidebarToggleButton.title = open ? "Close filters" : "Open filters";
-  sidebarToggleLabel.textContent = "Filters";
-  sidebarToggleIcon.textContent = "☰";
-  filterMenuPanel.hidden = !open;
-}
-
-function bindThemeToggle() {
-  const toggles = [...document.querySelectorAll("[data-theme-toggle]")];
-  const systemQuery = window.matchMedia("(prefers-color-scheme: dark)");
-  const initial = localStorage.getItem("cool-paper-theme") || "auto";
-  applyTheme(initial);
-
-  toggles.forEach((button) => {
-    button.addEventListener("click", () => applyTheme(button.dataset.themeToggle));
-  });
-
-  const handleSystemThemeChange = () => {
-    const current = localStorage.getItem("cool-paper-theme") || "auto";
-    if (current === "auto") {
-      applyTheme("auto", false);
-    }
-  };
-
-  if (typeof systemQuery.addEventListener === "function") {
-    systemQuery.addEventListener("change", handleSystemThemeChange);
-  } else if (typeof systemQuery.addListener === "function") {
-    systemQuery.addListener(handleSystemThemeChange);
-  }
-
-  function applyTheme(mode, persist = true) {
-    const resolvedTheme = mode === "auto" ? (systemQuery.matches ? "dark" : "light") : mode;
-    document.documentElement.dataset.theme = resolvedTheme;
-    document.documentElement.dataset.themeMode = mode;
-    if (persist) {
-      localStorage.setItem("cool-paper-theme", mode);
-    }
-    toggles.forEach((button) => button.classList.toggle("active", button.dataset.themeToggle === mode));
-  }
 }
 
 function renderPage() {
@@ -284,7 +214,7 @@ function filterSnapshots(snapshotsToFilter) {
 }
 
 function renderFatal(error) {
-  const message = error instanceof Error ? error.message : String(error);
+  const message = getErrorMessage(error);
   if (summaryNode) {
     summaryNode.textContent = "Unread snapshot page failed to load.";
   }
@@ -429,25 +359,4 @@ function displayTopicLabel(value) {
     return "Other AI";
   }
   return TOPIC_LABEL_TRANSLATIONS.get(label) || label;
-}
-
-async function fetchJson(url) {
-  const response = await fetch(url, { cache: "no-store" });
-  if (!response.ok) {
-    throw new Error(`Failed to load ${url}: ${response.status}`);
-  }
-  return response.json();
-}
-
-function escapeHtml(value) {
-  return String(value ?? "")
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#39;");
-}
-
-function escapeAttribute(value) {
-  return escapeHtml(value).replaceAll("`", "&#96;");
 }

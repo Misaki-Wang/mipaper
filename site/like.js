@@ -11,13 +11,15 @@ import {
 import { getSupabaseClient, isSupabaseConfigured, loadRuntimeConfig } from "./supabase.js";
 import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js?v=20260319-4";
 import { bindQueueButtons, initQueue, isInQueue, readQueue, subscribeQueue } from "./paper_queue.js?v=20260319-5";
-import { bindBranchAuthToolbar } from "./branch_auth.js?v=20260319-9";
-import { mountAppToolbar } from "./app_toolbar.js?v=20260320-1";
+import { bindBranchAuthToolbar } from "./branch_auth.js?v=20260320-1";
+import { mountAppToolbar } from "./app_toolbar.js?v=20260320-2";
 import { repairLikeLaterConflicts } from "./paper_selection.js?v=20260319-5";
 import { bindBranchNav } from "./branch_nav.js?v=20260319-4";
 import { bindLibraryNav } from "./library_nav.js?v=20260319-4";
 import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=20260319-13";
 import { initToolbarPreferences, setPageViewMode } from "./toolbar_preferences.js?v=20260320-1";
+import { bindBackToTop, bindFilterMenu } from "./page_shell.js?v=20260320-1";
+import { escapeAttribute, escapeHtml, fetchJson, formatDateTime, getErrorMessage } from "./ui_utils.js?v=20260320-2";
 import {
   initSavedViewsSync,
   readSavedViews as readSavedViewsStore,
@@ -99,6 +101,18 @@ const PRIORITY_OPTIONS = [
   { value: "medium", label: "Medium" },
   { value: "low", label: "Low" },
 ];
+const LIKE_TIME_FORMAT = {
+  locale: "en-US",
+  emptyValue: "-",
+  fallbackToOriginal: false,
+  formatOptions: {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+  },
+};
 
 const sourceFilter = document.querySelector("#like-source-filter");
 const topicFilter = document.querySelector("#like-topic-filter");
@@ -118,7 +132,6 @@ const filterMenuPanel = document.querySelector("#like-filters-menu");
 const backToTopButton = document.querySelector("#like-back-to-top");
 const likeRecords = new Map();
 let toReadSyncPromise = null;
-let filterMenuOpen = false;
 const openWorkspaceEditors = new Set();
 const openListRowDetails = new Set();
 
@@ -148,12 +161,17 @@ async function init() {
       renderPage();
     },
   });
-  bindFilterMenu();
+  bindFilterMenu({
+    button: sidebarToggleButton,
+    panel: filterMenuPanel,
+    labelNode: sidebarToggleLabel,
+    iconNode: sidebarToggleIcon,
+  });
   bindBranchNav();
   bindLibraryNav();
   bindToolbarQuickAdd("like", { target: "later" });
   bindBranchAuthToolbar("like");
-  bindBackToTop();
+  bindBackToTop(backToTopButton);
   bindFilters();
   bindSavedViews();
   subscribeAuth((snapshot) => {
@@ -180,99 +198,6 @@ async function init() {
   state.likes = readLikes();
   renderPage();
   scheduleToReadSnapshotSync();
-}
-
-function bindThemeToggle() {
-  const toggles = [...document.querySelectorAll("[data-theme-toggle]")];
-  const systemQuery = window.matchMedia("(prefers-color-scheme: dark)");
-  const initial = localStorage.getItem("cool-paper-theme") || "auto";
-  applyTheme(initial);
-
-  toggles.forEach((button) => {
-    button.addEventListener("click", () => applyTheme(button.dataset.themeToggle));
-  });
-
-  const handleSystemThemeChange = () => {
-    const current = localStorage.getItem("cool-paper-theme") || "auto";
-    if (current === "auto") {
-      applyTheme("auto", false);
-    }
-  };
-
-  if (typeof systemQuery.addEventListener === "function") {
-    systemQuery.addEventListener("change", handleSystemThemeChange);
-  } else if (typeof systemQuery.addListener === "function") {
-    systemQuery.addListener(handleSystemThemeChange);
-  }
-
-  function applyTheme(mode, persist = true) {
-    const resolvedTheme = mode === "auto" ? (systemQuery.matches ? "dark" : "light") : mode;
-    document.documentElement.dataset.theme = resolvedTheme;
-    document.documentElement.dataset.themeMode = mode;
-    if (persist) {
-      localStorage.setItem("cool-paper-theme", mode);
-    }
-    toggles.forEach((button) => button.classList.toggle("active", button.dataset.themeToggle === mode));
-  }
-}
-
-function bindFilterMenu() {
-  if (!sidebarToggleButton || !filterMenuPanel) {
-    return;
-  }
-
-  sidebarToggleButton.addEventListener("click", (event) => {
-    event.stopPropagation();
-    setFilterMenuOpen(!filterMenuOpen);
-  });
-
-  document.addEventListener("click", (event) => {
-    if (!filterMenuOpen) {
-      return;
-    }
-    if (filterMenuPanel.contains(event.target) || sidebarToggleButton.contains(event.target)) {
-      return;
-    }
-    setFilterMenuOpen(false);
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && filterMenuOpen) {
-      setFilterMenuOpen(false);
-    }
-  });
-
-  setFilterMenuOpen(false);
-}
-
-function setFilterMenuOpen(open) {
-  filterMenuOpen = open;
-  if (!sidebarToggleButton || !filterMenuPanel) {
-    return;
-  }
-  sidebarToggleButton.setAttribute("aria-expanded", String(open));
-  sidebarToggleButton.setAttribute("aria-label", open ? "Close filters" : "Open filters");
-  sidebarToggleButton.title = open ? "Close filters" : "Open filters";
-  sidebarToggleLabel.textContent = "Filters";
-  sidebarToggleIcon.textContent = "☰";
-  filterMenuPanel.hidden = !open;
-}
-
-function bindBackToTop() {
-  const threshold = 720;
-
-  function updateVisibility() {
-    const visible = window.scrollY > threshold;
-    backToTopButton.classList.toggle("is-visible", visible);
-    backToTopButton.setAttribute("aria-hidden", String(!visible));
-  }
-
-  backToTopButton.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-
-  window.addEventListener("scroll", updateVisibility, { passive: true });
-  updateVisibility();
 }
 
 function bindFilters() {
@@ -582,7 +507,7 @@ function renderOverview(likes, visibleLikes, sourceSections, toReadSnapshots) {
     ? `${escapeHtml(topSource.group_label)} currently has the most liked papers, with ${topSource.liked_count} papers.`
     : "No visible groups yet.";
   document.querySelector("#like-latest-summary").textContent = latest
-    ? `${formatTime(latest.liked_at || latest.saved_at)} liked from ${escapeHtml(getSourceLabel(latest.source_kind))}.`
+    ? `${formatDateTime(latest.liked_at || latest.saved_at, LIKE_TIME_FORMAT)} liked from ${escapeHtml(getSourceLabel(latest.source_kind))}.`
     : "No latest like record yet.";
 }
 
@@ -2102,7 +2027,7 @@ function groupBySource(likes) {
         group_label: getLibraryGroupLabel(group_key),
         liked_count: papers.length,
         latest_snapshot: papers[0]?.snapshot_label || "",
-        latest_liked: formatTime(papers[0]?.liked_at || papers[0]?.saved_at),
+        latest_liked: formatDateTime(papers[0]?.liked_at || papers[0]?.saved_at, LIKE_TIME_FORMAT),
         top_topic: distribution[0]?.topic_label || "",
         papers,
       };
@@ -2359,28 +2284,9 @@ function createSavedViewId() {
 }
 
 function renderFatal(error) {
-  const message = error instanceof Error ? error.message : String(error);
+  const message = getErrorMessage(error);
   document.querySelector("#like-source-sections").innerHTML =
     `<div class="glass-card empty-state">Like page failed to load: ${escapeHtml(message)}</div>`;
-}
-
-function formatTime(value) {
-  if (!value) {
-    return "-";
-  }
-  const date = new Date(value);
-  if (Number.isNaN(date.getTime())) {
-    return "-";
-  }
-  return date
-    .toLocaleString("en-US", {
-      year: "numeric",
-      month: "2-digit",
-      day: "2-digit",
-      hour: "2-digit",
-      minute: "2-digit",
-    })
-    .replace(/\//g, "/");
 }
 
 function displayTopicLabel(value) {
@@ -2631,14 +2537,6 @@ function createTrendingSnapshot(report) {
   };
 }
 
-async function fetchJson(url) {
-  const response = await fetch(url, { cache: "no-store" });
-  if (!response.ok) {
-    throw new Error(`Failed to load ${url}: ${response.status}`);
-  }
-  return response.json();
-}
-
 function formatWeekLabel(dateString) {
   if (!dateString) {
     return "-";
@@ -2661,17 +2559,4 @@ function getIsoWeekParts(dateString) {
   const yearStart = new Date(Date.UTC(year, 0, 1));
   const week = Math.ceil((((date - yearStart) / 86400000) + 1) / 7);
   return { year, week };
-}
-
-function escapeHtml(value) {
-  return String(value ?? "")
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#39;");
-}
-
-function escapeAttribute(value) {
-  return escapeHtml(value).replaceAll("`", "&#96;");
 }

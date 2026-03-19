@@ -1,5 +1,6 @@
 import json
 import tempfile
+import time
 import unittest
 from pathlib import Path
 
@@ -77,6 +78,48 @@ class SiteDataTest(unittest.TestCase):
                 manifest["reports"][0]["data_path"],
             )
             self.assertTrue((site_data_dir / "daily" / "reports" / "2026-03-06" / "cs.AI-2026-03-06.json").exists())
+
+    def test_build_site_manifest_keeps_unchanged_reports_and_removes_stale_json(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            reports_dir = root / "reports" / "daily"
+            site_data_dir = root / "site" / "data"
+            reports_dir.mkdir(parents=True)
+
+            report_path = reports_dir / "2026-03-06" / "cs.AI-2026-03-06.json"
+            report_path.parent.mkdir(parents=True, exist_ok=True)
+            report_path.write_text(
+                json.dumps(
+                    {
+                        "generated_at": "2026-03-09T10:00:00Z",
+                        "category": "cs.AI",
+                        "report_date": "2026-03-06",
+                        "source_url": "https://example.com",
+                        "classifier": "rule",
+                        "total_papers": 10,
+                        "focus_topics": [{"topic_key": "a", "topic_label": "A", "count": 1, "share": 10.0}],
+                        "topic_distribution": [{"topic_label": "A", "count": 5, "share": 50.0}],
+                        "topics": [],
+                        "papers": [],
+                    },
+                    ensure_ascii=False,
+                ),
+                encoding="utf-8",
+            )
+
+            build_site_manifest(reports_dir, site_data_dir)
+            copied_path = site_data_dir / "daily" / "reports" / "2026-03-06" / "cs.AI-2026-03-06.json"
+            stale_path = site_data_dir / "daily" / "reports" / "2026-03-01" / "stale.json"
+            stale_path.parent.mkdir(parents=True, exist_ok=True)
+            stale_path.write_text("{}", encoding="utf-8")
+
+            initial_mtime = copied_path.stat().st_mtime_ns
+            time.sleep(0.01)
+
+            build_site_manifest(reports_dir, site_data_dir)
+
+            self.assertEqual(initial_mtime, copied_path.stat().st_mtime_ns)
+            self.assertFalse(stale_path.exists())
 
 
 if __name__ == "__main__":

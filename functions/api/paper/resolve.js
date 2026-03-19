@@ -201,7 +201,7 @@ function extractMetaContents(htmlText, name) {
 
   while ((match = tagPattern.exec(htmlText))) {
     const tag = match[0];
-    const metaName = getMetaAttribute(tag, "name");
+    const metaName = getMetaAttribute(tag, "name") || getMetaAttribute(tag, "property");
     if (!metaName || metaName.toLowerCase() !== name.toLowerCase()) {
       continue;
     }

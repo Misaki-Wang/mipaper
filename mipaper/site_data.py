@@ -1,9 +1,8 @@
 from __future__ import annotations
 
-import json
 from pathlib import Path
 
-from mipaper.branch_site_data import BranchManifestResult, build_branch_manifest
+from mipaper.branch_site_data import BranchManifestResult, build_branch_manifest, write_json_if_changed
 
 
 PREFERRED_CATEGORY_ORDER = ["cs.AI", "cs.CL", "cs.CV"]
@@ -46,7 +45,7 @@ def build_site_manifest(reports_dir: Path, site_data_dir: Path) -> BranchManifes
     result.manifest["default_report_path"] = latest_by_category[0]["data_path"] if latest_by_category else (
         result.manifest["reports"][0]["data_path"] if result.manifest["reports"] else ""
     )
-    result.manifest_path.write_text(json.dumps(result.manifest, ensure_ascii=False, indent=2), encoding="utf-8")
+    write_json_if_changed(result.manifest_path, result.manifest)
     return result
 
 

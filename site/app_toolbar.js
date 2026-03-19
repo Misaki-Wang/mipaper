@@ -1,3 +1,5 @@
+import { escapeAttribute, escapeHtml } from "./ui_utils.js?v=20260320-2";
+
 const BRANCH_NAV_ITEMS = [
   { key: "hf", href: "./hf-daily.html", label: "HF" },
   { key: "cool", href: "./cool-daily.html", label: "Cool" },
@@ -204,15 +206,4 @@ function resolveRoot(rootOrSelector) {
     return document.querySelector(rootOrSelector);
   }
   return rootOrSelector;
-}
-
-function escapeHtml(value) {
-  return String(value ?? "")
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;");
-}
-
-function escapeAttribute(value) {
-  return escapeHtml(value).replaceAll('"', "&quot;").replaceAll("'", "&#39;");
 }

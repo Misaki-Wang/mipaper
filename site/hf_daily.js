@@ -3,12 +3,16 @@ import { bindQueueButtons, initQueue, subscribeQueue } from "./paper_queue.js?v=
 import { repairLikeLaterConflicts } from "./paper_selection.js?v=20260319-5";
 import { createCalendarPicker } from "./calendar_picker.js";
 import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js?v=20260319-4";
-import { bindBranchAuthToolbar } from "./branch_auth.js?v=20260319-9";
-import { mountAppToolbar } from "./app_toolbar.js?v=20260320-1";
+import { bindBranchAuthToolbar } from "./branch_auth.js?v=20260320-1";
+import { mountAppToolbar } from "./app_toolbar.js?v=20260320-2";
 import { bindBranchNav } from "./branch_nav.js?v=20260319-4";
 import { bindLibraryNav } from "./library_nav.js?v=20260319-4";
 import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=20260319-13";
 import { initToolbarPreferences } from "./toolbar_preferences.js?v=20260320-1";
+import { bindBackToTop, bindFilterMenu } from "./page_shell.js?v=20260320-1";
+import { createLatestTaskRunner } from "./request_gate.js?v=20260320-1";
+import { createFloatingTocController } from "./floating_toc.js?v=20260320-1";
+import { escapeAttribute, escapeHtml, fetchJson, formatZhTime, getErrorMessage } from "./ui_utils.js?v=20260320-2";
 
 mountAppToolbar("#hf-toolbar-root", {
   prefix: "hf",
@@ -54,9 +58,9 @@ const reviewToggleButton = document.querySelector("#hf-review-toggle");
 const reviewToggleMeta = document.querySelector("#hf-review-toggle-meta");
 const heroReviewStatus = document.querySelector("#hf-hero-review-status");
 const likeRecords = new Map();
-let tocObserver = null;
 let datePicker = null;
-let filterMenuOpen = false;
+const runLatestReportLoad = createLatestTaskRunner();
+const floatingToc = createFloatingTocController(floatingTocRoot);
 
 init().catch((error) => {
   console.error(error);
@@ -65,12 +69,17 @@ init().catch((error) => {
 
 async function init() {
   initToolbarPreferences({ pageKey: "hf" });
-  bindFilterMenu();
+  bindFilterMenu({
+    button: sidebarToggleButton,
+    panel: filterMenuPanel,
+    labelNode: sidebarToggleLabel,
+    iconNode: sidebarToggleIcon,
+  });
   bindBranchNav();
   bindLibraryNav();
   bindToolbarQuickAdd("hf", { target: "later" });
   bindBranchAuthToolbar("hf");
-  bindBackToTop();
+  bindBackToTop(backToTopButton);
   bindFilters();
   bindReviewToggle();
   bindCadenceViewToggle();
@@ -90,99 +99,6 @@ async function init() {
   }
 
   await loadReport(manifest.default_report_path || manifest.reports[0].data_path);
-}
-
-function bindFilterMenu() {
-  if (!sidebarToggleButton || !filterMenuPanel) {
-    return;
-  }
-
-  sidebarToggleButton.addEventListener("click", (event) => {
-    event.stopPropagation();
-    setFilterMenuOpen(!filterMenuOpen);
-  });
-
-  document.addEventListener("click", (event) => {
-    if (!filterMenuOpen) {
-      return;
-    }
-    if (filterMenuPanel.contains(event.target) || sidebarToggleButton.contains(event.target)) {
-      return;
-    }
-    setFilterMenuOpen(false);
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && filterMenuOpen) {
-      setFilterMenuOpen(false);
-    }
-  });
-
-  setFilterMenuOpen(false);
-}
-
-function setFilterMenuOpen(open) {
-  filterMenuOpen = open;
-  if (!sidebarToggleButton || !filterMenuPanel) {
-    return;
-  }
-  sidebarToggleButton.setAttribute("aria-expanded", String(open));
-  sidebarToggleButton.setAttribute("aria-label", open ? "Close filters" : "Open filters");
-  sidebarToggleButton.title = open ? "Close filters" : "Open filters";
-  sidebarToggleLabel.textContent = "Filters";
-  sidebarToggleIcon.textContent = "☰";
-  filterMenuPanel.hidden = !open;
-}
-
-function bindThemeToggle() {
-  const toggles = [...document.querySelectorAll("[data-theme-toggle]")];
-  const systemQuery = window.matchMedia("(prefers-color-scheme: dark)");
-  const initial = localStorage.getItem("cool-paper-theme") || "auto";
-  applyTheme(initial);
-
-  toggles.forEach((button) => {
-    button.addEventListener("click", () => applyTheme(button.dataset.themeToggle));
-  });
-
-  const handleSystemThemeChange = () => {
-    const current = localStorage.getItem("cool-paper-theme") || "auto";
-    if (current === "auto") {
-      applyTheme("auto", false);
-    }
-  };
-
-  if (typeof systemQuery.addEventListener === "function") {
-    systemQuery.addEventListener("change", handleSystemThemeChange);
-  } else if (typeof systemQuery.addListener === "function") {
-    systemQuery.addListener(handleSystemThemeChange);
-  }
-
-  function applyTheme(mode, persist = true) {
-    const resolvedTheme = mode === "auto" ? (systemQuery.matches ? "dark" : "light") : mode;
-    document.documentElement.dataset.theme = resolvedTheme;
-    document.documentElement.dataset.themeMode = mode;
-    if (persist) {
-      localStorage.setItem("cool-paper-theme", mode);
-    }
-    toggles.forEach((button) => button.classList.toggle("active", button.dataset.themeToggle === mode));
-  }
-}
-
-function bindBackToTop() {
-  const threshold = 720;
-
-  function updateVisibility() {
-    const visible = window.scrollY > threshold;
-    backToTopButton.classList.toggle("is-visible", visible);
-    backToTopButton.setAttribute("aria-hidden", String(!visible));
-  }
-
-  backToTopButton.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-
-  window.addEventListener("scroll", updateVisibility, { passive: true });
-  updateVisibility();
 }
 
 function bindReviewToggle() {
@@ -315,7 +231,11 @@ function syncCadenceViewButtons() {
 }
 
 async function loadReport(path) {
-  const report = await fetchJson(path);
+  const result = await runLatestReportLoad(() => fetchJson(path));
+  if (result.stale) {
+    return;
+  }
+  const report = result.value;
   state.report = report;
   state.currentPath = path;
   state.query = "";
@@ -418,7 +338,7 @@ function renderHero(report, visiblePapers) {
   document.querySelector("#hf-hero-total").textContent = String(report.total_papers);
   document.querySelector("#hf-hero-submitter").textContent = topSubmitter?.submitted_by || "-";
   document.querySelector("#hf-hero-classifier").textContent = report.classifier;
-  document.querySelector("#hf-hero-updated").textContent = formatTime(report.generated_at);
+  document.querySelector("#hf-hero-updated").textContent = formatZhTime(report.generated_at);
   document.querySelector("#hf-hero-signals").innerHTML = [
     `<div class="signal-chip"><span>Top Topic</span><strong>${escapeHtml(topTopic?.topic_label || "-")}</strong></div>`,
     `<div class="signal-chip"><span>Top Submitter</span><strong>${escapeHtml(topSubmitter?.submitted_by || "-")}</strong></div>`,
@@ -936,29 +856,8 @@ function renderEmpty() {
   renderFloatingToc([]);
 }
 
-async function fetchJson(url) {
-  const response = await fetch(url, { cache: "no-store" });
-  if (!response.ok) {
-    throw new Error(`Failed to load ${url}: ${response.status}`);
-  }
-  return response.json();
-}
-
-function formatTime(isoString) {
-  if (!isoString) {
-    return "-";
-  }
-  return new Intl.DateTimeFormat("zh-CN", {
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-    hour: "2-digit",
-    minute: "2-digit",
-  }).format(new Date(isoString));
-}
-
 function renderFatal(error) {
-  const message = error instanceof Error ? error.message : String(error);
+  const message = getErrorMessage(error);
   const resultsTitle = document.querySelector("#hf-results-title");
   if (resultsTitle) {
     resultsTitle.textContent = "HF Daily page failed to load";
@@ -971,77 +870,7 @@ function renderFatal(error) {
 }
 
 function renderFloatingToc(items) {
-  if (!floatingTocRoot) {
-    return;
-  }
-  if (!items.length) {
-    tocObserver?.disconnect();
-    floatingTocRoot.innerHTML = `<span class="empty-state">No sections available yet.</span>`;
-    return;
-  }
-
-  floatingTocRoot.innerHTML = items
-    .map(
-      (item) => `
-        <a class="floating-toc-link${item.child ? " is-child" : ""}" href="#${escapeAttribute(item.id)}" data-toc-target="${escapeAttribute(
-          item.id
-        )}">
-          <span>${escapeHtml(item.label)}</span>
-        </a>
-      `
-    )
-    .join("");
-
-  floatingTocRoot.querySelectorAll("[data-toc-target]").forEach((link) => {
-    link.addEventListener("click", (event) => {
-      event.preventDefault();
-      document.getElementById(link.dataset.tocTarget)?.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
-  });
-
-  bindTocObserver(items.map((item) => item.id));
-}
-
-function bindTocObserver(ids) {
-  tocObserver?.disconnect();
-  const links = [...floatingTocRoot.querySelectorAll("[data-toc-target]")];
-  const sections = ids.map((id) => document.getElementById(id)).filter(Boolean);
-  if (!sections.length) {
-    return;
-  }
-
-  tocObserver = new IntersectionObserver(
-    (entries) => {
-      const visible = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((left, right) => right.intersectionRatio - left.intersectionRatio)[0];
-      if (!visible) {
-        return;
-      }
-      const activeId = visible.target.id;
-      links.forEach((link) => link.classList.toggle("active", link.dataset.tocTarget === activeId));
-    },
-    {
-      rootMargin: "-25% 0px -55% 0px",
-      threshold: [0.1, 0.3, 0.6],
-    }
-  );
-
-  sections.forEach((section) => tocObserver.observe(section));
-  links.forEach((link, index) => link.classList.toggle("active", index === 0));
-}
-
-function escapeHtml(value) {
-  return String(value)
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#39;");
-}
-
-function escapeAttribute(value) {
-  return escapeHtml(value);
+  floatingToc.render(items);
 }
 
 function sectionIdFromTopic(topic) {

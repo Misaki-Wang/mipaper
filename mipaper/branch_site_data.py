@@ -25,9 +25,63 @@ def load_reports(reports_dir: Path, sort_key: Callable[[dict], object]) -> List[
     return reports
 
 
-def clear_generated_json(directory: Path) -> None:
+def copy_file_if_changed(source_path: Path, destination_path: Path) -> None:
+    destination_path.parent.mkdir(parents=True, exist_ok=True)
+    if destination_path.exists():
+        source_size = source_path.stat().st_size
+        destination_size = destination_path.stat().st_size
+        if source_size == destination_size and source_path.read_bytes() == destination_path.read_bytes():
+            return
+    shutil.copyfile(source_path, destination_path)
+
+
+def write_json_if_changed(path: Path, payload: dict) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    existing_text = path.read_text(encoding="utf-8") if path.exists() else ""
+    serialized = json.dumps(payload, ensure_ascii=False, indent=2)
+    if existing_text == serialized:
+        return
+
+    preserved_payload = preserve_generated_at_if_unchanged(existing_text, payload)
+    serialized = json.dumps(preserved_payload, ensure_ascii=False, indent=2)
+    if existing_text == serialized:
+        return
+    path.write_text(serialized, encoding="utf-8")
+
+
+def preserve_generated_at_if_unchanged(existing_text: str, payload: dict) -> dict:
+    if not existing_text:
+        return payload
+    if "generated_at" not in payload:
+        return payload
+
+    try:
+        existing_payload = json.loads(existing_text)
+    except json.JSONDecodeError:
+        return payload
+
+    if not isinstance(existing_payload, dict):
+        return payload
+
+    existing_generated_at = existing_payload.get("generated_at")
+    if not isinstance(existing_generated_at, str) or not existing_generated_at.strip():
+        return payload
+
+    candidate_payload = dict(payload)
+    candidate_payload["generated_at"] = existing_generated_at
+    if candidate_payload == existing_payload:
+        return candidate_payload
+    return payload
+
+
+def remove_stale_json(directory: Path, expected_relative_paths: set[Path]) -> None:
+    if not directory.exists():
+        return
+
     for path in directory.rglob("*.json"):
-        path.unlink()
+        if path.relative_to(directory) not in expected_relative_paths:
+            path.unlink()
+
     for path in sorted(directory.rglob("*"), reverse=True):
         if path.is_dir() and not any(path.iterdir()):
             path.rmdir()
@@ -46,15 +100,15 @@ def build_branch_manifest(
     branch_output_dir = site_data_root / branch_key
     report_output_dir = branch_output_dir / "reports"
     report_output_dir.mkdir(parents=True, exist_ok=True)
-    clear_generated_json(report_output_dir)
 
     manifest_reports = []
+    expected_paths: set[Path] = set()
     for report in reports:
         source_path = report["source_path"]
         relative_path = source_path.relative_to(reports_dir)
         destination = report_output_dir / relative_path
-        destination.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copyfile(source_path, destination)
+        expected_paths.add(relative_path)
+        copy_file_if_changed(source_path, destination)
 
         entry = {
             "branch_key": branch_key,
@@ -63,6 +117,8 @@ def build_branch_manifest(
             **report_entry_builder(report),
         }
         manifest_reports.append(entry)
+
+    remove_stale_json(report_output_dir, expected_paths)
 
     manifest = {
         "branch_key": branch_key,
@@ -74,14 +130,13 @@ def build_branch_manifest(
     }
 
     manifest_path = branch_output_dir / "manifest.json"
-    manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
+    write_json_if_changed(manifest_path, manifest)
     return BranchManifestResult(manifest_path=manifest_path, manifest=manifest)
 
 
 def build_branch_catalog(site_data_root: Path, branch_manifests: Iterable[dict]) -> BranchManifestResult:
     catalog_dir = site_data_root / "branches"
     catalog_dir.mkdir(parents=True, exist_ok=True)
-    clear_generated_json(catalog_dir)
 
     branches = []
     reports = []
@@ -115,7 +170,7 @@ def build_branch_catalog(site_data_root: Path, branch_manifests: Iterable[dict])
     }
 
     catalog_path = catalog_dir / "manifest.json"
-    catalog_path.write_text(json.dumps(catalog, ensure_ascii=False, indent=2), encoding="utf-8")
+    write_json_if_changed(catalog_path, catalog)
     return BranchManifestResult(manifest_path=catalog_path, manifest=catalog)
 
 

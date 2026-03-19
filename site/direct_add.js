@@ -1,13 +1,15 @@
 import { getSourceLabel, initLikesSync, isLiked, readLikes, subscribeLikes, toggleLike } from "./likes.js?v=20260319-9";
 import { bindLikeButtons } from "./likes.js?v=20260319-9";
 import { bindQueueButtons, initQueue, isInQueue, readQueue, removeFromQueue, subscribeQueue } from "./paper_queue.js?v=20260319-5";
-import { bindBranchAuthToolbar } from "./branch_auth.js?v=20260319-9";
-import { mountAppToolbar } from "./app_toolbar.js?v=20260320-1";
+import { bindBranchAuthToolbar } from "./branch_auth.js?v=20260320-1";
+import { mountAppToolbar } from "./app_toolbar.js?v=20260320-2";
 import { bindBranchNav } from "./branch_nav.js?v=20260319-4";
 import { bindLibraryNav } from "./library_nav.js?v=20260319-4";
 import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=20260319-13";
+import { bindFilterMenu } from "./page_shell.js?v=20260320-1";
 import { repairLikeLaterConflicts } from "./paper_selection.js?v=20260319-5";
 import { initToolbarPreferences } from "./toolbar_preferences.js?v=20260320-1";
+import { escapeAttribute, escapeHtml, getErrorMessage } from "./ui_utils.js?v=20260320-2";
 import {
   hasDirectAddsMigrationRun,
   initDirectAddSync,
@@ -49,7 +51,6 @@ let likedPapers = [];
 let searchQuery = "";
 let sortMode = sortSelect?.value || "newest";
 let metadataFilter = metadataFilterSelect?.value || "all";
-let filterMenuOpen = false;
 
 init().catch((error) => {
   console.error(error);
@@ -58,7 +59,12 @@ init().catch((error) => {
 
 async function init() {
   initToolbarPreferences({ pageKey: "direct" });
-  bindFilterMenu();
+  bindFilterMenu({
+    button: sidebarToggleButton,
+    panel: filterMenuPanel,
+    labelNode: sidebarToggleLabel,
+    iconNode: sidebarToggleIcon,
+  });
   bindSearchInput();
   bindBranchNav();
   bindLibraryNav();
@@ -83,82 +89,6 @@ async function init() {
   repairLikeLaterConflicts();
   await initDirectAddSync();
   renderPage();
-}
-
-function bindFilterMenu() {
-  if (!sidebarToggleButton || !filterMenuPanel) {
-    return;
-  }
-
-  sidebarToggleButton.addEventListener("click", (event) => {
-    event.stopPropagation();
-    setFilterMenuOpen(!filterMenuOpen);
-  });
-
-  document.addEventListener("click", (event) => {
-    if (!filterMenuOpen) {
-      return;
-    }
-    if (filterMenuPanel.contains(event.target) || sidebarToggleButton.contains(event.target)) {
-      return;
-    }
-    setFilterMenuOpen(false);
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && filterMenuOpen) {
-      setFilterMenuOpen(false);
-    }
-  });
-
-  setFilterMenuOpen(false);
-}
-
-function setFilterMenuOpen(open) {
-  filterMenuOpen = open;
-  if (!sidebarToggleButton || !filterMenuPanel) {
-    return;
-  }
-  sidebarToggleButton.setAttribute("aria-expanded", String(open));
-  sidebarToggleButton.setAttribute("aria-label", open ? "Close filters" : "Open filters");
-  sidebarToggleButton.title = open ? "Close filters" : "Open filters";
-  sidebarToggleLabel.textContent = "Filters";
-  sidebarToggleIcon.textContent = "☰";
-  filterMenuPanel.hidden = !open;
-}
-
-function bindThemeToggle() {
-  const toggles = [...document.querySelectorAll("[data-theme-toggle]")];
-  const systemQuery = window.matchMedia("(prefers-color-scheme: dark)");
-  const initial = localStorage.getItem("cool-paper-theme") || "auto";
-  applyTheme(initial);
-
-  toggles.forEach((button) => {
-    button.addEventListener("click", () => applyTheme(button.dataset.themeToggle));
-  });
-
-  const handleSystemThemeChange = () => {
-    const current = localStorage.getItem("cool-paper-theme") || "auto";
-    if (current === "auto") {
-      applyTheme("auto", false);
-    }
-  };
-
-  if (typeof systemQuery.addEventListener === "function") {
-    systemQuery.addEventListener("change", handleSystemThemeChange);
-  } else if (typeof systemQuery.addListener === "function") {
-    systemQuery.addListener(handleSystemThemeChange);
-  }
-
-  function applyTheme(mode, persist = true) {
-    const resolvedTheme = mode === "auto" ? (systemQuery.matches ? "dark" : "light") : mode;
-    document.documentElement.dataset.theme = resolvedTheme;
-    document.documentElement.dataset.themeMode = mode;
-    if (persist) {
-      localStorage.setItem("cool-paper-theme", mode);
-    }
-    toggles.forEach((button) => button.classList.toggle("active", button.dataset.themeToggle === mode));
-  }
 }
 
 function bindSearchInput() {
@@ -429,7 +359,7 @@ function renderFatal(error) {
   if (!directList) {
     return;
   }
-  directList.innerHTML = `<div class="empty-state">${escapeHtml(error instanceof Error ? error.message : String(error || "Unexpected error"))}</div>`;
+  directList.innerHTML = `<div class="empty-state">${escapeHtml(getErrorMessage(error))}</div>`;
   if (directSummary) {
     directSummary.textContent = "Failed to load direct adds.";
   }
@@ -440,15 +370,4 @@ function hasMeaningfulMetadata(record) {
   const authors = Array.isArray(record?.authors) ? record.authors.filter(Boolean) : [];
   const abstract = String(record?.abstract || "").trim();
   return Boolean(title && !/^arXiv\s+\d/i.test(title) && authors.length > 0 && abstract.length > 20);
-}
-
-function escapeHtml(value) {
-  return String(value ?? "")
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;");
-}
-
-function escapeAttribute(value) {
-  return escapeHtml(value).replaceAll('"', "&quot;").replaceAll("'", "&#39;");
 }

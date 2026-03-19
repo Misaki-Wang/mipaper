@@ -116,7 +116,10 @@ def load_schedule_state(path: Path) -> dict:
 
 def save_schedule_state(path: Path, payload: dict) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    serialized = json.dumps(payload, indent=2, sort_keys=True) + "\n"
+    temp_path = path.with_name(f".{path.name}.tmp")
+    temp_path.write_text(serialized, encoding="utf-8")
+    temp_path.replace(path)
 
 
 def summarize_date_window(dates: list[str]) -> str:

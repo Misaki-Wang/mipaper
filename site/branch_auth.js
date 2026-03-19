@@ -1,6 +1,16 @@
 import { getAuthSnapshot, initLikesSync, signInWithGitHub, signOutFromGitHub, subscribeAuth, syncLikesNow } from "./likes.js?v=20260319-9";
+import { escapeAttribute, escapeHtml, formatDateTime } from "./ui_utils.js?v=20260320-2";
 
 const TOOLBAR_AUTO_HIDE_KEY = "cool-paper-toolbar-auto-hide";
+const AUTH_TIME_FORMAT = {
+  locale: "en-US",
+  emptyValue: "",
+  fallbackToOriginal: true,
+  formatOptions: {
+    dateStyle: "medium",
+    timeStyle: "short",
+  },
+};
 
 export function bindBranchAuthToolbar(prefix) {
   const toolbar = document.querySelector(".app-toolbar");
@@ -111,7 +121,7 @@ export function bindBranchAuthToolbar(prefix) {
         } else if (snapshot.syncError) {
           status.textContent = `Sync failed: ${snapshot.syncError}`;
         } else if (snapshot.lastSyncedAt) {
-          status.textContent = `Last synced ${formatTime(snapshot.lastSyncedAt)}`;
+          status.textContent = `Last synced ${formatDateTime(snapshot.lastSyncedAt, AUTH_TIME_FORMAT)}`;
         } else {
           status.textContent = "Connected. Automatic sync is ready.";
         }
@@ -308,37 +318,10 @@ export function bindToolbarAutoHide(toolbar, toggleButton) {
   }
 }
 
-function escapeHtml(value) {
-  return String(value)
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#39;");
-}
-
-function escapeAttribute(value) {
-  return escapeHtml(value).replaceAll("`", "&#96;");
-}
-
 function readToolbarAutoHidePreference() {
   const stored = window.localStorage.getItem(TOOLBAR_AUTO_HIDE_KEY);
   if (stored === null) {
     return true;
   }
   return stored !== "0" && stored !== "false";
-}
-
-function formatTime(timestamp) {
-  if (!timestamp) {
-    return "";
-  }
-  const date = new Date(timestamp);
-  if (Number.isNaN(date.getTime())) {
-    return String(timestamp);
-  }
-  return new Intl.DateTimeFormat("en-US", {
-    dateStyle: "medium",
-    timeStyle: "short",
-  }).format(date);
 }

@@ -1,13 +1,17 @@
 import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js?v=20260319-4";
 import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js?v=20260319-9";
 import { bindQueueButtons, initQueue, isInQueue, subscribeQueue } from "./paper_queue.js?v=20260319-5";
-import { bindBranchAuthToolbar } from "./branch_auth.js?v=20260319-9";
-import { mountAppToolbar } from "./app_toolbar.js?v=20260320-1";
+import { bindBranchAuthToolbar } from "./branch_auth.js?v=20260320-1";
+import { mountAppToolbar } from "./app_toolbar.js?v=20260320-2";
 import { repairLikeLaterConflicts } from "./paper_selection.js?v=20260319-5";
 import { bindBranchNav } from "./branch_nav.js?v=20260319-4";
 import { bindLibraryNav } from "./library_nav.js?v=20260319-4";
 import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=20260319-13";
 import { initToolbarPreferences } from "./toolbar_preferences.js?v=20260320-1";
+import { bindBackToTop, bindFilterMenu } from "./page_shell.js?v=20260320-1";
+import { createLatestTaskRunner } from "./request_gate.js?v=20260320-1";
+import { createFloatingTocController } from "./floating_toc.js?v=20260320-1";
+import { escapeAttribute, escapeHtml, fetchJson, formatZhTime, getErrorMessage } from "./ui_utils.js?v=20260320-2";
 
 mountAppToolbar("#trending-toolbar-root", {
   prefix: "trending",
@@ -41,8 +45,11 @@ const reviewToggleButton = document.querySelector("#trending-review-toggle");
 const reviewToggleMeta = document.querySelector("#trending-review-toggle-meta");
 const heroReviewStatus = document.querySelector("#trending-hero-review-status");
 const likeRecords = new Map();
-let tocObserver = null;
-let filterMenuOpen = false;
+const runLatestReportLoad = createLatestTaskRunner();
+const floatingToc = createFloatingTocController(floatingTocRoot, {
+  rootMargin: "-18% 0px -60% 0px",
+  threshold: [0.1, 0.3, 0.55],
+});
 
 init().catch((error) => {
   console.error(error);
@@ -51,12 +58,17 @@ init().catch((error) => {
 
 async function init() {
   initToolbarPreferences({ pageKey: "trending" });
-  bindFilterMenu();
+  bindFilterMenu({
+    button: sidebarToggleButton,
+    panel: filterMenuPanel,
+    labelNode: sidebarToggleLabel,
+    iconNode: sidebarToggleIcon,
+  });
   bindBranchNav();
   bindLibraryNav();
   bindToolbarQuickAdd("trending", { target: "later" });
   bindBranchAuthToolbar("trending");
-  bindBackToTop();
+  bindBackToTop(backToTopButton);
   bindFilters();
   bindReviewToggle();
   subscribeLikes(() => bindLikeButtons(document, likeRecords));
@@ -75,98 +87,6 @@ async function init() {
   }
 
   await loadReport(manifest.default_report_path || manifest.reports[0].data_path);
-}
-
-function bindFilterMenu() {
-  if (!sidebarToggleButton || !filterMenuPanel) {
-    return;
-  }
-
-  sidebarToggleButton.addEventListener("click", (event) => {
-    event.stopPropagation();
-    setFilterMenuOpen(!filterMenuOpen);
-  });
-
-  document.addEventListener("click", (event) => {
-    if (!filterMenuOpen) {
-      return;
-    }
-    if (filterMenuPanel.contains(event.target) || sidebarToggleButton.contains(event.target)) {
-      return;
-    }
-    setFilterMenuOpen(false);
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && filterMenuOpen) {
-      setFilterMenuOpen(false);
-    }
-  });
-
-  setFilterMenuOpen(false);
-}
-
-function setFilterMenuOpen(open) {
-  filterMenuOpen = open;
-  if (!sidebarToggleButton || !filterMenuPanel) {
-    return;
-  }
-  sidebarToggleButton.setAttribute("aria-expanded", String(open));
-  sidebarToggleButton.setAttribute("aria-label", open ? "Close filters" : "Open filters");
-  sidebarToggleButton.title = open ? "Close filters" : "Open filters";
-  sidebarToggleLabel.textContent = "Filters";
-  sidebarToggleIcon.textContent = "☰";
-  filterMenuPanel.hidden = !open;
-}
-
-function bindThemeToggle() {
-  const toggles = [...document.querySelectorAll("[data-theme-toggle]")];
-  const systemQuery = window.matchMedia("(prefers-color-scheme: dark)");
-  const initial = localStorage.getItem("cool-paper-theme") || "auto";
-  applyTheme(initial);
-
-  toggles.forEach((button) => {
-    button.addEventListener("click", () => applyTheme(button.dataset.themeToggle));
-  });
-
-  const handleSystemThemeChange = () => {
-    const current = localStorage.getItem("cool-paper-theme") || "auto";
-    if (current === "auto") {
-      applyTheme("auto", false);
-    }
-  };
-
-  if (typeof systemQuery.addEventListener === "function") {
-    systemQuery.addEventListener("change", handleSystemThemeChange);
-  } else if (typeof systemQuery.addListener === "function") {
-    systemQuery.addListener(handleSystemThemeChange);
-  }
-
-  function applyTheme(mode, persist = true) {
-    const resolvedTheme = mode === "auto" ? (systemQuery.matches ? "dark" : "light") : mode;
-    document.documentElement.dataset.theme = resolvedTheme;
-    document.documentElement.dataset.themeMode = mode;
-    if (persist) {
-      localStorage.setItem("cool-paper-theme", mode);
-    }
-    toggles.forEach((button) => button.classList.toggle("active", button.dataset.themeToggle === mode));
-  }
-}
-
-function bindBackToTop() {
-  const threshold = 720;
-  function updateVisibility() {
-    const visible = window.scrollY > threshold;
-    backToTopButton.classList.toggle("is-visible", visible);
-    backToTopButton.setAttribute("aria-hidden", String(!visible));
-  }
-
-  backToTopButton.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-
-  window.addEventListener("scroll", updateVisibility, { passive: true });
-  updateVisibility();
 }
 
 function bindReviewToggle() {
@@ -238,7 +158,11 @@ function bindFilters() {
 }
 
 async function loadReport(path) {
-  const report = await fetchJson(path);
+  const result = await runLatestReportLoad(() => fetchJson(path));
+  if (result.stale) {
+    return;
+  }
+  const report = result.value;
   state.report = report;
   state.currentPath = path;
   state.query = "";
@@ -341,7 +265,7 @@ function renderHero(report, visibleRepos) {
     ? `+${topRepo.stars_this_week.toLocaleString()}`
     : "-";
   document.querySelector("#trending-hero-window").textContent = report.since || "weekly";
-  document.querySelector("#trending-hero-updated").textContent = formatTime(report.generated_at);
+  document.querySelector("#trending-hero-updated").textContent = formatZhTime(report.generated_at);
   document.querySelector("#trending-hero-signals").innerHTML = [
     `<div class="signal-chip"><span>Weekly Lead</span><strong>${escapeHtml(topRepo?.full_name || "-")}</strong></div>`,
     `<div class="signal-chip"><span>Visible Scope</span><strong>${visibleRepos.length} repos</strong></div>`,
@@ -641,27 +565,6 @@ function renderEmpty() {
   renderFloatingToc([]);
 }
 
-async function fetchJson(url) {
-  const response = await fetch(url, { cache: "no-store" });
-  if (!response.ok) {
-    throw new Error(`Failed to load ${url}: ${response.status}`);
-  }
-  return response.json();
-}
-
-function formatTime(isoString) {
-  if (!isoString) {
-    return "-";
-  }
-  return new Intl.DateTimeFormat("zh-CN", {
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-    hour: "2-digit",
-    minute: "2-digit",
-  }).format(new Date(isoString));
-}
-
 function formatWeekLabel(dateString) {
   if (!dateString) {
     return "-";
@@ -687,62 +590,14 @@ function getIsoWeekParts(dateString) {
 }
 
 function renderFatal(error) {
-  const message = error instanceof Error ? error.message : String(error);
+  const message = getErrorMessage(error);
   document.querySelector("#trending-board-summary").textContent = "Trending page failed to load.";
   document.querySelector("#trending-home-cards").innerHTML =
     `<div class="glass-card empty-state">Trending page failed to load: ${escapeHtml(message)}</div>`;
 }
 
 function renderFloatingToc(items) {
-  if (!floatingTocRoot) {
-    return;
-  }
-  floatingTocRoot.innerHTML = items
-    .map(
-      (item) => `
-        <a class="floating-toc-link${item.child ? " is-child" : ""}" href="#${escapeAttribute(item.id)}" data-toc-target="${escapeAttribute(item.id)}">
-          ${escapeHtml(item.label)}
-        </a>
-      `
-    )
-    .join("");
-
-  if (tocObserver) {
-    tocObserver.disconnect();
-  }
-
-  const links = [...floatingTocRoot.querySelectorAll("[data-toc-target]")];
-  if (!links.length) {
-    return;
-  }
-
-  const updateActive = (id) => {
-    links.forEach((link) => link.classList.toggle("active", link.dataset.tocTarget === id));
-  };
-
-  tocObserver = new IntersectionObserver(
-    (entries) => {
-      const visible = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((left, right) => right.intersectionRatio - left.intersectionRatio)[0];
-      if (visible?.target?.id) {
-        updateActive(visible.target.id);
-      }
-    },
-    {
-      rootMargin: "-18% 0px -60% 0px",
-      threshold: [0.1, 0.3, 0.55],
-    }
-  );
-
-  links.forEach((link) => {
-    const target = document.getElementById(link.dataset.tocTarget);
-    if (target) {
-      tocObserver.observe(target);
-    }
-  });
-
-  updateActive(items[0]?.id || "");
+  floatingToc.render(items);
 }
 
 function renderPaperLink({ href, label, brand }) {
@@ -755,17 +610,4 @@ function renderPaperLink({ href, label, brand }) {
       <span class="paper-link-text">${escapeHtml(label)}</span>
     </a>
   `;
-}
-
-function escapeHtml(value) {
-  return String(value)
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#39;");
-}
-
-function escapeAttribute(value) {
-  return escapeHtml(value);
 }

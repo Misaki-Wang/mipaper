@@ -3,7 +3,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from mipaper.branch_site_data import build_branch_catalog
+from mipaper.branch_site_data import build_branch_catalog, write_json_if_changed
 
 
 class BranchSiteDataTest(unittest.TestCase):
@@ -64,6 +64,34 @@ class BranchSiteDataTest(unittest.TestCase):
             self.assertEqual(["daily", "conference"], [item["branch_key"] for item in manifest["branches"]])
             self.assertIn("Generative Foundations", manifest["reports"][0]["search_text"])
             self.assertIn("Conference", manifest["reports"][1]["search_text"])
+
+    def test_write_json_if_changed_preserves_generated_at_when_payload_is_otherwise_identical(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            path = Path(tmpdir) / "manifest.json"
+            path.write_text(
+                json.dumps(
+                    {
+                        "generated_at": "2026-03-20T00:00:00Z",
+                        "reports_count": 1,
+                        "reports": [{"data_path": "data/daily/reports/2026-03-19/cs.AI-2026-03-19.json"}],
+                    },
+                    ensure_ascii=False,
+                    indent=2,
+                ),
+                encoding="utf-8",
+            )
+
+            write_json_if_changed(
+                path,
+                {
+                    "generated_at": "2026-03-21T00:00:00Z",
+                    "reports_count": 1,
+                    "reports": [{"data_path": "data/daily/reports/2026-03-19/cs.AI-2026-03-19.json"}],
+                },
+            )
+
+            manifest = json.loads(path.read_text(encoding="utf-8"))
+            self.assertEqual("2026-03-20T00:00:00Z", manifest["generated_at"])
 
 
 if __name__ == "__main__":

@@ -82,10 +82,11 @@ class SchedulerHelpersTest(unittest.TestCase):
 
     def test_schedule_state_round_trip(self) -> None:
         with TemporaryDirectory() as tmp_dir:
-            path = Path(tmp_dir) / "scheduled_jobs.json"
+            path = Path(tmp_dir) / "state" / "scheduled_jobs.json"
             payload = {"cool_daily_last_success_date": "2026-03-10"}
             save_schedule_state(path, payload)
             self.assertEqual(payload, load_schedule_state(path))
+            self.assertTrue(path.read_text(encoding="utf-8").endswith("\n"))
 
 
 if __name__ == "__main__":
