@@ -5,21 +5,23 @@ import {
   readLikes,
   subscribeAuth,
   subscribeLikes,
-} from "./likes.js?v=20260319-4";
+} from "./likes.js?v=20260319-5";
 import { getSupabaseClient, isSupabaseConfigured, loadRuntimeConfig } from "./supabase.js";
 import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js?v=20260319-4";
-import { bindQueueButtons, initQueue, isInQueue, readQueue, subscribeQueue } from "./paper_queue.js?v=20260319-4";
-import { bindBranchAuthToolbar } from "./branch_auth.js?v=20260319-4";
-import { mountAppToolbar } from "./app_toolbar.js";
-import { repairLikeLaterConflicts } from "./paper_selection.js?v=20260319-4";
+import { bindQueueButtons, initQueue, isInQueue, readQueue, subscribeQueue } from "./paper_queue.js?v=20260319-5";
+import { bindBranchAuthToolbar } from "./branch_auth.js?v=20260319-5";
+import { mountAppToolbar } from "./app_toolbar.js?v=20260319-7";
+import { repairLikeLaterConflicts } from "./paper_selection.js?v=20260319-5";
 import { bindBranchNav } from "./branch_nav.js?v=20260319-4";
 import { bindLibraryNav } from "./library_nav.js?v=20260319-4";
+import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=20260319-7";
 
 mountAppToolbar("#like-toolbar-root", {
   prefix: "like",
   filtersTemplateId: "like-toolbar-filters",
   branchActiveKey: null,
   libraryActiveKey: "liked",
+  quickAddTarget: "later",
 });
 
 const state = {
@@ -89,6 +91,7 @@ async function init() {
   bindFilterMenu();
   bindBranchNav();
   bindLibraryNav();
+  bindToolbarQuickAdd("like", { target: "later" });
   bindBranchAuthToolbar("like");
   bindBackToTop();
   bindFilters();

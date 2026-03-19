@@ -9,7 +9,7 @@ import {
   getSyncDeviceId,
   mergeSyncRecords,
 } from "./sync_utils.js";
-import { movePaperToLikes } from "./paper_selection.js?v=20260319-4";
+import { movePaperToLikes } from "./paper_selection.js?v=20260319-5";
 
 const LIKES_STORAGE_KEY = "cool-paper-liked-papers-v1";
 const LIKES_META_KEY = "cool-paper-liked-papers-meta-v1";
@@ -21,6 +21,7 @@ const SOURCE_LABELS = {
   conference: "Conference",
   hf_daily: "HF Daily",
   trending: "Trending",
+  library: "Library",
 };
 
 let supabaseClient = null;

@@ -1,12 +1,13 @@
-import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js?v=20260319-4";
-import { bindQueueButtons, initQueue, subscribeQueue } from "./paper_queue.js?v=20260319-4";
-import { repairLikeLaterConflicts } from "./paper_selection.js?v=20260319-4";
+import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js?v=20260319-5";
+import { bindQueueButtons, initQueue, subscribeQueue } from "./paper_queue.js?v=20260319-5";
+import { repairLikeLaterConflicts } from "./paper_selection.js?v=20260319-5";
 import { createCalendarPicker } from "./calendar_picker.js";
 import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js?v=20260319-4";
-import { bindBranchAuthToolbar } from "./branch_auth.js?v=20260319-4";
-import { mountAppToolbar } from "./app_toolbar.js";
+import { bindBranchAuthToolbar } from "./branch_auth.js?v=20260319-5";
+import { mountAppToolbar } from "./app_toolbar.js?v=20260319-7";
 import { bindBranchNav } from "./branch_nav.js?v=20260319-4";
 import { bindLibraryNav } from "./library_nav.js?v=20260319-4";
+import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=20260319-7";
 
 mountAppToolbar("#hf-toolbar-root", {
   prefix: "hf",
@@ -66,6 +67,7 @@ async function init() {
   bindFilterMenu();
   bindBranchNav();
   bindLibraryNav();
+  bindToolbarQuickAdd("hf", { target: "later" });
   bindBranchAuthToolbar("hf");
   bindBackToTop();
   bindFilters();

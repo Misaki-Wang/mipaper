@@ -1,6 +1,6 @@
-import { createLikeRecord, isLiked } from "./likes.js?v=20260319-4";
+import { createLikeRecord, isLiked } from "./likes.js?v=20260319-5";
 import { getSupabaseClient, isSupabaseConfigured, loadRuntimeConfig } from "./supabase.js";
-import { movePaperToLater, movePaperToLikes } from "./paper_selection.js?v=20260319-4";
+import { movePaperToLater, movePaperToLikes } from "./paper_selection.js?v=20260319-5";
 import {
   compareSyncTimestamps,
   createSyncTimestamp,
@@ -109,13 +109,14 @@ export function readQueue(status = null) {
   return items.sort((left, right) => (right.saved_at || "").localeCompare(left.saved_at || ""));
 }
 
-export function addToQueue(paper, context) {
+export function addToQueue(paper, context, options = {}) {
   const store = readQueueStore();
   const record = paper?.like_id ? paper : createLikeRecord(paper, context);
   const likeId = record.like_id;
   const existingRecord = store.find((item) => item.like_id === likeId) || null;
   const timestamp = createSyncTimestamp();
   const deviceId = getSyncDeviceId();
+  const preserveOrder = Boolean(options.preserveOrder && existingRecord);
 
   if (isLiked(likeId)) {
     movePaperToLikes(record);
@@ -126,7 +127,7 @@ export function addToQueue(paper, context) {
     ...record,
     like_id: likeId,
     status: "later",
-    saved_at: timestamp,
+    saved_at: preserveOrder && existingRecord?.saved_at ? existingRecord.saved_at : timestamp,
     updated_at: timestamp,
     client_updated_at: timestamp,
     deleted_at: "",

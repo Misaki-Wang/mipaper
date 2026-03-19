@@ -1,14 +1,16 @@
 import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js?v=20260319-4";
-import { bindBranchAuthToolbar } from "./branch_auth.js?v=20260319-4";
-import { mountAppToolbar } from "./app_toolbar.js";
+import { bindBranchAuthToolbar } from "./branch_auth.js?v=20260319-5";
+import { mountAppToolbar } from "./app_toolbar.js?v=20260319-7";
 import { bindBranchNav } from "./branch_nav.js?v=20260319-4";
 import { bindLibraryNav } from "./library_nav.js?v=20260319-4";
+import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=20260319-7";
 
 mountAppToolbar("#unread-toolbar-root", {
   prefix: "unread",
   filtersTemplateId: "unread-toolbar-filters",
   branchActiveKey: null,
   libraryActiveKey: "unread",
+  quickAddTarget: "later",
 });
 
 const PAGE_SIZE = 6;
@@ -53,6 +55,7 @@ async function init() {
   bindBranchAuthToolbar("unread");
   bindBranchNav();
   bindLibraryNav();
+  bindToolbarQuickAdd("unread", { target: "later" });
   subscribePageReviews(() => renderPage());
   await initReviewSync();
   snapshots = await loadSnapshotQueueData();

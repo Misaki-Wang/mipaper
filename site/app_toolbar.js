@@ -25,6 +25,7 @@ export function renderAppToolbar({
   filtersTemplateId,
   branchActiveKey = null,
   libraryActiveKey = null,
+  quickAddTarget = "later",
 } = {}) {
   if (!prefix) {
     throw new Error("renderAppToolbar requires a prefix");
@@ -50,6 +51,9 @@ export function renderAppToolbar({
           ${renderNavDropdown("branch", "Branches", BRANCH_NAV_ITEMS, branchActiveKey)}
           ${renderNavDropdown("library", "Lib", LIBRARY_NAV_ITEMS, libraryActiveKey)}
         </div>
+      </div>
+      <div class="toolbar-center">
+        ${renderToolbarQuickAdd(prefix, quickAddTarget)}
       </div>
       <div class="toolbar-end">
         ${renderToolbarAutoHide(prefix)}
@@ -106,6 +110,37 @@ function renderToolbarAutoHide(prefix) {
         </svg>
       </span>
     </button>
+  `;
+}
+
+function renderToolbarQuickAdd(prefix, target) {
+  const safePrefix = escapeAttribute(prefix);
+  const safeTarget = escapeAttribute(target);
+  return `
+    <div class="toolbar-quick-add-shell" data-quick-add-target="${safeTarget}">
+      <form id="${safePrefix}-quick-add-form" class="toolbar-quick-add" novalidate>
+        <div class="toolbar-quick-add-control">
+          <span class="toolbar-quick-add-icon" aria-hidden="true">
+            <svg viewBox="0 0 20 20" fill="none">
+              <path d="M6 10h8M10 6v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+            </svg>
+          </span>
+          <input
+            id="${safePrefix}-quick-add-input"
+            class="toolbar-quick-add-input"
+            type="text"
+            inputmode="url"
+            autocomplete="off"
+            spellcheck="false"
+            placeholder="Paste arXiv / papers.cool URL"
+            aria-label="Paste arXiv or papers.cool URL to add to Later"
+            aria-describedby="${safePrefix}-quick-add-status"
+          />
+          <button id="${safePrefix}-quick-add-submit" class="toolbar-quick-add-submit" type="submit">Add</button>
+        </div>
+      </form>
+      <p id="${safePrefix}-quick-add-status" class="toolbar-quick-add-status" aria-live="polite" hidden></p>
+    </div>
   `;
 }
 

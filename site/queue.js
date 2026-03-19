@@ -1,16 +1,18 @@
-import { getSourceLabel, initLikesSync, readLikes, subscribeLikes } from "./likes.js?v=20260319-4";
-import { initQueue, readQueue, removeFromQueue, subscribeQueue } from "./paper_queue.js?v=20260319-4";
-import { movePaperToLikes, repairLikeLaterConflicts } from "./paper_selection.js?v=20260319-4";
-import { bindBranchAuthToolbar } from "./branch_auth.js?v=20260319-4";
-import { mountAppToolbar } from "./app_toolbar.js";
+import { getSourceLabel, initLikesSync, readLikes, subscribeLikes } from "./likes.js?v=20260319-5";
+import { initQueue, readQueue, removeFromQueue, subscribeQueue } from "./paper_queue.js?v=20260319-5";
+import { movePaperToLikes, repairLikeLaterConflicts } from "./paper_selection.js?v=20260319-5";
+import { bindBranchAuthToolbar } from "./branch_auth.js?v=20260319-5";
+import { mountAppToolbar } from "./app_toolbar.js?v=20260319-7";
 import { bindBranchNav } from "./branch_nav.js?v=20260319-4";
 import { bindLibraryNav } from "./library_nav.js?v=20260319-4";
+import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=20260319-7";
 
 mountAppToolbar("#queue-toolbar-root", {
   prefix: "queue",
   filtersTemplateId: "queue-toolbar-filters",
   branchActiveKey: null,
   libraryActiveKey: "later",
+  quickAddTarget: "later",
 });
 
 const PAGE_SIZE = 6;
@@ -56,6 +58,7 @@ async function init() {
   bindBranchAuthToolbar("queue");
   bindBranchNav();
   bindLibraryNav();
+  bindToolbarQuickAdd("queue", { target: "later" });
   subscribeQueue(renderPage);
   subscribeLikes(renderPage);
   await Promise.all([initQueue(), initLikesSync()]);

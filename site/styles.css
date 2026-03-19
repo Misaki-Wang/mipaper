@@ -171,6 +171,7 @@ code {
 }
 
 .toolbar-start,
+.toolbar-center,
 .toolbar-end {
   display: flex;
   align-items: center;
@@ -180,13 +181,144 @@ code {
 }
 
 .toolbar-start {
-  flex: 1 1 auto;
+  flex: 0 0 auto;
+}
+
+.toolbar-center {
+  flex: 1 1 28rem;
+  justify-content: center;
 }
 
 .toolbar-end {
   flex: 0 1 auto;
   justify-content: flex-end;
   margin-left: auto;
+}
+
+.toolbar-quick-add-shell {
+  display: flex;
+  justify-content: center;
+  flex: 1 1 auto;
+  min-width: min(100%, 20rem);
+  max-width: 40rem;
+}
+
+.toolbar-quick-add {
+  display: grid;
+  gap: 0.3rem;
+  width: min(100%, 34rem);
+  min-width: 0;
+}
+
+.toolbar-quick-add-control {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-width: 0;
+  min-height: 2.7rem;
+  padding: 0.32rem 0.34rem 0.32rem 0.74rem;
+  border-radius: 18px;
+  border: 1px solid color-mix(in srgb, var(--border), var(--accent) 16%);
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--surface-strong), white 8%), color-mix(in srgb, var(--surface-soft), white 10%)),
+    radial-gradient(120% 180% at 0% 0%, color-mix(in srgb, var(--accent-soft), transparent 28%), transparent 58%);
+  box-shadow: 0 8px 18px rgba(16, 24, 40, 0.06);
+  transition: border-color 180ms ease, box-shadow 180ms ease, background 180ms ease, transform 180ms ease;
+}
+
+.toolbar-quick-add-control:focus-within {
+  border-color: color-mix(in srgb, var(--border), var(--accent) 34%);
+  box-shadow: 0 12px 24px rgba(16, 24, 40, 0.08);
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--surface-strong), white 10%), color-mix(in srgb, var(--surface-soft), white 12%)),
+    radial-gradient(120% 180% at 0% 0%, color-mix(in srgb, var(--accent-soft), transparent 24%), transparent 56%);
+}
+
+.toolbar-quick-add[data-busy="true"] .toolbar-quick-add-control {
+  opacity: 0.86;
+}
+
+.toolbar-quick-add-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 1.1rem;
+  height: 1.1rem;
+  color: color-mix(in srgb, var(--accent-strong), var(--text) 22%);
+  flex: 0 0 auto;
+}
+
+.toolbar-quick-add-icon svg {
+  width: 1rem;
+  height: 1rem;
+  display: block;
+}
+
+.toolbar-quick-add-input {
+  flex: 1 1 auto;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.toolbar-quick-add-input::placeholder {
+  color: color-mix(in srgb, var(--muted), var(--text) 10%);
+}
+
+.toolbar-quick-add-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  min-width: 3.6rem;
+  min-height: 2rem;
+  padding: 0.28rem 0.78rem;
+  border: 1px solid color-mix(in srgb, var(--border), var(--accent) 18%);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent-soft), white 18%);
+  color: var(--accent-strong);
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: border-color 180ms ease, background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.toolbar-quick-add-submit:hover:not(:disabled) {
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--border), var(--accent) 30%);
+  background: color-mix(in srgb, var(--accent-soft), white 28%);
+}
+
+.toolbar-quick-add-submit:disabled {
+  cursor: wait;
+  opacity: 0.72;
+}
+
+.toolbar-quick-add-status {
+  min-height: 1.05rem;
+  margin: 0;
+  padding-left: 0.2rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+  line-height: 1.35;
+}
+
+.toolbar-quick-add-status[data-state="success"] {
+  color: color-mix(in srgb, var(--accent-strong), #0a6b47 28%);
+}
+
+.toolbar-quick-add-status[data-state="error"] {
+  color: #b64a5c;
+}
+
+.toolbar-quick-add-status[data-state="info"] {
+  color: color-mix(in srgb, var(--accent-strong), var(--text) 32%);
 }
 
 .back-to-top {
@@ -3809,6 +3941,7 @@ code {
   }
 
   .toolbar-start,
+  .toolbar-center,
   .toolbar-end {
     width: 100%;
   }
@@ -3816,6 +3949,14 @@ code {
   .toolbar-end {
     justify-content: space-between;
     margin-left: 0;
+  }
+
+  .toolbar-center {
+    justify-content: stretch;
+  }
+
+  .toolbar-quick-add-shell {
+    max-width: none;
   }
 
   .page-cool-daily .hero,
@@ -3898,6 +4039,7 @@ code {
   }
 
   .toolbar-start,
+  .toolbar-center,
   .toolbar-end {
     gap: 0.6rem;
     width: 100%;
@@ -3906,6 +4048,10 @@ code {
   .toolbar-start {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .toolbar-center {
+    justify-content: stretch;
   }
 
   .toolbar-end {
@@ -3917,6 +4063,16 @@ code {
     justify-content: flex-start;
     padding: 0.28rem;
     border-radius: 24px;
+  }
+
+  .toolbar-quick-add-shell {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+  }
+
+  .toolbar-quick-add-control {
+    width: 100%;
   }
 
   .page-nav-dropdown {
