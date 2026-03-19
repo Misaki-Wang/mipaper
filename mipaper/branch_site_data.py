@@ -7,6 +7,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Callable, Iterable, List
 
+from mipaper.site_contract import validate_branch_catalog_manifest
+
 
 @dataclass(frozen=True)
 class BranchManifestResult:
@@ -14,10 +16,15 @@ class BranchManifestResult:
     manifest: dict
 
 
-def load_reports(reports_dir: Path, sort_key: Callable[[dict], object]) -> List[dict]:
+def load_reports(
+    reports_dir: Path,
+    sort_key: Callable[[dict], object],
+    report_validator: Callable[[dict], None] | None = None,
+) -> List[dict]:
     reports = []
     for path in sorted(reports_dir.rglob("*.json")):
         payload = json.loads(path.read_text(encoding="utf-8"))
+        report_validator and report_validator(payload)
         payload["source_path"] = path
         reports.append(payload)
 
@@ -95,8 +102,10 @@ def build_branch_manifest(
     branch_label: str,
     report_sort_key: Callable[[dict], object],
     report_entry_builder: Callable[[dict], dict],
+    report_validator: Callable[[dict], None] | None = None,
+    manifest_validator: Callable[[dict], None] | None = None,
 ) -> BranchManifestResult:
-    reports = load_reports(reports_dir, report_sort_key)
+    reports = load_reports(reports_dir, report_sort_key, report_validator)
     branch_output_dir = site_data_root / branch_key
     report_output_dir = branch_output_dir / "reports"
     report_output_dir.mkdir(parents=True, exist_ok=True)
@@ -128,6 +137,8 @@ def build_branch_manifest(
         "default_report_path": manifest_reports[0]["data_path"] if manifest_reports else "",
         "reports": manifest_reports,
     }
+    if manifest_validator:
+        manifest_validator(manifest)
 
     manifest_path = branch_output_dir / "manifest.json"
     write_json_if_changed(manifest_path, manifest)
@@ -168,6 +179,7 @@ def build_branch_catalog(site_data_root: Path, branch_manifests: Iterable[dict])
         "branches": branches,
         "reports": reports,
     }
+    validate_branch_catalog_manifest(catalog)
 
     catalog_path = catalog_dir / "manifest.json"
     write_json_if_changed(catalog_path, catalog)

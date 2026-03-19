@@ -7,26 +7,50 @@ import {
   subscribeLikes,
   updateLikedPaper,
   updateLikedPapers,
-} from "./likes.js?v=20260319-9";
-import { getSupabaseClient, isSupabaseConfigured, loadRuntimeConfig } from "./supabase.js";
-import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js?v=20260319-4";
-import { bindQueueButtons, initQueue, isInQueue, readQueue, subscribeQueue } from "./paper_queue.js?v=20260319-5";
-import { bindBranchAuthToolbar } from "./branch_auth.js?v=20260320-1";
-import { mountAppToolbar } from "./app_toolbar.js?v=20260320-2";
-import { repairLikeLaterConflicts } from "./paper_selection.js?v=20260319-5";
-import { bindBranchNav } from "./branch_nav.js?v=20260319-4";
-import { bindLibraryNav } from "./library_nav.js?v=20260319-4";
-import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=20260319-13";
-import { initToolbarPreferences, setPageViewMode } from "./toolbar_preferences.js?v=20260320-1";
-import { bindBackToTop, bindFilterMenu } from "./page_shell.js?v=20260320-1";
-import { escapeAttribute, escapeHtml, fetchJson, formatDateTime, getErrorMessage } from "./ui_utils.js?v=20260320-2";
+} from "./likes.js?v=d409e691d1";
+import { getSupabaseClient, isSupabaseConfigured, loadRuntimeConfig } from "./supabase.js?v=606e1fd811";
+import { initReviewSync, setPageReviewed, subscribePageReviews } from "./reading_state.js?v=f943be8314";
+import { bindQueueButtons, initQueue, isInQueue, readQueue, subscribeQueue } from "./paper_queue.js?v=8b696292c3";
+import { bindBranchAuthToolbar } from "./branch_auth.js?v=75537cfcb2";
+import { mountAppToolbar } from "./app_toolbar.js?v=625fba0996";
+import { repairLikeLaterConflicts } from "./paper_selection.js?v=964dbe6c53";
+import { bindBranchNav } from "./branch_nav.js?v=2ab092d7f1";
+import { bindLibraryNav } from "./library_nav.js?v=7b6e095589";
+import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=c2effc3556";
+import { initToolbarPreferences, setPageViewMode } from "./toolbar_preferences.js?v=a0ed68b91d";
+import { bindBackToTop, bindFilterMenu } from "./page_shell.js?v=8490eadf5b";
+import { escapeAttribute, escapeHtml, fetchJson, formatDateTime, getErrorMessage } from "./ui_utils.js?v=e2da3b3a11";
+import {
+  LIKE_TIME_FORMAT,
+  PRIORITY_OPTIONS,
+  WORKFLOW_STATUS_OPTIONS,
+  displayTopicLabel,
+  getLibraryGroupKey,
+  getLibraryGroupLabel,
+  getPriorityLabel,
+  getPriorityValue,
+  getWorkflowStatusLabel,
+  getWorkflowStatusValue,
+} from "./like_page_labels.js?v=aaa244a29d";
+import { createSavedViewId, describeSavedView, getActiveFilters, normalizeFilterState, areFilterStatesEqual } from "./like_page_saved_views.js?v=eea77993c0";
+import {
+  CUSTOM_TAG_PALETTE,
+  assignTagColor,
+  buildCustomTag,
+  collectCustomTagCatalog,
+  compareCustomTagMeta,
+  getCustomTagOrder,
+  getCustomTagStyle,
+  getPaperCustomTags,
+} from "./like_page_tags.js?v=8ad782742a";
+import { formatWeekLabel, getSnapshotSourceKind, getToReadSnapshots, loadSnapshotQueueData } from "./like_page_snapshots.js?v=30e01ecd4f";
 import {
   initSavedViewsSync,
   readSavedViews as readSavedViewsStore,
   removeSavedView as removeSavedViewStore,
   subscribeSavedViews,
   upsertSavedView,
-} from "./like_saved_views_store.js?v=20260319-2";
+} from "./like_saved_views_store.js?v=fbaaa1606a";
 
 mountAppToolbar("#like-toolbar-root", {
   prefix: "like",
@@ -56,63 +80,6 @@ const focusTopicKeys = new Set([
   "multimodal_generative",
   "multimodal_agents",
 ]);
-
-const CUSTOM_TAG_PALETTE = [
-  "#5c8f7b",
-  "#6c7fd1",
-  "#c46a6a",
-  "#c08b49",
-  "#7c76c7",
-  "#4d8fa8",
-  "#9c6cae",
-  "#7b9960",
-  "#cc7d55",
-  "#4f9a93",
-  "#b46888",
-  "#8d7b5e",
-];
-
-const TOPIC_LABEL_TRANSLATIONS = new Map([
-  ["多模态理解与视觉", "Multimodal Understanding and Vision"],
-  ["多模态理解和视觉", "Multimodal Understanding and Vision"],
-  ["多模态生成建模", "Multimodal Generative Modeling"],
-  ["多模态生成与建模", "Multimodal Generative Modeling"],
-  ["多模态代理", "Multimodal Agents"],
-  ["代理与规划", "Agents and Planning"],
-  ["生成基础", "Generative Foundations"],
-  ["领域应用", "Domain Applications"],
-  ["数据集与基准", "Datasets and Benchmarks"],
-  ["推理、对齐与评估", "Reasoning, Alignment, and Evaluation"],
-  ["LLMs与语言", "LLMs and Language"],
-  ["LLM与语言", "LLMs and Language"],
-  ["机器人与具身AI", "Robotics and Embodied AI"],
-]);
-
-const WORKFLOW_STATUS_OPTIONS = [
-  { value: "inbox", label: "Inbox" },
-  { value: "reading", label: "Reading" },
-  { value: "digesting", label: "Digesting" },
-  { value: "synthesized", label: "Synthesized" },
-  { value: "archived", label: "Archived" },
-];
-
-const PRIORITY_OPTIONS = [
-  { value: "high", label: "High" },
-  { value: "medium", label: "Medium" },
-  { value: "low", label: "Low" },
-];
-const LIKE_TIME_FORMAT = {
-  locale: "en-US",
-  emptyValue: "-",
-  fallbackToOriginal: false,
-  formatOptions: {
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-    hour: "2-digit",
-    minute: "2-digit",
-  },
-};
 
 const sourceFilter = document.querySelector("#like-source-filter");
 const topicFilter = document.querySelector("#like-topic-filter");
@@ -194,7 +161,7 @@ async function init() {
   });
   await Promise.all([initLikesSync(), initReviewSync(), initQueue(), initSavedViewsSync()]);
   repairLikeLaterConflicts();
-  state.snapshots = await loadSnapshotQueueData();
+  state.snapshots = await loadSnapshotQueueData(fetchJson);
   state.likes = readLikes();
   renderPage();
   scheduleToReadSnapshotSync();
@@ -298,14 +265,6 @@ function bindSavedViews() {
     state.savedViewDraftName = "";
     renderPage();
   });
-}
-
-function getLibraryGroupKey(sourceKind) {
-  return sourceKind === "trending" ? "trending" : "papers";
-}
-
-function getLibraryGroupLabel(groupKey) {
-  return groupKey === "trending" ? "Trending" : "Papers";
 }
 
 function renderPage() {
@@ -544,7 +503,7 @@ function renderSavedViews() {
               data-saved-view-id="${escapeAttribute(view.view_id)}"
             >
               <span class="saved-view-chip-name">${escapeHtml(view.name)}</span>
-              <span class="saved-view-chip-meta">${escapeHtml(describeSavedView(view.filters))}</span>
+              <span class="saved-view-chip-meta">${escapeHtml(describeSavedView(view.filters, state.likes))}</span>
             </button>
           `;
         })
@@ -822,7 +781,7 @@ function renderDistribution(distribution) {
 }
 
 function renderResults(likes, visibleLikes, sourceSections) {
-  const activeFilters = getActiveFilters();
+  const activeFilters = getActiveFilters(getCurrentFilterState(), state.likes);
   const activeCustomTag = state.customTag
     ? collectCustomTagCatalog(state.likes).find((item) => item.key === state.customTag)?.label || state.customTag
     : "";
@@ -1671,84 +1630,6 @@ function readWorkspaceFieldValues(likeId) {
   };
 }
 
-function getPaperCustomTags(paper) {
-  if (!Array.isArray(paper?.custom_tags)) {
-    return [];
-  }
-  const seen = new Set();
-  return paper.custom_tags
-    .filter((tag) => {
-      if (!tag?.key || !tag?.label || seen.has(tag.key)) {
-        return false;
-      }
-      seen.add(tag.key);
-      return true;
-    })
-    .sort(compareCustomTagMeta);
-}
-
-function collectCustomTagCatalog(likes) {
-  const catalog = new Map();
-  likes.forEach((paper) => {
-    getPaperCustomTags(paper).forEach((tag) => {
-      const existing = catalog.get(tag.key);
-      if (!existing) {
-        catalog.set(tag.key, {
-          key: tag.key,
-          label: tag.label,
-          color: tag.color || assignTagColor(tag.key, catalog),
-          order: Number.isFinite(tag.order) ? tag.order : catalog.size,
-        });
-        return;
-      }
-      catalog.set(tag.key, {
-        key: tag.key,
-        label: existing.label || tag.label,
-        color: existing.color || tag.color || assignTagColor(tag.key, catalog),
-        order: Math.min(getCustomTagOrder(existing), getCustomTagOrder(tag)),
-      });
-    });
-  });
-  return [...catalog.values()].sort(compareCustomTagMeta);
-}
-
-function buildCustomTag(rawValue, likes) {
-  const label = String(rawValue || "").replace(/\s+/g, " ").trim();
-  if (!label) {
-    return null;
-  }
-  const key = slugifyTag(label);
-  const existing = collectCustomTagCatalog(likes).find((tag) => tag.key === key);
-  if (existing) {
-    return existing;
-  }
-  return {
-    key,
-    label,
-    color: assignTagColor(key, new Map(collectCustomTagCatalog(likes).map((tag) => [tag.key, tag]))),
-    order: getNextCustomTagOrder(collectCustomTagCatalog(likes)),
-  };
-}
-
-function getCustomTagOrder(tag) {
-  return Number.isFinite(Number(tag?.order)) ? Number(tag.order) : Number.MAX_SAFE_INTEGER;
-}
-
-function getNextCustomTagOrder(catalog) {
-  const orders = catalog
-    .map((tag) => getCustomTagOrder(tag))
-    .filter((value) => Number.isFinite(value) && value !== Number.MAX_SAFE_INTEGER);
-  return orders.length ? Math.max(...orders) + 1 : 0;
-}
-
-function compareCustomTagMeta(left, right) {
-  const orderDiff = getCustomTagOrder(left) - getCustomTagOrder(right);
-  if (orderDiff !== 0) {
-    return orderDiff;
-  }
-  return String(left?.label || "").localeCompare(String(right?.label || ""), "en");
-}
-
 function updateCustomTagDefinition(tagKey, nextDefinition) {
   const key = String(tagKey || "").trim();
   const label = String(nextDefinition?.label || "").replace(/\s+/g, " ").trim();
@@ -1939,28 +1820,6 @@ function removeTagFromPaper(likeId, tagKey) {
   });
 }
 
-function slugifyTag(value) {
-  return String(value || "")
-    .trim()
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
-}
-
-function assignTagColor(tagKey, catalog) {
-  const used = new Set([...catalog.values()].map((tag) => tag.color).filter(Boolean));
-  const available = CUSTOM_TAG_PALETTE.find((color) => !used.has(color));
-  if (available) {
-    return available;
-  }
-  const hash = [...String(tagKey || "")].reduce((acc, char) => acc + char.charCodeAt(0), 0);
-  return CUSTOM_TAG_PALETTE[hash % CUSTOM_TAG_PALETTE.length];
-}
-
-function getCustomTagStyle(color) {
-  return `--custom-tag-accent:${String(color || "#5c8f7b")}`;
-}
-
 function getArxivUrl(paper) {
   return paper.pdf_url || paper.abs_url || "";
 }
@@ -2091,20 +1950,6 @@ function buildLibrarySourceLede(likedCount, laterCount, toReadCount) {
   return "Start liking papers to build this group";
 }
 
-function getSnapshotSourceKind(snapshot) {
-  const url = snapshot?.branch_url || "";
-  if (url.includes("cool-daily")) {
-    return "daily";
-  }
-  if (url.includes("conference")) {
-    return "conference";
-  }
-  if (url.includes("trending")) {
-    return "trending";
-  }
-  return "hf_daily";
-}
-
 function computeTopicDistribution(papers) {
   const counts = new Map();
   papers.forEach((paper) => {
@@ -2118,30 +1963,6 @@ function computeTopicDistribution(papers) {
       share: papers.length ? (count / papers.length) * 100 : 0,
     }))
     .sort((a, b) => b.count - a.count || a.topic_label.localeCompare(b.topic_label, "en"));
-}
-
-function getActiveFilters() {
-  const filters = [];
-  if (state.source) {
-    filters.push(`Group: ${getLibraryGroupLabel(state.source)}`);
-  }
-  if (state.workflowStatus) {
-    filters.push(`Status: ${getWorkflowStatusLabel(state.workflowStatus)}`);
-  }
-  if (state.priorityLevel) {
-    filters.push(`Priority: ${getPriorityLabel(state.priorityLevel)}`);
-  }
-  if (state.customTag) {
-    const tag = collectCustomTagCatalog(state.likes).find((item) => item.key === state.customTag);
-    filters.push(`Custom Tag: ${tag?.label || state.customTag}`);
-  }
-  if (state.topic) {
-    filters.push(`Topic: ${displayTopicLabel(state.topic)}`);
-  }
-  if (state.query) {
-    filters.push(`Search: ${state.query}`);
-  }
-  return filters;
 }
 
 function renderResultStat(label, value, meta) {
@@ -2169,21 +1990,6 @@ function renderEmpty(toReadSnapshots) {
   resetFiltersButton.disabled = true;
 }
 
-function normalizeFilterState(value) {
-  const workflowStatus = String(value.workflowStatus || "").trim();
-  const priorityLevel = String(value.priorityLevel || "").trim();
-  const viewMode = String(value.viewMode || "").trim().toLowerCase();
-  return {
-    source: String(value.source || "").trim(),
-    topic: String(value.topic || "").trim(),
-    customTag: String(value.customTag || "").trim(),
-    workflowStatus: workflowStatus && WORKFLOW_STATUS_OPTIONS.some((item) => item.value === workflowStatus) ? workflowStatus : "",
-    priorityLevel: priorityLevel && PRIORITY_OPTIONS.some((item) => item.value === priorityLevel) ? priorityLevel : "",
-    query: String(value.query || "").trim().toLowerCase(),
-    viewMode: viewMode === "list" ? "list" : "card",
-  };
-}
-
 function getCurrentFilterState() {
   return normalizeFilterState({
     source: state.source,
@@ -2194,46 +2000,6 @@ function getCurrentFilterState() {
     query: state.query,
     viewMode: state.viewMode,
   });
-}
-
-function areFilterStatesEqual(left, right) {
-  const nextLeft = normalizeFilterState(left);
-  const nextRight = normalizeFilterState(right);
-  return (
-    nextLeft.source === nextRight.source &&
-    nextLeft.topic === nextRight.topic &&
-    nextLeft.customTag === nextRight.customTag &&
-    nextLeft.workflowStatus === nextRight.workflowStatus &&
-    nextLeft.priorityLevel === nextRight.priorityLevel &&
-    nextLeft.query === nextRight.query &&
-    nextLeft.viewMode === nextRight.viewMode
-  );
-}
-
-function describeSavedView(filters) {
-  const normalized = normalizeFilterState(filters);
-  const parts = [];
-  if (normalized.source) {
-    parts.push(getLibraryGroupLabel(normalized.source));
-  }
-  if (normalized.topic) {
-    parts.push(displayTopicLabel(normalized.topic));
-  }
-  if (normalized.customTag) {
-    const tag = collectCustomTagCatalog(state.likes).find((item) => item.key === normalized.customTag);
-    parts.push(tag?.label || normalized.customTag);
-  }
-  if (normalized.workflowStatus) {
-    parts.push(getWorkflowStatusLabel(normalized.workflowStatus));
-  }
-  if (normalized.priorityLevel) {
-    parts.push(getPriorityLabel(normalized.priorityLevel));
-  }
-  if (normalized.query) {
-    parts.push("Search");
-  }
-  parts.push(normalized.viewMode === "list" ? "List" : "Gallery");
-  return parts.length ? parts.join(" · ") : "Full scan";
 }
 
 function applySavedView(viewId) {
@@ -2279,109 +2045,10 @@ function updateSavedViewActionState() {
   }
 }
 
-function createSavedViewId() {
-  return `view_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 8)}`;
-}
-
 function renderFatal(error) {
   const message = getErrorMessage(error);
   document.querySelector("#like-source-sections").innerHTML =
     `<div class="glass-card empty-state">Like page failed to load: ${escapeHtml(message)}</div>`;
-}
-
-function displayTopicLabel(value) {
-  const label = String(value || "").trim();
-  if (!label) {
-    return "Other AI";
-  }
-  return TOPIC_LABEL_TRANSLATIONS.get(label) || label;
-}
-
-function getWorkflowStatusValue(value) {
-  return WORKFLOW_STATUS_OPTIONS.some((item) => item.value === value) ? value : "inbox";
-}
-
-function getWorkflowStatusLabel(value) {
-  return WORKFLOW_STATUS_OPTIONS.find((item) => item.value === getWorkflowStatusValue(value))?.label || "";
-}
-
-function getPriorityValue(value) {
-  return PRIORITY_OPTIONS.some((item) => item.value === value) ? value : "medium";
-}
-
-function getPriorityLabel(value) {
-  return PRIORITY_OPTIONS.find((item) => item.value === getPriorityValue(value))?.label || "";
-}
-
-function extractDateParts(paper) {
-  const reportDate = typeof paper.report_date === "string" ? paper.report_date.trim() : "";
-  if (/^\d{4}-\d{2}-\d{2}$/.test(reportDate)) {
-    return {
-      year: reportDate.slice(0, 4),
-      month: reportDate.slice(0, 7),
-      day: reportDate,
-    };
-  }
-  const venueYear = String(paper.venue_year || "").trim();
-  if (/^\d{4}$/.test(venueYear)) {
-    return {
-      year: venueYear,
-      month: "",
-      day: "",
-    };
-  }
-  return {
-    year: "",
-    month: "",
-    day: "",
-  };
-}
-
-function findLatestReportedDate(likes) {
-  return likes
-    .map((paper) => extractDateParts(paper).day || extractDateParts(paper).month || extractDateParts(paper).year)
-    .filter(Boolean)
-    .sort((a, b) => b.localeCompare(a))[0] || "";
-}
-
-function extractDateLabel(paper) {
-  const dateParts = extractDateParts(paper);
-  return dateParts.day || dateParts.month || dateParts.year || "";
-}
-
-async function loadSnapshotQueueData() {
-  const branchCatalog = await fetchJson("./data/branches/manifest.json").catch(() => null);
-  const manifestUrls = ["./data/trending/manifest.json"];
-
-  if (branchCatalog && Array.isArray(branchCatalog.reports)) {
-    const snapshots = branchCatalog.reports.map((report) => createSnapshotFromReport(report)).filter(Boolean);
-    const trendingResult = await Promise.allSettled([fetchJson("./data/trending/manifest.json")]);
-    const combinedSnapshots = [...snapshots];
-    if (trendingResult[0]?.status === "fulfilled" && Array.isArray(trendingResult[0].value?.reports)) {
-      combinedSnapshots.push(...trendingResult[0].value.reports.map((report) => createSnapshotFromReport(report)).filter(Boolean));
-    }
-    return combinedSnapshots.sort((left, right) => right.sort_key.localeCompare(left.sort_key) || left.title.localeCompare(right.title));
-  }
-
-  manifestUrls.unshift("./data/daily/manifest.json", "./data/hf-daily/manifest.json", "./data/conference/manifest.json");
-  const results = await Promise.allSettled(manifestUrls.map((url) => fetchJson(url)));
-  const snapshots = [];
-
-  for (const result of results) {
-    if (result.status !== "fulfilled") {
-      continue;
-    }
-    const manifest = result.value;
-    if (Array.isArray(manifest?.reports)) {
-      snapshots.push(...manifest.reports.map((report) => createSnapshotFromReport(report)).filter(Boolean));
-    }
-  }
-
-  return snapshots.sort((left, right) => right.sort_key.localeCompare(left.sort_key) || left.title.localeCompare(right.title));
-}
-
-function getToReadSnapshots(snapshots) {
-  return snapshots.filter((snapshot) => !isPageReviewed(snapshot.review_key));
 }
 
 function scheduleToReadSnapshotSync() {
@@ -2463,100 +2130,4 @@ async function performToReadSnapshotSync() {
   }
 
   return snapshots;
-}
-
-function createDailySnapshot(report) {
-  return {
-    review_key: createPageReviewKey("cool_daily", report.data_path),
-    branch_label: "Cool Daily",
-    branch_url: "./cool-daily.html",
-    snapshot_label: `${report.report_date} · ${report.category}`,
-    title: `Cool Daily ${report.report_date} · ${report.category}`,
-    summary: `${report.total_papers} papers${report.top_topics?.[0] ? ` · Top topic ${displayTopicLabel(report.top_topics[0].topic_label)}` : ""}`,
-    source_url: report.source_url || "",
-    sort_key: `${report.report_date}-2-${report.category}`,
-  };
-}
-
-function createSnapshotFromReport(report) {
-  if (!report || typeof report !== "object") {
-    return null;
-  }
-  if (report.snapshot_date || report.since) {
-    return createTrendingSnapshot(report);
-  }
-  if (report.venue) {
-    return createConferenceSnapshot(report);
-  }
-  if (report.category) {
-    return createDailySnapshot(report);
-  }
-  if (report.report_date) {
-    return createHfSnapshot(report);
-  }
-  return null;
-}
-
-function createHfSnapshot(report) {
-  return {
-    review_key: createPageReviewKey("hf_daily", report.data_path),
-    branch_label: "HF Daily",
-    branch_url: "./hf-daily.html",
-    snapshot_label: report.report_date,
-    title: `HF Daily ${report.report_date}`,
-    summary: `${report.total_papers} papers${report.top_topics?.[0] ? ` · Top topic ${displayTopicLabel(report.top_topics[0].topic_label)}` : ""}`,
-    source_url: report.source_url || "",
-    sort_key: `${report.report_date}-3`,
-  };
-}
-
-function createConferenceSnapshot(report) {
-  return {
-    review_key: createPageReviewKey("conference", report.data_path),
-    branch_label: "Conference",
-    branch_url: "./conference.html",
-    snapshot_label: report.venue,
-    title: `Conference ${report.venue}`,
-    summary: `${report.total_papers} papers${report.top_topics?.[0] ? ` · Top topic ${displayTopicLabel(report.top_topics[0].topic_label)}` : ""}`,
-    source_url: report.source_url || "",
-    sort_key: `${report.venue_year || "0000"}-1-${report.venue}`,
-  };
-}
-
-function createTrendingSnapshot(report) {
-  const weekLabel = formatWeekLabel(report.snapshot_date);
-  return {
-    review_key: createPageReviewKey("trending", report.data_path),
-    branch_label: "Trending",
-    branch_url: "./trending.html",
-    snapshot_label: weekLabel,
-    title: `Trending ${weekLabel}`,
-    summary: `${report.total_repositories} repos${report.top_repositories?.[0] ? ` · Lead ${report.top_repositories[0].full_name}` : ""}`,
-    source_url: report.source_url || "",
-    sort_key: `${report.snapshot_date}-0`,
-  };
-}
-
-function formatWeekLabel(dateString) {
-  if (!dateString) {
-    return "-";
-  }
-  const week = getIsoWeekParts(dateString);
-  if (!week) {
-    return dateString;
-  }
-  return `${week.year}-W${String(week.week).padStart(2, "0")}`;
-}
-
-function getIsoWeekParts(dateString) {
-  const date = new Date(`${dateString}T00:00:00Z`);
-  if (Number.isNaN(date.getTime())) {
-    return null;
-  }
-  const day = date.getUTCDay() || 7;
-  date.setUTCDate(date.getUTCDate() + 4 - day);
-  const year = date.getUTCFullYear();
-  const yearStart = new Date(Date.UTC(year, 0, 1));
-  const week = Math.ceil((((date - yearStart) / 86400000) + 1) / 7);
-  return { year, week };
 }

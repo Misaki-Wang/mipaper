@@ -1,10 +1,14 @@
 export async function fetchJson(url, options = {}) {
-  const { cache = "no-store", errorFormatter = defaultFetchErrorFormatter } = options;
+  const { cache = "no-store", errorFormatter = defaultFetchErrorFormatter, validator = null } = options;
   const response = await fetch(url, { cache });
   if (!response.ok) {
     throw new Error(errorFormatter(url, response.status));
   }
-  return response.json();
+  const payload = await response.json();
+  if (typeof validator === "function") {
+    validator(payload);
+  }
+  return payload;
 }
 
 export function escapeHtml(value) {

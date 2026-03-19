@@ -1,4 +1,4 @@
-import { escapeAttribute, escapeHtml } from "./ui_utils.js?v=20260320-2";
+import { escapeAttribute, escapeHtml } from "./ui_utils.js?v=e2da3b3a11";
 
 const BRANCH_NAV_ITEMS = [
   { key: "hf", href: "./hf-daily.html", label: "HF" },

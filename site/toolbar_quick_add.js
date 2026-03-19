@@ -1,5 +1,5 @@
-import { addToQueue, readQueue } from "./paper_queue.js?v=20260319-5";
-import { initDirectAddSync, upsertDirectAdd } from "./direct_add_store.js?v=20260319-4";
+import { addToQueue, readQueue } from "./paper_queue.js?v=8b696292c3";
+import { initDirectAddSync, upsertDirectAdd } from "./direct_add_store.js?v=f47049a9ef";
 
 const ARXIV_ID_PATTERN = /^\d{4}\.\d{4,5}(?:v\d+)?$/i;
 const STATUS_RESET_MS = 3200;

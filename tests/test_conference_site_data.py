@@ -32,6 +32,7 @@ class ConferenceSiteDataTest(unittest.TestCase):
                             "source_url": f"https://papers.cool/venue/{venue}",
                             "subject_distribution": [{"subject_label": "Oral", "count": 10, "share": 100.0}],
                             "topic_distribution": [{"topic_label": "Other AI", "count": 10, "share": 100.0}],
+                            "papers": [],
                         },
                         ensure_ascii=False,
                     ),

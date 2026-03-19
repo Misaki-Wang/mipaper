@@ -1,6 +1,6 @@
-import { createLikeRecord, isLiked } from "./likes.js?v=20260319-9";
-import { getSupabaseClient, isSupabaseConfigured, loadRuntimeConfig } from "./supabase.js";
-import { movePaperToLater, movePaperToLikes } from "./paper_selection.js?v=20260319-5";
+import { createLikeRecord, isLiked } from "./likes.js?v=d409e691d1";
+import { getSupabaseClient, isSupabaseConfigured, loadRuntimeConfig } from "./supabase.js?v=606e1fd811";
+import { movePaperToLater, movePaperToLikes } from "./paper_selection.js?v=964dbe6c53";
 import {
   compareSyncTimestamps,
   createSyncTimestamp,
@@ -10,7 +10,7 @@ import {
   getRecordUpdatedAt,
   getSyncDeviceId,
   mergeSyncRecords,
-} from "./sync_utils.js";
+} from "./sync_utils.js?v=b3e14c1ece";
 
 const QUEUE_STORAGE_KEY = "cool-paper-queue-v1";
 const QUEUE_META_KEY = "cool-paper-queue-meta-v1";

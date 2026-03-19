@@ -3,6 +3,7 @@ from __future__ import annotations
 from pathlib import Path
 
 from mipaper.branch_site_data import BranchManifestResult, build_branch_manifest
+from mipaper.site_contract import validate_hf_manifest, validate_hf_report_payload
 
 
 def build_hf_site_manifest(reports_dir: Path, site_data_dir: Path) -> BranchManifestResult:
@@ -12,6 +13,8 @@ def build_hf_site_manifest(reports_dir: Path, site_data_dir: Path) -> BranchMani
         branch_key="hf-daily",
         branch_label="HF Daily",
         report_sort_key=lambda item: item.get("report_date", ""),
+        report_validator=validate_hf_report_payload,
+        manifest_validator=validate_hf_manifest,
         report_entry_builder=lambda report: {
             "slug": report["source_path"].stem,
             "report_date": report["report_date"],

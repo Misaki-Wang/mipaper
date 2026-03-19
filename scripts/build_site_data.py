@@ -12,6 +12,7 @@ if str(ROOT_DIR) not in sys.path:
 from mipaper.conference_site_data import build_conference_site_manifest
 from mipaper.branch_site_data import build_branch_catalog
 from mipaper.hf_site_data import build_hf_site_manifest
+from mipaper.asset_versions import update_site_asset_versions
 from mipaper.paths import (
     CONFERENCE_REPORTS_DIR,
     CONFERENCE_SITE_DATA_DIR,
@@ -19,6 +20,7 @@ from mipaper.paths import (
     DAILY_SITE_DATA_DIR,
     HF_DAILY_REPORTS_DIR,
     HF_DAILY_SITE_DATA_DIR,
+    SITE_DIR,
     TRENDING_REPORTS_DIR,
     TRENDING_SITE_DATA_DIR,
 )
@@ -51,11 +53,13 @@ def main() -> int:
             conference_result.manifest,
         ),
     )
+    asset_result = update_site_asset_versions(SITE_DIR)
     print(f"Built site data: {daily_result.manifest_path}")
     print(f"Built conference site data: {conference_result.manifest_path}")
     print(f"Built HF daily site data: {hf_result.manifest_path}")
     print(f"Built trending site data: {trending_result.manifest_path}")
     print(f"Built branch catalog: {catalog_result.manifest_path}")
+    print(f"Updated asset versions in {len(asset_result.updated_files)} files")
     return 0
 
 

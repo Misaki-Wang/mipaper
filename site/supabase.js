@@ -1,4 +1,4 @@
-import { appConfig } from "./config.js";
+import { appConfig } from "./config.js?v=ce24b689eb";
 
 let supabaseClientPromise = null;
 let runtimeConfigPromise = null;

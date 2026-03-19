@@ -1,17 +1,12 @@
-import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js?v=20260319-4";
-import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js?v=20260319-9";
-import { bindQueueButtons, initQueue, isInQueue, subscribeQueue } from "./paper_queue.js?v=20260319-5";
-import { bindBranchAuthToolbar } from "./branch_auth.js?v=20260320-1";
-import { mountAppToolbar } from "./app_toolbar.js?v=20260320-2";
-import { repairLikeLaterConflicts } from "./paper_selection.js?v=20260319-5";
-import { bindBranchNav } from "./branch_nav.js?v=20260319-4";
-import { bindLibraryNav } from "./library_nav.js?v=20260319-4";
-import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=20260319-13";
-import { initToolbarPreferences } from "./toolbar_preferences.js?v=20260320-1";
-import { bindBackToTop, bindFilterMenu } from "./page_shell.js?v=20260320-1";
-import { createLatestTaskRunner } from "./request_gate.js?v=20260320-1";
-import { createFloatingTocController } from "./floating_toc.js?v=20260320-1";
-import { escapeAttribute, escapeHtml, fetchJson, formatZhTime, getErrorMessage } from "./ui_utils.js?v=20260320-2";
+import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js?v=d409e691d1";
+import { bindQueueButtons, initQueue, isInQueue, subscribeQueue } from "./paper_queue.js?v=8b696292c3";
+import { mountAppToolbar } from "./app_toolbar.js?v=625fba0996";
+import { repairLikeLaterConflicts } from "./paper_selection.js?v=964dbe6c53";
+import { buildBranchReviewKey, createBranchReviewController, initBranchReportPage } from "./branch_page.js?v=f27a328acc";
+import { createLatestTaskRunner } from "./request_gate.js?v=f527e8e81d";
+import { createFloatingTocController } from "./floating_toc.js?v=a9ffd5aa93";
+import { validateTrendingManifest, validateTrendingReport } from "./site_contract.js?v=12344e596d";
+import { escapeAttribute, escapeHtml, fetchJson, formatZhTime, getErrorMessage } from "./ui_utils.js?v=e2da3b3a11";
 
 mountAppToolbar("#trending-toolbar-root", {
   prefix: "trending",
@@ -50,6 +45,17 @@ const floatingToc = createFloatingTocController(floatingTocRoot, {
   rootMargin: "-18% 0px -60% 0px",
   threshold: [0.1, 0.3, 0.55],
 });
+const reviewController = createBranchReviewController({
+  reviewScope: "trending",
+  branchLabel: "Trending",
+  reviewToggleButton,
+  reviewToggleMeta,
+  heroReviewStatus,
+  getCurrentReport: () => state.report,
+  getCurrentPath: () => state.currentPath,
+  getSnapshotLabel: (report) => formatWeekLabel(report.snapshot_date),
+});
+const { bindReviewToggle, renderReviewState } = reviewController;
 
 init().catch((error) => {
   console.error(error);
@@ -57,83 +63,34 @@ init().catch((error) => {
 });
 
 async function init() {
-  initToolbarPreferences({ pageKey: "trending" });
-  bindFilterMenu({
-    button: sidebarToggleButton,
-    panel: filterMenuPanel,
-    labelNode: sidebarToggleLabel,
-    iconNode: sidebarToggleIcon,
-  });
-  bindBranchNav();
-  bindLibraryNav();
-  bindToolbarQuickAdd("trending", { target: "later" });
-  bindBranchAuthToolbar("trending");
-  bindBackToTop(backToTopButton);
-  bindFilters();
-  bindReviewToggle();
-  subscribeLikes(() => bindLikeButtons(document, likeRecords));
-  subscribeQueue(() => bindQueueButtons(document, likeRecords));
-  subscribePageReviews(() => renderReviewState());
-  await Promise.all([initLikesSync(), initReviewSync(), initQueue()]);
-  repairLikeLaterConflicts();
-  const manifest = await fetchJson(manifestUrl);
-  state.manifest = manifest;
-  populateReportSelect(manifest.reports || []);
-  renderHomeCards(manifest);
-
-  if (!manifest.reports?.length) {
-    renderEmpty();
-    return;
-  }
-
-  await loadReport(manifest.default_report_path || manifest.reports[0].data_path);
-}
-
-function bindReviewToggle() {
-  if (!reviewToggleButton) {
-    return;
-  }
-  reviewToggleButton.addEventListener("click", () => {
-    if (!state.report || !state.currentPath) {
-      return;
-    }
-    const reviewKey = createPageReviewKey("trending", state.currentPath);
-    const next = !isPageReviewed(reviewKey);
-    setPageReviewed(reviewKey, next, {
-      branch: "Trending",
-      snapshot_label: state.report.snapshot_date,
-    });
-    renderReviewState();
+  await initBranchReportPage({
+    pageKey: "trending",
+    toolbarPrefix: "trending",
+    manifestUrl,
+    sidebarToggleButton,
+    sidebarToggleLabel,
+    sidebarToggleIcon,
+    filterMenuPanel,
+    backToTopButton,
+    likeRecords,
+    bindPageControls: () => {
+      bindFilters();
+      bindReviewToggle();
+    },
+    renderReviewState,
+    onManifestLoaded: (manifest) => {
+      state.manifest = manifest;
+      populateReportSelect(manifest.reports || []);
+      renderHomeCards(manifest);
+    },
+    onEmptyManifest: () => {
+      renderEmpty();
+    },
+    getInitialReportPath: (manifest) => manifest.default_report_path || manifest.reports[0]?.data_path || "",
+    manifestValidator: validateTrendingManifest,
+    loadReport,
   });
 }
-
-function renderReviewState() {
-  if (!reviewToggleButton || !reviewToggleMeta) {
-    return;
-  }
-  if (!state.report || !state.currentPath) {
-    reviewToggleButton.classList.remove("is-reviewed");
-    reviewToggleButton.setAttribute("aria-pressed", "false");
-    reviewToggleMeta.textContent = "Mark this snapshot as reviewed";
-    if (heroReviewStatus) {
-      heroReviewStatus.textContent = "Not reviewed";
-      heroReviewStatus.classList.remove("is-reviewed");
-    }
-    return;
-  }
-  const reviewed = isPageReviewed(createPageReviewKey("trending", state.currentPath));
-  const snapshotLabel = formatWeekLabel(state.report.snapshot_date);
-  reviewToggleButton.classList.toggle("is-reviewed", reviewed);
-  reviewToggleButton.setAttribute("aria-pressed", String(reviewed));
-  reviewToggleMeta.textContent = reviewed
-    ? `Reviewed ${snapshotLabel}`
-    : `Mark ${snapshotLabel} as reviewed`;
-  if (heroReviewStatus) {
-    heroReviewStatus.textContent = reviewed ? "Reviewed" : "Not reviewed";
-    heroReviewStatus.classList.toggle("is-reviewed", reviewed);
-  }
-}
-
 function bindFilters() {
   reportSelect.addEventListener("change", async (event) => {
     const path = event.target.value;
@@ -158,7 +115,7 @@ function bindFilters() {
 }
 
 async function loadReport(path) {
-  const result = await runLatestReportLoad(() => fetchJson(path));
+  const result = await runLatestReportLoad(() => fetchJson(path, { validator: validateTrendingReport }));
   if (result.stale) {
     return;
   }
@@ -246,7 +203,7 @@ function renderReport() {
   renderCadence(report);
   renderResults(report, visibleRepos);
   renderRepositorySections(visibleRepos);
-  renderFloatingToc([
+  floatingToc.render([
     { id: "trending-overview-section", label: "Overview" },
     { id: "trending-tags-section", label: "Current Tags" },
     { id: "trending-cadence-section", label: "Recent Cadence" },
@@ -503,6 +460,7 @@ function rememberLikeRecord(repo) {
       sourcePage: "./trending.html",
       snapshotLabel,
       reportDate: state.report?.snapshot_date || "",
+      reviewKey: buildBranchReviewKey("trending", state.currentPath),
     }
   );
   likeRecords.set(record.like_id, record);
@@ -562,7 +520,7 @@ function renderEmpty() {
     `<div class="empty-state">Run the trending report generator first, then refresh the page.</div>`;
   document.querySelector("#trending-repository-sections").innerHTML = "";
   document.querySelector("#trending-tag-map").innerHTML = "";
-  renderFloatingToc([]);
+  floatingToc.render([]);
 }
 
 function formatWeekLabel(dateString) {
@@ -594,10 +552,7 @@ function renderFatal(error) {
   document.querySelector("#trending-board-summary").textContent = "Trending page failed to load.";
   document.querySelector("#trending-home-cards").innerHTML =
     `<div class="glass-card empty-state">Trending page failed to load: ${escapeHtml(message)}</div>`;
-}
-
-function renderFloatingToc(items) {
-  floatingToc.render(items);
+  floatingToc.render([]);
 }
 
 function renderPaperLink({ href, label, brand }) {

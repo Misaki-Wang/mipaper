@@ -34,3 +34,31 @@ test("fetchJson uses default error formatter", async () => {
     globalThis.fetch = originalFetch;
   }
 });
+
+test("fetchJson runs payload validators before returning", async () => {
+  const originalFetch = globalThis.fetch;
+  globalThis.fetch = async () =>
+    new Response(JSON.stringify({ ok: true }), {
+      headers: { "Content-Type": "application/json" },
+      status: 200,
+    });
+
+  try {
+    const payload = await fetchJson("/ok", {
+      validator(value) {
+        assert.equal(value.ok, true);
+      },
+    });
+    assert.deepEqual(payload, { ok: true });
+    await assert.rejects(
+      fetchJson("/ok", {
+        validator() {
+          throw new Error("bad payload");
+        },
+      }),
+      /bad payload/
+    );
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+});

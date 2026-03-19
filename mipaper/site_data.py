@@ -3,6 +3,7 @@ from __future__ import annotations
 from pathlib import Path
 
 from mipaper.branch_site_data import BranchManifestResult, build_branch_manifest, write_json_if_changed
+from mipaper.site_contract import validate_daily_manifest, validate_daily_report_payload
 
 
 PREFERRED_CATEGORY_ORDER = ["cs.AI", "cs.CL", "cs.CV"]
@@ -18,6 +19,7 @@ def build_site_manifest(reports_dir: Path, site_data_dir: Path) -> BranchManifes
             item.get("report_date", ""),
             -category_sort_key(item.get("category", "")),
         ),
+        report_validator=validate_daily_report_payload,
         report_entry_builder=lambda report: {
             "slug": report["source_path"].stem,
             "report_date": report["report_date"],
@@ -45,6 +47,7 @@ def build_site_manifest(reports_dir: Path, site_data_dir: Path) -> BranchManifes
     result.manifest["default_report_path"] = latest_by_category[0]["data_path"] if latest_by_category else (
         result.manifest["reports"][0]["data_path"] if result.manifest["reports"] else ""
     )
+    validate_daily_manifest(result.manifest)
     write_json_if_changed(result.manifest_path, result.manifest)
     return result
 

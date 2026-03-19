@@ -1,18 +1,13 @@
-import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js?v=20260319-9";
-import { bindQueueButtons, initQueue, subscribeQueue } from "./paper_queue.js?v=20260319-5";
-import { repairLikeLaterConflicts } from "./paper_selection.js?v=20260319-5";
-import { createCalendarPicker } from "./calendar_picker.js";
-import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js?v=20260319-4";
-import { bindBranchAuthToolbar } from "./branch_auth.js?v=20260320-1";
-import { mountAppToolbar } from "./app_toolbar.js?v=20260320-2";
-import { bindBranchNav } from "./branch_nav.js?v=20260319-4";
-import { bindLibraryNav } from "./library_nav.js?v=20260319-4";
-import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=20260319-13";
-import { initToolbarPreferences } from "./toolbar_preferences.js?v=20260320-1";
-import { bindBackToTop, bindFilterMenu } from "./page_shell.js?v=20260320-1";
-import { createLatestTaskRunner } from "./request_gate.js?v=20260320-1";
-import { createFloatingTocController } from "./floating_toc.js?v=20260320-1";
-import { escapeAttribute, escapeHtml, fetchJson, formatZhTime, getErrorMessage } from "./ui_utils.js?v=20260320-2";
+import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js?v=d409e691d1";
+import { bindQueueButtons, initQueue, subscribeQueue } from "./paper_queue.js?v=8b696292c3";
+import { repairLikeLaterConflicts } from "./paper_selection.js?v=964dbe6c53";
+import { createCalendarPicker } from "./calendar_picker.js?v=4b01d6ac6c";
+import { mountAppToolbar } from "./app_toolbar.js?v=625fba0996";
+import { buildBranchReviewKey, createBranchReviewController, initBranchReportPage } from "./branch_page.js?v=f27a328acc";
+import { createLatestTaskRunner } from "./request_gate.js?v=f527e8e81d";
+import { createFloatingTocController } from "./floating_toc.js?v=a9ffd5aa93";
+import { validateHfManifest, validateHfReport } from "./site_contract.js?v=12344e596d";
+import { escapeAttribute, escapeHtml, fetchJson, formatZhTime, getErrorMessage } from "./ui_utils.js?v=e2da3b3a11";
 
 mountAppToolbar("#hf-toolbar-root", {
   prefix: "hf",
@@ -61,6 +56,17 @@ const likeRecords = new Map();
 let datePicker = null;
 const runLatestReportLoad = createLatestTaskRunner();
 const floatingToc = createFloatingTocController(floatingTocRoot);
+const reviewController = createBranchReviewController({
+  reviewScope: "hf_daily",
+  branchLabel: "HF Daily",
+  reviewToggleButton,
+  reviewToggleMeta,
+  heroReviewStatus,
+  getCurrentReport: () => state.report,
+  getCurrentPath: () => state.currentPath,
+  getSnapshotLabel: (report) => report.report_date,
+});
+const { bindReviewToggle, renderReviewState } = reviewController;
 
 init().catch((error) => {
   console.error(error);
@@ -68,83 +74,35 @@ init().catch((error) => {
 });
 
 async function init() {
-  initToolbarPreferences({ pageKey: "hf" });
-  bindFilterMenu({
-    button: sidebarToggleButton,
-    panel: filterMenuPanel,
-    labelNode: sidebarToggleLabel,
-    iconNode: sidebarToggleIcon,
-  });
-  bindBranchNav();
-  bindLibraryNav();
-  bindToolbarQuickAdd("hf", { target: "later" });
-  bindBranchAuthToolbar("hf");
-  bindBackToTop(backToTopButton);
-  bindFilters();
-  bindReviewToggle();
-  bindCadenceViewToggle();
-  subscribeLikes(() => bindLikeButtons(document, likeRecords));
-  subscribeQueue(() => bindQueueButtons(document, likeRecords));
-  subscribePageReviews(() => renderReviewState());
-  await Promise.all([initLikesSync(), initReviewSync(), initQueue()]);
-  repairLikeLaterConflicts();
-  const manifest = await fetchJson(manifestUrl);
-  state.manifest = manifest;
-  bindDatePicker();
-  populateReportSelect(manifest.reports || []);
-
-  if (!manifest.reports?.length) {
-    renderEmpty();
-    return;
-  }
-
-  await loadReport(manifest.default_report_path || manifest.reports[0].data_path);
-}
-
-function bindReviewToggle() {
-  if (!reviewToggleButton) {
-    return;
-  }
-  reviewToggleButton.addEventListener("click", () => {
-    if (!state.report || !state.currentPath) {
-      return;
-    }
-    const reviewKey = createPageReviewKey("hf_daily", state.currentPath);
-    const next = !isPageReviewed(reviewKey);
-    setPageReviewed(reviewKey, next, {
-      branch: "HF Daily",
-      snapshot_label: state.report.report_date,
-    });
-    renderReviewState();
+  await initBranchReportPage({
+    pageKey: "hf",
+    toolbarPrefix: "hf",
+    manifestUrl,
+    sidebarToggleButton,
+    sidebarToggleLabel,
+    sidebarToggleIcon,
+    filterMenuPanel,
+    backToTopButton,
+    likeRecords,
+    bindPageControls: () => {
+      bindFilters();
+      bindReviewToggle();
+      bindCadenceViewToggle();
+    },
+    renderReviewState,
+    onManifestLoaded: (manifest) => {
+      state.manifest = manifest;
+      bindDatePicker();
+      populateReportSelect(manifest.reports || []);
+    },
+    onEmptyManifest: () => {
+      renderEmpty();
+    },
+    getInitialReportPath: (manifest) => manifest.default_report_path || manifest.reports[0]?.data_path || "",
+    manifestValidator: validateHfManifest,
+    loadReport,
   });
 }
-
-function renderReviewState() {
-  if (!reviewToggleButton || !reviewToggleMeta) {
-    return;
-  }
-  if (!state.report || !state.currentPath) {
-    reviewToggleButton.classList.remove("is-reviewed");
-    reviewToggleButton.setAttribute("aria-pressed", "false");
-    reviewToggleMeta.textContent = "Mark this snapshot as reviewed";
-    if (heroReviewStatus) {
-      heroReviewStatus.textContent = "Not reviewed";
-      heroReviewStatus.classList.remove("is-reviewed");
-    }
-    return;
-  }
-  const reviewed = isPageReviewed(createPageReviewKey("hf_daily", state.currentPath));
-  reviewToggleButton.classList.toggle("is-reviewed", reviewed);
-  reviewToggleButton.setAttribute("aria-pressed", String(reviewed));
-  reviewToggleMeta.textContent = reviewed
-    ? `Reviewed ${state.report.report_date}`
-    : `Mark ${state.report.report_date} as reviewed`;
-  if (heroReviewStatus) {
-    heroReviewStatus.textContent = reviewed ? "Reviewed" : "Not reviewed";
-    heroReviewStatus.classList.toggle("is-reviewed", reviewed);
-  }
-}
-
 function bindDatePicker() {
   const shell = reportSelect.closest(".date-input-shell");
   const button = shell?.querySelector("[data-date-picker-button]");
@@ -231,7 +189,7 @@ function syncCadenceViewButtons() {
 }
 
 async function loadReport(path) {
-  const result = await runLatestReportLoad(() => fetchJson(path));
+  const result = await runLatestReportLoad(() => fetchJson(path, { validator: validateHfReport }));
   if (result.stale) {
     return;
   }
@@ -287,7 +245,7 @@ function renderReport() {
   renderSpotlight(report, visiblePapers);
   renderResults(report, visiblePapers, topics);
   renderTopicSections(topics);
-  renderFloatingToc([
+  floatingToc.render([
     { id: "hf-overview-section", label: "Overview" },
     { id: "hf-tags-section", label: "Current Tags" },
     { id: "hf-cadence-section", label: "Recent Cadence" },
@@ -759,7 +717,7 @@ function rememberLikeRecord(paper) {
     sourcePage: "./hf-daily.html",
     snapshotLabel: report ? report.report_date : "HF Daily",
     reportDate: report?.report_date || "",
-    reviewKey: state.currentPath ? createPageReviewKey("hf_daily", state.currentPath) : "",
+    reviewKey: buildBranchReviewKey("hf_daily", state.currentPath),
   });
   likeRecords.set(record.like_id, record);
   return record.like_id;
@@ -853,7 +811,7 @@ function renderEmpty() {
   if (tagMap) {
     tagMap.innerHTML = "";
   }
-  renderFloatingToc([]);
+  floatingToc.render([]);
 }
 
 function renderFatal(error) {
@@ -866,11 +824,7 @@ function renderFatal(error) {
   if (topicSections) {
     topicSections.innerHTML = `<div class="glass-card empty-state">${escapeHtml(message)}</div>`;
   }
-  renderFloatingToc([]);
-}
-
-function renderFloatingToc(items) {
-  floatingToc.render(items);
+  floatingToc.render([]);
 }
 
 function sectionIdFromTopic(topic) {

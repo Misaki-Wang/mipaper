@@ -1,5 +1,5 @@
-import { getAuthSnapshot, initLikesSync, signInWithGitHub, signOutFromGitHub, subscribeAuth, syncLikesNow } from "./likes.js?v=20260319-9";
-import { escapeAttribute, escapeHtml, formatDateTime } from "./ui_utils.js?v=20260320-2";
+import { getAuthSnapshot, initLikesSync, signInWithGitHub, signOutFromGitHub, subscribeAuth, syncLikesNow } from "./likes.js?v=d409e691d1";
+import { escapeAttribute, escapeHtml, formatDateTime } from "./ui_utils.js?v=e2da3b3a11";
 
 const TOOLBAR_AUTO_HIDE_KEY = "cool-paper-toolbar-auto-hide";
 const AUTH_TIME_FORMAT = {

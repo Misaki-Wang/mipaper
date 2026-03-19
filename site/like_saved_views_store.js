@@ -1,4 +1,4 @@
-import { getSupabaseClient, isSupabaseConfigured, loadRuntimeConfig } from "./supabase.js";
+import { getSupabaseClient, isSupabaseConfigured, loadRuntimeConfig } from "./supabase.js?v=606e1fd811";
 import {
   compareSyncTimestamps,
   createSyncTimestamp,
@@ -8,7 +8,7 @@ import {
   getRecordUpdatedAt,
   getSyncDeviceId,
   mergeSyncRecords,
-} from "./sync_utils.js";
+} from "./sync_utils.js?v=b3e14c1ece";
 
 const SAVED_VIEWS_STORAGE_KEY = "cool-paper-like-saved-views-v1";
 const SAVED_VIEWS_META_KEY = "cool-paper-like-saved-views-meta-v1";
