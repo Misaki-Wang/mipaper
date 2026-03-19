@@ -6,7 +6,7 @@ import {
   subscribeAuth,
   subscribeLikes,
 } from "./likes.js?v=20260319";
-import { getSupabaseClient, isAuthorizedUser, isSupabaseConfigured, loadRuntimeConfig } from "./supabase.js";
+import { getSupabaseClient, isSupabaseConfigured, loadRuntimeConfig } from "./supabase.js";
 import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js";
 import { bindQueueButtons, initQueue, isInQueue, readQueue, subscribeQueue } from "./paper_queue.js?v=20260319";
 import { bindBranchAuthToolbar } from "./branch_auth.js";
@@ -93,7 +93,7 @@ async function init() {
   bindBackToTop();
   bindFilters();
   subscribeAuth((snapshot) => {
-    if (snapshot.configured && snapshot.signedIn && snapshot.authorized) {
+    if (snapshot.configured && snapshot.signedIn) {
       scheduleToReadSnapshotSync();
     }
   });
@@ -1251,7 +1251,7 @@ async function performToReadSnapshotSync() {
     data: { session },
   } = await supabaseClient.auth.getSession();
   const user = session?.user || null;
-  if (!user || !isAuthorizedUser(user)) {
+  if (!user) {
     return [];
   }
 

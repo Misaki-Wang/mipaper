@@ -1,4 +1,4 @@
-import { getAccessPolicy, getGitHubRedirectTo, getSupabaseClient, isAuthorizedUser, isSupabaseConfigured, loadRuntimeConfig } from "./supabase.js";
+import { getAccessPolicy, getGitHubRedirectTo, getSupabaseClient, isSupabaseConfigured, loadRuntimeConfig } from "./supabase.js";
 import {
   compareSyncTimestamps,
   createSyncTimestamp,
@@ -152,14 +152,14 @@ export function getAuthSnapshot() {
   return {
     configured: isSupabaseConfigured(),
     signedIn: Boolean(authUser),
-    authorized: Boolean(authUser) && !accessState.unauthorized,
+    authorized: Boolean(authUser),
     user: authUser,
     syncing: syncState.syncing,
     syncError: syncState.error,
     lastSyncedAt: syncState.lastSyncedAt || meta.last_synced_at || "",
-    unauthorized: accessState.unauthorized,
-    unauthorizedMessage: accessState.message,
-    blockedUser: accessState.blockedUser,
+    unauthorized: false,
+    unauthorizedMessage: "",
+    blockedUser: null,
     accessPolicy,
   };
 }
@@ -484,22 +484,8 @@ async function applyAuthorizationGuard() {
     }
     return false;
   }
-  if (isAuthorizedUser(authUser)) {
-    clearUnauthorizedState();
-    return true;
-  }
-
-  setUnauthorizedState(authUser);
-  authSession = null;
-  authUser = null;
-  if (supabaseClient) {
-    try {
-      await supabaseClient.auth.signOut();
-    } catch (error) {
-      console.error("Failed to sign out unauthorized user", error);
-    }
-  }
-  return false;
+  clearUnauthorizedState();
+  return true;
 }
 
 function setUnauthorizedState(user) {

@@ -1,4 +1,4 @@
-import { getSupabaseClient, isAuthorizedUser, isSupabaseConfigured, loadRuntimeConfig } from "./supabase.js";
+import { getSupabaseClient, isSupabaseConfigured, loadRuntimeConfig } from "./supabase.js";
 import {
   compareSyncTimestamps,
   createSyncTimestamp,
@@ -242,20 +242,7 @@ async function applyAuthorizationGuard() {
   if (!authUser) {
     return false;
   }
-  if (isAuthorizedUser(authUser)) {
-    return true;
-  }
-
-  authSession = null;
-  authUser = null;
-  if (supabaseClient) {
-    try {
-      await supabaseClient.auth.signOut();
-    } catch (error) {
-      console.error("Failed to sign out unauthorized review-sync user", error);
-    }
-  }
-  return false;
+  return true;
 }
 
 function queueHydrateOrSyncRemoteReviews() {

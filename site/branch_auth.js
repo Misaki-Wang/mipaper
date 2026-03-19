@@ -120,7 +120,7 @@ export function bindBranchAuthToolbar(prefix) {
       signInButton.disabled = !snapshot.configured || (snapshot.signedIn && !snapshot.unauthorized);
     }
     if (signOutButton) {
-      signOutButton.disabled = !snapshot.configured || !snapshot.signedIn || snapshot.unauthorized;
+      signOutButton.disabled = !snapshot.configured || !snapshot.signedIn;
     }
     if (syncNowButton) {
       syncNowButton.disabled = !snapshot.configured || !snapshot.signedIn || snapshot.syncing || snapshot.unauthorized;
