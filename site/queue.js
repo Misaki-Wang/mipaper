@@ -26,11 +26,16 @@ const laterHeroBranches = document.querySelector("#later-hero-branches");
 const laterHeroSource = document.querySelector("#later-hero-source");
 const laterHeroTopic = document.querySelector("#later-hero-topic");
 const searchInput = document.querySelector("#queue-search-input");
+const sidebarToggleButton = document.querySelector("#queue-sidebar-toggle");
+const sidebarToggleLabel = document.querySelector("#queue-sidebar-toggle-label");
+const sidebarToggleIcon = document.querySelector("#queue-sidebar-toggle-icon");
+const filterMenuPanel = document.querySelector("#queue-filters-menu");
 
 let laterPage = 0;
 let laterPapers = [];
 let likedPapers = [];
 let searchQuery = "";
+let filterMenuOpen = false;
 
 const TOPIC_LABEL_TRANSLATIONS = new Map([
   ["多模态理解与视觉", "Multimodal Understanding and Vision"],
@@ -55,6 +60,7 @@ init().catch((error) => {
 
 async function init() {
   initToolbarPreferences({ pageKey: "queue" });
+  bindFilterMenu();
   bindSearchInput();
   bindBranchAuthToolbar("queue");
   bindBranchNav();
@@ -65,6 +71,48 @@ async function init() {
   await Promise.all([initQueue(), initLikesSync()]);
   repairLikeLaterConflicts();
   renderPage();
+}
+
+function bindFilterMenu() {
+  if (!sidebarToggleButton || !filterMenuPanel) {
+    return;
+  }
+
+  sidebarToggleButton.addEventListener("click", (event) => {
+    event.stopPropagation();
+    setFilterMenuOpen(!filterMenuOpen);
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!filterMenuOpen) {
+      return;
+    }
+    if (filterMenuPanel.contains(event.target) || sidebarToggleButton.contains(event.target)) {
+      return;
+    }
+    setFilterMenuOpen(false);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && filterMenuOpen) {
+      setFilterMenuOpen(false);
+    }
+  });
+
+  setFilterMenuOpen(false);
+}
+
+function setFilterMenuOpen(open) {
+  filterMenuOpen = open;
+  if (!sidebarToggleButton || !filterMenuPanel) {
+    return;
+  }
+  sidebarToggleButton.setAttribute("aria-expanded", String(open));
+  sidebarToggleButton.setAttribute("aria-label", open ? "Close filters" : "Open filters");
+  sidebarToggleButton.title = open ? "Close filters" : "Open filters";
+  sidebarToggleLabel.textContent = "Filters";
+  sidebarToggleIcon.textContent = "☰";
+  filterMenuPanel.hidden = !open;
 }
 
 function bindThemeToggle() {

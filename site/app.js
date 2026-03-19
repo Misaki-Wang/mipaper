@@ -13,7 +13,7 @@ import { initToolbarPreferences } from "./toolbar_preferences.js?v=20260320-1";
 mountAppToolbar("#daily-toolbar-root", {
   prefix: "daily",
   filtersTemplateId: "daily-toolbar-filters",
-  branchActiveKey: "hf",
+  branchActiveKey: "cool",
   libraryActiveKey: null,
 });
 
@@ -46,10 +46,10 @@ const topicFilter = document.querySelector("#topic-filter");
 const searchInput = document.querySelector("#search-input");
 const focusOnlyInput = document.querySelector("#focus-only");
 const resetFiltersButton = document.querySelector("#reset-filters");
-const sidebarToggleButton = document.querySelector("#sidebar-toggle");
-const sidebarToggleLabel = document.querySelector("#sidebar-toggle-label");
-const sidebarToggleIcon = document.querySelector("#sidebar-toggle-icon");
-const filterMenuPanel = document.querySelector("#sidebar-filters-menu");
+const sidebarToggleButton = document.querySelector("#daily-sidebar-toggle");
+const sidebarToggleLabel = document.querySelector("#daily-sidebar-toggle-label");
+const sidebarToggleIcon = document.querySelector("#daily-sidebar-toggle-icon");
+const filterMenuPanel = document.querySelector("#daily-filters-menu");
 const backToTopButton = document.querySelector("#back-to-top");
 const floatingTocRoot = document.querySelector("#daily-floating-toc");
 const reviewToggleButton = document.querySelector("#daily-review-toggle");

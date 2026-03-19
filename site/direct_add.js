@@ -38,6 +38,10 @@ const directHeroSource = document.querySelector("#direct-hero-source");
 const searchInput = document.querySelector("#direct-search-input");
 const sortSelect = document.querySelector("#direct-sort");
 const metadataFilterSelect = document.querySelector("#direct-metadata-filter");
+const sidebarToggleButton = document.querySelector("#direct-sidebar-toggle");
+const sidebarToggleLabel = document.querySelector("#direct-sidebar-toggle-label");
+const sidebarToggleIcon = document.querySelector("#direct-sidebar-toggle-icon");
+const filterMenuPanel = document.querySelector("#direct-filters-menu");
 
 let directPage = 0;
 let directPapers = [];
@@ -45,6 +49,7 @@ let likedPapers = [];
 let searchQuery = "";
 let sortMode = sortSelect?.value || "newest";
 let metadataFilter = metadataFilterSelect?.value || "all";
+let filterMenuOpen = false;
 
 init().catch((error) => {
   console.error(error);
@@ -53,6 +58,7 @@ init().catch((error) => {
 
 async function init() {
   initToolbarPreferences({ pageKey: "direct" });
+  bindFilterMenu();
   bindSearchInput();
   bindBranchNav();
   bindLibraryNav();
@@ -77,6 +83,48 @@ async function init() {
   repairLikeLaterConflicts();
   await initDirectAddSync();
   renderPage();
+}
+
+function bindFilterMenu() {
+  if (!sidebarToggleButton || !filterMenuPanel) {
+    return;
+  }
+
+  sidebarToggleButton.addEventListener("click", (event) => {
+    event.stopPropagation();
+    setFilterMenuOpen(!filterMenuOpen);
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!filterMenuOpen) {
+      return;
+    }
+    if (filterMenuPanel.contains(event.target) || sidebarToggleButton.contains(event.target)) {
+      return;
+    }
+    setFilterMenuOpen(false);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && filterMenuOpen) {
+      setFilterMenuOpen(false);
+    }
+  });
+
+  setFilterMenuOpen(false);
+}
+
+function setFilterMenuOpen(open) {
+  filterMenuOpen = open;
+  if (!sidebarToggleButton || !filterMenuPanel) {
+    return;
+  }
+  sidebarToggleButton.setAttribute("aria-expanded", String(open));
+  sidebarToggleButton.setAttribute("aria-label", open ? "Close filters" : "Open filters");
+  sidebarToggleButton.title = open ? "Close filters" : "Open filters";
+  sidebarToggleLabel.textContent = "Filters";
+  sidebarToggleIcon.textContent = "☰";
+  filterMenuPanel.hidden = !open;
 }
 
 function bindThemeToggle() {

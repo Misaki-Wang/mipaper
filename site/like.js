@@ -1066,6 +1066,10 @@ function renderLikeListRow(paper) {
         </div>
       </div>
       <div class="liked-paper-row-body"${rowOpen ? "" : " hidden"}>
+        <div class="paper-authors-box liked-paper-row-authors-box">
+          <span class="paper-detail-label">Authors</span>
+          <p class="paper-authors-line">${view.authors}</p>
+        </div>
         ${view.abstract}
         ${renderCustomTagPanel(view)}
         ${renderWorkspacePanel(view)}
