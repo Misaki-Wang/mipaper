@@ -76,21 +76,19 @@ export function bindToolbarQuickAdd(prefix, options = {}) {
         setBusy(true);
         const resolved = await fetchResolvedPaperMetadata(parsed);
         const record = buildResolvedPaperRecord(parsed, resolved, existingLater);
-        upsertDirectAdd(record, {
+        const directRecord = upsertDirectAdd(record, {
           sourceKind: "library",
           sourceLabel: "Library",
           sourcePage: window.location.pathname,
           snapshotLabel: "Quick Add",
         });
 
-        if (existingLater && hasMeaningfulMetadata(existingLater)) {
-          setStatus("Already in Later", "info");
-          input.value = "";
-          return;
+        if (!directRecord) {
+          throw new Error("Failed to store direct add");
         }
 
         addToQueue(
-          record,
+          directRecord,
           {
             sourceKind: "library",
             sourceLabel: "Library",
@@ -102,7 +100,7 @@ export function bindToolbarQuickAdd(prefix, options = {}) {
           }
         );
         input.value = "";
-        setStatus(existingLater ? "Updated metadata" : "Added to Later", "success");
+        setStatus(existingLater && hasMeaningfulMetadata(existingLater) ? "Updated Later" : "Added to Later", "success");
       } catch (error) {
         const message = error instanceof Error ? error.message : String(error || "Failed to add paper");
         setStatus(message, "error");
