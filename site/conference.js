@@ -1,8 +1,8 @@
-import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js?v=20260319-5";
+import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js?v=20260319-9";
 import { bindQueueButtons, initQueue, subscribeQueue } from "./paper_queue.js?v=20260319-5";
 import { repairLikeLaterConflicts } from "./paper_selection.js?v=20260319-5";
 import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js?v=20260319-4";
-import { bindBranchAuthToolbar } from "./branch_auth.js?v=20260319-6";
+import { bindBranchAuthToolbar } from "./branch_auth.js?v=20260319-9";
 import { mountAppToolbar } from "./app_toolbar.js?v=20260319-11";
 import { bindBranchNav } from "./branch_nav.js?v=20260319-4";
 import { bindLibraryNav } from "./library_nav.js?v=20260319-4";

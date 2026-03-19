@@ -1619,6 +1619,7 @@ code {
 }
 
 .page-like .overview,
+.page-like .saved-view-panel,
 .page-like .tag-panel,
 .page-like .results-strip {
   padding: 0.95rem;
@@ -1650,6 +1651,87 @@ code {
 
 .page-like #like-results-section .results-grid {
   gap: 0.68rem;
+}
+
+.saved-view-panel {
+  display: grid;
+  gap: 0.82rem;
+}
+
+.saved-view-top {
+  margin-bottom: 0;
+}
+
+.saved-view-controls {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) auto;
+  gap: 0.72rem;
+  align-items: end;
+}
+
+.saved-view-name-field {
+  display: grid;
+  gap: 0.34rem;
+}
+
+.saved-view-name-field span {
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.saved-view-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.saved-view-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.58rem;
+}
+
+.saved-view-chip {
+  display: inline-grid;
+  gap: 0.12rem;
+  min-width: 10.5rem;
+  padding: 0.7rem 0.86rem;
+  border-radius: 18px;
+  border: 1px solid color-mix(in srgb, var(--border), var(--accent) 16%);
+  background: color-mix(in srgb, var(--surface-soft), white 10%);
+  color: var(--text);
+  text-align: left;
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease, box-shadow 160ms ease;
+}
+
+.saved-view-chip:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--border), var(--accent) 28%);
+}
+
+.saved-view-chip.is-selected {
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--border), var(--accent) 24%);
+}
+
+.saved-view-chip.is-applied {
+  border-color: color-mix(in srgb, var(--border), var(--accent) 34%);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--accent-soft), white 10%), color-mix(in srgb, var(--surface-soft), white 8%));
+}
+
+.saved-view-chip-name {
+  font-weight: 700;
+  color: var(--text-strong);
+}
+
+.saved-view-chip-meta,
+.saved-view-empty {
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.45;
 }
 
 .page-hf .layout,
@@ -3308,6 +3390,404 @@ code {
 
 .paper-badge.subdued {
   color: var(--muted);
+}
+
+.custom-tag-panel {
+  display: grid;
+  gap: 0.62rem;
+  padding: 0.78rem 0.82rem;
+  border-radius: 18px;
+  border: 1px solid color-mix(in srgb, var(--border), var(--accent) 12%);
+  background: color-mix(in srgb, var(--surface-soft), white 6%);
+}
+
+.custom-tag-panel-top,
+.custom-tag-list,
+.custom-tag-composer-field,
+.custom-tag-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.custom-tag-panel-top {
+  justify-content: space-between;
+}
+
+.custom-tag-list,
+.custom-tag-options {
+  align-items: stretch;
+}
+
+.custom-tag-composer-section,
+.custom-tag-editor,
+.custom-tag-library {
+  display: grid;
+  gap: 0.48rem;
+}
+
+.custom-tag-section-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.custom-tag-section-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.custom-tag-section-meta {
+  color: var(--muted);
+  font-size: 0.76rem;
+}
+
+.custom-tag-trigger,
+.custom-tag-create,
+.custom-tag-option,
+.custom-tag-chip,
+.custom-tag-manage,
+.custom-tag-color-option {
+  border: 1px solid color-mix(in srgb, var(--border), var(--accent) 16%);
+  background: color-mix(in srgb, var(--surface-strong), white 12%);
+  color: var(--text);
+  border-radius: 999px;
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.custom-tag-trigger,
+.custom-tag-create {
+  padding: 0.38rem 0.74rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.custom-tag-trigger:hover,
+.custom-tag-create:hover,
+.custom-tag-option:hover,
+.custom-tag-chip.is-interactive:hover,
+.custom-tag-manage:hover,
+.custom-tag-color-option:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--border), var(--accent) 30%);
+}
+
+.custom-tag-composer {
+  display: grid;
+  gap: 0.58rem;
+  padding-top: 0.08rem;
+}
+
+.custom-tag-composer[hidden] {
+  display: none;
+}
+
+.custom-tag-input {
+  flex: 1 1 180px;
+  min-width: 0;
+  border: 1px solid color-mix(in srgb, var(--border), var(--accent) 18%);
+  border-radius: 16px;
+  padding: 0.62rem 0.78rem;
+  background: color-mix(in srgb, var(--surface), white 10%);
+  color: var(--text);
+  font: inherit;
+}
+
+.custom-tag-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.46rem;
+  padding: 0.42rem 0.72rem;
+  cursor: pointer;
+}
+
+.custom-tag-option.is-applied {
+  cursor: default;
+  opacity: 0.68;
+}
+
+.custom-tag-option:disabled {
+  cursor: default;
+}
+
+.custom-tag-swatch {
+  width: 0.72rem;
+  height: 0.72rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--custom-tag-accent), white 14%);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--custom-tag-accent), black 10%);
+  flex: 0 0 auto;
+}
+
+.custom-tag-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42rem;
+  padding: 0.36rem 0.68rem;
+  font-size: 0.76rem;
+  cursor: default;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--custom-tag-accent), white 82%), color-mix(in srgb, var(--custom-tag-accent), white 90%)),
+    color-mix(in srgb, var(--surface), white 8%);
+  border-color: color-mix(in srgb, var(--custom-tag-accent), var(--border) 56%);
+  color: color-mix(in srgb, var(--custom-tag-accent), black 40%);
+}
+
+:root[data-theme="dark"] .custom-tag-chip {
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--custom-tag-accent), transparent 80%), color-mix(in srgb, var(--custom-tag-accent), transparent 88%)),
+    color-mix(in srgb, var(--surface-strong), #0c1420 18%);
+  color: color-mix(in srgb, var(--custom-tag-accent), white 18%);
+}
+
+.custom-tag-chip-remove {
+  font-size: 0.82rem;
+  line-height: 1;
+  opacity: 0.72;
+}
+
+.custom-tag-library-item {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 0.48rem;
+  align-items: center;
+  padding: 0.18rem 0;
+}
+
+.custom-tag-library-item.is-dragging {
+  opacity: 0.58;
+}
+
+.custom-tag-library-item.is-drop-target {
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--accent-soft), transparent 70%);
+}
+
+.custom-tag-drag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.9rem;
+  height: 1.9rem;
+  padding: 0;
+  border: 1px dashed color-mix(in srgb, var(--border), var(--accent) 22%);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--surface-soft), white 10%);
+  color: var(--muted);
+  cursor: grab;
+  font-size: 0.92rem;
+  line-height: 1;
+}
+
+.custom-tag-drag:active {
+  cursor: grabbing;
+}
+
+.custom-tag-drag:hover {
+  border-color: color-mix(in srgb, var(--border), var(--accent) 34%);
+}
+
+.custom-tag-manage {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 0.68rem;
+  font-size: 0.76rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.custom-tag-manage.ghost {
+  background: transparent;
+}
+
+.custom-tag-manage.warn {
+  color: #b36474;
+}
+
+.custom-tag-editor[hidden] {
+  display: none;
+}
+
+.custom-tag-editor {
+  padding: 0.7rem 0.78rem;
+  border-radius: 16px;
+  border: 1px solid color-mix(in srgb, var(--border), var(--accent) 14%);
+  background: color-mix(in srgb, var(--surface), white 8%);
+}
+
+.custom-tag-editor-label {
+  display: grid;
+  gap: 0.36rem;
+}
+
+.custom-tag-color-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.42rem;
+}
+
+.custom-tag-color-option {
+  display: inline-grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  cursor: pointer;
+}
+
+.custom-tag-color-option .custom-tag-swatch {
+  width: 0.88rem;
+  height: 0.88rem;
+}
+
+.custom-tag-color-option.is-selected {
+  border-color: color-mix(in srgb, var(--border), var(--accent) 34%);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent-soft), transparent 22%);
+}
+
+.custom-tag-color-option:disabled {
+  cursor: not-allowed;
+  opacity: 0.42;
+}
+
+.custom-tag-editor-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.48rem;
+}
+
+.custom-tag-merge-select {
+  min-width: 11rem;
+  flex: 1 1 11rem;
+}
+
+.custom-tag-empty {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.workspace-status-badge,
+.workspace-priority-badge {
+  border-color: color-mix(in srgb, var(--border), var(--accent) 16%);
+  background: color-mix(in srgb, var(--accent-soft), white 14%);
+}
+
+.paper-workspace-panel {
+  display: grid;
+  gap: 0.72rem;
+  padding: 0.82rem 0.88rem;
+  border-radius: 18px;
+  border: 1px solid color-mix(in srgb, var(--border), var(--accent) 12%);
+  background: color-mix(in srgb, var(--surface-soft), white 6%);
+}
+
+.paper-workspace-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.paper-workspace-meta {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.paper-workspace-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.68rem;
+}
+
+.paper-workspace-card {
+  display: grid;
+  gap: 0.28rem;
+  padding: 0.72rem 0.82rem;
+  border-radius: 16px;
+  border: 1px solid color-mix(in srgb, var(--border), var(--accent) 12%);
+  background: color-mix(in srgb, var(--surface), white 8%);
+}
+
+.paper-workspace-card p {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.58;
+}
+
+.paper-workspace-editor {
+  display: grid;
+  gap: 0.56rem;
+}
+
+.paper-workspace-editor summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.56rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.paper-workspace-editor summary::-webkit-details-marker {
+  display: none;
+}
+
+.paper-workspace-editor[open] .paper-abstract-arrow {
+  transform: rotate(180deg);
+}
+
+.paper-workspace-form {
+  display: grid;
+  gap: 0.8rem;
+  padding-top: 0.2rem;
+}
+
+.paper-workspace-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.68rem;
+}
+
+.paper-workspace-field {
+  display: grid;
+  gap: 0.34rem;
+}
+
+.paper-workspace-textarea {
+  min-height: 4.5rem;
+  resize: vertical;
+  border: 1px solid color-mix(in srgb, var(--border), var(--accent) 18%);
+  border-radius: 16px;
+  padding: 0.72rem 0.84rem;
+  background: color-mix(in srgb, var(--surface), white 10%);
+  color: var(--text);
+  font: inherit;
+  line-height: 1.58;
+}
+
+@media (max-width: 780px) {
+  .saved-view-controls {
+    grid-template-columns: 1fr;
+    align-items: stretch;
+  }
+
+  .saved-view-actions {
+    justify-content: flex-start;
+  }
+
+  .paper-workspace-grid,
+  .paper-workspace-fields {
+    grid-template-columns: 1fr;
+  }
 }
 
 .lead-metrics {

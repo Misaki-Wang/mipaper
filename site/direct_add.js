@@ -1,7 +1,7 @@
-import { getSourceLabel, initLikesSync, isLiked, readLikes, subscribeLikes, toggleLike } from "./likes.js?v=20260319-5";
-import { bindLikeButtons } from "./likes.js?v=20260319-5";
+import { getSourceLabel, initLikesSync, isLiked, readLikes, subscribeLikes, toggleLike } from "./likes.js?v=20260319-9";
+import { bindLikeButtons } from "./likes.js?v=20260319-9";
 import { bindQueueButtons, initQueue, isInQueue, readQueue, removeFromQueue, subscribeQueue } from "./paper_queue.js?v=20260319-5";
-import { bindBranchAuthToolbar } from "./branch_auth.js?v=20260319-6";
+import { bindBranchAuthToolbar } from "./branch_auth.js?v=20260319-9";
 import { mountAppToolbar } from "./app_toolbar.js?v=20260319-11";
 import { bindBranchNav } from "./branch_nav.js?v=20260319-4";
 import { bindLibraryNav } from "./library_nav.js?v=20260319-4";

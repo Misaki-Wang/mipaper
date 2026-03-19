@@ -24,6 +24,9 @@ const SOURCE_LABELS = {
   library: "Library",
 };
 
+const WORKFLOW_STATUSES = new Set(["inbox", "later", "reading", "digesting", "synthesized", "archived"]);
+const PRIORITY_LEVELS = new Set(["high", "medium", "low"]);
+
 let supabaseClient = null;
 let authSession = null;
 let authUser = null;
@@ -88,6 +91,11 @@ export function createLikeRecord(paper, context = {}) {
     venue: context.venue || "",
     venue_series: context.venueSeries || "",
     venue_year: context.venueYear || "",
+    workflow_status: normalizeWorkflowStatus(paper.workflow_status || context.workflowStatus || "inbox"),
+    priority_level: normalizePriorityLevel(paper.priority_level || context.priorityLevel || "medium"),
+    one_line_takeaway: normalizeNoteField(paper.one_line_takeaway),
+    next_action: normalizeNoteField(paper.next_action),
+    custom_tags: normalizeCustomTags(paper.custom_tags),
   };
 }
 
@@ -137,6 +145,85 @@ export function toggleLike(record) {
   writeLikeStore([nextRecord, ...store.filter((item) => item.like_id !== likeId)], { dirty: true });
   scheduleRemoteSync();
   return true;
+}
+
+export function updateLikedPaper(likeId, updater) {
+  const normalizedLikeId = normalizeLikeId(likeId || "");
+  if (!normalizedLikeId || typeof updater !== "function") {
+    return null;
+  }
+
+  const store = readLikeStore();
+  const existingIndex = store.findIndex((item) => item.like_id === normalizedLikeId && !item.deleted_at);
+  if (existingIndex < 0) {
+    return null;
+  }
+
+  const existingRecord = store[existingIndex];
+  const nextValue = updater({ ...existingRecord });
+  if (!nextValue || typeof nextValue !== "object") {
+    return null;
+  }
+
+  const timestamp = createSyncTimestamp();
+  const deviceId = getSyncDeviceId();
+  const nextRecord = normalizeLikeRecord({
+    ...existingRecord,
+    ...nextValue,
+    like_id: normalizedLikeId,
+    saved_at: existingRecord.saved_at || timestamp,
+    updated_at: timestamp,
+    client_updated_at: timestamp,
+    deleted_at: "",
+    device_id: deviceId,
+  });
+
+  store[existingIndex] = nextRecord;
+  writeLikeStore(store, { dirty: true });
+  scheduleRemoteSync();
+  return nextRecord;
+}
+
+export function updateLikedPapers(updater) {
+  if (typeof updater !== "function") {
+    return [];
+  }
+
+  const store = readLikeStore();
+  const timestamp = createSyncTimestamp();
+  const deviceId = getSyncDeviceId();
+  let changed = false;
+
+  const nextStore = store.map((record) => {
+    if (record.deleted_at) {
+      return record;
+    }
+
+    const nextValue = updater({ ...record });
+    if (!nextValue || typeof nextValue !== "object") {
+      return record;
+    }
+
+    changed = true;
+    return normalizeLikeRecord({
+      ...record,
+      ...nextValue,
+      like_id: record.like_id,
+      saved_at: record.saved_at || timestamp,
+      updated_at: timestamp,
+      client_updated_at: timestamp,
+      deleted_at: "",
+      device_id: deviceId,
+    });
+  });
+
+  if (!changed) {
+    return readLikes();
+  }
+
+  writeLikeStore(nextStore, { dirty: true });
+  scheduleRemoteSync();
+  return nextStore.filter((item) => !item.deleted_at);
 }
 
 export async function initLikesSync() {
@@ -235,16 +322,7 @@ async function performRemoteSync() {
 
     // Step 1: Push local changes since the last successful cursor.
     if (pendingRecords.length) {
-      const upsertRows = pendingRecords.map((item) => ({
-        user_id: authUser.id,
-        like_id: item.like_id,
-        saved_at: item.saved_at || item.updated_at || createSyncTimestamp(),
-        updated_at: item.updated_at || createSyncTimestamp(),
-        deleted_at: item.deleted_at || null,
-        client_updated_at: item.client_updated_at || null,
-        device_id: item.device_id || getSyncDeviceId(),
-        payload: item,
-      }));
+      const upsertRows = pendingRecords.map((item) => createLikedPaperSyncRow(authUser.id, item));
 
       const { error } = await supabaseClient.from("liked_papers").upsert(upsertRows, {
         onConflict: "user_id,like_id",
@@ -364,6 +442,20 @@ function normalizeLikeId(value) {
     .replace(/^-+|-+$/g, "");
 }
 
+function normalizeWorkflowStatus(value) {
+  const normalized = String(value || "").trim().toLowerCase();
+  return WORKFLOW_STATUSES.has(normalized) ? normalized : "inbox";
+}
+
+function normalizePriorityLevel(value) {
+  const normalized = String(value || "").trim().toLowerCase();
+  return PRIORITY_LEVELS.has(normalized) ? normalized : "medium";
+}
+
+function normalizeNoteField(value) {
+  return typeof value === "string" ? value.trim() : "";
+}
+
 function safeParse(value) {
   if (!value) {
     return null;
@@ -396,12 +488,46 @@ function normalizeLikeRecord(record) {
   return {
     ...record,
     like_id: likeId,
+    workflow_status: normalizeWorkflowStatus(record.workflow_status),
+    priority_level: normalizePriorityLevel(record.priority_level),
+    one_line_takeaway: normalizeNoteField(record.one_line_takeaway),
+    next_action: normalizeNoteField(record.next_action),
+    custom_tags: normalizeCustomTags(record.custom_tags),
     saved_at: typeof record.saved_at === "string" ? record.saved_at : fallbackUpdatedAt,
     updated_at: fallbackUpdatedAt,
     client_updated_at: typeof record.client_updated_at === "string" ? record.client_updated_at : fallbackUpdatedAt,
     deleted_at: typeof record.deleted_at === "string" ? record.deleted_at : "",
     device_id: typeof record.device_id === "string" ? record.device_id : "",
   };
+}
+
+function normalizeCustomTags(tags) {
+  if (!Array.isArray(tags)) {
+    return [];
+  }
+
+  const seen = new Set();
+  return tags
+    .map((tag) => {
+      if (!tag || typeof tag !== "object") {
+        return null;
+      }
+      const key = normalizeLikeId(tag.key || tag.label || "");
+      const label = String(tag.label || "").trim();
+      const color = String(tag.color || "").trim();
+      const order = Number.isFinite(Number(tag.order)) ? Number(tag.order) : null;
+      if (!key || !label) {
+        return null;
+      }
+      return { key, label, color, order };
+    })
+    .filter((tag) => {
+      if (!tag || seen.has(tag.key)) {
+        return false;
+      }
+      seen.add(tag.key);
+      return true;
+    });
 }
 
 function readLikeStore() {
@@ -551,19 +677,7 @@ async function fetchRemoteLikes(since = "") {
   if (error) {
     throw error;
   }
-  return (data || [])
-    .map((item) =>
-      normalizeLikeRecord({
-        ...(item.payload || {}),
-        like_id: item.like_id,
-        saved_at: item.saved_at,
-        updated_at: item.updated_at,
-        deleted_at: item.deleted_at,
-        client_updated_at: item.client_updated_at,
-        device_id: item.device_id,
-      })
-    )
-    .filter(Boolean);
+  return (data || []).map((item) => hydrateLikedPaperSyncRow(item)).filter(Boolean);
 }
 
 function emitAuthChanged() {
@@ -586,4 +700,38 @@ function formatSyncError(error) {
     }
   }
   return String(error || "Unknown sync error");
+}
+
+export function createLikedPaperSyncRow(userId, item) {
+  const normalizedRecord = normalizeLikeRecord(item);
+  if (!userId || !normalizedRecord) {
+    return null;
+  }
+
+  return {
+    user_id: userId,
+    like_id: normalizedRecord.like_id,
+    saved_at: normalizedRecord.saved_at || normalizedRecord.updated_at || createSyncTimestamp(),
+    updated_at: normalizedRecord.updated_at || createSyncTimestamp(),
+    deleted_at: normalizedRecord.deleted_at || null,
+    client_updated_at: normalizedRecord.client_updated_at || null,
+    device_id: normalizedRecord.device_id || getSyncDeviceId(),
+    payload: normalizedRecord,
+  };
+}
+
+export function hydrateLikedPaperSyncRow(row) {
+  if (!row || typeof row !== "object") {
+    return null;
+  }
+
+  return normalizeLikeRecord({
+    ...(row.payload || {}),
+    like_id: row.like_id,
+    saved_at: row.saved_at,
+    updated_at: row.updated_at,
+    deleted_at: row.deleted_at,
+    client_updated_at: row.client_updated_at,
+    device_id: row.device_id,
+  });
 }

@@ -28,49 +28,49 @@
                 <div id="like-toolbar-root"></div>
         <template id="like-toolbar-filters">
           <section class="glass-card controls reveal">
-                              <div class="control-block">
-                                <label for="like-source-filter">Group</label>
-                                <select id="like-source-filter" class="control-input">
-                                  <option value="">All Groups</option>
-                                </select>
-                              </div>
-                              <div class="control-block">
-                                <label for="like-year-filter">Year</label>
-                                <select id="like-year-filter" class="control-input">
-                                  <option value="">All Years</option>
-                                </select>
-                              </div>
-                              <div class="control-block">
-                                <label for="like-month-filter">Month</label>
-                                <select id="like-month-filter" class="control-input">
-                                  <option value="">All Months</option>
-                                </select>
-                              </div>
-                              <div class="control-block">
-                                <label for="like-day-filter">Day</label>
-                                <select id="like-day-filter" class="control-input">
-                                  <option value="">All Days</option>
-                                </select>
-                              </div>
-                              <div class="control-block">
-                                <label for="like-topic-filter">Topic</label>
-                                <select id="like-topic-filter" class="control-input">
-                                  <option value="">All Topics</option>
-                                </select>
-                              </div>
-                              <div class="control-block">
-                                <label for="like-search-input">Search</label>
-                                <input id="like-search-input" class="control-input" type="search" placeholder="Search title or authors" />
-                              </div>
-                            </section>
+            <div class="control-block">
+              <label for="like-source-filter">Group</label>
+              <select id="like-source-filter" class="control-input">
+                <option value="">All Groups</option>
+              </select>
+            </div>
+            <div class="control-block">
+              <label for="like-topic-filter">Topic</label>
+              <select id="like-topic-filter" class="control-input">
+                <option value="">All Topics</option>
+              </select>
+            </div>
+            <div class="control-block">
+              <label for="like-custom-tag-filter">Custom Tag</label>
+              <select id="like-custom-tag-filter" class="control-input">
+                <option value="">All Tags</option>
+              </select>
+            </div>
+            <div class="control-block">
+              <label for="like-status-filter">Status</label>
+              <select id="like-status-filter" class="control-input">
+                <option value="">All Statuses</option>
+              </select>
+            </div>
+            <div class="control-block">
+              <label for="like-priority-filter">Priority</label>
+              <select id="like-priority-filter" class="control-input">
+                <option value="">All Priorities</option>
+              </select>
+            </div>
+            <div class="control-block">
+              <label for="like-search-input">Search</label>
+              <input id="like-search-input" class="control-input" type="search" placeholder="Search title or authors" />
+            </div>
+          </section>
 
-                            <section class="glass-card trend-panel reveal">
-                              <div class="section-heading">
-                                <p class="eyebrow">TOPIC MIX</p>
-                                <h2>Liked Topic Distribution</h2>
-                              </div>
-                              <div id="like-distribution-list" class="distribution-list"></div>
-                            </section>
+          <section class="glass-card trend-panel reveal">
+            <div class="section-heading">
+              <p class="eyebrow">TOPIC MIX</p>
+              <h2>Liked Topic Distribution</h2>
+            </div>
+            <div id="like-distribution-list" class="distribution-list"></div>
+          </section>
         </template>
 
       </div>
@@ -168,6 +168,28 @@
             </div>
           </section>
 
+          <section class="glass-card library-section reveal saved-view-panel">
+            <div class="section-heading saved-view-top">
+              <div>
+                <p class="eyebrow">SAVED VIEWS</p>
+                <h2>Saved Views</h2>
+                <p id="like-saved-view-summary" class="home-board-summary">No saved views yet.</p>
+              </div>
+            </div>
+            <div class="saved-view-controls">
+              <label class="control-block saved-view-name-field" for="like-saved-view-name">
+                <span>View Name</span>
+                <input id="like-saved-view-name" class="control-input" type="text" placeholder="e.g. Agent Reading" maxlength="48" />
+              </label>
+              <div class="saved-view-actions">
+                <button id="like-save-view" class="pill-button" type="button">Save Current</button>
+                <button id="like-update-view" class="pill-button" type="button">Update Selected</button>
+                <button id="like-delete-view" class="pill-button" type="button">Delete Selected</button>
+              </div>
+            </div>
+            <div id="like-saved-view-list" class="saved-view-list"></div>
+          </section>
+
           <section class="glass-card tag-panel library-section reveal">
             <div class="section-heading">
               <p class="eyebrow">TAG MAP</p>
@@ -216,6 +238,6 @@
       <span>Top</span>
     </button>
 
-    <script type="module" src="./like.js?v=20260319-12"></script>
+    <script type="module" src="./like.js?v=20260319-21"></script>
   </body>
 </html>

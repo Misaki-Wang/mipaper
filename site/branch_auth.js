@@ -1,4 +1,4 @@
-import { getAuthSnapshot, initLikesSync, signInWithGitHub, signOutFromGitHub, subscribeAuth, syncLikesNow } from "./likes.js?v=20260319-5";
+import { getAuthSnapshot, initLikesSync, signInWithGitHub, signOutFromGitHub, subscribeAuth, syncLikesNow } from "./likes.js?v=20260319-9";
 
 const TOOLBAR_AUTO_HIDE_KEY = "cool-paper-toolbar-auto-hide";
 
