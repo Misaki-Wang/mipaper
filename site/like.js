@@ -5,15 +5,15 @@ import {
   readLikes,
   subscribeAuth,
   subscribeLikes,
-} from "./likes.js?v=20260319";
+} from "./likes.js?v=20260319-4";
 import { getSupabaseClient, isSupabaseConfigured, loadRuntimeConfig } from "./supabase.js";
-import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js";
-import { bindQueueButtons, initQueue, isInQueue, readQueue, subscribeQueue } from "./paper_queue.js?v=20260319";
-import { bindBranchAuthToolbar } from "./branch_auth.js";
+import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js?v=20260319-4";
+import { bindQueueButtons, initQueue, isInQueue, readQueue, subscribeQueue } from "./paper_queue.js?v=20260319-4";
+import { bindBranchAuthToolbar } from "./branch_auth.js?v=20260319-4";
 import { mountAppToolbar } from "./app_toolbar.js";
-import { repairLikeLaterConflicts } from "./paper_selection.js?v=20260319";
-import { bindBranchNav } from "./branch_nav.js?v=20260319-2";
-import { bindLibraryNav } from "./library_nav.js?v=20260319-2";
+import { repairLikeLaterConflicts } from "./paper_selection.js?v=20260319-4";
+import { bindBranchNav } from "./branch_nav.js?v=20260319-4";
+import { bindLibraryNav } from "./library_nav.js?v=20260319-4";
 
 mountAppToolbar("#like-toolbar-root", {
   prefix: "like",

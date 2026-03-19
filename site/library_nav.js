@@ -1,4 +1,4 @@
-import { openExclusiveDropdown, registerExclusiveDropdown } from "./nav_dropdowns.js?v=20260319-2";
+import { openExclusiveDropdown, registerExclusiveDropdown } from "./nav_dropdowns.js?v=20260319-4";
 
 export function bindLibraryNav(root = document) {
   const shells = [...root.querySelectorAll("[data-library-nav]")];

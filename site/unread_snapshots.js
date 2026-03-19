@@ -1,8 +1,8 @@
-import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js";
-import { bindBranchAuthToolbar } from "./branch_auth.js";
+import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js?v=20260319-4";
+import { bindBranchAuthToolbar } from "./branch_auth.js?v=20260319-4";
 import { mountAppToolbar } from "./app_toolbar.js";
-import { bindBranchNav } from "./branch_nav.js?v=20260319-2";
-import { bindLibraryNav } from "./library_nav.js?v=20260319-2";
+import { bindBranchNav } from "./branch_nav.js?v=20260319-4";
+import { bindLibraryNav } from "./library_nav.js?v=20260319-4";
 
 mountAppToolbar("#unread-toolbar-root", {
   prefix: "unread",

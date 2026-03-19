@@ -1,6 +1,6 @@
-import { createLikeRecord, isLiked } from "./likes.js";
+import { createLikeRecord, isLiked } from "./likes.js?v=20260319-4";
 import { getSupabaseClient, isSupabaseConfigured, loadRuntimeConfig } from "./supabase.js";
-import { movePaperToLater, movePaperToLikes } from "./paper_selection.js";
+import { movePaperToLater, movePaperToLikes } from "./paper_selection.js?v=20260319-4";
 import {
   compareSyncTimestamps,
   createSyncTimestamp,

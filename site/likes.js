@@ -9,7 +9,7 @@ import {
   getSyncDeviceId,
   mergeSyncRecords,
 } from "./sync_utils.js";
-import { movePaperToLikes } from "./paper_selection.js?v=20260319";
+import { movePaperToLikes } from "./paper_selection.js?v=20260319-4";
 
 const LIKES_STORAGE_KEY = "cool-paper-liked-papers-v1";
 const LIKES_META_KEY = "cool-paper-liked-papers-meta-v1";
@@ -279,7 +279,7 @@ async function performRemoteSync() {
     syncState = {
       ...syncState,
       syncing: false,
-      error: error instanceof Error ? error.message : String(error),
+      error: formatSyncError(error),
     };
     emitAuthChanged();
     throw error;
@@ -567,4 +567,22 @@ async function fetchRemoteLikes(since = "") {
 
 function emitAuthChanged() {
   window.dispatchEvent(new CustomEvent(AUTH_CHANGED_EVENT, { detail: getAuthSnapshot() }));
+}
+
+function formatSyncError(error) {
+  if (error instanceof Error) {
+    return error.message || error.name || "Unknown sync error";
+  }
+  if (error && typeof error === "object") {
+    const parts = [error.message, error.details, error.hint, error.code].filter(Boolean);
+    if (parts.length) {
+      return parts.join(" · ");
+    }
+    try {
+      return JSON.stringify(error);
+    } catch (_serializeError) {
+      return Object.prototype.toString.call(error);
+    }
+  }
+  return String(error || "Unknown sync error");
 }
