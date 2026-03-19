@@ -27,10 +27,60 @@
       <div class="page-chrome">
         <header class="app-toolbar">
           <div class="toolbar-start">
-            <button id="like-sidebar-toggle" class="toolbar-filter-toggle" type="button" aria-expanded="false" aria-haspopup="menu" aria-label="Open filters">
-              <span id="like-sidebar-toggle-icon" class="toolbar-filter-icon">☰</span>
-              <span id="like-sidebar-toggle-label" class="toolbar-filter-label">Filters</span>
-            </button>
+            <div class="filters-menu-shell" id="like-filters-menu-shell">
+              <button id="like-sidebar-toggle" class="toolbar-filter-toggle" type="button" aria-expanded="false" aria-haspopup="menu" aria-label="Open filters">
+                <span id="like-sidebar-toggle-icon" class="toolbar-filter-icon">☰</span>
+                <span id="like-sidebar-toggle-label" class="toolbar-filter-label">Filters</span>
+              </button>
+              <aside id="like-filters-menu" class="filters-menu-panel glass-card" hidden>
+                <div id="like-sidebar-stack" class="sidebar-stack">
+                  <section class="glass-card controls reveal">
+                    <div class="control-block">
+                      <label for="like-source-filter">Group</label>
+                      <select id="like-source-filter" class="control-input">
+                        <option value="">All Groups</option>
+                      </select>
+                    </div>
+                    <div class="control-block">
+                      <label for="like-year-filter">Year</label>
+                      <select id="like-year-filter" class="control-input">
+                        <option value="">All Years</option>
+                      </select>
+                    </div>
+                    <div class="control-block">
+                      <label for="like-month-filter">Month</label>
+                      <select id="like-month-filter" class="control-input">
+                        <option value="">All Months</option>
+                      </select>
+                    </div>
+                    <div class="control-block">
+                      <label for="like-day-filter">Day</label>
+                      <select id="like-day-filter" class="control-input">
+                        <option value="">All Days</option>
+                      </select>
+                    </div>
+                    <div class="control-block">
+                      <label for="like-topic-filter">Topic</label>
+                      <select id="like-topic-filter" class="control-input">
+                        <option value="">All Topics</option>
+                      </select>
+                    </div>
+                    <div class="control-block">
+                      <label for="like-search-input">Search</label>
+                      <input id="like-search-input" class="control-input" type="search" placeholder="Search title or authors" />
+                    </div>
+                  </section>
+
+                  <section class="glass-card trend-panel reveal">
+                    <div class="section-heading">
+                      <p class="eyebrow">TOPIC MIX</p>
+                      <h2>Liked Topic Distribution</h2>
+                    </div>
+                    <div id="like-distribution-list" class="distribution-list"></div>
+                  </section>
+                </div>
+              </aside>
+            </div>
             <div class="page-nav">
               <a class="page-nav-link" href="./index.html">HF Daily</a>
               <a class="page-nav-link" href="./cool-daily.html">Cool Daily</a>
@@ -91,54 +141,6 @@
           </div>
         </header>
 
-        <aside id="like-filters-menu" class="filters-menu-panel glass-card" hidden>
-          <div id="like-sidebar-stack" class="sidebar-stack">
-            <section class="glass-card controls reveal">
-              <div class="control-block">
-                <label for="like-source-filter">Group</label>
-                <select id="like-source-filter" class="control-input">
-                  <option value="">All Groups</option>
-                </select>
-              </div>
-              <div class="control-block">
-                <label for="like-year-filter">Year</label>
-                <select id="like-year-filter" class="control-input">
-                  <option value="">All Years</option>
-                </select>
-              </div>
-              <div class="control-block">
-                <label for="like-month-filter">Month</label>
-                <select id="like-month-filter" class="control-input">
-                  <option value="">All Months</option>
-                </select>
-              </div>
-              <div class="control-block">
-                <label for="like-day-filter">Day</label>
-                <select id="like-day-filter" class="control-input">
-                  <option value="">All Days</option>
-                </select>
-              </div>
-              <div class="control-block">
-                <label for="like-topic-filter">Topic</label>
-                <select id="like-topic-filter" class="control-input">
-                  <option value="">All Topics</option>
-                </select>
-              </div>
-              <div class="control-block">
-                <label for="like-search-input">Search</label>
-                <input id="like-search-input" class="control-input" type="search" placeholder="Search title or authors" />
-              </div>
-            </section>
-
-            <section class="glass-card trend-panel reveal">
-              <div class="section-heading">
-                <p class="eyebrow">TOPIC MIX</p>
-                <h2>Liked Topic Distribution</h2>
-              </div>
-              <div id="like-distribution-list" class="distribution-list"></div>
-            </section>
-          </div>
-        </aside>
       </div>
 
       <header class="hero reveal">

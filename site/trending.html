@@ -27,10 +27,26 @@
       <div class="page-chrome">
         <header class="app-toolbar">
           <div class="toolbar-start">
-            <button id="trending-sidebar-toggle" class="toolbar-filter-toggle" type="button" aria-expanded="false" aria-haspopup="menu" aria-label="Open filters">
-              <span id="trending-sidebar-toggle-icon" class="toolbar-filter-icon">☰</span>
-              <span id="trending-sidebar-toggle-label" class="toolbar-filter-label">Filters</span>
-            </button>
+            <div class="filters-menu-shell" id="trending-filters-menu-shell">
+              <button id="trending-sidebar-toggle" class="toolbar-filter-toggle" type="button" aria-expanded="false" aria-haspopup="menu" aria-label="Open filters">
+                <span id="trending-sidebar-toggle-icon" class="toolbar-filter-icon">☰</span>
+                <span id="trending-sidebar-toggle-label" class="toolbar-filter-label">Filters</span>
+              </button>
+              <aside id="trending-filters-menu" class="filters-menu-panel glass-card" hidden>
+                <div id="trending-sidebar-stack" class="sidebar-stack">
+                  <section class="glass-card controls reveal">
+                    <div class="control-block">
+                      <label for="trending-report-select">Snapshot</label>
+                      <select id="trending-report-select" class="control-input"></select>
+                    </div>
+                    <div class="control-block">
+                      <label for="trending-search-input">Repository Search</label>
+                      <input id="trending-search-input" class="control-input" type="search" placeholder="owner / repo or description" />
+                    </div>
+                  </section>
+                </div>
+              </aside>
+            </div>
             <div class="page-nav">
               <a class="page-nav-link" href="./index.html">HF Daily</a>
               <a class="page-nav-link" href="./cool-daily.html">Cool Daily</a>
@@ -91,20 +107,6 @@
           </div>
         </header>
 
-        <aside id="trending-filters-menu" class="filters-menu-panel glass-card" hidden>
-          <div id="trending-sidebar-stack" class="sidebar-stack">
-            <section class="glass-card controls reveal">
-              <div class="control-block">
-                <label for="trending-report-select">Snapshot</label>
-                <select id="trending-report-select" class="control-input"></select>
-              </div>
-              <div class="control-block">
-                <label for="trending-search-input">Repository Search</label>
-                <input id="trending-search-input" class="control-input" type="search" placeholder="owner / repo or description" />
-              </div>
-            </section>
-          </div>
-        </aside>
       </div>
 
       <header class="hero reveal">

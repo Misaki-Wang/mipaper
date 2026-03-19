@@ -819,6 +819,14 @@ code {
   flex: 0 0 auto;
 }
 
+.filters-menu-shell {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 0 0 auto;
+}
+
 .account-menu-toggle {
   display: inline-flex;
   align-items: center;
