@@ -8,7 +8,7 @@ import {
   getRecordUpdatedAt,
   getSyncDeviceId,
   mergeSyncRecords,
-} from "./sync_utils.js?v=b3e14c1ece";
+} from "./sync_utils.js?v=8b7af265fa";
 
 const SAVED_VIEWS_STORAGE_KEY = "cool-paper-like-saved-views-v1";
 const SAVED_VIEWS_META_KEY = "cool-paper-like-saved-views-meta-v1";

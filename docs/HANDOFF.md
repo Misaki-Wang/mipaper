@@ -1,15 +1,16 @@
 # Project Handoff
 
-Last updated: 2026-03-10
+Last updated: 2026-03-20
 
 ## Goal
 
-This repository is a paper observatory with four site branches:
+This repository is a paper observatory with five content branches plus library workspace pages:
 
 - `Cool Daily`
 - `Conference`
 - `HF Daily`
 - `Like`
+- `Trending`
 
 Core capabilities:
 
@@ -19,6 +20,7 @@ Core capabilities:
 - Generate Markdown and JSON reports
 - Build a static site in `site/`
 - Sync liked papers with GitHub OAuth + Supabase
+- Persist browser-level display preferences and library workspace metadata
 
 ## Repo and Deployment
 
@@ -53,17 +55,30 @@ Frontend pages:
 - [index.html](/Users/misaki/Code/cool_paper/site/index.html)
 - [cool-daily.html](/Users/misaki/Code/cool_paper/site/cool-daily.html)
 - [conference.html](/Users/misaki/Code/cool_paper/site/conference.html)
+- [library.html](/Users/misaki/Code/cool_paper/site/library.html)
 - [like.html](/Users/misaki/Code/cool_paper/site/like.html)
+- [queue.html](/Users/misaki/Code/cool_paper/site/queue.html)
+- [unread-snapshots.html](/Users/misaki/Code/cool_paper/site/unread-snapshots.html)
+- [settings.html](/Users/misaki/Code/cool_paper/site/settings.html)
 - [trending.html](/Users/misaki/Code/cool_paper/site/trending.html)
 
 Frontend logic:
 
 - [app.js](/Users/misaki/Code/cool_paper/site/app.js)
+- [app_toolbar.js](/Users/misaki/Code/cool_paper/site/app_toolbar.js)
+- [branch_auth.js](/Users/misaki/Code/cool_paper/site/branch_auth.js)
+- [branch_details.js](/Users/misaki/Code/cool_paper/site/branch_details.js)
 - [conference.js](/Users/misaki/Code/cool_paper/site/conference.js)
 - [hf_daily.js](/Users/misaki/Code/cool_paper/site/hf_daily.js)
+- [library_home.js](/Users/misaki/Code/cool_paper/site/library_home.js)
 - [like.js](/Users/misaki/Code/cool_paper/site/like.js)
 - [likes.js](/Users/misaki/Code/cool_paper/site/likes.js)
+- [queue.js](/Users/misaki/Code/cool_paper/site/queue.js)
+- [settings.js](/Users/misaki/Code/cool_paper/site/settings.js)
 - [supabase.js](/Users/misaki/Code/cool_paper/site/supabase.js)
+- [toolbar_preferences.js](/Users/misaki/Code/cool_paper/site/toolbar_preferences.js)
+- [unread_snapshots.js](/Users/misaki/Code/cool_paper/site/unread_snapshots.js)
+- [user_settings.js](/Users/misaki/Code/cool_paper/site/user_settings.js)
 
 Operational templates:
 
@@ -94,6 +109,8 @@ Schema:
 
 - The site reads runtime config from `/api/config`
 - Likes can fall back to local storage when Supabase is not configured
+- Browser settings are stored in local storage and now sync live across already-open pages in the same browser session
+- `library.html`, `like.html`, and `queue.html` seed manual local test records on localhost / `file:` previews unless `?seedTestCases=0` is set
 - Scheduled jobs can auto-commit generated artifacts and push them to GitHub
 - Auto-push only stages generated outputs, not active source edits
 
@@ -108,15 +125,17 @@ Schema:
 
 1. Run `git status`
 2. Run `python3 -m unittest discover -s tests`
-3. Verify Cloudflare Pages deployment
-4. Verify Like sign-in and Supabase writes
-5. Verify scheduled jobs on the target machine
+3. Run `node --test tests/*.mjs`
+4. Verify `library.html`, `queue.html`, `unread-snapshots.html`, and `settings.html`
+5. Verify Like sign-in and Supabase writes
+6. Verify scheduled jobs on the target machine
 
 ## Quick Commands
 
 ```bash
 git status
 python3 -m unittest discover -s tests
+node --test tests/*.mjs
 python3 scripts/build_site_data.py
 cd site && python3 -m http.server 4173
 ```

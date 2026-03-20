@@ -1,8 +1,9 @@
-import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js?v=d409e691d1";
+import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js?v=3b466b6556";
 import { bindQueueButtons, initQueue, subscribeQueue } from "./paper_queue.js?v=8b696292c3";
 import { repairLikeLaterConflicts } from "./paper_selection.js?v=964dbe6c53";
-import { mountAppToolbar } from "./app_toolbar.js?v=625fba0996";
+import { mountAppToolbar } from "./app_toolbar.js?v=90ae25c72d";
 import { buildBranchReviewKey, createBranchReviewController, initBranchReportPage } from "./branch_page.js?v=f27a328acc";
+import { bindBranchListDetails, renderBranchDetailGroup, renderBranchDetailSection, renderBranchListDetails } from "./branch_details.js?v=7c8a22c23c";
 import { createLatestTaskRunner } from "./request_gate.js?v=f527e8e81d";
 import { createFloatingTocController } from "./floating_toc.js?v=a9ffd5aa93";
 import { validateConferenceManifest, validateConferenceReport } from "./site_contract.js?v=12344e596d";
@@ -403,6 +404,7 @@ function renderReport() {
   ]);
   bindLikeButtons(document, likeRecords);
   bindQueueButtons(document, likeRecords);
+  bindBranchListDetails(document);
 }
 
 function bindSubjectSectionActions() {
@@ -811,6 +813,7 @@ function renderSubjectSections(report, sections) {
 
 function renderPaperCard(paper, className) {
   const authors = paper.authors?.length ? escapeHtml(paper.authors.join(", ")) : "Unknown";
+  const listAuthors = paper.authors?.length ? escapeHtml(paper.authors.join(", ")) : "";
   const abstract = paper.abstract
     ? `
       <details class="paper-abstract">
@@ -831,18 +834,34 @@ function renderPaperCard(paper, className) {
         .map((subject) => `<span>${escapeHtml(subject)}</span>`)
         .join("")}</div>`
     : "";
+  const inlineAuthors = `
+    <div class="paper-authors-box">
+      <span class="paper-detail-label">Authors</span>
+      <p class="paper-authors-line">${authors}</p>
+    </div>
+  `;
+  const listDetails = renderBranchListDetails(
+    [
+      subjects ? renderBranchDetailGroup({ label: "Subjects", body: subjects }) : "",
+      listAuthors ? renderBranchDetailSection({ label: "Authors", body: listAuthors }) : "",
+      paper.abstract ? renderBranchDetailSection({ label: "Abstract", body: escapeHtml(paper.abstract), muted: true }) : "",
+    ].join(""),
+    {
+      detailKey: rememberLikeRecord(paper),
+    }
+  );
   return `
     <article class="${className}">
       <div class="conference-paper-top">
         <span class="paper-badge">${escapeHtml(paper.topic_label || "Other AI")}</span>
       </div>
       <h4>${escapeHtml(paper.title)}</h4>
-      ${subjects}
-      <div class="paper-authors-box">
-        <span class="paper-detail-label">Authors</span>
-        <p class="paper-authors-line">${authors}</p>
+      <div class="branch-card-inline-details">
+        ${subjects}
+        ${inlineAuthors}
+        ${abstract}
       </div>
-      ${abstract}
+      ${listDetails}
       <div class="paper-links">
         ${paper.pdf_url || paper.abs_url ? renderPaperLink(paper.pdf_url || paper.abs_url, "OpenReview", "openreview") : ""}
         ${paper.detail_url ? renderPaperLink(paper.detail_url, "Cool", "cool") : ""}

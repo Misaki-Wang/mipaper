@@ -22,7 +22,7 @@
     </script>
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body class="page-library">
+  <body class="page-library page-library-queue">
     <div class="page-shell">
       <div class="page-chrome">
         <div id="queue-toolbar-root"></div>
@@ -39,31 +39,11 @@
         <div class="hero-copy">
           <h1>Later Queue</h1>
           <p class="hero-text">
-            Papers saved for later reading.
+            Papers saved for later reading. Use Lib Home for overall stats, and use this page to process the queue itself.
           </p>
-        </div>
-        <div class="hero-panel glass-card">
-          <div class="hero-panel-top">
-            <span class="meta-kicker">Later Queue Pulse</span>
-            <strong id="later-hero-count">-</strong>
-          </div>
-          <div class="hero-stat-grid">
-            <div>
-              <span class="stat-label">Likes</span>
-              <strong id="later-hero-liked">-</strong>
-            </div>
-            <div>
-              <span class="stat-label">Branches</span>
-              <strong id="later-hero-branches">-</strong>
-            </div>
-            <div>
-              <span class="stat-label">Source</span>
-              <strong id="later-hero-source">-</strong>
-            </div>
-            <div>
-              <span class="stat-label">Topic</span>
-              <strong id="later-hero-topic">-</strong>
-            </div>
+          <div class="hero-actions page-like-jump-links" aria-label="Queue shortcuts">
+            <a class="link-chip" href="./library.html">Open Lib Home</a>
+            <a class="link-chip" href="./like.html">Open Liked</a>
           </div>
         </div>
       </header>
@@ -81,6 +61,6 @@
       </main>
     </div>
 
-    <script type="module" src="./queue.js?v=23d6120da0"></script>
+    <script type="module" src="./queue.js?v=20260320queue4"></script>
   </body>
 </html>

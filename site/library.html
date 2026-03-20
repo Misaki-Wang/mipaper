@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MiPaper - Library Home</title>
+    <meta
+      name="description"
+      content="Library home for liked papers, later queue, unread snapshots, and reading stats."
+    />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <script>
+      (function () {
+        var storedMode = localStorage.getItem("cool-paper-theme") || "auto";
+        var prefersDark =
+          typeof window.matchMedia === "function" &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+        var resolvedTheme = storedMode === "auto" ? (prefersDark ? "dark" : "light") : storedMode;
+        document.documentElement.dataset.theme = resolvedTheme;
+        document.documentElement.dataset.themeMode = storedMode;
+      })();
+    </script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="page-library page-library-home">
+    <div class="page-shell">
+      <div class="page-chrome">
+        <div id="library-home-toolbar-root"></div>
+        <template id="library-home-toolbar-filters">
+          <section class="glass-card controls reveal">
+            <div class="control-block">
+              <label>Library Filters</label>
+              <p class="library-home-filter-note">
+                Reserved for future filters like group, topic, workflow status, saved view, and time range.
+              </p>
+            </div>
+            <div class="library-home-filter-placeholder-row" aria-label="Planned filter slots">
+              <span class="active-filter-pill">Group</span>
+              <span class="active-filter-pill">Topic</span>
+              <span class="active-filter-pill">Workflow</span>
+              <span class="active-filter-pill">Saved View</span>
+              <span class="active-filter-pill">Date Range</span>
+            </div>
+          </section>
+        </template>
+      </div>
+
+      <header class="hero reveal">
+        <div class="hero-copy">
+          <p class="eyebrow">LIBRARY HOME</p>
+          <h1>Library Overview</h1>
+          <p class="hero-text">
+            One place for reading pipeline stats, topic mix, and quick entry into Liked, Later, and Unread.
+          </p>
+          <div id="library-home-hero-signals" class="hero-signals"></div>
+        </div>
+        <div class="hero-panel glass-card">
+          <div class="hero-panel-top">
+            <span class="meta-kicker">Library Pulse</span>
+            <strong id="library-home-hero-count">-</strong>
+          </div>
+          <div class="hero-stat-grid">
+            <div>
+              <span class="stat-label">Later</span>
+              <strong id="library-home-hero-later">-</strong>
+            </div>
+            <div>
+              <span class="stat-label">Unread</span>
+              <strong id="library-home-hero-unread">-</strong>
+            </div>
+            <div>
+              <span class="stat-label">Saved Views</span>
+              <strong id="library-home-hero-saved">-</strong>
+            </div>
+            <div>
+              <span class="stat-label">Groups</span>
+              <strong id="library-home-hero-groups">-</strong>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="layout">
+        <section class="content">
+          <section class="glass-card home-board library-section reveal">
+            <div class="section-heading">
+              <p class="eyebrow">LIBRARY PAGES</p>
+              <h2>Quick Entry</h2>
+              <p id="library-home-links-summary" class="home-board-summary">-</p>
+            </div>
+            <div id="library-home-link-cards" class="home-categories"></div>
+          </section>
+
+          <section class="glass-card library-section reveal">
+            <div class="section-heading">
+              <p class="eyebrow">CORE STATS</p>
+              <h2>Reading Pipeline</h2>
+              <p id="library-home-facts-summary" class="home-board-summary">-</p>
+            </div>
+            <div id="library-home-facts" class="settings-fact-grid"></div>
+          </section>
+
+          <section class="glass-card overview library-section reveal">
+            <div class="overview-top">
+              <div>
+                <p class="eyebrow">LIBRARY HEALTH</p>
+                <h2>Coverage Snapshot</h2>
+              </div>
+            </div>
+            <div id="library-home-overview" class="overview-grid conference-overview-grid"></div>
+          </section>
+
+          <section class="glass-card home-board library-section reveal">
+            <div class="section-heading">
+              <p class="eyebrow">GROUP MIX</p>
+              <h2>Library Groups</h2>
+              <p id="library-home-groups-summary" class="home-board-summary">-</p>
+            </div>
+            <div id="library-home-groups" class="home-categories"></div>
+          </section>
+
+          <section class="glass-card trend-panel library-section reveal">
+            <div class="section-heading">
+              <p class="eyebrow">TOPIC MIX</p>
+              <h2>Liked Topic Distribution</h2>
+            </div>
+            <div id="library-home-topics" class="distribution-list"></div>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="./library_home.js?v=20260320lib3"></script>
+  </body>
+</html>

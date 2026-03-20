@@ -9,6 +9,7 @@ const BRANCH_NAV_ITEMS = [
 ];
 
 const LIBRARY_NAV_ITEMS = [
+  { key: "home", href: "./library.html", label: "Home" },
   { key: "later", href: "./queue.html", label: "Later" },
   { key: "liked", href: "./like.html", label: "Liked" },
   { key: "unread", href: "./unread-snapshots.html", label: "Unread" },
@@ -20,15 +21,19 @@ export function mountAppToolbar(rootOrSelector, config = {}) {
     return null;
   }
   root.innerHTML = renderAppToolbar(config);
+  enhanceFilterSelects(root);
   return root;
 }
 
 export function renderAppToolbar({
   prefix,
   filtersTemplateId,
+  showFilters = Boolean(filtersTemplateId),
   branchActiveKey = null,
   libraryActiveKey = null,
   quickAddTarget = "later",
+  settingsHref = "./settings.html",
+  settingsActive = false,
 } = {}) {
   if (!prefix) {
     throw new Error("renderAppToolbar requires a prefix");
@@ -39,17 +44,21 @@ export function renderAppToolbar({
   return `
     <header class="app-toolbar">
       <div class="toolbar-start">
-        <div class="filters-menu-shell" id="${escapeAttribute(prefix)}-filters-menu-shell">
-          <button id="${escapeAttribute(prefix)}-sidebar-toggle" class="toolbar-filter-toggle" type="button" aria-expanded="false" aria-haspopup="menu" aria-label="Open filters">
-            <span id="${escapeAttribute(prefix)}-sidebar-toggle-icon" class="toolbar-filter-icon">☰</span>
-            <span id="${escapeAttribute(prefix)}-sidebar-toggle-label" class="toolbar-filter-label">Filters</span>
-          </button>
-          <aside id="${escapeAttribute(prefix)}-filters-menu" class="filters-menu-panel glass-card" hidden>
-            <div id="${escapeAttribute(prefix)}-sidebar-stack" class="sidebar-stack">
-              ${filtersContent}
+        ${showFilters
+          ? `
+            <div class="filters-menu-shell" id="${escapeAttribute(prefix)}-filters-menu-shell">
+              <button id="${escapeAttribute(prefix)}-sidebar-toggle" class="toolbar-filter-toggle" type="button" aria-expanded="false" aria-haspopup="menu" aria-label="Open filters">
+                <span id="${escapeAttribute(prefix)}-sidebar-toggle-icon" class="toolbar-filter-icon">☰</span>
+                <span id="${escapeAttribute(prefix)}-sidebar-toggle-label" class="toolbar-filter-label">Filters</span>
+              </button>
+              <aside id="${escapeAttribute(prefix)}-filters-menu" class="filters-menu-panel glass-card" hidden>
+                <div id="${escapeAttribute(prefix)}-sidebar-stack" class="sidebar-stack">
+                  ${filtersContent}
+                </div>
+              </aside>
             </div>
-          </aside>
-        </div>
+          `
+          : ""}
         <div class="page-nav">
           ${renderNavDropdown("branch", "Branches", BRANCH_NAV_ITEMS, branchActiveKey)}
           ${renderNavDropdown("library", "Lib", LIBRARY_NAV_ITEMS, libraryActiveKey)}
@@ -60,7 +69,7 @@ export function renderAppToolbar({
       </div>
       <div class="toolbar-end">
         ${renderToolbarAutoHide(prefix)}
-        ${renderAccountMenu(prefix)}
+        ${renderAccountMenu(prefix, { settingsHref, settingsActive })}
       </div>
     </header>
   `;
@@ -142,8 +151,9 @@ function renderToolbarQuickAdd(prefix, target) {
   `;
 }
 
-function renderAccountMenu(prefix) {
+function renderAccountMenu(prefix, { settingsHref = "./settings.html", settingsActive = false } = {}) {
   const safePrefix = escapeAttribute(prefix);
+  const safeSettingsHref = escapeAttribute(settingsHref);
   return `
     <div class="account-menu-shell" id="${safePrefix}-account-menu-shell">
       <button id="${safePrefix}-account-menu-toggle" class="account-menu-toggle" type="button" aria-expanded="false" aria-haspopup="menu" aria-label="Sync account" title="Sync account">
@@ -152,8 +162,8 @@ function renderAccountMenu(prefix) {
         </span>
       </button>
       <div id="${safePrefix}-sync-menu" class="account-menu-panel" hidden>
-        <section class="account-panel-section account-panel-preferences" aria-label="Display preferences">
-          <div class="account-panel-preference">
+        <section class="account-panel-section account-panel-preferences" data-account-preferences-section aria-label="Display preferences">
+          <div class="account-panel-preference" data-account-preference-option="theme">
             <span class="account-panel-preference-label">Theme</span>
             <div class="hero-actions toolbar-theme-switch account-panel-switch">
               <button class="pill-button active" type="button" data-theme-toggle="auto" aria-pressed="true">Auto</button>
@@ -161,11 +171,32 @@ function renderAccountMenu(prefix) {
               <button class="pill-button" type="button" data-theme-toggle="dark" aria-pressed="false">Night</button>
             </div>
           </div>
-          <div class="account-panel-preference">
+          <div class="account-panel-preference" data-account-preference-option="view">
             <span class="account-panel-preference-label">View</span>
             <div class="section-view-toggle toolbar-view-switch" role="tablist" aria-label="Page view mode">
               <button class="pill-button" type="button" data-page-view-toggle="card" aria-pressed="true">Gallery</button>
               <button class="pill-button" type="button" data-page-view-toggle="list" aria-pressed="false">List</button>
+            </div>
+          </div>
+          <div class="account-panel-preference" data-account-preference-option="toolbar">
+            <span class="account-panel-preference-label">Toolbar</span>
+            <div class="section-view-toggle toolbar-view-switch" role="tablist" aria-label="Toolbar auto-hide mode">
+              <button class="pill-button" type="button" data-toolbar-autohide-mode-toggle="enabled" aria-pressed="true">Auto</button>
+              <button class="pill-button" type="button" data-toolbar-autohide-mode-toggle="disabled" aria-pressed="false">Pinned</button>
+            </div>
+          </div>
+          <div class="account-panel-preference" data-account-preference-option="workspace">
+            <span class="account-panel-preference-label">Workspace</span>
+            <div class="section-view-toggle toolbar-view-switch" role="tablist" aria-label="Workspace default panel state">
+              <button class="pill-button" type="button" data-workspace-default-toggle="expanded" aria-pressed="true">Expanded</button>
+              <button class="pill-button" type="button" data-workspace-default-toggle="collapsed" aria-pressed="false">Collapsed</button>
+            </div>
+          </div>
+          <div class="account-panel-preference" data-account-preference-option="details">
+            <span class="account-panel-preference-label">Details</span>
+            <div class="section-view-toggle toolbar-view-switch" role="tablist" aria-label="Details default panel state">
+              <button class="pill-button" type="button" data-detail-panel-default-toggle="expanded" aria-pressed="false">Expanded</button>
+              <button class="pill-button active" type="button" data-detail-panel-default-toggle="collapsed" aria-pressed="true">Collapsed</button>
             </div>
           </div>
         </section>
@@ -175,15 +206,22 @@ function renderAccountMenu(prefix) {
           </div>
           <div class="account-card-copy">
             <strong class="account-card-name">Not signed in</strong>
-            <span class="account-card-email">GitHub + Supabase</span>
+            <span class="account-card-email">OAuth + Supabase</span>
           </div>
         </div>
         <div id="${safePrefix}-auth-warning" class="auth-warning" hidden></div>
         <p id="${safePrefix}-auth-status" class="auth-status">Supabase is not configured. Sync is currently disabled.</p>
         <div class="auth-actions">
-          <button id="${safePrefix}-sign-in" class="link-chip button-link" type="button">GitHub Sign in</button>
+          <button id="${safePrefix}-auth-button" class="link-chip button-link" type="button">Sign in</button>
           <button id="${safePrefix}-sync-now" class="link-chip button-link" type="button">Sync now</button>
-          <button id="${safePrefix}-sign-out" class="link-chip button-link" type="button">Sign out</button>
+        </div>
+        <div class="account-settings-row">
+          <a
+            id="${safePrefix}-settings-link"
+            class="link-chip button-link account-settings-link${settingsActive ? " active" : ""}"
+            href="${safeSettingsHref}"
+            ${settingsActive ? 'aria-current="page"' : ""}
+          >Settings</a>
         </div>
       </div>
     </div>
@@ -206,4 +244,17 @@ function resolveRoot(rootOrSelector) {
     return document.querySelector(rootOrSelector);
   }
   return rootOrSelector;
+}
+
+function enhanceFilterSelects(root) {
+  const selects = root.querySelectorAll(".filters-menu-panel .control-block > select.control-input");
+  selects.forEach((select) => {
+    if (select.parentElement?.classList.contains("filter-select-shell")) {
+      return;
+    }
+    const shell = document.createElement("div");
+    shell.className = "filter-select-shell";
+    select.parentNode.insertBefore(shell, select);
+    shell.appendChild(select);
+  });
 }

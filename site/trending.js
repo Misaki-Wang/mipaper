@@ -1,8 +1,9 @@
-import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js?v=d409e691d1";
+import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js?v=3b466b6556";
 import { bindQueueButtons, initQueue, isInQueue, subscribeQueue } from "./paper_queue.js?v=8b696292c3";
-import { mountAppToolbar } from "./app_toolbar.js?v=625fba0996";
+import { mountAppToolbar } from "./app_toolbar.js?v=90ae25c72d";
 import { repairLikeLaterConflicts } from "./paper_selection.js?v=964dbe6c53";
 import { buildBranchReviewKey, createBranchReviewController, initBranchReportPage } from "./branch_page.js?v=f27a328acc";
+import { bindBranchListDetails, renderBranchDetailGroup, renderBranchDetailSection, renderBranchListDetails } from "./branch_details.js?v=7c8a22c23c";
 import { createLatestTaskRunner } from "./request_gate.js?v=f527e8e81d";
 import { createFloatingTocController } from "./floating_toc.js?v=a9ffd5aa93";
 import { validateTrendingManifest, validateTrendingReport } from "./site_contract.js?v=12344e596d";
@@ -212,6 +213,7 @@ function renderReport() {
   ]);
   bindLikeButtons(document, likeRecords);
   bindQueueButtons(document, likeRecords);
+  bindBranchListDetails(document);
 }
 
 function renderHero(report, visibleRepos) {
@@ -379,6 +381,7 @@ function renderRepoCard(repo) {
   const likeId = rememberLikeRecord(repo);
   const liked = isLiked(likeId);
   const inLater = isInQueue(likeId);
+  const summary = escapeHtml(repo.description || "No description provided.");
   const badges = [
     `<span class="paper-badge">${escapeHtml(repo.language || "Unknown")}</span>`,
     repo.stars_this_week !== null && repo.stars_this_week !== undefined
@@ -387,6 +390,26 @@ function renderRepoCard(repo) {
   ]
     .filter(Boolean)
     .join("");
+  const stats = `
+    <div class="repo-stat-row">
+      <span class="repo-stat-pill">
+        <span class="repo-stat-icon" aria-hidden="true">
+          <svg viewBox="0 0 16 16" fill="currentColor" focusable="false">
+            <path d="M8 .75l2.12 4.29 4.73.69-3.42 3.33.81 4.7L8 11.53l-4.24 2.23.81-4.7L1.15 5.73l4.73-.69L8 .75z"></path>
+          </svg>
+        </span>
+        <span>Stars ${escapeHtml((repo.stars || 0).toLocaleString())}</span>
+      </span>
+      <span class="repo-stat-pill">
+        <span class="repo-stat-icon" aria-hidden="true">
+          <svg viewBox="0 0 16 16" fill="currentColor" focusable="false">
+            <path d="M5 1.25a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5zm7.5 2.25a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5zM5 12.25a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5zM6 3.75v6.5a2.5 2.5 0 11-2 0v-6.5a2.5 2.5 0 012 0zm1.22 1h3.56a2.5 2.5 0 11-.56 1h-3a2.5 2.5 0 01-.22-1z"></path>
+          </svg>
+        </span>
+        <span>Forks ${escapeHtml((repo.forks || 0).toLocaleString())}</span>
+      </span>
+    </div>
+  `;
   const builtBy = repo.built_by?.length
     ? `
       <div class="paper-authors-box">
@@ -395,30 +418,28 @@ function renderRepoCard(repo) {
       </div>
     `
     : "";
+  const listDetails = renderBranchListDetails(
+    [
+      renderBranchDetailSection({ label: "Summary", body: summary, muted: true }),
+      renderBranchDetailGroup({ label: "Stats", body: stats }),
+      repo.built_by?.length
+        ? renderBranchDetailSection({ label: "Built By", body: escapeHtml(repo.built_by.join(", ")) })
+        : "",
+    ].join(""),
+    {
+      detailKey: likeId,
+    }
+  );
   return `
     <article class="conference-paper-card repo-card">
       <div class="conference-paper-top">${badges}</div>
       <h4>${escapeHtml(repo.full_name)}</h4>
-      <p class="repo-description">${escapeHtml(repo.description || "No description provided.")}</p>
-      <div class="repo-stat-row">
-        <span class="repo-stat-pill">
-          <span class="repo-stat-icon" aria-hidden="true">
-            <svg viewBox="0 0 16 16" fill="currentColor" focusable="false">
-              <path d="M8 .75l2.12 4.29 4.73.69-3.42 3.33.81 4.7L8 11.53l-4.24 2.23.81-4.7L1.15 5.73l4.73-.69L8 .75z"></path>
-            </svg>
-          </span>
-          <span>Stars ${escapeHtml((repo.stars || 0).toLocaleString())}</span>
-        </span>
-        <span class="repo-stat-pill">
-          <span class="repo-stat-icon" aria-hidden="true">
-            <svg viewBox="0 0 16 16" fill="currentColor" focusable="false">
-              <path d="M5 1.25a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5zm7.5 2.25a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5zM5 12.25a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5zM6 3.75v6.5a2.5 2.5 0 11-2 0v-6.5a2.5 2.5 0 012 0zm1.22 1h3.56a2.5 2.5 0 11-.56 1h-3a2.5 2.5 0 01-.22-1z"></path>
-            </svg>
-          </span>
-          <span>Forks ${escapeHtml((repo.forks || 0).toLocaleString())}</span>
-        </span>
+      <div class="branch-card-inline-details">
+        <p class="repo-description">${summary}</p>
+        ${stats}
+        ${builtBy}
       </div>
-      ${builtBy}
+      ${listDetails}
       <div class="paper-links">
         ${renderPaperLink({ href: repo.repo_url, label: "GitHub", brand: "github" })}
         <button class="paper-link later-button${inLater ? " is-later" : ""}" type="button" data-later-id="${escapeAttribute(likeId)}" aria-pressed="${inLater}">

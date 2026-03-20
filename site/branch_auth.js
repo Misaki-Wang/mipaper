@@ -1,8 +1,7 @@
-import { getAuthSnapshot, initLikesSync, signInWithGitHub, signOutFromGitHub, subscribeAuth, syncLikesNow } from "./likes.js?v=d409e691d1";
+import { getAuthSnapshot, initLikesSync, signIn, signOut, subscribeAuth, syncLikesNow } from "./likes.js?v=3b466b6556";
 import { openExclusiveDropdown, registerExclusiveDropdown } from "./nav_dropdowns.js?v=cd4da78ec3";
+import { readToolbarAutoHidePreference, setToolbarAutoHidePreference, subscribeUserSettings } from "./user_settings.js?v=0f028ca95d";
 import { escapeAttribute, escapeHtml, formatDateTime } from "./ui_utils.js?v=e2da3b3a11";
-
-const TOOLBAR_AUTO_HIDE_KEY = "cool-paper-toolbar-auto-hide";
 const AUTH_TIME_FORMAT = {
   locale: "en-US",
   emptyValue: "",
@@ -22,8 +21,7 @@ export function bindBranchAuthToolbar(prefix) {
   const card = document.querySelector(`#${prefix}-account-card`);
   const warning = document.querySelector(`#${prefix}-auth-warning`);
   const status = document.querySelector(`#${prefix}-auth-status`);
-  const signInButton = document.querySelector(`#${prefix}-sign-in`);
-  const signOutButton = document.querySelector(`#${prefix}-sign-out`);
+  const authButton = document.querySelector(`#${prefix}-auth-button`);
   const syncNowButton = document.querySelector(`#${prefix}-sync-now`);
   const autoHideButton = document.querySelector(`#${prefix}-toolbar-autohide-toggle`);
 
@@ -37,7 +35,14 @@ export function bindBranchAuthToolbar(prefix) {
     return;
   }
 
+  const preferenceSection = shell.querySelector("[data-account-preferences-section]");
+  const preferenceRows = [...shell.querySelectorAll("[data-account-preference-option]")];
+  const autoHideModeButtons = [...shell.querySelectorAll("[data-toolbar-autohide-mode-toggle]")];
+  const authActions = shell.querySelector(".auth-actions");
+  const settingsRow = shell.querySelector(".account-settings-row");
+
   let open = false;
+  let latestSnapshot = getAuthSnapshot();
   const dropdown = {
     close: () => setOpen(false),
   };
@@ -53,8 +58,13 @@ export function bindBranchAuthToolbar(prefix) {
   };
 
   const render = (snapshot) => {
+    latestSnapshot = snapshot;
     const identitySource = snapshot.unauthorized ? snapshot.blockedUser : snapshot.user;
     const signedIn = Boolean(snapshot.signedIn && snapshot.user && !snapshot.unauthorized);
+    const hasSession = Boolean(snapshot.signedIn);
+    const canShowAuthAction = Boolean(snapshot.configured);
+    const canShowSyncNow = Boolean(snapshot.configured && signedIn && !snapshot.unauthorized);
+    const hasVisibleAuthActions = canShowAuthAction || canShowSyncNow;
     const metadata = identitySource?.user_metadata || {};
     const displayName =
       identitySource?.displayName ||
@@ -63,7 +73,7 @@ export function bindBranchAuthToolbar(prefix) {
       metadata.preferred_username ||
       metadata.user_name ||
       "Not signed in";
-    const email = identitySource?.email || identitySource?.id || identitySource?.userId || "GitHub + Supabase";
+    const email = identitySource?.email || identitySource?.id || identitySource?.userId || "OAuth + Supabase";
     const avatarUrl = identitySource?.avatarUrl || metadata.avatar_url || "";
     const initial = String(displayName || email || "?").trim().charAt(0).toUpperCase() || "?";
 
@@ -97,7 +107,7 @@ export function bindBranchAuthToolbar(prefix) {
         nameNode.textContent = snapshot.unauthorized ? `Unauthorized · ${displayName}` : signedIn ? displayName : "Not signed in";
       }
       if (emailNode) {
-        emailNode.textContent = snapshot.unauthorized ? email : signedIn ? email : "GitHub + Supabase";
+        emailNode.textContent = snapshot.unauthorized ? email : signedIn ? email : "OAuth + Supabase";
       }
       if (avatarShell) {
         if (signedIn && avatarUrl) {
@@ -120,32 +130,40 @@ export function bindBranchAuthToolbar(prefix) {
 
     if (status) {
       if (!snapshot.configured) {
-        status.textContent = "Sync disabled. Supabase is not configured.";
+        status.textContent = "Sync unavailable. Missing Supabase config.";
       } else if (snapshot.unauthorized) {
-        status.textContent = snapshot.unauthorizedMessage || "This account is not authorized for sync.";
+        status.textContent = snapshot.unauthorizedMessage || "This account is not authorized.";
       } else if (snapshot.signedIn) {
         if (snapshot.syncing) {
-          status.textContent = "Syncing likes to Supabase now.";
+          status.textContent = "Syncing now.";
         } else if (snapshot.syncError) {
           status.textContent = `Sync failed: ${snapshot.syncError}`;
         } else if (snapshot.lastSyncedAt) {
-          status.textContent = `Last synced ${formatDateTime(snapshot.lastSyncedAt, AUTH_TIME_FORMAT)}`;
+          status.textContent = `Synced ${formatDateTime(snapshot.lastSyncedAt, AUTH_TIME_FORMAT)}`;
         } else {
-          status.textContent = "Connected. Automatic sync is ready.";
+          status.textContent = "Auto sync ready.";
         }
       } else {
-        status.textContent = "Sign in with GitHub to sync likes across devices.";
+        status.textContent = "Sign in to sync across devices.";
       }
     }
 
-    if (signInButton) {
-      signInButton.disabled = !snapshot.configured || (snapshot.signedIn && !snapshot.unauthorized);
+    if (authActions) {
+      const visibleActionCount = [canShowAuthAction, canShowSyncNow].filter(Boolean).length;
+      authActions.dataset.visibleCount = String(visibleActionCount);
+      authActions.hidden = !hasVisibleAuthActions;
     }
-    if (signOutButton) {
-      signOutButton.disabled = !snapshot.configured || !snapshot.signedIn;
+    if (settingsRow) {
+      settingsRow.classList.toggle("is-standalone", !hasVisibleAuthActions);
+    }
+    if (authButton) {
+      authButton.hidden = !canShowAuthAction;
+      authButton.disabled = !canShowAuthAction;
+      authButton.textContent = hasSession ? "Sign out" : "Sign in";
     }
     if (syncNowButton) {
-      syncNowButton.disabled = !snapshot.configured || !snapshot.signedIn || snapshot.syncing || snapshot.unauthorized;
+      syncNowButton.hidden = !canShowSyncNow;
+      syncNowButton.disabled = !canShowSyncNow || snapshot.syncing;
       syncNowButton.textContent = snapshot.syncing ? "Syncing..." : "Sync now";
     }
   };
@@ -171,18 +189,25 @@ export function bindBranchAuthToolbar(prefix) {
     }
   });
 
-  if (signInButton) {
-    signInButton.addEventListener("click", async () => {
-      if (status) {
-        status.textContent = "Redirecting to GitHub sign-in. Likes will sync automatically when you return.";
-      }
-      await signInWithGitHub();
-    });
-  }
+  panel.addEventListener("click", (event) => {
+    const autoHideModeButton =
+      event.target instanceof Element ? event.target.closest("[data-toolbar-autohide-mode-toggle]") : null;
+    if (!autoHideModeButton) {
+      return;
+    }
+    setToolbarAutoHidePreference((autoHideModeButton.dataset.toolbarAutohideModeToggle || "enabled") === "enabled");
+  });
 
-  if (signOutButton) {
-    signOutButton.addEventListener("click", async () => {
-      await signOutFromGitHub();
+  if (authButton) {
+    authButton.addEventListener("click", async () => {
+      if (latestSnapshot.signedIn) {
+        await signOut();
+        return;
+      }
+      if (status) {
+        status.textContent = "Redirecting to sign-in. Sync will resume automatically when you return.";
+      }
+      await signIn();
     });
   }
 
@@ -203,8 +228,36 @@ export function bindBranchAuthToolbar(prefix) {
   }
 
   subscribeAuth(render);
+  subscribeUserSettings((snapshot) => {
+    syncPreferencePanel(snapshot);
+  });
   setOpen(false);
   render(getAuthSnapshot());
+
+  function syncPreferencePanel(snapshot) {
+    const pinned = new Set(Array.isArray(snapshot?.accountPanelPreferencePins) ? snapshot.accountPanelPreferencePins : []);
+    let visibleCount = 0;
+
+    preferenceRows.forEach((row) => {
+      const key = String(row.dataset.accountPreferenceOption || "").trim().toLowerCase();
+      const visible = pinned.has(key);
+      row.hidden = !visible;
+      if (visible) {
+        visibleCount += 1;
+      }
+    });
+
+    if (preferenceSection) {
+      preferenceSection.hidden = visibleCount === 0;
+    }
+
+    autoHideModeButtons.forEach((button) => {
+      const value = button.dataset.toolbarAutohideModeToggle || "enabled";
+      const active = snapshot?.toolbarAutoHide ? value === "enabled" : value === "disabled";
+      button.classList.toggle("active", active);
+      button.setAttribute("aria-pressed", String(active));
+    });
+  }
 }
 
 export function bindToolbarAutoHide(toolbar, toggleButton) {
@@ -251,9 +304,12 @@ export function bindToolbarAutoHide(toolbar, toggleButton) {
     scheduleTick();
   };
 
-  const setAutoHideEnabled = (enabled) => {
+  const setAutoHideEnabled = (enabled, options = {}) => {
+    const { persist = true } = options;
     autoHideEnabled = Boolean(enabled);
-    window.localStorage.setItem(TOOLBAR_AUTO_HIDE_KEY, autoHideEnabled ? "1" : "0");
+    if (persist) {
+      setToolbarAutoHidePreference(autoHideEnabled);
+    }
     syncToggleButton();
     if (!autoHideEnabled) {
       targetCollapse = 0;
@@ -318,18 +374,16 @@ export function bindToolbarAutoHide(toolbar, toggleButton) {
       setAutoHideEnabled(!autoHideEnabled);
     });
   }
+  subscribeUserSettings((snapshot) => {
+    if (snapshot.toolbarAutoHide === autoHideEnabled) {
+      return;
+    }
+    setAutoHideEnabled(snapshot.toolbarAutoHide, { persist: false });
+  });
   syncToggleButton();
   setCollapse(0);
   setTargetCollapse(0);
   if (!autoHideEnabled) {
     setCollapse(0);
   }
-}
-
-function readToolbarAutoHidePreference() {
-  const stored = window.localStorage.getItem(TOOLBAR_AUTO_HIDE_KEY);
-  if (stored === null) {
-    return true;
-  }
-  return stored !== "0" && stored !== "false";
 }

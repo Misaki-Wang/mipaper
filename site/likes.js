@@ -8,7 +8,7 @@ import {
   getRecordUpdatedAt,
   getSyncDeviceId,
   mergeSyncRecords,
-} from "./sync_utils.js?v=b3e14c1ece";
+} from "./sync_utils.js?v=8b7af265fa";
 import { movePaperToLikes } from "./paper_selection.js?v=964dbe6c53";
 
 const LIKES_STORAGE_KEY = "cool-paper-liked-papers-v1";
@@ -26,6 +26,13 @@ const SOURCE_LABELS = {
 
 const WORKFLOW_STATUSES = new Set(["inbox", "reading", "digesting", "synthesized", "archived"]);
 const PRIORITY_LEVELS = new Set(["high", "medium", "low"]);
+const AUTH_PROVIDERS = Object.freeze({
+  github: Object.freeze({
+    key: "github",
+    label: "GitHub",
+    getRedirectTo: () => getGitHubRedirectTo(),
+  }),
+});
 
 let supabaseClient = null;
 let authSession = null;
@@ -259,22 +266,34 @@ export function subscribeAuth(callback) {
   return () => window.removeEventListener(AUTH_CHANGED_EVENT, handler);
 }
 
-export async function signInWithGitHub() {
+export function getAuthProviders() {
+  return Object.values(AUTH_PROVIDERS).map((provider) => ({
+    key: provider.key,
+    label: provider.label,
+  }));
+}
+
+export function getDefaultAuthProviderKey() {
+  return getAuthProviders()[0]?.key || "github";
+}
+
+export async function signIn(options = {}) {
   await initLikesSync();
   if (!supabaseClient) {
     return { configured: false };
   }
   clearUnauthorizedState();
   emitAuthChanged();
+  const provider = resolveAuthProvider(options.provider || getDefaultAuthProviderKey());
   return supabaseClient.auth.signInWithOAuth({
-    provider: "github",
+    provider: provider.key,
     options: {
-      redirectTo: getGitHubRedirectTo(),
+      redirectTo: provider.getRedirectTo(),
     },
   });
 }
 
-export async function signOutFromGitHub() {
+export async function signOut() {
   await initLikesSync();
   if (!supabaseClient) {
     return { configured: false };
@@ -285,6 +304,14 @@ export async function signOutFromGitHub() {
   clearUnauthorizedState();
   emitAuthChanged();
   return result;
+}
+
+export async function signInWithGitHub() {
+  return signIn({ provider: "github" });
+}
+
+export async function signOutFromGitHub() {
+  return signOut();
 }
 
 export async function syncLikesNow() {
@@ -685,6 +712,11 @@ async function fetchRemoteLikes(since = "") {
 
 function emitAuthChanged() {
   window.dispatchEvent(new CustomEvent(AUTH_CHANGED_EVENT, { detail: getAuthSnapshot() }));
+}
+
+function resolveAuthProvider(providerKey) {
+  const normalizedKey = String(providerKey || "").trim().toLowerCase();
+  return AUTH_PROVIDERS[normalizedKey] || AUTH_PROVIDERS[getDefaultAuthProviderKey()] || AUTH_PROVIDERS.github;
 }
 
 function formatSyncError(error) {

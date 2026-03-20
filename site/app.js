@@ -1,9 +1,10 @@
-import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js?v=d409e691d1";
+import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js?v=3b466b6556";
 import { bindQueueButtons, initQueue, isInQueue, subscribeQueue } from "./paper_queue.js?v=8b696292c3";
 import { repairLikeLaterConflicts } from "./paper_selection.js?v=964dbe6c53";
 import { createCalendarPicker } from "./calendar_picker.js?v=4b01d6ac6c";
-import { mountAppToolbar } from "./app_toolbar.js?v=625fba0996";
+import { mountAppToolbar } from "./app_toolbar.js?v=90ae25c72d";
 import { buildBranchReviewKey, createBranchReviewController, initBranchReportPage } from "./branch_page.js?v=f27a328acc";
+import { bindBranchListDetails, renderBranchDetailSection, renderBranchListDetails } from "./branch_details.js?v=7c8a22c23c";
 import { createLatestTaskRunner } from "./request_gate.js?v=f527e8e81d";
 import { buildCadenceSummary } from "./daily_cadence.js?v=a064eed5f2";
 import { createFloatingTocController } from "./floating_toc.js?v=a9ffd5aa93";
@@ -431,6 +432,7 @@ function renderReport() {
   );
   bindLikeButtons(document, likeRecords);
   bindQueueButtons(document, likeRecords);
+  bindBranchListDetails(document);
 }
 
 function renderTagMap(report) {
@@ -886,21 +888,16 @@ function renderTopicSections(report, sections) {
 
 function buildTopicLeadMarkup(paper, topic) {
   return `
-    <div class="topic-lead-main">
-      <div class="lead-top">
-        <span class="lead-badge">${escapeHtml(topic.topic_label)}</span>
-        <span class="paper-id">${escapeHtml(paper.paper_id)}</span>
-      </div>
-      <h4 class="topic-lead-title">${escapeHtml(paper.title)}</h4>
-      ${renderPaperDetails(paper)}
-    </div>
-    <div class="topic-lead-side">
+    <div class="paper-card-top">
+      <span class="paper-id">${escapeHtml(paper.paper_id)}</span>
       <div class="paper-badges">${renderPaperBadges(paper)}</div>
-      <div class="paper-links">
+    </div>
+    <h4 class="topic-lead-title">${escapeHtml(paper.title)}</h4>
+    ${renderPaperDetails(paper)}
+    <div class="paper-links">
       ${renderPaperLink({ href: paper.pdf_url || paper.abs_url, label: "arXiv", brand: "arxiv" })}
       ${renderPaperLink({ href: paper.detail_url, label: "Cool", brand: "cool" })}
       ${renderLikeButton(paper)}
-      </div>
     </div>
   `;
 }
@@ -1114,36 +1111,45 @@ function renderPaperDetails(paper) {
     return "";
   }
 
+  const inlineAuthors = authors.length
+    ? `
+      <div class="paper-authors-box">
+        <span class="paper-detail-label">Authors</span>
+        <p class="paper-authors-line">${escapeHtml(authors.join(", "))}</p>
+      </div>
+    `
+    : "";
+  const inlineAbstract = abstract
+    ? `
+      <details class="paper-abstract">
+        <summary>
+          <span class="paper-abstract-label">Abstract</span>
+          <span class="paper-abstract-arrow" aria-hidden="true">
+            <svg viewBox="0 0 20 20" width="14" height="14">
+              <path d="M5.5 7.5L10 12l4.5-4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+            </svg>
+          </span>
+        </summary>
+        <p>${escapeHtml(abstract)}</p>
+      </details>
+    `
+    : "";
+  const listDetails = renderBranchListDetails(
+    [
+      authors.length ? renderBranchDetailSection({ label: "Authors", body: escapeHtml(authors.join(", ")) }) : "",
+      abstract ? renderBranchDetailSection({ label: "Abstract", body: escapeHtml(abstract), muted: true }) : "",
+    ].join(""),
+    {
+      detailKey: rememberLikeRecord(paper),
+    }
+  );
+
   return `
-    <div class="paper-extra-stack">
-      ${
-        authors.length
-          ? `
-            <div class="paper-authors-box">
-              <span class="paper-detail-label">Authors</span>
-              <p class="paper-authors-line">${escapeHtml(authors.join(", "))}</p>
-            </div>
-          `
-          : ""
-      }
-      ${
-        abstract
-          ? `
-            <details class="paper-abstract">
-              <summary>
-                <span class="paper-abstract-label">Abstract</span>
-                <span class="paper-abstract-arrow" aria-hidden="true">
-                  <svg viewBox="0 0 20 20" width="14" height="14">
-                    <path d="M5.5 7.5L10 12l4.5-4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
-                  </svg>
-                </span>
-              </summary>
-              <p>${escapeHtml(abstract)}</p>
-            </details>
-          `
-          : ""
-      }
+    <div class="paper-extra-stack branch-card-inline-details">
+      ${inlineAuthors}
+      ${inlineAbstract}
     </div>
+    ${listDetails}
   `;
 }
 

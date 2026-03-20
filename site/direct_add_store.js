@@ -8,7 +8,7 @@ import {
   getRecordUpdatedAt,
   getSyncDeviceId,
   mergeSyncRecords,
-} from "./sync_utils.js?v=b3e14c1ece";
+} from "./sync_utils.js?v=8b7af265fa";
 
 const DIRECT_ADDS_STORAGE_KEY = "cool-paper-direct-adds-v1";
 const DIRECT_ADDS_META_KEY = "cool-paper-direct-adds-meta-v1";

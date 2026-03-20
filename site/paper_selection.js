@@ -1,4 +1,4 @@
-import { readLikes, toggleLike } from "./likes.js?v=d409e691d1";
+import { readLikes, toggleLike } from "./likes.js?v=3b466b6556";
 import { addToQueue, readQueue, removeFromQueue } from "./paper_queue.js?v=8b696292c3";
 
 function getRecordTime(record) {

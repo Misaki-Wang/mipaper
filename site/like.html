@@ -63,14 +63,6 @@
               <input id="like-search-input" class="control-input" type="search" placeholder="Search title or authors" />
             </div>
           </section>
-
-          <section class="glass-card trend-panel reveal">
-            <div class="section-heading">
-              <p class="eyebrow">TOPIC MIX</p>
-              <h2>Liked Topic Distribution</h2>
-            </div>
-            <div id="like-distribution-list" class="distribution-list"></div>
-          </section>
         </template>
 
       </div>
@@ -80,95 +72,40 @@
           <p class="eyebrow">LIKED PAPERS</p>
           <h1>Liked Papers</h1>
           <p class="hero-text">
-            Collect liked papers across HF Daily, Cool Daily, and Conference.
+            Your retained paper set. Use Lib Home for aggregated stats, and use this page to browse, filter, and reopen specific likes.
           </p>
-          <div id="like-hero-signals" class="hero-signals"></div>
-        </div>
-        <div class="hero-panel glass-card">
-          <div class="hero-panel-top">
-            <span class="meta-kicker">Liked Papers Pulse</span>
-            <strong id="like-hero-count">-</strong>
-          </div>
-          <div class="hero-stat-grid">
-            <div>
-              <span class="stat-label">Groups</span>
-              <strong id="like-hero-sources">-</strong>
-            </div>
-            <div>
-              <span class="stat-label">Later Queue</span>
-              <strong id="like-hero-focus">-</strong>
-            </div>
-            <div>
-              <span class="stat-label">Unread Snapshots</span>
-              <strong id="like-hero-latest">-</strong>
-            </div>
-            <div>
-              <span class="stat-label">Top Topic</span>
-              <strong id="like-hero-topic">-</strong>
-            </div>
+          <div class="hero-actions page-like-jump-links" aria-label="Quick jump">
+            <a class="link-chip" href="./library.html">Open Lib Home</a>
+            <a class="link-chip" href="#like-results-section">Jump to liked papers</a>
+            <a class="link-chip" href="#like-browse-section">Browse by group</a>
+            <a class="link-chip" href="#like-saved-views-section">Saved views</a>
           </div>
         </div>
       </header>
 
-      <section class="glass-card home-board library-section reveal">
-        <div class="section-heading">
-          <p class="eyebrow">LIKED SOURCES</p>
-          <h2>Liked Groups</h2>
-          <p id="like-board-summary" class="home-board-summary">-</p>
-        </div>
-        <div id="like-home-cards" class="home-categories"></div>
-      </section>
-
       <main class="layout">
         <section class="content">
-          <section id="like-later-section" class="glass-card conference-panel library-section reveal">
-            <div class="section-heading">
-              <p class="eyebrow">LATER QUEUE</p>
-              <h2>Later Queue</h2>
-              <p id="like-later-summary" class="home-board-summary">-</p>
-            </div>
-            <div id="like-later-list" class="conference-spotlight"></div>
-            <div id="like-later-pagination"></div>
-          </section>
-
-          <section id="like-to-read-section" class="glass-card conference-panel library-section reveal">
-            <div class="section-heading">
-              <p class="eyebrow">UNREAD SNAPSHOTS</p>
-              <h2>Unread Snapshots</h2>
-              <p id="like-to-read-summary" class="home-board-summary">-</p>
-            </div>
-            <div id="like-to-read-list" class="conference-spotlight"></div>
-            <div id="like-to-read-pagination"></div>
-          </section>
-
-          <section class="glass-card overview library-section reveal">
-            <div class="overview-top">
+          <section id="like-results-section" class="glass-card results-strip library-section reveal">
+            <div class="results-top">
               <div>
-                <p class="eyebrow">LIKED PAPERS OVERVIEW</p>
-                <h2 id="like-overview-title">Liked Papers Overview</h2>
+                <p class="eyebrow">LIKED PAPERS</p>
+                <h2 id="like-results-title">0 liked papers</h2>
+              </div>
+              <div class="results-top-actions">
+                <button id="like-reset-filters" class="link-chip button-link" type="button">Reset filters</button>
               </div>
             </div>
-            <div class="overview-grid conference-overview-grid">
-              <article class="insight-card accent-card">
-                <span class="insight-label">Liked Queue</span>
-                <p id="like-overview-summary" class="insight-text">-</p>
-              </article>
-              <article class="insight-card">
-                <span class="insight-label">Focus Coverage</span>
-                <p id="like-focus-summary" class="insight-text">-</p>
-              </article>
-              <article class="insight-card">
-                <span class="insight-label">Group Spread</span>
-                <p id="like-branch-summary" class="insight-text">-</p>
-              </article>
-              <article class="insight-card">
-                <span class="insight-label">Latest Like</span>
-                <p id="like-latest-summary" class="insight-text">-</p>
-              </article>
+            <div class="results-grid">
+              <div id="like-results-stats" class="results-stats"></div>
+              <div id="like-active-filters" class="active-filter-chips"></div>
             </div>
           </section>
 
-          <section class="glass-card library-section reveal saved-view-panel">
+          <section id="like-browse-section" class="glass-card library-section reveal">
+            <div id="like-source-sections" class="conference-subject-sections"></div>
+          </section>
+
+          <section id="like-saved-views-section" class="glass-card library-section reveal saved-view-panel">
             <div class="section-heading saved-view-top">
               <div>
                 <p class="eyebrow">SAVED VIEWS</p>
@@ -189,57 +126,15 @@
             </div>
             <div id="like-saved-view-list" class="saved-view-list"></div>
           </section>
-
-          <section class="glass-card tag-panel library-section reveal">
-            <div class="section-heading">
-              <p class="eyebrow">TAG MAP</p>
-              <h2>Current Library Tags</h2>
-            </div>
-            <div id="like-tag-map" class="tag-map"></div>
-          </section>
-
-          <section id="like-results-section" class="glass-card results-strip library-section reveal">
-            <div class="results-top">
-              <div>
-                <p class="eyebrow">LIKED PAPERS</p>
-                <h2 id="like-results-title">0 liked papers</h2>
-              </div>
-              <div class="results-top-actions">
-                <button id="like-reset-filters" class="link-chip button-link" type="button">Reset filters</button>
-              </div>
-            </div>
-            <div class="results-grid">
-              <div id="like-results-stats" class="results-stats"></div>
-              <div id="like-active-filters" class="active-filter-chips"></div>
-            </div>
-          </section>
-
-          <section class="glass-card library-section reveal">
-            <div id="like-source-sections" class="conference-subject-sections"></div>
-          </section>
         </section>
       </main>
     </div>
-
-    <aside class="floating-toc" aria-label="Table of contents">
-      <div class="floating-toc-card">
-        <p class="eyebrow">TABLE OF CONTENTS</p>
-        <h2>Quick Jump</h2>
-        <nav id="like-floating-toc" class="floating-toc-list">
-          <a href="#like-later-section" class="floating-toc-link">Later Queue</a>
-          <a href="#like-to-read-section" class="floating-toc-link">Unread Snapshots</a>
-          <a href="#like-overview-title" class="floating-toc-link">Overview</a>
-          <a href="#like-tag-map" class="floating-toc-link">Tag Map</a>
-          <a href="#like-results-section" class="floating-toc-link">Liked Papers</a>
-        </nav>
-      </div>
-    </aside>
 
     <button id="like-back-to-top" class="back-to-top" type="button" aria-hidden="true">
       <span>↑</span>
       <span>Top</span>
     </button>
 
-    <script type="module" src="./like.js?v=29b93ff8e1"></script>
+    <script type="module" src="./like.js?v=20260320like4"></script>
   </body>
 </html>

@@ -14,6 +14,7 @@ This project crawls `papers.cool`, Hugging Face daily papers, and GitHub Trendin
 - Classify papers with rules or local `codex exec`
 - Generate Markdown and JSON reports
 - Build a static site for HF Daily, Cool Daily, Conference, Trending, and Like
+- Add library dashboards for Liked, Later, Unread, and browser-level settings
 - Run scheduled jobs on macOS `launchd` or WSL `cron`
 - Auto-commit generated artifacts and push them to GitHub
 
@@ -107,9 +108,31 @@ Then open `http://127.0.0.1:4173`.
 - `cool-daily.html`: Cool Daily across `cs.AI`, `cs.CL`, and `cs.CV`
 - `conference.html`: conference snapshots with `Subject` and `Topic` filters
 - `trending.html`: GitHub Trending weekly snapshots
-- `like.html`: saved papers with GitHub OAuth + Supabase sync
+- `library.html`: library home for liked papers, Later queue, unread snapshots, and saved-view coverage
+- `like.html`: saved papers with GitHub OAuth + Supabase sync plus workspace metadata
+- `queue.html`: Later queue with direct move-to-Liked actions
+- `unread-snapshots.html`: review queue for fetched branch snapshots
+- `settings.html`: browser-level display preferences, sync status, and device-local workspace summary
 
 The non-trending branches also share a unified catalog at `site/data/branches/manifest.json` for cross-branch management and future search expansion.
+
+## Browser Settings and Local Seeds
+
+Shared browser preferences live in `site/user_settings.js` and currently cover:
+
+- theme mode
+- global page view mode
+- toolbar auto-hide
+- liked-paper workspace panel default state
+- branch details panel default state
+- pinned preference rows in the account quick panel
+
+The `library.html`, `like.html`, and `queue.html` pages also install local manual library seeds while running on `file:` or localhost-style preview URLs. This makes manual UI checks easier without touching production data.
+
+- Disable default seeding with `?seedTestCases=0`
+- Force reseeding with `?seedTestCases=1`
+- Clear the seeded records with `?clearTestCases=1`
+- Debug helpers are exposed on `window.coolPaperDebug.*`
 
 ## Supabase and Cloudflare Pages
 

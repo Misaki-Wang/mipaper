@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MiPaper - Settings</title>
+    <meta
+      name="description"
+      content="Manage user settings, display preferences, and sync status for MiPaper."
+    />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <script>
+      (function () {
+        var storedMode = localStorage.getItem("cool-paper-theme") || "auto";
+        var prefersDark =
+          typeof window.matchMedia === "function" &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+        var resolvedTheme = storedMode === "auto" ? (prefersDark ? "dark" : "light") : storedMode;
+        document.documentElement.dataset.theme = resolvedTheme;
+        document.documentElement.dataset.themeMode = storedMode;
+      })();
+    </script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="page-settings page-library">
+    <div class="page-shell">
+      <div class="page-chrome">
+        <div id="settings-toolbar-root"></div>
+      </div>
+
+      <header class="hero reveal">
+        <div class="hero-copy">
+          <p class="eyebrow">SETTINGS</p>
+          <h1>User Settings</h1>
+          <p class="hero-text">
+            Manage display preferences, sync status, and local workspace data for this device in one place.
+          </p>
+          <div id="settings-hero-signals" class="hero-signals"></div>
+        </div>
+        <div class="hero-panel glass-card">
+          <div class="hero-panel-top">
+            <span class="meta-kicker">Preferences Pulse</span>
+            <strong id="settings-hero-status">-</strong>
+          </div>
+          <div class="hero-stat-grid">
+            <div>
+              <span class="stat-label">Theme</span>
+              <strong id="settings-hero-theme">-</strong>
+            </div>
+            <div>
+              <span class="stat-label">View</span>
+              <strong id="settings-hero-view">-</strong>
+            </div>
+            <div>
+              <span class="stat-label">Toolbar</span>
+              <strong id="settings-hero-toolbar">-</strong>
+            </div>
+            <div>
+              <span class="stat-label">Device</span>
+              <strong id="settings-hero-device">-</strong>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="layout">
+        <section class="content">
+          <section id="settings-appearance-section" class="glass-card library-section reveal settings-section">
+            <div class="section-heading">
+              <p class="eyebrow">APPEARANCE</p>
+              <h2>Display Preferences</h2>
+              <p class="home-board-summary">These preferences are stored in the current browser and applied across pages.</p>
+            </div>
+            <div class="settings-panel-grid">
+              <article class="settings-option-card">
+                <div class="settings-option-head">
+                  <span class="settings-option-label">Theme</span>
+                  <strong id="settings-theme-summary">Auto</strong>
+                </div>
+                <p class="settings-option-copy">Follow the system theme or lock the interface to Day or Night mode.</p>
+                <div class="section-view-toggle toolbar-theme-switch settings-toggle-group" role="tablist" aria-label="Theme mode">
+                  <button class="pill-button active" type="button" data-theme-toggle="auto" aria-pressed="true">Auto</button>
+                  <button class="pill-button" type="button" data-theme-toggle="light" aria-pressed="false">Day</button>
+                  <button class="pill-button" type="button" data-theme-toggle="dark" aria-pressed="false">Night</button>
+                </div>
+              </article>
+
+              <article class="settings-option-card">
+                <div class="settings-option-head">
+                  <span class="settings-option-label">Default View</span>
+                  <strong id="settings-view-summary">Gallery</strong>
+                </div>
+                <p class="settings-option-copy">Choose whether paper lists should default to Gallery or List layouts.</p>
+                <div class="section-view-toggle toolbar-view-switch settings-toggle-group" role="tablist" aria-label="Default page view mode">
+                  <button class="pill-button" type="button" data-page-view-toggle="card" aria-pressed="true">Gallery</button>
+                  <button class="pill-button" type="button" data-page-view-toggle="list" aria-pressed="false">List</button>
+                </div>
+              </article>
+
+              <article class="settings-option-card">
+                <div class="settings-option-head">
+                  <span class="settings-option-label">Toolbar Auto-hide</span>
+                  <strong id="settings-autohide-summary">Enabled</strong>
+                </div>
+                <p class="settings-option-copy">Automatically collapse the top toolbar while scrolling to leave more room for reading.</p>
+                <div class="settings-inline-actions">
+                  <button id="settings-autohide-toggle" class="pill-button" type="button" aria-pressed="true">Enabled</button>
+                </div>
+                <p id="settings-autohide-note" class="settings-option-note">Hide the toolbar when scrolling down and show it again when scrolling up.</p>
+              </article>
+
+              <article class="settings-option-card">
+                <div class="settings-option-head">
+                  <span class="settings-option-label">Workspace Panel</span>
+                  <strong id="settings-workspace-summary">Expanded</strong>
+                </div>
+                <p class="settings-option-copy">Choose whether each liked paper opens with the Workspace panel expanded or collapsed by default.</p>
+                <div class="section-view-toggle toolbar-view-switch settings-toggle-group" role="tablist" aria-label="Workspace default panel state">
+                  <button class="pill-button" type="button" data-workspace-default-toggle="expanded" aria-pressed="true">Expanded</button>
+                  <button class="pill-button" type="button" data-workspace-default-toggle="collapsed" aria-pressed="false">Collapsed</button>
+                </div>
+              </article>
+
+              <article class="settings-option-card">
+                <div class="settings-option-head">
+                  <span class="settings-option-label">Details Panels</span>
+                  <strong id="settings-detail-summary">Collapsed</strong>
+                </div>
+                <p class="settings-option-copy">Choose whether branch-page Details panels start expanded or collapsed by default in both Gallery and List views.</p>
+                <div class="section-view-toggle toolbar-view-switch settings-toggle-group" role="tablist" aria-label="Branch details default state">
+                  <button class="pill-button" type="button" data-detail-panel-default-toggle="collapsed" aria-pressed="true">Collapsed</button>
+                  <button class="pill-button" type="button" data-detail-panel-default-toggle="expanded" aria-pressed="false">Expanded</button>
+                </div>
+              </article>
+
+              <article class="settings-option-card">
+                <div class="settings-option-head">
+                  <span class="settings-option-label">Quick Panel Pins</span>
+                  <strong id="settings-quick-panel-summary">Theme, View, Workspace</strong>
+                </div>
+                <p class="settings-option-copy">Choose which Display Preferences stay pinned in the top-right quick panel across pages.</p>
+                <div class="settings-chip-toggle-list" role="group" aria-label="Quick panel pinned preferences">
+                  <button class="pill-button active" type="button" data-quick-panel-pin-toggle="theme" aria-pressed="true">Theme</button>
+                  <button class="pill-button active" type="button" data-quick-panel-pin-toggle="view" aria-pressed="true">View</button>
+                  <button class="pill-button" type="button" data-quick-panel-pin-toggle="toolbar" aria-pressed="false">Toolbar</button>
+                  <button class="pill-button active" type="button" data-quick-panel-pin-toggle="workspace" aria-pressed="true">Workspace</button>
+                  <button class="pill-button" type="button" data-quick-panel-pin-toggle="details" aria-pressed="false">Details</button>
+                </div>
+                <p class="settings-option-note">This controls which preference rows are fixed inside the avatar menu, without changing their actual values.</p>
+              </article>
+            </div>
+          </section>
+
+          <section id="settings-sync-section" class="glass-card library-section reveal settings-section">
+            <div class="section-heading">
+              <p class="eyebrow">SYNC</p>
+              <h2>Sync Account</h2>
+              <p class="home-board-summary">After signing in, Likes, Saved Views, and Reviewed Snapshots sync through Supabase across devices.</p>
+            </div>
+
+            <div id="settings-account-card" class="account-card is-empty">
+              <div class="account-avatar-shell" aria-hidden="true">
+                <div class="account-avatar-fallback">?</div>
+              </div>
+              <div class="account-card-copy">
+                <strong class="account-card-name">Not signed in</strong>
+                <span class="account-card-email">OAuth + Supabase</span>
+              </div>
+            </div>
+
+            <div id="settings-auth-warning" class="auth-warning" hidden></div>
+            <p id="settings-auth-status" class="auth-status">Supabase is not configured. Sync is currently disabled.</p>
+
+            <div class="auth-actions">
+              <button id="settings-auth-button" class="link-chip button-link" type="button">Sign in</button>
+              <button id="settings-sync-now" class="link-chip button-link" type="button">Sync now</button>
+            </div>
+
+            <div id="settings-sync-facts" class="settings-fact-grid"></div>
+          </section>
+
+          <section id="settings-storage-section" class="glass-card library-section reveal settings-section">
+            <div class="section-heading">
+              <p class="eyebrow">DEVICE</p>
+              <h2>Local Workspace</h2>
+              <p class="home-board-summary">This section summarizes the data already stored in the current browser and the active sync identity for this device.</p>
+            </div>
+            <div id="settings-storage-facts" class="settings-fact-grid"></div>
+            <div class="settings-link-row">
+              <a class="link-chip button-link" href="./queue.html">Open Later</a>
+              <a class="link-chip button-link" href="./like.html">Open Liked</a>
+              <a class="link-chip button-link" href="./unread-snapshots.html">Open Unread</a>
+            </div>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <aside class="floating-toc" aria-label="Table of contents">
+      <div class="floating-toc-card">
+        <p class="eyebrow">TABLE OF CONTENTS</p>
+        <h2>Quick Jump</h2>
+        <nav class="floating-toc-list">
+          <a href="#settings-appearance-section" class="floating-toc-link">Appearance</a>
+          <a href="#settings-sync-section" class="floating-toc-link">Sync</a>
+          <a href="#settings-storage-section" class="floating-toc-link">Local Workspace</a>
+        </nav>
+      </div>
+    </aside>
+
+    <button id="settings-back-to-top" class="back-to-top" type="button" aria-hidden="true">
+      <span>↑</span>
+      <span>Top</span>
+    </button>
+
+    <script type="module" src="./settings.js?v=4c80d0b5bf"></script>
+  </body>
+</html>

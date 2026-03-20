@@ -1,12 +1,12 @@
-import { bindLikeButtons, initLikesSync, subscribeLikes } from "./likes.js?v=d409e691d1";
+import { bindLikeButtons, initLikesSync, subscribeLikes } from "./likes.js?v=3b466b6556";
 import { bindQueueButtons, initQueue, subscribeQueue } from "./paper_queue.js?v=8b696292c3";
 import { repairLikeLaterConflicts } from "./paper_selection.js?v=964dbe6c53";
-import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js?v=f943be8314";
-import { bindBranchAuthToolbar } from "./branch_auth.js?v=1060920198";
+import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js?v=3a706b914e";
+import { bindBranchAuthToolbar } from "./branch_auth.js?v=81b329db27";
 import { bindBranchNav } from "./branch_nav.js?v=2ab092d7f1";
 import { bindLibraryNav } from "./library_nav.js?v=7b6e095589";
 import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=c2effc3556";
-import { initToolbarPreferences } from "./toolbar_preferences.js?v=a0ed68b91d";
+import { initToolbarPreferences } from "./toolbar_preferences.js?v=27d8e761fb";
 import { bindBackToTop, bindFilterMenu } from "./page_shell.js?v=b0d53b671d";
 import { fetchJson } from "./ui_utils.js?v=e2da3b3a11";
 

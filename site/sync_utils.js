@@ -1,4 +1,4 @@
-const DEVICE_ID_STORAGE_KEY = "cool-paper-sync-device-id-v1";
+export const DEVICE_ID_STORAGE_KEY = "cool-paper-sync-device-id-v1";
 
 function normalizeSyncId(value) {
   return typeof value === "string" ? value.trim() : "";

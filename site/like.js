@@ -7,17 +7,17 @@ import {
   subscribeLikes,
   updateLikedPaper,
   updateLikedPapers,
-} from "./likes.js?v=d409e691d1";
+} from "./likes.js?v=3b466b6556";
 import { getSupabaseClient, isSupabaseConfigured, loadRuntimeConfig } from "./supabase.js?v=606e1fd811";
-import { initReviewSync, setPageReviewed, subscribePageReviews } from "./reading_state.js?v=f943be8314";
+import { initReviewSync, setPageReviewed, subscribePageReviews } from "./reading_state.js?v=3a706b914e";
 import { bindQueueButtons, initQueue, isInQueue, readQueue, subscribeQueue } from "./paper_queue.js?v=8b696292c3";
-import { bindBranchAuthToolbar } from "./branch_auth.js?v=1060920198";
-import { mountAppToolbar } from "./app_toolbar.js?v=625fba0996";
+import { bindBranchAuthToolbar } from "./branch_auth.js?v=81b329db27";
+import { mountAppToolbar } from "./app_toolbar.js?v=90ae25c72d";
 import { repairLikeLaterConflicts } from "./paper_selection.js?v=964dbe6c53";
 import { bindBranchNav } from "./branch_nav.js?v=2ab092d7f1";
 import { bindLibraryNav } from "./library_nav.js?v=7b6e095589";
 import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=c2effc3556";
-import { initToolbarPreferences, setPageViewMode } from "./toolbar_preferences.js?v=a0ed68b91d";
+import { initToolbarPreferences, setPageViewMode } from "./toolbar_preferences.js?v=27d8e761fb";
 import { bindBackToTop, bindFilterMenu } from "./page_shell.js?v=b0d53b671d";
 import { escapeAttribute, escapeHtml, fetchJson, formatDateTime, getErrorMessage } from "./ui_utils.js?v=e2da3b3a11";
 import {
@@ -35,13 +35,16 @@ import {
 import { createSavedViewId, describeSavedView, getActiveFilters, normalizeFilterState, areFilterStatesEqual } from "./like_page_saved_views.js?v=eea77993c0";
 import {
   CUSTOM_TAG_PALETTE,
+  applyCustomTagToRecord,
   assignTagColor,
   buildCustomTag,
   collectCustomTagCatalog,
-  compareCustomTagMeta,
-  getCustomTagOrder,
   getCustomTagStyle,
+  mergeCustomTagsInRecord,
   getPaperCustomTags,
+  removeCustomTagFromRecord,
+  reorderCustomTagsInRecord,
+  updateCustomTagDefinitionInRecord,
 } from "./like_page_tags.js?v=8ad782742a";
 import { formatWeekLabel, getSnapshotSourceKind, getToReadSnapshots, loadSnapshotQueueData } from "./like_page_snapshots.js?v=30e01ecd4f";
 import {
@@ -51,6 +54,8 @@ import {
   subscribeSavedViews,
   upsertSavedView,
 } from "./like_saved_views_store.js?v=fbaaa1606a";
+import { installManualLibraryTestCases } from "./manual_test_cases.js?v=20260320seedfix1";
+import { readWorkspacePanelDefaultMode, subscribeUserSettings } from "./user_settings.js?v=0f028ca95d";
 
 mountAppToolbar("#like-toolbar-root", {
   prefix: "like",
@@ -59,6 +64,7 @@ mountAppToolbar("#like-toolbar-root", {
   libraryActiveKey: "liked",
   quickAddTarget: "later",
 });
+installManualLibraryTestCases();
 
 const state = {
   likes: [],
@@ -73,6 +79,7 @@ const state = {
   savedViews: [],
   selectedSavedViewId: "",
   savedViewDraftName: "",
+  workspacePanelDefaultMode: readWorkspacePanelDefaultMode(),
 };
 
 const focusTopicKeys = new Set([
@@ -99,8 +106,15 @@ const filterMenuPanel = document.querySelector("#like-filters-menu");
 const backToTopButton = document.querySelector("#like-back-to-top");
 const likeRecords = new Map();
 let toReadSyncPromise = null;
-const openWorkspaceEditors = new Set();
 const openListRowDetails = new Set();
+const workspacePanelOverrides = new Map();
+const tagWorkbenchState = {
+  openLikeId: "",
+  manageLikeId: "",
+  editorLikeId: "",
+  editorTagKey: "",
+};
+let customTagSummaryFrame = 0;
 
 const LATER_PAGE_SIZE = 6;
 let laterPage = 0;
@@ -116,6 +130,15 @@ init().catch((error) => {
 
 async function init() {
   likeRecords.render = renderPage;
+  window.addEventListener("resize", scheduleCustomTagSummaryLayout);
+  if (document.fonts?.ready) {
+    document.fonts.ready.then(() => {
+      scheduleCustomTagSummaryLayout();
+    }).catch(() => {});
+  }
+  if (document.fonts?.addEventListener) {
+    document.fonts.addEventListener("loadingdone", scheduleCustomTagSummaryLayout);
+  }
   state.savedViews = readSavedViewsStore();
   state.viewMode = initToolbarPreferences({
     pageKey: "like",
@@ -152,6 +175,13 @@ async function init() {
   });
   subscribeSavedViews((savedViews) => {
     state.savedViews = savedViews;
+    renderPage();
+  });
+  subscribeUserSettings((snapshot) => {
+    if (state.workspacePanelDefaultMode === snapshot.workspacePanelDefaultMode) {
+      return;
+    }
+    state.workspacePanelDefaultMode = snapshot.workspacePanelDefaultMode;
     renderPage();
   });
   subscribeQueue(() => renderPage());
@@ -299,10 +329,13 @@ function renderPage() {
     renderDistribution(topicDistribution);
     renderResults(likes, visibleLikes, sourceSections);
     renderSourceSections(sourceSections);
+    bindWorkspacePanels();
     bindTagComposer();
+    restoreTagWorkbenchState();
     bindWorkspaceEditors();
     bindLikeButtons(document, likeRecords);
     bindQueueButtons(document, likeRecords);
+    scheduleCustomTagSummaryLayout();
   } catch (error) {
     console.error('renderPage failed:', error);
   }
@@ -369,6 +402,16 @@ function populateFilters(likes, laterQueue, toReadSnapshots) {
 }
 
 function renderHero(likes, laterQueue, toReadSnapshots) {
+  const heroCount = document.querySelector("#like-hero-count");
+  const heroSources = document.querySelector("#like-hero-sources");
+  const heroFocus = document.querySelector("#like-hero-focus");
+  const heroLatest = document.querySelector("#like-hero-latest");
+  const heroTopic = document.querySelector("#like-hero-topic");
+  const heroSignals = document.querySelector("#like-hero-signals");
+  if (!heroCount && !heroSources && !heroFocus && !heroLatest && !heroTopic && !heroSignals) {
+    return;
+  }
+
   const topTopic = computeTopicDistribution(likes)[0];
   const focusCount = likes.filter((item) => focusTopicKeys.has(item.topic_key)).length;
   const groups = new Set([
@@ -378,16 +421,27 @@ function renderHero(likes, laterQueue, toReadSnapshots) {
   ].filter(Boolean));
   const latest = likes[0];
 
-  document.querySelector("#like-hero-count").textContent =
-    likes.length || laterQueue.length || toReadSnapshots.length
-      ? `${likes.length} liked / ${laterQueue.length} later`
-      : "0 items";
-  document.querySelector("#like-hero-sources").textContent = String(groups.size);
-  document.querySelector("#like-hero-focus").textContent = String(laterQueue.length);
-  document.querySelector("#like-hero-latest").textContent = String(toReadSnapshots.length);
-  document.querySelector("#like-hero-topic").textContent = topTopic ? displayTopicLabel(topTopic.topic_label) : "-";
+  if (heroCount) {
+    heroCount.textContent =
+      likes.length || laterQueue.length || toReadSnapshots.length
+        ? `${likes.length} liked / ${laterQueue.length} later`
+        : "0 items";
+  }
+  if (heroSources) {
+    heroSources.textContent = String(groups.size);
+  }
+  if (heroFocus) {
+    heroFocus.textContent = String(laterQueue.length);
+  }
+  if (heroLatest) {
+    heroLatest.textContent = String(toReadSnapshots.length);
+  }
+  if (heroTopic) {
+    heroTopic.textContent = topTopic ? displayTopicLabel(topTopic.topic_label) : "-";
+  }
 
-  document.querySelector("#like-hero-signals").innerHTML = [
+  if (heroSignals) {
+    heroSignals.innerHTML = [
     topTopic ? `<div class="signal-chip"><span>Top Topic</span><strong>${escapeHtml(displayTopicLabel(topTopic.topic_label))}</strong></div>` : "",
     likes.length ? `<div class="signal-chip"><span>Liked Papers</span><strong>${likes.length}</strong></div>` : "",
     laterQueue.length ? `<div class="signal-chip"><span>Later Queue</span><strong>${laterQueue.length}</strong></div>` : "",
@@ -396,11 +450,15 @@ function renderHero(likes, laterQueue, toReadSnapshots) {
   ]
     .filter(Boolean)
     .join("");
+  }
 }
 
 function renderSourceCards(likes, laterQueue, toReadSnapshots) {
   const root = document.querySelector("#like-home-cards");
   const summary = document.querySelector("#like-board-summary");
+  if (!root || !summary) {
+    return;
+  }
   const sections = buildLibrarySourceSections(likes, laterQueue, toReadSnapshots);
 
   if (!sections.length) {
@@ -454,18 +512,27 @@ function renderSourceCards(likes, laterQueue, toReadSnapshots) {
 }
 
 function renderOverview(likes, visibleLikes, sourceSections, toReadSnapshots) {
+  const titleNode = document.querySelector("#like-overview-title");
+  const summaryNode = document.querySelector("#like-overview-summary");
+  const focusNode = document.querySelector("#like-focus-summary");
+  const branchNode = document.querySelector("#like-branch-summary");
+  const latestNode = document.querySelector("#like-latest-summary");
+  if (!titleNode || !summaryNode || !focusNode || !branchNode || !latestNode) {
+    return;
+  }
+
   const focusCount = visibleLikes.filter((item) => focusTopicKeys.has(item.topic_key)).length;
   const focusShare = visibleLikes.length ? (focusCount / visibleLikes.length) * 100 : 0;
   const latest = visibleLikes[0] || likes[0];
   const topSource = sourceSections[0];
 
-  document.querySelector("#like-overview-title").textContent = "Liked Papers Overview";
-  document.querySelector("#like-overview-summary").textContent = `Currently liked: ${visibleLikes.length} papers for later reading and revisit. ${toReadSnapshots.length} fetched snapshots are still not reviewed.`;
-  document.querySelector("#like-focus-summary").textContent = `${focusCount} papers hit your focus topics, accounting for ${focusShare.toFixed(2)}% of the current view.`;
-  document.querySelector("#like-branch-summary").textContent = topSource
+  titleNode.textContent = "Liked Papers Overview";
+  summaryNode.textContent = `Currently liked: ${visibleLikes.length} papers for later reading and revisit. ${toReadSnapshots.length} fetched snapshots are still not reviewed.`;
+  focusNode.textContent = `${focusCount} papers hit your focus topics, accounting for ${focusShare.toFixed(2)}% of the current view.`;
+  branchNode.textContent = topSource
     ? `${escapeHtml(topSource.group_label)} currently has the most liked papers, with ${topSource.liked_count} papers.`
     : "No visible groups yet.";
-  document.querySelector("#like-latest-summary").textContent = latest
+  latestNode.textContent = latest
     ? `${formatDateTime(latest.liked_at || latest.saved_at, LIKE_TIME_FORMAT)} liked from ${escapeHtml(getSourceLabel(latest.source_kind))}.`
     : "No latest like record yet.";
 }
@@ -524,10 +591,14 @@ function renderSavedViews() {
 }
 
 function renderTagMap(likes, topicDistribution) {
+  const tagMapRoot = document.querySelector("#like-tag-map");
+  if (!tagMapRoot) {
+    return;
+  }
   const topTopic = topicDistribution[0]?.topic_label || "Other AI";
   const tagCatalog = collectCustomTagCatalog(likes);
   const activeTag = tagCatalog.find((tag) => tag.key === state.customTag) || null;
-  document.querySelector("#like-tag-map").innerHTML = [
+  tagMapRoot.innerHTML = [
     {
       label: "Group",
       value: state.source ? getLibraryGroupLabel(state.source) : "All groups",
@@ -574,11 +645,15 @@ function renderTagMap(likes, topicDistribution) {
 function renderLaterQueue(laterQueue) {
   const summary = document.querySelector("#like-later-summary");
   const root = document.querySelector("#like-later-list");
+  const paginationRoot = document.querySelector("#like-later-pagination");
+  if (!summary || !root || !paginationRoot) {
+    return;
+  }
 
   if (!laterQueue.length) {
     summary.textContent = "No papers in Later queue.";
     root.innerHTML = `<div class="empty-state">Papers marked as Later will appear here.</div>`;
-    document.querySelector("#like-later-pagination").innerHTML = "";
+    paginationRoot.innerHTML = "";
     return;
   }
 
@@ -651,8 +726,7 @@ function renderLaterQueue(laterQueue) {
 
   root.innerHTML = cardsHtml;
 
-  const pagRoot = document.querySelector("#like-later-pagination");
-  pagRoot.innerHTML = totalPages > 1
+  paginationRoot.innerHTML = totalPages > 1
     ? `<div class="pagination">
         <button class="pill-button" data-later-page="prev" ${laterPage === 0 ? 'disabled' : ''}>← Prev</button>
         <span class="pagination-info">${laterPage + 1} / ${totalPages}</span>
@@ -660,7 +734,7 @@ function renderLaterQueue(laterQueue) {
       </div>`
     : "";
 
-  pagRoot.querySelectorAll("[data-later-page]").forEach((btn) => {
+  paginationRoot.querySelectorAll("[data-later-page]").forEach((btn) => {
     btn.addEventListener("click", () => {
       if (btn.dataset.laterPage === "prev" && laterPage > 0) laterPage--;
       else if (btn.dataset.laterPage === "next" && laterPage < totalPages - 1) laterPage++;
@@ -674,11 +748,15 @@ function renderLaterQueue(laterQueue) {
 function renderToReadList(toReadSnapshots) {
   const summary = document.querySelector("#like-to-read-summary");
   const root = document.querySelector("#like-to-read-list");
+  const paginationRoot = document.querySelector("#like-to-read-pagination");
+  if (!summary || !root || !paginationRoot) {
+    return;
+  }
 
   if (!toReadSnapshots.length) {
     summary.textContent = "Every fetched snapshot has been reviewed.";
     root.innerHTML = `<div class="empty-state">No unread snapshots remain in your queue.</div>`;
-    document.querySelector("#like-to-read-pagination").innerHTML = "";
+    paginationRoot.innerHTML = "";
     return;
   }
 
@@ -725,8 +803,7 @@ function renderToReadList(toReadSnapshots) {
 
   root.innerHTML = cardsHtml;
 
-  const pagRoot = document.querySelector("#like-to-read-pagination");
-  pagRoot.innerHTML = totalPages > 1
+  paginationRoot.innerHTML = totalPages > 1
     ? `<div class="pagination">
         <button class="pill-button" data-to-read-page="prev" ${toReadPage === 0 ? 'disabled' : ''}>← Prev</button>
         <span class="pagination-info">${toReadPage + 1} / ${totalPages}</span>
@@ -734,7 +811,7 @@ function renderToReadList(toReadSnapshots) {
       </div>`
     : "";
 
-  pagRoot.querySelectorAll("[data-to-read-page]").forEach((btn) => {
+  paginationRoot.querySelectorAll("[data-to-read-page]").forEach((btn) => {
     btn.addEventListener("click", () => {
       if (btn.dataset.toReadPage === "prev" && toReadPage > 0) toReadPage--;
       else if (btn.dataset.toReadPage === "next" && toReadPage < totalPages - 1) toReadPage++;
@@ -758,6 +835,9 @@ function renderToReadList(toReadSnapshots) {
 
 function renderDistribution(distribution) {
   const root = document.querySelector("#like-distribution-list");
+  if (!root) {
+    return;
+  }
   if (!distribution.length) {
     root.innerHTML = `<div class="empty-state">No topic statistics are available.</div>`;
     return;
@@ -879,10 +959,14 @@ function bindListRowDetails() {
         return;
       }
       const body = details.closest(".liked-paper-row")?.querySelector(".liked-paper-row-body");
+      const workspacePanel = body?.querySelector("[data-workspace-panel]");
       if (details.open) {
         openListRowDetails.add(likeId);
         if (body) {
           body.hidden = false;
+        }
+        if (workspacePanel && !workspacePanelOverrides.has(likeId) && !workspacePanel.open) {
+          workspacePanel.open = true;
         }
       } else {
         openListRowDetails.delete(likeId);
@@ -905,6 +989,7 @@ function renderLikeCard(paper) {
         <div class="paper-links liked-paper-card-links">${view.links}</div>
       </div>
       <h4>${escapeHtml(view.paper.title)}</h4>
+      ${view.customTagSummary}
       <div class="liked-paper-card-copy">
         <div class="paper-authors-box">
           <span class="paper-detail-label">Authors</span>
@@ -914,7 +999,6 @@ function renderLikeCard(paper) {
       </div>
       ${view.abstract}
       <div class="liked-paper-card-secondary">
-        ${renderCustomTagPanel(view)}
         ${renderWorkspacePanel(view)}
       </div>
     </article>
@@ -925,21 +1009,30 @@ function renderLikeListRow(paper) {
   const view = buildLikePaperViewModel(paper);
   const rowOpen = openListRowDetails.has(view.paper.like_id);
   const summaryText = view.takeaway || view.nextAction || view.paper.abstract || "No note yet.";
+  const abstractBlock = view.paper.abstract
+    ? `
+      <div class="liked-paper-row-abstract">
+        <span class="paper-detail-label">Abstract</span>
+        <p>${escapeHtml(view.paper.abstract)}</p>
+      </div>
+    `
+    : "";
 
   return `
-    <article class="liked-paper-row">
+    <article class="liked-paper-row${rowOpen ? "" : " is-compact"}">
       <div class="liked-paper-row-main">
         <div class="liked-paper-row-copy">
-          <div class="liked-paper-row-top">${view.metaBadges}</div>
+          <div class="liked-paper-row-top">${view.metaBadges}${renderWorkspaceSummaryTags(view, { includeQueue: false })}</div>
           <h4>${escapeHtml(view.paper.title)}</h4>
-          <p class="liked-paper-row-authors">${view.authors}</p>
-          <p class="liked-paper-row-summary">${escapeHtml(summaryText)}</p>
+          ${view.customTagSummary}
+          ${rowOpen ? `<p class="liked-paper-row-authors">${view.authors}</p>` : ""}
+          ${rowOpen ? `<p class="liked-paper-row-summary">${escapeHtml(summaryText)}</p>` : ""}
         </div>
         <div class="liked-paper-row-actions">
           <div class="paper-links liked-paper-row-links">${view.links}</div>
           <details class="liked-paper-row-details" data-like-row-details="${escapeAttribute(view.paper.like_id)}"${rowOpen ? " open" : ""}>
             <summary>
-              <span class="paper-abstract-label">Open details</span>
+              <span class="paper-abstract-label">${rowOpen ? "Hide" : "Details"}</span>
               <span class="paper-abstract-arrow" aria-hidden="true">
                 <svg viewBox="0 0 20 20" width="14" height="14">
                   <path d="M5.5 7.5L10 12l4.5-4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
@@ -950,16 +1043,122 @@ function renderLikeListRow(paper) {
         </div>
       </div>
       <div class="liked-paper-row-body"${rowOpen ? "" : " hidden"}>
-        <div class="paper-authors-box liked-paper-row-authors-box">
-          <span class="paper-detail-label">Authors</span>
-          <p class="paper-authors-line">${view.authors}</p>
-        </div>
-        ${view.abstract}
-        ${renderCustomTagPanel(view)}
-        ${renderWorkspacePanel(view)}
+        ${abstractBlock}
+        ${renderWorkspacePanel(view, { showSummaryTags: false })}
       </div>
     </article>
   `;
+}
+
+function getWorkspaceStatusTone(value) {
+  switch (getWorkflowStatusValue(value)) {
+    case "reading":
+      return "status-reading";
+    case "digesting":
+      return "status-digesting";
+    case "synthesized":
+      return "status-synthesized";
+    case "archived":
+      return "status-archived";
+    default:
+      return "status-inbox";
+  }
+}
+
+function getWorkspacePriorityTone(value) {
+  switch (getPriorityValue(value)) {
+    case "high":
+      return "priority-high";
+    case "low":
+      return "priority-low";
+    default:
+      return "priority-medium";
+  }
+}
+
+function renderWorkspaceSummaryTag(label, toneClass) {
+  return `
+    <span class="paper-workspace-summary-tag ${escapeAttribute(toneClass)}">
+      <span class="paper-workspace-summary-dot" aria-hidden="true"></span>
+      <span>${escapeHtml(label)}</span>
+    </span>
+  `;
+}
+
+function renderWorkspaceSummaryTags(view, { includeQueue = true } = {}) {
+  return [
+    includeQueue && view.inLater ? renderWorkspaceSummaryTag("Queued", "status-inbox") : "",
+    renderWorkspaceSummaryTag(view.statusLabel, view.statusTone),
+    renderWorkspaceSummaryTag(view.priorityLabel, view.priorityTone),
+  ]
+    .filter(Boolean)
+    .join("");
+}
+
+function renderCustomTagSummary(tags) {
+  if (!tags.length) {
+    return "";
+  }
+
+  return `
+    <div class="paper-custom-tag-summary" aria-label="Custom tags">
+      <span class="paper-custom-tag-label">Tags</span>
+      <div class="paper-custom-tag-summary-list" data-tag-summary-list>
+        ${tags
+          .map(
+            (tag) => `
+              <span class="custom-tag-chip custom-tag-chip-summary" data-tag-summary-chip style="${escapeAttribute(getCustomTagStyle(tag.color))}">
+                <span>${escapeHtml(tag.label)}</span>
+              </span>
+            `
+          )
+          .join("")}
+        <span class="paper-custom-tag-overflow" data-tag-summary-overflow hidden></span>
+      </div>
+    </div>
+  `;
+}
+
+function layoutCustomTagSummaries() {
+  document.querySelectorAll(".paper-custom-tag-summary").forEach((summary) => {
+    const list = summary.querySelector("[data-tag-summary-list]");
+    const overflow = summary.querySelector("[data-tag-summary-overflow]");
+    const chips = [...summary.querySelectorAll("[data-tag-summary-chip]")];
+    if (!list || !overflow || !chips.length) {
+      return;
+    }
+
+    chips.forEach((chip) => {
+      chip.hidden = false;
+    });
+    overflow.hidden = true;
+    overflow.textContent = "";
+    if (list.scrollWidth <= list.clientWidth) {
+      return;
+    }
+
+    for (let visibleCount = chips.length - 1; visibleCount >= 0; visibleCount -= 1) {
+      const hiddenCount = chips.length - visibleCount;
+      overflow.hidden = hiddenCount <= 0;
+      overflow.textContent = hiddenCount > 0 ? `+${hiddenCount}` : "";
+      chips.forEach((chip, index) => {
+        chip.hidden = index >= visibleCount;
+      });
+      if (list.scrollWidth <= list.clientWidth) {
+        return;
+      }
+    }
+  });
+}
+
+function scheduleCustomTagSummaryLayout() {
+  if (customTagSummaryFrame) {
+    return;
+  }
+  customTagSummaryFrame = window.requestAnimationFrame(() => {
+    customTagSummaryFrame = 0;
+    layoutCustomTagSummaries();
+  });
 }
 
 function buildLikePaperViewModel(paper) {
@@ -993,11 +1192,8 @@ function buildLikePaperViewModel(paper) {
 
   const metaBadges = [
     `<span class="paper-badge">${escapeHtml(displayTopicLabel(paper.topic_label || "Other AI"))}</span>`,
-    `<span class="paper-badge subdued">${escapeHtml(getSourceLabel(paper.source_kind))}</span>`,
     paper.snapshot_label ? `<span class="paper-badge subdued">${escapeHtml(paper.snapshot_label)}</span>` : "",
     inLater ? `<span class="paper-badge queued-badge">Queued</span>` : "",
-    `<span class="paper-badge workspace-status-badge">${escapeHtml(getWorkflowStatusLabel(paper.workflow_status))}</span>`,
-    `<span class="paper-badge workspace-priority-badge">${escapeHtml(getPriorityLabel(paper.priority_level))}</span>`,
   ]
     .filter(Boolean)
     .join("");
@@ -1041,6 +1237,7 @@ function buildLikePaperViewModel(paper) {
           type="button"
           data-tag-option="${escapeAttribute(paper.like_id)}"
           data-tag-key="${escapeAttribute(tag.key)}"
+          data-tag-label="${escapeAttribute(tag.label)}"
         >
           <span class="custom-tag-swatch" style="${escapeAttribute(getCustomTagStyle(tag.color))}"></span>
           <span>${escapeHtml(tag.label)}</span>
@@ -1071,13 +1268,13 @@ function buildLikePaperViewModel(paper) {
                 ≡
               </button>
               <button
-                class="custom-tag-option${applied ? " is-applied" : ""}"
+                class="custom-tag-chip custom-tag-library-chip${applied ? " is-applied" : ""}"
                 type="button"
                 data-tag-option="${escapeAttribute(paper.like_id)}"
                 data-tag-key="${escapeAttribute(tag.key)}"
+                style="${escapeAttribute(getCustomTagStyle(tag.color))}"
                 ${applied ? 'disabled aria-disabled="true"' : ""}
               >
-                <span class="custom-tag-swatch" style="${escapeAttribute(getCustomTagStyle(tag.color))}"></span>
                 <span>${escapeHtml(tag.label)}</span>
               </button>
               <button
@@ -1109,11 +1306,35 @@ function buildLikePaperViewModel(paper) {
     `
   ).join("");
 
-  const statusOptions = WORKFLOW_STATUS_OPTIONS.map(
-    (item) => `<option value="${escapeAttribute(item.value)}" ${getWorkflowStatusValue(paper.workflow_status) === item.value ? "selected" : ""}>${escapeHtml(item.label)}</option>`
+  const statusValue = getWorkflowStatusValue(paper.workflow_status);
+  const priorityValue = getPriorityValue(paper.priority_level);
+  const statusTone = getWorkspaceStatusTone(statusValue);
+  const priorityTone = getWorkspacePriorityTone(priorityValue);
+  const statusButtons = WORKFLOW_STATUS_OPTIONS.map(
+    (item) => `
+      <button
+        class="paper-workspace-segment ${escapeAttribute(getWorkspaceStatusTone(item.value))}${statusValue === item.value ? " is-selected" : ""}"
+        type="button"
+        data-workspace-status-option="${escapeAttribute(paper.like_id)}"
+        data-workspace-value="${escapeAttribute(item.value)}"
+      >
+        <span class="paper-workspace-segment-dot" aria-hidden="true"></span>
+        <span>${escapeHtml(item.label)}</span>
+      </button>
+    `
   ).join("");
-  const priorityOptions = PRIORITY_OPTIONS.map(
-    (item) => `<option value="${escapeAttribute(item.value)}" ${getPriorityValue(paper.priority_level) === item.value ? "selected" : ""}>${escapeHtml(item.label)}</option>`
+  const priorityButtons = PRIORITY_OPTIONS.map(
+    (item) => `
+      <button
+        class="paper-workspace-segment ${escapeAttribute(getWorkspacePriorityTone(item.value))}${priorityValue === item.value ? " is-selected" : ""}"
+        type="button"
+        data-workspace-priority-option="${escapeAttribute(paper.like_id)}"
+        data-workspace-value="${escapeAttribute(item.value)}"
+      >
+        <span class="paper-workspace-segment-dot" aria-hidden="true"></span>
+        <span>${escapeHtml(item.label)}</span>
+      </button>
+    `
   ).join("");
 
   return {
@@ -1123,28 +1344,55 @@ function buildLikePaperViewModel(paper) {
     abstract,
     metaBadges,
     links,
+    customTagSummary: renderCustomTagSummary(customTags),
+    customTagCount: customTags.length,
     tagChips,
     tagOptions,
+    tagCatalog,
+    availableTagCount: tagCatalog.filter((tag) => !customTags.some((item) => item.key === tag.key)).length,
+    tagPaletteCount: tagCatalog.length,
     manageItems,
     paletteButtons,
-    statusOptions,
-    priorityOptions,
+    statusValue,
+    priorityValue,
+    statusLabel: getWorkflowStatusLabel(paper.workflow_status),
+    priorityLabel: getPriorityLabel(paper.priority_level),
+    statusTone,
+    priorityTone,
+    statusButtons,
+    priorityButtons,
     takeaway: paper.one_line_takeaway || "",
     nextAction: paper.next_action || "",
-    workspaceEditorOpen: openWorkspaceEditors.has(paper.like_id),
   };
 }
 
-function renderCustomTagPanel(view) {
+function renderWorkspaceTagSection(view) {
+  const composerOpen = tagWorkbenchState.openLikeId === view.paper.like_id;
+  const manageOpen =
+    tagWorkbenchState.manageLikeId === view.paper.like_id || tagWorkbenchState.editorLikeId === view.paper.like_id;
+  const activeEditorTag =
+    tagWorkbenchState.editorLikeId === view.paper.like_id
+      ? view.tagCatalog.find((tag) => tag.key === tagWorkbenchState.editorTagKey) || null
+      : null;
+  const activeEditorColor = activeEditorTag?.color || assignTagColor(activeEditorTag?.key || "", new Map());
   return `
-    <section class="custom-tag-panel">
-      <div class="custom-tag-panel-top">
-        <span class="paper-detail-label">Custom Tags</span>
-        <button class="custom-tag-trigger" type="button" data-tag-toggle="${escapeAttribute(view.paper.like_id)}">Add Tag</button>
-      </div>
-      <div class="custom-tag-list">${view.tagChips}</div>
-      <div class="custom-tag-composer" data-tag-popover="${escapeAttribute(view.paper.like_id)}" hidden>
-        <div class="custom-tag-composer-field">
+    <div class="paper-workspace-field paper-workspace-choice paper-workspace-choice-tags">
+      <span class="paper-detail-label custom-tag-property-label">Custom Tags</span>
+      <div class="custom-tag-picker">
+        <div class="custom-tag-list">
+          ${view.tagChips}
+          <button
+            class="custom-tag-trigger"
+            type="button"
+            data-tag-toggle="${escapeAttribute(view.paper.like_id)}"
+            aria-label="Add tag"
+            aria-expanded="${composerOpen}"
+          >
+            <span aria-hidden="true">+</span>
+          </button>
+        </div>
+        <div class="custom-tag-composer custom-tag-panel" data-tag-popover="${escapeAttribute(view.paper.like_id)}"${composerOpen ? "" : " hidden"}>
+        <div class="custom-tag-composer-field custom-tag-creator-row">
           <input
             class="custom-tag-input"
             type="text"
@@ -1155,114 +1403,161 @@ function renderCustomTagPanel(view) {
           />
           <button class="custom-tag-create" type="button" data-tag-create="${escapeAttribute(view.paper.like_id)}">Create</button>
         </div>
-        <div class="custom-tag-composer-section">
-          <span class="custom-tag-section-label">Reuse tags</span>
-          <div class="custom-tag-options">
-            ${view.tagOptions || `<span class="custom-tag-empty">No reusable tags yet.</span>`}
-          </div>
-        </div>
-        <div class="custom-tag-composer-section">
+        ${view.customTagCount ? `
+        <div class="custom-tag-composer-section custom-tag-surface">
           <div class="custom-tag-section-heading">
-            <span class="custom-tag-section-label">Tag palette</span>
-            <span class="custom-tag-section-meta">Rename or recolor once, update everywhere</span>
+            <span class="custom-tag-section-label">Selected tags</span>
+            <span class="custom-tag-section-meta">Click a tag to remove it</span>
           </div>
-          <div class="custom-tag-library">
-            ${view.manageItems}
+          <div class="custom-tag-current-list">
+            ${view.tagChips}
           </div>
         </div>
-        <div class="custom-tag-editor" data-tag-editor="${escapeAttribute(view.paper.like_id)}" hidden>
-          <input type="hidden" data-tag-edit-key-field="${escapeAttribute(view.paper.like_id)}" value="" />
-          <label class="custom-tag-editor-label">
-            <span class="custom-tag-section-label">Tag name</span>
-            <input
-              class="custom-tag-input"
-              type="text"
-              data-tag-edit-label="${escapeAttribute(view.paper.like_id)}"
-              placeholder="Rename tag"
-              autocomplete="off"
-              spellcheck="false"
-            />
-          </label>
-          <div class="custom-tag-composer-section">
-            <span class="custom-tag-section-label">Color</span>
-            <div class="custom-tag-color-grid">
-              ${view.paletteButtons}
+        ` : ""}
+        <div class="custom-tag-composer-section custom-tag-surface">
+          <div class="custom-tag-section-heading">
+            <div class="custom-tag-panel-copy">
+              <span class="custom-tag-section-label">Reuse tags</span>
+              <span
+                class="custom-tag-section-meta"
+                data-tag-options-meta="${escapeAttribute(view.paper.like_id)}"
+                data-tag-options-total="${escapeAttribute(String(view.availableTagCount))}"
+              >
+                ${view.availableTagCount} available for this paper
+              </span>
+            </div>
+            ${
+              view.tagPaletteCount
+                ? `
+                  <button
+                    class="custom-tag-manage ghost custom-tag-manage-toggle"
+                    type="button"
+                    data-tag-manage-toggle="${escapeAttribute(view.paper.like_id)}"
+                    data-tag-manage-open-label="Hide palette"
+                    data-tag-manage-closed-label="${escapeAttribute(`Manage palette (${view.tagPaletteCount})`)}"
+                    aria-expanded="${manageOpen}"
+                  >
+                    ${manageOpen ? "Hide palette" : `Manage palette (${view.tagPaletteCount})`}
+                  </button>
+                `
+                : ""
+            }
+          </div>
+          <div class="custom-tag-options" data-tag-options-root="${escapeAttribute(view.paper.like_id)}">
+            ${view.tagOptions || ""}
+            <span class="custom-tag-empty" data-tag-options-empty="${escapeAttribute(view.paper.like_id)}"${view.availableTagCount ? " hidden" : ""}>
+              ${view.availableTagCount ? "No matching tags." : "No reusable tags yet."}
+            </span>
+          </div>
+        </div>
+        <div class="custom-tag-advanced" data-tag-advanced="${escapeAttribute(view.paper.like_id)}"${manageOpen ? "" : " hidden"}>
+          <div class="custom-tag-composer-section custom-tag-surface">
+            <div class="custom-tag-section-heading">
+              <span class="custom-tag-section-label">Tag palette</span>
+              <span class="custom-tag-section-meta">Rename, recolor, merge, or drag to reorder</span>
+            </div>
+            <div class="custom-tag-library">
+              ${view.manageItems}
             </div>
           </div>
-          <div class="custom-tag-composer-section">
-            <div class="custom-tag-section-heading">
-              <span class="custom-tag-section-label">Merge</span>
-              <span class="custom-tag-section-meta">Move papers from this tag into another tag</span>
+          <div
+            class="custom-tag-editor"
+            data-tag-editor="${escapeAttribute(view.paper.like_id)}"
+            data-tag-edit-key="${escapeAttribute(activeEditorTag?.key || "")}"
+            data-tag-edit-color="${escapeAttribute(activeEditorColor)}"
+            ${activeEditorTag ? "" : " hidden"}
+          >
+            <input type="hidden" data-tag-edit-key-field="${escapeAttribute(view.paper.like_id)}" value="${escapeAttribute(activeEditorTag?.key || "")}" />
+            <label class="custom-tag-editor-label">
+              <span class="custom-tag-section-label">Tag name</span>
+              <input
+                class="custom-tag-input"
+                type="text"
+                data-tag-edit-label="${escapeAttribute(view.paper.like_id)}"
+                value="${escapeAttribute(activeEditorTag?.label || "")}"
+                placeholder="Rename tag"
+                autocomplete="off"
+                spellcheck="false"
+              />
+            </label>
+            <div class="custom-tag-composer-section">
+              <span class="custom-tag-section-label">Color</span>
+              <div class="custom-tag-color-grid">
+                ${view.paletteButtons}
+              </div>
+            </div>
+            <div class="custom-tag-composer-section">
+              <div class="custom-tag-section-heading">
+                <span class="custom-tag-section-label">Merge</span>
+                <span class="custom-tag-section-meta">Move papers from this tag into another tag</span>
+              </div>
+              <div class="custom-tag-editor-actions">
+                <select class="control-input custom-tag-merge-select" data-tag-merge-target="${escapeAttribute(view.paper.like_id)}">
+                  <option value="">Select target tag</option>
+                </select>
+                <button class="custom-tag-manage warn" type="button" data-tag-merge-apply="${escapeAttribute(view.paper.like_id)}">Merge</button>
+              </div>
             </div>
             <div class="custom-tag-editor-actions">
-              <select class="control-input custom-tag-merge-select" data-tag-merge-target="${escapeAttribute(view.paper.like_id)}">
-                <option value="">Select target tag</option>
-              </select>
-              <button class="custom-tag-manage warn" type="button" data-tag-merge-apply="${escapeAttribute(view.paper.like_id)}">Merge</button>
+              <button class="custom-tag-create" type="button" data-tag-edit-save="${escapeAttribute(view.paper.like_id)}">Save</button>
+              <button class="custom-tag-manage ghost" type="button" data-tag-edit-cancel="${escapeAttribute(view.paper.like_id)}">Cancel</button>
             </div>
           </div>
-          <div class="custom-tag-editor-actions">
-            <button class="custom-tag-create" type="button" data-tag-edit-save="${escapeAttribute(view.paper.like_id)}">Save</button>
-            <button class="custom-tag-manage ghost" type="button" data-tag-edit-cancel="${escapeAttribute(view.paper.like_id)}">Cancel</button>
-          </div>
+        </div>
         </div>
       </div>
-    </section>
+    </div>
   `;
 }
 
-function renderWorkspacePanel(view) {
+function renderWorkspacePanel(view, options = {}) {
+  const { showSummaryTags = true } = options;
+  const panelOpen = isWorkspacePanelOpen(view.paper.like_id);
   return `
-    <section class="paper-workspace-panel">
-      <div class="paper-workspace-top">
-        <span class="paper-detail-label">Workspace</span>
-        <span class="paper-workspace-meta">${escapeHtml([view.inLater ? "Queued" : "", getWorkflowStatusLabel(view.paper.workflow_status), getPriorityLabel(view.paper.priority_level)].filter(Boolean).join(" · "))}</span>
-      </div>
-      <div class="paper-workspace-grid">
-        <article class="paper-workspace-card">
-          <span class="paper-detail-label">Takeaway</span>
-          <p>${escapeHtml(view.takeaway || "Capture the one-line reason this paper matters.")}</p>
-        </article>
-        <article class="paper-workspace-card">
-          <span class="paper-detail-label">Next Action</span>
-          <p>${escapeHtml(view.nextAction || "Leave a concrete follow-up step for yourself.")}</p>
-        </article>
-      </div>
-      <details class="paper-workspace-editor" data-workspace-editor-id="${escapeAttribute(view.paper.like_id)}"${view.workspaceEditorOpen ? " open" : ""}>
-        <summary>
-          <span class="paper-abstract-label">Edit notes</span>
-          <span class="paper-abstract-arrow" aria-hidden="true">
-            <svg viewBox="0 0 20 20" width="14" height="14">
+    <details class="paper-workspace-panel" data-workspace-panel="${escapeAttribute(view.paper.like_id)}"${panelOpen ? " open" : ""}>
+      <summary class="paper-workspace-header">
+        <div class="paper-workspace-header-copy">
+          <span class="paper-detail-label">Workspace</span>
+        </div>
+        <div class="paper-workspace-header-right">
+          ${showSummaryTags ? `<div class="paper-workspace-summary">${renderWorkspaceSummaryTags(view)}</div>` : ""}
+          <span class="paper-workspace-chevron" aria-hidden="true">
+            <svg viewBox="0 0 20 20" width="16" height="16">
               <path d="M5.5 7.5L10 12l4.5-4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
             </svg>
           </span>
-        </summary>
-        <div class="paper-workspace-form">
-          <div class="paper-workspace-fields">
-            <label class="paper-workspace-field">
-              <span class="paper-detail-label">Status</span>
-              <select class="control-input" data-workspace-status="${escapeAttribute(view.paper.like_id)}">
-                ${view.statusOptions}
-              </select>
-            </label>
-            <label class="paper-workspace-field">
-              <span class="paper-detail-label">Priority</span>
-              <select class="control-input" data-workspace-priority="${escapeAttribute(view.paper.like_id)}">
-                ${view.priorityOptions}
-              </select>
-            </label>
+        </div>
+      </summary>
+      <div class="paper-workspace-body">
+        <div class="paper-workspace-controls">
+          <div class="paper-workspace-field paper-workspace-choice">
+            <span class="paper-detail-label">Status</span>
+            <input type="hidden" data-workspace-status="${escapeAttribute(view.paper.like_id)}" value="${escapeAttribute(view.statusValue)}" />
+            <div class="paper-workspace-segmented" role="tablist" aria-label="Status">
+              ${view.statusButtons}
+            </div>
           </div>
-          <label class="paper-workspace-field">
-            <span class="paper-detail-label">One-line takeaway</span>
-            <textarea class="paper-workspace-textarea" rows="2" data-workspace-takeaway="${escapeAttribute(view.paper.like_id)}" placeholder="What is the main reason to keep this paper?">${escapeHtml(view.takeaway)}</textarea>
+          <div class="paper-workspace-field paper-workspace-choice">
+            <span class="paper-detail-label">Priority</span>
+            <input type="hidden" data-workspace-priority="${escapeAttribute(view.paper.like_id)}" value="${escapeAttribute(view.priorityValue)}" />
+            <div class="paper-workspace-segmented" role="tablist" aria-label="Priority">
+              ${view.priorityButtons}
+            </div>
+          </div>
+          ${renderWorkspaceTagSection(view)}
+        </div>
+        <div class="paper-workspace-grid">
+          <label class="paper-workspace-card paper-workspace-field">
+            <span class="paper-detail-label">Takeaway</span>
+            <textarea class="paper-workspace-textarea" rows="2" data-workspace-takeaway="${escapeAttribute(view.paper.like_id)}" placeholder="Capture the one-line reason this paper matters.">${escapeHtml(view.takeaway)}</textarea>
           </label>
-          <label class="paper-workspace-field">
-            <span class="paper-detail-label">Next action</span>
-            <textarea class="paper-workspace-textarea" rows="2" data-workspace-next-action="${escapeAttribute(view.paper.like_id)}" placeholder="What should future-you do with this paper?">${escapeHtml(view.nextAction)}</textarea>
+          <label class="paper-workspace-card paper-workspace-field">
+            <span class="paper-detail-label">Next Action</span>
+            <textarea class="paper-workspace-textarea" rows="2" data-workspace-next-action="${escapeAttribute(view.paper.like_id)}" placeholder="Leave a concrete follow-up step for yourself.">${escapeHtml(view.nextAction)}</textarea>
           </label>
         </div>
-      </details>
-    </section>
+      </div>
+    </details>
   `;
 }
 
@@ -1304,6 +1599,64 @@ function renderExternalPaperLink({ href, label, brand }) {
   `;
 }
 
+function normalizeTagSearchQuery(value) {
+  return String(value || "").replace(/\s+/g, " ").trim().toLowerCase();
+}
+
+function updateTagOptionFiltering(likeId, query = "") {
+  const key = String(likeId || "").trim();
+  if (!key) {
+    return;
+  }
+
+  const optionsRoot = document.querySelector(`[data-tag-options-root="${CSS.escape(key)}"]`);
+  if (!optionsRoot) {
+    return;
+  }
+
+  const meta = document.querySelector(`[data-tag-options-meta="${CSS.escape(key)}"]`);
+  const empty = optionsRoot.querySelector(`[data-tag-options-empty="${CSS.escape(key)}"]`);
+  const optionButtons = [...optionsRoot.querySelectorAll("[data-tag-option]")];
+  const normalizedQuery = normalizeTagSearchQuery(query);
+  let visibleCount = 0;
+
+  optionButtons.forEach((button) => {
+    const label = normalizeTagSearchQuery(button.dataset.tagLabel || button.textContent);
+    const matched = !normalizedQuery || label.includes(normalizedQuery);
+    button.hidden = !matched;
+    if (matched) {
+      visibleCount += 1;
+    }
+  });
+
+  if (empty) {
+    if (!optionButtons.length) {
+      empty.hidden = false;
+      empty.textContent = "No reusable tags yet.";
+    } else if (!visibleCount) {
+      empty.hidden = false;
+      empty.textContent = normalizedQuery ? "No matching tags. Use Create to add it." : "No reusable tags yet.";
+    } else {
+      empty.hidden = true;
+      empty.textContent = "No matching tags.";
+    }
+  }
+
+  if (meta) {
+    const total = Number(meta.dataset.tagOptionsTotal || optionButtons.length);
+    if (!optionButtons.length) {
+      meta.textContent = "No reusable tags yet";
+      return;
+    }
+    if (!normalizedQuery) {
+      meta.textContent = `${total} available for this paper`;
+      return;
+    }
+    meta.textContent =
+      visibleCount === 1 ? "1 matching tag" : `${visibleCount} matching tags`;
+  }
+}
+
 function bindTagComposer() {
   document.querySelectorAll("[data-tag-toggle]").forEach((button) => {
     if (button.dataset.bound === "true") {
@@ -1313,16 +1666,58 @@ function bindTagComposer() {
     button.addEventListener("click", () => {
       const likeId = button.dataset.tagToggle;
       const popover = document.querySelector(`[data-tag-popover="${CSS.escape(likeId)}"]`);
-      if (!popover) {
+      if (!likeId || !popover) {
         return;
       }
-      const nextHidden = !popover.hidden;
-      hideAllTagPopovers();
-      popover.hidden = nextHidden;
-      if (!nextHidden) {
-        const input = popover.querySelector("[data-tag-input]");
-        input?.focus();
+      hideAllWorkspacePickers();
+      const shouldClose = tagWorkbenchState.openLikeId === likeId && !popover.hidden;
+      if (shouldClose) {
+        hideAllTagPopovers();
+        return;
       }
+      hideAllTagPopovers();
+      tagWorkbenchState.openLikeId = likeId;
+      popover.hidden = false;
+      button.setAttribute("aria-expanded", "true");
+      const input = popover.querySelector("[data-tag-input]");
+      updateTagOptionFiltering(likeId, input?.value || "");
+      input?.focus();
+    });
+  });
+
+  document.querySelectorAll("[data-tag-manage-toggle]").forEach((button) => {
+    if (button.dataset.bound === "true") {
+      return;
+    }
+    button.dataset.bound = "true";
+    button.addEventListener("click", (event) => {
+      event.stopPropagation();
+      const likeId = button.dataset.tagManageToggle;
+      const advanced = document.querySelector(`[data-tag-advanced="${CSS.escape(likeId)}"]`);
+      const editor = document.querySelector(`[data-tag-editor="${CSS.escape(likeId)}"]`);
+      if (!likeId || !advanced) {
+        return;
+      }
+      const shouldClose = tagWorkbenchState.manageLikeId === likeId && !advanced.hidden;
+      if (shouldClose) {
+        tagWorkbenchState.manageLikeId = "";
+        if (tagWorkbenchState.editorLikeId === likeId) {
+          tagWorkbenchState.editorLikeId = "";
+          tagWorkbenchState.editorTagKey = "";
+        }
+        advanced.hidden = true;
+        if (editor) {
+          editor.hidden = true;
+        }
+        button.setAttribute("aria-expanded", "false");
+        button.textContent = button.dataset.tagManageClosedLabel || "Manage palette";
+        return;
+      }
+      tagWorkbenchState.openLikeId = likeId;
+      tagWorkbenchState.manageLikeId = likeId;
+      advanced.hidden = false;
+      button.setAttribute("aria-expanded", "true");
+      button.textContent = button.dataset.tagManageOpenLabel || "Hide palette";
     });
   });
 
@@ -1365,7 +1760,15 @@ function bindTagComposer() {
       return;
     }
     input.dataset.bound = "true";
+    input.addEventListener("input", () => {
+      updateTagOptionFiltering(input.dataset.tagInput, input.value);
+    });
     input.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        hideAllTagPopovers();
+        return;
+      }
       if (event.key !== "Enter") {
         return;
       }
@@ -1411,6 +1814,10 @@ function bindTagComposer() {
       if (!likeId || !tag || !editor || !keyField || !labelInput) {
         return;
       }
+      tagWorkbenchState.openLikeId = likeId;
+      tagWorkbenchState.manageLikeId = likeId;
+      tagWorkbenchState.editorLikeId = likeId;
+      tagWorkbenchState.editorTagKey = tag.key;
       keyField.value = tag.key;
       labelInput.value = tag.label;
       editor.hidden = false;
@@ -1471,6 +1878,10 @@ function bindTagComposer() {
       event.stopPropagation();
       const likeId = button.dataset.tagEditCancel;
       const editor = document.querySelector(`[data-tag-editor="${CSS.escape(likeId)}"]`);
+      if (tagWorkbenchState.editorLikeId === likeId) {
+        tagWorkbenchState.editorLikeId = "";
+        tagWorkbenchState.editorTagKey = "";
+      }
       if (editor) {
         editor.hidden = true;
       }
@@ -1492,6 +1903,10 @@ function bindTagComposer() {
       const targetKey = mergeSelect?.value || "";
       if (!sourceKey || !targetKey) {
         return;
+      }
+      if (tagWorkbenchState.editorLikeId === likeId) {
+        tagWorkbenchState.editorLikeId = "";
+        tagWorkbenchState.editorTagKey = "";
       }
       mergeCustomTags(sourceKey, targetKey);
     });
@@ -1552,9 +1967,10 @@ function bindTagComposer() {
     document.addEventListener(
       "click",
       (event) => {
-        if (event.target.closest(".custom-tag-panel")) {
+        if (event.target.closest(".custom-tag-picker")) {
           return;
         }
+        hideAllWorkspacePickers();
         hideAllTagPopovers();
       },
       { capture: true }
@@ -1563,7 +1979,21 @@ function bindTagComposer() {
 }
 
 function hideAllTagPopovers() {
+  tagWorkbenchState.openLikeId = "";
+  tagWorkbenchState.manageLikeId = "";
+  tagWorkbenchState.editorLikeId = "";
+  tagWorkbenchState.editorTagKey = "";
+  document.querySelectorAll("[data-tag-toggle]").forEach((node) => {
+    node.setAttribute("aria-expanded", "false");
+  });
   document.querySelectorAll("[data-tag-popover]").forEach((node) => {
+    node.hidden = true;
+  });
+  document.querySelectorAll("[data-tag-input]").forEach((input) => {
+    input.value = "";
+    updateTagOptionFiltering(input.dataset.tagInput, "");
+  });
+  document.querySelectorAll("[data-tag-advanced]").forEach((node) => {
     node.hidden = true;
   });
   document.querySelectorAll("[data-tag-editor]").forEach((node) => {
@@ -1573,34 +2003,93 @@ function hideAllTagPopovers() {
   });
 }
 
-function bindWorkspaceEditors() {
-  document.querySelectorAll("[data-workspace-editor-id]").forEach((editor) => {
-    if (editor.dataset.bound === "true") {
+function hideAllWorkspacePickers() {}
+
+function restoreTagWorkbenchState() {
+  const openLikeId = String(tagWorkbenchState.openLikeId || "").trim();
+  if (!openLikeId) {
+    return;
+  }
+
+  const popover = document.querySelector(`[data-tag-popover="${CSS.escape(openLikeId)}"]`);
+  if (!popover) {
+    hideAllTagPopovers();
+    return;
+  }
+  popover.hidden = false;
+  const toggle = document.querySelector(`[data-tag-toggle="${CSS.escape(openLikeId)}"]`);
+  toggle?.setAttribute("aria-expanded", "true");
+  const input = popover.querySelector("[data-tag-input]");
+  updateTagOptionFiltering(openLikeId, input?.value || "");
+
+  const manageLikeId = String(tagWorkbenchState.manageLikeId || "").trim();
+  const editorLikeId = String(tagWorkbenchState.editorLikeId || "").trim();
+  const advanced = document.querySelector(`[data-tag-advanced="${CSS.escape(openLikeId)}"]`);
+  if (advanced) {
+    advanced.hidden = !((manageLikeId && manageLikeId === openLikeId) || (editorLikeId && editorLikeId === openLikeId));
+  }
+
+  const editorTagKey = String(tagWorkbenchState.editorTagKey || "").trim();
+  if (!editorLikeId || !editorTagKey || editorLikeId !== openLikeId) {
+    return;
+  }
+
+  const editor = document.querySelector(`[data-tag-editor="${CSS.escape(editorLikeId)}"]`);
+  const keyField = document.querySelector(`[data-tag-edit-key-field="${CSS.escape(editorLikeId)}"]`);
+  const labelInput = document.querySelector(`[data-tag-edit-label="${CSS.escape(editorLikeId)}"]`);
+  const tag = collectCustomTagCatalog(state.likes).find((item) => item.key === editorTagKey);
+  if (!editor || !keyField || !labelInput || !tag) {
+    tagWorkbenchState.editorLikeId = "";
+    tagWorkbenchState.editorTagKey = "";
+    return;
+  }
+
+  keyField.value = tag.key;
+  labelInput.value = tag.label;
+  editor.hidden = false;
+  syncTagEditorPalette(editor, tag.key, tag.color || assignTagColor(tag.key, new Map()));
+}
+
+function bindWorkspacePanels() {
+  document.querySelectorAll("[data-workspace-panel]").forEach((details) => {
+    if (details.dataset.bound === "true") {
       return;
     }
-    editor.dataset.bound = "true";
-    editor.addEventListener("toggle", () => {
-      const likeId = editor.dataset.workspaceEditorId;
+    details.dataset.bound = "true";
+    details.addEventListener("toggle", () => {
+      const likeId = details.dataset.workspacePanel;
       if (!likeId) {
         return;
       }
-      if (editor.open) {
-        openWorkspaceEditors.add(likeId);
-      } else {
-        openWorkspaceEditors.delete(likeId);
-      }
+      workspacePanelOverrides.set(likeId, details.open);
     });
   });
+}
 
-  document.querySelectorAll("[data-workspace-status], [data-workspace-priority]").forEach((field) => {
-    if (field.dataset.bound === "true") {
+function bindWorkspaceEditors() {
+  document.querySelectorAll("[data-workspace-status-option], [data-workspace-priority-option]").forEach((button) => {
+    if (button.dataset.bound === "true") {
       return;
     }
-    field.dataset.bound = "true";
-    field.addEventListener("change", () => {
-      const likeId = field.dataset.workspaceStatus || field.dataset.workspacePriority;
+    button.dataset.bound = "true";
+    button.addEventListener("click", (event) => {
+      event.stopPropagation();
+      const likeId = button.dataset.workspaceStatusOption || button.dataset.workspacePriorityOption;
+      const nextValue = button.dataset.workspaceValue || "";
       if (!likeId) {
         return;
+      }
+      if (button.dataset.workspaceStatusOption) {
+        const input = document.querySelector(`[data-workspace-status="${CSS.escape(likeId)}"]`);
+        if (input) {
+          input.value = nextValue;
+        }
+      }
+      if (button.dataset.workspacePriorityOption) {
+        const input = document.querySelector(`[data-workspace-priority="${CSS.escape(likeId)}"]`);
+        if (input) {
+          input.value = nextValue;
+        }
       }
       saveWorkspaceFields(likeId, readWorkspaceFieldValues(likeId));
     });
@@ -1630,36 +2119,20 @@ function readWorkspaceFieldValues(likeId) {
   };
 }
 
+function isWorkspacePanelOpen(likeId) {
+  if (workspacePanelOverrides.has(likeId)) {
+    return workspacePanelOverrides.get(likeId) === true;
+  }
+  return state.workspacePanelDefaultMode !== "collapsed";
+}
+
 function updateCustomTagDefinition(tagKey, nextDefinition) {
   const key = String(tagKey || "").trim();
-  const label = String(nextDefinition?.label || "").replace(/\s+/g, " ").trim();
-  const color = String(nextDefinition?.color || "").trim();
-  const order = Number.isFinite(Number(nextDefinition?.order)) ? Number(nextDefinition.order) : null;
-  if (!key || !label || !color) {
+  if (!key) {
     return null;
   }
 
-  return updateLikedPapers((record) => {
-    const existingTags = getPaperCustomTags(record);
-    if (!existingTags.some((tag) => tag.key === key)) {
-      return null;
-    }
-
-    let changed = false;
-    const nextTags = existingTags.map((tag) => {
-      if (tag.key !== key) {
-        return tag;
-      }
-      const nextOrder = order ?? (Number.isFinite(tag.order) ? tag.order : null);
-      if (tag.label === label && tag.color === color && (tag.order ?? null) === nextOrder) {
-        return tag;
-      }
-      changed = true;
-      return { ...tag, label, color, order: nextOrder };
-    });
-
-    return changed ? { ...record, custom_tags: nextTags.sort(compareCustomTagMeta) } : null;
-  });
+  return updateLikedPapers((record) => updateCustomTagDefinitionInRecord(record, key, nextDefinition));
 }
 
 function saveWorkspaceFields(likeId, nextFields) {
@@ -1689,25 +2162,7 @@ function saveWorkspaceFields(likeId, nextFields) {
 }
 
 function reorderCustomTags(orderedKeys) {
-  const normalizedKeys = orderedKeys.map((key) => String(key || "").trim()).filter(Boolean);
-  if (!normalizedKeys.length) {
-    return null;
-  }
-
-  const orderByKey = new Map(normalizedKeys.map((key, index) => [key, index]));
-  return updateLikedPapers((record) => {
-    const existingTags = getPaperCustomTags(record);
-    let changed = false;
-    const nextTags = existingTags.map((tag) => {
-      const nextOrder = orderByKey.get(tag.key);
-      if (nextOrder === undefined || getCustomTagOrder(tag) === nextOrder) {
-        return tag;
-      }
-      changed = true;
-      return { ...tag, order: nextOrder };
-    });
-    return changed ? { ...record, custom_tags: nextTags.sort(compareCustomTagMeta) } : null;
-  });
+  return updateLikedPapers((record) => reorderCustomTagsInRecord(record, orderedKeys));
 }
 
 function mergeCustomTags(sourceKey, targetKey) {
@@ -1723,40 +2178,7 @@ function mergeCustomTags(sourceKey, targetKey) {
     return null;
   }
 
-  const result = updateLikedPapers((record) => {
-    const existingTags = getPaperCustomTags(record);
-    if (!existingTags.some((tag) => tag.key === source)) {
-      return null;
-    }
-
-    let changed = false;
-    const nextTags = [];
-    existingTags.forEach((tag) => {
-      if (tag.key === source) {
-        changed = true;
-        if (!existingTags.some((item) => item.key === target) && !nextTags.some((item) => item.key === target)) {
-          nextTags.push({ ...targetTag });
-        }
-        return;
-      }
-      if (tag.key === target) {
-        nextTags.push({ ...tag, label: targetTag.label, color: targetTag.color, order: targetTag.order });
-        return;
-      }
-      nextTags.push(tag);
-    });
-
-    const deduped = [];
-    const seen = new Set();
-    nextTags.forEach((tag) => {
-      if (!seen.has(tag.key)) {
-        seen.add(tag.key);
-        deduped.push(tag);
-      }
-    });
-
-    return changed ? { ...record, custom_tags: deduped.sort(compareCustomTagMeta) } : null;
-  });
+  const result = updateLikedPapers((record) => mergeCustomTagsInRecord(record, source, targetTag));
 
   if (state.customTag === source) {
     state.customTag = target;
@@ -1795,29 +2217,11 @@ function syncTagEditorPalette(editor, tagKey, selectedColor) {
 }
 
 function applyTagToPaper(likeId, tag) {
-  updateLikedPaper(likeId, (record) => {
-    const existingTags = getPaperCustomTags(record);
-    if (existingTags.some((item) => item.key === tag.key)) {
-      return null;
-    }
-    return {
-      ...record,
-      custom_tags: [...existingTags, { key: tag.key, label: tag.label, color: tag.color }],
-    };
-  });
+  updateLikedPaper(likeId, (record) => applyCustomTagToRecord(record, tag));
 }
 
 function removeTagFromPaper(likeId, tagKey) {
-  updateLikedPaper(likeId, (record) => {
-    const nextTags = getPaperCustomTags(record).filter((tag) => tag.key !== tagKey);
-    if (nextTags.length === getPaperCustomTags(record).length) {
-      return null;
-    }
-    return {
-      ...record,
-      custom_tags: nextTags,
-    };
-  });
+  updateLikedPaper(likeId, (record) => removeCustomTagFromRecord(record, tagKey));
 }
 
 function getArxivUrl(paper) {
@@ -1976,17 +2380,47 @@ function renderResultStat(label, value, meta) {
 }
 
 function renderEmpty(toReadSnapshots) {
-  document.querySelector("#like-overview-summary").textContent = "No liked papers yet.";
-  document.querySelector("#like-focus-summary").textContent = "This area will populate after you like papers.";
-  document.querySelector("#like-branch-summary").textContent = "No group distribution yet.";
-  document.querySelector("#like-latest-summary").textContent = "No latest like record yet.";
-  document.querySelector("#like-tag-map").innerHTML = "";
-  document.querySelector("#like-distribution-list").innerHTML = `<div class="empty-state">No like statistics yet.</div>`;
-  document.querySelector("#like-results-title").textContent = "No liked papers yet";
-  document.querySelector("#like-results-stats").innerHTML = "";
-  document.querySelector("#like-active-filters").innerHTML = `<span class="active-filter-pill">Like any paper and this area will update automatically.</span>`;
-  document.querySelector("#like-source-sections").innerHTML =
-    `<div class="glass-card empty-state">Click Like in Cool Daily, Conference, or HF Daily to add papers here.</div>`;
+  const overviewSummary = document.querySelector("#like-overview-summary");
+  const focusSummary = document.querySelector("#like-focus-summary");
+  const branchSummary = document.querySelector("#like-branch-summary");
+  const latestSummary = document.querySelector("#like-latest-summary");
+  const tagMapRoot = document.querySelector("#like-tag-map");
+  const distributionRoot = document.querySelector("#like-distribution-list");
+  const resultsTitle = document.querySelector("#like-results-title");
+  const resultsStats = document.querySelector("#like-results-stats");
+  const activeFilters = document.querySelector("#like-active-filters");
+  const sourceSections = document.querySelector("#like-source-sections");
+
+  if (overviewSummary) {
+    overviewSummary.textContent = "No liked papers yet.";
+  }
+  if (focusSummary) {
+    focusSummary.textContent = "This area will populate after you like papers.";
+  }
+  if (branchSummary) {
+    branchSummary.textContent = "No group distribution yet.";
+  }
+  if (latestSummary) {
+    latestSummary.textContent = "No latest like record yet.";
+  }
+  if (tagMapRoot) {
+    tagMapRoot.innerHTML = "";
+  }
+  if (distributionRoot) {
+    distributionRoot.innerHTML = `<div class="empty-state">No like statistics yet.</div>`;
+  }
+  if (resultsTitle) {
+    resultsTitle.textContent = "No liked papers yet";
+  }
+  if (resultsStats) {
+    resultsStats.innerHTML = "";
+  }
+  if (activeFilters) {
+    activeFilters.innerHTML = `<span class="active-filter-pill">Like any paper and this area will update automatically.</span>`;
+  }
+  if (sourceSections) {
+    sourceSections.innerHTML = `<div class="glass-card empty-state">Click Like in Cool Daily, Conference, or HF Daily to add papers here.</div>`;
+  }
   resetFiltersButton.disabled = true;
 }
 

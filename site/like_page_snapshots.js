@@ -1,4 +1,4 @@
-import { createPageReviewKey, isPageReviewed } from "./reading_state.js?v=f943be8314";
+import { createPageReviewKey, isPageReviewed } from "./reading_state.js?v=3a706b914e";
 import { displayTopicLabel } from "./like_page_labels.js?v=aaa244a29d";
 import {
   validateBranchCatalogManifest,

@@ -1,11 +1,29 @@
-const THEME_STORAGE_KEY = "cool-paper-theme";
-const GLOBAL_VIEW_MODE_STORAGE_KEY = "cool-paper-page-view-mode-v1";
-const LEGACY_PAGE_VIEW_MODE_KEY_PREFIX = "cool-paper-page-view-mode:";
+import {
+  hasGlobalViewModePreference,
+  normalizeDetailPanelDefaultMode,
+  normalizeThemeMode,
+  normalizeViewMode,
+  normalizeWorkspacePanelDefaultMode,
+  readDetailPanelDefaultMode as readStoredDetailPanelDefaultMode,
+  readPageViewMode as readUserPageViewMode,
+  readThemeMode as readStoredThemeMode,
+  readWorkspacePanelDefaultMode as readStoredWorkspacePanelDefaultMode,
+  setDetailPanelDefaultMode,
+  setGlobalViewMode,
+  setThemeMode,
+  setWorkspacePanelDefaultMode,
+  subscribeUserSettings,
+} from "./user_settings.js?v=0f028ca95d";
 
 const viewModeCallbacks = new Map();
 
 let themeBindingInitialized = false;
 let systemThemeQuery = null;
+let workspaceBindingInitialized = false;
+let detailBindingInitialized = false;
+let userSettingsBindingInitialized = false;
+let userSettingsInitialSnapshotHandled = false;
+let activeViewContext = null;
 
 export function initToolbarPreferences({ pageKey, defaultViewMode = "card", fallbackViewKeys = [], onViewModeChange = null } = {}) {
   if (!pageKey) {
@@ -18,10 +36,19 @@ export function initToolbarPreferences({ pageKey, defaultViewMode = "card", fall
     viewModeCallbacks.delete(pageKey);
   }
 
+  activeViewContext = {
+    pageKey,
+    defaultViewMode,
+    fallbackViewKeys: Array.isArray(fallbackViewKeys) ? [...fallbackViewKeys] : [],
+  };
+
   ensureThemeBinding();
+  ensureWorkspaceBinding();
+  ensureDetailBinding();
+  ensureUserSettingsBinding();
   bindViewButtons(pageKey);
 
-  const initialViewMode = readPageViewMode(pageKey, { defaultViewMode, fallbackViewKeys });
+  const initialViewMode = readUserPageViewMode(pageKey, { defaultViewMode, fallbackViewKeys });
   applyPageViewMode(pageKey, initialViewMode, { persist: !hasGlobalViewModePreference(), notify: false });
   return initialViewMode;
 }
@@ -34,26 +61,7 @@ export function setPageViewMode(pageKey, nextMode, options = {}) {
 }
 
 export function readPageViewMode(pageKey, { defaultViewMode = "card", fallbackViewKeys = [] } = {}) {
-  const normalizedDefault = normalizeViewMode(defaultViewMode);
-  try {
-    const stored = window.localStorage.getItem(GLOBAL_VIEW_MODE_STORAGE_KEY);
-    if (stored) {
-      return normalizeViewMode(stored);
-    }
-    const legacyStored = window.localStorage.getItem(getLegacyPageViewModeKey(pageKey));
-    if (legacyStored) {
-      return normalizeViewMode(legacyStored);
-    }
-    for (const fallbackKey of fallbackViewKeys) {
-      const fallback = window.localStorage.getItem(String(fallbackKey || ""));
-      if (fallback) {
-        return normalizeViewMode(fallback);
-      }
-    }
-  } catch (_error) {
-    return normalizedDefault;
-  }
-  return normalizedDefault;
+  return readUserPageViewMode(pageKey, { defaultViewMode, fallbackViewKeys });
 }
 
 function bindViewButtons(pageKey) {
@@ -72,6 +80,8 @@ function bindViewButtons(pageKey) {
 function applyPageViewMode(pageKey, nextMode, options = {}) {
   const mode = normalizeViewMode(nextMode);
   const { persist = true, notify = true } = options;
+  const previousMode = normalizeViewMode(document.documentElement?.dataset?.pageViewMode || "");
+  const modeChanged = previousMode !== mode;
 
   document.documentElement.dataset.pageViewMode = mode;
   if (document.body) {
@@ -80,11 +90,7 @@ function applyPageViewMode(pageKey, nextMode, options = {}) {
   }
 
   if (persist) {
-    try {
-      window.localStorage.setItem(GLOBAL_VIEW_MODE_STORAGE_KEY, mode);
-    } catch (_error) {
-      // Ignore view preference persistence failures.
-    }
+    setGlobalViewMode(mode);
   }
 
   document.querySelectorAll("[data-page-view-toggle]").forEach((button) => {
@@ -93,7 +99,7 @@ function applyPageViewMode(pageKey, nextMode, options = {}) {
     button.setAttribute("aria-pressed", String(active));
   });
 
-  if (notify) {
+  if (notify && modeChanged) {
     const callback = viewModeCallbacks.get(pageKey);
     if (typeof callback === "function") {
       callback(mode);
@@ -106,7 +112,7 @@ function applyPageViewMode(pageKey, nextMode, options = {}) {
 
 function ensureThemeBinding() {
   if (themeBindingInitialized) {
-    applyTheme(readThemeMode(), { persist: false });
+    applyTheme(readStoredThemeMode(), { persist: false });
     return;
   }
 
@@ -122,7 +128,7 @@ function ensureThemeBinding() {
   });
 
   const handleSystemThemeChange = () => {
-    if (readThemeMode() === "auto") {
+    if (readStoredThemeMode() === "auto") {
       applyTheme("auto", { persist: false });
     }
   };
@@ -133,7 +139,69 @@ function ensureThemeBinding() {
     systemThemeQuery.addListener(handleSystemThemeChange);
   }
 
-  applyTheme(readThemeMode(), { persist: false });
+  applyTheme(readStoredThemeMode(), { persist: false });
+}
+
+function ensureWorkspaceBinding() {
+  if (workspaceBindingInitialized) {
+    applyWorkspacePanelDefaultMode(readStoredWorkspacePanelDefaultMode(), { persist: false });
+    return;
+  }
+
+  workspaceBindingInitialized = true;
+
+  document.addEventListener("click", (event) => {
+    const button = event.target instanceof Element ? event.target.closest("[data-workspace-default-toggle]") : null;
+    if (!button) {
+      return;
+    }
+    applyWorkspacePanelDefaultMode(button.dataset.workspaceDefaultToggle || "expanded");
+  });
+
+  applyWorkspacePanelDefaultMode(readStoredWorkspacePanelDefaultMode(), { persist: false });
+}
+
+function ensureDetailBinding() {
+  if (detailBindingInitialized) {
+    applyDetailPanelDefaultMode(readStoredDetailPanelDefaultMode(), { persist: false });
+    return;
+  }
+
+  detailBindingInitialized = true;
+
+  document.addEventListener("click", (event) => {
+    const button = event.target instanceof Element ? event.target.closest("[data-detail-panel-default-toggle]") : null;
+    if (!button) {
+      return;
+    }
+    applyDetailPanelDefaultMode(button.dataset.detailPanelDefaultToggle || "collapsed");
+  });
+
+  applyDetailPanelDefaultMode(readStoredDetailPanelDefaultMode(), { persist: false });
+}
+
+function ensureUserSettingsBinding() {
+  if (userSettingsBindingInitialized) {
+    return;
+  }
+
+  userSettingsBindingInitialized = true;
+
+  subscribeUserSettings((snapshot) => {
+    applyTheme(snapshot?.themeMode, { persist: false });
+    applyWorkspacePanelDefaultMode(snapshot?.workspacePanelDefaultMode, { persist: false });
+    applyDetailPanelDefaultMode(snapshot?.detailPanelDefaultMode, { persist: false });
+
+    if (activeViewContext?.pageKey) {
+      const nextMode = normalizeViewMode(snapshot?.viewMode);
+      applyPageViewMode(activeViewContext.pageKey, nextMode, {
+        persist: false,
+        notify: userSettingsInitialSnapshotHandled,
+      });
+    }
+
+    userSettingsInitialSnapshotHandled = true;
+  });
 }
 
 function applyTheme(mode, options = {}) {
@@ -144,11 +212,7 @@ function applyTheme(mode, options = {}) {
   document.documentElement.dataset.themeMode = normalizedMode;
 
   if (persist) {
-    try {
-      window.localStorage.setItem(THEME_STORAGE_KEY, normalizedMode);
-    } catch (_error) {
-      // Ignore theme persistence failures.
-    }
+    setThemeMode(normalizedMode);
   }
 
   document.querySelectorAll("[data-theme-toggle]").forEach((button) => {
@@ -158,30 +222,40 @@ function applyTheme(mode, options = {}) {
   });
 }
 
-function readThemeMode() {
-  try {
-    return normalizeThemeMode(window.localStorage.getItem(THEME_STORAGE_KEY) || "auto");
-  } catch {
-    return "auto";
+function applyWorkspacePanelDefaultMode(mode, options = {}) {
+  const { persist = true } = options;
+  const normalizedMode = normalizeWorkspacePanelDefaultMode(mode);
+
+  document.documentElement.dataset.workspacePanelDefaultMode = normalizedMode;
+
+  if (persist) {
+    setWorkspacePanelDefaultMode(normalizedMode);
   }
+
+  document.querySelectorAll("[data-workspace-default-toggle]").forEach((button) => {
+    const active = normalizeWorkspacePanelDefaultMode(button.dataset.workspaceDefaultToggle) === normalizedMode;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
+
+  return normalizedMode;
 }
 
-function normalizeThemeMode(value) {
-  return value === "light" || value === "dark" ? value : "auto";
-}
+function applyDetailPanelDefaultMode(mode, options = {}) {
+  const { persist = true } = options;
+  const normalizedMode = normalizeDetailPanelDefaultMode(mode);
 
-function normalizeViewMode(value) {
-  return String(value || "").trim().toLowerCase() === "list" ? "list" : "card";
-}
+  document.documentElement.dataset.detailPanelDefaultMode = normalizedMode;
 
-function hasGlobalViewModePreference() {
-  try {
-    return Boolean(window.localStorage.getItem(GLOBAL_VIEW_MODE_STORAGE_KEY));
-  } catch {
-    return false;
+  if (persist) {
+    setDetailPanelDefaultMode(normalizedMode);
   }
-}
 
-function getLegacyPageViewModeKey(pageKey) {
-  return `${LEGACY_PAGE_VIEW_MODE_KEY_PREFIX}${pageKey}`;
+  document.querySelectorAll("[data-detail-panel-default-toggle]").forEach((button) => {
+    const active = normalizeDetailPanelDefaultMode(button.dataset.detailPanelDefaultToggle) === normalizedMode;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
+
+  return normalizedMode;
 }

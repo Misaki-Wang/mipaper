@@ -1,11 +1,11 @@
-import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js?v=f943be8314";
-import { bindBranchAuthToolbar } from "./branch_auth.js?v=1060920198";
-import { mountAppToolbar } from "./app_toolbar.js?v=625fba0996";
+import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js?v=3a706b914e";
+import { bindBranchAuthToolbar } from "./branch_auth.js?v=81b329db27";
+import { mountAppToolbar } from "./app_toolbar.js?v=90ae25c72d";
 import { bindBranchNav } from "./branch_nav.js?v=2ab092d7f1";
 import { bindLibraryNav } from "./library_nav.js?v=7b6e095589";
 import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=c2effc3556";
 import { bindFilterMenu } from "./page_shell.js?v=b0d53b671d";
-import { initToolbarPreferences } from "./toolbar_preferences.js?v=a0ed68b91d";
+import { initToolbarPreferences } from "./toolbar_preferences.js?v=27d8e761fb";
 import { escapeAttribute, escapeHtml, fetchJson, getErrorMessage } from "./ui_utils.js?v=e2da3b3a11";
 
 mountAppToolbar("#unread-toolbar-root", {
@@ -34,6 +34,7 @@ const filterMenuPanel = document.querySelector("#unread-filters-menu");
 let page = 0;
 let snapshots = [];
 let searchQuery = "";
+let viewMode = "card";
 
 const TOPIC_LABEL_TRANSLATIONS = new Map([
   ["多模态理解与视觉", "Multimodal Understanding and Vision"],
@@ -57,7 +58,13 @@ init().catch((error) => {
 });
 
 async function init() {
-  initToolbarPreferences({ pageKey: "unread" });
+  viewMode = initToolbarPreferences({
+    pageKey: "unread",
+    onViewModeChange: (mode) => {
+      viewMode = mode;
+      renderPage();
+    },
+  });
   bindFilterMenu({
     button: sidebarToggleButton,
     panel: filterMenuPanel,
@@ -85,11 +92,13 @@ function renderPage() {
   });
   const topBranch = [...branchCounts.entries()].sort((left, right) => right[1] - left[1] || left[0].localeCompare(right[0], "en"))[0] || null;
 
-  heroCountNode.textContent = unreadSnapshots.length ? `${unreadSnapshots.length} unread` : "All clear";
-  heroBranchesNode.textContent = String(new Set(unreadSnapshots.map((snapshot) => snapshot.branch_label)).size);
-  heroLatestNode.textContent = unreadSnapshots[0]?.snapshot_label || "-";
-  heroBranchNode.textContent = topBranch ? `${topBranch[0]} · ${topBranch[1]}` : "-";
-  heroReviewedNode.textContent = String(totalReviewed);
+  if (heroCountNode && heroBranchesNode && heroLatestNode && heroBranchNode && heroReviewedNode) {
+    heroCountNode.textContent = unreadSnapshots.length ? `${unreadSnapshots.length} unread` : "All clear";
+    heroBranchesNode.textContent = String(new Set(unreadSnapshots.map((snapshot) => snapshot.branch_label)).size);
+    heroLatestNode.textContent = unreadSnapshots[0]?.snapshot_label || "-";
+    heroBranchNode.textContent = topBranch ? `${topBranch[0]} · ${topBranch[1]}` : "-";
+    heroReviewedNode.textContent = String(totalReviewed);
+  }
 
   if (!unreadSnapshots.length) {
     summaryNode.textContent = "Every fetched snapshot has been reviewed.";
@@ -115,37 +124,7 @@ function renderPage() {
     : `${unreadSnapshots.length} fetched snapshots are currently waiting for review.`;
 
   listRoot.innerHTML = pageItems
-    .map(
-      (snapshot) => `
-        <article class="spotlight-card">
-          <div class="spotlight-meta">
-            <span>${escapeHtml(snapshot.branch_label)}</span>
-            <span>${escapeHtml(snapshot.snapshot_label)}</span>
-          </div>
-          <h3>${escapeHtml(snapshot.title)}</h3>
-          <p>${escapeHtml(snapshot.summary)}</p>
-          <div class="paper-links">
-            <a class="paper-link" href="${escapeAttribute(snapshot.branch_url)}">${escapeHtml(snapshot.branch_label)}</a>
-            ${snapshot.source_url ? `<a class="paper-link brand-cool" href="${escapeAttribute(snapshot.source_url)}" target="_blank" rel="noreferrer">Source</a>` : ""}
-            <button
-              class="paper-link review-button"
-              type="button"
-              data-review-key="${escapeAttribute(snapshot.review_key)}"
-              data-branch-label="${escapeAttribute(snapshot.branch_label)}"
-              data-snapshot-label="${escapeAttribute(snapshot.snapshot_label)}"
-              aria-pressed="false"
-            >
-              <span class="paper-link-icon review-icon" aria-hidden="true">
-                <svg viewBox="0 0 20 20">
-                  <path d="M5 10.5l3.1 3.1L15 6.8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
-                </svg>
-              </span>
-              <span class="paper-link-text">Reviewed</span>
-            </button>
-          </div>
-        </article>
-      `
-    )
+    .map((snapshot) => (viewMode === "list" ? renderUnreadSnapshotRow(snapshot) : renderUnreadSnapshotCard(snapshot)))
     .join("");
 
   paginationNode.innerHTML =
@@ -181,6 +160,64 @@ function renderPage() {
       renderPage();
     });
   });
+}
+
+function renderUnreadSnapshotCard(snapshot) {
+  return `
+    <article class="spotlight-card">
+      <div class="spotlight-meta">
+        <span>${escapeHtml(snapshot.branch_label)}</span>
+        <span>${escapeHtml(snapshot.snapshot_label)}</span>
+      </div>
+      <h3>${escapeHtml(snapshot.title)}</h3>
+      <p>${escapeHtml(snapshot.summary)}</p>
+      <div class="paper-links">
+        <a class="paper-link" href="${escapeAttribute(snapshot.branch_url)}">${escapeHtml(snapshot.branch_label)}</a>
+        ${snapshot.source_url ? `<a class="paper-link brand-cool" href="${escapeAttribute(snapshot.source_url)}" target="_blank" rel="noreferrer">Source</a>` : ""}
+        ${renderReviewedButton(snapshot)}
+      </div>
+    </article>
+  `;
+}
+
+function renderUnreadSnapshotRow(snapshot) {
+  return `
+    <article class="unread-snapshot-row">
+      <div class="unread-snapshot-row-main">
+        <div class="spotlight-meta unread-snapshot-row-meta">
+          <span>${escapeHtml(snapshot.branch_label)}</span>
+          <span>${escapeHtml(snapshot.snapshot_label)}</span>
+        </div>
+        <h3 class="unread-snapshot-row-title">${escapeHtml(snapshot.title)}</h3>
+        <p class="unread-snapshot-row-summary">${escapeHtml(snapshot.summary)}</p>
+      </div>
+      <div class="paper-links unread-snapshot-row-actions">
+        <a class="paper-link" href="${escapeAttribute(snapshot.branch_url)}">${escapeHtml(snapshot.branch_label)}</a>
+        ${snapshot.source_url ? `<a class="paper-link brand-cool" href="${escapeAttribute(snapshot.source_url)}" target="_blank" rel="noreferrer">Source</a>` : ""}
+        ${renderReviewedButton(snapshot)}
+      </div>
+    </article>
+  `;
+}
+
+function renderReviewedButton(snapshot) {
+  return `
+    <button
+      class="paper-link review-button"
+      type="button"
+      data-review-key="${escapeAttribute(snapshot.review_key)}"
+      data-branch-label="${escapeAttribute(snapshot.branch_label)}"
+      data-snapshot-label="${escapeAttribute(snapshot.snapshot_label)}"
+      aria-pressed="false"
+    >
+      <span class="paper-link-icon review-icon" aria-hidden="true">
+        <svg viewBox="0 0 20 20">
+          <path d="M5 10.5l3.1 3.1L15 6.8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </span>
+      <span class="paper-link-text">Reviewed</span>
+    </button>
+  `;
 }
 
 function bindSearchInput() {

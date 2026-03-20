@@ -8,7 +8,7 @@ import {
   getRecordUpdatedAt,
   getSyncDeviceId,
   mergeSyncRecords,
-} from "./sync_utils.js?v=b3e14c1ece";
+} from "./sync_utils.js?v=8b7af265fa";
 
 const PAGE_REVIEWS_KEY = "cool-paper-page-reviews-v1";
 const PAGE_REVIEWS_META_KEY = "cool-paper-page-reviews-meta-v1";
@@ -263,7 +263,7 @@ async function hydrateOrSyncRemoteReviews() {
   return syncPageReviewsNow();
 }
 
-async function syncPageReviewsNow() {
+export async function syncPageReviewsNow() {
   await initReviewSync();
   if (!supabaseClient || !authUser) {
     return readPageReviews();

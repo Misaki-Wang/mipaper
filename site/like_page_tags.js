@@ -113,3 +113,182 @@ export function assignTagColor(tagKey, catalog) {
 export function getCustomTagStyle(color) {
   return `--custom-tag-accent:${String(color || "#5c8f7b")}`;
 }
+
+function normalizeCustomTagMeta(tag, fallbackColor = "") {
+  const key = String(tag?.key || "").trim();
+  const label = String(tag?.label || "").replace(/\s+/g, " ").trim();
+  if (!key || !label) {
+    return null;
+  }
+  return {
+    key,
+    label,
+    color: String(tag?.color || fallbackColor || assignTagColor(key, new Map())).trim(),
+    order: Number.isFinite(Number(tag?.order)) ? Number(tag.order) : null,
+  };
+}
+
+function dedupeCustomTags(tags) {
+  const seen = new Set();
+  return tags.filter((tag) => {
+    if (!tag || seen.has(tag.key)) {
+      return false;
+    }
+    seen.add(tag.key);
+    return true;
+  });
+}
+
+export function applyCustomTagToRecord(record, tag) {
+  const nextTag = normalizeCustomTagMeta(tag);
+  if (!nextTag) {
+    return null;
+  }
+
+  const existingTags = getPaperCustomTags(record);
+  if (existingTags.some((item) => item.key === nextTag.key)) {
+    return null;
+  }
+
+  return {
+    ...record,
+    custom_tags: [...existingTags, nextTag].sort(compareCustomTagMeta),
+  };
+}
+
+export function removeCustomTagFromRecord(record, tagKey) {
+  const key = String(tagKey || "").trim();
+  if (!key) {
+    return null;
+  }
+
+  const existingTags = getPaperCustomTags(record);
+  const nextTags = existingTags.filter((tag) => tag.key !== key);
+  if (nextTags.length === existingTags.length) {
+    return null;
+  }
+
+  return {
+    ...record,
+    custom_tags: nextTags,
+  };
+}
+
+export function updateCustomTagDefinitionInRecord(record, tagKey, nextDefinition) {
+  const key = String(tagKey || "").trim();
+  if (!key) {
+    return null;
+  }
+
+  const existingTags = getPaperCustomTags(record);
+  if (!existingTags.some((tag) => tag.key === key)) {
+    return null;
+  }
+
+  let changed = false;
+  const nextTags = existingTags.map((tag) => {
+    if (tag.key !== key) {
+      return tag;
+    }
+    const normalized = normalizeCustomTagMeta(
+      {
+        ...tag,
+        ...nextDefinition,
+        order:
+          Number.isFinite(Number(nextDefinition?.order))
+            ? Number(nextDefinition.order)
+            : getCustomTagOrder(tag) !== Number.MAX_SAFE_INTEGER
+            ? getCustomTagOrder(tag)
+            : null,
+      },
+      tag.color
+    );
+    if (!normalized) {
+      return tag;
+    }
+    if (
+      normalized.label === tag.label &&
+      normalized.color === tag.color &&
+      (normalized.order ?? null) === (tag.order ?? null)
+    ) {
+      return tag;
+    }
+    changed = true;
+    return normalized;
+  });
+
+  return changed
+    ? {
+        ...record,
+        custom_tags: nextTags.sort(compareCustomTagMeta),
+      }
+    : null;
+}
+
+export function reorderCustomTagsInRecord(record, orderedKeys) {
+  const normalizedKeys = orderedKeys.map((key) => String(key || "").trim()).filter(Boolean);
+  if (!normalizedKeys.length) {
+    return null;
+  }
+
+  const orderByKey = new Map(normalizedKeys.map((key, index) => [key, index]));
+  const existingTags = getPaperCustomTags(record);
+  let changed = false;
+  const nextTags = existingTags.map((tag) => {
+    const nextOrder = orderByKey.get(tag.key);
+    if (nextOrder === undefined || getCustomTagOrder(tag) === nextOrder) {
+      return tag;
+    }
+    changed = true;
+    return { ...tag, order: nextOrder };
+  });
+
+  return changed
+    ? {
+        ...record,
+        custom_tags: nextTags.sort(compareCustomTagMeta),
+      }
+    : null;
+}
+
+export function mergeCustomTagsInRecord(record, sourceKey, targetTag) {
+  const source = String(sourceKey || "").trim();
+  const normalizedTarget = normalizeCustomTagMeta(targetTag);
+  if (!source || !normalizedTarget || source === normalizedTarget.key) {
+    return null;
+  }
+
+  const existingTags = getPaperCustomTags(record);
+  if (!existingTags.some((tag) => tag.key === source)) {
+    return null;
+  }
+
+  let changed = false;
+  const nextTags = [];
+  existingTags.forEach((tag) => {
+    if (tag.key === source) {
+      changed = true;
+      if (!existingTags.some((item) => item.key === normalizedTarget.key) && !nextTags.some((item) => item.key === normalizedTarget.key)) {
+        nextTags.push({ ...normalizedTarget });
+      }
+      return;
+    }
+    if (tag.key === normalizedTarget.key) {
+      nextTags.push({
+        ...tag,
+        label: normalizedTarget.label,
+        color: normalizedTarget.color,
+        order: normalizedTarget.order,
+      });
+      return;
+    }
+    nextTags.push(tag);
+  });
+
+  return changed
+    ? {
+        ...record,
+        custom_tags: dedupeCustomTags(nextTags).sort(compareCustomTagMeta),
+      }
+    : null;
+}

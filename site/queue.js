@@ -1,14 +1,16 @@
-import { getSourceLabel, initLikesSync, readLikes, subscribeLikes } from "./likes.js?v=d409e691d1";
+import { getSourceLabel, initLikesSync, readLikes, subscribeLikes } from "./likes.js?v=3b466b6556";
 import { initQueue, readQueue, removeFromQueue, subscribeQueue } from "./paper_queue.js?v=8b696292c3";
 import { movePaperToLikes, repairLikeLaterConflicts } from "./paper_selection.js?v=964dbe6c53";
-import { bindBranchAuthToolbar } from "./branch_auth.js?v=1060920198";
-import { mountAppToolbar } from "./app_toolbar.js?v=625fba0996";
+import { bindBranchAuthToolbar } from "./branch_auth.js?v=81b329db27";
+import { mountAppToolbar } from "./app_toolbar.js?v=90ae25c72d";
 import { bindBranchNav } from "./branch_nav.js?v=2ab092d7f1";
 import { bindLibraryNav } from "./library_nav.js?v=7b6e095589";
 import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=c2effc3556";
 import { bindFilterMenu } from "./page_shell.js?v=b0d53b671d";
-import { initToolbarPreferences } from "./toolbar_preferences.js?v=a0ed68b91d";
+import { initToolbarPreferences } from "./toolbar_preferences.js?v=27d8e761fb";
 import { escapeAttribute, escapeHtml, getErrorMessage } from "./ui_utils.js?v=e2da3b3a11";
+import { WORKFLOW_STATUS_OPTIONS, getWorkflowStatusLabel, getWorkflowStatusValue } from "./like_page_labels.js?v=aaa244a29d";
+import { installManualLibraryTestCases } from "./manual_test_cases.js?v=20260320seedfix1";
 
 mountAppToolbar("#queue-toolbar-root", {
   prefix: "queue",
@@ -17,6 +19,7 @@ mountAppToolbar("#queue-toolbar-root", {
   libraryActiveKey: "later",
   quickAddTarget: "later",
 });
+installManualLibraryTestCases();
 
 const PAGE_SIZE = 6;
 const laterList = document.querySelector("#later-list");
@@ -37,6 +40,8 @@ let laterPage = 0;
 let laterPapers = [];
 let likedPapers = [];
 let searchQuery = "";
+let viewMode = "card";
+let queueLikeStatusInteractionsBound = false;
 
 const TOPIC_LABEL_TRANSLATIONS = new Map([
   ["多模态理解与视觉", "Multimodal Understanding and Vision"],
@@ -60,7 +65,13 @@ init().catch((error) => {
 });
 
 async function init() {
-  initToolbarPreferences({ pageKey: "queue" });
+  viewMode = initToolbarPreferences({
+    pageKey: "queue",
+    onViewModeChange: (mode) => {
+      viewMode = mode;
+      renderPage();
+    },
+  });
   bindFilterMenu({
     button: sidebarToggleButton,
     panel: filterMenuPanel,
@@ -72,6 +83,7 @@ async function init() {
   bindBranchNav();
   bindLibraryNav();
   bindToolbarQuickAdd("queue", { target: "later" });
+  bindQueueLikeStatusInteractions();
   subscribeQueue(renderPage);
   subscribeLikes(renderPage);
   await Promise.all([initQueue(), initLikesSync()]);
@@ -118,6 +130,10 @@ function filterLaterPapers(papers) {
 }
 
 function renderHero(laterQueue, likes) {
+  if (!laterHeroCount || !laterHeroLiked || !laterHeroBranches || !laterHeroSource || !laterHeroTopic) {
+    return;
+  }
+
   const sourceCounts = new Map();
   const topicCounts = new Map();
 
@@ -161,54 +177,7 @@ function renderLaterList(papers) {
     : `${papers.length} papers queued for later reading.`;
 
   laterList.innerHTML = pageItems
-    .map(
-      (paper) => `
-        <article class="spotlight-card">
-          <div class="spotlight-meta">
-            <span>${escapeHtml(displayTopicLabel(paper.topic_label || "Other AI"))}</span>
-            <span>${escapeHtml(getSourceLabel(paper.source_kind))}</span>
-          </div>
-          <h3>${escapeHtml(paper.title || "Untitled")}</h3>
-          <div class="paper-authors-box">
-            <span class="paper-detail-label">Authors</span>
-            <p class="paper-authors-line">${escapeHtml(paper.authors?.join(", ") || "Unknown")}</p>
-          </div>
-          ${paper.abstract ? `
-          <details class="paper-abstract">
-            <summary>
-              <span class="paper-abstract-label">Abstract</span>
-              <span class="paper-abstract-arrow" aria-hidden="true">
-                <svg viewBox="0 0 20 20" width="14" height="14">
-                  <path d="M5.5 7.5L10 12l4.5-4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
-                </svg>
-              </span>
-            </summary>
-            <p>${escapeHtml(paper.abstract)}</p>
-          </details>
-          ` : ""}
-          <div class="paper-links">
-            ${renderExternalPaperLink({ href: getArxivUrl(paper), label: "arXiv", brand: "arxiv" })}
-            ${renderExternalPaperLink({ href: getCoolUrl(paper), label: "Cool", brand: "cool" })}
-            <button class="paper-link later-button is-later" type="button" data-remove-id="${escapeAttribute(paper.like_id)}" aria-pressed="true">
-              <span class="paper-link-icon later-icon" aria-hidden="true">
-                <svg viewBox="0 0 20 20">
-                  <path d="M4 6h12M4 10h12M4 14h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
-                </svg>
-              </span>
-              <span class="paper-link-text">Later</span>
-            </button>
-            <button class="paper-link like-button" type="button" data-like-id="${escapeAttribute(paper.like_id)}" aria-pressed="false">
-              <span class="paper-link-icon like-icon" aria-hidden="true">
-                <svg viewBox="0 0 20 20">
-                  <path d="M10 16.3l-5.26-4.98A3.8 3.8 0 0 1 10 5.9a3.8 3.8 0 0 1 5.26 5.42z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path>
-                </svg>
-              </span>
-              <span class="paper-link-text">Like</span>
-            </button>
-          </div>
-        </article>
-      `
-    )
+    .map((paper) => (viewMode === "list" ? renderLaterPaperRow(paper) : renderLaterPaperCard(paper)))
     .join("");
 
   laterPagination.innerHTML =
@@ -238,8 +207,37 @@ function renderLaterList(papers) {
       if (!paper) {
         return;
       }
-      movePaperToLikes(paper);
-      renderPage();
+      const workflowStatus = getWorkflowStatusValue(
+        button.closest(".queue-like-action")?.querySelector("[data-like-status-field]")?.value || paper.workflow_status
+      );
+      transferQueuePaperToLikes(paper, workflowStatus);
+    });
+  });
+
+  laterList.querySelectorAll("[data-like-status-toggle]").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      toggleLikeStatusMenu(button.dataset.likeStatusToggle || "");
+    });
+  });
+
+  laterList.querySelectorAll("[data-like-status-option]").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      const likeId = button.dataset.likeStatusOption || "";
+      const statusValue = getWorkflowStatusValue(button.dataset.likeStatusValue || "");
+      const paper = papers.find((item) => item.like_id === likeId);
+      if (!likeId) {
+        return;
+      }
+      updateLikeStatusSelection(likeId, statusValue);
+      if (!paper) {
+        closeLikeStatusMenus();
+        return;
+      }
+      transferQueuePaperToLikes(paper, statusValue);
     });
   });
 
@@ -249,6 +247,122 @@ function renderLaterList(papers) {
       renderPage();
     });
   });
+}
+
+function renderLaterPaperCard(paper) {
+  const workflowStatus = getWorkflowStatusValue(paper.workflow_status);
+  const workflowStatusLabel = getWorkflowStatusLabel(workflowStatus);
+  return `
+    <article class="spotlight-card">
+      <div class="spotlight-meta">
+        <span>${escapeHtml(displayTopicLabel(paper.topic_label || "Other AI"))}</span>
+        <span>${escapeHtml(getSourceLabel(paper.source_kind))}</span>
+      </div>
+      <h3>${escapeHtml(paper.title || "Untitled")}</h3>
+      <div class="paper-authors-box">
+        <span class="paper-detail-label">Authors</span>
+        <p class="paper-authors-line">${escapeHtml(paper.authors?.join(", ") || "Unknown")}</p>
+      </div>
+      ${paper.abstract ? `
+      <details class="paper-abstract">
+        <summary>
+          <span class="paper-abstract-label">Abstract</span>
+          <span class="paper-abstract-arrow" aria-hidden="true">
+            <svg viewBox="0 0 20 20" width="14" height="14">
+              <path d="M5.5 7.5L10 12l4.5-4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+            </svg>
+          </span>
+        </summary>
+        <p>${escapeHtml(paper.abstract)}</p>
+      </details>
+      ` : ""}
+      <div class="paper-links">
+        ${renderExternalPaperLink({ href: getArxivUrl(paper), label: "arXiv", brand: "arxiv" })}
+        ${renderExternalPaperLink({ href: getCoolUrl(paper), label: "Cool", brand: "cool" })}
+        ${renderLaterRemoveButton(paper)}
+        ${renderQueueLikeAction(paper.like_id, workflowStatus, workflowStatusLabel)}
+      </div>
+    </article>
+  `;
+}
+
+function renderLaterPaperRow(paper) {
+  const workflowStatus = getWorkflowStatusValue(paper.workflow_status);
+  const workflowStatusLabel = getWorkflowStatusLabel(workflowStatus);
+  return `
+    <article class="later-paper-row">
+      <div class="later-paper-row-main">
+        <div class="spotlight-meta later-paper-row-meta">
+          <span>${escapeHtml(displayTopicLabel(paper.topic_label || "Other AI"))}</span>
+          <span>${escapeHtml(getSourceLabel(paper.source_kind))}</span>
+        </div>
+        <h3 class="later-paper-row-title">${escapeHtml(paper.title || "Untitled")}</h3>
+        <p class="later-paper-row-authors">${escapeHtml(paper.authors?.join(", ") || "Unknown")}</p>
+      </div>
+      <div class="paper-links later-paper-row-actions">
+        ${renderExternalPaperLink({ href: getArxivUrl(paper), label: "arXiv", brand: "arxiv" })}
+        ${renderExternalPaperLink({ href: getCoolUrl(paper), label: "Cool", brand: "cool" })}
+        ${renderLaterRemoveButton(paper)}
+        ${renderQueueLikeAction(paper.like_id, workflowStatus, workflowStatusLabel)}
+      </div>
+    </article>
+  `;
+}
+
+function renderLaterRemoveButton(paper) {
+  return `
+    <button class="paper-link later-button is-later" type="button" data-remove-id="${escapeAttribute(paper.like_id)}" aria-pressed="true">
+      <span class="paper-link-icon later-icon" aria-hidden="true">
+        <svg viewBox="0 0 20 20">
+          <path d="M4 6h12M4 10h12M4 14h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+        </svg>
+      </span>
+      <span class="paper-link-text">Later</span>
+    </button>
+  `;
+}
+
+function renderQueueLikeAction(likeId, workflowStatus, workflowStatusLabel) {
+  return `
+    <div class="queue-like-action">
+      <input type="hidden" data-like-status-field="${escapeAttribute(likeId)}" value="${escapeAttribute(workflowStatus)}" />
+      <button
+        class="paper-link like-button queue-like-button"
+        type="button"
+        data-like-id="${escapeAttribute(likeId)}"
+        aria-pressed="false"
+        title="Add Like as ${escapeAttribute(workflowStatusLabel)}"
+        aria-label="Add Like as ${escapeAttribute(workflowStatusLabel)}"
+      >
+        <span class="paper-link-icon like-icon" aria-hidden="true">
+          <svg viewBox="0 0 20 20">
+            <path d="M10 16.3l-5.26-4.98A3.8 3.8 0 0 1 10 5.9a3.8 3.8 0 0 1 5.26 5.42z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path>
+          </svg>
+        </span>
+        <span class="paper-link-text">Like</span>
+      </button>
+      <button
+        class="paper-link queue-like-status-toggle"
+        type="button"
+        data-like-status-toggle="${escapeAttribute(likeId)}"
+        aria-expanded="false"
+        aria-haspopup="menu"
+        title="Choose Like status, current ${escapeAttribute(workflowStatusLabel)}"
+        aria-label="Choose Like status, current ${escapeAttribute(workflowStatusLabel)}"
+      >
+        <span class="paper-abstract-arrow" aria-hidden="true">
+          <svg viewBox="0 0 20 20" width="14" height="14">
+            <path d="M5.5 7.5L10 12l4.5-4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+          </svg>
+        </span>
+      </button>
+      <div class="workspace-picker-popover queue-like-status-popover" data-like-status-popover="${escapeAttribute(likeId)}" hidden>
+        <div class="queue-like-status-menu">
+          ${renderWorkflowStatusButtons(likeId, workflowStatus)}
+        </div>
+      </div>
+    </div>
+  `;
 }
 
 function renderExternalPaperLink({ href, label, brand }) {
@@ -267,6 +381,117 @@ function renderExternalPaperLink({ href, label, brand }) {
       <span class="paper-link-text">${escapeHtml(label)}</span>
     </a>
   `;
+}
+
+function renderWorkflowStatusButtons(likeId, selectedValue) {
+  return WORKFLOW_STATUS_OPTIONS.map(
+    (item) => `
+      <button
+        class="paper-workspace-segment queue-like-status-option ${escapeAttribute(getQueueStatusTone(item.value))}${item.value === selectedValue ? " is-selected" : ""}"
+        type="button"
+        data-like-status-option="${escapeAttribute(likeId)}"
+        data-like-status-value="${escapeAttribute(item.value)}"
+      >
+        <span class="paper-workspace-segment-dot" aria-hidden="true"></span>
+        <span>${escapeHtml(item.label)}</span>
+      </button>
+    `
+  ).join("");
+}
+
+function bindQueueLikeStatusInteractions() {
+  if (queueLikeStatusInteractionsBound || typeof document === "undefined") {
+    return;
+  }
+  queueLikeStatusInteractionsBound = true;
+
+  document.addEventListener("click", (event) => {
+    const target = event.target;
+    if (typeof Element !== "undefined" && target instanceof Element && target.closest("[data-like-status-toggle], [data-like-status-popover]")) {
+      return;
+    }
+    closeLikeStatusMenus();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeLikeStatusMenus();
+    }
+  });
+}
+
+function toggleLikeStatusMenu(likeId) {
+  const toggle = document.querySelector(`[data-like-status-toggle="${CSS.escape(likeId)}"]`);
+  const popover = document.querySelector(`[data-like-status-popover="${CSS.escape(likeId)}"]`);
+  if (!toggle || !popover) {
+    return;
+  }
+
+  const nextOpen = popover.hidden;
+  closeLikeStatusMenus();
+  popover.hidden = !nextOpen;
+  toggle.setAttribute("aria-expanded", String(nextOpen));
+}
+
+function closeLikeStatusMenus() {
+  if (typeof document === "undefined") {
+    return;
+  }
+  document.querySelectorAll("[data-like-status-popover]").forEach((popover) => {
+    popover.hidden = true;
+  });
+  document.querySelectorAll("[data-like-status-toggle]").forEach((button) => {
+    button.setAttribute("aria-expanded", "false");
+  });
+}
+
+function transferQueuePaperToLikes(paper, workflowStatus) {
+  movePaperToLikes({
+    ...paper,
+    workflow_status: getWorkflowStatusValue(workflowStatus || paper.workflow_status),
+  });
+  closeLikeStatusMenus();
+  renderPage();
+}
+
+function updateLikeStatusSelection(likeId, statusValue) {
+  const normalized = getWorkflowStatusValue(statusValue);
+  const label = getWorkflowStatusLabel(normalized);
+  const field = document.querySelector(`[data-like-status-field="${CSS.escape(likeId)}"]`);
+  if (field) {
+    field.value = normalized;
+  }
+
+  const likeButton = document.querySelector(`[data-like-id="${CSS.escape(likeId)}"]`);
+  if (likeButton) {
+    likeButton.title = `Add Like as ${label}`;
+    likeButton.setAttribute("aria-label", `Add Like as ${label}`);
+  }
+
+  const toggle = document.querySelector(`[data-like-status-toggle="${CSS.escape(likeId)}"]`);
+  if (toggle) {
+    toggle.title = `Choose Like status, current ${label}`;
+    toggle.setAttribute("aria-label", `Choose Like status, current ${label}`);
+  }
+
+  document.querySelectorAll(`[data-like-status-option="${CSS.escape(likeId)}"]`).forEach((button) => {
+    button.classList.toggle("is-selected", (button.dataset.likeStatusValue || "") === normalized);
+  });
+}
+
+function getQueueStatusTone(value) {
+  switch (getWorkflowStatusValue(value)) {
+    case "reading":
+      return "status-reading";
+    case "digesting":
+      return "status-digesting";
+    case "synthesized":
+      return "status-synthesized";
+    case "archived":
+      return "status-archived";
+    default:
+      return "status-inbox";
+  }
 }
 
 function getArxivUrl(paper) {
