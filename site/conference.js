@@ -17,6 +17,11 @@ mountAppToolbar("#conference-toolbar-root", {
 
 const manifestUrl = "./data/conference/manifest.json";
 const CONFERENCE_HOME_PAGE_SIZE = 6;
+const CONFERENCE_SECTION_INITIAL_SIZE = 8;
+const CONFERENCE_SECTION_LOAD_MORE_SIZE = 16;
+const CONFERENCE_SEARCH_DEBOUNCE_MS = 160;
+const CONFERENCE_AUTO_LOAD_SUPPRESS_MS = 4000;
+const CONFERENCE_USER_SCROLL_INTENT_MS = 1400;
 
 const state = {
   manifest: null,
@@ -55,8 +60,15 @@ const reviewToggleButton = document.querySelector("#conference-review-toggle");
 const reviewToggleMeta = document.querySelector("#conference-review-toggle-meta");
 const heroReviewStatus = document.querySelector("#conference-hero-review-status");
 const likeRecords = new Map();
+const subjectVisibleCounts = new Map();
 const runLatestReportLoad = createLatestTaskRunner();
 const floatingToc = createFloatingTocController(floatingTocRoot);
+let searchInputTimer = 0;
+let subjectAutoLoadObserver = null;
+let autoLoadResumeTimer = 0;
+let autoLoadSuppressedUntil = 0;
+let pendingTocTargetId = "";
+let userScrollIntentUntil = 0;
 const reviewController = createBranchReviewController({
   reviewScope: "conference",
   branchLabel: "Conference",
@@ -75,6 +87,7 @@ init().catch((error) => {
 });
 
 async function init() {
+  initSubjectAutoLoadObserver();
   await initBranchReportPage({
     pageKey: "conference",
     toolbarPrefix: "conference",
@@ -87,6 +100,9 @@ async function init() {
     likeRecords,
     bindPageControls: () => {
       bindFilters();
+      bindSubjectSectionActions();
+      bindUserScrollIntentTracking();
+      bindTocAutoLoadGuard();
       bindReviewToggle();
     },
     renderReviewState,
@@ -133,8 +149,12 @@ function bindFilters() {
   });
 
   searchInput.addEventListener("input", (event) => {
-    state.query = event.target.value.trim().toLowerCase();
-    renderReport();
+    const nextQuery = event.target.value.trim().toLowerCase();
+    window.clearTimeout(searchInputTimer);
+    searchInputTimer = window.setTimeout(() => {
+      state.query = nextQuery;
+      renderReport();
+    }, CONFERENCE_SEARCH_DEBOUNCE_MS);
   });
 
   focusOnlyInput.addEventListener("change", (event) => {
@@ -146,6 +166,7 @@ function bindFilters() {
     if (!hasActiveFilters()) {
       return;
     }
+    window.clearTimeout(searchInputTimer);
     state.year = "";
     state.series = "";
     state.query = "";
@@ -168,12 +189,14 @@ async function loadReport(path) {
     return;
   }
   const report = result.value;
+  window.clearTimeout(searchInputTimer);
   state.report = report;
   state.currentPath = path;
   state.query = "";
   state.subject = "";
   state.topic = "";
   state.focusOnly = false;
+  subjectVisibleCounts.clear();
   conferenceSelect.value = path;
   searchInput.value = "";
   subjectFilter.value = "";
@@ -382,6 +405,173 @@ function renderReport() {
   bindQueueButtons(document, likeRecords);
 }
 
+function bindSubjectSectionActions() {
+  const root = document.querySelector("#conference-subject-sections");
+  if (!root || root.dataset.bound === "true") {
+    return;
+  }
+
+  root.dataset.bound = "true";
+  root.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-conference-subject-action]");
+    if (!button) {
+      return;
+    }
+
+    const sectionKey = button.dataset.conferenceSectionKey || "";
+    if (!sectionKey) {
+      return;
+    }
+
+    const section = findVisibleSection(sectionKey);
+    if (!section) {
+      return;
+    }
+
+    if (button.dataset.conferenceSubjectAction === "more") {
+      expandSubjectSection(sectionKey, section.papers.length);
+    } else if (button.dataset.conferenceSubjectAction === "less") {
+      subjectVisibleCounts.set(sectionKey, Math.min(CONFERENCE_SECTION_INITIAL_SIZE, section.papers.length));
+    }
+
+    rerenderSubjectSections();
+  });
+}
+
+function bindTocAutoLoadGuard() {
+  if (!floatingTocRoot || floatingTocRoot.dataset.autoLoadGuardBound === "true") {
+    return;
+  }
+
+  floatingTocRoot.dataset.autoLoadGuardBound = "true";
+  floatingTocRoot.addEventListener("click", (event) => {
+    const link = event.target.closest("[data-toc-target]");
+    if (!link) {
+      return;
+    }
+    suppressConferenceAutoLoad(link.dataset.tocTarget || "");
+  });
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!pendingTocTargetId) {
+        return;
+      }
+      maybeReleaseTocAutoLoadSuppression();
+    },
+    { passive: true }
+  );
+}
+
+function bindUserScrollIntentTracking() {
+  if (document.body.dataset.conferenceScrollIntentBound === "true") {
+    return;
+  }
+
+  document.body.dataset.conferenceScrollIntentBound = "true";
+  const markIntent = () => {
+    userScrollIntentUntil = Date.now() + CONFERENCE_USER_SCROLL_INTENT_MS;
+  };
+
+  window.addEventListener("wheel", markIntent, { passive: true });
+  window.addEventListener("touchmove", markIntent, { passive: true });
+  window.addEventListener("keydown", (event) => {
+    if (["ArrowDown", "ArrowUp", "PageDown", "PageUp", " ", "Home", "End"].includes(event.key)) {
+      markIntent();
+    }
+  });
+}
+
+function initSubjectAutoLoadObserver() {
+  if (subjectAutoLoadObserver || typeof IntersectionObserver !== "function") {
+    return;
+  }
+
+  subjectAutoLoadObserver = new IntersectionObserver(
+    (entries) => {
+      if (isConferenceAutoLoadSuppressed() || !hasRecentUserScrollIntent()) {
+        return;
+      }
+      for (const entry of entries) {
+        if (!entry.isIntersecting) {
+          continue;
+        }
+
+        const sectionKey = entry.target.dataset.conferenceAutoLoad || "";
+        const totalPapers = Number(entry.target.dataset.conferenceTotalPapers || "0");
+        if (!sectionKey || !Number.isFinite(totalPapers) || totalPapers <= 0) {
+          continue;
+        }
+
+        if (!expandSubjectSection(sectionKey, totalPapers)) {
+          continue;
+        }
+
+        rerenderSubjectSections();
+        break;
+      }
+    },
+    {
+      root: null,
+      rootMargin: "280px 0px",
+      threshold: 0.01,
+    }
+  );
+}
+
+function suppressConferenceAutoLoad(targetId = "", duration = CONFERENCE_AUTO_LOAD_SUPPRESS_MS) {
+  pendingTocTargetId = targetId || pendingTocTargetId;
+  autoLoadSuppressedUntil = Date.now() + duration;
+  window.clearTimeout(autoLoadResumeTimer);
+  autoLoadResumeTimer = window.setTimeout(() => {
+    autoLoadResumeTimer = 0;
+    pendingTocTargetId = "";
+    refreshSubjectAutoLoadObserver();
+  }, duration);
+}
+
+function isConferenceAutoLoadSuppressed() {
+  return Boolean(pendingTocTargetId) || Date.now() < autoLoadSuppressedUntil;
+}
+
+function hasRecentUserScrollIntent() {
+  return Date.now() < userScrollIntentUntil;
+}
+
+function maybeReleaseTocAutoLoadSuppression() {
+  if (!pendingTocTargetId) {
+    return;
+  }
+
+  const target = document.getElementById(pendingTocTargetId);
+  if (!target) {
+    pendingTocTargetId = "";
+    refreshSubjectAutoLoadObserver();
+    return;
+  }
+
+  const top = target.getBoundingClientRect().top;
+  if (top <= 120 && top >= -24) {
+    pendingTocTargetId = "";
+    window.clearTimeout(autoLoadResumeTimer);
+    autoLoadResumeTimer = 0;
+    autoLoadSuppressedUntil = 0;
+    refreshSubjectAutoLoadObserver();
+  }
+}
+
+function refreshSubjectAutoLoadObserver() {
+  if (!subjectAutoLoadObserver) {
+    return;
+  }
+
+  subjectAutoLoadObserver.disconnect();
+  document.querySelectorAll("[data-conference-auto-load]").forEach((node) => {
+    subjectAutoLoadObserver.observe(node);
+  });
+}
+
 function renderTagMap(report) {
   const topTopic = report.topic_distribution?.[0]?.topic_label || "Other AI";
   document.querySelector("#conference-tag-map").innerHTML = [
@@ -561,14 +751,20 @@ function renderSubjectSections(report, sections) {
   const root = document.querySelector("#conference-subject-sections");
   if (!sections.length) {
     root.innerHTML = `<div class="glass-card empty-state">No subjects match the current filters.</div>`;
+    refreshSubjectAutoLoadObserver();
     return;
   }
 
   root.innerHTML = sections
     .map((section, index) => {
       const topTopic = computeTopicDistribution(section.papers)[0];
+      const sectionKey = sectionIdFromSubject(section.subject_label);
+      const visibleCount = readVisibleSubjectCount(sectionKey, section.papers.length);
+      const visiblePapers = section.papers.slice(0, visibleCount);
+      const hasMore = visibleCount < section.papers.length;
+      const canCollapse = visibleCount > Math.min(CONFERENCE_SECTION_INITIAL_SIZE, section.papers.length);
       return `
-        <section id="${escapeAttribute(sectionIdFromSubject(section.subject_label))}" class="glass-card conference-subject-card">
+        <section id="${escapeAttribute(sectionKey)}" class="glass-card conference-subject-card">
           <div class="conference-subject-header">
             <div>
               <p class="eyebrow">SUBJECT</p>
@@ -580,12 +776,37 @@ function renderSubjectSections(report, sections) {
             </div>
           </div>
           <div class="conference-paper-grid">
-            ${section.papers.map((paper) => renderPaperCard(paper, "conference-paper-card")).join("")}
+            ${visiblePapers.map((paper) => renderPaperCard(paper, "conference-paper-card")).join("")}
+          </div>
+          <div class="conference-subject-footer">
+            <span class="conference-subject-progress">Showing ${visiblePapers.length} of ${section.papers.length} papers</span>
+            <div class="conference-subject-actions">
+              ${
+                canCollapse
+                  ? `<button class="link-chip button-link" type="button" data-conference-subject-action="less" data-conference-section-key="${escapeAttribute(
+                      sectionKey
+                    )}">Show less</button>`
+                  : ""
+              }
+              ${
+                hasMore
+                  ? `<button
+                      class="link-chip button-link"
+                      type="button"
+                      data-conference-subject-action="more"
+                      data-conference-section-key="${escapeAttribute(sectionKey)}"
+                      data-conference-auto-load="${escapeAttribute(sectionKey)}"
+                      data-conference-total-papers="${section.papers.length}"
+                    >Show more</button>`
+                  : ""
+              }
+            </div>
           </div>
         </section>
       `;
     })
     .join("");
+  refreshSubjectAutoLoadObserver();
 }
 
 function renderPaperCard(paper, className) {
@@ -718,6 +939,46 @@ function groupBySubject(papers) {
   return [...map.entries()]
     .map(([subject_label, subjectPapers]) => ({ subject_label, papers: subjectPapers }))
     .sort((a, b) => b.papers.length - a.papers.length || a.subject_label.localeCompare(b.subject_label));
+}
+
+function readVisibleSubjectCount(sectionKey, totalPapers) {
+  const minimum = Math.min(CONFERENCE_SECTION_INITIAL_SIZE, totalPapers);
+  const current = subjectVisibleCounts.get(sectionKey);
+  if (typeof current === "number" && current > 0) {
+    return Math.min(current, totalPapers);
+  }
+  subjectVisibleCounts.set(sectionKey, minimum);
+  return minimum;
+}
+
+function expandSubjectSection(sectionKey, totalPapers) {
+  const current = readVisibleSubjectCount(sectionKey, totalPapers);
+  const next = Math.min(current + CONFERENCE_SECTION_LOAD_MORE_SIZE, totalPapers);
+  if (next <= current) {
+    return false;
+  }
+  subjectVisibleCounts.set(sectionKey, next);
+  return true;
+}
+
+function getCurrentVisibleSections() {
+  if (!state.report) {
+    return [];
+  }
+  return groupBySubject(getVisiblePapers(state.report));
+}
+
+function findVisibleSection(sectionKey) {
+  return getCurrentVisibleSections().find((entry) => sectionIdFromSubject(entry.subject_label) === sectionKey) || null;
+}
+
+function rerenderSubjectSections() {
+  if (!state.report) {
+    return;
+  }
+  renderSubjectSections(state.report, getCurrentVisibleSections());
+  bindLikeButtons(document, likeRecords);
+  bindQueueButtons(document, likeRecords);
 }
 
 function computeSubjectDistribution(papers) {
