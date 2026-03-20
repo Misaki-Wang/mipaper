@@ -2,9 +2,12 @@ from __future__ import annotations
 
 import json
 import re
+import ssl
+import time
 from html import unescape
 from html.parser import HTMLParser
 from typing import Callable, Dict, List
+from urllib.error import URLError
 from urllib.parse import parse_qs, urlencode, urljoin, urlparse
 from urllib.request import Request, urlopen
 
@@ -23,6 +26,7 @@ VENUE_TOTAL_PATTERN = re.compile(r"Total:\s*([0-9][0-9,]*)")
 MAX_VENUE_FETCH_ATTEMPTS = 6
 ARXIV_ID_PATTERN = re.compile(r"^\d{4}\.\d{4,5}(?:v\d+)?$")
 TRENDING_ARTICLE_PATTERN = re.compile(r'<article[^>]*class="Box-row"[^>]*>(.*?)</article>', re.S)
+DEFAULT_FETCH_RETRIES = 3
 
 
 def arxiv_abs_to_pdf(abs_url: str) -> str:
@@ -59,10 +63,17 @@ def extract_total_papers(html_text: str) -> int | None:
     return int(match.group(1).replace(",", ""))
 
 
-def fetch_feed_html(url: str, timeout: int = 30) -> str:
+def fetch_feed_html(url: str, timeout: int = 30, retries: int = DEFAULT_FETCH_RETRIES) -> str:
     request = Request(url, headers={"User-Agent": USER_AGENT})
-    with urlopen(request, timeout=timeout) as response:
-        return response.read().decode("utf-8")
+    attempts = max(1, retries)
+    for attempt in range(1, attempts + 1):
+        try:
+            with urlopen(request, timeout=timeout) as response:
+                return response.read().decode("utf-8")
+        except (TimeoutError, URLError, ssl.SSLError, OSError):
+            if attempt >= attempts:
+                raise
+            time.sleep(attempt)
 
 
 def fetch_complete_venue_snapshot(

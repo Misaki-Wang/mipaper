@@ -1,14 +1,14 @@
 import { getSourceLabel, initLikesSync, readLikes, subscribeLikes, updateLikedPapers } from "./likes.js?v=3b466b6556";
-import { initQueue, readQueue, removeFromQueue, subscribeQueue, updateQueuedPaper, updateQueuedPapers } from "./paper_queue.js?v=8b696292c3";
+import { initQueue, readQueue, removeFromQueue, subscribeQueue, updateQueuedPaper, updateQueuedPapers } from "./paper_queue.js?v=033bd186d1";
 import { movePaperToLikes, repairLikeLaterConflicts } from "./paper_selection.js?v=964dbe6c53";
-import { bindBranchAuthToolbar } from "./branch_auth.js?v=81b329db27";
-import { mountAppToolbar } from "./app_toolbar.js?v=90ae25c72d";
+import { bindBranchAuthToolbar } from "./branch_auth.js?v=66a12f1edc";
+import { mountAppToolbar } from "./app_toolbar.js?v=a364077e66";
 import { bindBranchNav } from "./branch_nav.js?v=2ab092d7f1";
 import { bindLibraryNav } from "./library_nav.js?v=7b6e095589";
 import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=c2effc3556";
 import { bindFilterMenu } from "./page_shell.js?v=b0d53b671d";
-import { initToolbarPreferences } from "./toolbar_preferences.js?v=27d8e761fb";
-import { createShowMoreAutoLoadController } from "./show_more_autoload.js?v=20260320autoload1";
+import { initToolbarPreferences } from "./toolbar_preferences.js?v=c889d6e375";
+import { createShowMoreAutoLoadController } from "./show_more_autoload.js?v=5f324a6f25";
 import { escapeAttribute, escapeHtml, getErrorMessage } from "./ui_utils.js?v=e2da3b3a11";
 import {
   PRIORITY_OPTIONS,
@@ -31,9 +31,9 @@ import {
   removeCustomTagFromRecord,
   reorderCustomTagsInRecord,
   updateCustomTagDefinitionInRecord,
-} from "./like_page_tags.js?v=2fbc182dfb";
-import { installManualLibraryTestCases } from "./manual_test_cases.js?v=20260320seedfix1";
-import { readWorkspacePanelDefaultMode, subscribeUserSettings } from "./user_settings.js?v=0f028ca95d";
+} from "./like_page_tags.js?v=dce6e52df9";
+import { installManualLibraryTestCases } from "./manual_test_cases.js?v=2bdd5fc135";
+import { readWorkspacePanelDefaultMode, subscribeUserSettings } from "./user_settings.js?v=6c7496f04b";
 
 mountAppToolbar("#queue-toolbar-root", {
   prefix: "queue",

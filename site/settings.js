@@ -9,13 +9,13 @@ import {
   syncLikesNow,
 } from "./likes.js?v=3b466b6556";
 import { initReviewSync, subscribePageReviews, syncPageReviewsNow } from "./reading_state.js?v=3a706b914e";
-import { initQueue, readQueue, subscribeQueue } from "./paper_queue.js?v=8b696292c3";
-import { bindBranchAuthToolbar } from "./branch_auth.js?v=81b329db27";
-import { mountAppToolbar } from "./app_toolbar.js?v=90ae25c72d";
+import { initQueue, readQueue, subscribeQueue } from "./paper_queue.js?v=033bd186d1";
+import { bindBranchAuthToolbar } from "./branch_auth.js?v=66a12f1edc";
+import { mountAppToolbar } from "./app_toolbar.js?v=a364077e66";
 import { bindBranchNav } from "./branch_nav.js?v=2ab092d7f1";
 import { bindLibraryNav } from "./library_nav.js?v=7b6e095589";
 import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=c2effc3556";
-import { initToolbarPreferences } from "./toolbar_preferences.js?v=27d8e761fb";
+import { initToolbarPreferences } from "./toolbar_preferences.js?v=c889d6e375";
 import { bindBackToTop } from "./page_shell.js?v=b0d53b671d";
 import { escapeAttribute, escapeHtml, fetchJson, formatDateTime } from "./ui_utils.js?v=e2da3b3a11";
 import { getToReadSnapshots, loadSnapshotQueueData } from "./like_page_snapshots.js?v=30e01ecd4f";
@@ -32,7 +32,7 @@ import {
   setAccountPanelPreferencePins,
   setToolbarAutoHidePreference,
   subscribeUserSettings,
-} from "./user_settings.js?v=0f028ca95d";
+} from "./user_settings.js?v=6c7496f04b";
 
 mountAppToolbar("#settings-toolbar-root", {
   prefix: "settings",

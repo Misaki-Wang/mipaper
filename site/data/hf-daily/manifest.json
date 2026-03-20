@@ -1,7 +1,7 @@
 {
   "branch_key": "hf-daily",
   "branch_label": "HF Daily",
-  "generated_at": "2026-03-20T15:18:13Z",
+  "generated_at": "2026-03-20T22:45:43Z",
   "reports_count": 15,
   "default_report_path": "data/hf-daily/reports/2026-03-20/hf-daily-2026-03-20.json",
   "reports": [
@@ -11,55 +11,55 @@
       "data_path": "data/hf-daily/reports/2026-03-20/hf-daily-2026-03-20.json",
       "slug": "hf-daily-2026-03-20",
       "report_date": "2026-03-20",
-      "total_papers": 30,
+      "total_papers": 32,
       "classifier": "codex",
-      "generated_at": "2026-03-20T15:18:12Z",
+      "generated_at": "2026-03-20T22:45:42Z",
       "source_url": "https://huggingface.co/papers/date/2026-03-20",
       "focus_topics": [
         {
           "topic_key": "generative_foundations",
           "topic_label": "Generative Foundations",
-          "count": 2,
-          "share": 6.67
+          "count": 3,
+          "share": 9.38
         },
         {
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
-          "count": 6,
-          "share": 20.0
+          "count": 7,
+          "share": 21.88
         },
         {
           "topic_key": "multimodal_agents",
           "topic_label": "Multimodal Agents",
           "count": 1,
-          "share": 3.33
+          "share": 3.12
         }
       ],
       "top_topics": [
         {
-          "topic_label": "Multimodal Understanding and Vision",
+          "topic_label": "Multimodal Generative Modeling",
           "count": 7,
-          "share": 23.33
+          "share": 21.88
         },
         {
-          "topic_label": "Multimodal Generative Modeling",
-          "count": 6,
-          "share": 20.0
+          "topic_label": "Multimodal Understanding and Vision",
+          "count": 5,
+          "share": 15.62
         },
         {
           "topic_label": "Datasets and Benchmarks",
           "count": 4,
-          "share": 13.33
+          "share": 12.5
+        },
+        {
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "count": 4,
+          "share": 12.5
         },
         {
           "topic_label": "Agents and Planning",
           "count": 3,
-          "share": 10.0
-        },
-        {
-          "topic_label": "Reasoning, Alignment, and Evaluation",
-          "count": 3,
-          "share": 10.0
+          "share": 9.38
         }
       ],
       "top_submitters": [

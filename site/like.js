@@ -10,16 +10,16 @@ import {
 } from "./likes.js?v=3b466b6556";
 import { getSupabaseClient, isSupabaseConfigured, loadRuntimeConfig } from "./supabase.js?v=606e1fd811";
 import { initReviewSync, setPageReviewed, subscribePageReviews } from "./reading_state.js?v=3a706b914e";
-import { bindQueueButtons, initQueue, isInQueue, readQueue, subscribeQueue } from "./paper_queue.js?v=8b696292c3";
-import { bindBranchAuthToolbar } from "./branch_auth.js?v=81b329db27";
-import { mountAppToolbar } from "./app_toolbar.js?v=90ae25c72d";
+import { bindQueueButtons, initQueue, isInQueue, readQueue, subscribeQueue } from "./paper_queue.js?v=033bd186d1";
+import { bindBranchAuthToolbar } from "./branch_auth.js?v=66a12f1edc";
+import { mountAppToolbar } from "./app_toolbar.js?v=a364077e66";
 import { repairLikeLaterConflicts } from "./paper_selection.js?v=964dbe6c53";
 import { bindBranchNav } from "./branch_nav.js?v=2ab092d7f1";
 import { bindLibraryNav } from "./library_nav.js?v=7b6e095589";
 import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=c2effc3556";
-import { initToolbarPreferences, setPageViewMode } from "./toolbar_preferences.js?v=27d8e761fb";
+import { initToolbarPreferences, setPageViewMode } from "./toolbar_preferences.js?v=c889d6e375";
 import { bindBackToTop, bindFilterMenu } from "./page_shell.js?v=b0d53b671d";
-import { createShowMoreAutoLoadController } from "./show_more_autoload.js?v=20260320autoload1";
+import { createShowMoreAutoLoadController } from "./show_more_autoload.js?v=5f324a6f25";
 import { escapeAttribute, escapeHtml, fetchJson, formatDateTime, getErrorMessage } from "./ui_utils.js?v=e2da3b3a11";
 import {
   LIKE_TIME_FORMAT,
@@ -46,7 +46,7 @@ import {
   removeCustomTagFromRecord,
   reorderCustomTagsInRecord,
   updateCustomTagDefinitionInRecord,
-} from "./like_page_tags.js?v=8ad782742a";
+} from "./like_page_tags.js?v=dce6e52df9";
 import { formatWeekLabel, getSnapshotSourceKind, getToReadSnapshots, loadSnapshotQueueData } from "./like_page_snapshots.js?v=30e01ecd4f";
 import {
   initSavedViewsSync,
@@ -55,8 +55,8 @@ import {
   subscribeSavedViews,
   upsertSavedView,
 } from "./like_saved_views_store.js?v=fbaaa1606a";
-import { installManualLibraryTestCases } from "./manual_test_cases.js?v=20260320seedfix1";
-import { readWorkspacePanelDefaultMode, subscribeUserSettings } from "./user_settings.js?v=0f028ca95d";
+import { installManualLibraryTestCases } from "./manual_test_cases.js?v=2bdd5fc135";
+import { readWorkspacePanelDefaultMode, subscribeUserSettings } from "./user_settings.js?v=6c7496f04b";
 
 mountAppToolbar("#like-toolbar-root", {
   prefix: "like",

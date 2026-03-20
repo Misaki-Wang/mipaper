@@ -7,6 +7,7 @@ import os
 import shutil
 import subprocess
 import sys
+import time
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -83,6 +84,13 @@ def ensure_llm_available(binary_name: str) -> None:
     raise RuntimeError(f"Scheduled classification requested, but `{binary_name}` is not available in PATH.")
 
 
+def env_flag(name: str, default: bool) -> bool:
+    raw_value = os.environ.get(name)
+    if raw_value is None:
+        return default
+    return raw_value.strip().lower() not in {"0", "false", "no", "off"}
+
+
 def build_classifier_args(prefix: str) -> list[str]:
     classifier = os.environ.get(f"{prefix}_CLASSIFIER", "codex")
     args = ["--classifier", classifier]
@@ -107,6 +115,12 @@ def build_classifier_args(prefix: str) -> list[str]:
         args.extend(["--claude-model", claude_model])
     if classifier == "codex" and fallback:
         args.extend(["--llm-fallback", fallback])
+    allow_rule_fallback = env_flag(
+        f"{prefix}_ALLOW_RULE_FALLBACK",
+        env_flag("COOL_PAPER_ALLOW_RULE_FALLBACK", True),
+    )
+    if allow_rule_fallback:
+        args.append("--allow-rule-fallback")
     return args
 
 
@@ -249,6 +263,22 @@ def build_site_data() -> None:
     run_command(["python3", "scripts/build_site_data.py"])
 
 
+def run_command_with_retries(command: list[str], retries: int = 3) -> None:
+    attempts = max(1, retries)
+    for attempt in range(1, attempts + 1):
+        try:
+            run_command(command)
+            return
+        except subprocess.CalledProcessError as exc:
+            if attempt >= attempts:
+                raise
+            print(
+                f"Retrying after exit code {exc.returncode} "
+                f"({attempt}/{attempts - 1}): {' '.join(command)}"
+            )
+            time.sleep(attempt * 5)
+
+
 def commit_and_push(job: str, date_window: list[str], remote: str, branch: str) -> None:
     resolved_branch = branch or subprocess.check_output(
         ["git", "rev-parse", "--abbrev-ref", "HEAD"],
@@ -268,7 +298,7 @@ def commit_and_push(job: str, date_window: list[str], remote: str, branch: str) 
 
     message = f"chore(auto): update {job} {summarize_date_window(date_window)}"
     run_command(["git", "commit", "-m", message])
-    run_command(["git", "push", remote, resolved_branch])
+    run_command_with_retries(["git", "push", remote, resolved_branch], retries=3)
 
 
 def main() -> int:

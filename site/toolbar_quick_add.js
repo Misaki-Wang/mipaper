@@ -1,4 +1,4 @@
-import { addToQueue, readQueue } from "./paper_queue.js?v=8b696292c3";
+import { addToQueue, readQueue } from "./paper_queue.js?v=033bd186d1";
 import { initDirectAddSync, upsertDirectAdd } from "./direct_add_store.js?v=f47049a9ef";
 
 const ARXIV_ID_PATTERN = /^\d{4}\.\d{4,5}(?:v\d+)?$/i;

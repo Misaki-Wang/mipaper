@@ -1,14 +1,14 @@
 import { getSourceLabel, initLikesSync, isLiked, readLikes, subscribeLikes, toggleLike } from "./likes.js?v=3b466b6556";
 import { bindLikeButtons } from "./likes.js?v=3b466b6556";
-import { bindQueueButtons, initQueue, isInQueue, readQueue, removeFromQueue, subscribeQueue } from "./paper_queue.js?v=8b696292c3";
-import { bindBranchAuthToolbar } from "./branch_auth.js?v=81b329db27";
-import { mountAppToolbar } from "./app_toolbar.js?v=90ae25c72d";
+import { bindQueueButtons, initQueue, isInQueue, readQueue, removeFromQueue, subscribeQueue } from "./paper_queue.js?v=033bd186d1";
+import { bindBranchAuthToolbar } from "./branch_auth.js?v=66a12f1edc";
+import { mountAppToolbar } from "./app_toolbar.js?v=a364077e66";
 import { bindBranchNav } from "./branch_nav.js?v=2ab092d7f1";
 import { bindLibraryNav } from "./library_nav.js?v=7b6e095589";
 import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=c2effc3556";
 import { bindFilterMenu } from "./page_shell.js?v=b0d53b671d";
 import { repairLikeLaterConflicts } from "./paper_selection.js?v=964dbe6c53";
-import { initToolbarPreferences } from "./toolbar_preferences.js?v=27d8e761fb";
+import { initToolbarPreferences } from "./toolbar_preferences.js?v=c889d6e375";
 import { escapeAttribute, escapeHtml, getErrorMessage } from "./ui_utils.js?v=e2da3b3a11";
 import {
   hasDirectAddsMigrationRun,

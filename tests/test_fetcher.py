@@ -1,4 +1,6 @@
 import unittest
+from unittest import mock
+from urllib.error import URLError
 
 from mipaper.fetcher import (
     build_github_trending_url,
@@ -6,6 +8,7 @@ from mipaper.fetcher import (
     build_venue_url,
     extract_total_papers,
     fetch_complete_venue_snapshot,
+    fetch_feed_html,
     parse_feed_html,
     parse_github_trending_html,
     parse_hf_daily_html,
@@ -175,6 +178,22 @@ class ParseFeedHTMLTest(unittest.TestCase):
 
     def test_build_hf_daily_url(self) -> None:
         self.assertEqual("https://huggingface.co/papers/date/2026-03-09", build_hf_daily_url("2026-03-09"))
+
+    @mock.patch("mipaper.fetcher.time.sleep")
+    @mock.patch("mipaper.fetcher.urlopen")
+    def test_fetch_feed_html_retries_transient_errors(self, mocked_urlopen: mock.Mock, mocked_sleep: mock.Mock) -> None:
+        response = mock.MagicMock()
+        response.read.return_value = b"<html>ok</html>"
+        context = mock.MagicMock()
+        context.__enter__.return_value = response
+        context.__exit__.return_value = None
+        mocked_urlopen.side_effect = [URLError("temporary"), context]
+
+        html = fetch_feed_html("https://example.com/feed", timeout=5, retries=2)
+
+        self.assertEqual("<html>ok</html>", html)
+        self.assertEqual(2, mocked_urlopen.call_count)
+        mocked_sleep.assert_called_once_with(1)
 
     def test_build_github_trending_url(self) -> None:
         self.assertEqual(

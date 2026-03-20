@@ -37,6 +37,11 @@ class ClaudeClassificationError(RuntimeError):
     pass
 
 
+def fallback_to_rule_classification(papers: Sequence[T], provider: str, detail: str) -> List[T]:
+    print(f"{provider} classification failed, falling back to rule-based topics: {detail}")
+    return assign_topics(list(papers))
+
+
 def resolve_batch_size(env_var: str, default: int) -> int:
     raw_value = os.environ.get(env_var, "").strip()
     if not raw_value:
@@ -124,6 +129,8 @@ def classify_with_codex(
                 claude_model=claude_model,
             )
             return list(papers)
+        if fallback_to_rules:
+            return fallback_to_rule_classification(papers, "Codex", detail)
         raise
     try:
         payload = json.loads(raw_response)
@@ -210,6 +217,8 @@ def classify_with_claude(
                 fallback_to_rules=fallback_to_rules,
             )
             return list(papers)
+        if fallback_to_rules:
+            return fallback_to_rule_classification(papers, "Claude", detail)
         raise
     assignments = validate_assignments(payload, papers)
     papers_by_id = {paper.paper_id: paper for paper in papers}

@@ -1,6 +1,6 @@
 import { getAuthSnapshot, initLikesSync, signIn, signOut, subscribeAuth, syncLikesNow } from "./likes.js?v=3b466b6556";
 import { openExclusiveDropdown, registerExclusiveDropdown } from "./nav_dropdowns.js?v=cd4da78ec3";
-import { readToolbarAutoHidePreference, setToolbarAutoHidePreference, subscribeUserSettings } from "./user_settings.js?v=0f028ca95d";
+import { readToolbarAutoHidePreference, setToolbarAutoHidePreference, subscribeUserSettings } from "./user_settings.js?v=6c7496f04b";
 import { escapeAttribute, escapeHtml, formatDateTime } from "./ui_utils.js?v=e2da3b3a11";
 const AUTH_TIME_FORMAT = {
   locale: "en-US",

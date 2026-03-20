@@ -1,4 +1,4 @@
-import { collectCustomTagCatalog } from "./like_page_tags.js?v=8ad782742a";
+import { collectCustomTagCatalog } from "./like_page_tags.js?v=dce6e52df9";
 import {
   PRIORITY_OPTIONS,
   WORKFLOW_STATUS_OPTIONS,

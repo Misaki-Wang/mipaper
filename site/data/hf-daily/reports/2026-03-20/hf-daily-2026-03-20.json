@@ -1,80 +1,85 @@
 {
-  "generated_at": "2026-03-20T15:18:12Z",
+  "generated_at": "2026-03-20T22:45:42Z",
   "report_kind": "hf_daily",
   "report_date": "2026-03-20",
   "source_url": "https://huggingface.co/papers/date/2026-03-20",
   "classifier": "codex",
-  "total_papers": 30,
+  "total_papers": 32,
   "focus_topics": [
     {
       "topic_key": "generative_foundations",
       "topic_label": "Generative Foundations",
-      "count": 2,
-      "share": 6.67
+      "count": 3,
+      "share": 9.38
     },
     {
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
-      "count": 6,
-      "share": 20.0
+      "count": 7,
+      "share": 21.88
     },
     {
       "topic_key": "multimodal_agents",
       "topic_label": "Multimodal Agents",
       "count": 1,
-      "share": 3.33
+      "share": 3.12
     }
   ],
   "topic_distribution": [
     {
-      "topic_label": "Multimodal Understanding and Vision",
+      "topic_label": "Multimodal Generative Modeling",
       "count": 7,
-      "share": 23.33
+      "share": 21.88
     },
     {
-      "topic_label": "Multimodal Generative Modeling",
-      "count": 6,
-      "share": 20.0
+      "topic_label": "Multimodal Understanding and Vision",
+      "count": 5,
+      "share": 15.62
     },
     {
       "topic_label": "Datasets and Benchmarks",
       "count": 4,
-      "share": 13.33
+      "share": 12.5
+    },
+    {
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "count": 4,
+      "share": 12.5
     },
     {
       "topic_label": "Agents and Planning",
       "count": 3,
-      "share": 10.0
-    },
-    {
-      "topic_label": "Reasoning, Alignment, and Evaluation",
-      "count": 3,
-      "share": 10.0
+      "share": 9.38
     },
     {
       "topic_label": "Generative Foundations",
-      "count": 2,
-      "share": 6.67
+      "count": 3,
+      "share": 9.38
     },
     {
       "topic_label": "LLMs and Language",
       "count": 2,
-      "share": 6.67
+      "share": 6.25
     },
     {
       "topic_label": "Domain Applications",
       "count": 1,
-      "share": 3.33
+      "share": 3.12
     },
     {
       "topic_label": "Learning, Optimization, and Theory",
       "count": 1,
-      "share": 3.33
+      "share": 3.12
     },
     {
       "topic_label": "Multimodal Agents",
       "count": 1,
-      "share": 3.33
+      "share": 3.12
+    },
+    {
+      "topic_label": "Robotics and Embodied AI",
+      "count": 1,
+      "share": 3.12
     }
   ],
   "top_submitters": [
@@ -126,13 +131,13 @@
       "github_url": "",
       "submitted_by": "Dingkang Liang",
       "submitted_at": "2026-03-20T00:47:57.997Z",
-      "upvotes": 60,
-      "comments": 2,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
+      "upvotes": 62,
+      "comments": 3,
+      "topic_key": "generative_foundations",
+      "topic_label": "Generative Foundations",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.82
+      "classification_confidence": 0.61
     },
     {
       "report_date": "2026-03-20",
@@ -161,8 +166,8 @@
       "github_url": "",
       "submitted_by": "Yuxin Song",
       "submitted_at": "2026-03-20T01:01:32.962Z",
-      "upvotes": 55,
-      "comments": 1,
+      "upvotes": 56,
+      "comments": 2,
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
@@ -191,13 +196,13 @@
       "github_url": "",
       "submitted_by": "Yuxiang Lu",
       "submitted_at": "2026-03-20T01:09:18.396Z",
-      "upvotes": 39,
-      "comments": 1,
+      "upvotes": 41,
+      "comments": 2,
       "topic_key": "multimodal_agents",
       "topic_label": "Multimodal Agents",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.98
+      "classification_confidence": 0.97
     },
     {
       "report_date": "2026-03-20",
@@ -218,13 +223,13 @@
       "github_url": "",
       "submitted_by": "Lani Ko",
       "submitted_at": "2026-03-20T04:46:51.588Z",
-      "upvotes": 37,
-      "comments": 1,
+      "upvotes": 39,
+      "comments": 2,
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.99
+      "classification_confidence": 0.98
     },
     {
       "report_date": "2026-03-20",
@@ -246,13 +251,13 @@
       "github_url": "",
       "submitted_by": "Haozhe Xie",
       "submitted_at": "2026-03-20T03:38:04.272Z",
-      "upvotes": 32,
-      "comments": 1,
-      "topic_key": "multimodal_generative",
-      "topic_label": "Multimodal Generative Modeling",
+      "upvotes": 34,
+      "comments": 2,
+      "topic_key": "robotics_embodied",
+      "topic_label": "Robotics and Embodied AI",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.71
+      "classification_confidence": 0.62
     },
     {
       "report_date": "2026-03-20",
@@ -275,12 +280,51 @@
       "submitted_by": "Haozhe Xie",
       "submitted_at": "2026-03-20T04:49:45.233Z",
       "upvotes": 28,
-      "comments": 1,
+      "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.96
+      "classification_confidence": 0.93
+    },
+    {
+      "report_date": "2026-03-20",
+      "paper_id": "2603.19220",
+      "title": "Nemotron-Cascade 2: Post-Training LLMs with Cascade RL and Multi-Domain On-Policy Distillation",
+      "authors": [
+        "Zhuolin Yang",
+        "Zihan Liu",
+        "Yang Chen",
+        "Wenliang Dai",
+        "Boxin Wang",
+        "Sheng-Chieh Lin",
+        "Chankyu Lee",
+        "Yangyi Chen",
+        "Dongfu Jiang",
+        "Jiafan He",
+        "Renjie Pi",
+        "Grace Lam",
+        "Nayeon Lee",
+        "Alexander Bukharin",
+        "Mohammad Shoeybi",
+        "Bryan Catanzaro",
+        "Wei Ping"
+      ],
+      "abstract": "We introduce Nemotron-Cascade 2, an open 30B MoE model with 3B activated parameters that delivers best-in-class reasoning and strong agentic capabilities. Despite its compact size, its mathematical and coding reasoning performance approaches that of frontier open models. It is the second open-weight LLM, after DeepSeekV3.2-Speciale-671B-A37B, to achieve Gold Medal-level performance in the 2025 International Mathematical Olympiad (IMO), the International Olympiad in Informatics (IOI), and the ICPC World Finals, demonstrating remarkably high intelligence density with 20x fewer parameters. In contrast to Nemotron-Cascade 1, the key technical advancements are as follows. After SFT on a meticulously curated dataset, we substantially expand Cascade RL to cover a much broader spectrum of reasoning and agentic domains. Furthermore, we introduce multi-domain on-policy distillation from the strongest intermediate teacher models for each domain throughout the Cascade RL process, allowing us to efficiently recover benchmark regressions and sustain strong performance gains along the way. We release the collection of model checkpoint and training data.",
+      "hf_url": "https://huggingface.co/papers/2603.19220",
+      "arxiv_url": "https://arxiv.org/abs/2603.19220",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19220",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.19220",
+      "github_url": "",
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-03-20T00:47:05.026Z",
+      "upvotes": 27,
+      "comments": 1,
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.94
     },
     {
       "report_date": "2026-03-20",
@@ -313,268 +357,13 @@
       "matched_terms": [],
       "classification_source": "codex",
       "classification_confidence": 0.98
-    },
-    {
-      "report_date": "2026-03-20",
-      "paper_id": "2603.19217",
-      "title": "LVOmniBench: Pioneering Long Audio-Video Understanding Evaluation for Omnimodal LLMs",
-      "authors": [
-        "Keda Tao",
-        "Yuhua Zheng",
-        "Jia Xu",
-        "Wenjie Du",
-        "Kele Shao",
-        "Hesong Wang",
-        "Xueyi Chen",
-        "Xin Jin",
-        "Junhan Zhu",
-        "Bohan Yu",
-        "Weiqiang Wang",
-        "Jian Liu",
-        "Can Qin",
-        "Yulun Zhang",
-        "Ming-Hsuan Yang",
-        "Huan Wang"
-      ],
-      "abstract": "Recent advancements in omnimodal large language models (OmniLLMs) have significantly improved the comprehension of audio and video inputs. However, current evaluations primarily focus on short audio and video clips ranging from 10 seconds to 5 minutes, failing to reflect the demands of real-world applications, where videos typically run for tens of minutes. To address this critical gap, we introduce LVOmniBench, a new benchmark designed specifically for the cross-modal comprehension of long-form audio and video. This dataset comprises high-quality videos sourced from open platforms that feature rich audio-visual dynamics. Through rigorous manual selection and annotation, LVOmniBench comprises 275 videos, ranging in duration from 10 to 90 minutes, and 1,014 question-answer (QA) pairs. LVOmniBench aims to rigorously evaluate the capabilities of OmniLLMs across domains, including long-term memory, temporal localization, fine-grained understanding, and multimodal perception. Our extensive evaluation reveals that current OmniLLMs encounter significant challenges when processing extended audio-visual inputs. Open-source models generally achieve accuracies below 35%, whereas the Gemini 3 Pro reaches a peak accuracy of approximately 65%. We anticipate that this dataset, along with our empirical findings, will stimulate further research and the development of advanced models capable of resolving complex cross-modal understanding problems within long-form audio-visual contexts.",
-      "hf_url": "https://huggingface.co/papers/2603.19217",
-      "arxiv_url": "https://arxiv.org/abs/2603.19217",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19217",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.19217",
-      "github_url": "",
-      "submitted_by": "Keda TAO",
-      "submitted_at": "2026-03-20T01:18:51.634Z",
-      "upvotes": 25,
-      "comments": 1,
-      "topic_key": "datasets_benchmarks",
-      "topic_label": "Datasets and Benchmarks",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.98
     }
   ],
   "topics": [
     {
-      "topic_label": "Multimodal Understanding and Vision",
-      "count": 7,
-      "share": 23.33,
-      "papers": [
-        {
-          "report_date": "2026-03-20",
-          "paper_id": "2603.19235",
-          "title": "Generation Models Know Space: Unleashing Implicit 3D Priors for Scene Understanding",
-          "authors": [
-            "Xianjin Wu",
-            "Dingkang Liang",
-            "Tianrui Feng",
-            "Kui Xia",
-            "Yumeng Zhang",
-            "Xiaofan Li",
-            "Xiao Tan",
-            "Xiang Bai"
-          ],
-          "abstract": "While Multimodal Large Language Models demonstrate impressive semantic capabilities, they often suffer from spatial blindness, struggling with fine-grained geometric reasoning and physical dynamics. Existing solutions typically rely on explicit 3D modalities or complex geometric scaffolding, which are limited by data scarcity and generalization challenges. In this work, we propose a paradigm shift by leveraging the implicit spatial prior within large-scale video generation models. We posit that to synthesize temporally coherent videos, these models inherently learn robust 3D structural priors and physical laws. We introduce VEGA-3D (Video Extracted Generative Awareness), a plug-and-play framework that repurposes a pre-trained video diffusion model as a Latent World Simulator. By extracting spatiotemporal features from intermediate noise levels and integrating them with semantic representations via a token-level adaptive gated fusion mechanism, we enrich MLLMs with dense geometric cues without explicit 3D supervision. Extensive experiments across 3D scene understanding, spatial reasoning, and embodied manipulation benchmarks demonstrate that our method outperforms state-of-the-art baselines, validating that generative priors provide a scalable foundation for physical-world understanding. Code is publicly available at https://github.com/H-EmbodVis/VEGA-3D.",
-          "hf_url": "https://huggingface.co/papers/2603.19235",
-          "arxiv_url": "https://arxiv.org/abs/2603.19235",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19235",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.19235",
-          "github_url": "",
-          "submitted_by": "Dingkang Liang",
-          "submitted_at": "2026-03-20T00:47:57.997Z",
-          "upvotes": 60,
-          "comments": 2,
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.82
-        },
-        {
-          "report_date": "2026-03-20",
-          "paper_id": "2603.19231",
-          "title": "MonoArt: Progressive Structural Reasoning for Monocular Articulated 3D Reconstruction",
-          "authors": [
-            "Haitian Li",
-            "Haozhe Xie",
-            "Junxiang Xu",
-            "Beichen Wen",
-            "Fangzhou Hong",
-            "Ziwei Liu"
-          ],
-          "abstract": "Reconstructing articulated 3D objects from a single image requires jointly inferring object geometry, part structure, and motion parameters from limited visual evidence. A key difficulty lies in the entanglement between motion cues and object structure, which makes direct articulation regression unstable. Existing methods address this challenge through multi-view supervision, retrieval-based assembly, or auxiliary video generation, often sacrificing scalability or efficiency. We present MonoArt, a unified framework grounded in progressive structural reasoning. Rather than predicting articulation directly from image features, MonoArt progressively transforms visual observations into canonical geometry, structured part representations, and motion-aware embeddings within a single architecture. This structured reasoning process enables stable and interpretable articulation inference without external motion templates or multi-stage pipelines. Extensive experiments on PartNet-Mobility demonstrate that OM achieves state-of-the-art performance in both reconstruction accuracy and inference speed. The framework further generalizes to robotic manipulation and articulated scene reconstruction.",
-          "hf_url": "https://huggingface.co/papers/2603.19231",
-          "arxiv_url": "https://arxiv.org/abs/2603.19231",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19231",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.19231",
-          "github_url": "",
-          "submitted_by": "Haozhe Xie",
-          "submitted_at": "2026-03-20T04:49:45.233Z",
-          "upvotes": 28,
-          "comments": 1,
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.96
-        },
-        {
-          "report_date": "2026-03-20",
-          "paper_id": "2603.18472",
-          "title": "Cognitive Mismatch in Multimodal Large Language Models for Discrete Symbol Understanding",
-          "authors": [
-            "Yinghui Li",
-            "Jiayi Kuang",
-            "Peng Xing",
-            "Daixian Liu",
-            "Junnan Dong",
-            "Shu-Yu Guo",
-            "Yangning Li",
-            "Qingyu Zhou",
-            "Wenhao Jiang",
-            "Hai-Tao Zheng",
-            "Ying Shen",
-            "Liang Lin",
-            "Philip S. Yu"
-          ],
-          "abstract": "While Multimodal Large Language Models (MLLMs) have achieved remarkable success in interpreting natural scenes, their ability to process discrete symbols -- the fundamental building blocks of human cognition -- remains a critical open question. Unlike continuous visual data, symbols such as mathematical formulas, chemical structures, and linguistic characters require precise, deeper interpretation. This paper introduces a comprehensive benchmark to evaluate how top-tier MLLMs navigate these \"discrete semantic spaces\" across five domains: language, culture, mathematics, physics, and chemistry. Our investigation uncovers a counterintuitive phenomenon: models often fail at basic symbol recognition yet succeed in complex reasoning tasks, suggesting they rely on linguistic probability rather than true visual perception. By exposing this \"cognitive mismatch\", we highlight a significant gap in current AI capabilities: the struggle to truly perceive and understand the symbolic languages that underpin scientific discovery and abstract thought. This work offers a roadmap for developing more rigorous, human-aligned intelligent systems.",
-          "hf_url": "https://huggingface.co/papers/2603.18472",
-          "arxiv_url": "https://arxiv.org/abs/2603.18472",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.18472",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.18472",
-          "github_url": "",
-          "submitted_by": "Yangning Li",
-          "submitted_at": "2026-03-20T03:52:09.456Z",
-          "upvotes": 16,
-          "comments": 1,
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.84
-        },
-        {
-          "report_date": "2026-03-20",
-          "paper_id": "2603.16924",
-          "title": "SimulU: Training-free Policy for Long-form Simultaneous Speech-to-Speech Translation",
-          "authors": [
-            "Amirbek Djanibekov",
-            "Luisa Bentivogli",
-            "Matteo Negri",
-            "Sara Papi"
-          ],
-          "abstract": "Simultaneous speech-to-speech translation (SimulS2S) is essential for real-time multilingual communication, with increasing integration into meeting and streaming platforms. Despite this, SimulS2S remains underexplored in research, where current solutions often rely on resource-intensive training procedures and operate on short-form, pre-segmented utterances, failing to generalize to continuous speech. To bridge this gap, we propose SimulU, the first training-free policy for long-form SimulS2S. SimulU adopts history management and speech output selection strategies that exploit cross-attention in pre-trained end-to-end models to regulate both input history and output generation. Evaluations on MuST-C across 8 languages show that SimulU achieves a better or comparable quality-latency trade-off against strong cascaded models. By eliminating the need for ad-hoc training, SimulU offers a promising path to end-to-end SimulS2S in realistic, long-form scenarios.",
-          "hf_url": "https://huggingface.co/papers/2603.16924",
-          "arxiv_url": "https://arxiv.org/abs/2603.16924",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.16924",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.16924",
-          "github_url": "",
-          "submitted_by": "Sara Papi",
-          "submitted_at": "2026-03-20T11:31:55.836Z",
-          "upvotes": 13,
-          "comments": 1,
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.84
-        },
-        {
-          "report_date": "2026-03-20",
-          "paper_id": "2603.18002",
-          "title": "Loc3R-VLM: Language-based Localization and 3D Reasoning with Vision-Language Models",
-          "authors": [
-            "Kevin Qu",
-            "Haozhe Qi",
-            "Mihai Dusmanu",
-            "Mahdi Rad",
-            "Rui Wang",
-            "Marc Pollefeys"
-          ],
-          "abstract": "Multimodal Large Language Models (MLLMs) have made impressive progress in connecting vision and language, but they still struggle with spatial understanding and viewpoint-aware reasoning. Recent efforts aim to augment the input representations with geometric cues rather than explicitly teaching models to reason in 3D space. We introduce Loc3R-VLM, a framework that equips 2D Vision-Language Models with advanced 3D understanding capabilities from monocular video input. Inspired by human spatial cognition, Loc3R-VLM relies on two joint objectives: global layout reconstruction to build a holistic representation of the scene structure, and explicit situation modeling to anchor egocentric perspective. These objectives provide direct spatial supervision that grounds both perception and language in a 3D context. To ensure geometric consistency and metric-scale alignment, we leverage lightweight camera pose priors extracted from a pre-trained 3D foundation model. Loc3R-VLM achieves state-of-the-art performance in language-based localization and outperforms existing 2D- and video-based approaches on situated and general 3D question-answering benchmarks, demonstrating that our spatial supervision framework enables strong 3D understanding. Project page: https://kevinqu7.github.io/loc3r-vlm",
-          "hf_url": "https://huggingface.co/papers/2603.18002",
-          "arxiv_url": "https://arxiv.org/abs/2603.18002",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.18002",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.18002",
-          "github_url": "",
-          "submitted_by": "Kevin Qu",
-          "submitted_at": "2026-03-20T03:33:48.979Z",
-          "upvotes": 3,
-          "comments": 1,
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.92
-        },
-        {
-          "report_date": "2026-03-20",
-          "paper_id": "2603.19234",
-          "title": "Matryoshka Gaussian Splatting",
-          "authors": [
-            "Zhilin Guo",
-            "Boqiao Zhang",
-            "Hakan Aktas",
-            "Kyle Fogarty",
-            "Jeffrey Hu",
-            "Nursena Koprucu Aslan",
-            "Wenzhao Li",
-            "Canberk Baykal",
-            "Albert Miao",
-            "Josef Bengtson",
-            "Chenliang Zhou",
-            "Weihao Xia",
-            "Cristina Nader Vasconcelos. Cengiz Oztireli"
-          ],
-          "abstract": "The ability to render scenes at adjustable fidelity from a single model, known as level of detail (LoD), is crucial for practical deployment of 3D Gaussian Splatting (3DGS). Existing discrete LoD methods expose only a limited set of operating points, while concurrent continuous LoD approaches enable smoother scaling but often suffer noticeable quality degradation at full capacity, making LoD a costly design decision. We introduce Matryoshka Gaussian Splatting (MGS), a training framework that enables continuous LoD for standard 3DGS pipelines without sacrificing full-capacity rendering quality. MGS learns a single ordered set of Gaussians such that rendering any prefix, the first k splats, produces a coherent reconstruction whose fidelity improves smoothly with increasing budget. Our key idea is stochastic budget training: each iteration samples a random splat budget and optimises both the corresponding prefix and the full set. This strategy requires only two forward passes and introduces no architectural modifications. Experiments across four benchmarks and six baselines show that MGS matches the full-capacity performance of its backbone while enabling a continuous speed-quality trade-off from a single model. Extensive ablations on ordering strategies, training objectives, and model capacity further validate the designs.",
-          "hf_url": "https://huggingface.co/papers/2603.19234",
-          "arxiv_url": "https://arxiv.org/abs/2603.19234",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19234",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.19234",
-          "github_url": "",
-          "submitted_by": "taesiri",
-          "submitted_at": "2026-03-20T00:49:13.729Z",
-          "upvotes": 1,
-          "comments": 0,
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.58
-        },
-        {
-          "report_date": "2026-03-20",
-          "paper_id": "2603.17554",
-          "title": "Prompt-Free Universal Region Proposal Network",
-          "authors": [
-            "Qihong Tang",
-            "Changhan Liu",
-            "Shaofeng Zhang",
-            "Wenbin Li",
-            "Qi Fan",
-            "Yang Gao"
-          ],
-          "abstract": "Identifying potential objects is critical for object recognition and analysis across various computer vision applications. Existing methods typically localize potential objects by relying on exemplar images, predefined categories, or textual descriptions. However, their reliance on image and text prompts often limits flexibility, restricting adaptability in real-world scenarios. In this paper, we introduce a novel Prompt-Free Universal Region Proposal Network (PF-RPN), which identifies potential objects without relying on external prompts. First, the Sparse Image-Aware Adapter (SIA) module performs initial localization of potential objects using a learnable query embedding dynamically updated with visual features. Next, the Cascade Self-Prompt (CSP) module identifies the remaining potential objects by leveraging the self-prompted learnable embedding, autonomously aggregating informative visual features in a cascading manner. Finally, the Centerness-Guided Query Selection (CG-QS) module facilitates the selection of high-quality query embeddings using a centerness scoring network. Our method can be optimized with limited data (e.g., 5% of MS COCO data) and applied directly to various object detection application domains for identifying potential objects without fine-tuning, such as underwater object detection, industrial defect detection, and remote sensing image object detection. Experimental results across 19 datasets validate the effectiveness of our method. Code is available at https://github.com/tangqh03/PF-RPN.",
-          "hf_url": "https://huggingface.co/papers/2603.17554",
-          "arxiv_url": "https://arxiv.org/abs/2603.17554",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.17554",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.17554",
-          "github_url": "",
-          "submitted_by": "Qihong Tang",
-          "submitted_at": "2026-03-20T06:04:38.872Z",
-          "upvotes": 1,
-          "comments": 1,
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.77
-        }
-      ]
-    },
-    {
       "topic_label": "Multimodal Generative Modeling",
-      "count": 6,
-      "share": 20.0,
+      "count": 7,
+      "share": 21.88,
       "papers": [
         {
           "report_date": "2026-03-20",
@@ -603,8 +392,8 @@
           "github_url": "",
           "submitted_by": "Yuxin Song",
           "submitted_at": "2026-03-20T01:01:32.962Z",
-          "upvotes": 55,
-          "comments": 1,
+          "upvotes": 56,
+          "comments": 2,
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
@@ -630,41 +419,13 @@
           "github_url": "",
           "submitted_by": "Lani Ko",
           "submitted_at": "2026-03-20T04:46:51.588Z",
-          "upvotes": 37,
-          "comments": 1,
+          "upvotes": 39,
+          "comments": 2,
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.99
-        },
-        {
-          "report_date": "2026-03-20",
-          "paper_id": "2603.19227",
-          "title": "Bridging Semantic and Kinematic Conditions with Diffusion-based Discrete Motion Tokenizer",
-          "authors": [
-            "Chenyang Gu",
-            "Mingyuan Zhang",
-            "Haozhe Xie",
-            "Zhongang Cai",
-            "Lei Yang",
-            "Ziwei Liu"
-          ],
-          "abstract": "Prior motion generation largely follows two paradigms: continuous diffusion models that excel at kinematic control, and discrete token-based generators that are effective for semantic conditioning. To combine their strengths, we propose a three-stage framework comprising condition feature extraction (Perception), discrete token generation (Planning), and diffusion-based motion synthesis (Control). Central to this framework is MoTok, a diffusion-based discrete motion tokenizer that decouples semantic abstraction from fine-grained reconstruction by delegating motion recovery to a diffusion decoder, enabling compact single-layer tokens while preserving motion fidelity. For kinematic conditions, coarse constraints guide token generation during planning, while fine-grained constraints are enforced during control through diffusion-based optimization. This design prevents kinematic details from disrupting semantic token planning. On HumanML3D, our method significantly improves controllability and fidelity over MaskControl while using only one-sixth of the tokens, reducing trajectory error from 0.72 cm to 0.08 cm and FID from 0.083 to 0.029. Unlike prior methods that degrade under stronger kinematic constraints, ours improves fidelity, reducing FID from 0.033 to 0.014.",
-          "hf_url": "https://huggingface.co/papers/2603.19227",
-          "arxiv_url": "https://arxiv.org/abs/2603.19227",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19227",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.19227",
-          "github_url": "",
-          "submitted_by": "Haozhe Xie",
-          "submitted_at": "2026-03-20T03:38:04.272Z",
-          "upvotes": 32,
-          "comments": 1,
-          "topic_key": "multimodal_generative",
-          "topic_label": "Multimodal Generative Modeling",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.71
+          "classification_confidence": 0.98
         },
         {
           "report_date": "2026-03-20",
@@ -688,13 +449,13 @@
           "github_url": "",
           "submitted_by": "Bing Li",
           "submitted_at": "2026-03-20T11:04:30.281Z",
-          "upvotes": 18,
+          "upvotes": 20,
           "comments": 2,
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.88
+          "classification_confidence": 0.89
         },
         {
           "report_date": "2026-03-20",
@@ -721,6 +482,32 @@
           "matched_terms": [],
           "classification_source": "codex",
           "classification_confidence": 0.98
+        },
+        {
+          "report_date": "2026-03-20",
+          "paper_id": "2603.16924",
+          "title": "SimulU: Training-free Policy for Long-form Simultaneous Speech-to-Speech Translation",
+          "authors": [
+            "Amirbek Djanibekov",
+            "Luisa Bentivogli",
+            "Matteo Negri",
+            "Sara Papi"
+          ],
+          "abstract": "Simultaneous speech-to-speech translation (SimulS2S) is essential for real-time multilingual communication, with increasing integration into meeting and streaming platforms. Despite this, SimulS2S remains underexplored in research, where current solutions often rely on resource-intensive training procedures and operate on short-form, pre-segmented utterances, failing to generalize to continuous speech. To bridge this gap, we propose SimulU, the first training-free policy for long-form SimulS2S. SimulU adopts history management and speech output selection strategies that exploit cross-attention in pre-trained end-to-end models to regulate both input history and output generation. Evaluations on MuST-C across 8 languages show that SimulU achieves a better or comparable quality-latency trade-off against strong cascaded models. By eliminating the need for ad-hoc training, SimulU offers a promising path to end-to-end SimulS2S in realistic, long-form scenarios.",
+          "hf_url": "https://huggingface.co/papers/2603.16924",
+          "arxiv_url": "https://arxiv.org/abs/2603.16924",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.16924",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.16924",
+          "github_url": "",
+          "submitted_by": "Sara Papi",
+          "submitted_at": "2026-03-20T11:31:55.836Z",
+          "upvotes": 13,
+          "comments": 1,
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.76
         },
         {
           "report_date": "2026-03-20",
@@ -768,14 +555,204 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.86
+          "classification_confidence": 0.93
+        },
+        {
+          "report_date": "2026-03-20",
+          "paper_id": "2603.19216",
+          "title": "DreamPartGen: Semantically Grounded Part-Level 3D Generation via Collaborative Latent Denoising",
+          "authors": [
+            "Tianjiao Yu",
+            "Xinzhuo Li",
+            "Muntasir Wahed",
+            "Jerry Xiong",
+            "Yifan Shen",
+            "Ying Shen",
+            "Ismini Lourentzou"
+          ],
+          "abstract": "Understanding and generating 3D objects as compositions of meaningful parts is fundamental to human perception and reasoning. However, most text-to-3D methods overlook the semantic and functional structure of parts. While recent part-aware approaches introduce decomposition, they remain largely geometry-focused, lacking semantic grounding and failing to model how parts align with textual descriptions or their inter-part relations. We propose DreamPartGen, a framework for semantically grounded, part-aware text-to-3D generation. DreamPartGen introduces Duplex Part Latents (DPLs) that jointly model each part's geometry and appearance, and Relational Semantic Latents (RSLs) that capture inter-part dependencies derived from language. A synchronized co-denoising process enforces mutual geometric and semantic consistency, enabling coherent, interpretable, and text-aligned 3D synthesis. Across multiple benchmarks, DreamPartGen delivers state-of-the-art performance in geometric fidelity and text-shape alignment.",
+          "hf_url": "https://huggingface.co/papers/2603.19216",
+          "arxiv_url": "https://arxiv.org/abs/2603.19216",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19216",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.19216",
+          "github_url": "",
+          "submitted_by": "Ismini Lourentzou",
+          "submitted_at": "2026-03-20T17:58:06.057Z",
+          "upvotes": 0,
+          "comments": 1,
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.97
+        }
+      ]
+    },
+    {
+      "topic_label": "Multimodal Understanding and Vision",
+      "count": 5,
+      "share": 15.62,
+      "papers": [
+        {
+          "report_date": "2026-03-20",
+          "paper_id": "2603.19231",
+          "title": "MonoArt: Progressive Structural Reasoning for Monocular Articulated 3D Reconstruction",
+          "authors": [
+            "Haitian Li",
+            "Haozhe Xie",
+            "Junxiang Xu",
+            "Beichen Wen",
+            "Fangzhou Hong",
+            "Ziwei Liu"
+          ],
+          "abstract": "Reconstructing articulated 3D objects from a single image requires jointly inferring object geometry, part structure, and motion parameters from limited visual evidence. A key difficulty lies in the entanglement between motion cues and object structure, which makes direct articulation regression unstable. Existing methods address this challenge through multi-view supervision, retrieval-based assembly, or auxiliary video generation, often sacrificing scalability or efficiency. We present MonoArt, a unified framework grounded in progressive structural reasoning. Rather than predicting articulation directly from image features, MonoArt progressively transforms visual observations into canonical geometry, structured part representations, and motion-aware embeddings within a single architecture. This structured reasoning process enables stable and interpretable articulation inference without external motion templates or multi-stage pipelines. Extensive experiments on PartNet-Mobility demonstrate that OM achieves state-of-the-art performance in both reconstruction accuracy and inference speed. The framework further generalizes to robotic manipulation and articulated scene reconstruction.",
+          "hf_url": "https://huggingface.co/papers/2603.19231",
+          "arxiv_url": "https://arxiv.org/abs/2603.19231",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19231",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.19231",
+          "github_url": "",
+          "submitted_by": "Haozhe Xie",
+          "submitted_at": "2026-03-20T04:49:45.233Z",
+          "upvotes": 28,
+          "comments": 2,
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.93
+        },
+        {
+          "report_date": "2026-03-20",
+          "paper_id": "2603.18472",
+          "title": "Cognitive Mismatch in Multimodal Large Language Models for Discrete Symbol Understanding",
+          "authors": [
+            "Yinghui Li",
+            "Jiayi Kuang",
+            "Peng Xing",
+            "Daixian Liu",
+            "Junnan Dong",
+            "Shu-Yu Guo",
+            "Yangning Li",
+            "Qingyu Zhou",
+            "Wenhao Jiang",
+            "Hai-Tao Zheng",
+            "Ying Shen",
+            "Liang Lin",
+            "Philip S. Yu"
+          ],
+          "abstract": "While Multimodal Large Language Models (MLLMs) have achieved remarkable success in interpreting natural scenes, their ability to process discrete symbols -- the fundamental building blocks of human cognition -- remains a critical open question. Unlike continuous visual data, symbols such as mathematical formulas, chemical structures, and linguistic characters require precise, deeper interpretation. This paper introduces a comprehensive benchmark to evaluate how top-tier MLLMs navigate these \"discrete semantic spaces\" across five domains: language, culture, mathematics, physics, and chemistry. Our investigation uncovers a counterintuitive phenomenon: models often fail at basic symbol recognition yet succeed in complex reasoning tasks, suggesting they rely on linguistic probability rather than true visual perception. By exposing this \"cognitive mismatch\", we highlight a significant gap in current AI capabilities: the struggle to truly perceive and understand the symbolic languages that underpin scientific discovery and abstract thought. This work offers a roadmap for developing more rigorous, human-aligned intelligent systems.",
+          "hf_url": "https://huggingface.co/papers/2603.18472",
+          "arxiv_url": "https://arxiv.org/abs/2603.18472",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.18472",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.18472",
+          "github_url": "",
+          "submitted_by": "Yangning Li",
+          "submitted_at": "2026-03-20T03:52:09.456Z",
+          "upvotes": 16,
+          "comments": 1,
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.78
+        },
+        {
+          "report_date": "2026-03-20",
+          "paper_id": "2603.18002",
+          "title": "Loc3R-VLM: Language-based Localization and 3D Reasoning with Vision-Language Models",
+          "authors": [
+            "Kevin Qu",
+            "Haozhe Qi",
+            "Mihai Dusmanu",
+            "Mahdi Rad",
+            "Rui Wang",
+            "Marc Pollefeys"
+          ],
+          "abstract": "Multimodal Large Language Models (MLLMs) have made impressive progress in connecting vision and language, but they still struggle with spatial understanding and viewpoint-aware reasoning. Recent efforts aim to augment the input representations with geometric cues rather than explicitly teaching models to reason in 3D space. We introduce Loc3R-VLM, a framework that equips 2D Vision-Language Models with advanced 3D understanding capabilities from monocular video input. Inspired by human spatial cognition, Loc3R-VLM relies on two joint objectives: global layout reconstruction to build a holistic representation of the scene structure, and explicit situation modeling to anchor egocentric perspective. These objectives provide direct spatial supervision that grounds both perception and language in a 3D context. To ensure geometric consistency and metric-scale alignment, we leverage lightweight camera pose priors extracted from a pre-trained 3D foundation model. Loc3R-VLM achieves state-of-the-art performance in language-based localization and outperforms existing 2D- and video-based approaches on situated and general 3D question-answering benchmarks, demonstrating that our spatial supervision framework enables strong 3D understanding. Project page: https://kevinqu7.github.io/loc3r-vlm",
+          "hf_url": "https://huggingface.co/papers/2603.18002",
+          "arxiv_url": "https://arxiv.org/abs/2603.18002",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.18002",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.18002",
+          "github_url": "",
+          "submitted_by": "Kevin Qu",
+          "submitted_at": "2026-03-20T03:33:48.979Z",
+          "upvotes": 3,
+          "comments": 1,
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.81
+        },
+        {
+          "report_date": "2026-03-20",
+          "paper_id": "2603.19234",
+          "title": "Matryoshka Gaussian Splatting",
+          "authors": [
+            "Zhilin Guo",
+            "Boqiao Zhang",
+            "Hakan Aktas",
+            "Kyle Fogarty",
+            "Jeffrey Hu",
+            "Nursena Koprucu Aslan",
+            "Wenzhao Li",
+            "Canberk Baykal",
+            "Albert Miao",
+            "Josef Bengtson",
+            "Chenliang Zhou",
+            "Weihao Xia",
+            "Cristina Nader Vasconcelos. Cengiz Oztireli"
+          ],
+          "abstract": "The ability to render scenes at adjustable fidelity from a single model, known as level of detail (LoD), is crucial for practical deployment of 3D Gaussian Splatting (3DGS). Existing discrete LoD methods expose only a limited set of operating points, while concurrent continuous LoD approaches enable smoother scaling but often suffer noticeable quality degradation at full capacity, making LoD a costly design decision. We introduce Matryoshka Gaussian Splatting (MGS), a training framework that enables continuous LoD for standard 3DGS pipelines without sacrificing full-capacity rendering quality. MGS learns a single ordered set of Gaussians such that rendering any prefix, the first k splats, produces a coherent reconstruction whose fidelity improves smoothly with increasing budget. Our key idea is stochastic budget training: each iteration samples a random splat budget and optimises both the corresponding prefix and the full set. This strategy requires only two forward passes and introduces no architectural modifications. Experiments across four benchmarks and six baselines show that MGS matches the full-capacity performance of its backbone while enabling a continuous speed-quality trade-off from a single model. Extensive ablations on ordering strategies, training objectives, and model capacity further validate the designs.",
+          "hf_url": "https://huggingface.co/papers/2603.19234",
+          "arxiv_url": "https://arxiv.org/abs/2603.19234",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19234",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.19234",
+          "github_url": "",
+          "submitted_by": "taesiri",
+          "submitted_at": "2026-03-20T00:49:13.729Z",
+          "upvotes": 1,
+          "comments": 0,
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.72
+        },
+        {
+          "report_date": "2026-03-20",
+          "paper_id": "2603.17554",
+          "title": "Prompt-Free Universal Region Proposal Network",
+          "authors": [
+            "Qihong Tang",
+            "Changhan Liu",
+            "Shaofeng Zhang",
+            "Wenbin Li",
+            "Qi Fan",
+            "Yang Gao"
+          ],
+          "abstract": "Identifying potential objects is critical for object recognition and analysis across various computer vision applications. Existing methods typically localize potential objects by relying on exemplar images, predefined categories, or textual descriptions. However, their reliance on image and text prompts often limits flexibility, restricting adaptability in real-world scenarios. In this paper, we introduce a novel Prompt-Free Universal Region Proposal Network (PF-RPN), which identifies potential objects without relying on external prompts. First, the Sparse Image-Aware Adapter (SIA) module performs initial localization of potential objects using a learnable query embedding dynamically updated with visual features. Next, the Cascade Self-Prompt (CSP) module identifies the remaining potential objects by leveraging the self-prompted learnable embedding, autonomously aggregating informative visual features in a cascading manner. Finally, the Centerness-Guided Query Selection (CG-QS) module facilitates the selection of high-quality query embeddings using a centerness scoring network. Our method can be optimized with limited data (e.g., 5% of MS COCO data) and applied directly to various object detection application domains for identifying potential objects without fine-tuning, such as underwater object detection, industrial defect detection, and remote sensing image object detection. Experimental results across 19 datasets validate the effectiveness of our method. Code is available at https://github.com/tangqh03/PF-RPN.",
+          "hf_url": "https://huggingface.co/papers/2603.17554",
+          "arxiv_url": "https://arxiv.org/abs/2603.17554",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.17554",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.17554",
+          "github_url": "",
+          "submitted_by": "Qihong Tang",
+          "submitted_at": "2026-03-20T06:04:38.872Z",
+          "upvotes": 1,
+          "comments": 1,
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.95
         }
       ]
     },
     {
       "topic_label": "Datasets and Benchmarks",
       "count": 4,
-      "share": 13.33,
+      "share": 12.5,
       "papers": [
         {
           "report_date": "2026-03-20",
@@ -847,7 +824,7 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.95
+          "classification_confidence": 0.97
         },
         {
           "report_date": "2026-03-20",
@@ -909,140 +886,9 @@
       ]
     },
     {
-      "topic_label": "Agents and Planning",
-      "count": 3,
-      "share": 10.0,
-      "papers": [
-        {
-          "report_date": "2026-03-20",
-          "paper_id": "2603.18743",
-          "title": "Memento-Skills: Let Agents Design Agents",
-          "authors": [
-            "Huichi Zhou",
-            "Siyuan Guo",
-            "Anjie Liu",
-            "Zhongwei Yu",
-            "Ziqin Gong",
-            "Bowen Zhao",
-            "Zhixun Chen",
-            "Menglong Zhang",
-            "Yihang Chen",
-            "Jinsong Li",
-            "Runyu Yang",
-            "Qiangbin Liu",
-            "Xinlei Yu",
-            "Jianmin Zhou",
-            "Na Wang",
-            "Chunyang Sun",
-            "Jun Wang"
-          ],
-          "abstract": "We introduce Memento-Skills, a generalist, continually-learnable LLM agent system that functions as an agent-designing agent: it autonomously constructs, adapts, and improves task-specific agents through experience. The system is built on a memory-based reinforcement learning framework with stateful prompts, where reusable skills (stored as structured markdown files) serve as persistent, evolving memory. These skills encode both behaviour and context, enabling the agent to carry forward knowledge across interactions. Starting from simple elementary skills (like Web search and terminal operations), the agent continually improves via the Read--Write Reflective Learning mechanism introduced in Memento~2~wang2025memento2. In the read phase, a behaviour-trainable skill router selects the most relevant skill conditioned on the current stateful prompt; in the write phase, the agent updates and expands its skill library based on new experience. This closed-loop design enables continual learning without updating LLM parameters, as all adaptation is realised through the evolution of externalised skills and prompts. Unlike prior approaches that rely on human-designed agents, Memento-Skills enables a generalist agent to design agents end-to-end for new tasks. Through iterative skill generation and refinement, the system progressively improves its own capabilities. Experiments on the General AI Assistants benchmark and Humanity's Last Exam demonstrate sustained gains, achieving 26.2\\% and 116.2\\% relative improvements in overall accuracy, respectively. Code is available at https://github.com/Memento-Teams/Memento-Skills.",
-          "hf_url": "https://huggingface.co/papers/2603.18743",
-          "arxiv_url": "https://arxiv.org/abs/2603.18743",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.18743",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.18743",
-          "github_url": "",
-          "submitted_by": "HuichiZhou",
-          "submitted_at": "2026-03-20T01:26:50.129Z",
-          "upvotes": 23,
-          "comments": 1,
-          "topic_key": "agents_planning",
-          "topic_label": "Agents and Planning",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.95
-        },
-        {
-          "report_date": "2026-03-20",
-          "paper_id": "2603.18429",
-          "title": "AndroTMem: From Interaction Trajectories to Anchored Memory in Long-Horizon GUI Agents",
-          "authors": [
-            "Yibo Shi",
-            "Jungang Li",
-            "Linghao Zhang",
-            "Zihao Dongfang",
-            "Biao Wu",
-            "Sicheng Tao",
-            "Yibo Yan",
-            "Chenxi Qin",
-            "Weiting Liu",
-            "Zhixin Lin",
-            "Hanqian Li",
-            "Yu Huang",
-            "Song Dai",
-            "Yonghua Hei",
-            "Yue Ding",
-            "Xiang Li",
-            "Shikang Wang",
-            "Chengdong Xu",
-            "Jingqi Liu",
-            "Xueying Ma",
-            "Zhiwen Zheng",
-            "Xiaofei Zhang",
-            "Bincheng Wang",
-            "Nichen Yang",
-            "Jie Wu",
-            "Lihua Tian",
-            "Chen Li",
-            "Xuming Hu"
-          ],
-          "abstract": "Long-horizon GUI agents are a key step toward real-world deployment, yet effective interaction memory under prevailing paradigms remains under-explored. Replaying full interaction sequences is redundant and amplifies noise, while summaries often erase dependency-critical information and traceability. We present AndroTMem, a diagnostic framework for anchored memory in long-horizon Android GUI agents. Its core benchmark, AndroTMem-Bench, comprises 1,069 tasks with 34,473 interaction steps (avg. 32.1 per task, max. 65). We evaluate agents with TCR (Task Complete Rate), focusing on tasks whose completion requires carrying forward critical intermediate state; AndroTMem-Bench is designed to enforce strong step-to-step causal dependencies, making sparse yet essential intermediate states decisive for downstream actions and centering interaction memory in evaluation. Across open- and closed-source GUI agents, we observe a consistent pattern: as interaction sequences grow longer, performance drops are driven mainly by within-task memory failures, not isolated perception errors or local action mistakes. Guided by this diagnosis, we propose Anchored State Memory (ASM), which represents interaction sequences as a compact set of causally linked intermediate-state anchors to enable subgoal-targeted retrieval and attribution-aware decision making. Across multiple settings and 12 evaluated GUI agents, ASM consistently outperforms full-sequence replay and summary-based baselines, improving TCR by 5%-30.16% and AMS by 4.93%-24.66%, indicating that anchored, structured memory effectively mitigates the interaction-memory bottleneck in long-horizon GUI tasks. The code, benchmark, and related resources are publicly available at [https://github.com/CVC2233/AndroTMem](https://github.com/CVC2233/AndroTMem).",
-          "hf_url": "https://huggingface.co/papers/2603.18429",
-          "arxiv_url": "https://arxiv.org/abs/2603.18429",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.18429",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.18429",
-          "github_url": "",
-          "submitted_by": "Jungang Li",
-          "submitted_at": "2026-03-20T11:12:51.644Z",
-          "upvotes": 15,
-          "comments": 1,
-          "topic_key": "agents_planning",
-          "topic_label": "Agents and Planning",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.95
-        },
-        {
-          "report_date": "2026-03-20",
-          "paper_id": "2603.18815",
-          "title": "ProRL Agent: Rollout-as-a-Service for RL Training of Multi-Turn LLM Agents",
-          "authors": [
-            "Hao Zhang",
-            "Mingjie Liu",
-            "Shaokun Zhang",
-            "Songyang Han",
-            "Jian Hu",
-            "Zhenghui Jin",
-            "Yuchi Zhang",
-            "Shizhe Diao",
-            "Ximing Lu",
-            "Binfeng Xu",
-            "Zhiding Yu",
-            "Jan Kautz",
-            "Yi Dong"
-          ],
-          "abstract": "Multi-turn LLM agents are increasingly important for solving complex, interactive tasks, and reinforcement learning (RL) is a key ingredient for improving their long-horizon behavior. However, RL training requires generating large numbers of sandboxed rollout trajectories, and existing infrastructures often couple rollout orchestration with the training loop, making systems hard to migrate and maintain. Under the rollout-as-a-service philosophy, we present ProRL Agent , a scalable infrastructure that serves the full agentic rollout lifecycle through an API service. ProRL Agent also provides standardized and extensible sandbox environments that support diverse agentic tasks in rootless HPC settings. We validate ProRL Agent through RL training on software engineering, math, STEM, and coding tasks. ProRL Agent is open-sourced and integrated as part of NVIDIA NeMo Gym.",
-          "hf_url": "https://huggingface.co/papers/2603.18815",
-          "arxiv_url": "https://arxiv.org/abs/2603.18815",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.18815",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.18815",
-          "github_url": "",
-          "submitted_by": "taesiri",
-          "submitted_at": "2026-03-20T01:23:53.050Z",
-          "upvotes": 4,
-          "comments": 0,
-          "topic_key": "agents_planning",
-          "topic_label": "Agents and Planning",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.94
-        }
-      ]
-    },
-    {
       "topic_label": "Reasoning, Alignment, and Evaluation",
-      "count": 3,
-      "share": 10.0,
+      "count": 4,
+      "share": 12.5,
       "papers": [
         {
           "report_date": "2026-03-20",
@@ -1063,7 +909,7 @@
           "github_url": "",
           "submitted_by": "Declan Kutscher",
           "submitted_at": "2026-03-20T12:36:35.690Z",
-          "upvotes": 2,
+          "upvotes": 13,
           "comments": 1,
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
@@ -1112,7 +958,33 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.67
+          "classification_confidence": 0.75
+        },
+        {
+          "report_date": "2026-03-20",
+          "paper_id": "2603.19017",
+          "title": "What Really Controls Temporal Reasoning in Large Language Models: Tokenisation or Representation of Time?",
+          "authors": [
+            "Gagan Bhatia",
+            "Ahmad Muhammad Isa",
+            "Maxime Peyrard",
+            "Wei Zhao"
+          ],
+          "abstract": "We present MultiTempBench, a multilingual temporal reasoning benchmark spanning three tasks, date arithmetic, time zone conversion, and temporal relation extraction across five languages (English, German, Chinese, Arabic, and Hausa) and multiple calendar conventions (Gregorian, Hijri, and Chinese Lunar). MultiTempBench contains 15,000 examples built by translating 750 curated English questions and expanding each into controlled date-format variants. We evaluate 20 LLMs and introduce the multilingual Date Fragmentation Ratio (mDFR), calibrated with human severity ratings, together with geometric-probing analyses of internal temporal representations. We find tokenisation quality of temporal artefacts is a resource-dependent bottleneck: in low-resource languages and rarer calendar formats, fragmentation disrupts Year/Month/Day separation and accuracy collapses, while high-resource settings are often robust to digit-level splitting. Beyond tokenisation, crossed mixed-effects regression shows that temporal linearity is the strongest predictor of temporal reasoning in high-resource languages, whereas fragmentation is the stronger predictor in low-resource languages. Code is available at: https://github.com/gagan3012/mtb",
+          "hf_url": "https://huggingface.co/papers/2603.19017",
+          "arxiv_url": "https://arxiv.org/abs/2603.19017",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19017",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.19017",
+          "github_url": "",
+          "submitted_by": "Gagan Bhatia",
+          "submitted_at": "2026-03-20T15:12:00.114Z",
+          "upvotes": 1,
+          "comments": 1,
+          "topic_key": "reasoning_alignment_eval",
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.91
         },
         {
           "report_date": "2026-03-20",
@@ -1138,15 +1010,176 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
+          "classification_confidence": 0.92
+        }
+      ]
+    },
+    {
+      "topic_label": "Agents and Planning",
+      "count": 3,
+      "share": 9.38,
+      "papers": [
+        {
+          "report_date": "2026-03-20",
+          "paper_id": "2603.18743",
+          "title": "Memento-Skills: Let Agents Design Agents",
+          "authors": [
+            "Huichi Zhou",
+            "Siyuan Guo",
+            "Anjie Liu",
+            "Zhongwei Yu",
+            "Ziqin Gong",
+            "Bowen Zhao",
+            "Zhixun Chen",
+            "Menglong Zhang",
+            "Yihang Chen",
+            "Jinsong Li",
+            "Runyu Yang",
+            "Qiangbin Liu",
+            "Xinlei Yu",
+            "Jianmin Zhou",
+            "Na Wang",
+            "Chunyang Sun",
+            "Jun Wang"
+          ],
+          "abstract": "We introduce Memento-Skills, a generalist, continually-learnable LLM agent system that functions as an agent-designing agent: it autonomously constructs, adapts, and improves task-specific agents through experience. The system is built on a memory-based reinforcement learning framework with stateful prompts, where reusable skills (stored as structured markdown files) serve as persistent, evolving memory. These skills encode both behaviour and context, enabling the agent to carry forward knowledge across interactions. Starting from simple elementary skills (like Web search and terminal operations), the agent continually improves via the Read--Write Reflective Learning mechanism introduced in Memento~2~wang2025memento2. In the read phase, a behaviour-trainable skill router selects the most relevant skill conditioned on the current stateful prompt; in the write phase, the agent updates and expands its skill library based on new experience. This closed-loop design enables continual learning without updating LLM parameters, as all adaptation is realised through the evolution of externalised skills and prompts. Unlike prior approaches that rely on human-designed agents, Memento-Skills enables a generalist agent to design agents end-to-end for new tasks. Through iterative skill generation and refinement, the system progressively improves its own capabilities. Experiments on the General AI Assistants benchmark and Humanity's Last Exam demonstrate sustained gains, achieving 26.2\\% and 116.2\\% relative improvements in overall accuracy, respectively. Code is available at https://github.com/Memento-Teams/Memento-Skills.",
+          "hf_url": "https://huggingface.co/papers/2603.18743",
+          "arxiv_url": "https://arxiv.org/abs/2603.18743",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.18743",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.18743",
+          "github_url": "",
+          "submitted_by": "HuichiZhou",
+          "submitted_at": "2026-03-20T01:26:50.129Z",
+          "upvotes": 23,
+          "comments": 1,
+          "topic_key": "agents_planning",
+          "topic_label": "Agents and Planning",
+          "matched_terms": [],
+          "classification_source": "codex",
           "classification_confidence": 0.94
+        },
+        {
+          "report_date": "2026-03-20",
+          "paper_id": "2603.18429",
+          "title": "AndroTMem: From Interaction Trajectories to Anchored Memory in Long-Horizon GUI Agents",
+          "authors": [
+            "Yibo Shi",
+            "Jungang Li",
+            "Linghao Zhang",
+            "Zihao Dongfang",
+            "Biao Wu",
+            "Sicheng Tao",
+            "Yibo Yan",
+            "Chenxi Qin",
+            "Weiting Liu",
+            "Zhixin Lin",
+            "Hanqian Li",
+            "Yu Huang",
+            "Song Dai",
+            "Yonghua Hei",
+            "Yue Ding",
+            "Xiang Li",
+            "Shikang Wang",
+            "Chengdong Xu",
+            "Jingqi Liu",
+            "Xueying Ma",
+            "Zhiwen Zheng",
+            "Xiaofei Zhang",
+            "Bincheng Wang",
+            "Nichen Yang",
+            "Jie Wu",
+            "Lihua Tian",
+            "Chen Li",
+            "Xuming Hu"
+          ],
+          "abstract": "Long-horizon GUI agents are a key step toward real-world deployment, yet effective interaction memory under prevailing paradigms remains under-explored. Replaying full interaction sequences is redundant and amplifies noise, while summaries often erase dependency-critical information and traceability. We present AndroTMem, a diagnostic framework for anchored memory in long-horizon Android GUI agents. Its core benchmark, AndroTMem-Bench, comprises 1,069 tasks with 34,473 interaction steps (avg. 32.1 per task, max. 65). We evaluate agents with TCR (Task Complete Rate), focusing on tasks whose completion requires carrying forward critical intermediate state; AndroTMem-Bench is designed to enforce strong step-to-step causal dependencies, making sparse yet essential intermediate states decisive for downstream actions and centering interaction memory in evaluation. Across open- and closed-source GUI agents, we observe a consistent pattern: as interaction sequences grow longer, performance drops are driven mainly by within-task memory failures, not isolated perception errors or local action mistakes. Guided by this diagnosis, we propose Anchored State Memory (ASM), which represents interaction sequences as a compact set of causally linked intermediate-state anchors to enable subgoal-targeted retrieval and attribution-aware decision making. Across multiple settings and 12 evaluated GUI agents, ASM consistently outperforms full-sequence replay and summary-based baselines, improving TCR by 5%-30.16% and AMS by 4.93%-24.66%, indicating that anchored, structured memory effectively mitigates the interaction-memory bottleneck in long-horizon GUI tasks. The code, benchmark, and related resources are publicly available at [https://github.com/CVC2233/AndroTMem](https://github.com/CVC2233/AndroTMem).",
+          "hf_url": "https://huggingface.co/papers/2603.18429",
+          "arxiv_url": "https://arxiv.org/abs/2603.18429",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.18429",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.18429",
+          "github_url": "",
+          "submitted_by": "Jungang Li",
+          "submitted_at": "2026-03-20T11:12:51.644Z",
+          "upvotes": 16,
+          "comments": 1,
+          "topic_key": "agents_planning",
+          "topic_label": "Agents and Planning",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.94
+        },
+        {
+          "report_date": "2026-03-20",
+          "paper_id": "2603.18815",
+          "title": "ProRL Agent: Rollout-as-a-Service for RL Training of Multi-Turn LLM Agents",
+          "authors": [
+            "Hao Zhang",
+            "Mingjie Liu",
+            "Shaokun Zhang",
+            "Songyang Han",
+            "Jian Hu",
+            "Zhenghui Jin",
+            "Yuchi Zhang",
+            "Shizhe Diao",
+            "Ximing Lu",
+            "Binfeng Xu",
+            "Zhiding Yu",
+            "Jan Kautz",
+            "Yi Dong"
+          ],
+          "abstract": "Multi-turn LLM agents are increasingly important for solving complex, interactive tasks, and reinforcement learning (RL) is a key ingredient for improving their long-horizon behavior. However, RL training requires generating large numbers of sandboxed rollout trajectories, and existing infrastructures often couple rollout orchestration with the training loop, making systems hard to migrate and maintain. Under the rollout-as-a-service philosophy, we present ProRL Agent , a scalable infrastructure that serves the full agentic rollout lifecycle through an API service. ProRL Agent also provides standardized and extensible sandbox environments that support diverse agentic tasks in rootless HPC settings. We validate ProRL Agent through RL training on software engineering, math, STEM, and coding tasks. ProRL Agent is open-sourced and integrated as part of NVIDIA NeMo Gym.",
+          "hf_url": "https://huggingface.co/papers/2603.18815",
+          "arxiv_url": "https://arxiv.org/abs/2603.18815",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.18815",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.18815",
+          "github_url": "",
+          "submitted_by": "taesiri",
+          "submitted_at": "2026-03-20T01:23:53.050Z",
+          "upvotes": 5,
+          "comments": 0,
+          "topic_key": "agents_planning",
+          "topic_label": "Agents and Planning",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.95
         }
       ]
     },
     {
       "topic_label": "Generative Foundations",
-      "count": 2,
-      "share": 6.67,
+      "count": 3,
+      "share": 9.38,
       "papers": [
+        {
+          "report_date": "2026-03-20",
+          "paper_id": "2603.19235",
+          "title": "Generation Models Know Space: Unleashing Implicit 3D Priors for Scene Understanding",
+          "authors": [
+            "Xianjin Wu",
+            "Dingkang Liang",
+            "Tianrui Feng",
+            "Kui Xia",
+            "Yumeng Zhang",
+            "Xiaofan Li",
+            "Xiao Tan",
+            "Xiang Bai"
+          ],
+          "abstract": "While Multimodal Large Language Models demonstrate impressive semantic capabilities, they often suffer from spatial blindness, struggling with fine-grained geometric reasoning and physical dynamics. Existing solutions typically rely on explicit 3D modalities or complex geometric scaffolding, which are limited by data scarcity and generalization challenges. In this work, we propose a paradigm shift by leveraging the implicit spatial prior within large-scale video generation models. We posit that to synthesize temporally coherent videos, these models inherently learn robust 3D structural priors and physical laws. We introduce VEGA-3D (Video Extracted Generative Awareness), a plug-and-play framework that repurposes a pre-trained video diffusion model as a Latent World Simulator. By extracting spatiotemporal features from intermediate noise levels and integrating them with semantic representations via a token-level adaptive gated fusion mechanism, we enrich MLLMs with dense geometric cues without explicit 3D supervision. Extensive experiments across 3D scene understanding, spatial reasoning, and embodied manipulation benchmarks demonstrate that our method outperforms state-of-the-art baselines, validating that generative priors provide a scalable foundation for physical-world understanding. Code is publicly available at https://github.com/H-EmbodVis/VEGA-3D.",
+          "hf_url": "https://huggingface.co/papers/2603.19235",
+          "arxiv_url": "https://arxiv.org/abs/2603.19235",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19235",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.19235",
+          "github_url": "",
+          "submitted_by": "Dingkang Liang",
+          "submitted_at": "2026-03-20T00:47:57.997Z",
+          "upvotes": 62,
+          "comments": 3,
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.61
+        },
         {
           "report_date": "2026-03-20",
           "paper_id": "2603.19232",
@@ -1204,42 +1237,15 @@
           "topic_label": "Generative Foundations",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.95
+          "classification_confidence": 0.97
         }
       ]
     },
     {
       "topic_label": "LLMs and Language",
       "count": 2,
-      "share": 6.67,
+      "share": 6.25,
       "papers": [
-        {
-          "report_date": "2026-03-20",
-          "paper_id": "2603.19223",
-          "title": "F2LLM-v2: Inclusive, Performant, and Efficient Embeddings for a Multilingual World",
-          "authors": [
-            "Ziyin Zhang",
-            "Zihan Liao",
-            "Hang Yu",
-            "Peng Di",
-            "Rui Wang"
-          ],
-          "abstract": "We present F2LLM-v2, a new family of general-purpose, multilingual embedding models in 8 distinct sizes ranging from 80M to 14B. Trained on a newly curated composite of 60 million publicly available high-quality data samples, F2LLM-v2 supports more than 200 languages, with a particular emphasis on previously underserved mid- and low-resource languages. By integrating a two-stage LLM-based embedding training pipeline with matryoshka learning, model pruning, and knowledge distillation techniques, we present models that are far more efficient than previous LLM-based embedding models while retaining competitive performances. Extensive evaluations confirm that F2LLM-v2-14B ranks first on 11 MTEB benchmarks, while the smaller models in the family also set a new state of the art for resource-constrained applications. To facilitate open-source embedding model research, we release all models, data, code, and intermediate checkpoints.",
-          "hf_url": "https://huggingface.co/papers/2603.19223",
-          "arxiv_url": "https://arxiv.org/abs/2603.19223",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19223",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.19223",
-          "github_url": "",
-          "submitted_by": "Ziyin Zhang",
-          "submitted_at": "2026-03-20T01:00:11.241Z",
-          "upvotes": 21,
-          "comments": 1,
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.77
-        },
         {
           "report_date": "2026-03-20",
           "paper_id": "2603.19220",
@@ -1271,20 +1277,47 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-03-20T00:47:05.026Z",
-          "upvotes": 19,
+          "upvotes": 27,
           "comments": 1,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.88
+          "classification_confidence": 0.94
+        },
+        {
+          "report_date": "2026-03-20",
+          "paper_id": "2603.19223",
+          "title": "F2LLM-v2: Inclusive, Performant, and Efficient Embeddings for a Multilingual World",
+          "authors": [
+            "Ziyin Zhang",
+            "Zihan Liao",
+            "Hang Yu",
+            "Peng Di",
+            "Rui Wang"
+          ],
+          "abstract": "We present F2LLM-v2, a new family of general-purpose, multilingual embedding models in 8 distinct sizes ranging from 80M to 14B. Trained on a newly curated composite of 60 million publicly available high-quality data samples, F2LLM-v2 supports more than 200 languages, with a particular emphasis on previously underserved mid- and low-resource languages. By integrating a two-stage LLM-based embedding training pipeline with matryoshka learning, model pruning, and knowledge distillation techniques, we present models that are far more efficient than previous LLM-based embedding models while retaining competitive performances. Extensive evaluations confirm that F2LLM-v2-14B ranks first on 11 MTEB benchmarks, while the smaller models in the family also set a new state of the art for resource-constrained applications. To facilitate open-source embedding model research, we release all models, data, code, and intermediate checkpoints.",
+          "hf_url": "https://huggingface.co/papers/2603.19223",
+          "arxiv_url": "https://arxiv.org/abs/2603.19223",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19223",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.19223",
+          "github_url": "",
+          "submitted_by": "Ziyin Zhang",
+          "submitted_at": "2026-03-20T01:00:11.241Z",
+          "upvotes": 21,
+          "comments": 1,
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.74
         }
       ]
     },
     {
       "topic_label": "Domain Applications",
       "count": 1,
-      "share": 3.33,
+      "share": 3.12,
       "papers": [
         {
           "report_date": "2026-03-20",
@@ -1312,14 +1345,14 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.84
+          "classification_confidence": 0.85
         }
       ]
     },
     {
       "topic_label": "Learning, Optimization, and Theory",
       "count": 1,
-      "share": 3.33,
+      "share": 3.12,
       "papers": [
         {
           "report_date": "2026-03-20",
@@ -1346,14 +1379,14 @@
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.94
+          "classification_confidence": 0.96
         }
       ]
     },
     {
       "topic_label": "Multimodal Agents",
       "count": 1,
-      "share": 3.33,
+      "share": 3.12,
       "papers": [
         {
           "report_date": "2026-03-20",
@@ -1377,13 +1410,48 @@
           "github_url": "",
           "submitted_by": "Yuxiang Lu",
           "submitted_at": "2026-03-20T01:09:18.396Z",
-          "upvotes": 39,
-          "comments": 1,
+          "upvotes": 41,
+          "comments": 2,
           "topic_key": "multimodal_agents",
           "topic_label": "Multimodal Agents",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.98
+          "classification_confidence": 0.97
+        }
+      ]
+    },
+    {
+      "topic_label": "Robotics and Embodied AI",
+      "count": 1,
+      "share": 3.12,
+      "papers": [
+        {
+          "report_date": "2026-03-20",
+          "paper_id": "2603.19227",
+          "title": "Bridging Semantic and Kinematic Conditions with Diffusion-based Discrete Motion Tokenizer",
+          "authors": [
+            "Chenyang Gu",
+            "Mingyuan Zhang",
+            "Haozhe Xie",
+            "Zhongang Cai",
+            "Lei Yang",
+            "Ziwei Liu"
+          ],
+          "abstract": "Prior motion generation largely follows two paradigms: continuous diffusion models that excel at kinematic control, and discrete token-based generators that are effective for semantic conditioning. To combine their strengths, we propose a three-stage framework comprising condition feature extraction (Perception), discrete token generation (Planning), and diffusion-based motion synthesis (Control). Central to this framework is MoTok, a diffusion-based discrete motion tokenizer that decouples semantic abstraction from fine-grained reconstruction by delegating motion recovery to a diffusion decoder, enabling compact single-layer tokens while preserving motion fidelity. For kinematic conditions, coarse constraints guide token generation during planning, while fine-grained constraints are enforced during control through diffusion-based optimization. This design prevents kinematic details from disrupting semantic token planning. On HumanML3D, our method significantly improves controllability and fidelity over MaskControl while using only one-sixth of the tokens, reducing trajectory error from 0.72 cm to 0.08 cm and FID from 0.083 to 0.029. Unlike prior methods that degrade under stronger kinematic constraints, ours improves fidelity, reducing FID from 0.033 to 0.014.",
+          "hf_url": "https://huggingface.co/papers/2603.19227",
+          "arxiv_url": "https://arxiv.org/abs/2603.19227",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19227",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.19227",
+          "github_url": "",
+          "submitted_by": "Haozhe Xie",
+          "submitted_at": "2026-03-20T03:38:04.272Z",
+          "upvotes": 34,
+          "comments": 2,
+          "topic_key": "robotics_embodied",
+          "topic_label": "Robotics and Embodied AI",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.62
         }
       ]
     }
@@ -1411,13 +1479,13 @@
       "github_url": "",
       "submitted_by": "Dingkang Liang",
       "submitted_at": "2026-03-20T00:47:57.997Z",
-      "upvotes": 60,
-      "comments": 2,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
+      "upvotes": 62,
+      "comments": 3,
+      "topic_key": "generative_foundations",
+      "topic_label": "Generative Foundations",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.82
+      "classification_confidence": 0.61
     },
     {
       "report_date": "2026-03-20",
@@ -1446,8 +1514,8 @@
       "github_url": "",
       "submitted_by": "Yuxin Song",
       "submitted_at": "2026-03-20T01:01:32.962Z",
-      "upvotes": 55,
-      "comments": 1,
+      "upvotes": 56,
+      "comments": 2,
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
@@ -1476,13 +1544,13 @@
       "github_url": "",
       "submitted_by": "Yuxiang Lu",
       "submitted_at": "2026-03-20T01:09:18.396Z",
-      "upvotes": 39,
-      "comments": 1,
+      "upvotes": 41,
+      "comments": 2,
       "topic_key": "multimodal_agents",
       "topic_label": "Multimodal Agents",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.98
+      "classification_confidence": 0.97
     },
     {
       "report_date": "2026-03-20",
@@ -1503,13 +1571,13 @@
       "github_url": "",
       "submitted_by": "Lani Ko",
       "submitted_at": "2026-03-20T04:46:51.588Z",
-      "upvotes": 37,
-      "comments": 1,
+      "upvotes": 39,
+      "comments": 2,
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.99
+      "classification_confidence": 0.98
     },
     {
       "report_date": "2026-03-20",
@@ -1531,13 +1599,13 @@
       "github_url": "",
       "submitted_by": "Haozhe Xie",
       "submitted_at": "2026-03-20T03:38:04.272Z",
-      "upvotes": 32,
-      "comments": 1,
-      "topic_key": "multimodal_generative",
-      "topic_label": "Multimodal Generative Modeling",
+      "upvotes": 34,
+      "comments": 2,
+      "topic_key": "robotics_embodied",
+      "topic_label": "Robotics and Embodied AI",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.71
+      "classification_confidence": 0.62
     },
     {
       "report_date": "2026-03-20",
@@ -1560,12 +1628,51 @@
       "submitted_by": "Haozhe Xie",
       "submitted_at": "2026-03-20T04:49:45.233Z",
       "upvotes": 28,
-      "comments": 1,
+      "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.96
+      "classification_confidence": 0.93
+    },
+    {
+      "report_date": "2026-03-20",
+      "paper_id": "2603.19220",
+      "title": "Nemotron-Cascade 2: Post-Training LLMs with Cascade RL and Multi-Domain On-Policy Distillation",
+      "authors": [
+        "Zhuolin Yang",
+        "Zihan Liu",
+        "Yang Chen",
+        "Wenliang Dai",
+        "Boxin Wang",
+        "Sheng-Chieh Lin",
+        "Chankyu Lee",
+        "Yangyi Chen",
+        "Dongfu Jiang",
+        "Jiafan He",
+        "Renjie Pi",
+        "Grace Lam",
+        "Nayeon Lee",
+        "Alexander Bukharin",
+        "Mohammad Shoeybi",
+        "Bryan Catanzaro",
+        "Wei Ping"
+      ],
+      "abstract": "We introduce Nemotron-Cascade 2, an open 30B MoE model with 3B activated parameters that delivers best-in-class reasoning and strong agentic capabilities. Despite its compact size, its mathematical and coding reasoning performance approaches that of frontier open models. It is the second open-weight LLM, after DeepSeekV3.2-Speciale-671B-A37B, to achieve Gold Medal-level performance in the 2025 International Mathematical Olympiad (IMO), the International Olympiad in Informatics (IOI), and the ICPC World Finals, demonstrating remarkably high intelligence density with 20x fewer parameters. In contrast to Nemotron-Cascade 1, the key technical advancements are as follows. After SFT on a meticulously curated dataset, we substantially expand Cascade RL to cover a much broader spectrum of reasoning and agentic domains. Furthermore, we introduce multi-domain on-policy distillation from the strongest intermediate teacher models for each domain throughout the Cascade RL process, allowing us to efficiently recover benchmark regressions and sustain strong performance gains along the way. We release the collection of model checkpoint and training data.",
+      "hf_url": "https://huggingface.co/papers/2603.19220",
+      "arxiv_url": "https://arxiv.org/abs/2603.19220",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19220",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.19220",
+      "github_url": "",
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-03-20T00:47:05.026Z",
+      "upvotes": 27,
+      "comments": 1,
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.94
     },
     {
       "report_date": "2026-03-20",
@@ -1674,7 +1781,7 @@
       "topic_label": "Agents and Planning",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.94
     },
     {
       "report_date": "2026-03-20",
@@ -1701,46 +1808,7 @@
       "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.77
-    },
-    {
-      "report_date": "2026-03-20",
-      "paper_id": "2603.19220",
-      "title": "Nemotron-Cascade 2: Post-Training LLMs with Cascade RL and Multi-Domain On-Policy Distillation",
-      "authors": [
-        "Zhuolin Yang",
-        "Zihan Liu",
-        "Yang Chen",
-        "Wenliang Dai",
-        "Boxin Wang",
-        "Sheng-Chieh Lin",
-        "Chankyu Lee",
-        "Yangyi Chen",
-        "Dongfu Jiang",
-        "Jiafan He",
-        "Renjie Pi",
-        "Grace Lam",
-        "Nayeon Lee",
-        "Alexander Bukharin",
-        "Mohammad Shoeybi",
-        "Bryan Catanzaro",
-        "Wei Ping"
-      ],
-      "abstract": "We introduce Nemotron-Cascade 2, an open 30B MoE model with 3B activated parameters that delivers best-in-class reasoning and strong agentic capabilities. Despite its compact size, its mathematical and coding reasoning performance approaches that of frontier open models. It is the second open-weight LLM, after DeepSeekV3.2-Speciale-671B-A37B, to achieve Gold Medal-level performance in the 2025 International Mathematical Olympiad (IMO), the International Olympiad in Informatics (IOI), and the ICPC World Finals, demonstrating remarkably high intelligence density with 20x fewer parameters. In contrast to Nemotron-Cascade 1, the key technical advancements are as follows. After SFT on a meticulously curated dataset, we substantially expand Cascade RL to cover a much broader spectrum of reasoning and agentic domains. Furthermore, we introduce multi-domain on-policy distillation from the strongest intermediate teacher models for each domain throughout the Cascade RL process, allowing us to efficiently recover benchmark regressions and sustain strong performance gains along the way. We release the collection of model checkpoint and training data.",
-      "hf_url": "https://huggingface.co/papers/2603.19220",
-      "arxiv_url": "https://arxiv.org/abs/2603.19220",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19220",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.19220",
-      "github_url": "",
-      "submitted_by": "taesiri",
-      "submitted_at": "2026-03-20T00:47:05.026Z",
-      "upvotes": 19,
-      "comments": 1,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.88
+      "classification_confidence": 0.74
     },
     {
       "report_date": "2026-03-20",
@@ -1764,13 +1832,13 @@
       "github_url": "",
       "submitted_by": "Bing Li",
       "submitted_at": "2026-03-20T11:04:30.281Z",
-      "upvotes": 18,
+      "upvotes": 20,
       "comments": 2,
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.88
+      "classification_confidence": 0.89
     },
     {
       "report_date": "2026-03-20",
@@ -1805,33 +1873,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.84
-    },
-    {
-      "report_date": "2026-03-20",
-      "paper_id": "2603.19224",
-      "title": "EffectErase: Joint Video Object Removal and Insertion for High-Quality Effect Erasing",
-      "authors": [
-        "Yang Fu",
-        "Yike Zheng",
-        "Ziyun Dai",
-        "Henghui Ding"
-      ],
-      "abstract": "Video object removal aims to eliminate dynamic target objects and their visual effects, such as deformation, shadows, and reflections, while restoring seamless backgrounds. Recent diffusion-based video inpainting and object removal methods can remove the objects but often struggle to erase these effects and to synthesize coherent backgrounds. Beyond method limitations, progress is further hampered by the lack of a comprehensive dataset that systematically captures common object effects across varied environments for training and evaluation. To address this, we introduce VOR (Video Object Removal), a large-scale dataset that provides diverse paired videos, each consisting of one video where the target object is present with its effects and a counterpart where the object and effects are absent, with corresponding object masks. VOR contains 60K high-quality video pairs from captured and synthetic sources, covers five effects types, and spans a wide range of object categories as well as complex, dynamic multi-object scenes. Building on VOR, we propose EffectErase, an effect-aware video object removal method that treats video object insertion as the inverse auxiliary task within a reciprocal learning scheme. The model includes task-aware region guidance that focuses learning on affected areas and enables flexible task switching. Then, an insertion-removal consistency objective that encourages complementary behaviors and shared localization of effect regions and structural cues. Trained on VOR, EffectErase achieves superior performance in extensive experiments, delivering high-quality video object effect erasing across diverse scenarios.",
-      "hf_url": "https://huggingface.co/papers/2603.19224",
-      "arxiv_url": "https://arxiv.org/abs/2603.19224",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19224",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.19224",
-      "github_url": "",
-      "submitted_by": "Henghui Ding",
-      "submitted_at": "2026-03-20T06:12:57.138Z",
-      "upvotes": 15,
-      "comments": 1,
-      "topic_key": "multimodal_generative",
-      "topic_label": "Multimodal Generative Modeling",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.98
+      "classification_confidence": 0.78
     },
     {
       "report_date": "2026-03-20",
@@ -1875,13 +1917,66 @@
       "github_url": "",
       "submitted_by": "Jungang Li",
       "submitted_at": "2026-03-20T11:12:51.644Z",
-      "upvotes": 15,
+      "upvotes": 16,
       "comments": 1,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.94
+    },
+    {
+      "report_date": "2026-03-20",
+      "paper_id": "2603.19224",
+      "title": "EffectErase: Joint Video Object Removal and Insertion for High-Quality Effect Erasing",
+      "authors": [
+        "Yang Fu",
+        "Yike Zheng",
+        "Ziyun Dai",
+        "Henghui Ding"
+      ],
+      "abstract": "Video object removal aims to eliminate dynamic target objects and their visual effects, such as deformation, shadows, and reflections, while restoring seamless backgrounds. Recent diffusion-based video inpainting and object removal methods can remove the objects but often struggle to erase these effects and to synthesize coherent backgrounds. Beyond method limitations, progress is further hampered by the lack of a comprehensive dataset that systematically captures common object effects across varied environments for training and evaluation. To address this, we introduce VOR (Video Object Removal), a large-scale dataset that provides diverse paired videos, each consisting of one video where the target object is present with its effects and a counterpart where the object and effects are absent, with corresponding object masks. VOR contains 60K high-quality video pairs from captured and synthetic sources, covers five effects types, and spans a wide range of object categories as well as complex, dynamic multi-object scenes. Building on VOR, we propose EffectErase, an effect-aware video object removal method that treats video object insertion as the inverse auxiliary task within a reciprocal learning scheme. The model includes task-aware region guidance that focuses learning on affected areas and enables flexible task switching. Then, an insertion-removal consistency objective that encourages complementary behaviors and shared localization of effect regions and structural cues. Trained on VOR, EffectErase achieves superior performance in extensive experiments, delivering high-quality video object effect erasing across diverse scenarios.",
+      "hf_url": "https://huggingface.co/papers/2603.19224",
+      "arxiv_url": "https://arxiv.org/abs/2603.19224",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19224",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.19224",
+      "github_url": "",
+      "submitted_by": "Henghui Ding",
+      "submitted_at": "2026-03-20T06:12:57.138Z",
+      "upvotes": 15,
+      "comments": 1,
+      "topic_key": "multimodal_generative",
+      "topic_label": "Multimodal Generative Modeling",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.98
+    },
+    {
+      "report_date": "2026-03-20",
+      "paper_id": "2603.19203",
+      "title": "Tinted Frames: Question Framing Blinds Vision-Language Models",
+      "authors": [
+        "Wan-Cyuan Fan",
+        "Jiayun Luo",
+        "Declan Kutscher",
+        "Leonid Sigal",
+        "Ritwik Gupta"
+      ],
+      "abstract": "Vision-Language Models (VLMs) have been shown to be blind, often underutilizing their visual inputs even on tasks that require visual reasoning. In this work, we demonstrate that VLMs are selectively blind. They modulate the amount of attention applied to visual inputs based on linguistic framing even when alternative framings demand identical visual reasoning. Using visual attention as a probe, we quantify how framing alters both the amount and distribution of attention over the image. Constrained framings, such as multiple choice and yes/no, induce substantially lower attention to image context compared to open-ended, reduce focus on task-relevant regions, and shift attention towards uninformative tokens. We further demonstrate that this attention misallocation is the principal cause of degraded accuracy and cross-framing inconsistency. Building on this mechanistic insight, we introduce a lightweight prompt-tuning method using learnable tokens that encourages the robust, visually grounded attention patterns observed in open-ended settings, improving visual grounding and improving performance across framings.",
+      "hf_url": "https://huggingface.co/papers/2603.19203",
+      "arxiv_url": "https://arxiv.org/abs/2603.19203",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19203",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.19203",
+      "github_url": "",
+      "submitted_by": "Declan Kutscher",
+      "submitted_at": "2026-03-20T12:36:35.690Z",
+      "upvotes": 13,
+      "comments": 1,
+      "topic_key": "reasoning_alignment_eval",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.9
     },
     {
       "report_date": "2026-03-20",
@@ -1903,11 +1998,11 @@
       "submitted_at": "2026-03-20T11:31:55.836Z",
       "upvotes": 13,
       "comments": 1,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
+      "topic_key": "multimodal_generative",
+      "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.84
+      "classification_confidence": 0.76
     },
     {
       "report_date": "2026-03-20",
@@ -1941,7 +2036,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.97
     },
     {
       "report_date": "2026-03-20",
@@ -1989,7 +2084,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.86
+      "classification_confidence": 0.93
     },
     {
       "report_date": "2026-03-20",
@@ -2018,13 +2113,13 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-03-20T01:23:53.050Z",
-      "upvotes": 4,
+      "upvotes": 5,
       "comments": 0,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.94
+      "classification_confidence": 0.95
     },
     {
       "report_date": "2026-03-20",
@@ -2052,7 +2147,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.84
+      "classification_confidence": 0.85
     },
     {
       "report_date": "2026-03-20",
@@ -2080,7 +2175,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.92
+      "classification_confidence": 0.81
     },
     {
       "report_date": "2026-03-20",
@@ -2107,34 +2202,7 @@
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.94
-    },
-    {
-      "report_date": "2026-03-20",
-      "paper_id": "2603.19203",
-      "title": "Tinted Frames: Question Framing Blinds Vision-Language Models",
-      "authors": [
-        "Wan-Cyuan Fan",
-        "Jiayun Luo",
-        "Declan Kutscher",
-        "Leonid Sigal",
-        "Ritwik Gupta"
-      ],
-      "abstract": "Vision-Language Models (VLMs) have been shown to be blind, often underutilizing their visual inputs even on tasks that require visual reasoning. In this work, we demonstrate that VLMs are selectively blind. They modulate the amount of attention applied to visual inputs based on linguistic framing even when alternative framings demand identical visual reasoning. Using visual attention as a probe, we quantify how framing alters both the amount and distribution of attention over the image. Constrained framings, such as multiple choice and yes/no, induce substantially lower attention to image context compared to open-ended, reduce focus on task-relevant regions, and shift attention towards uninformative tokens. We further demonstrate that this attention misallocation is the principal cause of degraded accuracy and cross-framing inconsistency. Building on this mechanistic insight, we introduce a lightweight prompt-tuning method using learnable tokens that encourages the robust, visually grounded attention patterns observed in open-ended settings, improving visual grounding and improving performance across framings.",
-      "hf_url": "https://huggingface.co/papers/2603.19203",
-      "arxiv_url": "https://arxiv.org/abs/2603.19203",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19203",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.19203",
-      "github_url": "",
-      "submitted_by": "Declan Kutscher",
-      "submitted_at": "2026-03-20T12:36:35.690Z",
-      "upvotes": 2,
-      "comments": 1,
-      "topic_key": "reasoning_alignment_eval",
-      "topic_label": "Reasoning, Alignment, and Evaluation",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.9
+      "classification_confidence": 0.96
     },
     {
       "report_date": "2026-03-20",
@@ -2177,7 +2245,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.67
+      "classification_confidence": 0.75
     },
     {
       "report_date": "2026-03-20",
@@ -2212,7 +2280,33 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.58
+      "classification_confidence": 0.72
+    },
+    {
+      "report_date": "2026-03-20",
+      "paper_id": "2603.19017",
+      "title": "What Really Controls Temporal Reasoning in Large Language Models: Tokenisation or Representation of Time?",
+      "authors": [
+        "Gagan Bhatia",
+        "Ahmad Muhammad Isa",
+        "Maxime Peyrard",
+        "Wei Zhao"
+      ],
+      "abstract": "We present MultiTempBench, a multilingual temporal reasoning benchmark spanning three tasks, date arithmetic, time zone conversion, and temporal relation extraction across five languages (English, German, Chinese, Arabic, and Hausa) and multiple calendar conventions (Gregorian, Hijri, and Chinese Lunar). MultiTempBench contains 15,000 examples built by translating 750 curated English questions and expanding each into controlled date-format variants. We evaluate 20 LLMs and introduce the multilingual Date Fragmentation Ratio (mDFR), calibrated with human severity ratings, together with geometric-probing analyses of internal temporal representations. We find tokenisation quality of temporal artefacts is a resource-dependent bottleneck: in low-resource languages and rarer calendar formats, fragmentation disrupts Year/Month/Day separation and accuracy collapses, while high-resource settings are often robust to digit-level splitting. Beyond tokenisation, crossed mixed-effects regression shows that temporal linearity is the strongest predictor of temporal reasoning in high-resource languages, whereas fragmentation is the stronger predictor in low-resource languages. Code is available at: https://github.com/gagan3012/mtb",
+      "hf_url": "https://huggingface.co/papers/2603.19017",
+      "arxiv_url": "https://arxiv.org/abs/2603.19017",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19017",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.19017",
+      "github_url": "",
+      "submitted_by": "Gagan Bhatia",
+      "submitted_at": "2026-03-20T15:12:00.114Z",
+      "upvotes": 1,
+      "comments": 1,
+      "topic_key": "reasoning_alignment_eval",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.91
     },
     {
       "report_date": "2026-03-20",
@@ -2240,7 +2334,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.77
+      "classification_confidence": 0.95
     },
     {
       "report_date": "2026-03-20",
@@ -2266,7 +2360,36 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.94
+      "classification_confidence": 0.92
+    },
+    {
+      "report_date": "2026-03-20",
+      "paper_id": "2603.19216",
+      "title": "DreamPartGen: Semantically Grounded Part-Level 3D Generation via Collaborative Latent Denoising",
+      "authors": [
+        "Tianjiao Yu",
+        "Xinzhuo Li",
+        "Muntasir Wahed",
+        "Jerry Xiong",
+        "Yifan Shen",
+        "Ying Shen",
+        "Ismini Lourentzou"
+      ],
+      "abstract": "Understanding and generating 3D objects as compositions of meaningful parts is fundamental to human perception and reasoning. However, most text-to-3D methods overlook the semantic and functional structure of parts. While recent part-aware approaches introduce decomposition, they remain largely geometry-focused, lacking semantic grounding and failing to model how parts align with textual descriptions or their inter-part relations. We propose DreamPartGen, a framework for semantically grounded, part-aware text-to-3D generation. DreamPartGen introduces Duplex Part Latents (DPLs) that jointly model each part's geometry and appearance, and Relational Semantic Latents (RSLs) that capture inter-part dependencies derived from language. A synchronized co-denoising process enforces mutual geometric and semantic consistency, enabling coherent, interpretable, and text-aligned 3D synthesis. Across multiple benchmarks, DreamPartGen delivers state-of-the-art performance in geometric fidelity and text-shape alignment.",
+      "hf_url": "https://huggingface.co/papers/2603.19216",
+      "arxiv_url": "https://arxiv.org/abs/2603.19216",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19216",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.19216",
+      "github_url": "",
+      "submitted_by": "Ismini Lourentzou",
+      "submitted_at": "2026-03-20T17:58:06.057Z",
+      "upvotes": 0,
+      "comments": 1,
+      "topic_key": "multimodal_generative",
+      "topic_label": "Multimodal Generative Modeling",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.97
     },
     {
       "report_date": "2026-03-20",
@@ -2350,7 +2473,7 @@
       "topic_label": "Generative Foundations",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.97
     }
   ]
 }

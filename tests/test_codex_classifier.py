@@ -3,6 +3,7 @@ import unittest
 from unittest import mock
 
 from mipaper.codex_classifier import (
+    ClaudeClassificationError,
     CodexClassificationError,
     build_output_schema,
     classify_with_claude,
@@ -79,6 +80,28 @@ class CodexClassifierTest(unittest.TestCase):
 
         self.assertEqual(papers, result)
         mocked_classify_with_claude.assert_called_once()
+
+    @mock.patch("mipaper.codex_classifier.run_codex_exec")
+    def test_classify_with_codex_falls_back_to_rules_on_failure_when_allowed(self, mocked_run_codex_exec: mock.Mock) -> None:
+        paper = Paper(paper_id="1", title="Robot planning with tools", abs_url="https://a", pdf_url="https://a.pdf", detail_url="https://b")
+        mocked_run_codex_exec.side_effect = CodexClassificationError("codex exec timed out after 600 seconds")
+
+        result = classify_with_codex([paper], fallback_to_rules=True)
+
+        self.assertEqual(1, len(result))
+        self.assertEqual("rule", result[0].classification_source)
+        self.assertTrue(result[0].topic_key)
+
+    @mock.patch("mipaper.codex_classifier.run_claude_exec")
+    def test_classify_with_claude_falls_back_to_rules_on_failure_when_allowed(self, mocked_run_claude_exec: mock.Mock) -> None:
+        paper = Paper(paper_id="1", title="Video generation benchmark", abs_url="https://a", pdf_url="https://a.pdf", detail_url="https://b")
+        mocked_run_claude_exec.side_effect = ClaudeClassificationError("claude exec timed out after 600 seconds")
+
+        result = classify_with_claude([paper], fallback_to_rules=True)
+
+        self.assertEqual(1, len(result))
+        self.assertEqual("rule", result[0].classification_source)
+        self.assertTrue(result[0].topic_key)
 
     @mock.patch("mipaper.codex_classifier.run_codex_exec")
     def test_classify_with_codex_batches_large_inputs(self, mocked_run_codex_exec: mock.Mock) -> None:

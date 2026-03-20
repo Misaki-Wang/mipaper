@@ -1,12 +1,33 @@
 import json
+import os
 import unittest
 from pathlib import Path
 from tempfile import TemporaryDirectory
+from unittest import mock
 
-from scripts.run_scheduled_job import validate_cool_daily_reports
+from scripts.run_scheduled_job import build_classifier_args, validate_cool_daily_reports
 
 
 class RunScheduledJobTest(unittest.TestCase):
+    def test_build_classifier_args_enables_rule_fallback_by_default(self) -> None:
+        with mock.patch.dict(os.environ, {"COOL_PAPER_DAILY_CLASSIFIER": "codex"}, clear=False):
+            args = build_classifier_args("COOL_PAPER_DAILY")
+
+        self.assertIn("--allow-rule-fallback", args)
+
+    def test_build_classifier_args_respects_disabled_rule_fallback(self) -> None:
+        with mock.patch.dict(
+            os.environ,
+            {
+                "COOL_PAPER_DAILY_CLASSIFIER": "codex",
+                "COOL_PAPER_DAILY_ALLOW_RULE_FALLBACK": "false",
+            },
+            clear=False,
+        ):
+            args = build_classifier_args("COOL_PAPER_DAILY")
+
+        self.assertNotIn("--allow-rule-fallback", args)
+
     def test_validate_cool_daily_reports_accepts_non_empty_payloads(self) -> None:
         with TemporaryDirectory() as tmp_dir:
             base_dir = Path(tmp_dir)
