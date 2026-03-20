@@ -6588,6 +6588,9 @@ code {
   }
 
   .page-chrome {
+    position: sticky;
+    top: calc(var(--safe-top) + 0.35rem);
+    z-index: 80;
     margin-bottom: 0.72rem;
   }
 
@@ -6612,8 +6615,8 @@ code {
   }
 
   .app-toolbar {
-    position: sticky;
-    top: calc(var(--safe-top) + 0.35rem);
+    position: relative;
+    top: auto;
     left: auto;
     right: auto;
     gap: 0.5rem;
