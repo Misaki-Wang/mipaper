@@ -37,7 +37,15 @@ test("like page exposes direct links back to library home and liked content", ()
 test("like page uses show-more controls for grouped papers instead of per-group pagination", () => {
   assert.doesNotMatch(likeSource, /data-branch-page=/);
   assert.doesNotMatch(likeSource, /const branchPages = new Map/);
+  assert.match(likeSource, /createShowMoreAutoLoadController/);
   assert.match(likeSource, /data-like-source-action="more"/);
   assert.match(likeSource, /data-like-source-action="less"/);
   assert.match(likeSource, /function bindSourceSectionActions\(/);
+  assert.match(likeSource, /data-show-more-auto-load="\$\{escapeAttribute\(key\)\}"/);
+  assert.doesNotMatch(likeSource, /data-later-page=/);
+  assert.doesNotMatch(likeSource, /data-to-read-page=/);
+  assert.doesNotMatch(likeSource, /const LATER_PAGE_SIZE = 6/);
+  assert.doesNotMatch(likeSource, /const TO_READ_PAGE_SIZE = 6/);
+  assert.match(likeSource, /data-like-later-action="more"/);
+  assert.match(likeSource, /data-like-to-read-action="more"/);
 });

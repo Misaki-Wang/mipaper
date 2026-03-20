@@ -6,6 +6,7 @@ import { bindLibraryNav } from "./library_nav.js?v=7b6e095589";
 import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=c2effc3556";
 import { bindFilterMenu } from "./page_shell.js?v=b0d53b671d";
 import { initToolbarPreferences } from "./toolbar_preferences.js?v=27d8e761fb";
+import { createShowMoreAutoLoadController } from "./show_more_autoload.js?v=20260320autoload1";
 import { escapeAttribute, escapeHtml, fetchJson, getErrorMessage } from "./ui_utils.js?v=e2da3b3a11";
 
 mountAppToolbar("#unread-toolbar-root", {
@@ -16,10 +17,11 @@ mountAppToolbar("#unread-toolbar-root", {
   quickAddTarget: "later",
 });
 
-const PAGE_SIZE = 6;
+const UNREAD_INITIAL_SIZE = 6;
+const UNREAD_LOAD_MORE_SIZE = 6;
 const listRoot = document.querySelector("#unread-list");
 const summaryNode = document.querySelector("#unread-summary");
-const paginationNode = document.querySelector("#unread-pagination");
+const actionsNode = document.querySelector("#unread-actions");
 const heroCountNode = document.querySelector("#unread-hero-count");
 const heroBranchesNode = document.querySelector("#unread-hero-branches");
 const heroLatestNode = document.querySelector("#unread-hero-latest");
@@ -31,10 +33,20 @@ const sidebarToggleLabel = document.querySelector("#unread-sidebar-toggle-label"
 const sidebarToggleIcon = document.querySelector("#unread-sidebar-toggle-icon");
 const filterMenuPanel = document.querySelector("#unread-filters-menu");
 
-let page = 0;
+let visibleCount = UNREAD_INITIAL_SIZE;
 let snapshots = [];
 let searchQuery = "";
 let viewMode = "card";
+const showMoreAutoLoad = createShowMoreAutoLoadController({
+  bindingFlag: "unreadShowMoreAutoLoadBound",
+  onTrigger: ({ total }) => {
+    if (!expandVisibleUnreadCount(total)) {
+      return false;
+    }
+    renderPage();
+    return true;
+  },
+});
 
 const TOPIC_LABEL_TRANSLATIONS = new Map([
   ["多模态理解与视觉", "Multimodal Understanding and Vision"],
@@ -58,6 +70,8 @@ init().catch((error) => {
 });
 
 async function init() {
+  showMoreAutoLoad.init();
+  showMoreAutoLoad.bindUserScrollIntentTracking();
   viewMode = initToolbarPreferences({
     pageKey: "unread",
     onViewModeChange: (mode) => {
@@ -103,21 +117,23 @@ function renderPage() {
   if (!unreadSnapshots.length) {
     summaryNode.textContent = "Every fetched snapshot has been reviewed.";
     listRoot.innerHTML = `<div class="empty-state">No unread snapshots remain in your queue.</div>`;
-    paginationNode.innerHTML = "";
+    actionsNode.innerHTML = "";
+    showMoreAutoLoad.refresh();
     return;
   }
 
   if (!visibleSnapshots.length) {
     summaryNode.textContent = "No unread snapshots match the current search.";
     listRoot.innerHTML = `<div class="empty-state">No unread snapshots match the current search.</div>`;
-    paginationNode.innerHTML = "";
+    actionsNode.innerHTML = "";
+    showMoreAutoLoad.refresh();
     return;
   }
 
-  const totalPages = Math.ceil(visibleSnapshots.length / PAGE_SIZE);
-  page = Math.min(page, totalPages - 1);
-  const start = page * PAGE_SIZE;
-  const pageItems = visibleSnapshots.slice(start, start + PAGE_SIZE);
+  const unreadVisibleCount = readVisibleUnreadCount(visibleSnapshots.length);
+  const pageItems = visibleSnapshots.slice(0, unreadVisibleCount);
+  const hasMore = unreadVisibleCount < visibleSnapshots.length;
+  const canCollapse = unreadVisibleCount > Math.min(UNREAD_INITIAL_SIZE, visibleSnapshots.length);
 
   summaryNode.textContent = searchQuery
     ? `${visibleSnapshots.length} of ${unreadSnapshots.length} fetched snapshots match the current search.`
@@ -127,21 +143,28 @@ function renderPage() {
     .map((snapshot) => (viewMode === "list" ? renderUnreadSnapshotRow(snapshot) : renderUnreadSnapshotCard(snapshot)))
     .join("");
 
-  paginationNode.innerHTML =
-    totalPages > 1
-      ? `<div class="pagination">
-          <button class="pill-button" data-page="prev" ${page === 0 ? "disabled" : ""}>← Prev</button>
-          <span class="pagination-info">${page + 1} / ${totalPages}</span>
-          <button class="pill-button" data-page="next" ${page >= totalPages - 1 ? "disabled" : ""}>Next →</button>
-        </div>`
-      : "";
+  actionsNode.innerHTML = `
+    <div class="conference-subject-footer">
+      <span class="conference-subject-progress">Showing ${pageItems.length} of ${visibleSnapshots.length} snapshots</span>
+      <div class="conference-subject-actions">
+        ${canCollapse ? `<button class="link-chip button-link" type="button" data-unread-action="less">Show less</button>` : ""}
+        ${
+          hasMore
+            ? `<button class="link-chip button-link" type="button" data-unread-action="more" data-show-more-auto-load="unread" data-show-more-total="${visibleSnapshots.length}">Show more</button>`
+            : ""
+        }
+      </div>
+    </div>
+  `;
+  showMoreAutoLoad.refresh();
 
-  paginationNode.querySelectorAll("[data-page]").forEach((button) => {
+  actionsNode.querySelectorAll("[data-unread-action]").forEach((button) => {
     button.addEventListener("click", () => {
-      if (button.dataset.page === "prev" && page > 0) {
-        page -= 1;
-      } else if (button.dataset.page === "next" && page < totalPages - 1) {
-        page += 1;
+      showMoreAutoLoad.suppress();
+      if (button.dataset.unreadAction === "more") {
+        expandVisibleUnreadCount(visibleSnapshots.length);
+      } else if (button.dataset.unreadAction === "less") {
+        visibleCount = Math.min(UNREAD_INITIAL_SIZE, visibleSnapshots.length);
       }
       renderPage();
     });
@@ -224,10 +247,26 @@ function bindSearchInput() {
   if (searchInput) {
     searchInput.addEventListener("input", () => {
       searchQuery = searchInput.value.trim().toLowerCase();
-      page = 0;
+      visibleCount = UNREAD_INITIAL_SIZE;
       renderPage();
     });
   }
+}
+
+function readVisibleUnreadCount(totalSnapshots) {
+  const minimum = Math.min(UNREAD_INITIAL_SIZE, totalSnapshots);
+  visibleCount = Math.max(visibleCount, minimum);
+  return Math.min(visibleCount, totalSnapshots);
+}
+
+function expandVisibleUnreadCount(totalSnapshots) {
+  const current = readVisibleUnreadCount(totalSnapshots);
+  const next = Math.min(current + UNREAD_LOAD_MORE_SIZE, totalSnapshots);
+  if (next <= current) {
+    return false;
+  }
+  visibleCount = next;
+  return true;
 }
 
 function filterSnapshots(snapshotsToFilter) {
@@ -258,8 +297,8 @@ function renderFatal(error) {
   if (listRoot) {
     listRoot.innerHTML = `<div class="empty-state">Unread snapshot page failed to load: ${escapeHtml(message)}</div>`;
   }
-  if (paginationNode) {
-    paginationNode.innerHTML = "";
+  if (actionsNode) {
+    actionsNode.innerHTML = "";
   }
 }
 

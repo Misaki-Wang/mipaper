@@ -19,6 +19,7 @@ import { bindLibraryNav } from "./library_nav.js?v=7b6e095589";
 import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=c2effc3556";
 import { initToolbarPreferences, setPageViewMode } from "./toolbar_preferences.js?v=27d8e761fb";
 import { bindBackToTop, bindFilterMenu } from "./page_shell.js?v=b0d53b671d";
+import { createShowMoreAutoLoadController } from "./show_more_autoload.js?v=20260320autoload1";
 import { escapeAttribute, escapeHtml, fetchJson, formatDateTime, getErrorMessage } from "./ui_utils.js?v=e2da3b3a11";
 import {
   LIKE_TIME_FORMAT,
@@ -116,13 +117,25 @@ const tagWorkbenchState = {
 };
 let customTagSummaryFrame = 0;
 
-const LATER_PAGE_SIZE = 6;
-let laterPage = 0;
-const TO_READ_PAGE_SIZE = 6;
-let toReadPage = 0;
+const LATER_SECTION_INITIAL_SIZE = 6;
+const LATER_SECTION_LOAD_MORE_SIZE = 6;
+let laterVisibleCount = LATER_SECTION_INITIAL_SIZE;
+const TO_READ_SECTION_INITIAL_SIZE = 6;
+const TO_READ_SECTION_LOAD_MORE_SIZE = 6;
+let toReadVisibleCount = TO_READ_SECTION_INITIAL_SIZE;
 const SOURCE_SECTION_INITIAL_SIZE = 6;
 const SOURCE_SECTION_LOAD_MORE_SIZE = 6;
 const sourceSectionVisibleCounts = new Map();
+const showMoreAutoLoad = createShowMoreAutoLoadController({
+  bindingFlag: "likeShowMoreAutoLoadBound",
+  onTrigger: ({ key, total }) => {
+    if (!expandSourceSection(key, total)) {
+      return false;
+    }
+    renderPage();
+    return true;
+  },
+});
 
 init().catch((error) => {
   console.error(error);
@@ -130,6 +143,8 @@ init().catch((error) => {
 });
 
 async function init() {
+  showMoreAutoLoad.init();
+  showMoreAutoLoad.bindUserScrollIntentTracking();
   likeRecords.render = renderPage;
   window.addEventListener("resize", scheduleCustomTagSummaryLayout);
   if (document.fonts?.ready) {
@@ -647,22 +662,22 @@ function renderTagMap(likes, topicDistribution) {
 function renderLaterQueue(laterQueue) {
   const summary = document.querySelector("#like-later-summary");
   const root = document.querySelector("#like-later-list");
-  const paginationRoot = document.querySelector("#like-later-pagination");
-  if (!summary || !root || !paginationRoot) {
+  const actionsRoot = document.querySelector("#like-later-actions");
+  if (!summary || !root || !actionsRoot) {
     return;
   }
 
   if (!laterQueue.length) {
     summary.textContent = "No papers in Later queue.";
     root.innerHTML = `<div class="empty-state">Papers marked as Later will appear here.</div>`;
-    paginationRoot.innerHTML = "";
+    actionsRoot.innerHTML = "";
     return;
   }
 
-  const totalPages = Math.ceil(laterQueue.length / LATER_PAGE_SIZE);
-  laterPage = Math.min(laterPage, totalPages - 1);
-  const start = laterPage * LATER_PAGE_SIZE;
-  const pageItems = laterQueue.slice(start, start + LATER_PAGE_SIZE);
+  const visibleCount = readVisibleLikeLaterCount(laterQueue.length);
+  const pageItems = laterQueue.slice(0, visibleCount);
+  const hasMore = visibleCount < laterQueue.length;
+  const canCollapse = visibleCount > Math.min(LATER_SECTION_INITIAL_SIZE, laterQueue.length);
 
   summary.textContent = `${laterQueue.length} papers marked for later reading.`;
 
@@ -728,18 +743,23 @@ function renderLaterQueue(laterQueue) {
 
   root.innerHTML = cardsHtml;
 
-  paginationRoot.innerHTML = totalPages > 1
-    ? `<div class="pagination">
-        <button class="pill-button" data-later-page="prev" ${laterPage === 0 ? 'disabled' : ''}>← Prev</button>
-        <span class="pagination-info">${laterPage + 1} / ${totalPages}</span>
-        <button class="pill-button" data-later-page="next" ${laterPage >= totalPages - 1 ? 'disabled' : ''}>Next →</button>
-      </div>`
-    : "";
+  actionsRoot.innerHTML = `
+    <div class="conference-subject-footer">
+      <span class="conference-subject-progress">Showing ${pageItems.length} of ${laterQueue.length} papers</span>
+      <div class="conference-subject-actions">
+        ${canCollapse ? `<button class="link-chip button-link" type="button" data-like-later-action="less">Show less</button>` : ""}
+        ${hasMore ? `<button class="link-chip button-link" type="button" data-like-later-action="more">Show more</button>` : ""}
+      </div>
+    </div>
+  `;
 
-  paginationRoot.querySelectorAll("[data-later-page]").forEach((btn) => {
+  actionsRoot.querySelectorAll("[data-like-later-action]").forEach((btn) => {
     btn.addEventListener("click", () => {
-      if (btn.dataset.laterPage === "prev" && laterPage > 0) laterPage--;
-      else if (btn.dataset.laterPage === "next" && laterPage < totalPages - 1) laterPage++;
+      if (btn.dataset.likeLaterAction === "more") {
+        expandVisibleLikeLaterCount(laterQueue.length);
+      } else if (btn.dataset.likeLaterAction === "less") {
+        laterVisibleCount = Math.min(LATER_SECTION_INITIAL_SIZE, laterQueue.length);
+      }
       renderLaterQueue(laterQueue);
       bindLikeButtons(document, likeRecords);
       bindQueueButtons(document, likeRecords);
@@ -750,22 +770,22 @@ function renderLaterQueue(laterQueue) {
 function renderToReadList(toReadSnapshots) {
   const summary = document.querySelector("#like-to-read-summary");
   const root = document.querySelector("#like-to-read-list");
-  const paginationRoot = document.querySelector("#like-to-read-pagination");
-  if (!summary || !root || !paginationRoot) {
+  const actionsRoot = document.querySelector("#like-to-read-actions");
+  if (!summary || !root || !actionsRoot) {
     return;
   }
 
   if (!toReadSnapshots.length) {
     summary.textContent = "Every fetched snapshot has been reviewed.";
     root.innerHTML = `<div class="empty-state">No unread snapshots remain in your queue.</div>`;
-    paginationRoot.innerHTML = "";
+    actionsRoot.innerHTML = "";
     return;
   }
 
-  const totalPages = Math.ceil(toReadSnapshots.length / TO_READ_PAGE_SIZE);
-  toReadPage = Math.min(toReadPage, totalPages - 1);
-  const start = toReadPage * TO_READ_PAGE_SIZE;
-  const pageItems = toReadSnapshots.slice(start, start + TO_READ_PAGE_SIZE);
+  const visibleCount = readVisibleLikeToReadCount(toReadSnapshots.length);
+  const pageItems = toReadSnapshots.slice(0, visibleCount);
+  const hasMore = visibleCount < toReadSnapshots.length;
+  const canCollapse = visibleCount > Math.min(TO_READ_SECTION_INITIAL_SIZE, toReadSnapshots.length);
 
   summary.textContent = `${toReadSnapshots.length} fetched snapshots are currently in your queue because they are not reviewed.`;
 
@@ -805,18 +825,23 @@ function renderToReadList(toReadSnapshots) {
 
   root.innerHTML = cardsHtml;
 
-  paginationRoot.innerHTML = totalPages > 1
-    ? `<div class="pagination">
-        <button class="pill-button" data-to-read-page="prev" ${toReadPage === 0 ? 'disabled' : ''}>← Prev</button>
-        <span class="pagination-info">${toReadPage + 1} / ${totalPages}</span>
-        <button class="pill-button" data-to-read-page="next" ${toReadPage >= totalPages - 1 ? 'disabled' : ''}>Next →</button>
-      </div>`
-    : "";
+  actionsRoot.innerHTML = `
+    <div class="conference-subject-footer">
+      <span class="conference-subject-progress">Showing ${pageItems.length} of ${toReadSnapshots.length} snapshots</span>
+      <div class="conference-subject-actions">
+        ${canCollapse ? `<button class="link-chip button-link" type="button" data-like-to-read-action="less">Show less</button>` : ""}
+        ${hasMore ? `<button class="link-chip button-link" type="button" data-like-to-read-action="more">Show more</button>` : ""}
+      </div>
+    </div>
+  `;
 
-  paginationRoot.querySelectorAll("[data-to-read-page]").forEach((btn) => {
+  actionsRoot.querySelectorAll("[data-like-to-read-action]").forEach((btn) => {
     btn.addEventListener("click", () => {
-      if (btn.dataset.toReadPage === "prev" && toReadPage > 0) toReadPage--;
-      else if (btn.dataset.toReadPage === "next" && toReadPage < totalPages - 1) toReadPage++;
+      if (btn.dataset.likeToReadAction === "more") {
+        expandVisibleLikeToReadCount(toReadSnapshots.length);
+      } else if (btn.dataset.likeToReadAction === "less") {
+        toReadVisibleCount = Math.min(TO_READ_SECTION_INITIAL_SIZE, toReadSnapshots.length);
+      }
       renderToReadList(toReadSnapshots);
     });
   });
@@ -833,6 +858,38 @@ function renderToReadList(toReadSnapshots) {
       });
     });
   });
+}
+
+function readVisibleLikeLaterCount(totalPapers) {
+  const minimum = Math.min(LATER_SECTION_INITIAL_SIZE, totalPapers);
+  laterVisibleCount = Math.max(laterVisibleCount, minimum);
+  return Math.min(laterVisibleCount, totalPapers);
+}
+
+function expandVisibleLikeLaterCount(totalPapers) {
+  const current = readVisibleLikeLaterCount(totalPapers);
+  const next = Math.min(current + LATER_SECTION_LOAD_MORE_SIZE, totalPapers);
+  if (next <= current) {
+    return false;
+  }
+  laterVisibleCount = next;
+  return true;
+}
+
+function readVisibleLikeToReadCount(totalSnapshots) {
+  const minimum = Math.min(TO_READ_SECTION_INITIAL_SIZE, totalSnapshots);
+  toReadVisibleCount = Math.max(toReadVisibleCount, minimum);
+  return Math.min(toReadVisibleCount, totalSnapshots);
+}
+
+function expandVisibleLikeToReadCount(totalSnapshots) {
+  const current = readVisibleLikeToReadCount(totalSnapshots);
+  const next = Math.min(current + TO_READ_SECTION_LOAD_MORE_SIZE, totalSnapshots);
+  if (next <= current) {
+    return false;
+  }
+  toReadVisibleCount = next;
+  return true;
 }
 
 function renderDistribution(distribution) {
@@ -889,6 +946,7 @@ function renderSourceSections(sections) {
   const root = document.querySelector("#like-source-sections");
   if (!sections.length) {
     root.innerHTML = `<div class="glass-card empty-state">No liked papers match the current filters.</div>`;
+    showMoreAutoLoad.refresh();
     return;
   }
 
@@ -930,7 +988,7 @@ function renderSourceSections(sections) {
                   hasMore
                     ? `<button class="link-chip button-link" type="button" data-like-source-action="more" data-like-source-section-key="${escapeAttribute(
                         key
-                      )}">Show more</button>`
+                      )}" data-show-more-auto-load="${escapeAttribute(key)}" data-show-more-total="${section.papers.length}">Show more</button>`
                     : ""
                 }
               </div>
@@ -940,6 +998,7 @@ function renderSourceSections(sections) {
       }
     )
     .join("");
+  showMoreAutoLoad.refresh();
 
   bindListRowDetails();
 }
@@ -973,6 +1032,7 @@ function bindSourceSectionActions() {
       sourceSectionVisibleCounts.set(sectionKey, Math.min(SOURCE_SECTION_INITIAL_SIZE, section.papers.length));
     }
 
+    showMoreAutoLoad.suppress();
     renderPage();
   });
 }

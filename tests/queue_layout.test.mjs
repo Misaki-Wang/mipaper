@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 
 const queueSource = readFileSync(new URL("../site/queue.js", import.meta.url), "utf8");
+const queueHtml = readFileSync(new URL("../site/queue.html", import.meta.url), "utf8");
 
 test("queue uses a dedicated compact row renderer in list mode", () => {
   assert.match(queueSource, /onViewModeChange:\s*\(mode\)\s*=>/);
@@ -12,4 +13,15 @@ test("queue uses a dedicated compact row renderer in list mode", () => {
   assert.match(queueSource, /function renderWorkspacePanel\(view, options = \{\}\)/);
   assert.match(queueSource, /data-workspace-status=/);
   assert.match(queueSource, /function bindTagComposer\(\)/);
+});
+
+test("queue uses show-more controls instead of pagination", () => {
+  assert.doesNotMatch(queueHtml, /id="later-pagination"/);
+  assert.match(queueHtml, /id="later-actions"/);
+  assert.doesNotMatch(queueSource, /data-later-page=/);
+  assert.doesNotMatch(queueSource, /const PAGE_SIZE = 6/);
+  assert.match(queueSource, /createShowMoreAutoLoadController/);
+  assert.match(queueSource, /data-later-action="more"/);
+  assert.match(queueSource, /data-later-action="less"/);
+  assert.match(queueSource, /data-show-more-auto-load="later"/);
 });

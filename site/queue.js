@@ -8,6 +8,7 @@ import { bindLibraryNav } from "./library_nav.js?v=7b6e095589";
 import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=c2effc3556";
 import { bindFilterMenu } from "./page_shell.js?v=b0d53b671d";
 import { initToolbarPreferences } from "./toolbar_preferences.js?v=27d8e761fb";
+import { createShowMoreAutoLoadController } from "./show_more_autoload.js?v=20260320autoload1";
 import { escapeAttribute, escapeHtml, getErrorMessage } from "./ui_utils.js?v=e2da3b3a11";
 import {
   PRIORITY_OPTIONS,
@@ -43,10 +44,11 @@ mountAppToolbar("#queue-toolbar-root", {
 });
 installManualLibraryTestCases();
 
-const PAGE_SIZE = 6;
+const LATER_INITIAL_SIZE = 6;
+const LATER_LOAD_MORE_SIZE = 6;
 const laterList = document.querySelector("#later-list");
 const laterSummary = document.querySelector("#later-summary");
-const laterPagination = document.querySelector("#later-pagination");
+const laterActions = document.querySelector("#later-actions");
 const laterHeroCount = document.querySelector("#later-hero-count");
 const laterHeroLiked = document.querySelector("#later-hero-liked");
 const laterHeroBranches = document.querySelector("#later-hero-branches");
@@ -58,7 +60,7 @@ const sidebarToggleLabel = document.querySelector("#queue-sidebar-toggle-label")
 const sidebarToggleIcon = document.querySelector("#queue-sidebar-toggle-icon");
 const filterMenuPanel = document.querySelector("#queue-filters-menu");
 
-let laterPage = 0;
+let laterVisibleCount = LATER_INITIAL_SIZE;
 let laterPapers = [];
 let likedPapers = [];
 let searchQuery = "";
@@ -74,6 +76,16 @@ const tagWorkbenchState = {
   editorLikeId: "",
   editorTagKey: "",
 };
+const showMoreAutoLoad = createShowMoreAutoLoadController({
+  bindingFlag: "queueShowMoreAutoLoadBound",
+  onTrigger: ({ total }) => {
+    if (!expandVisibleLaterCount(total)) {
+      return false;
+    }
+    renderPage();
+    return true;
+  },
+});
 
 init().catch((error) => {
   console.error(error);
@@ -81,6 +93,8 @@ init().catch((error) => {
 });
 
 async function init() {
+  showMoreAutoLoad.init();
+  showMoreAutoLoad.bindUserScrollIntentTracking();
   viewMode = initToolbarPreferences({
     pageKey: "queue",
     onViewModeChange: (mode) => {
@@ -140,7 +154,7 @@ function bindSearchInput() {
 
   searchInput.addEventListener("input", () => {
     searchQuery = searchInput.value.trim().toLowerCase();
-    laterPage = 0;
+    laterVisibleCount = LATER_INITIAL_SIZE;
     renderPage();
   });
 }
@@ -196,7 +210,7 @@ function renderHero(laterQueue, likes) {
 }
 
 function renderLaterList(papers) {
-  if (!laterList) {
+  if (!laterList || !laterSummary || !laterActions) {
     return;
   }
 
@@ -204,38 +218,46 @@ function renderLaterList(papers) {
     const emptyText = searchQuery ? "No papers match the current search." : "No papers in Later queue yet.";
     laterSummary.textContent = emptyText;
     laterList.innerHTML = `<div class="empty-state">${emptyText}</div>`;
-    laterPagination.innerHTML = "";
+    laterActions.innerHTML = "";
+    showMoreAutoLoad.refresh();
     return;
   }
 
-  const totalPages = Math.ceil(papers.length / PAGE_SIZE);
-  laterPage = Math.min(laterPage, totalPages - 1);
-  const start = laterPage * PAGE_SIZE;
-  const pageItems = papers.slice(start, start + PAGE_SIZE);
+  const visibleCount = readVisibleLaterCount(papers.length);
+  const visiblePapers = papers.slice(0, visibleCount);
+  const hasMore = visibleCount < papers.length;
+  const canCollapse = visibleCount > Math.min(LATER_INITIAL_SIZE, papers.length);
 
   laterSummary.textContent = searchQuery
     ? `${papers.length} of ${laterPapers.length} papers match the current search.`
     : `${papers.length} papers queued for later reading.`;
 
-  laterList.innerHTML = pageItems
+  laterList.innerHTML = visiblePapers
     .map((paper) => (viewMode === "list" ? renderLaterPaperRow(paper) : renderLaterPaperCard(paper)))
     .join("");
 
-  laterPagination.innerHTML =
-    totalPages > 1
-      ? `<div class="pagination">
-          <button class="pill-button" data-later-page="prev" ${laterPage === 0 ? "disabled" : ""}>← Prev</button>
-          <span class="pagination-info">${laterPage + 1} / ${totalPages}</span>
-          <button class="pill-button" data-later-page="next" ${laterPage >= totalPages - 1 ? "disabled" : ""}>Next →</button>
-        </div>`
-      : "";
+  laterActions.innerHTML = `
+    <div class="conference-subject-footer">
+      <span class="conference-subject-progress">Showing ${visiblePapers.length} of ${papers.length} papers</span>
+      <div class="conference-subject-actions">
+        ${canCollapse ? `<button class="link-chip button-link" type="button" data-later-action="less">Show less</button>` : ""}
+        ${
+          hasMore
+            ? `<button class="link-chip button-link" type="button" data-later-action="more" data-show-more-auto-load="later" data-show-more-total="${papers.length}">Show more</button>`
+            : ""
+        }
+      </div>
+    </div>
+  `;
+  showMoreAutoLoad.refresh();
 
-  laterPagination.querySelectorAll("[data-later-page]").forEach((button) => {
+  laterActions.querySelectorAll("[data-later-action]").forEach((button) => {
     button.addEventListener("click", () => {
-      if (button.dataset.laterPage === "prev" && laterPage > 0) {
-        laterPage -= 1;
-      } else if (button.dataset.laterPage === "next" && laterPage < totalPages - 1) {
-        laterPage += 1;
+      showMoreAutoLoad.suppress();
+      if (button.dataset.laterAction === "more") {
+        expandVisibleLaterCount(papers.length);
+      } else if (button.dataset.laterAction === "less") {
+        laterVisibleCount = Math.min(LATER_INITIAL_SIZE, papers.length);
       }
       renderLaterList(papers);
     });
@@ -275,6 +297,22 @@ function renderLaterList(papers) {
   bindTagComposer();
   restoreTagWorkbenchState();
   scheduleCustomTagSummaryLayout();
+}
+
+function readVisibleLaterCount(totalPapers) {
+  const minimum = Math.min(LATER_INITIAL_SIZE, totalPapers);
+  laterVisibleCount = Math.max(laterVisibleCount, minimum);
+  return Math.min(laterVisibleCount, totalPapers);
+}
+
+function expandVisibleLaterCount(totalPapers) {
+  const current = readVisibleLaterCount(totalPapers);
+  const next = Math.min(current + LATER_LOAD_MORE_SIZE, totalPapers);
+  if (next <= current) {
+    return false;
+  }
+  laterVisibleCount = next;
+  return true;
 }
 
 function renderLaterPaperCard(paper) {
