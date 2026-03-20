@@ -50,6 +50,20 @@ function normalizeQueueRecord(record) {
     return null;
   }
 
+  const normalizedPayload = createLikeRecord(record, {
+    sourceKind: record.source_kind || "daily",
+    sourceLabel: record.source_label || "",
+    sourcePage: record.source_page || "",
+    snapshotLabel: record.snapshot_label || "",
+    reportDate: record.report_date || "",
+    category: record.category || "",
+    venue: record.venue || "",
+    venueSeries: record.venue_series || "",
+    venueYear: record.venue_year || "",
+    workflowStatus: record.workflow_status || "inbox",
+    priorityLevel: record.priority_level || "medium",
+  });
+
   const fallbackUpdatedAt =
     (typeof record.updated_at === "string" && record.updated_at) ||
     (typeof record.client_updated_at === "string" && record.client_updated_at) ||
@@ -59,6 +73,7 @@ function normalizeQueueRecord(record) {
 
   return {
     ...record,
+    ...normalizedPayload,
     like_id: likeId,
     status: "later",
     saved_at: typeof record.saved_at === "string" ? record.saved_at : fallbackUpdatedAt,
@@ -161,6 +176,87 @@ export function removeFromQueue(likeId) {
 
   writeQueueStore(nextStore, { dirty: true });
   scheduleSync();
+}
+
+export function updateQueuedPaper(likeId, updater) {
+  const normalizedLikeId = typeof likeId === "string" ? likeId.trim() : "";
+  if (!normalizedLikeId || typeof updater !== "function") {
+    return null;
+  }
+
+  const store = readQueueStore();
+  const existingIndex = store.findIndex((item) => item.like_id === normalizedLikeId && !item.deleted_at);
+  if (existingIndex < 0) {
+    return null;
+  }
+
+  const existingRecord = store[existingIndex];
+  const nextValue = updater({ ...existingRecord });
+  if (!nextValue || typeof nextValue !== "object") {
+    return null;
+  }
+
+  const timestamp = createSyncTimestamp();
+  const deviceId = getSyncDeviceId();
+  const nextRecord = normalizeQueueRecord({
+    ...existingRecord,
+    ...nextValue,
+    like_id: normalizedLikeId,
+    status: "later",
+    saved_at: existingRecord.saved_at || timestamp,
+    updated_at: timestamp,
+    client_updated_at: timestamp,
+    deleted_at: "",
+    device_id: deviceId,
+  });
+
+  store[existingIndex] = nextRecord;
+  writeQueueStore(store, { dirty: true });
+  scheduleSync();
+  return nextRecord;
+}
+
+export function updateQueuedPapers(updater) {
+  if (typeof updater !== "function") {
+    return [];
+  }
+
+  const store = readQueueStore();
+  const timestamp = createSyncTimestamp();
+  const deviceId = getSyncDeviceId();
+  let changed = false;
+
+  const nextStore = store.map((record) => {
+    if (record.deleted_at) {
+      return record;
+    }
+
+    const nextValue = updater({ ...record });
+    if (!nextValue || typeof nextValue !== "object") {
+      return record;
+    }
+
+    changed = true;
+    return normalizeQueueRecord({
+      ...record,
+      ...nextValue,
+      like_id: record.like_id,
+      status: "later",
+      saved_at: record.saved_at || timestamp,
+      updated_at: timestamp,
+      client_updated_at: timestamp,
+      deleted_at: "",
+      device_id: deviceId,
+    });
+  });
+
+  if (!changed) {
+    return readQueue();
+  }
+
+  writeQueueStore(nextStore, { dirty: true });
+  scheduleSync();
+  return nextStore.filter((item) => !item.deleted_at);
 }
 
 export function isInQueue(likeId) {

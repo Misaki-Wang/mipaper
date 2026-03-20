@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 
 const likeHtml = readFileSync(new URL("../site/like.html", import.meta.url), "utf8");
+const likeSource = readFileSync(new URL("../site/like.js", import.meta.url), "utf8");
 
 test("like page surfaces the liked paper results before secondary panels", () => {
   const resultsIndex = likeHtml.indexOf('id="like-results-section"');
@@ -31,4 +32,12 @@ test("like page exposes direct links back to library home and liked content", ()
   assert.match(likeHtml, /href="#like-results-section"[^>]*>Jump to liked papers</);
   assert.match(likeHtml, /href="#like-browse-section"[^>]*>Browse by group</);
   assert.match(likeHtml, /href="#like-saved-views-section"[^>]*>Saved views</);
+});
+
+test("like page uses show-more controls for grouped papers instead of per-group pagination", () => {
+  assert.doesNotMatch(likeSource, /data-branch-page=/);
+  assert.doesNotMatch(likeSource, /const branchPages = new Map/);
+  assert.match(likeSource, /data-like-source-action="more"/);
+  assert.match(likeSource, /data-like-source-action="less"/);
+  assert.match(likeSource, /function bindSourceSectionActions\(/);
 });

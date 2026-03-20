@@ -52,6 +52,10 @@ test("phone breakpoint increases top spacing and avoids iOS input zoom", () => {
   );
   assert.match(
     stylesSource,
+    /@media \(max-width: 760px\) \{[\s\S]*?\.page-nav \{\s*\n    order: 1;\s*\n    flex: 1 1 auto;\s*\n    min-width: 0;\s*\n    justify-content: flex-start;\s*\n    flex-wrap: nowrap;\s*\n    overflow: visible;/m
+  );
+  assert.match(
+    stylesSource,
     /@media \(max-width: 760px\) \{[\s\S]*?\.filters-menu-panel \{\s*\n    position: fixed;\s*\n    top: auto;\s*\n    bottom: calc\(var\(--safe-bottom\) \+ 0\.8rem\);\s*\n    left: calc\(var\(--page-gutter\) \+ var\(--safe-left\)\);\s*\n    right: calc\(var\(--page-gutter\) \+ var\(--safe-right\)\);/m
   );
   assert.match(

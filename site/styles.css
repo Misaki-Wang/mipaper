@@ -1858,6 +1858,22 @@ code {
   justify-content: flex-end;
 }
 
+.later-paper-row-workspace {
+  grid-column: 1 / -1;
+}
+
+.later-paper-row-workspace .paper-workspace-panel {
+  margin-top: 0.08rem;
+}
+
+.page-library-queue .spotlight-card .paper-workspace-panel {
+  margin-top: 0.72rem;
+}
+
+.page-library-queue .paper-custom-tag-summary {
+  margin-top: -0.08rem;
+}
+
 .page-like #like-results-section,
 .page-like #like-browse-section,
 .page-like #like-groups-section,
@@ -6662,7 +6678,7 @@ code {
     min-width: 0;
     justify-content: flex-start;
     flex-wrap: nowrap;
-    overflow-x: auto;
+    overflow: visible;
     padding: 0.22rem;
     border-radius: 18px;
     gap: 0.3rem;

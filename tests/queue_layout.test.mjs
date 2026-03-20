@@ -9,4 +9,7 @@ test("queue uses a dedicated compact row renderer in list mode", () => {
   assert.match(queueSource, /viewMode === "list" \? renderLaterPaperRow\(paper\) : renderLaterPaperCard\(paper\)/);
   assert.match(queueSource, /function renderLaterPaperRow\(paper\)/);
   assert.match(queueSource, /function renderQueueLikeAction\(likeId, workflowStatus, workflowStatusLabel\)/);
+  assert.match(queueSource, /function renderWorkspacePanel\(view, options = \{\}\)/);
+  assert.match(queueSource, /data-workspace-status=/);
+  assert.match(queueSource, /function bindTagComposer\(\)/);
 });

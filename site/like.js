@@ -120,8 +120,9 @@ const LATER_PAGE_SIZE = 6;
 let laterPage = 0;
 const TO_READ_PAGE_SIZE = 6;
 let toReadPage = 0;
-const BRANCH_PAGE_SIZE = 6;
-const branchPages = new Map();
+const SOURCE_SECTION_INITIAL_SIZE = 6;
+const SOURCE_SECTION_LOAD_MORE_SIZE = 6;
+const sourceSectionVisibleCounts = new Map();
 
 init().catch((error) => {
   console.error(error);
@@ -163,6 +164,7 @@ async function init() {
   bindBranchAuthToolbar("like");
   bindBackToTop(backToTopButton);
   bindFilters();
+  bindSourceSectionActions();
   bindSavedViews();
   subscribeAuth((snapshot) => {
     if (snapshot.configured && snapshot.signedIn) {
@@ -894,20 +896,10 @@ function renderSourceSections(sections) {
     .map(
       (section, index) => {
         const key = section.group_key;
-        const page = branchPages.get(key) || 0;
-        const totalPages = Math.ceil(section.liked_count / BRANCH_PAGE_SIZE);
-        const safePage = Math.min(page, totalPages - 1);
-        if (safePage !== page) branchPages.set(key, safePage);
-        const start = safePage * BRANCH_PAGE_SIZE;
-        const pageItems = section.papers.slice(start, start + BRANCH_PAGE_SIZE);
-
-        const paginationHtml = totalPages > 1
-          ? `<div class="pagination">
-              <button class="pill-button" data-branch-page="prev" data-branch-key="${escapeAttribute(key)}" ${safePage === 0 ? 'disabled' : ''}>← Prev</button>
-              <span class="pagination-info">${safePage + 1} / ${totalPages}</span>
-              <button class="pill-button" data-branch-page="next" data-branch-key="${escapeAttribute(key)}" ${safePage >= totalPages - 1 ? 'disabled' : ''}>Next →</button>
-            </div>`
-          : "";
+        const visibleCount = readVisibleSourceCount(key, section.papers.length);
+        const visiblePapers = section.papers.slice(0, visibleCount);
+        const hasMore = visibleCount < section.papers.length;
+        const canCollapse = visibleCount > Math.min(SOURCE_SECTION_INITIAL_SIZE, section.papers.length);
 
         return `
           <section class="glass-card conference-subject-card">
@@ -922,29 +914,67 @@ function renderSourceSections(sections) {
               </div>
             </div>
             <div class="${state.viewMode === "list" ? "liked-paper-list" : "conference-paper-grid"}">
-              ${pageItems.map((paper) => (state.viewMode === "list" ? renderLikeListRow(paper) : renderLikeCard(paper))).join("")}
+              ${visiblePapers.map((paper) => (state.viewMode === "list" ? renderLikeListRow(paper) : renderLikeCard(paper))).join("")}
             </div>
-            ${paginationHtml}
+            <div class="conference-subject-footer">
+              <span class="conference-subject-progress">Showing ${visiblePapers.length} of ${section.papers.length} papers</span>
+              <div class="conference-subject-actions">
+                ${
+                  canCollapse
+                    ? `<button class="link-chip button-link" type="button" data-like-source-action="less" data-like-source-section-key="${escapeAttribute(
+                        key
+                      )}">Show less</button>`
+                    : ""
+                }
+                ${
+                  hasMore
+                    ? `<button class="link-chip button-link" type="button" data-like-source-action="more" data-like-source-section-key="${escapeAttribute(
+                        key
+                      )}">Show more</button>`
+                    : ""
+                }
+              </div>
+            </div>
           </section>
         `;
       }
     )
     .join("");
 
-  root.querySelectorAll("[data-branch-page]").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const key = btn.dataset.branchKey;
-      const current = branchPages.get(key) || 0;
-      if (btn.dataset.branchPage === "prev" && current > 0) {
-        branchPages.set(key, current - 1);
-      } else if (btn.dataset.branchPage === "next") {
-        branchPages.set(key, current + 1);
-      }
-      renderPage();
-    });
-  });
-
   bindListRowDetails();
+}
+
+function bindSourceSectionActions() {
+  const root = document.querySelector("#like-source-sections");
+  if (!root || root.dataset.bound === "true") {
+    return;
+  }
+
+  root.dataset.bound = "true";
+  root.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-like-source-action]");
+    if (!button) {
+      return;
+    }
+
+    const sectionKey = button.dataset.likeSourceSectionKey || "";
+    if (!sectionKey) {
+      return;
+    }
+
+    const section = findVisibleSourceSection(sectionKey);
+    if (!section) {
+      return;
+    }
+
+    if (button.dataset.likeSourceAction === "more") {
+      expandSourceSection(sectionKey, section.papers.length);
+    } else if (button.dataset.likeSourceAction === "less") {
+      sourceSectionVisibleCounts.set(sectionKey, Math.min(SOURCE_SECTION_INITIAL_SIZE, section.papers.length));
+    }
+
+    renderPage();
+  });
 }
 
 function bindListRowDetails() {
@@ -2296,6 +2326,34 @@ function groupBySource(likes) {
       };
     })
     .sort((a, b) => b.liked_count - a.liked_count || a.group_label.localeCompare(b.group_label, "en"));
+}
+
+function getCurrentVisibleSourceSections() {
+  return groupBySource(getVisibleLikes(state.likes));
+}
+
+function findVisibleSourceSection(sectionKey) {
+  return getCurrentVisibleSourceSections().find((section) => section.group_key === sectionKey) || null;
+}
+
+function readVisibleSourceCount(sectionKey, totalPapers) {
+  const minimum = Math.min(SOURCE_SECTION_INITIAL_SIZE, totalPapers);
+  const current = sourceSectionVisibleCounts.get(sectionKey);
+  if (typeof current === "number" && current > 0) {
+    return Math.min(current, totalPapers);
+  }
+  sourceSectionVisibleCounts.set(sectionKey, minimum);
+  return minimum;
+}
+
+function expandSourceSection(sectionKey, totalPapers) {
+  const current = readVisibleSourceCount(sectionKey, totalPapers);
+  const next = Math.min(current + SOURCE_SECTION_LOAD_MORE_SIZE, totalPapers);
+  if (next <= current) {
+    return false;
+  }
+  sourceSectionVisibleCounts.set(sectionKey, next);
+  return true;
 }
 
 function buildLibrarySourceSections(likes, laterQueue, toReadSnapshots) {
