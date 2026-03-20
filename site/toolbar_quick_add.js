@@ -1,5 +1,5 @@
 import { addToQueue, readQueue } from "./paper_queue.js?v=033bd186d1";
-import { initDirectAddSync, upsertDirectAdd } from "./direct_add_store.js?v=f47049a9ef";
+import { initDirectAddSync, upsertDirectAdd } from "./direct_add_store.js?v=f81e05e9bb";
 
 const ARXIV_ID_PATTERN = /^\d{4}\.\d{4,5}(?:v\d+)?$/i;
 const STATUS_RESET_MS = 3200;
@@ -80,7 +80,7 @@ export function bindToolbarQuickAdd(prefix, options = {}) {
           sourceKind: "library",
           sourceLabel: "Library",
           sourcePage: window.location.pathname,
-          snapshotLabel: "Quick Add",
+          snapshotLabel: "",
         });
 
         if (!directRecord) {
@@ -93,7 +93,7 @@ export function bindToolbarQuickAdd(prefix, options = {}) {
             sourceKind: "library",
             sourceLabel: "Library",
             sourcePage: window.location.pathname,
-            snapshotLabel: "Quick Add",
+            snapshotLabel: "",
           },
           {
             preserveOrder: Boolean(existingLater),

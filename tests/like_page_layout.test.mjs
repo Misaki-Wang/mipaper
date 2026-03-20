@@ -35,6 +35,14 @@ test("like page exposes direct links back to library home and liked content", ()
   assert.match(likeHtml, /href="#like-saved-views-section"[^>]*>Saved views</);
 });
 
+test("like page exposes a sort control for Pub Date ordering", () => {
+  assert.match(likeHtml, /id="like-sort-filter"/);
+  assert.match(likeHtml, /value="arxiv_desc"[^>]*>Pub Date: newest</);
+  assert.match(likeHtml, /value="arxiv_asc"[^>]*>Pub Date: oldest</);
+  assert.match(likeSource, /state\.sortMode/);
+  assert.match(likeSource, /sortLikes\(readLikes\(\), state\.sortMode\)/);
+});
+
 test("like page uses show-more controls for grouped papers instead of per-group pagination", () => {
   assert.doesNotMatch(likeSource, /data-branch-page=/);
   assert.doesNotMatch(likeSource, /const branchPages = new Map/);

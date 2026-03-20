@@ -2,6 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 
 import { describeSavedView, normalizeFilterState } from "../site/like_page_saved_views.js";
+import { getPaperArxivSortKey, sortLikes } from "../site/like_page_sorting.js";
 import {
   applyCustomTagToRecord,
   collectCustomTagCatalog,
@@ -21,6 +22,7 @@ test("normalizeFilterState trims values and rejects invalid workflow metadata", 
       workflowStatus: "unknown",
       priorityLevel: "urgent",
       query: "  RAG  ",
+      sortMode: "by-month",
       viewMode: "LIST",
     }),
     {
@@ -30,6 +32,7 @@ test("normalizeFilterState trims values and rejects invalid workflow metadata", 
       workflowStatus: "",
       priorityLevel: "",
       query: "rag",
+      sortMode: "saved_desc",
       viewMode: "list",
     }
   );
@@ -49,12 +52,59 @@ test("describeSavedView resolves custom tag labels from the liked paper catalog"
       source: "papers",
       customTag: "deep-dive",
       workflowStatus: "reading",
+      sortMode: "arxiv_desc",
       viewMode: "card",
     },
     likes
   );
 
-  assert.equal(description, "Papers · Deep Dive · Reading · Gallery");
+  assert.equal(description, "Papers · Deep Dive · Reading · Pub Date: newest · Gallery");
+});
+
+test("getPaperArxivSortKey extracts sortable chronology from arXiv URLs", () => {
+  assert.equal(
+    getPaperArxivSortKey({
+      abs_url: "https://arxiv.org/abs/2603.05498v2",
+    }),
+    "20260305498"
+  );
+
+  assert.equal(
+    getPaperArxivSortKey({
+      pdf_url: "https://arxiv.org/pdf/cs/0601001.pdf",
+    }),
+    "20060100001"
+  );
+});
+
+test("sortLikes can order liked papers by arXiv identifier date", () => {
+  const likes = [
+    {
+      title: "Older arXiv id but newer save",
+      abs_url: "https://arxiv.org/abs/2501.12345",
+      saved_at: "2026-03-19T12:00:00.000Z",
+    },
+    {
+      title: "Newer arXiv id but older save",
+      abs_url: "https://arxiv.org/abs/2603.10001",
+      saved_at: "2026-03-18T12:00:00.000Z",
+    },
+    {
+      title: "Missing arXiv URL",
+      detail_url: "https://example.com/paper",
+      saved_at: "2026-03-20T12:00:00.000Z",
+    },
+  ];
+
+  assert.deepEqual(
+    sortLikes(likes, "arxiv_desc").map((item) => item.title),
+    ["Newer arXiv id but older save", "Older arXiv id but newer save", "Missing arXiv URL"]
+  );
+
+  assert.deepEqual(
+    sortLikes(likes, "arxiv_asc").map((item) => item.title),
+    ["Older arXiv id but newer save", "Newer arXiv id but older save", "Missing arXiv URL"]
+  );
 });
 
 test("collectCustomTagCatalog deduplicates tags and preserves stable order", () => {

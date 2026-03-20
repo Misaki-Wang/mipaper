@@ -62,6 +62,14 @@
               <label for="like-search-input">Search</label>
               <input id="like-search-input" class="control-input" type="search" placeholder="Search title or authors" />
             </div>
+            <div class="control-block">
+              <label for="like-sort-filter">Sort</label>
+              <select id="like-sort-filter" class="control-input">
+                <option value="saved_desc">Recently liked</option>
+                <option value="arxiv_desc">Pub Date: newest</option>
+                <option value="arxiv_asc">Pub Date: oldest</option>
+              </select>
+            </div>
           </section>
         </template>
 
@@ -135,6 +143,6 @@
       <span>Top</span>
     </button>
 
-    <script type="module" src="./like.js?v=5a9960cef9"></script>
+    <script type="module" src="./like.js?v=a0438e8054"></script>
   </body>
 </html>

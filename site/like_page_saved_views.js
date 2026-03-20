@@ -7,6 +7,7 @@ import {
   getPriorityLabel,
   getWorkflowStatusLabel,
 } from "./like_page_labels.js?v=aaa244a29d";
+import { getLikeSortLabel, normalizeLikeSortMode } from "./like_page_sorting.js?v=6ae385c61b";
 
 export function normalizeFilterState(value) {
   const workflowStatus = String(value.workflowStatus || "").trim();
@@ -19,6 +20,7 @@ export function normalizeFilterState(value) {
     workflowStatus: workflowStatus && WORKFLOW_STATUS_OPTIONS.some((item) => item.value === workflowStatus) ? workflowStatus : "",
     priorityLevel: priorityLevel && PRIORITY_OPTIONS.some((item) => item.value === priorityLevel) ? priorityLevel : "",
     query: String(value.query || "").trim().toLowerCase(),
+    sortMode: normalizeLikeSortMode(value.sortMode),
     viewMode: viewMode === "list" ? "list" : "card",
   };
 }
@@ -33,6 +35,7 @@ export function areFilterStatesEqual(left, right) {
     nextLeft.workflowStatus === nextRight.workflowStatus &&
     nextLeft.priorityLevel === nextRight.priorityLevel &&
     nextLeft.query === nextRight.query &&
+    nextLeft.sortMode === nextRight.sortMode &&
     nextLeft.viewMode === nextRight.viewMode
   );
 }
@@ -59,6 +62,9 @@ export function describeSavedView(filters, likes) {
   if (normalized.query) {
     parts.push("Search");
   }
+  if (normalized.sortMode !== "saved_desc") {
+    parts.push(getLikeSortLabel(normalized.sortMode));
+  }
   parts.push(normalized.viewMode === "list" ? "List" : "Gallery");
   return parts.length ? parts.join(" · ") : "Full scan";
 }
@@ -83,6 +89,9 @@ export function getActiveFilters(filterState, likes) {
   }
   if (filterState.query) {
     filters.push(`Search: ${filterState.query}`);
+  }
+  if (filterState.sortMode !== "saved_desc") {
+    filters.push(`Sort: ${getLikeSortLabel(filterState.sortMode)}`);
   }
   return filters;
 }

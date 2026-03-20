@@ -7,7 +7,7 @@ import {
   subscribeLikes,
   updateLikedPaper,
   updateLikedPapers,
-} from "./likes.js?v=3b466b6556";
+} from "./likes.js?v=99ec863b62";
 import { getSupabaseClient, isSupabaseConfigured, loadRuntimeConfig } from "./supabase.js?v=606e1fd811";
 import { initReviewSync, setPageReviewed, subscribePageReviews } from "./reading_state.js?v=3a706b914e";
 import { bindQueueButtons, initQueue, isInQueue, readQueue, subscribeQueue } from "./paper_queue.js?v=033bd186d1";
@@ -16,7 +16,7 @@ import { mountAppToolbar } from "./app_toolbar.js?v=a364077e66";
 import { repairLikeLaterConflicts } from "./paper_selection.js?v=964dbe6c53";
 import { bindBranchNav } from "./branch_nav.js?v=2ab092d7f1";
 import { bindLibraryNav } from "./library_nav.js?v=7b6e095589";
-import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=c2effc3556";
+import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=a318f05c52";
 import { initToolbarPreferences, setPageViewMode } from "./toolbar_preferences.js?v=c889d6e375";
 import { bindBackToTop, bindFilterMenu } from "./page_shell.js?v=b0d53b671d";
 import { createShowMoreAutoLoadController } from "./show_more_autoload.js?v=5f324a6f25";
@@ -33,7 +33,7 @@ import {
   getWorkflowStatusLabel,
   getWorkflowStatusValue,
 } from "./like_page_labels.js?v=aaa244a29d";
-import { createSavedViewId, describeSavedView, getActiveFilters, normalizeFilterState, areFilterStatesEqual } from "./like_page_saved_views.js?v=eea77993c0";
+import { createSavedViewId, describeSavedView, getActiveFilters, normalizeFilterState, areFilterStatesEqual } from "./like_page_saved_views.js?v=4379d3608e";
 import {
   CUSTOM_TAG_PALETTE,
   applyCustomTagToRecord,
@@ -48,13 +48,14 @@ import {
   updateCustomTagDefinitionInRecord,
 } from "./like_page_tags.js?v=dce6e52df9";
 import { formatWeekLabel, getSnapshotSourceKind, getToReadSnapshots, loadSnapshotQueueData } from "./like_page_snapshots.js?v=30e01ecd4f";
+import { getLikeSortLabel, normalizeLikeSortMode, sortLikes } from "./like_page_sorting.js?v=6ae385c61b";
 import {
   initSavedViewsSync,
   readSavedViews as readSavedViewsStore,
   removeSavedView as removeSavedViewStore,
   subscribeSavedViews,
   upsertSavedView,
-} from "./like_saved_views_store.js?v=fbaaa1606a";
+} from "./like_saved_views_store.js?v=90877ca133";
 import { installManualLibraryTestCases } from "./manual_test_cases.js?v=2bdd5fc135";
 import { readWorkspacePanelDefaultMode, subscribeUserSettings } from "./user_settings.js?v=6c7496f04b";
 
@@ -76,6 +77,7 @@ const state = {
   workflowStatus: "",
   priorityLevel: "",
   query: "",
+  sortMode: "saved_desc",
   viewMode: "card",
   savedViews: [],
   selectedSavedViewId: "",
@@ -95,6 +97,7 @@ const customTagFilter = document.querySelector("#like-custom-tag-filter");
 const statusFilter = document.querySelector("#like-status-filter");
 const priorityFilter = document.querySelector("#like-priority-filter");
 const searchInput = document.querySelector("#like-search-input");
+const sortFilter = document.querySelector("#like-sort-filter");
 const resetFiltersButton = document.querySelector("#like-reset-filters");
 const savedViewNameInput = document.querySelector("#like-saved-view-name");
 const saveViewButton = document.querySelector("#like-save-view");
@@ -146,6 +149,7 @@ async function init() {
   showMoreAutoLoad.init();
   showMoreAutoLoad.bindUserScrollIntentTracking();
   likeRecords.render = renderPage;
+  state.sortMode = normalizeLikeSortMode(state.sortMode);
   window.addEventListener("resize", scheduleCustomTagSummaryLayout);
   if (document.fonts?.ready) {
     document.fonts.ready.then(() => {
@@ -245,6 +249,11 @@ function bindFilters() {
     renderPage();
   });
 
+  sortFilter.addEventListener("change", (event) => {
+    state.sortMode = normalizeLikeSortMode(event.target.value);
+    renderPage();
+  });
+
   resetFiltersButton.addEventListener("click", () => {
     state.source = "";
     state.topic = "";
@@ -252,12 +261,14 @@ function bindFilters() {
     state.workflowStatus = "";
     state.priorityLevel = "";
     state.query = "";
+    state.sortMode = "saved_desc";
     sourceFilter.value = "";
     topicFilter.value = "";
     customTagFilter.value = "";
     statusFilter.value = "";
     priorityFilter.value = "";
     searchInput.value = "";
+    sortFilter.value = state.sortMode;
     renderPage();
   });
 }
@@ -316,7 +327,7 @@ function bindSavedViews() {
 
 function renderPage() {
   try {
-    const likes = readLikes();
+    const likes = sortLikes(readLikes(), state.sortMode);
     state.likes = likes;
     const laterQueue = readQueue("later");
     const toReadSnapshots = getToReadSnapshots(state.snapshots);
@@ -411,11 +422,13 @@ function populateFilters(likes, laterQueue, toReadSnapshots) {
   customTagFilter.value = customTags.some((tag) => tag.key === currentCustomTag) ? currentCustomTag : "";
   statusFilter.value = WORKFLOW_STATUS_OPTIONS.some((item) => item.value === currentWorkflowStatus) ? currentWorkflowStatus : "";
   priorityFilter.value = PRIORITY_OPTIONS.some((item) => item.value === currentPriorityLevel) ? currentPriorityLevel : "";
+  sortFilter.value = normalizeLikeSortMode(state.sortMode);
   state.source = sourceFilter.value;
   state.topic = topicFilter.value;
   state.customTag = customTagFilter.value;
   state.workflowStatus = statusFilter.value;
   state.priorityLevel = priorityFilter.value;
+  state.sortMode = sortFilter.value;
 }
 
 function renderHero(likes, laterQueue, toReadSnapshots) {
@@ -540,7 +553,7 @@ function renderOverview(likes, visibleLikes, sourceSections, toReadSnapshots) {
 
   const focusCount = visibleLikes.filter((item) => focusTopicKeys.has(item.topic_key)).length;
   const focusShare = visibleLikes.length ? (focusCount / visibleLikes.length) * 100 : 0;
-  const latest = visibleLikes[0] || likes[0];
+  const latest = getLatestLikedPaper(visibleLikes) || getLatestLikedPaper(likes);
   const topSource = sourceSections[0];
 
   titleNode.textContent = "Liked Papers Overview";
@@ -920,20 +933,27 @@ function renderDistribution(distribution) {
 }
 
 function renderResults(likes, visibleLikes, sourceSections) {
-  const activeFilters = getActiveFilters(getCurrentFilterState(), state.likes);
+  const currentFilterState = getCurrentFilterState();
+  const activeFilters = getActiveFilters(currentFilterState, state.likes);
+  const hasNarrowingFilters = hasActiveLikeFilters(currentFilterState);
   const activeCustomTag = state.customTag
     ? collectCustomTagCatalog(state.likes).find((item) => item.key === state.customTag)?.label || state.customTag
     : "";
-  document.querySelector("#like-results-title").textContent = activeFilters.length
+  document.querySelector("#like-results-title").textContent = hasNarrowingFilters
     ? `${visibleLikes.length} papers visible after filtering`
     : `${likes.length} liked papers`;
   document.querySelector("#like-results-stats").innerHTML = [
-    renderResultStat("Visible Liked", visibleLikes.length, activeFilters.length ? `of ${likes.length}` : "full liked set"),
-    renderResultStat("Visible Groups", sourceSections.length, activeFilters.length ? "filtered" : "all groups"),
+    renderResultStat("Visible Liked", visibleLikes.length, hasNarrowingFilters ? `of ${likes.length}` : "full liked set"),
+    renderResultStat("Visible Groups", sourceSections.length, hasNarrowingFilters ? "filtered" : "all groups"),
     renderResultStat(
       "View Mode",
       state.viewMode === "list" ? "List" : "Gallery",
       activeCustomTag || getWorkflowStatusLabel(state.workflowStatus) || getPriorityLabel(state.priorityLevel) || state.topic || (state.query ? `search: ${state.query}` : "cross-group browsing")
+    ),
+    renderResultStat(
+      "Sort",
+      getLikeSortLabel(state.sortMode),
+      state.sortMode === "saved_desc" ? "default order" : "based on Pub Date"
     ),
   ].join("");
   document.querySelector("#like-active-filters").innerHTML = activeFilters.length
@@ -2376,17 +2396,33 @@ function groupBySource(likes) {
   return [...map.entries()]
     .map(([group_key, papers]) => {
       const distribution = computeTopicDistribution(papers);
+      const latestLikedPaper = getLatestLikedPaper(papers);
       return {
         group_key,
         group_label: getLibraryGroupLabel(group_key),
         liked_count: papers.length,
-        latest_snapshot: papers[0]?.snapshot_label || "",
-        latest_liked: formatDateTime(papers[0]?.liked_at || papers[0]?.saved_at, LIKE_TIME_FORMAT),
+        latest_snapshot: latestLikedPaper?.snapshot_label || "",
+        latest_liked: formatDateTime(latestLikedPaper?.liked_at || latestLikedPaper?.saved_at, LIKE_TIME_FORMAT),
         top_topic: distribution[0]?.topic_label || "",
         papers,
       };
     })
     .sort((a, b) => b.liked_count - a.liked_count || a.group_label.localeCompare(b.group_label, "en"));
+}
+
+function getLatestLikedPaper(likes) {
+  return sortLikes(likes, "saved_desc")[0] || null;
+}
+
+function hasActiveLikeFilters(filterState) {
+  return Boolean(
+    filterState.source ||
+      filterState.topic ||
+      filterState.customTag ||
+      filterState.workflowStatus ||
+      filterState.priorityLevel ||
+      filterState.query
+  );
 }
 
 function getCurrentVisibleSourceSections() {
@@ -2551,6 +2587,7 @@ function getCurrentFilterState() {
     workflowStatus: state.workflowStatus,
     priorityLevel: state.priorityLevel,
     query: state.query,
+    sortMode: state.sortMode,
     viewMode: state.viewMode,
   });
 }
@@ -2569,6 +2606,7 @@ function applySavedView(viewId) {
   state.workflowStatus = filters.workflowStatus;
   state.priorityLevel = filters.priorityLevel;
   state.query = filters.query;
+  state.sortMode = filters.sortMode;
   state.viewMode = filters.viewMode;
   setPageViewMode("like", filters.viewMode, { persist: true, notify: false });
   sourceFilter.value = state.source;
@@ -2577,6 +2615,7 @@ function applySavedView(viewId) {
   statusFilter.value = state.workflowStatus;
   priorityFilter.value = state.priorityLevel;
   searchInput.value = state.query;
+  sortFilter.value = state.sortMode;
   renderPage();
 }
 

@@ -1,11 +1,11 @@
-import { getSourceLabel, initLikesSync, readLikes, subscribeLikes, updateLikedPapers } from "./likes.js?v=3b466b6556";
+import { getSourceLabel, initLikesSync, readLikes, subscribeLikes, updateLikedPapers } from "./likes.js?v=99ec863b62";
 import { initQueue, readQueue, removeFromQueue, subscribeQueue, updateQueuedPaper, updateQueuedPapers } from "./paper_queue.js?v=033bd186d1";
 import { movePaperToLikes, repairLikeLaterConflicts } from "./paper_selection.js?v=964dbe6c53";
 import { bindBranchAuthToolbar } from "./branch_auth.js?v=66a12f1edc";
 import { mountAppToolbar } from "./app_toolbar.js?v=a364077e66";
 import { bindBranchNav } from "./branch_nav.js?v=2ab092d7f1";
 import { bindLibraryNav } from "./library_nav.js?v=7b6e095589";
-import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=c2effc3556";
+import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=a318f05c52";
 import { bindFilterMenu } from "./page_shell.js?v=b0d53b671d";
 import { initToolbarPreferences } from "./toolbar_preferences.js?v=c889d6e375";
 import { createShowMoreAutoLoadController } from "./show_more_autoload.js?v=5f324a6f25";

@@ -1,4 +1,4 @@
-import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js?v=3b466b6556";
+import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js?v=99ec863b62";
 import { bindQueueButtons, initQueue, subscribeQueue } from "./paper_queue.js?v=033bd186d1";
 import { repairLikeLaterConflicts } from "./paper_selection.js?v=964dbe6c53";
 import { createCalendarPicker } from "./calendar_picker.js?v=4b01d6ac6c";

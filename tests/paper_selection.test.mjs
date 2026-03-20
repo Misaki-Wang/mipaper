@@ -152,3 +152,58 @@ test("updating a Later paper preserves workspace metadata before moving to Likes
     globalThis.CustomEvent = originalCustomEvent;
   }
 });
+
+test("library quick-add papers do not keep a Quick Add snapshot tag", async () => {
+  const originalWindow = globalThis.window;
+  const originalLocalStorage = globalThis.localStorage;
+  const originalCustomEvent = globalThis.CustomEvent;
+
+  const mockWindow = new EventTarget();
+
+  class MockCustomEvent extends Event {
+    constructor(type, options = {}) {
+      super(type);
+      this.detail = options.detail;
+    }
+  }
+
+  globalThis.window = mockWindow;
+  globalThis.localStorage = new MemoryStorage();
+  globalThis.CustomEvent = MockCustomEvent;
+
+  try {
+    const [queueModule, likesModule, paperSelectionModule] = await Promise.all([
+      import("../site/paper_queue.js?quick-add-tag"),
+      import("../site/likes.js?quick-add-tag"),
+      import("../site/paper_selection.js?quick-add-tag"),
+    ]);
+
+    queueModule.addToQueue(
+      {
+        title: "Quick add paper",
+        paper_id: "2603.99999",
+        authors: ["C. Researcher"],
+        abstract: "Paper added from the library quick add flow.",
+        arxiv_url: "https://arxiv.org/abs/2603.99999",
+        arxiv_pdf_url: "https://arxiv.org/pdf/2603.99999",
+      },
+      {
+        sourceKind: "library",
+        sourceLabel: "Library",
+        snapshotLabel: "Quick Add",
+      }
+    );
+
+    const queuedPaper = queueModule.readQueue("later")[0];
+    assert.equal(queuedPaper.snapshot_label, "");
+
+    paperSelectionModule.movePaperToLikes(queuedPaper);
+
+    const likedPaper = likesModule.readLikes()[0];
+    assert.equal(likedPaper.snapshot_label, "");
+  } finally {
+    globalThis.window = originalWindow;
+    globalThis.localStorage = originalLocalStorage;
+    globalThis.CustomEvent = originalCustomEvent;
+  }
+});

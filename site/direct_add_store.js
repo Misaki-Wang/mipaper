@@ -15,6 +15,7 @@ const DIRECT_ADDS_META_KEY = "cool-paper-direct-adds-meta-v1";
 const DIRECT_ADDS_MIGRATED_KEY = "cool-paper-direct-adds-migrated-v1";
 const DIRECT_ADDS_CHANGED_EVENT = "cool-paper-direct-adds-changed";
 const DIRECT_ADDS_TABLE = "direct_add_papers";
+const HIDDEN_LIBRARY_SNAPSHOT_LABELS = new Set(["quick add"]);
 
 let supabaseClient = null;
 let authUser = null;
@@ -38,14 +39,15 @@ export function upsertDirectAdd(record, context = {}) {
 
   const existingRecord = store.find((item) => item.like_id === likeId) || null;
   const timestamp = createSyncTimestamp();
+  const sourceKind = context.sourceKind || record?.source_kind || "library";
   const nextRecord = normalizeDirectAddRecord({
     ...(existingRecord || {}),
     ...record,
     like_id: likeId,
-    source_kind: context.sourceKind || record?.source_kind || "library",
+    source_kind: sourceKind,
     source_label: context.sourceLabel || record?.source_label || "Library",
     source_page: context.sourcePage || record?.source_page || "",
-    snapshot_label: context.snapshotLabel || record?.snapshot_label || "",
+    snapshot_label: normalizeSnapshotLabel(sourceKind, context.snapshotLabel || record?.snapshot_label || ""),
     saved_at: existingRecord?.saved_at || record?.saved_at || timestamp,
     updated_at: timestamp,
     client_updated_at: timestamp,
@@ -188,13 +190,25 @@ function normalizeDirectAddRecord(record) {
     source_kind: typeof record.source_kind === "string" && record.source_kind ? record.source_kind : "library",
     source_label: typeof record.source_label === "string" && record.source_label ? record.source_label : "Library",
     source_page: typeof record.source_page === "string" ? record.source_page : "",
-    snapshot_label: typeof record.snapshot_label === "string" ? record.snapshot_label : "",
+    snapshot_label: normalizeSnapshotLabel(record.source_kind, record.snapshot_label),
     saved_at: typeof record.saved_at === "string" ? record.saved_at : fallbackUpdatedAt,
     updated_at: fallbackUpdatedAt,
     client_updated_at: typeof record.client_updated_at === "string" ? record.client_updated_at : fallbackUpdatedAt,
     deleted_at: typeof record.deleted_at === "string" ? record.deleted_at : "",
     device_id: typeof record.device_id === "string" ? record.device_id : "",
   };
+}
+
+function normalizeSnapshotLabel(sourceKind, snapshotLabel) {
+  const normalizedSourceKind = typeof sourceKind === "string" ? sourceKind.trim().toLowerCase() : "";
+  const normalizedSnapshotLabel = typeof snapshotLabel === "string" ? snapshotLabel.trim() : "";
+  if (!normalizedSnapshotLabel) {
+    return "";
+  }
+  if (normalizedSourceKind === "library" && HIDDEN_LIBRARY_SNAPSHOT_LABELS.has(normalizedSnapshotLabel.toLowerCase())) {
+    return "";
+  }
+  return normalizedSnapshotLabel;
 }
 
 function readDirectAddStore() {

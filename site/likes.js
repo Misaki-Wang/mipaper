@@ -24,6 +24,7 @@ const SOURCE_LABELS = {
   library: "Library",
 };
 
+const HIDDEN_LIBRARY_SNAPSHOT_LABELS = new Set(["quick add"]);
 const WORKFLOW_STATUSES = new Set(["inbox", "reading", "digesting", "synthesized", "archived"]);
 const PRIORITY_LEVELS = new Set(["high", "medium", "low"]);
 const AUTH_PROVIDERS = Object.freeze({
@@ -71,6 +72,7 @@ export function getLikeId(paper) {
 }
 
 export function createLikeRecord(paper, context = {}) {
+  const sourceKind = context.sourceKind || paper.source_kind || "daily";
   return {
     like_id: getLikeId(paper),
     title: paper.title || "Untitled",
@@ -89,10 +91,10 @@ export function createLikeRecord(paper, context = {}) {
     classification_source: paper.classification_source || "",
     classification_confidence:
       typeof paper.classification_confidence === "number" ? paper.classification_confidence : null,
-    source_kind: context.sourceKind || "daily",
-    source_label: context.sourceLabel || getSourceLabel(context.sourceKind || "daily"),
+    source_kind: sourceKind,
+    source_label: context.sourceLabel || getSourceLabel(sourceKind),
     source_page: context.sourcePage || "",
-    snapshot_label: context.snapshotLabel || "",
+    snapshot_label: normalizeSnapshotLabel(sourceKind, context.snapshotLabel || paper.snapshot_label || ""),
     report_date: context.reportDate || "",
     category: context.category || "",
     venue: context.venue || "",
@@ -518,6 +520,7 @@ function normalizeLikeRecord(record) {
   return {
     ...record,
     like_id: likeId,
+    snapshot_label: normalizeSnapshotLabel(record.source_kind, record.snapshot_label),
     workflow_status: normalizeWorkflowStatus(record.workflow_status),
     priority_level: normalizePriorityLevel(record.priority_level),
     one_line_takeaway: normalizeNoteField(record.one_line_takeaway),
@@ -529,6 +532,18 @@ function normalizeLikeRecord(record) {
     deleted_at: typeof record.deleted_at === "string" ? record.deleted_at : "",
     device_id: typeof record.device_id === "string" ? record.device_id : "",
   };
+}
+
+function normalizeSnapshotLabel(sourceKind, snapshotLabel) {
+  const normalizedSourceKind = typeof sourceKind === "string" ? sourceKind.trim().toLowerCase() : "";
+  const normalizedSnapshotLabel = typeof snapshotLabel === "string" ? snapshotLabel.trim() : "";
+  if (!normalizedSnapshotLabel) {
+    return "";
+  }
+  if (normalizedSourceKind === "library" && HIDDEN_LIBRARY_SNAPSHOT_LABELS.has(normalizedSnapshotLabel.toLowerCase())) {
+    return "";
+  }
+  return normalizedSnapshotLabel;
 }
 
 function normalizeCustomTags(tags) {
