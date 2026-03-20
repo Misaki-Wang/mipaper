@@ -5768,6 +5768,19 @@ code {
   z-index: 30;
 }
 
+.paper-workspace-panel:has(.custom-tag-trigger[aria-expanded="true"]),
+.paper-workspace-panel:has(.custom-tag-composer:not([hidden])) {
+  position: relative;
+  z-index: 34;
+}
+
+.page-library-queue .spotlight-card:has(.custom-tag-trigger[aria-expanded="true"]),
+.page-library-queue .spotlight-card:has(.custom-tag-composer:not([hidden])),
+.page-library-queue .later-paper-row:has(.custom-tag-trigger[aria-expanded="true"]),
+.page-library-queue .later-paper-row:has(.custom-tag-composer:not([hidden])) {
+  z-index: 35;
+}
+
 .queue-like-button {
   gap: 0.44rem;
   padding-inline: 0.64rem 0.78rem;

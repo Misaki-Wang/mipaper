@@ -4,6 +4,7 @@ import { readFileSync } from "node:fs";
 
 const queueSource = readFileSync(new URL("../site/queue.js", import.meta.url), "utf8");
 const queueHtml = readFileSync(new URL("../site/queue.html", import.meta.url), "utf8");
+const stylesSource = readFileSync(new URL("../site/styles.css", import.meta.url), "utf8");
 
 test("queue uses a dedicated compact row renderer in list mode", () => {
   assert.match(queueSource, /onViewModeChange:\s*\(mode\)\s*=>/);
@@ -24,4 +25,12 @@ test("queue uses show-more controls instead of pagination", () => {
   assert.match(queueSource, /data-later-action="more"/);
   assert.match(queueSource, /data-later-action="less"/);
   assert.match(queueSource, /data-show-more-auto-load="later"/);
+});
+
+test("queue lifts workspace tag editors above neighboring cards", () => {
+  assert.match(stylesSource, /\.paper-workspace-panel:has\(\.custom-tag-trigger\[aria-expanded="true"\]\),/);
+  assert.match(stylesSource, /\.paper-workspace-panel:has\(\.custom-tag-composer:not\(\[hidden\]\)\) \{/);
+  assert.match(stylesSource, /\.page-library-queue \.spotlight-card:has\(\.custom-tag-trigger\[aria-expanded="true"\]\),/);
+  assert.match(stylesSource, /\.page-library-queue \.later-paper-row:has\(\.custom-tag-composer:not\(\[hidden\]\)\) \{/);
+  assert.match(stylesSource, /z-index: 35;/);
 });
