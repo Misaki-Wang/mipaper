@@ -49,3 +49,8 @@ test("like page uses show-more controls for grouped papers instead of per-group 
   assert.match(likeSource, /data-like-later-action="more"/);
   assert.match(likeSource, /data-like-to-read-action="more"/);
 });
+
+test("like list rows do not reuse abstract text as the summary note fallback", () => {
+  assert.match(likeSource, /const summaryText = view\.takeaway \|\| view\.nextAction \|\| "";/);
+  assert.doesNotMatch(likeSource, /view\.takeaway \|\| view\.nextAction \|\| view\.paper\.abstract/);
+});

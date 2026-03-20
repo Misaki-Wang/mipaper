@@ -17,6 +17,16 @@ function shouldOpenBranchDetail(key = "") {
   return readDetailPanelDefaultMode() === "expanded";
 }
 
+function renderDetailChevron() {
+  return `
+    <span class="branch-card-details-arrow paper-abstract-arrow" aria-hidden="true">
+      <svg viewBox="0 0 20 20" width="14" height="14">
+        <path d="M5.5 7.5L10 12l4.5-4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+      </svg>
+    </span>
+  `;
+}
+
 export function renderBranchListDetails(content, { label = "Details", openLabel = "Hide", detailKey = "" } = {}) {
   const body = typeof content === "string" ? content.trim() : "";
   if (!body) {
@@ -38,11 +48,7 @@ export function renderBranchListDetails(content, { label = "Details", openLabel 
       >
         <summary>
           <span class="paper-abstract-label">${isOpen ? expandedLabel : closedLabel}</span>
-          <span class="branch-card-details-arrow paper-abstract-arrow" aria-hidden="true">
-            <svg viewBox="0 0 20 20" width="14" height="14">
-              <path d="M5.5 7.5L10 12l4.5-4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
-            </svg>
-          </span>
+          ${renderDetailChevron()}
         </summary>
       </details>
       <div class="branch-card-details-body" data-branch-card-details-body${isOpen ? "" : " hidden"}>
@@ -52,11 +58,27 @@ export function renderBranchListDetails(content, { label = "Details", openLabel 
   `;
 }
 
-export function renderBranchDetailSection({ label, body, muted = false } = {}) {
+export function renderBranchDetailSection({ label, body, muted = false, collapsible = false } = {}) {
   const title = typeof label === "string" ? label.trim() : "";
   const content = typeof body === "string" ? body.trim() : "";
   if (!title || !content) {
     return "";
+  }
+
+  if (collapsible) {
+    return `
+      <section class="branch-card-detail-section is-collapsible">
+        <details class="branch-card-detail-disclosure">
+          <summary>
+            <span class="paper-detail-label">${title}</span>
+            ${renderDetailChevron()}
+          </summary>
+          <div class="branch-card-detail-body">
+            <p class="branch-card-detail-copy${muted ? " is-muted" : ""}">${content}</p>
+          </div>
+        </details>
+      </section>
+    `;
   }
 
   return `

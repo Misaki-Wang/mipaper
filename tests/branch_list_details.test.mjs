@@ -17,6 +17,8 @@ test("branch list details helper exposes reusable compact detail renderers", () 
   assert.match(helperSource, /export function bindBranchListDetails/);
   assert.match(helperSource, /data-branch-card-details=/);
   assert.match(helperSource, /data-branch-card-details-body/);
+  assert.match(helperSource, /collapsible = false/);
+  assert.match(helperSource, /branch-card-detail-disclosure/);
 });
 
 test("renderBranchListDetails respects the global detail panel default mode", () => {
@@ -44,12 +46,15 @@ test("renderBranchListDetails respects the global detail panel default mode", ()
 test("all branch pages add a collapsible details panel for list and gallery views", () => {
   assert.match(dailySource, /renderBranchListDetails/);
   assert.match(dailySource, /branch-card-inline-details/);
+  assert.match(dailySource, /label: "Abstract", body: escapeHtml\(abstract\), muted: true, collapsible: true/);
 
   assert.match(hfSource, /renderBranchListDetails/);
   assert.match(hfSource, /branch-card-inline-details/);
+  assert.match(hfSource, /label: "Abstract", body: escapeHtml\(paper\.abstract\), muted: true, collapsible: true/);
 
   assert.match(conferenceSource, /renderBranchListDetails/);
   assert.match(conferenceSource, /branch-card-inline-details/);
+  assert.match(conferenceSource, /label: "Abstract", body: escapeHtml\(paper\.abstract\), muted: true, collapsible: true/);
 
   assert.match(trendingSource, /renderBranchListDetails/);
   assert.match(trendingSource, /branch-card-inline-details/);
@@ -79,6 +84,8 @@ test("styles use the same details toggle in list and gallery modes", () => {
     stylesSource,
     /\.branch-card-details summary \{\s*\n  display: inline-flex;\s*\n  align-items: center;\s*\n  justify-content: center;/m
   );
+  assert.match(stylesSource, /\.branch-card-detail-disclosure summary \{\s*\n  display: flex;\s*\n  align-items: center;\s*\n  justify-content: space-between;/m);
+  assert.match(stylesSource, /\.branch-card-detail-disclosure\[open\] \.branch-card-details-arrow \{\s*\n  transform: rotate\(180deg\);/m);
   assert.match(stylesSource, /:root\[data-page-view-mode="list"\] \.branch-card-details-body \{\s*\n  grid-column: 1 \/ -1;/m);
 });
 

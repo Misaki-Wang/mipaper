@@ -3,7 +3,7 @@ import { bindQueueButtons, initQueue, subscribeQueue } from "./paper_queue.js?v=
 import { repairLikeLaterConflicts } from "./paper_selection.js?v=964dbe6c53";
 import { mountAppToolbar } from "./app_toolbar.js?v=90ae25c72d";
 import { buildBranchReviewKey, createBranchReviewController, initBranchReportPage } from "./branch_page.js?v=f27a328acc";
-import { bindBranchListDetails, renderBranchDetailGroup, renderBranchDetailSection, renderBranchListDetails } from "./branch_details.js?v=7c8a22c23c";
+import { bindBranchListDetails, renderBranchDetailGroup, renderBranchDetailSection, renderBranchListDetails } from "./branch_details.js?v=22d7e0f349";
 import { createLatestTaskRunner } from "./request_gate.js?v=f527e8e81d";
 import { createFloatingTocController } from "./floating_toc.js?v=a9ffd5aa93";
 import { validateConferenceManifest, validateConferenceReport } from "./site_contract.js?v=12344e596d";
@@ -844,7 +844,7 @@ function renderPaperCard(paper, className) {
     [
       subjects ? renderBranchDetailGroup({ label: "Subjects", body: subjects }) : "",
       listAuthors ? renderBranchDetailSection({ label: "Authors", body: listAuthors }) : "",
-      paper.abstract ? renderBranchDetailSection({ label: "Abstract", body: escapeHtml(paper.abstract), muted: true }) : "",
+      paper.abstract ? renderBranchDetailSection({ label: "Abstract", body: escapeHtml(paper.abstract), muted: true, collapsible: true }) : "",
     ].join(""),
     {
       detailKey: rememberLikeRecord(paper),

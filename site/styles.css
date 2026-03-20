@@ -4633,6 +4633,36 @@ code {
   background: color-mix(in srgb, var(--surface-soft), white 6%);
 }
 
+.branch-card-detail-section.is-collapsible {
+  gap: 0;
+}
+
+.branch-card-detail-disclosure {
+  display: grid;
+  gap: 0;
+}
+
+.branch-card-detail-disclosure summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  list-style: none;
+  cursor: pointer;
+}
+
+.branch-card-detail-disclosure summary::-webkit-details-marker {
+  display: none;
+}
+
+.branch-card-detail-disclosure .branch-card-detail-body {
+  padding-top: 0.34rem;
+}
+
+.branch-card-detail-disclosure[open] .branch-card-details-arrow {
+  transform: rotate(180deg);
+}
+
 .branch-card-detail-body {
   display: grid;
   gap: 0.38rem;

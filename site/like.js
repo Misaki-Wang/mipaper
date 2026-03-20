@@ -1098,7 +1098,7 @@ function renderLikeCard(paper) {
 function renderLikeListRow(paper) {
   const view = buildLikePaperViewModel(paper);
   const rowOpen = openListRowDetails.has(view.paper.like_id);
-  const summaryText = view.takeaway || view.nextAction || view.paper.abstract || "No note yet.";
+  const summaryText = view.takeaway || view.nextAction || "";
   const abstractBlock = view.paper.abstract
     ? `
       <div class="liked-paper-row-abstract">
@@ -1116,7 +1116,7 @@ function renderLikeListRow(paper) {
           <h4>${escapeHtml(view.paper.title)}</h4>
           ${view.customTagSummary}
           ${rowOpen ? `<p class="liked-paper-row-authors">${view.authors}</p>` : ""}
-          ${rowOpen ? `<p class="liked-paper-row-summary">${escapeHtml(summaryText)}</p>` : ""}
+          ${rowOpen && summaryText ? `<p class="liked-paper-row-summary">${escapeHtml(summaryText)}</p>` : ""}
         </div>
         <div class="liked-paper-row-actions">
           <div class="paper-links liked-paper-row-links">${view.links}</div>
