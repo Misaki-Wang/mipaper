@@ -2253,6 +2253,13 @@ code {
   font-size: 0.92rem;
 }
 
+.liked-paper-row.is-compact .liked-paper-row-summary {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
 .liked-paper-row-actions {
   display: flex;
   flex-direction: column;

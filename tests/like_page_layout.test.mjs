@@ -4,6 +4,7 @@ import { readFileSync } from "node:fs";
 
 const likeHtml = readFileSync(new URL("../site/like.html", import.meta.url), "utf8");
 const likeSource = readFileSync(new URL("../site/like.js", import.meta.url), "utf8");
+const stylesSource = readFileSync(new URL("../site/styles.css", import.meta.url), "utf8");
 
 test("like page surfaces the liked paper results before secondary panels", () => {
   const resultsIndex = likeHtml.indexOf('id="like-results-section"');
@@ -51,6 +52,13 @@ test("like page uses show-more controls for grouped papers instead of per-group 
 });
 
 test("like list rows do not reuse abstract text as the summary note fallback", () => {
-  assert.match(likeSource, /const summaryText = view\.takeaway \|\| view\.nextAction \|\| "";/);
+  assert.match(likeSource, /const takeawayText = view\.takeaway \|\| "";/);
+  assert.match(likeSource, /const summaryText = takeawayText \|\| \(rowOpen \? view\.nextAction \|\| "" : ""\);/);
   assert.doesNotMatch(likeSource, /view\.takeaway \|\| view\.nextAction \|\| view\.paper\.abstract/);
+});
+
+test("compact like rows clamp summary notes to two lines", () => {
+  assert.match(stylesSource, /\.liked-paper-row\.is-compact \.liked-paper-row-summary \{/);
+  assert.match(stylesSource, /-webkit-line-clamp: 2;/);
+  assert.match(stylesSource, /overflow: hidden;/);
 });
