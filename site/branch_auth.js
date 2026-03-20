@@ -266,31 +266,45 @@ export function bindToolbarAutoHide(toolbar, toggleButton) {
   }
   toolbar.dataset.autoHideBound = "true";
 
-  let autoHideEnabled = readToolbarAutoHidePreference();
+  const mobileToolbarQuery =
+    typeof window.matchMedia === "function" ? window.matchMedia("(max-width: 760px)") : null;
+  const isMobileViewport = () => Boolean(mobileToolbarQuery?.matches);
+
+  let preferredAutoHideEnabled = readToolbarAutoHidePreference();
+  let autoHideEnabled = preferredAutoHideEnabled && !isMobileViewport();
   let lastY = window.scrollY;
   let collapse = 0;
   let targetCollapse = 0;
   let rafId = 0;
 
   const hideDistance = 144;
+  const syncToolbarHiddenState = (hidden) => {
+    document.querySelectorAll(".app-toolbar").forEach((node) => {
+      node.hidden = hidden;
+      node.setAttribute("aria-hidden", hidden ? "true" : "false");
+    });
+  };
 
   const setCollapse = (value) => {
     collapse = Math.max(0, Math.min(1, value));
     const eased = collapse * collapse * (3 - 2 * collapse);
     const offset = -hideDistance * eased;
     const opacity = 1 - collapse * 0.08;
+    const fullyCollapsed = collapse > 0.94;
+    syncToolbarHiddenState(fullyCollapsed);
     toolbar.style.transform = `translateY(${offset}px)`;
     toolbar.style.opacity = opacity.toFixed(4);
-    const fullyCollapsed = collapse > 0.94;
     toolbar.classList.toggle("is-collapsed", fullyCollapsed);
-    toolbar.setAttribute("aria-hidden", fullyCollapsed ? "true" : "false");
   };
 
   const syncToggleButton = () => {
     if (!toggleButton) {
       return;
     }
+    const hiddenOnMobile = isMobileViewport();
+    toggleButton.hidden = hiddenOnMobile;
     toggleButton.classList.toggle("is-enabled", autoHideEnabled);
+    toggleButton.setAttribute("aria-hidden", String(hiddenOnMobile));
     toggleButton.setAttribute("aria-pressed", String(autoHideEnabled));
     toggleButton.setAttribute(
       "aria-label",
@@ -306,10 +320,11 @@ export function bindToolbarAutoHide(toolbar, toggleButton) {
 
   const setAutoHideEnabled = (enabled, options = {}) => {
     const { persist = true } = options;
-    autoHideEnabled = Boolean(enabled);
+    preferredAutoHideEnabled = Boolean(enabled);
     if (persist) {
-      setToolbarAutoHidePreference(autoHideEnabled);
+      setToolbarAutoHidePreference(preferredAutoHideEnabled);
     }
+    autoHideEnabled = preferredAutoHideEnabled && !isMobileViewport();
     syncToggleButton();
     if (!autoHideEnabled) {
       targetCollapse = 0;
@@ -318,8 +333,10 @@ export function bindToolbarAutoHide(toolbar, toggleButton) {
         rafId = 0;
       }
       setCollapse(0);
+      lastY = Math.max(0, window.scrollY || 0);
       return;
     }
+    lastY = Math.max(0, window.scrollY || 0);
     onScroll();
   };
 
@@ -368,14 +385,24 @@ export function bindToolbarAutoHide(toolbar, toggleButton) {
       setCollapse(0);
     }
   }, { passive: true });
+  if (mobileToolbarQuery) {
+    const handleViewportChange = () => {
+      setAutoHideEnabled(preferredAutoHideEnabled, { persist: false });
+    };
+    if (typeof mobileToolbarQuery.addEventListener === "function") {
+      mobileToolbarQuery.addEventListener("change", handleViewportChange);
+    } else if (typeof mobileToolbarQuery.addListener === "function") {
+      mobileToolbarQuery.addListener(handleViewportChange);
+    }
+  }
   if (toggleButton) {
     toggleButton.addEventListener("click", (event) => {
       event.stopPropagation();
-      setAutoHideEnabled(!autoHideEnabled);
+      setAutoHideEnabled(!preferredAutoHideEnabled);
     });
   }
   subscribeUserSettings((snapshot) => {
-    if (snapshot.toolbarAutoHide === autoHideEnabled) {
+    if (snapshot.toolbarAutoHide === preferredAutoHideEnabled) {
       return;
     }
     setAutoHideEnabled(snapshot.toolbarAutoHide, { persist: false });

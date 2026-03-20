@@ -24,6 +24,10 @@ test("branch auth toolbar syncs pinned account preference rows from user setting
   assert.match(authSource, /data-account-preference-option/);
   assert.match(authSource, /data-toolbar-autohide-mode-toggle/);
   assert.match(authSource, /preferenceSection\.hidden = visibleCount === 0/);
+  assert.match(authSource, /matchMedia\("\(max-width: 760px\)"\)/);
+  assert.match(authSource, /toggleButton\.hidden = hiddenOnMobile/);
+  assert.match(authSource, /document\.querySelectorAll\("\.app-toolbar"\)\.forEach/);
+  assert.match(authSource, /node\.hidden = hidden/);
 });
 
 test("settings page lets users choose which preferences stay pinned in the account panel", () => {

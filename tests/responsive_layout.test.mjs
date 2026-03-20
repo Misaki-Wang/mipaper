@@ -28,7 +28,7 @@ test("tablet breakpoint restores denser two-column content grids", () => {
 test("phone breakpoint increases top spacing and avoids iOS input zoom", () => {
   assert.match(
     stylesSource,
-    /@media \(max-width: 760px\) \{[\s\S]*?\.page-shell \{\s*\n    width: var\(--shell-width\);\s*\n    padding-top: calc\(8\.3rem \+ var\(--safe-top\)\);\s*\n    padding-bottom: calc\(1\.6rem \+ var\(--safe-bottom\)\);/m
+    /@media \(max-width: 760px\) \{[\s\S]*?\.page-shell \{\s*\n    width: var\(--shell-width\);\s*\n    padding-top: calc\(0\.85rem \+ var\(--safe-top\)\);\s*\n    padding-bottom: calc\(1\.6rem \+ var\(--safe-bottom\)\);/m
   );
   assert.match(
     stylesSource,
@@ -36,7 +36,44 @@ test("phone breakpoint increases top spacing and avoids iOS input zoom", () => {
   );
   assert.match(
     stylesSource,
-    /@media \(max-width: 760px\) \{[\s\S]*?\.filters-menu-panel \{\s*\n    position: fixed;\s*\n    top: calc\(var\(--safe-top\) \+ 4\.8rem\);\s*\n    left: calc\(var\(--page-gutter\) \+ var\(--safe-left\)\);\s*\n    right: calc\(var\(--page-gutter\) \+ var\(--safe-right\)\);/m
+    /@media \(max-width: 760px\) \{[\s\S]*?\.app-toolbar \{\s*\n    position: sticky;\s*\n    top: calc\(var\(--safe-top\) \+ 0\.35rem\);\s*\n    left: auto;\s*\n    right: auto;/m
   );
-  assert.match(stylesSource, /\.toolbar-quick-add-status \{\s*\n    left: 0;\s*\n    right: 0;\s*\n    transform: translateY\(-0\.22rem\);\s*\n    max-width: 100%;\s*\n    white-space: normal;/m);
+  assert.match(
+    stylesSource,
+    /@media \(max-width: 760px\) \{[\s\S]*?\.toolbar-autohide-toggle \{\s*\n    display: none;\s*\n  \}/m
+  );
+  assert.match(
+    stylesSource,
+    /@media \(max-width: 760px\) \{[\s\S]*?\.filters-menu-shell \{\s*\n    order: 2;\s*\n    flex: 0 0 auto;\s*\n    margin-left: 0\.1rem;\s*\n  \}/m
+  );
+  assert.match(
+    stylesSource,
+    /@media \(max-width: 760px\) \{[\s\S]*?\.filters-menu-panel \{\s*\n    position: fixed;\s*\n    top: auto;\s*\n    bottom: calc\(var\(--safe-bottom\) \+ 0\.8rem\);\s*\n    left: calc\(var\(--page-gutter\) \+ var\(--safe-left\)\);\s*\n    right: calc\(var\(--page-gutter\) \+ var\(--safe-right\)\);/m
+  );
+  assert.match(
+    stylesSource,
+    /\.toolbar-quick-add-status \{[\s\S]*?\n    left: 0;\s*\n    right: 0;\s*\n    top: calc\(100% \+ 0\.22rem\);\s*\n    transform: translateY\(-0\.22rem\);\s*\n    max-width: 100%;\s*\n    white-space: normal;/m
+  );
+});
+
+test("single-column list cards keep details controls in the primary column", () => {
+  assert.match(
+    stylesSource,
+    /@media \(max-width: 900px\) \{[\s\S]*?:root\[data-page-view-mode="list"\] \.branch-card-details \{\s*\n    grid-column: 1;\s*\n    grid-row: auto;\s*\n    justify-content: flex-start;\s*\n    justify-self: start;\s*\n    align-self: start;\s*\n  \}/m
+  );
+});
+
+test("phone list cards collapse paper actions into a single icon row", () => {
+  assert.match(
+    stylesSource,
+    /@media \(max-width: 760px\) \{[\s\S]*?:root\[data-page-view-mode="list"\] \.page-cool-daily \.paper-card \.paper-links,[\s\S]*?\{\s*\n    gap: 0\.3rem;\s*\n    flex-wrap: nowrap;\s*\n    align-items: center;\s*\n  \}/m
+  );
+  assert.match(
+    stylesSource,
+    /@media \(max-width: 760px\) \{[\s\S]*?:root\[data-page-view-mode="list"\] \.page-cool-daily \.paper-card \.paper-link,[\s\S]*?\{\s*\n    position: relative;\s*\n    width: 2\.34rem;\s*\n    height: 2\.34rem;\s*\n    min-width: 2\.34rem;\s*\n    min-height: 2\.34rem;\s*\n    padding: 0;\s*\n    gap: 0;\s*\n    font-size: 0\.74rem;\s*\n  \}/m
+  );
+  assert.match(
+    stylesSource,
+    /@media \(max-width: 760px\) \{[\s\S]*?:root\[data-page-view-mode="list"\] \.page-cool-daily \.paper-card \.paper-link-text,[\s\S]*?\{\s*\n    position: absolute;\s*\n    width: 1px;\s*\n    height: 1px;[\s\S]*?clip-path: inset\(50%\);[\s\S]*?white-space: nowrap;[\s\S]*?border: 0;\s*\n  \}/m
+  );
 });
