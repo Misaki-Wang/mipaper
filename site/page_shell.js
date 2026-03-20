@@ -1,9 +1,15 @@
+import { openExclusiveDropdown, registerExclusiveDropdown } from "./nav_dropdowns.js?v=cd4da78ec3";
+
 export function bindFilterMenu({ button, panel, labelNode = null, iconNode = null, labelText = "Filters", iconText = "☰" }) {
   if (!button || !panel) {
     return () => {};
   }
 
   let open = false;
+  const dropdown = {
+    close: () => setOpen(false),
+  };
+  registerExclusiveDropdown(dropdown);
 
   function setOpen(nextOpen) {
     open = nextOpen;
@@ -17,6 +23,9 @@ export function bindFilterMenu({ button, panel, labelNode = null, iconNode = nul
       iconNode.textContent = iconText;
     }
     panel.hidden = !nextOpen;
+    if (nextOpen) {
+      openExclusiveDropdown(dropdown);
+    }
   }
 
   button.addEventListener("click", (event) => {

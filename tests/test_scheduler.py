@@ -88,6 +88,14 @@ class SchedulerHelpersTest(unittest.TestCase):
             self.assertEqual(payload, load_schedule_state(path))
             self.assertTrue(path.read_text(encoding="utf-8").endswith("\n"))
 
+    def test_load_schedule_state_ignores_invalid_json(self) -> None:
+        with TemporaryDirectory() as tmp_dir:
+            path = Path(tmp_dir) / "state" / "scheduled_jobs.json"
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text("{invalid", encoding="utf-8")
+
+            self.assertEqual({}, load_schedule_state(path))
+
 
 if __name__ == "__main__":
     unittest.main()

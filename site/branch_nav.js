@@ -1,4 +1,4 @@
-import { openExclusiveDropdown, registerExclusiveDropdown } from "./nav_dropdowns.js?v=e61dc1f67f";
+import { openExclusiveDropdown, registerExclusiveDropdown } from "./nav_dropdowns.js?v=cd4da78ec3";
 
 export function bindBranchNav(root = document) {
   const shells = [...root.querySelectorAll("[data-branch-nav]")];

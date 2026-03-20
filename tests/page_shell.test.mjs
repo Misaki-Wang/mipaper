@@ -92,6 +92,34 @@ test("bindFilterMenu toggles panel and closes on outside click", () => {
   }
 });
 
+test("bindFilterMenu closes other toolbar panels when a new one opens", () => {
+  const originalDocument = globalThis.document;
+  const mockDocument = new EventTarget();
+  globalThis.document = mockDocument;
+
+  try {
+    const firstButton = new MockElement();
+    const firstPanel = new MockElement();
+    const secondButton = new MockElement();
+    const secondPanel = new MockElement();
+
+    bindFilterMenu({ button: firstButton, panel: firstPanel });
+    bindFilterMenu({ button: secondButton, panel: secondPanel });
+
+    firstButton.dispatchEvent(new Event("click"));
+    assert.equal(firstPanel.hidden, false);
+    assert.equal(secondPanel.hidden, true);
+
+    secondButton.dispatchEvent(new Event("click"));
+    assert.equal(firstPanel.hidden, true);
+    assert.equal(secondPanel.hidden, false);
+    assert.equal(firstButton.getAttribute("aria-expanded"), "false");
+    assert.equal(secondButton.getAttribute("aria-expanded"), "true");
+  } finally {
+    globalThis.document = originalDocument;
+  }
+});
+
 test("bindBackToTop updates visibility and scrolls to top", () => {
   const originalWindow = globalThis.window;
   const mockWindow = new MockWindow();

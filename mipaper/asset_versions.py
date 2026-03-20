@@ -8,7 +8,7 @@ from pathlib import Path
 
 JS_REFERENCE_PATTERN = re.compile(
     r'(?P<prefix>\bfrom\s+["\']|\bimport\s+["\']|src=["\'])'
-    r'(?P<path>\./[^"\']+?\.js(?:\?[^"\']*)?)'
+    r'(?P<path>(?:\./|\.\./)[^"\']+?\.js(?:\?[^"\']*)?)'
     r'(?P<suffix>["\'])'
 )
 
@@ -20,11 +20,11 @@ class AssetVersionUpdateResult:
 
 def update_site_asset_versions(site_dir: Path) -> AssetVersionUpdateResult:
     site_root = site_dir.resolve()
-    js_files = sorted(site_root.glob("*.js"))
+    js_files = iter_site_files(site_root, suffixes={".js"})
     target_versions = {path.resolve(): compute_asset_version(path) for path in js_files}
 
     updated_files: list[Path] = []
-    for path in sorted([*site_root.glob("*.js"), *site_root.glob("*.html")]):
+    for path in iter_site_files(site_root, suffixes={".html", ".js"}):
         text = path.read_text(encoding="utf-8")
         rewritten = rewrite_js_references(text, source_path=path, site_root=site_root, target_versions=target_versions)
         if rewritten == text:
@@ -49,7 +49,7 @@ def rewrite_js_references(text: str, *, source_path: Path, site_root: Path, targ
         raw_path = match.group("path")
         base_path = strip_version(raw_path)
         target_path = (source_path.parent / base_path).resolve()
-        if not str(target_path).startswith(str(site_root)):
+        if not is_path_within_root(target_path, site_root):
             raise ValueError(f"Asset reference escapes site root: {raw_path} in {source_path}")
         if target_path not in target_versions:
             raise FileNotFoundError(f"Referenced asset not found for versioning: {raw_path} in {source_path}")
@@ -57,6 +57,18 @@ def rewrite_js_references(text: str, *, source_path: Path, site_root: Path, targ
         return f"{match.group('prefix')}{versioned_path}{match.group('suffix')}"
 
     return JS_REFERENCE_PATTERN.sub(replace, text)
+
+
+def iter_site_files(site_root: Path, *, suffixes: set[str]) -> list[Path]:
+    return sorted(path for path in site_root.rglob("*") if path.is_file() and path.suffix in suffixes)
+
+
+def is_path_within_root(path: Path, root: Path) -> bool:
+    try:
+        path.relative_to(root)
+        return True
+    except ValueError:
+        return False
 
 
 def strip_version(path: str) -> str:

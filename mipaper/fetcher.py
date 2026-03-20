@@ -423,8 +423,10 @@ def extract_first_int(*payloads: dict, keys: tuple[str, ...]) -> int | None:
                 continue
             if isinstance(value, int):
                 return value
-            if isinstance(value, str) and value.isdigit():
-                return int(value)
+            if isinstance(value, str):
+                normalized = value.strip().replace(",", "")
+                if normalized.isdigit():
+                    return int(normalized)
     return None
 
 

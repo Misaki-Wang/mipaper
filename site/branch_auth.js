@@ -1,4 +1,5 @@
 import { getAuthSnapshot, initLikesSync, signInWithGitHub, signOutFromGitHub, subscribeAuth, syncLikesNow } from "./likes.js?v=d409e691d1";
+import { openExclusiveDropdown, registerExclusiveDropdown } from "./nav_dropdowns.js?v=cd4da78ec3";
 import { escapeAttribute, escapeHtml, formatDateTime } from "./ui_utils.js?v=e2da3b3a11";
 
 const TOOLBAR_AUTO_HIDE_KEY = "cool-paper-toolbar-auto-hide";
@@ -37,11 +38,18 @@ export function bindBranchAuthToolbar(prefix) {
   }
 
   let open = false;
+  const dropdown = {
+    close: () => setOpen(false),
+  };
+  registerExclusiveDropdown(dropdown);
 
   const setOpen = (nextOpen) => {
     open = nextOpen;
     button.setAttribute("aria-expanded", String(open));
     panel.hidden = !open;
+    if (open) {
+      openExclusiveDropdown(dropdown);
+    }
   };
 
   const render = (snapshot) => {

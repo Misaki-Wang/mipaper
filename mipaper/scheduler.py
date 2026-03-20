@@ -108,7 +108,10 @@ def trending_backfill_dates(
 def load_schedule_state(path: Path) -> dict:
     if not path.exists():
         return {}
-    payload = json.loads(path.read_text(encoding="utf-8"))
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
     if not isinstance(payload, dict):
         return {}
     return payload

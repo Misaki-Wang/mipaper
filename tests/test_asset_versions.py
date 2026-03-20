@@ -53,6 +53,61 @@ class AssetVersionsTest(unittest.TestCase):
 
             self.assertEqual(first, second)
 
+    def test_update_site_asset_versions_rewrites_nested_relative_imports(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            site_dir = Path(tmpdir) / "site"
+            pages_dir = site_dir / "pages"
+            site_dir.mkdir(parents=True)
+            pages_dir.mkdir(parents=True)
+
+            (site_dir / "shared.js").write_text("export const value = 1;\n", encoding="utf-8")
+            (pages_dir / "nested.js").write_text(
+                'import { value } from "../shared.js";\nconsole.log(value);\n',
+                encoding="utf-8",
+            )
+            (pages_dir / "index.html").write_text(
+                '<script type="module" src="./nested.js"></script>\n',
+                encoding="utf-8",
+            )
+
+            result = update_site_asset_versions(site_dir)
+
+            shared_version = compute_asset_version(site_dir / "shared.js")
+            nested_version = compute_asset_version(pages_dir / "nested.js")
+
+            self.assertIn(
+                f'from "../shared.js?v={shared_version}"',
+                (pages_dir / "nested.js").read_text(encoding="utf-8"),
+            )
+            self.assertIn(
+                f'src="./nested.js?v={nested_version}"',
+                (pages_dir / "index.html").read_text(encoding="utf-8"),
+            )
+            self.assertEqual(
+                {
+                    (pages_dir / "nested.js").resolve(),
+                    (pages_dir / "index.html").resolve(),
+                },
+                {path.resolve() for path in result.updated_files},
+            )
+
+    def test_update_site_asset_versions_rejects_prefix_matched_escape_paths(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            site_dir = root / "site"
+            site_dir.mkdir(parents=True)
+            sibling_dir = root / "site-shadow"
+            sibling_dir.mkdir(parents=True)
+
+            (sibling_dir / "escape.js").write_text('console.log("escape");\n', encoding="utf-8")
+            (site_dir / "index.html").write_text(
+                '<script type="module" src="../site-shadow/escape.js"></script>\n',
+                encoding="utf-8",
+            )
+
+            with self.assertRaisesRegex(ValueError, "escapes site root"):
+                update_site_asset_versions(site_dir)
+
 
 if __name__ == "__main__":
     unittest.main()

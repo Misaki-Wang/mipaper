@@ -16,5 +16,7 @@ export function openExclusiveDropdown(dropdown) {
 }
 
 export function closeExclusiveDropdown() {
-  // No-op: kept for backward compatibility with existing imports.
+  for (const dropdown of registeredDropdowns) {
+    dropdown.close();
+  }
 }

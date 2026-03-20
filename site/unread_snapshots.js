@@ -1,10 +1,10 @@
 import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js?v=f943be8314";
-import { bindBranchAuthToolbar } from "./branch_auth.js?v=75537cfcb2";
+import { bindBranchAuthToolbar } from "./branch_auth.js?v=1060920198";
 import { mountAppToolbar } from "./app_toolbar.js?v=625fba0996";
 import { bindBranchNav } from "./branch_nav.js?v=2ab092d7f1";
 import { bindLibraryNav } from "./library_nav.js?v=7b6e095589";
 import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=c2effc3556";
-import { bindFilterMenu } from "./page_shell.js?v=8490eadf5b";
+import { bindFilterMenu } from "./page_shell.js?v=b0d53b671d";
 import { initToolbarPreferences } from "./toolbar_preferences.js?v=a0ed68b91d";
 import { escapeAttribute, escapeHtml, fetchJson, getErrorMessage } from "./ui_utils.js?v=e2da3b3a11";
 

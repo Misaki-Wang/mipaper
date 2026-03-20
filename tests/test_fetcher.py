@@ -159,6 +159,20 @@ class ParseFeedHTMLTest(unittest.TestCase):
         self.assertEqual("https://arxiv.org/pdf/2603.01234", papers[0].arxiv_pdf_url)
         self.assertEqual("https://papers.cool/arxiv/2603.01234", papers[0].papers_cool_url)
 
+    def test_parse_hf_daily_html_parses_string_counters(self) -> None:
+        html = """
+        <div
+          data-target="DailyPapers"
+          data-props="{&quot;dailyPapers&quot;:[{&quot;paper&quot;:{&quot;id&quot;:&quot;2603.01235&quot;,&quot;title&quot;:&quot;Counter Paper&quot;},&quot;upvotes&quot;:&quot;1,234&quot;,&quot;comments&quot;:&quot;56&quot;}]}"
+        ></div>
+        """
+
+        papers = parse_hf_daily_html(html, "2026-03-09")
+
+        self.assertEqual(1, len(papers))
+        self.assertEqual(1234, papers[0].upvotes)
+        self.assertEqual(56, papers[0].comments)
+
     def test_build_hf_daily_url(self) -> None:
         self.assertEqual("https://huggingface.co/papers/date/2026-03-09", build_hf_daily_url("2026-03-09"))
 
