@@ -11,7 +11,12 @@ import { escapeAttribute, escapeHtml, fetchJson, getErrorMessage } from "./ui_ut
 
 mountAppToolbar("#unread-toolbar-root", {
   prefix: "unread",
-  filtersTemplateId: "unread-toolbar-filters",
+  showFilters: false,
+  toolbarSearch: {
+    inputId: "unread-search-input",
+    placeholder: "Search title, branch, or snapshot",
+    ariaLabel: "Search unread snapshots by title, branch, or snapshot",
+  },
   branchActiveKey: null,
   libraryActiveKey: "unread",
   quickAddTarget: "later",

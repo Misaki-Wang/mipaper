@@ -37,7 +37,12 @@ import { readWorkspacePanelDefaultMode, subscribeUserSettings } from "./user_set
 
 mountAppToolbar("#queue-toolbar-root", {
   prefix: "queue",
-  filtersTemplateId: "queue-toolbar-filters",
+  showFilters: false,
+  toolbarSearch: {
+    inputId: "queue-search-input",
+    placeholder: "Search title, authors, topic, or tags",
+    ariaLabel: "Search later queue by title, authors, topic, or custom tags",
+  },
   branchActiveKey: null,
   libraryActiveKey: "later",
   quickAddTarget: "later",
@@ -903,6 +908,86 @@ function normalizeTagSearchQuery(value) {
   return String(value || "").replace(/\s+/g, " ").trim().toLowerCase();
 }
 
+function getVisibleTagOptionButtons(likeId) {
+  const key = String(likeId || "").trim();
+  if (!key) {
+    return [];
+  }
+  const optionsRoot = document.querySelector(`[data-tag-options-root="${CSS.escape(key)}"]`);
+  if (!optionsRoot) {
+    return [];
+  }
+  return [...optionsRoot.querySelectorAll("[data-tag-option]")].filter((button) => !button.hidden && !button.disabled);
+}
+
+function clearActiveTagOption(likeId) {
+  const key = String(likeId || "").trim();
+  if (!key) {
+    return;
+  }
+  document
+    .querySelectorAll(`[data-tag-options-root="${CSS.escape(key)}"] [data-tag-option].is-active`)
+    .forEach((button) => button.classList.remove("is-active"));
+  const input = document.querySelector(`[data-tag-input="${CSS.escape(key)}"]`);
+  input?.removeAttribute("aria-activedescendant");
+}
+
+function setActiveTagOption(likeId, nextButton) {
+  const key = String(likeId || "").trim();
+  if (!key) {
+    return null;
+  }
+
+  const buttons = getVisibleTagOptionButtons(key);
+  if (!buttons.length) {
+    clearActiveTagOption(key);
+    return null;
+  }
+
+  const target = nextButton && buttons.includes(nextButton) ? nextButton : buttons[0];
+  const input = document.querySelector(`[data-tag-input="${CSS.escape(key)}"]`);
+  const activeId = target.id || `tag-option-${key}-${target.dataset.tagKey || buttons.indexOf(target)}`;
+  target.id = activeId;
+
+  buttons.forEach((button) => {
+    button.classList.toggle("is-active", button === target);
+  });
+  input?.setAttribute("aria-activedescendant", activeId);
+  target.scrollIntoView({ block: "nearest" });
+  return target;
+}
+
+function syncActiveTagOption(likeId, { preserveCurrent = true } = {}) {
+  const buttons = getVisibleTagOptionButtons(likeId);
+  if (!buttons.length) {
+    clearActiveTagOption(likeId);
+    return null;
+  }
+  const current = buttons.find((button) => button.classList.contains("is-active"));
+  if (preserveCurrent && current) {
+    return current;
+  }
+  return setActiveTagOption(likeId, buttons[0]);
+}
+
+function moveActiveTagOption(likeId, direction) {
+  const buttons = getVisibleTagOptionButtons(likeId);
+  if (!buttons.length) {
+    clearActiveTagOption(likeId);
+    return null;
+  }
+
+  const currentIndex = buttons.findIndex((button) => button.classList.contains("is-active"));
+  const nextIndex =
+    currentIndex < 0
+      ? direction < 0
+        ? buttons.length - 1
+        : 0
+      : (currentIndex + direction + buttons.length) % buttons.length;
+
+  return setActiveTagOption(likeId, buttons[nextIndex]);
+}
+
 function updateTagOptionFiltering(likeId, query = "") {
   const key = String(likeId || "").trim();
   if (!key) {
@@ -946,14 +1031,14 @@ function updateTagOptionFiltering(likeId, query = "") {
     const total = Number(meta.dataset.tagOptionsTotal || optionButtons.length);
     if (!optionButtons.length) {
       meta.textContent = "No reusable tags yet";
-      return;
-    }
-    if (!normalizedQuery) {
+    } else if (!normalizedQuery) {
       meta.textContent = `${total} available for this paper`;
-      return;
+    } else {
+      meta.textContent = visibleCount === 1 ? "1 matching tag" : `${visibleCount} matching tags`;
     }
-    meta.textContent = visibleCount === 1 ? "1 matching tag" : `${visibleCount} matching tags`;
   }
+
+  syncActiveTagOption(key, { preserveCurrent: true });
 }
 
 function bindTagComposer() {
@@ -1033,6 +1118,7 @@ function bindTagComposer() {
       if (!likeId || !tag) {
         return;
       }
+      setActiveTagOption(likeId, button);
       applyTagToPaper(likeId, tag);
     });
   });
@@ -1068,11 +1154,26 @@ function bindTagComposer() {
         hideAllTagPopovers();
         return;
       }
+      if (event.key === "ArrowDown") {
+        event.preventDefault();
+        moveActiveTagOption(input.dataset.tagInput, 1);
+        return;
+      }
+      if (event.key === "ArrowUp") {
+        event.preventDefault();
+        moveActiveTagOption(input.dataset.tagInput, -1);
+        return;
+      }
       if (event.key !== "Enter") {
         return;
       }
       event.preventDefault();
       const likeId = input.dataset.tagInput;
+      const activeOption = getVisibleTagOptionButtons(likeId).find((button) => button.classList.contains("is-active"));
+      if (activeOption) {
+        activeOption.click();
+        return;
+      }
       const tag = buildCustomTag(String(input.value || ""), getTagCatalogRecords());
       if (!likeId || !tag) {
         return;

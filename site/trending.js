@@ -12,6 +12,11 @@ import { escapeAttribute, escapeHtml, fetchJson, formatZhTime, getErrorMessage }
 mountAppToolbar("#trending-toolbar-root", {
   prefix: "trending",
   filtersTemplateId: "trending-toolbar-filters",
+  toolbarSearch: {
+    inputId: "trending-search-input",
+    placeholder: "Search owner, repo, or description",
+    ariaLabel: "Search trending repositories by owner, repository name, or description",
+  },
   branchActiveKey: "trending",
   libraryActiveKey: null,
 });

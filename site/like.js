@@ -33,7 +33,7 @@ import {
   getWorkflowStatusLabel,
   getWorkflowStatusValue,
 } from "./like_page_labels.js?v=aaa244a29d";
-import { createSavedViewId, describeSavedView, getActiveFilters, normalizeFilterState, areFilterStatesEqual } from "./like_page_saved_views.js?v=4379d3608e";
+import { createSavedViewId, getActiveFilters, normalizeFilterState, areFilterStatesEqual } from "./like_page_saved_views.js?v=4379d3608e";
 import {
   CUSTOM_TAG_PALETTE,
   applyCustomTagToRecord,
@@ -62,6 +62,11 @@ import { readWorkspacePanelDefaultMode, subscribeUserSettings } from "./user_set
 mountAppToolbar("#like-toolbar-root", {
   prefix: "like",
   filtersTemplateId: "like-toolbar-filters",
+  toolbarSearch: {
+    inputId: "like-search-input",
+    placeholder: "Search title, authors, notes, or tags",
+    ariaLabel: "Search liked papers by title, authors, notes, or custom tags",
+  },
   branchActiveKey: null,
   libraryActiveKey: "liked",
   quickAddTarget: "later",
@@ -103,6 +108,12 @@ const savedViewNameInput = document.querySelector("#like-saved-view-name");
 const saveViewButton = document.querySelector("#like-save-view");
 const updateViewButton = document.querySelector("#like-update-view");
 const deleteViewButton = document.querySelector("#like-delete-view");
+const inlineSearchInput = document.querySelector("#like-inline-search-filter");
+const inlineCustomTagFilter = document.querySelector("#like-inline-custom-tag-filter");
+const inlineStatusFilter = document.querySelector("#like-inline-status-filter");
+const inlinePriorityFilter = document.querySelector("#like-inline-priority-filter");
+const inlineSortFilter = document.querySelector("#like-inline-sort-filter");
+const inlineResetFiltersButton = document.querySelector("#like-inline-reset-filters");
 const sidebarToggleButton = document.querySelector("#like-sidebar-toggle");
 const sidebarToggleLabel = document.querySelector("#like-sidebar-toggle-label");
 const sidebarToggleIcon = document.querySelector("#like-sidebar-toggle-icon");
@@ -249,26 +260,43 @@ function bindFilters() {
     renderPage();
   });
 
+  inlineSearchInput?.addEventListener("input", (event) => {
+    state.query = event.target.value.trim().toLowerCase();
+    renderPage();
+  });
+
   sortFilter.addEventListener("change", (event) => {
     state.sortMode = normalizeLikeSortMode(event.target.value);
     renderPage();
   });
 
+  inlineCustomTagFilter?.addEventListener("change", (event) => {
+    state.customTag = event.target.value;
+    renderPage();
+  });
+
+  inlineStatusFilter?.addEventListener("change", (event) => {
+    state.workflowStatus = event.target.value;
+    renderPage();
+  });
+
+  inlinePriorityFilter?.addEventListener("change", (event) => {
+    state.priorityLevel = event.target.value;
+    renderPage();
+  });
+
+  inlineSortFilter?.addEventListener("change", (event) => {
+    state.sortMode = normalizeLikeSortMode(event.target.value);
+    renderPage();
+  });
+
   resetFiltersButton.addEventListener("click", () => {
-    state.source = "";
-    state.topic = "";
-    state.customTag = "";
-    state.workflowStatus = "";
-    state.priorityLevel = "";
-    state.query = "";
-    state.sortMode = "saved_desc";
-    sourceFilter.value = "";
-    topicFilter.value = "";
-    customTagFilter.value = "";
-    statusFilter.value = "";
-    priorityFilter.value = "";
-    searchInput.value = "";
-    sortFilter.value = state.sortMode;
+    resetAllFilters();
+    renderPage();
+  });
+
+  inlineResetFiltersButton?.addEventListener("click", () => {
+    clearQuickFilters();
     renderPage();
   });
 }
@@ -404,25 +432,54 @@ function populateFilters(likes, laterQueue, toReadSnapshots) {
     `<option value="">All Topics</option>`,
     ...topics.map((topic) => `<option value="${escapeAttribute(topic)}">${escapeHtml(displayTopicLabel(topic))}</option>`),
   ].join("");
-  customTagFilter.innerHTML = [
+  const customTagOptions = [
     `<option value="">All Tags</option>`,
     ...customTags.map((tag) => `<option value="${escapeAttribute(tag.key)}">${escapeHtml(tag.label)}</option>`),
   ].join("");
-  statusFilter.innerHTML = [
+  const statusOptions = [
     `<option value="">All Statuses</option>`,
     ...WORKFLOW_STATUS_OPTIONS.map((item) => `<option value="${escapeAttribute(item.value)}">${escapeHtml(item.label)}</option>`),
   ].join("");
-  priorityFilter.innerHTML = [
+  const priorityOptions = [
     `<option value="">All Priorities</option>`,
     ...PRIORITY_OPTIONS.map((item) => `<option value="${escapeAttribute(item.value)}">${escapeHtml(item.label)}</option>`),
   ].join("");
+
+  customTagFilter.innerHTML = customTagOptions;
+  if (inlineCustomTagFilter) {
+    inlineCustomTagFilter.innerHTML = customTagOptions;
+  }
+  statusFilter.innerHTML = statusOptions;
+  if (inlineStatusFilter) {
+    inlineStatusFilter.innerHTML = statusOptions;
+  }
+  priorityFilter.innerHTML = priorityOptions;
+  if (inlinePriorityFilter) {
+    inlinePriorityFilter.innerHTML = priorityOptions;
+  }
 
   sourceFilter.value = sources.includes(currentSource) ? currentSource : "";
   topicFilter.value = topics.includes(currentTopic) ? currentTopic : "";
   customTagFilter.value = customTags.some((tag) => tag.key === currentCustomTag) ? currentCustomTag : "";
   statusFilter.value = WORKFLOW_STATUS_OPTIONS.some((item) => item.value === currentWorkflowStatus) ? currentWorkflowStatus : "";
   priorityFilter.value = PRIORITY_OPTIONS.some((item) => item.value === currentPriorityLevel) ? currentPriorityLevel : "";
+  if (inlineCustomTagFilter) {
+    inlineCustomTagFilter.value = customTagFilter.value;
+  }
+  if (inlineStatusFilter) {
+    inlineStatusFilter.value = statusFilter.value;
+  }
+  if (inlinePriorityFilter) {
+    inlinePriorityFilter.value = priorityFilter.value;
+  }
+  searchInput.value = state.query;
+  if (inlineSearchInput) {
+    inlineSearchInput.value = state.query;
+  }
   sortFilter.value = normalizeLikeSortMode(state.sortMode);
+  if (inlineSortFilter) {
+    inlineSortFilter.value = sortFilter.value;
+  }
   state.source = sourceFilter.value;
   state.topic = topicFilter.value;
   state.customTag = customTagFilter.value;
@@ -593,14 +650,20 @@ function renderSavedViews() {
         .map((view) => {
           const isSelected = view.view_id === state.selectedSavedViewId;
           const isApplied = areFilterStatesEqual(view.filters, currentFilters);
+          const savedViewMeta = describeSavedViewCard(view.filters, state.likes);
+          const savedViewScopeNote = getSavedViewScopeNote(view.filters);
           return `
             <button
               class="saved-view-chip${isSelected ? " is-selected" : ""}${isApplied ? " is-applied" : ""}"
               type="button"
               data-saved-view-id="${escapeAttribute(view.view_id)}"
             >
-              <span class="saved-view-chip-name">${escapeHtml(view.name)}</span>
-              <span class="saved-view-chip-meta">${escapeHtml(describeSavedView(view.filters, state.likes))}</span>
+              <span class="saved-view-chip-head">
+                <span class="saved-view-chip-name">${escapeHtml(view.name)}</span>
+                ${isApplied ? `<span class="saved-view-chip-state">Applied</span>` : isSelected ? `<span class="saved-view-chip-state is-muted">Selected</span>` : ""}
+              </span>
+              <span class="saved-view-chip-meta">${escapeHtml(savedViewMeta)}</span>
+              ${savedViewScopeNote ? `<span class="saved-view-chip-note">${escapeHtml(savedViewScopeNote)}</span>` : ""}
             </button>
           `;
         })
@@ -936,30 +999,20 @@ function renderResults(likes, visibleLikes, sourceSections) {
   const currentFilterState = getCurrentFilterState();
   const activeFilters = getActiveFilters(currentFilterState, state.likes);
   const hasNarrowingFilters = hasActiveLikeFilters(currentFilterState);
-  const activeCustomTag = state.customTag
-    ? collectCustomTagCatalog(state.likes).find((item) => item.key === state.customTag)?.label || state.customTag
-    : "";
   document.querySelector("#like-results-title").textContent = hasNarrowingFilters
-    ? `${visibleLikes.length} papers visible after filtering`
+    ? `${visibleLikes.length} visible`
     : `${likes.length} liked papers`;
   document.querySelector("#like-results-stats").innerHTML = [
-    renderResultStat("Visible Liked", visibleLikes.length, hasNarrowingFilters ? `of ${likes.length}` : "full liked set"),
-    renderResultStat("Visible Groups", sourceSections.length, hasNarrowingFilters ? "filtered" : "all groups"),
-    renderResultStat(
-      "View Mode",
-      state.viewMode === "list" ? "List" : "Gallery",
-      activeCustomTag || getWorkflowStatusLabel(state.workflowStatus) || getPriorityLabel(state.priorityLevel) || state.topic || (state.query ? `search: ${state.query}` : "cross-group browsing")
-    ),
-    renderResultStat(
-      "Sort",
-      getLikeSortLabel(state.sortMode),
-      state.sortMode === "saved_desc" ? "default order" : "based on Pub Date"
-    ),
+    renderResultStat(hasNarrowingFilters ? "Visible" : "Liked", visibleLikes.length, hasNarrowingFilters ? `of ${likes.length}` : "full set"),
+    renderResultStat("Groups", sourceSections.length, hasNarrowingFilters ? "shown" : "all"),
+    renderResultStat("View", state.viewMode === "list" ? "List" : "Gallery"),
+    renderResultStat("Sort", getLikeSortLabel(state.sortMode)),
   ].join("");
   document.querySelector("#like-active-filters").innerHTML = activeFilters.length
     ? activeFilters.map((item) => `<span class="active-filter-pill">${escapeHtml(item)}</span>`).join("")
-    : `<span class="active-filter-pill">No filters applied. You are looking at the full liked set.</span>`;
+    : "";
   resetFiltersButton.disabled = !activeFilters.length;
+  resetFiltersButton.hidden = !activeFilters.length;
 }
 
 function renderSourceSections(sections) {
@@ -1714,6 +1767,86 @@ function normalizeTagSearchQuery(value) {
   return String(value || "").replace(/\s+/g, " ").trim().toLowerCase();
 }
 
+function getVisibleTagOptionButtons(likeId) {
+  const key = String(likeId || "").trim();
+  if (!key) {
+    return [];
+  }
+  const optionsRoot = document.querySelector(`[data-tag-options-root="${CSS.escape(key)}"]`);
+  if (!optionsRoot) {
+    return [];
+  }
+  return [...optionsRoot.querySelectorAll("[data-tag-option]")].filter((button) => !button.hidden && !button.disabled);
+}
+
+function clearActiveTagOption(likeId) {
+  const key = String(likeId || "").trim();
+  if (!key) {
+    return;
+  }
+  document
+    .querySelectorAll(`[data-tag-options-root="${CSS.escape(key)}"] [data-tag-option].is-active`)
+    .forEach((button) => button.classList.remove("is-active"));
+  const input = document.querySelector(`[data-tag-input="${CSS.escape(key)}"]`);
+  input?.removeAttribute("aria-activedescendant");
+}
+
+function setActiveTagOption(likeId, nextButton) {
+  const key = String(likeId || "").trim();
+  if (!key) {
+    return null;
+  }
+
+  const buttons = getVisibleTagOptionButtons(key);
+  if (!buttons.length) {
+    clearActiveTagOption(key);
+    return null;
+  }
+
+  const target = nextButton && buttons.includes(nextButton) ? nextButton : buttons[0];
+  const input = document.querySelector(`[data-tag-input="${CSS.escape(key)}"]`);
+  const activeId = target.id || `tag-option-${key}-${target.dataset.tagKey || buttons.indexOf(target)}`;
+  target.id = activeId;
+
+  buttons.forEach((button) => {
+    button.classList.toggle("is-active", button === target);
+  });
+  input?.setAttribute("aria-activedescendant", activeId);
+  target.scrollIntoView({ block: "nearest" });
+  return target;
+}
+
+function syncActiveTagOption(likeId, { preserveCurrent = true } = {}) {
+  const buttons = getVisibleTagOptionButtons(likeId);
+  if (!buttons.length) {
+    clearActiveTagOption(likeId);
+    return null;
+  }
+  const current = buttons.find((button) => button.classList.contains("is-active"));
+  if (preserveCurrent && current) {
+    return current;
+  }
+  return setActiveTagOption(likeId, buttons[0]);
+}
+
+function moveActiveTagOption(likeId, direction) {
+  const buttons = getVisibleTagOptionButtons(likeId);
+  if (!buttons.length) {
+    clearActiveTagOption(likeId);
+    return null;
+  }
+
+  const currentIndex = buttons.findIndex((button) => button.classList.contains("is-active"));
+  const nextIndex =
+    currentIndex < 0
+      ? direction < 0
+        ? buttons.length - 1
+        : 0
+      : (currentIndex + direction + buttons.length) % buttons.length;
+
+  return setActiveTagOption(likeId, buttons[nextIndex]);
+}
+
 function updateTagOptionFiltering(likeId, query = "") {
   const key = String(likeId || "").trim();
   if (!key) {
@@ -1757,15 +1890,15 @@ function updateTagOptionFiltering(likeId, query = "") {
     const total = Number(meta.dataset.tagOptionsTotal || optionButtons.length);
     if (!optionButtons.length) {
       meta.textContent = "No reusable tags yet";
-      return;
-    }
-    if (!normalizedQuery) {
+    } else if (!normalizedQuery) {
       meta.textContent = `${total} available for this paper`;
-      return;
+    } else {
+      meta.textContent =
+        visibleCount === 1 ? "1 matching tag" : `${visibleCount} matching tags`;
     }
-    meta.textContent =
-      visibleCount === 1 ? "1 matching tag" : `${visibleCount} matching tags`;
   }
+
+  syncActiveTagOption(key, { preserveCurrent: true });
 }
 
 function bindTagComposer() {
@@ -1845,6 +1978,7 @@ function bindTagComposer() {
       if (!likeId || !tag) {
         return;
       }
+      setActiveTagOption(likeId, button);
       applyTagToPaper(likeId, tag);
     });
   });
@@ -1875,16 +2009,31 @@ function bindTagComposer() {
       updateTagOptionFiltering(input.dataset.tagInput, input.value);
     });
     input.addEventListener("keydown", (event) => {
+      const likeId = input.dataset.tagInput;
       if (event.key === "Escape") {
         event.preventDefault();
         hideAllTagPopovers();
+        return;
+      }
+      if (event.key === "ArrowDown") {
+        event.preventDefault();
+        moveActiveTagOption(likeId, 1);
+        return;
+      }
+      if (event.key === "ArrowUp") {
+        event.preventDefault();
+        moveActiveTagOption(likeId, -1);
         return;
       }
       if (event.key !== "Enter") {
         return;
       }
       event.preventDefault();
-      const likeId = input.dataset.tagInput;
+      const activeOption = getVisibleTagOptionButtons(likeId).find((button) => button.classList.contains("is-active"));
+      if (activeOption) {
+        activeOption.click();
+        return;
+      }
       const tag = buildCustomTag(String(input.value || ""), state.likes);
       if (!likeId || !tag) {
         return;
@@ -2526,10 +2675,10 @@ function computeTopicDistribution(papers) {
 
 function renderResultStat(label, value, meta) {
   return `
-    <article class="result-stat">
-      <span class="result-stat-label">${escapeHtml(label)}</span>
-      <strong class="result-stat-value">${escapeHtml(String(value))}</strong>
-      <span class="result-stat-meta">${escapeHtml(meta)}</span>
+    <article class="like-results-pill">
+      <span class="like-results-pill-label">${escapeHtml(label)}</span>
+      <strong class="like-results-pill-value">${escapeHtml(String(value))}</strong>
+      ${meta ? `<span class="like-results-pill-meta">${escapeHtml(meta)}</span>` : ""}
     </article>
   `;
 }
@@ -2577,6 +2726,7 @@ function renderEmpty(toReadSnapshots) {
     sourceSections.innerHTML = `<div class="glass-card empty-state">Click Like in Cool Daily, Conference, or HF Daily to add papers here.</div>`;
   }
   resetFiltersButton.disabled = true;
+  resetFiltersButton.hidden = true;
 }
 
 function getCurrentFilterState() {
@@ -2590,6 +2740,75 @@ function getCurrentFilterState() {
     sortMode: state.sortMode,
     viewMode: state.viewMode,
   });
+}
+
+function resetAllFilters() {
+  state.source = "";
+  state.topic = "";
+  clearQuickFilters();
+  sourceFilter.value = "";
+  topicFilter.value = "";
+}
+
+function clearQuickFilters() {
+  state.customTag = "";
+  state.workflowStatus = "";
+  state.priorityLevel = "";
+  state.query = "";
+  state.sortMode = "saved_desc";
+  customTagFilter.value = "";
+  statusFilter.value = "";
+  priorityFilter.value = "";
+  searchInput.value = "";
+  sortFilter.value = state.sortMode;
+  if (inlineCustomTagFilter) {
+    inlineCustomTagFilter.value = "";
+  }
+  if (inlineStatusFilter) {
+    inlineStatusFilter.value = "";
+  }
+  if (inlinePriorityFilter) {
+    inlinePriorityFilter.value = "";
+  }
+  if (inlineSearchInput) {
+    inlineSearchInput.value = "";
+  }
+  if (inlineSortFilter) {
+    inlineSortFilter.value = state.sortMode;
+  }
+}
+
+function describeSavedViewCard(filters, likes) {
+  const normalized = normalizeFilterState(filters);
+  const parts = [];
+  if (normalized.customTag) {
+    const tag = collectCustomTagCatalog(likes).find((item) => item.key === normalized.customTag);
+    parts.push(tag?.label || normalized.customTag);
+  }
+  if (normalized.workflowStatus) {
+    parts.push(getWorkflowStatusLabel(normalized.workflowStatus));
+  }
+  if (normalized.priorityLevel) {
+    parts.push(getPriorityLabel(normalized.priorityLevel));
+  }
+  if (normalized.query) {
+    parts.push(`Search: ${normalized.query}`);
+  }
+  if (normalized.sortMode !== "saved_desc") {
+    parts.push(getLikeSortLabel(normalized.sortMode));
+  }
+  if (normalized.viewMode === "list") {
+    parts.push("List");
+  }
+  return parts.length ? parts.join(" · ") : "Default browse";
+}
+
+function getSavedViewScopeNote(filters) {
+  const normalized = normalizeFilterState(filters);
+  if (normalized.source || normalized.topic) {
+    return "Includes scope filters from the toolbar";
+  }
+  return "";
 }
 
 function applySavedView(viewId) {
@@ -2616,6 +2835,21 @@ function applySavedView(viewId) {
   priorityFilter.value = state.priorityLevel;
   searchInput.value = state.query;
   sortFilter.value = state.sortMode;
+  if (inlineCustomTagFilter) {
+    inlineCustomTagFilter.value = state.customTag;
+  }
+  if (inlineStatusFilter) {
+    inlineStatusFilter.value = state.workflowStatus;
+  }
+  if (inlinePriorityFilter) {
+    inlinePriorityFilter.value = state.priorityLevel;
+  }
+  if (inlineSearchInput) {
+    inlineSearchInput.value = state.query;
+  }
+  if (inlineSortFilter) {
+    inlineSortFilter.value = state.sortMode;
+  }
   renderPage();
 }
 

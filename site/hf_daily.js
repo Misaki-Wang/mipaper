@@ -13,6 +13,11 @@ import { escapeAttribute, escapeHtml, fetchJson, formatZhTime, getErrorMessage }
 mountAppToolbar("#hf-toolbar-root", {
   prefix: "hf",
   filtersTemplateId: "hf-toolbar-filters",
+  toolbarSearch: {
+    inputId: "hf-search-input",
+    placeholder: "Search title keywords",
+    ariaLabel: "Search Hugging Face daily papers by title keywords",
+  },
   branchActiveKey: "hf",
   libraryActiveKey: null,
 });

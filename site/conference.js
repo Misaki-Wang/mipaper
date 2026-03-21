@@ -12,6 +12,11 @@ import { escapeAttribute, escapeHtml, fetchJson, formatZhTime, getErrorMessage }
 mountAppToolbar("#conference-toolbar-root", {
   prefix: "conference",
   filtersTemplateId: "conference-toolbar-filters",
+  toolbarSearch: {
+    inputId: "conference-search",
+    placeholder: "Search paper titles, authors, or subjects",
+    ariaLabel: "Search conference papers by title, authors, or subjects",
+  },
   branchActiveKey: "conference",
   libraryActiveKey: null,
 });

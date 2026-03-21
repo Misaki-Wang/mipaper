@@ -34,3 +34,11 @@ test("queue lifts workspace tag editors above neighboring cards", () => {
   assert.match(stylesSource, /\.page-library-queue \.later-paper-row:has\(\.custom-tag-composer:not\(\[hidden\]\)\) \{/);
   assert.match(stylesSource, /z-index: 35;/);
 });
+
+test("queue tag picker supports keyboard navigation with a visible active state", () => {
+  assert.match(queueSource, /function moveActiveTagOption\(likeId, direction\)/);
+  assert.match(queueSource, /event\.key === "ArrowDown"/);
+  assert.match(queueSource, /event\.key === "ArrowUp"/);
+  assert.match(queueSource, /activeOption\.click\(\);/);
+  assert.match(stylesSource, /\.custom-tag-options \.custom-tag-option\.is-active \{/);
+});

@@ -14,6 +14,11 @@ import { escapeAttribute, escapeHtml, fetchJson, formatZhTime, getErrorMessage }
 mountAppToolbar("#daily-toolbar-root", {
   prefix: "daily",
   filtersTemplateId: "daily-toolbar-filters",
+  toolbarSearch: {
+    inputId: "search-input",
+    placeholder: "Search title keywords",
+    ariaLabel: "Search daily papers by title keywords",
+  },
   branchActiveKey: "cool",
   libraryActiveKey: null,
 });

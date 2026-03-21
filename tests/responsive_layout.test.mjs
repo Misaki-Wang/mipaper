@@ -32,7 +32,7 @@ test("phone breakpoint increases top spacing and avoids iOS input zoom", () => {
   );
   assert.match(
     stylesSource,
-    /\.toolbar-quick-add-input,\s*\n  \.control-input,\s*\n  \.filter-select-shell > \.control-input,\s*\n  \.control-input-date,\s*\n  input,\s*\n  select,\s*\n  textarea \{\s*\n    font-size: 16px;\s*\n  \}/m
+    /\.toolbar-command-text-input,\s*\n  \.control-input,\s*\n  \.filter-select-shell > \.control-input,\s*\n  \.control-input-date,\s*\n  input,\s*\n  select,\s*\n  textarea \{\s*\n    font-size: 16px;\s*\n  \}/m
   );
   assert.match(
     stylesSource,

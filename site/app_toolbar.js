@@ -22,6 +22,7 @@ export function mountAppToolbar(rootOrSelector, config = {}) {
   }
   root.innerHTML = renderAppToolbar(config);
   enhanceFilterSelects(root);
+  bindToolbarCommandMode(root, config);
   return root;
 }
 
@@ -29,6 +30,7 @@ export function renderAppToolbar({
   prefix,
   filtersTemplateId,
   showFilters = Boolean(filtersTemplateId),
+  toolbarSearch = null,
   branchActiveKey = null,
   libraryActiveKey = null,
   quickAddTarget = "later",
@@ -39,7 +41,7 @@ export function renderAppToolbar({
     throw new Error("renderAppToolbar requires a prefix");
   }
 
-  const filtersContent = getTemplateContent(filtersTemplateId);
+  const filtersContent = showFilters ? getTemplateContent(filtersTemplateId) : "";
 
   return `
     <header class="app-toolbar">
@@ -65,7 +67,11 @@ export function renderAppToolbar({
         </div>
       </div>
       <div class="toolbar-center">
-        ${renderToolbarQuickAdd(prefix, quickAddTarget)}
+        ${renderToolbarCommandBar({
+          prefix,
+          toolbarSearch,
+          quickAddTarget,
+        })}
       </div>
       <div class="toolbar-end">
         ${renderToolbarAutoHide(prefix)}
@@ -120,34 +126,98 @@ function renderToolbarAutoHide(prefix) {
   `;
 }
 
+function renderToolbarCommandBar({ prefix, toolbarSearch, quickAddTarget }) {
+  const hasSearch = Boolean(toolbarSearch?.inputId);
+  const safePrefix = escapeAttribute(prefix);
+  return `
+    <div class="toolbar-command-bar">
+      <div class="toolbar-command-shell${hasSearch ? " has-search" : " add-only"}" data-command-shell data-command-mode="${hasSearch ? "search" : "add"}">
+        <div class="toolbar-command-control">
+          ${renderToolbarCommandModeSwitch(hasSearch)}
+          <div class="toolbar-command-surfaces">
+            ${renderToolbarSearch(toolbarSearch)}
+            ${renderToolbarQuickAdd(prefix, quickAddTarget)}
+          </div>
+        </div>
+        <p id="${safePrefix}-quick-add-status" class="toolbar-quick-add-status" aria-live="polite" hidden></p>
+      </div>
+    </div>
+  `;
+}
+
+function renderToolbarCommandModeSwitch(hasSearch) {
+  if (!hasSearch) {
+    return "";
+  }
+  return `
+    <div class="toolbar-command-mode section-view-toggle" role="tablist" aria-label="Choose command mode">
+      <button class="pill-button toolbar-command-mode-button active is-active" type="button" data-command-mode-toggle="search" aria-pressed="true">Search</button>
+      <button class="pill-button toolbar-command-mode-button" type="button" data-command-mode-toggle="add" aria-pressed="false">Add</button>
+    </div>
+  `;
+}
+
 function renderToolbarQuickAdd(prefix, target) {
   const safePrefix = escapeAttribute(prefix);
   const safeTarget = escapeAttribute(target);
   return `
-    <div class="toolbar-quick-add-shell" data-quick-add-target="${safeTarget}">
-      <form id="${safePrefix}-quick-add-form" class="toolbar-quick-add" novalidate>
-        <div class="toolbar-quick-add-control">
-          <span class="toolbar-quick-add-icon" aria-hidden="true">
-            <svg viewBox="0 0 20 20" fill="none">
-              <path d="M6 10h8M10 6v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
-            </svg>
-          </span>
-          <input
-            id="${safePrefix}-quick-add-input"
-            class="toolbar-quick-add-input"
-            type="text"
-            inputmode="url"
-            autocomplete="off"
-            spellcheck="false"
-            placeholder="Paste arXiv / papers.cool URL"
-            aria-label="Paste arXiv or papers.cool URL to add to Later"
-            aria-describedby="${safePrefix}-quick-add-status"
-          />
-          <button id="${safePrefix}-quick-add-submit" class="toolbar-quick-add-submit" type="submit">Add</button>
-        </div>
-      </form>
-      <p id="${safePrefix}-quick-add-status" class="toolbar-quick-add-status" aria-live="polite" hidden></p>
-    </div>
+    <form
+      id="${safePrefix}-quick-add-form"
+      class="toolbar-command-surface toolbar-command-surface-add toolbar-quick-add"
+      data-command-surface="add"
+      data-quick-add-target="${safeTarget}"
+      novalidate
+      hidden
+    >
+      <span class="toolbar-command-surface-icon toolbar-quick-add-icon" aria-hidden="true">
+        <svg viewBox="0 0 20 20" fill="none">
+          <path d="M6 10h8M10 6v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+        </svg>
+      </span>
+      <input
+        id="${safePrefix}-quick-add-input"
+        class="toolbar-command-text-input toolbar-quick-add-input"
+        type="text"
+        inputmode="url"
+        autocomplete="off"
+        spellcheck="false"
+        placeholder="Paste arXiv / papers.cool URL"
+        aria-label="Paste arXiv or papers.cool URL to add to Later"
+        aria-describedby="${safePrefix}-quick-add-status"
+      />
+      <button id="${safePrefix}-quick-add-submit" class="toolbar-command-submit toolbar-quick-add-submit" type="submit">Add</button>
+    </form>
+  `;
+}
+
+function renderToolbarSearch(config) {
+  if (!config?.inputId) {
+    return "";
+  }
+
+  const label = String(config.label || "Search").trim() || "Search";
+  const inputId = escapeAttribute(config.inputId);
+  const placeholder = escapeAttribute(config.placeholder || label);
+  const ariaLabel = escapeAttribute(config.ariaLabel || label);
+
+  return `
+    <label class="toolbar-command-surface toolbar-command-surface-search toolbar-search" data-command-surface="search" for="${inputId}">
+      <span class="toolbar-command-surface-icon toolbar-search-icon" aria-hidden="true">
+        <svg viewBox="0 0 20 20" fill="none">
+          <circle cx="8.5" cy="8.5" r="4.75" stroke="currentColor" stroke-width="1.6"></circle>
+          <path d="M12.2 12.2L16 16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+        </svg>
+      </span>
+      <input
+        id="${inputId}"
+        class="toolbar-command-text-input toolbar-search-input"
+        type="search"
+        autocomplete="off"
+        spellcheck="false"
+        placeholder="${placeholder}"
+        aria-label="${ariaLabel}"
+      />
+    </label>
   `;
 }
 
@@ -257,4 +327,60 @@ function enhanceFilterSelects(root) {
     select.parentNode.insertBefore(shell, select);
     shell.appendChild(select);
   });
+}
+
+function bindToolbarCommandMode(root, { prefix, toolbarSearch = null } = {}) {
+  const shell = root.querySelector("[data-command-shell]");
+  if (!shell) {
+    return;
+  }
+
+  const searchSurface = root.querySelector('[data-command-surface="search"]');
+  const addSurface = root.querySelector('[data-command-surface="add"]');
+  const toggles = [...root.querySelectorAll("[data-command-mode-toggle]")];
+  const searchInput = toolbarSearch?.inputId ? document.getElementById(String(toolbarSearch.inputId)) : null;
+  const addInput = prefix ? document.getElementById(`${prefix}-quick-add-input`) : null;
+  const hasSearch = Boolean(searchSurface && searchInput && toggles.length);
+
+  const applyMode = (nextMode, { focus = false } = {}) => {
+    const mode = hasSearch ? (nextMode === "add" ? "add" : "search") : "add";
+    shell.dataset.commandMode = mode;
+
+    if (searchSurface) {
+      searchSurface.hidden = mode !== "search";
+    }
+    if (addSurface) {
+      addSurface.hidden = mode !== "add";
+    }
+
+    toggles.forEach((toggle) => {
+      const active = toggle.dataset.commandModeToggle === mode;
+      toggle.classList.toggle("is-active", active);
+      toggle.classList.toggle("active", active);
+      toggle.setAttribute("aria-pressed", String(active));
+    });
+
+    if (!focus) {
+      return;
+    }
+    if (mode === "search" && searchInput) {
+      searchInput.focus();
+      searchInput.select?.();
+      return;
+    }
+    if (mode === "add" && addInput) {
+      addInput.focus();
+      addInput.select?.();
+    }
+  };
+
+  if (hasSearch) {
+    toggles.forEach((toggle) => {
+      toggle.addEventListener("click", () => {
+        applyMode(toggle.dataset.commandModeToggle, { focus: true });
+      });
+    });
+  }
+
+  applyMode(hasSearch ? "search" : "add");
 }

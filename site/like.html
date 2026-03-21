@@ -59,10 +59,6 @@
               </select>
             </div>
             <div class="control-block">
-              <label for="like-search-input">Search</label>
-              <input id="like-search-input" class="control-input" type="search" placeholder="Search title or authors" />
-            </div>
-            <div class="control-block">
               <label for="like-sort-filter">Sort</label>
               <select id="like-sort-filter" class="control-input">
                 <option value="saved_desc">Recently liked</option>
@@ -85,8 +81,8 @@
           <div class="hero-actions page-like-jump-links" aria-label="Quick jump">
             <a class="link-chip" href="./library.html">Open Lib Home</a>
             <a class="link-chip" href="#like-results-section">Jump to liked papers</a>
-            <a class="link-chip" href="#like-browse-section">Browse by group</a>
             <a class="link-chip" href="#like-saved-views-section">Saved views</a>
+            <a class="link-chip" href="#like-browse-section">Browse by group</a>
           </div>
         </div>
       </header>
@@ -109,10 +105,6 @@
             </div>
           </section>
 
-          <section id="like-browse-section" class="glass-card library-section reveal">
-            <div id="like-source-sections" class="conference-subject-sections"></div>
-          </section>
-
           <section id="like-saved-views-section" class="glass-card library-section reveal saved-view-panel">
             <div class="section-heading saved-view-top">
               <div>
@@ -122,17 +114,62 @@
               </div>
             </div>
             <div class="saved-view-controls">
-              <label class="control-block saved-view-name-field" for="like-saved-view-name">
-                <span>View Name</span>
-                <input id="like-saved-view-name" class="control-input" type="text" placeholder="e.g. Agent Reading" maxlength="48" />
-              </label>
-              <div class="saved-view-actions">
-                <button id="like-save-view" class="pill-button" type="button">Save Current</button>
-                <button id="like-update-view" class="pill-button" type="button">Update Selected</button>
-                <button id="like-delete-view" class="pill-button" type="button">Delete Selected</button>
+              <div class="saved-view-save-row">
+                <label class="control-block saved-view-name-field" for="like-saved-view-name">
+                  <span>View Name</span>
+                  <input id="like-saved-view-name" class="control-input" type="text" placeholder="e.g. Agent Reading" maxlength="48" />
+                </label>
+                <div class="saved-view-actions">
+                  <button id="like-save-view" class="pill-button" type="button">Save Current</button>
+                  <button id="like-update-view" class="pill-button" type="button">Update Selected</button>
+                  <button id="like-delete-view" class="pill-button" type="button">Delete Selected</button>
+                </div>
+              </div>
+              <div class="saved-view-filter-shell">
+                <div class="saved-view-filter-copy">
+                  <p class="eyebrow">QUICK FILTERS</p>
+                  <p class="saved-view-filter-note">Keep search, tags, workflow state, and sort close to your saved presets. Group and topic stay in the toolbar filters.</p>
+                </div>
+                <div class="saved-view-filter-grid">
+                  <label class="saved-view-filter-field saved-view-filter-field-search" for="like-inline-search-filter">
+                    <span>Search</span>
+                    <input id="like-inline-search-filter" class="control-input" type="search" placeholder="Search liked papers" />
+                  </label>
+                  <label class="saved-view-filter-field" for="like-inline-custom-tag-filter">
+                    <span>Tag</span>
+                    <select id="like-inline-custom-tag-filter" class="control-input">
+                      <option value="">All Tags</option>
+                    </select>
+                  </label>
+                  <label class="saved-view-filter-field" for="like-inline-status-filter">
+                    <span>Status</span>
+                    <select id="like-inline-status-filter" class="control-input">
+                      <option value="">All Statuses</option>
+                    </select>
+                  </label>
+                  <label class="saved-view-filter-field" for="like-inline-priority-filter">
+                    <span>Priority</span>
+                    <select id="like-inline-priority-filter" class="control-input">
+                      <option value="">All Priorities</option>
+                    </select>
+                  </label>
+                  <label class="saved-view-filter-field" for="like-inline-sort-filter">
+                    <span>Sort</span>
+                    <select id="like-inline-sort-filter" class="control-input">
+                      <option value="saved_desc">Recently liked</option>
+                      <option value="arxiv_desc">Pub Date: newest</option>
+                      <option value="arxiv_asc">Pub Date: oldest</option>
+                    </select>
+                  </label>
+                  <button id="like-inline-reset-filters" class="link-chip button-link saved-view-filter-reset" type="button">Clear quick filters</button>
+                </div>
               </div>
             </div>
             <div id="like-saved-view-list" class="saved-view-list"></div>
+          </section>
+
+          <section id="like-browse-section" class="glass-card library-section reveal">
+            <div id="like-source-sections" class="conference-subject-sections"></div>
           </section>
         </section>
       </main>
@@ -143,6 +180,6 @@
       <span>Top</span>
     </button>
 
-    <script type="module" src="./like.js?v=a0438e8054"></script>
+    <script type="module" src="./like.js?v=1f83d9b0a4"></script>
   </body>
 </html>

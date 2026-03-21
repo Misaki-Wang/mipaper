@@ -6,7 +6,7 @@ const likeHtml = readFileSync(new URL("../site/like.html", import.meta.url), "ut
 const likeSource = readFileSync(new URL("../site/like.js", import.meta.url), "utf8");
 const stylesSource = readFileSync(new URL("../site/styles.css", import.meta.url), "utf8");
 
-test("like page surfaces the liked paper results before secondary panels", () => {
+test("like page surfaces the liked paper results before saved views and grouped browse panels", () => {
   const resultsIndex = likeHtml.indexOf('id="like-results-section"');
   const browseIndex = likeHtml.indexOf('id="like-browse-section"');
   const savedViewsIndex = likeHtml.indexOf('id="like-saved-views-section"');
@@ -15,8 +15,8 @@ test("like page surfaces the liked paper results before secondary panels", () =>
   assert.ok(browseIndex >= 0, "expected browse section");
   assert.ok(savedViewsIndex >= 0, "expected saved views section");
 
-  assert.ok(resultsIndex < browseIndex, "results should appear before the grouped liked cards");
-  assert.ok(browseIndex < savedViewsIndex, "grouped liked cards should appear before saved views");
+  assert.ok(resultsIndex < savedViewsIndex, "results should appear before saved views");
+  assert.ok(savedViewsIndex < browseIndex, "saved views should appear before the grouped liked cards");
 });
 
 test("like page focuses on liked-paper actions instead of library-wide dashboards", () => {
@@ -69,4 +69,34 @@ test("compact like rows clamp summary notes to two lines", () => {
   assert.match(stylesSource, /\.liked-paper-row\.is-compact \.liked-paper-row-summary \{/);
   assert.match(stylesSource, /-webkit-line-clamp: 2;/);
   assert.match(stylesSource, /overflow: hidden;/);
+});
+
+test("liked papers summary uses compact chips instead of large dashboard cards", () => {
+  assert.match(likeSource, /class="like-results-pill"/);
+  assert.match(stylesSource, /\.like-results-pill \{/);
+  assert.match(stylesSource, /\.page-like #like-results-section \.results-stats,/);
+  assert.match(likeSource, /resetFiltersButton\.hidden = !activeFilters\.length;/);
+  assert.doesNotMatch(likeSource, /No filters applied\. You are looking at the full liked set\./);
+});
+
+test("saved views section provides quick filters without duplicating group and topic controls", () => {
+  assert.match(likeHtml, /id="like-inline-search-filter"/);
+  assert.match(likeHtml, /id="like-inline-custom-tag-filter"/);
+  assert.match(likeHtml, /id="like-inline-status-filter"/);
+  assert.match(likeHtml, /id="like-inline-priority-filter"/);
+  assert.match(likeHtml, /id="like-inline-sort-filter"/);
+  assert.match(likeHtml, /id="like-inline-reset-filters"/);
+  assert.doesNotMatch(likeHtml, /id="like-inline-source-filter"/);
+  assert.doesNotMatch(likeHtml, /id="like-inline-topic-filter"/);
+  assert.match(likeSource, /function clearQuickFilters\(\)/);
+  assert.match(stylesSource, /\.saved-view-filter-grid \{/);
+  assert.match(stylesSource, /\.saved-view-chip-state \{/);
+});
+
+test("like tag picker supports keyboard navigation and an active option state", () => {
+  assert.match(likeSource, /function moveActiveTagOption\(likeId, direction\)/);
+  assert.match(likeSource, /event\.key === "ArrowDown"/);
+  assert.match(likeSource, /event\.key === "ArrowUp"/);
+  assert.match(likeSource, /activeOption\.click\(\);/);
+  assert.match(stylesSource, /\.custom-tag-options \.custom-tag-option\.is-active \{/);
 });

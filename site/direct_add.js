@@ -10,6 +10,7 @@ import { bindFilterMenu } from "./page_shell.js?v=b0d53b671d";
 import { repairLikeLaterConflicts } from "./paper_selection.js?v=964dbe6c53";
 import { initToolbarPreferences } from "./toolbar_preferences.js?v=c889d6e375";
 import { escapeAttribute, escapeHtml, getErrorMessage } from "./ui_utils.js?v=e2da3b3a11";
+import { getPaperCustomTags } from "./like_page_tags.js?v=dce6e52df9";
 import {
   hasDirectAddsMigrationRun,
   initDirectAddSync,
@@ -23,6 +24,11 @@ import {
 mountAppToolbar("#direct-toolbar-root", {
   prefix: "direct",
   filtersTemplateId: "direct-toolbar-filters",
+  toolbarSearch: {
+    inputId: "direct-search-input",
+    placeholder: "Search title, authors, topic, or tags",
+    ariaLabel: "Search direct add papers by title, authors, topic, or custom tags",
+  },
   branchActiveKey: "direct",
   libraryActiveKey: null,
   quickAddTarget: "later",
@@ -152,6 +158,7 @@ function filterDirectAddPapers(papers) {
       getSourceLabel(paper.source_kind),
       paper.source_kind,
       ...(paper.authors || []),
+      ...getPaperCustomTags(paper).map((tag) => tag.label),
     ]
       .map((value) => String(value || "").toLowerCase())
       .join(" ");
