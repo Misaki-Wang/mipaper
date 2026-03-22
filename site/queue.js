@@ -2,7 +2,7 @@ import { getSourceLabel, initLikesSync, readLikes, subscribeLikes, updateLikedPa
 import { initQueue, readQueue, removeFromQueue, subscribeQueue, updateQueuedPaper, updateQueuedPapers } from "./paper_queue.js?v=033bd186d1";
 import { movePaperToLikes, repairLikeLaterConflicts } from "./paper_selection.js?v=964dbe6c53";
 import { bindBranchAuthToolbar } from "./branch_auth.js?v=66a12f1edc";
-import { mountAppToolbar } from "./app_toolbar.js?v=a364077e66";
+import { mountAppToolbar } from "./app_toolbar.js?v=a2626f682a";
 import { bindBranchNav } from "./branch_nav.js?v=2ab092d7f1";
 import { bindLibraryNav } from "./library_nav.js?v=7b6e095589";
 import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=a318f05c52";
