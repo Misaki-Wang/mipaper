@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-21T17:09:35Z",
+  "generated_at": "2026-03-22T17:02:53Z",
   "report_kind": "hf_daily",
   "report_date": "2026-03-20",
   "source_url": "https://huggingface.co/papers/date/2026-03-20",
@@ -9,8 +9,8 @@
     {
       "topic_key": "generative_foundations",
       "topic_label": "Generative Foundations",
-      "count": 4,
-      "share": 12.5
+      "count": 3,
+      "share": 9.38
     },
     {
       "topic_key": "multimodal_generative",
@@ -32,22 +32,12 @@
       "share": 21.88
     },
     {
-      "topic_label": "Reasoning, Alignment, and Evaluation",
-      "count": 5,
-      "share": 15.62
+      "topic_label": "Multimodal Understanding and Vision",
+      "count": 6,
+      "share": 18.75
     },
     {
       "topic_label": "Datasets and Benchmarks",
-      "count": 4,
-      "share": 12.5
-    },
-    {
-      "topic_label": "Generative Foundations",
-      "count": 4,
-      "share": 12.5
-    },
-    {
-      "topic_label": "Multimodal Understanding and Vision",
       "count": 4,
       "share": 12.5
     },
@@ -57,9 +47,19 @@
       "share": 9.38
     },
     {
+      "topic_label": "Generative Foundations",
+      "count": 3,
+      "share": 9.38
+    },
+    {
       "topic_label": "LLMs and Language",
-      "count": 2,
-      "share": 6.25
+      "count": 3,
+      "share": 9.38
+    },
+    {
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "count": 3,
+      "share": 9.38
     },
     {
       "topic_label": "Domain Applications",
@@ -126,13 +126,13 @@
       "github_url": "",
       "submitted_by": "Dingkang Liang",
       "submitted_at": "2026-03-20T00:47:57.997Z",
-      "upvotes": 76,
+      "upvotes": 83,
       "comments": 4,
-      "topic_key": "generative_foundations",
-      "topic_label": "Generative Foundations",
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.63
+      "classification_confidence": 0.81
     },
     {
       "report_date": "2026-03-20",
@@ -161,7 +161,7 @@
       "github_url": "",
       "submitted_by": "Yuxin Song",
       "submitted_at": "2026-03-20T01:01:32.962Z",
-      "upvotes": 59,
+      "upvotes": 60,
       "comments": 3,
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
@@ -188,7 +188,7 @@
       "github_url": "",
       "submitted_by": "Lani Ko",
       "submitted_at": "2026-03-20T04:46:51.588Z",
-      "upvotes": 44,
+      "upvotes": 49,
       "comments": 3,
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
@@ -218,7 +218,7 @@
       "github_url": "",
       "submitted_by": "Yuxiang Lu",
       "submitted_at": "2026-03-20T01:09:18.396Z",
-      "upvotes": 43,
+      "upvotes": 47,
       "comments": 3,
       "topic_key": "multimodal_agents",
       "topic_label": "Multimodal Agents",
@@ -257,13 +257,13 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-03-20T00:47:05.026Z",
-      "upvotes": 37,
+      "upvotes": 45,
       "comments": 2,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.9
+      "classification_confidence": 0.88
     },
     {
       "report_date": "2026-03-20",
@@ -285,13 +285,13 @@
       "github_url": "",
       "submitted_by": "Haozhe Xie",
       "submitted_at": "2026-03-20T03:38:04.272Z",
-      "upvotes": 35,
+      "upvotes": 37,
       "comments": 3,
       "topic_key": "generative_foundations",
       "topic_label": "Generative Foundations",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.69
+      "classification_confidence": 0.86
     },
     {
       "report_date": "2026-03-20",
@@ -324,7 +324,7 @@
       "github_url": "",
       "submitted_by": "HuichiZhou",
       "submitted_at": "2026-03-20T01:26:50.129Z",
-      "upvotes": 30,
+      "upvotes": 35,
       "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -352,13 +352,13 @@
       "github_url": "",
       "submitted_by": "Haozhe Xie",
       "submitted_at": "2026-03-20T04:49:45.233Z",
-      "upvotes": 28,
+      "upvotes": 30,
       "comments": 3,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.93
+      "classification_confidence": 0.89
     }
   ],
   "topics": [
@@ -394,7 +394,7 @@
           "github_url": "",
           "submitted_by": "Yuxin Song",
           "submitted_at": "2026-03-20T01:01:32.962Z",
-          "upvotes": 59,
+          "upvotes": 60,
           "comments": 3,
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
@@ -421,7 +421,7 @@
           "github_url": "",
           "submitted_by": "Lani Ko",
           "submitted_at": "2026-03-20T04:46:51.588Z",
-          "upvotes": 44,
+          "upvotes": 49,
           "comments": 3,
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
@@ -457,7 +457,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.9
+          "classification_confidence": 0.86
         },
         {
           "report_date": "2026-03-20",
@@ -509,7 +509,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.74
+          "classification_confidence": 0.73
         },
         {
           "report_date": "2026-03-20",
@@ -551,13 +551,13 @@
           "github_url": "",
           "submitted_by": "yitian gong",
           "submitted_at": "2026-03-20T04:09:57.272Z",
-          "upvotes": 6,
+          "upvotes": 8,
           "comments": 2,
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.8
+          "classification_confidence": 0.79
         },
         {
           "report_date": "2026-03-20",
@@ -586,15 +586,73 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.97
+          "classification_confidence": 0.98
         }
       ]
     },
     {
-      "topic_label": "Reasoning, Alignment, and Evaluation",
-      "count": 5,
-      "share": 15.62,
+      "topic_label": "Multimodal Understanding and Vision",
+      "count": 6,
+      "share": 18.75,
       "papers": [
+        {
+          "report_date": "2026-03-20",
+          "paper_id": "2603.19235",
+          "title": "Generation Models Know Space: Unleashing Implicit 3D Priors for Scene Understanding",
+          "authors": [
+            "Xianjin Wu",
+            "Dingkang Liang",
+            "Tianrui Feng",
+            "Kui Xia",
+            "Yumeng Zhang",
+            "Xiaofan Li",
+            "Xiao Tan",
+            "Xiang Bai"
+          ],
+          "abstract": "While Multimodal Large Language Models demonstrate impressive semantic capabilities, they often suffer from spatial blindness, struggling with fine-grained geometric reasoning and physical dynamics. Existing solutions typically rely on explicit 3D modalities or complex geometric scaffolding, which are limited by data scarcity and generalization challenges. In this work, we propose a paradigm shift by leveraging the implicit spatial prior within large-scale video generation models. We posit that to synthesize temporally coherent videos, these models inherently learn robust 3D structural priors and physical laws. We introduce VEGA-3D (Video Extracted Generative Awareness), a plug-and-play framework that repurposes a pre-trained video diffusion model as a Latent World Simulator. By extracting spatiotemporal features from intermediate noise levels and integrating them with semantic representations via a token-level adaptive gated fusion mechanism, we enrich MLLMs with dense geometric cues without explicit 3D supervision. Extensive experiments across 3D scene understanding, spatial reasoning, and embodied manipulation benchmarks demonstrate that our method outperforms state-of-the-art baselines, validating that generative priors provide a scalable foundation for physical-world understanding. Code is publicly available at https://github.com/H-EmbodVis/VEGA-3D.",
+          "hf_url": "https://huggingface.co/papers/2603.19235",
+          "arxiv_url": "https://arxiv.org/abs/2603.19235",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19235",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.19235",
+          "github_url": "",
+          "submitted_by": "Dingkang Liang",
+          "submitted_at": "2026-03-20T00:47:57.997Z",
+          "upvotes": 83,
+          "comments": 4,
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.81
+        },
+        {
+          "report_date": "2026-03-20",
+          "paper_id": "2603.19231",
+          "title": "MonoArt: Progressive Structural Reasoning for Monocular Articulated 3D Reconstruction",
+          "authors": [
+            "Haitian Li",
+            "Haozhe Xie",
+            "Junxiang Xu",
+            "Beichen Wen",
+            "Fangzhou Hong",
+            "Ziwei Liu"
+          ],
+          "abstract": "Reconstructing articulated 3D objects from a single image requires jointly inferring object geometry, part structure, and motion parameters from limited visual evidence. A key difficulty lies in the entanglement between motion cues and object structure, which makes direct articulation regression unstable. Existing methods address this challenge through multi-view supervision, retrieval-based assembly, or auxiliary video generation, often sacrificing scalability or efficiency. We present MonoArt, a unified framework grounded in progressive structural reasoning. Rather than predicting articulation directly from image features, MonoArt progressively transforms visual observations into canonical geometry, structured part representations, and motion-aware embeddings within a single architecture. This structured reasoning process enables stable and interpretable articulation inference without external motion templates or multi-stage pipelines. Extensive experiments on PartNet-Mobility demonstrate that OM achieves state-of-the-art performance in both reconstruction accuracy and inference speed. The framework further generalizes to robotic manipulation and articulated scene reconstruction.",
+          "hf_url": "https://huggingface.co/papers/2603.19231",
+          "arxiv_url": "https://arxiv.org/abs/2603.19231",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19231",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.19231",
+          "github_url": "",
+          "submitted_by": "Haozhe Xie",
+          "submitted_at": "2026-03-20T04:49:45.233Z",
+          "upvotes": 30,
+          "comments": 3,
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.89
+        },
         {
           "report_date": "2026-03-20",
           "paper_id": "2603.18472",
@@ -624,133 +682,102 @@
           "submitted_at": "2026-03-20T03:52:09.456Z",
           "upvotes": 17,
           "comments": 2,
-          "topic_key": "reasoning_alignment_eval",
-          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.76
+          "classification_confidence": 0.86
         },
         {
           "report_date": "2026-03-20",
-          "paper_id": "2603.19203",
-          "title": "Tinted Frames: Question Framing Blinds Vision-Language Models",
+          "paper_id": "2603.18002",
+          "title": "Loc3R-VLM: Language-based Localization and 3D Reasoning with Vision-Language Models",
           "authors": [
-            "Wan-Cyuan Fan",
-            "Jiayun Luo",
-            "Declan Kutscher",
-            "Leonid Sigal",
-            "Ritwik Gupta"
+            "Kevin Qu",
+            "Haozhe Qi",
+            "Mihai Dusmanu",
+            "Mahdi Rad",
+            "Rui Wang",
+            "Marc Pollefeys"
           ],
-          "abstract": "Vision-Language Models (VLMs) have been shown to be blind, often underutilizing their visual inputs even on tasks that require visual reasoning. In this work, we demonstrate that VLMs are selectively blind. They modulate the amount of attention applied to visual inputs based on linguistic framing even when alternative framings demand identical visual reasoning. Using visual attention as a probe, we quantify how framing alters both the amount and distribution of attention over the image. Constrained framings, such as multiple choice and yes/no, induce substantially lower attention to image context compared to open-ended, reduce focus on task-relevant regions, and shift attention towards uninformative tokens. We further demonstrate that this attention misallocation is the principal cause of degraded accuracy and cross-framing inconsistency. Building on this mechanistic insight, we introduce a lightweight prompt-tuning method using learnable tokens that encourages the robust, visually grounded attention patterns observed in open-ended settings, improving visual grounding and improving performance across framings.",
-          "hf_url": "https://huggingface.co/papers/2603.19203",
-          "arxiv_url": "https://arxiv.org/abs/2603.19203",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19203",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.19203",
+          "abstract": "Multimodal Large Language Models (MLLMs) have made impressive progress in connecting vision and language, but they still struggle with spatial understanding and viewpoint-aware reasoning. Recent efforts aim to augment the input representations with geometric cues rather than explicitly teaching models to reason in 3D space. We introduce Loc3R-VLM, a framework that equips 2D Vision-Language Models with advanced 3D understanding capabilities from monocular video input. Inspired by human spatial cognition, Loc3R-VLM relies on two joint objectives: global layout reconstruction to build a holistic representation of the scene structure, and explicit situation modeling to anchor egocentric perspective. These objectives provide direct spatial supervision that grounds both perception and language in a 3D context. To ensure geometric consistency and metric-scale alignment, we leverage lightweight camera pose priors extracted from a pre-trained 3D foundation model. Loc3R-VLM achieves state-of-the-art performance in language-based localization and outperforms existing 2D- and video-based approaches on situated and general 3D question-answering benchmarks, demonstrating that our spatial supervision framework enables strong 3D understanding. Project page: https://kevinqu7.github.io/loc3r-vlm",
+          "hf_url": "https://huggingface.co/papers/2603.18002",
+          "arxiv_url": "https://arxiv.org/abs/2603.18002",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.18002",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.18002",
           "github_url": "",
-          "submitted_by": "Declan Kutscher",
-          "submitted_at": "2026-03-20T12:36:35.690Z",
-          "upvotes": 13,
+          "submitted_by": "Kevin Qu",
+          "submitted_at": "2026-03-20T03:33:48.979Z",
+          "upvotes": 7,
           "comments": 2,
-          "topic_key": "reasoning_alignment_eval",
-          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.9
+          "classification_confidence": 0.84
         },
         {
           "report_date": "2026-03-20",
-          "paper_id": "2603.18886",
-          "title": "Reasoning over mathematical objects: on-policy reward modeling and test time aggregation",
+          "paper_id": "2603.19234",
+          "title": "Matryoshka Gaussian Splatting",
           "authors": [
-            "Pranjal Aggarwal",
-            "Marjan Ghazvininejad",
-            "Seungone Kim",
-            "Ilia Kulikov",
-            "Jack Lanchantin",
-            "Xian Li",
-            "Tianjian Li",
-            "Bo Liu",
-            "Graham Neubig",
-            "Anaelia Ovalle",
-            "Swarnadeep Saha",
-            "Sainbayar Sukhbaatar",
-            "Sean Welleck",
-            "Jason Weston",
-            "Chenxi Whitehouse",
-            "Adina Williams",
-            "Jing Xu",
-            "Ping Yu",
-            "Weizhe Yuan",
-            "Jingyu Zhang",
-            "Wenting Zhao"
+            "Zhilin Guo",
+            "Boqiao Zhang",
+            "Hakan Aktas",
+            "Kyle Fogarty",
+            "Jeffrey Hu",
+            "Nursena Koprucu Aslan",
+            "Wenzhao Li",
+            "Canberk Baykal",
+            "Albert Miao",
+            "Josef Bengtson",
+            "Chenliang Zhou",
+            "Weihao Xia",
+            "Cristina Nader Vasconcelos. Cengiz Oztireli"
           ],
-          "abstract": "The ability to precisely derive mathematical objects is a core requirement for downstream STEM applications, including mathematics, physics, and chemistry, where reasoning must culminate in formally structured expressions. Yet, current LM evaluations of mathematical and scientific reasoning rely heavily on simplified answer formats such as numerical values or multiple choice options due to the convenience of automated assessment. In this paper we provide three contributions for improving reasoning over mathematical objects: (i) we build and release training data and benchmarks for deriving mathematical objects, the Principia suite; (ii) we provide training recipes with strong LLM-judges and verifiers, where we show that on-policy judge training boosts performance; (iii) we show how on-policy training can also be used to scale test-time compute via aggregation. We find that strong LMs such as Qwen3-235B and o3 struggle on Principia, while our training recipes can bring significant improvements over different LLM backbones, while simultaneously improving results on existing numerical and MCQA tasks, demonstrating cross-format generalization of reasoning abilities.",
-          "hf_url": "https://huggingface.co/papers/2603.18886",
-          "arxiv_url": "https://arxiv.org/abs/2603.18886",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.18886",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.18886",
+          "abstract": "The ability to render scenes at adjustable fidelity from a single model, known as level of detail (LoD), is crucial for practical deployment of 3D Gaussian Splatting (3DGS). Existing discrete LoD methods expose only a limited set of operating points, while concurrent continuous LoD approaches enable smoother scaling but often suffer noticeable quality degradation at full capacity, making LoD a costly design decision. We introduce Matryoshka Gaussian Splatting (MGS), a training framework that enables continuous LoD for standard 3DGS pipelines without sacrificing full-capacity rendering quality. MGS learns a single ordered set of Gaussians such that rendering any prefix, the first k splats, produces a coherent reconstruction whose fidelity improves smoothly with increasing budget. Our key idea is stochastic budget training: each iteration samples a random splat budget and optimises both the corresponding prefix and the full set. This strategy requires only two forward passes and introduces no architectural modifications. Experiments across four benchmarks and six baselines show that MGS matches the full-capacity performance of its backbone while enabling a continuous speed-quality trade-off from a single model. Extensive ablations on ordering strategies, training objectives, and model capacity further validate the designs.",
+          "hf_url": "https://huggingface.co/papers/2603.19234",
+          "arxiv_url": "https://arxiv.org/abs/2603.19234",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19234",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.19234",
           "github_url": "",
           "submitted_by": "taesiri",
-          "submitted_at": "2026-03-20T00:50:20.850Z",
-          "upvotes": 2,
+          "submitted_at": "2026-03-20T00:49:13.729Z",
+          "upvotes": 6,
           "comments": 1,
-          "topic_key": "reasoning_alignment_eval",
-          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.81
+          "classification_confidence": 0.58
         },
         {
           "report_date": "2026-03-20",
-          "paper_id": "2603.19017",
-          "title": "What Really Controls Temporal Reasoning in Large Language Models: Tokenisation or Representation of Time?",
+          "paper_id": "2603.17554",
+          "title": "Prompt-Free Universal Region Proposal Network",
           "authors": [
-            "Gagan Bhatia",
-            "Ahmad Muhammad Isa",
-            "Maxime Peyrard",
-            "Wei Zhao"
+            "Qihong Tang",
+            "Changhan Liu",
+            "Shaofeng Zhang",
+            "Wenbin Li",
+            "Qi Fan",
+            "Yang Gao"
           ],
-          "abstract": "We present MultiTempBench, a multilingual temporal reasoning benchmark spanning three tasks, date arithmetic, time zone conversion, and temporal relation extraction across five languages (English, German, Chinese, Arabic, and Hausa) and multiple calendar conventions (Gregorian, Hijri, and Chinese Lunar). MultiTempBench contains 15,000 examples built by translating 750 curated English questions and expanding each into controlled date-format variants. We evaluate 20 LLMs and introduce the multilingual Date Fragmentation Ratio (mDFR), calibrated with human severity ratings, together with geometric-probing analyses of internal temporal representations. We find tokenisation quality of temporal artefacts is a resource-dependent bottleneck: in low-resource languages and rarer calendar formats, fragmentation disrupts Year/Month/Day separation and accuracy collapses, while high-resource settings are often robust to digit-level splitting. Beyond tokenisation, crossed mixed-effects regression shows that temporal linearity is the strongest predictor of temporal reasoning in high-resource languages, whereas fragmentation is the stronger predictor in low-resource languages. Code is available at: https://github.com/gagan3012/mtb",
-          "hf_url": "https://huggingface.co/papers/2603.19017",
-          "arxiv_url": "https://arxiv.org/abs/2603.19017",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19017",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.19017",
+          "abstract": "Identifying potential objects is critical for object recognition and analysis across various computer vision applications. Existing methods typically localize potential objects by relying on exemplar images, predefined categories, or textual descriptions. However, their reliance on image and text prompts often limits flexibility, restricting adaptability in real-world scenarios. In this paper, we introduce a novel Prompt-Free Universal Region Proposal Network (PF-RPN), which identifies potential objects without relying on external prompts. First, the Sparse Image-Aware Adapter (SIA) module performs initial localization of potential objects using a learnable query embedding dynamically updated with visual features. Next, the Cascade Self-Prompt (CSP) module identifies the remaining potential objects by leveraging the self-prompted learnable embedding, autonomously aggregating informative visual features in a cascading manner. Finally, the Centerness-Guided Query Selection (CG-QS) module facilitates the selection of high-quality query embeddings using a centerness scoring network. Our method can be optimized with limited data (e.g., 5% of MS COCO data) and applied directly to various object detection application domains for identifying potential objects without fine-tuning, such as underwater object detection, industrial defect detection, and remote sensing image object detection. Experimental results across 19 datasets validate the effectiveness of our method. Code is available at https://github.com/tangqh03/PF-RPN.",
+          "hf_url": "https://huggingface.co/papers/2603.17554",
+          "arxiv_url": "https://arxiv.org/abs/2603.17554",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.17554",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.17554",
           "github_url": "",
-          "submitted_by": "Gagan Bhatia",
-          "submitted_at": "2026-03-20T15:12:00.114Z",
-          "upvotes": 1,
+          "submitted_by": "Qihong Tang",
+          "submitted_at": "2026-03-20T06:04:38.872Z",
+          "upvotes": 2,
           "comments": 2,
-          "topic_key": "reasoning_alignment_eval",
-          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.88
-        },
-        {
-          "report_date": "2026-03-20",
-          "paper_id": "2603.13045",
-          "title": "Mending the Holes: Mitigating Reward Hacking in Reinforcement Learning for Multilingual Translation",
-          "authors": [
-            "Yifeng Liu",
-            "Siqi Ouyang",
-            "Yatish Hosmane Revanasiddappa",
-            "Lei Li"
-          ],
-          "abstract": "Large Language Models (LLMs) have demonstrated remarkable capability in machine translation on high-resource language pairs, yet their performance on low-resource translation still lags behind. Existing post-training methods rely heavily on high-quality parallel data, which are often scarce or unavailable for low-resource languages. In this paper, we introduce WALAR, a reinforcement training method using only monolingual text to elevate LLMs' translation capabilities on massive low-resource languages while retaining their performance on high-resource languages. Our key insight is based on the observation of failure modes (or \"holes\") in existing source-based multilingual quality estimation (QE) models. Reinforcement learning (RL) using these QE models tends to amplify such holes, resulting in poorer multilingual LLMs. We develop techniques including word alignment and language alignment to mitigate such holes in WALAR's reward for RL training. We continually trained an LLM supporting translation of 101 languages using WALAR. The experiments show that our new model outperforms LLaMAX, one of the strongest open-source multilingual LLMs by a large margin on 1400 language directions on Flores-101 dataset.",
-          "hf_url": "https://huggingface.co/papers/2603.13045",
-          "arxiv_url": "https://arxiv.org/abs/2603.13045",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.13045",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.13045",
-          "github_url": "",
-          "submitted_by": "Yifeng Liu",
-          "submitted_at": "2026-03-20T07:00:22.965Z",
-          "upvotes": 1,
-          "comments": 2,
-          "topic_key": "reasoning_alignment_eval",
-          "topic_label": "Reasoning, Alignment, and Evaluation",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.91
+          "classification_confidence": 0.83
         }
       ]
     },
@@ -795,7 +822,7 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.99
+          "classification_confidence": 0.98
         },
         {
           "report_date": "2026-03-20",
@@ -823,13 +850,13 @@
           "github_url": "",
           "submitted_by": "Yang Shi",
           "submitted_at": "2026-03-20T03:48:36.995Z",
-          "upvotes": 13,
+          "upvotes": 15,
           "comments": 2,
           "topic_key": "datasets_benchmarks",
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.98
+          "classification_confidence": 0.96
         },
         {
           "report_date": "2026-03-20",
@@ -856,7 +883,7 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.99
+          "classification_confidence": 0.98
         },
         {
           "report_date": "2026-03-20",
@@ -886,257 +913,7 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.99
-        }
-      ]
-    },
-    {
-      "topic_label": "Generative Foundations",
-      "count": 4,
-      "share": 12.5,
-      "papers": [
-        {
-          "report_date": "2026-03-20",
-          "paper_id": "2603.19235",
-          "title": "Generation Models Know Space: Unleashing Implicit 3D Priors for Scene Understanding",
-          "authors": [
-            "Xianjin Wu",
-            "Dingkang Liang",
-            "Tianrui Feng",
-            "Kui Xia",
-            "Yumeng Zhang",
-            "Xiaofan Li",
-            "Xiao Tan",
-            "Xiang Bai"
-          ],
-          "abstract": "While Multimodal Large Language Models demonstrate impressive semantic capabilities, they often suffer from spatial blindness, struggling with fine-grained geometric reasoning and physical dynamics. Existing solutions typically rely on explicit 3D modalities or complex geometric scaffolding, which are limited by data scarcity and generalization challenges. In this work, we propose a paradigm shift by leveraging the implicit spatial prior within large-scale video generation models. We posit that to synthesize temporally coherent videos, these models inherently learn robust 3D structural priors and physical laws. We introduce VEGA-3D (Video Extracted Generative Awareness), a plug-and-play framework that repurposes a pre-trained video diffusion model as a Latent World Simulator. By extracting spatiotemporal features from intermediate noise levels and integrating them with semantic representations via a token-level adaptive gated fusion mechanism, we enrich MLLMs with dense geometric cues without explicit 3D supervision. Extensive experiments across 3D scene understanding, spatial reasoning, and embodied manipulation benchmarks demonstrate that our method outperforms state-of-the-art baselines, validating that generative priors provide a scalable foundation for physical-world understanding. Code is publicly available at https://github.com/H-EmbodVis/VEGA-3D.",
-          "hf_url": "https://huggingface.co/papers/2603.19235",
-          "arxiv_url": "https://arxiv.org/abs/2603.19235",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19235",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.19235",
-          "github_url": "",
-          "submitted_by": "Dingkang Liang",
-          "submitted_at": "2026-03-20T00:47:57.997Z",
-          "upvotes": 76,
-          "comments": 4,
-          "topic_key": "generative_foundations",
-          "topic_label": "Generative Foundations",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.63
-        },
-        {
-          "report_date": "2026-03-20",
-          "paper_id": "2603.19227",
-          "title": "Bridging Semantic and Kinematic Conditions with Diffusion-based Discrete Motion Tokenizer",
-          "authors": [
-            "Chenyang Gu",
-            "Mingyuan Zhang",
-            "Haozhe Xie",
-            "Zhongang Cai",
-            "Lei Yang",
-            "Ziwei Liu"
-          ],
-          "abstract": "Prior motion generation largely follows two paradigms: continuous diffusion models that excel at kinematic control, and discrete token-based generators that are effective for semantic conditioning. To combine their strengths, we propose a three-stage framework comprising condition feature extraction (Perception), discrete token generation (Planning), and diffusion-based motion synthesis (Control). Central to this framework is MoTok, a diffusion-based discrete motion tokenizer that decouples semantic abstraction from fine-grained reconstruction by delegating motion recovery to a diffusion decoder, enabling compact single-layer tokens while preserving motion fidelity. For kinematic conditions, coarse constraints guide token generation during planning, while fine-grained constraints are enforced during control through diffusion-based optimization. This design prevents kinematic details from disrupting semantic token planning. On HumanML3D, our method significantly improves controllability and fidelity over MaskControl while using only one-sixth of the tokens, reducing trajectory error from 0.72 cm to 0.08 cm and FID from 0.083 to 0.029. Unlike prior methods that degrade under stronger kinematic constraints, ours improves fidelity, reducing FID from 0.033 to 0.014.",
-          "hf_url": "https://huggingface.co/papers/2603.19227",
-          "arxiv_url": "https://arxiv.org/abs/2603.19227",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19227",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.19227",
-          "github_url": "",
-          "submitted_by": "Haozhe Xie",
-          "submitted_at": "2026-03-20T03:38:04.272Z",
-          "upvotes": 35,
-          "comments": 3,
-          "topic_key": "generative_foundations",
-          "topic_label": "Generative Foundations",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.69
-        },
-        {
-          "report_date": "2026-03-20",
-          "paper_id": "2603.19232",
-          "title": "Cubic Discrete Diffusion: Discrete Visual Generation on High-Dimensional Representation Tokens",
-          "authors": [
-            "Yuqing Wang",
-            "Chuofan Ma",
-            "Zhijie Lin",
-            "Yao Teng",
-            "Lijun Yu",
-            "Shuai Wang",
-            "Jiaming Han",
-            "Jiashi Feng",
-            "Yi Jiang",
-            "Xihui Liu"
-          ],
-          "abstract": "Visual generation with discrete tokens has gained significant attention as it enables a unified token prediction paradigm shared with language models, promising seamless multimodal architectures. However, current discrete generation methods remain limited to low-dimensional latent tokens (typically 8-32 dims), sacrificing the semantic richness essential for understanding. While high-dimensional pretrained representations (768-1024 dims) could bridge this gap, their discrete generation poses fundamental challenges. In this paper, we present Cubic Discrete Diffusion (CubiD), the first discrete generation model for high-dimensional representations. CubiD performs fine-grained masking throughout the high-dimensional discrete representation -- any dimension at any position can be masked and predicted from partial observations. This enables the model to learn rich correlations both within and across spatial positions, with the number of generation steps fixed at T regardless of feature dimensionality, where T ll hwd. On ImageNet-256, CubiD achieves state-of-the-art discrete generation with strong scaling behavior from 900M to 3.7B parameters. Crucially, we validate that these discretized tokens preserve original representation capabilities, demonstrating that the same discrete tokens can effectively serve both understanding and generation tasks. We hope this work will inspire future research toward unified multimodal architectures. Code is available at: https://github.com/YuqingWang1029/CubiD.",
-          "hf_url": "https://huggingface.co/papers/2603.19232",
-          "arxiv_url": "https://arxiv.org/abs/2603.19232",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19232",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.19232",
-          "github_url": "",
-          "submitted_by": "Yuqing Wang",
-          "submitted_at": "2026-03-20T00:47:36.683Z",
-          "upvotes": 26,
-          "comments": 2,
-          "topic_key": "generative_foundations",
-          "topic_label": "Generative Foundations",
-          "matched_terms": [],
-          "classification_source": "codex",
           "classification_confidence": 0.98
-        },
-        {
-          "report_date": "2026-03-20",
-          "paper_id": "2603.13395",
-          "title": "COT-FM: Cluster-wise Optimal Transport Flow Matching",
-          "authors": [
-            "Chiensheng Chiang",
-            "Kuan-Hsun Tu",
-            "Jia-Wei Liao",
-            "Cheng-Fu Chou",
-            "Tsung-Wei Ke"
-          ],
-          "abstract": "We introduce COT-FM, a general framework that reshapes the probability path in Flow Matching (FM) to achieve faster and more reliable generation. FM models often produce curved trajectories due to random or batchwise couplings, which increase discretization error and reduce sample quality. COT-FM fixes this by clustering target samples and assigning each cluster a dedicated source distribution obtained by reversing pretrained FM models. This divide-and-conquer strategy yields more accurate local transport and significantly straighter vector fields, all without changing the model architecture. As a plug-and-play approach, COT-FM consistently accelerates sampling and improves generation quality across 2D datasets, image generation benchmarks, and robotic manipulation tasks.",
-          "hf_url": "https://huggingface.co/papers/2603.13395",
-          "arxiv_url": "https://arxiv.org/abs/2603.13395",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.13395",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.13395",
-          "github_url": "",
-          "submitted_by": "Jiawei",
-          "submitted_at": "2026-03-20T02:05:00.254Z",
-          "upvotes": 1,
-          "comments": 2,
-          "topic_key": "generative_foundations",
-          "topic_label": "Generative Foundations",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.97
-        }
-      ]
-    },
-    {
-      "topic_label": "Multimodal Understanding and Vision",
-      "count": 4,
-      "share": 12.5,
-      "papers": [
-        {
-          "report_date": "2026-03-20",
-          "paper_id": "2603.19231",
-          "title": "MonoArt: Progressive Structural Reasoning for Monocular Articulated 3D Reconstruction",
-          "authors": [
-            "Haitian Li",
-            "Haozhe Xie",
-            "Junxiang Xu",
-            "Beichen Wen",
-            "Fangzhou Hong",
-            "Ziwei Liu"
-          ],
-          "abstract": "Reconstructing articulated 3D objects from a single image requires jointly inferring object geometry, part structure, and motion parameters from limited visual evidence. A key difficulty lies in the entanglement between motion cues and object structure, which makes direct articulation regression unstable. Existing methods address this challenge through multi-view supervision, retrieval-based assembly, or auxiliary video generation, often sacrificing scalability or efficiency. We present MonoArt, a unified framework grounded in progressive structural reasoning. Rather than predicting articulation directly from image features, MonoArt progressively transforms visual observations into canonical geometry, structured part representations, and motion-aware embeddings within a single architecture. This structured reasoning process enables stable and interpretable articulation inference without external motion templates or multi-stage pipelines. Extensive experiments on PartNet-Mobility demonstrate that OM achieves state-of-the-art performance in both reconstruction accuracy and inference speed. The framework further generalizes to robotic manipulation and articulated scene reconstruction.",
-          "hf_url": "https://huggingface.co/papers/2603.19231",
-          "arxiv_url": "https://arxiv.org/abs/2603.19231",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19231",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.19231",
-          "github_url": "",
-          "submitted_by": "Haozhe Xie",
-          "submitted_at": "2026-03-20T04:49:45.233Z",
-          "upvotes": 28,
-          "comments": 3,
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.93
-        },
-        {
-          "report_date": "2026-03-20",
-          "paper_id": "2603.18002",
-          "title": "Loc3R-VLM: Language-based Localization and 3D Reasoning with Vision-Language Models",
-          "authors": [
-            "Kevin Qu",
-            "Haozhe Qi",
-            "Mihai Dusmanu",
-            "Mahdi Rad",
-            "Rui Wang",
-            "Marc Pollefeys"
-          ],
-          "abstract": "Multimodal Large Language Models (MLLMs) have made impressive progress in connecting vision and language, but they still struggle with spatial understanding and viewpoint-aware reasoning. Recent efforts aim to augment the input representations with geometric cues rather than explicitly teaching models to reason in 3D space. We introduce Loc3R-VLM, a framework that equips 2D Vision-Language Models with advanced 3D understanding capabilities from monocular video input. Inspired by human spatial cognition, Loc3R-VLM relies on two joint objectives: global layout reconstruction to build a holistic representation of the scene structure, and explicit situation modeling to anchor egocentric perspective. These objectives provide direct spatial supervision that grounds both perception and language in a 3D context. To ensure geometric consistency and metric-scale alignment, we leverage lightweight camera pose priors extracted from a pre-trained 3D foundation model. Loc3R-VLM achieves state-of-the-art performance in language-based localization and outperforms existing 2D- and video-based approaches on situated and general 3D question-answering benchmarks, demonstrating that our spatial supervision framework enables strong 3D understanding. Project page: https://kevinqu7.github.io/loc3r-vlm",
-          "hf_url": "https://huggingface.co/papers/2603.18002",
-          "arxiv_url": "https://arxiv.org/abs/2603.18002",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.18002",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.18002",
-          "github_url": "",
-          "submitted_by": "Kevin Qu",
-          "submitted_at": "2026-03-20T03:33:48.979Z",
-          "upvotes": 6,
-          "comments": 2,
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.92
-        },
-        {
-          "report_date": "2026-03-20",
-          "paper_id": "2603.19234",
-          "title": "Matryoshka Gaussian Splatting",
-          "authors": [
-            "Zhilin Guo",
-            "Boqiao Zhang",
-            "Hakan Aktas",
-            "Kyle Fogarty",
-            "Jeffrey Hu",
-            "Nursena Koprucu Aslan",
-            "Wenzhao Li",
-            "Canberk Baykal",
-            "Albert Miao",
-            "Josef Bengtson",
-            "Chenliang Zhou",
-            "Weihao Xia",
-            "Cristina Nader Vasconcelos. Cengiz Oztireli"
-          ],
-          "abstract": "The ability to render scenes at adjustable fidelity from a single model, known as level of detail (LoD), is crucial for practical deployment of 3D Gaussian Splatting (3DGS). Existing discrete LoD methods expose only a limited set of operating points, while concurrent continuous LoD approaches enable smoother scaling but often suffer noticeable quality degradation at full capacity, making LoD a costly design decision. We introduce Matryoshka Gaussian Splatting (MGS), a training framework that enables continuous LoD for standard 3DGS pipelines without sacrificing full-capacity rendering quality. MGS learns a single ordered set of Gaussians such that rendering any prefix, the first k splats, produces a coherent reconstruction whose fidelity improves smoothly with increasing budget. Our key idea is stochastic budget training: each iteration samples a random splat budget and optimises both the corresponding prefix and the full set. This strategy requires only two forward passes and introduces no architectural modifications. Experiments across four benchmarks and six baselines show that MGS matches the full-capacity performance of its backbone while enabling a continuous speed-quality trade-off from a single model. Extensive ablations on ordering strategies, training objectives, and model capacity further validate the designs.",
-          "hf_url": "https://huggingface.co/papers/2603.19234",
-          "arxiv_url": "https://arxiv.org/abs/2603.19234",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19234",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.19234",
-          "github_url": "",
-          "submitted_by": "taesiri",
-          "submitted_at": "2026-03-20T00:49:13.729Z",
-          "upvotes": 4,
-          "comments": 1,
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.61
-        },
-        {
-          "report_date": "2026-03-20",
-          "paper_id": "2603.17554",
-          "title": "Prompt-Free Universal Region Proposal Network",
-          "authors": [
-            "Qihong Tang",
-            "Changhan Liu",
-            "Shaofeng Zhang",
-            "Wenbin Li",
-            "Qi Fan",
-            "Yang Gao"
-          ],
-          "abstract": "Identifying potential objects is critical for object recognition and analysis across various computer vision applications. Existing methods typically localize potential objects by relying on exemplar images, predefined categories, or textual descriptions. However, their reliance on image and text prompts often limits flexibility, restricting adaptability in real-world scenarios. In this paper, we introduce a novel Prompt-Free Universal Region Proposal Network (PF-RPN), which identifies potential objects without relying on external prompts. First, the Sparse Image-Aware Adapter (SIA) module performs initial localization of potential objects using a learnable query embedding dynamically updated with visual features. Next, the Cascade Self-Prompt (CSP) module identifies the remaining potential objects by leveraging the self-prompted learnable embedding, autonomously aggregating informative visual features in a cascading manner. Finally, the Centerness-Guided Query Selection (CG-QS) module facilitates the selection of high-quality query embeddings using a centerness scoring network. Our method can be optimized with limited data (e.g., 5% of MS COCO data) and applied directly to various object detection application domains for identifying potential objects without fine-tuning, such as underwater object detection, industrial defect detection, and remote sensing image object detection. Experimental results across 19 datasets validate the effectiveness of our method. Code is available at https://github.com/tangqh03/PF-RPN.",
-          "hf_url": "https://huggingface.co/papers/2603.17554",
-          "arxiv_url": "https://arxiv.org/abs/2603.17554",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.17554",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.17554",
-          "github_url": "",
-          "submitted_by": "Qihong Tang",
-          "submitted_at": "2026-03-20T06:04:38.872Z",
-          "upvotes": 2,
-          "comments": 2,
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.87
         }
       ]
     },
@@ -1176,7 +953,7 @@
           "github_url": "",
           "submitted_by": "HuichiZhou",
           "submitted_at": "2026-03-20T01:26:50.129Z",
-          "upvotes": 30,
+          "upvotes": 35,
           "comments": 2,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
@@ -1226,13 +1003,13 @@
           "github_url": "",
           "submitted_by": "Jungang Li",
           "submitted_at": "2026-03-20T11:12:51.644Z",
-          "upvotes": 19,
+          "upvotes": 21,
           "comments": 2,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.95
+          "classification_confidence": 0.96
         },
         {
           "report_date": "2026-03-20",
@@ -1261,20 +1038,114 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-03-20T01:23:53.050Z",
-          "upvotes": 6,
+          "upvotes": 8,
           "comments": 1,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.94
+          "classification_confidence": 0.96
+        }
+      ]
+    },
+    {
+      "topic_label": "Generative Foundations",
+      "count": 3,
+      "share": 9.38,
+      "papers": [
+        {
+          "report_date": "2026-03-20",
+          "paper_id": "2603.19227",
+          "title": "Bridging Semantic and Kinematic Conditions with Diffusion-based Discrete Motion Tokenizer",
+          "authors": [
+            "Chenyang Gu",
+            "Mingyuan Zhang",
+            "Haozhe Xie",
+            "Zhongang Cai",
+            "Lei Yang",
+            "Ziwei Liu"
+          ],
+          "abstract": "Prior motion generation largely follows two paradigms: continuous diffusion models that excel at kinematic control, and discrete token-based generators that are effective for semantic conditioning. To combine their strengths, we propose a three-stage framework comprising condition feature extraction (Perception), discrete token generation (Planning), and diffusion-based motion synthesis (Control). Central to this framework is MoTok, a diffusion-based discrete motion tokenizer that decouples semantic abstraction from fine-grained reconstruction by delegating motion recovery to a diffusion decoder, enabling compact single-layer tokens while preserving motion fidelity. For kinematic conditions, coarse constraints guide token generation during planning, while fine-grained constraints are enforced during control through diffusion-based optimization. This design prevents kinematic details from disrupting semantic token planning. On HumanML3D, our method significantly improves controllability and fidelity over MaskControl while using only one-sixth of the tokens, reducing trajectory error from 0.72 cm to 0.08 cm and FID from 0.083 to 0.029. Unlike prior methods that degrade under stronger kinematic constraints, ours improves fidelity, reducing FID from 0.033 to 0.014.",
+          "hf_url": "https://huggingface.co/papers/2603.19227",
+          "arxiv_url": "https://arxiv.org/abs/2603.19227",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19227",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.19227",
+          "github_url": "",
+          "submitted_by": "Haozhe Xie",
+          "submitted_at": "2026-03-20T03:38:04.272Z",
+          "upvotes": 37,
+          "comments": 3,
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.86
+        },
+        {
+          "report_date": "2026-03-20",
+          "paper_id": "2603.19232",
+          "title": "Cubic Discrete Diffusion: Discrete Visual Generation on High-Dimensional Representation Tokens",
+          "authors": [
+            "Yuqing Wang",
+            "Chuofan Ma",
+            "Zhijie Lin",
+            "Yao Teng",
+            "Lijun Yu",
+            "Shuai Wang",
+            "Jiaming Han",
+            "Jiashi Feng",
+            "Yi Jiang",
+            "Xihui Liu"
+          ],
+          "abstract": "Visual generation with discrete tokens has gained significant attention as it enables a unified token prediction paradigm shared with language models, promising seamless multimodal architectures. However, current discrete generation methods remain limited to low-dimensional latent tokens (typically 8-32 dims), sacrificing the semantic richness essential for understanding. While high-dimensional pretrained representations (768-1024 dims) could bridge this gap, their discrete generation poses fundamental challenges. In this paper, we present Cubic Discrete Diffusion (CubiD), the first discrete generation model for high-dimensional representations. CubiD performs fine-grained masking throughout the high-dimensional discrete representation -- any dimension at any position can be masked and predicted from partial observations. This enables the model to learn rich correlations both within and across spatial positions, with the number of generation steps fixed at T regardless of feature dimensionality, where T ll hwd. On ImageNet-256, CubiD achieves state-of-the-art discrete generation with strong scaling behavior from 900M to 3.7B parameters. Crucially, we validate that these discretized tokens preserve original representation capabilities, demonstrating that the same discrete tokens can effectively serve both understanding and generation tasks. We hope this work will inspire future research toward unified multimodal architectures. Code is available at: https://github.com/YuqingWang1029/CubiD.",
+          "hf_url": "https://huggingface.co/papers/2603.19232",
+          "arxiv_url": "https://arxiv.org/abs/2603.19232",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19232",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.19232",
+          "github_url": "",
+          "submitted_by": "Yuqing Wang",
+          "submitted_at": "2026-03-20T00:47:36.683Z",
+          "upvotes": 30,
+          "comments": 2,
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.98
+        },
+        {
+          "report_date": "2026-03-20",
+          "paper_id": "2603.13395",
+          "title": "COT-FM: Cluster-wise Optimal Transport Flow Matching",
+          "authors": [
+            "Chiensheng Chiang",
+            "Kuan-Hsun Tu",
+            "Jia-Wei Liao",
+            "Cheng-Fu Chou",
+            "Tsung-Wei Ke"
+          ],
+          "abstract": "We introduce COT-FM, a general framework that reshapes the probability path in Flow Matching (FM) to achieve faster and more reliable generation. FM models often produce curved trajectories due to random or batchwise couplings, which increase discretization error and reduce sample quality. COT-FM fixes this by clustering target samples and assigning each cluster a dedicated source distribution obtained by reversing pretrained FM models. This divide-and-conquer strategy yields more accurate local transport and significantly straighter vector fields, all without changing the model architecture. As a plug-and-play approach, COT-FM consistently accelerates sampling and improves generation quality across 2D datasets, image generation benchmarks, and robotic manipulation tasks.",
+          "hf_url": "https://huggingface.co/papers/2603.13395",
+          "arxiv_url": "https://arxiv.org/abs/2603.13395",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.13395",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.13395",
+          "github_url": "",
+          "submitted_by": "Jiawei",
+          "submitted_at": "2026-03-20T02:05:00.254Z",
+          "upvotes": 1,
+          "comments": 2,
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.91
         }
       ]
     },
     {
       "topic_label": "LLMs and Language",
-      "count": 2,
-      "share": 6.25,
+      "count": 3,
+      "share": 9.38,
       "papers": [
         {
           "report_date": "2026-03-20",
@@ -1307,13 +1178,13 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-03-20T00:47:05.026Z",
-          "upvotes": 37,
+          "upvotes": 45,
           "comments": 2,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.9
+          "classification_confidence": 0.88
         },
         {
           "report_date": "2026-03-20",
@@ -1340,7 +1211,136 @@
           "topic_label": "LLMs and Language",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.78
+          "classification_confidence": 0.67
+        },
+        {
+          "report_date": "2026-03-20",
+          "paper_id": "2603.19017",
+          "title": "What Really Controls Temporal Reasoning in Large Language Models: Tokenisation or Representation of Time?",
+          "authors": [
+            "Gagan Bhatia",
+            "Ahmad Muhammad Isa",
+            "Maxime Peyrard",
+            "Wei Zhao"
+          ],
+          "abstract": "We present MultiTempBench, a multilingual temporal reasoning benchmark spanning three tasks, date arithmetic, time zone conversion, and temporal relation extraction across five languages (English, German, Chinese, Arabic, and Hausa) and multiple calendar conventions (Gregorian, Hijri, and Chinese Lunar). MultiTempBench contains 15,000 examples built by translating 750 curated English questions and expanding each into controlled date-format variants. We evaluate 20 LLMs and introduce the multilingual Date Fragmentation Ratio (mDFR), calibrated with human severity ratings, together with geometric-probing analyses of internal temporal representations. We find tokenisation quality of temporal artefacts is a resource-dependent bottleneck: in low-resource languages and rarer calendar formats, fragmentation disrupts Year/Month/Day separation and accuracy collapses, while high-resource settings are often robust to digit-level splitting. Beyond tokenisation, crossed mixed-effects regression shows that temporal linearity is the strongest predictor of temporal reasoning in high-resource languages, whereas fragmentation is the stronger predictor in low-resource languages. Code is available at: https://github.com/gagan3012/mtb",
+          "hf_url": "https://huggingface.co/papers/2603.19017",
+          "arxiv_url": "https://arxiv.org/abs/2603.19017",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19017",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.19017",
+          "github_url": "",
+          "submitted_by": "Gagan Bhatia",
+          "submitted_at": "2026-03-20T15:12:00.114Z",
+          "upvotes": 1,
+          "comments": 2,
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.94
+        }
+      ]
+    },
+    {
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "count": 3,
+      "share": 9.38,
+      "papers": [
+        {
+          "report_date": "2026-03-20",
+          "paper_id": "2603.19203",
+          "title": "Tinted Frames: Question Framing Blinds Vision-Language Models",
+          "authors": [
+            "Wan-Cyuan Fan",
+            "Jiayun Luo",
+            "Declan Kutscher",
+            "Leonid Sigal",
+            "Ritwik Gupta"
+          ],
+          "abstract": "Vision-Language Models (VLMs) have been shown to be blind, often underutilizing their visual inputs even on tasks that require visual reasoning. In this work, we demonstrate that VLMs are selectively blind. They modulate the amount of attention applied to visual inputs based on linguistic framing even when alternative framings demand identical visual reasoning. Using visual attention as a probe, we quantify how framing alters both the amount and distribution of attention over the image. Constrained framings, such as multiple choice and yes/no, induce substantially lower attention to image context compared to open-ended, reduce focus on task-relevant regions, and shift attention towards uninformative tokens. We further demonstrate that this attention misallocation is the principal cause of degraded accuracy and cross-framing inconsistency. Building on this mechanistic insight, we introduce a lightweight prompt-tuning method using learnable tokens that encourages the robust, visually grounded attention patterns observed in open-ended settings, improving visual grounding and improving performance across framings.",
+          "hf_url": "https://huggingface.co/papers/2603.19203",
+          "arxiv_url": "https://arxiv.org/abs/2603.19203",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19203",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.19203",
+          "github_url": "",
+          "submitted_by": "Declan Kutscher",
+          "submitted_at": "2026-03-20T12:36:35.690Z",
+          "upvotes": 13,
+          "comments": 2,
+          "topic_key": "reasoning_alignment_eval",
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.88
+        },
+        {
+          "report_date": "2026-03-20",
+          "paper_id": "2603.18886",
+          "title": "Reasoning over mathematical objects: on-policy reward modeling and test time aggregation",
+          "authors": [
+            "Pranjal Aggarwal",
+            "Marjan Ghazvininejad",
+            "Seungone Kim",
+            "Ilia Kulikov",
+            "Jack Lanchantin",
+            "Xian Li",
+            "Tianjian Li",
+            "Bo Liu",
+            "Graham Neubig",
+            "Anaelia Ovalle",
+            "Swarnadeep Saha",
+            "Sainbayar Sukhbaatar",
+            "Sean Welleck",
+            "Jason Weston",
+            "Chenxi Whitehouse",
+            "Adina Williams",
+            "Jing Xu",
+            "Ping Yu",
+            "Weizhe Yuan",
+            "Jingyu Zhang",
+            "Wenting Zhao"
+          ],
+          "abstract": "The ability to precisely derive mathematical objects is a core requirement for downstream STEM applications, including mathematics, physics, and chemistry, where reasoning must culminate in formally structured expressions. Yet, current LM evaluations of mathematical and scientific reasoning rely heavily on simplified answer formats such as numerical values or multiple choice options due to the convenience of automated assessment. In this paper we provide three contributions for improving reasoning over mathematical objects: (i) we build and release training data and benchmarks for deriving mathematical objects, the Principia suite; (ii) we provide training recipes with strong LLM-judges and verifiers, where we show that on-policy judge training boosts performance; (iii) we show how on-policy training can also be used to scale test-time compute via aggregation. We find that strong LMs such as Qwen3-235B and o3 struggle on Principia, while our training recipes can bring significant improvements over different LLM backbones, while simultaneously improving results on existing numerical and MCQA tasks, demonstrating cross-format generalization of reasoning abilities.",
+          "hf_url": "https://huggingface.co/papers/2603.18886",
+          "arxiv_url": "https://arxiv.org/abs/2603.18886",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.18886",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.18886",
+          "github_url": "",
+          "submitted_by": "taesiri",
+          "submitted_at": "2026-03-20T00:50:20.850Z",
+          "upvotes": 3,
+          "comments": 1,
+          "topic_key": "reasoning_alignment_eval",
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.81
+        },
+        {
+          "report_date": "2026-03-20",
+          "paper_id": "2603.13045",
+          "title": "Mending the Holes: Mitigating Reward Hacking in Reinforcement Learning for Multilingual Translation",
+          "authors": [
+            "Yifeng Liu",
+            "Siqi Ouyang",
+            "Yatish Hosmane Revanasiddappa",
+            "Lei Li"
+          ],
+          "abstract": "Large Language Models (LLMs) have demonstrated remarkable capability in machine translation on high-resource language pairs, yet their performance on low-resource translation still lags behind. Existing post-training methods rely heavily on high-quality parallel data, which are often scarce or unavailable for low-resource languages. In this paper, we introduce WALAR, a reinforcement training method using only monolingual text to elevate LLMs' translation capabilities on massive low-resource languages while retaining their performance on high-resource languages. Our key insight is based on the observation of failure modes (or \"holes\") in existing source-based multilingual quality estimation (QE) models. Reinforcement learning (RL) using these QE models tends to amplify such holes, resulting in poorer multilingual LLMs. We develop techniques including word alignment and language alignment to mitigate such holes in WALAR's reward for RL training. We continually trained an LLM supporting translation of 101 languages using WALAR. The experiments show that our new model outperforms LLaMAX, one of the strongest open-source multilingual LLMs by a large margin on 1400 language directions on Flores-101 dataset.",
+          "hf_url": "https://huggingface.co/papers/2603.13045",
+          "arxiv_url": "https://arxiv.org/abs/2603.13045",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.13045",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.13045",
+          "github_url": "",
+          "submitted_by": "Yifeng Liu",
+          "submitted_at": "2026-03-20T07:00:22.965Z",
+          "upvotes": 1,
+          "comments": 2,
+          "topic_key": "reasoning_alignment_eval",
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.84
         }
       ]
     },
@@ -1375,7 +1375,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.84
+          "classification_confidence": 0.9
         }
       ]
     },
@@ -1409,7 +1409,7 @@
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.92
+          "classification_confidence": 0.93
         }
       ]
     },
@@ -1440,7 +1440,7 @@
           "github_url": "",
           "submitted_by": "Yuxiang Lu",
           "submitted_at": "2026-03-20T01:09:18.396Z",
-          "upvotes": 43,
+          "upvotes": 47,
           "comments": 3,
           "topic_key": "multimodal_agents",
           "topic_label": "Multimodal Agents",
@@ -1474,13 +1474,13 @@
       "github_url": "",
       "submitted_by": "Dingkang Liang",
       "submitted_at": "2026-03-20T00:47:57.997Z",
-      "upvotes": 76,
+      "upvotes": 83,
       "comments": 4,
-      "topic_key": "generative_foundations",
-      "topic_label": "Generative Foundations",
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.63
+      "classification_confidence": 0.81
     },
     {
       "report_date": "2026-03-20",
@@ -1509,7 +1509,7 @@
       "github_url": "",
       "submitted_by": "Yuxin Song",
       "submitted_at": "2026-03-20T01:01:32.962Z",
-      "upvotes": 59,
+      "upvotes": 60,
       "comments": 3,
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
@@ -1536,7 +1536,7 @@
       "github_url": "",
       "submitted_by": "Lani Ko",
       "submitted_at": "2026-03-20T04:46:51.588Z",
-      "upvotes": 44,
+      "upvotes": 49,
       "comments": 3,
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
@@ -1566,7 +1566,7 @@
       "github_url": "",
       "submitted_by": "Yuxiang Lu",
       "submitted_at": "2026-03-20T01:09:18.396Z",
-      "upvotes": 43,
+      "upvotes": 47,
       "comments": 3,
       "topic_key": "multimodal_agents",
       "topic_label": "Multimodal Agents",
@@ -1605,13 +1605,13 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-03-20T00:47:05.026Z",
-      "upvotes": 37,
+      "upvotes": 45,
       "comments": 2,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.9
+      "classification_confidence": 0.88
     },
     {
       "report_date": "2026-03-20",
@@ -1633,13 +1633,13 @@
       "github_url": "",
       "submitted_by": "Haozhe Xie",
       "submitted_at": "2026-03-20T03:38:04.272Z",
-      "upvotes": 35,
+      "upvotes": 37,
       "comments": 3,
       "topic_key": "generative_foundations",
       "topic_label": "Generative Foundations",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.69
+      "classification_confidence": 0.86
     },
     {
       "report_date": "2026-03-20",
@@ -1672,13 +1672,45 @@
       "github_url": "",
       "submitted_by": "HuichiZhou",
       "submitted_at": "2026-03-20T01:26:50.129Z",
-      "upvotes": 30,
+      "upvotes": 35,
       "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
       "matched_terms": [],
       "classification_source": "codex",
       "classification_confidence": 0.95
+    },
+    {
+      "report_date": "2026-03-20",
+      "paper_id": "2603.19232",
+      "title": "Cubic Discrete Diffusion: Discrete Visual Generation on High-Dimensional Representation Tokens",
+      "authors": [
+        "Yuqing Wang",
+        "Chuofan Ma",
+        "Zhijie Lin",
+        "Yao Teng",
+        "Lijun Yu",
+        "Shuai Wang",
+        "Jiaming Han",
+        "Jiashi Feng",
+        "Yi Jiang",
+        "Xihui Liu"
+      ],
+      "abstract": "Visual generation with discrete tokens has gained significant attention as it enables a unified token prediction paradigm shared with language models, promising seamless multimodal architectures. However, current discrete generation methods remain limited to low-dimensional latent tokens (typically 8-32 dims), sacrificing the semantic richness essential for understanding. While high-dimensional pretrained representations (768-1024 dims) could bridge this gap, their discrete generation poses fundamental challenges. In this paper, we present Cubic Discrete Diffusion (CubiD), the first discrete generation model for high-dimensional representations. CubiD performs fine-grained masking throughout the high-dimensional discrete representation -- any dimension at any position can be masked and predicted from partial observations. This enables the model to learn rich correlations both within and across spatial positions, with the number of generation steps fixed at T regardless of feature dimensionality, where T ll hwd. On ImageNet-256, CubiD achieves state-of-the-art discrete generation with strong scaling behavior from 900M to 3.7B parameters. Crucially, we validate that these discretized tokens preserve original representation capabilities, demonstrating that the same discrete tokens can effectively serve both understanding and generation tasks. We hope this work will inspire future research toward unified multimodal architectures. Code is available at: https://github.com/YuqingWang1029/CubiD.",
+      "hf_url": "https://huggingface.co/papers/2603.19232",
+      "arxiv_url": "https://arxiv.org/abs/2603.19232",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19232",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.19232",
+      "github_url": "",
+      "submitted_by": "Yuqing Wang",
+      "submitted_at": "2026-03-20T00:47:36.683Z",
+      "upvotes": 30,
+      "comments": 2,
+      "topic_key": "generative_foundations",
+      "topic_label": "Generative Foundations",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.98
     },
     {
       "report_date": "2026-03-20",
@@ -1700,13 +1732,13 @@
       "github_url": "",
       "submitted_by": "Haozhe Xie",
       "submitted_at": "2026-03-20T04:49:45.233Z",
-      "upvotes": 28,
+      "upvotes": 30,
       "comments": 3,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.93
+      "classification_confidence": 0.89
     },
     {
       "report_date": "2026-03-20",
@@ -1744,38 +1776,6 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.99
-    },
-    {
-      "report_date": "2026-03-20",
-      "paper_id": "2603.19232",
-      "title": "Cubic Discrete Diffusion: Discrete Visual Generation on High-Dimensional Representation Tokens",
-      "authors": [
-        "Yuqing Wang",
-        "Chuofan Ma",
-        "Zhijie Lin",
-        "Yao Teng",
-        "Lijun Yu",
-        "Shuai Wang",
-        "Jiaming Han",
-        "Jiashi Feng",
-        "Yi Jiang",
-        "Xihui Liu"
-      ],
-      "abstract": "Visual generation with discrete tokens has gained significant attention as it enables a unified token prediction paradigm shared with language models, promising seamless multimodal architectures. However, current discrete generation methods remain limited to low-dimensional latent tokens (typically 8-32 dims), sacrificing the semantic richness essential for understanding. While high-dimensional pretrained representations (768-1024 dims) could bridge this gap, their discrete generation poses fundamental challenges. In this paper, we present Cubic Discrete Diffusion (CubiD), the first discrete generation model for high-dimensional representations. CubiD performs fine-grained masking throughout the high-dimensional discrete representation -- any dimension at any position can be masked and predicted from partial observations. This enables the model to learn rich correlations both within and across spatial positions, with the number of generation steps fixed at T regardless of feature dimensionality, where T ll hwd. On ImageNet-256, CubiD achieves state-of-the-art discrete generation with strong scaling behavior from 900M to 3.7B parameters. Crucially, we validate that these discretized tokens preserve original representation capabilities, demonstrating that the same discrete tokens can effectively serve both understanding and generation tasks. We hope this work will inspire future research toward unified multimodal architectures. Code is available at: https://github.com/YuqingWang1029/CubiD.",
-      "hf_url": "https://huggingface.co/papers/2603.19232",
-      "arxiv_url": "https://arxiv.org/abs/2603.19232",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19232",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.19232",
-      "github_url": "",
-      "submitted_by": "Yuqing Wang",
-      "submitted_at": "2026-03-20T00:47:36.683Z",
-      "upvotes": 26,
-      "comments": 2,
-      "topic_key": "generative_foundations",
-      "topic_label": "Generative Foundations",
-      "matched_terms": [],
-      "classification_source": "codex",
       "classification_confidence": 0.98
     },
     {
@@ -1803,37 +1803,7 @@
       "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.78
-    },
-    {
-      "report_date": "2026-03-20",
-      "paper_id": "2603.15083",
-      "title": "ReactMotion: Generating Reactive Listener Motions from Speaker Utterance",
-      "authors": [
-        "Cheng Luo",
-        "Bizhu Wu",
-        "Bing Li",
-        "Jianfeng Ren",
-        "Ruibin Bai",
-        "Rong Qu",
-        "Linlin Shen",
-        "Bernard Ghanem"
-      ],
-      "abstract": "In this paper, we introduce a new task, Reactive Listener Motion Generation from Speaker Utterance, which aims to generate naturalistic listener body motions that appropriately respond to a speaker's utterance. However, modeling such nonverbal listener behaviors remains underexplored and challenging due to the inherently non-deterministic nature of human reactions. To facilitate this task, we present ReactMotionNet, a large-scale dataset that pairs speaker utterances with multiple candidate listener motions annotated with varying degrees of appropriateness. This dataset design explicitly captures the one-to-many nature of listener behavior and provides supervision beyond a single ground-truth motion. Building on this dataset design, we develop preference-oriented evaluation protocols tailored to evaluate reactive appropriateness, where conventional motion metrics focusing on input-motion alignment ignore. We further propose ReactMotion, a unified generative framework that jointly models text, audio, emotion, and motion, and is trained with preference-based objectives to encourage both appropriate and diverse listener responses. Extensive experiments show that ReactMotion outperforms retrieval baselines and cascaded LLM-based pipelines, generating more natural, diverse, and appropriate listener motions.",
-      "hf_url": "https://huggingface.co/papers/2603.15083",
-      "arxiv_url": "https://arxiv.org/abs/2603.15083",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.15083",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.15083",
-      "github_url": "",
-      "submitted_by": "Bing Li",
-      "submitted_at": "2026-03-20T11:04:30.281Z",
-      "upvotes": 21,
-      "comments": 3,
-      "topic_key": "multimodal_generative",
-      "topic_label": "Multimodal Generative Modeling",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.9
+      "classification_confidence": 0.67
     },
     {
       "report_date": "2026-03-20",
@@ -1877,13 +1847,43 @@
       "github_url": "",
       "submitted_by": "Jungang Li",
       "submitted_at": "2026-03-20T11:12:51.644Z",
-      "upvotes": 19,
+      "upvotes": 21,
       "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.96
+    },
+    {
+      "report_date": "2026-03-20",
+      "paper_id": "2603.15083",
+      "title": "ReactMotion: Generating Reactive Listener Motions from Speaker Utterance",
+      "authors": [
+        "Cheng Luo",
+        "Bizhu Wu",
+        "Bing Li",
+        "Jianfeng Ren",
+        "Ruibin Bai",
+        "Rong Qu",
+        "Linlin Shen",
+        "Bernard Ghanem"
+      ],
+      "abstract": "In this paper, we introduce a new task, Reactive Listener Motion Generation from Speaker Utterance, which aims to generate naturalistic listener body motions that appropriately respond to a speaker's utterance. However, modeling such nonverbal listener behaviors remains underexplored and challenging due to the inherently non-deterministic nature of human reactions. To facilitate this task, we present ReactMotionNet, a large-scale dataset that pairs speaker utterances with multiple candidate listener motions annotated with varying degrees of appropriateness. This dataset design explicitly captures the one-to-many nature of listener behavior and provides supervision beyond a single ground-truth motion. Building on this dataset design, we develop preference-oriented evaluation protocols tailored to evaluate reactive appropriateness, where conventional motion metrics focusing on input-motion alignment ignore. We further propose ReactMotion, a unified generative framework that jointly models text, audio, emotion, and motion, and is trained with preference-based objectives to encourage both appropriate and diverse listener responses. Extensive experiments show that ReactMotion outperforms retrieval baselines and cascaded LLM-based pipelines, generating more natural, diverse, and appropriate listener motions.",
+      "hf_url": "https://huggingface.co/papers/2603.15083",
+      "arxiv_url": "https://arxiv.org/abs/2603.15083",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.15083",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.15083",
+      "github_url": "",
+      "submitted_by": "Bing Li",
+      "submitted_at": "2026-03-20T11:04:30.281Z",
+      "upvotes": 21,
+      "comments": 3,
+      "topic_key": "multimodal_generative",
+      "topic_label": "Multimodal Generative Modeling",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.86
     },
     {
       "report_date": "2026-03-20",
@@ -1914,11 +1914,11 @@
       "submitted_at": "2026-03-20T03:52:09.456Z",
       "upvotes": 17,
       "comments": 2,
-      "topic_key": "reasoning_alignment_eval",
-      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.76
+      "classification_confidence": 0.86
     },
     {
       "report_date": "2026-03-20",
@@ -1948,33 +1948,6 @@
     },
     {
       "report_date": "2026-03-20",
-      "paper_id": "2603.19203",
-      "title": "Tinted Frames: Question Framing Blinds Vision-Language Models",
-      "authors": [
-        "Wan-Cyuan Fan",
-        "Jiayun Luo",
-        "Declan Kutscher",
-        "Leonid Sigal",
-        "Ritwik Gupta"
-      ],
-      "abstract": "Vision-Language Models (VLMs) have been shown to be blind, often underutilizing their visual inputs even on tasks that require visual reasoning. In this work, we demonstrate that VLMs are selectively blind. They modulate the amount of attention applied to visual inputs based on linguistic framing even when alternative framings demand identical visual reasoning. Using visual attention as a probe, we quantify how framing alters both the amount and distribution of attention over the image. Constrained framings, such as multiple choice and yes/no, induce substantially lower attention to image context compared to open-ended, reduce focus on task-relevant regions, and shift attention towards uninformative tokens. We further demonstrate that this attention misallocation is the principal cause of degraded accuracy and cross-framing inconsistency. Building on this mechanistic insight, we introduce a lightweight prompt-tuning method using learnable tokens that encourages the robust, visually grounded attention patterns observed in open-ended settings, improving visual grounding and improving performance across framings.",
-      "hf_url": "https://huggingface.co/papers/2603.19203",
-      "arxiv_url": "https://arxiv.org/abs/2603.19203",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19203",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.19203",
-      "github_url": "",
-      "submitted_by": "Declan Kutscher",
-      "submitted_at": "2026-03-20T12:36:35.690Z",
-      "upvotes": 13,
-      "comments": 2,
-      "topic_key": "reasoning_alignment_eval",
-      "topic_label": "Reasoning, Alignment, and Evaluation",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.9
-    },
-    {
-      "report_date": "2026-03-20",
       "paper_id": "2603.15030",
       "title": "VTC-Bench: Evaluating Agentic Multimodal Models via Compositional Visual Tool Chaining",
       "authors": [
@@ -1999,13 +1972,40 @@
       "github_url": "",
       "submitted_by": "Yang Shi",
       "submitted_at": "2026-03-20T03:48:36.995Z",
-      "upvotes": 13,
+      "upvotes": 15,
       "comments": 2,
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.98
+      "classification_confidence": 0.96
+    },
+    {
+      "report_date": "2026-03-20",
+      "paper_id": "2603.19203",
+      "title": "Tinted Frames: Question Framing Blinds Vision-Language Models",
+      "authors": [
+        "Wan-Cyuan Fan",
+        "Jiayun Luo",
+        "Declan Kutscher",
+        "Leonid Sigal",
+        "Ritwik Gupta"
+      ],
+      "abstract": "Vision-Language Models (VLMs) have been shown to be blind, often underutilizing their visual inputs even on tasks that require visual reasoning. In this work, we demonstrate that VLMs are selectively blind. They modulate the amount of attention applied to visual inputs based on linguistic framing even when alternative framings demand identical visual reasoning. Using visual attention as a probe, we quantify how framing alters both the amount and distribution of attention over the image. Constrained framings, such as multiple choice and yes/no, induce substantially lower attention to image context compared to open-ended, reduce focus on task-relevant regions, and shift attention towards uninformative tokens. We further demonstrate that this attention misallocation is the principal cause of degraded accuracy and cross-framing inconsistency. Building on this mechanistic insight, we introduce a lightweight prompt-tuning method using learnable tokens that encourages the robust, visually grounded attention patterns observed in open-ended settings, improving visual grounding and improving performance across framings.",
+      "hf_url": "https://huggingface.co/papers/2603.19203",
+      "arxiv_url": "https://arxiv.org/abs/2603.19203",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19203",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.19203",
+      "github_url": "",
+      "submitted_by": "Declan Kutscher",
+      "submitted_at": "2026-03-20T12:36:35.690Z",
+      "upvotes": 13,
+      "comments": 2,
+      "topic_key": "reasoning_alignment_eval",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.88
     },
     {
       "report_date": "2026-03-20",
@@ -2031,7 +2031,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.74
+      "classification_confidence": 0.73
     },
     {
       "report_date": "2026-03-20",
@@ -2060,41 +2060,13 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-03-20T01:23:53.050Z",
-      "upvotes": 6,
+      "upvotes": 8,
       "comments": 1,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.94
-    },
-    {
-      "report_date": "2026-03-20",
-      "paper_id": "2603.18002",
-      "title": "Loc3R-VLM: Language-based Localization and 3D Reasoning with Vision-Language Models",
-      "authors": [
-        "Kevin Qu",
-        "Haozhe Qi",
-        "Mihai Dusmanu",
-        "Mahdi Rad",
-        "Rui Wang",
-        "Marc Pollefeys"
-      ],
-      "abstract": "Multimodal Large Language Models (MLLMs) have made impressive progress in connecting vision and language, but they still struggle with spatial understanding and viewpoint-aware reasoning. Recent efforts aim to augment the input representations with geometric cues rather than explicitly teaching models to reason in 3D space. We introduce Loc3R-VLM, a framework that equips 2D Vision-Language Models with advanced 3D understanding capabilities from monocular video input. Inspired by human spatial cognition, Loc3R-VLM relies on two joint objectives: global layout reconstruction to build a holistic representation of the scene structure, and explicit situation modeling to anchor egocentric perspective. These objectives provide direct spatial supervision that grounds both perception and language in a 3D context. To ensure geometric consistency and metric-scale alignment, we leverage lightweight camera pose priors extracted from a pre-trained 3D foundation model. Loc3R-VLM achieves state-of-the-art performance in language-based localization and outperforms existing 2D- and video-based approaches on situated and general 3D question-answering benchmarks, demonstrating that our spatial supervision framework enables strong 3D understanding. Project page: https://kevinqu7.github.io/loc3r-vlm",
-      "hf_url": "https://huggingface.co/papers/2603.18002",
-      "arxiv_url": "https://arxiv.org/abs/2603.18002",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.18002",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.18002",
-      "github_url": "",
-      "submitted_by": "Kevin Qu",
-      "submitted_at": "2026-03-20T03:33:48.979Z",
-      "upvotes": 6,
-      "comments": 2,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.92
+      "classification_confidence": 0.96
     },
     {
       "report_date": "2026-03-20",
@@ -2136,40 +2108,41 @@
       "github_url": "",
       "submitted_by": "yitian gong",
       "submitted_at": "2026-03-20T04:09:57.272Z",
-      "upvotes": 6,
+      "upvotes": 8,
       "comments": 2,
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.8
+      "classification_confidence": 0.79
     },
     {
       "report_date": "2026-03-20",
-      "paper_id": "2603.16929",
-      "title": "MHPO: Modulated Hazard-aware Policy Optimization for Stable Reinforcement Learning",
+      "paper_id": "2603.18002",
+      "title": "Loc3R-VLM: Language-based Localization and 3D Reasoning with Vision-Language Models",
       "authors": [
-        "Hongjun Wang",
-        "Wei Liu",
-        "Weibo Gu",
-        "Xing Sun",
-        "Kai Han"
+        "Kevin Qu",
+        "Haozhe Qi",
+        "Mihai Dusmanu",
+        "Mahdi Rad",
+        "Rui Wang",
+        "Marc Pollefeys"
       ],
-      "abstract": "Regulating the importance ratio is critical for the training stability of Group Relative Policy Optimization (GRPO) based frameworks. However, prevailing ratio control methods, such as hard clipping, suffer from non-differentiable boundaries and vanishing gradient regions, failing to maintain gradient fidelity. Furthermore, these methods lack a hazard-aware mechanism to adaptively suppress extreme deviations, leaving the optimization process vulnerable to abrupt policy shifts. To address these challenges, we propose Modulated Hazard-aware Policy Optimization (MHPO), a novel framework designed for robust and stable reinforcement learning. The proposed MHPO introduces a Log-Fidelity Modulator (LFM) to map unbounded importance ratios into a bounded, differentiable domain. This mechanism effectively prevents high-variance outlier tokens from destabilizing the loss landscape while ensuring global gradient stability. Complementarily, a Decoupled Hazard Penalty (DHP) integrates cumulative hazard functions from survival analysis to independently regulate positive and negative policy shifts. By shaping the optimization landscape with hazard-aware penalties, the proposed MHPO achieves fine-grained regulation of asymmetric policy shifts simultaneously mitigating mode collapse from over-expansion and preventing policy erosion from catastrophic contraction within a stabilized trust region. Extensive evaluations on diverse reasoning benchmarks across both text-based and vision-language tasks demonstrate that MHPO consistently outperforms existing methods, achieving superior performance while significantly enhancing training stability.",
-      "hf_url": "https://huggingface.co/papers/2603.16929",
-      "arxiv_url": "https://arxiv.org/abs/2603.16929",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.16929",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.16929",
+      "abstract": "Multimodal Large Language Models (MLLMs) have made impressive progress in connecting vision and language, but they still struggle with spatial understanding and viewpoint-aware reasoning. Recent efforts aim to augment the input representations with geometric cues rather than explicitly teaching models to reason in 3D space. We introduce Loc3R-VLM, a framework that equips 2D Vision-Language Models with advanced 3D understanding capabilities from monocular video input. Inspired by human spatial cognition, Loc3R-VLM relies on two joint objectives: global layout reconstruction to build a holistic representation of the scene structure, and explicit situation modeling to anchor egocentric perspective. These objectives provide direct spatial supervision that grounds both perception and language in a 3D context. To ensure geometric consistency and metric-scale alignment, we leverage lightweight camera pose priors extracted from a pre-trained 3D foundation model. Loc3R-VLM achieves state-of-the-art performance in language-based localization and outperforms existing 2D- and video-based approaches on situated and general 3D question-answering benchmarks, demonstrating that our spatial supervision framework enables strong 3D understanding. Project page: https://kevinqu7.github.io/loc3r-vlm",
+      "hf_url": "https://huggingface.co/papers/2603.18002",
+      "arxiv_url": "https://arxiv.org/abs/2603.18002",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.18002",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.18002",
       "github_url": "",
-      "submitted_by": "whj363636",
-      "submitted_at": "2026-03-20T00:35:14.963Z",
-      "upvotes": 5,
+      "submitted_by": "Kevin Qu",
+      "submitted_at": "2026-03-20T03:33:48.979Z",
+      "upvotes": 7,
       "comments": 2,
-      "topic_key": "learning_theory",
-      "topic_label": "Learning, Optimization, and Theory",
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.92
+      "classification_confidence": 0.84
     },
     {
       "report_date": "2026-03-20",
@@ -2198,13 +2171,40 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-03-20T00:49:13.729Z",
-      "upvotes": 4,
+      "upvotes": 6,
       "comments": 1,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.61
+      "classification_confidence": 0.58
+    },
+    {
+      "report_date": "2026-03-20",
+      "paper_id": "2603.16929",
+      "title": "MHPO: Modulated Hazard-aware Policy Optimization for Stable Reinforcement Learning",
+      "authors": [
+        "Hongjun Wang",
+        "Wei Liu",
+        "Weibo Gu",
+        "Xing Sun",
+        "Kai Han"
+      ],
+      "abstract": "Regulating the importance ratio is critical for the training stability of Group Relative Policy Optimization (GRPO) based frameworks. However, prevailing ratio control methods, such as hard clipping, suffer from non-differentiable boundaries and vanishing gradient regions, failing to maintain gradient fidelity. Furthermore, these methods lack a hazard-aware mechanism to adaptively suppress extreme deviations, leaving the optimization process vulnerable to abrupt policy shifts. To address these challenges, we propose Modulated Hazard-aware Policy Optimization (MHPO), a novel framework designed for robust and stable reinforcement learning. The proposed MHPO introduces a Log-Fidelity Modulator (LFM) to map unbounded importance ratios into a bounded, differentiable domain. This mechanism effectively prevents high-variance outlier tokens from destabilizing the loss landscape while ensuring global gradient stability. Complementarily, a Decoupled Hazard Penalty (DHP) integrates cumulative hazard functions from survival analysis to independently regulate positive and negative policy shifts. By shaping the optimization landscape with hazard-aware penalties, the proposed MHPO achieves fine-grained regulation of asymmetric policy shifts simultaneously mitigating mode collapse from over-expansion and preventing policy erosion from catastrophic contraction within a stabilized trust region. Extensive evaluations on diverse reasoning benchmarks across both text-based and vision-language tasks demonstrate that MHPO consistently outperforms existing methods, achieving superior performance while significantly enhancing training stability.",
+      "hf_url": "https://huggingface.co/papers/2603.16929",
+      "arxiv_url": "https://arxiv.org/abs/2603.16929",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.16929",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.16929",
+      "github_url": "",
+      "submitted_by": "whj363636",
+      "submitted_at": "2026-03-20T00:35:14.963Z",
+      "upvotes": 5,
+      "comments": 2,
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.93
     },
     {
       "report_date": "2026-03-20",
@@ -2232,7 +2232,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.84
+      "classification_confidence": 0.9
     },
     {
       "report_date": "2026-03-20",
@@ -2269,7 +2269,7 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-03-20T00:50:20.850Z",
-      "upvotes": 2,
+      "upvotes": 3,
       "comments": 1,
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
@@ -2303,7 +2303,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.87
+      "classification_confidence": 0.83
     },
     {
       "report_date": "2026-03-20",
@@ -2325,11 +2325,11 @@
       "submitted_at": "2026-03-20T15:12:00.114Z",
       "upvotes": 1,
       "comments": 2,
-      "topic_key": "reasoning_alignment_eval",
-      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.88
+      "classification_confidence": 0.94
     },
     {
       "report_date": "2026-03-20",
@@ -2356,7 +2356,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.99
+      "classification_confidence": 0.98
     },
     {
       "report_date": "2026-03-20",
@@ -2386,7 +2386,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.99
+      "classification_confidence": 0.98
     },
     {
       "report_date": "2026-03-20",
@@ -2412,7 +2412,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.91
+      "classification_confidence": 0.84
     },
     {
       "report_date": "2026-03-20",
@@ -2439,7 +2439,7 @@
       "topic_label": "Generative Foundations",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.97
+      "classification_confidence": 0.91
     },
     {
       "report_date": "2026-03-20",
@@ -2468,7 +2468,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.97
+      "classification_confidence": 0.98
     }
   ]
 }

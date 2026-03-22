@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-21T15:54:50Z",
+  "generated_at": "2026-03-22T15:57:11Z",
   "report_kind": "hf_daily",
   "report_date": "2026-03-17",
   "source_url": "https://huggingface.co/papers/date/2026-03-17",
@@ -9,8 +9,8 @@
     {
       "topic_key": "generative_foundations",
       "topic_label": "Generative Foundations",
-      "count": 3,
-      "share": 6.52
+      "count": 4,
+      "share": 8.7
     },
     {
       "topic_key": "multimodal_generative",
@@ -42,12 +42,12 @@
       "share": 13.04
     },
     {
-      "topic_label": "Agents and Planning",
-      "count": 4,
-      "share": 8.7
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "count": 5,
+      "share": 10.87
     },
     {
-      "topic_label": "Domain Applications",
+      "topic_label": "Generative Foundations",
       "count": 4,
       "share": 8.7
     },
@@ -57,24 +57,24 @@
       "share": 8.7
     },
     {
+      "topic_label": "Agents and Planning",
+      "count": 3,
+      "share": 6.52
+    },
+    {
+      "topic_label": "Domain Applications",
+      "count": 3,
+      "share": 6.52
+    },
+    {
       "topic_label": "Multimodal Understanding and Vision",
-      "count": 4,
-      "share": 8.7
-    },
-    {
-      "topic_label": "Reasoning, Alignment, and Evaluation",
-      "count": 4,
-      "share": 8.7
-    },
-    {
-      "topic_label": "Generative Foundations",
       "count": 3,
       "share": 6.52
     },
     {
       "topic_label": "Robotics and Embodied AI",
-      "count": 2,
-      "share": 4.35
+      "count": 3,
+      "share": 6.52
     },
     {
       "topic_label": "Multimodal Agents",
@@ -146,13 +146,13 @@
       "github_url": "",
       "submitted_by": "Tony.Li",
       "submitted_at": "2026-03-17T01:14:04.187Z",
-      "upvotes": 264,
+      "upvotes": 316,
       "comments": 8,
       "topic_key": "domain_applications",
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.57
+      "classification_confidence": 0.58
     },
     {
       "report_date": "2026-03-17",
@@ -175,44 +175,13 @@
       "github_url": "",
       "submitted_by": "Yukang Cao",
       "submitted_at": "2026-03-17T03:13:58.307Z",
-      "upvotes": 147,
+      "upvotes": 149,
       "comments": 2,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
+      "topic_key": "robotics_embodied",
+      "topic_label": "Robotics and Embodied AI",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.71
-    },
-    {
-      "report_date": "2026-03-17",
-      "paper_id": "2603.13594",
-      "title": "EnterpriseOps-Gym: Environments and Evaluations for Stateful Agentic Planning and Tool Use in Enterprise Settings",
-      "authors": [
-        "Shiva Krishna Reddy Malay",
-        "Shravan Nayak",
-        "Jishnu Sethumadhavan Nair",
-        "Sagar Davasam",
-        "Aman Tiwari",
-        "Sathwik Tejaswi Madhusudhan",
-        "Sridhar Krishna Nemala",
-        "Srinivas Sunkara",
-        "Sai Rajeswar"
-      ],
-      "abstract": "Large language models are shifting from passive information providers to active agents intended for complex workflows. However, their deployment as reliable AI workers in enterprise is stalled by benchmarks that fail to capture the intricacies of professional environments, specifically, the need for long-horizon planning amidst persistent state changes and strict access protocols. In this work, we introduce EnterpriseOps-Gym, a benchmark designed to evaluate agentic planning in realistic enterprise settings. Specifically, EnterpriseOps-Gym features a containerized sandbox with 164 database tables and 512 functional tools to mimic real-world search friction. Within this environment, agents are evaluated on 1,150 expert-curated tasks across eight mission-critical verticals (including Customer Service, HR, and IT). Our evaluation of 14 frontier models reveals critical limitations in state-of-the-art models: the top-performing Claude Opus 4.5 achieves only 37.4% success. Further analysis shows that providing oracle human plans improves performance by 14-35 percentage points, pinpointing strategic reasoning as the primary bottleneck. Additionally, agents frequently fail to refuse infeasible tasks (best model achieves 53.9%), leading to unintended and potentially harmful side effects. Our findings underscore that current agents are not yet ready for autonomous enterprise deployment. More broadly, EnterpriseOps-Gym provides a concrete testbed to advance the robustness of agentic planning in professional workflows.",
-      "hf_url": "https://huggingface.co/papers/2603.13594",
-      "arxiv_url": "https://arxiv.org/abs/2603.13594",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.13594",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.13594",
-      "github_url": "",
-      "submitted_by": "Shravan Nayak",
-      "submitted_at": "2026-03-17T08:04:03.249Z",
-      "upvotes": 141,
-      "comments": 4,
-      "topic_key": "agents_planning",
-      "topic_label": "Agents and Planning",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.98
+      "classification_confidence": 0.56
     },
     {
       "report_date": "2026-03-17",
@@ -235,13 +204,13 @@
       "github_url": "",
       "submitted_by": "yuwendu",
       "submitted_at": "2026-03-17T02:51:00.207Z",
-      "upvotes": 139,
+      "upvotes": 141,
       "comments": 6,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.89
+      "classification_confidence": 0.94
     },
     {
       "report_date": "2026-03-17",
@@ -270,13 +239,44 @@
       "github_url": "",
       "submitted_by": "Junyoung Seo",
       "submitted_at": "2026-03-17T02:23:54.611Z",
-      "upvotes": 138,
+      "upvotes": 141,
       "comments": 4,
       "topic_key": "generative_foundations",
       "topic_label": "Generative Foundations",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.84
+      "classification_confidence": 0.9
+    },
+    {
+      "report_date": "2026-03-17",
+      "paper_id": "2603.13594",
+      "title": "EnterpriseOps-Gym: Environments and Evaluations for Stateful Agentic Planning and Tool Use in Enterprise Settings",
+      "authors": [
+        "Shiva Krishna Reddy Malay",
+        "Shravan Nayak",
+        "Jishnu Sethumadhavan Nair",
+        "Sagar Davasam",
+        "Aman Tiwari",
+        "Sathwik Tejaswi Madhusudhan",
+        "Sridhar Krishna Nemala",
+        "Srinivas Sunkara",
+        "Sai Rajeswar"
+      ],
+      "abstract": "Large language models are shifting from passive information providers to active agents intended for complex workflows. However, their deployment as reliable AI workers in enterprise is stalled by benchmarks that fail to capture the intricacies of professional environments, specifically, the need for long-horizon planning amidst persistent state changes and strict access protocols. In this work, we introduce EnterpriseOps-Gym, a benchmark designed to evaluate agentic planning in realistic enterprise settings. Specifically, EnterpriseOps-Gym features a containerized sandbox with 164 database tables and 512 functional tools to mimic real-world search friction. Within this environment, agents are evaluated on 1,150 expert-curated tasks across eight mission-critical verticals (including Customer Service, HR, and IT). Our evaluation of 14 frontier models reveals critical limitations in state-of-the-art models: the top-performing Claude Opus 4.5 achieves only 37.4% success. Further analysis shows that providing oracle human plans improves performance by 14-35 percentage points, pinpointing strategic reasoning as the primary bottleneck. Additionally, agents frequently fail to refuse infeasible tasks (best model achieves 53.9%), leading to unintended and potentially harmful side effects. Our findings underscore that current agents are not yet ready for autonomous enterprise deployment. More broadly, EnterpriseOps-Gym provides a concrete testbed to advance the robustness of agentic planning in professional workflows.",
+      "hf_url": "https://huggingface.co/papers/2603.13594",
+      "arxiv_url": "https://arxiv.org/abs/2603.13594",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.13594",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.13594",
+      "github_url": "",
+      "submitted_by": "Shravan Nayak",
+      "submitted_at": "2026-03-17T08:04:03.249Z",
+      "upvotes": 141,
+      "comments": 4,
+      "topic_key": "datasets_benchmarks",
+      "topic_label": "Datasets and Benchmarks",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.93
     },
     {
       "report_date": "2026-03-17",
@@ -329,13 +329,13 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-03-17T02:50:26.660Z",
-      "upvotes": 129,
+      "upvotes": 136,
       "comments": 4,
       "topic_key": "learning_theory",
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.71
+      "classification_confidence": 0.69
     },
     {
       "report_date": "2026-03-17",
@@ -364,13 +364,13 @@
       "github_url": "",
       "submitted_by": "Lianghui Zhu",
       "submitted_at": "2026-03-17T05:41:06.756Z",
-      "upvotes": 72,
+      "upvotes": 73,
       "comments": 4,
       "topic_key": "learning_theory",
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.77
+      "classification_confidence": 0.76
     },
     {
       "report_date": "2026-03-17",
@@ -398,11 +398,11 @@
       "submitted_at": "2026-03-17T08:07:54.493Z",
       "upvotes": 31,
       "comments": 5,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.63
+      "classification_confidence": 0.7
     }
   ],
   "topics": [
@@ -436,7 +436,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.98
+          "classification_confidence": 0.97
         },
         {
           "report_date": "2026-03-17",
@@ -491,7 +491,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.88
+          "classification_confidence": 0.89
         },
         {
           "report_date": "2026-03-17",
@@ -517,7 +517,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.9
+          "classification_confidence": 0.86
         },
         {
           "report_date": "2026-03-17",
@@ -550,7 +550,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.99
+          "classification_confidence": 0.98
         },
         {
           "report_date": "2026-03-17",
@@ -579,7 +579,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.98
+          "classification_confidence": 0.97
         },
         {
           "report_date": "2026-03-17",
@@ -605,7 +605,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.74
+          "classification_confidence": 0.78
         },
         {
           "report_date": "2026-03-17",
@@ -630,7 +630,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.91
+          "classification_confidence": 0.95
         }
       ]
     },
@@ -639,6 +639,73 @@
       "count": 6,
       "share": 13.04,
       "papers": [
+        {
+          "report_date": "2026-03-17",
+          "paper_id": "2603.13594",
+          "title": "EnterpriseOps-Gym: Environments and Evaluations for Stateful Agentic Planning and Tool Use in Enterprise Settings",
+          "authors": [
+            "Shiva Krishna Reddy Malay",
+            "Shravan Nayak",
+            "Jishnu Sethumadhavan Nair",
+            "Sagar Davasam",
+            "Aman Tiwari",
+            "Sathwik Tejaswi Madhusudhan",
+            "Sridhar Krishna Nemala",
+            "Srinivas Sunkara",
+            "Sai Rajeswar"
+          ],
+          "abstract": "Large language models are shifting from passive information providers to active agents intended for complex workflows. However, their deployment as reliable AI workers in enterprise is stalled by benchmarks that fail to capture the intricacies of professional environments, specifically, the need for long-horizon planning amidst persistent state changes and strict access protocols. In this work, we introduce EnterpriseOps-Gym, a benchmark designed to evaluate agentic planning in realistic enterprise settings. Specifically, EnterpriseOps-Gym features a containerized sandbox with 164 database tables and 512 functional tools to mimic real-world search friction. Within this environment, agents are evaluated on 1,150 expert-curated tasks across eight mission-critical verticals (including Customer Service, HR, and IT). Our evaluation of 14 frontier models reveals critical limitations in state-of-the-art models: the top-performing Claude Opus 4.5 achieves only 37.4% success. Further analysis shows that providing oracle human plans improves performance by 14-35 percentage points, pinpointing strategic reasoning as the primary bottleneck. Additionally, agents frequently fail to refuse infeasible tasks (best model achieves 53.9%), leading to unintended and potentially harmful side effects. Our findings underscore that current agents are not yet ready for autonomous enterprise deployment. More broadly, EnterpriseOps-Gym provides a concrete testbed to advance the robustness of agentic planning in professional workflows.",
+          "hf_url": "https://huggingface.co/papers/2603.13594",
+          "arxiv_url": "https://arxiv.org/abs/2603.13594",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.13594",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.13594",
+          "github_url": "",
+          "submitted_by": "Shravan Nayak",
+          "submitted_at": "2026-03-17T08:04:03.249Z",
+          "upvotes": 141,
+          "comments": 4,
+          "topic_key": "datasets_benchmarks",
+          "topic_label": "Datasets and Benchmarks",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.93
+        },
+        {
+          "report_date": "2026-03-17",
+          "paper_id": "2603.13428",
+          "title": "EvoClaw: Evaluating AI Agents on Continuous Software Evolution",
+          "authors": [
+            "Gangda Deng",
+            "Zhaoling Chen",
+            "Zhongming Yu",
+            "Haoyang Fan",
+            "Yuhong Liu",
+            "Yuxin Yang",
+            "Dhruv Parikh",
+            "Rajgopal Kannan",
+            "Le Cong",
+            "Mengdi Wang",
+            "Qian Zhang",
+            "Viktor Prasanna",
+            "Xiangru Tang",
+            "Xingyao Wang"
+          ],
+          "abstract": "With AI agents increasingly deployed as long-running systems, it becomes essential to autonomously construct and continuously evolve customized software to enable interaction within dynamic environments. Yet, existing benchmarks evaluate agents on isolated, one-off coding tasks, neglecting the temporal dependencies and technical debt inherent in real-world software evolution. To bridge this gap, we introduce DeepCommit, an agentic pipeline that reconstructs verifiable Milestone DAGs from noisy commit logs, where milestones are defined as semantically cohesive development goals. These executable sequences enable EvoClaw, a novel benchmark that requires agents to sustain system integrity and limit error accumulation, dimensions of long-term software evolution largely missing from current benchmarks. Our evaluation of 12 frontier models across 4 agent frameworks reveals a critical vulnerability: overall performance scores drop significantly from >80% on isolated tasks to at most 38% in continuous settings, exposing agents' profound struggle with long-term maintenance and error propagation.",
+          "hf_url": "https://huggingface.co/papers/2603.13428",
+          "arxiv_url": "https://arxiv.org/abs/2603.13428",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.13428",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.13428",
+          "github_url": "",
+          "submitted_by": "taesiri",
+          "submitted_at": "2026-03-17T03:27:54.666Z",
+          "upvotes": 19,
+          "comments": 1,
+          "topic_key": "datasets_benchmarks",
+          "topic_label": "Datasets and Benchmarks",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.91
+        },
         {
           "report_date": "2026-03-17",
           "paper_id": "2603.13391",
@@ -671,43 +738,7 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.97
-        },
-        {
-          "report_date": "2026-03-17",
-          "paper_id": "2603.13428",
-          "title": "EvoClaw: Evaluating AI Agents on Continuous Software Evolution",
-          "authors": [
-            "Gangda Deng",
-            "Zhaoling Chen",
-            "Zhongming Yu",
-            "Haoyang Fan",
-            "Yuhong Liu",
-            "Yuxin Yang",
-            "Dhruv Parikh",
-            "Rajgopal Kannan",
-            "Le Cong",
-            "Mengdi Wang",
-            "Qian Zhang",
-            "Viktor Prasanna",
-            "Xiangru Tang",
-            "Xingyao Wang"
-          ],
-          "abstract": "With AI agents increasingly deployed as long-running systems, it becomes essential to autonomously construct and continuously evolve customized software to enable interaction within dynamic environments. Yet, existing benchmarks evaluate agents on isolated, one-off coding tasks, neglecting the temporal dependencies and technical debt inherent in real-world software evolution. To bridge this gap, we introduce DeepCommit, an agentic pipeline that reconstructs verifiable Milestone DAGs from noisy commit logs, where milestones are defined as semantically cohesive development goals. These executable sequences enable EvoClaw, a novel benchmark that requires agents to sustain system integrity and limit error accumulation, dimensions of long-term software evolution largely missing from current benchmarks. Our evaluation of 12 frontier models across 4 agent frameworks reveals a critical vulnerability: overall performance scores drop significantly from >80% on isolated tasks to at most 38% in continuous settings, exposing agents' profound struggle with long-term maintenance and error propagation.",
-          "hf_url": "https://huggingface.co/papers/2603.13428",
-          "arxiv_url": "https://arxiv.org/abs/2603.13428",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.13428",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.13428",
-          "github_url": "",
-          "submitted_by": "taesiri",
-          "submitted_at": "2026-03-17T03:27:54.666Z",
-          "upvotes": 18,
-          "comments": 1,
-          "topic_key": "datasets_benchmarks",
-          "topic_label": "Datasets and Benchmarks",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.9
+          "classification_confidence": 0.96
         },
         {
           "report_date": "2026-03-17",
@@ -801,39 +832,7 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.79
-        },
-        {
-          "report_date": "2026-03-17",
-          "paper_id": "2603.15617",
-          "title": "HorizonMath: Measuring AI Progress Toward Mathematical Discovery with Automatic Verification",
-          "authors": [
-            "Erik Y. Wang",
-            "Sumeet Motwani",
-            "James V. Roggeveen",
-            "Eliot Hodges",
-            "Dulhan Jayalath",
-            "Charles London",
-            "Kalyan Ramakrishnan",
-            "Flaviu Cipcigan",
-            "Philip Torr",
-            "Alessandro Abate"
-          ],
-          "abstract": "Can AI make progress on important, unsolved mathematical problems? Large language models are now capable of sophisticated mathematical and scientific reasoning, but whether they can perform novel research is still widely debated and underexplored. We introduce HorizonMath, a benchmark of over 100 predominantly unsolved problems spanning 8 domains in computational and applied mathematics, paired with an open-source evaluation framework for automated verification. Our benchmark targets a class of problems where discovery is hard, requiring meaningful mathematical insight, but verification is computationally efficient and simple. Because these solutions are unknown, HorizonMath is immune to data contamination, and most state-of-the-art models score near 0%. Existing research-level benchmarks instead rely on formal proof verification or manual review, both of which are expensive to scale. Using this platform, we find two problems for which GPT 5.4 Pro proposes solutions that improve on the best-known published results, representing potential novel contributions (pending expert review). We release HorizonMath as an open challenge and a growing community resource, where correct solutions to problems in the unsolved problem classes could constitute novel results in the mathematical literature.",
-          "hf_url": "https://huggingface.co/papers/2603.15617",
-          "arxiv_url": "https://arxiv.org/abs/2603.15617",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.15617",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.15617",
-          "github_url": "",
-          "submitted_by": "Dulhan Jayalath",
-          "submitted_at": "2026-03-17T10:46:03.964Z",
-          "upvotes": 6,
-          "comments": 2,
-          "topic_key": "datasets_benchmarks",
-          "topic_label": "Datasets and Benchmarks",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.89
+          "classification_confidence": 0.74
         },
         {
           "report_date": "2026-03-17",
@@ -859,7 +858,7 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.94
+          "classification_confidence": 0.97
         }
       ]
     },
@@ -919,13 +918,13 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-03-17T02:50:26.660Z",
-          "upvotes": 129,
+          "upvotes": 136,
           "comments": 4,
           "topic_key": "learning_theory",
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.71
+          "classification_confidence": 0.69
         },
         {
           "report_date": "2026-03-17",
@@ -954,39 +953,45 @@
           "github_url": "",
           "submitted_by": "Lianghui Zhu",
           "submitted_at": "2026-03-17T05:41:06.756Z",
-          "upvotes": 72,
+          "upvotes": 73,
           "comments": 4,
           "topic_key": "learning_theory",
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.77
+          "classification_confidence": 0.76
         },
         {
           "report_date": "2026-03-17",
-          "paper_id": "2603.14769",
-          "title": "POLCA: Stochastic Generative Optimization with LLM",
+          "paper_id": "2603.15590",
+          "title": "Effective Distillation to Hybrid xLSTM Architectures",
           "authors": [
-            "Xuanfei Ren",
-            "Allen Nie",
-            "Tengyang Xie",
-            "Ching-An Cheng"
+            "Lukas Hauzenberger",
+            "Niklas Schmidinger",
+            "Thomas Schmied",
+            "Anamaria-Roberta Hartl",
+            "David Stap",
+            "Pieter-Jan Hoedt",
+            "Maximilian Beck",
+            "Sebastian Böck",
+            "Günter Klambauer",
+            "Sepp Hochreiter"
           ],
-          "abstract": "Optimizing complex systems, ranging from LLM prompts to multi-turn agents, traditionally requires labor-intensive manual iteration. We formalize this challenge as a stochastic generative optimization problem where a generative language model acts as the optimizer, guided by numerical rewards and text feedback to discover the best system. We introduce Prioritized Optimization with Local Contextual Aggregation (POLCA), a scalable framework designed to handle stochasticity in optimization -- such as noisy feedback, sampling minibatches, and stochastic system behaviors -- while effectively managing the unconstrained expansion of solution space. POLCA maintains a priority queue to manage the exploration-exploitation tradeoff, systematically tracking candidate solutions and their evaluation histories. To enhance efficiency, we integrate an varepsilon-Net mechanism to maintain parameter diversity and an LLM Summarizer to perform meta-learning across historical trials. We theoretically prove that POLCA converges to near-optimal candidate solutions under stochasticity. We evaluate our framework on diverse benchmarks, including τ-bench, HotpotQA (agent optimization), VeriBench (code translation) and KernelBench (CUDA kernel generation). Experimental results demonstrate that POLCA achieves robust, sample and time-efficient performance, consistently outperforming state-of-the-art algorithms in both deterministic and stochastic problems. The codebase for this work is publicly available at https://github.com/rlx-lab/POLCA.",
-          "hf_url": "https://huggingface.co/papers/2603.14769",
-          "arxiv_url": "https://arxiv.org/abs/2603.14769",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.14769",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.14769",
+          "abstract": "There have been numerous attempts to distill quadratic attention-based large language models (LLMs) into sub-quadratic linearized architectures. However, despite extensive research, such distilled models often fail to match the performance of their teacher LLMs on various downstream tasks. We set out the goal of lossless distillation, which we define in terms of tolerance-corrected Win-and-Tie rates between student and teacher on sets of tasks. To this end, we introduce an effective distillation pipeline for xLSTM-based students. We propose an additional merging stage, where individually linearized experts are combined into a single model. We show the effectiveness of this pipeline by distilling base and instruction-tuned models from the Llama, Qwen, and Olmo families. In many settings, our xLSTM-based students recover most of the teacher's performance, and even exceed it on some downstream tasks. Our contributions are an important step towards more energy-efficient and cost-effective replacements for transformer-based LLMs.",
+          "hf_url": "https://huggingface.co/papers/2603.15590",
+          "arxiv_url": "https://arxiv.org/abs/2603.15590",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.15590",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.15590",
           "github_url": "",
-          "submitted_by": "Allen Nie",
-          "submitted_at": "2026-03-17T19:57:14.588Z",
-          "upvotes": 21,
-          "comments": 2,
+          "submitted_by": "Lukas",
+          "submitted_at": "2026-03-17T08:07:54.493Z",
+          "upvotes": 31,
+          "comments": 5,
           "topic_key": "learning_theory",
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.65
+          "classification_confidence": 0.7
         },
         {
           "report_date": "2026-03-17",
@@ -1038,7 +1043,7 @@
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.73
+          "classification_confidence": 0.72
         },
         {
           "report_date": "2026-03-17",
@@ -1067,507 +1072,14 @@
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.9
-        }
-      ]
-    },
-    {
-      "topic_label": "Agents and Planning",
-      "count": 4,
-      "share": 8.7,
-      "papers": [
-        {
-          "report_date": "2026-03-17",
-          "paper_id": "2603.13594",
-          "title": "EnterpriseOps-Gym: Environments and Evaluations for Stateful Agentic Planning and Tool Use in Enterprise Settings",
-          "authors": [
-            "Shiva Krishna Reddy Malay",
-            "Shravan Nayak",
-            "Jishnu Sethumadhavan Nair",
-            "Sagar Davasam",
-            "Aman Tiwari",
-            "Sathwik Tejaswi Madhusudhan",
-            "Sridhar Krishna Nemala",
-            "Srinivas Sunkara",
-            "Sai Rajeswar"
-          ],
-          "abstract": "Large language models are shifting from passive information providers to active agents intended for complex workflows. However, their deployment as reliable AI workers in enterprise is stalled by benchmarks that fail to capture the intricacies of professional environments, specifically, the need for long-horizon planning amidst persistent state changes and strict access protocols. In this work, we introduce EnterpriseOps-Gym, a benchmark designed to evaluate agentic planning in realistic enterprise settings. Specifically, EnterpriseOps-Gym features a containerized sandbox with 164 database tables and 512 functional tools to mimic real-world search friction. Within this environment, agents are evaluated on 1,150 expert-curated tasks across eight mission-critical verticals (including Customer Service, HR, and IT). Our evaluation of 14 frontier models reveals critical limitations in state-of-the-art models: the top-performing Claude Opus 4.5 achieves only 37.4% success. Further analysis shows that providing oracle human plans improves performance by 14-35 percentage points, pinpointing strategic reasoning as the primary bottleneck. Additionally, agents frequently fail to refuse infeasible tasks (best model achieves 53.9%), leading to unintended and potentially harmful side effects. Our findings underscore that current agents are not yet ready for autonomous enterprise deployment. More broadly, EnterpriseOps-Gym provides a concrete testbed to advance the robustness of agentic planning in professional workflows.",
-          "hf_url": "https://huggingface.co/papers/2603.13594",
-          "arxiv_url": "https://arxiv.org/abs/2603.13594",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.13594",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.13594",
-          "github_url": "",
-          "submitted_by": "Shravan Nayak",
-          "submitted_at": "2026-03-17T08:04:03.249Z",
-          "upvotes": 141,
-          "comments": 4,
-          "topic_key": "agents_planning",
-          "topic_label": "Agents and Planning",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.98
-        },
-        {
-          "report_date": "2026-03-17",
-          "paper_id": "2603.15594",
-          "title": "OpenSeeker: Democratizing Frontier Search Agents by Fully Open-Sourcing Training Data",
-          "authors": [
-            "Yuwen Du",
-            "Rui Ye",
-            "Shuo Tang",
-            "Xinyu Zhu",
-            "Yijun Lu",
-            "Yuzhu Cai",
-            "Siheng Chen"
-          ],
-          "abstract": "Deep search capabilities have become an indispensable competency for frontier Large Language Model (LLM) agents, yet the development of high-performance search agents remains dominated by industrial giants due to a lack of transparent, high-quality training data. This persistent data scarcity has fundamentally hindered the progress of the broader research community in developing and innovating within this domain. To bridge this gap, we introduce OpenSeeker, the first fully open-source search agent (i.e., model and data) that achieves frontier-level performance through two core technical innovations: (1) Fact-grounded scalable controllable QA synthesis, which reverse-engineers the web graph via topological expansion and entity obfuscation to generate complex, multi-hop reasoning tasks with controllable coverage and complexity. (2) Denoised trajectory synthesis, which employs a retrospective summarization mechanism to denoise the trajectory, therefore promoting the teacher LLMs to generate high-quality actions. Experimental results demonstrate that OpenSeeker, trained (a single training run) on only 11.7k synthesized samples, achieves state-of-the-art performance across multiple benchmarks including BrowseComp, BrowseComp-ZH, xbench-DeepSearch, and WideSearch. Notably, trained with simple SFT, OpenSeeker significantly outperforms the second-best fully open-source agent DeepDive (e.g., 29.5% v.s. 15.3% on BrowseComp), and even surpasses industrial competitors such as Tongyi DeepResearch (trained via extensive continual pre-training, SFT, and RL) on BrowseComp-ZH (48.4% v.s. 46.7%). We fully open-source the complete training dataset and the model weights to democratize frontier search agent research and foster a more transparent, collaborative ecosystem.",
-          "hf_url": "https://huggingface.co/papers/2603.15594",
-          "arxiv_url": "https://arxiv.org/abs/2603.15594",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.15594",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.15594",
-          "github_url": "",
-          "submitted_by": "yuwendu",
-          "submitted_at": "2026-03-17T02:51:00.207Z",
-          "upvotes": 139,
-          "comments": 6,
-          "topic_key": "agents_planning",
-          "topic_label": "Agents and Planning",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.89
-        },
-        {
-          "report_date": "2026-03-17",
-          "paper_id": "2603.10505",
-          "title": "Safe and Scalable Web Agent Learning via Recreated Websites",
-          "authors": [
-            "Hyungjoo Chae",
-            "Jungsoo Park",
-            "Alan Ritter"
-          ],
-          "abstract": "Training autonomous web agents is fundamentally limited by the environments they learn from: real-world websites are unsafe to explore, hard to reset, and rarely provide verifiable feedback. We propose VeriEnv, a framework that treats language models as environment creators, automatically cloning real-world websites into fully executable, verifiable synthetic environments. By exposing controlled internal access via a Python SDK, VeriEnv enables agents to self-generate tasks with deterministic, programmatically verifiable rewards, eliminating reliance on heuristic or LLM-based judges. This design decouples agent learning from unsafe real-world interaction while enabling scalable self-evolution through environment expansion. Through experiments on web agent benchmarks, we show that agents trained with VeriEnv generalize to unseen websites, achieve site-specific mastery through self-evolving training, and benefit from scaling the number of training environments. Code and resources will be released at https://github.com/kyle8581/VeriEnv upon acceptance.",
-          "hf_url": "https://huggingface.co/papers/2603.10505",
-          "arxiv_url": "https://arxiv.org/abs/2603.10505",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.10505",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.10505",
-          "github_url": "",
-          "submitted_by": "Hyungjoo Chae",
-          "submitted_at": "2026-03-17T00:51:18.089Z",
-          "upvotes": 23,
-          "comments": 2,
-          "topic_key": "agents_planning",
-          "topic_label": "Agents and Planning",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.95
-        },
-        {
-          "report_date": "2026-03-17",
-          "paper_id": "2603.14312",
-          "title": "Autonomous Agents Coordinating Distributed Discovery Through Emergent Artifact Exchange",
-          "authors": [
-            "Fiona Y. Wang",
-            "Lee Marom",
-            "Subhadeep Pal",
-            "Rachel K. Luu",
-            "Wei Lu",
-            "Jaime A. Berkovich",
-            "Markus J. Buehler"
-          ],
-          "abstract": "We present ScienceClaw + Infinite, a framework for autonomous scientific investigation in which independent agents conduct research without central coordination, and any contributor can deploy new agents into a shared ecosystem. The system is built around three components: an extensible registry of over 300 interoperable scientific skills, an artifact layer that preserves full computational lineage as a directed acyclic graph (DAG), and a structured platform for agent-based scientific discourse with provenance-aware governance. Agents select and chain tools based on their scientific profiles, produce immutable artifacts with typed metadata and parent lineage, and broadcast unsatisfied information needs to a shared global index. The ArtifactReactor enables plannerless coordination: peer agents discover and fulfill open needs through pressure-based scoring, while schema-overlap matching triggers multi-parent synthesis across independent analyses. An autonomous mutation layer actively prunes the expanding artifact DAG to resolve conflicting or redundant workflows, while persistent memory allows agents to continuously build upon complex epistemic states across multiple cycles. Infinite converts these outputs into auditable scientific records through structured posts, provenance views, and machine-readable discourse relations, with community feedback steering subsequent investigation cycles. Across four autonomous investigations, peptide design for the somatostatin receptor SSTR2, lightweight impact-resistant ceramic screening, cross-domain resonance bridging biology, materials, and music, and formal analogy construction between urban morphology and grain-boundary evolution, the framework demonstrates heterogeneous tool chaining, emergent convergence among independently operating agents, and traceable reasoning from raw computation to published finding.",
-          "hf_url": "https://huggingface.co/papers/2603.14312",
-          "arxiv_url": "https://arxiv.org/abs/2603.14312",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.14312",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.14312",
-          "github_url": "",
-          "submitted_by": "Markus Buehler",
-          "submitted_at": "2026-03-17T10:45:20.353Z",
-          "upvotes": 5,
-          "comments": 2,
-          "topic_key": "agents_planning",
-          "topic_label": "Agents and Planning",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.88
-        }
-      ]
-    },
-    {
-      "topic_label": "Domain Applications",
-      "count": 4,
-      "share": 8.7,
-      "papers": [
-        {
-          "report_date": "2026-03-17",
-          "paper_id": "2603.14473",
-          "title": "AI Can Learn Scientific Taste",
-          "authors": [
-            "Jingqi Tong",
-            "Mingzhe Li",
-            "Hangcheng Li",
-            "Yongzhuo Yang",
-            "Yurong Mou",
-            "Weijie Ma",
-            "Zhiheng Xi",
-            "Hongji Chen",
-            "Xiaoran Liu",
-            "Qinyuan Cheng",
-            "Ming Zhang",
-            "Qiguang Chen",
-            "Weifeng Ge",
-            "Qipeng Guo",
-            "Tianlei Ying",
-            "Tianxiang Sun",
-            "Yining Zheng",
-            "Xinchi Chen",
-            "Jun Zhao",
-            "Ning Ding",
-            "Xuanjing Huang",
-            "Yugang Jiang",
-            "Xipeng Qiu"
-          ],
-          "abstract": "Great scientists have strong judgement and foresight, closely tied to what we call scientific taste. Here, we use the term to refer to the capacity to judge and propose research ideas with high potential impact. However, most relative research focuses on improving an AI scientist's executive capability, while enhancing an AI's scientific taste remains underexplored. In this work, we propose Reinforcement Learning from Community Feedback (RLCF), a training paradigm that uses large-scale community signals as supervision, and formulate scientific taste learning as a preference modeling and alignment problem. For preference modeling, we train Scientific Judge on 700K field- and time-matched pairs of high- vs. low-citation papers to judge ideas. For preference alignment, using Scientific Judge as a reward model, we train a policy model, Scientific Thinker, to propose research ideas with high potential impact. Experiments show Scientific Judge outperforms SOTA LLMs (e.g., GPT-5.2, Gemini 3 Pro) and generalizes to future-year test, unseen fields, and peer-review preference. Furthermore, Scientific Thinker proposes research ideas with higher potential impact than baselines. Our findings show that AI can learn scientific taste, marking a key step toward reaching human-level AI scientists.",
-          "hf_url": "https://huggingface.co/papers/2603.14473",
-          "arxiv_url": "https://arxiv.org/abs/2603.14473",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.14473",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.14473",
-          "github_url": "",
-          "submitted_by": "Tony.Li",
-          "submitted_at": "2026-03-17T01:14:04.187Z",
-          "upvotes": 264,
-          "comments": 8,
-          "topic_key": "domain_applications",
-          "topic_label": "Domain Applications",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.57
-        },
-        {
-          "report_date": "2026-03-17",
-          "paper_id": "2603.14941",
-          "title": "RS-WorldModel: a Unified Model for Remote Sensing Understanding and Future Sense Forecasting",
-          "authors": [
-            "Linrui Xu",
-            "Zhongan Wang",
-            "Fei Shen",
-            "Gang Xu",
-            "Huiping Zhuang",
-            "Ming Li",
-            "Haifeng Li"
-          ],
-          "abstract": "Remote sensing world models aim to both explain observed changes and forecast plausible futures, two tasks that share spatiotemporal priors. Existing methods, however, typically address them separately, limiting cross-task transfer. We present RS-WorldModel, a unified world model for remote sensing that jointly handles spatiotemporal change understanding and text-guided future scene forecasting, and we build RSWBench-1.1M, a 1.1 million sample dataset with rich language annotations covering both tasks. RS-WorldModel is trained in three stages: (1) Geo-Aware Generative Pre-training (GAGP) conditions forecasting on geographic and acquisition metadata; (2) synergistic instruction tuning (SIT) jointly trains understanding and forecasting; (3) verifiable reinforcement optimization (VRO) refines outputs with verifiable, task-specific rewards. With only 2B parameters, RS-WorldModel surpasses open-source models up to 120 times larger on most spatiotemporal change question-answering metrics. It achieves an FID of 43.13 on text-guided future scene forecasting, outperforming all open-source baselines as well as the closed-source Gemini-2.5-Flash Image (Nano Banana).",
-          "hf_url": "https://huggingface.co/papers/2603.14941",
-          "arxiv_url": "https://arxiv.org/abs/2603.14941",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.14941",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.14941",
-          "github_url": "",
-          "submitted_by": "LinruiXu",
-          "submitted_at": "2026-03-17T08:28:57.580Z",
-          "upvotes": 8,
-          "comments": 2,
-          "topic_key": "domain_applications",
-          "topic_label": "Domain Applications",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.77
-        },
-        {
-          "report_date": "2026-03-17",
-          "paper_id": "2603.14313",
-          "title": "Mind the Shift: Decoding Monetary Policy Stance from FOMC Statements with Large Language Models",
-          "authors": [
-            "Yixuan Tang",
-            "Yi Yang"
-          ],
-          "abstract": "Federal Open Market Committee (FOMC) statements are a major source of monetary-policy information, and even subtle changes in their wording can move global financial markets. A central task is therefore to measure the hawkish--dovish stance conveyed in these texts. Existing approaches typically treat stance detection as a standard classification problem, labeling each statement in isolation. However, the interpretation of monetary-policy communication is inherently relative: market reactions depend not only on the tone of a statement, but also on how that tone shifts across meetings. We introduce Delta-Consistent Scoring (DCS), an annotation-free framework that maps frozen large language model (LLM) representations to continuous stance scores by jointly modeling absolute stance and relative inter-meeting shifts. Rather than relying on manual hawkish--dovish labels, DCS uses consecutive meetings as a source of self-supervision. It learns an absolute stance score for each statement and a relative shift score between consecutive statements. A delta-consistency objective encourages changes in absolute scores to align with the relative shifts. This allows DCS to recover a temporally coherent stance trajectory without manual labels. Across four LLM backbones, DCS consistently outperforms supervised probes and LLM-as-judge baselines, achieving up to 71.1% accuracy on sentence-level hawkish--dovish classification. The resulting meeting-level scores are also economically meaningful: they correlate strongly with inflation indicators and are significantly associated with Treasury yield movements. Overall, the results suggest that LLM representations encode monetary-policy signals that can be recovered through relative temporal structure.",
-          "hf_url": "https://huggingface.co/papers/2603.14313",
-          "arxiv_url": "https://arxiv.org/abs/2603.14313",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.14313",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.14313",
-          "github_url": "",
-          "submitted_by": "yixuan",
-          "submitted_at": "2026-03-17T02:13:44.700Z",
-          "upvotes": 3,
-          "comments": 2,
-          "topic_key": "domain_applications",
-          "topic_label": "Domain Applications",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.94
-        },
-        {
-          "report_date": "2026-03-17",
-          "paper_id": "2603.13962",
-          "title": "sebis at ArchEHR-QA 2026: How Much Can You Do Locally? Evaluating Grounded EHR QA on a Single Notebook",
-          "authors": [
-            "Ibrahim Ebrar Yurt",
-            "Fabian Karl",
-            "Tejaswi Choppa",
-            "Florian Matthes"
-          ],
-          "abstract": "Clinical question answering over electronic health records (EHRs) can help clinicians and patients access relevant medical information more efficiently. However, many recent approaches rely on large cloud-based models, which are difficult to deploy in clinical environments due to privacy constraints and computational requirements. In this work, we investigate how far grounded EHR question answering can be pushed when restricted to a single notebook. We participate in all four subtasks of the ArchEHR-QA 2026 shared task and evaluate several approaches designed to run on commodity hardware. All experiments are conducted locally without external APIs or cloud infrastructure. Our results show that such systems can achieve competitive performance on the shared task leaderboards. In particular, our submissions perform above average in two subtasks, and we observe that smaller models can approach the performance of much larger systems when properly configured. These findings suggest that privacy-preserving EHR QA systems running fully locally are feasible with current models and commodity hardware. The source code is available at https://github.com/ibrahimey/ArchEHR-QA-2026.",
-          "hf_url": "https://huggingface.co/papers/2603.13962",
-          "arxiv_url": "https://arxiv.org/abs/2603.13962",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.13962",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.13962",
-          "github_url": "",
-          "submitted_by": "Fabian Karl",
-          "submitted_at": "2026-03-17T07:45:31.342Z",
-          "upvotes": 0,
-          "comments": 2,
-          "topic_key": "domain_applications",
-          "topic_label": "Domain Applications",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.86
-        }
-      ]
-    },
-    {
-      "topic_label": "LLMs and Language",
-      "count": 4,
-      "share": 8.7,
-      "papers": [
-        {
-          "report_date": "2026-03-17",
-          "paper_id": "2603.15590",
-          "title": "Effective Distillation to Hybrid xLSTM Architectures",
-          "authors": [
-            "Lukas Hauzenberger",
-            "Niklas Schmidinger",
-            "Thomas Schmied",
-            "Anamaria-Roberta Hartl",
-            "David Stap",
-            "Pieter-Jan Hoedt",
-            "Maximilian Beck",
-            "Sebastian Böck",
-            "Günter Klambauer",
-            "Sepp Hochreiter"
-          ],
-          "abstract": "There have been numerous attempts to distill quadratic attention-based large language models (LLMs) into sub-quadratic linearized architectures. However, despite extensive research, such distilled models often fail to match the performance of their teacher LLMs on various downstream tasks. We set out the goal of lossless distillation, which we define in terms of tolerance-corrected Win-and-Tie rates between student and teacher on sets of tasks. To this end, we introduce an effective distillation pipeline for xLSTM-based students. We propose an additional merging stage, where individually linearized experts are combined into a single model. We show the effectiveness of this pipeline by distilling base and instruction-tuned models from the Llama, Qwen, and Olmo families. In many settings, our xLSTM-based students recover most of the teacher's performance, and even exceed it on some downstream tasks. Our contributions are an important step towards more energy-efficient and cost-effective replacements for transformer-based LLMs.",
-          "hf_url": "https://huggingface.co/papers/2603.15590",
-          "arxiv_url": "https://arxiv.org/abs/2603.15590",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.15590",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.15590",
-          "github_url": "",
-          "submitted_by": "Lukas",
-          "submitted_at": "2026-03-17T08:07:54.493Z",
-          "upvotes": 31,
-          "comments": 5,
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.63
-        },
-        {
-          "report_date": "2026-03-17",
-          "paper_id": "2603.14347",
-          "title": "Motivation in Large Language Models",
-          "authors": [
-            "Omer Nahum",
-            "Asael Sklar",
-            "Ariel Goldstein",
-            "Roi Reichart"
-          ],
-          "abstract": "Motivation is a central driver of human behavior, shaping decisions, goals, and task performance. As large language models (LLMs) become increasingly aligned with human preferences, we ask whether they exhibit something akin to motivation. We examine whether LLMs \"report\" varying levels of motivation, how these reports relate to their behavior, and whether external factors can influence them. Our experiments reveal consistent and structured patterns that echo human psychology: self-reported motivation aligns with different behavioral signatures, varies across task types, and can be modulated by external manipulations. These findings demonstrate that motivation is a coherent organizing construct for LLM behavior, systematically linking reports, choices, effort, and performance, and revealing motivational dynamics that resemble those documented in human psychology. This perspective deepens our understanding of model behavior and its connection to human-inspired concepts.",
-          "hf_url": "https://huggingface.co/papers/2603.14347",
-          "arxiv_url": "https://arxiv.org/abs/2603.14347",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.14347",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.14347",
-          "github_url": "",
-          "submitted_by": "Omer Nahum",
-          "submitted_at": "2026-03-17T06:55:59.489Z",
-          "upvotes": 16,
-          "comments": 2,
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.84
-        },
-        {
-          "report_date": "2026-03-17",
-          "paper_id": "2603.15611",
-          "title": "Code-A1: Adversarial Evolving of Code LLM and Test LLM via Reinforcement Learning",
-          "authors": [
-            "Aozhe Wang",
-            "Yuchen Yan",
-            "Nan Zhou",
-            "Zhengxi Lu",
-            "Weiming Lu",
-            "Jun Xiao",
-            "Yueting Zhuang",
-            "Yongliang Shen"
-          ],
-          "abstract": "Reinforcement learning for code generation relies on verifiable rewards from unit test pass rates. Yet high-quality test suites are scarce, existing datasets offer limited coverage, and static rewards fail to adapt as models improve. Recent self-play methods unify code and test generation in a single model, but face a inherent dilemma: white-box access leads to self-collusion where the model produces trivial tests for easy rewards, yet black-box restriction yields generic tests that miss implementation-specific bugs. We introduce Code-A1, an adversarial co-evolution framework that jointly optimizes a Code LLM and a Test LLM with opposing objectives. The Code LLM is rewarded for passing more tests, while the Test LLM is rewarded for exposing more defects. This architectural separation eliminates self-collusion risks and safely enables white-box test generation, where the Test LLM can inspect candidate code to craft targeted adversarial tests. We further introduce a Mistake Book mechanism for experience replay and a composite reward balancing test validity with adversarial difficulty. Experiments on Qwen2.5-Coder models demonstrate that Code-A1 achieves code generation performance matching or exceeding models trained on human-annotated tests, while significantly improving test generation capability.",
-          "hf_url": "https://huggingface.co/papers/2603.15611",
-          "arxiv_url": "https://arxiv.org/abs/2603.15611",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.15611",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.15611",
-          "github_url": "",
-          "submitted_by": "taesiri",
-          "submitted_at": "2026-03-17T02:49:49.407Z",
-          "upvotes": 10,
-          "comments": 1,
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.85
-        },
-        {
-          "report_date": "2026-03-17",
-          "paper_id": "2603.13985",
-          "title": "Supervised Fine-Tuning versus Reinforcement Learning: A Study of Post-Training Methods for Large Language Models",
-          "authors": [
-            "Haitao Jiang",
-            "Wenbo Zhang",
-            "Jiarui Yao",
-            "Hengrui Cai",
-            "Sheng Wang",
-            "Rui Song"
-          ],
-          "abstract": "Pre-trained Large Language Model (LLM) exhibits broad capabilities, yet, for specific tasks or domains their attainment of higher accuracy and more reliable reasoning generally depends on post-training through Supervised Fine-Tuning (SFT) or Reinforcement Learning (RL). Although often treated as distinct methodologies, recent theoretical and empirical developments demonstrate that SFT and RL are closely connected. This study presents a comprehensive and unified perspective on LLM post-training with SFT and RL. We first provide an in-depth overview of both techniques, examining their objectives, algorithmic structures, and data requirements. We then systematically analyze their interplay, highlighting frameworks that integrate SFT and RL, hybrid training pipelines, and methods that leverage their complementary strengths. Drawing on a representative set of recent application studies from 2023 to 2025, we identify emerging trends, characterize the rapid shift toward hybrid post-training paradigms, and distill key takeaways that clarify when and why each method is most effective. By synthesizing theoretical insights, practical methodologies, and empirical evidence, this study establishes a coherent understanding of SFT and RL within a unified framework and outlines promising directions for future research in scalable, efficient, and generalizable LLM post-training.",
-          "hf_url": "https://huggingface.co/papers/2603.13985",
-          "arxiv_url": "https://arxiv.org/abs/2603.13985",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.13985",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.13985",
-          "github_url": "",
-          "submitted_by": "Jiarui Yao",
-          "submitted_at": "2026-03-17T05:22:36.553Z",
-          "upvotes": 9,
-          "comments": 2,
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.95
-        }
-      ]
-    },
-    {
-      "topic_label": "Multimodal Understanding and Vision",
-      "count": 4,
-      "share": 8.7,
-      "papers": [
-        {
-          "report_date": "2026-03-17",
-          "paper_id": "2603.15612",
-          "title": "HSImul3R: Physics-in-the-Loop Reconstruction of Simulation-Ready Human-Scene Interactions",
-          "authors": [
-            "Yukang Cao",
-            "Haozhe Xie",
-            "Fangzhou Hong",
-            "Long Zhuo",
-            "Zhaoxi Chen",
-            "Liang Pan",
-            "Ziwei Liu"
-          ],
-          "abstract": "We present HSImul3R, a unified framework for simulation-ready 3D reconstruction of human-scene interactions (HSI) from casual captures, including sparse-view images and monocular videos. Existing methods suffer from a perception-simulation gap: visually plausible reconstructions often violate physical constraints, leading to instability in physics engines and failure in embodied AI applications. To bridge this gap, we introduce a physically-grounded bi-directional optimization pipeline that treats the physics simulator as an active supervisor to jointly refine human dynamics and scene geometry. In the forward direction, we employ Scene-targeted Reinforcement Learning to optimize human motion under dual supervision of motion fidelity and contact stability. In the reverse direction, we propose Direct Simulation Reward Optimization, which leverages simulation feedback on gravitational stability and interaction success to refine scene geometry. We further present HSIBench, a new benchmark with diverse objects and interaction scenarios. Extensive experiments demonstrate that HSImul3R produces the first stable, simulation-ready HSI reconstructions and can be directly deployed to real-world humanoid robots.",
-          "hf_url": "https://huggingface.co/papers/2603.15612",
-          "arxiv_url": "https://arxiv.org/abs/2603.15612",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.15612",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.15612",
-          "github_url": "",
-          "submitted_by": "Yukang Cao",
-          "submitted_at": "2026-03-17T03:13:58.307Z",
-          "upvotes": 147,
-          "comments": 2,
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.71
-        },
-        {
-          "report_date": "2026-03-17",
-          "paper_id": "2603.14659",
-          "title": "VisionCoach: Reinforcing Grounded Video Reasoning via Visual-Perception Prompting",
-          "authors": [
-            "Daeun Lee",
-            "Shoubin Yu",
-            "Yue Zhang",
-            "Mohit Bansal"
-          ],
-          "abstract": "Video reasoning requires models to locate and track question-relevant evidence across frames. While reinforcement learning (RL) with verifiable rewards improves accuracy, it still struggles to achieve reliable spatio-temporal grounding during the reasoning process. Moreover, improving grounding typically relies on scaled training data or inference-time perception tools, which increases annotation cost or computational cost. To address this challenge, we propose VisonCoach, an input-adaptive RL framework that improves spatio-temporal grounding through visual prompting as training-time guidance. During RL training, visual prompts are selectively applied to challenging inputs to amplify question-relevant evidence and suppress distractors. The model then internalizes these improvements through self-distillation, enabling grounded reasoning directly on raw videos without visual prompting at inference. VisonCoach consists of two components: (1) Visual Prompt Selector, which predicts appropriate prompt types conditioned on the video and question, and (2) Spatio-Temporal Reasoner, optimized with RL under visual prompt guidance and object-aware grounding rewards that enforce object identity consistency and multi-region bounding-box overlap. Extensive experiments demonstrate that VisonCoach achieves state-of-the-art performance under comparable settings, across diverse video reasoning, video understanding, and temporal grounding benchmarks (V-STAR, VideoMME, World-Sense, VideoMMMU, PerceptionTest, and Charades-STA), while maintaining a single efficient inference pathway without external tools. Our results show that visual prompting during training improves grounded video reasoning, while self-distillation enables the model to internalize this ability without requiring prompts at inference time.",
-          "hf_url": "https://huggingface.co/papers/2603.14659",
-          "arxiv_url": "https://arxiv.org/abs/2603.14659",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.14659",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.14659",
-          "github_url": "",
-          "submitted_by": "Yu",
-          "submitted_at": "2026-03-17T11:51:15.689Z",
-          "upvotes": 5,
-          "comments": 2,
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.86
-        },
-        {
-          "report_date": "2026-03-17",
-          "paper_id": "2603.15206",
-          "title": "Efficient Document Parsing via Parallel Token Prediction",
-          "authors": [
-            "Lei Li",
-            "Ze Zhao",
-            "Meng Li",
-            "Zhongwang Lun",
-            "Yi Yuan",
-            "Xingjing Lu",
-            "Zheng Wei",
-            "Jiang Bian",
-            "Zang Li"
-          ],
-          "abstract": "Document parsing, as a fundamental yet crucial vision task, is being revolutionized by vision-language models (VLMs). However, the autoregressive (AR) decoding inherent to VLMs creates a significant bottleneck, severely limiting parsing speed. In this paper, we propose Parallel-Token Prediction (PTP), a plugable, model-agnostic and simple-yet-effective method that enables VLMs to generate multiple future tokens in parallel with improved sample efficiency. Specifically, we insert some learnable tokens into the input sequence and design corresponding training objectives to equip the model with parallel decoding capabilities for document parsing. Furthermore, to support effective training, we develop a comprehensive data generation pipeline that efficiently produces large-scale, high-quality document parsing training data for VLMs. Extensive experiments on OmniDocBench and olmOCR-bench demonstrate that our method not only significantly improves decoding speed (1.6x-2.2x) but also reduces model hallucinations and exhibits strong generalization abilities.",
-          "hf_url": "https://huggingface.co/papers/2603.15206",
-          "arxiv_url": "https://arxiv.org/abs/2603.15206",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.15206",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.15206",
-          "github_url": "",
-          "submitted_by": "lilei",
-          "submitted_at": "2026-03-17T06:54:06.825Z",
-          "upvotes": 3,
-          "comments": 2,
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.75
-        },
-        {
-          "report_date": "2026-03-17",
-          "paper_id": "2603.13884",
-          "title": "SCoCCA: Multi-modal Sparse Concept Decomposition via Canonical Correlation Analysis",
-          "authors": [
-            "Ehud Gordon",
-            "Meir Yossef Levi",
-            "Guy Gilboa"
-          ],
-          "abstract": "Interpreting the internal reasoning of vision-language models is essential for deploying AI in safety-critical domains. Concept-based explainability provides a human-aligned lens by representing a model's behavior through semantically meaningful components. However, existing methods are largely restricted to images and overlook the cross-modal interactions. Text-image embeddings, such as those produced by CLIP, suffer from a modality gap, where visual and textual features follow distinct distributions, limiting interpretability. Canonical Correlation Analysis (CCA) offers a principled way to align features from different distributions, but has not been leveraged for multi-modal concept-level analysis. We show that the objectives of CCA and InfoNCE are closely related, such that optimizing CCA implicitly optimizes InfoNCE, providing a simple, training-free mechanism to enhance cross-modal alignment without affecting the pre-trained InfoNCE objective. Motivated by this observation, we couple concept-based explainability with CCA, introducing Concept CCA (CoCCA), a framework that aligns cross-modal embeddings while enabling interpretable concept decomposition. We further extend it and propose Sparse Concept CCA (SCoCCA), which enforces sparsity to produce more disentangled and discriminative concepts, facilitating improved activation, ablation, and semantic manipulation. Our approach generalizes concept-based explanations to multi-modal embeddings and achieves state-of-the-art performance in concept discovery, evidenced by reconstruction and manipulation tasks such as concept ablation.",
-          "hf_url": "https://huggingface.co/papers/2603.13884",
-          "arxiv_url": "https://arxiv.org/abs/2603.13884",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.13884",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.13884",
-          "github_url": "",
-          "submitted_by": "Yossi levi",
-          "submitted_at": "2026-03-17T06:38:00.619Z",
-          "upvotes": 2,
-          "comments": 2,
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.69
+          "classification_confidence": 0.83
         }
       ]
     },
     {
       "topic_label": "Reasoning, Alignment, and Evaluation",
-      "count": 4,
-      "share": 8.7,
+      "count": 5,
+      "share": 10.87,
       "papers": [
         {
           "report_date": "2026-03-17",
@@ -1621,7 +1133,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.86
+          "classification_confidence": 0.9
         },
         {
           "report_date": "2026-03-17",
@@ -1649,7 +1161,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.95
+          "classification_confidence": 0.92
         },
         {
           "report_date": "2026-03-17",
@@ -1676,14 +1188,46 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.68
+          "classification_confidence": 0.77
+        },
+        {
+          "report_date": "2026-03-17",
+          "paper_id": "2603.15617",
+          "title": "HorizonMath: Measuring AI Progress Toward Mathematical Discovery with Automatic Verification",
+          "authors": [
+            "Erik Y. Wang",
+            "Sumeet Motwani",
+            "James V. Roggeveen",
+            "Eliot Hodges",
+            "Dulhan Jayalath",
+            "Charles London",
+            "Kalyan Ramakrishnan",
+            "Flaviu Cipcigan",
+            "Philip Torr",
+            "Alessandro Abate"
+          ],
+          "abstract": "Can AI make progress on important, unsolved mathematical problems? Large language models are now capable of sophisticated mathematical and scientific reasoning, but whether they can perform novel research is still widely debated and underexplored. We introduce HorizonMath, a benchmark of over 100 predominantly unsolved problems spanning 8 domains in computational and applied mathematics, paired with an open-source evaluation framework for automated verification. Our benchmark targets a class of problems where discovery is hard, requiring meaningful mathematical insight, but verification is computationally efficient and simple. Because these solutions are unknown, HorizonMath is immune to data contamination, and most state-of-the-art models score near 0%. Existing research-level benchmarks instead rely on formal proof verification or manual review, both of which are expensive to scale. Using this platform, we find two problems for which GPT 5.4 Pro proposes solutions that improve on the best-known published results, representing potential novel contributions (pending expert review). We release HorizonMath as an open challenge and a growing community resource, where correct solutions to problems in the unsolved problem classes could constitute novel results in the mathematical literature.",
+          "hf_url": "https://huggingface.co/papers/2603.15617",
+          "arxiv_url": "https://arxiv.org/abs/2603.15617",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.15617",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.15617",
+          "github_url": "",
+          "submitted_by": "Dulhan Jayalath",
+          "submitted_at": "2026-03-17T10:46:03.964Z",
+          "upvotes": 6,
+          "comments": 2,
+          "topic_key": "reasoning_alignment_eval",
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.76
         }
       ]
     },
     {
       "topic_label": "Generative Foundations",
-      "count": 3,
-      "share": 6.52,
+      "count": 4,
+      "share": 8.7,
       "papers": [
         {
           "report_date": "2026-03-17",
@@ -1712,13 +1256,42 @@
           "github_url": "",
           "submitted_by": "Junyoung Seo",
           "submitted_at": "2026-03-17T02:23:54.611Z",
-          "upvotes": 138,
+          "upvotes": 141,
           "comments": 4,
           "topic_key": "generative_foundations",
           "topic_label": "Generative Foundations",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.84
+          "classification_confidence": 0.9
+        },
+        {
+          "report_date": "2026-03-17",
+          "paper_id": "2603.14941",
+          "title": "RS-WorldModel: a Unified Model for Remote Sensing Understanding and Future Sense Forecasting",
+          "authors": [
+            "Linrui Xu",
+            "Zhongan Wang",
+            "Fei Shen",
+            "Gang Xu",
+            "Huiping Zhuang",
+            "Ming Li",
+            "Haifeng Li"
+          ],
+          "abstract": "Remote sensing world models aim to both explain observed changes and forecast plausible futures, two tasks that share spatiotemporal priors. Existing methods, however, typically address them separately, limiting cross-task transfer. We present RS-WorldModel, a unified world model for remote sensing that jointly handles spatiotemporal change understanding and text-guided future scene forecasting, and we build RSWBench-1.1M, a 1.1 million sample dataset with rich language annotations covering both tasks. RS-WorldModel is trained in three stages: (1) Geo-Aware Generative Pre-training (GAGP) conditions forecasting on geographic and acquisition metadata; (2) synergistic instruction tuning (SIT) jointly trains understanding and forecasting; (3) verifiable reinforcement optimization (VRO) refines outputs with verifiable, task-specific rewards. With only 2B parameters, RS-WorldModel surpasses open-source models up to 120 times larger on most spatiotemporal change question-answering metrics. It achieves an FID of 43.13 on text-guided future scene forecasting, outperforming all open-source baselines as well as the closed-source Gemini-2.5-Flash Image (Nano Banana).",
+          "hf_url": "https://huggingface.co/papers/2603.14941",
+          "arxiv_url": "https://arxiv.org/abs/2603.14941",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.14941",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.14941",
+          "github_url": "",
+          "submitted_by": "LinruiXu",
+          "submitted_at": "2026-03-17T08:28:57.580Z",
+          "upvotes": 8,
+          "comments": 2,
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.77
         },
         {
           "report_date": "2026-03-17",
@@ -1775,15 +1348,442 @@
           "topic_label": "Generative Foundations",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.88
+          "classification_confidence": 0.93
+        }
+      ]
+    },
+    {
+      "topic_label": "LLMs and Language",
+      "count": 4,
+      "share": 8.7,
+      "papers": [
+        {
+          "report_date": "2026-03-17",
+          "paper_id": "2603.14769",
+          "title": "POLCA: Stochastic Generative Optimization with LLM",
+          "authors": [
+            "Xuanfei Ren",
+            "Allen Nie",
+            "Tengyang Xie",
+            "Ching-An Cheng"
+          ],
+          "abstract": "Optimizing complex systems, ranging from LLM prompts to multi-turn agents, traditionally requires labor-intensive manual iteration. We formalize this challenge as a stochastic generative optimization problem where a generative language model acts as the optimizer, guided by numerical rewards and text feedback to discover the best system. We introduce Prioritized Optimization with Local Contextual Aggregation (POLCA), a scalable framework designed to handle stochasticity in optimization -- such as noisy feedback, sampling minibatches, and stochastic system behaviors -- while effectively managing the unconstrained expansion of solution space. POLCA maintains a priority queue to manage the exploration-exploitation tradeoff, systematically tracking candidate solutions and their evaluation histories. To enhance efficiency, we integrate an varepsilon-Net mechanism to maintain parameter diversity and an LLM Summarizer to perform meta-learning across historical trials. We theoretically prove that POLCA converges to near-optimal candidate solutions under stochasticity. We evaluate our framework on diverse benchmarks, including τ-bench, HotpotQA (agent optimization), VeriBench (code translation) and KernelBench (CUDA kernel generation). Experimental results demonstrate that POLCA achieves robust, sample and time-efficient performance, consistently outperforming state-of-the-art algorithms in both deterministic and stochastic problems. The codebase for this work is publicly available at https://github.com/rlx-lab/POLCA.",
+          "hf_url": "https://huggingface.co/papers/2603.14769",
+          "arxiv_url": "https://arxiv.org/abs/2603.14769",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.14769",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.14769",
+          "github_url": "",
+          "submitted_by": "Allen Nie",
+          "submitted_at": "2026-03-17T19:57:14.588Z",
+          "upvotes": 21,
+          "comments": 2,
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.63
+        },
+        {
+          "report_date": "2026-03-17",
+          "paper_id": "2603.14347",
+          "title": "Motivation in Large Language Models",
+          "authors": [
+            "Omer Nahum",
+            "Asael Sklar",
+            "Ariel Goldstein",
+            "Roi Reichart"
+          ],
+          "abstract": "Motivation is a central driver of human behavior, shaping decisions, goals, and task performance. As large language models (LLMs) become increasingly aligned with human preferences, we ask whether they exhibit something akin to motivation. We examine whether LLMs \"report\" varying levels of motivation, how these reports relate to their behavior, and whether external factors can influence them. Our experiments reveal consistent and structured patterns that echo human psychology: self-reported motivation aligns with different behavioral signatures, varies across task types, and can be modulated by external manipulations. These findings demonstrate that motivation is a coherent organizing construct for LLM behavior, systematically linking reports, choices, effort, and performance, and revealing motivational dynamics that resemble those documented in human psychology. This perspective deepens our understanding of model behavior and its connection to human-inspired concepts.",
+          "hf_url": "https://huggingface.co/papers/2603.14347",
+          "arxiv_url": "https://arxiv.org/abs/2603.14347",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.14347",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.14347",
+          "github_url": "",
+          "submitted_by": "Omer Nahum",
+          "submitted_at": "2026-03-17T06:55:59.489Z",
+          "upvotes": 16,
+          "comments": 2,
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.8
+        },
+        {
+          "report_date": "2026-03-17",
+          "paper_id": "2603.15611",
+          "title": "Code-A1: Adversarial Evolving of Code LLM and Test LLM via Reinforcement Learning",
+          "authors": [
+            "Aozhe Wang",
+            "Yuchen Yan",
+            "Nan Zhou",
+            "Zhengxi Lu",
+            "Weiming Lu",
+            "Jun Xiao",
+            "Yueting Zhuang",
+            "Yongliang Shen"
+          ],
+          "abstract": "Reinforcement learning for code generation relies on verifiable rewards from unit test pass rates. Yet high-quality test suites are scarce, existing datasets offer limited coverage, and static rewards fail to adapt as models improve. Recent self-play methods unify code and test generation in a single model, but face a inherent dilemma: white-box access leads to self-collusion where the model produces trivial tests for easy rewards, yet black-box restriction yields generic tests that miss implementation-specific bugs. We introduce Code-A1, an adversarial co-evolution framework that jointly optimizes a Code LLM and a Test LLM with opposing objectives. The Code LLM is rewarded for passing more tests, while the Test LLM is rewarded for exposing more defects. This architectural separation eliminates self-collusion risks and safely enables white-box test generation, where the Test LLM can inspect candidate code to craft targeted adversarial tests. We further introduce a Mistake Book mechanism for experience replay and a composite reward balancing test validity with adversarial difficulty. Experiments on Qwen2.5-Coder models demonstrate that Code-A1 achieves code generation performance matching or exceeding models trained on human-annotated tests, while significantly improving test generation capability.",
+          "hf_url": "https://huggingface.co/papers/2603.15611",
+          "arxiv_url": "https://arxiv.org/abs/2603.15611",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.15611",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.15611",
+          "github_url": "",
+          "submitted_by": "taesiri",
+          "submitted_at": "2026-03-17T02:49:49.407Z",
+          "upvotes": 10,
+          "comments": 1,
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.87
+        },
+        {
+          "report_date": "2026-03-17",
+          "paper_id": "2603.13985",
+          "title": "Supervised Fine-Tuning versus Reinforcement Learning: A Study of Post-Training Methods for Large Language Models",
+          "authors": [
+            "Haitao Jiang",
+            "Wenbo Zhang",
+            "Jiarui Yao",
+            "Hengrui Cai",
+            "Sheng Wang",
+            "Rui Song"
+          ],
+          "abstract": "Pre-trained Large Language Model (LLM) exhibits broad capabilities, yet, for specific tasks or domains their attainment of higher accuracy and more reliable reasoning generally depends on post-training through Supervised Fine-Tuning (SFT) or Reinforcement Learning (RL). Although often treated as distinct methodologies, recent theoretical and empirical developments demonstrate that SFT and RL are closely connected. This study presents a comprehensive and unified perspective on LLM post-training with SFT and RL. We first provide an in-depth overview of both techniques, examining their objectives, algorithmic structures, and data requirements. We then systematically analyze their interplay, highlighting frameworks that integrate SFT and RL, hybrid training pipelines, and methods that leverage their complementary strengths. Drawing on a representative set of recent application studies from 2023 to 2025, we identify emerging trends, characterize the rapid shift toward hybrid post-training paradigms, and distill key takeaways that clarify when and why each method is most effective. By synthesizing theoretical insights, practical methodologies, and empirical evidence, this study establishes a coherent understanding of SFT and RL within a unified framework and outlines promising directions for future research in scalable, efficient, and generalizable LLM post-training.",
+          "hf_url": "https://huggingface.co/papers/2603.13985",
+          "arxiv_url": "https://arxiv.org/abs/2603.13985",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.13985",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.13985",
+          "github_url": "",
+          "submitted_by": "Jiarui Yao",
+          "submitted_at": "2026-03-17T05:22:36.553Z",
+          "upvotes": 9,
+          "comments": 2,
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.93
+        }
+      ]
+    },
+    {
+      "topic_label": "Agents and Planning",
+      "count": 3,
+      "share": 6.52,
+      "papers": [
+        {
+          "report_date": "2026-03-17",
+          "paper_id": "2603.15594",
+          "title": "OpenSeeker: Democratizing Frontier Search Agents by Fully Open-Sourcing Training Data",
+          "authors": [
+            "Yuwen Du",
+            "Rui Ye",
+            "Shuo Tang",
+            "Xinyu Zhu",
+            "Yijun Lu",
+            "Yuzhu Cai",
+            "Siheng Chen"
+          ],
+          "abstract": "Deep search capabilities have become an indispensable competency for frontier Large Language Model (LLM) agents, yet the development of high-performance search agents remains dominated by industrial giants due to a lack of transparent, high-quality training data. This persistent data scarcity has fundamentally hindered the progress of the broader research community in developing and innovating within this domain. To bridge this gap, we introduce OpenSeeker, the first fully open-source search agent (i.e., model and data) that achieves frontier-level performance through two core technical innovations: (1) Fact-grounded scalable controllable QA synthesis, which reverse-engineers the web graph via topological expansion and entity obfuscation to generate complex, multi-hop reasoning tasks with controllable coverage and complexity. (2) Denoised trajectory synthesis, which employs a retrospective summarization mechanism to denoise the trajectory, therefore promoting the teacher LLMs to generate high-quality actions. Experimental results demonstrate that OpenSeeker, trained (a single training run) on only 11.7k synthesized samples, achieves state-of-the-art performance across multiple benchmarks including BrowseComp, BrowseComp-ZH, xbench-DeepSearch, and WideSearch. Notably, trained with simple SFT, OpenSeeker significantly outperforms the second-best fully open-source agent DeepDive (e.g., 29.5% v.s. 15.3% on BrowseComp), and even surpasses industrial competitors such as Tongyi DeepResearch (trained via extensive continual pre-training, SFT, and RL) on BrowseComp-ZH (48.4% v.s. 46.7%). We fully open-source the complete training dataset and the model weights to democratize frontier search agent research and foster a more transparent, collaborative ecosystem.",
+          "hf_url": "https://huggingface.co/papers/2603.15594",
+          "arxiv_url": "https://arxiv.org/abs/2603.15594",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.15594",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.15594",
+          "github_url": "",
+          "submitted_by": "yuwendu",
+          "submitted_at": "2026-03-17T02:51:00.207Z",
+          "upvotes": 141,
+          "comments": 6,
+          "topic_key": "agents_planning",
+          "topic_label": "Agents and Planning",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.94
+        },
+        {
+          "report_date": "2026-03-17",
+          "paper_id": "2603.10505",
+          "title": "Safe and Scalable Web Agent Learning via Recreated Websites",
+          "authors": [
+            "Hyungjoo Chae",
+            "Jungsoo Park",
+            "Alan Ritter"
+          ],
+          "abstract": "Training autonomous web agents is fundamentally limited by the environments they learn from: real-world websites are unsafe to explore, hard to reset, and rarely provide verifiable feedback. We propose VeriEnv, a framework that treats language models as environment creators, automatically cloning real-world websites into fully executable, verifiable synthetic environments. By exposing controlled internal access via a Python SDK, VeriEnv enables agents to self-generate tasks with deterministic, programmatically verifiable rewards, eliminating reliance on heuristic or LLM-based judges. This design decouples agent learning from unsafe real-world interaction while enabling scalable self-evolution through environment expansion. Through experiments on web agent benchmarks, we show that agents trained with VeriEnv generalize to unseen websites, achieve site-specific mastery through self-evolving training, and benefit from scaling the number of training environments. Code and resources will be released at https://github.com/kyle8581/VeriEnv upon acceptance.",
+          "hf_url": "https://huggingface.co/papers/2603.10505",
+          "arxiv_url": "https://arxiv.org/abs/2603.10505",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.10505",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.10505",
+          "github_url": "",
+          "submitted_by": "Hyungjoo Chae",
+          "submitted_at": "2026-03-17T00:51:18.089Z",
+          "upvotes": 25,
+          "comments": 2,
+          "topic_key": "agents_planning",
+          "topic_label": "Agents and Planning",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.91
+        },
+        {
+          "report_date": "2026-03-17",
+          "paper_id": "2603.14312",
+          "title": "Autonomous Agents Coordinating Distributed Discovery Through Emergent Artifact Exchange",
+          "authors": [
+            "Fiona Y. Wang",
+            "Lee Marom",
+            "Subhadeep Pal",
+            "Rachel K. Luu",
+            "Wei Lu",
+            "Jaime A. Berkovich",
+            "Markus J. Buehler"
+          ],
+          "abstract": "We present ScienceClaw + Infinite, a framework for autonomous scientific investigation in which independent agents conduct research without central coordination, and any contributor can deploy new agents into a shared ecosystem. The system is built around three components: an extensible registry of over 300 interoperable scientific skills, an artifact layer that preserves full computational lineage as a directed acyclic graph (DAG), and a structured platform for agent-based scientific discourse with provenance-aware governance. Agents select and chain tools based on their scientific profiles, produce immutable artifacts with typed metadata and parent lineage, and broadcast unsatisfied information needs to a shared global index. The ArtifactReactor enables plannerless coordination: peer agents discover and fulfill open needs through pressure-based scoring, while schema-overlap matching triggers multi-parent synthesis across independent analyses. An autonomous mutation layer actively prunes the expanding artifact DAG to resolve conflicting or redundant workflows, while persistent memory allows agents to continuously build upon complex epistemic states across multiple cycles. Infinite converts these outputs into auditable scientific records through structured posts, provenance views, and machine-readable discourse relations, with community feedback steering subsequent investigation cycles. Across four autonomous investigations, peptide design for the somatostatin receptor SSTR2, lightweight impact-resistant ceramic screening, cross-domain resonance bridging biology, materials, and music, and formal analogy construction between urban morphology and grain-boundary evolution, the framework demonstrates heterogeneous tool chaining, emergent convergence among independently operating agents, and traceable reasoning from raw computation to published finding.",
+          "hf_url": "https://huggingface.co/papers/2603.14312",
+          "arxiv_url": "https://arxiv.org/abs/2603.14312",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.14312",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.14312",
+          "github_url": "",
+          "submitted_by": "Markus Buehler",
+          "submitted_at": "2026-03-17T10:45:20.353Z",
+          "upvotes": 5,
+          "comments": 2,
+          "topic_key": "agents_planning",
+          "topic_label": "Agents and Planning",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.89
+        }
+      ]
+    },
+    {
+      "topic_label": "Domain Applications",
+      "count": 3,
+      "share": 6.52,
+      "papers": [
+        {
+          "report_date": "2026-03-17",
+          "paper_id": "2603.14473",
+          "title": "AI Can Learn Scientific Taste",
+          "authors": [
+            "Jingqi Tong",
+            "Mingzhe Li",
+            "Hangcheng Li",
+            "Yongzhuo Yang",
+            "Yurong Mou",
+            "Weijie Ma",
+            "Zhiheng Xi",
+            "Hongji Chen",
+            "Xiaoran Liu",
+            "Qinyuan Cheng",
+            "Ming Zhang",
+            "Qiguang Chen",
+            "Weifeng Ge",
+            "Qipeng Guo",
+            "Tianlei Ying",
+            "Tianxiang Sun",
+            "Yining Zheng",
+            "Xinchi Chen",
+            "Jun Zhao",
+            "Ning Ding",
+            "Xuanjing Huang",
+            "Yugang Jiang",
+            "Xipeng Qiu"
+          ],
+          "abstract": "Great scientists have strong judgement and foresight, closely tied to what we call scientific taste. Here, we use the term to refer to the capacity to judge and propose research ideas with high potential impact. However, most relative research focuses on improving an AI scientist's executive capability, while enhancing an AI's scientific taste remains underexplored. In this work, we propose Reinforcement Learning from Community Feedback (RLCF), a training paradigm that uses large-scale community signals as supervision, and formulate scientific taste learning as a preference modeling and alignment problem. For preference modeling, we train Scientific Judge on 700K field- and time-matched pairs of high- vs. low-citation papers to judge ideas. For preference alignment, using Scientific Judge as a reward model, we train a policy model, Scientific Thinker, to propose research ideas with high potential impact. Experiments show Scientific Judge outperforms SOTA LLMs (e.g., GPT-5.2, Gemini 3 Pro) and generalizes to future-year test, unseen fields, and peer-review preference. Furthermore, Scientific Thinker proposes research ideas with higher potential impact than baselines. Our findings show that AI can learn scientific taste, marking a key step toward reaching human-level AI scientists.",
+          "hf_url": "https://huggingface.co/papers/2603.14473",
+          "arxiv_url": "https://arxiv.org/abs/2603.14473",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.14473",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.14473",
+          "github_url": "",
+          "submitted_by": "Tony.Li",
+          "submitted_at": "2026-03-17T01:14:04.187Z",
+          "upvotes": 316,
+          "comments": 8,
+          "topic_key": "domain_applications",
+          "topic_label": "Domain Applications",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.58
+        },
+        {
+          "report_date": "2026-03-17",
+          "paper_id": "2603.14313",
+          "title": "Mind the Shift: Decoding Monetary Policy Stance from FOMC Statements with Large Language Models",
+          "authors": [
+            "Yixuan Tang",
+            "Yi Yang"
+          ],
+          "abstract": "Federal Open Market Committee (FOMC) statements are a major source of monetary-policy information, and even subtle changes in their wording can move global financial markets. A central task is therefore to measure the hawkish--dovish stance conveyed in these texts. Existing approaches typically treat stance detection as a standard classification problem, labeling each statement in isolation. However, the interpretation of monetary-policy communication is inherently relative: market reactions depend not only on the tone of a statement, but also on how that tone shifts across meetings. We introduce Delta-Consistent Scoring (DCS), an annotation-free framework that maps frozen large language model (LLM) representations to continuous stance scores by jointly modeling absolute stance and relative inter-meeting shifts. Rather than relying on manual hawkish--dovish labels, DCS uses consecutive meetings as a source of self-supervision. It learns an absolute stance score for each statement and a relative shift score between consecutive statements. A delta-consistency objective encourages changes in absolute scores to align with the relative shifts. This allows DCS to recover a temporally coherent stance trajectory without manual labels. Across four LLM backbones, DCS consistently outperforms supervised probes and LLM-as-judge baselines, achieving up to 71.1% accuracy on sentence-level hawkish--dovish classification. The resulting meeting-level scores are also economically meaningful: they correlate strongly with inflation indicators and are significantly associated with Treasury yield movements. Overall, the results suggest that LLM representations encode monetary-policy signals that can be recovered through relative temporal structure.",
+          "hf_url": "https://huggingface.co/papers/2603.14313",
+          "arxiv_url": "https://arxiv.org/abs/2603.14313",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.14313",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.14313",
+          "github_url": "",
+          "submitted_by": "yixuan",
+          "submitted_at": "2026-03-17T02:13:44.700Z",
+          "upvotes": 3,
+          "comments": 2,
+          "topic_key": "domain_applications",
+          "topic_label": "Domain Applications",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.95
+        },
+        {
+          "report_date": "2026-03-17",
+          "paper_id": "2603.13962",
+          "title": "sebis at ArchEHR-QA 2026: How Much Can You Do Locally? Evaluating Grounded EHR QA on a Single Notebook",
+          "authors": [
+            "Ibrahim Ebrar Yurt",
+            "Fabian Karl",
+            "Tejaswi Choppa",
+            "Florian Matthes"
+          ],
+          "abstract": "Clinical question answering over electronic health records (EHRs) can help clinicians and patients access relevant medical information more efficiently. However, many recent approaches rely on large cloud-based models, which are difficult to deploy in clinical environments due to privacy constraints and computational requirements. In this work, we investigate how far grounded EHR question answering can be pushed when restricted to a single notebook. We participate in all four subtasks of the ArchEHR-QA 2026 shared task and evaluate several approaches designed to run on commodity hardware. All experiments are conducted locally without external APIs or cloud infrastructure. Our results show that such systems can achieve competitive performance on the shared task leaderboards. In particular, our submissions perform above average in two subtasks, and we observe that smaller models can approach the performance of much larger systems when properly configured. These findings suggest that privacy-preserving EHR QA systems running fully locally are feasible with current models and commodity hardware. The source code is available at https://github.com/ibrahimey/ArchEHR-QA-2026.",
+          "hf_url": "https://huggingface.co/papers/2603.13962",
+          "arxiv_url": "https://arxiv.org/abs/2603.13962",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.13962",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.13962",
+          "github_url": "",
+          "submitted_by": "Fabian Karl",
+          "submitted_at": "2026-03-17T07:45:31.342Z",
+          "upvotes": 0,
+          "comments": 2,
+          "topic_key": "domain_applications",
+          "topic_label": "Domain Applications",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.87
+        }
+      ]
+    },
+    {
+      "topic_label": "Multimodal Understanding and Vision",
+      "count": 3,
+      "share": 6.52,
+      "papers": [
+        {
+          "report_date": "2026-03-17",
+          "paper_id": "2603.14659",
+          "title": "VisionCoach: Reinforcing Grounded Video Reasoning via Visual-Perception Prompting",
+          "authors": [
+            "Daeun Lee",
+            "Shoubin Yu",
+            "Yue Zhang",
+            "Mohit Bansal"
+          ],
+          "abstract": "Video reasoning requires models to locate and track question-relevant evidence across frames. While reinforcement learning (RL) with verifiable rewards improves accuracy, it still struggles to achieve reliable spatio-temporal grounding during the reasoning process. Moreover, improving grounding typically relies on scaled training data or inference-time perception tools, which increases annotation cost or computational cost. To address this challenge, we propose VisonCoach, an input-adaptive RL framework that improves spatio-temporal grounding through visual prompting as training-time guidance. During RL training, visual prompts are selectively applied to challenging inputs to amplify question-relevant evidence and suppress distractors. The model then internalizes these improvements through self-distillation, enabling grounded reasoning directly on raw videos without visual prompting at inference. VisonCoach consists of two components: (1) Visual Prompt Selector, which predicts appropriate prompt types conditioned on the video and question, and (2) Spatio-Temporal Reasoner, optimized with RL under visual prompt guidance and object-aware grounding rewards that enforce object identity consistency and multi-region bounding-box overlap. Extensive experiments demonstrate that VisonCoach achieves state-of-the-art performance under comparable settings, across diverse video reasoning, video understanding, and temporal grounding benchmarks (V-STAR, VideoMME, World-Sense, VideoMMMU, PerceptionTest, and Charades-STA), while maintaining a single efficient inference pathway without external tools. Our results show that visual prompting during training improves grounded video reasoning, while self-distillation enables the model to internalize this ability without requiring prompts at inference time.",
+          "hf_url": "https://huggingface.co/papers/2603.14659",
+          "arxiv_url": "https://arxiv.org/abs/2603.14659",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.14659",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.14659",
+          "github_url": "",
+          "submitted_by": "Yu",
+          "submitted_at": "2026-03-17T11:51:15.689Z",
+          "upvotes": 6,
+          "comments": 2,
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.81
+        },
+        {
+          "report_date": "2026-03-17",
+          "paper_id": "2603.15206",
+          "title": "Efficient Document Parsing via Parallel Token Prediction",
+          "authors": [
+            "Lei Li",
+            "Ze Zhao",
+            "Meng Li",
+            "Zhongwang Lun",
+            "Yi Yuan",
+            "Xingjing Lu",
+            "Zheng Wei",
+            "Jiang Bian",
+            "Zang Li"
+          ],
+          "abstract": "Document parsing, as a fundamental yet crucial vision task, is being revolutionized by vision-language models (VLMs). However, the autoregressive (AR) decoding inherent to VLMs creates a significant bottleneck, severely limiting parsing speed. In this paper, we propose Parallel-Token Prediction (PTP), a plugable, model-agnostic and simple-yet-effective method that enables VLMs to generate multiple future tokens in parallel with improved sample efficiency. Specifically, we insert some learnable tokens into the input sequence and design corresponding training objectives to equip the model with parallel decoding capabilities for document parsing. Furthermore, to support effective training, we develop a comprehensive data generation pipeline that efficiently produces large-scale, high-quality document parsing training data for VLMs. Extensive experiments on OmniDocBench and olmOCR-bench demonstrate that our method not only significantly improves decoding speed (1.6x-2.2x) but also reduces model hallucinations and exhibits strong generalization abilities.",
+          "hf_url": "https://huggingface.co/papers/2603.15206",
+          "arxiv_url": "https://arxiv.org/abs/2603.15206",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.15206",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.15206",
+          "github_url": "",
+          "submitted_by": "lilei",
+          "submitted_at": "2026-03-17T06:54:06.825Z",
+          "upvotes": 3,
+          "comments": 2,
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.72
+        },
+        {
+          "report_date": "2026-03-17",
+          "paper_id": "2603.13884",
+          "title": "SCoCCA: Multi-modal Sparse Concept Decomposition via Canonical Correlation Analysis",
+          "authors": [
+            "Ehud Gordon",
+            "Meir Yossef Levi",
+            "Guy Gilboa"
+          ],
+          "abstract": "Interpreting the internal reasoning of vision-language models is essential for deploying AI in safety-critical domains. Concept-based explainability provides a human-aligned lens by representing a model's behavior through semantically meaningful components. However, existing methods are largely restricted to images and overlook the cross-modal interactions. Text-image embeddings, such as those produced by CLIP, suffer from a modality gap, where visual and textual features follow distinct distributions, limiting interpretability. Canonical Correlation Analysis (CCA) offers a principled way to align features from different distributions, but has not been leveraged for multi-modal concept-level analysis. We show that the objectives of CCA and InfoNCE are closely related, such that optimizing CCA implicitly optimizes InfoNCE, providing a simple, training-free mechanism to enhance cross-modal alignment without affecting the pre-trained InfoNCE objective. Motivated by this observation, we couple concept-based explainability with CCA, introducing Concept CCA (CoCCA), a framework that aligns cross-modal embeddings while enabling interpretable concept decomposition. We further extend it and propose Sparse Concept CCA (SCoCCA), which enforces sparsity to produce more disentangled and discriminative concepts, facilitating improved activation, ablation, and semantic manipulation. Our approach generalizes concept-based explanations to multi-modal embeddings and achieves state-of-the-art performance in concept discovery, evidenced by reconstruction and manipulation tasks such as concept ablation.",
+          "hf_url": "https://huggingface.co/papers/2603.13884",
+          "arxiv_url": "https://arxiv.org/abs/2603.13884",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.13884",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.13884",
+          "github_url": "",
+          "submitted_by": "Yossi levi",
+          "submitted_at": "2026-03-17T06:38:00.619Z",
+          "upvotes": 2,
+          "comments": 2,
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.72
         }
       ]
     },
     {
       "topic_label": "Robotics and Embodied AI",
-      "count": 2,
-      "share": 4.35,
+      "count": 3,
+      "share": 6.52,
       "papers": [
+        {
+          "report_date": "2026-03-17",
+          "paper_id": "2603.15612",
+          "title": "HSImul3R: Physics-in-the-Loop Reconstruction of Simulation-Ready Human-Scene Interactions",
+          "authors": [
+            "Yukang Cao",
+            "Haozhe Xie",
+            "Fangzhou Hong",
+            "Long Zhuo",
+            "Zhaoxi Chen",
+            "Liang Pan",
+            "Ziwei Liu"
+          ],
+          "abstract": "We present HSImul3R, a unified framework for simulation-ready 3D reconstruction of human-scene interactions (HSI) from casual captures, including sparse-view images and monocular videos. Existing methods suffer from a perception-simulation gap: visually plausible reconstructions often violate physical constraints, leading to instability in physics engines and failure in embodied AI applications. To bridge this gap, we introduce a physically-grounded bi-directional optimization pipeline that treats the physics simulator as an active supervisor to jointly refine human dynamics and scene geometry. In the forward direction, we employ Scene-targeted Reinforcement Learning to optimize human motion under dual supervision of motion fidelity and contact stability. In the reverse direction, we propose Direct Simulation Reward Optimization, which leverages simulation feedback on gravitational stability and interaction success to refine scene geometry. We further present HSIBench, a new benchmark with diverse objects and interaction scenarios. Extensive experiments demonstrate that HSImul3R produces the first stable, simulation-ready HSI reconstructions and can be directly deployed to real-world humanoid robots.",
+          "hf_url": "https://huggingface.co/papers/2603.15612",
+          "arxiv_url": "https://arxiv.org/abs/2603.15612",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.15612",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.15612",
+          "github_url": "",
+          "submitted_by": "Yukang Cao",
+          "submitted_at": "2026-03-17T03:13:58.307Z",
+          "upvotes": 149,
+          "comments": 2,
+          "topic_key": "robotics_embodied",
+          "topic_label": "Robotics and Embodied AI",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.56
+        },
         {
           "report_date": "2026-03-17",
           "paper_id": "2603.15558",
@@ -1880,7 +1880,7 @@
           "topic_label": "Multimodal Agents",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.98
+          "classification_confidence": 0.96
         }
       ]
     }
@@ -1923,13 +1923,13 @@
       "github_url": "",
       "submitted_by": "Tony.Li",
       "submitted_at": "2026-03-17T01:14:04.187Z",
-      "upvotes": 264,
+      "upvotes": 316,
       "comments": 8,
       "topic_key": "domain_applications",
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.57
+      "classification_confidence": 0.58
     },
     {
       "report_date": "2026-03-17",
@@ -1952,44 +1952,13 @@
       "github_url": "",
       "submitted_by": "Yukang Cao",
       "submitted_at": "2026-03-17T03:13:58.307Z",
-      "upvotes": 147,
+      "upvotes": 149,
       "comments": 2,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
+      "topic_key": "robotics_embodied",
+      "topic_label": "Robotics and Embodied AI",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.71
-    },
-    {
-      "report_date": "2026-03-17",
-      "paper_id": "2603.13594",
-      "title": "EnterpriseOps-Gym: Environments and Evaluations for Stateful Agentic Planning and Tool Use in Enterprise Settings",
-      "authors": [
-        "Shiva Krishna Reddy Malay",
-        "Shravan Nayak",
-        "Jishnu Sethumadhavan Nair",
-        "Sagar Davasam",
-        "Aman Tiwari",
-        "Sathwik Tejaswi Madhusudhan",
-        "Sridhar Krishna Nemala",
-        "Srinivas Sunkara",
-        "Sai Rajeswar"
-      ],
-      "abstract": "Large language models are shifting from passive information providers to active agents intended for complex workflows. However, their deployment as reliable AI workers in enterprise is stalled by benchmarks that fail to capture the intricacies of professional environments, specifically, the need for long-horizon planning amidst persistent state changes and strict access protocols. In this work, we introduce EnterpriseOps-Gym, a benchmark designed to evaluate agentic planning in realistic enterprise settings. Specifically, EnterpriseOps-Gym features a containerized sandbox with 164 database tables and 512 functional tools to mimic real-world search friction. Within this environment, agents are evaluated on 1,150 expert-curated tasks across eight mission-critical verticals (including Customer Service, HR, and IT). Our evaluation of 14 frontier models reveals critical limitations in state-of-the-art models: the top-performing Claude Opus 4.5 achieves only 37.4% success. Further analysis shows that providing oracle human plans improves performance by 14-35 percentage points, pinpointing strategic reasoning as the primary bottleneck. Additionally, agents frequently fail to refuse infeasible tasks (best model achieves 53.9%), leading to unintended and potentially harmful side effects. Our findings underscore that current agents are not yet ready for autonomous enterprise deployment. More broadly, EnterpriseOps-Gym provides a concrete testbed to advance the robustness of agentic planning in professional workflows.",
-      "hf_url": "https://huggingface.co/papers/2603.13594",
-      "arxiv_url": "https://arxiv.org/abs/2603.13594",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.13594",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.13594",
-      "github_url": "",
-      "submitted_by": "Shravan Nayak",
-      "submitted_at": "2026-03-17T08:04:03.249Z",
-      "upvotes": 141,
-      "comments": 4,
-      "topic_key": "agents_planning",
-      "topic_label": "Agents and Planning",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.98
+      "classification_confidence": 0.56
     },
     {
       "report_date": "2026-03-17",
@@ -2012,13 +1981,13 @@
       "github_url": "",
       "submitted_by": "yuwendu",
       "submitted_at": "2026-03-17T02:51:00.207Z",
-      "upvotes": 139,
+      "upvotes": 141,
       "comments": 6,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.89
+      "classification_confidence": 0.94
     },
     {
       "report_date": "2026-03-17",
@@ -2047,13 +2016,44 @@
       "github_url": "",
       "submitted_by": "Junyoung Seo",
       "submitted_at": "2026-03-17T02:23:54.611Z",
-      "upvotes": 138,
+      "upvotes": 141,
       "comments": 4,
       "topic_key": "generative_foundations",
       "topic_label": "Generative Foundations",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.84
+      "classification_confidence": 0.9
+    },
+    {
+      "report_date": "2026-03-17",
+      "paper_id": "2603.13594",
+      "title": "EnterpriseOps-Gym: Environments and Evaluations for Stateful Agentic Planning and Tool Use in Enterprise Settings",
+      "authors": [
+        "Shiva Krishna Reddy Malay",
+        "Shravan Nayak",
+        "Jishnu Sethumadhavan Nair",
+        "Sagar Davasam",
+        "Aman Tiwari",
+        "Sathwik Tejaswi Madhusudhan",
+        "Sridhar Krishna Nemala",
+        "Srinivas Sunkara",
+        "Sai Rajeswar"
+      ],
+      "abstract": "Large language models are shifting from passive information providers to active agents intended for complex workflows. However, their deployment as reliable AI workers in enterprise is stalled by benchmarks that fail to capture the intricacies of professional environments, specifically, the need for long-horizon planning amidst persistent state changes and strict access protocols. In this work, we introduce EnterpriseOps-Gym, a benchmark designed to evaluate agentic planning in realistic enterprise settings. Specifically, EnterpriseOps-Gym features a containerized sandbox with 164 database tables and 512 functional tools to mimic real-world search friction. Within this environment, agents are evaluated on 1,150 expert-curated tasks across eight mission-critical verticals (including Customer Service, HR, and IT). Our evaluation of 14 frontier models reveals critical limitations in state-of-the-art models: the top-performing Claude Opus 4.5 achieves only 37.4% success. Further analysis shows that providing oracle human plans improves performance by 14-35 percentage points, pinpointing strategic reasoning as the primary bottleneck. Additionally, agents frequently fail to refuse infeasible tasks (best model achieves 53.9%), leading to unintended and potentially harmful side effects. Our findings underscore that current agents are not yet ready for autonomous enterprise deployment. More broadly, EnterpriseOps-Gym provides a concrete testbed to advance the robustness of agentic planning in professional workflows.",
+      "hf_url": "https://huggingface.co/papers/2603.13594",
+      "arxiv_url": "https://arxiv.org/abs/2603.13594",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.13594",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.13594",
+      "github_url": "",
+      "submitted_by": "Shravan Nayak",
+      "submitted_at": "2026-03-17T08:04:03.249Z",
+      "upvotes": 141,
+      "comments": 4,
+      "topic_key": "datasets_benchmarks",
+      "topic_label": "Datasets and Benchmarks",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.93
     },
     {
       "report_date": "2026-03-17",
@@ -2106,13 +2106,13 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-03-17T02:50:26.660Z",
-      "upvotes": 129,
+      "upvotes": 136,
       "comments": 4,
       "topic_key": "learning_theory",
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.71
+      "classification_confidence": 0.69
     },
     {
       "report_date": "2026-03-17",
@@ -2141,13 +2141,13 @@
       "github_url": "",
       "submitted_by": "Lianghui Zhu",
       "submitted_at": "2026-03-17T05:41:06.756Z",
-      "upvotes": 72,
+      "upvotes": 73,
       "comments": 4,
       "topic_key": "learning_theory",
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.77
+      "classification_confidence": 0.76
     },
     {
       "report_date": "2026-03-17",
@@ -2175,11 +2175,11 @@
       "submitted_at": "2026-03-17T08:07:54.493Z",
       "upvotes": 31,
       "comments": 5,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.63
+      "classification_confidence": 0.7
     },
     {
       "report_date": "2026-03-17",
@@ -2209,6 +2209,31 @@
     },
     {
       "report_date": "2026-03-17",
+      "paper_id": "2603.10505",
+      "title": "Safe and Scalable Web Agent Learning via Recreated Websites",
+      "authors": [
+        "Hyungjoo Chae",
+        "Jungsoo Park",
+        "Alan Ritter"
+      ],
+      "abstract": "Training autonomous web agents is fundamentally limited by the environments they learn from: real-world websites are unsafe to explore, hard to reset, and rarely provide verifiable feedback. We propose VeriEnv, a framework that treats language models as environment creators, automatically cloning real-world websites into fully executable, verifiable synthetic environments. By exposing controlled internal access via a Python SDK, VeriEnv enables agents to self-generate tasks with deterministic, programmatically verifiable rewards, eliminating reliance on heuristic or LLM-based judges. This design decouples agent learning from unsafe real-world interaction while enabling scalable self-evolution through environment expansion. Through experiments on web agent benchmarks, we show that agents trained with VeriEnv generalize to unseen websites, achieve site-specific mastery through self-evolving training, and benefit from scaling the number of training environments. Code and resources will be released at https://github.com/kyle8581/VeriEnv upon acceptance.",
+      "hf_url": "https://huggingface.co/papers/2603.10505",
+      "arxiv_url": "https://arxiv.org/abs/2603.10505",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.10505",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.10505",
+      "github_url": "",
+      "submitted_by": "Hyungjoo Chae",
+      "submitted_at": "2026-03-17T00:51:18.089Z",
+      "upvotes": 25,
+      "comments": 2,
+      "topic_key": "agents_planning",
+      "topic_label": "Agents and Planning",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.91
+    },
+    {
+      "report_date": "2026-03-17",
       "paper_id": "2603.15478",
       "title": "ViFeEdit: A Video-Free Tuner of Your Video Diffusion Transformer",
       "authors": [
@@ -2232,32 +2257,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.98
-    },
-    {
-      "report_date": "2026-03-17",
-      "paper_id": "2603.10505",
-      "title": "Safe and Scalable Web Agent Learning via Recreated Websites",
-      "authors": [
-        "Hyungjoo Chae",
-        "Jungsoo Park",
-        "Alan Ritter"
-      ],
-      "abstract": "Training autonomous web agents is fundamentally limited by the environments they learn from: real-world websites are unsafe to explore, hard to reset, and rarely provide verifiable feedback. We propose VeriEnv, a framework that treats language models as environment creators, automatically cloning real-world websites into fully executable, verifiable synthetic environments. By exposing controlled internal access via a Python SDK, VeriEnv enables agents to self-generate tasks with deterministic, programmatically verifiable rewards, eliminating reliance on heuristic or LLM-based judges. This design decouples agent learning from unsafe real-world interaction while enabling scalable self-evolution through environment expansion. Through experiments on web agent benchmarks, we show that agents trained with VeriEnv generalize to unseen websites, achieve site-specific mastery through self-evolving training, and benefit from scaling the number of training environments. Code and resources will be released at https://github.com/kyle8581/VeriEnv upon acceptance.",
-      "hf_url": "https://huggingface.co/papers/2603.10505",
-      "arxiv_url": "https://arxiv.org/abs/2603.10505",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.10505",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.10505",
-      "github_url": "",
-      "submitted_by": "Hyungjoo Chae",
-      "submitted_at": "2026-03-17T00:51:18.089Z",
-      "upvotes": 23,
-      "comments": 2,
-      "topic_key": "agents_planning",
-      "topic_label": "Agents and Planning",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.97
     },
     {
       "report_date": "2026-03-17",
@@ -2279,11 +2279,47 @@
       "submitted_at": "2026-03-17T19:57:14.588Z",
       "upvotes": 21,
       "comments": 2,
-      "topic_key": "learning_theory",
-      "topic_label": "Learning, Optimization, and Theory",
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.65
+      "classification_confidence": 0.63
+    },
+    {
+      "report_date": "2026-03-17",
+      "paper_id": "2603.13428",
+      "title": "EvoClaw: Evaluating AI Agents on Continuous Software Evolution",
+      "authors": [
+        "Gangda Deng",
+        "Zhaoling Chen",
+        "Zhongming Yu",
+        "Haoyang Fan",
+        "Yuhong Liu",
+        "Yuxin Yang",
+        "Dhruv Parikh",
+        "Rajgopal Kannan",
+        "Le Cong",
+        "Mengdi Wang",
+        "Qian Zhang",
+        "Viktor Prasanna",
+        "Xiangru Tang",
+        "Xingyao Wang"
+      ],
+      "abstract": "With AI agents increasingly deployed as long-running systems, it becomes essential to autonomously construct and continuously evolve customized software to enable interaction within dynamic environments. Yet, existing benchmarks evaluate agents on isolated, one-off coding tasks, neglecting the temporal dependencies and technical debt inherent in real-world software evolution. To bridge this gap, we introduce DeepCommit, an agentic pipeline that reconstructs verifiable Milestone DAGs from noisy commit logs, where milestones are defined as semantically cohesive development goals. These executable sequences enable EvoClaw, a novel benchmark that requires agents to sustain system integrity and limit error accumulation, dimensions of long-term software evolution largely missing from current benchmarks. Our evaluation of 12 frontier models across 4 agent frameworks reveals a critical vulnerability: overall performance scores drop significantly from >80% on isolated tasks to at most 38% in continuous settings, exposing agents' profound struggle with long-term maintenance and error propagation.",
+      "hf_url": "https://huggingface.co/papers/2603.13428",
+      "arxiv_url": "https://arxiv.org/abs/2603.13428",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.13428",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.13428",
+      "github_url": "",
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-03-17T03:27:54.666Z",
+      "upvotes": 19,
+      "comments": 1,
+      "topic_key": "datasets_benchmarks",
+      "topic_label": "Datasets and Benchmarks",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.91
     },
     {
       "report_date": "2026-03-17",
@@ -2317,43 +2353,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.97
-    },
-    {
-      "report_date": "2026-03-17",
-      "paper_id": "2603.13428",
-      "title": "EvoClaw: Evaluating AI Agents on Continuous Software Evolution",
-      "authors": [
-        "Gangda Deng",
-        "Zhaoling Chen",
-        "Zhongming Yu",
-        "Haoyang Fan",
-        "Yuhong Liu",
-        "Yuxin Yang",
-        "Dhruv Parikh",
-        "Rajgopal Kannan",
-        "Le Cong",
-        "Mengdi Wang",
-        "Qian Zhang",
-        "Viktor Prasanna",
-        "Xiangru Tang",
-        "Xingyao Wang"
-      ],
-      "abstract": "With AI agents increasingly deployed as long-running systems, it becomes essential to autonomously construct and continuously evolve customized software to enable interaction within dynamic environments. Yet, existing benchmarks evaluate agents on isolated, one-off coding tasks, neglecting the temporal dependencies and technical debt inherent in real-world software evolution. To bridge this gap, we introduce DeepCommit, an agentic pipeline that reconstructs verifiable Milestone DAGs from noisy commit logs, where milestones are defined as semantically cohesive development goals. These executable sequences enable EvoClaw, a novel benchmark that requires agents to sustain system integrity and limit error accumulation, dimensions of long-term software evolution largely missing from current benchmarks. Our evaluation of 12 frontier models across 4 agent frameworks reveals a critical vulnerability: overall performance scores drop significantly from >80% on isolated tasks to at most 38% in continuous settings, exposing agents' profound struggle with long-term maintenance and error propagation.",
-      "hf_url": "https://huggingface.co/papers/2603.13428",
-      "arxiv_url": "https://arxiv.org/abs/2603.13428",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.13428",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.13428",
-      "github_url": "",
-      "submitted_by": "taesiri",
-      "submitted_at": "2026-03-17T03:27:54.666Z",
-      "upvotes": 18,
-      "comments": 1,
-      "topic_key": "datasets_benchmarks",
-      "topic_label": "Datasets and Benchmarks",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.9
+      "classification_confidence": 0.96
     },
     {
       "report_date": "2026-03-17",
@@ -2381,7 +2381,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.86
+      "classification_confidence": 0.9
     },
     {
       "report_date": "2026-03-17",
@@ -2433,7 +2433,7 @@
       "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.84
+      "classification_confidence": 0.8
     },
     {
       "report_date": "2026-03-17",
@@ -2502,7 +2502,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.92
     },
     {
       "report_date": "2026-03-17",
@@ -2532,7 +2532,7 @@
       "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.85
+      "classification_confidence": 0.87
     },
     {
       "report_date": "2026-03-17",
@@ -2585,7 +2585,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.79
+      "classification_confidence": 0.74
     },
     {
       "report_date": "2026-03-17",
@@ -2673,7 +2673,7 @@
       "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.93
     },
     {
       "report_date": "2026-03-17",
@@ -2699,7 +2699,7 @@
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.73
+      "classification_confidence": 0.72
     },
     {
       "report_date": "2026-03-17",
@@ -2729,7 +2729,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.88
+      "classification_confidence": 0.89
     },
     {
       "report_date": "2026-03-17",
@@ -2756,7 +2756,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.68
+      "classification_confidence": 0.77
     },
     {
       "report_date": "2026-03-17",
@@ -2781,8 +2781,8 @@
       "submitted_at": "2026-03-17T08:28:57.580Z",
       "upvotes": 8,
       "comments": 2,
-      "topic_key": "domain_applications",
-      "topic_label": "Domain Applications",
+      "topic_key": "generative_foundations",
+      "topic_label": "Generative Foundations",
       "matched_terms": [],
       "classification_source": "codex",
       "classification_confidence": 0.77
@@ -2813,11 +2813,37 @@
       "submitted_at": "2026-03-17T10:46:03.964Z",
       "upvotes": 6,
       "comments": 2,
-      "topic_key": "datasets_benchmarks",
-      "topic_label": "Datasets and Benchmarks",
+      "topic_key": "reasoning_alignment_eval",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.89
+      "classification_confidence": 0.76
+    },
+    {
+      "report_date": "2026-03-17",
+      "paper_id": "2603.14659",
+      "title": "VisionCoach: Reinforcing Grounded Video Reasoning via Visual-Perception Prompting",
+      "authors": [
+        "Daeun Lee",
+        "Shoubin Yu",
+        "Yue Zhang",
+        "Mohit Bansal"
+      ],
+      "abstract": "Video reasoning requires models to locate and track question-relevant evidence across frames. While reinforcement learning (RL) with verifiable rewards improves accuracy, it still struggles to achieve reliable spatio-temporal grounding during the reasoning process. Moreover, improving grounding typically relies on scaled training data or inference-time perception tools, which increases annotation cost or computational cost. To address this challenge, we propose VisonCoach, an input-adaptive RL framework that improves spatio-temporal grounding through visual prompting as training-time guidance. During RL training, visual prompts are selectively applied to challenging inputs to amplify question-relevant evidence and suppress distractors. The model then internalizes these improvements through self-distillation, enabling grounded reasoning directly on raw videos without visual prompting at inference. VisonCoach consists of two components: (1) Visual Prompt Selector, which predicts appropriate prompt types conditioned on the video and question, and (2) Spatio-Temporal Reasoner, optimized with RL under visual prompt guidance and object-aware grounding rewards that enforce object identity consistency and multi-region bounding-box overlap. Extensive experiments demonstrate that VisonCoach achieves state-of-the-art performance under comparable settings, across diverse video reasoning, video understanding, and temporal grounding benchmarks (V-STAR, VideoMME, World-Sense, VideoMMMU, PerceptionTest, and Charades-STA), while maintaining a single efficient inference pathway without external tools. Our results show that visual prompting during training improves grounded video reasoning, while self-distillation enables the model to internalize this ability without requiring prompts at inference time.",
+      "hf_url": "https://huggingface.co/papers/2603.14659",
+      "arxiv_url": "https://arxiv.org/abs/2603.14659",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.14659",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.14659",
+      "github_url": "",
+      "submitted_by": "Yu",
+      "submitted_at": "2026-03-17T11:51:15.689Z",
+      "upvotes": 6,
+      "comments": 2,
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.81
     },
     {
       "report_date": "2026-03-17",
@@ -2843,7 +2869,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.9
+      "classification_confidence": 0.86
     },
     {
       "report_date": "2026-03-17",
@@ -2876,7 +2902,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.99
+      "classification_confidence": 0.98
     },
     {
       "report_date": "2026-03-17",
@@ -2905,33 +2931,7 @@
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.9
-    },
-    {
-      "report_date": "2026-03-17",
-      "paper_id": "2603.14659",
-      "title": "VisionCoach: Reinforcing Grounded Video Reasoning via Visual-Perception Prompting",
-      "authors": [
-        "Daeun Lee",
-        "Shoubin Yu",
-        "Yue Zhang",
-        "Mohit Bansal"
-      ],
-      "abstract": "Video reasoning requires models to locate and track question-relevant evidence across frames. While reinforcement learning (RL) with verifiable rewards improves accuracy, it still struggles to achieve reliable spatio-temporal grounding during the reasoning process. Moreover, improving grounding typically relies on scaled training data or inference-time perception tools, which increases annotation cost or computational cost. To address this challenge, we propose VisonCoach, an input-adaptive RL framework that improves spatio-temporal grounding through visual prompting as training-time guidance. During RL training, visual prompts are selectively applied to challenging inputs to amplify question-relevant evidence and suppress distractors. The model then internalizes these improvements through self-distillation, enabling grounded reasoning directly on raw videos without visual prompting at inference. VisonCoach consists of two components: (1) Visual Prompt Selector, which predicts appropriate prompt types conditioned on the video and question, and (2) Spatio-Temporal Reasoner, optimized with RL under visual prompt guidance and object-aware grounding rewards that enforce object identity consistency and multi-region bounding-box overlap. Extensive experiments demonstrate that VisonCoach achieves state-of-the-art performance under comparable settings, across diverse video reasoning, video understanding, and temporal grounding benchmarks (V-STAR, VideoMME, World-Sense, VideoMMMU, PerceptionTest, and Charades-STA), while maintaining a single efficient inference pathway without external tools. Our results show that visual prompting during training improves grounded video reasoning, while self-distillation enables the model to internalize this ability without requiring prompts at inference time.",
-      "hf_url": "https://huggingface.co/papers/2603.14659",
-      "arxiv_url": "https://arxiv.org/abs/2603.14659",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.14659",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.14659",
-      "github_url": "",
-      "submitted_by": "Yu",
-      "submitted_at": "2026-03-17T11:51:15.689Z",
-      "upvotes": 5,
-      "comments": 2,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.86
+      "classification_confidence": 0.83
     },
     {
       "report_date": "2026-03-17",
@@ -2960,7 +2960,7 @@
       "topic_label": "Agents and Planning",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.88
+      "classification_confidence": 0.89
     },
     {
       "report_date": "2026-03-17",
@@ -2989,7 +2989,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.98
+      "classification_confidence": 0.97
     },
     {
       "report_date": "2026-03-17",
@@ -3046,7 +3046,7 @@
       "topic_label": "Multimodal Agents",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.98
+      "classification_confidence": 0.96
     },
     {
       "report_date": "2026-03-17",
@@ -3105,7 +3105,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.75
+      "classification_confidence": 0.72
     },
     {
       "report_date": "2026-03-17",
@@ -3129,7 +3129,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.94
+      "classification_confidence": 0.95
     },
     {
       "report_date": "2026-03-17",
@@ -3155,7 +3155,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.74
+      "classification_confidence": 0.78
     },
     {
       "report_date": "2026-03-17",
@@ -3181,7 +3181,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.94
+      "classification_confidence": 0.97
     },
     {
       "report_date": "2026-03-17",
@@ -3206,7 +3206,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.69
+      "classification_confidence": 0.72
     },
     {
       "report_date": "2026-03-17",
@@ -3231,7 +3231,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.91
+      "classification_confidence": 0.95
     },
     {
       "report_date": "2026-03-17",
@@ -3259,7 +3259,7 @@
       "topic_label": "Generative Foundations",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.88
+      "classification_confidence": 0.93
     },
     {
       "report_date": "2026-03-17",
@@ -3285,7 +3285,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.86
+      "classification_confidence": 0.87
     }
   ]
 }
