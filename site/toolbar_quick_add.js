@@ -4,6 +4,7 @@ import { initDirectAddSync, upsertDirectAdd } from "./direct_add_store.js?v=f81e
 const ARXIV_ID_PATTERN = /^\d{4}\.\d{4,5}(?:v\d+)?$/i;
 const STATUS_RESET_MS = 3200;
 const PAPER_RESOLVE_ENDPOINT = "./api/paper/resolve";
+const DIRECT_ABS_HOSTS = new Set(["arxiv.org", "alphaxiv.org"]);
 
 export function bindToolbarQuickAdd(prefix, options = {}) {
   const target = options.target || "later";
@@ -134,7 +135,7 @@ export function parseQuickAddInput(rawValue) {
 
   if (hostname === "papers.cool") {
     paperId = pathname.replace(/^\/arxiv\//i, "").replace(/\/+$/, "");
-  } else if (hostname === "arxiv.org") {
+  } else if (DIRECT_ABS_HOSTS.has(hostname)) {
     if (pathname.startsWith("/abs/")) {
       paperId = pathname.replace(/^\/abs\//i, "");
     } else if (pathname.startsWith("/pdf/")) {
