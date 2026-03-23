@@ -1,10 +1,147 @@
 {
   "branch_key": "trending",
   "branch_label": "Trending",
-  "generated_at": "2026-03-19T19:15:33Z",
-  "reports_count": 3,
-  "default_report_path": "data/trending/reports/2026-03-16/trending-2026-03-16.json",
+  "generated_at": "2026-03-23T04:04:41Z",
+  "reports_count": 4,
+  "default_report_path": "data/trending/reports/2026-03-23/trending-2026-03-23.json",
   "reports": [
+    {
+      "branch_key": "trending",
+      "branch_label": "Trending",
+      "data_path": "data/trending/reports/2026-03-23/trending-2026-03-23.json",
+      "slug": "trending-2026-03-23",
+      "snapshot_date": "2026-03-23",
+      "since": "weekly",
+      "total_repositories": 14,
+      "generated_at": "2026-03-23T04:04:40Z",
+      "source_url": "https://github.com/trending?since=weekly&spoken_language_code=",
+      "top_languages": [
+        {
+          "language": "Python",
+          "count": 6,
+          "share": 42.857142857142854
+        },
+        {
+          "language": "JavaScript",
+          "count": 3,
+          "share": 21.428571428571427
+        },
+        {
+          "language": "C++",
+          "count": 1,
+          "share": 7.142857142857142
+        },
+        {
+          "language": "Rust",
+          "count": 1,
+          "share": 7.142857142857142
+        },
+        {
+          "language": "Shell",
+          "count": 1,
+          "share": 7.142857142857142
+        }
+      ],
+      "top_repositories": [
+        {
+          "snapshot_date": "2026-03-23",
+          "repo_id": "obra/superpowers",
+          "owner": "obra",
+          "name": "superpowers",
+          "full_name": "obra/superpowers",
+          "repo_url": "https://github.com/obra/superpowers",
+          "description": "An agentic skills framework & software development methodology that works.",
+          "language": "Shell",
+          "stars": 105685,
+          "forks": 8490,
+          "stars_this_week": 20036,
+          "built_by": [
+            "obra",
+            "claude",
+            "arittr",
+            "clkao",
+            "jjshanks"
+          ]
+        },
+        {
+          "snapshot_date": "2026-03-23",
+          "repo_id": "affaan-m/everything-claude-code",
+          "owner": "affaan-m",
+          "name": "everything-claude-code",
+          "full_name": "affaan-m/everything-claude-code",
+          "repo_url": "https://github.com/affaan-m/everything-claude-code",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "language": "JavaScript",
+          "stars": 98737,
+          "forks": 12880,
+          "stars_this_week": 19975,
+          "built_by": [
+            "affaan-m",
+            "pangerlkr",
+            "claude",
+            "Copilot",
+            "shimo4228"
+          ]
+        },
+        {
+          "snapshot_date": "2026-03-23",
+          "repo_id": "666ghj/mirofish",
+          "owner": "666ghj",
+          "name": "MiroFish",
+          "full_name": "666ghj/MiroFish",
+          "repo_url": "https://github.com/666ghj/MiroFish",
+          "description": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物",
+          "language": "Python",
+          "stars": 39935,
+          "forks": 5408,
+          "stars_this_week": 13473,
+          "built_by": [
+            "666ghj",
+            "cursoragent"
+          ]
+        },
+        {
+          "snapshot_date": "2026-03-23",
+          "repo_id": "shareai-lab/learn-claude-code",
+          "owner": "shareAI-lab",
+          "name": "learn-claude-code",
+          "full_name": "shareAI-lab/learn-claude-code",
+          "repo_url": "https://github.com/shareAI-lab/learn-claude-code",
+          "description": "Bash is all you need - A nano claude code–like 「agent harness」, built from 0 to 1",
+          "language": "TypeScript",
+          "stars": 36170,
+          "forks": 5780,
+          "stars_this_week": 8331,
+          "built_by": [
+            "CrazyBoyM",
+            "claude",
+            "bansalkanav",
+            "Octane0411",
+            "synix"
+          ]
+        },
+        {
+          "snapshot_date": "2026-03-23",
+          "repo_id": "jarrodwatts/claude-hud",
+          "owner": "jarrodwatts",
+          "name": "claude-hud",
+          "full_name": "jarrodwatts/claude-hud",
+          "repo_url": "https://github.com/jarrodwatts/claude-hud",
+          "description": "A Claude Code plugin that shows what's happening - context usage, active tools, running agents, and todo progress",
+          "language": "JavaScript",
+          "stars": 11401,
+          "forks": 479,
+          "stars_this_week": 6411,
+          "built_by": [
+            "jarrodwatts",
+            "claude",
+            "github-actions",
+            "dependabot",
+            "melon-hub"
+          ]
+        }
+      ]
+    },
     {
       "branch_key": "trending",
       "branch_label": "Trending",
