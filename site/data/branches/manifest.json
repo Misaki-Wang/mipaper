@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-03-24T08:52:27Z",
-  "reports_count": 74,
+  "generated_at": "2026-03-25T15:18:08Z",
+  "reports_count": 78,
   "branches": [
     {
       "branch_key": "daily",
       "branch_label": "Cool Daily",
-      "reports_count": 51,
-      "default_report_path": "data/daily/reports/2026-03-24/cs.AI-2026-03-24.json",
+      "reports_count": 54,
+      "default_report_path": "data/daily/reports/2026-03-25/cs.AI-2026-03-25.json",
       "manifest_path": "data/daily/manifest.json"
     },
     {
       "branch_key": "hf-daily",
       "branch_label": "HF Daily",
-      "reports_count": 17,
-      "default_report_path": "data/hf-daily/reports/2026-03-24/hf-daily-2026-03-24.json",
+      "reports_count": 18,
+      "default_report_path": "data/hf-daily/reports/2026-03-25/hf-daily-2026-03-25.json",
       "manifest_path": "data/hf-daily/manifest.json"
     },
     {
@@ -25,6 +25,134 @@
     }
   ],
   "reports": [
+    {
+      "branch_key": "daily",
+      "branch_label": "Cool Daily",
+      "search_text": "daily Cool Daily cs.AI-2026-03-25 data/daily/reports/2026-03-25/cs.AI-2026-03-25.json https://papers.cool/arxiv/cs.AI?date=2026-03-25&show=1000 codex 2026-03-25 cs.AI Generative Foundations Multimodal Generative Modeling Multimodal Agents Domain Applications Reasoning, Alignment, and Evaluation Agents and Planning Learning, Optimization, and Theory Multimodal Understanding and Vision",
+      "data_path": "data/daily/reports/2026-03-25/cs.AI-2026-03-25.json",
+      "slug": "cs.AI-2026-03-25",
+      "report_date": "2026-03-25",
+      "category": "cs.AI",
+      "total_papers": 212,
+      "classifier": "codex",
+      "generated_at": "2026-03-25T14:49:24Z",
+      "source_url": "https://papers.cool/arxiv/cs.AI?date=2026-03-25&show=1000",
+      "focus_topics": [
+        {
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "count": 9,
+          "share": 4.25
+        },
+        {
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 5,
+          "share": 2.36
+        },
+        {
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "count": 10,
+          "share": 4.72
+        }
+      ],
+      "top_topics": [
+        {
+          "topic_label": "Domain Applications",
+          "count": 42,
+          "share": 19.81
+        },
+        {
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "count": 31,
+          "share": 14.62
+        },
+        {
+          "topic_label": "Agents and Planning",
+          "count": 23,
+          "share": 10.85
+        },
+        {
+          "topic_label": "Learning, Optimization, and Theory",
+          "count": 22,
+          "share": 10.38
+        },
+        {
+          "topic_label": "Multimodal Understanding and Vision",
+          "count": 21,
+          "share": 9.91
+        }
+      ]
+    },
+    {
+      "branch_key": "daily",
+      "branch_label": "Cool Daily",
+      "search_text": "daily Cool Daily cs.CL-2026-03-25 data/daily/reports/2026-03-25/cs.CL-2026-03-25.json https://papers.cool/arxiv/cs.CL?date=2026-03-25&show=1000 codex 2026-03-25 cs.CL Generative Foundations Multimodal Generative Modeling Multimodal Agents",
+      "data_path": "data/daily/reports/2026-03-25/cs.CL-2026-03-25.json",
+      "slug": "cs.CL-2026-03-25",
+      "report_date": "2026-03-25",
+      "category": "cs.CL",
+      "total_papers": 0,
+      "classifier": "codex",
+      "generated_at": "2026-03-25T01:20:01Z",
+      "source_url": "https://papers.cool/arxiv/cs.CL?date=2026-03-25&show=1000",
+      "focus_topics": [
+        {
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "count": 0,
+          "share": 0
+        },
+        {
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 0,
+          "share": 0
+        },
+        {
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "count": 0,
+          "share": 0
+        }
+      ],
+      "top_topics": []
+    },
+    {
+      "branch_key": "daily",
+      "branch_label": "Cool Daily",
+      "search_text": "daily Cool Daily cs.CV-2026-03-25 data/daily/reports/2026-03-25/cs.CV-2026-03-25.json https://papers.cool/arxiv/cs.CV?date=2026-03-25&show=1000 codex 2026-03-25 cs.CV Generative Foundations Multimodal Generative Modeling Multimodal Agents",
+      "data_path": "data/daily/reports/2026-03-25/cs.CV-2026-03-25.json",
+      "slug": "cs.CV-2026-03-25",
+      "report_date": "2026-03-25",
+      "category": "cs.CV",
+      "total_papers": 0,
+      "classifier": "codex",
+      "generated_at": "2026-03-25T01:20:02Z",
+      "source_url": "https://papers.cool/arxiv/cs.CV?date=2026-03-25&show=1000",
+      "focus_topics": [
+        {
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "count": 0,
+          "share": 0
+        },
+        {
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 0,
+          "share": 0
+        },
+        {
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "count": 0,
+          "share": 0
+        }
+      ],
+      "top_topics": []
+    },
     {
       "branch_key": "daily",
       "branch_label": "Cool Daily",
@@ -3082,6 +3210,87 @@
           "topic_label": "Datasets and Benchmarks",
           "count": 9,
           "share": 7.38
+        }
+      ]
+    },
+    {
+      "branch_key": "hf-daily",
+      "branch_label": "HF Daily",
+      "search_text": "hf-daily HF Daily hf-daily-2026-03-25 data/hf-daily/reports/2026-03-25/hf-daily-2026-03-25.json https://huggingface.co/papers/date/2026-03-25 codex 2026-03-25 Generative Foundations Multimodal Generative Modeling Multimodal Agents Multimodal Understanding and Vision Multimodal Generative Modeling Multimodal Agents Reasoning, Alignment, and Evaluation Agents and Planning taesiri Adrian Bulat Aman Chadha Baifeng Shi Haichao Zhang",
+      "data_path": "data/hf-daily/reports/2026-03-25/hf-daily-2026-03-25.json",
+      "slug": "hf-daily-2026-03-25",
+      "report_date": "2026-03-25",
+      "total_papers": 29,
+      "classifier": "codex",
+      "generated_at": "2026-03-25T15:18:07Z",
+      "source_url": "https://huggingface.co/papers/date/2026-03-25",
+      "focus_topics": [
+        {
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "count": 2,
+          "share": 6.9
+        },
+        {
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 5,
+          "share": 17.24
+        },
+        {
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "count": 4,
+          "share": 13.79
+        }
+      ],
+      "top_topics": [
+        {
+          "topic_label": "Multimodal Understanding and Vision",
+          "count": 6,
+          "share": 20.69
+        },
+        {
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 5,
+          "share": 17.24
+        },
+        {
+          "topic_label": "Multimodal Agents",
+          "count": 4,
+          "share": 13.79
+        },
+        {
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "count": 4,
+          "share": 13.79
+        },
+        {
+          "topic_label": "Agents and Planning",
+          "count": 3,
+          "share": 10.34
+        }
+      ],
+      "top_submitters": [
+        {
+          "submitted_by": "taesiri",
+          "count": 5
+        },
+        {
+          "submitted_by": "Adrian Bulat",
+          "count": 1
+        },
+        {
+          "submitted_by": "Aman Chadha",
+          "count": 1
+        },
+        {
+          "submitted_by": "Baifeng Shi",
+          "count": 1
+        },
+        {
+          "submitted_by": "Haichao Zhang",
+          "count": 1
         }
       ]
     },
