@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-28T22:33:00Z",
+  "generated_at": "2026-03-29T15:11:15Z",
   "category": "cs.CL",
   "report_date": "2026-03-27",
   "source_url": "https://papers.cool/arxiv/cs.CL?date=2026-03-27&show=1000",
@@ -32,19 +32,14 @@
       "share": 19.7
     },
     {
-      "topic_label": "LLMs and Language",
+      "topic_label": "Domain Applications",
       "count": 12,
       "share": 18.18
     },
     {
-      "topic_label": "Domain Applications",
-      "count": 9,
-      "share": 13.64
-    },
-    {
-      "topic_label": "Datasets and Benchmarks",
-      "count": 7,
-      "share": 10.61
+      "topic_label": "LLMs and Language",
+      "count": 12,
+      "share": 18.18
     },
     {
       "topic_label": "Agents and Planning",
@@ -57,6 +52,11 @@
       "share": 9.09
     },
     {
+      "topic_label": "Datasets and Benchmarks",
+      "count": 5,
+      "share": 7.58
+    },
+    {
       "topic_label": "Retrieval, Knowledge, and RAG",
       "count": 5,
       "share": 7.58
@@ -65,11 +65,6 @@
       "topic_label": "Learning, Optimization, and Theory",
       "count": 3,
       "share": 4.55
-    },
-    {
-      "topic_label": "Other AI",
-      "count": 2,
-      "share": 3.03
     },
     {
       "topic_label": "Generative Foundations",
@@ -83,6 +78,11 @@
     },
     {
       "topic_label": "Multimodal Generative Modeling",
+      "count": 1,
+      "share": 1.52
+    },
+    {
+      "topic_label": "Other AI",
       "count": 1,
       "share": 1.52
     }
@@ -116,29 +116,6 @@
           "classification_confidence": 0.97
         },
         {
-          "paper_id": "2603.25419",
-          "title": "TAPO: Translation Augmented Policy Optimization for Multilingual Mathematical Reasoning",
-          "abs_url": "https://arxiv.org/abs/2603.25419",
-          "pdf_url": "https://arxiv.org/pdf/2603.25419",
-          "detail_url": "https://papers.cool/arxiv/2603.25419",
-          "authors": [
-            "Xu Huang",
-            "Zhejian Lai",
-            "Zixian Huang",
-            "Jiajun Chen",
-            "Shujian Huang"
-          ],
-          "subjects": [
-            "Computation and Language"
-          ],
-          "abstract": "Large Language Models (LLMs) have demonstrated remarkable proficiency in English mathematical reasoning, yet a significant performance disparity persists in multilingual contexts, largely attributed to deficiencies in language understanding. To bridge this gap, we introduce Translation-Augmented Policy Optimization (TAPO), a novel reinforcement learning framework built upon GRPO. TAPO enforces an explicit alignment strategy where the model leverages English as a pivot and follows an understand-then-reason paradigm. Crucially, we employ a step-level relative advantage mechanism that decouples understanding from reasoning, allowing the integration of translation quality rewards without introducing optimization conflicts. Extensive experiments reveal that TAPO effectively synergizes language understanding with reasoning capabilities and is compatible with various models. It outperforms baseline methods in both multilingual mathematical reasoning and translation tasks, while generalizing well to unseen languages and out-of-domain tasks.",
-          "topic_key": "reasoning_alignment_eval",
-          "topic_label": "Reasoning, Alignment, and Evaluation",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.68
-        },
-        {
           "paper_id": "2603.25222",
           "title": "Translation or Recitation? Calibrating Evaluation Scores for Machine Translation of Extremely Low-Resource Languages",
           "abs_url": "https://arxiv.org/abs/2603.25222",
@@ -162,7 +139,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.78
+          "classification_confidence": 0.83
         },
         {
           "paper_id": "2603.25201",
@@ -187,7 +164,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.83
+          "classification_confidence": 0.8
         },
         {
           "paper_id": "2603.25187",
@@ -232,7 +209,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.97
+          "classification_confidence": 0.95
         },
         {
           "paper_id": "2603.25112",
@@ -252,7 +229,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.96
+          "classification_confidence": 0.94
         },
         {
           "paper_id": "2603.25052",
@@ -273,7 +250,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.94
+          "classification_confidence": 0.91
         },
         {
           "paper_id": "2603.24981",
@@ -297,7 +274,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.8
+          "classification_confidence": 0.81
         },
         {
           "paper_id": "2603.24917",
@@ -325,7 +302,33 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.95
+          "classification_confidence": 0.9
+        },
+        {
+          "paper_id": "2603.24840",
+          "title": "Prune as You Generate: Online Rollout Pruning for Faster and Better RLVR",
+          "abs_url": "https://arxiv.org/abs/2603.24840",
+          "pdf_url": "https://arxiv.org/pdf/2603.24840",
+          "detail_url": "https://papers.cool/arxiv/2603.24840",
+          "authors": [
+            "Haobo Xu",
+            "Sirui Chen",
+            "Ruizhong Qiu",
+            "Yuchen Yan",
+            "Chen Luo",
+            "Monica Cheng",
+            "Jingrui He",
+            "Hanghang Tong"
+          ],
+          "subjects": [
+            "Computation and Language"
+          ],
+          "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) has significantly advanced the reasoning capabilities of Large Language Models (LLMs). However, methods such as GRPO and DAPO suffer from substantial computational cost, since they rely on sampling many rollouts for each prompt. Moreover, in RLVR the relative advantage is often sparse: many samples become nearly all-correct or all-incorrect, yielding low within-group reward variance and thus weak learning signals. In this paper, we introduce arrol (Accelerating RLVR via online Rollout Pruning), an online rollout pruning method that prunes rollouts during generation while explicitly steering the surviving ones more correctness-balanced to enhance learning signals. Specifically, arrol trains a lightweight quality head on-the-fly to predict the success probability of partial rollouts and uses it to make early pruning decisions. The learned quality head can further weigh candidates to improve inference accuracy during test-time scaling. To improve efficiency, we present a system design that prunes rollouts inside the inference engine and re-batches the remaining ones for log-probability computation and policy updates. Across GRPO and DAPO on Qwen-3 and LLaMA-3.2 models (1B-8B), arrol improves average accuracy by +2.30 to +2.99 while achieving up to 1.7x training speedup, and yielding up to +8.33 additional gains in average accuracy in test-time scaling. The code is available at https://github.com/Hsu1023/ARRoL.",
+          "topic_key": "reasoning_alignment_eval",
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.73
         },
         {
           "paper_id": "2603.24651",
@@ -353,7 +356,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.62
+          "classification_confidence": 0.78
         },
         {
           "paper_id": "2603.24929",
@@ -376,7 +379,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.9
+          "classification_confidence": 0.78
         },
         {
           "paper_id": "2603.24857",
@@ -400,299 +403,14 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.94
-        }
-      ]
-    },
-    {
-      "topic_label": "LLMs and Language",
-      "count": 12,
-      "share": 18.18,
-      "papers": [
-        {
-          "paper_id": "2603.25681",
-          "title": "Self-Improvement of Large Language Models: A Technical Overview and Future Outlook",
-          "abs_url": "https://arxiv.org/abs/2603.25681",
-          "pdf_url": "https://arxiv.org/pdf/2603.25681",
-          "detail_url": "https://papers.cool/arxiv/2603.25681",
-          "authors": [
-            "Haoyan Yang",
-            "Mario Xerri",
-            "Solha Park",
-            "Huajian Zhang",
-            "Yiyang Feng",
-            "Sai Akhil Kogilathota",
-            "Jiawei Zhou"
-          ],
-          "subjects": [
-            "Computation and Language"
-          ],
-          "abstract": "As large language models (LLMs) continue to advance, improving them solely through human supervision is becoming increasingly costly and limited in scalability. As models approach human-level capabilities in certain domains, human feedback may no longer provide sufficiently informative signals for further improvement. At the same time, the growing ability of models to make autonomous decisions and execute complex actions naturally enables abstractions in which components of the model development process can be progressively automated. Together, these challenges and opportunities have driven increasing interest in self-improvement, where models autonomously generate data, evaluate outputs, and iteratively refine their own capabilities. In this paper, we present a system-level perspective on self-improving language models and introduce a unified framework that organizes existing techniques. We conceptualize the self-improvement system as a closed-loop lifecycle, consisting of four tightly coupled processes: data acquisition, data selection, model optimization, and inference refinement, along with an autonomous evaluation layer. Within this framework, the model itself plays a central role in driving each stage: collecting or generating data, selecting informative signals, updating its parameters, and refining outputs, while the autonomous evaluation layer continuously monitors progress and guides the improvement cycle across stages. Following this lifecycle perspective, we systematically review and analyze representative methods for each component from a technical standpoint. We further discuss current limitations and outline our vision for future research toward fully self-improving LLMs.",
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.96
-        },
-        {
-          "paper_id": "2603.25489",
-          "title": "Translation Asymmetry in LLMs as a Data Augmentation Factor: A Case Study for 6 Romansh Language Varieties",
-          "abs_url": "https://arxiv.org/abs/2603.25489",
-          "pdf_url": "https://arxiv.org/pdf/2603.25489",
-          "detail_url": "https://papers.cool/arxiv/2603.25489",
-          "authors": [
-            "Jannis Vamvas",
-            "Ignacio Pérez Prat",
-            "Angela Heldstab",
-            "Dominic P. Fischer",
-            "Sina Ahmadi",
-            "Rico Sennrich"
-          ],
-          "subjects": [
-            "Computation and Language"
-          ],
-          "abstract": "Recent strategies for low-resource machine translation rely on LLMs to generate synthetic data from higher-resource languages. We find that this method fails for Romansh, because LLMs tend to confuse its 6 distinct language varieties. Our experiments show that instead, the direction of data augmentation should be aligned with the resource gradient between source and target language. This approach surpasses Gemini 3 Pro in the lowest-resource variety of Romansh by 23 BLEU. A human evaluation confirms that our experiments yield the first model that generates fluent translations in the individual Romansh varieties.",
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.91
-        },
-        {
-          "paper_id": "2603.25422",
-          "title": "Navigating the Prompt Space: Improving LLM Classification of Social Science Texts Through Prompt Engineering",
-          "abs_url": "https://arxiv.org/abs/2603.25422",
-          "pdf_url": "https://arxiv.org/pdf/2603.25422",
-          "detail_url": "https://papers.cool/arxiv/2603.25422",
-          "authors": [
-            "Erkan Gunes",
-            "Christoffer Florczak",
-            "Tevfik Murat Yildirim"
-          ],
-          "subjects": [
-            "Computation and Language",
-            "Computers and Society"
-          ],
-          "abstract": "Recent developments in text classification using Large Language Models (LLMs) in the social sciences suggest that costs can be cut significantly, while performance can sometimes rival existing computational methods. However, with a wide variance in performance in current tests, we move to the question of how to maximize performance. In this paper, we focus on prompt context as a possible avenue for increasing accuracy by systematically varying three aspects of prompt engineering: label descriptions, instructional nudges, and few shot examples. Across two different examples, our tests illustrate that a minimal increase in prompt context yields the highest increase in performance, while further increases in context only tend to yield marginal performance increases thereafter. Alarmingly, increasing prompt context sometimes decreases accuracy. Furthermore, our tests suggest substantial heterogeneity across models, tasks, and batch size, underlining the need for individual validation of each LLM coding task rather than reliance on general rules.",
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.92
-        },
-        {
-          "paper_id": "2603.25340",
-          "title": "Large Language Model as Token Compressor and Decompressor",
-          "abs_url": "https://arxiv.org/abs/2603.25340",
-          "pdf_url": "https://arxiv.org/pdf/2603.25340",
-          "detail_url": "https://papers.cool/arxiv/2603.25340",
-          "authors": [
-            "Wenbing Li",
-            "Zikai Song",
-            "Jielei Zhang",
-            "Tianhao Zhao",
-            "Junkai Lin",
-            "Yiran Wang",
-            "Wei Yang"
-          ],
-          "subjects": [
-            "Computation and Language"
-          ],
-          "abstract": "In this paper, we establish the novel insight that an off-the-shelf LLM can function as an excellent token compressor and decompressor. To demonstrate, we design a self-expressive autoencoding learning framework fine-tunes a pretrained LLM to translate long texts into a compact internal language of discrete, variable-length latent codes, termed Z-tokens, and to reconstruct the original text exactly from them. The resulting representation is content-adaptive: semantically dense segments receive more Z-tokens, while redundant or predictable regions are aggressively compressed, via lightweight LoRA-based adapter heads. Empirically, our method achieves up to 18 times token reduction on Wikipedia, CNN/DailyMail, HotpotQA, and Qulac-style long-query datasets, while preserving reconstruction fidelity and downstream performance. This simple yet effective design supports applications including prompt compression and autoregressive generation directly in the Z-token space, offering a potential pathway toward token-efficient long-context reasoning.",
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.86
-        },
-        {
-          "paper_id": "2603.25309",
-          "title": "Separate Before You Compress: The WWHO Tokenization Architecture",
-          "abs_url": "https://arxiv.org/abs/2603.25309",
-          "pdf_url": "https://arxiv.org/pdf/2603.25309",
-          "detail_url": "https://papers.cool/arxiv/2603.25309",
-          "authors": [
-            "Kusal Darshana"
-          ],
-          "subjects": [
-            "Computation and Language"
-          ],
-          "abstract": "Current Large Language Models (LLMs) mostly use BPE (Byte Pair Encoding) based tokenizers, which are very effective for simple structured Latin scripts such as English. However, standard BPE tokenizers struggle to process complex Abugida scripts due to their structural complexity. The problem is that these tokenizers break complex conjuncts, which are multi-codepoint grapheme clusters, into meaningless sub-character units. This degrades the LLM's reasoning efficiency by forcing it to learn basic orthographic structures at inference time and raises inference costs, resulting in a significant \"Token Tax\" for the Global South. We propose a new three-layer architecture, the WWHO (Where-What-How Often), and an algorithm named SGPE (Syllable-aware Grapheme Pair Encoding) that separates the linguistic rules of the script from the statistical compression process while enabling seamless multilingual tokenization. Using Sinhala and Devanagari (Hindi/Sanskrit) as highly complex Abugida scripts, we trained WWHO on a cleaned 30-million-sentence dataset and evaluated on a 1,499,950-sentence test set. For Sinhala, SGPE achieves a Token to Word Ratio (TWR) of 1.274 with 4.83 characters per token, representing a 61.7 percent reduction in tokens compared to OpenAI's o200k base. For Hindi, it achieves a TWR of 1.181 (27.0 percent reduction vs o200k). On the mixed-script (Sinhala, Devanagari, and English) dataset, SGPE achieves an overall TWR of 1.240, representing token reductions of 36.7 percent, 39.6 percent, and 60.2 percent relative to o200k base, Llama 4 Scout, and DeepSeek V3, respectively. This effectively extends the usable context window by up to 4.38 times for these Abugida languages while ensuring a Linguistic Zero-Breakage Guarantee, which ensures that no valid syllable is ever split across multiple tokens.",
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.61
-        },
-        {
-          "paper_id": "2603.25269",
-          "title": "When Hate Meets Facts: LLMs-in-the-Loop for Check-worthiness Detection in Hate Speech",
-          "abs_url": "https://arxiv.org/abs/2603.25269",
-          "pdf_url": "https://arxiv.org/pdf/2603.25269",
-          "detail_url": "https://papers.cool/arxiv/2603.25269",
-          "authors": [
-            "Nicolás Benjamín Ocampo",
-            "Tommaso Caselli",
-            "Davide Ceolin"
-          ],
-          "subjects": [
-            "Computation and Language"
-          ],
-          "abstract": "Hateful content online is often expressed using fact-like, not necessarily correct information, especially in coordinated online harassment campaigns and extremist propaganda. Failing to jointly address hate speech (HS) and misinformation can deepen prejudice, reinforce harmful stereotypes, and expose bystanders to psychological distress, while polluting public debate. Moreover, these messages require more effort from content moderators because they must assess both harmfulness and veracity, i.e., fact-check them. To address this challenge, we release WSF-ARG+, the first dataset which combines hate speech with check-worthiness information. We also introduce a novel LLM-in-the-loop framework to facilitate the annotation of check-worthy claims. We run our framework, testing it with 12 open-weight LLMs of different sizes and architectures. We validate it through extensive human evaluation, and show that our LLM-in-the-loop framework reduces human effort without compromising the annotation quality of the data. Finally, we show that HS messages with check-worthy claims show significantly higher harassment and hate, and that incorporating check-worthiness labels improves LLM-based HS detection up to 0.213 macro-F1 and to 0.154 macro-F1 on average for large models.",
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.78
-        },
-        {
-          "paper_id": "2603.25183",
-          "title": "Cross-Preference Learning for Sentence-Level and Context-Aware Machine Translation",
-          "abs_url": "https://arxiv.org/abs/2603.25183",
-          "pdf_url": "https://arxiv.org/pdf/2603.25183",
-          "detail_url": "https://papers.cool/arxiv/2603.25183",
-          "authors": [
-            "Ying Li",
-            "Xinglin Lyu",
-            "Junhui Li",
-            "Jinlong Yang",
-            "Hengchao Shang",
-            "Min Zhang",
-            "Shimin Tao",
-            "Daimeng Wei"
-          ],
-          "subjects": [
-            "Computation and Language"
-          ],
-          "abstract": "Context-aware machine translation (MT) leverages document-level information, yet it does not consistently outperform sentence-level MT, as contextual signals are unevenly beneficial across sentences. Existing training objectives do not explicitly model this variability, limiting a model's ability to adaptively exploit context. In this paper, we propose Cross-Preference Learning (CPL), a preference-based training framework that explicitly captures the complementary benefits of sentence-level and context-aware MT. CPL achieves this by integrating both intra- and cross-condition preferences into the preference optimization objective. The introduction of intra- and cross-condition preferences provides explicit supervision on when and how contextual information improves translation quality. We validate the proposed approach on several public context-aware MT tasks using multiple models, including Qwen3-4B, Qwen3-8B, and Llama-3-8B. Experimental results demonstrate consistent improvements in translation quality and robustness across both input conditions, achieved without any architectural modifications.",
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.82
-        },
-        {
-          "paper_id": "2603.25169",
-          "title": "To Write or to Automate Linguistic Prompts, That Is the Question",
-          "abs_url": "https://arxiv.org/abs/2603.25169",
-          "pdf_url": "https://arxiv.org/pdf/2603.25169",
-          "detail_url": "https://papers.cool/arxiv/2603.25169",
-          "authors": [
-            "Marina Sánchez-Torrón",
-            "Daria Akselrod",
-            "Jason Rauchwerk"
-          ],
-          "subjects": [
-            "Computation and Language"
-          ],
-          "abstract": "LLM performance is highly sensitive to prompt design, yet whether automatic prompt optimization can replace expert prompt engineering in linguistic tasks remains unexplored. We present the first systematic comparison of hand-crafted zero-shot expert prompts, base DSPy signatures, and GEPA-optimized DSPy signatures across translation, terminology insertion, and language quality assessment, evaluating five model configurations. Results are task-dependent. In terminology insertion, optimized and manual prompts produce mostly statistically indistinguishable quality. In translation, each approach wins on different models. In LQA, expert prompts achieve stronger error detection while optimization improves characterization. Across all tasks, GEPA elevates minimal DSPy signatures, and the majority of expert-optimized comparisons show no statistically significant difference. We note that the comparison is asymmetric: GEPA optimization searches programmatically over gold-standard splits, whereas expert prompts require in principle no labeled data, relying instead on domain expertise and iterative refinement.",
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.72
-        },
-        {
-          "paper_id": "2603.25015",
-          "title": "Imperative Interference: Social Register Shapes Instruction Topology in Large Language Models",
-          "abs_url": "https://arxiv.org/abs/2603.25015",
-          "pdf_url": "https://arxiv.org/pdf/2603.25015",
-          "detail_url": "https://papers.cool/arxiv/2603.25015",
-          "authors": [
-            "Tony Mason"
-          ],
-          "subjects": [
-            "Computation and Language",
-            "Artificial Intelligence",
-            "Software Engineering"
-          ],
-          "abstract": "System prompt instructions that cooperate in English compete in Spanish, with the same semantic content, but opposite interaction topology. We present instruction-level ablation experiments across four languages and four models showing that this topology inversion is mediated by social register: the imperative mood carries different obligatory force across speech communities, and models trained on multilingual data have learned these conventions. Declarative rewriting of a single instruction block reduces cross-linguistic variance by 81% (p = 0.029, permutation test). Rewriting three of eleven imperative blocks shifts Spanish instruction topology from competitive to cooperative, with spillover effects on unrewritten blocks. These findings suggest that models process instructions as social acts, not technical specifications: \"NEVER do X\" is an exercise of authority whose force is language-dependent, while \"X: disabled\" is a factual description that transfers across languages. If register mediates instruction-following at inference time, it plausibly does so during training. We state this as a testable prediction: constitutional AI principles authored in imperative mood may create language-dependent alignment. Corpus: 22 hand-authored probes against a production system prompt decomposed into 56 blocks.",
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.86
-        },
-        {
-          "paper_id": "2603.24826",
-          "title": "Synthetic Rewriting as a Quality Multiplier: Evidence from Portuguese Continued Pretraining",
-          "abs_url": "https://arxiv.org/abs/2603.24826",
-          "pdf_url": "https://arxiv.org/pdf/2603.24826",
-          "detail_url": "https://papers.cool/arxiv/2603.24826",
-          "authors": [
-            "Thales Sales Almeida",
-            "Rodrigo Nogueira",
-            "Hélio Pedrini"
-          ],
-          "subjects": [
-            "Computation and Language"
-          ],
-          "abstract": "Synthetic data generation through document rewriting has emerged as a promising technique for improving language model pretraining, yet most studies focus on English and do not systematically control for the quality of the source data being rewritten. We present a controlled study of how synthetic rewriting interacts with source data quality in the context of Portuguese continued pretraining. Starting from ClassiCC-PT, a Portuguese corpus annotated with STEM and Educational quality scores, we construct two 10B-token subsets at different quality levels and rewrite each into four styles using a 7B instruction-tuned model, producing approximately 40B tokens of synthetic data per condition. We train two English-centric base models (1.1B and 7B parameters) on each condition and evaluate on PoETa V2, a comprehensive 44-task Portuguese benchmark. At the 7B scale, rewriting high-quality data yields a +3.4 NPM gain over the same data unmodified, while rewriting low-quality data provides only +0.5 NPM. At the 1.1B scale, this interaction is weaker, with unmodified low-quality data performing comparably to rewritten high-quality data. Our results demonstrate that synthetic rewriting acts primarily as a quality multiplier rather than a substitute for data curation, and that this effect is scale-dependent.",
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.78
-        },
-        {
-          "paper_id": "2603.24797",
-          "title": "Enhancing Structured Meaning Representations with Aspect Classification",
-          "abs_url": "https://arxiv.org/abs/2603.24797",
-          "pdf_url": "https://arxiv.org/pdf/2603.24797",
-          "detail_url": "https://papers.cool/arxiv/2603.24797",
-          "authors": [
-            "Claire Benét Post",
-            "Paul Bontempo",
-            "August Milliken",
-            "Alvin Po-Chun Chen",
-            "Nicholas Derby",
-            "Saksham Khatwani",
-            "Sumeyye Nabieva",
-            "Karthik Sairam",
-            "Alexis Palmer"
-          ],
-          "subjects": [
-            "Computation and Language"
-          ],
-          "abstract": "To fully capture the meaning of a sentence, semantic representations should encode aspect, which describes the internal temporal structure of events. In graph-based meaning representation frameworks such as Uniform Meaning Representations (UMR), aspect lets one know how events unfold over time, including distinctions such as states, activities, and completed events. Despite its importance, aspect remains sparsely annotated across semantic meaning representation frameworks. This has, in turn, hindered not only current manual annotation, but also the development of automatic systems capable of predicting aspectual information. In this paper, we introduce a new dataset of English sentences annotated with UMR aspect labels over Abstract Meaning Representation (AMR) graphs that lack the feature. We describe the annotation scheme and guidelines used to label eventive predicates according to the UMR aspect lattice, as well as the annotation pipeline used to ensure consistency and quality across annotators through a multi-step adjudication process. To demonstrate the utility of our dataset for future automation, we present baseline experiments using three modeling approaches. Our results establish initial benchmarks for automatic UMR aspect prediction and provide a foundation for integrating aspect into semantic meaning representations more broadly.",
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.53
-        },
-        {
-          "paper_id": "2603.24844",
-          "title": "Reaching Beyond the Mode: RL for Distributional Reasoning in Language Models",
-          "abs_url": "https://arxiv.org/abs/2603.24844",
-          "pdf_url": "https://arxiv.org/pdf/2603.24844",
-          "detail_url": "https://papers.cool/arxiv/2603.24844",
-          "authors": [
-            "Isha Puri",
-            "Mehul Damani",
-            "Idan Shenfeld",
-            "Marzyeh Ghassemi",
-            "Jacob Andreas",
-            "Yoon Kim"
-          ],
-          "subjects": [
-            "Machine Learning",
-            "Artificial Intelligence",
-            "Computation and Language"
-          ],
-          "abstract": "Given a question, a language model (LM) implicitly encodes a distribution over possible answers. In practice, post-training procedures for LMs often collapse this distribution onto a single dominant mode. While this is generally not a problem for benchmark-style evaluations that assume one correct answer, many real-world tasks inherently involve multiple valid answers or irreducible uncertainty. Examples include medical diagnosis, ambiguous question answering, and settings with incomplete information. In these cases, we would like LMs to generate multiple plausible hypotheses, ideally with confidence estimates for each one, and without computationally intensive repeated sampling to generate non-modal answers. This paper describes a multi-answer reinforcement learning approach for training LMs to perform distributional reasoning over multiple answers during inference. We modify the RL objective to enable models to explicitly generate multiple candidate answers in a single forward pass, internalizing aspects of inference-time search into the model's generative process. Across question-answering, medical diagnostic, and coding benchmarks, we observe improved diversity, coverage, and set-level calibration scores compared to single answer trained baselines. Models trained with our approach require fewer tokens to generate multiple answers than competing approaches. On coding tasks, they are also substantially more accurate. These results position multi-answer RL as a principled and compute-efficient alternative to inference-time scaling procedures such as best-of-k. Code and more information can be found at https://multi-answer-rl.github.io/.",
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.75
+          "classification_confidence": 0.93
         }
       ]
     },
     {
       "topic_label": "Domain Applications",
-      "count": 9,
-      "share": 13.64,
+      "count": 12,
+      "share": 18.18,
       "papers": [
         {
           "paper_id": "2603.25638",
@@ -717,7 +435,51 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.63
+          "classification_confidence": 0.7
+        },
+        {
+          "paper_id": "2603.25501",
+          "title": "An Experimental Comparison of the Most Popular Approaches to Fake News Detection",
+          "abs_url": "https://arxiv.org/abs/2603.25501",
+          "pdf_url": "https://arxiv.org/pdf/2603.25501",
+          "detail_url": "https://papers.cool/arxiv/2603.25501",
+          "authors": [
+            "Pietro Dell'Oglio",
+            "Alessandro Bondielli",
+            "Francesco Marcelloni",
+            "Lucia C. Passaro"
+          ],
+          "subjects": [
+            "Computation and Language"
+          ],
+          "abstract": "In recent years, fake news detection has received increasing attention in public debate and scientific research. Despite advances in detection techniques, the production and spread of false information have become more sophisticated, driven by Large Language Models (LLMs) and the amplification power of social media. We present a critical assessment of 12 representative fake news detection approaches, spanning traditional machine learning, deep learning, transformers, and specialized cross-domain architectures. We evaluate these methods on 10 publicly available datasets differing in genre, source, topic, and labeling rationale. We address text-only English fake news detection as a binary classification task by harmonizing labels into \"Real\" and \"Fake\" to ensure a consistent evaluation protocol. We acknowledge that label semantics vary across datasets and that harmonization inevitably removes such semantic nuances. Each dataset is treated as a distinct domain. We conduct in-domain, multi-domain and cross-domain experiments to simulate real-world scenarios involving domain shift and out-of-distribution data. Fine-tuned models perform well in-domain but struggle to generalize. Cross-domain architectures can reduce this gap but are data-hungry, while LLMs offer a promising alternative through zero- and few-shot learning. Given inherent dataset confounds and possible pre-training exposure, results should be interpreted as robustness evaluations within this English, text-only protocol.",
+          "topic_key": "domain_applications",
+          "topic_label": "Domain Applications",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.76
+        },
+        {
+          "paper_id": "2603.25422",
+          "title": "Navigating the Prompt Space: Improving LLM Classification of Social Science Texts Through Prompt Engineering",
+          "abs_url": "https://arxiv.org/abs/2603.25422",
+          "pdf_url": "https://arxiv.org/pdf/2603.25422",
+          "detail_url": "https://papers.cool/arxiv/2603.25422",
+          "authors": [
+            "Erkan Gunes",
+            "Christoffer Florczak",
+            "Tevfik Murat Yildirim"
+          ],
+          "subjects": [
+            "Computation and Language",
+            "Computers and Society"
+          ],
+          "abstract": "Recent developments in text classification using Large Language Models (LLMs) in the social sciences suggest that costs can be cut significantly, while performance can sometimes rival existing computational methods. However, with a wide variance in performance in current tests, we move to the question of how to maximize performance. In this paper, we focus on prompt context as a possible avenue for increasing accuracy by systematically varying three aspects of prompt engineering: label descriptions, instructional nudges, and few shot examples. Across two different examples, our tests illustrate that a minimal increase in prompt context yields the highest increase in performance, while further increases in context only tend to yield marginal performance increases thereafter. Alarmingly, increasing prompt context sometimes decreases accuracy. Furthermore, our tests suggest substantial heterogeneity across models, tasks, and batch size, underlining the need for individual validation of each LLM coding task rather than reliance on general rules.",
+          "topic_key": "domain_applications",
+          "topic_label": "Domain Applications",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.84
         },
         {
           "paper_id": "2603.25329",
@@ -738,7 +500,28 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.75
+          "classification_confidence": 0.88
+        },
+        {
+          "paper_id": "2603.25269",
+          "title": "When Hate Meets Facts: LLMs-in-the-Loop for Check-worthiness Detection in Hate Speech",
+          "abs_url": "https://arxiv.org/abs/2603.25269",
+          "pdf_url": "https://arxiv.org/pdf/2603.25269",
+          "detail_url": "https://papers.cool/arxiv/2603.25269",
+          "authors": [
+            "Nicolás Benjamín Ocampo",
+            "Tommaso Caselli",
+            "Davide Ceolin"
+          ],
+          "subjects": [
+            "Computation and Language"
+          ],
+          "abstract": "Hateful content online is often expressed using fact-like, not necessarily correct information, especially in coordinated online harassment campaigns and extremist propaganda. Failing to jointly address hate speech (HS) and misinformation can deepen prejudice, reinforce harmful stereotypes, and expose bystanders to psychological distress, while polluting public debate. Moreover, these messages require more effort from content moderators because they must assess both harmfulness and veracity, i.e., fact-check them. To address this challenge, we release WSF-ARG+, the first dataset which combines hate speech with check-worthiness information. We also introduce a novel LLM-in-the-loop framework to facilitate the annotation of check-worthy claims. We run our framework, testing it with 12 open-weight LLMs of different sizes and architectures. We validate it through extensive human evaluation, and show that our LLM-in-the-loop framework reduces human effort without compromising the annotation quality of the data. Finally, we show that HS messages with check-worthy claims show significantly higher harassment and hate, and that incorporating check-worthiness labels improves LLM-based HS detection up to 0.213 macro-F1 and to 0.154 macro-F1 on average for large models.",
+          "topic_key": "domain_applications",
+          "topic_label": "Domain Applications",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.82
         },
         {
           "paper_id": "2603.25196",
@@ -767,7 +550,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.97
+          "classification_confidence": 0.92
         },
         {
           "paper_id": "2603.25105",
@@ -794,7 +577,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.89
+          "classification_confidence": 0.85
         },
         {
           "paper_id": "2603.25051",
@@ -858,7 +641,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.81
+          "classification_confidence": 0.86
         },
         {
           "paper_id": "2603.24955",
@@ -878,7 +661,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.89
+          "classification_confidence": 0.87
         },
         {
           "paper_id": "2603.24772",
@@ -901,7 +684,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.95
+          "classification_confidence": 0.92
         },
         {
           "paper_id": "2603.24767",
@@ -924,40 +707,130 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.93
+          "classification_confidence": 0.9
         }
       ]
     },
     {
-      "topic_label": "Datasets and Benchmarks",
-      "count": 7,
-      "share": 10.61,
+      "topic_label": "LLMs and Language",
+      "count": 12,
+      "share": 18.18,
       "papers": [
         {
-          "paper_id": "2603.25253",
-          "title": "MolQuest: A Benchmark for Agentic Evaluation of Abductive Reasoning in Chemical Structure Elucidation",
-          "abs_url": "https://arxiv.org/abs/2603.25253",
-          "pdf_url": "https://arxiv.org/pdf/2603.25253",
-          "detail_url": "https://papers.cool/arxiv/2603.25253",
+          "paper_id": "2603.25681",
+          "title": "Self-Improvement of Large Language Models: A Technical Overview and Future Outlook",
+          "abs_url": "https://arxiv.org/abs/2603.25681",
+          "pdf_url": "https://arxiv.org/pdf/2603.25681",
+          "detail_url": "https://papers.cool/arxiv/2603.25681",
           "authors": [
-            "Taolin Han",
-            "Shuang Wu",
-            "Jinghang Wang",
-            "Yuhao Zhou",
-            "Renquan Lv",
-            "Bing Zhao",
-            "Wei Hu"
+            "Haoyan Yang",
+            "Mario Xerri",
+            "Solha Park",
+            "Huajian Zhang",
+            "Yiyang Feng",
+            "Sai Akhil Kogilathota",
+            "Jiawei Zhou"
           ],
           "subjects": [
-            "Computation and Language",
-            "Artificial Intelligence"
+            "Computation and Language"
           ],
-          "abstract": "Large language models (LLMs) hold considerable potential for advancing scientific discovery, yet systematic assessment of their dynamic reasoning in real-world research remains limited. Current scientific evaluation benchmarks predominantly rely on static, single-turn Question Answering (QA) formats, which are inadequate for measuring model performance in complex scientific tasks that require multi-step iteration and experimental interaction. To address this gap, we introduce MolQuest, a novel agent-based evaluation framework for molecular structure elucidation built upon authentic chemical experimental data. Unlike existing datasets, MolQuest formalizes molecular structure elucidation as a multi-turn interactive task, requiring models to proactively plan experimental steps, integrate heterogeneous spectral sources (e.g., NMR, MS), and iteratively refine structural hypotheses. This framework systematically evaluates LLMs' abductive reasoning and strategic decision-making abilities within a vast and complex chemical space. Empirical results reveal that contemporary frontier models exhibit significant limitations in authentic scientific scenarios: notably, even state-of-the-art (SOTA) models achieve an accuracy of only approximately 50%, while the performance of most other models remains below the 30% threshold. This work provides a reproducible and extensible framework for science-oriented LLM evaluation, our findings highlight the critical gap in current LLMs' strategic scientific reasoning, setting a clear direction for future research toward AI that can actively participate in the scientific process.",
-          "topic_key": "datasets_benchmarks",
-          "topic_label": "Datasets and Benchmarks",
+          "abstract": "As large language models (LLMs) continue to advance, improving them solely through human supervision is becoming increasingly costly and limited in scalability. As models approach human-level capabilities in certain domains, human feedback may no longer provide sufficiently informative signals for further improvement. At the same time, the growing ability of models to make autonomous decisions and execute complex actions naturally enables abstractions in which components of the model development process can be progressively automated. Together, these challenges and opportunities have driven increasing interest in self-improvement, where models autonomously generate data, evaluate outputs, and iteratively refine their own capabilities. In this paper, we present a system-level perspective on self-improving language models and introduce a unified framework that organizes existing techniques. We conceptualize the self-improvement system as a closed-loop lifecycle, consisting of four tightly coupled processes: data acquisition, data selection, model optimization, and inference refinement, along with an autonomous evaluation layer. Within this framework, the model itself plays a central role in driving each stage: collecting or generating data, selecting informative signals, updating its parameters, and refining outputs, while the autonomous evaluation layer continuously monitors progress and guides the improvement cycle across stages. Following this lifecycle perspective, we systematically review and analyze representative methods for each component from a technical standpoint. We further discuss current limitations and outline our vision for future research toward fully self-improving LLMs.",
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.95
+          "classification_confidence": 0.96
+        },
+        {
+          "paper_id": "2603.25489",
+          "title": "Translation Asymmetry in LLMs as a Data Augmentation Factor: A Case Study for 6 Romansh Language Varieties",
+          "abs_url": "https://arxiv.org/abs/2603.25489",
+          "pdf_url": "https://arxiv.org/pdf/2603.25489",
+          "detail_url": "https://papers.cool/arxiv/2603.25489",
+          "authors": [
+            "Jannis Vamvas",
+            "Ignacio Pérez Prat",
+            "Angela Heldstab",
+            "Dominic P. Fischer",
+            "Sina Ahmadi",
+            "Rico Sennrich"
+          ],
+          "subjects": [
+            "Computation and Language"
+          ],
+          "abstract": "Recent strategies for low-resource machine translation rely on LLMs to generate synthetic data from higher-resource languages. We find that this method fails for Romansh, because LLMs tend to confuse its 6 distinct language varieties. Our experiments show that instead, the direction of data augmentation should be aligned with the resource gradient between source and target language. This approach surpasses Gemini 3 Pro in the lowest-resource variety of Romansh by 23 BLEU. A human evaluation confirms that our experiments yield the first model that generates fluent translations in the individual Romansh varieties.",
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.86
+        },
+        {
+          "paper_id": "2603.25419",
+          "title": "TAPO: Translation Augmented Policy Optimization for Multilingual Mathematical Reasoning",
+          "abs_url": "https://arxiv.org/abs/2603.25419",
+          "pdf_url": "https://arxiv.org/pdf/2603.25419",
+          "detail_url": "https://papers.cool/arxiv/2603.25419",
+          "authors": [
+            "Xu Huang",
+            "Zhejian Lai",
+            "Zixian Huang",
+            "Jiajun Chen",
+            "Shujian Huang"
+          ],
+          "subjects": [
+            "Computation and Language"
+          ],
+          "abstract": "Large Language Models (LLMs) have demonstrated remarkable proficiency in English mathematical reasoning, yet a significant performance disparity persists in multilingual contexts, largely attributed to deficiencies in language understanding. To bridge this gap, we introduce Translation-Augmented Policy Optimization (TAPO), a novel reinforcement learning framework built upon GRPO. TAPO enforces an explicit alignment strategy where the model leverages English as a pivot and follows an understand-then-reason paradigm. Crucially, we employ a step-level relative advantage mechanism that decouples understanding from reasoning, allowing the integration of translation quality rewards without introducing optimization conflicts. Extensive experiments reveal that TAPO effectively synergizes language understanding with reasoning capabilities and is compatible with various models. It outperforms baseline methods in both multilingual mathematical reasoning and translation tasks, while generalizing well to unseen languages and out-of-domain tasks.",
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.73
+        },
+        {
+          "paper_id": "2603.25340",
+          "title": "Large Language Model as Token Compressor and Decompressor",
+          "abs_url": "https://arxiv.org/abs/2603.25340",
+          "pdf_url": "https://arxiv.org/pdf/2603.25340",
+          "detail_url": "https://papers.cool/arxiv/2603.25340",
+          "authors": [
+            "Wenbing Li",
+            "Zikai Song",
+            "Jielei Zhang",
+            "Tianhao Zhao",
+            "Junkai Lin",
+            "Yiran Wang",
+            "Wei Yang"
+          ],
+          "subjects": [
+            "Computation and Language"
+          ],
+          "abstract": "In this paper, we establish the novel insight that an off-the-shelf LLM can function as an excellent token compressor and decompressor. To demonstrate, we design a self-expressive autoencoding learning framework fine-tunes a pretrained LLM to translate long texts into a compact internal language of discrete, variable-length latent codes, termed Z-tokens, and to reconstruct the original text exactly from them. The resulting representation is content-adaptive: semantically dense segments receive more Z-tokens, while redundant or predictable regions are aggressively compressed, via lightweight LoRA-based adapter heads. Empirically, our method achieves up to 18 times token reduction on Wikipedia, CNN/DailyMail, HotpotQA, and Qulac-style long-query datasets, while preserving reconstruction fidelity and downstream performance. This simple yet effective design supports applications including prompt compression and autoregressive generation directly in the Z-token space, offering a potential pathway toward token-efficient long-context reasoning.",
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.9
+        },
+        {
+          "paper_id": "2603.25309",
+          "title": "Separate Before You Compress: The WWHO Tokenization Architecture",
+          "abs_url": "https://arxiv.org/abs/2603.25309",
+          "pdf_url": "https://arxiv.org/pdf/2603.25309",
+          "detail_url": "https://papers.cool/arxiv/2603.25309",
+          "authors": [
+            "Kusal Darshana"
+          ],
+          "subjects": [
+            "Computation and Language"
+          ],
+          "abstract": "Current Large Language Models (LLMs) mostly use BPE (Byte Pair Encoding) based tokenizers, which are very effective for simple structured Latin scripts such as English. However, standard BPE tokenizers struggle to process complex Abugida scripts due to their structural complexity. The problem is that these tokenizers break complex conjuncts, which are multi-codepoint grapheme clusters, into meaningless sub-character units. This degrades the LLM's reasoning efficiency by forcing it to learn basic orthographic structures at inference time and raises inference costs, resulting in a significant \"Token Tax\" for the Global South. We propose a new three-layer architecture, the WWHO (Where-What-How Often), and an algorithm named SGPE (Syllable-aware Grapheme Pair Encoding) that separates the linguistic rules of the script from the statistical compression process while enabling seamless multilingual tokenization. Using Sinhala and Devanagari (Hindi/Sanskrit) as highly complex Abugida scripts, we trained WWHO on a cleaned 30-million-sentence dataset and evaluated on a 1,499,950-sentence test set. For Sinhala, SGPE achieves a Token to Word Ratio (TWR) of 1.274 with 4.83 characters per token, representing a 61.7 percent reduction in tokens compared to OpenAI's o200k base. For Hindi, it achieves a TWR of 1.181 (27.0 percent reduction vs o200k). On the mixed-script (Sinhala, Devanagari, and English) dataset, SGPE achieves an overall TWR of 1.240, representing token reductions of 36.7 percent, 39.6 percent, and 60.2 percent relative to o200k base, Llama 4 Scout, and DeepSeek V3, respectively. This effectively extends the usable context window by up to 4.38 times for these Abugida languages while ensuring a Linguistic Zero-Breakage Guarantee, which ensures that no valid syllable is ever split across multiple tokens.",
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.71
         },
         {
           "paper_id": "2603.25227",
@@ -973,140 +846,153 @@
             "Computation and Language"
           ],
           "abstract": "This study compares the impact of natural and synthetic data on training and evaluating large language models (LLMs), using the case of passive verb alternation in French and Italian. We use Blackbird Language Matrices (BLMs), structured datasets designed to probe linguistic knowledge of underlying patterns across sentence sets. We compare structured templates instantiated with natural sentences extracted from Universal Dependencies to structured templates of synthetic sentences. Experiments show that while models achieve ceiling performance when trained and tested on synthetic datasets, they do not reliably generalize to natural sentences. In contrast, models trained on natural data exhibit robust performance across both natural and synthetic test suites, demonstrating their superior ability to capture abstract linguistic patterns. These results corroborate the value of natural data and of structured set ups in linguistic evaluation for probing LLMs' syntactic and semantic knowledge.",
-          "topic_key": "datasets_benchmarks",
-          "topic_label": "Datasets and Benchmarks",
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.54
+          "classification_confidence": 0.58
         },
         {
-          "paper_id": "2603.25189",
-          "title": "A Catalog of Basque Dialectal Resources: Online Collections and Standard-to-Dialectal Adaptations",
-          "abs_url": "https://arxiv.org/abs/2603.25189",
-          "pdf_url": "https://arxiv.org/pdf/2603.25189",
-          "detail_url": "https://papers.cool/arxiv/2603.25189",
+          "paper_id": "2603.25183",
+          "title": "Cross-Preference Learning for Sentence-Level and Context-Aware Machine Translation",
+          "abs_url": "https://arxiv.org/abs/2603.25183",
+          "pdf_url": "https://arxiv.org/pdf/2603.25183",
+          "detail_url": "https://papers.cool/arxiv/2603.25183",
           "authors": [
-            "Jaione Bengoetxea",
-            "Itziar Gonzalez-Dios",
-            "Rodrigo Agerri"
-          ],
-          "subjects": [
-            "Computation and Language"
-          ],
-          "abstract": "Recent research on dialectal NLP has identified data scarcity as a primary limitation. To address this limitation, this paper presents a catalog of contemporary Basque dialectal data and resources, offering a systematic and comprehensive compilation of the dialectal data currently available in Basque. Two types of data sources have been distinguished: online data originally written in some dialect, and standard-to-dialect adapted data. The former includes all dialectal data that can be found online, such as news and radio sites, informal tweets, as well as online resources such as dictionaries, atlases, grammar rules, or videos. The latter consists of data that has been adapted from the standard variety to dialectal varieties, either manually or automatically. Regarding the manual adaptation, the test split of the XNLI Natural Language Inference dataset was manually adapted into three Basque dialects: Western, Central, and Navarrese-Lapurdian, yielding a high-quality parallel gold standard evaluation dataset. With respect to the automatic dialectal adaptation, the automatically adapted physical commonsense dataset (BasPhyCowest) underwent additional manual evaluation by native speakers to assess its quality and determine whether it could serve as a viable substitute for full manual adaptation (i.e., silver data creation).",
-          "topic_key": "datasets_benchmarks",
-          "topic_label": "Datasets and Benchmarks",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.92
-        },
-        {
-          "paper_id": "2603.25640",
-          "title": "RenoBench: A Citation Parsing Benchmark",
-          "abs_url": "https://arxiv.org/abs/2603.25640",
-          "pdf_url": "https://arxiv.org/pdf/2603.25640",
-          "detail_url": "https://papers.cool/arxiv/2603.25640",
-          "authors": [
-            "Parth Sarin",
-            "Juan Pablo Alperin",
-            "Adam Buttrick",
-            "Dione Mentis"
-          ],
-          "subjects": [
-            "Digital Libraries",
-            "Computation and Language"
-          ],
-          "abstract": "Accurate parsing of citations is necessary for machine-readable scholarly infrastructure. But, despite sustained interest in this problem, existing evaluation techniques are often not generalizable, based on synthetic data, or not publicly available. We introduce RenoBench, a public domain benchmark for citation parsing, sourced from PDFs released on four publishing ecosystems: SciELO, Redalyc, the Public Knowledge Project, and Open Research Europe. Starting from 161,000 annotated citations, we apply automated validation and feature-based sampling to produce a dataset of 10,000 citations spanning multiple languages, publication types, and platforms. We then evaluate a variety of citation parsing systems and report field-level precision and recall. Our results show strong performance from language models, particularly when fine-tuned. RenoBench enables reproducible, standardized evaluation of citation parsing systems, and provides a foundation for advancing automated citation parsing and metascientific research.",
-          "topic_key": "datasets_benchmarks",
-          "topic_label": "Datasets and Benchmarks",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.98
-        },
-        {
-          "paper_id": "2603.24943",
-          "title": "FinMCP-Bench: Benchmarking LLM Agents for Real-World Financial Tool Use under the Model Context Protocol",
-          "abs_url": "https://arxiv.org/abs/2603.24943",
-          "pdf_url": "https://arxiv.org/pdf/2603.24943",
-          "detail_url": "https://papers.cool/arxiv/2603.24943",
-          "authors": [
-            "Jie Zhu",
-            "Yimin Tian",
-            "Boyang Li",
-            "Kehao Wu",
-            "Zhongzhi Liang",
+            "Ying Li",
+            "Xinglin Lyu",
             "Junhui Li",
-            "Xianyin Zhang",
-            "Lifan Guo",
-            "Feng Chen",
-            "Yong Liu",
-            "Chi Zhang"
+            "Jinlong Yang",
+            "Hengchao Shang",
+            "Min Zhang",
+            "Shimin Tao",
+            "Daimeng Wei"
           ],
           "subjects": [
-            "Artificial Intelligence",
             "Computation and Language"
           ],
-          "abstract": "This paper introduces \\textbf{FinMCP-Bench}, a novel benchmark for evaluating large language models (LLMs) in solving real-world financial problems through tool invocation of financial model context protocols. FinMCP-Bench contains 613 samples spanning 10 main scenarios and 33 sub-scenarios, featuring both real and synthetic user queries to ensure diversity and authenticity. It incorporates 65 real financial MCPs and three types of samples, single tool, multi-tool, and multi-turn, allowing evaluation of models across different levels of task complexity. Using this benchmark, we systematically assess a range of mainstream LLMs and propose metrics that explicitly measure tool invocation accuracy and reasoning capabilities. FinMCP-Bench provides a standardized, practical, and challenging testbed for advancing research on financial LLM agents.",
-          "topic_key": "datasets_benchmarks",
-          "topic_label": "Datasets and Benchmarks",
+          "abstract": "Context-aware machine translation (MT) leverages document-level information, yet it does not consistently outperform sentence-level MT, as contextual signals are unevenly beneficial across sentences. Existing training objectives do not explicitly model this variability, limiting a model's ability to adaptively exploit context. In this paper, we propose Cross-Preference Learning (CPL), a preference-based training framework that explicitly captures the complementary benefits of sentence-level and context-aware MT. CPL achieves this by integrating both intra- and cross-condition preferences into the preference optimization objective. The introduction of intra- and cross-condition preferences provides explicit supervision on when and how contextual information improves translation quality. We validate the proposed approach on several public context-aware MT tasks using multiple models, including Qwen3-4B, Qwen3-8B, and Llama-3-8B. Experimental results demonstrate consistent improvements in translation quality and robustness across both input conditions, achieved without any architectural modifications.",
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
           "matched_terms": [],
           "classification_source": "codex",
           "classification_confidence": 0.8
         },
         {
-          "paper_id": "2603.24866",
-          "title": "How Far Are Vision-Language Models from Constructing the Real World? A Benchmark for Physical Generative Reasoning",
-          "abs_url": "https://arxiv.org/abs/2603.24866",
-          "pdf_url": "https://arxiv.org/pdf/2603.24866",
-          "detail_url": "https://papers.cool/arxiv/2603.24866",
+          "paper_id": "2603.25169",
+          "title": "To Write or to Automate Linguistic Prompts, That Is the Question",
+          "abs_url": "https://arxiv.org/abs/2603.25169",
+          "pdf_url": "https://arxiv.org/pdf/2603.25169",
+          "detail_url": "https://papers.cool/arxiv/2603.25169",
           "authors": [
-            "Luyu Yang",
-            "Yutong Dai",
-            "An Yan",
-            "Viraj Prabhu",
-            "Ran Xu",
-            "Zeyuan Chen"
+            "Marina Sánchez-Torrón",
+            "Daria Akselrod",
+            "Jason Rauchwerk"
           ],
           "subjects": [
-            "Artificial Intelligence",
-            "Computation and Language",
-            "Computer Vision and Pattern Recognition"
+            "Computation and Language"
           ],
-          "abstract": "The physical world is not merely visual; it is governed by rigorous structural and procedural constraints. Yet, the evaluation of vision-language models (VLMs) remains heavily skewed toward perceptual realism, prioritizing the generation of visually plausible 3D layouts, shapes, and appearances. Current benchmarks rarely test whether models grasp the step-by-step processes and physical dependencies required to actually build these artifacts, a capability essential for automating design-to-construction pipelines. To address this, we introduce DreamHouse, a novel benchmark for physical generative reasoning: the capacity to synthesize artifacts that concurrently satisfy geometric, structural, constructability, and code-compliance constraints. We ground this benchmark in residential timber-frame construction, a domain with fully codified engineering standards and objectively verifiable correctness. We curate over 26,000 structures spanning 13 architectural styles, ach verified to construction-document standards (LOD 350) and develop a deterministic 10-test structural validation framework. Unlike static benchmarks that assess only final outputs, DreamHouse supports iterative agentic interaction. Models observe intermediate build states, generate construction actions, and receive structured environmental feedback, enabling a fine-grained evaluation of planning, structural reasoning, and self-correction. Extensive experiments with state-of-the-art VLMs reveal substantial capability gaps that are largely invisible on existing leaderboards. These findings establish physical validity as a critical evaluation axis orthogonal to visual realism, highlighting physical generative reasoning as a distinct and underdeveloped frontier in multimodal intelligence. Available at https://luluyuyuyang.github.io/dreamhouse",
-          "topic_key": "datasets_benchmarks",
-          "topic_label": "Datasets and Benchmarks",
+          "abstract": "LLM performance is highly sensitive to prompt design, yet whether automatic prompt optimization can replace expert prompt engineering in linguistic tasks remains unexplored. We present the first systematic comparison of hand-crafted zero-shot expert prompts, base DSPy signatures, and GEPA-optimized DSPy signatures across translation, terminology insertion, and language quality assessment, evaluating five model configurations. Results are task-dependent. In terminology insertion, optimized and manual prompts produce mostly statistically indistinguishable quality. In translation, each approach wins on different models. In LQA, expert prompts achieve stronger error detection while optimization improves characterization. Across all tasks, GEPA elevates minimal DSPy signatures, and the majority of expert-optimized comparisons show no statistically significant difference. We note that the comparison is asymmetric: GEPA optimization searches programmatically over gold-standard splits, whereas expert prompts require in principle no labeled data, relying instead on domain expertise and iterative refinement.",
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.86
+          "classification_confidence": 0.74
         },
         {
-          "paper_id": "2603.24755",
-          "title": "SlopCodeBench: Benchmarking How Coding Agents Degrade Over Long-Horizon Iterative Tasks",
-          "abs_url": "https://arxiv.org/abs/2603.24755",
-          "pdf_url": "https://arxiv.org/pdf/2603.24755",
-          "detail_url": "https://papers.cool/arxiv/2603.24755",
+          "paper_id": "2603.25015",
+          "title": "Imperative Interference: Social Register Shapes Instruction Topology in Large Language Models",
+          "abs_url": "https://arxiv.org/abs/2603.25015",
+          "pdf_url": "https://arxiv.org/pdf/2603.25015",
+          "detail_url": "https://papers.cool/arxiv/2603.25015",
           "authors": [
-            "Gabriel Orlanski",
-            "Devjeet Roy",
-            "Alexander Yun",
-            "Changho Shin",
-            "Alex Gu",
-            "Albert Ge",
-            "Dyah Adila",
-            "Frederic Sala",
-            "Aws Albarghouthi"
+            "Tony Mason"
           ],
           "subjects": [
-            "Software Engineering",
+            "Computation and Language",
+            "Artificial Intelligence",
+            "Software Engineering"
+          ],
+          "abstract": "System prompt instructions that cooperate in English compete in Spanish, with the same semantic content, but opposite interaction topology. We present instruction-level ablation experiments across four languages and four models showing that this topology inversion is mediated by social register: the imperative mood carries different obligatory force across speech communities, and models trained on multilingual data have learned these conventions. Declarative rewriting of a single instruction block reduces cross-linguistic variance by 81% (p = 0.029, permutation test). Rewriting three of eleven imperative blocks shifts Spanish instruction topology from competitive to cooperative, with spillover effects on unrewritten blocks. These findings suggest that models process instructions as social acts, not technical specifications: \"NEVER do X\" is an exercise of authority whose force is language-dependent, while \"X: disabled\" is a factual description that transfers across languages. If register mediates instruction-following at inference time, it plausibly does so during training. We state this as a testable prediction: constitutional AI principles authored in imperative mood may create language-dependent alignment. Corpus: 22 hand-authored probes against a production system prompt decomposed into 56 blocks.",
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.84
+        },
+        {
+          "paper_id": "2603.24826",
+          "title": "Synthetic Rewriting as a Quality Multiplier: Evidence from Portuguese Continued Pretraining",
+          "abs_url": "https://arxiv.org/abs/2603.24826",
+          "pdf_url": "https://arxiv.org/pdf/2603.24826",
+          "detail_url": "https://papers.cool/arxiv/2603.24826",
+          "authors": [
+            "Thales Sales Almeida",
+            "Rodrigo Nogueira",
+            "Hélio Pedrini"
+          ],
+          "subjects": [
+            "Computation and Language"
+          ],
+          "abstract": "Synthetic data generation through document rewriting has emerged as a promising technique for improving language model pretraining, yet most studies focus on English and do not systematically control for the quality of the source data being rewritten. We present a controlled study of how synthetic rewriting interacts with source data quality in the context of Portuguese continued pretraining. Starting from ClassiCC-PT, a Portuguese corpus annotated with STEM and Educational quality scores, we construct two 10B-token subsets at different quality levels and rewrite each into four styles using a 7B instruction-tuned model, producing approximately 40B tokens of synthetic data per condition. We train two English-centric base models (1.1B and 7B parameters) on each condition and evaluate on PoETa V2, a comprehensive 44-task Portuguese benchmark. At the 7B scale, rewriting high-quality data yields a +3.4 NPM gain over the same data unmodified, while rewriting low-quality data provides only +0.5 NPM. At the 1.1B scale, this interaction is weaker, with unmodified low-quality data performing comparably to rewritten high-quality data. Our results demonstrate that synthetic rewriting acts primarily as a quality multiplier rather than a substitute for data curation, and that this effect is scale-dependent.",
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.8
+        },
+        {
+          "paper_id": "2603.24797",
+          "title": "Enhancing Structured Meaning Representations with Aspect Classification",
+          "abs_url": "https://arxiv.org/abs/2603.24797",
+          "pdf_url": "https://arxiv.org/pdf/2603.24797",
+          "detail_url": "https://papers.cool/arxiv/2603.24797",
+          "authors": [
+            "Claire Benét Post",
+            "Paul Bontempo",
+            "August Milliken",
+            "Alvin Po-Chun Chen",
+            "Nicholas Derby",
+            "Saksham Khatwani",
+            "Sumeyye Nabieva",
+            "Karthik Sairam",
+            "Alexis Palmer"
+          ],
+          "subjects": [
+            "Computation and Language"
+          ],
+          "abstract": "To fully capture the meaning of a sentence, semantic representations should encode aspect, which describes the internal temporal structure of events. In graph-based meaning representation frameworks such as Uniform Meaning Representations (UMR), aspect lets one know how events unfold over time, including distinctions such as states, activities, and completed events. Despite its importance, aspect remains sparsely annotated across semantic meaning representation frameworks. This has, in turn, hindered not only current manual annotation, but also the development of automatic systems capable of predicting aspectual information. In this paper, we introduce a new dataset of English sentences annotated with UMR aspect labels over Abstract Meaning Representation (AMR) graphs that lack the feature. We describe the annotation scheme and guidelines used to label eventive predicates according to the UMR aspect lattice, as well as the annotation pipeline used to ensure consistency and quality across annotators through a multi-step adjudication process. To demonstrate the utility of our dataset for future automation, we present baseline experiments using three modeling approaches. Our results establish initial benchmarks for automatic UMR aspect prediction and provide a foundation for integrating aspect into semantic meaning representations more broadly.",
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.69
+        },
+        {
+          "paper_id": "2603.24844",
+          "title": "Reaching Beyond the Mode: RL for Distributional Reasoning in Language Models",
+          "abs_url": "https://arxiv.org/abs/2603.24844",
+          "pdf_url": "https://arxiv.org/pdf/2603.24844",
+          "detail_url": "https://papers.cool/arxiv/2603.24844",
+          "authors": [
+            "Isha Puri",
+            "Mehul Damani",
+            "Idan Shenfeld",
+            "Marzyeh Ghassemi",
+            "Jacob Andreas",
+            "Yoon Kim"
+          ],
+          "subjects": [
+            "Machine Learning",
             "Artificial Intelligence",
             "Computation and Language"
           ],
-          "abstract": "Software development is iterative, yet agentic coding benchmarks overwhelmingly evaluate single-shot solutions against complete specifications. Code can pass the test suite but become progressively harder to extend. Recent iterative benchmarks attempt to close this gap, but constrain the agent's design decisions too tightly to faithfully measure how code quality shapes future extensions. We introduce SlopCodeBench, a language-agnostic benchmark comprising 20 problems and 93 checkpoints, in which agents repeatedly extend their own prior solutions under evolving specifications that force architectural decisions without prescribing internal structure. We track two trajectory-level quality signals: verbosity, the fraction of redundant or duplicated code, and structural erosion, the share of complexity mass concentrated in high-complexity functions. No agent solves any problem end-to-end across 11 models; the highest checkpoint solve rate is 17.2%. Quality degrades steadily: erosion rises in 80% of trajectories and verbosity in 89.8%. Against 48 open-source Python repositories, agent code is 2.2x more verbose and markedly more eroded. Tracking 20 of those repositories over time shows that human code stays flat, while agent code deteriorates with each iteration. A prompt-intervention study shows that initial quality can be improved, but it does not halt degradation. These results demonstrate that pass-rate benchmarks systematically undermeasure extension robustness, and that current agents lack the design discipline iterative software development demands.",
-          "topic_key": "datasets_benchmarks",
-          "topic_label": "Datasets and Benchmarks",
+          "abstract": "Given a question, a language model (LM) implicitly encodes a distribution over possible answers. In practice, post-training procedures for LMs often collapse this distribution onto a single dominant mode. While this is generally not a problem for benchmark-style evaluations that assume one correct answer, many real-world tasks inherently involve multiple valid answers or irreducible uncertainty. Examples include medical diagnosis, ambiguous question answering, and settings with incomplete information. In these cases, we would like LMs to generate multiple plausible hypotheses, ideally with confidence estimates for each one, and without computationally intensive repeated sampling to generate non-modal answers. This paper describes a multi-answer reinforcement learning approach for training LMs to perform distributional reasoning over multiple answers during inference. We modify the RL objective to enable models to explicitly generate multiple candidate answers in a single forward pass, internalizing aspects of inference-time search into the model's generative process. Across question-answering, medical diagnostic, and coding benchmarks, we observe improved diversity, coverage, and set-level calibration scores compared to single answer trained baselines. Models trained with our approach require fewer tokens to generate multiple answers than competing approaches. On coding tasks, they are also substantially more accurate. These results position multi-answer RL as a principled and compute-efficient alternative to inference-time scaling procedures such as best-of-k. Code and more information can be found at https://multi-answer-rl.github.io/.",
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.94
+          "classification_confidence": 0.73
         }
       ]
     },
@@ -1137,7 +1023,7 @@
           "topic_label": "Agents and Planning",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.95
+          "classification_confidence": 0.9
         },
         {
           "paper_id": "2603.25620",
@@ -1161,7 +1047,7 @@
           "topic_label": "Agents and Planning",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.94
+          "classification_confidence": 0.91
         },
         {
           "paper_id": "2603.25268",
@@ -1183,33 +1069,7 @@
           "topic_label": "Agents and Planning",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.83
-        },
-        {
-          "paper_id": "2603.24840",
-          "title": "Prune as You Generate: Online Rollout Pruning for Faster and Better RLVR",
-          "abs_url": "https://arxiv.org/abs/2603.24840",
-          "pdf_url": "https://arxiv.org/pdf/2603.24840",
-          "detail_url": "https://papers.cool/arxiv/2603.24840",
-          "authors": [
-            "Haobo Xu",
-            "Sirui Chen",
-            "Ruizhong Qiu",
-            "Yuchen Yan",
-            "Chen Luo",
-            "Monica Cheng",
-            "Jingrui He",
-            "Hanghang Tong"
-          ],
-          "subjects": [
-            "Computation and Language"
-          ],
-          "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) has significantly advanced the reasoning capabilities of Large Language Models (LLMs). However, methods such as GRPO and DAPO suffer from substantial computational cost, since they rely on sampling many rollouts for each prompt. Moreover, in RLVR the relative advantage is often sparse: many samples become nearly all-correct or all-incorrect, yielding low within-group reward variance and thus weak learning signals. In this paper, we introduce arrol (Accelerating RLVR via online Rollout Pruning), an online rollout pruning method that prunes rollouts during generation while explicitly steering the surviving ones more correctness-balanced to enhance learning signals. Specifically, arrol trains a lightweight quality head on-the-fly to predict the success probability of partial rollouts and uses it to make early pruning decisions. The learned quality head can further weigh candidates to improve inference accuracy during test-time scaling. To improve efficiency, we present a system design that prunes rollouts inside the inference engine and re-batches the remaining ones for log-probability computation and policy updates. Across GRPO and DAPO on Qwen-3 and LLaMA-3.2 models (1B-8B), arrol improves average accuracy by +2.30 to +2.99 while achieving up to 1.7x training speedup, and yielding up to +8.33 additional gains in average accuracy in test-time scaling. The code is available at https://github.com/Hsu1023/ARRoL.",
-          "topic_key": "agents_planning",
-          "topic_label": "Agents and Planning",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.67
+          "classification_confidence": 0.93
         },
         {
           "paper_id": "2603.25226",
@@ -1243,7 +1103,37 @@
           "topic_label": "Agents and Planning",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.93
+          "classification_confidence": 0.96
+        },
+        {
+          "paper_id": "2603.24943",
+          "title": "FinMCP-Bench: Benchmarking LLM Agents for Real-World Financial Tool Use under the Model Context Protocol",
+          "abs_url": "https://arxiv.org/abs/2603.24943",
+          "pdf_url": "https://arxiv.org/pdf/2603.24943",
+          "detail_url": "https://papers.cool/arxiv/2603.24943",
+          "authors": [
+            "Jie Zhu",
+            "Yimin Tian",
+            "Boyang Li",
+            "Kehao Wu",
+            "Zhongzhi Liang",
+            "Junhui Li",
+            "Xianyin Zhang",
+            "Lifan Guo",
+            "Feng Chen",
+            "Yong Liu",
+            "Chi Zhang"
+          ],
+          "subjects": [
+            "Artificial Intelligence",
+            "Computation and Language"
+          ],
+          "abstract": "This paper introduces \\textbf{FinMCP-Bench}, a novel benchmark for evaluating large language models (LLMs) in solving real-world financial problems through tool invocation of financial model context protocols. FinMCP-Bench contains 613 samples spanning 10 main scenarios and 33 sub-scenarios, featuring both real and synthetic user queries to ensure diversity and authenticity. It incorporates 65 real financial MCPs and three types of samples, single tool, multi-tool, and multi-turn, allowing evaluation of models across different levels of task complexity. Using this benchmark, we systematically assess a range of mainstream LLMs and propose metrics that explicitly measure tool invocation accuracy and reasoning capabilities. FinMCP-Bench provides a standardized, practical, and challenging testbed for advancing research on financial LLM agents.",
+          "topic_key": "agents_planning",
+          "topic_label": "Agents and Planning",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.95
         },
         {
           "paper_id": "2603.24709",
@@ -1273,7 +1163,7 @@
           "topic_label": "Agents and Planning",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.94
+          "classification_confidence": 0.96
         }
       ]
     },
@@ -1303,7 +1193,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.96
+          "classification_confidence": 0.98
         },
         {
           "paper_id": "2603.25150",
@@ -1326,7 +1216,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.63
+          "classification_confidence": 0.72
         },
         {
           "paper_id": "2603.25203",
@@ -1547,7 +1437,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.74
+          "classification_confidence": 0.76
         },
         {
           "paper_id": "2603.24961",
@@ -1576,7 +1466,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.93
+          "classification_confidence": 0.91
         },
         {
           "paper_id": "2603.24596",
@@ -1602,7 +1492,139 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.74
+          "classification_confidence": 0.8
+        }
+      ]
+    },
+    {
+      "topic_label": "Datasets and Benchmarks",
+      "count": 5,
+      "share": 7.58,
+      "papers": [
+        {
+          "paper_id": "2603.25253",
+          "title": "MolQuest: A Benchmark for Agentic Evaluation of Abductive Reasoning in Chemical Structure Elucidation",
+          "abs_url": "https://arxiv.org/abs/2603.25253",
+          "pdf_url": "https://arxiv.org/pdf/2603.25253",
+          "detail_url": "https://papers.cool/arxiv/2603.25253",
+          "authors": [
+            "Taolin Han",
+            "Shuang Wu",
+            "Jinghang Wang",
+            "Yuhao Zhou",
+            "Renquan Lv",
+            "Bing Zhao",
+            "Wei Hu"
+          ],
+          "subjects": [
+            "Computation and Language",
+            "Artificial Intelligence"
+          ],
+          "abstract": "Large language models (LLMs) hold considerable potential for advancing scientific discovery, yet systematic assessment of their dynamic reasoning in real-world research remains limited. Current scientific evaluation benchmarks predominantly rely on static, single-turn Question Answering (QA) formats, which are inadequate for measuring model performance in complex scientific tasks that require multi-step iteration and experimental interaction. To address this gap, we introduce MolQuest, a novel agent-based evaluation framework for molecular structure elucidation built upon authentic chemical experimental data. Unlike existing datasets, MolQuest formalizes molecular structure elucidation as a multi-turn interactive task, requiring models to proactively plan experimental steps, integrate heterogeneous spectral sources (e.g., NMR, MS), and iteratively refine structural hypotheses. This framework systematically evaluates LLMs' abductive reasoning and strategic decision-making abilities within a vast and complex chemical space. Empirical results reveal that contemporary frontier models exhibit significant limitations in authentic scientific scenarios: notably, even state-of-the-art (SOTA) models achieve an accuracy of only approximately 50%, while the performance of most other models remains below the 30% threshold. This work provides a reproducible and extensible framework for science-oriented LLM evaluation, our findings highlight the critical gap in current LLMs' strategic scientific reasoning, setting a clear direction for future research toward AI that can actively participate in the scientific process.",
+          "topic_key": "datasets_benchmarks",
+          "topic_label": "Datasets and Benchmarks",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.97
+        },
+        {
+          "paper_id": "2603.25189",
+          "title": "A Catalog of Basque Dialectal Resources: Online Collections and Standard-to-Dialectal Adaptations",
+          "abs_url": "https://arxiv.org/abs/2603.25189",
+          "pdf_url": "https://arxiv.org/pdf/2603.25189",
+          "detail_url": "https://papers.cool/arxiv/2603.25189",
+          "authors": [
+            "Jaione Bengoetxea",
+            "Itziar Gonzalez-Dios",
+            "Rodrigo Agerri"
+          ],
+          "subjects": [
+            "Computation and Language"
+          ],
+          "abstract": "Recent research on dialectal NLP has identified data scarcity as a primary limitation. To address this limitation, this paper presents a catalog of contemporary Basque dialectal data and resources, offering a systematic and comprehensive compilation of the dialectal data currently available in Basque. Two types of data sources have been distinguished: online data originally written in some dialect, and standard-to-dialect adapted data. The former includes all dialectal data that can be found online, such as news and radio sites, informal tweets, as well as online resources such as dictionaries, atlases, grammar rules, or videos. The latter consists of data that has been adapted from the standard variety to dialectal varieties, either manually or automatically. Regarding the manual adaptation, the test split of the XNLI Natural Language Inference dataset was manually adapted into three Basque dialects: Western, Central, and Navarrese-Lapurdian, yielding a high-quality parallel gold standard evaluation dataset. With respect to the automatic dialectal adaptation, the automatically adapted physical commonsense dataset (BasPhyCowest) underwent additional manual evaluation by native speakers to assess its quality and determine whether it could serve as a viable substitute for full manual adaptation (i.e., silver data creation).",
+          "topic_key": "datasets_benchmarks",
+          "topic_label": "Datasets and Benchmarks",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.95
+        },
+        {
+          "paper_id": "2603.25640",
+          "title": "RenoBench: A Citation Parsing Benchmark",
+          "abs_url": "https://arxiv.org/abs/2603.25640",
+          "pdf_url": "https://arxiv.org/pdf/2603.25640",
+          "detail_url": "https://papers.cool/arxiv/2603.25640",
+          "authors": [
+            "Parth Sarin",
+            "Juan Pablo Alperin",
+            "Adam Buttrick",
+            "Dione Mentis"
+          ],
+          "subjects": [
+            "Digital Libraries",
+            "Computation and Language"
+          ],
+          "abstract": "Accurate parsing of citations is necessary for machine-readable scholarly infrastructure. But, despite sustained interest in this problem, existing evaluation techniques are often not generalizable, based on synthetic data, or not publicly available. We introduce RenoBench, a public domain benchmark for citation parsing, sourced from PDFs released on four publishing ecosystems: SciELO, Redalyc, the Public Knowledge Project, and Open Research Europe. Starting from 161,000 annotated citations, we apply automated validation and feature-based sampling to produce a dataset of 10,000 citations spanning multiple languages, publication types, and platforms. We then evaluate a variety of citation parsing systems and report field-level precision and recall. Our results show strong performance from language models, particularly when fine-tuned. RenoBench enables reproducible, standardized evaluation of citation parsing systems, and provides a foundation for advancing automated citation parsing and metascientific research.",
+          "topic_key": "datasets_benchmarks",
+          "topic_label": "Datasets and Benchmarks",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.98
+        },
+        {
+          "paper_id": "2603.24866",
+          "title": "How Far Are Vision-Language Models from Constructing the Real World? A Benchmark for Physical Generative Reasoning",
+          "abs_url": "https://arxiv.org/abs/2603.24866",
+          "pdf_url": "https://arxiv.org/pdf/2603.24866",
+          "detail_url": "https://papers.cool/arxiv/2603.24866",
+          "authors": [
+            "Luyu Yang",
+            "Yutong Dai",
+            "An Yan",
+            "Viraj Prabhu",
+            "Ran Xu",
+            "Zeyuan Chen"
+          ],
+          "subjects": [
+            "Artificial Intelligence",
+            "Computation and Language",
+            "Computer Vision and Pattern Recognition"
+          ],
+          "abstract": "The physical world is not merely visual; it is governed by rigorous structural and procedural constraints. Yet, the evaluation of vision-language models (VLMs) remains heavily skewed toward perceptual realism, prioritizing the generation of visually plausible 3D layouts, shapes, and appearances. Current benchmarks rarely test whether models grasp the step-by-step processes and physical dependencies required to actually build these artifacts, a capability essential for automating design-to-construction pipelines. To address this, we introduce DreamHouse, a novel benchmark for physical generative reasoning: the capacity to synthesize artifacts that concurrently satisfy geometric, structural, constructability, and code-compliance constraints. We ground this benchmark in residential timber-frame construction, a domain with fully codified engineering standards and objectively verifiable correctness. We curate over 26,000 structures spanning 13 architectural styles, ach verified to construction-document standards (LOD 350) and develop a deterministic 10-test structural validation framework. Unlike static benchmarks that assess only final outputs, DreamHouse supports iterative agentic interaction. Models observe intermediate build states, generate construction actions, and receive structured environmental feedback, enabling a fine-grained evaluation of planning, structural reasoning, and self-correction. Extensive experiments with state-of-the-art VLMs reveal substantial capability gaps that are largely invisible on existing leaderboards. These findings establish physical validity as a critical evaluation axis orthogonal to visual realism, highlighting physical generative reasoning as a distinct and underdeveloped frontier in multimodal intelligence. Available at https://luluyuyuyang.github.io/dreamhouse",
+          "topic_key": "datasets_benchmarks",
+          "topic_label": "Datasets and Benchmarks",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.87
+        },
+        {
+          "paper_id": "2603.24755",
+          "title": "SlopCodeBench: Benchmarking How Coding Agents Degrade Over Long-Horizon Iterative Tasks",
+          "abs_url": "https://arxiv.org/abs/2603.24755",
+          "pdf_url": "https://arxiv.org/pdf/2603.24755",
+          "detail_url": "https://papers.cool/arxiv/2603.24755",
+          "authors": [
+            "Gabriel Orlanski",
+            "Devjeet Roy",
+            "Alexander Yun",
+            "Changho Shin",
+            "Alex Gu",
+            "Albert Ge",
+            "Dyah Adila",
+            "Frederic Sala",
+            "Aws Albarghouthi"
+          ],
+          "subjects": [
+            "Software Engineering",
+            "Artificial Intelligence",
+            "Computation and Language"
+          ],
+          "abstract": "Software development is iterative, yet agentic coding benchmarks overwhelmingly evaluate single-shot solutions against complete specifications. Code can pass the test suite but become progressively harder to extend. Recent iterative benchmarks attempt to close this gap, but constrain the agent's design decisions too tightly to faithfully measure how code quality shapes future extensions. We introduce SlopCodeBench, a language-agnostic benchmark comprising 20 problems and 93 checkpoints, in which agents repeatedly extend their own prior solutions under evolving specifications that force architectural decisions without prescribing internal structure. We track two trajectory-level quality signals: verbosity, the fraction of redundant or duplicated code, and structural erosion, the share of complexity mass concentrated in high-complexity functions. No agent solves any problem end-to-end across 11 models; the highest checkpoint solve rate is 17.2%. Quality degrades steadily: erosion rises in 80% of trajectories and verbosity in 89.8%. Against 48 open-source Python repositories, agent code is 2.2x more verbose and markedly more eroded. Tracking 20 of those repositories over time shows that human code stays flat, while agent code deteriorates with each iteration. A prompt-intervention study shows that initial quality can be improved, but it does not halt degradation. These results demonstrate that pass-rate benchmarks systematically undermeasure extension robustness, and that current agents lack the design discipline iterative software development demands.",
+          "topic_key": "datasets_benchmarks",
+          "topic_label": "Datasets and Benchmarks",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.97
         }
       ]
     },
@@ -1656,7 +1678,7 @@
           "topic_label": "Retrieval, Knowledge, and RAG",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.87
+          "classification_confidence": 0.88
         },
         {
           "paper_id": "2603.25374",
@@ -1684,7 +1706,7 @@
           "topic_label": "Retrieval, Knowledge, and RAG",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.83
+          "classification_confidence": 0.9
         },
         {
           "paper_id": "2603.25293",
@@ -1710,7 +1732,7 @@
           "topic_label": "Retrieval, Knowledge, and RAG",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.78
+          "classification_confidence": 0.79
         },
         {
           "paper_id": "2603.24925",
@@ -1737,7 +1759,7 @@
           "topic_label": "Retrieval, Knowledge, and RAG",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.98
+          "classification_confidence": 0.99
         }
       ]
     },
@@ -1766,7 +1788,7 @@
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.72
+          "classification_confidence": 0.66
         },
         {
           "paper_id": "2603.24652",
@@ -1790,7 +1812,7 @@
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.92
+          "classification_confidence": 0.94
         },
         {
           "paper_id": "2603.25562",
@@ -1815,60 +1837,7 @@
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.81
-        }
-      ]
-    },
-    {
-      "topic_label": "Other AI",
-      "count": 2,
-      "share": 3.03,
-      "papers": [
-        {
-          "paper_id": "2603.25501",
-          "title": "An Experimental Comparison of the Most Popular Approaches to Fake News Detection",
-          "abs_url": "https://arxiv.org/abs/2603.25501",
-          "pdf_url": "https://arxiv.org/pdf/2603.25501",
-          "detail_url": "https://papers.cool/arxiv/2603.25501",
-          "authors": [
-            "Pietro Dell'Oglio",
-            "Alessandro Bondielli",
-            "Francesco Marcelloni",
-            "Lucia C. Passaro"
-          ],
-          "subjects": [
-            "Computation and Language"
-          ],
-          "abstract": "In recent years, fake news detection has received increasing attention in public debate and scientific research. Despite advances in detection techniques, the production and spread of false information have become more sophisticated, driven by Large Language Models (LLMs) and the amplification power of social media. We present a critical assessment of 12 representative fake news detection approaches, spanning traditional machine learning, deep learning, transformers, and specialized cross-domain architectures. We evaluate these methods on 10 publicly available datasets differing in genre, source, topic, and labeling rationale. We address text-only English fake news detection as a binary classification task by harmonizing labels into \"Real\" and \"Fake\" to ensure a consistent evaluation protocol. We acknowledge that label semantics vary across datasets and that harmonization inevitably removes such semantic nuances. Each dataset is treated as a distinct domain. We conduct in-domain, multi-domain and cross-domain experiments to simulate real-world scenarios involving domain shift and out-of-distribution data. Fine-tuned models perform well in-domain but struggle to generalize. Cross-domain architectures can reduce this gap but are data-hungry, while LLMs offer a promising alternative through zero- and few-shot learning. Given inherent dataset confounds and possible pre-training exposure, results should be interpreted as robustness evaluations within this English, text-only protocol.",
-          "topic_key": "other_ai",
-          "topic_label": "Other AI",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.56
-        },
-        {
-          "paper_id": "2603.25531",
-          "title": "Synchronous Signal Temporal Logic for Decidable Verification of Cyber-Physical Systems",
-          "abs_url": "https://arxiv.org/abs/2603.25531",
-          "pdf_url": "https://arxiv.org/pdf/2603.25531",
-          "detail_url": "https://papers.cool/arxiv/2603.25531",
-          "authors": [
-            "Partha Roop",
-            "Sobhan Chatterjee",
-            "Avinash Malik",
-            "Nathan Allen",
-            "Logan Kenwright"
-          ],
-          "subjects": [
-            "Formal Languages and Automata Theory",
-            "Computation and Language"
-          ],
-          "abstract": "Many Cyber Physical System (CPS) work in a safety-critical environment, where correct execution, reliability and trustworthiness are essential. Signal Temporal Logic (STL) provides a formal framework for checking safety-critical CPS. However, static verification of STL is undecidable in general, except when we want to verify using run-time-based methods, which have limitations. We propose Synchronous Signal Temporal Logic (SSTL), a decidable fragment of STL, which admits static safety and liveness property verification. In SSTL, we assume that a signal is sampled at fixed discrete steps, called ticks, and then propose a hypothesis, called the Signal Invariance Hypothesis (SIH), which is inspired by a similar hypothesis for synchronous programs. We define the syntax and semantics of SSTL and show that SIH is a necessary and sufficient condition for equivalence between an STL formula and its SSTL counterpart. By translating SSTL to LTL_P (LTL defined over predicates), we enable decidable model checking using the SPIN model checker. We demonstrate the approach on a 33-node human heart model and other case studies.",
-          "topic_key": "other_ai",
-          "topic_label": "Other AI",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.72
+          "classification_confidence": 0.8
         }
       ]
     },
@@ -1898,7 +1867,7 @@
           "topic_label": "Generative Foundations",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.98
+          "classification_confidence": 0.99
         }
       ]
     },
@@ -1928,7 +1897,7 @@
           "topic_label": "Multimodal Agents",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.97
+          "classification_confidence": 0.98
         }
       ]
     },
@@ -1960,7 +1929,38 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.97
+          "classification_confidence": 0.98
+        }
+      ]
+    },
+    {
+      "topic_label": "Other AI",
+      "count": 1,
+      "share": 1.52,
+      "papers": [
+        {
+          "paper_id": "2603.25531",
+          "title": "Synchronous Signal Temporal Logic for Decidable Verification of Cyber-Physical Systems",
+          "abs_url": "https://arxiv.org/abs/2603.25531",
+          "pdf_url": "https://arxiv.org/pdf/2603.25531",
+          "detail_url": "https://papers.cool/arxiv/2603.25531",
+          "authors": [
+            "Partha Roop",
+            "Sobhan Chatterjee",
+            "Avinash Malik",
+            "Nathan Allen",
+            "Logan Kenwright"
+          ],
+          "subjects": [
+            "Formal Languages and Automata Theory",
+            "Computation and Language"
+          ],
+          "abstract": "Many Cyber Physical System (CPS) work in a safety-critical environment, where correct execution, reliability and trustworthiness are essential. Signal Temporal Logic (STL) provides a formal framework for checking safety-critical CPS. However, static verification of STL is undecidable in general, except when we want to verify using run-time-based methods, which have limitations. We propose Synchronous Signal Temporal Logic (SSTL), a decidable fragment of STL, which admits static safety and liveness property verification. In SSTL, we assume that a signal is sampled at fixed discrete steps, called ticks, and then propose a hypothesis, called the Signal Invariance Hypothesis (SIH), which is inspired by a similar hypothesis for synchronous programs. We define the syntax and semantics of SSTL and show that SIH is a necessary and sufficient condition for equivalence between an STL formula and its SSTL counterpart. By translating SSTL to LTL_P (LTL defined over predicates), we enable decidable model checking using the SPIN model checker. We demonstrate the approach on a 33-node human heart model and other case studies.",
+          "topic_key": "other_ai",
+          "topic_label": "Other AI",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.72
         }
       ]
     }
@@ -1988,7 +1988,7 @@
       "topic_label": "Agents and Planning",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.9
     },
     {
       "paper_id": "2603.25702",
@@ -2011,7 +2011,7 @@
       "topic_label": "Generative Foundations",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.98
+      "classification_confidence": 0.99
     },
     {
       "paper_id": "2603.25681",
@@ -2083,7 +2083,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.63
+      "classification_confidence": 0.7
     },
     {
       "paper_id": "2603.25620",
@@ -2107,7 +2107,7 @@
       "topic_label": "Agents and Planning",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.94
+      "classification_confidence": 0.91
     },
     {
       "paper_id": "2603.25537",
@@ -2130,7 +2130,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.96
+      "classification_confidence": 0.98
     },
     {
       "paper_id": "2603.25501",
@@ -2148,11 +2148,11 @@
         "Computation and Language"
       ],
       "abstract": "In recent years, fake news detection has received increasing attention in public debate and scientific research. Despite advances in detection techniques, the production and spread of false information have become more sophisticated, driven by Large Language Models (LLMs) and the amplification power of social media. We present a critical assessment of 12 representative fake news detection approaches, spanning traditional machine learning, deep learning, transformers, and specialized cross-domain architectures. We evaluate these methods on 10 publicly available datasets differing in genre, source, topic, and labeling rationale. We address text-only English fake news detection as a binary classification task by harmonizing labels into \"Real\" and \"Fake\" to ensure a consistent evaluation protocol. We acknowledge that label semantics vary across datasets and that harmonization inevitably removes such semantic nuances. Each dataset is treated as a distinct domain. We conduct in-domain, multi-domain and cross-domain experiments to simulate real-world scenarios involving domain shift and out-of-distribution data. Fine-tuned models perform well in-domain but struggle to generalize. Cross-domain architectures can reduce this gap but are data-hungry, while LLMs offer a promising alternative through zero- and few-shot learning. Given inherent dataset confounds and possible pre-training exposure, results should be interpreted as robustness evaluations within this English, text-only protocol.",
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
+      "topic_key": "domain_applications",
+      "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.56
+      "classification_confidence": 0.76
     },
     {
       "paper_id": "2603.25489",
@@ -2176,7 +2176,7 @@
       "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.91
+      "classification_confidence": 0.86
     },
     {
       "paper_id": "2603.25422",
@@ -2194,11 +2194,11 @@
         "Computers and Society"
       ],
       "abstract": "Recent developments in text classification using Large Language Models (LLMs) in the social sciences suggest that costs can be cut significantly, while performance can sometimes rival existing computational methods. However, with a wide variance in performance in current tests, we move to the question of how to maximize performance. In this paper, we focus on prompt context as a possible avenue for increasing accuracy by systematically varying three aspects of prompt engineering: label descriptions, instructional nudges, and few shot examples. Across two different examples, our tests illustrate that a minimal increase in prompt context yields the highest increase in performance, while further increases in context only tend to yield marginal performance increases thereafter. Alarmingly, increasing prompt context sometimes decreases accuracy. Furthermore, our tests suggest substantial heterogeneity across models, tasks, and batch size, underlining the need for individual validation of each LLM coding task rather than reliance on general rules.",
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
+      "topic_key": "domain_applications",
+      "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.92
+      "classification_confidence": 0.84
     },
     {
       "paper_id": "2603.25419",
@@ -2217,11 +2217,11 @@
         "Computation and Language"
       ],
       "abstract": "Large Language Models (LLMs) have demonstrated remarkable proficiency in English mathematical reasoning, yet a significant performance disparity persists in multilingual contexts, largely attributed to deficiencies in language understanding. To bridge this gap, we introduce Translation-Augmented Policy Optimization (TAPO), a novel reinforcement learning framework built upon GRPO. TAPO enforces an explicit alignment strategy where the model leverages English as a pivot and follows an understand-then-reason paradigm. Crucially, we employ a step-level relative advantage mechanism that decouples understanding from reasoning, allowing the integration of translation quality rewards without introducing optimization conflicts. Extensive experiments reveal that TAPO effectively synergizes language understanding with reasoning capabilities and is compatible with various models. It outperforms baseline methods in both multilingual mathematical reasoning and translation tasks, while generalizing well to unseen languages and out-of-domain tasks.",
-      "topic_key": "reasoning_alignment_eval",
-      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.68
+      "classification_confidence": 0.73
     },
     {
       "paper_id": "2603.25340",
@@ -2246,7 +2246,7 @@
       "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.86
+      "classification_confidence": 0.9
     },
     {
       "paper_id": "2603.25333",
@@ -2290,7 +2290,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.75
+      "classification_confidence": 0.88
     },
     {
       "paper_id": "2603.25309",
@@ -2309,7 +2309,7 @@
       "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.61
+      "classification_confidence": 0.71
     },
     {
       "paper_id": "2603.25269",
@@ -2326,11 +2326,11 @@
         "Computation and Language"
       ],
       "abstract": "Hateful content online is often expressed using fact-like, not necessarily correct information, especially in coordinated online harassment campaigns and extremist propaganda. Failing to jointly address hate speech (HS) and misinformation can deepen prejudice, reinforce harmful stereotypes, and expose bystanders to psychological distress, while polluting public debate. Moreover, these messages require more effort from content moderators because they must assess both harmfulness and veracity, i.e., fact-check them. To address this challenge, we release WSF-ARG+, the first dataset which combines hate speech with check-worthiness information. We also introduce a novel LLM-in-the-loop framework to facilitate the annotation of check-worthy claims. We run our framework, testing it with 12 open-weight LLMs of different sizes and architectures. We validate it through extensive human evaluation, and show that our LLM-in-the-loop framework reduces human effort without compromising the annotation quality of the data. Finally, we show that HS messages with check-worthy claims show significantly higher harassment and hate, and that incorporating check-worthiness labels improves LLM-based HS detection up to 0.213 macro-F1 and to 0.154 macro-F1 on average for large models.",
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
+      "topic_key": "domain_applications",
+      "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.78
+      "classification_confidence": 0.82
     },
     {
       "paper_id": "2603.25268",
@@ -2352,7 +2352,7 @@
       "topic_label": "Agents and Planning",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.83
+      "classification_confidence": 0.93
     },
     {
       "paper_id": "2603.25253",
@@ -2378,7 +2378,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.97
     },
     {
       "paper_id": "2603.25227",
@@ -2394,11 +2394,11 @@
         "Computation and Language"
       ],
       "abstract": "This study compares the impact of natural and synthetic data on training and evaluating large language models (LLMs), using the case of passive verb alternation in French and Italian. We use Blackbird Language Matrices (BLMs), structured datasets designed to probe linguistic knowledge of underlying patterns across sentence sets. We compare structured templates instantiated with natural sentences extracted from Universal Dependencies to structured templates of synthetic sentences. Experiments show that while models achieve ceiling performance when trained and tested on synthetic datasets, they do not reliably generalize to natural sentences. In contrast, models trained on natural data exhibit robust performance across both natural and synthetic test suites, demonstrating their superior ability to capture abstract linguistic patterns. These results corroborate the value of natural data and of structured set ups in linguistic evaluation for probing LLMs' syntactic and semantic knowledge.",
-      "topic_key": "datasets_benchmarks",
-      "topic_label": "Datasets and Benchmarks",
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.54
+      "classification_confidence": 0.58
     },
     {
       "paper_id": "2603.25222",
@@ -2424,7 +2424,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.78
+      "classification_confidence": 0.83
     },
     {
       "paper_id": "2603.25201",
@@ -2449,7 +2449,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.83
+      "classification_confidence": 0.8
     },
     {
       "paper_id": "2603.25196",
@@ -2478,7 +2478,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.97
+      "classification_confidence": 0.92
     },
     {
       "paper_id": "2603.25189",
@@ -2499,7 +2499,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.92
+      "classification_confidence": 0.95
     },
     {
       "paper_id": "2603.25187",
@@ -2549,7 +2549,7 @@
       "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.82
+      "classification_confidence": 0.8
     },
     {
       "paper_id": "2603.25176",
@@ -2570,7 +2570,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.97
+      "classification_confidence": 0.95
     },
     {
       "paper_id": "2603.25169",
@@ -2591,7 +2591,7 @@
       "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.72
+      "classification_confidence": 0.74
     },
     {
       "paper_id": "2603.25150",
@@ -2614,7 +2614,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.63
+      "classification_confidence": 0.72
     },
     {
       "paper_id": "2603.25112",
@@ -2634,7 +2634,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.96
+      "classification_confidence": 0.94
     },
     {
       "paper_id": "2603.25105",
@@ -2661,7 +2661,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.89
+      "classification_confidence": 0.85
     },
     {
       "paper_id": "2603.25052",
@@ -2682,7 +2682,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.94
+      "classification_confidence": 0.91
     },
     {
       "paper_id": "2603.25051",
@@ -2732,7 +2732,7 @@
       "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.86
+      "classification_confidence": 0.84
     },
     {
       "paper_id": "2603.24981",
@@ -2756,7 +2756,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.8
+      "classification_confidence": 0.81
     },
     {
       "paper_id": "2603.24979",
@@ -2791,7 +2791,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.81
+      "classification_confidence": 0.86
     },
     {
       "paper_id": "2603.24955",
@@ -2811,7 +2811,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.89
+      "classification_confidence": 0.87
     },
     {
       "paper_id": "2603.24917",
@@ -2839,7 +2839,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.9
     },
     {
       "paper_id": "2603.24896",
@@ -2861,7 +2861,7 @@
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.72
+      "classification_confidence": 0.66
     },
     {
       "paper_id": "2603.24840",
@@ -2883,11 +2883,11 @@
         "Computation and Language"
       ],
       "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) has significantly advanced the reasoning capabilities of Large Language Models (LLMs). However, methods such as GRPO and DAPO suffer from substantial computational cost, since they rely on sampling many rollouts for each prompt. Moreover, in RLVR the relative advantage is often sparse: many samples become nearly all-correct or all-incorrect, yielding low within-group reward variance and thus weak learning signals. In this paper, we introduce arrol (Accelerating RLVR via online Rollout Pruning), an online rollout pruning method that prunes rollouts during generation while explicitly steering the surviving ones more correctness-balanced to enhance learning signals. Specifically, arrol trains a lightweight quality head on-the-fly to predict the success probability of partial rollouts and uses it to make early pruning decisions. The learned quality head can further weigh candidates to improve inference accuracy during test-time scaling. To improve efficiency, we present a system design that prunes rollouts inside the inference engine and re-batches the remaining ones for log-probability computation and policy updates. Across GRPO and DAPO on Qwen-3 and LLaMA-3.2 models (1B-8B), arrol improves average accuracy by +2.30 to +2.99 while achieving up to 1.7x training speedup, and yielding up to +8.33 additional gains in average accuracy in test-time scaling. The code is available at https://github.com/Hsu1023/ARRoL.",
-      "topic_key": "agents_planning",
-      "topic_label": "Agents and Planning",
+      "topic_key": "reasoning_alignment_eval",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.67
+      "classification_confidence": 0.73
     },
     {
       "paper_id": "2603.24826",
@@ -2908,7 +2908,7 @@
       "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.78
+      "classification_confidence": 0.8
     },
     {
       "paper_id": "2603.24797",
@@ -2935,7 +2935,7 @@
       "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.53
+      "classification_confidence": 0.69
     },
     {
       "paper_id": "2603.24772",
@@ -2958,7 +2958,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.92
     },
     {
       "paper_id": "2603.24767",
@@ -2981,7 +2981,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.93
+      "classification_confidence": 0.9
     },
     {
       "paper_id": "2603.24652",
@@ -3005,7 +3005,7 @@
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.92
+      "classification_confidence": 0.94
     },
     {
       "paper_id": "2603.24651",
@@ -3033,7 +3033,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.62
+      "classification_confidence": 0.78
     },
     {
       "paper_id": "2603.25737",
@@ -3057,7 +3057,7 @@
       "topic_label": "Retrieval, Knowledge, and RAG",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.87
+      "classification_confidence": 0.88
     },
     {
       "paper_id": "2603.25640",
@@ -3105,7 +3105,7 @@
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.81
+      "classification_confidence": 0.8
     },
     {
       "paper_id": "2603.25531",
@@ -3157,7 +3157,7 @@
       "topic_label": "Retrieval, Knowledge, and RAG",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.83
+      "classification_confidence": 0.9
     },
     {
       "paper_id": "2603.25293",
@@ -3183,7 +3183,7 @@
       "topic_label": "Retrieval, Knowledge, and RAG",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.78
+      "classification_confidence": 0.79
     },
     {
       "paper_id": "2603.25226",
@@ -3217,7 +3217,7 @@
       "topic_label": "Agents and Planning",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.93
+      "classification_confidence": 0.96
     },
     {
       "paper_id": "2603.25203",
@@ -3269,7 +3269,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.97
+      "classification_confidence": 0.98
     },
     {
       "paper_id": "2603.25040",
@@ -3463,7 +3463,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.74
+      "classification_confidence": 0.76
     },
     {
       "paper_id": "2603.24961",
@@ -3492,7 +3492,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.93
+      "classification_confidence": 0.91
     },
     {
       "paper_id": "2603.24943",
@@ -3518,11 +3518,11 @@
         "Computation and Language"
       ],
       "abstract": "This paper introduces \\textbf{FinMCP-Bench}, a novel benchmark for evaluating large language models (LLMs) in solving real-world financial problems through tool invocation of financial model context protocols. FinMCP-Bench contains 613 samples spanning 10 main scenarios and 33 sub-scenarios, featuring both real and synthetic user queries to ensure diversity and authenticity. It incorporates 65 real financial MCPs and three types of samples, single tool, multi-tool, and multi-turn, allowing evaluation of models across different levels of task complexity. Using this benchmark, we systematically assess a range of mainstream LLMs and propose metrics that explicitly measure tool invocation accuracy and reasoning capabilities. FinMCP-Bench provides a standardized, practical, and challenging testbed for advancing research on financial LLM agents.",
-      "topic_key": "datasets_benchmarks",
-      "topic_label": "Datasets and Benchmarks",
+      "topic_key": "agents_planning",
+      "topic_label": "Agents and Planning",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.8
+      "classification_confidence": 0.95
     },
     {
       "paper_id": "2603.24941",
@@ -3545,7 +3545,7 @@
       "topic_label": "Multimodal Agents",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.97
+      "classification_confidence": 0.98
     },
     {
       "paper_id": "2603.24929",
@@ -3568,7 +3568,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.9
+      "classification_confidence": 0.78
     },
     {
       "paper_id": "2603.24925",
@@ -3595,7 +3595,7 @@
       "topic_label": "Retrieval, Knowledge, and RAG",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.98
+      "classification_confidence": 0.99
     },
     {
       "paper_id": "2603.24866",
@@ -3621,7 +3621,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.86
+      "classification_confidence": 0.87
     },
     {
       "paper_id": "2603.24857",
@@ -3645,7 +3645,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.94
+      "classification_confidence": 0.93
     },
     {
       "paper_id": "2603.24844",
@@ -3671,7 +3671,7 @@
       "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.75
+      "classification_confidence": 0.73
     },
     {
       "paper_id": "2603.24755",
@@ -3700,7 +3700,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.94
+      "classification_confidence": 0.97
     },
     {
       "paper_id": "2603.24709",
@@ -3730,7 +3730,7 @@
       "topic_label": "Agents and Planning",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.94
+      "classification_confidence": 0.96
     },
     {
       "paper_id": "2603.24596",
@@ -3756,7 +3756,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.74
+      "classification_confidence": 0.8
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-29T06:34:22Z",
+  "generated_at": "2026-03-29T15:55:04Z",
   "report_kind": "hf_daily",
   "report_date": "2026-03-24",
   "source_url": "https://huggingface.co/papers/date/2026-03-24",
@@ -9,8 +9,8 @@
     {
       "topic_key": "generative_foundations",
       "topic_label": "Generative Foundations",
-      "count": 4,
-      "share": 9.76
+      "count": 3,
+      "share": 7.32
     },
     {
       "topic_key": "multimodal_generative",
@@ -37,7 +37,7 @@
       "share": 17.07
     },
     {
-      "topic_label": "Generative Foundations",
+      "topic_label": "Learning, Optimization, and Theory",
       "count": 4,
       "share": 9.76
     },
@@ -52,6 +52,11 @@
       "share": 9.76
     },
     {
+      "topic_label": "Generative Foundations",
+      "count": 3,
+      "share": 7.32
+    },
+    {
       "topic_label": "LLMs and Language",
       "count": 3,
       "share": 7.32
@@ -60,16 +65,6 @@
       "topic_label": "Retrieval, Knowledge, and RAG",
       "count": 3,
       "share": 7.32
-    },
-    {
-      "topic_label": "Learning, Optimization, and Theory",
-      "count": 2,
-      "share": 4.88
-    },
-    {
-      "topic_label": "Robotics and Embodied AI",
-      "count": 2,
-      "share": 4.88
     },
     {
       "topic_label": "Datasets and Benchmarks",
@@ -88,6 +83,11 @@
     },
     {
       "topic_label": "Other AI",
+      "count": 1,
+      "share": 2.44
+    },
+    {
+      "topic_label": "Robotics and Embodied AI",
       "count": 1,
       "share": 2.44
     }
@@ -155,7 +155,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.98
     },
     {
       "report_date": "2026-03-24",
@@ -216,7 +216,7 @@
       "github_url": "",
       "submitted_by": "Ethan Chern",
       "submitted_at": "2026-03-24T01:38:56.590Z",
-      "upvotes": 114,
+      "upvotes": 116,
       "comments": 5,
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
@@ -254,7 +254,7 @@
       "topic_label": "Agents and Planning",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.88
+      "classification_confidence": 0.83
     },
     {
       "report_date": "2026-03-24",
@@ -284,7 +284,7 @@
       "topic_label": "Retrieval, Knowledge, and RAG",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.82
+      "classification_confidence": 0.84
     },
     {
       "report_date": "2026-03-24",
@@ -333,7 +333,7 @@
       "topic_label": "Agents and Planning",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.85
+      "classification_confidence": 0.92
     },
     {
       "report_date": "2026-03-24",
@@ -354,13 +354,13 @@
       "github_url": "",
       "submitted_by": "BradyFU",
       "submitted_at": "2026-03-24T01:38:20.247Z",
-      "upvotes": 49,
+      "upvotes": 50,
       "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.94
+      "classification_confidence": 0.97
     },
     {
       "report_date": "2026-03-24",
@@ -382,12 +382,12 @@
       "submitted_by": "Byungwoo Jeon",
       "submitted_at": "2026-03-24T06:26:26.317Z",
       "upvotes": 44,
-      "comments": 2,
+      "comments": 3,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.79
+      "classification_confidence": 0.86
     },
     {
       "report_date": "2026-03-24",
@@ -417,7 +417,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.96
+      "classification_confidence": 0.95
     }
   ],
   "topics": [
@@ -456,7 +456,7 @@
           "topic_label": "Agents and Planning",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.88
+          "classification_confidence": 0.83
         },
         {
           "report_date": "2026-03-24",
@@ -505,7 +505,7 @@
           "topic_label": "Agents and Planning",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.85
+          "classification_confidence": 0.92
         },
         {
           "report_date": "2026-03-24",
@@ -533,7 +533,7 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-03-24T01:56:51.649Z",
-          "upvotes": 16,
+          "upvotes": 18,
           "comments": 1,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
@@ -559,13 +559,13 @@
           "github_url": "",
           "submitted_by": "Aniketh",
           "submitted_at": "2026-03-24T07:32:09.374Z",
-          "upvotes": 16,
+          "upvotes": 17,
           "comments": 2,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.91
+          "classification_confidence": 0.95
         },
         {
           "report_date": "2026-03-24",
@@ -584,13 +584,13 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-03-24T01:58:58.295Z",
-          "upvotes": 7,
+          "upvotes": 8,
           "comments": 1,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.77
+          "classification_confidence": 0.79
         },
         {
           "report_date": "2026-03-24",
@@ -624,7 +624,7 @@
           "topic_label": "Agents and Planning",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.95
+          "classification_confidence": 0.97
         },
         {
           "report_date": "2026-03-24",
@@ -653,7 +653,7 @@
           "topic_label": "Agents and Planning",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.96
+          "classification_confidence": 0.99
         },
         {
           "report_date": "2026-03-24",
@@ -677,7 +677,7 @@
           "topic_label": "Agents and Planning",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.94
+          "classification_confidence": 0.98
         }
       ]
     },
@@ -705,13 +705,13 @@
           "github_url": "",
           "submitted_by": "BradyFU",
           "submitted_at": "2026-03-24T01:38:20.247Z",
-          "upvotes": 49,
+          "upvotes": 50,
           "comments": 2,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.94
+          "classification_confidence": 0.97
         },
         {
           "report_date": "2026-03-24",
@@ -733,12 +733,12 @@
           "submitted_by": "Byungwoo Jeon",
           "submitted_at": "2026-03-24T06:26:26.317Z",
           "upvotes": 44,
-          "comments": 2,
+          "comments": 3,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.79
+          "classification_confidence": 0.86
         },
         {
           "report_date": "2026-03-24",
@@ -765,7 +765,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.75
+          "classification_confidence": 0.72
         },
         {
           "report_date": "2026-03-24",
@@ -791,7 +791,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.9
+          "classification_confidence": 0.95
         },
         {
           "report_date": "2026-03-24",
@@ -818,7 +818,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.8
+          "classification_confidence": 0.9
         },
         {
           "report_date": "2026-03-24",
@@ -845,7 +845,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.94
+          "classification_confidence": 0.96
         },
         {
           "report_date": "2026-03-24",
@@ -872,120 +872,114 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.88
+          "classification_confidence": 0.9
         }
       ]
     },
     {
-      "topic_label": "Generative Foundations",
+      "topic_label": "Learning, Optimization, and Theory",
       "count": 4,
       "share": 9.76,
       "papers": [
         {
           "report_date": "2026-03-24",
-          "paper_id": "2603.21342",
-          "title": "Generalized Discrete Diffusion from Snapshots",
+          "paper_id": "2603.21786",
+          "title": "The Universal Normal Embedding",
           "authors": [
-            "Oussama Zekri",
-            "Théo Uscidda",
-            "Nicolas Boullé",
-            "Anna Korba"
+            "Chen Tasker",
+            "Roy Betser",
+            "Eyal Gofer",
+            "Meir Yossef Levi",
+            "Guy Gilboa"
           ],
-          "abstract": "We introduce Generalized Discrete Diffusion from Snapshots (GDDS), a unified framework for discrete diffusion modeling that supports arbitrary noising processes over large discrete state spaces. Our formulation encompasses all existing discrete diffusion approaches, while allowing significantly greater flexibility in the choice of corruption dynamics. The forward noising process relies on uniformization and enables fast arbitrary corruption. For the reverse process, we derive a simple evidence lower bound (ELBO) based on snapshot latents, instead of the entire noising path, that allows efficient training of standard generative modeling architectures with clear probabilistic interpretation. Our experiments on large-vocabulary discrete generation tasks suggest that the proposed framework outperforms existing discrete diffusion methods in terms of training efficiency and generation quality, and beats autoregressive models for the first time at this scale. We provide the code along with a blog post on the project page : https://oussamazekri.fr/gdds{https://oussamazekri.fr/gdds}.",
-          "hf_url": "https://huggingface.co/papers/2603.21342",
-          "arxiv_url": "https://arxiv.org/abs/2603.21342",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.21342",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.21342",
+          "abstract": "Generative models and vision encoders have largely advanced on separate tracks, optimized for different goals and grounded in different mathematical principles. Yet, they share a fundamental property: latent space Gaussianity. Generative models map Gaussian noise to images, while encoders map images to semantic embeddings whose coordinates empirically behave as Gaussian. We hypothesize that both are views of a shared latent source, the Universal Normal Embedding (UNE): an approximately Gaussian latent space from which encoder embeddings and DDIM-inverted noise arise as noisy linear projections. To test our hypothesis, we introduce NoiseZoo, a dataset of per-image latents comprising DDIM-inverted diffusion noise and matching encoder representations (CLIP, DINO). On CelebA, linear probes in both spaces yield strong, aligned attribute predictions, indicating that generative noise encodes meaningful semantics along linear directions. These directions further enable faithful, controllable edits (e.g., smile, gender, age) without architectural changes, where simple orthogonalization mitigates spurious entanglements. Taken together, our results provide empirical support for the UNE hypothesis and reveal a shared Gaussian-like latent geometry that concretely links encoding and generation. Code and data are available https://rbetser.github.io/UNE/",
+          "hf_url": "https://huggingface.co/papers/2603.21786",
+          "arxiv_url": "https://arxiv.org/abs/2603.21786",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.21786",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.21786",
           "github_url": "",
-          "submitted_by": "Oussama Zekri",
-          "submitted_at": "2026-03-24T05:48:54.493Z",
-          "upvotes": 11,
+          "submitted_by": "Yossi levi",
+          "submitted_at": "2026-03-24T06:44:28.477Z",
+          "upvotes": 14,
           "comments": 2,
-          "topic_key": "generative_foundations",
-          "topic_label": "Generative Foundations",
+          "topic_key": "learning_theory",
+          "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.98
+          "classification_confidence": 0.6
         },
         {
           "report_date": "2026-03-24",
-          "paper_id": "2603.22286",
-          "title": "WorldCache: Content-Aware Caching for Accelerated Video World Models",
+          "paper_id": "2603.22276",
+          "title": "Scaling DoRA: High-Rank Adaptation via Factored Norms and Fused Kernels",
           "authors": [
-            "Umair Nawaz",
-            "Ahmed Heakl",
-            "Ufaq Khan",
-            "Abdelrahman Shaker",
-            "Salman Khan",
-            "Fahad Shahbaz Khan"
+            "Alexandra Zelenin",
+            "Alexandra Zhuravlyova"
           ],
-          "abstract": "Diffusion Transformers (DiTs) power high-fidelity video world models but remain computationally expensive due to sequential denoising and costly spatio-temporal attention. Training-free feature caching accelerates inference by reusing intermediate activations across denoising steps; however, existing methods largely rely on a Zero-Order Hold assumption i.e., reusing cached features as static snapshots when global drift is small. This often leads to ghosting artifacts, blur, and motion inconsistencies in dynamic scenes. We propose WorldCache, a Perception-Constrained Dynamical Caching framework that improves both when and how to reuse features. WorldCache introduces motion-adaptive thresholds, saliency-weighted drift estimation, optimal approximation via blending and warping, and phase-aware threshold scheduling across diffusion steps. Our cohesive approach enables adaptive, motion-consistent feature reuse without retraining. On Cosmos-Predict2.5-2B evaluated on PAI-Bench, WorldCache achieves 2.3times inference speedup while preserving 99.4\\% of baseline quality, substantially outperforming prior training-free caching approaches. Our code can be accessed on https://umair1221.github.io/World-Cache/{World-Cache}.",
-          "hf_url": "https://huggingface.co/papers/2603.22286",
-          "arxiv_url": "https://arxiv.org/abs/2603.22286",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.22286",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.22286",
+          "abstract": "Weight-Decomposed Low-Rank Adaptation (DoRA) extends LoRA by decoupling weight magnitude from direction, but its forward pass requires the row-wise norm of W + sBA, a computation that every major framework we surveyed implements by materializing the dense [d_out, d_in] product BA. At d_in = 8192 and rank r = 384, a single module's norm requires about 512 MB of transient working memory in bf16, making high-rank DoRA costly and often infeasible on common single-GPU setups once hundreds of adapted modules and checkpointing are involved. We present two systems contributions. A factored norm decomposes the squared norm into base, cross, and Gram terms computable through O(d_out r + r^2) intermediates, eliminating the dense product. Fused Triton kernels collapse the four-kernel DoRA composition into a single pass, reducing memory traffic by about 4x and using a numerically stable form that avoids catastrophic cancellation in the near-unity rescaling regime where magnitude scales concentrate in practice. Across six 8-32B vision-language models (VLMs) on three NVIDIA GPUs (RTX 6000 PRO, H200, B200) at r = 384 in bf16, the fused implementation is 1.5-2.0x faster than Hugging Face PEFT's DoRA implementation for inference and 1.5-1.9x faster for gradient computation (optimizer step excluded), with up to 7 GB lower peak VRAM. Microbenchmarks on six GPUs spanning four architecture generations (L40S, A100, RTX 6000 PRO, H200, B200, B300) confirm 1.5-2.7x compose-kernel speedup. Final-logit cosine similarity exceeds 0.9999 across all model/GPU pairs, and multi-seed training curves match within 7.1 x 10^-4 mean per-step loss delta over 2000 steps.",
+          "hf_url": "https://huggingface.co/papers/2603.22276",
+          "arxiv_url": "https://arxiv.org/abs/2603.22276",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.22276",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.22276",
           "github_url": "",
-          "submitted_by": "taesiri",
-          "submitted_at": "2026-03-24T01:50:58.283Z",
-          "upvotes": 4,
-          "comments": 1,
-          "topic_key": "generative_foundations",
-          "topic_label": "Generative Foundations",
+          "submitted_by": "Alexandra Z.",
+          "submitted_at": "2026-03-24T02:48:00.751Z",
+          "upvotes": 13,
+          "comments": 2,
+          "topic_key": "learning_theory",
+          "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.95
+          "classification_confidence": 0.8
         },
         {
           "report_date": "2026-03-24",
-          "paper_id": "2603.22241",
-          "title": "MemDLM: Memory-Enhanced DLM Training",
+          "paper_id": "2603.15136",
+          "title": "Safe Flow Q-Learning: Offline Safe Reinforcement Learning with Reachability-Based Flow Policies",
           "authors": [
-            "Zehua Pei",
-            "Hui-Ling Zhen",
-            "Weizhe Lin",
-            "Sinno Jialin Pan",
-            "Yunhe Wang",
-            "Mingxuan Yuan",
-            "Bei Yu"
+            "Mumuksh Tayal",
+            "Manan Tayal",
+            "Ravi Prakash"
           ],
-          "abstract": "Diffusion Language Models (DLMs) offer attractive advantages over Auto-Regressive (AR) models, such as full-attention parallel decoding and flexible generation. However, they suffer from a notable train-inference mismatch: DLMs are trained with a static, single-step masked prediction objective, but deployed through a multi-step progressive denoising trajectory. We propose MemDLM (Memory-Enhanced DLM), which narrows this gap by embedding a simulated denoising process into training via Bi-level Optimization. An inner loop updates a set of fast weights, forming a Parametric Memory that captures the local trajectory experience of each sample, while an outer loop updates the base model conditioned on this memory. By offloading memorization pressure from token representations to parameters, MemDLM yields faster convergence and lower training loss. Moreover, the inner loop can be re-enabled at inference time as an adaptation step, yielding additional gains on long-context understanding. We find that, when activated at inference time, this Parametric Memory acts as an emergent in-weight retrieval mechanism, helping MemDLM further reduce token-level attention bottlenecks on challenging Needle-in-a-Haystack retrieval tasks. Code: https://github.com/JarvisPei/MemDLM.",
-          "hf_url": "https://huggingface.co/papers/2603.22241",
-          "arxiv_url": "https://arxiv.org/abs/2603.22241",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.22241",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.22241",
+          "abstract": "Offline safe reinforcement learning (RL) seeks reward-maximizing policies from static datasets under strict safety constraints. Existing methods often rely on soft expected-cost objectives or iterative generative inference, which can be insufficient for safety-critical real-time control. We propose Safe Flow Q-Learning (SafeFQL), which extends FQL to safe offline RL by combining a Hamilton--Jacobi reachability-inspired safety value function with an efficient one-step flow policy. SafeFQL learns the safety value via a self-consistency Bellman recursion, trains a flow policy by behavioral cloning, and distills it into a one-step actor for reward-maximizing safe action selection without rejection sampling at deployment. To account for finite-data approximation error in the learned safety boundary, we add a conformal prediction calibration step that adjusts the safety threshold and provides finite-sample probabilistic safety coverage. Empirically, SafeFQL trades modestly higher offline training cost for substantially lower inference latency than diffusion-style safe generative baselines, which is advantageous for real-time safety-critical deployment. Across boat navigation, and Safety Gymnasium MuJoCo tasks, SafeFQL matches or exceeds prior offline safe RL performance while substantially reducing constraint violations.",
+          "hf_url": "https://huggingface.co/papers/2603.15136",
+          "arxiv_url": "https://arxiv.org/abs/2603.15136",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.15136",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.15136",
           "github_url": "",
-          "submitted_by": "JarvisPei",
-          "submitted_at": "2026-03-24T02:28:00.916Z",
+          "submitted_by": "Manan Tayal",
+          "submitted_at": "2026-03-24T10:48:36.189Z",
           "upvotes": 3,
           "comments": 2,
-          "topic_key": "generative_foundations",
-          "topic_label": "Generative Foundations",
+          "topic_key": "learning_theory",
+          "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.74
+          "classification_confidence": 0.87
         },
         {
           "report_date": "2026-03-24",
-          "paper_id": "2603.21315",
-          "title": "FluidWorld: Reaction-Diffusion Dynamics as a Predictive Substrate for World Models",
+          "paper_id": "2603.20538",
+          "title": "Understanding Behavior Cloning with Action Quantization",
           "authors": [
-            "Fabien Polly"
+            "Haoqun Cao",
+            "Tengyang Xie"
           ],
-          "abstract": "World models learn to predict future states of an environment, enabling planning and mental simulation. Current approaches default to Transformer-based predictors operating in learned latent spaces. This comes at a cost: O(N^2) computation and no explicit spatial inductive bias. This paper asks a foundational question: is self-attention necessary for predictive world modeling, or can alternative computational substrates achieve comparable or superior results? I introduce FluidWorld, a proof-of-concept world model whose predictive dynamics are governed by partial differential equations (PDEs) of reaction-diffusion type. Instead of using a separate neural network predictor, the PDE integration itself produces the future state prediction. In a strictly parameter-matched three-way ablation on unconditional UCF-101 video prediction (64x64, ~800K parameters, identical encoder, decoder, losses, and data), FluidWorld is compared against both a Transformer baseline (self-attention) and a ConvLSTM baseline (convolutional recurrence). While all three models converge to comparable single-step prediction loss, FluidWorld achieves 2x lower reconstruction error, produces representations with 10-15% higher spatial structure preservation and 18-25% more effective dimensionality, and critically maintains coherent multi-step rollouts where both baselines degrade rapidly. All experiments were conducted on a single consumer-grade PC (Intel Core i5, NVIDIA RTX 4070 Ti), without any large-scale compute. These results establish that PDE-based dynamics, which natively provide O(N) spatial complexity, adaptive computation, and global spatial coherence through diffusion, are a viable and parameter-efficient alternative to both attention and convolutional recurrence for world modeling.",
-          "hf_url": "https://huggingface.co/papers/2603.21315",
-          "arxiv_url": "https://arxiv.org/abs/2603.21315",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.21315",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.21315",
+          "abstract": "Behavior cloning is a fundamental paradigm in machine learning, enabling policy learning from expert demonstrations across robotics, autonomous driving, and generative models. Autoregressive models like transformer have proven remarkably effective, from large language models (LLMs) to vision-language-action systems (VLAs). However, applying autoregressive models to continuous control requires discretizing actions through quantization, a practice widely adopted yet poorly understood theoretically. This paper provides theoretical foundations for this practice. We analyze how quantization error propagates along the horizon and interacts with statistical sample complexity. We show that behavior cloning with quantized actions and log-loss achieves optimal sample complexity, matching existing lower bounds, and incurs only polynomial horizon dependence on quantization error, provided the dynamics are stable and the policy satisfies a probabilistic smoothness condition. We further characterize when different quantization schemes satisfy or violate these requirements, and propose a model-based augmentation that provably improves the error bound without requiring policy smoothness. Finally, we establish fundamental limits that jointly capture the effects of quantization error and statistical complexity.",
+          "hf_url": "https://huggingface.co/papers/2603.20538",
+          "arxiv_url": "https://arxiv.org/abs/2603.20538",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.20538",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.20538",
           "github_url": "",
-          "submitted_by": "infinition",
-          "submitted_at": "2026-03-24T08:40:07.678Z",
-          "upvotes": 3,
+          "submitted_by": "Tengyang Xie",
+          "submitted_at": "2026-03-24T02:30:26.414Z",
+          "upvotes": 2,
           "comments": 2,
-          "topic_key": "generative_foundations",
-          "topic_label": "Generative Foundations",
+          "topic_key": "learning_theory",
+          "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.93
+          "classification_confidence": 0.78
         }
       ]
     },
@@ -1053,7 +1047,7 @@
           "github_url": "",
           "submitted_by": "Ethan Chern",
           "submitted_at": "2026-03-24T01:38:56.590Z",
-          "upvotes": 114,
+          "upvotes": 116,
           "comments": 5,
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
@@ -1089,7 +1083,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.96
+          "classification_confidence": 0.95
         },
         {
           "report_date": "2026-03-24",
@@ -1123,7 +1117,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.78
+          "classification_confidence": 0.93
         },
         {
           "report_date": "2026-03-24",
@@ -1142,13 +1136,13 @@
           "github_url": "",
           "submitted_by": "Donald Shenaj",
           "submitted_at": "2026-03-24T07:48:42.957Z",
-          "upvotes": 4,
+          "upvotes": 5,
           "comments": 2,
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.96
+          "classification_confidence": 0.97
         }
       ]
     },
@@ -1190,7 +1184,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.83
+          "classification_confidence": 0.91
         },
         {
           "report_date": "2026-03-24",
@@ -1218,7 +1212,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.86
+          "classification_confidence": 0.93
         },
         {
           "report_date": "2026-03-24",
@@ -1247,7 +1241,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.86
+          "classification_confidence": 0.77
         },
         {
           "report_date": "2026-03-24",
@@ -1276,7 +1270,91 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.72
+          "classification_confidence": 0.83
+        }
+      ]
+    },
+    {
+      "topic_label": "Generative Foundations",
+      "count": 3,
+      "share": 7.32,
+      "papers": [
+        {
+          "report_date": "2026-03-24",
+          "paper_id": "2603.21342",
+          "title": "Generalized Discrete Diffusion from Snapshots",
+          "authors": [
+            "Oussama Zekri",
+            "Théo Uscidda",
+            "Nicolas Boullé",
+            "Anna Korba"
+          ],
+          "abstract": "We introduce Generalized Discrete Diffusion from Snapshots (GDDS), a unified framework for discrete diffusion modeling that supports arbitrary noising processes over large discrete state spaces. Our formulation encompasses all existing discrete diffusion approaches, while allowing significantly greater flexibility in the choice of corruption dynamics. The forward noising process relies on uniformization and enables fast arbitrary corruption. For the reverse process, we derive a simple evidence lower bound (ELBO) based on snapshot latents, instead of the entire noising path, that allows efficient training of standard generative modeling architectures with clear probabilistic interpretation. Our experiments on large-vocabulary discrete generation tasks suggest that the proposed framework outperforms existing discrete diffusion methods in terms of training efficiency and generation quality, and beats autoregressive models for the first time at this scale. We provide the code along with a blog post on the project page : https://oussamazekri.fr/gdds{https://oussamazekri.fr/gdds}.",
+          "hf_url": "https://huggingface.co/papers/2603.21342",
+          "arxiv_url": "https://arxiv.org/abs/2603.21342",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.21342",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.21342",
+          "github_url": "",
+          "submitted_by": "Oussama Zekri",
+          "submitted_at": "2026-03-24T05:48:54.493Z",
+          "upvotes": 11,
+          "comments": 2,
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.98
+        },
+        {
+          "report_date": "2026-03-24",
+          "paper_id": "2603.22286",
+          "title": "WorldCache: Content-Aware Caching for Accelerated Video World Models",
+          "authors": [
+            "Umair Nawaz",
+            "Ahmed Heakl",
+            "Ufaq Khan",
+            "Abdelrahman Shaker",
+            "Salman Khan",
+            "Fahad Shahbaz Khan"
+          ],
+          "abstract": "Diffusion Transformers (DiTs) power high-fidelity video world models but remain computationally expensive due to sequential denoising and costly spatio-temporal attention. Training-free feature caching accelerates inference by reusing intermediate activations across denoising steps; however, existing methods largely rely on a Zero-Order Hold assumption i.e., reusing cached features as static snapshots when global drift is small. This often leads to ghosting artifacts, blur, and motion inconsistencies in dynamic scenes. We propose WorldCache, a Perception-Constrained Dynamical Caching framework that improves both when and how to reuse features. WorldCache introduces motion-adaptive thresholds, saliency-weighted drift estimation, optimal approximation via blending and warping, and phase-aware threshold scheduling across diffusion steps. Our cohesive approach enables adaptive, motion-consistent feature reuse without retraining. On Cosmos-Predict2.5-2B evaluated on PAI-Bench, WorldCache achieves 2.3times inference speedup while preserving 99.4\\% of baseline quality, substantially outperforming prior training-free caching approaches. Our code can be accessed on https://umair1221.github.io/World-Cache/{World-Cache}.",
+          "hf_url": "https://huggingface.co/papers/2603.22286",
+          "arxiv_url": "https://arxiv.org/abs/2603.22286",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.22286",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.22286",
+          "github_url": "",
+          "submitted_by": "taesiri",
+          "submitted_at": "2026-03-24T01:50:58.283Z",
+          "upvotes": 4,
+          "comments": 1,
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.93
+        },
+        {
+          "report_date": "2026-03-24",
+          "paper_id": "2603.21315",
+          "title": "FluidWorld: Reaction-Diffusion Dynamics as a Predictive Substrate for World Models",
+          "authors": [
+            "Fabien Polly"
+          ],
+          "abstract": "World models learn to predict future states of an environment, enabling planning and mental simulation. Current approaches default to Transformer-based predictors operating in learned latent spaces. This comes at a cost: O(N^2) computation and no explicit spatial inductive bias. This paper asks a foundational question: is self-attention necessary for predictive world modeling, or can alternative computational substrates achieve comparable or superior results? I introduce FluidWorld, a proof-of-concept world model whose predictive dynamics are governed by partial differential equations (PDEs) of reaction-diffusion type. Instead of using a separate neural network predictor, the PDE integration itself produces the future state prediction. In a strictly parameter-matched three-way ablation on unconditional UCF-101 video prediction (64x64, ~800K parameters, identical encoder, decoder, losses, and data), FluidWorld is compared against both a Transformer baseline (self-attention) and a ConvLSTM baseline (convolutional recurrence). While all three models converge to comparable single-step prediction loss, FluidWorld achieves 2x lower reconstruction error, produces representations with 10-15% higher spatial structure preservation and 18-25% more effective dimensionality, and critically maintains coherent multi-step rollouts where both baselines degrade rapidly. All experiments were conducted on a single consumer-grade PC (Intel Core i5, NVIDIA RTX 4070 Ti), without any large-scale compute. These results establish that PDE-based dynamics, which natively provide O(N) spatial complexity, adaptive computation, and global spatial coherence through diffusion, are a viable and parameter-efficient alternative to both attention and convolutional recurrence for world modeling.",
+          "hf_url": "https://huggingface.co/papers/2603.21315",
+          "arxiv_url": "https://arxiv.org/abs/2603.21315",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.21315",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.21315",
+          "github_url": "",
+          "submitted_by": "infinition",
+          "submitted_at": "2026-03-24T08:40:07.678Z",
+          "upvotes": 3,
+          "comments": 2,
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.97
         }
       ]
     },
@@ -1312,31 +1390,7 @@
           "topic_label": "LLMs and Language",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.65
-        },
-        {
-          "report_date": "2026-03-24",
-          "paper_id": "2603.22276",
-          "title": "Scaling DoRA: High-Rank Adaptation via Factored Norms and Fused Kernels",
-          "authors": [
-            "Alexandra Zelenin",
-            "Alexandra Zhuravlyova"
-          ],
-          "abstract": "Weight-Decomposed Low-Rank Adaptation (DoRA) extends LoRA by decoupling weight magnitude from direction, but its forward pass requires the row-wise norm of W + sBA, a computation that every major framework we surveyed implements by materializing the dense [d_out, d_in] product BA. At d_in = 8192 and rank r = 384, a single module's norm requires about 512 MB of transient working memory in bf16, making high-rank DoRA costly and often infeasible on common single-GPU setups once hundreds of adapted modules and checkpointing are involved. We present two systems contributions. A factored norm decomposes the squared norm into base, cross, and Gram terms computable through O(d_out r + r^2) intermediates, eliminating the dense product. Fused Triton kernels collapse the four-kernel DoRA composition into a single pass, reducing memory traffic by about 4x and using a numerically stable form that avoids catastrophic cancellation in the near-unity rescaling regime where magnitude scales concentrate in practice. Across six 8-32B vision-language models (VLMs) on three NVIDIA GPUs (RTX 6000 PRO, H200, B200) at r = 384 in bf16, the fused implementation is 1.5-2.0x faster than Hugging Face PEFT's DoRA implementation for inference and 1.5-1.9x faster for gradient computation (optimizer step excluded), with up to 7 GB lower peak VRAM. Microbenchmarks on six GPUs spanning four architecture generations (L40S, A100, RTX 6000 PRO, H200, B200, B300) confirm 1.5-2.7x compose-kernel speedup. Final-logit cosine similarity exceeds 0.9999 across all model/GPU pairs, and multi-seed training curves match within 7.1 x 10^-4 mean per-step loss delta over 2000 steps.",
-          "hf_url": "https://huggingface.co/papers/2603.22276",
-          "arxiv_url": "https://arxiv.org/abs/2603.22276",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.22276",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.22276",
-          "github_url": "",
-          "submitted_by": "Alexandra Z.",
-          "submitted_at": "2026-03-24T02:48:00.751Z",
-          "upvotes": 12,
-          "comments": 2,
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.68
+          "classification_confidence": 0.81
         },
         {
           "report_date": "2026-03-24",
@@ -1366,7 +1420,36 @@
           "topic_label": "LLMs and Language",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.72
+          "classification_confidence": 0.82
+        },
+        {
+          "report_date": "2026-03-24",
+          "paper_id": "2603.22241",
+          "title": "MemDLM: Memory-Enhanced DLM Training",
+          "authors": [
+            "Zehua Pei",
+            "Hui-Ling Zhen",
+            "Weizhe Lin",
+            "Sinno Jialin Pan",
+            "Yunhe Wang",
+            "Mingxuan Yuan",
+            "Bei Yu"
+          ],
+          "abstract": "Diffusion Language Models (DLMs) offer attractive advantages over Auto-Regressive (AR) models, such as full-attention parallel decoding and flexible generation. However, they suffer from a notable train-inference mismatch: DLMs are trained with a static, single-step masked prediction objective, but deployed through a multi-step progressive denoising trajectory. We propose MemDLM (Memory-Enhanced DLM), which narrows this gap by embedding a simulated denoising process into training via Bi-level Optimization. An inner loop updates a set of fast weights, forming a Parametric Memory that captures the local trajectory experience of each sample, while an outer loop updates the base model conditioned on this memory. By offloading memorization pressure from token representations to parameters, MemDLM yields faster convergence and lower training loss. Moreover, the inner loop can be re-enabled at inference time as an adaptation step, yielding additional gains on long-context understanding. We find that, when activated at inference time, this Parametric Memory acts as an emergent in-weight retrieval mechanism, helping MemDLM further reduce token-level attention bottlenecks on challenging Needle-in-a-Haystack retrieval tasks. Code: https://github.com/JarvisPei/MemDLM.",
+          "hf_url": "https://huggingface.co/papers/2603.22241",
+          "arxiv_url": "https://arxiv.org/abs/2603.22241",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.22241",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.22241",
+          "github_url": "",
+          "submitted_by": "JarvisPei",
+          "submitted_at": "2026-03-24T02:28:00.916Z",
+          "upvotes": 3,
+          "comments": 2,
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.62
         }
       ]
     },
@@ -1403,7 +1486,7 @@
           "topic_label": "Retrieval, Knowledge, and RAG",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.82
+          "classification_confidence": 0.84
         },
         {
           "report_date": "2026-03-24",
@@ -1433,7 +1516,7 @@
           "topic_label": "Retrieval, Knowledge, and RAG",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.98
+          "classification_confidence": 0.99
         },
         {
           "report_date": "2026-03-24",
@@ -1456,126 +1539,7 @@
           "topic_label": "Retrieval, Knowledge, and RAG",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.86
-        }
-      ]
-    },
-    {
-      "topic_label": "Learning, Optimization, and Theory",
-      "count": 2,
-      "share": 4.88,
-      "papers": [
-        {
-          "report_date": "2026-03-24",
-          "paper_id": "2603.21786",
-          "title": "The Universal Normal Embedding",
-          "authors": [
-            "Chen Tasker",
-            "Roy Betser",
-            "Eyal Gofer",
-            "Meir Yossef Levi",
-            "Guy Gilboa"
-          ],
-          "abstract": "Generative models and vision encoders have largely advanced on separate tracks, optimized for different goals and grounded in different mathematical principles. Yet, they share a fundamental property: latent space Gaussianity. Generative models map Gaussian noise to images, while encoders map images to semantic embeddings whose coordinates empirically behave as Gaussian. We hypothesize that both are views of a shared latent source, the Universal Normal Embedding (UNE): an approximately Gaussian latent space from which encoder embeddings and DDIM-inverted noise arise as noisy linear projections. To test our hypothesis, we introduce NoiseZoo, a dataset of per-image latents comprising DDIM-inverted diffusion noise and matching encoder representations (CLIP, DINO). On CelebA, linear probes in both spaces yield strong, aligned attribute predictions, indicating that generative noise encodes meaningful semantics along linear directions. These directions further enable faithful, controllable edits (e.g., smile, gender, age) without architectural changes, where simple orthogonalization mitigates spurious entanglements. Taken together, our results provide empirical support for the UNE hypothesis and reveal a shared Gaussian-like latent geometry that concretely links encoding and generation. Code and data are available https://rbetser.github.io/UNE/",
-          "hf_url": "https://huggingface.co/papers/2603.21786",
-          "arxiv_url": "https://arxiv.org/abs/2603.21786",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.21786",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.21786",
-          "github_url": "",
-          "submitted_by": "Yossi levi",
-          "submitted_at": "2026-03-24T06:44:28.477Z",
-          "upvotes": 14,
-          "comments": 2,
-          "topic_key": "learning_theory",
-          "topic_label": "Learning, Optimization, and Theory",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.44
-        },
-        {
-          "report_date": "2026-03-24",
-          "paper_id": "2603.15136",
-          "title": "Safe Flow Q-Learning: Offline Safe Reinforcement Learning with Reachability-Based Flow Policies",
-          "authors": [
-            "Mumuksh Tayal",
-            "Manan Tayal",
-            "Ravi Prakash"
-          ],
-          "abstract": "Offline safe reinforcement learning (RL) seeks reward-maximizing policies from static datasets under strict safety constraints. Existing methods often rely on soft expected-cost objectives or iterative generative inference, which can be insufficient for safety-critical real-time control. We propose Safe Flow Q-Learning (SafeFQL), which extends FQL to safe offline RL by combining a Hamilton--Jacobi reachability-inspired safety value function with an efficient one-step flow policy. SafeFQL learns the safety value via a self-consistency Bellman recursion, trains a flow policy by behavioral cloning, and distills it into a one-step actor for reward-maximizing safe action selection without rejection sampling at deployment. To account for finite-data approximation error in the learned safety boundary, we add a conformal prediction calibration step that adjusts the safety threshold and provides finite-sample probabilistic safety coverage. Empirically, SafeFQL trades modestly higher offline training cost for substantially lower inference latency than diffusion-style safe generative baselines, which is advantageous for real-time safety-critical deployment. Across boat navigation, and Safety Gymnasium MuJoCo tasks, SafeFQL matches or exceeds prior offline safe RL performance while substantially reducing constraint violations.",
-          "hf_url": "https://huggingface.co/papers/2603.15136",
-          "arxiv_url": "https://arxiv.org/abs/2603.15136",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.15136",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.15136",
-          "github_url": "",
-          "submitted_by": "Manan Tayal",
-          "submitted_at": "2026-03-24T10:48:36.189Z",
-          "upvotes": 3,
-          "comments": 2,
-          "topic_key": "learning_theory",
-          "topic_label": "Learning, Optimization, and Theory",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.81
-        }
-      ]
-    },
-    {
-      "topic_label": "Robotics and Embodied AI",
-      "count": 2,
-      "share": 4.88,
-      "papers": [
-        {
-          "report_date": "2026-03-24",
-          "paper_id": "2603.20538",
-          "title": "Understanding Behavior Cloning with Action Quantization",
-          "authors": [
-            "Haoqun Cao",
-            "Tengyang Xie"
-          ],
-          "abstract": "Behavior cloning is a fundamental paradigm in machine learning, enabling policy learning from expert demonstrations across robotics, autonomous driving, and generative models. Autoregressive models like transformer have proven remarkably effective, from large language models (LLMs) to vision-language-action systems (VLAs). However, applying autoregressive models to continuous control requires discretizing actions through quantization, a practice widely adopted yet poorly understood theoretically. This paper provides theoretical foundations for this practice. We analyze how quantization error propagates along the horizon and interacts with statistical sample complexity. We show that behavior cloning with quantized actions and log-loss achieves optimal sample complexity, matching existing lower bounds, and incurs only polynomial horizon dependence on quantization error, provided the dynamics are stable and the policy satisfies a probabilistic smoothness condition. We further characterize when different quantization schemes satisfy or violate these requirements, and propose a model-based augmentation that provably improves the error bound without requiring policy smoothness. Finally, we establish fundamental limits that jointly capture the effects of quantization error and statistical complexity.",
-          "hf_url": "https://huggingface.co/papers/2603.20538",
-          "arxiv_url": "https://arxiv.org/abs/2603.20538",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.20538",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.20538",
-          "github_url": "",
-          "submitted_by": "Tengyang Xie",
-          "submitted_at": "2026-03-24T02:30:26.414Z",
-          "upvotes": 2,
-          "comments": 2,
-          "topic_key": "robotics_embodied",
-          "topic_label": "Robotics and Embodied AI",
-          "matched_terms": [],
-          "classification_source": "codex",
           "classification_confidence": 0.8
-        },
-        {
-          "report_date": "2026-03-24",
-          "paper_id": "2603.19660",
-          "title": "Semantic Audio-Visual Navigation in Continuous Environments",
-          "authors": [
-            "Yichen Zeng",
-            "Hebaixu Wang",
-            "Meng Liu",
-            "Yu Zhou",
-            "Chen Gao",
-            "Kehan Chen",
-            "Gongping Huang"
-          ],
-          "abstract": "Audio-visual navigation enables embodied agents to navigate toward sound-emitting targets by leveraging both auditory and visual cues. However, most existing approaches rely on precomputed room impulse responses (RIRs) for binaural audio rendering, restricting agents to discrete grid positions and leading to spatially discontinuous observations. To establish a more realistic setting, we introduce Semantic Audio-Visual Navigation in Continuous Environments (SAVN-CE), where agents can move freely in 3D spaces and perceive temporally and spatially coherent audio-visual streams. In this setting, targets may intermittently become silent or stop emitting sound entirely, causing agents to lose goal information. To tackle this challenge, we propose MAGNet, a multimodal transformer-based model that jointly encodes spatial and semantic goal representations and integrates historical context with self-motion cues to enable memory-augmented goal reasoning. Comprehensive experiments demonstrate that MAGNet significantly outperforms state-of-the-art methods, achieving up to a 12.1\\% absolute improvement in success rate. These results also highlight its robustness to short-duration sounds and long-distance navigation scenarios. The code is available at https://github.com/yichenzeng24/SAVN-CE.",
-          "hf_url": "https://huggingface.co/papers/2603.19660",
-          "arxiv_url": "https://arxiv.org/abs/2603.19660",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19660",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.19660",
-          "github_url": "",
-          "submitted_by": "Yichen Zeng",
-          "submitted_at": "2026-03-24T04:05:40.310Z",
-          "upvotes": 2,
-          "comments": 2,
-          "topic_key": "robotics_embodied",
-          "topic_label": "Robotics and Embodied AI",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.97
         }
       ]
     },
@@ -1620,7 +1584,7 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.95
+          "classification_confidence": 0.98
         }
       ]
     },
@@ -1651,7 +1615,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.96
+          "classification_confidence": 0.98
         }
       ]
     },
@@ -1689,7 +1653,7 @@
           "topic_label": "Multimodal Agents",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.97
+          "classification_confidence": 0.98
         }
       ]
     },
@@ -1719,7 +1683,43 @@
           "topic_label": "Other AI",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.47
+          "classification_confidence": 0.66
+        }
+      ]
+    },
+    {
+      "topic_label": "Robotics and Embodied AI",
+      "count": 1,
+      "share": 2.44,
+      "papers": [
+        {
+          "report_date": "2026-03-24",
+          "paper_id": "2603.19660",
+          "title": "Semantic Audio-Visual Navigation in Continuous Environments",
+          "authors": [
+            "Yichen Zeng",
+            "Hebaixu Wang",
+            "Meng Liu",
+            "Yu Zhou",
+            "Chen Gao",
+            "Kehan Chen",
+            "Gongping Huang"
+          ],
+          "abstract": "Audio-visual navigation enables embodied agents to navigate toward sound-emitting targets by leveraging both auditory and visual cues. However, most existing approaches rely on precomputed room impulse responses (RIRs) for binaural audio rendering, restricting agents to discrete grid positions and leading to spatially discontinuous observations. To establish a more realistic setting, we introduce Semantic Audio-Visual Navigation in Continuous Environments (SAVN-CE), where agents can move freely in 3D spaces and perceive temporally and spatially coherent audio-visual streams. In this setting, targets may intermittently become silent or stop emitting sound entirely, causing agents to lose goal information. To tackle this challenge, we propose MAGNet, a multimodal transformer-based model that jointly encodes spatial and semantic goal representations and integrates historical context with self-motion cues to enable memory-augmented goal reasoning. Comprehensive experiments demonstrate that MAGNet significantly outperforms state-of-the-art methods, achieving up to a 12.1\\% absolute improvement in success rate. These results also highlight its robustness to short-duration sounds and long-distance navigation scenarios. The code is available at https://github.com/yichenzeng24/SAVN-CE.",
+          "hf_url": "https://huggingface.co/papers/2603.19660",
+          "arxiv_url": "https://arxiv.org/abs/2603.19660",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19660",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.19660",
+          "github_url": "",
+          "submitted_by": "Yichen Zeng",
+          "submitted_at": "2026-03-24T04:05:40.310Z",
+          "upvotes": 2,
+          "comments": 2,
+          "topic_key": "robotics_embodied",
+          "topic_label": "Robotics and Embodied AI",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.98
         }
       ]
     }
@@ -1761,7 +1761,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.98
     },
     {
       "report_date": "2026-03-24",
@@ -1822,7 +1822,7 @@
       "github_url": "",
       "submitted_by": "Ethan Chern",
       "submitted_at": "2026-03-24T01:38:56.590Z",
-      "upvotes": 114,
+      "upvotes": 116,
       "comments": 5,
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
@@ -1860,7 +1860,7 @@
       "topic_label": "Agents and Planning",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.88
+      "classification_confidence": 0.83
     },
     {
       "report_date": "2026-03-24",
@@ -1890,7 +1890,7 @@
       "topic_label": "Retrieval, Knowledge, and RAG",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.82
+      "classification_confidence": 0.84
     },
     {
       "report_date": "2026-03-24",
@@ -1939,7 +1939,7 @@
       "topic_label": "Agents and Planning",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.85
+      "classification_confidence": 0.92
     },
     {
       "report_date": "2026-03-24",
@@ -1960,13 +1960,13 @@
       "github_url": "",
       "submitted_by": "BradyFU",
       "submitted_at": "2026-03-24T01:38:20.247Z",
-      "upvotes": 49,
+      "upvotes": 50,
       "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.94
+      "classification_confidence": 0.97
     },
     {
       "report_date": "2026-03-24",
@@ -1988,12 +1988,12 @@
       "submitted_by": "Byungwoo Jeon",
       "submitted_at": "2026-03-24T06:26:26.317Z",
       "upvotes": 44,
-      "comments": 2,
+      "comments": 3,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.79
+      "classification_confidence": 0.86
     },
     {
       "report_date": "2026-03-24",
@@ -2023,7 +2023,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.96
+      "classification_confidence": 0.95
     },
     {
       "report_date": "2026-03-24",
@@ -2052,7 +2052,7 @@
       "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.65
+      "classification_confidence": 0.81
     },
     {
       "report_date": "2026-03-24",
@@ -2086,7 +2086,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.78
+      "classification_confidence": 0.93
     },
     {
       "report_date": "2026-03-24",
@@ -2113,7 +2113,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.75
+      "classification_confidence": 0.72
     },
     {
       "report_date": "2026-03-24",
@@ -2148,7 +2148,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.83
+      "classification_confidence": 0.91
     },
     {
       "report_date": "2026-03-24",
@@ -2174,7 +2174,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.9
+      "classification_confidence": 0.95
     },
     {
       "report_date": "2026-03-24",
@@ -2205,7 +2205,7 @@
       "topic_label": "Multimodal Agents",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.97
+      "classification_confidence": 0.98
     },
     {
       "report_date": "2026-03-24",
@@ -2235,7 +2235,7 @@
       "topic_label": "Retrieval, Knowledge, and RAG",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.98
+      "classification_confidence": 0.99
     },
     {
       "report_date": "2026-03-24",
@@ -2263,7 +2263,7 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-03-24T01:56:51.649Z",
-      "upvotes": 16,
+      "upvotes": 18,
       "comments": 1,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -2289,13 +2289,13 @@
       "github_url": "",
       "submitted_by": "Aniketh",
       "submitted_at": "2026-03-24T07:32:09.374Z",
-      "upvotes": 16,
+      "upvotes": 17,
       "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.91
+      "classification_confidence": 0.95
     },
     {
       "report_date": "2026-03-24",
@@ -2323,7 +2323,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.86
+      "classification_confidence": 0.93
     },
     {
       "report_date": "2026-03-24",
@@ -2350,7 +2350,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.8
+      "classification_confidence": 0.9
     },
     {
       "report_date": "2026-03-24",
@@ -2377,7 +2377,7 @@
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.44
+      "classification_confidence": 0.6
     },
     {
       "report_date": "2026-03-24",
@@ -2395,13 +2395,13 @@
       "github_url": "",
       "submitted_by": "Alexandra Z.",
       "submitted_at": "2026-03-24T02:48:00.751Z",
-      "upvotes": 12,
+      "upvotes": 13,
       "comments": 2,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.68
+      "classification_confidence": 0.8
     },
     {
       "report_date": "2026-03-24",
@@ -2428,7 +2428,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.94
+      "classification_confidence": 0.96
     },
     {
       "report_date": "2026-03-24",
@@ -2473,13 +2473,13 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-03-24T01:58:58.295Z",
-      "upvotes": 7,
+      "upvotes": 8,
       "comments": 1,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.77
+      "classification_confidence": 0.79
     },
     {
       "report_date": "2026-03-24",
@@ -2509,7 +2509,7 @@
       "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.72
+      "classification_confidence": 0.82
     },
     {
       "report_date": "2026-03-24",
@@ -2543,7 +2543,7 @@
       "topic_label": "Agents and Planning",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.97
     },
     {
       "report_date": "2026-03-24",
@@ -2572,7 +2572,32 @@
       "topic_label": "Agents and Planning",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.96
+      "classification_confidence": 0.99
+    },
+    {
+      "report_date": "2026-03-24",
+      "paper_id": "2603.21884",
+      "title": "Not All Layers Are Created Equal: Adaptive LoRA Ranks for Personalized Image Generation",
+      "authors": [
+        "Donald Shenaj",
+        "Federico Errica",
+        "Antonio Carta"
+      ],
+      "abstract": "Low Rank Adaptation (LoRA) is the de facto fine-tuning strategy to generate personalized images from pre-trained diffusion models. Choosing a good rank is extremely critical, since it trades off performance and memory consumption, but today the decision is often left to the community's consensus, regardless of the personalized subject's complexity. The reason is evident: the cost of selecting a good rank for each LoRA component is combinatorial, so we opt for practical shortcuts such as fixing the same rank for all components. In this paper, we take a first step to overcome this challenge. Inspired by variational methods that learn an adaptive width of neural networks, we let the ranks of each layer freely adapt during fine-tuning on a subject. We achieve it by imposing an ordering of importance on the rank's positions, effectively encouraging the creation of higher ranks when strictly needed. Qualitatively and quantitatively, our approach, LoRA^2, achieves a competitive trade-off between DINO, CLIP-I, and CLIP-T across 29 subjects while requiring much less memory and lower rank than high rank LoRA versions. Code: https://github.com/donaldssh/NotAllLayersAreCreatedEqual.",
+      "hf_url": "https://huggingface.co/papers/2603.21884",
+      "arxiv_url": "https://arxiv.org/abs/2603.21884",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.21884",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.21884",
+      "github_url": "",
+      "submitted_by": "Donald Shenaj",
+      "submitted_at": "2026-03-24T07:48:42.957Z",
+      "upvotes": 5,
+      "comments": 2,
+      "topic_key": "multimodal_generative",
+      "topic_label": "Multimodal Generative Modeling",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.97
     },
     {
       "report_date": "2026-03-24",
@@ -2596,7 +2621,7 @@
       "topic_label": "Agents and Planning",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.94
+      "classification_confidence": 0.98
     },
     {
       "report_date": "2026-03-24",
@@ -2624,32 +2649,7 @@
       "topic_label": "Generative Foundations",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
-    },
-    {
-      "report_date": "2026-03-24",
-      "paper_id": "2603.21884",
-      "title": "Not All Layers Are Created Equal: Adaptive LoRA Ranks for Personalized Image Generation",
-      "authors": [
-        "Donald Shenaj",
-        "Federico Errica",
-        "Antonio Carta"
-      ],
-      "abstract": "Low Rank Adaptation (LoRA) is the de facto fine-tuning strategy to generate personalized images from pre-trained diffusion models. Choosing a good rank is extremely critical, since it trades off performance and memory consumption, but today the decision is often left to the community's consensus, regardless of the personalized subject's complexity. The reason is evident: the cost of selecting a good rank for each LoRA component is combinatorial, so we opt for practical shortcuts such as fixing the same rank for all components. In this paper, we take a first step to overcome this challenge. Inspired by variational methods that learn an adaptive width of neural networks, we let the ranks of each layer freely adapt during fine-tuning on a subject. We achieve it by imposing an ordering of importance on the rank's positions, effectively encouraging the creation of higher ranks when strictly needed. Qualitatively and quantitatively, our approach, LoRA^2, achieves a competitive trade-off between DINO, CLIP-I, and CLIP-T across 29 subjects while requiring much less memory and lower rank than high rank LoRA versions. Code: https://github.com/donaldssh/NotAllLayersAreCreatedEqual.",
-      "hf_url": "https://huggingface.co/papers/2603.21884",
-      "arxiv_url": "https://arxiv.org/abs/2603.21884",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.21884",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.21884",
-      "github_url": "",
-      "submitted_by": "Donald Shenaj",
-      "submitted_at": "2026-03-24T07:48:42.957Z",
-      "upvotes": 4,
-      "comments": 2,
-      "topic_key": "multimodal_generative",
-      "topic_label": "Multimodal Generative Modeling",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.96
+      "classification_confidence": 0.93
     },
     {
       "report_date": "2026-03-24",
@@ -2674,11 +2674,11 @@
       "submitted_at": "2026-03-24T02:28:00.916Z",
       "upvotes": 3,
       "comments": 2,
-      "topic_key": "generative_foundations",
-      "topic_label": "Generative Foundations",
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.74
+      "classification_confidence": 0.62
     },
     {
       "report_date": "2026-03-24",
@@ -2705,7 +2705,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.88
+      "classification_confidence": 0.9
     },
     {
       "report_date": "2026-03-24",
@@ -2728,7 +2728,7 @@
       "topic_label": "Generative Foundations",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.93
+      "classification_confidence": 0.97
     },
     {
       "report_date": "2026-03-24",
@@ -2757,7 +2757,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.86
+      "classification_confidence": 0.77
     },
     {
       "report_date": "2026-03-24",
@@ -2782,7 +2782,7 @@
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.81
+      "classification_confidence": 0.87
     },
     {
       "report_date": "2026-03-24",
@@ -2806,7 +2806,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.96
+      "classification_confidence": 0.98
     },
     {
       "report_date": "2026-03-24",
@@ -2826,11 +2826,11 @@
       "submitted_at": "2026-03-24T02:30:26.414Z",
       "upvotes": 2,
       "comments": 2,
-      "topic_key": "robotics_embodied",
-      "topic_label": "Robotics and Embodied AI",
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.8
+      "classification_confidence": 0.78
     },
     {
       "report_date": "2026-03-24",
@@ -2859,7 +2859,7 @@
       "topic_label": "Robotics and Embodied AI",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.97
+      "classification_confidence": 0.98
     },
     {
       "report_date": "2026-03-24",
@@ -2888,7 +2888,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.72
+      "classification_confidence": 0.83
     },
     {
       "report_date": "2026-03-24",
@@ -2911,7 +2911,7 @@
       "topic_label": "Other AI",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.47
+      "classification_confidence": 0.66
     },
     {
       "report_date": "2026-03-24",
@@ -2934,7 +2934,7 @@
       "topic_label": "Retrieval, Knowledge, and RAG",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.86
+      "classification_confidence": 0.8
     }
   ]
 }

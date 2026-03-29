@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-29T11:37:44Z",
+  "generated_at": "2026-03-29T16:32:11Z",
   "report_kind": "hf_daily",
   "report_date": "2026-03-26",
   "source_url": "https://huggingface.co/papers/date/2026-03-26",
@@ -9,14 +9,14 @@
     {
       "topic_key": "generative_foundations",
       "topic_label": "Generative Foundations",
-      "count": 2,
-      "share": 9.09
+      "count": 1,
+      "share": 4.55
     },
     {
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
-      "count": 1,
-      "share": 4.55
+      "count": 3,
+      "share": 13.64
     },
     {
       "topic_key": "multimodal_agents",
@@ -28,8 +28,8 @@
   "topic_distribution": [
     {
       "topic_label": "Multimodal Understanding and Vision",
-      "count": 6,
-      "share": 27.27
+      "count": 5,
+      "share": 22.73
     },
     {
       "topic_label": "Reasoning, Alignment, and Evaluation",
@@ -42,9 +42,9 @@
       "share": 13.64
     },
     {
-      "topic_label": "Generative Foundations",
-      "count": 2,
-      "share": 9.09
+      "topic_label": "Multimodal Generative Modeling",
+      "count": 3,
+      "share": 13.64
     },
     {
       "topic_label": "LLMs and Language",
@@ -62,7 +62,7 @@
       "share": 4.55
     },
     {
-      "topic_label": "Multimodal Generative Modeling",
+      "topic_label": "Generative Foundations",
       "count": 1,
       "share": 4.55
     },
@@ -127,7 +127,37 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.98
+      "classification_confidence": 0.96
+    },
+    {
+      "report_date": "2026-03-26",
+      "paper_id": "2603.24472",
+      "title": "Why Does Self-Distillation (Sometimes) Degrade the Reasoning Capability of LLMs?",
+      "authors": [
+        "Jeonghye Kim",
+        "Xufang Luo",
+        "Minbeom Kim",
+        "Sangmook Lee",
+        "Dohyung Kim",
+        "Jiwon Jeon",
+        "Dongsheng Li",
+        "Yuqing Yang"
+      ],
+      "abstract": "Self-distillation has emerged as an effective post-training paradigm for LLMs, often improving performance while shortening reasoning traces. However, in mathematical reasoning, we find that it can reduce response length while degrading performance. We trace this degradation to the suppression of epistemic verbalization - the model's expression of uncertainty during reasoning. Through controlled experiments varying conditioning context richness and task coverage, we show that conditioning the teacher on rich information suppresses uncertainty expression, enabling rapid in-domain optimization with limited task coverage but harming OOD performance, where unseen problems benefit from expressing uncertainty and adjusting accordingly. Across Qwen3-8B, DeepSeek-Distill-Qwen-7B, and Olmo3-7B-Instruct, we observe performance drops of up to 40%. Our findings highlight that exposing appropriate levels of uncertainty is crucial for robust reasoning and underscore the importance of optimizing reasoning behavior beyond merely reinforcing correct answer traces.",
+      "hf_url": "https://huggingface.co/papers/2603.24472",
+      "arxiv_url": "https://arxiv.org/abs/2603.24472",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.24472",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.24472",
+      "github_url": "",
+      "submitted_by": "JeonghyeKim",
+      "submitted_at": "2026-03-26T02:02:15.866Z",
+      "upvotes": 39,
+      "comments": 6,
+      "topic_key": "reasoning_alignment_eval",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.88
     },
     {
       "report_date": "2026-03-26",
@@ -162,36 +192,6 @@
       "matched_terms": [],
       "classification_source": "codex",
       "classification_confidence": 0.83
-    },
-    {
-      "report_date": "2026-03-26",
-      "paper_id": "2603.24472",
-      "title": "Why Does Self-Distillation (Sometimes) Degrade the Reasoning Capability of LLMs?",
-      "authors": [
-        "Jeonghye Kim",
-        "Xufang Luo",
-        "Minbeom Kim",
-        "Sangmook Lee",
-        "Dohyung Kim",
-        "Jiwon Jeon",
-        "Dongsheng Li",
-        "Yuqing Yang"
-      ],
-      "abstract": "Self-distillation has emerged as an effective post-training paradigm for LLMs, often improving performance while shortening reasoning traces. However, in mathematical reasoning, we find that it can reduce response length while degrading performance. We trace this degradation to the suppression of epistemic verbalization - the model's expression of uncertainty during reasoning. Through controlled experiments varying conditioning context richness and task coverage, we show that conditioning the teacher on rich information suppresses uncertainty expression, enabling rapid in-domain optimization with limited task coverage but harming OOD performance, where unseen problems benefit from expressing uncertainty and adjusting accordingly. Across Qwen3-8B, DeepSeek-Distill-Qwen-7B, and Olmo3-7B-Instruct, we observe performance drops of up to 40%. Our findings highlight that exposing appropriate levels of uncertainty is crucial for robust reasoning and underscore the importance of optimizing reasoning behavior beyond merely reinforcing correct answer traces.",
-      "hf_url": "https://huggingface.co/papers/2603.24472",
-      "arxiv_url": "https://arxiv.org/abs/2603.24472",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.24472",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.24472",
-      "github_url": "",
-      "submitted_by": "JeonghyeKim",
-      "submitted_at": "2026-03-26T02:02:15.866Z",
-      "upvotes": 38,
-      "comments": 6,
-      "topic_key": "reasoning_alignment_eval",
-      "topic_label": "Reasoning, Alignment, and Evaluation",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.93
     },
     {
       "report_date": "2026-03-26",
@@ -250,7 +250,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.94
+      "classification_confidence": 0.91
     },
     {
       "report_date": "2026-03-26",
@@ -285,7 +285,7 @@
       "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.76
+      "classification_confidence": 0.72
     },
     {
       "report_date": "2026-03-26",
@@ -320,7 +320,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.82
+      "classification_confidence": 0.79
     },
     {
       "report_date": "2026-03-26",
@@ -349,14 +349,14 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.97
+      "classification_confidence": 0.95
     }
   ],
   "topics": [
     {
       "topic_label": "Multimodal Understanding and Vision",
-      "count": 6,
-      "share": 27.27,
+      "count": 5,
+      "share": 22.73,
       "papers": [
         {
           "report_date": "2026-03-26",
@@ -385,7 +385,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.88
+          "classification_confidence": 0.84
         },
         {
           "report_date": "2026-03-26",
@@ -411,7 +411,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.83
+          "classification_confidence": 0.79
         },
         {
           "report_date": "2026-03-26",
@@ -438,34 +438,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.85
-        },
-        {
-          "report_date": "2026-03-26",
-          "paper_id": "2603.20176",
-          "title": "LagerNVS: Latent Geometry for Fully Neural Real-time Novel View Synthesis",
-          "authors": [
-            "Stanislaw Szymanowicz",
-            "Minghao Chen",
-            "Jianyuan Wang",
-            "Christian Rupprecht",
-            "Andrea Vedaldi"
-          ],
-          "abstract": "Recent work has shown that neural networks can perform 3D tasks such as Novel View Synthesis (NVS) without explicit 3D reconstruction. Even so, we argue that strong 3D inductive biases are still helpful in the design of such networks. We show this point by introducing LagerNVS, an encoder-decoder neural network for NVS that builds on `3D-aware' latent features. The encoder is initialized from a 3D reconstruction network pre-trained using explicit 3D supervision. This is paired with a lightweight decoder, and trained end-to-end with photometric losses. LagerNVS achieves state-of-the-art deterministic feed-forward Novel View Synthesis (including 31.4 PSNR on Re10k), with and without known cameras, renders in real time, generalizes to in-the-wild data, and can be paired with a diffusion decoder for generative extrapolation.",
-          "hf_url": "https://huggingface.co/papers/2603.20176",
-          "arxiv_url": "https://arxiv.org/abs/2603.20176",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.20176",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.20176",
-          "github_url": "",
-          "submitted_by": "Stan Szymanowicz",
-          "submitted_at": "2026-03-26T09:04:14.632Z",
-          "upvotes": 8,
-          "comments": 2,
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.75
+          "classification_confidence": 0.67
         },
         {
           "report_date": "2026-03-26",
@@ -493,7 +466,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.94
+          "classification_confidence": 0.9
         },
         {
           "report_date": "2026-03-26",
@@ -517,7 +490,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.87
+          "classification_confidence": 0.8
         }
       ]
     },
@@ -548,13 +521,13 @@
           "github_url": "",
           "submitted_by": "JeonghyeKim",
           "submitted_at": "2026-03-26T02:02:15.866Z",
-          "upvotes": 38,
+          "upvotes": 39,
           "comments": 6,
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.93
+          "classification_confidence": 0.88
         },
         {
           "report_date": "2026-03-26",
@@ -582,7 +555,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.94
+          "classification_confidence": 0.91
         },
         {
           "report_date": "2026-03-26",
@@ -617,7 +590,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.82
+          "classification_confidence": 0.79
         },
         {
           "report_date": "2026-03-26",
@@ -644,7 +617,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.97
+          "classification_confidence": 0.94
         }
       ]
     },
@@ -681,7 +654,7 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.98
+          "classification_confidence": 0.96
         },
         {
           "report_date": "2026-03-26",
@@ -710,7 +683,7 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.97
+          "classification_confidence": 0.95
         },
         {
           "report_date": "2026-03-26",
@@ -745,15 +718,78 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.9
+          "classification_confidence": 0.94
         }
       ]
     },
     {
-      "topic_label": "Generative Foundations",
-      "count": 2,
-      "share": 9.09,
+      "topic_label": "Multimodal Generative Modeling",
+      "count": 3,
+      "share": 13.64,
       "papers": [
+        {
+          "report_date": "2026-03-26",
+          "paper_id": "2603.20176",
+          "title": "LagerNVS: Latent Geometry for Fully Neural Real-time Novel View Synthesis",
+          "authors": [
+            "Stanislaw Szymanowicz",
+            "Minghao Chen",
+            "Jianyuan Wang",
+            "Christian Rupprecht",
+            "Andrea Vedaldi"
+          ],
+          "abstract": "Recent work has shown that neural networks can perform 3D tasks such as Novel View Synthesis (NVS) without explicit 3D reconstruction. Even so, we argue that strong 3D inductive biases are still helpful in the design of such networks. We show this point by introducing LagerNVS, an encoder-decoder neural network for NVS that builds on `3D-aware' latent features. The encoder is initialized from a 3D reconstruction network pre-trained using explicit 3D supervision. This is paired with a lightweight decoder, and trained end-to-end with photometric losses. LagerNVS achieves state-of-the-art deterministic feed-forward Novel View Synthesis (including 31.4 PSNR on Re10k), with and without known cameras, renders in real time, generalizes to in-the-wild data, and can be paired with a diffusion decoder for generative extrapolation.",
+          "hf_url": "https://huggingface.co/papers/2603.20176",
+          "arxiv_url": "https://arxiv.org/abs/2603.20176",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.20176",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.20176",
+          "github_url": "",
+          "submitted_by": "Stan Szymanowicz",
+          "submitted_at": "2026-03-26T09:04:14.632Z",
+          "upvotes": 8,
+          "comments": 2,
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.77
+        },
+        {
+          "report_date": "2026-03-26",
+          "paper_id": "2603.24458",
+          "title": "OmniWeaving: Towards Unified Video Generation with Free-form Composition and Reasoning",
+          "authors": [
+            "Kaihang Pan",
+            "Qi Tian",
+            "Jianwei Zhang",
+            "Weijie Kong",
+            "Jiangfeng Xiong",
+            "Yanxin Long",
+            "Shixue Zhang",
+            "Haiyi Qiu",
+            "Tan Wang",
+            "Zheqi Lv",
+            "Yue Wu",
+            "Liefeng Bo",
+            "Siliang Tang",
+            "Zhao Zhong"
+          ],
+          "abstract": "While proprietary systems such as Seedance-2.0 have achieved remarkable success in omni-capable video generation, open-source alternatives significantly lag behind. Most academic models remain heavily fragmented, and the few existing efforts toward unified video generation still struggle to seamlessly integrate diverse tasks within a single framework. To bridge this gap, we propose OmniWeaving, an omni-level video generation model featuring powerful multimodal composition and reasoning-informed capabilities. By leveraging a massive-scale pretraining dataset that encompasses diverse compositional and reasoning-augmented scenarios, OmniWeaving learns to temporally bind interleaved text, multi-image, and video inputs while acting as an intelligent agent to infer complex user intentions for sophisticated video creation. Furthermore, we introduce IntelligentVBench, the first comprehensive benchmark designed to rigorously assess next-level intelligent unified video generation. Extensive experiments demonstrate that OmniWeaving achieves SoTA performance among open-source unified models. The codes and model will be made publicly available soon. Project Page: https://omniweaving.github.io.",
+          "hf_url": "https://huggingface.co/papers/2603.24458",
+          "arxiv_url": "https://arxiv.org/abs/2603.24458",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.24458",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.24458",
+          "github_url": "",
+          "submitted_by": "taesiri",
+          "submitted_at": "2026-03-26T01:02:34.054Z",
+          "upvotes": 4,
+          "comments": 2,
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.98
+        },
         {
           "report_date": "2026-03-26",
           "paper_id": "2603.18742",
@@ -776,46 +812,11 @@
           "submitted_at": "2026-03-26T09:17:08.569Z",
           "upvotes": 4,
           "comments": 2,
-          "topic_key": "generative_foundations",
-          "topic_label": "Generative Foundations",
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.98
-        },
-        {
-          "report_date": "2026-03-26",
-          "paper_id": "2603.24506",
-          "title": "Toward Physically Consistent Driving Video World Models under Challenging Trajectories",
-          "authors": [
-            "Jiawei Zhou",
-            "Zhenxin Zhu",
-            "Lingyi Du",
-            "Linye Lyu",
-            "Lijun Zhou",
-            "Zhanqian Wu",
-            "Hongcheng Luo",
-            "Zhuotao Tian",
-            "Bing Wang",
-            "Guang Chen",
-            "Hangjun Ye",
-            "Haiyang Sun",
-            "Yu Li"
-          ],
-          "abstract": "Video generation models have shown strong potential as world models for autonomous driving simulation. However, existing approaches are primarily trained on real-world driving datasets, which mostly contain natural and safe driving scenarios. As a result, current models often fail when conditioned on challenging or counterfactual trajectories-such as imperfect trajectories generated by simulators or planning systems-producing videos with severe physical inconsistencies and artifacts. To address this limitation, we propose PhyGenesis, a world model designed to generate driving videos with high visual fidelity and strong physical consistency. Our framework consists of two key components: (1) a physical condition generator that transforms potentially invalid trajectory inputs into physically plausible conditions, and (2) a physics-enhanced video generator that produces high-fidelity multi-view driving videos under these conditions. To effectively train these components, we construct a large-scale, physics-rich heterogeneous dataset. Specifically, in addition to real-world driving videos, we generate diverse challenging driving scenarios using the CARLA simulator, from which we derive supervision signals that guide the model to learn physically grounded dynamics under extreme conditions. This challenging-trajectory learning strategy enables trajectory correction and promotes physically consistent video generation. Extensive experiments demonstrate that PhyGenesis consistently outperforms state-of-the-art methods, especially on challenging trajectories. Our project page is available at: https://wm-research.github.io/PhyGenesis/.",
-          "hf_url": "https://huggingface.co/papers/2603.24506",
-          "arxiv_url": "https://arxiv.org/abs/2603.24506",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.24506",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.24506",
-          "github_url": "",
-          "submitted_by": "taesiri",
-          "submitted_at": "2026-03-26T01:04:18.253Z",
-          "upvotes": 3,
-          "comments": 2,
-          "topic_key": "generative_foundations",
-          "topic_label": "Generative Foundations",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.92
+          "classification_confidence": 0.89
         }
       ]
     },
@@ -857,7 +858,7 @@
           "topic_label": "LLMs and Language",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.76
+          "classification_confidence": 0.72
         },
         {
           "report_date": "2026-03-26",
@@ -880,7 +881,7 @@
           "topic_label": "LLMs and Language",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.66
+          "classification_confidence": 0.69
         }
       ]
     },
@@ -988,50 +989,49 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.85
+          "classification_confidence": 0.84
         }
       ]
     },
     {
-      "topic_label": "Multimodal Generative Modeling",
+      "topic_label": "Generative Foundations",
       "count": 1,
       "share": 4.55,
       "papers": [
         {
           "report_date": "2026-03-26",
-          "paper_id": "2603.24458",
-          "title": "OmniWeaving: Towards Unified Video Generation with Free-form Composition and Reasoning",
+          "paper_id": "2603.24506",
+          "title": "Toward Physically Consistent Driving Video World Models under Challenging Trajectories",
           "authors": [
-            "Kaihang Pan",
-            "Qi Tian",
-            "Jianwei Zhang",
-            "Weijie Kong",
-            "Jiangfeng Xiong",
-            "Yanxin Long",
-            "Shixue Zhang",
-            "Haiyi Qiu",
-            "Tan Wang",
-            "Zheqi Lv",
-            "Yue Wu",
-            "Liefeng Bo",
-            "Siliang Tang",
-            "Zhao Zhong"
+            "Jiawei Zhou",
+            "Zhenxin Zhu",
+            "Lingyi Du",
+            "Linye Lyu",
+            "Lijun Zhou",
+            "Zhanqian Wu",
+            "Hongcheng Luo",
+            "Zhuotao Tian",
+            "Bing Wang",
+            "Guang Chen",
+            "Hangjun Ye",
+            "Haiyang Sun",
+            "Yu Li"
           ],
-          "abstract": "While proprietary systems such as Seedance-2.0 have achieved remarkable success in omni-capable video generation, open-source alternatives significantly lag behind. Most academic models remain heavily fragmented, and the few existing efforts toward unified video generation still struggle to seamlessly integrate diverse tasks within a single framework. To bridge this gap, we propose OmniWeaving, an omni-level video generation model featuring powerful multimodal composition and reasoning-informed capabilities. By leveraging a massive-scale pretraining dataset that encompasses diverse compositional and reasoning-augmented scenarios, OmniWeaving learns to temporally bind interleaved text, multi-image, and video inputs while acting as an intelligent agent to infer complex user intentions for sophisticated video creation. Furthermore, we introduce IntelligentVBench, the first comprehensive benchmark designed to rigorously assess next-level intelligent unified video generation. Extensive experiments demonstrate that OmniWeaving achieves SoTA performance among open-source unified models. The codes and model will be made publicly available soon. Project Page: https://omniweaving.github.io.",
-          "hf_url": "https://huggingface.co/papers/2603.24458",
-          "arxiv_url": "https://arxiv.org/abs/2603.24458",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.24458",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.24458",
+          "abstract": "Video generation models have shown strong potential as world models for autonomous driving simulation. However, existing approaches are primarily trained on real-world driving datasets, which mostly contain natural and safe driving scenarios. As a result, current models often fail when conditioned on challenging or counterfactual trajectories-such as imperfect trajectories generated by simulators or planning systems-producing videos with severe physical inconsistencies and artifacts. To address this limitation, we propose PhyGenesis, a world model designed to generate driving videos with high visual fidelity and strong physical consistency. Our framework consists of two key components: (1) a physical condition generator that transforms potentially invalid trajectory inputs into physically plausible conditions, and (2) a physics-enhanced video generator that produces high-fidelity multi-view driving videos under these conditions. To effectively train these components, we construct a large-scale, physics-rich heterogeneous dataset. Specifically, in addition to real-world driving videos, we generate diverse challenging driving scenarios using the CARLA simulator, from which we derive supervision signals that guide the model to learn physically grounded dynamics under extreme conditions. This challenging-trajectory learning strategy enables trajectory correction and promotes physically consistent video generation. Extensive experiments demonstrate that PhyGenesis consistently outperforms state-of-the-art methods, especially on challenging trajectories. Our project page is available at: https://wm-research.github.io/PhyGenesis/.",
+          "hf_url": "https://huggingface.co/papers/2603.24506",
+          "arxiv_url": "https://arxiv.org/abs/2603.24506",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.24506",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.24506",
           "github_url": "",
           "submitted_by": "taesiri",
-          "submitted_at": "2026-03-26T01:02:34.054Z",
-          "upvotes": 4,
+          "submitted_at": "2026-03-26T01:04:18.253Z",
+          "upvotes": 3,
           "comments": 2,
-          "topic_key": "multimodal_generative",
-          "topic_label": "Multimodal Generative Modeling",
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.99
+          "classification_confidence": 0.87
         }
       ]
     },
@@ -1084,7 +1084,7 @@
           "topic_label": "Other AI",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.21
+          "classification_confidence": 0.31
         }
       ]
     }
@@ -1118,7 +1118,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.98
+      "classification_confidence": 0.96
     },
     {
       "report_date": "2026-03-26",
@@ -1176,13 +1176,13 @@
       "github_url": "",
       "submitted_by": "JeonghyeKim",
       "submitted_at": "2026-03-26T02:02:15.866Z",
-      "upvotes": 38,
+      "upvotes": 39,
       "comments": 6,
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.93
+      "classification_confidence": 0.88
     },
     {
       "report_date": "2026-03-26",
@@ -1241,7 +1241,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.94
+      "classification_confidence": 0.91
     },
     {
       "report_date": "2026-03-26",
@@ -1276,7 +1276,7 @@
       "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.76
+      "classification_confidence": 0.72
     },
     {
       "report_date": "2026-03-26",
@@ -1305,7 +1305,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.97
+      "classification_confidence": 0.95
     },
     {
       "report_date": "2026-03-26",
@@ -1340,7 +1340,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.82
+      "classification_confidence": 0.79
     },
     {
       "report_date": "2026-03-26",
@@ -1369,7 +1369,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.88
+      "classification_confidence": 0.84
     },
     {
       "report_date": "2026-03-26",
@@ -1395,7 +1395,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.83
+      "classification_confidence": 0.79
     },
     {
       "report_date": "2026-03-26",
@@ -1422,7 +1422,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.85
+      "classification_confidence": 0.67
     },
     {
       "report_date": "2026-03-26",
@@ -1457,7 +1457,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.9
+      "classification_confidence": 0.94
     },
     {
       "report_date": "2026-03-26",
@@ -1484,7 +1484,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.97
+      "classification_confidence": 0.94
     },
     {
       "report_date": "2026-03-26",
@@ -1513,7 +1513,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.85
+      "classification_confidence": 0.84
     },
     {
       "report_date": "2026-03-26",
@@ -1536,11 +1536,11 @@
       "submitted_at": "2026-03-26T09:04:14.632Z",
       "upvotes": 8,
       "comments": 2,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
+      "topic_key": "multimodal_generative",
+      "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.75
+      "classification_confidence": 0.77
     },
     {
       "report_date": "2026-03-26",
@@ -1586,7 +1586,7 @@
       "topic_label": "Other AI",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.21
+      "classification_confidence": 0.31
     },
     {
       "report_date": "2026-03-26",
@@ -1622,7 +1622,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.99
+      "classification_confidence": 0.98
     },
     {
       "report_date": "2026-03-26",
@@ -1646,11 +1646,11 @@
       "submitted_at": "2026-03-26T09:17:08.569Z",
       "upvotes": 4,
       "comments": 2,
-      "topic_key": "generative_foundations",
-      "topic_label": "Generative Foundations",
+      "topic_key": "multimodal_generative",
+      "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.98
+      "classification_confidence": 0.89
     },
     {
       "report_date": "2026-03-26",
@@ -1685,7 +1685,7 @@
       "topic_label": "Generative Foundations",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.92
+      "classification_confidence": 0.87
     },
     {
       "report_date": "2026-03-26",
@@ -1713,7 +1713,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.94
+      "classification_confidence": 0.9
     },
     {
       "report_date": "2026-03-26",
@@ -1736,7 +1736,7 @@
       "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.66
+      "classification_confidence": 0.69
     },
     {
       "report_date": "2026-03-26",
@@ -1760,7 +1760,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.87
+      "classification_confidence": 0.8
     }
   ]
 }
