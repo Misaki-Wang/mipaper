@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-03-24T08:51:49Z",
+  "generated_at": "2026-03-28T18:50:27Z",
   "report_kind": "hf_daily",
   "report_date": "2026-03-23",
   "source_url": "https://huggingface.co/papers/date/2026-03-23",
-  "classifier": "rule",
+  "classifier": "codex",
   "total_papers": 37,
   "focus_topics": [
     {
@@ -15,46 +15,61 @@
     {
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
-      "count": 1,
-      "share": 2.7
+      "count": 5,
+      "share": 13.51
     },
     {
       "topic_key": "multimodal_agents",
       "topic_label": "Multimodal Agents",
-      "count": 0,
-      "share": 0.0
+      "count": 2,
+      "share": 5.41
     }
   ],
   "topic_distribution": [
     {
+      "topic_label": "Agents and Planning",
+      "count": 5,
+      "share": 13.51
+    },
+    {
       "topic_label": "LLMs and Language",
-      "count": 10,
-      "share": 27.03
+      "count": 5,
+      "share": 13.51
+    },
+    {
+      "topic_label": "Multimodal Generative Modeling",
+      "count": 5,
+      "share": 13.51
     },
     {
       "topic_label": "Multimodal Understanding and Vision",
-      "count": 10,
-      "share": 27.03
+      "count": 5,
+      "share": 13.51
     },
     {
-      "topic_label": "Other AI",
-      "count": 8,
-      "share": 21.62
-    },
-    {
-      "topic_label": "Agents and Planning",
-      "count": 2,
-      "share": 5.41
-    },
-    {
-      "topic_label": "Reasoning, Alignment, and Evaluation",
-      "count": 2,
-      "share": 5.41
+      "topic_label": "Datasets and Benchmarks",
+      "count": 4,
+      "share": 10.81
     },
     {
       "topic_label": "Domain Applications",
-      "count": 1,
-      "share": 2.7
+      "count": 3,
+      "share": 8.11
+    },
+    {
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "count": 3,
+      "share": 8.11
+    },
+    {
+      "topic_label": "Multimodal Agents",
+      "count": 2,
+      "share": 5.41
+    },
+    {
+      "topic_label": "Robotics and Embodied AI",
+      "count": 2,
+      "share": 5.41
     },
     {
       "topic_label": "Generative Foundations",
@@ -63,11 +78,6 @@
     },
     {
       "topic_label": "Learning, Optimization, and Theory",
-      "count": 1,
-      "share": 2.7
-    },
-    {
-      "topic_label": "Multimodal Generative Modeling",
       "count": 1,
       "share": 2.7
     },
@@ -106,6 +116,37 @@
   "top_upvoted": [
     {
       "report_date": "2026-03-23",
+      "paper_id": "2603.17051",
+      "title": "Astrolabe: Steering Forward-Process Reinforcement Learning for Distilled Autoregressive Video Models",
+      "authors": [
+        "Songchun Zhang",
+        "Zeyue Xue",
+        "Siming Fu",
+        "Jie Huang",
+        "Xianghao Kong",
+        "Y Ma",
+        "Haoyang Huang",
+        "Nan Duan",
+        "Anyi Rao"
+      ],
+      "abstract": "Distilled autoregressive (AR) video models enable efficient streaming generation but frequently misalign with human visual preferences. Existing reinforcement learning (RL) frameworks are not naturally suited to these architectures, typically requiring either expensive re-distillation or solver-coupled reverse-process optimization that introduces considerable memory and computational overhead. We present Astrolabe, an efficient online RL framework tailored for distilled AR models. To overcome existing bottlenecks, we introduce a forward-process RL formulation based on negative-aware fine-tuning. By contrasting positive and negative samples directly at inference endpoints, this approach establishes an implicit policy improvement direction without requiring reverse-process unrolling. To scale this alignment to long videos, we propose a streaming training scheme that generates sequences progressively via a rolling KV-cache, applying RL updates exclusively to local clip windows while conditioning on prior context to ensure long-range coherence. Finally, to mitigate reward hacking, we integrate a multi-reward objective stabilized by uncertainty-aware selective regularization and dynamic reference updates. Extensive experiments demonstrate that our method consistently enhances generation quality across multiple distilled AR video models, serving as a robust and scalable alignment solution.",
+      "hf_url": "https://huggingface.co/papers/2603.17051",
+      "arxiv_url": "https://arxiv.org/abs/2603.17051",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.17051",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.17051",
+      "github_url": "",
+      "submitted_by": "Franklin",
+      "submitted_at": "2026-03-23T01:47:54.443Z",
+      "upvotes": 105,
+      "comments": 6,
+      "topic_key": "multimodal_generative",
+      "topic_label": "Multimodal Generative Modeling",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.95
+    },
+    {
+      "report_date": "2026-03-23",
       "paper_id": "2603.17024",
       "title": "HopChain: Multi-Hop Data Synthesis for Generalizable Vision-Language Reasoning",
       "authors": [
@@ -129,49 +170,13 @@
       "github_url": "",
       "submitted_by": "Shenzhi Wang",
       "submitted_at": "2026-03-23T01:59:32.507Z",
-      "upvotes": 99,
-      "comments": 3,
-      "topic_key": "multimodal_generative",
-      "topic_label": "Multimodal Generative Modeling",
-      "matched_terms": [
-        "\\bvision-language\\b",
-        "\\bsynthesis\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null
-    },
-    {
-      "report_date": "2026-03-23",
-      "paper_id": "2603.17051",
-      "title": "Astrolabe: Steering Forward-Process Reinforcement Learning for Distilled Autoregressive Video Models",
-      "authors": [
-        "Songchun Zhang",
-        "Zeyue Xue",
-        "Siming Fu",
-        "Jie Huang",
-        "Xianghao Kong",
-        "Y Ma",
-        "Haoyang Huang",
-        "Nan Duan",
-        "Anyi Rao"
-      ],
-      "abstract": "Distilled autoregressive (AR) video models enable efficient streaming generation but frequently misalign with human visual preferences. Existing reinforcement learning (RL) frameworks are not naturally suited to these architectures, typically requiring either expensive re-distillation or solver-coupled reverse-process optimization that introduces considerable memory and computational overhead. We present Astrolabe, an efficient online RL framework tailored for distilled AR models. To overcome existing bottlenecks, we introduce a forward-process RL formulation based on negative-aware fine-tuning. By contrasting positive and negative samples directly at inference endpoints, this approach establishes an implicit policy improvement direction without requiring reverse-process unrolling. To scale this alignment to long videos, we propose a streaming training scheme that generates sequences progressively via a rolling KV-cache, applying RL updates exclusively to local clip windows while conditioning on prior context to ensure long-range coherence. Finally, to mitigate reward hacking, we integrate a multi-reward objective stabilized by uncertainty-aware selective regularization and dynamic reference updates. Extensive experiments demonstrate that our method consistently enhances generation quality across multiple distilled AR video models, serving as a robust and scalable alignment solution.",
-      "hf_url": "https://huggingface.co/papers/2603.17051",
-      "arxiv_url": "https://arxiv.org/abs/2603.17051",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.17051",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.17051",
-      "github_url": "",
-      "submitted_by": "Franklin",
-      "submitted_at": "2026-03-23T01:47:54.443Z",
-      "upvotes": 91,
-      "comments": 5,
+      "upvotes": 104,
+      "comments": 4,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [
-        "\\bvideo\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.87
     },
     {
       "report_date": "2026-03-23",
@@ -194,15 +199,13 @@
       "github_url": "",
       "submitted_by": "Yan Shu",
       "submitted_at": "2026-03-23T05:53:40.762Z",
-      "upvotes": 42,
-      "comments": 3,
-      "topic_key": "reasoning_alignment_eval",
-      "topic_label": "Reasoning, Alignment, and Evaluation",
-      "matched_terms": [
-        "\\breasoning\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null
+      "upvotes": 49,
+      "comments": 6,
+      "topic_key": "domain_applications",
+      "topic_label": "Domain Applications",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.88
     },
     {
       "report_date": "2026-03-23",
@@ -223,16 +226,43 @@
       "github_url": "",
       "submitted_by": "Thomas De Min",
       "submitted_at": "2026-03-23T06:51:51.496Z",
-      "upvotes": 32,
-      "comments": 2,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
-      "matched_terms": [
-        "\\blanguage models?\\b",
-        "\\blanguage\\b"
+      "upvotes": 40,
+      "comments": 4,
+      "topic_key": "datasets_benchmarks",
+      "topic_label": "Datasets and Benchmarks",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.98
+    },
+    {
+      "report_date": "2026-03-23",
+      "paper_id": "2603.19461",
+      "title": "Hyperagents",
+      "authors": [
+        "Jenny Zhang",
+        "Bingchen Zhao",
+        "Wannan Yang",
+        "Jakob Foerster",
+        "Jeff Clune",
+        "Minqi Jiang",
+        "Sam Devlin",
+        "Tatiana Shavrina"
       ],
-      "classification_source": "rule",
-      "classification_confidence": null
+      "abstract": "Self-improving AI systems aim to reduce reliance on human engineering by learning to improve their own learning and problem-solving processes. Existing approaches to self-improvement rely on fixed, handcrafted meta-level mechanisms, fundamentally limiting how fast such systems can improve. The Darwin Gödel Machine (DGM) demonstrates open-ended self-improvement in coding by repeatedly generating and evaluating self-modified variants. Because both evaluation and self-modification are coding tasks, gains in coding ability can translate into gains in self-improvement ability. However, this alignment does not generally hold beyond coding domains. We introduce hyperagents, self-referential agents that integrate a task agent (which solves the target task) and a meta agent (which modifies itself and the task agent) into a single editable program. Crucially, the meta-level modification procedure is itself editable, enabling metacognitive self-modification, improving not only the task-solving behavior, but also the mechanism that generates future improvements. We instantiate this framework by extending DGM to create DGM-Hyperagents (DGM-H), eliminating the assumption of domain-specific alignment between task performance and self-modification skill to potentially support self-accelerating progress on any computable task. Across diverse domains, the DGM-H improves performance over time and outperforms baselines without self-improvement or open-ended exploration, as well as prior self-improving systems. Furthermore, the DGM-H improves the process by which it generates new agents (e.g., persistent memory, performance tracking), and these meta-level improvements transfer across domains and accumulate across runs. DGM-Hyperagents offer a glimpse of open-ended AI systems that do not merely search for better solutions, but continually improve their search for how to improve.",
+      "hf_url": "https://huggingface.co/papers/2603.19461",
+      "arxiv_url": "https://arxiv.org/abs/2603.19461",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19461",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.19461",
+      "github_url": "",
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-03-23T00:48:01.375Z",
+      "upvotes": 35,
+      "comments": 5,
+      "topic_key": "agents_planning",
+      "topic_label": "Agents and Planning",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.57
     },
     {
       "report_date": "2026-03-23",
@@ -253,15 +283,13 @@
       "github_url": "",
       "submitted_by": "Haitham Bou Ammar",
       "submitted_at": "2026-03-23T07:15:07.782Z",
-      "upvotes": 27,
+      "upvotes": 32,
       "comments": 6,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
-      "matched_terms": [
-        "\\b\\w*llms?\\w*\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.85
     },
     {
       "report_date": "2026-03-23",
@@ -286,45 +314,13 @@
       "github_url": "",
       "submitted_by": "Zhifei Yang",
       "submitted_at": "2026-03-23T01:30:55.980Z",
-      "upvotes": 27,
+      "upvotes": 32,
       "comments": 2,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [
-        "\\bmultimodal\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null
-    },
-    {
-      "report_date": "2026-03-23",
-      "paper_id": "2603.19461",
-      "title": "Hyperagents",
-      "authors": [
-        "Jenny Zhang",
-        "Bingchen Zhao",
-        "Wannan Yang",
-        "Jakob Foerster",
-        "Jeff Clune",
-        "Minqi Jiang",
-        "Sam Devlin",
-        "Tatiana Shavrina"
-      ],
-      "abstract": "Self-improving AI systems aim to reduce reliance on human engineering by learning to improve their own learning and problem-solving processes. Existing approaches to self-improvement rely on fixed, handcrafted meta-level mechanisms, fundamentally limiting how fast such systems can improve. The Darwin Gödel Machine (DGM) demonstrates open-ended self-improvement in coding by repeatedly generating and evaluating self-modified variants. Because both evaluation and self-modification are coding tasks, gains in coding ability can translate into gains in self-improvement ability. However, this alignment does not generally hold beyond coding domains. We introduce hyperagents, self-referential agents that integrate a task agent (which solves the target task) and a meta agent (which modifies itself and the task agent) into a single editable program. Crucially, the meta-level modification procedure is itself editable, enabling metacognitive self-modification, improving not only the task-solving behavior, but also the mechanism that generates future improvements. We instantiate this framework by extending DGM to create DGM-Hyperagents (DGM-H), eliminating the assumption of domain-specific alignment between task performance and self-modification skill to potentially support self-accelerating progress on any computable task. Across diverse domains, the DGM-H improves performance over time and outperforms baselines without self-improvement or open-ended exploration, as well as prior self-improving systems. Furthermore, the DGM-H improves the process by which it generates new agents (e.g., persistent memory, performance tracking), and these meta-level improvements transfer across domains and accumulate across runs. DGM-Hyperagents offer a glimpse of open-ended AI systems that do not merely search for better solutions, but continually improve their search for how to improve.",
-      "hf_url": "https://huggingface.co/papers/2603.19461",
-      "arxiv_url": "https://arxiv.org/abs/2603.19461",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19461",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.19461",
-      "github_url": "",
-      "submitted_by": "taesiri",
-      "submitted_at": "2026-03-23T00:48:01.375Z",
-      "upvotes": 25,
-      "comments": 5,
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
+      "topic_key": "multimodal_generative",
+      "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
-      "classification_source": "rule",
-      "classification_confidence": null
+      "classification_source": "codex",
+      "classification_confidence": 0.97
     },
     {
       "report_date": "2026-03-23",
@@ -352,79 +348,48 @@
       "submitted_at": "2026-03-23T01:19:26.199Z",
       "upvotes": 22,
       "comments": 2,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [
-        "\\bvideo\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null
+      "topic_key": "multimodal_generative",
+      "topic_label": "Multimodal Generative Modeling",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.98
     }
   ],
   "topics": [
     {
-      "topic_label": "LLMs and Language",
-      "count": 10,
-      "share": 27.03,
+      "topic_label": "Agents and Planning",
+      "count": 5,
+      "share": 13.51,
       "papers": [
         {
           "report_date": "2026-03-23",
-          "paper_id": "2603.19466",
-          "title": "ProactiveBench: Benchmarking Proactiveness in Multimodal Large Language Models",
+          "paper_id": "2603.19461",
+          "title": "Hyperagents",
           "authors": [
-            "Thomas De Min",
-            "Subhankar Roy",
-            "Stéphane Lathuilière",
-            "Elisa Ricci",
-            "Massimiliano Mancini"
+            "Jenny Zhang",
+            "Bingchen Zhao",
+            "Wannan Yang",
+            "Jakob Foerster",
+            "Jeff Clune",
+            "Minqi Jiang",
+            "Sam Devlin",
+            "Tatiana Shavrina"
           ],
-          "abstract": "Effective collaboration begins with knowing when to ask for help. For example, when trying to identify an occluded object, a human would ask someone to remove the obstruction. Can MLLMs exhibit a similar \"proactive\" behavior by requesting simple user interventions? To investigate this, we introduce ProactiveBench, a benchmark built from seven repurposed datasets that tests proactiveness across different tasks such as recognizing occluded objects, enhancing image quality, and interpreting coarse sketches. We evaluate 22 MLLMs on ProactiveBench, showing that (i) they generally lack proactiveness; (ii) proactiveness does not correlate with model capacity; (iii) \"hinting\" at proactiveness yields only marginal gains. Surprisingly, we found that conversation histories and in-context learning introduce negative biases, hindering performance. Finally, we explore a simple fine-tuning strategy based on reinforcement learning: its results suggest that proactiveness can be learned, even generalizing to unseen scenarios. We publicly release ProactiveBench as a first step toward building proactive multimodal models.",
-          "hf_url": "https://huggingface.co/papers/2603.19466",
-          "arxiv_url": "https://arxiv.org/abs/2603.19466",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19466",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.19466",
+          "abstract": "Self-improving AI systems aim to reduce reliance on human engineering by learning to improve their own learning and problem-solving processes. Existing approaches to self-improvement rely on fixed, handcrafted meta-level mechanisms, fundamentally limiting how fast such systems can improve. The Darwin Gödel Machine (DGM) demonstrates open-ended self-improvement in coding by repeatedly generating and evaluating self-modified variants. Because both evaluation and self-modification are coding tasks, gains in coding ability can translate into gains in self-improvement ability. However, this alignment does not generally hold beyond coding domains. We introduce hyperagents, self-referential agents that integrate a task agent (which solves the target task) and a meta agent (which modifies itself and the task agent) into a single editable program. Crucially, the meta-level modification procedure is itself editable, enabling metacognitive self-modification, improving not only the task-solving behavior, but also the mechanism that generates future improvements. We instantiate this framework by extending DGM to create DGM-Hyperagents (DGM-H), eliminating the assumption of domain-specific alignment between task performance and self-modification skill to potentially support self-accelerating progress on any computable task. Across diverse domains, the DGM-H improves performance over time and outperforms baselines without self-improvement or open-ended exploration, as well as prior self-improving systems. Furthermore, the DGM-H improves the process by which it generates new agents (e.g., persistent memory, performance tracking), and these meta-level improvements transfer across domains and accumulate across runs. DGM-Hyperagents offer a glimpse of open-ended AI systems that do not merely search for better solutions, but continually improve their search for how to improve.",
+          "hf_url": "https://huggingface.co/papers/2603.19461",
+          "arxiv_url": "https://arxiv.org/abs/2603.19461",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19461",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.19461",
           "github_url": "",
-          "submitted_by": "Thomas De Min",
-          "submitted_at": "2026-03-23T06:51:51.496Z",
-          "upvotes": 32,
-          "comments": 2,
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [
-            "\\blanguage models?\\b",
-            "\\blanguage\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
-        },
-        {
-          "report_date": "2026-03-23",
-          "paper_id": "2603.20105",
-          "title": "The Y-Combinator for LLMs: Solving Long-Context Rot with λ-Calculus",
-          "authors": [
-            "Amartya Roy",
-            "Rasul Tutunov",
-            "Xiaotong Ji",
-            "Matthieu Zimmer",
-            "Haitham Bou-Ammar"
-          ],
-          "abstract": "LLMs are increasingly used as general-purpose reasoners, but long inputs remain bottlenecked by a fixed context window. Recursive Language Models (RLMs) address this by externalising the prompt and recursively solving subproblems. Yet existing RLMs depend on an open-ended read-eval-print loop (REPL) in which the model generates arbitrary control code, making execution difficult to verify, predict, and analyse. We introduce λ-RLM, a framework for long-context reasoning that replaces free-form recursive code generation with a typed functional runtime grounded in λ-calculus. It executes a compact library of pre-verified combinators and uses neural inference only on bounded leaf subproblems, turning recursive reasoning into a structured functional program with explicit control flow. We show that λ-RLM admits formal guarantees absent from standard RLMs, including termination, closed-form cost bounds, controlled accuracy scaling with recursion depth, and an optimal partition rule under a simple cost model. Empirically, across four long-context reasoning tasks and nine base models, λ-RLM outperforms standard RLM in 29 of 36 model-task comparisons, improves average accuracy by up to +21.9 points across model tiers, and reduces latency by up to 4.1x. These results show that typed symbolic control yields a more reliable and efficient foundation for long-context reasoning than open-ended recursive code generation. The complete implementation of λ-RLM, is open-sourced for the community at: https://github.com/lambda-calculus-LLM/lambda-RLM.",
-          "hf_url": "https://huggingface.co/papers/2603.20105",
-          "arxiv_url": "https://arxiv.org/abs/2603.20105",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.20105",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.20105",
-          "github_url": "",
-          "submitted_by": "Haitham Bou Ammar",
-          "submitted_at": "2026-03-23T07:15:07.782Z",
-          "upvotes": 27,
-          "comments": 6,
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [
-            "\\b\\w*llms?\\w*\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
+          "submitted_by": "taesiri",
+          "submitted_at": "2026-03-23T00:48:01.375Z",
+          "upvotes": 35,
+          "comments": 5,
+          "topic_key": "agents_planning",
+          "topic_label": "Agents and Planning",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.57
         },
         {
           "report_date": "2026-03-23",
@@ -445,15 +410,128 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-03-23T00:42:49.285Z",
-          "upvotes": 15,
+          "upvotes": 18,
           "comments": 2,
+          "topic_key": "agents_planning",
+          "topic_label": "Agents and Planning",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.97
+        },
+        {
+          "report_date": "2026-03-23",
+          "paper_id": "2603.09151",
+          "title": "Deep Tabular Research via Continual Experience-Driven Execution",
+          "authors": [
+            "Junnan Dong",
+            "Chuang Zhou",
+            "Zheng Yuan",
+            "Yifei Yu",
+            "Qiufeng Wang",
+            "Yinghui Li",
+            "Siyu An",
+            "Di Yin",
+            "Xing Sun",
+            "Feiyue Huang"
+          ],
+          "abstract": "Large language models often struggle with complex long-horizon analytical tasks over unstructured tables, which typically feature hierarchical and bidirectional headers and non-canonical layouts. We formalize this challenge as Deep Tabular Research (DTR), requiring multi-step reasoning over interdependent table regions. To address DTR, we propose a novel agentic framework that treats tabular reasoning as a closed-loop decision-making process. We carefully design a coupled query and table comprehension for path decision making and operational execution. Specifically, (i) DTR first constructs a hierarchical meta graph to capture bidirectional semantics, mapping natural language queries into an operation-level search space; (ii) To navigate this space, we introduce an expectation-aware selection policy that prioritizes high-utility execution paths; (iii) Crucially, historical execution outcomes are synthesized into a siamese structured memory, i.e., parameterized updates and abstracted texts, enabling continual refinement. Extensive experiments on challenging unstructured tabular benchmarks verify the effectiveness and highlight the necessity of separating strategic planning from low-level execution for long-horizon tabular reasoning.",
+          "hf_url": "https://huggingface.co/papers/2603.09151",
+          "arxiv_url": "https://arxiv.org/abs/2603.09151",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.09151",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.09151",
+          "github_url": "",
+          "submitted_by": "HansonDong",
+          "submitted_at": "2026-03-23T09:24:58.705Z",
+          "upvotes": 13,
+          "comments": 2,
+          "topic_key": "agents_planning",
+          "topic_label": "Agents and Planning",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.62
+        },
+        {
+          "report_date": "2026-03-23",
+          "paper_id": "2603.19453",
+          "title": "Cooperation and Exploitation in LLM Policy Synthesis for Sequential Social Dilemmas",
+          "authors": [
+            "Víctor Gallego"
+          ],
+          "abstract": "We study LLM policy synthesis: using a large language model to iteratively generate programmatic agent policies for multi-agent environments. Rather than training neural policies via reinforcement learning, our framework prompts an LLM to produce Python policy functions, evaluates them in self-play, and refines them using performance feedback across iterations. We investigate feedback engineering (the design of what evaluation information is shown to the LLM during refinement) comparing sparse feedback (scalar reward only) against dense feedback (reward plus social metrics: efficiency, equality, sustainability, peace). Across two canonical Sequential Social Dilemmas (Gathering and Cleanup) and two frontier LLMs (Claude Sonnet 4.6, Gemini 3.1 Pro), dense feedback consistently matches or exceeds sparse feedback on all metrics. The advantage is largest in the Cleanup public goods game, where providing social metrics helps the LLM calibrate the costly cleaning-harvesting tradeoff. Rather than triggering over-optimization of fairness, social metrics serve as a coordination signal that guides the LLM toward more effective cooperative strategies, including territory partitioning, adaptive role assignment, and the avoidance of wasteful aggression. We further perform an adversarial experiment to determine whether LLMs can reward hack these environments. We characterize five attack classes and discuss mitigations, highlighting an inherent tension in LLM policy synthesis between expressiveness and safety. Code at https://github.com/vicgalle/llm-policies-social-dilemmas.",
+          "hf_url": "https://huggingface.co/papers/2603.19453",
+          "arxiv_url": "https://arxiv.org/abs/2603.19453",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19453",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.19453",
+          "github_url": "",
+          "submitted_by": "Victor Gallego",
+          "submitted_at": "2026-03-23T06:29:48.856Z",
+          "upvotes": 5,
+          "comments": 2,
+          "topic_key": "agents_planning",
+          "topic_label": "Agents and Planning",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.89
+        },
+        {
+          "report_date": "2026-03-23",
+          "paper_id": "2603.15911",
+          "title": "Human-AI Synergy in Agentic Code Review",
+          "authors": [
+            "Suzhen Zhong",
+            "Shayan Noei",
+            "Ying Zou",
+            "Bram Adams"
+          ],
+          "abstract": "Code review is a critical software engineering practice where developers review code changes before integration to ensure code quality, detect defects, and improve maintainability. In recent years, AI agents that can understand code context, plan review actions, and interact with development environments have been increasingly integrated into the code review process. However, there is limited empirical evidence to compare the effectiveness of AI agents and human reviewers in collaborative workflows. To address this gap, we conduct a large-scale empirical analysis of 278,790 code review conversations across 300 open-source GitHub projects. In our study, we aim to compare the feedback differences provided by human reviewers and AI agents. We investigate human-AI collaboration patterns in review conversations to understand how interaction shapes review outcomes. Moreover, we analyze the adoption of code suggestions provided by human reviewers and AI agents into the codebase and how adopted suggestions change code quality. We find that human reviewers provide additional feedback than AI agents, including understanding, testing, and knowledge transfer. Human reviewers exchange 11.8% more rounds when reviewing AI-generated code than human-written code. Moreover, code suggestions made by AI agents are adopted into the codebase at a significantly lower rate than suggestions proposed by human reviewers. Over half of unadopted suggestions from AI agents are either incorrect or addressed through alternative fixes by developers. When adopted, suggestions provided by AI agents produce significantly larger increases in code complexity and code size than suggestions provided by human reviewers. Our findings suggest that while AI agents can scale defect screening, human oversight remains critical for ensuring suggestion quality and providing contextual feedback that AI agents lack.",
+          "hf_url": "https://huggingface.co/papers/2603.15911",
+          "arxiv_url": "https://arxiv.org/abs/2603.15911",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.15911",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.15911",
+          "github_url": "",
+          "submitted_by": "Suzhen Zhong",
+          "submitted_at": "2026-03-23T12:55:21.798Z",
+          "upvotes": 4,
+          "comments": 2,
+          "topic_key": "agents_planning",
+          "topic_label": "Agents and Planning",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.92
+        }
+      ]
+    },
+    {
+      "topic_label": "LLMs and Language",
+      "count": 5,
+      "share": 13.51,
+      "papers": [
+        {
+          "report_date": "2026-03-23",
+          "paper_id": "2603.20105",
+          "title": "The Y-Combinator for LLMs: Solving Long-Context Rot with λ-Calculus",
+          "authors": [
+            "Amartya Roy",
+            "Rasul Tutunov",
+            "Xiaotong Ji",
+            "Matthieu Zimmer",
+            "Haitham Bou-Ammar"
+          ],
+          "abstract": "LLMs are increasingly used as general-purpose reasoners, but long inputs remain bottlenecked by a fixed context window. Recursive Language Models (RLMs) address this by externalising the prompt and recursively solving subproblems. Yet existing RLMs depend on an open-ended read-eval-print loop (REPL) in which the model generates arbitrary control code, making execution difficult to verify, predict, and analyse. We introduce λ-RLM, a framework for long-context reasoning that replaces free-form recursive code generation with a typed functional runtime grounded in λ-calculus. It executes a compact library of pre-verified combinators and uses neural inference only on bounded leaf subproblems, turning recursive reasoning into a structured functional program with explicit control flow. We show that λ-RLM admits formal guarantees absent from standard RLMs, including termination, closed-form cost bounds, controlled accuracy scaling with recursion depth, and an optimal partition rule under a simple cost model. Empirically, across four long-context reasoning tasks and nine base models, λ-RLM outperforms standard RLM in 29 of 36 model-task comparisons, improves average accuracy by up to +21.9 points across model tiers, and reduces latency by up to 4.1x. These results show that typed symbolic control yields a more reliable and efficient foundation for long-context reasoning than open-ended recursive code generation. The complete implementation of λ-RLM, is open-sourced for the community at: https://github.com/lambda-calculus-LLM/lambda-RLM.",
+          "hf_url": "https://huggingface.co/papers/2603.20105",
+          "arxiv_url": "https://arxiv.org/abs/2603.20105",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.20105",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.20105",
+          "github_url": "",
+          "submitted_by": "Haitham Bou Ammar",
+          "submitted_at": "2026-03-23T07:15:07.782Z",
+          "upvotes": 32,
+          "comments": 6,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
-          "matched_terms": [
-            "\\b\\w*llms?\\w*\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.85
         },
         {
           "report_date": "2026-03-23",
@@ -478,16 +556,13 @@
           "github_url": "",
           "submitted_by": "蒋世鑫",
           "submitted_at": "2026-03-23T06:47:41.509Z",
-          "upvotes": 9,
+          "upvotes": 13,
           "comments": 2,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
-          "matched_terms": [
-            "\\blanguage models?\\b",
-            "\\blanguage\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.9
         },
         {
           "report_date": "2026-03-23",
@@ -505,40 +580,13 @@
           "github_url": "",
           "submitted_by": "Tengyang Xie",
           "submitted_at": "2026-03-23T16:28:10.019Z",
-          "upvotes": 7,
+          "upvotes": 9,
           "comments": 2,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
-          "matched_terms": [
-            "\\b\\w*llms?\\w*\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
-        },
-        {
-          "report_date": "2026-03-23",
-          "paper_id": "2603.19453",
-          "title": "Cooperation and Exploitation in LLM Policy Synthesis for Sequential Social Dilemmas",
-          "authors": [
-            "Víctor Gallego"
-          ],
-          "abstract": "We study LLM policy synthesis: using a large language model to iteratively generate programmatic agent policies for multi-agent environments. Rather than training neural policies via reinforcement learning, our framework prompts an LLM to produce Python policy functions, evaluates them in self-play, and refines them using performance feedback across iterations. We investigate feedback engineering (the design of what evaluation information is shown to the LLM during refinement) comparing sparse feedback (scalar reward only) against dense feedback (reward plus social metrics: efficiency, equality, sustainability, peace). Across two canonical Sequential Social Dilemmas (Gathering and Cleanup) and two frontier LLMs (Claude Sonnet 4.6, Gemini 3.1 Pro), dense feedback consistently matches or exceeds sparse feedback on all metrics. The advantage is largest in the Cleanup public goods game, where providing social metrics helps the LLM calibrate the costly cleaning-harvesting tradeoff. Rather than triggering over-optimization of fairness, social metrics serve as a coordination signal that guides the LLM toward more effective cooperative strategies, including territory partitioning, adaptive role assignment, and the avoidance of wasteful aggression. We further perform an adversarial experiment to determine whether LLMs can reward hack these environments. We characterize five attack classes and discuss mitigations, highlighting an inherent tension in LLM policy synthesis between expressiveness and safety. Code at https://github.com/vicgalle/llm-policies-social-dilemmas.",
-          "hf_url": "https://huggingface.co/papers/2603.19453",
-          "arxiv_url": "https://arxiv.org/abs/2603.19453",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19453",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.19453",
-          "github_url": "",
-          "submitted_by": "Victor Gallego",
-          "submitted_at": "2026-03-23T06:29:48.856Z",
-          "upvotes": 4,
-          "comments": 2,
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [
-            "\\b\\w*llms?\\w*\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.83
         },
         {
           "report_date": "2026-03-23",
@@ -556,46 +604,13 @@
           "github_url": "",
           "submitted_by": "Mengyu Bu",
           "submitted_at": "2026-03-23T01:24:09.982Z",
-          "upvotes": 3,
+          "upvotes": 4,
           "comments": 2,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
-          "matched_terms": [
-            "\\b\\w*llms?\\w*\\b",
-            "\\blanguage\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
-        },
-        {
-          "report_date": "2026-03-23",
-          "paper_id": "2603.16749",
-          "title": "Probing Cultural Signals in Large Language Models through Author Profiling",
-          "authors": [
-            "Valentin Lafargue",
-            "Ariel Guerra-Adames",
-            "Emmanuelle Claeys",
-            "Elouan Vuichard",
-            "Jean-Michel Loubes"
-          ],
-          "abstract": "Large language models (LLMs) are increasingly deployed in applications with societal impact, raising concerns about the cultural biases they encode. We probe these representations by evaluating whether LLMs can perform author profiling from song lyrics in a zero-shot setting, inferring singers' gender and ethnicity without task-specific fine-tuning. Across several open-source models evaluated on more than 10,000 lyrics, we find that LLMs achieve non-trivial profiling performance but demonstrate systematic cultural alignment: most models default toward North American ethnicity, while DeepSeek-1.5B aligns more strongly with Asian ethnicity. This finding emerges from both the models' prediction distributions and an analysis of their generated rationales. To quantify these disparities, we introduce two fairness metrics, Modality Accuracy Divergence (MAD) and Recall Divergence (RD), and show that Ministral-8B displays the strongest ethnicity bias among the evaluated models, whereas Gemma-12B shows the most balanced behavior. Our code is available on GitHub (https://github.com/ValentinLafargue/CulturalProbingLLM).",
-          "hf_url": "https://huggingface.co/papers/2603.16749",
-          "arxiv_url": "https://arxiv.org/abs/2603.16749",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.16749",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.16749",
-          "github_url": "",
-          "submitted_by": "Valentin Lafargue",
-          "submitted_at": "2026-03-23T11:34:04.143Z",
-          "upvotes": 2,
-          "comments": 2,
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [
-            "\\blanguage models?\\b",
-            "\\blanguage\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.88
         },
         {
           "report_date": "2026-03-23",
@@ -620,52 +635,20 @@
           "github_url": "",
           "submitted_by": "Chenlu Ye",
           "submitted_at": "2026-03-23T16:21:18.733Z",
-          "upvotes": 1,
+          "upvotes": 3,
           "comments": 2,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
-          "matched_terms": [
-            "\\b\\w*llms?\\w*\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
-        },
-        {
-          "report_date": "2026-03-23",
-          "paper_id": "2603.14628",
-          "title": "s2n-bignum-bench: A practical benchmark for evaluating low-level code reasoning of LLMs",
-          "authors": [
-            "Balaji Rao",
-            "John Harrison",
-            "Soonho Kong",
-            "Juneyoung Lee",
-            "Carlo Lipizzi"
-          ],
-          "abstract": "Neurosymbolic approaches leveraging Large Language Models (LLMs) with formal methods have recently achieved strong results on mathematics-oriented theorem-proving benchmarks. However, success on competition-style mathematics does not by itself demonstrate the ability to construct proofs about real-world implementations. We address this gap with a benchmark derived from an industrial cryptographic library whose assembly routines are already verified in HOL Light. s2n-bignum is a library used at AWS for providing fast assembly routines for cryptography, and its correctness is established by formal verification. The task of formally verifying this library has been a significant achievement for the Automated Reasoning Group. It involved two tasks: (1) precisely specifying the correct behavior of a program as a mathematical proposition, and (2) proving that the proposition is correct. In the case of s2n-bignum, both tasks were carried out by human experts. In s2n-bignum-bench, we provide the formal specification and ask the LLM to generate a proof script that is accepted by HOL Light within a fixed proof-check timeout. To our knowledge, s2n-bignum-bench is the first public benchmark focused on machine-checkable proof synthesis for industrial low-level cryptographic assembly routines in HOL Light. This benchmark provides a challenging and practically relevant testbed for evaluating LLM-based theorem proving beyond competition mathematics. The code to set up and use the benchmark is available here: https://github.com/kings-crown/s2n-bignum-bench{s2n-bignum-bench}.",
-          "hf_url": "https://huggingface.co/papers/2603.14628",
-          "arxiv_url": "https://arxiv.org/abs/2603.14628",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.14628",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.14628",
-          "github_url": "",
-          "submitted_by": "Balaji Rao",
-          "submitted_at": "2026-03-23T09:55:38.788Z",
-          "upvotes": 1,
-          "comments": 2,
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [
-            "\\b\\w*llms?\\w*\\b",
-            "\\bcode\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.8
         }
       ]
     },
     {
-      "topic_label": "Multimodal Understanding and Vision",
-      "count": 10,
-      "share": 27.03,
+      "topic_label": "Multimodal Generative Modeling",
+      "count": 5,
+      "share": 13.51,
       "papers": [
         {
           "report_date": "2026-03-23",
@@ -690,15 +673,13 @@
           "github_url": "",
           "submitted_by": "Franklin",
           "submitted_at": "2026-03-23T01:47:54.443Z",
-          "upvotes": 91,
-          "comments": 5,
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [
-            "\\bvideo\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
+          "upvotes": 105,
+          "comments": 6,
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.95
         },
         {
           "report_date": "2026-03-23",
@@ -723,15 +704,13 @@
           "github_url": "",
           "submitted_by": "Zhifei Yang",
           "submitted_at": "2026-03-23T01:30:55.980Z",
-          "upvotes": 27,
+          "upvotes": 32,
           "comments": 2,
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [
-            "\\bmultimodal\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.97
         },
         {
           "report_date": "2026-03-23",
@@ -759,13 +738,11 @@
           "submitted_at": "2026-03-23T01:19:26.199Z",
           "upvotes": 22,
           "comments": 2,
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [
-            "\\bvideo\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.98
         },
         {
           "report_date": "2026-03-23",
@@ -787,15 +764,82 @@
           "github_url": "",
           "submitted_by": "Vladimir Kulikov",
           "submitted_at": "2026-03-23T08:59:22.558Z",
-          "upvotes": 13,
+          "upvotes": 15,
           "comments": 2,
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.97
+        },
+        {
+          "report_date": "2026-03-23",
+          "paper_id": "2603.17735",
+          "title": "TAPESTRY: From Geometry to Appearance via Consistent Turntable Videos",
+          "authors": [
+            "Yan Zeng",
+            "Haoran Jiang",
+            "Kaixin Yao",
+            "Qixuan Zhang",
+            "Longwen Zhang",
+            "Lan Xu",
+            "Jingyi Yu"
+          ],
+          "abstract": "Automatically generating photorealistic and self-consistent appearances for untextured 3D models is a critical challenge in digital content creation. The advancement of large-scale video generation models offers a natural approach: directly synthesizing 360-degree turntable videos (TTVs), which can serve not only as high-quality dynamic previews but also as an intermediate representation to drive texture synthesis and neural rendering. However, existing general-purpose video diffusion models struggle to maintain strict geometric consistency and appearance stability across the full range of views, making their outputs ill-suited for high-quality 3D reconstruction. To this end, we introduce TAPESTRY, a framework for generating high-fidelity TTVs conditioned on explicit 3D geometry. We reframe the 3D appearance generation task as a geometry-conditioned video diffusion problem: given a 3D mesh, we first render and encode multi-modal geometric features to constrain the video generation process with pixel-level precision, thereby enabling the creation of high-quality and consistent TTVs. Building upon this, we also design a method for downstream reconstruction tasks from the TTV input, featuring a multi-stage pipeline with 3D-Aware Inpainting. By rotating the model and performing a context-aware secondary generation, this pipeline effectively completes self-occluded regions to achieve full surface coverage. The videos generated by TAPESTRY are not only high-quality dynamic previews but also serve as a reliable, 3D-aware intermediate representation that can be seamlessly back-projected into UV textures or used to supervise neural rendering methods like 3DGS. This enables the automated creation of production-ready, complete 3D assets from untextured meshes. Experimental results demonstrate that our method outperforms existing approaches in both video consistency and final reconstruction quality.",
+          "hf_url": "https://huggingface.co/papers/2603.17735",
+          "arxiv_url": "https://arxiv.org/abs/2603.17735",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.17735",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.17735",
+          "github_url": "",
+          "submitted_by": "Yan Zeng",
+          "submitted_at": "2026-03-23T10:08:24.757Z",
+          "upvotes": 2,
+          "comments": 2,
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.75
+        }
+      ]
+    },
+    {
+      "topic_label": "Multimodal Understanding and Vision",
+      "count": 5,
+      "share": 13.51,
+      "papers": [
+        {
+          "report_date": "2026-03-23",
+          "paper_id": "2603.17024",
+          "title": "HopChain: Multi-Hop Data Synthesis for Generalizable Vision-Language Reasoning",
+          "authors": [
+            "Shenzhi Wang",
+            "Shixuan Liu",
+            "Jing Zhou",
+            "Chang Gao",
+            "Xiong-Hui Chen",
+            "Binghai Wang",
+            "An Yang",
+            "Shiji Song",
+            "Bowen Yu",
+            "Gao Huang",
+            "Junyang Lin"
+          ],
+          "abstract": "VLMs show strong multimodal capabilities, but they still struggle with fine-grained vision-language reasoning. We find that long CoT reasoning exposes diverse failure modes, including perception, reasoning, knowledge, and hallucination errors, which can compound across intermediate steps. However, most existing vision-language data used for RLVR does not involve complex reasoning chains that rely on visual evidence throughout, leaving these weaknesses largely unexposed. We therefore propose HopChain, a scalable framework for synthesizing multi-hop vision-language reasoning data specifically for RLVR training of VLMs. Each synthesized multi-hop query forms a logically dependent chain of instance-grounded hops, where earlier hops establish the instances, sets, or conditions needed for later hops, while the final answer remains a specific, unambiguous number suitable for verifiable rewards. We add the multi-hop data synthesized by HopChain to the original RLVR data used to train Qwen3.5-35B-A3B and Qwen3.5-397B-A17B, and compare against RLVR on the original RLVR data alone across 24 benchmarks spanning STEM and Puzzle, General VQA, Text Recognition and Document Understanding, and Video Understanding. Although this multi-hop data is not synthesized to target any specific benchmark, adding it improves 20 out of 24 benchmarks on both models, indicating broad and generalizable gains. To demonstrate that full chained queries are important, we replace them with half-multi-hop or single-hop variants, reducing the 24-benchmark average accuracy by 5.3 and 7.0 points, respectively. Multi-hop training also strengthens long-CoT vision-language reasoning, with gains peaking at more than 50 accuracy points in the ultra-long-CoT regime. These experiments establish HopChain as an effective, scalable framework for synthesizing multi-hop data that improves generalizable vision-language reasoning.",
+          "hf_url": "https://huggingface.co/papers/2603.17024",
+          "arxiv_url": "https://arxiv.org/abs/2603.17024",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.17024",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.17024",
+          "github_url": "",
+          "submitted_by": "Shenzhi Wang",
+          "submitted_at": "2026-03-23T01:59:32.507Z",
+          "upvotes": 104,
+          "comments": 4,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [
-            "\\bvideo\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.87
         },
         {
           "report_date": "2026-03-23",
@@ -815,45 +859,13 @@
           "github_url": "",
           "submitted_by": "Gabriele Serussi",
           "submitted_at": "2026-03-23T05:51:28.031Z",
-          "upvotes": 9,
+          "upvotes": 10,
           "comments": 2,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [
-            "\\bmultimodal\\b",
-            "\\bvideo\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
-        },
-        {
-          "report_date": "2026-03-23",
-          "paper_id": "2603.20155",
-          "title": "Beyond Single Tokens: Distilling Discrete Diffusion Models via Discrete MMD",
-          "authors": [
-            "Emiel Hoogeboom",
-            "David Ruhe",
-            "Jonathan Heek",
-            "Thomas Mensink",
-            "Tim Salimans"
-          ],
-          "abstract": "It is currently difficult to distill discrete diffusion models. In contrast, continuous diffusion literature has many distillation approaches methods that can reduce sampling steps to a handful. Our method, Discrete Moment Matching Distillation (D-MMD), leverages ideas that have been highly successful in the continuous domain. Whereas previous discrete distillation methods collapse, D-MMD maintains high quality and diversity (given sufficient sampling steps). This is demonstrated on both text and image datasets. Moreover, the newly distilled generators can outperform their teachers.",
-          "hf_url": "https://huggingface.co/papers/2603.20155",
-          "arxiv_url": "https://arxiv.org/abs/2603.20155",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.20155",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.20155",
-          "github_url": "",
-          "submitted_by": "taesiri",
-          "submitted_at": "2026-03-23T01:00:36.392Z",
-          "upvotes": 7,
-          "comments": 2,
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [
-            "\\bdiffusion\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.96
         },
         {
           "report_date": "2026-03-23",
@@ -871,15 +883,13 @@
           "github_url": "",
           "submitted_by": "Niels Rogge",
           "submitted_at": "2026-03-23T09:17:43.681Z",
-          "upvotes": 3,
+          "upvotes": 5,
           "comments": 2,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [
-            "\\bvision\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.94
         },
         {
           "report_date": "2026-03-23",
@@ -905,11 +915,9 @@
           "comments": 2,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [
-            "\\b3d\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.9
         },
         {
           "report_date": "2026-03-23",
@@ -934,211 +942,43 @@
           "comments": 2,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [
-            "\\bvisual\\b",
-            "\\bvideo\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
-        },
-        {
-          "report_date": "2026-03-23",
-          "paper_id": "2603.20193",
-          "title": "From Masks to Pixels and Meaning: A New Taxonomy, Benchmark, and Metrics for VLM Image Tampering",
-          "authors": [
-            "Xinyi Shang",
-            "Yi Tang",
-            "Jiacheng Cui",
-            "Ahmed Elhagry",
-            "Salwa K. Al Khatib",
-            "Sondos Mahmoud Bsharat",
-            "Jiacheng Liu",
-            "Xiaohan Zhao",
-            "Jing-Hao Xue",
-            "Hao Li",
-            "Salman Khan",
-            "Zhiqiang Shen"
-          ],
-          "abstract": "Existing tampering detection benchmarks largely rely on object masks, which severely misalign with the true edit signal: many pixels inside a mask are untouched or only trivially modified, while subtle yet consequential edits outside the mask are treated as natural. We reformulate VLM image tampering from coarse region labels to a pixel-grounded, meaning and language-aware task. First, we introduce a taxonomy spanning edit primitives (replace/remove/splice/inpaint/attribute/colorization, etc.) and their semantic class of tampered object, linking low-level changes to high-level understanding. Second, we release a new benchmark with per-pixel tamper maps and paired category supervision to evaluate detection and classification within a unified protocol. Third, we propose a training framework and evaluation metrics that quantify pixel-level correctness with localization to assess confidence or prediction on true edit intensity, and further measure tamper meaning understanding via semantics-aware classification and natural language descriptions for the predicted regions. We also re-evaluate the existing strong segmentation/localization baselines on recent strong tamper detectors and reveal substantial over- and under-scoring using mask-only metrics, and expose failure modes on micro-edits and off-mask changes. Our framework advances the field from masks to pixels, meanings and language descriptions, establishing a rigorous standard for tamper localization, semantic classification and description. Code and benchmark data are available at https://github.com/VILA-Lab/PIXAR.",
-          "hf_url": "https://huggingface.co/papers/2603.20193",
-          "arxiv_url": "https://arxiv.org/abs/2603.20193",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.20193",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.20193",
-          "github_url": "",
-          "submitted_by": "Zhiqiang Shen",
-          "submitted_at": "2026-03-23T19:25:07.709Z",
-          "upvotes": 1,
-          "comments": 2,
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [
-            "\\bimage\\b",
-            "\\bvlm\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.95
         }
       ]
     },
     {
-      "topic_label": "Other AI",
-      "count": 8,
-      "share": 21.62,
+      "topic_label": "Datasets and Benchmarks",
+      "count": 4,
+      "share": 10.81,
       "papers": [
         {
           "report_date": "2026-03-23",
-          "paper_id": "2603.19461",
-          "title": "Hyperagents",
+          "paper_id": "2603.19466",
+          "title": "ProactiveBench: Benchmarking Proactiveness in Multimodal Large Language Models",
           "authors": [
-            "Jenny Zhang",
-            "Bingchen Zhao",
-            "Wannan Yang",
-            "Jakob Foerster",
-            "Jeff Clune",
-            "Minqi Jiang",
-            "Sam Devlin",
-            "Tatiana Shavrina"
+            "Thomas De Min",
+            "Subhankar Roy",
+            "Stéphane Lathuilière",
+            "Elisa Ricci",
+            "Massimiliano Mancini"
           ],
-          "abstract": "Self-improving AI systems aim to reduce reliance on human engineering by learning to improve their own learning and problem-solving processes. Existing approaches to self-improvement rely on fixed, handcrafted meta-level mechanisms, fundamentally limiting how fast such systems can improve. The Darwin Gödel Machine (DGM) demonstrates open-ended self-improvement in coding by repeatedly generating and evaluating self-modified variants. Because both evaluation and self-modification are coding tasks, gains in coding ability can translate into gains in self-improvement ability. However, this alignment does not generally hold beyond coding domains. We introduce hyperagents, self-referential agents that integrate a task agent (which solves the target task) and a meta agent (which modifies itself and the task agent) into a single editable program. Crucially, the meta-level modification procedure is itself editable, enabling metacognitive self-modification, improving not only the task-solving behavior, but also the mechanism that generates future improvements. We instantiate this framework by extending DGM to create DGM-Hyperagents (DGM-H), eliminating the assumption of domain-specific alignment between task performance and self-modification skill to potentially support self-accelerating progress on any computable task. Across diverse domains, the DGM-H improves performance over time and outperforms baselines without self-improvement or open-ended exploration, as well as prior self-improving systems. Furthermore, the DGM-H improves the process by which it generates new agents (e.g., persistent memory, performance tracking), and these meta-level improvements transfer across domains and accumulate across runs. DGM-Hyperagents offer a glimpse of open-ended AI systems that do not merely search for better solutions, but continually improve their search for how to improve.",
-          "hf_url": "https://huggingface.co/papers/2603.19461",
-          "arxiv_url": "https://arxiv.org/abs/2603.19461",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19461",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.19461",
+          "abstract": "Effective collaboration begins with knowing when to ask for help. For example, when trying to identify an occluded object, a human would ask someone to remove the obstruction. Can MLLMs exhibit a similar \"proactive\" behavior by requesting simple user interventions? To investigate this, we introduce ProactiveBench, a benchmark built from seven repurposed datasets that tests proactiveness across different tasks such as recognizing occluded objects, enhancing image quality, and interpreting coarse sketches. We evaluate 22 MLLMs on ProactiveBench, showing that (i) they generally lack proactiveness; (ii) proactiveness does not correlate with model capacity; (iii) \"hinting\" at proactiveness yields only marginal gains. Surprisingly, we found that conversation histories and in-context learning introduce negative biases, hindering performance. Finally, we explore a simple fine-tuning strategy based on reinforcement learning: its results suggest that proactiveness can be learned, even generalizing to unseen scenarios. We publicly release ProactiveBench as a first step toward building proactive multimodal models.",
+          "hf_url": "https://huggingface.co/papers/2603.19466",
+          "arxiv_url": "https://arxiv.org/abs/2603.19466",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19466",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.19466",
           "github_url": "",
-          "submitted_by": "taesiri",
-          "submitted_at": "2026-03-23T00:48:01.375Z",
-          "upvotes": 25,
-          "comments": 5,
-          "topic_key": "other_ai",
-          "topic_label": "Other AI",
+          "submitted_by": "Thomas De Min",
+          "submitted_at": "2026-03-23T06:51:51.496Z",
+          "upvotes": 40,
+          "comments": 4,
+          "topic_key": "datasets_benchmarks",
+          "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
-          "classification_source": "rule",
-          "classification_confidence": null
-        },
-        {
-          "report_date": "2026-03-23",
-          "paper_id": "2603.09151",
-          "title": "Deep Tabular Research via Continual Experience-Driven Execution",
-          "authors": [
-            "Junnan Dong",
-            "Chuang Zhou",
-            "Zheng Yuan",
-            "Yifei Yu",
-            "Qiufeng Wang",
-            "Yinghui Li",
-            "Siyu An",
-            "Di Yin",
-            "Xing Sun",
-            "Feiyue Huang"
-          ],
-          "abstract": "Large language models often struggle with complex long-horizon analytical tasks over unstructured tables, which typically feature hierarchical and bidirectional headers and non-canonical layouts. We formalize this challenge as Deep Tabular Research (DTR), requiring multi-step reasoning over interdependent table regions. To address DTR, we propose a novel agentic framework that treats tabular reasoning as a closed-loop decision-making process. We carefully design a coupled query and table comprehension for path decision making and operational execution. Specifically, (i) DTR first constructs a hierarchical meta graph to capture bidirectional semantics, mapping natural language queries into an operation-level search space; (ii) To navigate this space, we introduce an expectation-aware selection policy that prioritizes high-utility execution paths; (iii) Crucially, historical execution outcomes are synthesized into a siamese structured memory, i.e., parameterized updates and abstracted texts, enabling continual refinement. Extensive experiments on challenging unstructured tabular benchmarks verify the effectiveness and highlight the necessity of separating strategic planning from low-level execution for long-horizon tabular reasoning.",
-          "hf_url": "https://huggingface.co/papers/2603.09151",
-          "arxiv_url": "https://arxiv.org/abs/2603.09151",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.09151",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.09151",
-          "github_url": "",
-          "submitted_by": "HansonDong",
-          "submitted_at": "2026-03-23T09:24:58.705Z",
-          "upvotes": 11,
-          "comments": 2,
-          "topic_key": "other_ai",
-          "topic_label": "Other AI",
-          "matched_terms": [],
-          "classification_source": "rule",
-          "classification_confidence": null
-        },
-        {
-          "report_date": "2026-03-23",
-          "paper_id": "2603.19809",
-          "title": "How Well Does Generative Recommendation Generalize?",
-          "authors": [
-            "Yijie Ding",
-            "Zitian Guo",
-            "Jiacheng Li",
-            "Letian Peng",
-            "Shuai Shao",
-            "Wei Shao",
-            "Xiaoqiang Luo",
-            "Luke Simon",
-            "Jingbo Shang",
-            "Julian McAuley",
-            "Yupeng Hou"
-          ],
-          "abstract": "A widely held hypothesis for why generative recommendation (GR) models outperform conventional item ID-based models is that they generalize better. However, there is few systematic way to verify this hypothesis beyond a superficial comparison of overall performance. To address this gap, we categorize each data instance based on the specific capability required for a correct prediction: either memorization (reusing item transition patterns observed during training) or generalization (composing known patterns to predict unseen item transitions). Extensive experiments show that GR models perform better on instances that require generalization, whereas item ID-based models perform better when memorization is more important. To explain this divergence, we shift the analysis from the item level to the token level and show that what appears to be item-level generalization often reduces to token-level memorization for GR models. Finally, we show that the two paradigms are complementary. We propose a simple memorization-aware indicator that adaptively combines them on a per-instance basis, leading to improved overall recommendation performance.",
-          "hf_url": "https://huggingface.co/papers/2603.19809",
-          "arxiv_url": "https://arxiv.org/abs/2603.19809",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19809",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.19809",
-          "github_url": "",
-          "submitted_by": "Yupeng Hou",
-          "submitted_at": "2026-03-23T01:23:58.122Z",
-          "upvotes": 9,
-          "comments": 2,
-          "topic_key": "other_ai",
-          "topic_label": "Other AI",
-          "matched_terms": [],
-          "classification_source": "rule",
-          "classification_confidence": null
-        },
-        {
-          "report_date": "2026-03-23",
-          "paper_id": "2603.20169",
-          "title": "EgoForge: Goal-Directed Egocentric World Simulator",
-          "authors": [
-            "Yifan Shen",
-            "Jiateng Liu",
-            "Xinzhuo Li",
-            "Yuanzhe Liu",
-            "Bingxuan Li",
-            "Houze Yang",
-            "Wenqi Jia",
-            "Yijiang Li",
-            "Tianjiao Yu",
-            "James Matthew Rehg",
-            "Xu Cao",
-            "Ismini Lourentzou"
-          ],
-          "abstract": "Generative world models have shown promise for simulating dynamic environments, yet egocentric video remains challenging due to rapid viewpoint changes, frequent hand-object interactions, and goal-directed procedures whose evolution depends on latent human intent. Existing approaches either focus on hand-centric instructional synthesis with limited scene evolution, perform static view translation without modeling action dynamics, or rely on dense supervision, such as camera trajectories, long video prefixes, synchronized multicamera capture, etc. In this work, we introduce EgoForge, an egocentric goal-directed world simulator that generates coherent, first-person video rollouts from minimal static inputs: a single egocentric image, a high-level instruction, and an optional auxiliary exocentric view. To improve intent alignment and temporal consistency, we propose VideoDiffusionNFT, a trajectory-level reward-guided refinement that optimizes goal completion, temporal causality, scene consistency, and perceptual fidelity during diffusion sampling. Extensive experiments show EgoForge achieves consistent gains in semantic alignment, geometric stability, and motion fidelity over strong baselines, and robust performance in real-world smart-glasses experiments.",
-          "hf_url": "https://huggingface.co/papers/2603.20169",
-          "arxiv_url": "https://arxiv.org/abs/2603.20169",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.20169",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.20169",
-          "github_url": "",
-          "submitted_by": "Ismini Lourentzou",
-          "submitted_at": "2026-03-23T02:17:25.402Z",
-          "upvotes": 6,
-          "comments": 2,
-          "topic_key": "other_ai",
-          "topic_label": "Other AI",
-          "matched_terms": [],
-          "classification_source": "rule",
-          "classification_confidence": null
-        },
-        {
-          "report_date": "2026-03-23",
-          "paper_id": "2603.19076",
-          "title": "DROID-SLAM in the Wild",
-          "authors": [
-            "Moyang Li",
-            "Zihan Zhu",
-            "Marc Pollefeys",
-            "Daniel Barath"
-          ],
-          "abstract": "We present a robust, real-time RGB SLAM system that handles dynamic environments by leveraging differentiable Uncertainty-aware Bundle Adjustment. Traditional SLAM methods typically assume static scenes, leading to tracking failures in the presence of motion. Recent dynamic SLAM approaches attempt to address this challenge using predefined dynamic priors or uncertainty-aware mapping, but they remain limited when confronted with unknown dynamic objects or highly cluttered scenes where geometric mapping becomes unreliable. In contrast, our method estimates per-pixel uncertainty by exploiting multi-view visual feature inconsistency, enabling robust tracking and reconstruction even in real-world environments. The proposed system achieves state-of-the-art camera poses and scene geometry in cluttered dynamic scenarios while running in real time at around 10 FPS. Code and datasets are available at https://github.com/MoyangLi00/DROID-W.git.",
-          "hf_url": "https://huggingface.co/papers/2603.19076",
-          "arxiv_url": "https://arxiv.org/abs/2603.19076",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19076",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.19076",
-          "github_url": "",
-          "submitted_by": "Moyang Li",
-          "submitted_at": "2026-03-23T12:17:02.392Z",
-          "upvotes": 4,
-          "comments": 2,
-          "topic_key": "other_ai",
-          "topic_label": "Other AI",
-          "matched_terms": [],
-          "classification_source": "rule",
-          "classification_confidence": null
+          "classification_source": "codex",
+          "classification_confidence": 0.98
         },
         {
           "report_date": "2026-03-23",
@@ -1169,137 +1009,81 @@
           "github_url": "",
           "submitted_by": "An Luo",
           "submitted_at": "2026-03-23T02:16:47.540Z",
-          "upvotes": 4,
+          "upvotes": 6,
           "comments": 2,
-          "topic_key": "other_ai",
-          "topic_label": "Other AI",
+          "topic_key": "datasets_benchmarks",
+          "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
-          "classification_source": "rule",
-          "classification_confidence": null
+          "classification_source": "codex",
+          "classification_confidence": 0.95
         },
         {
           "report_date": "2026-03-23",
-          "paper_id": "2603.17735",
-          "title": "TAPESTRY: From Geometry to Appearance via Consistent Turntable Videos",
+          "paper_id": "2603.14628",
+          "title": "s2n-bignum-bench: A practical benchmark for evaluating low-level code reasoning of LLMs",
           "authors": [
-            "Yan Zeng",
-            "Haoran Jiang",
-            "Kaixin Yao",
-            "Qixuan Zhang",
-            "Longwen Zhang",
-            "Lan Xu",
-            "Jingyi Yu"
+            "Balaji Rao",
+            "John Harrison",
+            "Soonho Kong",
+            "Juneyoung Lee",
+            "Carlo Lipizzi"
           ],
-          "abstract": "Automatically generating photorealistic and self-consistent appearances for untextured 3D models is a critical challenge in digital content creation. The advancement of large-scale video generation models offers a natural approach: directly synthesizing 360-degree turntable videos (TTVs), which can serve not only as high-quality dynamic previews but also as an intermediate representation to drive texture synthesis and neural rendering. However, existing general-purpose video diffusion models struggle to maintain strict geometric consistency and appearance stability across the full range of views, making their outputs ill-suited for high-quality 3D reconstruction. To this end, we introduce TAPESTRY, a framework for generating high-fidelity TTVs conditioned on explicit 3D geometry. We reframe the 3D appearance generation task as a geometry-conditioned video diffusion problem: given a 3D mesh, we first render and encode multi-modal geometric features to constrain the video generation process with pixel-level precision, thereby enabling the creation of high-quality and consistent TTVs. Building upon this, we also design a method for downstream reconstruction tasks from the TTV input, featuring a multi-stage pipeline with 3D-Aware Inpainting. By rotating the model and performing a context-aware secondary generation, this pipeline effectively completes self-occluded regions to achieve full surface coverage. The videos generated by TAPESTRY are not only high-quality dynamic previews but also serve as a reliable, 3D-aware intermediate representation that can be seamlessly back-projected into UV textures or used to supervise neural rendering methods like 3DGS. This enables the automated creation of production-ready, complete 3D assets from untextured meshes. Experimental results demonstrate that our method outperforms existing approaches in both video consistency and final reconstruction quality.",
-          "hf_url": "https://huggingface.co/papers/2603.17735",
-          "arxiv_url": "https://arxiv.org/abs/2603.17735",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.17735",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.17735",
+          "abstract": "Neurosymbolic approaches leveraging Large Language Models (LLMs) with formal methods have recently achieved strong results on mathematics-oriented theorem-proving benchmarks. However, success on competition-style mathematics does not by itself demonstrate the ability to construct proofs about real-world implementations. We address this gap with a benchmark derived from an industrial cryptographic library whose assembly routines are already verified in HOL Light. s2n-bignum is a library used at AWS for providing fast assembly routines for cryptography, and its correctness is established by formal verification. The task of formally verifying this library has been a significant achievement for the Automated Reasoning Group. It involved two tasks: (1) precisely specifying the correct behavior of a program as a mathematical proposition, and (2) proving that the proposition is correct. In the case of s2n-bignum, both tasks were carried out by human experts. In s2n-bignum-bench, we provide the formal specification and ask the LLM to generate a proof script that is accepted by HOL Light within a fixed proof-check timeout. To our knowledge, s2n-bignum-bench is the first public benchmark focused on machine-checkable proof synthesis for industrial low-level cryptographic assembly routines in HOL Light. This benchmark provides a challenging and practically relevant testbed for evaluating LLM-based theorem proving beyond competition mathematics. The code to set up and use the benchmark is available here: https://github.com/kings-crown/s2n-bignum-bench{s2n-bignum-bench}.",
+          "hf_url": "https://huggingface.co/papers/2603.14628",
+          "arxiv_url": "https://arxiv.org/abs/2603.14628",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.14628",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.14628",
           "github_url": "",
-          "submitted_by": "Yan Zeng",
-          "submitted_at": "2026-03-23T10:08:24.757Z",
-          "upvotes": 2,
-          "comments": 2,
-          "topic_key": "other_ai",
-          "topic_label": "Other AI",
-          "matched_terms": [],
-          "classification_source": "rule",
-          "classification_confidence": null
-        },
-        {
-          "report_date": "2026-03-23",
-          "paper_id": "2603.18750",
-          "title": "Automatic detection of Gen-AI texts: A comparative framework of neural models",
-          "authors": [
-            "Cristian Buttaro",
-            "Irene Amerini"
-          ],
-          "abstract": "The rapid proliferation of Large Language Models has significantly increased the difficulty of distinguishing between human-written and AI generated texts, raising critical issues across academic, editorial, and social domains. This paper investigates the problem of AI generated text detection through the design, implementation, and comparative evaluation of multiple machine learning based detectors. Four neural architectures are developed and analyzed: a Multilayer Perceptron, a one-dimensional Convolutional Neural Network, a MobileNet-based CNN, and a Transformer model. The proposed models are benchmarked against widely used online detectors, including ZeroGPT, GPTZero, QuillBot, Originality.AI, Sapling, IsGen, Rephrase, and Writer. Experiments are conducted on the COLING Multilingual Dataset, considering both English and Italian configurations, as well as on an original thematic dataset focused on Art and Mental Health. Results show that supervised detectors achieve more stable and robust performance than commercial tools across different languages and domains, highlighting key strengths and limitations of current detection strategies.",
-          "hf_url": "https://huggingface.co/papers/2603.18750",
-          "arxiv_url": "https://arxiv.org/abs/2603.18750",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.18750",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.18750",
-          "github_url": "",
-          "submitted_by": "Cristian Buttaro",
-          "submitted_at": "2026-03-23T18:30:39.073Z",
-          "upvotes": 1,
-          "comments": 2,
-          "topic_key": "other_ai",
-          "topic_label": "Other AI",
-          "matched_terms": [],
-          "classification_source": "rule",
-          "classification_confidence": null
-        }
-      ]
-    },
-    {
-      "topic_label": "Agents and Planning",
-      "count": 2,
-      "share": 5.41,
-      "papers": [
-        {
-          "report_date": "2026-03-23",
-          "paper_id": "2603.19500",
-          "title": "Teaching an Agent to Sketch One Part at a Time",
-          "authors": [
-            "Xiaodan Du",
-            "Ruize Xu",
-            "David Yunis",
-            "Yael Vinker",
-            "Greg Shakhnarovich"
-          ],
-          "abstract": "We develop a method for producing vector sketches one part at a time. To do this, we train a multi-modal language model-based agent using a novel multi-turn process-reward reinforcement learning following supervised fine-tuning. Our approach is enabled by a new dataset we call ControlSketch-Part, containing rich part-level annotations for sketches, obtained using a novel, generic automatic annotation pipeline that segments vector sketches into semantic parts and assigns paths to parts with a structured multi-stage labeling process. Our results indicate that incorporating structured part-level data and providing agent with the visual feedback through the process enables interpretable, controllable, and locally editable text-to-vector sketch generation.",
-          "hf_url": "https://huggingface.co/papers/2603.19500",
-          "arxiv_url": "https://arxiv.org/abs/2603.19500",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19500",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.19500",
-          "github_url": "",
-          "submitted_by": "taesiri",
-          "submitted_at": "2026-03-23T00:45:06.320Z",
-          "upvotes": 4,
-          "comments": 1,
-          "topic_key": "agents_planning",
-          "topic_label": "Agents and Planning",
-          "matched_terms": [
-            "\\bagents?\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
-        },
-        {
-          "report_date": "2026-03-23",
-          "paper_id": "2603.15911",
-          "title": "Human-AI Synergy in Agentic Code Review",
-          "authors": [
-            "Suzhen Zhong",
-            "Shayan Noei",
-            "Ying Zou",
-            "Bram Adams"
-          ],
-          "abstract": "Code review is a critical software engineering practice where developers review code changes before integration to ensure code quality, detect defects, and improve maintainability. In recent years, AI agents that can understand code context, plan review actions, and interact with development environments have been increasingly integrated into the code review process. However, there is limited empirical evidence to compare the effectiveness of AI agents and human reviewers in collaborative workflows. To address this gap, we conduct a large-scale empirical analysis of 278,790 code review conversations across 300 open-source GitHub projects. In our study, we aim to compare the feedback differences provided by human reviewers and AI agents. We investigate human-AI collaboration patterns in review conversations to understand how interaction shapes review outcomes. Moreover, we analyze the adoption of code suggestions provided by human reviewers and AI agents into the codebase and how adopted suggestions change code quality. We find that human reviewers provide additional feedback than AI agents, including understanding, testing, and knowledge transfer. Human reviewers exchange 11.8% more rounds when reviewing AI-generated code than human-written code. Moreover, code suggestions made by AI agents are adopted into the codebase at a significantly lower rate than suggestions proposed by human reviewers. Over half of unadopted suggestions from AI agents are either incorrect or addressed through alternative fixes by developers. When adopted, suggestions provided by AI agents produce significantly larger increases in code complexity and code size than suggestions provided by human reviewers. Our findings suggest that while AI agents can scale defect screening, human oversight remains critical for ensuring suggestion quality and providing contextual feedback that AI agents lack.",
-          "hf_url": "https://huggingface.co/papers/2603.15911",
-          "arxiv_url": "https://arxiv.org/abs/2603.15911",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.15911",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.15911",
-          "github_url": "",
-          "submitted_by": "Suzhen Zhong",
-          "submitted_at": "2026-03-23T12:55:21.798Z",
+          "submitted_by": "Balaji Rao",
+          "submitted_at": "2026-03-23T09:55:38.788Z",
           "upvotes": 3,
           "comments": 2,
-          "topic_key": "agents_planning",
-          "topic_label": "Agents and Planning",
-          "matched_terms": [
-            "\\bagentic\\b"
+          "topic_key": "datasets_benchmarks",
+          "topic_label": "Datasets and Benchmarks",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.98
+        },
+        {
+          "report_date": "2026-03-23",
+          "paper_id": "2603.20193",
+          "title": "From Masks to Pixels and Meaning: A New Taxonomy, Benchmark, and Metrics for VLM Image Tampering",
+          "authors": [
+            "Xinyi Shang",
+            "Yi Tang",
+            "Jiacheng Cui",
+            "Ahmed Elhagry",
+            "Salwa K. Al Khatib",
+            "Sondos Mahmoud Bsharat",
+            "Jiacheng Liu",
+            "Xiaohan Zhao",
+            "Jing-Hao Xue",
+            "Hao Li",
+            "Salman Khan",
+            "Zhiqiang Shen"
           ],
-          "classification_source": "rule",
-          "classification_confidence": null
+          "abstract": "Existing tampering detection benchmarks largely rely on object masks, which severely misalign with the true edit signal: many pixels inside a mask are untouched or only trivially modified, while subtle yet consequential edits outside the mask are treated as natural. We reformulate VLM image tampering from coarse region labels to a pixel-grounded, meaning and language-aware task. First, we introduce a taxonomy spanning edit primitives (replace/remove/splice/inpaint/attribute/colorization, etc.) and their semantic class of tampered object, linking low-level changes to high-level understanding. Second, we release a new benchmark with per-pixel tamper maps and paired category supervision to evaluate detection and classification within a unified protocol. Third, we propose a training framework and evaluation metrics that quantify pixel-level correctness with localization to assess confidence or prediction on true edit intensity, and further measure tamper meaning understanding via semantics-aware classification and natural language descriptions for the predicted regions. We also re-evaluate the existing strong segmentation/localization baselines on recent strong tamper detectors and reveal substantial over- and under-scoring using mask-only metrics, and expose failure modes on micro-edits and off-mask changes. Our framework advances the field from masks to pixels, meanings and language descriptions, establishing a rigorous standard for tamper localization, semantic classification and description. Code and benchmark data are available at https://github.com/VILA-Lab/PIXAR.",
+          "hf_url": "https://huggingface.co/papers/2603.20193",
+          "arxiv_url": "https://arxiv.org/abs/2603.20193",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.20193",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.20193",
+          "github_url": "",
+          "submitted_by": "Zhiqiang Shen",
+          "submitted_at": "2026-03-23T19:25:07.709Z",
+          "upvotes": 1,
+          "comments": 2,
+          "topic_key": "datasets_benchmarks",
+          "topic_label": "Datasets and Benchmarks",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.98
         }
       ]
     },
     {
-      "topic_label": "Reasoning, Alignment, and Evaluation",
-      "count": 2,
-      "share": 5.41,
+      "topic_label": "Domain Applications",
+      "count": 3,
+      "share": 8.11,
       "papers": [
         {
           "report_date": "2026-03-23",
@@ -1322,50 +1106,47 @@
           "github_url": "",
           "submitted_by": "Yan Shu",
           "submitted_at": "2026-03-23T05:53:40.762Z",
-          "upvotes": 42,
-          "comments": 3,
-          "topic_key": "reasoning_alignment_eval",
-          "topic_label": "Reasoning, Alignment, and Evaluation",
-          "matched_terms": [
-            "\\breasoning\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
+          "upvotes": 49,
+          "comments": 6,
+          "topic_key": "domain_applications",
+          "topic_label": "Domain Applications",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.88
         },
         {
           "report_date": "2026-03-23",
-          "paper_id": "2603.08462",
-          "title": "Reasoning as Compression: Unifying Budget Forcing via the Conditional Information Bottleneck",
+          "paper_id": "2603.19809",
+          "title": "How Well Does Generative Recommendation Generalize?",
           "authors": [
-            "Fabio Valerio Massoli",
-            "Andrey Kuzmin",
-            "Arash Behboodi"
+            "Yijie Ding",
+            "Zitian Guo",
+            "Jiacheng Li",
+            "Letian Peng",
+            "Shuai Shao",
+            "Wei Shao",
+            "Xiaoqiang Luo",
+            "Luke Simon",
+            "Jingbo Shang",
+            "Julian McAuley",
+            "Yupeng Hou"
           ],
-          "abstract": "Chain-of-Thought (CoT) prompting improves LLM accuracy on complex tasks but often increases token usage and inference cost. Existing \"Budget Forcing\" methods reducing cost via fine-tuning with heuristic length penalties, suppress both essential reasoning and redundant filler. We recast efficient reasoning as a lossy compression problem under the Information Bottleneck (IB) principle, and identify a key theoretical gap when applying naive IB to transformers: attention violates the Markov property between prompt, reasoning trace, and response. To resolve this issue, we model CoT generation under the Conditional Information Bottleneck (CIB) principle, where the reasoning trace Z acts as a computational bridge that contains only the information about the response Y that is not directly accessible from the prompt X. This yields a general Reinforcement Learning objective: maximize task reward while compressing completions under a prior over reasoning traces, subsuming common heuristics (e.g., length penalties) as special cases (e.g., uniform priors). In contrast to naive token-counting-based approaches, we introduce a semantic prior that measures token cost by surprisal under a language model prior. Empirically, our CIB objective prunes cognitive bloat while preserving fluency and logic, improving accuracy at moderate compression and enabling aggressive compression with minimal accuracy drop.",
-          "hf_url": "https://huggingface.co/papers/2603.08462",
-          "arxiv_url": "https://arxiv.org/abs/2603.08462",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.08462",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.08462",
+          "abstract": "A widely held hypothesis for why generative recommendation (GR) models outperform conventional item ID-based models is that they generalize better. However, there is few systematic way to verify this hypothesis beyond a superficial comparison of overall performance. To address this gap, we categorize each data instance based on the specific capability required for a correct prediction: either memorization (reusing item transition patterns observed during training) or generalization (composing known patterns to predict unseen item transitions). Extensive experiments show that GR models perform better on instances that require generalization, whereas item ID-based models perform better when memorization is more important. To explain this divergence, we shift the analysis from the item level to the token level and show that what appears to be item-level generalization often reduces to token-level memorization for GR models. Finally, we show that the two paradigms are complementary. We propose a simple memorization-aware indicator that adaptively combines them on a per-instance basis, leading to improved overall recommendation performance.",
+          "hf_url": "https://huggingface.co/papers/2603.19809",
+          "arxiv_url": "https://arxiv.org/abs/2603.19809",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19809",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.19809",
           "github_url": "",
-          "submitted_by": "Fabio Valerio Massoli",
-          "submitted_at": "2026-03-23T11:48:08.554Z",
-          "upvotes": 17,
+          "submitted_by": "Yupeng Hou",
+          "submitted_at": "2026-03-23T01:23:58.122Z",
+          "upvotes": 10,
           "comments": 2,
-          "topic_key": "reasoning_alignment_eval",
-          "topic_label": "Reasoning, Alignment, and Evaluation",
-          "matched_terms": [
-            "\\breasoning\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
-        }
-      ]
-    },
-    {
-      "topic_label": "Domain Applications",
-      "count": 1,
-      "share": 2.7,
-      "papers": [
+          "topic_key": "domain_applications",
+          "topic_label": "Domain Applications",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.8
+        },
         {
           "report_date": "2026-03-23",
           "paper_id": "2603.18655",
@@ -1391,22 +1172,103 @@
           "github_url": "",
           "submitted_by": "Anthony",
           "submitted_at": "2026-03-23T15:33:09.533Z",
-          "upvotes": 1,
+          "upvotes": 2,
           "comments": 2,
           "topic_key": "domain_applications",
           "topic_label": "Domain Applications",
-          "matched_terms": [
-            "\\bmedical\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.97
         }
       ]
     },
     {
-      "topic_label": "Generative Foundations",
-      "count": 1,
-      "share": 2.7,
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "count": 3,
+      "share": 8.11,
+      "papers": [
+        {
+          "report_date": "2026-03-23",
+          "paper_id": "2603.08462",
+          "title": "Reasoning as Compression: Unifying Budget Forcing via the Conditional Information Bottleneck",
+          "authors": [
+            "Fabio Valerio Massoli",
+            "Andrey Kuzmin",
+            "Arash Behboodi"
+          ],
+          "abstract": "Chain-of-Thought (CoT) prompting improves LLM accuracy on complex tasks but often increases token usage and inference cost. Existing \"Budget Forcing\" methods reducing cost via fine-tuning with heuristic length penalties, suppress both essential reasoning and redundant filler. We recast efficient reasoning as a lossy compression problem under the Information Bottleneck (IB) principle, and identify a key theoretical gap when applying naive IB to transformers: attention violates the Markov property between prompt, reasoning trace, and response. To resolve this issue, we model CoT generation under the Conditional Information Bottleneck (CIB) principle, where the reasoning trace Z acts as a computational bridge that contains only the information about the response Y that is not directly accessible from the prompt X. This yields a general Reinforcement Learning objective: maximize task reward while compressing completions under a prior over reasoning traces, subsuming common heuristics (e.g., length penalties) as special cases (e.g., uniform priors). In contrast to naive token-counting-based approaches, we introduce a semantic prior that measures token cost by surprisal under a language model prior. Empirically, our CIB objective prunes cognitive bloat while preserving fluency and logic, improving accuracy at moderate compression and enabling aggressive compression with minimal accuracy drop.",
+          "hf_url": "https://huggingface.co/papers/2603.08462",
+          "arxiv_url": "https://arxiv.org/abs/2603.08462",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.08462",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.08462",
+          "github_url": "",
+          "submitted_by": "Fabio Valerio Massoli",
+          "submitted_at": "2026-03-23T11:48:08.554Z",
+          "upvotes": 21,
+          "comments": 2,
+          "topic_key": "reasoning_alignment_eval",
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.7
+        },
+        {
+          "report_date": "2026-03-23",
+          "paper_id": "2603.18750",
+          "title": "Automatic detection of Gen-AI texts: A comparative framework of neural models",
+          "authors": [
+            "Cristian Buttaro",
+            "Irene Amerini"
+          ],
+          "abstract": "The rapid proliferation of Large Language Models has significantly increased the difficulty of distinguishing between human-written and AI generated texts, raising critical issues across academic, editorial, and social domains. This paper investigates the problem of AI generated text detection through the design, implementation, and comparative evaluation of multiple machine learning based detectors. Four neural architectures are developed and analyzed: a Multilayer Perceptron, a one-dimensional Convolutional Neural Network, a MobileNet-based CNN, and a Transformer model. The proposed models are benchmarked against widely used online detectors, including ZeroGPT, GPTZero, QuillBot, Originality.AI, Sapling, IsGen, Rephrase, and Writer. Experiments are conducted on the COLING Multilingual Dataset, considering both English and Italian configurations, as well as on an original thematic dataset focused on Art and Mental Health. Results show that supervised detectors achieve more stable and robust performance than commercial tools across different languages and domains, highlighting key strengths and limitations of current detection strategies.",
+          "hf_url": "https://huggingface.co/papers/2603.18750",
+          "arxiv_url": "https://arxiv.org/abs/2603.18750",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.18750",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.18750",
+          "github_url": "",
+          "submitted_by": "Cristian Buttaro",
+          "submitted_at": "2026-03-23T18:30:39.073Z",
+          "upvotes": 2,
+          "comments": 2,
+          "topic_key": "reasoning_alignment_eval",
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.83
+        },
+        {
+          "report_date": "2026-03-23",
+          "paper_id": "2603.16749",
+          "title": "Probing Cultural Signals in Large Language Models through Author Profiling",
+          "authors": [
+            "Valentin Lafargue",
+            "Ariel Guerra-Adames",
+            "Emmanuelle Claeys",
+            "Elouan Vuichard",
+            "Jean-Michel Loubes"
+          ],
+          "abstract": "Large language models (LLMs) are increasingly deployed in applications with societal impact, raising concerns about the cultural biases they encode. We probe these representations by evaluating whether LLMs can perform author profiling from song lyrics in a zero-shot setting, inferring singers' gender and ethnicity without task-specific fine-tuning. Across several open-source models evaluated on more than 10,000 lyrics, we find that LLMs achieve non-trivial profiling performance but demonstrate systematic cultural alignment: most models default toward North American ethnicity, while DeepSeek-1.5B aligns more strongly with Asian ethnicity. This finding emerges from both the models' prediction distributions and an analysis of their generated rationales. To quantify these disparities, we introduce two fairness metrics, Modality Accuracy Divergence (MAD) and Recall Divergence (RD), and show that Ministral-8B displays the strongest ethnicity bias among the evaluated models, whereas Gemma-12B shows the most balanced behavior. Our code is available on GitHub (https://github.com/ValentinLafargue/CulturalProbingLLM).",
+          "hf_url": "https://huggingface.co/papers/2603.16749",
+          "arxiv_url": "https://arxiv.org/abs/2603.16749",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.16749",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.16749",
+          "github_url": "",
+          "submitted_by": "Valentin Lafargue",
+          "submitted_at": "2026-03-23T11:34:04.143Z",
+          "upvotes": 2,
+          "comments": 2,
+          "topic_key": "reasoning_alignment_eval",
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.89
+        }
+      ]
+    },
+    {
+      "topic_label": "Multimodal Agents",
+      "count": 2,
+      "share": 5.41,
       "papers": [
         {
           "report_date": "2026-03-23",
@@ -1425,21 +1287,180 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-03-23T00:52:17.809Z",
-          "upvotes": 10,
+          "upvotes": 12,
+          "comments": 2,
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.92
+        },
+        {
+          "report_date": "2026-03-23",
+          "paper_id": "2603.19500",
+          "title": "Teaching an Agent to Sketch One Part at a Time",
+          "authors": [
+            "Xiaodan Du",
+            "Ruize Xu",
+            "David Yunis",
+            "Yael Vinker",
+            "Greg Shakhnarovich"
+          ],
+          "abstract": "We develop a method for producing vector sketches one part at a time. To do this, we train a multi-modal language model-based agent using a novel multi-turn process-reward reinforcement learning following supervised fine-tuning. Our approach is enabled by a new dataset we call ControlSketch-Part, containing rich part-level annotations for sketches, obtained using a novel, generic automatic annotation pipeline that segments vector sketches into semantic parts and assigns paths to parts with a structured multi-stage labeling process. Our results indicate that incorporating structured part-level data and providing agent with the visual feedback through the process enables interpretable, controllable, and locally editable text-to-vector sketch generation.",
+          "hf_url": "https://huggingface.co/papers/2603.19500",
+          "arxiv_url": "https://arxiv.org/abs/2603.19500",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19500",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.19500",
+          "github_url": "",
+          "submitted_by": "taesiri",
+          "submitted_at": "2026-03-23T00:45:06.320Z",
+          "upvotes": 5,
+          "comments": 1,
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.68
+        }
+      ]
+    },
+    {
+      "topic_label": "Robotics and Embodied AI",
+      "count": 2,
+      "share": 5.41,
+      "papers": [
+        {
+          "report_date": "2026-03-23",
+          "paper_id": "2603.20169",
+          "title": "EgoForge: Goal-Directed Egocentric World Simulator",
+          "authors": [
+            "Yifan Shen",
+            "Jiateng Liu",
+            "Xinzhuo Li",
+            "Yuanzhe Liu",
+            "Bingxuan Li",
+            "Houze Yang",
+            "Wenqi Jia",
+            "Yijiang Li",
+            "Tianjiao Yu",
+            "James Matthew Rehg",
+            "Xu Cao",
+            "Ismini Lourentzou"
+          ],
+          "abstract": "Generative world models have shown promise for simulating dynamic environments, yet egocentric video remains challenging due to rapid viewpoint changes, frequent hand-object interactions, and goal-directed procedures whose evolution depends on latent human intent. Existing approaches either focus on hand-centric instructional synthesis with limited scene evolution, perform static view translation without modeling action dynamics, or rely on dense supervision, such as camera trajectories, long video prefixes, synchronized multicamera capture, etc. In this work, we introduce EgoForge, an egocentric goal-directed world simulator that generates coherent, first-person video rollouts from minimal static inputs: a single egocentric image, a high-level instruction, and an optional auxiliary exocentric view. To improve intent alignment and temporal consistency, we propose VideoDiffusionNFT, a trajectory-level reward-guided refinement that optimizes goal completion, temporal causality, scene consistency, and perceptual fidelity during diffusion sampling. Extensive experiments show EgoForge achieves consistent gains in semantic alignment, geometric stability, and motion fidelity over strong baselines, and robust performance in real-world smart-glasses experiments.",
+          "hf_url": "https://huggingface.co/papers/2603.20169",
+          "arxiv_url": "https://arxiv.org/abs/2603.20169",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.20169",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.20169",
+          "github_url": "",
+          "submitted_by": "Ismini Lourentzou",
+          "submitted_at": "2026-03-23T02:17:25.402Z",
+          "upvotes": 9,
+          "comments": 2,
+          "topic_key": "robotics_embodied",
+          "topic_label": "Robotics and Embodied AI",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.72
+        },
+        {
+          "report_date": "2026-03-23",
+          "paper_id": "2603.19076",
+          "title": "DROID-SLAM in the Wild",
+          "authors": [
+            "Moyang Li",
+            "Zihan Zhu",
+            "Marc Pollefeys",
+            "Daniel Barath"
+          ],
+          "abstract": "We present a robust, real-time RGB SLAM system that handles dynamic environments by leveraging differentiable Uncertainty-aware Bundle Adjustment. Traditional SLAM methods typically assume static scenes, leading to tracking failures in the presence of motion. Recent dynamic SLAM approaches attempt to address this challenge using predefined dynamic priors or uncertainty-aware mapping, but they remain limited when confronted with unknown dynamic objects or highly cluttered scenes where geometric mapping becomes unreliable. In contrast, our method estimates per-pixel uncertainty by exploiting multi-view visual feature inconsistency, enabling robust tracking and reconstruction even in real-world environments. The proposed system achieves state-of-the-art camera poses and scene geometry in cluttered dynamic scenarios while running in real time at around 10 FPS. Code and datasets are available at https://github.com/MoyangLi00/DROID-W.git.",
+          "hf_url": "https://huggingface.co/papers/2603.19076",
+          "arxiv_url": "https://arxiv.org/abs/2603.19076",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19076",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.19076",
+          "github_url": "",
+          "submitted_by": "Moyang Li",
+          "submitted_at": "2026-03-23T12:17:02.392Z",
+          "upvotes": 5,
+          "comments": 2,
+          "topic_key": "robotics_embodied",
+          "topic_label": "Robotics and Embodied AI",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.98
+        }
+      ]
+    },
+    {
+      "topic_label": "Generative Foundations",
+      "count": 1,
+      "share": 2.7,
+      "papers": [
+        {
+          "report_date": "2026-03-23",
+          "paper_id": "2603.20155",
+          "title": "Beyond Single Tokens: Distilling Discrete Diffusion Models via Discrete MMD",
+          "authors": [
+            "Emiel Hoogeboom",
+            "David Ruhe",
+            "Jonathan Heek",
+            "Thomas Mensink",
+            "Tim Salimans"
+          ],
+          "abstract": "It is currently difficult to distill discrete diffusion models. In contrast, continuous diffusion literature has many distillation approaches methods that can reduce sampling steps to a handful. Our method, Discrete Moment Matching Distillation (D-MMD), leverages ideas that have been highly successful in the continuous domain. Whereas previous discrete distillation methods collapse, D-MMD maintains high quality and diversity (given sufficient sampling steps). This is demonstrated on both text and image datasets. Moreover, the newly distilled generators can outperform their teachers.",
+          "hf_url": "https://huggingface.co/papers/2603.20155",
+          "arxiv_url": "https://arxiv.org/abs/2603.20155",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.20155",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.20155",
+          "github_url": "",
+          "submitted_by": "taesiri",
+          "submitted_at": "2026-03-23T01:00:36.392Z",
+          "upvotes": 8,
           "comments": 2,
           "topic_key": "generative_foundations",
           "topic_label": "Generative Foundations",
-          "matched_terms": [
-            "\\bworld models?\\b",
-            "\\bfoundation(s|al)?\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.98
         }
       ]
     },
     {
       "topic_label": "Learning, Optimization, and Theory",
+      "count": 1,
+      "share": 2.7,
+      "papers": [
+        {
+          "report_date": "2026-03-23",
+          "paper_id": "2603.17309",
+          "title": "ReLMXEL: Adaptive RL-Based Memory Controller with Explainable Energy and Latency Optimization",
+          "authors": [
+            "Panuganti Chirag Sai",
+            "Gandholi Sarat",
+            "R. Raghunatha Sarma",
+            "Venkata Kalyan Tavva",
+            "Naveen M"
+          ],
+          "abstract": "Reducing latency and energy consumption is critical to improving the efficiency of memory systems in modern computing. This work introduces ReLMXEL (Reinforcement Learning for Memory Controller with Explainable Energy and Latency Optimization), a explainable multi-agent online reinforcement learning framework that dynamically optimizes memory controller parameters using reward decomposition. ReLMXEL operates within the memory controller, leveraging detailed memory behavior metrics to guide decision-making. Experimental evaluations across diverse workloads demonstrate consistent performance gains over baseline configurations, with refinements driven by workload-specific memory access behaviour. By incorporating explainability into the learning process, ReLMXEL not only enhances performance but also increases the transparency of control decisions, paving the way for more accountable and adaptive memory system designs.",
+          "hf_url": "https://huggingface.co/papers/2603.17309",
+          "arxiv_url": "https://arxiv.org/abs/2603.17309",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.17309",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.17309",
+          "github_url": "",
+          "submitted_by": "Panuganti Chirag Sai",
+          "submitted_at": "2026-03-23T12:56:32.224Z",
+          "upvotes": 1,
+          "comments": 2,
+          "topic_key": "learning_theory",
+          "topic_label": "Learning, Optimization, and Theory",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.61
+        }
+      ]
+    },
+    {
+      "topic_label": "Retrieval, Knowledge, and RAG",
       "count": 1,
       "share": 2.7,
       "papers": [
@@ -1464,99 +1485,49 @@
           "github_url": "",
           "submitted_by": "Kai Li",
           "submitted_at": "2026-03-23T01:49:41.190Z",
-          "upvotes": 10,
-          "comments": 2,
-          "topic_key": "learning_theory",
-          "topic_label": "Learning, Optimization, and Theory",
-          "matched_terms": [
-            "\\btraining\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
-        }
-      ]
-    },
-    {
-      "topic_label": "Multimodal Generative Modeling",
-      "count": 1,
-      "share": 2.7,
-      "papers": [
-        {
-          "report_date": "2026-03-23",
-          "paper_id": "2603.17024",
-          "title": "HopChain: Multi-Hop Data Synthesis for Generalizable Vision-Language Reasoning",
-          "authors": [
-            "Shenzhi Wang",
-            "Shixuan Liu",
-            "Jing Zhou",
-            "Chang Gao",
-            "Xiong-Hui Chen",
-            "Binghai Wang",
-            "An Yang",
-            "Shiji Song",
-            "Bowen Yu",
-            "Gao Huang",
-            "Junyang Lin"
-          ],
-          "abstract": "VLMs show strong multimodal capabilities, but they still struggle with fine-grained vision-language reasoning. We find that long CoT reasoning exposes diverse failure modes, including perception, reasoning, knowledge, and hallucination errors, which can compound across intermediate steps. However, most existing vision-language data used for RLVR does not involve complex reasoning chains that rely on visual evidence throughout, leaving these weaknesses largely unexposed. We therefore propose HopChain, a scalable framework for synthesizing multi-hop vision-language reasoning data specifically for RLVR training of VLMs. Each synthesized multi-hop query forms a logically dependent chain of instance-grounded hops, where earlier hops establish the instances, sets, or conditions needed for later hops, while the final answer remains a specific, unambiguous number suitable for verifiable rewards. We add the multi-hop data synthesized by HopChain to the original RLVR data used to train Qwen3.5-35B-A3B and Qwen3.5-397B-A17B, and compare against RLVR on the original RLVR data alone across 24 benchmarks spanning STEM and Puzzle, General VQA, Text Recognition and Document Understanding, and Video Understanding. Although this multi-hop data is not synthesized to target any specific benchmark, adding it improves 20 out of 24 benchmarks on both models, indicating broad and generalizable gains. To demonstrate that full chained queries are important, we replace them with half-multi-hop or single-hop variants, reducing the 24-benchmark average accuracy by 5.3 and 7.0 points, respectively. Multi-hop training also strengthens long-CoT vision-language reasoning, with gains peaking at more than 50 accuracy points in the ultra-long-CoT regime. These experiments establish HopChain as an effective, scalable framework for synthesizing multi-hop data that improves generalizable vision-language reasoning.",
-          "hf_url": "https://huggingface.co/papers/2603.17024",
-          "arxiv_url": "https://arxiv.org/abs/2603.17024",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.17024",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.17024",
-          "github_url": "",
-          "submitted_by": "Shenzhi Wang",
-          "submitted_at": "2026-03-23T01:59:32.507Z",
-          "upvotes": 99,
-          "comments": 3,
-          "topic_key": "multimodal_generative",
-          "topic_label": "Multimodal Generative Modeling",
-          "matched_terms": [
-            "\\bvision-language\\b",
-            "\\bsynthesis\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
-        }
-      ]
-    },
-    {
-      "topic_label": "Retrieval, Knowledge, and RAG",
-      "count": 1,
-      "share": 2.7,
-      "papers": [
-        {
-          "report_date": "2026-03-23",
-          "paper_id": "2603.17309",
-          "title": "ReLMXEL: Adaptive RL-Based Memory Controller with Explainable Energy and Latency Optimization",
-          "authors": [
-            "Panuganti Chirag Sai",
-            "Gandholi Sarat",
-            "R. Raghunatha Sarma",
-            "Venkata Kalyan Tavva",
-            "Naveen M"
-          ],
-          "abstract": "Reducing latency and energy consumption is critical to improving the efficiency of memory systems in modern computing. This work introduces ReLMXEL (Reinforcement Learning for Memory Controller with Explainable Energy and Latency Optimization), a explainable multi-agent online reinforcement learning framework that dynamically optimizes memory controller parameters using reward decomposition. ReLMXEL operates within the memory controller, leveraging detailed memory behavior metrics to guide decision-making. Experimental evaluations across diverse workloads demonstrate consistent performance gains over baseline configurations, with refinements driven by workload-specific memory access behaviour. By incorporating explainability into the learning process, ReLMXEL not only enhances performance but also increases the transparency of control decisions, paving the way for more accountable and adaptive memory system designs.",
-          "hf_url": "https://huggingface.co/papers/2603.17309",
-          "arxiv_url": "https://arxiv.org/abs/2603.17309",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.17309",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.17309",
-          "github_url": "",
-          "submitted_by": "Panuganti Chirag Sai",
-          "submitted_at": "2026-03-23T12:56:32.224Z",
-          "upvotes": 0,
+          "upvotes": 11,
           "comments": 2,
           "topic_key": "retrieval_knowledge",
           "topic_label": "Retrieval, Knowledge, and RAG",
-          "matched_terms": [
-            "\\bmemory\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.68
         }
       ]
     }
   ],
   "papers": [
+    {
+      "report_date": "2026-03-23",
+      "paper_id": "2603.17051",
+      "title": "Astrolabe: Steering Forward-Process Reinforcement Learning for Distilled Autoregressive Video Models",
+      "authors": [
+        "Songchun Zhang",
+        "Zeyue Xue",
+        "Siming Fu",
+        "Jie Huang",
+        "Xianghao Kong",
+        "Y Ma",
+        "Haoyang Huang",
+        "Nan Duan",
+        "Anyi Rao"
+      ],
+      "abstract": "Distilled autoregressive (AR) video models enable efficient streaming generation but frequently misalign with human visual preferences. Existing reinforcement learning (RL) frameworks are not naturally suited to these architectures, typically requiring either expensive re-distillation or solver-coupled reverse-process optimization that introduces considerable memory and computational overhead. We present Astrolabe, an efficient online RL framework tailored for distilled AR models. To overcome existing bottlenecks, we introduce a forward-process RL formulation based on negative-aware fine-tuning. By contrasting positive and negative samples directly at inference endpoints, this approach establishes an implicit policy improvement direction without requiring reverse-process unrolling. To scale this alignment to long videos, we propose a streaming training scheme that generates sequences progressively via a rolling KV-cache, applying RL updates exclusively to local clip windows while conditioning on prior context to ensure long-range coherence. Finally, to mitigate reward hacking, we integrate a multi-reward objective stabilized by uncertainty-aware selective regularization and dynamic reference updates. Extensive experiments demonstrate that our method consistently enhances generation quality across multiple distilled AR video models, serving as a robust and scalable alignment solution.",
+      "hf_url": "https://huggingface.co/papers/2603.17051",
+      "arxiv_url": "https://arxiv.org/abs/2603.17051",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.17051",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.17051",
+      "github_url": "",
+      "submitted_by": "Franklin",
+      "submitted_at": "2026-03-23T01:47:54.443Z",
+      "upvotes": 105,
+      "comments": 6,
+      "topic_key": "multimodal_generative",
+      "topic_label": "Multimodal Generative Modeling",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.95
+    },
     {
       "report_date": "2026-03-23",
       "paper_id": "2603.17024",
@@ -1582,49 +1553,13 @@
       "github_url": "",
       "submitted_by": "Shenzhi Wang",
       "submitted_at": "2026-03-23T01:59:32.507Z",
-      "upvotes": 99,
-      "comments": 3,
-      "topic_key": "multimodal_generative",
-      "topic_label": "Multimodal Generative Modeling",
-      "matched_terms": [
-        "\\bvision-language\\b",
-        "\\bsynthesis\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null
-    },
-    {
-      "report_date": "2026-03-23",
-      "paper_id": "2603.17051",
-      "title": "Astrolabe: Steering Forward-Process Reinforcement Learning for Distilled Autoregressive Video Models",
-      "authors": [
-        "Songchun Zhang",
-        "Zeyue Xue",
-        "Siming Fu",
-        "Jie Huang",
-        "Xianghao Kong",
-        "Y Ma",
-        "Haoyang Huang",
-        "Nan Duan",
-        "Anyi Rao"
-      ],
-      "abstract": "Distilled autoregressive (AR) video models enable efficient streaming generation but frequently misalign with human visual preferences. Existing reinforcement learning (RL) frameworks are not naturally suited to these architectures, typically requiring either expensive re-distillation or solver-coupled reverse-process optimization that introduces considerable memory and computational overhead. We present Astrolabe, an efficient online RL framework tailored for distilled AR models. To overcome existing bottlenecks, we introduce a forward-process RL formulation based on negative-aware fine-tuning. By contrasting positive and negative samples directly at inference endpoints, this approach establishes an implicit policy improvement direction without requiring reverse-process unrolling. To scale this alignment to long videos, we propose a streaming training scheme that generates sequences progressively via a rolling KV-cache, applying RL updates exclusively to local clip windows while conditioning on prior context to ensure long-range coherence. Finally, to mitigate reward hacking, we integrate a multi-reward objective stabilized by uncertainty-aware selective regularization and dynamic reference updates. Extensive experiments demonstrate that our method consistently enhances generation quality across multiple distilled AR video models, serving as a robust and scalable alignment solution.",
-      "hf_url": "https://huggingface.co/papers/2603.17051",
-      "arxiv_url": "https://arxiv.org/abs/2603.17051",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.17051",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.17051",
-      "github_url": "",
-      "submitted_by": "Franklin",
-      "submitted_at": "2026-03-23T01:47:54.443Z",
-      "upvotes": 91,
-      "comments": 5,
+      "upvotes": 104,
+      "comments": 4,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [
-        "\\bvideo\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.87
     },
     {
       "report_date": "2026-03-23",
@@ -1647,15 +1582,13 @@
       "github_url": "",
       "submitted_by": "Yan Shu",
       "submitted_at": "2026-03-23T05:53:40.762Z",
-      "upvotes": 42,
-      "comments": 3,
-      "topic_key": "reasoning_alignment_eval",
-      "topic_label": "Reasoning, Alignment, and Evaluation",
-      "matched_terms": [
-        "\\breasoning\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null
+      "upvotes": 49,
+      "comments": 6,
+      "topic_key": "domain_applications",
+      "topic_label": "Domain Applications",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.88
     },
     {
       "report_date": "2026-03-23",
@@ -1676,16 +1609,43 @@
       "github_url": "",
       "submitted_by": "Thomas De Min",
       "submitted_at": "2026-03-23T06:51:51.496Z",
-      "upvotes": 32,
-      "comments": 2,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
-      "matched_terms": [
-        "\\blanguage models?\\b",
-        "\\blanguage\\b"
+      "upvotes": 40,
+      "comments": 4,
+      "topic_key": "datasets_benchmarks",
+      "topic_label": "Datasets and Benchmarks",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.98
+    },
+    {
+      "report_date": "2026-03-23",
+      "paper_id": "2603.19461",
+      "title": "Hyperagents",
+      "authors": [
+        "Jenny Zhang",
+        "Bingchen Zhao",
+        "Wannan Yang",
+        "Jakob Foerster",
+        "Jeff Clune",
+        "Minqi Jiang",
+        "Sam Devlin",
+        "Tatiana Shavrina"
       ],
-      "classification_source": "rule",
-      "classification_confidence": null
+      "abstract": "Self-improving AI systems aim to reduce reliance on human engineering by learning to improve their own learning and problem-solving processes. Existing approaches to self-improvement rely on fixed, handcrafted meta-level mechanisms, fundamentally limiting how fast such systems can improve. The Darwin Gödel Machine (DGM) demonstrates open-ended self-improvement in coding by repeatedly generating and evaluating self-modified variants. Because both evaluation and self-modification are coding tasks, gains in coding ability can translate into gains in self-improvement ability. However, this alignment does not generally hold beyond coding domains. We introduce hyperagents, self-referential agents that integrate a task agent (which solves the target task) and a meta agent (which modifies itself and the task agent) into a single editable program. Crucially, the meta-level modification procedure is itself editable, enabling metacognitive self-modification, improving not only the task-solving behavior, but also the mechanism that generates future improvements. We instantiate this framework by extending DGM to create DGM-Hyperagents (DGM-H), eliminating the assumption of domain-specific alignment between task performance and self-modification skill to potentially support self-accelerating progress on any computable task. Across diverse domains, the DGM-H improves performance over time and outperforms baselines without self-improvement or open-ended exploration, as well as prior self-improving systems. Furthermore, the DGM-H improves the process by which it generates new agents (e.g., persistent memory, performance tracking), and these meta-level improvements transfer across domains and accumulate across runs. DGM-Hyperagents offer a glimpse of open-ended AI systems that do not merely search for better solutions, but continually improve their search for how to improve.",
+      "hf_url": "https://huggingface.co/papers/2603.19461",
+      "arxiv_url": "https://arxiv.org/abs/2603.19461",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19461",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.19461",
+      "github_url": "",
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-03-23T00:48:01.375Z",
+      "upvotes": 35,
+      "comments": 5,
+      "topic_key": "agents_planning",
+      "topic_label": "Agents and Planning",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.57
     },
     {
       "report_date": "2026-03-23",
@@ -1706,15 +1666,13 @@
       "github_url": "",
       "submitted_by": "Haitham Bou Ammar",
       "submitted_at": "2026-03-23T07:15:07.782Z",
-      "upvotes": 27,
+      "upvotes": 32,
       "comments": 6,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
-      "matched_terms": [
-        "\\b\\w*llms?\\w*\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.85
     },
     {
       "report_date": "2026-03-23",
@@ -1739,45 +1697,13 @@
       "github_url": "",
       "submitted_by": "Zhifei Yang",
       "submitted_at": "2026-03-23T01:30:55.980Z",
-      "upvotes": 27,
+      "upvotes": 32,
       "comments": 2,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [
-        "\\bmultimodal\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null
-    },
-    {
-      "report_date": "2026-03-23",
-      "paper_id": "2603.19461",
-      "title": "Hyperagents",
-      "authors": [
-        "Jenny Zhang",
-        "Bingchen Zhao",
-        "Wannan Yang",
-        "Jakob Foerster",
-        "Jeff Clune",
-        "Minqi Jiang",
-        "Sam Devlin",
-        "Tatiana Shavrina"
-      ],
-      "abstract": "Self-improving AI systems aim to reduce reliance on human engineering by learning to improve their own learning and problem-solving processes. Existing approaches to self-improvement rely on fixed, handcrafted meta-level mechanisms, fundamentally limiting how fast such systems can improve. The Darwin Gödel Machine (DGM) demonstrates open-ended self-improvement in coding by repeatedly generating and evaluating self-modified variants. Because both evaluation and self-modification are coding tasks, gains in coding ability can translate into gains in self-improvement ability. However, this alignment does not generally hold beyond coding domains. We introduce hyperagents, self-referential agents that integrate a task agent (which solves the target task) and a meta agent (which modifies itself and the task agent) into a single editable program. Crucially, the meta-level modification procedure is itself editable, enabling metacognitive self-modification, improving not only the task-solving behavior, but also the mechanism that generates future improvements. We instantiate this framework by extending DGM to create DGM-Hyperagents (DGM-H), eliminating the assumption of domain-specific alignment between task performance and self-modification skill to potentially support self-accelerating progress on any computable task. Across diverse domains, the DGM-H improves performance over time and outperforms baselines without self-improvement or open-ended exploration, as well as prior self-improving systems. Furthermore, the DGM-H improves the process by which it generates new agents (e.g., persistent memory, performance tracking), and these meta-level improvements transfer across domains and accumulate across runs. DGM-Hyperagents offer a glimpse of open-ended AI systems that do not merely search for better solutions, but continually improve their search for how to improve.",
-      "hf_url": "https://huggingface.co/papers/2603.19461",
-      "arxiv_url": "https://arxiv.org/abs/2603.19461",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19461",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.19461",
-      "github_url": "",
-      "submitted_by": "taesiri",
-      "submitted_at": "2026-03-23T00:48:01.375Z",
-      "upvotes": 25,
-      "comments": 5,
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
+      "topic_key": "multimodal_generative",
+      "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
-      "classification_source": "rule",
-      "classification_confidence": null
+      "classification_source": "codex",
+      "classification_confidence": 0.97
     },
     {
       "report_date": "2026-03-23",
@@ -1805,13 +1731,11 @@
       "submitted_at": "2026-03-23T01:19:26.199Z",
       "upvotes": 22,
       "comments": 2,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [
-        "\\bvideo\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null
+      "topic_key": "multimodal_generative",
+      "topic_label": "Multimodal Generative Modeling",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.98
     },
     {
       "report_date": "2026-03-23",
@@ -1830,15 +1754,13 @@
       "github_url": "",
       "submitted_by": "Fabio Valerio Massoli",
       "submitted_at": "2026-03-23T11:48:08.554Z",
-      "upvotes": 17,
+      "upvotes": 21,
       "comments": 2,
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
-      "matched_terms": [
-        "\\breasoning\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.7
     },
     {
       "report_date": "2026-03-23",
@@ -1859,15 +1781,13 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-03-23T00:42:49.285Z",
-      "upvotes": 15,
+      "upvotes": 18,
       "comments": 2,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
-      "matched_terms": [
-        "\\b\\w*llms?\\w*\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null
+      "topic_key": "agents_planning",
+      "topic_label": "Agents and Planning",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.97
     },
     {
       "report_date": "2026-03-23",
@@ -1889,15 +1809,44 @@
       "github_url": "",
       "submitted_by": "Vladimir Kulikov",
       "submitted_at": "2026-03-23T08:59:22.558Z",
+      "upvotes": 15,
+      "comments": 2,
+      "topic_key": "multimodal_generative",
+      "topic_label": "Multimodal Generative Modeling",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.97
+    },
+    {
+      "report_date": "2026-03-23",
+      "paper_id": "2603.19714",
+      "title": "LoopRPT: Reinforcement Pre-Training for Looped Language Models",
+      "authors": [
+        "Guo Tang",
+        "Shixin Jiang",
+        "Heng Chang",
+        "Nuo Chen",
+        "Yuhan Li",
+        "Huiming Fan",
+        "Jia Li",
+        "Ming Liu",
+        "Bing Qin"
+      ],
+      "abstract": "Looped language models (LoopLMs) perform iterative latent computation to refine internal representations, offering a promising alternative to explicit chain-of-thought (CoT) reasoning. However, existing reinforcement learning (RL) paradigms primarily target output tokens, creating a structural mismatch with looped architectures whose reasoning unfolds implicitly. In this work, we propose LoopRPT, a reinforcement pre-training framework tailored for LoopLMs. By reframing next-token prediction as a next-token reasoning task, LoopRPT assigns reinforcement signals directly to latent steps using an EMA teacher reference and noisy latent rollouts. This formulation enables RL to directly shape intermediate representations, compressing effective reasoning into fewer iterations. We instantiate LoopRPT on the Ouro architecture across multiple model scales. Results demonstrate that LoopRPT consistently improves per-step representation quality, achieving Pareto dominance in accuracy-computation trade-offs. Notably, significant gains on hard tokens indicate that LoopRPT enhances early-stage reasoning rather than merely encouraging premature exits. Our findings highlight reinforcement pre-training as a principled paradigm for learning efficient latent reasoning in LoopLMs.",
+      "hf_url": "https://huggingface.co/papers/2603.19714",
+      "arxiv_url": "https://arxiv.org/abs/2603.19714",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19714",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.19714",
+      "github_url": "",
+      "submitted_by": "蒋世鑫",
+      "submitted_at": "2026-03-23T06:47:41.509Z",
       "upvotes": 13,
       "comments": 2,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [
-        "\\bvideo\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.9
     },
     {
       "report_date": "2026-03-23",
@@ -1923,13 +1872,13 @@
       "github_url": "",
       "submitted_by": "HansonDong",
       "submitted_at": "2026-03-23T09:24:58.705Z",
-      "upvotes": 11,
+      "upvotes": 13,
       "comments": 2,
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
+      "topic_key": "agents_planning",
+      "topic_label": "Agents and Planning",
       "matched_terms": [],
-      "classification_source": "rule",
-      "classification_confidence": null
+      "classification_source": "codex",
+      "classification_confidence": 0.62
     },
     {
       "report_date": "2026-03-23",
@@ -1948,16 +1897,13 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-03-23T00:52:17.809Z",
-      "upvotes": 10,
+      "upvotes": 12,
       "comments": 2,
-      "topic_key": "generative_foundations",
-      "topic_label": "Generative Foundations",
-      "matched_terms": [
-        "\\bworld models?\\b",
-        "\\bfoundation(s|al)?\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null
+      "topic_key": "multimodal_agents",
+      "topic_label": "Multimodal Agents",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.92
     },
     {
       "report_date": "2026-03-23",
@@ -1980,15 +1926,13 @@
       "github_url": "",
       "submitted_by": "Kai Li",
       "submitted_at": "2026-03-23T01:49:41.190Z",
-      "upvotes": 10,
+      "upvotes": 11,
       "comments": 2,
-      "topic_key": "learning_theory",
-      "topic_label": "Learning, Optimization, and Theory",
-      "matched_terms": [
-        "\\btraining\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null
+      "topic_key": "retrieval_knowledge",
+      "topic_label": "Retrieval, Knowledge, and RAG",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.68
     },
     {
       "report_date": "2026-03-23",
@@ -2015,47 +1959,13 @@
       "github_url": "",
       "submitted_by": "Yupeng Hou",
       "submitted_at": "2026-03-23T01:23:58.122Z",
-      "upvotes": 9,
+      "upvotes": 10,
       "comments": 2,
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
+      "topic_key": "domain_applications",
+      "topic_label": "Domain Applications",
       "matched_terms": [],
-      "classification_source": "rule",
-      "classification_confidence": null
-    },
-    {
-      "report_date": "2026-03-23",
-      "paper_id": "2603.19714",
-      "title": "LoopRPT: Reinforcement Pre-Training for Looped Language Models",
-      "authors": [
-        "Guo Tang",
-        "Shixin Jiang",
-        "Heng Chang",
-        "Nuo Chen",
-        "Yuhan Li",
-        "Huiming Fan",
-        "Jia Li",
-        "Ming Liu",
-        "Bing Qin"
-      ],
-      "abstract": "Looped language models (LoopLMs) perform iterative latent computation to refine internal representations, offering a promising alternative to explicit chain-of-thought (CoT) reasoning. However, existing reinforcement learning (RL) paradigms primarily target output tokens, creating a structural mismatch with looped architectures whose reasoning unfolds implicitly. In this work, we propose LoopRPT, a reinforcement pre-training framework tailored for LoopLMs. By reframing next-token prediction as a next-token reasoning task, LoopRPT assigns reinforcement signals directly to latent steps using an EMA teacher reference and noisy latent rollouts. This formulation enables RL to directly shape intermediate representations, compressing effective reasoning into fewer iterations. We instantiate LoopRPT on the Ouro architecture across multiple model scales. Results demonstrate that LoopRPT consistently improves per-step representation quality, achieving Pareto dominance in accuracy-computation trade-offs. Notably, significant gains on hard tokens indicate that LoopRPT enhances early-stage reasoning rather than merely encouraging premature exits. Our findings highlight reinforcement pre-training as a principled paradigm for learning efficient latent reasoning in LoopLMs.",
-      "hf_url": "https://huggingface.co/papers/2603.19714",
-      "arxiv_url": "https://arxiv.org/abs/2603.19714",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19714",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.19714",
-      "github_url": "",
-      "submitted_by": "蒋世鑫",
-      "submitted_at": "2026-03-23T06:47:41.509Z",
-      "upvotes": 9,
-      "comments": 2,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
-      "matched_terms": [
-        "\\blanguage models?\\b",
-        "\\blanguage\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null
+      "classification_source": "codex",
+      "classification_confidence": 0.8
     },
     {
       "report_date": "2026-03-23",
@@ -2075,71 +1985,13 @@
       "github_url": "",
       "submitted_by": "Gabriele Serussi",
       "submitted_at": "2026-03-23T05:51:28.031Z",
-      "upvotes": 9,
+      "upvotes": 10,
       "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [
-        "\\bmultimodal\\b",
-        "\\bvideo\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null
-    },
-    {
-      "report_date": "2026-03-23",
-      "paper_id": "2603.20155",
-      "title": "Beyond Single Tokens: Distilling Discrete Diffusion Models via Discrete MMD",
-      "authors": [
-        "Emiel Hoogeboom",
-        "David Ruhe",
-        "Jonathan Heek",
-        "Thomas Mensink",
-        "Tim Salimans"
-      ],
-      "abstract": "It is currently difficult to distill discrete diffusion models. In contrast, continuous diffusion literature has many distillation approaches methods that can reduce sampling steps to a handful. Our method, Discrete Moment Matching Distillation (D-MMD), leverages ideas that have been highly successful in the continuous domain. Whereas previous discrete distillation methods collapse, D-MMD maintains high quality and diversity (given sufficient sampling steps). This is demonstrated on both text and image datasets. Moreover, the newly distilled generators can outperform their teachers.",
-      "hf_url": "https://huggingface.co/papers/2603.20155",
-      "arxiv_url": "https://arxiv.org/abs/2603.20155",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.20155",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.20155",
-      "github_url": "",
-      "submitted_by": "taesiri",
-      "submitted_at": "2026-03-23T01:00:36.392Z",
-      "upvotes": 7,
-      "comments": 2,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [
-        "\\bdiffusion\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null
-    },
-    {
-      "report_date": "2026-03-23",
-      "paper_id": "2603.19987",
-      "title": "Breaking the Capability Ceiling of LLM Post-Training by Reintroducing Markov States",
-      "authors": [
-        "Yurun Yuan",
-        "Tengyang Xie"
-      ],
-      "abstract": "Reinforcement learning (RL) has become a standard paradigm for post-training and aligning Large Language Models (LLMs), yet recent evidence suggests it faces a persistent \"capability ceiling\": unlike classical RL systems that discover novel strategies, RL for LLMs often acts as a mere refiner of patterns already latent in pre-trained weights. In this work, we identify a fundamental structural bottleneck: while classical RL relies on compact, informative Markov states, current LLM post-training formulations are tethered to an ever-expanding history of actions. We revisit a classical principle long central to RL yet absent from LLM post-training: explicit Markov states. Theoretically, we provide rigorous guarantees demonstrating that leveraging estimated Markov states can significantly reduce sample complexity. Empirically, we show that introducing Markov states consistently breaks the performance boundaries of standard RL post-training across a suite of complex logic puzzles. Our findings suggest that moving beyond \"history-as-state\" modeling in favor of structured Markovian representations is essential for unlocking open-ended discovery and genuinely new reasoning capabilities in Generative AI.",
-      "hf_url": "https://huggingface.co/papers/2603.19987",
-      "arxiv_url": "https://arxiv.org/abs/2603.19987",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19987",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.19987",
-      "github_url": "",
-      "submitted_by": "Tengyang Xie",
-      "submitted_at": "2026-03-23T16:28:10.019Z",
-      "upvotes": 7,
-      "comments": 2,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
-      "matched_terms": [
-        "\\b\\w*llms?\\w*\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.96
     },
     {
       "report_date": "2026-03-23",
@@ -2167,93 +2019,64 @@
       "github_url": "",
       "submitted_by": "Ismini Lourentzou",
       "submitted_at": "2026-03-23T02:17:25.402Z",
-      "upvotes": 6,
+      "upvotes": 9,
       "comments": 2,
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
+      "topic_key": "robotics_embodied",
+      "topic_label": "Robotics and Embodied AI",
       "matched_terms": [],
-      "classification_source": "rule",
-      "classification_confidence": null
+      "classification_source": "codex",
+      "classification_confidence": 0.72
     },
     {
       "report_date": "2026-03-23",
-      "paper_id": "2603.19500",
-      "title": "Teaching an Agent to Sketch One Part at a Time",
+      "paper_id": "2603.19987",
+      "title": "Breaking the Capability Ceiling of LLM Post-Training by Reintroducing Markov States",
       "authors": [
-        "Xiaodan Du",
-        "Ruize Xu",
-        "David Yunis",
-        "Yael Vinker",
-        "Greg Shakhnarovich"
+        "Yurun Yuan",
+        "Tengyang Xie"
       ],
-      "abstract": "We develop a method for producing vector sketches one part at a time. To do this, we train a multi-modal language model-based agent using a novel multi-turn process-reward reinforcement learning following supervised fine-tuning. Our approach is enabled by a new dataset we call ControlSketch-Part, containing rich part-level annotations for sketches, obtained using a novel, generic automatic annotation pipeline that segments vector sketches into semantic parts and assigns paths to parts with a structured multi-stage labeling process. Our results indicate that incorporating structured part-level data and providing agent with the visual feedback through the process enables interpretable, controllable, and locally editable text-to-vector sketch generation.",
-      "hf_url": "https://huggingface.co/papers/2603.19500",
-      "arxiv_url": "https://arxiv.org/abs/2603.19500",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19500",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.19500",
+      "abstract": "Reinforcement learning (RL) has become a standard paradigm for post-training and aligning Large Language Models (LLMs), yet recent evidence suggests it faces a persistent \"capability ceiling\": unlike classical RL systems that discover novel strategies, RL for LLMs often acts as a mere refiner of patterns already latent in pre-trained weights. In this work, we identify a fundamental structural bottleneck: while classical RL relies on compact, informative Markov states, current LLM post-training formulations are tethered to an ever-expanding history of actions. We revisit a classical principle long central to RL yet absent from LLM post-training: explicit Markov states. Theoretically, we provide rigorous guarantees demonstrating that leveraging estimated Markov states can significantly reduce sample complexity. Empirically, we show that introducing Markov states consistently breaks the performance boundaries of standard RL post-training across a suite of complex logic puzzles. Our findings suggest that moving beyond \"history-as-state\" modeling in favor of structured Markovian representations is essential for unlocking open-ended discovery and genuinely new reasoning capabilities in Generative AI.",
+      "hf_url": "https://huggingface.co/papers/2603.19987",
+      "arxiv_url": "https://arxiv.org/abs/2603.19987",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19987",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.19987",
       "github_url": "",
-      "submitted_by": "taesiri",
-      "submitted_at": "2026-03-23T00:45:06.320Z",
-      "upvotes": 4,
-      "comments": 1,
-      "topic_key": "agents_planning",
-      "topic_label": "Agents and Planning",
-      "matched_terms": [
-        "\\bagents?\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null
-    },
-    {
-      "report_date": "2026-03-23",
-      "paper_id": "2603.19453",
-      "title": "Cooperation and Exploitation in LLM Policy Synthesis for Sequential Social Dilemmas",
-      "authors": [
-        "Víctor Gallego"
-      ],
-      "abstract": "We study LLM policy synthesis: using a large language model to iteratively generate programmatic agent policies for multi-agent environments. Rather than training neural policies via reinforcement learning, our framework prompts an LLM to produce Python policy functions, evaluates them in self-play, and refines them using performance feedback across iterations. We investigate feedback engineering (the design of what evaluation information is shown to the LLM during refinement) comparing sparse feedback (scalar reward only) against dense feedback (reward plus social metrics: efficiency, equality, sustainability, peace). Across two canonical Sequential Social Dilemmas (Gathering and Cleanup) and two frontier LLMs (Claude Sonnet 4.6, Gemini 3.1 Pro), dense feedback consistently matches or exceeds sparse feedback on all metrics. The advantage is largest in the Cleanup public goods game, where providing social metrics helps the LLM calibrate the costly cleaning-harvesting tradeoff. Rather than triggering over-optimization of fairness, social metrics serve as a coordination signal that guides the LLM toward more effective cooperative strategies, including territory partitioning, adaptive role assignment, and the avoidance of wasteful aggression. We further perform an adversarial experiment to determine whether LLMs can reward hack these environments. We characterize five attack classes and discuss mitigations, highlighting an inherent tension in LLM policy synthesis between expressiveness and safety. Code at https://github.com/vicgalle/llm-policies-social-dilemmas.",
-      "hf_url": "https://huggingface.co/papers/2603.19453",
-      "arxiv_url": "https://arxiv.org/abs/2603.19453",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19453",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.19453",
-      "github_url": "",
-      "submitted_by": "Victor Gallego",
-      "submitted_at": "2026-03-23T06:29:48.856Z",
-      "upvotes": 4,
+      "submitted_by": "Tengyang Xie",
+      "submitted_at": "2026-03-23T16:28:10.019Z",
+      "upvotes": 9,
       "comments": 2,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
-      "matched_terms": [
-        "\\b\\w*llms?\\w*\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.83
     },
     {
       "report_date": "2026-03-23",
-      "paper_id": "2603.19076",
-      "title": "DROID-SLAM in the Wild",
+      "paper_id": "2603.20155",
+      "title": "Beyond Single Tokens: Distilling Discrete Diffusion Models via Discrete MMD",
       "authors": [
-        "Moyang Li",
-        "Zihan Zhu",
-        "Marc Pollefeys",
-        "Daniel Barath"
+        "Emiel Hoogeboom",
+        "David Ruhe",
+        "Jonathan Heek",
+        "Thomas Mensink",
+        "Tim Salimans"
       ],
-      "abstract": "We present a robust, real-time RGB SLAM system that handles dynamic environments by leveraging differentiable Uncertainty-aware Bundle Adjustment. Traditional SLAM methods typically assume static scenes, leading to tracking failures in the presence of motion. Recent dynamic SLAM approaches attempt to address this challenge using predefined dynamic priors or uncertainty-aware mapping, but they remain limited when confronted with unknown dynamic objects or highly cluttered scenes where geometric mapping becomes unreliable. In contrast, our method estimates per-pixel uncertainty by exploiting multi-view visual feature inconsistency, enabling robust tracking and reconstruction even in real-world environments. The proposed system achieves state-of-the-art camera poses and scene geometry in cluttered dynamic scenarios while running in real time at around 10 FPS. Code and datasets are available at https://github.com/MoyangLi00/DROID-W.git.",
-      "hf_url": "https://huggingface.co/papers/2603.19076",
-      "arxiv_url": "https://arxiv.org/abs/2603.19076",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19076",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.19076",
+      "abstract": "It is currently difficult to distill discrete diffusion models. In contrast, continuous diffusion literature has many distillation approaches methods that can reduce sampling steps to a handful. Our method, Discrete Moment Matching Distillation (D-MMD), leverages ideas that have been highly successful in the continuous domain. Whereas previous discrete distillation methods collapse, D-MMD maintains high quality and diversity (given sufficient sampling steps). This is demonstrated on both text and image datasets. Moreover, the newly distilled generators can outperform their teachers.",
+      "hf_url": "https://huggingface.co/papers/2603.20155",
+      "arxiv_url": "https://arxiv.org/abs/2603.20155",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.20155",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.20155",
       "github_url": "",
-      "submitted_by": "Moyang Li",
-      "submitted_at": "2026-03-23T12:17:02.392Z",
-      "upvotes": 4,
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-03-23T01:00:36.392Z",
+      "upvotes": 8,
       "comments": 2,
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
+      "topic_key": "generative_foundations",
+      "topic_label": "Generative Foundations",
       "matched_terms": [],
-      "classification_source": "rule",
-      "classification_confidence": null
+      "classification_source": "codex",
+      "classification_confidence": 0.98
     },
     {
       "report_date": "2026-03-23",
@@ -2284,13 +2107,63 @@
       "github_url": "",
       "submitted_by": "An Luo",
       "submitted_at": "2026-03-23T02:16:47.540Z",
-      "upvotes": 4,
+      "upvotes": 6,
       "comments": 2,
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
+      "topic_key": "datasets_benchmarks",
+      "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
-      "classification_source": "rule",
-      "classification_confidence": null
+      "classification_source": "codex",
+      "classification_confidence": 0.95
+    },
+    {
+      "report_date": "2026-03-23",
+      "paper_id": "2603.19500",
+      "title": "Teaching an Agent to Sketch One Part at a Time",
+      "authors": [
+        "Xiaodan Du",
+        "Ruize Xu",
+        "David Yunis",
+        "Yael Vinker",
+        "Greg Shakhnarovich"
+      ],
+      "abstract": "We develop a method for producing vector sketches one part at a time. To do this, we train a multi-modal language model-based agent using a novel multi-turn process-reward reinforcement learning following supervised fine-tuning. Our approach is enabled by a new dataset we call ControlSketch-Part, containing rich part-level annotations for sketches, obtained using a novel, generic automatic annotation pipeline that segments vector sketches into semantic parts and assigns paths to parts with a structured multi-stage labeling process. Our results indicate that incorporating structured part-level data and providing agent with the visual feedback through the process enables interpretable, controllable, and locally editable text-to-vector sketch generation.",
+      "hf_url": "https://huggingface.co/papers/2603.19500",
+      "arxiv_url": "https://arxiv.org/abs/2603.19500",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19500",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.19500",
+      "github_url": "",
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-03-23T00:45:06.320Z",
+      "upvotes": 5,
+      "comments": 1,
+      "topic_key": "multimodal_agents",
+      "topic_label": "Multimodal Agents",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.68
+    },
+    {
+      "report_date": "2026-03-23",
+      "paper_id": "2603.19453",
+      "title": "Cooperation and Exploitation in LLM Policy Synthesis for Sequential Social Dilemmas",
+      "authors": [
+        "Víctor Gallego"
+      ],
+      "abstract": "We study LLM policy synthesis: using a large language model to iteratively generate programmatic agent policies for multi-agent environments. Rather than training neural policies via reinforcement learning, our framework prompts an LLM to produce Python policy functions, evaluates them in self-play, and refines them using performance feedback across iterations. We investigate feedback engineering (the design of what evaluation information is shown to the LLM during refinement) comparing sparse feedback (scalar reward only) against dense feedback (reward plus social metrics: efficiency, equality, sustainability, peace). Across two canonical Sequential Social Dilemmas (Gathering and Cleanup) and two frontier LLMs (Claude Sonnet 4.6, Gemini 3.1 Pro), dense feedback consistently matches or exceeds sparse feedback on all metrics. The advantage is largest in the Cleanup public goods game, where providing social metrics helps the LLM calibrate the costly cleaning-harvesting tradeoff. Rather than triggering over-optimization of fairness, social metrics serve as a coordination signal that guides the LLM toward more effective cooperative strategies, including territory partitioning, adaptive role assignment, and the avoidance of wasteful aggression. We further perform an adversarial experiment to determine whether LLMs can reward hack these environments. We characterize five attack classes and discuss mitigations, highlighting an inherent tension in LLM policy synthesis between expressiveness and safety. Code at https://github.com/vicgalle/llm-policies-social-dilemmas.",
+      "hf_url": "https://huggingface.co/papers/2603.19453",
+      "arxiv_url": "https://arxiv.org/abs/2603.19453",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19453",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.19453",
+      "github_url": "",
+      "submitted_by": "Victor Gallego",
+      "submitted_at": "2026-03-23T06:29:48.856Z",
+      "upvotes": 5,
+      "comments": 2,
+      "topic_key": "agents_planning",
+      "topic_label": "Agents and Planning",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.89
     },
     {
       "report_date": "2026-03-23",
@@ -2308,15 +2181,39 @@
       "github_url": "",
       "submitted_by": "Niels Rogge",
       "submitted_at": "2026-03-23T09:17:43.681Z",
-      "upvotes": 3,
+      "upvotes": 5,
       "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [
-        "\\bvision\\b"
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.94
+    },
+    {
+      "report_date": "2026-03-23",
+      "paper_id": "2603.19076",
+      "title": "DROID-SLAM in the Wild",
+      "authors": [
+        "Moyang Li",
+        "Zihan Zhu",
+        "Marc Pollefeys",
+        "Daniel Barath"
       ],
-      "classification_source": "rule",
-      "classification_confidence": null
+      "abstract": "We present a robust, real-time RGB SLAM system that handles dynamic environments by leveraging differentiable Uncertainty-aware Bundle Adjustment. Traditional SLAM methods typically assume static scenes, leading to tracking failures in the presence of motion. Recent dynamic SLAM approaches attempt to address this challenge using predefined dynamic priors or uncertainty-aware mapping, but they remain limited when confronted with unknown dynamic objects or highly cluttered scenes where geometric mapping becomes unreliable. In contrast, our method estimates per-pixel uncertainty by exploiting multi-view visual feature inconsistency, enabling robust tracking and reconstruction even in real-world environments. The proposed system achieves state-of-the-art camera poses and scene geometry in cluttered dynamic scenarios while running in real time at around 10 FPS. Code and datasets are available at https://github.com/MoyangLi00/DROID-W.git.",
+      "hf_url": "https://huggingface.co/papers/2603.19076",
+      "arxiv_url": "https://arxiv.org/abs/2603.19076",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19076",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.19076",
+      "github_url": "",
+      "submitted_by": "Moyang Li",
+      "submitted_at": "2026-03-23T12:17:02.392Z",
+      "upvotes": 5,
+      "comments": 2,
+      "topic_key": "robotics_embodied",
+      "topic_label": "Robotics and Embodied AI",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.98
     },
     {
       "report_date": "2026-03-23",
@@ -2334,16 +2231,13 @@
       "github_url": "",
       "submitted_by": "Mengyu Bu",
       "submitted_at": "2026-03-23T01:24:09.982Z",
-      "upvotes": 3,
+      "upvotes": 4,
       "comments": 2,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
-      "matched_terms": [
-        "\\b\\w*llms?\\w*\\b",
-        "\\blanguage\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.88
     },
     {
       "report_date": "2026-03-23",
@@ -2363,15 +2257,71 @@
       "github_url": "",
       "submitted_by": "Suzhen Zhong",
       "submitted_at": "2026-03-23T12:55:21.798Z",
-      "upvotes": 3,
+      "upvotes": 4,
       "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
-      "matched_terms": [
-        "\\bagentic\\b"
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.92
+    },
+    {
+      "report_date": "2026-03-23",
+      "paper_id": "2603.19470",
+      "title": "Adaptive Layerwise Perturbation: Unifying Off-Policy Corrections for LLM RL",
+      "authors": [
+        "Chenlu Ye",
+        "Xuanchang Zhang",
+        "Yifan Hao",
+        "Zhou Yu",
+        "Ziji Zhang",
+        "Abhinav Gullapalli",
+        "Hao Chen",
+        "Jing Huang",
+        "Tong Zhang"
       ],
-      "classification_source": "rule",
-      "classification_confidence": null
+      "abstract": "Off-policy problems such as policy staleness and training-inference mismatch, has become a major bottleneck for training stability and further exploration for LLM RL. To enhance inference efficiency, the distribution gap between the inference and updated policy grows, leading to heavy-tailed importance ratios. Heavy-tailed ratios arise when the policy is locally sharp, which further inflates sharp gradients and can push updates outside the trust region. To address this, we propose Adaptive Layerwise Perturbation(ALP) by injecting small learnable perturbations into input hidden states of each layer during updates, which is used as the numerator of the importance ratio against the unchanged inference policy in the objective. Intuitively, by adding controlled noise to intermediate representations, ALP prevents the updated policy from deviating too sharply from the inference policy, and enlarges the policy family to cover the inference policy family with mismatch noises. Hence, the flattened distribution can naturally tighten the updated and inference policy gap and reduce the tail of importance ratios, thus maintaining training stability. This is further validated empirically. Experiments on single-turn math and multi-turn tool-integrated reasoning tasks show that ALP not only improves final performance, but also avoid blow up of importance ratio tail and KL spikes during iterative training, along with boosted exploration. Ablations show that representation-level perturbations across all layers are most effective, substantially outperforming partial-layer and logits-only variants.",
+      "hf_url": "https://huggingface.co/papers/2603.19470",
+      "arxiv_url": "https://arxiv.org/abs/2603.19470",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19470",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.19470",
+      "github_url": "",
+      "submitted_by": "Chenlu Ye",
+      "submitted_at": "2026-03-23T16:21:18.733Z",
+      "upvotes": 3,
+      "comments": 2,
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.8
+    },
+    {
+      "report_date": "2026-03-23",
+      "paper_id": "2603.14628",
+      "title": "s2n-bignum-bench: A practical benchmark for evaluating low-level code reasoning of LLMs",
+      "authors": [
+        "Balaji Rao",
+        "John Harrison",
+        "Soonho Kong",
+        "Juneyoung Lee",
+        "Carlo Lipizzi"
+      ],
+      "abstract": "Neurosymbolic approaches leveraging Large Language Models (LLMs) with formal methods have recently achieved strong results on mathematics-oriented theorem-proving benchmarks. However, success on competition-style mathematics does not by itself demonstrate the ability to construct proofs about real-world implementations. We address this gap with a benchmark derived from an industrial cryptographic library whose assembly routines are already verified in HOL Light. s2n-bignum is a library used at AWS for providing fast assembly routines for cryptography, and its correctness is established by formal verification. The task of formally verifying this library has been a significant achievement for the Automated Reasoning Group. It involved two tasks: (1) precisely specifying the correct behavior of a program as a mathematical proposition, and (2) proving that the proposition is correct. In the case of s2n-bignum, both tasks were carried out by human experts. In s2n-bignum-bench, we provide the formal specification and ask the LLM to generate a proof script that is accepted by HOL Light within a fixed proof-check timeout. To our knowledge, s2n-bignum-bench is the first public benchmark focused on machine-checkable proof synthesis for industrial low-level cryptographic assembly routines in HOL Light. This benchmark provides a challenging and practically relevant testbed for evaluating LLM-based theorem proving beyond competition mathematics. The code to set up and use the benchmark is available here: https://github.com/kings-crown/s2n-bignum-bench{s2n-bignum-bench}.",
+      "hf_url": "https://huggingface.co/papers/2603.14628",
+      "arxiv_url": "https://arxiv.org/abs/2603.14628",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.14628",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.14628",
+      "github_url": "",
+      "submitted_by": "Balaji Rao",
+      "submitted_at": "2026-03-23T09:55:38.788Z",
+      "upvotes": 3,
+      "comments": 2,
+      "topic_key": "datasets_benchmarks",
+      "topic_label": "Datasets and Benchmarks",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.98
     },
     {
       "report_date": "2026-03-23",
@@ -2397,11 +2347,9 @@
       "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [
-        "\\b3d\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.9
     },
     {
       "report_date": "2026-03-23",
@@ -2426,12 +2374,66 @@
       "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [
-        "\\bvisual\\b",
-        "\\bvideo\\b"
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.95
+    },
+    {
+      "report_date": "2026-03-23",
+      "paper_id": "2603.18750",
+      "title": "Automatic detection of Gen-AI texts: A comparative framework of neural models",
+      "authors": [
+        "Cristian Buttaro",
+        "Irene Amerini"
       ],
-      "classification_source": "rule",
-      "classification_confidence": null
+      "abstract": "The rapid proliferation of Large Language Models has significantly increased the difficulty of distinguishing between human-written and AI generated texts, raising critical issues across academic, editorial, and social domains. This paper investigates the problem of AI generated text detection through the design, implementation, and comparative evaluation of multiple machine learning based detectors. Four neural architectures are developed and analyzed: a Multilayer Perceptron, a one-dimensional Convolutional Neural Network, a MobileNet-based CNN, and a Transformer model. The proposed models are benchmarked against widely used online detectors, including ZeroGPT, GPTZero, QuillBot, Originality.AI, Sapling, IsGen, Rephrase, and Writer. Experiments are conducted on the COLING Multilingual Dataset, considering both English and Italian configurations, as well as on an original thematic dataset focused on Art and Mental Health. Results show that supervised detectors achieve more stable and robust performance than commercial tools across different languages and domains, highlighting key strengths and limitations of current detection strategies.",
+      "hf_url": "https://huggingface.co/papers/2603.18750",
+      "arxiv_url": "https://arxiv.org/abs/2603.18750",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.18750",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.18750",
+      "github_url": "",
+      "submitted_by": "Cristian Buttaro",
+      "submitted_at": "2026-03-23T18:30:39.073Z",
+      "upvotes": 2,
+      "comments": 2,
+      "topic_key": "reasoning_alignment_eval",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.83
+    },
+    {
+      "report_date": "2026-03-23",
+      "paper_id": "2603.18655",
+      "title": "Multiscale Switch for Semi-Supervised and Contrastive Learning in Medical Ultrasound Image Segmentation",
+      "authors": [
+        "Jingguo Qu",
+        "Xinyang Han",
+        "Yao Pu",
+        "Man-Lik Chui",
+        "Simon Takadiyi Gunda",
+        "Ziman Chen",
+        "Jing Qin",
+        "Ann Dorothy King",
+        "Winnie Chiu-Wing Chu",
+        "Jing Cai",
+        "Michael Tin-Cheung Ying"
+      ],
+      "abstract": "Medical ultrasound image segmentation faces significant challenges due to limited labeled data and characteristic imaging artifacts including speckle noise and low-contrast boundaries. While semi-supervised learning (SSL) approaches have emerged to address data scarcity, existing methods suffer from suboptimal unlabeled data utilization and lack robust feature representation mechanisms. In this paper, we propose Switch, a novel SSL framework with two key innovations: (1) Multiscale Switch (MSS) strategy that employs hierarchical patch mixing to achieve uniform spatial coverage; (2) Frequency Domain Switch (FDS) with contrastive learning that performs amplitude switching in Fourier space for robust feature representations. Our framework integrates these components within a teacher-student architecture to effectively leverage both labeled and unlabeled data. Comprehensive evaluation across six diverse ultrasound datasets (lymph nodes, breast lesions, thyroid nodules, and prostate) demonstrates consistent superiority over state-of-the-art methods. At 5\\% labeling ratio, Switch achieves remarkable improvements: 80.04\\% Dice on LN-INT, 85.52\\% Dice on DDTI, and 83.48\\% Dice on Prostate datasets, with our semi-supervised approach even exceeding fully supervised baselines. The method maintains parameter efficiency (1.8M parameters) while delivering superior performance, validating its effectiveness for resource-constrained medical imaging applications. The source code is publicly available at https://github.com/jinggqu/Switch",
+      "hf_url": "https://huggingface.co/papers/2603.18655",
+      "arxiv_url": "https://arxiv.org/abs/2603.18655",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.18655",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.18655",
+      "github_url": "",
+      "submitted_by": "Anthony",
+      "submitted_at": "2026-03-23T15:33:09.533Z",
+      "upvotes": 2,
+      "comments": 2,
+      "topic_key": "domain_applications",
+      "topic_label": "Domain Applications",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.97
     },
     {
       "report_date": "2026-03-23",
@@ -2456,11 +2458,11 @@
       "submitted_at": "2026-03-23T10:08:24.757Z",
       "upvotes": 2,
       "comments": 2,
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
+      "topic_key": "multimodal_generative",
+      "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
-      "classification_source": "rule",
-      "classification_confidence": null
+      "classification_source": "codex",
+      "classification_confidence": 0.75
     },
     {
       "report_date": "2026-03-23",
@@ -2483,14 +2485,11 @@
       "submitted_at": "2026-03-23T11:34:04.143Z",
       "upvotes": 2,
       "comments": 2,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
-      "matched_terms": [
-        "\\blanguage models?\\b",
-        "\\blanguage\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null
+      "topic_key": "reasoning_alignment_eval",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.89
     },
     {
       "report_date": "2026-03-23",
@@ -2520,136 +2519,11 @@
       "submitted_at": "2026-03-23T19:25:07.709Z",
       "upvotes": 1,
       "comments": 2,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [
-        "\\bimage\\b",
-        "\\bvlm\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null
-    },
-    {
-      "report_date": "2026-03-23",
-      "paper_id": "2603.19470",
-      "title": "Adaptive Layerwise Perturbation: Unifying Off-Policy Corrections for LLM RL",
-      "authors": [
-        "Chenlu Ye",
-        "Xuanchang Zhang",
-        "Yifan Hao",
-        "Zhou Yu",
-        "Ziji Zhang",
-        "Abhinav Gullapalli",
-        "Hao Chen",
-        "Jing Huang",
-        "Tong Zhang"
-      ],
-      "abstract": "Off-policy problems such as policy staleness and training-inference mismatch, has become a major bottleneck for training stability and further exploration for LLM RL. To enhance inference efficiency, the distribution gap between the inference and updated policy grows, leading to heavy-tailed importance ratios. Heavy-tailed ratios arise when the policy is locally sharp, which further inflates sharp gradients and can push updates outside the trust region. To address this, we propose Adaptive Layerwise Perturbation(ALP) by injecting small learnable perturbations into input hidden states of each layer during updates, which is used as the numerator of the importance ratio against the unchanged inference policy in the objective. Intuitively, by adding controlled noise to intermediate representations, ALP prevents the updated policy from deviating too sharply from the inference policy, and enlarges the policy family to cover the inference policy family with mismatch noises. Hence, the flattened distribution can naturally tighten the updated and inference policy gap and reduce the tail of importance ratios, thus maintaining training stability. This is further validated empirically. Experiments on single-turn math and multi-turn tool-integrated reasoning tasks show that ALP not only improves final performance, but also avoid blow up of importance ratio tail and KL spikes during iterative training, along with boosted exploration. Ablations show that representation-level perturbations across all layers are most effective, substantially outperforming partial-layer and logits-only variants.",
-      "hf_url": "https://huggingface.co/papers/2603.19470",
-      "arxiv_url": "https://arxiv.org/abs/2603.19470",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.19470",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.19470",
-      "github_url": "",
-      "submitted_by": "Chenlu Ye",
-      "submitted_at": "2026-03-23T16:21:18.733Z",
-      "upvotes": 1,
-      "comments": 2,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
-      "matched_terms": [
-        "\\b\\w*llms?\\w*\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null
-    },
-    {
-      "report_date": "2026-03-23",
-      "paper_id": "2603.18750",
-      "title": "Automatic detection of Gen-AI texts: A comparative framework of neural models",
-      "authors": [
-        "Cristian Buttaro",
-        "Irene Amerini"
-      ],
-      "abstract": "The rapid proliferation of Large Language Models has significantly increased the difficulty of distinguishing between human-written and AI generated texts, raising critical issues across academic, editorial, and social domains. This paper investigates the problem of AI generated text detection through the design, implementation, and comparative evaluation of multiple machine learning based detectors. Four neural architectures are developed and analyzed: a Multilayer Perceptron, a one-dimensional Convolutional Neural Network, a MobileNet-based CNN, and a Transformer model. The proposed models are benchmarked against widely used online detectors, including ZeroGPT, GPTZero, QuillBot, Originality.AI, Sapling, IsGen, Rephrase, and Writer. Experiments are conducted on the COLING Multilingual Dataset, considering both English and Italian configurations, as well as on an original thematic dataset focused on Art and Mental Health. Results show that supervised detectors achieve more stable and robust performance than commercial tools across different languages and domains, highlighting key strengths and limitations of current detection strategies.",
-      "hf_url": "https://huggingface.co/papers/2603.18750",
-      "arxiv_url": "https://arxiv.org/abs/2603.18750",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.18750",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.18750",
-      "github_url": "",
-      "submitted_by": "Cristian Buttaro",
-      "submitted_at": "2026-03-23T18:30:39.073Z",
-      "upvotes": 1,
-      "comments": 2,
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
+      "topic_key": "datasets_benchmarks",
+      "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
-      "classification_source": "rule",
-      "classification_confidence": null
-    },
-    {
-      "report_date": "2026-03-23",
-      "paper_id": "2603.18655",
-      "title": "Multiscale Switch for Semi-Supervised and Contrastive Learning in Medical Ultrasound Image Segmentation",
-      "authors": [
-        "Jingguo Qu",
-        "Xinyang Han",
-        "Yao Pu",
-        "Man-Lik Chui",
-        "Simon Takadiyi Gunda",
-        "Ziman Chen",
-        "Jing Qin",
-        "Ann Dorothy King",
-        "Winnie Chiu-Wing Chu",
-        "Jing Cai",
-        "Michael Tin-Cheung Ying"
-      ],
-      "abstract": "Medical ultrasound image segmentation faces significant challenges due to limited labeled data and characteristic imaging artifacts including speckle noise and low-contrast boundaries. While semi-supervised learning (SSL) approaches have emerged to address data scarcity, existing methods suffer from suboptimal unlabeled data utilization and lack robust feature representation mechanisms. In this paper, we propose Switch, a novel SSL framework with two key innovations: (1) Multiscale Switch (MSS) strategy that employs hierarchical patch mixing to achieve uniform spatial coverage; (2) Frequency Domain Switch (FDS) with contrastive learning that performs amplitude switching in Fourier space for robust feature representations. Our framework integrates these components within a teacher-student architecture to effectively leverage both labeled and unlabeled data. Comprehensive evaluation across six diverse ultrasound datasets (lymph nodes, breast lesions, thyroid nodules, and prostate) demonstrates consistent superiority over state-of-the-art methods. At 5\\% labeling ratio, Switch achieves remarkable improvements: 80.04\\% Dice on LN-INT, 85.52\\% Dice on DDTI, and 83.48\\% Dice on Prostate datasets, with our semi-supervised approach even exceeding fully supervised baselines. The method maintains parameter efficiency (1.8M parameters) while delivering superior performance, validating its effectiveness for resource-constrained medical imaging applications. The source code is publicly available at https://github.com/jinggqu/Switch",
-      "hf_url": "https://huggingface.co/papers/2603.18655",
-      "arxiv_url": "https://arxiv.org/abs/2603.18655",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.18655",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.18655",
-      "github_url": "",
-      "submitted_by": "Anthony",
-      "submitted_at": "2026-03-23T15:33:09.533Z",
-      "upvotes": 1,
-      "comments": 2,
-      "topic_key": "domain_applications",
-      "topic_label": "Domain Applications",
-      "matched_terms": [
-        "\\bmedical\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null
-    },
-    {
-      "report_date": "2026-03-23",
-      "paper_id": "2603.14628",
-      "title": "s2n-bignum-bench: A practical benchmark for evaluating low-level code reasoning of LLMs",
-      "authors": [
-        "Balaji Rao",
-        "John Harrison",
-        "Soonho Kong",
-        "Juneyoung Lee",
-        "Carlo Lipizzi"
-      ],
-      "abstract": "Neurosymbolic approaches leveraging Large Language Models (LLMs) with formal methods have recently achieved strong results on mathematics-oriented theorem-proving benchmarks. However, success on competition-style mathematics does not by itself demonstrate the ability to construct proofs about real-world implementations. We address this gap with a benchmark derived from an industrial cryptographic library whose assembly routines are already verified in HOL Light. s2n-bignum is a library used at AWS for providing fast assembly routines for cryptography, and its correctness is established by formal verification. The task of formally verifying this library has been a significant achievement for the Automated Reasoning Group. It involved two tasks: (1) precisely specifying the correct behavior of a program as a mathematical proposition, and (2) proving that the proposition is correct. In the case of s2n-bignum, both tasks were carried out by human experts. In s2n-bignum-bench, we provide the formal specification and ask the LLM to generate a proof script that is accepted by HOL Light within a fixed proof-check timeout. To our knowledge, s2n-bignum-bench is the first public benchmark focused on machine-checkable proof synthesis for industrial low-level cryptographic assembly routines in HOL Light. This benchmark provides a challenging and practically relevant testbed for evaluating LLM-based theorem proving beyond competition mathematics. The code to set up and use the benchmark is available here: https://github.com/kings-crown/s2n-bignum-bench{s2n-bignum-bench}.",
-      "hf_url": "https://huggingface.co/papers/2603.14628",
-      "arxiv_url": "https://arxiv.org/abs/2603.14628",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.14628",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.14628",
-      "github_url": "",
-      "submitted_by": "Balaji Rao",
-      "submitted_at": "2026-03-23T09:55:38.788Z",
-      "upvotes": 1,
-      "comments": 2,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
-      "matched_terms": [
-        "\\b\\w*llms?\\w*\\b",
-        "\\bcode\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null
+      "classification_source": "codex",
+      "classification_confidence": 0.98
     },
     {
       "report_date": "2026-03-23",
@@ -2670,15 +2544,13 @@
       "github_url": "",
       "submitted_by": "Panuganti Chirag Sai",
       "submitted_at": "2026-03-23T12:56:32.224Z",
-      "upvotes": 0,
+      "upvotes": 1,
       "comments": 2,
-      "topic_key": "retrieval_knowledge",
-      "topic_label": "Retrieval, Knowledge, and RAG",
-      "matched_terms": [
-        "\\bmemory\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.61
     }
   ]
 }

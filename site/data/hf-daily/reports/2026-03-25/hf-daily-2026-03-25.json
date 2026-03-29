@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-27T18:08:56Z",
+  "generated_at": "2026-03-29T11:19:34Z",
   "report_kind": "hf_daily",
   "report_date": "2026-03-25",
   "source_url": "https://huggingface.co/papers/date/2026-03-25",
@@ -9,14 +9,14 @@
     {
       "topic_key": "generative_foundations",
       "topic_label": "Generative Foundations",
-      "count": 3,
-      "share": 8.82
+      "count": 1,
+      "share": 2.94
     },
     {
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
-      "count": 4,
-      "share": 11.76
+      "count": 5,
+      "share": 14.71
     },
     {
       "topic_key": "multimodal_agents",
@@ -28,11 +28,16 @@
   "topic_distribution": [
     {
       "topic_label": "Multimodal Understanding and Vision",
-      "count": 7,
-      "share": 20.59
+      "count": 8,
+      "share": 23.53
     },
     {
       "topic_label": "Multimodal Agents",
+      "count": 5,
+      "share": 14.71
+    },
+    {
+      "topic_label": "Multimodal Generative Modeling",
       "count": 5,
       "share": 14.71
     },
@@ -42,17 +47,7 @@
       "share": 14.71
     },
     {
-      "topic_label": "Multimodal Generative Modeling",
-      "count": 4,
-      "share": 11.76
-    },
-    {
       "topic_label": "Datasets and Benchmarks",
-      "count": 3,
-      "share": 8.82
-    },
-    {
-      "topic_label": "Generative Foundations",
       "count": 3,
       "share": 8.82
     },
@@ -68,11 +63,11 @@
     },
     {
       "topic_label": "Learning, Optimization, and Theory",
-      "count": 1,
-      "share": 2.94
+      "count": 2,
+      "share": 5.88
     },
     {
-      "topic_label": "Other AI",
+      "topic_label": "Generative Foundations",
       "count": 1,
       "share": 2.94
     },
@@ -129,13 +124,13 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-03-25T01:04:17.857Z",
-      "upvotes": 122,
+      "upvotes": 127,
       "comments": 6,
-      "topic_key": "generative_foundations",
-      "topic_label": "Generative Foundations",
+      "topic_key": "multimodal_generative",
+      "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.94
+      "classification_confidence": 0.97
     },
     {
       "report_date": "2026-03-25",
@@ -159,13 +154,13 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-03-25T00:50:53.746Z",
-      "upvotes": 83,
+      "upvotes": 84,
       "comments": 3,
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.97
+      "classification_confidence": 0.95
     },
     {
       "report_date": "2026-03-25",
@@ -187,7 +182,7 @@
       "github_url": "",
       "submitted_by": "Huang",
       "submitted_at": "2026-03-25T01:04:51.255Z",
-      "upvotes": 56,
+      "upvotes": 57,
       "comments": 4,
       "topic_key": "multimodal_agents",
       "topic_label": "Multimodal Agents",
@@ -218,7 +213,7 @@
       "github_url": "",
       "submitted_by": "Leo Y",
       "submitted_at": "2026-03-25T00:21:57.570Z",
-      "upvotes": 49,
+      "upvotes": 51,
       "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -250,13 +245,13 @@
       "github_url": "",
       "submitted_by": "Jaewon Min",
       "submitted_at": "2026-03-25T06:07:41.845Z",
-      "upvotes": 46,
+      "upvotes": 47,
       "comments": 3,
-      "topic_key": "generative_foundations",
-      "topic_label": "Generative Foundations",
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.86
+      "classification_confidence": 0.79
     },
     {
       "report_date": "2026-03-25",
@@ -278,13 +273,13 @@
       "github_url": "",
       "submitted_by": "Minghan Qin",
       "submitted_at": "2026-03-25T02:02:36.667Z",
-      "upvotes": 39,
+      "upvotes": 41,
       "comments": 3,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.74
+      "classification_confidence": 0.7
     },
     {
       "report_date": "2026-03-25",
@@ -319,7 +314,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.93
+      "classification_confidence": 0.94
     },
     {
       "report_date": "2026-03-25",
@@ -346,7 +341,7 @@
       "github_url": "",
       "submitted_by": "wujie10558@gmail.com",
       "submitted_at": "2026-03-25T00:31:50.385Z",
-      "upvotes": 33,
+      "upvotes": 34,
       "comments": 2,
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
@@ -358,9 +353,41 @@
   "topics": [
     {
       "topic_label": "Multimodal Understanding and Vision",
-      "count": 7,
-      "share": 20.59,
+      "count": 8,
+      "share": 23.53,
       "papers": [
+        {
+          "report_date": "2026-03-25",
+          "paper_id": "2603.23499",
+          "title": "DA-Flow: Degradation-Aware Optical Flow Estimation with Diffusion Models",
+          "authors": [
+            "Jaewon Min",
+            "Jaeeun Lee",
+            "Yeji Choi",
+            "Paul Hyunbin Cho",
+            "Jin Hyeon Kim",
+            "Tae-Young Lee",
+            "Jongsik Ahn",
+            "Hwayeong Lee",
+            "Seonghyun Park",
+            "Seungryong Kim"
+          ],
+          "abstract": "Optical flow models trained on high-quality data often degrade severely when confronted with real-world corruptions such as blur, noise, and compression artifacts. To overcome this limitation, we formulate Degradation-Aware Optical Flow, a new task targeting accurate dense correspondence estimation from real-world corrupted videos. Our key insight is that the intermediate representations of image restoration diffusion models are inherently corruption-aware but lack temporal awareness. To address this limitation, we lift the model to attend across adjacent frames via full spatio-temporal attention, and empirically demonstrate that the resulting features exhibit zero-shot correspondence capabilities. Based on this finding, we present DA-Flow, a hybrid architecture that fuses these diffusion features with convolutional features within an iterative refinement framework. DA-Flow substantially outperforms existing optical flow methods under severe degradation across multiple benchmarks.",
+          "hf_url": "https://huggingface.co/papers/2603.23499",
+          "arxiv_url": "https://arxiv.org/abs/2603.23499",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.23499",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.23499",
+          "github_url": "",
+          "submitted_by": "Jaewon Min",
+          "submitted_at": "2026-03-25T06:07:41.845Z",
+          "upvotes": 47,
+          "comments": 3,
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.79
+        },
         {
           "report_date": "2026-03-25",
           "paper_id": "2603.23386",
@@ -381,13 +408,13 @@
           "github_url": "",
           "submitted_by": "Minghan Qin",
           "submitted_at": "2026-03-25T02:02:36.667Z",
-          "upvotes": 39,
+          "upvotes": 41,
           "comments": 3,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.74
+          "classification_confidence": 0.7
         },
         {
           "report_date": "2026-03-25",
@@ -422,7 +449,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.93
+          "classification_confidence": 0.94
         },
         {
           "report_date": "2026-03-25",
@@ -457,7 +484,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.87
+          "classification_confidence": 0.9
         },
         {
           "report_date": "2026-03-25",
@@ -484,7 +511,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.85
+          "classification_confidence": 0.86
         },
         {
           "report_date": "2026-03-25",
@@ -510,7 +537,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.92
+          "classification_confidence": 0.8
         },
         {
           "report_date": "2026-03-25",
@@ -535,7 +562,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.88
+          "classification_confidence": 0.87
         },
         {
           "report_date": "2026-03-25",
@@ -559,7 +586,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.95
+          "classification_confidence": 0.9
         }
       ]
     },
@@ -588,7 +615,7 @@
           "github_url": "",
           "submitted_by": "Huang",
           "submitted_at": "2026-03-25T01:04:51.255Z",
-          "upvotes": 56,
+          "upvotes": 57,
           "comments": 4,
           "topic_key": "multimodal_agents",
           "topic_label": "Multimodal Agents",
@@ -624,7 +651,7 @@
           "topic_label": "Multimodal Agents",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.98
+          "classification_confidence": 0.99
         },
         {
           "report_date": "2026-03-25",
@@ -658,7 +685,7 @@
           "topic_label": "Multimodal Agents",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.99
+          "classification_confidence": 0.98
         },
         {
           "report_date": "2026-03-25",
@@ -689,7 +716,7 @@
           "topic_label": "Multimodal Agents",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.94
+          "classification_confidence": 0.88
         },
         {
           "report_date": "2026-03-25",
@@ -725,156 +752,43 @@
           "topic_label": "Multimodal Agents",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.83
-        }
-      ]
-    },
-    {
-      "topic_label": "Reasoning, Alignment, and Evaluation",
-      "count": 5,
-      "share": 14.71,
-      "papers": [
-        {
-          "report_date": "2026-03-25",
-          "paper_id": "2603.22847",
-          "title": "Rethinking Token-Level Policy Optimization for Multimodal Chain-of-Thought",
-          "authors": [
-            "Yunheng Li",
-            "Hangyi Kuang",
-            "Hengrui Zhang",
-            "Jiangxia Cao",
-            "Zhaojie Liu",
-            "Qibin Hou",
-            "Ming-Ming Cheng"
-          ],
-          "abstract": "Multimodal Chain-of-Thought (CoT) reasoning requires large vision-language models to construct reasoning trajectories that interleave perceptual grounding with multi-step inference. However, existing Reinforcement Learning with Verifiable Rewards (RLVR) methods typically optimize reasoning at a coarse granularity, treating CoT uniformly without distinguishing their varying degrees of visual grounding. In this work, we conduct a token-level analysis of multimodal reasoning trajectories and show that successful reasoning is characterized by structured token dynamics reflecting both perceptual grounding and exploratory inference. Building upon this analysis, we propose Perception-Exploration Policy Optimization (PEPO), which derives a perception prior from hidden state similarity and integrates it with token entropy through a smooth gating mechanism to produce token-level advantages. PEPO integrates seamlessly with existing RLVR frameworks such as GRPO and DAPO, requiring neither additional supervision nor auxiliary branches. Extensive experiments across diverse multimodal benchmarks demonstrate consistent and robust improvements over strong RL baselines, spanning geometry reasoning, visual grounding, visual puzzle solving, and few-shot classification, while maintaining stable training dynamics. Code: https://github.com/xzxxntxdy/PEPO",
-          "hf_url": "https://huggingface.co/papers/2603.22847",
-          "arxiv_url": "https://arxiv.org/abs/2603.22847",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.22847",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.22847",
-          "github_url": "",
-          "submitted_by": "Yunheng Li",
-          "submitted_at": "2026-03-25T00:49:56.471Z",
-          "upvotes": 21,
-          "comments": 2,
-          "topic_key": "reasoning_alignment_eval",
-          "topic_label": "Reasoning, Alignment, and Evaluation",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.72
-        },
-        {
-          "report_date": "2026-03-25",
-          "paper_id": "2603.22446",
-          "title": "Sparse but Critical: A Token-Level Analysis of Distributional Shifts in RLVR Fine-Tuning of LLMs",
-          "authors": [
-            "Haoming Meng",
-            "Kexin Huang",
-            "Shaohang Wei",
-            "Chiyu Ma",
-            "Shuo Yang",
-            "Xue Wang",
-            "Guoyin Wang",
-            "Bolin Ding",
-            "Jingren Zhou"
-          ],
-          "abstract": "Reinforcement learning with verifiable rewards (RLVR) has significantly improved reasoning in large language models (LLMs), yet the token-level mechanisms underlying these improvements remain unclear. We present a systematic empirical study of RLVR's distributional effects organized around three main analyses: (1) token-level characterization of distributional shifts between base and RL models, (2) the impact of token-level distributional shifts on sequence-level reasoning performance through cross-sampling interventions, and (3) fine-grained mechanics of these shifts at the token level. We find that RL fine-tuning induces highly sparse and targeted changes, with only a small fraction of token distributions exhibiting meaningful divergence between the base and RL policies. We further characterize the structure and evolution of these shifts through analyses of token entropy, positional concentration, and reallocation of probability mass. To assess the functional importance of these sparse changes, we conduct cross-sampling experiments that selectively swap token choices between the base and RL models with varying intervention budgets. We show that inserting only a small fraction of RL-sampled tokens into base generations progressively recovers RL performance gains, while injecting a similarly small number of base token choices into otherwise RL-generated sequences collapses performance to base levels, isolating a small set of token-level decisions directly responsible for RLVR's performance gains. Finally, we explore divergence-weighted variants of the advantage signal as a diagnostic intervention, finding that they can yield improvements over baselines. Together, our results shed light on the distributional changes induced by RLVR and provide a fine-grained, token-level lens for understanding RLVR fine-tuning as a targeted refinement process.",
-          "hf_url": "https://huggingface.co/papers/2603.22446",
-          "arxiv_url": "https://arxiv.org/abs/2603.22446",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.22446",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.22446",
-          "github_url": "",
-          "submitted_by": "taesiri",
-          "submitted_at": "2026-03-25T01:02:32.272Z",
-          "upvotes": 5,
-          "comments": 1,
-          "topic_key": "reasoning_alignment_eval",
-          "topic_label": "Reasoning, Alignment, and Evaluation",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.91
-        },
-        {
-          "report_date": "2026-03-25",
-          "paper_id": "2603.23471",
-          "title": "Regulating AI Agents",
-          "authors": [
-            "Kathrin Gardhouse",
-            "Amin Oueslati",
-            "Noam Kolt"
-          ],
-          "abstract": "AI agents -- systems that can independently take actions to pursue complex goals with only limited human oversight -- have entered the mainstream. These systems are now being widely used to produce software, conduct business activities, and automate everyday personal tasks. While AI agents implicate many areas of law, ranging from agency law and contracts to tort liability and labor law, they present particularly pressing questions for the most globally consequential AI regulation: the European Union's AI Act. Promulgated prior to the development and widespread use of AI agents, the EU AI Act faces significant obstacles in confronting the governance challenges arising from this transformative technology, such as performance failures in autonomous task execution, the risk of misuse of agents by malicious actors, and unequal access to the economic opportunities afforded by AI agents. We systematically analyze the EU AI Act's response to these challenges, focusing on both the substantive provisions of the regulation and, crucially, the institutional frameworks that aim to support its implementation. Our analysis of the Act's allocation of monitoring and enforcement responsibilities, reliance on industry self-regulation, and level of government resourcing illustrates how a regulatory framework designed for conventional AI systems can be ill-suited to AI agents. Taken together, our findings suggest that policymakers in the EU and beyond will need to change course, and soon, if they are to effectively govern the next generation of AI technology.",
-          "hf_url": "https://huggingface.co/papers/2603.23471",
-          "arxiv_url": "https://arxiv.org/abs/2603.23471",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.23471",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.23471",
-          "github_url": "",
-          "submitted_by": "Noam Kolt",
-          "submitted_at": "2026-03-25T06:43:15.514Z",
-          "upvotes": 4,
-          "comments": 2,
-          "topic_key": "reasoning_alignment_eval",
-          "topic_label": "Reasoning, Alignment, and Evaluation",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.94
-        },
-        {
-          "report_date": "2026-03-25",
-          "paper_id": "2603.21854",
-          "title": "Reasoning or Rhetoric? An Empirical Analysis of Moral Reasoning Explanations in Large Language Models",
-          "authors": [
-            "Aryan Kasat",
-            "Smriti Singh",
-            "Aman Chadha",
-            "Vinija Jain"
-          ],
-          "abstract": "Do large language models reason morally, or do they merely sound like they do? We investigate whether LLM responses to moral dilemmas exhibit genuine developmental progression through Kohlberg's stages of moral development, or whether alignment training instead produces reasoning-like outputs that superficially resemble mature moral judgment without the underlying developmental trajectory. Using an LLM-as-judge scoring pipeline validated across three judge models, we classify more than 600 responses from 13 LLMs spanning a range of architectures, parameter scales, and training regimes across six classical moral dilemmas, and conduct ten complementary analyses to characterize the nature and internal coherence of the resulting patterns. Our results reveal a striking inversion: responses overwhelmingly correspond to post-conventional reasoning (Stages 5-6) regardless of model size, architecture, or prompting strategy, the effective inverse of human developmental norms, where Stage 4 dominates. Most strikingly, a subset of models exhibit moral decoupling: systematic inconsistency between stated moral justification and action choice, a form of logical incoherence that persists across scale and prompting strategy and represents a direct reasoning consistency failure independent of rhetorical sophistication. Model scale carries a statistically significant but practically small effect; training type has no significant independent main effect; and models exhibit near-robotic cross-dilemma consistency producing logically indistinguishable responses across semantically distinct moral problems. We posit that these patterns constitute evidence for moral ventriloquism: the acquisition, through alignment training, of the rhetorical conventions of mature moral reasoning without the underlying developmental trajectory those conventions are meant to represent.",
-          "hf_url": "https://huggingface.co/papers/2603.21854",
-          "arxiv_url": "https://arxiv.org/abs/2603.21854",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.21854",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.21854",
-          "github_url": "",
-          "submitted_by": "Aman Chadha",
-          "submitted_at": "2026-03-25T03:07:23.120Z",
-          "upvotes": 3,
-          "comments": 2,
-          "topic_key": "reasoning_alignment_eval",
-          "topic_label": "Reasoning, Alignment, and Evaluation",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.98
-        },
-        {
-          "report_date": "2026-03-25",
-          "paper_id": "2603.22350",
-          "title": "Session Risk Memory (SRM): Temporal Authorization for Deterministic Pre-Execution Safety Gates",
-          "authors": [
-            "Florin Adrian Chitan"
-          ],
-          "abstract": "Deterministic pre-execution safety gates evaluate whether individual agent actions are compatible with their assigned roles. While effective at per-action authorization, these systems are structurally blind to distributed attacks that decompose harmful intent across multiple individually-compliant steps. This paper introduces Session Risk Memory (SRM), a lightweight deterministic module that extends stateless execution gates with trajectory-level authorization. SRM maintains a compact semantic centroid representing the evolving behavioral profile of an agent session and accumulates a risk signal through exponential moving average over baseline-subtracted gate outputs. It operates on the same semantic vector representation as the underlying gate, requiring no additional model components, training, or probabilistic inference. We evaluate SRM on a multi-turn benchmark of 80 sessions containing slow-burn exfiltration, gradual privilege escalation, and compliance drift scenarios. Results show that ILION+SRM achieves F1 = 1.0000 with 0% false positive rate, compared to stateless ILION at F1 = 0.9756 with 5% FPR, while maintaining 100% detection rate for both systems. Critically, SRM eliminates all false positives with a per-turn overhead under 250 microseconds. The framework introduces a conceptual distinction between spatial authorization consistency (evaluated per action) and temporal authorization consistency (evaluated over trajectory), providing a principled basis for session-level safety in agentic systems.",
-          "hf_url": "https://huggingface.co/papers/2603.22350",
-          "arxiv_url": "https://arxiv.org/abs/2603.22350",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.22350",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.22350",
-          "github_url": "",
-          "submitted_by": "adrian chitan",
-          "submitted_at": "2026-03-25T05:07:19.449Z",
-          "upvotes": 1,
-          "comments": 2,
-          "topic_key": "reasoning_alignment_eval",
-          "topic_label": "Reasoning, Alignment, and Evaluation",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.87
+          "classification_confidence": 0.95
         }
       ]
     },
     {
       "topic_label": "Multimodal Generative Modeling",
-      "count": 4,
-      "share": 11.76,
+      "count": 5,
+      "share": 14.71,
       "papers": [
+        {
+          "report_date": "2026-03-25",
+          "paper_id": "2603.22458",
+          "title": "MinerU-Diffusion: Rethinking Document OCR as Inverse Rendering via Diffusion Decoding",
+          "authors": [
+            "Hejun Dong",
+            "Junbo Niu",
+            "Bin Wang",
+            "Weijun Zeng",
+            "Wentao Zhang",
+            "Conghui He"
+          ],
+          "abstract": "Optical character recognition (OCR) has evolved from line-level transcription to structured document parsing, requiring models to recover long-form sequences containing layout, tables, and formulas. Despite recent advances in vision-language models, most existing systems rely on autoregressive decoding, which introduces sequential latency and amplifies error propagation in long documents. In this work, we revisit document OCR from an inverse rendering perspective, arguing that left-to-right causal generation is an artifact of serialization rather than an intrinsic property of the task. Motivated by this insight, we propose MinerU-Diffusion, a unified diffusion-based framework that replaces autoregressive sequential decoding with parallel diffusion denoising under visual conditioning. MinerU-Diffusion employs a block-wise diffusion decoder and an uncertainty-driven curriculum learning strategy to enable stable training and efficient long-sequence inference. Extensive experiments demonstrate that MinerU-Diffusion consistently improves robustness while achieving up to 3.2x faster decoding compared to autoregressive baselines. Evaluations on the proposed Semantic Shuffle benchmark further confirm its reduced dependence on linguistic priors and stronger visual OCR capability.",
+          "hf_url": "https://huggingface.co/papers/2603.22458",
+          "arxiv_url": "https://arxiv.org/abs/2603.22458",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.22458",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.22458",
+          "github_url": "",
+          "submitted_by": "taesiri",
+          "submitted_at": "2026-03-25T01:04:17.857Z",
+          "upvotes": 127,
+          "comments": 6,
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.97
+        },
         {
           "report_date": "2026-03-25",
           "paper_id": "2603.23500",
@@ -900,7 +814,7 @@
           "github_url": "",
           "submitted_by": "wujie10558@gmail.com",
           "submitted_at": "2026-03-25T00:31:50.385Z",
-          "upvotes": 33,
+          "upvotes": 34,
           "comments": 2,
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
@@ -930,7 +844,7 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-03-25T13:00:00.494Z",
-          "upvotes": 25,
+          "upvotes": 26,
           "comments": 5,
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
@@ -965,7 +879,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.88
+          "classification_confidence": 0.85
         },
         {
           "report_date": "2026-03-25",
@@ -991,7 +905,148 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.95
+          "classification_confidence": 0.96
+        }
+      ]
+    },
+    {
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "count": 5,
+      "share": 14.71,
+      "papers": [
+        {
+          "report_date": "2026-03-25",
+          "paper_id": "2603.22847",
+          "title": "Rethinking Token-Level Policy Optimization for Multimodal Chain-of-Thought",
+          "authors": [
+            "Yunheng Li",
+            "Hangyi Kuang",
+            "Hengrui Zhang",
+            "Jiangxia Cao",
+            "Zhaojie Liu",
+            "Qibin Hou",
+            "Ming-Ming Cheng"
+          ],
+          "abstract": "Multimodal Chain-of-Thought (CoT) reasoning requires large vision-language models to construct reasoning trajectories that interleave perceptual grounding with multi-step inference. However, existing Reinforcement Learning with Verifiable Rewards (RLVR) methods typically optimize reasoning at a coarse granularity, treating CoT uniformly without distinguishing their varying degrees of visual grounding. In this work, we conduct a token-level analysis of multimodal reasoning trajectories and show that successful reasoning is characterized by structured token dynamics reflecting both perceptual grounding and exploratory inference. Building upon this analysis, we propose Perception-Exploration Policy Optimization (PEPO), which derives a perception prior from hidden state similarity and integrates it with token entropy through a smooth gating mechanism to produce token-level advantages. PEPO integrates seamlessly with existing RLVR frameworks such as GRPO and DAPO, requiring neither additional supervision nor auxiliary branches. Extensive experiments across diverse multimodal benchmarks demonstrate consistent and robust improvements over strong RL baselines, spanning geometry reasoning, visual grounding, visual puzzle solving, and few-shot classification, while maintaining stable training dynamics. Code: https://github.com/xzxxntxdy/PEPO",
+          "hf_url": "https://huggingface.co/papers/2603.22847",
+          "arxiv_url": "https://arxiv.org/abs/2603.22847",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.22847",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.22847",
+          "github_url": "",
+          "submitted_by": "Yunheng Li",
+          "submitted_at": "2026-03-25T00:49:56.471Z",
+          "upvotes": 23,
+          "comments": 2,
+          "topic_key": "reasoning_alignment_eval",
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.8
+        },
+        {
+          "report_date": "2026-03-25",
+          "paper_id": "2603.22446",
+          "title": "Sparse but Critical: A Token-Level Analysis of Distributional Shifts in RLVR Fine-Tuning of LLMs",
+          "authors": [
+            "Haoming Meng",
+            "Kexin Huang",
+            "Shaohang Wei",
+            "Chiyu Ma",
+            "Shuo Yang",
+            "Xue Wang",
+            "Guoyin Wang",
+            "Bolin Ding",
+            "Jingren Zhou"
+          ],
+          "abstract": "Reinforcement learning with verifiable rewards (RLVR) has significantly improved reasoning in large language models (LLMs), yet the token-level mechanisms underlying these improvements remain unclear. We present a systematic empirical study of RLVR's distributional effects organized around three main analyses: (1) token-level characterization of distributional shifts between base and RL models, (2) the impact of token-level distributional shifts on sequence-level reasoning performance through cross-sampling interventions, and (3) fine-grained mechanics of these shifts at the token level. We find that RL fine-tuning induces highly sparse and targeted changes, with only a small fraction of token distributions exhibiting meaningful divergence between the base and RL policies. We further characterize the structure and evolution of these shifts through analyses of token entropy, positional concentration, and reallocation of probability mass. To assess the functional importance of these sparse changes, we conduct cross-sampling experiments that selectively swap token choices between the base and RL models with varying intervention budgets. We show that inserting only a small fraction of RL-sampled tokens into base generations progressively recovers RL performance gains, while injecting a similarly small number of base token choices into otherwise RL-generated sequences collapses performance to base levels, isolating a small set of token-level decisions directly responsible for RLVR's performance gains. Finally, we explore divergence-weighted variants of the advantage signal as a diagnostic intervention, finding that they can yield improvements over baselines. Together, our results shed light on the distributional changes induced by RLVR and provide a fine-grained, token-level lens for understanding RLVR fine-tuning as a targeted refinement process.",
+          "hf_url": "https://huggingface.co/papers/2603.22446",
+          "arxiv_url": "https://arxiv.org/abs/2603.22446",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.22446",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.22446",
+          "github_url": "",
+          "submitted_by": "taesiri",
+          "submitted_at": "2026-03-25T01:02:32.272Z",
+          "upvotes": 6,
+          "comments": 1,
+          "topic_key": "reasoning_alignment_eval",
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.86
+        },
+        {
+          "report_date": "2026-03-25",
+          "paper_id": "2603.23471",
+          "title": "Regulating AI Agents",
+          "authors": [
+            "Kathrin Gardhouse",
+            "Amin Oueslati",
+            "Noam Kolt"
+          ],
+          "abstract": "AI agents -- systems that can independently take actions to pursue complex goals with only limited human oversight -- have entered the mainstream. These systems are now being widely used to produce software, conduct business activities, and automate everyday personal tasks. While AI agents implicate many areas of law, ranging from agency law and contracts to tort liability and labor law, they present particularly pressing questions for the most globally consequential AI regulation: the European Union's AI Act. Promulgated prior to the development and widespread use of AI agents, the EU AI Act faces significant obstacles in confronting the governance challenges arising from this transformative technology, such as performance failures in autonomous task execution, the risk of misuse of agents by malicious actors, and unequal access to the economic opportunities afforded by AI agents. We systematically analyze the EU AI Act's response to these challenges, focusing on both the substantive provisions of the regulation and, crucially, the institutional frameworks that aim to support its implementation. Our analysis of the Act's allocation of monitoring and enforcement responsibilities, reliance on industry self-regulation, and level of government resourcing illustrates how a regulatory framework designed for conventional AI systems can be ill-suited to AI agents. Taken together, our findings suggest that policymakers in the EU and beyond will need to change course, and soon, if they are to effectively govern the next generation of AI technology.",
+          "hf_url": "https://huggingface.co/papers/2603.23471",
+          "arxiv_url": "https://arxiv.org/abs/2603.23471",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.23471",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.23471",
+          "github_url": "",
+          "submitted_by": "Noam Kolt",
+          "submitted_at": "2026-03-25T06:43:15.514Z",
+          "upvotes": 4,
+          "comments": 2,
+          "topic_key": "reasoning_alignment_eval",
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.89
+        },
+        {
+          "report_date": "2026-03-25",
+          "paper_id": "2603.21854",
+          "title": "Reasoning or Rhetoric? An Empirical Analysis of Moral Reasoning Explanations in Large Language Models",
+          "authors": [
+            "Aryan Kasat",
+            "Smriti Singh",
+            "Aman Chadha",
+            "Vinija Jain"
+          ],
+          "abstract": "Do large language models reason morally, or do they merely sound like they do? We investigate whether LLM responses to moral dilemmas exhibit genuine developmental progression through Kohlberg's stages of moral development, or whether alignment training instead produces reasoning-like outputs that superficially resemble mature moral judgment without the underlying developmental trajectory. Using an LLM-as-judge scoring pipeline validated across three judge models, we classify more than 600 responses from 13 LLMs spanning a range of architectures, parameter scales, and training regimes across six classical moral dilemmas, and conduct ten complementary analyses to characterize the nature and internal coherence of the resulting patterns. Our results reveal a striking inversion: responses overwhelmingly correspond to post-conventional reasoning (Stages 5-6) regardless of model size, architecture, or prompting strategy, the effective inverse of human developmental norms, where Stage 4 dominates. Most strikingly, a subset of models exhibit moral decoupling: systematic inconsistency between stated moral justification and action choice, a form of logical incoherence that persists across scale and prompting strategy and represents a direct reasoning consistency failure independent of rhetorical sophistication. Model scale carries a statistically significant but practically small effect; training type has no significant independent main effect; and models exhibit near-robotic cross-dilemma consistency producing logically indistinguishable responses across semantically distinct moral problems. We posit that these patterns constitute evidence for moral ventriloquism: the acquisition, through alignment training, of the rhetorical conventions of mature moral reasoning without the underlying developmental trajectory those conventions are meant to represent.",
+          "hf_url": "https://huggingface.co/papers/2603.21854",
+          "arxiv_url": "https://arxiv.org/abs/2603.21854",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.21854",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.21854",
+          "github_url": "",
+          "submitted_by": "Aman Chadha",
+          "submitted_at": "2026-03-25T03:07:23.120Z",
+          "upvotes": 3,
+          "comments": 2,
+          "topic_key": "reasoning_alignment_eval",
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.97
+        },
+        {
+          "report_date": "2026-03-25",
+          "paper_id": "2603.22350",
+          "title": "Session Risk Memory (SRM): Temporal Authorization for Deterministic Pre-Execution Safety Gates",
+          "authors": [
+            "Florin Adrian Chitan"
+          ],
+          "abstract": "Deterministic pre-execution safety gates evaluate whether individual agent actions are compatible with their assigned roles. While effective at per-action authorization, these systems are structurally blind to distributed attacks that decompose harmful intent across multiple individually-compliant steps. This paper introduces Session Risk Memory (SRM), a lightweight deterministic module that extends stateless execution gates with trajectory-level authorization. SRM maintains a compact semantic centroid representing the evolving behavioral profile of an agent session and accumulates a risk signal through exponential moving average over baseline-subtracted gate outputs. It operates on the same semantic vector representation as the underlying gate, requiring no additional model components, training, or probabilistic inference. We evaluate SRM on a multi-turn benchmark of 80 sessions containing slow-burn exfiltration, gradual privilege escalation, and compliance drift scenarios. Results show that ILION+SRM achieves F1 = 1.0000 with 0% false positive rate, compared to stateless ILION at F1 = 0.9756 with 5% FPR, while maintaining 100% detection rate for both systems. Critically, SRM eliminates all false positives with a per-turn overhead under 250 microseconds. The framework introduces a conceptual distinction between spatial authorization consistency (evaluated per action) and temporal authorization consistency (evaluated over trajectory), providing a principled basis for session-level safety in agentic systems.",
+          "hf_url": "https://huggingface.co/papers/2603.22350",
+          "arxiv_url": "https://arxiv.org/abs/2603.22350",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.22350",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.22350",
+          "github_url": "",
+          "submitted_by": "adrian chitan",
+          "submitted_at": "2026-03-25T05:07:19.449Z",
+          "upvotes": 1,
+          "comments": 2,
+          "topic_key": "reasoning_alignment_eval",
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.85
         }
       ]
     },
@@ -1022,13 +1077,13 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-03-25T00:50:53.746Z",
-          "upvotes": 83,
+          "upvotes": 84,
           "comments": 3,
           "topic_key": "datasets_benchmarks",
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.97
+          "classification_confidence": 0.95
         },
         {
           "report_date": "2026-03-25",
@@ -1057,7 +1112,7 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.98
+          "classification_confidence": 0.97
         },
         {
           "report_date": "2026-03-25",
@@ -1089,104 +1144,7 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.97
-        }
-      ]
-    },
-    {
-      "topic_label": "Generative Foundations",
-      "count": 3,
-      "share": 8.82,
-      "papers": [
-        {
-          "report_date": "2026-03-25",
-          "paper_id": "2603.22458",
-          "title": "MinerU-Diffusion: Rethinking Document OCR as Inverse Rendering via Diffusion Decoding",
-          "authors": [
-            "Hejun Dong",
-            "Junbo Niu",
-            "Bin Wang",
-            "Weijun Zeng",
-            "Wentao Zhang",
-            "Conghui He"
-          ],
-          "abstract": "Optical character recognition (OCR) has evolved from line-level transcription to structured document parsing, requiring models to recover long-form sequences containing layout, tables, and formulas. Despite recent advances in vision-language models, most existing systems rely on autoregressive decoding, which introduces sequential latency and amplifies error propagation in long documents. In this work, we revisit document OCR from an inverse rendering perspective, arguing that left-to-right causal generation is an artifact of serialization rather than an intrinsic property of the task. Motivated by this insight, we propose MinerU-Diffusion, a unified diffusion-based framework that replaces autoregressive sequential decoding with parallel diffusion denoising under visual conditioning. MinerU-Diffusion employs a block-wise diffusion decoder and an uncertainty-driven curriculum learning strategy to enable stable training and efficient long-sequence inference. Extensive experiments demonstrate that MinerU-Diffusion consistently improves robustness while achieving up to 3.2x faster decoding compared to autoregressive baselines. Evaluations on the proposed Semantic Shuffle benchmark further confirm its reduced dependence on linguistic priors and stronger visual OCR capability.",
-          "hf_url": "https://huggingface.co/papers/2603.22458",
-          "arxiv_url": "https://arxiv.org/abs/2603.22458",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.22458",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.22458",
-          "github_url": "",
-          "submitted_by": "taesiri",
-          "submitted_at": "2026-03-25T01:04:17.857Z",
-          "upvotes": 122,
-          "comments": 6,
-          "topic_key": "generative_foundations",
-          "topic_label": "Generative Foundations",
-          "matched_terms": [],
-          "classification_source": "codex",
           "classification_confidence": 0.94
-        },
-        {
-          "report_date": "2026-03-25",
-          "paper_id": "2603.23499",
-          "title": "DA-Flow: Degradation-Aware Optical Flow Estimation with Diffusion Models",
-          "authors": [
-            "Jaewon Min",
-            "Jaeeun Lee",
-            "Yeji Choi",
-            "Paul Hyunbin Cho",
-            "Jin Hyeon Kim",
-            "Tae-Young Lee",
-            "Jongsik Ahn",
-            "Hwayeong Lee",
-            "Seonghyun Park",
-            "Seungryong Kim"
-          ],
-          "abstract": "Optical flow models trained on high-quality data often degrade severely when confronted with real-world corruptions such as blur, noise, and compression artifacts. To overcome this limitation, we formulate Degradation-Aware Optical Flow, a new task targeting accurate dense correspondence estimation from real-world corrupted videos. Our key insight is that the intermediate representations of image restoration diffusion models are inherently corruption-aware but lack temporal awareness. To address this limitation, we lift the model to attend across adjacent frames via full spatio-temporal attention, and empirically demonstrate that the resulting features exhibit zero-shot correspondence capabilities. Based on this finding, we present DA-Flow, a hybrid architecture that fuses these diffusion features with convolutional features within an iterative refinement framework. DA-Flow substantially outperforms existing optical flow methods under severe degradation across multiple benchmarks.",
-          "hf_url": "https://huggingface.co/papers/2603.23499",
-          "arxiv_url": "https://arxiv.org/abs/2603.23499",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.23499",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.23499",
-          "github_url": "",
-          "submitted_by": "Jaewon Min",
-          "submitted_at": "2026-03-25T06:07:41.845Z",
-          "upvotes": 46,
-          "comments": 3,
-          "topic_key": "generative_foundations",
-          "topic_label": "Generative Foundations",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.86
-        },
-        {
-          "report_date": "2026-03-25",
-          "paper_id": "2603.22281",
-          "title": "ThinkJEPA: Empowering Latent World Models with Large Vision-Language Reasoning Model",
-          "authors": [
-            "Haichao Zhang",
-            "Yijiang Li",
-            "Shwai He",
-            "Tushar Nagarajan",
-            "Mingfei Chen",
-            "Jianglin Lu",
-            "Ang Li",
-            "Yun Fu"
-          ],
-          "abstract": "Recent progress in latent world models (e.g., V-JEPA2) has shown promising capability in forecasting future world states from video observations. Nevertheless, dense prediction from a short observation window limits temporal context and can bias predictors toward local, low-level extrapolation, making it difficult to capture long-horizon semantics and reducing downstream utility. Vision--language models (VLMs), in contrast, provide strong semantic grounding and general knowledge by reasoning over uniformly sampled frames, but they are not ideal as standalone dense predictors due to compute-driven sparse sampling, a language-output bottleneck that compresses fine-grained interaction states into text-oriented representations, and a data-regime mismatch when adapting to small action-conditioned datasets. We propose a VLM-guided JEPA-style latent world modeling framework that combines dense-frame dynamics modeling with long-horizon semantic guidance via a dual-temporal pathway: a dense JEPA branch for fine-grained motion and interaction cues, and a uniformly sampled VLM thinker branch with a larger temporal stride for knowledge-rich guidance. To transfer the VLM's progressive reasoning signals effectively, we introduce a hierarchical pyramid representation extraction module that aggregates multi-layer VLM representations into guidance features compatible with latent prediction. Experiments on hand-manipulation trajectory prediction show that our method outperforms both a strong VLM-only baseline and a JEPA-predictor baseline, and yields more robust long-horizon rollout behavior.",
-          "hf_url": "https://huggingface.co/papers/2603.22281",
-          "arxiv_url": "https://arxiv.org/abs/2603.22281",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.22281",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.22281",
-          "github_url": "",
-          "submitted_by": "Haichao Zhang",
-          "submitted_at": "2026-03-25T00:17:42.953Z",
-          "upvotes": 13,
-          "comments": 2,
-          "topic_key": "generative_foundations",
-          "topic_label": "Generative Foundations",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.9
         }
       ]
     },
@@ -1218,7 +1176,7 @@
           "github_url": "",
           "submitted_by": "Leo Y",
           "submitted_at": "2026-03-25T00:21:57.570Z",
-          "upvotes": 49,
+          "upvotes": 51,
           "comments": 2,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
@@ -1248,7 +1206,7 @@
           "topic_label": "Agents and Planning",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.97
+          "classification_confidence": 0.96
         }
       ]
     },
@@ -1293,7 +1251,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.91
+          "classification_confidence": 0.9
         },
         {
           "report_date": "2026-03-25",
@@ -1328,9 +1286,38 @@
     },
     {
       "topic_label": "Learning, Optimization, and Theory",
-      "count": 1,
-      "share": 2.94,
+      "count": 2,
+      "share": 5.88,
       "papers": [
+        {
+          "report_date": "2026-03-25",
+          "paper_id": "2603.21064",
+          "title": "2Xplat: Two Experts Are Better Than One Generalist",
+          "authors": [
+            "Hwasik Jeong",
+            "Seungryong Lee",
+            "Gyeongjin Kang",
+            "Seungkwon Yang",
+            "Xiangyu Sun",
+            "Seungtae Nam",
+            "Eunbyung Park"
+          ],
+          "abstract": "Pose-free feed-forward 3D Gaussian Splatting (3DGS) has opened a new frontier for rapid 3D modeling, enabling high-quality Gaussian representations to be generated from uncalibrated multi-view images in a single forward pass. The dominant approach in this space adopts unified monolithic architectures, often built on geometry-centric 3D foundation models, to jointly estimate camera poses and synthesize 3DGS representations within a single network. While architecturally streamlined, such \"all-in-one\" designs may be suboptimal for high-fidelity 3DGS generation, as they entangle geometric reasoning and appearance modeling within a shared representation. In this work, we introduce 2Xplat, a pose-free feed-forward 3DGS framework based on a two-expert design that explicitly separates geometry estimation from Gaussian generation. A dedicated geometry expert first predicts camera poses, which are then explicitly passed to a powerful appearance expert that synthesizes 3D Gaussians. Despite its conceptual simplicity, being largely underexplored in prior works, the proposed approach proves highly effective. In fewer than 5K training iterations, the proposed two-experts pipeline substantially outperforms prior pose-free feed-forward 3DGS approaches and achieves performance on par with state-of-the-art posed methods. These results challenge the prevailing unified paradigm and suggest the potential advantages of modular design principles for complex 3D geometric estimation and appearance synthesis tasks.",
+          "hf_url": "https://huggingface.co/papers/2603.21064",
+          "arxiv_url": "https://arxiv.org/abs/2603.21064",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.21064",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.21064",
+          "github_url": "",
+          "submitted_by": "Lani Ko",
+          "submitted_at": "2026-03-25T05:17:49.621Z",
+          "upvotes": 24,
+          "comments": 4,
+          "topic_key": "learning_theory",
+          "topic_label": "Learning, Optimization, and Theory",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.42
+        },
         {
           "report_date": "2026-03-25",
           "paper_id": "2603.17198",
@@ -1356,43 +1343,44 @@
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.96
+          "classification_confidence": 0.95
         }
       ]
     },
     {
-      "topic_label": "Other AI",
+      "topic_label": "Generative Foundations",
       "count": 1,
       "share": 2.94,
       "papers": [
         {
           "report_date": "2026-03-25",
-          "paper_id": "2603.21064",
-          "title": "2Xplat: Two Experts Are Better Than One Generalist",
+          "paper_id": "2603.22281",
+          "title": "ThinkJEPA: Empowering Latent World Models with Large Vision-Language Reasoning Model",
           "authors": [
-            "Hwasik Jeong",
-            "Seungryong Lee",
-            "Gyeongjin Kang",
-            "Seungkwon Yang",
-            "Xiangyu Sun",
-            "Seungtae Nam",
-            "Eunbyung Park"
+            "Haichao Zhang",
+            "Yijiang Li",
+            "Shwai He",
+            "Tushar Nagarajan",
+            "Mingfei Chen",
+            "Jianglin Lu",
+            "Ang Li",
+            "Yun Fu"
           ],
-          "abstract": "Pose-free feed-forward 3D Gaussian Splatting (3DGS) has opened a new frontier for rapid 3D modeling, enabling high-quality Gaussian representations to be generated from uncalibrated multi-view images in a single forward pass. The dominant approach in this space adopts unified monolithic architectures, often built on geometry-centric 3D foundation models, to jointly estimate camera poses and synthesize 3DGS representations within a single network. While architecturally streamlined, such \"all-in-one\" designs may be suboptimal for high-fidelity 3DGS generation, as they entangle geometric reasoning and appearance modeling within a shared representation. In this work, we introduce 2Xplat, a pose-free feed-forward 3DGS framework based on a two-expert design that explicitly separates geometry estimation from Gaussian generation. A dedicated geometry expert first predicts camera poses, which are then explicitly passed to a powerful appearance expert that synthesizes 3D Gaussians. Despite its conceptual simplicity, being largely underexplored in prior works, the proposed approach proves highly effective. In fewer than 5K training iterations, the proposed two-experts pipeline substantially outperforms prior pose-free feed-forward 3DGS approaches and achieves performance on par with state-of-the-art posed methods. These results challenge the prevailing unified paradigm and suggest the potential advantages of modular design principles for complex 3D geometric estimation and appearance synthesis tasks.",
-          "hf_url": "https://huggingface.co/papers/2603.21064",
-          "arxiv_url": "https://arxiv.org/abs/2603.21064",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.21064",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.21064",
+          "abstract": "Recent progress in latent world models (e.g., V-JEPA2) has shown promising capability in forecasting future world states from video observations. Nevertheless, dense prediction from a short observation window limits temporal context and can bias predictors toward local, low-level extrapolation, making it difficult to capture long-horizon semantics and reducing downstream utility. Vision--language models (VLMs), in contrast, provide strong semantic grounding and general knowledge by reasoning over uniformly sampled frames, but they are not ideal as standalone dense predictors due to compute-driven sparse sampling, a language-output bottleneck that compresses fine-grained interaction states into text-oriented representations, and a data-regime mismatch when adapting to small action-conditioned datasets. We propose a VLM-guided JEPA-style latent world modeling framework that combines dense-frame dynamics modeling with long-horizon semantic guidance via a dual-temporal pathway: a dense JEPA branch for fine-grained motion and interaction cues, and a uniformly sampled VLM thinker branch with a larger temporal stride for knowledge-rich guidance. To transfer the VLM's progressive reasoning signals effectively, we introduce a hierarchical pyramid representation extraction module that aggregates multi-layer VLM representations into guidance features compatible with latent prediction. Experiments on hand-manipulation trajectory prediction show that our method outperforms both a strong VLM-only baseline and a JEPA-predictor baseline, and yields more robust long-horizon rollout behavior.",
+          "hf_url": "https://huggingface.co/papers/2603.22281",
+          "arxiv_url": "https://arxiv.org/abs/2603.22281",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.22281",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.22281",
           "github_url": "",
-          "submitted_by": "Lani Ko",
-          "submitted_at": "2026-03-25T05:17:49.621Z",
-          "upvotes": 24,
-          "comments": 4,
-          "topic_key": "other_ai",
-          "topic_label": "Other AI",
+          "submitted_by": "Haichao Zhang",
+          "submitted_at": "2026-03-25T00:17:42.953Z",
+          "upvotes": 13,
+          "comments": 2,
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.25
+          "classification_confidence": 0.95
         }
       ]
     },
@@ -1419,13 +1407,13 @@
           "github_url": "",
           "submitted_by": "Yohaï-Eliel BERREBY",
           "submitted_at": "2026-03-25T14:21:56.379Z",
-          "upvotes": 9,
+          "upvotes": 10,
           "comments": 2,
           "topic_key": "robotics_embodied",
           "topic_label": "Robotics and Embodied AI",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.66
+          "classification_confidence": 0.7
         }
       ]
     }
@@ -1451,13 +1439,13 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-03-25T01:04:17.857Z",
-      "upvotes": 122,
+      "upvotes": 127,
       "comments": 6,
-      "topic_key": "generative_foundations",
-      "topic_label": "Generative Foundations",
+      "topic_key": "multimodal_generative",
+      "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.94
+      "classification_confidence": 0.97
     },
     {
       "report_date": "2026-03-25",
@@ -1481,13 +1469,13 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-03-25T00:50:53.746Z",
-      "upvotes": 83,
+      "upvotes": 84,
       "comments": 3,
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.97
+      "classification_confidence": 0.95
     },
     {
       "report_date": "2026-03-25",
@@ -1509,7 +1497,7 @@
       "github_url": "",
       "submitted_by": "Huang",
       "submitted_at": "2026-03-25T01:04:51.255Z",
-      "upvotes": 56,
+      "upvotes": 57,
       "comments": 4,
       "topic_key": "multimodal_agents",
       "topic_label": "Multimodal Agents",
@@ -1540,7 +1528,7 @@
       "github_url": "",
       "submitted_by": "Leo Y",
       "submitted_at": "2026-03-25T00:21:57.570Z",
-      "upvotes": 49,
+      "upvotes": 51,
       "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -1572,13 +1560,13 @@
       "github_url": "",
       "submitted_by": "Jaewon Min",
       "submitted_at": "2026-03-25T06:07:41.845Z",
-      "upvotes": 46,
+      "upvotes": 47,
       "comments": 3,
-      "topic_key": "generative_foundations",
-      "topic_label": "Generative Foundations",
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.86
+      "classification_confidence": 0.79
     },
     {
       "report_date": "2026-03-25",
@@ -1600,13 +1588,13 @@
       "github_url": "",
       "submitted_by": "Minghan Qin",
       "submitted_at": "2026-03-25T02:02:36.667Z",
-      "upvotes": 39,
+      "upvotes": 41,
       "comments": 3,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.74
+      "classification_confidence": 0.7
     },
     {
       "report_date": "2026-03-25",
@@ -1641,7 +1629,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.93
+      "classification_confidence": 0.94
     },
     {
       "report_date": "2026-03-25",
@@ -1668,7 +1656,7 @@
       "github_url": "",
       "submitted_by": "wujie10558@gmail.com",
       "submitted_at": "2026-03-25T00:31:50.385Z",
-      "upvotes": 33,
+      "upvotes": 34,
       "comments": 2,
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
@@ -1698,7 +1686,7 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-03-25T13:00:00.494Z",
-      "upvotes": 25,
+      "upvotes": 26,
       "comments": 5,
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
@@ -1729,11 +1717,11 @@
       "submitted_at": "2026-03-25T05:17:49.621Z",
       "upvotes": 24,
       "comments": 4,
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.25
+      "classification_confidence": 0.42
     },
     {
       "report_date": "2026-03-25",
@@ -1756,13 +1744,13 @@
       "github_url": "",
       "submitted_by": "Yunheng Li",
       "submitted_at": "2026-03-25T00:49:56.471Z",
-      "upvotes": 21,
+      "upvotes": 23,
       "comments": 2,
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.72
+      "classification_confidence": 0.8
     },
     {
       "report_date": "2026-03-25",
@@ -1797,7 +1785,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.87
+      "classification_confidence": 0.9
     },
     {
       "report_date": "2026-03-25",
@@ -1827,7 +1815,7 @@
       "topic_label": "Generative Foundations",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.9
+      "classification_confidence": 0.95
     },
     {
       "report_date": "2026-03-25",
@@ -1857,7 +1845,7 @@
       "topic_label": "Multimodal Agents",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.98
+      "classification_confidence": 0.99
     },
     {
       "report_date": "2026-03-25",
@@ -1877,13 +1865,13 @@
       "github_url": "",
       "submitted_by": "Yohaï-Eliel BERREBY",
       "submitted_at": "2026-03-25T14:21:56.379Z",
-      "upvotes": 9,
+      "upvotes": 10,
       "comments": 2,
       "topic_key": "robotics_embodied",
       "topic_label": "Robotics and Embodied AI",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.66
+      "classification_confidence": 0.7
     },
     {
       "report_date": "2026-03-25",
@@ -1921,7 +1909,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.91
+      "classification_confidence": 0.9
     },
     {
       "report_date": "2026-03-25",
@@ -1950,7 +1938,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.98
+      "classification_confidence": 0.97
     },
     {
       "report_date": "2026-03-25",
@@ -1977,7 +1965,7 @@
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.96
+      "classification_confidence": 0.95
     },
     {
       "report_date": "2026-03-25",
@@ -2011,7 +1999,38 @@
       "topic_label": "Multimodal Agents",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.99
+      "classification_confidence": 0.98
+    },
+    {
+      "report_date": "2026-03-25",
+      "paper_id": "2603.22446",
+      "title": "Sparse but Critical: A Token-Level Analysis of Distributional Shifts in RLVR Fine-Tuning of LLMs",
+      "authors": [
+        "Haoming Meng",
+        "Kexin Huang",
+        "Shaohang Wei",
+        "Chiyu Ma",
+        "Shuo Yang",
+        "Xue Wang",
+        "Guoyin Wang",
+        "Bolin Ding",
+        "Jingren Zhou"
+      ],
+      "abstract": "Reinforcement learning with verifiable rewards (RLVR) has significantly improved reasoning in large language models (LLMs), yet the token-level mechanisms underlying these improvements remain unclear. We present a systematic empirical study of RLVR's distributional effects organized around three main analyses: (1) token-level characterization of distributional shifts between base and RL models, (2) the impact of token-level distributional shifts on sequence-level reasoning performance through cross-sampling interventions, and (3) fine-grained mechanics of these shifts at the token level. We find that RL fine-tuning induces highly sparse and targeted changes, with only a small fraction of token distributions exhibiting meaningful divergence between the base and RL policies. We further characterize the structure and evolution of these shifts through analyses of token entropy, positional concentration, and reallocation of probability mass. To assess the functional importance of these sparse changes, we conduct cross-sampling experiments that selectively swap token choices between the base and RL models with varying intervention budgets. We show that inserting only a small fraction of RL-sampled tokens into base generations progressively recovers RL performance gains, while injecting a similarly small number of base token choices into otherwise RL-generated sequences collapses performance to base levels, isolating a small set of token-level decisions directly responsible for RLVR's performance gains. Finally, we explore divergence-weighted variants of the advantage signal as a diagnostic intervention, finding that they can yield improvements over baselines. Together, our results shed light on the distributional changes induced by RLVR and provide a fine-grained, token-level lens for understanding RLVR fine-tuning as a targeted refinement process.",
+      "hf_url": "https://huggingface.co/papers/2603.22446",
+      "arxiv_url": "https://arxiv.org/abs/2603.22446",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.22446",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.22446",
+      "github_url": "",
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-03-25T01:02:32.272Z",
+      "upvotes": 6,
+      "comments": 1,
+      "topic_key": "reasoning_alignment_eval",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.86
     },
     {
       "report_date": "2026-03-25",
@@ -2069,7 +2088,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.88
+      "classification_confidence": 0.85
     },
     {
       "report_date": "2026-03-25",
@@ -2100,38 +2119,7 @@
       "topic_label": "Multimodal Agents",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.94
-    },
-    {
-      "report_date": "2026-03-25",
-      "paper_id": "2603.22446",
-      "title": "Sparse but Critical: A Token-Level Analysis of Distributional Shifts in RLVR Fine-Tuning of LLMs",
-      "authors": [
-        "Haoming Meng",
-        "Kexin Huang",
-        "Shaohang Wei",
-        "Chiyu Ma",
-        "Shuo Yang",
-        "Xue Wang",
-        "Guoyin Wang",
-        "Bolin Ding",
-        "Jingren Zhou"
-      ],
-      "abstract": "Reinforcement learning with verifiable rewards (RLVR) has significantly improved reasoning in large language models (LLMs), yet the token-level mechanisms underlying these improvements remain unclear. We present a systematic empirical study of RLVR's distributional effects organized around three main analyses: (1) token-level characterization of distributional shifts between base and RL models, (2) the impact of token-level distributional shifts on sequence-level reasoning performance through cross-sampling interventions, and (3) fine-grained mechanics of these shifts at the token level. We find that RL fine-tuning induces highly sparse and targeted changes, with only a small fraction of token distributions exhibiting meaningful divergence between the base and RL policies. We further characterize the structure and evolution of these shifts through analyses of token entropy, positional concentration, and reallocation of probability mass. To assess the functional importance of these sparse changes, we conduct cross-sampling experiments that selectively swap token choices between the base and RL models with varying intervention budgets. We show that inserting only a small fraction of RL-sampled tokens into base generations progressively recovers RL performance gains, while injecting a similarly small number of base token choices into otherwise RL-generated sequences collapses performance to base levels, isolating a small set of token-level decisions directly responsible for RLVR's performance gains. Finally, we explore divergence-weighted variants of the advantage signal as a diagnostic intervention, finding that they can yield improvements over baselines. Together, our results shed light on the distributional changes induced by RLVR and provide a fine-grained, token-level lens for understanding RLVR fine-tuning as a targeted refinement process.",
-      "hf_url": "https://huggingface.co/papers/2603.22446",
-      "arxiv_url": "https://arxiv.org/abs/2603.22446",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.22446",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.22446",
-      "github_url": "",
-      "submitted_by": "taesiri",
-      "submitted_at": "2026-03-25T01:02:32.272Z",
-      "upvotes": 5,
-      "comments": 1,
-      "topic_key": "reasoning_alignment_eval",
-      "topic_label": "Reasoning, Alignment, and Evaluation",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.91
+      "classification_confidence": 0.88
     },
     {
       "report_date": "2026-03-25",
@@ -2157,7 +2145,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.96
     },
     {
       "report_date": "2026-03-25",
@@ -2182,7 +2170,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.94
+      "classification_confidence": 0.89
     },
     {
       "report_date": "2026-03-25",
@@ -2209,7 +2197,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.85
+      "classification_confidence": 0.86
     },
     {
       "report_date": "2026-03-25",
@@ -2235,7 +2223,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.92
+      "classification_confidence": 0.8
     },
     {
       "report_date": "2026-03-25",
@@ -2261,7 +2249,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.98
+      "classification_confidence": 0.97
     },
     {
       "report_date": "2026-03-25",
@@ -2297,7 +2285,7 @@
       "topic_label": "Multimodal Agents",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.83
+      "classification_confidence": 0.95
     },
     {
       "report_date": "2026-03-25",
@@ -2322,7 +2310,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.88
+      "classification_confidence": 0.87
     },
     {
       "report_date": "2026-03-25",
@@ -2346,7 +2334,7 @@
       "topic_label": "Agents and Planning",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.97
+      "classification_confidence": 0.96
     },
     {
       "report_date": "2026-03-25",
@@ -2369,7 +2357,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.87
+      "classification_confidence": 0.85
     },
     {
       "report_date": "2026-03-25",
@@ -2401,7 +2389,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.97
+      "classification_confidence": 0.94
     },
     {
       "report_date": "2026-03-25",
@@ -2425,7 +2413,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.9
     }
   ]
 }

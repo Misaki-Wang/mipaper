@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-27T23:17:42Z",
+  "generated_at": "2026-03-29T11:37:44Z",
   "report_kind": "hf_daily",
   "report_date": "2026-03-26",
   "source_url": "https://huggingface.co/papers/date/2026-03-26",
@@ -15,24 +15,24 @@
     {
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
-      "count": 3,
-      "share": 13.64
+      "count": 1,
+      "share": 4.55
     },
     {
       "topic_key": "multimodal_agents",
       "topic_label": "Multimodal Agents",
-      "count": 1,
-      "share": 4.55
+      "count": 2,
+      "share": 9.09
     }
   ],
   "topic_distribution": [
     {
-      "topic_label": "Reasoning, Alignment, and Evaluation",
-      "count": 5,
-      "share": 22.73
+      "topic_label": "Multimodal Understanding and Vision",
+      "count": 6,
+      "share": 27.27
     },
     {
-      "topic_label": "Multimodal Understanding and Vision",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
       "count": 4,
       "share": 18.18
     },
@@ -42,19 +42,19 @@
       "share": 13.64
     },
     {
-      "topic_label": "Multimodal Generative Modeling",
-      "count": 3,
-      "share": 13.64
-    },
-    {
       "topic_label": "Generative Foundations",
       "count": 2,
       "share": 9.09
     },
     {
-      "topic_label": "Agents and Planning",
-      "count": 1,
-      "share": 4.55
+      "topic_label": "LLMs and Language",
+      "count": 2,
+      "share": 9.09
+    },
+    {
+      "topic_label": "Multimodal Agents",
+      "count": 2,
+      "share": 9.09
     },
     {
       "topic_label": "Domain Applications",
@@ -62,12 +62,7 @@
       "share": 4.55
     },
     {
-      "topic_label": "LLMs and Language",
-      "count": 1,
-      "share": 4.55
-    },
-    {
-      "topic_label": "Multimodal Agents",
+      "topic_label": "Multimodal Generative Modeling",
       "count": 1,
       "share": 4.55
     },
@@ -126,13 +121,77 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-03-26T01:05:05.768Z",
-      "upvotes": 83,
+      "upvotes": 86,
       "comments": 5,
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.96
+      "classification_confidence": 0.98
+    },
+    {
+      "report_date": "2026-03-26",
+      "paper_id": "2603.24533",
+      "title": "UI-Voyager: A Self-Evolving GUI Agent Learning via Failed Experience",
+      "authors": [
+        "Zichuan Lin",
+        "Feiyu Liu",
+        "Yijun Yang",
+        "Jiafei Lyu",
+        "Yiming Gao",
+        "Yicheng Liu",
+        "Zhicong Lu",
+        "Yangbin Yu",
+        "Mingyu Yang",
+        "Junyou Li",
+        "Deheng Ye",
+        "Jie Jiang"
+      ],
+      "abstract": "Autonomous mobile GUI agents have attracted increasing attention along with the advancement of Multimodal Large Language Models (MLLMs). However, existing methods still suffer from inefficient learning from failed trajectories and ambiguous credit assignment under sparse rewards for long-horizon GUI tasks. To that end, we propose UI-Voyager, a novel two-stage self-evolving mobile GUI agent. In the first stage, we employ Rejection Fine-Tuning (RFT), which enables the continuous co-evolution of data and models in a fully autonomous loop. The second stage introduces Group Relative Self-Distillation (GRSD), which identifies critical fork points in group rollouts and constructs dense step-level supervision from successful trajectories to correct failed ones. Extensive experiments on AndroidWorld show that our 4B model achieves an 81.0% Pass@1 success rate, outperforming numerous recent baselines and exceeding human-level performance. Ablation and case studies further verify the effectiveness of GRSD. Our method represents a significant leap toward efficient, self-evolving, and high-performance mobile GUI automation without expensive manual data annotation.",
+      "hf_url": "https://huggingface.co/papers/2603.24533",
+      "arxiv_url": "https://arxiv.org/abs/2603.24533",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.24533",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.24533",
+      "github_url": "",
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-03-26T01:08:00.107Z",
+      "upvotes": 39,
+      "comments": 3,
+      "topic_key": "multimodal_agents",
+      "topic_label": "Multimodal Agents",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.83
+    },
+    {
+      "report_date": "2026-03-26",
+      "paper_id": "2603.24472",
+      "title": "Why Does Self-Distillation (Sometimes) Degrade the Reasoning Capability of LLMs?",
+      "authors": [
+        "Jeonghye Kim",
+        "Xufang Luo",
+        "Minbeom Kim",
+        "Sangmook Lee",
+        "Dohyung Kim",
+        "Jiwon Jeon",
+        "Dongsheng Li",
+        "Yuqing Yang"
+      ],
+      "abstract": "Self-distillation has emerged as an effective post-training paradigm for LLMs, often improving performance while shortening reasoning traces. However, in mathematical reasoning, we find that it can reduce response length while degrading performance. We trace this degradation to the suppression of epistemic verbalization - the model's expression of uncertainty during reasoning. Through controlled experiments varying conditioning context richness and task coverage, we show that conditioning the teacher on rich information suppresses uncertainty expression, enabling rapid in-domain optimization with limited task coverage but harming OOD performance, where unseen problems benefit from expressing uncertainty and adjusting accordingly. Across Qwen3-8B, DeepSeek-Distill-Qwen-7B, and Olmo3-7B-Instruct, we observe performance drops of up to 40%. Our findings highlight that exposing appropriate levels of uncertainty is crucial for robust reasoning and underscore the importance of optimizing reasoning behavior beyond merely reinforcing correct answer traces.",
+      "hf_url": "https://huggingface.co/papers/2603.24472",
+      "arxiv_url": "https://arxiv.org/abs/2603.24472",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.24472",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.24472",
+      "github_url": "",
+      "submitted_by": "JeonghyeKim",
+      "submitted_at": "2026-03-26T02:02:15.866Z",
+      "upvotes": 38,
+      "comments": 6,
+      "topic_key": "reasoning_alignment_eval",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.93
     },
     {
       "report_date": "2026-03-26",
@@ -163,71 +222,7 @@
       "topic_label": "Multimodal Agents",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.83
-    },
-    {
-      "report_date": "2026-03-26",
-      "paper_id": "2603.24472",
-      "title": "Why Does Self-Distillation (Sometimes) Degrade the Reasoning Capability of LLMs?",
-      "authors": [
-        "Jeonghye Kim",
-        "Xufang Luo",
-        "Minbeom Kim",
-        "Sangmook Lee",
-        "Dohyung Kim",
-        "Jiwon Jeon",
-        "Dongsheng Li",
-        "Yuqing Yang"
-      ],
-      "abstract": "Self-distillation has emerged as an effective post-training paradigm for LLMs, often improving performance while shortening reasoning traces. However, in mathematical reasoning, we find that it can reduce response length while degrading performance. We trace this degradation to the suppression of epistemic verbalization - the model's expression of uncertainty during reasoning. Through controlled experiments varying conditioning context richness and task coverage, we show that conditioning the teacher on rich information suppresses uncertainty expression, enabling rapid in-domain optimization with limited task coverage but harming OOD performance, where unseen problems benefit from expressing uncertainty and adjusting accordingly. Across Qwen3-8B, DeepSeek-Distill-Qwen-7B, and Olmo3-7B-Instruct, we observe performance drops of up to 40%. Our findings highlight that exposing appropriate levels of uncertainty is crucial for robust reasoning and underscore the importance of optimizing reasoning behavior beyond merely reinforcing correct answer traces.",
-      "hf_url": "https://huggingface.co/papers/2603.24472",
-      "arxiv_url": "https://arxiv.org/abs/2603.24472",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.24472",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.24472",
-      "github_url": "",
-      "submitted_by": "JeonghyeKim",
-      "submitted_at": "2026-03-26T02:02:15.866Z",
-      "upvotes": 37,
-      "comments": 6,
-      "topic_key": "reasoning_alignment_eval",
-      "topic_label": "Reasoning, Alignment, and Evaluation",
-      "matched_terms": [],
-      "classification_source": "codex",
       "classification_confidence": 0.95
-    },
-    {
-      "report_date": "2026-03-26",
-      "paper_id": "2603.24533",
-      "title": "UI-Voyager: A Self-Evolving GUI Agent Learning via Failed Experience",
-      "authors": [
-        "Zichuan Lin",
-        "Feiyu Liu",
-        "Yijun Yang",
-        "Jiafei Lyu",
-        "Yiming Gao",
-        "Yicheng Liu",
-        "Zhicong Lu",
-        "Yangbin Yu",
-        "Mingyu Yang",
-        "Junyou Li",
-        "Deheng Ye",
-        "Jie Jiang"
-      ],
-      "abstract": "Autonomous mobile GUI agents have attracted increasing attention along with the advancement of Multimodal Large Language Models (MLLMs). However, existing methods still suffer from inefficient learning from failed trajectories and ambiguous credit assignment under sparse rewards for long-horizon GUI tasks. To that end, we propose UI-Voyager, a novel two-stage self-evolving mobile GUI agent. In the first stage, we employ Rejection Fine-Tuning (RFT), which enables the continuous co-evolution of data and models in a fully autonomous loop. The second stage introduces Group Relative Self-Distillation (GRSD), which identifies critical fork points in group rollouts and constructs dense step-level supervision from successful trajectories to correct failed ones. Extensive experiments on AndroidWorld show that our 4B model achieves an 81.0% Pass@1 success rate, outperforming numerous recent baselines and exceeding human-level performance. Ablation and case studies further verify the effectiveness of GRSD. Our method represents a significant leap toward efficient, self-evolving, and high-performance mobile GUI automation without expensive manual data annotation.",
-      "hf_url": "https://huggingface.co/papers/2603.24533",
-      "arxiv_url": "https://arxiv.org/abs/2603.24533",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.24533",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.24533",
-      "github_url": "",
-      "submitted_by": "taesiri",
-      "submitted_at": "2026-03-26T01:08:00.107Z",
-      "upvotes": 35,
-      "comments": 3,
-      "topic_key": "agents_planning",
-      "topic_label": "Agents and Planning",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.94
     },
     {
       "report_date": "2026-03-26",
@@ -255,7 +250,42 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.93
+      "classification_confidence": 0.94
+    },
+    {
+      "report_date": "2026-03-26",
+      "paper_id": "2603.23994",
+      "title": "Understanding the Challenges in Iterative Generative Optimization with LLMs",
+      "authors": [
+        "Allen Nie",
+        "Xavier Daull",
+        "Zhiyi Kuang",
+        "Abhinav Akkiraju",
+        "Anish Chaudhuri",
+        "Max Piasevoli",
+        "Ryan Rong",
+        "YuCheng Yuan",
+        "Prerit Choudhary",
+        "Shannon Xiao",
+        "Rasool Fakoor",
+        "Adith Swaminathan",
+        "Ching-An Cheng"
+      ],
+      "abstract": "Generative optimization uses large language models (LLMs) to iteratively improve artifacts (such as code, workflows or prompts) using execution feedback. It is a promising approach to building self-improving agents, yet in practice remains brittle: despite active research, only 9% of surveyed agents used any automated optimization. We argue that this brittleness arises because, to set up a learning loop, an engineer must make ``hidden'' design choices: What can the optimizer edit and what is the \"right\" learning evidence to provide at each update? We investigate three factors that affect most applications: the starting artifact, the credit horizon for execution traces, and batching trials and errors into learning evidence. Through case studies in MLAgentBench, Atari, and BigBench Extra Hard, we find that these design decisions can determine whether generative optimization succeeds, yet they are rarely made explicit in prior work. Different starting artifacts determine which solutions are reachable in MLAgentBench, truncated traces can still improve Atari agents, and larger minibatches do not monotonically improve generalization on BBEH. We conclude that the lack of a simple, universal way to set up learning loops across domains is a major hurdle for productionization and adoption. We provide practical guidance for making these choices.",
+      "hf_url": "https://huggingface.co/papers/2603.23994",
+      "arxiv_url": "https://arxiv.org/abs/2603.23994",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.23994",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.23994",
+      "github_url": "",
+      "submitted_by": "Allen Nie",
+      "submitted_at": "2026-03-26T15:49:58.477Z",
+      "upvotes": 20,
+      "comments": 2,
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.76
     },
     {
       "report_date": "2026-03-26",
@@ -290,42 +320,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.77
-    },
-    {
-      "report_date": "2026-03-26",
-      "paper_id": "2603.23994",
-      "title": "Understanding the Challenges in Iterative Generative Optimization with LLMs",
-      "authors": [
-        "Allen Nie",
-        "Xavier Daull",
-        "Zhiyi Kuang",
-        "Abhinav Akkiraju",
-        "Anish Chaudhuri",
-        "Max Piasevoli",
-        "Ryan Rong",
-        "YuCheng Yuan",
-        "Prerit Choudhary",
-        "Shannon Xiao",
-        "Rasool Fakoor",
-        "Adith Swaminathan",
-        "Ching-An Cheng"
-      ],
-      "abstract": "Generative optimization uses large language models (LLMs) to iteratively improve artifacts (such as code, workflows or prompts) using execution feedback. It is a promising approach to building self-improving agents, yet in practice remains brittle: despite active research, only 9% of surveyed agents used any automated optimization. We argue that this brittleness arises because, to set up a learning loop, an engineer must make ``hidden'' design choices: What can the optimizer edit and what is the \"right\" learning evidence to provide at each update? We investigate three factors that affect most applications: the starting artifact, the credit horizon for execution traces, and batching trials and errors into learning evidence. Through case studies in MLAgentBench, Atari, and BigBench Extra Hard, we find that these design decisions can determine whether generative optimization succeeds, yet they are rarely made explicit in prior work. Different starting artifacts determine which solutions are reachable in MLAgentBench, truncated traces can still improve Atari agents, and larger minibatches do not monotonically improve generalization on BBEH. We conclude that the lack of a simple, universal way to set up learning loops across domains is a major hurdle for productionization and adoption. We provide practical guidance for making these choices.",
-      "hf_url": "https://huggingface.co/papers/2603.23994",
-      "arxiv_url": "https://arxiv.org/abs/2603.23994",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.23994",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.23994",
-      "github_url": "",
-      "submitted_by": "Allen Nie",
-      "submitted_at": "2026-03-26T15:49:58.477Z",
-      "upvotes": 17,
-      "comments": 2,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.72
+      "classification_confidence": 0.82
     },
     {
       "report_date": "2026-03-26",
@@ -354,14 +349,182 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.97
     }
   ],
   "topics": [
     {
+      "topic_label": "Multimodal Understanding and Vision",
+      "count": 6,
+      "share": 27.27,
+      "papers": [
+        {
+          "report_date": "2026-03-26",
+          "paper_id": "2603.14375",
+          "title": "The Pulse of Motion: Measuring Physical Frame Rate from Visual Dynamics",
+          "authors": [
+            "Xiangbo Gao",
+            "Mingyang Wu",
+            "Siyuan Yang",
+            "Jiongze Yu",
+            "Pardis Taghavi",
+            "Fangzhou Lin",
+            "Zhengzhong Tu"
+          ],
+          "abstract": "While recent generative video models have achieved remarkable visual realism and are being explored as world models, true physical simulation requires mastering both space and time. Current models can produce visually smooth kinematics, yet they lack a reliable internal motion pulse to ground these motions in a consistent, real-world time scale. This temporal ambiguity stems from the common practice of indiscriminately training on videos with vastly different real-world speeds, forcing them into standardized frame rates. This leads to what we term chronometric hallucination: generated sequences exhibit ambiguous, unstable, and uncontrollable physical motion speeds. To address this, we propose Visual Chronometer, a predictor that recovers the Physical Frames Per Second (PhyFPS) directly from the visual dynamics of an input video. Trained via controlled temporal resampling, our method estimates the true temporal scale implied by the motion itself, bypassing unreliable metadata. To systematically quantify this issue, we establish two benchmarks, PhyFPS-Bench-Real and PhyFPS-Bench-Gen. Our evaluations reveal a harsh reality: state-of-the-art video generators suffer from severe PhyFPS misalignment and temporal instability. Finally, we demonstrate that applying PhyFPS corrections significantly improves the human-perceived naturalness of AI-generated videos. Our project page is https://xiangbogaobarry.github.io/Visual_Chronometer/.",
+          "hf_url": "https://huggingface.co/papers/2603.14375",
+          "arxiv_url": "https://arxiv.org/abs/2603.14375",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.14375",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.14375",
+          "github_url": "",
+          "submitted_by": "Zhengzhong Tu",
+          "submitted_at": "2026-03-26T17:24:09.932Z",
+          "upvotes": 16,
+          "comments": 3,
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.88
+        },
+        {
+          "report_date": "2026-03-26",
+          "paper_id": "2603.24036",
+          "title": "SpectralSplats: Robust Differentiable Tracking via Spectral Moment Supervision",
+          "authors": [
+            "Avigail Cohen Rimon",
+            "Amir Mann",
+            "Mirela Ben Chen",
+            "Or Litany"
+          ],
+          "abstract": "3D Gaussian Splatting (3DGS) enables real-time, photorealistic novel view synthesis, making it a highly attractive representation for model-based video tracking. However, leveraging the differentiability of the 3DGS renderer \"in the wild\" remains notoriously fragile. A fundamental bottleneck lies in the compact, local support of the Gaussian primitives. Standard photometric objectives implicitly rely on spatial overlap; if severe camera misalignment places the rendered object outside the target's local footprint, gradients strictly vanish, leaving the optimizer stranded. We introduce SpectralSplats, a robust tracking framework that resolves this \"vanishing gradient\" problem by shifting the optimization objective from the spatial to the frequency domain. By supervising the rendered image via a set of global complex sinusoidal features (Spectral Moments), we construct a global basin of attraction, ensuring that a valid, directional gradient toward the target exists across the entire image domain, even when pixel overlap is completely nonexistent. To harness this global basin without introducing periodic local minima associated with high frequencies, we derive a principled Frequency Annealing schedule from first principles, gracefully transitioning the optimizer from global convexity to precise spatial alignment. We demonstrate that SpectralSplats acts as a seamless, drop-in replacement for spatial losses across diverse deformation parameterizations (from MLPs to sparse control points), successfully recovering complex deformations even from severely misaligned initializations where standard appearance-based tracking catastrophically fails.",
+          "hf_url": "https://huggingface.co/papers/2603.24036",
+          "arxiv_url": "https://arxiv.org/abs/2603.24036",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.24036",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.24036",
+          "github_url": "",
+          "submitted_by": "Avigail Cohen Rimon",
+          "submitted_at": "2026-03-26T15:26:47.348Z",
+          "upvotes": 11,
+          "comments": 2,
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.83
+        },
+        {
+          "report_date": "2026-03-26",
+          "paper_id": "2603.21618",
+          "title": "4DGS360: 360° Gaussian Reconstruction of Dynamic Objects from a Single Video",
+          "authors": [
+            "Jae Won Jang",
+            "Yeonjin Chang",
+            "Wonsik Shin",
+            "Juhwan Cho",
+            "Nojun Kwak"
+          ],
+          "abstract": "We introduce 4DGS360, a diffusion-free framework for 360^{circ} dynamic object reconstruction from casual monocular video. Existing methods often fail to reconstruct consistent 360^{circ} geometry, as their heavy reliance on 2D-native priors causes initial points to overfit to visible surface in each training view. 4DGS360 addresses this challenge through a advanced 3D-native initialization that mitigates the geometric ambiguity of occluded regions. Our proposed 3D tracker, AnchorTAP3D, produces reinforced 3D point trajectories by leveraging confident 2D track points as anchors, suppressing drift and providing reliable initialization that preserves geometry in occluded regions. This initialization, combined with optimization, yields coherent 360^{circ} 4D reconstructions. We further present iPhone360, a new benchmark where test cameras are placed up to 135^{circ} apart from training views, enabling 360^{circ} evaluation that existing datasets cannot provide. Experiments show that 4DGS360 achieves state-of-the-art performance on the iPhone360, iPhone, and DAVIS datasets, both qualitatively and quantitatively.",
+          "hf_url": "https://huggingface.co/papers/2603.21618",
+          "arxiv_url": "https://arxiv.org/abs/2603.21618",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.21618",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.21618",
+          "github_url": "",
+          "submitted_by": "jang",
+          "submitted_at": "2026-03-26T01:29:19.600Z",
+          "upvotes": 11,
+          "comments": 2,
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.85
+        },
+        {
+          "report_date": "2026-03-26",
+          "paper_id": "2603.20176",
+          "title": "LagerNVS: Latent Geometry for Fully Neural Real-time Novel View Synthesis",
+          "authors": [
+            "Stanislaw Szymanowicz",
+            "Minghao Chen",
+            "Jianyuan Wang",
+            "Christian Rupprecht",
+            "Andrea Vedaldi"
+          ],
+          "abstract": "Recent work has shown that neural networks can perform 3D tasks such as Novel View Synthesis (NVS) without explicit 3D reconstruction. Even so, we argue that strong 3D inductive biases are still helpful in the design of such networks. We show this point by introducing LagerNVS, an encoder-decoder neural network for NVS that builds on `3D-aware' latent features. The encoder is initialized from a 3D reconstruction network pre-trained using explicit 3D supervision. This is paired with a lightweight decoder, and trained end-to-end with photometric losses. LagerNVS achieves state-of-the-art deterministic feed-forward Novel View Synthesis (including 31.4 PSNR on Re10k), with and without known cameras, renders in real time, generalizes to in-the-wild data, and can be paired with a diffusion decoder for generative extrapolation.",
+          "hf_url": "https://huggingface.co/papers/2603.20176",
+          "arxiv_url": "https://arxiv.org/abs/2603.20176",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.20176",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.20176",
+          "github_url": "",
+          "submitted_by": "Stan Szymanowicz",
+          "submitted_at": "2026-03-26T09:04:14.632Z",
+          "upvotes": 8,
+          "comments": 2,
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.75
+        },
+        {
+          "report_date": "2026-03-26",
+          "paper_id": "2603.23404",
+          "title": "Unleashing Spatial Reasoning in Multimodal Large Language Models via Textual Representation Guided Reasoning",
+          "authors": [
+            "Jiacheng Hua",
+            "Yishu Yin",
+            "Yuhang Wu",
+            "Tai Wang",
+            "Yifei Huang",
+            "Miao Liu"
+          ],
+          "abstract": "Existing Multimodal Large Language Models (MLLMs) struggle with 3D spatial reasoning, as they fail to construct structured abstractions of the 3D environment depicted in video inputs. To bridge this gap, drawing inspiration from cognitive theories of allocentric spatial reasoning, we investigate how to enable MLLMs to model and reason over text-based spatial representations of video. Specifically, we introduce Textual Representation of Allocentric Context from Egocentric Video (TRACE), a prompting method that induces MLLMs to generate text-based representations of 3D environments as intermediate reasoning traces for more accurate spatial question answering. TRACE encodes meta-context, camera trajectories, and detailed object entities to support structured spatial reasoning over egocentric videos. Extensive experiments on VSI-Bench and OST-Bench demonstrate that TRACE yields notable and consistent improvements over prior prompting strategies across a diverse range of MLLM backbones, spanning different parameter scales and training schemas. We further present ablation studies to validate our design choices, along with detailed analyses that probe the bottlenecks of 3D spatial reasoning in MLLMs.",
+          "hf_url": "https://huggingface.co/papers/2603.23404",
+          "arxiv_url": "https://arxiv.org/abs/2603.23404",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.23404",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.23404",
+          "github_url": "",
+          "submitted_by": "jiacheng",
+          "submitted_at": "2026-03-26T06:00:20.151Z",
+          "upvotes": 3,
+          "comments": 2,
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.94
+        },
+        {
+          "report_date": "2026-03-26",
+          "paper_id": "2603.23478",
+          "title": "UniFunc3D: Unified Active Spatial-Temporal Grounding for 3D Functionality Segmentation",
+          "authors": [
+            "Jiaying Lin",
+            "Dan Xu"
+          ],
+          "abstract": "Functionality segmentation in 3D scenes requires an agent to ground implicit natural-language instructions into precise masks of fine-grained interactive elements. Existing methods rely on fragmented pipelines that suffer from visual blindness during initial task parsing. We observe that these methods are limited by single-scale, passive and heuristic frame selection. We present UniFunc3D, a unified and training-free framework that treats the multimodal large language model as an active observer. By consolidating semantic, temporal, and spatial reasoning into a single forward pass, UniFunc3D performs joint reasoning to ground task decomposition in direct visual evidence. Our approach introduces active spatial-temporal grounding with a coarse-to-fine strategy. This allows the model to select correct video frames adaptively and focus on high-detail interactive parts while preserving the global context necessary for disambiguation. On SceneFun3D, UniFunc3D achieves state-of-the-art performance, surpassing both training-free and training-based methods by a large margin with a relative 59.9\\% mIoU improvement, without any task-specific training. Code will be released on our project page: https://jiaying.link/unifunc3d.",
+          "hf_url": "https://huggingface.co/papers/2603.23478",
+          "arxiv_url": "https://arxiv.org/abs/2603.23478",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.23478",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.23478",
+          "github_url": "",
+          "submitted_by": "Jiaying Lin",
+          "submitted_at": "2026-03-26T02:29:56.926Z",
+          "upvotes": 1,
+          "comments": 3,
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.87
+        }
+      ]
+    },
+    {
       "topic_label": "Reasoning, Alignment, and Evaluation",
-      "count": 5,
-      "share": 22.73,
+      "count": 4,
+      "share": 18.18,
       "papers": [
         {
           "report_date": "2026-03-26",
@@ -385,13 +548,13 @@
           "github_url": "",
           "submitted_by": "JeonghyeKim",
           "submitted_at": "2026-03-26T02:02:15.866Z",
-          "upvotes": 37,
+          "upvotes": 38,
           "comments": 6,
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.95
+          "classification_confidence": 0.93
         },
         {
           "report_date": "2026-03-26",
@@ -419,7 +582,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.93
+          "classification_confidence": 0.94
         },
         {
           "report_date": "2026-03-26",
@@ -454,7 +617,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.77
+          "classification_confidence": 0.82
         },
         {
           "report_date": "2026-03-26",
@@ -482,143 +645,6 @@
           "matched_terms": [],
           "classification_source": "codex",
           "classification_confidence": 0.97
-        },
-        {
-          "report_date": "2026-03-26",
-          "paper_id": "2603.23539",
-          "title": "PLDR-LLMs Reason At Self-Organized Criticality",
-          "authors": [
-            "Burc Gokden"
-          ],
-          "abstract": "We show that PLDR-LLMs pretrained at self-organized criticality exhibit reasoning at inference time. The characteristics of PLDR-LLM deductive outputs at criticality is similar to second-order phase transitions. At criticality, the correlation length diverges, and the deductive outputs attain a metastable steady state. The steady state behaviour suggests that deductive outputs learn representations equivalent to scaling functions, universality classes and renormalization groups from the training dataset, leading to generalization and reasoning capabilities in the process. We can then define an order parameter from the global statistics of the model's deductive output parameters at inference. The reasoning capabilities of a PLDR-LLM is better when its order parameter is close to zero at criticality. This observation is supported by the benchmark scores of the models trained at near-criticality and sub-criticality. Our results provide a self-contained explanation on how reasoning manifests in large language models, and the ability to reason can be quantified solely from global model parameter values of the deductive outputs at steady state, without any need for evaluation of curated benchmark datasets through inductive output for reasoning and comprehension.",
-          "hf_url": "https://huggingface.co/papers/2603.23539",
-          "arxiv_url": "https://arxiv.org/abs/2603.23539",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.23539",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.23539",
-          "github_url": "",
-          "submitted_by": "Burc Gokden",
-          "submitted_at": "2026-03-26T02:42:52.375Z",
-          "upvotes": 1,
-          "comments": 2,
-          "topic_key": "reasoning_alignment_eval",
-          "topic_label": "Reasoning, Alignment, and Evaluation",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.69
-        }
-      ]
-    },
-    {
-      "topic_label": "Multimodal Understanding and Vision",
-      "count": 4,
-      "share": 18.18,
-      "papers": [
-        {
-          "report_date": "2026-03-26",
-          "paper_id": "2603.14375",
-          "title": "The Pulse of Motion: Measuring Physical Frame Rate from Visual Dynamics",
-          "authors": [
-            "Xiangbo Gao",
-            "Mingyang Wu",
-            "Siyuan Yang",
-            "Jiongze Yu",
-            "Pardis Taghavi",
-            "Fangzhou Lin",
-            "Zhengzhong Tu"
-          ],
-          "abstract": "While recent generative video models have achieved remarkable visual realism and are being explored as world models, true physical simulation requires mastering both space and time. Current models can produce visually smooth kinematics, yet they lack a reliable internal motion pulse to ground these motions in a consistent, real-world time scale. This temporal ambiguity stems from the common practice of indiscriminately training on videos with vastly different real-world speeds, forcing them into standardized frame rates. This leads to what we term chronometric hallucination: generated sequences exhibit ambiguous, unstable, and uncontrollable physical motion speeds. To address this, we propose Visual Chronometer, a predictor that recovers the Physical Frames Per Second (PhyFPS) directly from the visual dynamics of an input video. Trained via controlled temporal resampling, our method estimates the true temporal scale implied by the motion itself, bypassing unreliable metadata. To systematically quantify this issue, we establish two benchmarks, PhyFPS-Bench-Real and PhyFPS-Bench-Gen. Our evaluations reveal a harsh reality: state-of-the-art video generators suffer from severe PhyFPS misalignment and temporal instability. Finally, we demonstrate that applying PhyFPS corrections significantly improves the human-perceived naturalness of AI-generated videos. Our project page is https://xiangbogaobarry.github.io/Visual_Chronometer/.",
-          "hf_url": "https://huggingface.co/papers/2603.14375",
-          "arxiv_url": "https://arxiv.org/abs/2603.14375",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.14375",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.14375",
-          "github_url": "",
-          "submitted_by": "Zhengzhong Tu",
-          "submitted_at": "2026-03-26T17:24:09.932Z",
-          "upvotes": 15,
-          "comments": 3,
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.8
-        },
-        {
-          "report_date": "2026-03-26",
-          "paper_id": "2603.24036",
-          "title": "SpectralSplats: Robust Differentiable Tracking via Spectral Moment Supervision",
-          "authors": [
-            "Avigail Cohen Rimon",
-            "Amir Mann",
-            "Mirela Ben Chen",
-            "Or Litany"
-          ],
-          "abstract": "3D Gaussian Splatting (3DGS) enables real-time, photorealistic novel view synthesis, making it a highly attractive representation for model-based video tracking. However, leveraging the differentiability of the 3DGS renderer \"in the wild\" remains notoriously fragile. A fundamental bottleneck lies in the compact, local support of the Gaussian primitives. Standard photometric objectives implicitly rely on spatial overlap; if severe camera misalignment places the rendered object outside the target's local footprint, gradients strictly vanish, leaving the optimizer stranded. We introduce SpectralSplats, a robust tracking framework that resolves this \"vanishing gradient\" problem by shifting the optimization objective from the spatial to the frequency domain. By supervising the rendered image via a set of global complex sinusoidal features (Spectral Moments), we construct a global basin of attraction, ensuring that a valid, directional gradient toward the target exists across the entire image domain, even when pixel overlap is completely nonexistent. To harness this global basin without introducing periodic local minima associated with high frequencies, we derive a principled Frequency Annealing schedule from first principles, gracefully transitioning the optimizer from global convexity to precise spatial alignment. We demonstrate that SpectralSplats acts as a seamless, drop-in replacement for spatial losses across diverse deformation parameterizations (from MLPs to sparse control points), successfully recovering complex deformations even from severely misaligned initializations where standard appearance-based tracking catastrophically fails.",
-          "hf_url": "https://huggingface.co/papers/2603.24036",
-          "arxiv_url": "https://arxiv.org/abs/2603.24036",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.24036",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.24036",
-          "github_url": "",
-          "submitted_by": "Avigail Cohen Rimon",
-          "submitted_at": "2026-03-26T15:26:47.348Z",
-          "upvotes": 11,
-          "comments": 2,
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.76
-        },
-        {
-          "report_date": "2026-03-26",
-          "paper_id": "2603.23404",
-          "title": "Unleashing Spatial Reasoning in Multimodal Large Language Models via Textual Representation Guided Reasoning",
-          "authors": [
-            "Jiacheng Hua",
-            "Yishu Yin",
-            "Yuhang Wu",
-            "Tai Wang",
-            "Yifei Huang",
-            "Miao Liu"
-          ],
-          "abstract": "Existing Multimodal Large Language Models (MLLMs) struggle with 3D spatial reasoning, as they fail to construct structured abstractions of the 3D environment depicted in video inputs. To bridge this gap, drawing inspiration from cognitive theories of allocentric spatial reasoning, we investigate how to enable MLLMs to model and reason over text-based spatial representations of video. Specifically, we introduce Textual Representation of Allocentric Context from Egocentric Video (TRACE), a prompting method that induces MLLMs to generate text-based representations of 3D environments as intermediate reasoning traces for more accurate spatial question answering. TRACE encodes meta-context, camera trajectories, and detailed object entities to support structured spatial reasoning over egocentric videos. Extensive experiments on VSI-Bench and OST-Bench demonstrate that TRACE yields notable and consistent improvements over prior prompting strategies across a diverse range of MLLM backbones, spanning different parameter scales and training schemas. We further present ablation studies to validate our design choices, along with detailed analyses that probe the bottlenecks of 3D spatial reasoning in MLLMs.",
-          "hf_url": "https://huggingface.co/papers/2603.23404",
-          "arxiv_url": "https://arxiv.org/abs/2603.23404",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.23404",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.23404",
-          "github_url": "",
-          "submitted_by": "jiacheng",
-          "submitted_at": "2026-03-26T06:00:20.151Z",
-          "upvotes": 2,
-          "comments": 2,
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.93
-        },
-        {
-          "report_date": "2026-03-26",
-          "paper_id": "2603.23478",
-          "title": "UniFunc3D: Unified Active Spatial-Temporal Grounding for 3D Functionality Segmentation",
-          "authors": [
-            "Jiaying Lin",
-            "Dan Xu"
-          ],
-          "abstract": "Functionality segmentation in 3D scenes requires an agent to ground implicit natural-language instructions into precise masks of fine-grained interactive elements. Existing methods rely on fragmented pipelines that suffer from visual blindness during initial task parsing. We observe that these methods are limited by single-scale, passive and heuristic frame selection. We present UniFunc3D, a unified and training-free framework that treats the multimodal large language model as an active observer. By consolidating semantic, temporal, and spatial reasoning into a single forward pass, UniFunc3D performs joint reasoning to ground task decomposition in direct visual evidence. Our approach introduces active spatial-temporal grounding with a coarse-to-fine strategy. This allows the model to select correct video frames adaptively and focus on high-detail interactive parts while preserving the global context necessary for disambiguation. On SceneFun3D, UniFunc3D achieves state-of-the-art performance, surpassing both training-free and training-based methods by a large margin with a relative 59.9\\% mIoU improvement, without any task-specific training. Code will be released on our project page: https://jiaying.link/unifunc3d.",
-          "hf_url": "https://huggingface.co/papers/2603.23478",
-          "arxiv_url": "https://arxiv.org/abs/2603.23478",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.23478",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.23478",
-          "github_url": "",
-          "submitted_by": "Jiaying Lin",
-          "submitted_at": "2026-03-26T02:29:56.926Z",
-          "upvotes": 1,
-          "comments": 3,
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.7
         }
       ]
     },
@@ -649,13 +675,13 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-03-26T01:05:05.768Z",
-          "upvotes": 83,
+          "upvotes": 86,
           "comments": 5,
           "topic_key": "datasets_benchmarks",
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.96
+          "classification_confidence": 0.98
         },
         {
           "report_date": "2026-03-26",
@@ -684,7 +710,7 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.95
+          "classification_confidence": 0.97
         },
         {
           "report_date": "2026-03-26",
@@ -719,104 +745,7 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.95
-        }
-      ]
-    },
-    {
-      "topic_label": "Multimodal Generative Modeling",
-      "count": 3,
-      "share": 13.64,
-      "papers": [
-        {
-          "report_date": "2026-03-26",
-          "paper_id": "2603.21618",
-          "title": "4DGS360: 360° Gaussian Reconstruction of Dynamic Objects from a Single Video",
-          "authors": [
-            "Jae Won Jang",
-            "Yeonjin Chang",
-            "Wonsik Shin",
-            "Juhwan Cho",
-            "Nojun Kwak"
-          ],
-          "abstract": "We introduce 4DGS360, a diffusion-free framework for 360^{circ} dynamic object reconstruction from casual monocular video. Existing methods often fail to reconstruct consistent 360^{circ} geometry, as their heavy reliance on 2D-native priors causes initial points to overfit to visible surface in each training view. 4DGS360 addresses this challenge through a advanced 3D-native initialization that mitigates the geometric ambiguity of occluded regions. Our proposed 3D tracker, AnchorTAP3D, produces reinforced 3D point trajectories by leveraging confident 2D track points as anchors, suppressing drift and providing reliable initialization that preserves geometry in occluded regions. This initialization, combined with optimization, yields coherent 360^{circ} 4D reconstructions. We further present iPhone360, a new benchmark where test cameras are placed up to 135^{circ} apart from training views, enabling 360^{circ} evaluation that existing datasets cannot provide. Experiments show that 4DGS360 achieves state-of-the-art performance on the iPhone360, iPhone, and DAVIS datasets, both qualitatively and quantitatively.",
-          "hf_url": "https://huggingface.co/papers/2603.21618",
-          "arxiv_url": "https://arxiv.org/abs/2603.21618",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.21618",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.21618",
-          "github_url": "",
-          "submitted_by": "jang",
-          "submitted_at": "2026-03-26T01:29:19.600Z",
-          "upvotes": 11,
-          "comments": 2,
-          "topic_key": "multimodal_generative",
-          "topic_label": "Multimodal Generative Modeling",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.82
-        },
-        {
-          "report_date": "2026-03-26",
-          "paper_id": "2603.20176",
-          "title": "LagerNVS: Latent Geometry for Fully Neural Real-time Novel View Synthesis",
-          "authors": [
-            "Stanislaw Szymanowicz",
-            "Minghao Chen",
-            "Jianyuan Wang",
-            "Christian Rupprecht",
-            "Andrea Vedaldi"
-          ],
-          "abstract": "Recent work has shown that neural networks can perform 3D tasks such as Novel View Synthesis (NVS) without explicit 3D reconstruction. Even so, we argue that strong 3D inductive biases are still helpful in the design of such networks. We show this point by introducing LagerNVS, an encoder-decoder neural network for NVS that builds on `3D-aware' latent features. The encoder is initialized from a 3D reconstruction network pre-trained using explicit 3D supervision. This is paired with a lightweight decoder, and trained end-to-end with photometric losses. LagerNVS achieves state-of-the-art deterministic feed-forward Novel View Synthesis (including 31.4 PSNR on Re10k), with and without known cameras, renders in real time, generalizes to in-the-wild data, and can be paired with a diffusion decoder for generative extrapolation.",
-          "hf_url": "https://huggingface.co/papers/2603.20176",
-          "arxiv_url": "https://arxiv.org/abs/2603.20176",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.20176",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.20176",
-          "github_url": "",
-          "submitted_by": "Stan Szymanowicz",
-          "submitted_at": "2026-03-26T09:04:14.632Z",
-          "upvotes": 8,
-          "comments": 2,
-          "topic_key": "multimodal_generative",
-          "topic_label": "Multimodal Generative Modeling",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.87
-        },
-        {
-          "report_date": "2026-03-26",
-          "paper_id": "2603.24458",
-          "title": "OmniWeaving: Towards Unified Video Generation with Free-form Composition and Reasoning",
-          "authors": [
-            "Kaihang Pan",
-            "Qi Tian",
-            "Jianwei Zhang",
-            "Weijie Kong",
-            "Jiangfeng Xiong",
-            "Yanxin Long",
-            "Shixue Zhang",
-            "Haiyi Qiu",
-            "Tan Wang",
-            "Zheqi Lv",
-            "Yue Wu",
-            "Liefeng Bo",
-            "Siliang Tang",
-            "Zhao Zhong"
-          ],
-          "abstract": "While proprietary systems such as Seedance-2.0 have achieved remarkable success in omni-capable video generation, open-source alternatives significantly lag behind. Most academic models remain heavily fragmented, and the few existing efforts toward unified video generation still struggle to seamlessly integrate diverse tasks within a single framework. To bridge this gap, we propose OmniWeaving, an omni-level video generation model featuring powerful multimodal composition and reasoning-informed capabilities. By leveraging a massive-scale pretraining dataset that encompasses diverse compositional and reasoning-augmented scenarios, OmniWeaving learns to temporally bind interleaved text, multi-image, and video inputs while acting as an intelligent agent to infer complex user intentions for sophisticated video creation. Furthermore, we introduce IntelligentVBench, the first comprehensive benchmark designed to rigorously assess next-level intelligent unified video generation. Extensive experiments demonstrate that OmniWeaving achieves SoTA performance among open-source unified models. The codes and model will be made publicly available soon. Project Page: https://omniweaving.github.io.",
-          "hf_url": "https://huggingface.co/papers/2603.24458",
-          "arxiv_url": "https://arxiv.org/abs/2603.24458",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.24458",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.24458",
-          "github_url": "",
-          "submitted_by": "taesiri",
-          "submitted_at": "2026-03-26T01:02:34.054Z",
-          "upvotes": 4,
-          "comments": 2,
-          "topic_key": "multimodal_generative",
-          "topic_label": "Multimodal Generative Modeling",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.98
+          "classification_confidence": 0.9
         }
       ]
     },
@@ -851,7 +780,7 @@
           "topic_label": "Generative Foundations",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.88
+          "classification_confidence": 0.98
         },
         {
           "report_date": "2026-03-26",
@@ -886,14 +815,79 @@
           "topic_label": "Generative Foundations",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.91
+          "classification_confidence": 0.92
         }
       ]
     },
     {
-      "topic_label": "Agents and Planning",
-      "count": 1,
-      "share": 4.55,
+      "topic_label": "LLMs and Language",
+      "count": 2,
+      "share": 9.09,
+      "papers": [
+        {
+          "report_date": "2026-03-26",
+          "paper_id": "2603.23994",
+          "title": "Understanding the Challenges in Iterative Generative Optimization with LLMs",
+          "authors": [
+            "Allen Nie",
+            "Xavier Daull",
+            "Zhiyi Kuang",
+            "Abhinav Akkiraju",
+            "Anish Chaudhuri",
+            "Max Piasevoli",
+            "Ryan Rong",
+            "YuCheng Yuan",
+            "Prerit Choudhary",
+            "Shannon Xiao",
+            "Rasool Fakoor",
+            "Adith Swaminathan",
+            "Ching-An Cheng"
+          ],
+          "abstract": "Generative optimization uses large language models (LLMs) to iteratively improve artifacts (such as code, workflows or prompts) using execution feedback. It is a promising approach to building self-improving agents, yet in practice remains brittle: despite active research, only 9% of surveyed agents used any automated optimization. We argue that this brittleness arises because, to set up a learning loop, an engineer must make ``hidden'' design choices: What can the optimizer edit and what is the \"right\" learning evidence to provide at each update? We investigate three factors that affect most applications: the starting artifact, the credit horizon for execution traces, and batching trials and errors into learning evidence. Through case studies in MLAgentBench, Atari, and BigBench Extra Hard, we find that these design decisions can determine whether generative optimization succeeds, yet they are rarely made explicit in prior work. Different starting artifacts determine which solutions are reachable in MLAgentBench, truncated traces can still improve Atari agents, and larger minibatches do not monotonically improve generalization on BBEH. We conclude that the lack of a simple, universal way to set up learning loops across domains is a major hurdle for productionization and adoption. We provide practical guidance for making these choices.",
+          "hf_url": "https://huggingface.co/papers/2603.23994",
+          "arxiv_url": "https://arxiv.org/abs/2603.23994",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.23994",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.23994",
+          "github_url": "",
+          "submitted_by": "Allen Nie",
+          "submitted_at": "2026-03-26T15:49:58.477Z",
+          "upvotes": 20,
+          "comments": 2,
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.76
+        },
+        {
+          "report_date": "2026-03-26",
+          "paper_id": "2603.23539",
+          "title": "PLDR-LLMs Reason At Self-Organized Criticality",
+          "authors": [
+            "Burc Gokden"
+          ],
+          "abstract": "We show that PLDR-LLMs pretrained at self-organized criticality exhibit reasoning at inference time. The characteristics of PLDR-LLM deductive outputs at criticality is similar to second-order phase transitions. At criticality, the correlation length diverges, and the deductive outputs attain a metastable steady state. The steady state behaviour suggests that deductive outputs learn representations equivalent to scaling functions, universality classes and renormalization groups from the training dataset, leading to generalization and reasoning capabilities in the process. We can then define an order parameter from the global statistics of the model's deductive output parameters at inference. The reasoning capabilities of a PLDR-LLM is better when its order parameter is close to zero at criticality. This observation is supported by the benchmark scores of the models trained at near-criticality and sub-criticality. Our results provide a self-contained explanation on how reasoning manifests in large language models, and the ability to reason can be quantified solely from global model parameter values of the deductive outputs at steady state, without any need for evaluation of curated benchmark datasets through inductive output for reasoning and comprehension.",
+          "hf_url": "https://huggingface.co/papers/2603.23539",
+          "arxiv_url": "https://arxiv.org/abs/2603.23539",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.23539",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.23539",
+          "github_url": "",
+          "submitted_by": "Burc Gokden",
+          "submitted_at": "2026-03-26T02:42:52.375Z",
+          "upvotes": 2,
+          "comments": 2,
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.66
+        }
+      ]
+    },
+    {
+      "topic_label": "Multimodal Agents",
+      "count": 2,
+      "share": 9.09,
       "papers": [
         {
           "report_date": "2026-03-26",
@@ -921,13 +915,44 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-03-26T01:08:00.107Z",
-          "upvotes": 35,
+          "upvotes": 39,
           "comments": 3,
-          "topic_key": "agents_planning",
-          "topic_label": "Agents and Planning",
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.94
+          "classification_confidence": 0.83
+        },
+        {
+          "report_date": "2026-03-26",
+          "paper_id": "2603.22918",
+          "title": "EVA: Efficient Reinforcement Learning for End-to-End Video Agent",
+          "authors": [
+            "Yaolun Zhang",
+            "Ruohui Wang",
+            "Jiahao Wang",
+            "Yepeng Tang",
+            "Xuanyu Zheng",
+            "Haonan Duan",
+            "Hao Lu",
+            "Hanming Deng",
+            "Lewei Lu"
+          ],
+          "abstract": "Video understanding with multimodal large language models (MLLMs) remains challenging due to the long token sequences of videos, which contain extensive temporal dependencies and redundant frames. Existing approaches typically treat MLLMs as passive recognizers, processing entire videos or uniformly sampled frames without adaptive reasoning. Recent agent-based methods introduce external tools, yet still depend on manually designed workflows and perception-first strategies, resulting in inefficiency on long videos. We present EVA, an Efficient Reinforcement Learning framework for End-to-End Video Agent, which enables planning-before-perception through iterative summary-plan-action-reflection reasoning. EVA autonomously decides what to watch, when to watch, and how to watch, achieving query-driven and efficient video understanding. To train such agents, we design a simple yet effective three-stage learning pipeline - comprising supervised fine-tuning (SFT), Kahneman-Tversky Optimization (KTO), and Generalized Reward Policy Optimization (GRPO) - that bridges supervised imitation and reinforcement learning. We further construct high-quality datasets for each stage, supporting stable and reproducible training. We evaluate EVA on six video understanding benchmarks, demonstrating its comprehensive capabilities. Compared with existing baselines, EVA achieves a substantial improvement of 6-12% over general MLLM baselines and a further 1-3% gain over prior adaptive agent methods. Our code and model are available at https://github.com/wangruohui/EfficientVideoAgent.",
+          "hf_url": "https://huggingface.co/papers/2603.22918",
+          "arxiv_url": "https://arxiv.org/abs/2603.22918",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.22918",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.22918",
+          "github_url": "",
+          "submitted_by": "Yaolun Zhang",
+          "submitted_at": "2026-03-26T03:03:19.182Z",
+          "upvotes": 38,
+          "comments": 3,
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.95
         }
       ]
     },
@@ -963,87 +988,50 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.84
+          "classification_confidence": 0.85
         }
       ]
     },
     {
-      "topic_label": "LLMs and Language",
+      "topic_label": "Multimodal Generative Modeling",
       "count": 1,
       "share": 4.55,
       "papers": [
         {
           "report_date": "2026-03-26",
-          "paper_id": "2603.23994",
-          "title": "Understanding the Challenges in Iterative Generative Optimization with LLMs",
+          "paper_id": "2603.24458",
+          "title": "OmniWeaving: Towards Unified Video Generation with Free-form Composition and Reasoning",
           "authors": [
-            "Allen Nie",
-            "Xavier Daull",
-            "Zhiyi Kuang",
-            "Abhinav Akkiraju",
-            "Anish Chaudhuri",
-            "Max Piasevoli",
-            "Ryan Rong",
-            "YuCheng Yuan",
-            "Prerit Choudhary",
-            "Shannon Xiao",
-            "Rasool Fakoor",
-            "Adith Swaminathan",
-            "Ching-An Cheng"
+            "Kaihang Pan",
+            "Qi Tian",
+            "Jianwei Zhang",
+            "Weijie Kong",
+            "Jiangfeng Xiong",
+            "Yanxin Long",
+            "Shixue Zhang",
+            "Haiyi Qiu",
+            "Tan Wang",
+            "Zheqi Lv",
+            "Yue Wu",
+            "Liefeng Bo",
+            "Siliang Tang",
+            "Zhao Zhong"
           ],
-          "abstract": "Generative optimization uses large language models (LLMs) to iteratively improve artifacts (such as code, workflows or prompts) using execution feedback. It is a promising approach to building self-improving agents, yet in practice remains brittle: despite active research, only 9% of surveyed agents used any automated optimization. We argue that this brittleness arises because, to set up a learning loop, an engineer must make ``hidden'' design choices: What can the optimizer edit and what is the \"right\" learning evidence to provide at each update? We investigate three factors that affect most applications: the starting artifact, the credit horizon for execution traces, and batching trials and errors into learning evidence. Through case studies in MLAgentBench, Atari, and BigBench Extra Hard, we find that these design decisions can determine whether generative optimization succeeds, yet they are rarely made explicit in prior work. Different starting artifacts determine which solutions are reachable in MLAgentBench, truncated traces can still improve Atari agents, and larger minibatches do not monotonically improve generalization on BBEH. We conclude that the lack of a simple, universal way to set up learning loops across domains is a major hurdle for productionization and adoption. We provide practical guidance for making these choices.",
-          "hf_url": "https://huggingface.co/papers/2603.23994",
-          "arxiv_url": "https://arxiv.org/abs/2603.23994",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.23994",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.23994",
+          "abstract": "While proprietary systems such as Seedance-2.0 have achieved remarkable success in omni-capable video generation, open-source alternatives significantly lag behind. Most academic models remain heavily fragmented, and the few existing efforts toward unified video generation still struggle to seamlessly integrate diverse tasks within a single framework. To bridge this gap, we propose OmniWeaving, an omni-level video generation model featuring powerful multimodal composition and reasoning-informed capabilities. By leveraging a massive-scale pretraining dataset that encompasses diverse compositional and reasoning-augmented scenarios, OmniWeaving learns to temporally bind interleaved text, multi-image, and video inputs while acting as an intelligent agent to infer complex user intentions for sophisticated video creation. Furthermore, we introduce IntelligentVBench, the first comprehensive benchmark designed to rigorously assess next-level intelligent unified video generation. Extensive experiments demonstrate that OmniWeaving achieves SoTA performance among open-source unified models. The codes and model will be made publicly available soon. Project Page: https://omniweaving.github.io.",
+          "hf_url": "https://huggingface.co/papers/2603.24458",
+          "arxiv_url": "https://arxiv.org/abs/2603.24458",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.24458",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.24458",
           "github_url": "",
-          "submitted_by": "Allen Nie",
-          "submitted_at": "2026-03-26T15:49:58.477Z",
-          "upvotes": 17,
+          "submitted_by": "taesiri",
+          "submitted_at": "2026-03-26T01:02:34.054Z",
+          "upvotes": 4,
           "comments": 2,
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.72
-        }
-      ]
-    },
-    {
-      "topic_label": "Multimodal Agents",
-      "count": 1,
-      "share": 4.55,
-      "papers": [
-        {
-          "report_date": "2026-03-26",
-          "paper_id": "2603.22918",
-          "title": "EVA: Efficient Reinforcement Learning for End-to-End Video Agent",
-          "authors": [
-            "Yaolun Zhang",
-            "Ruohui Wang",
-            "Jiahao Wang",
-            "Yepeng Tang",
-            "Xuanyu Zheng",
-            "Haonan Duan",
-            "Hao Lu",
-            "Hanming Deng",
-            "Lewei Lu"
-          ],
-          "abstract": "Video understanding with multimodal large language models (MLLMs) remains challenging due to the long token sequences of videos, which contain extensive temporal dependencies and redundant frames. Existing approaches typically treat MLLMs as passive recognizers, processing entire videos or uniformly sampled frames without adaptive reasoning. Recent agent-based methods introduce external tools, yet still depend on manually designed workflows and perception-first strategies, resulting in inefficiency on long videos. We present EVA, an Efficient Reinforcement Learning framework for End-to-End Video Agent, which enables planning-before-perception through iterative summary-plan-action-reflection reasoning. EVA autonomously decides what to watch, when to watch, and how to watch, achieving query-driven and efficient video understanding. To train such agents, we design a simple yet effective three-stage learning pipeline - comprising supervised fine-tuning (SFT), Kahneman-Tversky Optimization (KTO), and Generalized Reward Policy Optimization (GRPO) - that bridges supervised imitation and reinforcement learning. We further construct high-quality datasets for each stage, supporting stable and reproducible training. We evaluate EVA on six video understanding benchmarks, demonstrating its comprehensive capabilities. Compared with existing baselines, EVA achieves a substantial improvement of 6-12% over general MLLM baselines and a further 1-3% gain over prior adaptive agent methods. Our code and model are available at https://github.com/wangruohui/EfficientVideoAgent.",
-          "hf_url": "https://huggingface.co/papers/2603.22918",
-          "arxiv_url": "https://arxiv.org/abs/2603.22918",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.22918",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.22918",
-          "github_url": "",
-          "submitted_by": "Yaolun Zhang",
-          "submitted_at": "2026-03-26T03:03:19.182Z",
-          "upvotes": 38,
-          "comments": 3,
-          "topic_key": "multimodal_agents",
-          "topic_label": "Multimodal Agents",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.83
+          "classification_confidence": 0.99
         }
       ]
     },
@@ -1090,7 +1078,7 @@
           "github_url": "",
           "submitted_by": "Yu",
           "submitted_at": "2026-03-26T05:08:43.754Z",
-          "upvotes": 5,
+          "upvotes": 7,
           "comments": 2,
           "topic_key": "other_ai",
           "topic_label": "Other AI",
@@ -1124,13 +1112,77 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-03-26T01:05:05.768Z",
-      "upvotes": 83,
+      "upvotes": 86,
       "comments": 5,
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.96
+      "classification_confidence": 0.98
+    },
+    {
+      "report_date": "2026-03-26",
+      "paper_id": "2603.24533",
+      "title": "UI-Voyager: A Self-Evolving GUI Agent Learning via Failed Experience",
+      "authors": [
+        "Zichuan Lin",
+        "Feiyu Liu",
+        "Yijun Yang",
+        "Jiafei Lyu",
+        "Yiming Gao",
+        "Yicheng Liu",
+        "Zhicong Lu",
+        "Yangbin Yu",
+        "Mingyu Yang",
+        "Junyou Li",
+        "Deheng Ye",
+        "Jie Jiang"
+      ],
+      "abstract": "Autonomous mobile GUI agents have attracted increasing attention along with the advancement of Multimodal Large Language Models (MLLMs). However, existing methods still suffer from inefficient learning from failed trajectories and ambiguous credit assignment under sparse rewards for long-horizon GUI tasks. To that end, we propose UI-Voyager, a novel two-stage self-evolving mobile GUI agent. In the first stage, we employ Rejection Fine-Tuning (RFT), which enables the continuous co-evolution of data and models in a fully autonomous loop. The second stage introduces Group Relative Self-Distillation (GRSD), which identifies critical fork points in group rollouts and constructs dense step-level supervision from successful trajectories to correct failed ones. Extensive experiments on AndroidWorld show that our 4B model achieves an 81.0% Pass@1 success rate, outperforming numerous recent baselines and exceeding human-level performance. Ablation and case studies further verify the effectiveness of GRSD. Our method represents a significant leap toward efficient, self-evolving, and high-performance mobile GUI automation without expensive manual data annotation.",
+      "hf_url": "https://huggingface.co/papers/2603.24533",
+      "arxiv_url": "https://arxiv.org/abs/2603.24533",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.24533",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.24533",
+      "github_url": "",
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-03-26T01:08:00.107Z",
+      "upvotes": 39,
+      "comments": 3,
+      "topic_key": "multimodal_agents",
+      "topic_label": "Multimodal Agents",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.83
+    },
+    {
+      "report_date": "2026-03-26",
+      "paper_id": "2603.24472",
+      "title": "Why Does Self-Distillation (Sometimes) Degrade the Reasoning Capability of LLMs?",
+      "authors": [
+        "Jeonghye Kim",
+        "Xufang Luo",
+        "Minbeom Kim",
+        "Sangmook Lee",
+        "Dohyung Kim",
+        "Jiwon Jeon",
+        "Dongsheng Li",
+        "Yuqing Yang"
+      ],
+      "abstract": "Self-distillation has emerged as an effective post-training paradigm for LLMs, often improving performance while shortening reasoning traces. However, in mathematical reasoning, we find that it can reduce response length while degrading performance. We trace this degradation to the suppression of epistemic verbalization - the model's expression of uncertainty during reasoning. Through controlled experiments varying conditioning context richness and task coverage, we show that conditioning the teacher on rich information suppresses uncertainty expression, enabling rapid in-domain optimization with limited task coverage but harming OOD performance, where unseen problems benefit from expressing uncertainty and adjusting accordingly. Across Qwen3-8B, DeepSeek-Distill-Qwen-7B, and Olmo3-7B-Instruct, we observe performance drops of up to 40%. Our findings highlight that exposing appropriate levels of uncertainty is crucial for robust reasoning and underscore the importance of optimizing reasoning behavior beyond merely reinforcing correct answer traces.",
+      "hf_url": "https://huggingface.co/papers/2603.24472",
+      "arxiv_url": "https://arxiv.org/abs/2603.24472",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.24472",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.24472",
+      "github_url": "",
+      "submitted_by": "JeonghyeKim",
+      "submitted_at": "2026-03-26T02:02:15.866Z",
+      "upvotes": 38,
+      "comments": 6,
+      "topic_key": "reasoning_alignment_eval",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.93
     },
     {
       "report_date": "2026-03-26",
@@ -1161,71 +1213,7 @@
       "topic_label": "Multimodal Agents",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.83
-    },
-    {
-      "report_date": "2026-03-26",
-      "paper_id": "2603.24472",
-      "title": "Why Does Self-Distillation (Sometimes) Degrade the Reasoning Capability of LLMs?",
-      "authors": [
-        "Jeonghye Kim",
-        "Xufang Luo",
-        "Minbeom Kim",
-        "Sangmook Lee",
-        "Dohyung Kim",
-        "Jiwon Jeon",
-        "Dongsheng Li",
-        "Yuqing Yang"
-      ],
-      "abstract": "Self-distillation has emerged as an effective post-training paradigm for LLMs, often improving performance while shortening reasoning traces. However, in mathematical reasoning, we find that it can reduce response length while degrading performance. We trace this degradation to the suppression of epistemic verbalization - the model's expression of uncertainty during reasoning. Through controlled experiments varying conditioning context richness and task coverage, we show that conditioning the teacher on rich information suppresses uncertainty expression, enabling rapid in-domain optimization with limited task coverage but harming OOD performance, where unseen problems benefit from expressing uncertainty and adjusting accordingly. Across Qwen3-8B, DeepSeek-Distill-Qwen-7B, and Olmo3-7B-Instruct, we observe performance drops of up to 40%. Our findings highlight that exposing appropriate levels of uncertainty is crucial for robust reasoning and underscore the importance of optimizing reasoning behavior beyond merely reinforcing correct answer traces.",
-      "hf_url": "https://huggingface.co/papers/2603.24472",
-      "arxiv_url": "https://arxiv.org/abs/2603.24472",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.24472",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.24472",
-      "github_url": "",
-      "submitted_by": "JeonghyeKim",
-      "submitted_at": "2026-03-26T02:02:15.866Z",
-      "upvotes": 37,
-      "comments": 6,
-      "topic_key": "reasoning_alignment_eval",
-      "topic_label": "Reasoning, Alignment, and Evaluation",
-      "matched_terms": [],
-      "classification_source": "codex",
       "classification_confidence": 0.95
-    },
-    {
-      "report_date": "2026-03-26",
-      "paper_id": "2603.24533",
-      "title": "UI-Voyager: A Self-Evolving GUI Agent Learning via Failed Experience",
-      "authors": [
-        "Zichuan Lin",
-        "Feiyu Liu",
-        "Yijun Yang",
-        "Jiafei Lyu",
-        "Yiming Gao",
-        "Yicheng Liu",
-        "Zhicong Lu",
-        "Yangbin Yu",
-        "Mingyu Yang",
-        "Junyou Li",
-        "Deheng Ye",
-        "Jie Jiang"
-      ],
-      "abstract": "Autonomous mobile GUI agents have attracted increasing attention along with the advancement of Multimodal Large Language Models (MLLMs). However, existing methods still suffer from inefficient learning from failed trajectories and ambiguous credit assignment under sparse rewards for long-horizon GUI tasks. To that end, we propose UI-Voyager, a novel two-stage self-evolving mobile GUI agent. In the first stage, we employ Rejection Fine-Tuning (RFT), which enables the continuous co-evolution of data and models in a fully autonomous loop. The second stage introduces Group Relative Self-Distillation (GRSD), which identifies critical fork points in group rollouts and constructs dense step-level supervision from successful trajectories to correct failed ones. Extensive experiments on AndroidWorld show that our 4B model achieves an 81.0% Pass@1 success rate, outperforming numerous recent baselines and exceeding human-level performance. Ablation and case studies further verify the effectiveness of GRSD. Our method represents a significant leap toward efficient, self-evolving, and high-performance mobile GUI automation without expensive manual data annotation.",
-      "hf_url": "https://huggingface.co/papers/2603.24533",
-      "arxiv_url": "https://arxiv.org/abs/2603.24533",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.24533",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.24533",
-      "github_url": "",
-      "submitted_by": "taesiri",
-      "submitted_at": "2026-03-26T01:08:00.107Z",
-      "upvotes": 35,
-      "comments": 3,
-      "topic_key": "agents_planning",
-      "topic_label": "Agents and Planning",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.94
     },
     {
       "report_date": "2026-03-26",
@@ -1253,36 +1241,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.93
-    },
-    {
-      "report_date": "2026-03-26",
-      "paper_id": "2603.24329",
-      "title": "GameplayQA: A Benchmarking Framework for Decision-Dense POV-Synced Multi-Video Understanding of 3D Virtual Agents",
-      "authors": [
-        "Yunzhe Wang",
-        "Runhui Xu",
-        "Kexin Zheng",
-        "Tianyi Zhang",
-        "Jayavibhav Niranjan Kogundi",
-        "Soham Hans",
-        "Volkan Ustun"
-      ],
-      "abstract": "Multimodal LLMs are increasingly deployed as perceptual backbones for autonomous agents in 3D environments, from robotics to virtual worlds. These applications require agents to perceive rapid state changes, attribute actions to the correct entities, and reason about concurrent multi-agent behaviors from a first-person perspective, capabilities that existing benchmarks do not adequately evaluate. We introduce GameplayQA, a framework for evaluating agentic-centric perception and reasoning through video understanding. Specifically, we densely annotate multiplayer 3D gameplay videos at 1.22 labels/second, with time-synced, concurrent captions of states, actions, and events structured around a triadic system of Self, Other Agents, and the World, a natural decomposition for multi-agent environments. From these annotations, we refined 2.4K diagnostic QA pairs organized into three levels of cognitive complexity, accompanied by a structured distractor taxonomy that enables fine-grained analysis of where models hallucinate. Evaluation of frontier MLLMs reveals a substantial gap from human performance, with common failures in temporal and cross-video grounding, agent-role attribution, and handling the decision density of the game. We hope GameplayQA stimulates future research at the intersection of embodied AI, agentic perception, and world modeling.",
-      "hf_url": "https://huggingface.co/papers/2603.24329",
-      "arxiv_url": "https://arxiv.org/abs/2603.24329",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.24329",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.24329",
-      "github_url": "",
-      "submitted_by": "taesiri",
-      "submitted_at": "2026-03-26T00:58:32.504Z",
-      "upvotes": 17,
-      "comments": 2,
-      "topic_key": "datasets_benchmarks",
-      "topic_label": "Datasets and Benchmarks",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.94
     },
     {
       "report_date": "2026-03-26",
@@ -1311,13 +1270,42 @@
       "github_url": "",
       "submitted_by": "Allen Nie",
       "submitted_at": "2026-03-26T15:49:58.477Z",
-      "upvotes": 17,
+      "upvotes": 20,
       "comments": 2,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.72
+      "classification_confidence": 0.76
+    },
+    {
+      "report_date": "2026-03-26",
+      "paper_id": "2603.24329",
+      "title": "GameplayQA: A Benchmarking Framework for Decision-Dense POV-Synced Multi-Video Understanding of 3D Virtual Agents",
+      "authors": [
+        "Yunzhe Wang",
+        "Runhui Xu",
+        "Kexin Zheng",
+        "Tianyi Zhang",
+        "Jayavibhav Niranjan Kogundi",
+        "Soham Hans",
+        "Volkan Ustun"
+      ],
+      "abstract": "Multimodal LLMs are increasingly deployed as perceptual backbones for autonomous agents in 3D environments, from robotics to virtual worlds. These applications require agents to perceive rapid state changes, attribute actions to the correct entities, and reason about concurrent multi-agent behaviors from a first-person perspective, capabilities that existing benchmarks do not adequately evaluate. We introduce GameplayQA, a framework for evaluating agentic-centric perception and reasoning through video understanding. Specifically, we densely annotate multiplayer 3D gameplay videos at 1.22 labels/second, with time-synced, concurrent captions of states, actions, and events structured around a triadic system of Self, Other Agents, and the World, a natural decomposition for multi-agent environments. From these annotations, we refined 2.4K diagnostic QA pairs organized into three levels of cognitive complexity, accompanied by a structured distractor taxonomy that enables fine-grained analysis of where models hallucinate. Evaluation of frontier MLLMs reveals a substantial gap from human performance, with common failures in temporal and cross-video grounding, agent-role attribution, and handling the decision density of the game. We hope GameplayQA stimulates future research at the intersection of embodied AI, agentic perception, and world modeling.",
+      "hf_url": "https://huggingface.co/papers/2603.24329",
+      "arxiv_url": "https://arxiv.org/abs/2603.24329",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.24329",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.24329",
+      "github_url": "",
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-03-26T00:58:32.504Z",
+      "upvotes": 17,
+      "comments": 2,
+      "topic_key": "datasets_benchmarks",
+      "topic_label": "Datasets and Benchmarks",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.97
     },
     {
       "report_date": "2026-03-26",
@@ -1352,7 +1340,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.77
+      "classification_confidence": 0.82
     },
     {
       "report_date": "2026-03-26",
@@ -1375,13 +1363,13 @@
       "github_url": "",
       "submitted_by": "Zhengzhong Tu",
       "submitted_at": "2026-03-26T17:24:09.932Z",
-      "upvotes": 15,
+      "upvotes": 16,
       "comments": 3,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.8
+      "classification_confidence": 0.88
     },
     {
       "report_date": "2026-03-26",
@@ -1407,7 +1395,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.76
+      "classification_confidence": 0.83
     },
     {
       "report_date": "2026-03-26",
@@ -1430,11 +1418,11 @@
       "submitted_at": "2026-03-26T01:29:19.600Z",
       "upvotes": 11,
       "comments": 2,
-      "topic_key": "multimodal_generative",
-      "topic_label": "Multimodal Generative Modeling",
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.82
+      "classification_confidence": 0.85
     },
     {
       "report_date": "2026-03-26",
@@ -1469,7 +1457,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.9
     },
     {
       "report_date": "2026-03-26",
@@ -1525,7 +1513,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.84
+      "classification_confidence": 0.85
     },
     {
       "report_date": "2026-03-26",
@@ -1548,11 +1536,11 @@
       "submitted_at": "2026-03-26T09:04:14.632Z",
       "upvotes": 8,
       "comments": 2,
-      "topic_key": "multimodal_generative",
-      "topic_label": "Multimodal Generative Modeling",
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.87
+      "classification_confidence": 0.75
     },
     {
       "report_date": "2026-03-26",
@@ -1592,7 +1580,7 @@
       "github_url": "",
       "submitted_by": "Yu",
       "submitted_at": "2026-03-26T05:08:43.754Z",
-      "upvotes": 5,
+      "upvotes": 7,
       "comments": 2,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
@@ -1634,7 +1622,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.98
+      "classification_confidence": 0.99
     },
     {
       "report_date": "2026-03-26",
@@ -1662,7 +1650,7 @@
       "topic_label": "Generative Foundations",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.88
+      "classification_confidence": 0.98
     },
     {
       "report_date": "2026-03-26",
@@ -1697,7 +1685,7 @@
       "topic_label": "Generative Foundations",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.91
+      "classification_confidence": 0.92
     },
     {
       "report_date": "2026-03-26",
@@ -1719,13 +1707,36 @@
       "github_url": "",
       "submitted_by": "jiacheng",
       "submitted_at": "2026-03-26T06:00:20.151Z",
-      "upvotes": 2,
+      "upvotes": 3,
       "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.93
+      "classification_confidence": 0.94
+    },
+    {
+      "report_date": "2026-03-26",
+      "paper_id": "2603.23539",
+      "title": "PLDR-LLMs Reason At Self-Organized Criticality",
+      "authors": [
+        "Burc Gokden"
+      ],
+      "abstract": "We show that PLDR-LLMs pretrained at self-organized criticality exhibit reasoning at inference time. The characteristics of PLDR-LLM deductive outputs at criticality is similar to second-order phase transitions. At criticality, the correlation length diverges, and the deductive outputs attain a metastable steady state. The steady state behaviour suggests that deductive outputs learn representations equivalent to scaling functions, universality classes and renormalization groups from the training dataset, leading to generalization and reasoning capabilities in the process. We can then define an order parameter from the global statistics of the model's deductive output parameters at inference. The reasoning capabilities of a PLDR-LLM is better when its order parameter is close to zero at criticality. This observation is supported by the benchmark scores of the models trained at near-criticality and sub-criticality. Our results provide a self-contained explanation on how reasoning manifests in large language models, and the ability to reason can be quantified solely from global model parameter values of the deductive outputs at steady state, without any need for evaluation of curated benchmark datasets through inductive output for reasoning and comprehension.",
+      "hf_url": "https://huggingface.co/papers/2603.23539",
+      "arxiv_url": "https://arxiv.org/abs/2603.23539",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.23539",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.23539",
+      "github_url": "",
+      "submitted_by": "Burc Gokden",
+      "submitted_at": "2026-03-26T02:42:52.375Z",
+      "upvotes": 2,
+      "comments": 2,
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.66
     },
     {
       "report_date": "2026-03-26",
@@ -1749,30 +1760,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.7
-    },
-    {
-      "report_date": "2026-03-26",
-      "paper_id": "2603.23539",
-      "title": "PLDR-LLMs Reason At Self-Organized Criticality",
-      "authors": [
-        "Burc Gokden"
-      ],
-      "abstract": "We show that PLDR-LLMs pretrained at self-organized criticality exhibit reasoning at inference time. The characteristics of PLDR-LLM deductive outputs at criticality is similar to second-order phase transitions. At criticality, the correlation length diverges, and the deductive outputs attain a metastable steady state. The steady state behaviour suggests that deductive outputs learn representations equivalent to scaling functions, universality classes and renormalization groups from the training dataset, leading to generalization and reasoning capabilities in the process. We can then define an order parameter from the global statistics of the model's deductive output parameters at inference. The reasoning capabilities of a PLDR-LLM is better when its order parameter is close to zero at criticality. This observation is supported by the benchmark scores of the models trained at near-criticality and sub-criticality. Our results provide a self-contained explanation on how reasoning manifests in large language models, and the ability to reason can be quantified solely from global model parameter values of the deductive outputs at steady state, without any need for evaluation of curated benchmark datasets through inductive output for reasoning and comprehension.",
-      "hf_url": "https://huggingface.co/papers/2603.23539",
-      "arxiv_url": "https://arxiv.org/abs/2603.23539",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.23539",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.23539",
-      "github_url": "",
-      "submitted_by": "Burc Gokden",
-      "submitted_at": "2026-03-26T02:42:52.375Z",
-      "upvotes": 1,
-      "comments": 2,
-      "topic_key": "reasoning_alignment_eval",
-      "topic_label": "Reasoning, Alignment, and Evaluation",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.69
+      "classification_confidence": 0.87
     }
   ]
 }
