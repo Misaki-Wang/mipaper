@@ -1,10 +1,145 @@
 {
   "branch_key": "trending",
   "branch_label": "Trending",
-  "generated_at": "2026-03-23T04:04:41Z",
-  "reports_count": 4,
-  "default_report_path": "data/trending/reports/2026-03-23/trending-2026-03-23.json",
+  "generated_at": "2026-03-30T04:13:38Z",
+  "reports_count": 5,
+  "default_report_path": "data/trending/reports/2026-03-30/trending-2026-03-30.json",
   "reports": [
+    {
+      "branch_key": "trending",
+      "branch_label": "Trending",
+      "data_path": "data/trending/reports/2026-03-30/trending-2026-03-30.json",
+      "slug": "trending-2026-03-30",
+      "snapshot_date": "2026-03-30",
+      "since": "weekly",
+      "total_repositories": 17,
+      "generated_at": "2026-03-30T04:13:38Z",
+      "source_url": "https://github.com/trending?since=weekly&spoken_language_code=",
+      "top_languages": [
+        {
+          "language": "Python",
+          "count": 11,
+          "share": 64.70588235294117
+        },
+        {
+          "language": "TypeScript",
+          "count": 3,
+          "share": 17.647058823529413
+        },
+        {
+          "language": "JavaScript",
+          "count": 2,
+          "share": 11.76470588235294
+        },
+        {
+          "language": "Shell",
+          "count": 1,
+          "share": 5.88235294117647
+        }
+      ],
+      "top_repositories": [
+        {
+          "snapshot_date": "2026-03-30",
+          "repo_id": "affaan-m/everything-claude-code",
+          "owner": "affaan-m",
+          "name": "everything-claude-code",
+          "full_name": "affaan-m/everything-claude-code",
+          "repo_url": "https://github.com/affaan-m/everything-claude-code",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "language": "JavaScript",
+          "stars": 116961,
+          "forks": 15199,
+          "stars_this_week": 19877,
+          "built_by": [
+            "affaan-m",
+            "pangerlkr",
+            "claude",
+            "greptile-apps",
+            "Copilot"
+          ]
+        },
+        {
+          "snapshot_date": "2026-03-30",
+          "repo_id": "bytedance/deer-flow",
+          "owner": "bytedance",
+          "name": "deer-flow",
+          "full_name": "bytedance/deer-flow",
+          "repo_url": "https://github.com/bytedance/deer-flow",
+          "description": "An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
+          "language": "Python",
+          "stars": 52959,
+          "forks": 6370,
+          "stars_this_week": 18158,
+          "built_by": [
+            "MagicCube",
+            "WillemJiang",
+            "hetaoBackend",
+            "henry-byted",
+            "claude"
+          ]
+        },
+        {
+          "snapshot_date": "2026-03-30",
+          "repo_id": "obra/superpowers",
+          "owner": "obra",
+          "name": "superpowers",
+          "full_name": "obra/superpowers",
+          "repo_url": "https://github.com/obra/superpowers",
+          "description": "An agentic skills framework & software development methodology that works.",
+          "language": "Shell",
+          "stars": 123516,
+          "forks": 10062,
+          "stars_this_week": 18047,
+          "built_by": [
+            "obra",
+            "claude",
+            "arittr",
+            "clkao",
+            "jjshanks"
+          ]
+        },
+        {
+          "snapshot_date": "2026-03-30",
+          "repo_id": "crosstalk-solutions/project-nomad",
+          "owner": "Crosstalk-Solutions",
+          "name": "project-nomad",
+          "full_name": "Crosstalk-Solutions/project-nomad",
+          "repo_url": "https://github.com/Crosstalk-Solutions/project-nomad",
+          "description": "Project N.O.M.A.D, is a self-contained, offline survival computer packed with critical tools, knowledge, and AI to keep you informed and empowered—anytime, anywhere.",
+          "language": "TypeScript",
+          "stars": 19836,
+          "forks": 1882,
+          "stars_this_week": 11503,
+          "built_by": [
+            "jakeaturner",
+            "claude",
+            "chriscrosstalk",
+            "cosmistack-bot",
+            "dependabot"
+          ]
+        },
+        {
+          "snapshot_date": "2026-03-30",
+          "repo_id": "mvanhorn/last30days-skill",
+          "owner": "mvanhorn",
+          "name": "last30days-skill",
+          "full_name": "mvanhorn/last30days-skill",
+          "repo_url": "https://github.com/mvanhorn/last30days-skill",
+          "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+          "language": "Python",
+          "stars": 15628,
+          "forks": 1246,
+          "stars_this_week": 10436,
+          "built_by": [
+            "mvanhorn",
+            "claude",
+            "j-sperling",
+            "phjlljp",
+            "iliaal"
+          ]
+        }
+      ]
+    },
     {
       "branch_key": "trending",
       "branch_label": "Trending",
