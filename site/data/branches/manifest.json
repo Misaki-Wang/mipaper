@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-03-31T15:18:06Z",
-  "reports_count": 91,
+  "generated_at": "2026-03-31T16:57:19Z",
+  "reports_count": 94,
   "branches": [
     {
       "branch_key": "daily",
       "branch_label": "Cool Daily",
-      "reports_count": 63,
-      "default_report_path": "data/daily/reports/2026-03-30/cs.AI-2026-03-30.json",
+      "reports_count": 66,
+      "default_report_path": "data/daily/reports/2026-03-31/cs.AI-2026-03-31.json",
       "manifest_path": "data/daily/manifest.json"
     },
     {
@@ -25,6 +25,186 @@
     }
   ],
   "reports": [
+    {
+      "branch_key": "daily",
+      "branch_label": "Cool Daily",
+      "search_text": "daily Cool Daily cs.AI-2026-03-31 data/daily/reports/2026-03-31/cs.AI-2026-03-31.json https://papers.cool/arxiv/cs.AI?date=2026-03-31&show=1000 codex 2026-03-31 cs.AI Generative Foundations Multimodal Generative Modeling Multimodal Agents Domain Applications Reasoning, Alignment, and Evaluation Multimodal Understanding and Vision Agents and Planning Learning, Optimization, and Theory",
+      "data_path": "data/daily/reports/2026-03-31/cs.AI-2026-03-31.json",
+      "slug": "cs.AI-2026-03-31",
+      "report_date": "2026-03-31",
+      "category": "cs.AI",
+      "total_papers": 337,
+      "classifier": "codex",
+      "generated_at": "2026-03-31T15:25:39Z",
+      "source_url": "https://papers.cool/arxiv/cs.AI?date=2026-03-31&show=1000",
+      "focus_topics": [
+        {
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "count": 11,
+          "share": 3.26
+        },
+        {
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 18,
+          "share": 5.34
+        },
+        {
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "count": 14,
+          "share": 4.15
+        }
+      ],
+      "top_topics": [
+        {
+          "topic_label": "Domain Applications",
+          "count": 68,
+          "share": 20.18
+        },
+        {
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "count": 46,
+          "share": 13.65
+        },
+        {
+          "topic_label": "Multimodal Understanding and Vision",
+          "count": 34,
+          "share": 10.09
+        },
+        {
+          "topic_label": "Agents and Planning",
+          "count": 33,
+          "share": 9.79
+        },
+        {
+          "topic_label": "Learning, Optimization, and Theory",
+          "count": 30,
+          "share": 8.9
+        }
+      ]
+    },
+    {
+      "branch_key": "daily",
+      "branch_label": "Cool Daily",
+      "search_text": "daily Cool Daily cs.CL-2026-03-31 data/daily/reports/2026-03-31/cs.CL-2026-03-31.json https://papers.cool/arxiv/cs.CL?date=2026-03-31&show=1000 codex 2026-03-31 cs.CL Generative Foundations Multimodal Generative Modeling Multimodal Agents LLMs and Language Domain Applications Datasets and Benchmarks Reasoning, Alignment, and Evaluation Retrieval, Knowledge, and RAG",
+      "data_path": "data/daily/reports/2026-03-31/cs.CL-2026-03-31.json",
+      "slug": "cs.CL-2026-03-31",
+      "report_date": "2026-03-31",
+      "category": "cs.CL",
+      "total_papers": 119,
+      "classifier": "codex",
+      "generated_at": "2026-03-31T15:34:33Z",
+      "source_url": "https://papers.cool/arxiv/cs.CL?date=2026-03-31&show=1000",
+      "focus_topics": [
+        {
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "count": 3,
+          "share": 2.52
+        },
+        {
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 1,
+          "share": 0.84
+        },
+        {
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "count": 1,
+          "share": 0.84
+        }
+      ],
+      "top_topics": [
+        {
+          "topic_label": "LLMs and Language",
+          "count": 22,
+          "share": 18.49
+        },
+        {
+          "topic_label": "Domain Applications",
+          "count": 17,
+          "share": 14.29
+        },
+        {
+          "topic_label": "Datasets and Benchmarks",
+          "count": 16,
+          "share": 13.45
+        },
+        {
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "count": 16,
+          "share": 13.45
+        },
+        {
+          "topic_label": "Retrieval, Knowledge, and RAG",
+          "count": 14,
+          "share": 11.76
+        }
+      ]
+    },
+    {
+      "branch_key": "daily",
+      "branch_label": "Cool Daily",
+      "search_text": "daily Cool Daily cs.CV-2026-03-31 data/daily/reports/2026-03-31/cs.CV-2026-03-31.json https://papers.cool/arxiv/cs.CV?date=2026-03-31&show=1000 codex 2026-03-31 cs.CV Generative Foundations Multimodal Generative Modeling Multimodal Agents Multimodal Understanding and Vision Domain Applications Multimodal Generative Modeling Datasets and Benchmarks Robotics and Embodied AI",
+      "data_path": "data/daily/reports/2026-03-31/cs.CV-2026-03-31.json",
+      "slug": "cs.CV-2026-03-31",
+      "report_date": "2026-03-31",
+      "category": "cs.CV",
+      "total_papers": 336,
+      "classifier": "codex",
+      "generated_at": "2026-03-31T16:57:19Z",
+      "source_url": "https://papers.cool/arxiv/cs.CV?date=2026-03-31&show=1000",
+      "focus_topics": [
+        {
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "count": 19,
+          "share": 5.65
+        },
+        {
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 47,
+          "share": 13.99
+        },
+        {
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "count": 14,
+          "share": 4.17
+        }
+      ],
+      "top_topics": [
+        {
+          "topic_label": "Multimodal Understanding and Vision",
+          "count": 90,
+          "share": 26.79
+        },
+        {
+          "topic_label": "Domain Applications",
+          "count": 64,
+          "share": 19.05
+        },
+        {
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 47,
+          "share": 13.99
+        },
+        {
+          "topic_label": "Datasets and Benchmarks",
+          "count": 32,
+          "share": 9.52
+        },
+        {
+          "topic_label": "Robotics and Embodied AI",
+          "count": 26,
+          "share": 7.74
+        }
+      ]
+    },
     {
       "branch_key": "daily",
       "branch_label": "Cool Daily",
