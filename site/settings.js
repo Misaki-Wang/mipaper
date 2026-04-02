@@ -7,18 +7,18 @@ import {
   subscribeAuth,
   subscribeLikes,
   syncLikesNow,
-} from "./likes.js?v=99ec863b62";
-import { initReviewSync, subscribePageReviews, syncPageReviewsNow } from "./reading_state.js?v=3a706b914e";
+} from "./likes.js?v=010cf1b2c9";
+import { initReviewSync, subscribePageReviews, syncPageReviewsNow } from "./reading_state.js?v=dd3f79ade0";
 import { initQueue, readQueue, subscribeQueue } from "./paper_queue.js?v=033bd186d1";
 import { bindBranchAuthToolbar } from "./branch_auth.js?v=66a12f1edc";
-import { mountAppToolbar } from "./app_toolbar.js?v=a2626f682a";
+import { mountAppToolbar } from "./app_toolbar.js?v=c5124e8940";
 import { bindBranchNav } from "./branch_nav.js?v=2ab092d7f1";
 import { bindLibraryNav } from "./library_nav.js?v=7b6e095589";
 import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=88024f7cbb";
 import { initToolbarPreferences } from "./toolbar_preferences.js?v=c889d6e375";
 import { bindBackToTop } from "./page_shell.js?v=b0d53b671d";
 import { escapeAttribute, escapeHtml, fetchJson, formatDateTime } from "./ui_utils.js?v=e2da3b3a11";
-import { getToReadSnapshots, loadSnapshotQueueData } from "./like_page_snapshots.js?v=30e01ecd4f";
+import { getToReadSnapshots, loadSnapshotQueueData } from "./like_page_snapshots.js?v=9b7df40d25";
 import {
   initSavedViewsSync,
   readSavedViews as readSavedViewsStore,

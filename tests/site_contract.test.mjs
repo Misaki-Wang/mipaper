@@ -4,6 +4,7 @@ import assert from "node:assert/strict";
 import {
   validateBranchCatalogManifest,
   validateDailyManifest,
+  validateMagazineManifest,
   validateTrendingManifest,
 } from "../site/site_contract.js";
 
@@ -83,4 +84,33 @@ test("validateBranchCatalogManifest rejects report count drift", () => {
       }),
     /reports_count mismatch/
   );
+});
+
+test("validateMagazineManifest accepts the generated magazine manifest shape", () => {
+  const manifest = {
+    branch_key: "magazine",
+    branch_label: "Magazine",
+    generated_at: "2026-04-02T00:00:00Z",
+    reports_count: 1,
+    default_report_path: "data/magazine/reports/issue-390/magazine-issue-390.json",
+    reports: [
+      {
+        branch_key: "magazine",
+        branch_label: "Magazine",
+        data_path: "data/magazine/reports/issue-390/magazine-issue-390.json",
+        slug: "issue-390",
+        issue_number: 390,
+        issue_title: "科技爱好者周刊（第 390 期）",
+        sync_date: "2026-04-02",
+        sections_count: 2,
+        generated_at: "2026-04-02T00:00:00Z",
+        source_url: "https://github.com/ruanyf/weekly/blob/master/docs/issue-390.md",
+        cover_image_url: "https://cdn.example.com/cover.webp",
+        excerpt: "同步摘要",
+        headings: [],
+      },
+    ],
+  };
+
+  assert.equal(validateMagazineManifest(manifest), manifest);
 });

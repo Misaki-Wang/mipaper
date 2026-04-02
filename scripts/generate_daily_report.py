@@ -135,7 +135,7 @@ def main() -> int:
     print(f"- Classifier: {args.classifier}")
 
     if args.notify == "email":
-        subject = f"[Cool Paper] {args.category} {report_date} Daily Paper Classification Report"
+        subject = f"[MiPaper] {args.category} {report_date} Daily Paper Classification Report"
         EmailNotifier().send(subject=subject, body=markdown_text)
         print("- Notification: email sent")
     else:

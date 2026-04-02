@@ -27,3 +27,13 @@ test("app toolbar renders a unified search/add command bar when toolbar search i
   assert.match(markup, /data-command-surface="search"/);
   assert.match(markup, /data-command-surface="add"/);
 });
+
+test("app toolbar exposes the magazine branch navigation item", () => {
+  const markup = renderAppToolbar({
+    prefix: "magazine",
+    showFilters: false,
+  });
+
+  assert.match(markup, /href="\.\/magazine\.html"/);
+  assert.match(markup, />Magazine</);
+});

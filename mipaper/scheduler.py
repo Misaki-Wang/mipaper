@@ -105,6 +105,23 @@ def trending_backfill_dates(
     return [current_date.isoformat()]
 
 
+def magazine_backfill_dates(
+    start_date: str,
+    timezone_name: str,
+    last_success_date: str | None = None,
+    now: datetime | None = None,
+) -> list[str]:
+    current_date = local_now(timezone_name, now).date()
+    anchor_date = parse_iso_date(start_date)
+    if current_date < anchor_date:
+        return []
+    if current_date.weekday() < 4:
+        return []
+    if last_success_date and iso_week_key(parse_iso_date(last_success_date)) == iso_week_key(current_date):
+        return []
+    return [current_date.isoformat()]
+
+
 def load_schedule_state(path: Path) -> dict:
     if not path.exists():
         return {}

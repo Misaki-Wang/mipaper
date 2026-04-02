@@ -16,12 +16,14 @@ ROOT_DIR = Path(__file__).resolve().parents[1]
 if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
+from mipaper.notifiers import EmailNotifier
 from mipaper.paths import SCHEDULE_STATE_PATH
 from mipaper.paths import DAILY_REPORTS_DIR
 from mipaper.scheduler import (
     cool_daily_backfill_dates,
     hf_daily_backfill_dates,
     load_schedule_state,
+    magazine_backfill_dates,
     local_now,
     save_schedule_state,
     summarize_date_window,
@@ -32,8 +34,28 @@ GENERATED_PATHS = [
     "reports/daily",
     "reports/hf-daily",
     "reports/trending",
+    "reports/magazine",
     "site/data",
 ]
+
+JOB_PAGE_CONFIG = {
+    "cool_daily": {
+        "label": "Cool Daily",
+        "path": "cool-daily.html",
+    },
+    "hf_daily": {
+        "label": "HF Daily",
+        "path": "hf-daily.html",
+    },
+    "trending": {
+        "label": "Trending",
+        "path": "trending.html",
+    },
+    "magazine": {
+        "label": "Magazine",
+        "path": "magazine.html",
+    },
+}
 
 
 def load_env_file(path: Path) -> None:
@@ -50,8 +72,13 @@ def load_env_file(path: Path) -> None:
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Run scheduled Cool Daily / HF Daily / Trending jobs.")
-    parser.add_argument("--job", choices=("cool_daily", "hf_daily", "trending"), required=True, help="scheduled job kind")
+    parser = argparse.ArgumentParser(description="Run scheduled Cool Daily / HF Daily / Trending / Magazine jobs.")
+    parser.add_argument(
+        "--job",
+        choices=("cool_daily", "hf_daily", "trending", "magazine"),
+        required=True,
+        help="scheduled job kind",
+    )
     parser.add_argument("--timezone", default=os.environ.get("COOL_PAPER_TIMEZONE", "Asia/Shanghai"))
     parser.add_argument("--skip-push", action="store_true", help="generate reports but skip git commit/push")
     parser.add_argument("--git-remote", default=os.environ.get("COOL_PAPER_GIT_REMOTE", "origin"))
@@ -137,6 +164,12 @@ def state_key(job: str) -> str:
     return f"{job}_last_success_date"
 
 
+def normalize_job_name(job: str) -> str:
+    if job == "weekly":
+        return "magazine"
+    return job
+
+
 def daily_report_json_path(report_date: str, category: str, base_dir: Path = DAILY_REPORTS_DIR) -> Path:
     return base_dir / report_date / f"{category}-{report_date}.json"
 
@@ -195,7 +228,7 @@ def run_cool_daily_job(timezone_name: str, start_date: str, state: dict, now: da
                 "--output-dir",
                 "reports/daily",
                 "--notify",
-                os.environ.get("COOL_PAPER_NOTIFY", "none"),
+                "none",
                 *classifier_args,
             ]
             run_command(command)
@@ -259,8 +292,93 @@ def run_trending_job(timezone_name: str, start_date: str, state: dict, now: date
     return report_dates
 
 
+def run_magazine_job(timezone_name: str, start_date: str, state: dict, now: datetime | None = None) -> list[str]:
+    report_dates = magazine_backfill_dates(
+        start_date=start_date,
+        timezone_name=timezone_name,
+        last_success_date=state.get(state_key("magazine")) or state.get("weekly_last_success_date"),
+        now=now,
+    )
+    if not report_dates:
+        print(f"No Magazine sync needed in timezone {timezone_name}.")
+        return []
+
+    for report_date in report_dates:
+        command = [
+            "python3",
+            "scripts/generate_magazine_report.py",
+            "--date",
+            report_date,
+            "--timezone",
+            timezone_name,
+            "--output-dir",
+            "reports/magazine",
+        ]
+        run_command(command)
+    return report_dates
+
+
 def build_site_data() -> None:
     run_command(["python3", "scripts/build_site_data.py"])
+
+
+def should_send_email_notification() -> bool:
+    return os.getenv("COOL_PAPER_NOTIFY", "none").strip().lower() == "email"
+
+
+def resolve_public_page_url(job: str) -> str:
+    page_path = JOB_PAGE_CONFIG[job]["path"]
+    site_url = os.getenv("COOL_PAPER_SITE_URL", "").strip()
+    if not site_url:
+        return page_path
+    return f"{site_url.rstrip('/')}/{page_path}"
+
+
+def build_notification_subject(job: str, date_window: list[str]) -> str:
+    job_label = JOB_PAGE_CONFIG[job]["label"]
+    return f"[MiPaper] {job_label} updated {summarize_date_window(date_window)}"
+
+
+def build_notification_body(job: str, date_window: list[str], timezone_name: str, now: datetime | None = None) -> str:
+    job_label = JOB_PAGE_CONFIG[job]["label"]
+    page_url = resolve_public_page_url(job)
+    updated_at = local_now(timezone_name, now).isoformat()
+    lines = [
+        "MiPaper published updated page content.",
+        "",
+        f"Job: {job_label}",
+        f"Updated at: {updated_at}",
+        f"Date window: {summarize_date_window(date_window)}",
+        f"Page: {page_url}",
+    ]
+
+    if job == "cool_daily":
+        categories = os.environ.get("COOL_PAPER_CATEGORIES", "cs.AI cs.CL cs.CV").split()
+        lines.append(f"Categories: {', '.join(categories)}")
+    elif job == "trending":
+        lines.append(f"Window: {os.environ.get('COOL_PAPER_TRENDING_WINDOW', 'weekly')}")
+    elif job == "magazine":
+        lines.append("Source: ruanyf/weekly")
+
+    lines.extend(
+        [
+            "",
+            "Business dates:",
+            *[f"- {report_date}" for report_date in date_window],
+        ]
+    )
+    return "\n".join(lines)
+
+
+def send_update_notification(job: str, date_window: list[str], timezone_name: str, now: datetime | None = None) -> None:
+    if not should_send_email_notification():
+        print("Notification: skipped")
+        return
+
+    subject = build_notification_subject(job, date_window)
+    body = build_notification_body(job, date_window, timezone_name, now=now)
+    EmailNotifier().send(subject=subject, body=body)
+    print("Notification: email sent")
 
 
 def run_command_with_retries(command: list[str], retries: int = 3) -> None:
@@ -303,7 +421,9 @@ def commit_and_push(job: str, date_window: list[str], remote: str, branch: str) 
 
 def main() -> int:
     load_env_file(ROOT_DIR / ".env")
+    load_env_file(ROOT_DIR / ".dev.vars")
     args = parse_args()
+    normalized_job = normalize_job_name(args.job)
     state_path = ROOT_DIR / args.state_path
     state = load_schedule_state(state_path)
     now = parse_now(args.now, args.timezone)
@@ -312,8 +432,10 @@ def main() -> int:
         dates = run_cool_daily_job(args.timezone, args.start_date, state, now)
     elif args.job == "hf_daily":
         dates = run_hf_daily_job(args.timezone, args.start_date, state, now)
-    else:
+    elif args.job == "trending":
         dates = run_trending_job(args.timezone, args.start_date, state, now)
+    else:
+        dates = run_magazine_job(args.timezone, args.start_date, state, now)
 
     if not dates:
         return 0
@@ -321,8 +443,9 @@ def main() -> int:
     build_site_data()
     if not args.skip_push:
         commit_and_push(args.job, dates, args.git_remote, args.git_branch)
-    state[state_key(args.job)] = dates[-1]
-    state[f"{args.job}_updated_at"] = local_now(args.timezone, now).isoformat()
+    send_update_notification(args.job, dates, args.timezone, now=now)
+    state[state_key(normalized_job)] = dates[-1]
+    state[f"{normalized_job}_updated_at"] = local_now(args.timezone, now).isoformat()
     save_schedule_state(state_path, state)
     return 0
 

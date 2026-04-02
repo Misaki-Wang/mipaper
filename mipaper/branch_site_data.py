@@ -196,15 +196,19 @@ def build_search_text(report: dict, branch_key: str, branch_label: str) -> str:
         report.get("classifier"),
         report.get("report_date"),
         report.get("snapshot_date"),
+        report.get("sync_date"),
         report.get("category"),
         report.get("venue"),
         report.get("venue_series"),
         report.get("venue_year"),
+        report.get("issue_title"),
+        report.get("excerpt"),
     ]
     values.extend(extract_nested_text(report.get("focus_topics")))
     values.extend(extract_nested_text(report.get("top_topics")))
     values.extend(extract_nested_text(report.get("subject_distribution")))
     values.extend(extract_nested_text(report.get("top_submitters")))
+    values.extend(extract_nested_text(report.get("headings")))
     return " ".join(str(value).strip() for value in values if value)
 
 
@@ -215,7 +219,7 @@ def extract_nested_text(items: object) -> List[str]:
     extracted = []
     for item in items:
         if isinstance(item, dict):
-            for key in ("topic_label", "subject_label", "language", "submitted_by", "label", "name"):
+            for key in ("topic_label", "subject_label", "language", "submitted_by", "label", "name", "title"):
                 value = item.get(key)
                 if isinstance(value, str) and value.strip():
                     extracted.append(value.strip())

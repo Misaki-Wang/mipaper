@@ -1,13 +1,13 @@
-import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js?v=99ec863b62";
+import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js?v=010cf1b2c9";
 import { bindQueueButtons, initQueue, subscribeQueue } from "./paper_queue.js?v=033bd186d1";
 import { repairLikeLaterConflicts } from "./paper_selection.js?v=964dbe6c53";
 import { createCalendarPicker } from "./calendar_picker.js?v=4b01d6ac6c";
-import { mountAppToolbar } from "./app_toolbar.js?v=a2626f682a";
+import { mountAppToolbar } from "./app_toolbar.js?v=c5124e8940";
 import { buildBranchReviewKey, createBranchReviewController, initBranchReportPage } from "./branch_page.js?v=f27a328acc";
 import { bindBranchListDetails, renderBranchDetailSection, renderBranchListDetails } from "./branch_details.js?v=bf87e132c5";
 import { createLatestTaskRunner } from "./request_gate.js?v=f527e8e81d";
 import { createFloatingTocController } from "./floating_toc.js?v=a9ffd5aa93";
-import { validateHfManifest, validateHfReport } from "./site_contract.js?v=12344e596d";
+import { validateHfManifest, validateHfReport } from "./site_contract.js?v=be9ddc76a7";
 import { escapeAttribute, escapeHtml, fetchJson, formatZhTime, getErrorMessage } from "./ui_utils.js?v=e2da3b3a11";
 
 mountAppToolbar("#hf-toolbar-root", {

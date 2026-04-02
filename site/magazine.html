@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MiPaper</title>
+    <meta
+      name="description"
+      content="Synced Magazine branch for ruanyf/weekly with issue archive browsing and full markdown reading."
+    />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <script>
+      (function () {
+        var storedMode = localStorage.getItem("cool-paper-theme") || "auto";
+        var prefersDark =
+          typeof window.matchMedia === "function" &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+        var resolvedTheme = storedMode === "auto" ? (prefersDark ? "dark" : "light") : storedMode;
+        document.documentElement.dataset.theme = resolvedTheme;
+        document.documentElement.dataset.themeMode = storedMode;
+      })();
+    </script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="page-magazine">
+    <div class="page-shell">
+      <div class="page-chrome">
+        <div id="magazine-toolbar-root"></div>
+        <template id="magazine-toolbar-filters">
+          <section class="glass-card controls reveal">
+            <div class="control-block">
+              <label for="magazine-report-select">Issue</label>
+              <select id="magazine-report-select" class="control-input"></select>
+            </div>
+          </section>
+        </template>
+      </div>
+
+      <header class="hero reveal">
+        <div class="hero-copy">
+          <p class="eyebrow">RUANYF MAGAZINE</p>
+          <h1 id="magazine-hero-title">Magazine Archive</h1>
+          <p id="magazine-hero-excerpt" class="hero-text">-</p>
+          <div id="magazine-hero-signals" class="hero-signals"></div>
+        </div>
+        <div class="hero-panel glass-card">
+          <div class="hero-panel-top">
+            <span class="meta-kicker">Latest Sync</span>
+            <div class="hero-panel-status">
+              <strong id="magazine-hero-issue">-</strong>
+              <span id="magazine-hero-review-status" class="review-status-pill">Not reviewed</span>
+            </div>
+          </div>
+          <div class="hero-stat-grid">
+            <div>
+              <span class="stat-label">Sections</span>
+              <strong id="magazine-hero-sections">-</strong>
+            </div>
+            <div>
+              <span class="stat-label">Synced</span>
+              <strong id="magazine-hero-sync-date">-</strong>
+            </div>
+            <div>
+              <span class="stat-label">Updated</span>
+              <strong id="magazine-hero-updated">-</strong>
+            </div>
+            <div>
+              <span class="stat-label">Source</span>
+              <a id="magazine-hero-source" class="link-chip" href="#" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="glass-card home-board reveal">
+        <div class="section-heading">
+          <p class="eyebrow">MAGAZINE ARCHIVE</p>
+          <h2>Issue Archive</h2>
+          <p id="magazine-board-summary" class="home-board-summary">-</p>
+        </div>
+        <div id="magazine-home-cards" class="home-categories"></div>
+      </section>
+
+      <main class="layout">
+        <section class="content">
+          <section id="magazine-overview-section" class="glass-card overview reveal">
+            <div class="overview-top">
+              <div>
+                <p class="eyebrow">OVERVIEW</p>
+                <h2 id="magazine-overview-title">Issue Overview</h2>
+              </div>
+              <a id="magazine-source-link" class="link-chip" href="#" target="_blank" rel="noreferrer">Source</a>
+            </div>
+            <div class="overview-grid conference-overview-grid">
+              <article class="insight-card accent-card">
+                <span class="insight-label">Lead</span>
+                <p id="magazine-overview-summary" class="insight-text">-</p>
+              </article>
+              <article class="insight-card">
+                <span class="insight-label">Cover</span>
+                <p id="magazine-cover-summary" class="insight-text">-</p>
+              </article>
+              <article class="insight-card">
+                <span class="insight-label">Body</span>
+                <p id="magazine-body-summary" class="insight-text">-</p>
+              </article>
+              <article class="insight-card">
+                <span class="insight-label">Archive</span>
+                <p id="magazine-archive-summary" class="insight-text">-</p>
+              </article>
+            </div>
+          </section>
+
+          <section id="magazine-intro-section" class="glass-card overview reveal">
+            <div class="section-heading">
+              <p class="eyebrow">INTRO</p>
+              <h2>Opening Notes</h2>
+            </div>
+            <div id="magazine-lead-content" class="paper-workspace-markdown-display workspace-markdown-render"></div>
+          </section>
+
+          <section class="reveal">
+            <div id="magazine-section-list" class="conference-subject-sections"></div>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <button id="magazine-back-to-top" class="back-to-top" type="button" aria-hidden="true">
+      <span>↑</span>
+      <span>Top</span>
+    </button>
+
+    <aside class="floating-toc" aria-label="Table of contents">
+      <div class="floating-toc-card">
+        <button id="magazine-review-toggle" class="review-toggle" type="button" aria-pressed="false">
+          <span class="review-toggle-icon" aria-hidden="true">✓</span>
+          <span class="review-toggle-copy">
+            <span class="review-toggle-label">Reviewed</span>
+            <span id="magazine-review-toggle-meta" class="review-toggle-meta">Mark this issue as reviewed</span>
+          </span>
+        </button>
+        <p class="eyebrow">TABLE OF CONTENTS</p>
+        <h2>Quick Jump</h2>
+        <nav id="magazine-floating-toc" class="floating-toc-list"></nav>
+      </div>
+    </aside>
+
+    <script type="module" src="./magazine.js?v=34351eedcf"></script>
+  </body>
+</html>

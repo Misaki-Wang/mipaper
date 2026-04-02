@@ -1,8 +1,8 @@
-import { getSourceLabel, initLikesSync, readLikes, subscribeLikes, updateLikedPapers } from "./likes.js?v=99ec863b62";
+import { getSourceLabel, initLikesSync, readLikes, subscribeLikes, updateLikedPapers } from "./likes.js?v=010cf1b2c9";
 import { initQueue, readQueue, removeFromQueue, subscribeQueue, updateQueuedPaper, updateQueuedPapers } from "./paper_queue.js?v=033bd186d1";
 import { movePaperToLikes, repairLikeLaterConflicts } from "./paper_selection.js?v=964dbe6c53";
 import { bindBranchAuthToolbar } from "./branch_auth.js?v=66a12f1edc";
-import { mountAppToolbar } from "./app_toolbar.js?v=a2626f682a";
+import { mountAppToolbar } from "./app_toolbar.js?v=c5124e8940";
 import { bindBranchNav } from "./branch_nav.js?v=2ab092d7f1";
 import { bindLibraryNav } from "./library_nav.js?v=7b6e095589";
 import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=88024f7cbb";
@@ -10,7 +10,7 @@ import { bindFilterMenu } from "./page_shell.js?v=b0d53b671d";
 import { initToolbarPreferences } from "./toolbar_preferences.js?v=c889d6e375";
 import { createShowMoreAutoLoadController } from "./show_more_autoload.js?v=5f324a6f25";
 import { escapeAttribute, escapeHtml, getErrorMessage } from "./ui_utils.js?v=e2da3b3a11";
-import { renderWorkspaceMarkdownPreviewContent } from "./workspace_markdown.js?v=dd095ad254";
+import { renderWorkspaceMarkdownPreviewContent } from "./workspace_markdown.js?v=7d091b73bd";
 import {
   PRIORITY_OPTIONS,
   WORKFLOW_STATUS_OPTIONS,
@@ -857,8 +857,6 @@ function renderWorkspaceTagSection(view) {
 function renderWorkspacePanel(view, options = {}) {
   const { showSummaryTags = true } = options;
   const panelOpen = isWorkspacePanelOpen(view.paper.like_id);
-  const takeawayPreview = renderWorkspaceMarkdownPreviewContent(view.takeaway);
-  const nextActionPreview = renderWorkspaceMarkdownPreviewContent(view.nextAction);
   return `
     <details class="paper-workspace-panel" data-workspace-panel="${escapeAttribute(view.paper.like_id)}"${panelOpen ? " open" : ""}>
       <summary class="paper-workspace-header">
@@ -893,37 +891,59 @@ function renderWorkspacePanel(view, options = {}) {
           ${renderWorkspaceTagSection(view)}
         </div>
         <div class="paper-workspace-grid">
-          <label class="paper-workspace-card paper-workspace-field">
-            <span class="paper-detail-label">Takeaway</span>
-            <textarea class="paper-workspace-textarea" rows="2" data-workspace-takeaway="${escapeAttribute(view.paper.like_id)}" placeholder="Capture the one-line reason this paper matters.">${escapeHtml(view.takeaway)}</textarea>
-            <div class="paper-workspace-markdown-preview${view.takeaway.trim() ? "" : " is-empty"}">
-              <span class="paper-workspace-markdown-caption">Markdown Preview</span>
-              <div
-                class="workspace-markdown-render"
-                data-workspace-preview-id="${escapeAttribute(view.paper.like_id)}"
-                data-workspace-preview-field="takeaway"
-              >
-                ${takeawayPreview}
-              </div>
-            </div>
-          </label>
-          <label class="paper-workspace-card paper-workspace-field">
-            <span class="paper-detail-label">Next Action</span>
-            <textarea class="paper-workspace-textarea" rows="2" data-workspace-next-action="${escapeAttribute(view.paper.like_id)}" placeholder="Leave a concrete follow-up step for yourself.">${escapeHtml(view.nextAction)}</textarea>
-            <div class="paper-workspace-markdown-preview${view.nextAction.trim() ? "" : " is-empty"}">
-              <span class="paper-workspace-markdown-caption">Markdown Preview</span>
-              <div
-                class="workspace-markdown-render"
-                data-workspace-preview-id="${escapeAttribute(view.paper.like_id)}"
-                data-workspace-preview-field="next-action"
-              >
-                ${nextActionPreview}
-              </div>
-            </div>
-          </label>
+          ${renderWorkspaceMarkdownField({
+            likeId: view.paper.like_id,
+            field: "takeaway",
+            label: "Takeaway",
+            value: view.takeaway,
+            placeholder: "Capture the one-line reason this paper matters.",
+          })}
+          ${renderWorkspaceMarkdownField({
+            likeId: view.paper.like_id,
+            field: "next-action",
+            label: "Next Action",
+            value: view.nextAction,
+            placeholder: "Leave a concrete follow-up step for yourself.",
+          })}
         </div>
       </div>
     </details>
+  `;
+}
+
+function renderWorkspaceMarkdownField({ likeId, field, label, value, placeholder }) {
+  const normalizedValue = String(value || "");
+  const previewContent = renderWorkspaceMarkdownPreviewContent(normalizedValue, { emptyText: placeholder });
+  const fieldAttribute =
+    field === "takeaway"
+      ? `data-workspace-takeaway="${escapeAttribute(likeId)}"`
+      : `data-workspace-next-action="${escapeAttribute(likeId)}"`;
+
+  return `
+    <div
+      class="paper-workspace-card paper-workspace-field paper-workspace-markdown-field${normalizedValue.trim() ? "" : " is-empty"}"
+      data-workspace-markdown-field="${escapeAttribute(likeId)}"
+      data-workspace-markdown-kind="${escapeAttribute(field)}"
+    >
+      <span class="paper-detail-label">${escapeHtml(label)}</span>
+      <div
+        class="paper-workspace-markdown-display workspace-markdown-render"
+        data-workspace-preview-id="${escapeAttribute(likeId)}"
+        data-workspace-preview-field="${escapeAttribute(field)}"
+        data-workspace-editor-toggle
+        role="button"
+        tabindex="0"
+        aria-label="Edit ${escapeAttribute(label)}"
+      >
+        ${previewContent}
+      </div>
+      <textarea
+        class="paper-workspace-textarea paper-workspace-markdown-editor"
+        rows="2"
+        ${fieldAttribute}
+        placeholder="${escapeAttribute(placeholder)}"
+      >${escapeHtml(normalizedValue)}</textarea>
+    </div>
   `;
 }
 
@@ -1486,6 +1506,23 @@ function bindWorkspacePanels() {
 }
 
 function bindWorkspaceEditors() {
+  document.querySelectorAll("[data-workspace-editor-toggle]").forEach((surface) => {
+    if (surface.dataset.bound === "true") {
+      return;
+    }
+    surface.dataset.bound = "true";
+    surface.addEventListener("click", () => {
+      activateWorkspaceMarkdownEditor(surface);
+    });
+    surface.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") {
+        return;
+      }
+      event.preventDefault();
+      activateWorkspaceMarkdownEditor(surface);
+    });
+  });
+
   document.querySelectorAll("[data-workspace-status-option], [data-workspace-priority-option]").forEach((button) => {
     if (button.dataset.bound === "true") {
       return;
@@ -1527,6 +1564,17 @@ function bindWorkspaceEditors() {
       const previewField = field.dataset.workspaceTakeaway ? "takeaway" : "next-action";
       updateWorkspaceMarkdownPreview(likeId, previewField, field.value);
     });
+    field.addEventListener("blur", () => {
+      const wrapper = field.closest("[data-workspace-markdown-field]");
+      wrapper?.classList.remove("is-editing");
+    });
+    field.addEventListener("keydown", (event) => {
+      if (event.key !== "Escape") {
+        return;
+      }
+      event.preventDefault();
+      field.blur();
+    });
     field.addEventListener("change", () => {
       const likeId = field.dataset.workspaceTakeaway || field.dataset.workspaceNextAction;
       if (!likeId) {
@@ -1554,7 +1602,20 @@ function updateWorkspaceMarkdownPreview(likeId, fieldName, value) {
     return;
   }
   preview.innerHTML = renderWorkspaceMarkdownPreviewContent(value);
-  preview.parentElement?.classList.toggle("is-empty", !String(value || "").trim());
+  preview.closest("[data-workspace-markdown-field]")?.classList.toggle("is-empty", !String(value || "").trim());
+}
+
+function activateWorkspaceMarkdownEditor(surface) {
+  const wrapper = surface.closest("[data-workspace-markdown-field]");
+  const textarea = wrapper?.querySelector(".paper-workspace-markdown-editor");
+  if (!wrapper || !(textarea instanceof HTMLTextAreaElement)) {
+    return;
+  }
+  wrapper.classList.add("is-editing");
+  window.requestAnimationFrame(() => {
+    textarea.focus();
+    textarea.setSelectionRange(textarea.value.length, textarea.value.length);
+  });
 }
 
 function isWorkspacePanelOpen(likeId) {

@@ -6,6 +6,7 @@ const BRANCH_NAV_ITEMS = [
   { key: "conference", href: "./conference.html", label: "Conf" },
   { key: "direct", href: "./direct-add.html", label: "Direct" },
   { key: "trending", href: "./trending.html", label: "Trend" },
+  { key: "magazine", href: "./magazine.html", label: "Magazine" },
 ];
 
 const LIBRARY_NAV_ITEMS = [

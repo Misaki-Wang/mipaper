@@ -56,3 +56,25 @@ class TrendingRepo:
     forks: Optional[int] = None
     stars_this_week: Optional[int] = None
     built_by: List[str] = field(default_factory=list)
+
+
+@dataclass
+class MagazineIssueSection:
+    title: str
+    slug: str
+    markdown: str = ""
+    excerpt: str = ""
+
+
+@dataclass
+class MagazineIssue:
+    sync_date: str
+    issue_number: int
+    issue_slug: str
+    issue_title: str
+    source_url: str
+    raw_url: str
+    cover_image_url: str = ""
+    excerpt: str = ""
+    lead_markdown: str = ""
+    sections: List[MagazineIssueSection] = field(default_factory=list)

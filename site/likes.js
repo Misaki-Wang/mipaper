@@ -20,6 +20,7 @@ const SOURCE_LABELS = {
   daily: "Cool Daily",
   conference: "Conference",
   hf_daily: "HF Daily",
+  magazine: "Magazine",
   trending: "Trending",
   library: "Library",
 };

@@ -33,6 +33,17 @@ test("workspace markdown renders common formatting safely", () => {
   assert.match(html, /&lt;script&gt;alert\(1\)&lt;\/script&gt;/);
 });
 
+test("workspace markdown renders standalone images without leaking raw URLs", () => {
+  const html = renderWorkspaceMarkdown('![Cover](https://example.com/cover.webp "Cover image")');
+
+  assert.match(html, /<figure class="workspace-markdown-figure">/);
+  assert.match(html, /<img class="workspace-markdown-image"/);
+  assert.match(html, /src="https:\/\/example\.com\/cover\.webp"/);
+  assert.match(html, /alt="Cover"/);
+  assert.match(html, /<figcaption>Cover image<\/figcaption>/);
+  assert.doesNotMatch(html, /!\[/);
+});
+
 test("workspace markdown excerpt stays compact for list-based notes", () => {
   const html = renderWorkspaceMarkdownExcerpt("- First follow-up item\n- Second follow-up item");
   assert.equal(html, "<p>First follow-up item</p>");

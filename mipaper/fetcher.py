@@ -16,16 +16,20 @@ from mipaper.models import HFDailyPaper, Paper, TrendingRepo
 PAPERS_COOL_ROOT = "https://papers.cool"
 HUGGING_FACE_ROOT = "https://huggingface.co"
 GITHUB_ROOT = "https://github.com"
+GITHUB_RAW_ROOT = "https://raw.githubusercontent.com"
+RUANYF_MAGAZINE_REPO = "ruanyf/weekly"
 ARXIV_CATEGORY_PATH = "/arxiv/{category}"
 VENUE_PATH = "/venue/{venue}"
 HF_DAILY_PATH = "/papers/date/{date_value}"
 GITHUB_TRENDING_PATH = "/trending"
+RUANYF_MAGAZINE_DOCS_PATH = "/ruanyf/weekly/tree/master/docs"
 DEFAULT_SHOW = 1000
 USER_AGENT = "cool-paper-bot/1.0"
 VENUE_TOTAL_PATTERN = re.compile(r"Total:\s*([0-9][0-9,]*)")
 MAX_VENUE_FETCH_ATTEMPTS = 6
 ARXIV_ID_PATTERN = re.compile(r"^\d{4}\.\d{4,5}(?:v\d+)?$")
 TRENDING_ARTICLE_PATTERN = re.compile(r'<article[^>]*class="Box-row"[^>]*>(.*?)</article>', re.S)
+RUANYF_MAGAZINE_ISSUE_PATTERN = re.compile(r"issue-(\d+)\.md")
 DEFAULT_FETCH_RETRIES = 3
 
 
@@ -45,6 +49,18 @@ def build_hf_daily_url(date_value: str) -> str:
 def build_github_trending_url(since: str = "weekly", spoken_language_code: str = "") -> str:
     query = urlencode({"since": since, "spoken_language_code": spoken_language_code})
     return f"{GITHUB_ROOT}{GITHUB_TRENDING_PATH}?{query}"
+
+
+def build_ruanyf_magazine_docs_url() -> str:
+    return f"{GITHUB_ROOT}{RUANYF_MAGAZINE_DOCS_PATH}"
+
+
+def build_ruanyf_magazine_issue_html_url(issue_number: int) -> str:
+    return f"{GITHUB_ROOT}/ruanyf/weekly/blob/master/docs/issue-{issue_number}.md"
+
+
+def build_ruanyf_magazine_issue_raw_url(issue_number: int) -> str:
+    return f"{GITHUB_RAW_ROOT}/{RUANYF_MAGAZINE_REPO}/master/docs/issue-{issue_number}.md"
 
 
 def build_venue_url(venue: str, group: str = "", show: int = DEFAULT_SHOW) -> str:
@@ -380,6 +396,18 @@ def parse_github_trending_html(html_text: str, snapshot_date: str) -> List[Trend
             )
         )
     return repos
+
+
+def parse_ruanyf_magazine_issue_numbers(html_text: str) -> List[int]:
+    numbers = {int(match) for match in RUANYF_MAGAZINE_ISSUE_PATTERN.findall(html_text)}
+    return sorted(numbers)
+
+
+def extract_latest_ruanyf_magazine_issue_number(html_text: str) -> int | None:
+    numbers = parse_ruanyf_magazine_issue_numbers(html_text)
+    if not numbers:
+        return None
+    return numbers[-1]
 
 
 def extract_hf_daily_props(html_text: str) -> dict:

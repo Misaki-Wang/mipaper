@@ -21,6 +21,30 @@ let reviewInitPromise = null;
 let reviewSyncPromise = null;
 let reviewHydratePromise = null;
 
+function normalizeLegacyReviewId(reviewId) {
+  const normalized = String(reviewId || "").trim();
+  if (!normalized) {
+    return "";
+  }
+
+  const [branch, ...snapshotParts] = normalized.split("::");
+  const snapshot = snapshotParts.join("::");
+  if (!snapshot) {
+    return normalized;
+  }
+
+  const normalizedSnapshot = snapshot.startsWith("data/weekly/")
+    ? `data/magazine/${snapshot.slice("data/weekly/".length)}`
+    : snapshot;
+  if (branch === "weekly") {
+    return `magazine::${normalizedSnapshot}`;
+  }
+  if (branch === "magazine" && normalizedSnapshot !== snapshot) {
+    return `magazine::${normalizedSnapshot}`;
+  }
+  return normalized;
+}
+
 export function createPageReviewKey(branch, snapshot) {
   return `${String(branch || "page").trim()}::${String(snapshot || "current").trim()}`;
 }
@@ -127,7 +151,7 @@ function normalizeReviewRecord(review) {
     return null;
   }
 
-  const reviewId = typeof review.review_id === "string" ? review.review_id.trim() : "";
+  const reviewId = normalizeLegacyReviewId(review.review_id);
   if (!reviewId) {
     return null;
   }
@@ -151,7 +175,8 @@ function normalizeReviewRecord(review) {
 }
 
 function readReviewStore() {
-  const payload = safeParse(localStorage.getItem(PAGE_REVIEWS_KEY));
+  const rawValue = localStorage.getItem(PAGE_REVIEWS_KEY);
+  const payload = safeParse(rawValue);
   if (!payload || typeof payload !== "object" || Array.isArray(payload)) {
     return {};
   }
@@ -164,10 +189,15 @@ function readReviewStore() {
     "review_id"
   );
 
-  return merged.reduce((accumulator, item) => {
+  const store = merged.reduce((accumulator, item) => {
     accumulator[item.review_id] = item;
     return accumulator;
   }, {});
+  const serialized = JSON.stringify(store);
+  if (rawValue !== serialized) {
+    localStorage.setItem(PAGE_REVIEWS_KEY, serialized);
+  }
+  return store;
 }
 
 function writeReviewStore(reviews, options = {}) {

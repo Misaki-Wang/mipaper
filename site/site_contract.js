@@ -219,6 +219,44 @@ export function validateTrendingReport(report) {
   ]);
 }
 
+export function validateMagazineManifest(manifest) {
+  return validateBranchManifest(manifest, {
+    branchKey: "magazine",
+    branchLabel: "Magazine",
+    requiredReportKeys: [
+      { key: "slug", type: "string" },
+      { key: "issue_number", type: "number" },
+      { key: "issue_title", type: "string" },
+      { key: "sync_date", type: "string" },
+      { key: "sections_count", type: "number" },
+      { key: "generated_at", type: "string" },
+      { key: "source_url", type: "string" },
+      { key: "cover_image_url", type: "string", allowEmpty: true },
+      { key: "excerpt", type: "string", allowEmpty: true },
+      { key: "headings", type: "array" },
+    ],
+  });
+}
+
+export function validateMagazineReport(report) {
+  validateBranchReport(report, [
+    { key: "report_kind", type: "string" },
+    { key: "sync_date", type: "string" },
+    { key: "issue_number", type: "number" },
+    { key: "issue_slug", type: "string" },
+    { key: "issue_title", type: "string" },
+    { key: "raw_url", type: "string" },
+    { key: "cover_image_url", type: "string", allowEmpty: true },
+    { key: "excerpt", type: "string", allowEmpty: true },
+    { key: "lead_markdown", type: "string", allowEmpty: true },
+    { key: "sections_count", type: "number" },
+    { key: "headings", type: "array" },
+    { key: "sections", type: "array" },
+  ]);
+  requireString(report, "report_kind", { expected: "magazine" });
+  return report;
+}
+
 export function validateBranchCatalogManifest(manifest) {
   requireObject("branch catalog manifest", manifest);
   requireString(manifest, "generated_at");

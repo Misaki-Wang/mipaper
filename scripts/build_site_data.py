@@ -20,12 +20,15 @@ from mipaper.paths import (
     DAILY_SITE_DATA_DIR,
     HF_DAILY_REPORTS_DIR,
     HF_DAILY_SITE_DATA_DIR,
+    MAGAZINE_REPORTS_DIR,
+    MAGAZINE_SITE_DATA_DIR,
     SITE_DIR,
     TRENDING_REPORTS_DIR,
     TRENDING_SITE_DATA_DIR,
 )
 from mipaper.site_data import build_site_manifest
 from mipaper.trending_site_data import build_trending_site_manifest
+from mipaper.magazine_site_data import build_magazine_site_manifest
 
 
 def main() -> int:
@@ -45,12 +48,17 @@ def main() -> int:
         reports_dir=TRENDING_REPORTS_DIR,
         site_data_dir=TRENDING_SITE_DATA_DIR,
     )
+    magazine_result = build_magazine_site_manifest(
+        reports_dir=MAGAZINE_REPORTS_DIR,
+        site_data_dir=MAGAZINE_SITE_DATA_DIR,
+    )
     catalog_result = build_branch_catalog(
         site_data_root=DAILY_SITE_DATA_DIR.parent,
         branch_manifests=(
             daily_result.manifest,
             hf_result.manifest,
             conference_result.manifest,
+            magazine_result.manifest,
         ),
     )
     asset_result = update_site_asset_versions(SITE_DIR)
@@ -58,6 +66,7 @@ def main() -> int:
     print(f"Built conference site data: {conference_result.manifest_path}")
     print(f"Built HF daily site data: {hf_result.manifest_path}")
     print(f"Built trending site data: {trending_result.manifest_path}")
+    print(f"Built magazine site data: {magazine_result.manifest_path}")
     print(f"Built branch catalog: {catalog_result.manifest_path}")
     print(f"Updated asset versions in {len(asset_result.updated_files)} files")
     return 0

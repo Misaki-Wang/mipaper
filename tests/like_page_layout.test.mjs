@@ -101,12 +101,16 @@ test("like tag picker supports keyboard navigation and an active option state", 
   assert.match(stylesSource, /\.custom-tag-options \.custom-tag-option\.is-active \{/);
 });
 
-test("like workspace notes render markdown summaries and live previews", () => {
+test("like workspace notes render markdown summaries with inline typora-style editing", () => {
   assert.match(likeSource, /renderWorkspaceMarkdownExcerpt/);
   assert.match(likeSource, /renderWorkspaceMarkdownPreviewContent/);
-  assert.match(likeSource, /data-workspace-preview-field="takeaway"/);
-  assert.match(likeSource, /data-workspace-preview-field="next-action"/);
+  assert.match(likeSource, /data-workspace-editor-toggle/);
+  assert.match(likeSource, /field: "takeaway"/);
+  assert.match(likeSource, /field: "next-action"/);
+  assert.match(likeSource, /wrapper\.classList\.add\("is-editing"\)/);
+  assert.match(likeSource, /field\.addEventListener\("blur"/);
   assert.match(likeSource, /field\.addEventListener\("input"/);
-  assert.match(stylesSource, /\.paper-workspace-markdown-preview \{/);
+  assert.match(stylesSource, /\.paper-workspace-markdown-display \{/);
+  assert.match(stylesSource, /\.paper-workspace-markdown-field\.is-editing \.paper-workspace-markdown-display \{/);
   assert.match(stylesSource, /\.workspace-markdown-render \{/);
 });

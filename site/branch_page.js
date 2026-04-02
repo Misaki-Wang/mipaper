@@ -1,7 +1,7 @@
-import { bindLikeButtons, initLikesSync, subscribeLikes } from "./likes.js?v=99ec863b62";
+import { bindLikeButtons, initLikesSync, subscribeLikes } from "./likes.js?v=010cf1b2c9";
 import { bindQueueButtons, initQueue, subscribeQueue } from "./paper_queue.js?v=033bd186d1";
 import { repairLikeLaterConflicts } from "./paper_selection.js?v=964dbe6c53";
-import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js?v=3a706b914e";
+import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js?v=dd3f79ade0";
 import { bindBranchAuthToolbar } from "./branch_auth.js?v=66a12f1edc";
 import { bindBranchNav } from "./branch_nav.js?v=2ab092d7f1";
 import { bindLibraryNav } from "./library_nav.js?v=7b6e095589";

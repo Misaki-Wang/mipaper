@@ -35,6 +35,24 @@ def validate_trending_report_payload(report: dict) -> None:
     _require_list(report, "repositories")
 
 
+def validate_magazine_report_payload(report: dict) -> None:
+    _require_object("magazine report payload", report)
+    _require_string(report, "generated_at")
+    _require_string(report, "report_kind", expected="magazine")
+    _require_string(report, "sync_date")
+    _require_string(report, "issue_slug")
+    _require_string(report, "issue_title")
+    _require_string(report, "source_url")
+    _require_string(report, "raw_url")
+    _require_string(report, "cover_image_url", allow_empty=True)
+    _require_string(report, "excerpt", allow_empty=True)
+    _require_string(report, "lead_markdown", allow_empty=True)
+    _require_number(report, "issue_number")
+    _require_number(report, "sections_count")
+    _require_list(report, "headings")
+    _require_list(report, "sections")
+
+
 def validate_daily_manifest(manifest: dict) -> None:
     _validate_branch_manifest(
         manifest,
@@ -113,6 +131,26 @@ def validate_trending_manifest(manifest: dict) -> None:
     )
 
 
+def validate_magazine_manifest(manifest: dict) -> None:
+    _validate_branch_manifest(
+        manifest,
+        branch_key="magazine",
+        branch_label="Magazine",
+        required_report_keys=(
+            "slug",
+            "issue_number",
+            "issue_title",
+            "sync_date",
+            "sections_count",
+            "generated_at",
+            "source_url",
+            "cover_image_url",
+            "excerpt",
+            "headings",
+        ),
+    )
+
+
 def validate_branch_catalog_manifest(manifest: dict) -> None:
     _require_object("branch catalog manifest", manifest)
     _require_string(manifest, "generated_at")
@@ -155,9 +193,9 @@ def _validate_branch_manifest(manifest: dict, *, branch_key: str, branch_label: 
         _require_string(report, "branch_label", expected=branch_label)
         _require_string(report, "data_path")
         for key in required_report_keys:
-            if key in {"total_papers", "total_repositories"}:
+            if key in {"total_papers", "total_repositories", "issue_number", "sections_count"}:
                 _require_number(report, key)
-            elif key in {"focus_topics", "top_topics", "top_submitters", "subject_distribution", "top_languages", "top_repositories"}:
+            elif key in {"focus_topics", "top_topics", "top_submitters", "subject_distribution", "top_languages", "top_repositories", "headings"}:
                 _require_list(report, key)
             else:
                 _require_string(report, key)

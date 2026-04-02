@@ -5,13 +5,18 @@ from urllib.error import URLError
 from mipaper.fetcher import (
     build_github_trending_url,
     build_hf_daily_url,
+    build_ruanyf_magazine_docs_url,
+    build_ruanyf_magazine_issue_html_url,
+    build_ruanyf_magazine_issue_raw_url,
     build_venue_url,
+    extract_latest_ruanyf_magazine_issue_number,
     extract_total_papers,
     fetch_complete_venue_snapshot,
     fetch_feed_html,
     parse_feed_html,
     parse_github_trending_html,
     parse_hf_daily_html,
+    parse_ruanyf_magazine_issue_numbers,
 )
 
 
@@ -200,6 +205,28 @@ class ParseFeedHTMLTest(unittest.TestCase):
             "https://github.com/trending?since=weekly&spoken_language_code=",
             build_github_trending_url("weekly", ""),
         )
+
+    def test_build_ruanyf_magazine_urls(self) -> None:
+        self.assertEqual("https://github.com/ruanyf/weekly/tree/master/docs", build_ruanyf_magazine_docs_url())
+        self.assertEqual(
+            "https://github.com/ruanyf/weekly/blob/master/docs/issue-390.md",
+            build_ruanyf_magazine_issue_html_url(390),
+        )
+        self.assertEqual(
+            "https://raw.githubusercontent.com/ruanyf/weekly/master/docs/issue-390.md",
+            build_ruanyf_magazine_issue_raw_url(390),
+        )
+
+    def test_extract_latest_ruanyf_magazine_issue_number(self) -> None:
+        html = """
+        <a href="/ruanyf/weekly/blob/master/docs/issue-388.md">issue-388.md</a>
+        <a href="/ruanyf/weekly/blob/master/docs/issue-390.md">issue-390.md</a>
+        <a href="/ruanyf/weekly/blob/master/docs/issue-389.md">issue-389.md</a>
+        <a href="/ruanyf/weekly/blob/master/docs/issue-390.md">issue-390.md</a>
+        """
+
+        self.assertEqual([388, 389, 390], parse_ruanyf_magazine_issue_numbers(html))
+        self.assertEqual(390, extract_latest_ruanyf_magazine_issue_number(html))
 
     def test_parse_github_trending_html_extracts_repositories(self) -> None:
         html = """

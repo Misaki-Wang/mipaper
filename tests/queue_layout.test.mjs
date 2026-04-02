@@ -43,10 +43,13 @@ test("queue tag picker supports keyboard navigation with a visible active state"
   assert.match(stylesSource, /\.custom-tag-options \.custom-tag-option\.is-active \{/);
 });
 
-test("queue workspace notes render markdown previews while editing", () => {
+test("queue workspace notes use inline typora-style markdown editing", () => {
   assert.match(queueSource, /renderWorkspaceMarkdownPreviewContent/);
-  assert.match(queueSource, /data-workspace-preview-field="takeaway"/);
-  assert.match(queueSource, /data-workspace-preview-field="next-action"/);
+  assert.match(queueSource, /data-workspace-editor-toggle/);
+  assert.match(queueSource, /field: "takeaway"/);
+  assert.match(queueSource, /field: "next-action"/);
+  assert.match(queueSource, /wrapper\.classList\.add\("is-editing"\)/);
+  assert.match(queueSource, /field\.addEventListener\("blur"/);
   assert.match(queueSource, /field\.addEventListener\("input"/);
-  assert.match(stylesSource, /\.paper-workspace-markdown-preview \{/);
+  assert.match(stylesSource, /\.paper-workspace-markdown-display \{/);
 });

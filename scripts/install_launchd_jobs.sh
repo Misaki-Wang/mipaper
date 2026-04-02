@@ -55,8 +55,10 @@ install_job() {
 install_job "com.coolpaper.cool-daily"
 install_job "com.coolpaper.hf-daily"
 install_job "com.coolpaper.trending"
+install_job "com.coolpaper.magazine"
 
 echo "Installed launchd jobs:"
 launchctl print "${USER_DOMAIN}/com.coolpaper.cool-daily" | sed -n '1,20p'
 launchctl print "${USER_DOMAIN}/com.coolpaper.hf-daily" | sed -n '1,20p'
 launchctl print "${USER_DOMAIN}/com.coolpaper.trending" | sed -n '1,20p'
+launchctl print "${USER_DOMAIN}/com.coolpaper.magazine" | sed -n '1,20p'

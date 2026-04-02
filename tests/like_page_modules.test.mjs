@@ -11,7 +11,7 @@ import {
   reorderCustomTagsInRecord,
   updateCustomTagDefinitionInRecord,
 } from "../site/like_page_tags.js";
-import { createSnapshotFromReport, formatWeekLabel, loadSnapshotQueueData } from "../site/like_page_snapshots.js";
+import { createSnapshotFromReport, formatIssueLabel, formatWeekLabel, loadSnapshotQueueData } from "../site/like_page_snapshots.js";
 
 test("normalizeFilterState trims values and rejects invalid workflow metadata", () => {
   assert.deepEqual(
@@ -238,6 +238,29 @@ test("createSnapshotFromReport builds trending snapshots with ISO week labels", 
     sort_key: "2026-03-16-0",
   });
   assert.equal(formatWeekLabel("2026-03-16"), "2026-W12");
+});
+
+test("createSnapshotFromReport builds magazine snapshots with issue labels", () => {
+  const snapshot = createSnapshotFromReport({
+    data_path: "data/magazine/reports/issue-390/magazine-issue-390.json",
+    issue_number: 390,
+    issue_title: "科技爱好者周刊（第 390 期）",
+    sections_count: 6,
+    sync_date: "2026-04-04",
+    source_url: "https://github.com/ruanyf/weekly/blob/master/docs/issue-390.md",
+  });
+
+  assert.deepEqual(snapshot, {
+    review_key: "magazine::data/magazine/reports/issue-390/magazine-issue-390.json",
+    branch_label: "Magazine",
+    branch_url: "./magazine.html",
+    snapshot_label: "Issue 390",
+    title: "Magazine Issue 390",
+    summary: "6 sections · 科技爱好者周刊（第 390 期）",
+    source_url: "https://github.com/ruanyf/weekly/blob/master/docs/issue-390.md",
+    sort_key: "2026-04-04-1-000390",
+  });
+  assert.equal(formatIssueLabel(390), "Issue 390");
 });
 
 test("loadSnapshotQueueData prefers branch catalog and appends trending snapshots", async () => {

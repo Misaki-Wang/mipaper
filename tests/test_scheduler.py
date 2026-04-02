@@ -4,6 +4,7 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 
 from mipaper.scheduler import (
+    magazine_backfill_dates,
     cool_daily_backfill_dates,
     current_week_business_days,
     hf_daily_backfill_dates,
@@ -75,6 +76,19 @@ class SchedulerHelpersTest(unittest.TestCase):
         self.assertEqual(
             [],
             trending_backfill_dates("2026-03-02", "Asia/Shanghai", last_success_date="2026-03-16", now=now),
+        )
+
+    def test_magazine_backfill_dates_waits_until_friday(self) -> None:
+        thursday = datetime.fromisoformat("2026-04-02T12:00:00+08:00")
+        friday = datetime.fromisoformat("2026-04-03T12:00:00+08:00")
+        self.assertEqual([], magazine_backfill_dates("2026-03-02", "Asia/Shanghai", now=thursday))
+        self.assertEqual(["2026-04-03"], magazine_backfill_dates("2026-03-02", "Asia/Shanghai", now=friday))
+
+    def test_magazine_backfill_dates_runs_once_per_iso_week(self) -> None:
+        saturday = datetime.fromisoformat("2026-04-04T09:00:00+08:00")
+        self.assertEqual(
+            [],
+            magazine_backfill_dates("2026-03-02", "Asia/Shanghai", last_success_date="2026-04-03", now=saturday),
         )
 
     def test_iso_week_key_groups_same_week(self) -> None:

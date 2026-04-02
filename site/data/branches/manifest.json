@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-01T15:33:59Z",
-  "reports_count": 98,
+  "generated_at": "2026-04-02T09:57:53Z",
+  "reports_count": 104,
   "branches": [
     {
       "branch_key": "daily",
@@ -22,6 +22,13 @@
       "reports_count": 6,
       "default_report_path": "data/conference/reports/ICLR.2026/ICLR.2026.json",
       "manifest_path": "data/conference/manifest.json"
+    },
+    {
+      "branch_key": "magazine",
+      "branch_label": "Magazine",
+      "reports_count": 6,
+      "default_report_path": "data/magazine/reports/issue-390/magazine-issue-390.json",
+      "manifest_path": "data/magazine/manifest.json"
     }
   ],
   "reports": [
@@ -6371,6 +6378,288 @@
           "topic_label": "Domain Applications",
           "count": 112,
           "share": 4.12
+        }
+      ]
+    },
+    {
+      "branch_key": "magazine",
+      "branch_label": "Magazine",
+      "search_text": "magazine Magazine issue-390 data/magazine/reports/issue-390/magazine-issue-390.json https://github.com/ruanyf/weekly/blob/master/docs/issue-390.md 2026-04-02 科技爱好者周刊（第 390 期）：没有语料，大模型就是智障 这里记录每周值得分享的科技内容，周五发布。\n\n本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。 封面图 没有语料，大模型就是智障 MAI-Image-2 科技动态 文章 工具",
+      "data_path": "data/magazine/reports/issue-390/magazine-issue-390.json",
+      "slug": "issue-390",
+      "issue_number": 390,
+      "issue_title": "科技爱好者周刊（第 390 期）：没有语料，大模型就是智障",
+      "sync_date": "2026-04-02",
+      "sections_count": 12,
+      "generated_at": "2026-04-02T09:46:14Z",
+      "source_url": "https://github.com/ruanyf/weekly/blob/master/docs/issue-390.md",
+      "cover_image_url": "https://cdn.beekka.com/blogimg/asset/202603/bg2026032201.webp",
+      "excerpt": "这里记录每周值得分享的科技内容，周五发布。\n\n本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。",
+      "headings": [
+        {
+          "title": "封面图",
+          "slug": "magazine-section-1",
+          "level": 2
+        },
+        {
+          "title": "没有语料，大模型就是智障",
+          "slug": "magazine-section-2",
+          "level": 2
+        },
+        {
+          "title": "MAI-Image-2",
+          "slug": "magazine-section-3",
+          "level": 2
+        },
+        {
+          "title": "科技动态",
+          "slug": "magazine-section-4",
+          "level": 2
+        },
+        {
+          "title": "文章",
+          "slug": "magazine-section-5",
+          "level": 2
+        },
+        {
+          "title": "工具",
+          "slug": "magazine-section-6",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "branch_key": "magazine",
+      "branch_label": "Magazine",
+      "search_text": "magazine Magazine issue-389 data/magazine/reports/issue-389/magazine-issue-389.json https://github.com/ruanyf/weekly/blob/master/docs/issue-389.md 2026-04-02 科技爱好者周刊（第 389 期）：未来如何招聘程序员 这里记录每周值得分享的科技内容，周五发布。\n\n本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。 封面图 未来如何招聘程序员 科技动态 文章 工具 AI 相关",
+      "data_path": "data/magazine/reports/issue-389/magazine-issue-389.json",
+      "slug": "issue-389",
+      "issue_number": 389,
+      "issue_title": "科技爱好者周刊（第 389 期）：未来如何招聘程序员",
+      "sync_date": "2026-04-02",
+      "sections_count": 11,
+      "generated_at": "2026-04-02T09:57:53Z",
+      "source_url": "https://github.com/ruanyf/weekly/blob/master/docs/issue-389.md",
+      "cover_image_url": "https://cdn.beekka.com/blogimg/asset/202602/bg2026022807.webp",
+      "excerpt": "这里记录每周值得分享的科技内容，周五发布。\n\n本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。",
+      "headings": [
+        {
+          "title": "封面图",
+          "slug": "magazine-section-1",
+          "level": 2
+        },
+        {
+          "title": "未来如何招聘程序员",
+          "slug": "magazine-section-2",
+          "level": 2
+        },
+        {
+          "title": "科技动态",
+          "slug": "magazine-section-3",
+          "level": 2
+        },
+        {
+          "title": "文章",
+          "slug": "magazine-section-4",
+          "level": 2
+        },
+        {
+          "title": "工具",
+          "slug": "magazine-section-5",
+          "level": 2
+        },
+        {
+          "title": "AI 相关",
+          "slug": "magazine-section-6",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "branch_key": "magazine",
+      "branch_label": "Magazine",
+      "search_text": "magazine Magazine issue-388 data/magazine/reports/issue-388/magazine-issue-388.json https://github.com/ruanyf/weekly/blob/master/docs/issue-388.md 2026-04-02 科技爱好者周刊（第 388 期）：测试是新的护城河 这里记录每周值得分享的科技内容，周五发布。\n\n本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。 封面图 测试是新的护城河 AI 复刻的版权问题 科技动态 文章 工具",
+      "data_path": "data/magazine/reports/issue-388/magazine-issue-388.json",
+      "slug": "issue-388",
+      "issue_number": 388,
+      "issue_title": "科技爱好者周刊（第 388 期）：测试是新的护城河",
+      "sync_date": "2026-04-02",
+      "sections_count": 12,
+      "generated_at": "2026-04-02T09:57:52Z",
+      "source_url": "https://github.com/ruanyf/weekly/blob/master/docs/issue-388.md",
+      "cover_image_url": "https://cdn.beekka.com/blogimg/asset/202603/bg2026030804.webp",
+      "excerpt": "这里记录每周值得分享的科技内容，周五发布。\n\n本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。",
+      "headings": [
+        {
+          "title": "封面图",
+          "slug": "magazine-section-1",
+          "level": 2
+        },
+        {
+          "title": "测试是新的护城河",
+          "slug": "magazine-section-2",
+          "level": 2
+        },
+        {
+          "title": "AI 复刻的版权问题",
+          "slug": "magazine-section-3",
+          "level": 2
+        },
+        {
+          "title": "科技动态",
+          "slug": "magazine-section-4",
+          "level": 2
+        },
+        {
+          "title": "文章",
+          "slug": "magazine-section-5",
+          "level": 2
+        },
+        {
+          "title": "工具",
+          "slug": "magazine-section-6",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "branch_key": "magazine",
+      "branch_label": "Magazine",
+      "search_text": "magazine Magazine issue-387 data/magazine/reports/issue-387/magazine-issue-387.json https://github.com/ruanyf/weekly/blob/master/docs/issue-387.md 2026-04-02 科技爱好者周刊（第 387 期）：你是领先的 这里记录每周值得分享的科技内容，周五发布。\n\n本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。 封面图 你是领先的 OpenClaw 的安全 科技动态 文章 工具",
+      "data_path": "data/magazine/reports/issue-387/magazine-issue-387.json",
+      "slug": "issue-387",
+      "issue_number": 387,
+      "issue_title": "科技爱好者周刊（第 387 期）：你是领先的",
+      "sync_date": "2026-04-02",
+      "sections_count": 12,
+      "generated_at": "2026-04-02T09:57:51Z",
+      "source_url": "https://github.com/ruanyf/weekly/blob/master/docs/issue-387.md",
+      "cover_image_url": "https://cdn.beekka.com/blogimg/asset/202603/bg2026030503.webp",
+      "excerpt": "这里记录每周值得分享的科技内容，周五发布。\n\n本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。",
+      "headings": [
+        {
+          "title": "封面图",
+          "slug": "magazine-section-1",
+          "level": 2
+        },
+        {
+          "title": "你是领先的",
+          "slug": "magazine-section-2",
+          "level": 2
+        },
+        {
+          "title": "OpenClaw 的安全",
+          "slug": "magazine-section-3",
+          "level": 2
+        },
+        {
+          "title": "科技动态",
+          "slug": "magazine-section-4",
+          "level": 2
+        },
+        {
+          "title": "文章",
+          "slug": "magazine-section-5",
+          "level": 2
+        },
+        {
+          "title": "工具",
+          "slug": "magazine-section-6",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "branch_key": "magazine",
+      "branch_label": "Magazine",
+      "search_text": "magazine Magazine issue-386 data/magazine/reports/issue-386/magazine-issue-386.json https://github.com/ruanyf/weekly/blob/master/docs/issue-386.md 2026-04-02 科技爱好者周刊（第 386 期）：当外卖员接入 AI 这里记录每周值得分享的科技内容，周五发布。\n\n本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。 封面图 当外卖员接入 AI [本周软件] PinMe：去中心化托管服务 科技动态 文章 工具",
+      "data_path": "data/magazine/reports/issue-386/magazine-issue-386.json",
+      "slug": "issue-386",
+      "issue_number": 386,
+      "issue_title": "科技爱好者周刊（第 386 期）：当外卖员接入 AI",
+      "sync_date": "2026-04-02",
+      "sections_count": 12,
+      "generated_at": "2026-04-02T09:57:50Z",
+      "source_url": "https://github.com/ruanyf/weekly/blob/master/docs/issue-386.md",
+      "cover_image_url": "https://cdn.beekka.com/blogimg/asset/202602/bg2026020702.webp",
+      "excerpt": "这里记录每周值得分享的科技内容，周五发布。\n\n本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。",
+      "headings": [
+        {
+          "title": "封面图",
+          "slug": "magazine-section-1",
+          "level": 2
+        },
+        {
+          "title": "当外卖员接入 AI",
+          "slug": "magazine-section-2",
+          "level": 2
+        },
+        {
+          "title": "[本周软件] PinMe：去中心化托管服务",
+          "slug": "magazine-section-3",
+          "level": 2
+        },
+        {
+          "title": "科技动态",
+          "slug": "magazine-section-4",
+          "level": 2
+        },
+        {
+          "title": "文章",
+          "slug": "magazine-section-5",
+          "level": 2
+        },
+        {
+          "title": "工具",
+          "slug": "magazine-section-6",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "branch_key": "magazine",
+      "branch_label": "Magazine",
+      "search_text": "magazine Magazine issue-385 data/magazine/reports/issue-385/magazine-issue-385.json https://github.com/ruanyf/weekly/blob/master/docs/issue-385.md 2026-04-02 科技爱好者周刊（第 385 期）：马斯克害怕中国车企吗？ 这里记录每周值得分享的科技内容，周五发布。（[通知] 下周春节假期，周刊休息。）\n\n本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。 封面图 马斯克害怕中国车企吗？ 科技动态 文章 工具 AI 相关",
+      "data_path": "data/magazine/reports/issue-385/magazine-issue-385.json",
+      "slug": "issue-385",
+      "issue_number": 385,
+      "issue_title": "科技爱好者周刊（第 385 期）：马斯克害怕中国车企吗？",
+      "sync_date": "2026-04-02",
+      "sections_count": 11,
+      "generated_at": "2026-04-02T09:57:49Z",
+      "source_url": "https://github.com/ruanyf/weekly/blob/master/docs/issue-385.md",
+      "cover_image_url": "https://cdn.beekka.com/blogimg/asset/202602/bg2026020701.webp",
+      "excerpt": "这里记录每周值得分享的科技内容，周五发布。（[通知] 下周春节假期，周刊休息。）\n\n本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。",
+      "headings": [
+        {
+          "title": "封面图",
+          "slug": "magazine-section-1",
+          "level": 2
+        },
+        {
+          "title": "马斯克害怕中国车企吗？",
+          "slug": "magazine-section-2",
+          "level": 2
+        },
+        {
+          "title": "科技动态",
+          "slug": "magazine-section-3",
+          "level": 2
+        },
+        {
+          "title": "文章",
+          "slug": "magazine-section-4",
+          "level": 2
+        },
+        {
+          "title": "工具",
+          "slug": "magazine-section-5",
+          "level": 2
+        },
+        {
+          "title": "AI 相关",
+          "slug": "magazine-section-6",
+          "level": 2
         }
       ]
     }

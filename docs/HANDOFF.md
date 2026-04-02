@@ -9,6 +9,7 @@ This repository is a paper observatory with five content branches plus library w
 - `Cool Daily`
 - `Conference`
 - `HF Daily`
+- `Magazine`
 - `Like`
 - `Trending`
 
@@ -61,6 +62,7 @@ Frontend pages:
 - [unread-snapshots.html](/Users/misaki/Code/cool_paper/site/unread-snapshots.html)
 - [settings.html](/Users/misaki/Code/cool_paper/site/settings.html)
 - [trending.html](/Users/misaki/Code/cool_paper/site/trending.html)
+- [magazine.html](/Users/misaki/Code/cool_paper/site/magazine.html)
 
 Frontend logic:
 
@@ -70,6 +72,7 @@ Frontend logic:
 - [branch_details.js](/Users/misaki/Code/cool_paper/site/branch_details.js)
 - [conference.js](/Users/misaki/Code/cool_paper/site/conference.js)
 - [hf_daily.js](/Users/misaki/Code/cool_paper/site/hf_daily.js)
+- [magazine.js](/Users/misaki/Code/cool_paper/site/magazine.js)
 - [library_home.js](/Users/misaki/Code/cool_paper/site/library_home.js)
 - [like.js](/Users/misaki/Code/cool_paper/site/like.js)
 - [likes.js](/Users/misaki/Code/cool_paper/site/likes.js)
@@ -112,6 +115,7 @@ Schema:
 - Browser settings are stored in local storage and now sync live across already-open pages in the same browser session
 - `library.html`, `like.html`, and `queue.html` seed manual local test records on localhost / `file:` previews unless `?seedTestCases=0` is set
 - Scheduled jobs can auto-commit generated artifacts and push them to GitHub
+- Scheduled email notifications now send one post-build summary per job and can reuse `ALLOWED_EMAILS` as the default recipient list
 - Auto-push only stages generated outputs, not active source edits
 
 ## Known Sensitive Areas

@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import unittest
 
-from mipaper.site_contract import validate_branch_catalog_manifest, validate_trending_manifest
+from mipaper.site_contract import validate_branch_catalog_manifest, validate_magazine_manifest, validate_trending_manifest
 
 
 class SiteContractTest(unittest.TestCase):
@@ -32,6 +32,17 @@ class SiteContractTest(unittest.TestCase):
                             "search_text": "daily cool",
                         }
                     ],
+                }
+            )
+
+    def test_validate_magazine_manifest_requires_branch_metadata(self) -> None:
+        with self.assertRaisesRegex(ValueError, "branch_key must be a string"):
+            validate_magazine_manifest(
+                {
+                    "generated_at": "2026-04-02T00:00:00Z",
+                    "reports_count": 0,
+                    "default_report_path": "",
+                    "reports": [],
                 }
             )
 

@@ -1,12 +1,13 @@
-import { createPageReviewKey, isPageReviewed } from "./reading_state.js?v=3a706b914e";
+import { createPageReviewKey, isPageReviewed } from "./reading_state.js?v=dd3f79ade0";
 import { displayTopicLabel } from "./like_page_labels.js?v=aaa244a29d";
 import {
   validateBranchCatalogManifest,
   validateConferenceManifest,
   validateDailyManifest,
   validateHfManifest,
+  validateMagazineManifest,
   validateTrendingManifest,
-} from "./site_contract.js?v=12344e596d";
+} from "./site_contract.js?v=be9ddc76a7";
 
 export async function loadSnapshotQueueData(fetchJson) {
   const branchCatalog = await fetchJson("./data/branches/manifest.json", {
@@ -28,12 +29,13 @@ export async function loadSnapshotQueueData(fetchJson) {
     return combinedSnapshots.sort((left, right) => right.sort_key.localeCompare(left.sort_key) || left.title.localeCompare(right.title));
   }
 
-  manifestUrls.unshift("./data/daily/manifest.json", "./data/hf-daily/manifest.json", "./data/conference/manifest.json");
+  manifestUrls.unshift("./data/daily/manifest.json", "./data/hf-daily/manifest.json", "./data/conference/manifest.json", "./data/magazine/manifest.json");
   const manifestValidators = new Map([
     ["./data/daily/manifest.json", validateDailyManifest],
     ["./data/hf-daily/manifest.json", validateHfManifest],
     ["./data/conference/manifest.json", validateConferenceManifest],
     ["./data/trending/manifest.json", validateTrendingManifest],
+    ["./data/magazine/manifest.json", validateMagazineManifest],
   ]);
   const results = await Promise.allSettled(
     manifestUrls.map((url) =>
@@ -72,12 +74,18 @@ export function getSnapshotSourceKind(snapshot) {
   if (url.includes("trending")) {
     return "trending";
   }
+  if (url.includes("magazine")) {
+    return "magazine";
+  }
   return "hf_daily";
 }
 
 export function createSnapshotFromReport(report) {
   if (!report || typeof report !== "object") {
     return null;
+  }
+  if (report.issue_number) {
+    return createMagazineSnapshot(report);
   }
   if (report.snapshot_date || report.since) {
     return createTrendingSnapshot(report);
@@ -145,6 +153,28 @@ export function createTrendingSnapshot(report) {
     source_url: report.source_url || "",
     sort_key: `${report.snapshot_date}-0`,
   };
+}
+
+export function createMagazineSnapshot(report) {
+  const issueLabel = formatIssueLabel(report.issue_number);
+  return {
+    review_key: createPageReviewKey("magazine", report.data_path),
+    branch_label: "Magazine",
+    branch_url: "./magazine.html",
+    snapshot_label: issueLabel,
+    title: `Magazine ${issueLabel}`,
+    summary: `${report.sections_count} sections${report.issue_title ? ` · ${report.issue_title}` : ""}`,
+    source_url: report.source_url || "",
+    sort_key: `${report.sync_date || "0000-00-00"}-1-${String(report.issue_number).padStart(6, "0")}`,
+  };
+}
+
+export function formatIssueLabel(issueNumber) {
+  const normalized = Number(issueNumber);
+  if (!Number.isFinite(normalized) || normalized <= 0) {
+    return "-";
+  }
+  return `Issue ${normalized}`;
 }
 
 export function formatWeekLabel(dateString) {

@@ -9,6 +9,54 @@ function sanitizeHref(value) {
   return /^(https?:\/\/|mailto:)/i.test(href) ? href : "";
 }
 
+function sanitizeImageSrc(value) {
+  const src = String(value ?? "").trim();
+  return /^https?:\/\//i.test(src) ? src : "";
+}
+
+function parseMarkdownImage(value) {
+  const match = String(value ?? "")
+    .trim()
+    .match(/^!\[([^\]\n]*)\]\((https?:\/\/[^\s)]+)(?:\s+"([^"\n]*)")?\)$/i);
+  if (!match) {
+    return null;
+  }
+
+  const [, alt = "", src = "", title = ""] = match;
+  const safeSrc = sanitizeImageSrc(src);
+  if (!safeSrc) {
+    return null;
+  }
+
+  return {
+    alt: String(alt),
+    src: safeSrc,
+    title: String(title),
+  };
+}
+
+function renderImageHtml(image, { block = false } = {}) {
+  if (!image?.src) {
+    return "";
+  }
+
+  const alt = String(image.alt ?? "");
+  const title = String(image.title ?? "");
+  const titleAttribute = title ? ` title="${escapeAttribute(title)}"` : "";
+  const imgHtml = `<img class="${block ? "workspace-markdown-image" : "workspace-markdown-image-inline"}" src="${escapeAttribute(
+    image.src
+  )}" alt="${escapeAttribute(alt)}"${titleAttribute} loading="lazy" decoding="async">`;
+
+  if (!block) {
+    return imgHtml;
+  }
+
+  const caption = title || alt;
+  return caption
+    ? `<figure class="workspace-markdown-figure">${imgHtml}<figcaption>${escapeHtml(caption)}</figcaption></figure>`
+    : `<figure class="workspace-markdown-figure">${imgHtml}</figure>`;
+}
+
 function createTokenStore() {
   const tokens = [];
   return {
@@ -28,6 +76,10 @@ function renderInlineMarkdown(value) {
   let html = String(value ?? "");
 
   html = html.replace(/`([^`\n]+)`/g, (_, code) => tokens.add(`<code>${escapeHtml(code)}</code>`));
+  html = html.replace(/!\[([^\]\n]*)\]\((https?:\/\/[^\s)]+)(?:\s+"([^"\n]*)")?\)/gi, (_, alt, src, title) => {
+    const image = parseMarkdownImage(`![${alt}](${src}${title ? ` "${title}"` : ""})`);
+    return image ? tokens.add(renderImageHtml(image)) : "";
+  });
   html = html.replace(/\[([^\]\n]+)\]\((https?:\/\/[^\s)]+|mailto:[^\s)]+)\)/gi, (_, label, href) => {
     const safeHref = sanitizeHref(href);
     if (!safeHref) {
@@ -80,6 +132,12 @@ function isBlockStart(line) {
 }
 
 function renderParagraph(lines) {
+  if (lines.length === 1) {
+    const image = parseMarkdownImage(lines[0]);
+    if (image) {
+      return renderImageHtml(image, { block: true });
+    }
+  }
   return `<p>${lines.map((line) => renderInlineMarkdown(line.trim())).join("<br>")}</p>`;
 }
 
@@ -121,16 +179,17 @@ function collectList(lines, startIndex, ordered) {
   };
 }
 
-function renderHeading(line) {
+function renderHeading(line, headingOffset = 3) {
   const match = line.trim().match(/^(#{1,6})\s+(.*)$/);
   if (!match) {
     return renderParagraph([line]);
   }
-  const level = Math.min(match[1].length + 3, 6);
+  const level = Math.min(Math.max(match[1].length + headingOffset, 1), 6);
   return `<h${level}>${renderInlineMarkdown(match[2].trim())}</h${level}>`;
 }
 
-export function renderWorkspaceMarkdown(value) {
+export function renderWorkspaceMarkdown(value, options = {}) {
+  const { headingOffset = 3 } = options;
   const source = normalizeMarkdownValue(value);
   if (!source) {
     return "";
@@ -164,7 +223,7 @@ export function renderWorkspaceMarkdown(value) {
     }
 
     if (isHeadingLine(trimmed)) {
-      blocks.push(renderHeading(trimmed));
+      blocks.push(renderHeading(trimmed, headingOffset));
       index += 1;
       continue;
     }
@@ -175,7 +234,7 @@ export function renderWorkspaceMarkdown(value) {
         quoteLines.push(lines[index].trim().replace(/^>\s?/, ""));
         index += 1;
       }
-      blocks.push(`<blockquote>${renderWorkspaceMarkdown(quoteLines.join("\n"))}</blockquote>`);
+      blocks.push(`<blockquote>${renderWorkspaceMarkdown(quoteLines.join("\n"), { headingOffset })}</blockquote>`);
       continue;
     }
 

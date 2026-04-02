@@ -108,6 +108,7 @@ Then open `http://127.0.0.1:4173`.
 - `cool-daily.html`: Cool Daily across `cs.AI`, `cs.CL`, and `cs.CV`
 - `conference.html`: conference snapshots with `Subject` and `Topic` filters
 - `trending.html`: GitHub Trending weekly snapshots
+- `magazine.html`: synced issues from `ruanyf/weekly`
 - `library.html`: library home for liked papers, Later queue, unread snapshots, and saved-view coverage
 - `like.html`: saved papers with GitHub OAuth + Supabase sync plus workspace metadata
 - `queue.html`: Later queue with direct move-to-Liked actions
@@ -172,7 +173,7 @@ Local fallback config:
 
 ## Scheduled Jobs
 
-There are three scheduled jobs. The paper jobs default to local Codex classification and all jobs can auto-push generated artifacts to GitHub.
+There are four scheduled jobs. The paper jobs default to local Codex classification and all jobs can auto-push generated artifacts to GitHub.
 
 - `Cool Daily`
   - `21:00`
@@ -188,14 +189,22 @@ There are three scheduled jobs. The paper jobs default to local Codex classifica
   - `Monday 12:00`
   - Captures one GitHub Trending weekly snapshot for the current ISO week
   - Runs at most once per week even if manually triggered multiple times
+- `Magazine`
+  - `Saturday 09:00`
+  - Syncs the latest published issue from `ruanyf/weekly/docs/issue-*.md`
+  - Waits until Friday before allowing the current ISO week to publish
+  - Runs at most once per week even if manually triggered multiple times
 
 The scheduler keeps its own local state in `state/scheduled_jobs.json` by default. If the machine is off for several days, the next scheduled run resumes from the last successful business date instead of skipping the gap.
+
+When `COOL_PAPER_NOTIFY=email`, the scheduler sends one summary email after the site page data has been rebuilt for the job. Recipients are resolved from `COOL_PAPER_EMAIL_TO` first, and fall back to `ALLOWED_EMAILS` when no explicit delivery list is configured.
 
 Entrypoints:
 
 - [run_cool_daily_job.sh](/Users/misaki/Code/cool_paper/scripts/run_cool_daily_job.sh)
 - [run_hf_daily_job.sh](/Users/misaki/Code/cool_paper/scripts/run_hf_daily_job.sh)
 - [run_trending_job.sh](/Users/misaki/Code/cool_paper/scripts/run_trending_job.sh)
+- [run_magazine_job.sh](/Users/misaki/Code/cool_paper/scripts/run_magazine_job.sh)
 - [run_scheduled_job.py](/Users/misaki/Code/cool_paper/scripts/run_scheduled_job.py)
 
 Relevant environment variables:
@@ -212,6 +221,8 @@ Relevant environment variables:
 - `COOL_PAPER_GIT_REMOTE`
 - `COOL_PAPER_GIT_BRANCH`
 - `COOL_PAPER_NOTIFY`
+- `COOL_PAPER_EMAIL_TO`
+- `COOL_PAPER_SITE_URL`
 
 Run one job manually without pushing:
 
@@ -219,6 +230,7 @@ Run one job manually without pushing:
 python3 scripts/run_scheduled_job.py --job cool_daily --skip-push
 python3 scripts/run_scheduled_job.py --job hf_daily --skip-push
 python3 scripts/run_scheduled_job.py --job trending --skip-push
+python3 scripts/run_scheduled_job.py --job magazine --skip-push
 ```
 
 Backfill from the configured start date through the current date:
@@ -234,6 +246,7 @@ Use an explicit test clock:
 python3 scripts/run_scheduled_job.py --job cool_daily --skip-push --now 2026-03-10T21:00:00+08:00
 python3 scripts/run_scheduled_job.py --job hf_daily --skip-push --now 2026-03-10T23:00:00+08:00
 python3 scripts/run_scheduled_job.py --job trending --skip-push --now 2026-03-16T12:00:00+08:00
+python3 scripts/run_scheduled_job.py --job magazine --skip-push --now 2026-04-04T09:00:00+08:00
 ```
 
 ### macOS launchd
@@ -243,6 +256,7 @@ Templates:
 - [com.coolpaper.cool-daily.plist.template](/Users/misaki/Code/cool_paper/ops/launchd/com.coolpaper.cool-daily.plist.template)
 - [com.coolpaper.hf-daily.plist.template](/Users/misaki/Code/cool_paper/ops/launchd/com.coolpaper.hf-daily.plist.template)
 - [com.coolpaper.trending.plist.template](/Users/misaki/Code/cool_paper/ops/launchd/com.coolpaper.trending.plist.template)
+- [com.coolpaper.magazine.plist.template](/Users/misaki/Code/cool_paper/ops/launchd/com.coolpaper.magazine.plist.template)
 
 Register them after replacing `__PROJECT_ROOT__`:
 
@@ -250,6 +264,7 @@ Register them after replacing `__PROJECT_ROOT__`:
 launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.coolpaper.cool-daily.plist
 launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.coolpaper.hf-daily.plist
 launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.coolpaper.trending.plist
+launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.coolpaper.magazine.plist
 ```
 
 ### WSL cron

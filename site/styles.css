@@ -1779,6 +1779,10 @@ code {
   grid-template-columns: 1fr;
 }
 
+.page-magazine .layout {
+  grid-template-columns: 1fr;
+}
+
 .page-settings .layout {
   grid-template-columns: 1fr;
 }
@@ -1828,6 +1832,10 @@ code {
 .page-library-home .content {
   min-width: 0;
   gap: 0.95rem;
+}
+
+.page-magazine .content {
+  min-width: 0;
 }
 
 .page-settings .content {
@@ -5898,25 +5906,42 @@ code {
   min-height: 4.2rem;
 }
 
-.paper-workspace-markdown-preview {
-  display: grid;
-  gap: 0.34rem;
-  padding: 0.56rem 0.62rem;
+.paper-workspace-markdown-field {
+  position: relative;
+}
+
+.paper-workspace-markdown-display {
+  min-height: 4.2rem;
+  padding: 0.56rem 0.68rem;
   border-radius: 12px;
-  border: 1px dashed color-mix(in srgb, var(--border), var(--accent) 12%);
-  background: color-mix(in srgb, var(--surface-soft), white 8%);
+  border: 1px solid color-mix(in srgb, var(--border), transparent 8%);
+  background: color-mix(in srgb, var(--surface), white 14%);
+  cursor: text;
+  transition: border-color 160ms ease, background 160ms ease, box-shadow 160ms ease;
 }
 
-.paper-workspace-markdown-preview.is-empty {
-  background: transparent;
+.paper-workspace-markdown-display:hover,
+.paper-workspace-markdown-display:focus-visible {
+  border-color: color-mix(in srgb, var(--border), var(--accent) 18%);
+  background: color-mix(in srgb, var(--surface), white 18%);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent-soft), transparent 18%);
+  outline: none;
 }
 
-.paper-workspace-markdown-caption {
+.paper-workspace-markdown-field.is-empty .paper-workspace-markdown-display {
   color: var(--muted);
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+}
+
+.paper-workspace-markdown-field .paper-workspace-markdown-editor {
+  display: none;
+}
+
+.paper-workspace-markdown-field.is-editing .paper-workspace-markdown-display {
+  display: none;
+}
+
+.paper-workspace-markdown-field.is-editing .paper-workspace-markdown-editor {
+  display: block;
 }
 
 .workspace-markdown-render {
@@ -5926,6 +5951,7 @@ code {
   color: color-mix(in srgb, var(--text), var(--muted) 22%);
   font-size: 0.9rem;
   line-height: 1.6;
+  overflow-wrap: anywhere;
 }
 
 .workspace-markdown-render > * {
@@ -5946,6 +5972,7 @@ code {
   text-decoration: underline;
   text-decoration-thickness: 0.08em;
   text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
 }
 
 .workspace-markdown-render code {
@@ -5975,6 +6002,28 @@ code {
   padding-left: 0.76rem;
   border-left: 2px solid color-mix(in srgb, var(--border), var(--accent) 24%);
   color: var(--muted);
+}
+
+.workspace-markdown-render figure {
+  margin: 0;
+}
+
+.workspace-markdown-render img {
+  display: block;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--surface), white 14%);
+  box-shadow: 0 14px 32px rgba(18, 32, 36, 0.1);
+}
+
+.workspace-markdown-render figcaption {
+  margin-top: 0.5rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  text-align: center;
 }
 
 .workspace-markdown-render h4,
