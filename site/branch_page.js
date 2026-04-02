@@ -5,7 +5,7 @@ import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, s
 import { bindBranchAuthToolbar } from "./branch_auth.js?v=66a12f1edc";
 import { bindBranchNav } from "./branch_nav.js?v=2ab092d7f1";
 import { bindLibraryNav } from "./library_nav.js?v=7b6e095589";
-import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=a318f05c52";
+import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=88024f7cbb";
 import { initToolbarPreferences } from "./toolbar_preferences.js?v=c889d6e375";
 import { bindBackToTop, bindFilterMenu } from "./page_shell.js?v=b0d53b671d";
 import { fetchJson } from "./ui_utils.js?v=e2da3b3a11";

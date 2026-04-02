@@ -16,11 +16,15 @@ import { mountAppToolbar } from "./app_toolbar.js?v=a2626f682a";
 import { repairLikeLaterConflicts } from "./paper_selection.js?v=964dbe6c53";
 import { bindBranchNav } from "./branch_nav.js?v=2ab092d7f1";
 import { bindLibraryNav } from "./library_nav.js?v=7b6e095589";
-import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=a318f05c52";
+import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=88024f7cbb";
 import { initToolbarPreferences, setPageViewMode } from "./toolbar_preferences.js?v=c889d6e375";
 import { bindBackToTop, bindFilterMenu } from "./page_shell.js?v=b0d53b671d";
 import { createShowMoreAutoLoadController } from "./show_more_autoload.js?v=5f324a6f25";
 import { escapeAttribute, escapeHtml, fetchJson, formatDateTime, getErrorMessage } from "./ui_utils.js?v=e2da3b3a11";
+import {
+  renderWorkspaceMarkdownExcerpt,
+  renderWorkspaceMarkdownPreviewContent,
+} from "./workspace_markdown.js?v=dd095ad254";
 import {
   LIKE_TIME_FORMAT,
   PRIORITY_OPTIONS,
@@ -1144,6 +1148,7 @@ function bindListRowDetails() {
 function renderLikeCard(paper) {
   const view = buildLikePaperViewModel(paper);
   const summaryNote = view.takeaway || view.nextAction || "";
+  const summaryNoteHtml = renderWorkspaceMarkdownExcerpt(summaryNote);
 
   return `
     <article class="conference-paper-card liked-paper-card">
@@ -1158,7 +1163,7 @@ function renderLikeCard(paper) {
           <span class="paper-detail-label">Authors</span>
           <p class="paper-authors-line">${view.authors}</p>
         </div>
-        ${summaryNote ? `<p class="liked-paper-card-note">${escapeHtml(summaryNote)}</p>` : ""}
+        ${summaryNoteHtml ? `<div class="liked-paper-card-note workspace-markdown-render">${summaryNoteHtml}</div>` : ""}
       </div>
       ${view.abstract}
       <div class="liked-paper-card-secondary">
@@ -1173,6 +1178,7 @@ function renderLikeListRow(paper) {
   const rowOpen = openListRowDetails.has(view.paper.like_id);
   const takeawayText = view.takeaway || "";
   const summaryText = takeawayText || (rowOpen ? view.nextAction || "" : "");
+  const summaryHtml = renderWorkspaceMarkdownExcerpt(summaryText);
   const abstractBlock = view.paper.abstract
     ? `
       <div class="liked-paper-row-abstract">
@@ -1190,7 +1196,7 @@ function renderLikeListRow(paper) {
           <h4>${escapeHtml(view.paper.title)}</h4>
           ${view.customTagSummary}
           ${rowOpen ? `<p class="liked-paper-row-authors">${view.authors}</p>` : ""}
-          ${summaryText ? `<p class="liked-paper-row-summary">${escapeHtml(summaryText)}</p>` : ""}
+          ${summaryHtml ? `<div class="liked-paper-row-summary workspace-markdown-render">${summaryHtml}</div>` : ""}
         </div>
         <div class="liked-paper-row-actions">
           <div class="paper-links liked-paper-row-links">${view.links}</div>
@@ -1677,6 +1683,8 @@ function renderWorkspaceTagSection(view) {
 function renderWorkspacePanel(view, options = {}) {
   const { showSummaryTags = true } = options;
   const panelOpen = isWorkspacePanelOpen(view.paper.like_id);
+  const takeawayPreview = renderWorkspaceMarkdownPreviewContent(view.takeaway);
+  const nextActionPreview = renderWorkspaceMarkdownPreviewContent(view.nextAction);
   return `
     <details class="paper-workspace-panel" data-workspace-panel="${escapeAttribute(view.paper.like_id)}"${panelOpen ? " open" : ""}>
       <summary class="paper-workspace-header">
@@ -1714,10 +1722,30 @@ function renderWorkspacePanel(view, options = {}) {
           <label class="paper-workspace-card paper-workspace-field">
             <span class="paper-detail-label">Takeaway</span>
             <textarea class="paper-workspace-textarea" rows="2" data-workspace-takeaway="${escapeAttribute(view.paper.like_id)}" placeholder="Capture the one-line reason this paper matters.">${escapeHtml(view.takeaway)}</textarea>
+            <div class="paper-workspace-markdown-preview${view.takeaway.trim() ? "" : " is-empty"}">
+              <span class="paper-workspace-markdown-caption">Markdown Preview</span>
+              <div
+                class="workspace-markdown-render"
+                data-workspace-preview-id="${escapeAttribute(view.paper.like_id)}"
+                data-workspace-preview-field="takeaway"
+              >
+                ${takeawayPreview}
+              </div>
+            </div>
           </label>
           <label class="paper-workspace-card paper-workspace-field">
             <span class="paper-detail-label">Next Action</span>
             <textarea class="paper-workspace-textarea" rows="2" data-workspace-next-action="${escapeAttribute(view.paper.like_id)}" placeholder="Leave a concrete follow-up step for yourself.">${escapeHtml(view.nextAction)}</textarea>
+            <div class="paper-workspace-markdown-preview${view.nextAction.trim() ? "" : " is-empty"}">
+              <span class="paper-workspace-markdown-caption">Markdown Preview</span>
+              <div
+                class="workspace-markdown-render"
+                data-workspace-preview-id="${escapeAttribute(view.paper.like_id)}"
+                data-workspace-preview-field="next-action"
+              >
+                ${nextActionPreview}
+              </div>
+            </div>
           </label>
         </div>
       </div>
@@ -2360,6 +2388,14 @@ function bindWorkspaceEditors() {
       return;
     }
     field.dataset.bound = "true";
+    field.addEventListener("input", () => {
+      const likeId = field.dataset.workspaceTakeaway || field.dataset.workspaceNextAction;
+      if (!likeId) {
+        return;
+      }
+      const previewField = field.dataset.workspaceTakeaway ? "takeaway" : "next-action";
+      updateWorkspaceMarkdownPreview(likeId, previewField, field.value);
+    });
     field.addEventListener("change", () => {
       const likeId = field.dataset.workspaceTakeaway || field.dataset.workspaceNextAction;
       if (!likeId) {
@@ -2377,6 +2413,17 @@ function readWorkspaceFieldValues(likeId) {
     one_line_takeaway: document.querySelector(`[data-workspace-takeaway="${CSS.escape(likeId)}"]`)?.value || "",
     next_action: document.querySelector(`[data-workspace-next-action="${CSS.escape(likeId)}"]`)?.value || "",
   };
+}
+
+function updateWorkspaceMarkdownPreview(likeId, fieldName, value) {
+  const preview = document.querySelector(
+    `[data-workspace-preview-id="${CSS.escape(likeId)}"][data-workspace-preview-field="${CSS.escape(fieldName)}"]`
+  );
+  if (!preview) {
+    return;
+  }
+  preview.innerHTML = renderWorkspaceMarkdownPreviewContent(value);
+  preview.parentElement?.classList.toggle("is-empty", !String(value || "").trim());
 }
 
 function isWorkspacePanelOpen(likeId) {

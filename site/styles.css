@@ -2523,6 +2523,11 @@ code {
   font-size: 0.92rem;
 }
 
+.liked-paper-card-note > *,
+.liked-paper-row-summary > * {
+  margin: 0;
+}
+
 .liked-paper-row.is-compact .liked-paper-row-summary {
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -5608,6 +5613,13 @@ code {
   color: color-mix(in srgb, var(--text), var(--muted) 36%);
 }
 
+.liked-paper-card-note.workspace-markdown-render,
+.liked-paper-row-summary.workspace-markdown-render {
+  gap: 0.24rem;
+  color: inherit;
+  font-size: inherit;
+}
+
 .liked-paper-card-copy .paper-authors-box {
   padding: 0.5rem 0.62rem;
   border-radius: 12px;
@@ -5884,6 +5896,98 @@ code {
 
 .paper-workspace-card .paper-workspace-textarea {
   min-height: 4.2rem;
+}
+
+.paper-workspace-markdown-preview {
+  display: grid;
+  gap: 0.34rem;
+  padding: 0.56rem 0.62rem;
+  border-radius: 12px;
+  border: 1px dashed color-mix(in srgb, var(--border), var(--accent) 12%);
+  background: color-mix(in srgb, var(--surface-soft), white 8%);
+}
+
+.paper-workspace-markdown-preview.is-empty {
+  background: transparent;
+}
+
+.paper-workspace-markdown-caption {
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.workspace-markdown-render {
+  display: grid;
+  gap: 0.42rem;
+  min-width: 0;
+  color: color-mix(in srgb, var(--text), var(--muted) 22%);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.workspace-markdown-render > * {
+  margin: 0;
+}
+
+.workspace-markdown-render ul,
+.workspace-markdown-render ol {
+  padding-left: 1.2rem;
+}
+
+.workspace-markdown-render li + li {
+  margin-top: 0.18rem;
+}
+
+.workspace-markdown-render a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+}
+
+.workspace-markdown-render code {
+  font-family: "SF Mono", "JetBrains Mono", monospace;
+  font-size: 0.86em;
+  padding: 0.08rem 0.32rem;
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--surface), white 20%);
+  color: color-mix(in srgb, var(--text), var(--accent-strong) 18%);
+}
+
+.workspace-markdown-render pre {
+  overflow: auto;
+  padding: 0.7rem 0.78rem;
+  border-radius: 10px;
+  border: 1px solid color-mix(in srgb, var(--border), transparent 4%);
+  background: color-mix(in srgb, var(--surface), white 12%);
+}
+
+.workspace-markdown-render pre code {
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.workspace-markdown-render blockquote {
+  padding-left: 0.76rem;
+  border-left: 2px solid color-mix(in srgb, var(--border), var(--accent) 24%);
+  color: var(--muted);
+}
+
+.workspace-markdown-render h4,
+.workspace-markdown-render h5,
+.workspace-markdown-render h6 {
+  color: var(--text-strong);
+  font-size: 0.96rem;
+  line-height: 1.35;
+}
+
+.paper-workspace-markdown-empty {
+  color: var(--muted);
+  font-size: 0.82rem;
 }
 
 @media (max-width: 780px) {

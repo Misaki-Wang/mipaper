@@ -100,3 +100,13 @@ test("like tag picker supports keyboard navigation and an active option state", 
   assert.match(likeSource, /activeOption\.click\(\);/);
   assert.match(stylesSource, /\.custom-tag-options \.custom-tag-option\.is-active \{/);
 });
+
+test("like workspace notes render markdown summaries and live previews", () => {
+  assert.match(likeSource, /renderWorkspaceMarkdownExcerpt/);
+  assert.match(likeSource, /renderWorkspaceMarkdownPreviewContent/);
+  assert.match(likeSource, /data-workspace-preview-field="takeaway"/);
+  assert.match(likeSource, /data-workspace-preview-field="next-action"/);
+  assert.match(likeSource, /field\.addEventListener\("input"/);
+  assert.match(stylesSource, /\.paper-workspace-markdown-preview \{/);
+  assert.match(stylesSource, /\.workspace-markdown-render \{/);
+});

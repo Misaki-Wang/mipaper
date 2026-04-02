@@ -42,3 +42,11 @@ test("queue tag picker supports keyboard navigation with a visible active state"
   assert.match(queueSource, /activeOption\.click\(\);/);
   assert.match(stylesSource, /\.custom-tag-options \.custom-tag-option\.is-active \{/);
 });
+
+test("queue workspace notes render markdown previews while editing", () => {
+  assert.match(queueSource, /renderWorkspaceMarkdownPreviewContent/);
+  assert.match(queueSource, /data-workspace-preview-field="takeaway"/);
+  assert.match(queueSource, /data-workspace-preview-field="next-action"/);
+  assert.match(queueSource, /field\.addEventListener\("input"/);
+  assert.match(stylesSource, /\.paper-workspace-markdown-preview \{/);
+});
