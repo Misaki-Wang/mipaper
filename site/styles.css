@@ -4398,6 +4398,15 @@ code {
   align-self: start;
 }
 
+:root[data-page-view-mode="list"] .page-cool-daily .paper-card .paper-workspace-panel,
+:root[data-page-view-mode="list"] .page-cool-daily .spotlight-card .paper-workspace-panel,
+:root[data-page-view-mode="list"] .page-cool-daily .topic-lead-card .paper-workspace-panel,
+:root[data-page-view-mode="list"] .page-hf .conference-paper-card .paper-workspace-panel,
+:root[data-page-view-mode="list"] .page-conference .conference-paper-card .paper-workspace-panel,
+:root[data-page-view-mode="list"] .page-trending .conference-paper-card .paper-workspace-panel {
+  grid-column: 1 / -1;
+}
+
 :root[data-page-view-mode="list"] .page-cool-daily .paper-card .paper-title,
 :root[data-page-view-mode="list"] .page-cool-daily .spotlight-card h3,
 :root[data-page-view-mode="list"] .page-cool-daily .topic-lead-card .topic-lead-title,
@@ -4483,6 +4492,15 @@ code {
 :root[data-page-view-mode="list"] .page-trending .conference-paper-card .paper-detail-label,
 :root[data-page-view-mode="list"] .page-cool-daily .topic-lead-card .paper-detail-label {
   display: none;
+}
+
+:root[data-page-view-mode="list"] .page-cool-daily .paper-card .paper-workspace-panel .paper-detail-label,
+:root[data-page-view-mode="list"] .page-cool-daily .spotlight-card .paper-workspace-panel .paper-detail-label,
+:root[data-page-view-mode="list"] .page-cool-daily .topic-lead-card .paper-workspace-panel .paper-detail-label,
+:root[data-page-view-mode="list"] .page-hf .conference-paper-card .paper-workspace-panel .paper-detail-label,
+:root[data-page-view-mode="list"] .page-conference .conference-paper-card .paper-workspace-panel .paper-detail-label,
+:root[data-page-view-mode="list"] .page-trending .conference-paper-card .paper-workspace-panel .paper-detail-label {
+  display: block;
 }
 
 :root[data-page-view-mode="list"] .page-cool-daily .paper-card .paper-authors-line,
@@ -5648,6 +5666,87 @@ code {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.32);
 }
 
+.page-cool-daily .paper-card .paper-workspace-panel,
+.page-cool-daily .spotlight-card .paper-workspace-panel,
+.page-cool-daily .topic-lead-card .paper-workspace-panel,
+.page-hf .conference-paper-card .paper-workspace-panel,
+.page-conference .conference-paper-card .paper-workspace-panel,
+.page-trending .conference-paper-card .paper-workspace-panel {
+  width: 100%;
+}
+
+.branch-workspace-panel .paper-workspace-header {
+  padding: 0.58rem 0.68rem;
+}
+
+.branch-workspace-panel .paper-workspace-body {
+  gap: 0.52rem;
+  padding: 0 0.68rem 0.68rem;
+}
+
+.branch-workspace-panel .paper-workspace-summary {
+  justify-content: flex-end;
+}
+
+.branch-workspace-panel .paper-workspace-summary-tag {
+  min-height: 1.34rem;
+  padding: 0.08rem 0.4rem;
+}
+
+.branch-workspace-panel .paper-workspace-grid {
+  gap: 0.5rem;
+}
+
+.branch-workspace-panel .paper-workspace-markdown-display,
+.branch-workspace-panel .paper-workspace-card .paper-workspace-textarea {
+  min-height: 3.7rem;
+}
+
+.branch-workspace-empty {
+  display: grid;
+  gap: 0.62rem;
+}
+
+.branch-workspace-empty-copy {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.58;
+}
+
+.branch-workspace-empty-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.46rem;
+  flex-wrap: wrap;
+}
+
+.branch-workspace-start {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2rem;
+  padding: 0.44rem 0.72rem;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--border), var(--accent) 14%);
+  background: color-mix(in srgb, var(--surface), white 12%);
+  color: var(--accent-strong);
+  font: inherit;
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 160ms ease, background 160ms ease, box-shadow 160ms ease, color 160ms ease;
+}
+
+.branch-workspace-start:hover {
+  border-color: color-mix(in srgb, var(--border), var(--accent) 24%);
+  background: color-mix(in srgb, var(--surface), white 18%);
+}
+
+.branch-workspace-start-primary {
+  background: color-mix(in srgb, var(--accent-soft), white 28%);
+}
+
 .paper-workspace-header {
   display: flex;
   align-items: center;
@@ -5860,6 +5959,14 @@ code {
 
 .status-inbox {
   --workspace-tag-color: #7f96a7;
+}
+
+.workspace-origin-liked {
+  --workspace-tag-color: #b26e83;
+}
+
+.workspace-origin-later {
+  --workspace-tag-color: #5d8fa5;
 }
 
 .status-reading {

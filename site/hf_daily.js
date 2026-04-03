@@ -3,8 +3,9 @@ import { bindQueueButtons, initQueue, subscribeQueue } from "./paper_queue.js?v=
 import { repairLikeLaterConflicts } from "./paper_selection.js?v=964dbe6c53";
 import { createCalendarPicker } from "./calendar_picker.js?v=4b01d6ac6c";
 import { mountAppToolbar } from "./app_toolbar.js?v=c5124e8940";
-import { buildBranchReviewKey, createBranchReviewController, initBranchReportPage } from "./branch_page.js?v=f27a328acc";
+import { buildBranchReviewKey, createBranchReviewController, initBranchReportPage } from "./branch_page.js?v=0c9bc4f3d6";
 import { bindBranchListDetails, renderBranchDetailSection, renderBranchListDetails } from "./branch_details.js?v=bf87e132c5";
+import { bindBranchWorkspace, createBranchWorkspaceLookup, initBranchWorkspace, renderBranchWorkspacePanel } from "./branch_workspace.js?v=1fbefaa5d2";
 import { createLatestTaskRunner } from "./request_gate.js?v=f527e8e81d";
 import { createFloatingTocController } from "./floating_toc.js?v=a9ffd5aa93";
 import { validateHfManifest, validateHfReport } from "./site_contract.js?v=be9ddc76a7";
@@ -80,6 +81,13 @@ init().catch((error) => {
 });
 
 async function init() {
+  initBranchWorkspace({
+    onSettingsChange: () => {
+      if (state.report) {
+        renderReport();
+      }
+    },
+  });
   await initBranchReportPage({
     pageKey: "hf",
     toolbarPrefix: "hf",
@@ -96,6 +104,11 @@ async function init() {
       bindCadenceViewToggle();
     },
     renderReviewState,
+    onLibraryStateChange: () => {
+      if (state.report) {
+        renderReport();
+      }
+    },
     onManifestLoaded: (manifest) => {
       state.manifest = manifest;
       bindDatePicker();
@@ -240,6 +253,7 @@ function renderReport() {
   }
 
   const report = state.report;
+  const workspaceLookup = createBranchWorkspaceLookup();
   likeRecords.clear();
   const visiblePapers = getVisiblePapers(report);
   const topics = groupByTopic(visiblePapers);
@@ -248,9 +262,9 @@ function renderReport() {
   renderTagMap(report);
   renderCadence(report);
   renderDistribution(report, visiblePapers);
-  renderSpotlight(report, visiblePapers);
+  renderSpotlight(report, visiblePapers, workspaceLookup);
   renderResults(report, visiblePapers, topics);
-  renderTopicSections(topics);
+  renderTopicSections(topics, workspaceLookup);
   floatingToc.render([
     { id: "hf-overview-section", label: "Overview" },
     { id: "hf-tags-section", label: "Current Tags" },
@@ -266,6 +280,7 @@ function renderReport() {
   bindLikeButtons(document, likeRecords);
   bindQueueButtons(document, likeRecords);
   bindBranchListDetails(document);
+  bindBranchWorkspace(document, { recordLookup: likeRecords });
 }
 
 function renderTagMap(report) {
@@ -414,7 +429,7 @@ function renderCadence(report) {
     state.cadenceView === "weekly" ? buildWeeklyCadenceSummary(cadenceRows) : buildCadenceSummary(cadenceRows);
 }
 
-function renderSpotlight(report, visiblePapers) {
+function renderSpotlight(report, visiblePapers, workspaceLookup) {
   const root = document.querySelector("#hf-spotlight");
   const prioritized = visiblePapers
     .slice()
@@ -426,7 +441,7 @@ function renderSpotlight(report, visiblePapers) {
     return;
   }
 
-  root.innerHTML = prioritized.map((paper) => renderPaperCard(paper)).join("");
+  root.innerHTML = prioritized.map((paper) => renderPaperCard(paper, workspaceLookup)).join("");
 }
 
 function renderResults(report, visiblePapers, topics) {
@@ -449,7 +464,7 @@ function renderResults(report, visiblePapers, topics) {
   resetFiltersButton.disabled = !activeFilters.length;
 }
 
-function renderTopicSections(topics) {
+function renderTopicSections(topics, workspaceLookup) {
   const root = document.querySelector("#hf-topic-sections");
   if (!topics.length) {
     root.innerHTML = `<div class="glass-card empty-state">No papers match the current filters.</div>`;
@@ -470,7 +485,7 @@ function renderTopicSections(topics) {
             </div>
           </div>
           <div class="conference-paper-grid">
-            ${section.papers.map((paper) => renderPaperCard(paper)).join("")}
+            ${section.papers.map((paper) => renderPaperCard(paper, workspaceLookup)).join("")}
           </div>
         </section>
       `
@@ -478,7 +493,8 @@ function renderTopicSections(topics) {
     .join("");
 }
 
-function renderPaperCard(paper) {
+function renderPaperCard(paper, workspaceLookup = createBranchWorkspaceLookup()) {
+  const likeId = rememberLikeRecord(paper);
   const authors = paper.authors?.length ? escapeHtml(paper.authors.join(", ")) : "Unknown";
   const listAuthors = paper.authors?.length ? escapeHtml(paper.authors.join(", ")) : "";
   const metaBadges = [
@@ -534,7 +550,7 @@ function renderPaperCard(paper) {
       paper.abstract ? renderBranchDetailSection({ label: "Abstract", body: escapeHtml(paper.abstract), muted: true, collapsible: true }) : "",
     ].join(""),
     {
-      detailKey: rememberLikeRecord(paper),
+      detailKey: likeId,
     }
   );
 
@@ -547,6 +563,7 @@ function renderPaperCard(paper) {
         ${abstract}
       </div>
       ${listDetails}
+      ${renderBranchWorkspacePanel(likeId, workspaceLookup)}
       <div class="paper-links">${links}</div>
     </article>
   `;

@@ -2,8 +2,9 @@ import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLik
 import { bindQueueButtons, initQueue, isInQueue, subscribeQueue } from "./paper_queue.js?v=033bd186d1";
 import { mountAppToolbar } from "./app_toolbar.js?v=c5124e8940";
 import { repairLikeLaterConflicts } from "./paper_selection.js?v=964dbe6c53";
-import { buildBranchReviewKey, createBranchReviewController, initBranchReportPage } from "./branch_page.js?v=f27a328acc";
+import { buildBranchReviewKey, createBranchReviewController, initBranchReportPage } from "./branch_page.js?v=0c9bc4f3d6";
 import { bindBranchListDetails, renderBranchDetailGroup, renderBranchDetailSection, renderBranchListDetails } from "./branch_details.js?v=bf87e132c5";
+import { bindBranchWorkspace, createBranchWorkspaceLookup, initBranchWorkspace, renderBranchWorkspacePanel } from "./branch_workspace.js?v=1fbefaa5d2";
 import { createLatestTaskRunner } from "./request_gate.js?v=f527e8e81d";
 import { createFloatingTocController } from "./floating_toc.js?v=a9ffd5aa93";
 import { validateTrendingManifest, validateTrendingReport } from "./site_contract.js?v=be9ddc76a7";
@@ -69,6 +70,13 @@ init().catch((error) => {
 });
 
 async function init() {
+  initBranchWorkspace({
+    onSettingsChange: () => {
+      if (state.report) {
+        renderReport();
+      }
+    },
+  });
   await initBranchReportPage({
     pageKey: "trending",
     toolbarPrefix: "trending",
@@ -84,6 +92,11 @@ async function init() {
       bindReviewToggle();
     },
     renderReviewState,
+    onLibraryStateChange: () => {
+      if (state.report) {
+        renderReport();
+      }
+    },
     onManifestLoaded: (manifest) => {
       state.manifest = manifest;
       populateReportSelect(manifest.reports || []);
@@ -202,13 +215,14 @@ function renderReport() {
 
   const report = state.report;
   const visibleRepos = getVisibleRepos(report);
+  const workspaceLookup = createBranchWorkspaceLookup();
   likeRecords.clear();
   renderHero(report, visibleRepos);
   renderOverview(report, visibleRepos);
   renderTagMap(report);
   renderCadence(report);
   renderResults(report, visibleRepos);
-  renderRepositorySections(visibleRepos);
+  renderRepositorySections(visibleRepos, workspaceLookup);
   floatingToc.render([
     { id: "trending-overview-section", label: "Overview" },
     { id: "trending-tags-section", label: "Current Tags" },
@@ -219,6 +233,7 @@ function renderReport() {
   bindLikeButtons(document, likeRecords);
   bindQueueButtons(document, likeRecords);
   bindBranchListDetails(document);
+  bindBranchWorkspace(document, { recordLookup: likeRecords });
 }
 
 function renderHero(report, visibleRepos) {
@@ -357,7 +372,7 @@ function renderResults(report, visibleRepos) {
   resetFiltersButton.disabled = !activeFilters.length;
 }
 
-function renderRepositorySections(visibleRepos) {
+function renderRepositorySections(visibleRepos, workspaceLookup) {
   const root = document.querySelector("#trending-repository-sections");
   if (!visibleRepos.length) {
     root.innerHTML = `<div class="glass-card empty-state">No repositories match the current filters.</div>`;
@@ -376,13 +391,13 @@ function renderRepositorySections(visibleRepos) {
         </div>
       </div>
       <div class="conference-paper-grid">
-        ${visibleRepos.map((repo) => renderRepoCard(repo)).join("")}
+        ${visibleRepos.map((repo) => renderRepoCard(repo, workspaceLookup)).join("")}
       </div>
     </section>
   `;
 }
 
-function renderRepoCard(repo) {
+function renderRepoCard(repo, workspaceLookup = createBranchWorkspaceLookup()) {
   const likeId = rememberLikeRecord(repo);
   const liked = isLiked(likeId);
   const inLater = isInQueue(likeId);
@@ -445,6 +460,7 @@ function renderRepoCard(repo) {
         ${builtBy}
       </div>
       ${listDetails}
+      ${renderBranchWorkspacePanel(likeId, workspaceLookup)}
       <div class="paper-links">
         ${renderPaperLink({ href: repo.repo_url, label: "GitHub", brand: "github" })}
         <button class="paper-link later-button${inLater ? " is-later" : ""}" type="button" data-later-id="${escapeAttribute(likeId)}" aria-pressed="${inLater}">

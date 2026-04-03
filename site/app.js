@@ -3,8 +3,9 @@ import { bindQueueButtons, initQueue, isInQueue, subscribeQueue } from "./paper_
 import { repairLikeLaterConflicts } from "./paper_selection.js?v=964dbe6c53";
 import { createCalendarPicker } from "./calendar_picker.js?v=4b01d6ac6c";
 import { mountAppToolbar } from "./app_toolbar.js?v=c5124e8940";
-import { buildBranchReviewKey, createBranchReviewController, initBranchReportPage } from "./branch_page.js?v=f27a328acc";
+import { buildBranchReviewKey, createBranchReviewController, initBranchReportPage } from "./branch_page.js?v=0c9bc4f3d6";
 import { bindBranchListDetails, renderBranchDetailSection, renderBranchListDetails } from "./branch_details.js?v=bf87e132c5";
+import { bindBranchWorkspace, createBranchWorkspaceLookup, initBranchWorkspace, renderBranchWorkspacePanel } from "./branch_workspace.js?v=1fbefaa5d2";
 import { createLatestTaskRunner } from "./request_gate.js?v=f527e8e81d";
 import { buildCadenceSummary } from "./daily_cadence.js?v=a064eed5f2";
 import { createFloatingTocController } from "./floating_toc.js?v=a9ffd5aa93";
@@ -84,6 +85,13 @@ init().catch((error) => {
 });
 
 async function init() {
+  initBranchWorkspace({
+    onSettingsChange: () => {
+      if (state.report) {
+        renderReport();
+      }
+    },
+  });
   await initBranchReportPage({
     pageKey: "daily",
     toolbarPrefix: "daily",
@@ -100,6 +108,11 @@ async function init() {
       bindReviewToggle();
     },
     renderReviewState,
+    onLibraryStateChange: () => {
+      if (state.report) {
+        renderReport();
+      }
+    },
     onManifestLoaded: (manifest) => {
       state.manifest = manifest;
       bindDatePicker();
@@ -409,6 +422,7 @@ function renderReport() {
   }
 
   const report = state.report;
+  const workspaceLookup = createBranchWorkspaceLookup();
   likeRecords.clear();
   const sections = getFilteredSections(report);
   renderHeroSignals(report);
@@ -417,9 +431,9 @@ function renderReport() {
   renderTagMap(report);
   renderAtlas(report);
   renderTopicNavigator(report.topic_distribution);
-  renderSpotlight(report, sections);
+  renderSpotlight(report, sections, workspaceLookup);
   renderResultsStrip(report, sections);
-  renderTopicSections(report, sections);
+  renderTopicSections(report, sections, workspaceLookup);
   floatingToc.render(
     [
       { id: "daily-overview-section", label: "Overview" },
@@ -438,6 +452,7 @@ function renderReport() {
   bindLikeButtons(document, likeRecords);
   bindQueueButtons(document, likeRecords);
   bindBranchListDetails(document);
+  bindBranchWorkspace(document, { recordLookup: likeRecords });
 }
 
 function renderTagMap(report) {
@@ -752,7 +767,7 @@ function renderTopicNavigator(items) {
   });
 }
 
-function renderSpotlight(report, sections) {
+function renderSpotlight(report, sections, workspaceLookup) {
   const root = document.querySelector("#spotlight-list");
   const visiblePapers = collectVisiblePapers(sections);
   const focusPapers = (visiblePapers.length ? visiblePapers : report.papers)
@@ -766,21 +781,24 @@ function renderSpotlight(report, sections) {
 
   root.innerHTML = focusPapers
     .map(
-      (paper, index) => `
+      (paper, index) => {
+        const likeId = rememberLikeRecord(paper);
+        return `
         <article class="spotlight-card ${focusTopicKeys.has(paper.topic_key) ? "is-focus" : ""}">
           <div class="paper-card-top">
             <span class="paper-id">${index === 0 ? "Start here" : escapeHtml(paper.paper_id)}</span>
             <div class="paper-badges">${renderPaperBadges(paper)}</div>
           </div>
           <h3>${escapeHtml(paper.title)}</h3>
-          ${renderPaperDetails(paper)}
+          ${renderPaperDetails(paper, { likeId, workspaceLookup })}
           <div class="paper-links">
             ${renderPaperLink({ href: paper.pdf_url || paper.abs_url, label: "arXiv", brand: "arxiv" })}
             ${renderPaperLink({ href: paper.detail_url, label: "Cool", brand: "cool" })}
-            ${renderLikeButton(paper)}
+            ${renderLikeButton(paper, likeId)}
           </div>
         </article>
-      `
+      `;
+      }
     )
     .join("");
 }
@@ -832,7 +850,7 @@ function renderResultsStrip(report, sections) {
   resetFiltersButton.disabled = !activeFilters.length;
 }
 
-function renderTopicSections(report, sections) {
+function renderTopicSections(report, sections, workspaceLookup) {
   const root = document.querySelector("#topic-sections");
   const sectionTemplate = document.querySelector("#topic-section-template");
   const paperTemplate = document.querySelector("#paper-card-template");
@@ -859,19 +877,19 @@ function renderTopicSections(report, sections) {
 
     const [leadPaper, ...restPapers] = topic.papers;
     const leadRoot = section.querySelector(".topic-lead-card");
-    leadRoot.innerHTML = buildTopicLeadMarkup(leadPaper, topic);
+    leadRoot.innerHTML = buildTopicLeadMarkup(leadPaper, topic, workspaceLookup);
 
     const paperList = section.querySelector(".paper-list");
     restPapers.forEach((paper) => {
+      const likeId = rememberLikeRecord(paper);
       const card = paperTemplate.content.firstElementChild.cloneNode(true);
       card.querySelector(".paper-id").textContent = paper.paper_id;
       card.querySelector(".paper-title").textContent = paper.title;
       card.querySelector(".paper-note").remove();
-      card.querySelector(".paper-extra").innerHTML = renderPaperDetails(paper);
+      card.querySelector(".paper-extra").innerHTML = renderPaperDetails(paper, { likeId, workspaceLookup });
       card.querySelector('[data-link="abs"]').href = paper.pdf_url || paper.abs_url;
       card.querySelector('[data-link="detail"]').href = paper.detail_url;
       card.querySelector(".paper-badges").innerHTML = renderPaperBadges(paper);
-      const likeId = rememberLikeRecord(paper);
       const laterButton = card.querySelector("[data-later]");
       laterButton.dataset.laterId = likeId;
       laterButton.classList.toggle("is-later", isInQueue(likeId));
@@ -891,18 +909,19 @@ function renderTopicSections(report, sections) {
   });
 }
 
-function buildTopicLeadMarkup(paper, topic) {
+function buildTopicLeadMarkup(paper, topic, workspaceLookup) {
+  const likeId = rememberLikeRecord(paper);
   return `
     <div class="paper-card-top">
       <span class="paper-id">${escapeHtml(paper.paper_id)}</span>
       <div class="paper-badges">${renderPaperBadges(paper)}</div>
     </div>
     <h4 class="topic-lead-title">${escapeHtml(paper.title)}</h4>
-    ${renderPaperDetails(paper)}
+    ${renderPaperDetails(paper, { likeId, workspaceLookup })}
     <div class="paper-links">
       ${renderPaperLink({ href: paper.pdf_url || paper.abs_url, label: "arXiv", brand: "arxiv" })}
       ${renderPaperLink({ href: paper.detail_url, label: "Cool", brand: "cool" })}
-      ${renderLikeButton(paper)}
+      ${renderLikeButton(paper, likeId)}
     </div>
   `;
 }
@@ -1063,8 +1082,7 @@ function renderPaperLink({ href, label, brand }) {
   `;
 }
 
-function renderLikeButton(paper) {
-  const likeId = rememberLikeRecord(paper);
+function renderLikeButton(paper, likeId = rememberLikeRecord(paper)) {
   const liked = isLiked(likeId);
   return `
     <button class="paper-link later-button" type="button" data-later-id="${escapeAttribute(likeId)}" aria-pressed="false">
@@ -1109,11 +1127,11 @@ function renderPaperBadges(paper) {
   return badges.join("");
 }
 
-function renderPaperDetails(paper) {
+function renderPaperDetails(paper, { likeId = rememberLikeRecord(paper), workspaceLookup = createBranchWorkspaceLookup() } = {}) {
   const authors = Array.isArray(paper.authors) ? paper.authors.filter(Boolean) : [];
   const abstract = typeof paper.abstract === "string" ? paper.abstract.trim() : "";
   if (!authors.length && !abstract) {
-    return "";
+    return renderBranchWorkspacePanel(likeId, workspaceLookup);
   }
 
   const inlineAuthors = authors.length
@@ -1145,7 +1163,7 @@ function renderPaperDetails(paper) {
       abstract ? renderBranchDetailSection({ label: "Abstract", body: escapeHtml(abstract), muted: true, collapsible: true }) : "",
     ].join(""),
     {
-      detailKey: rememberLikeRecord(paper),
+      detailKey: likeId,
     }
   );
 
@@ -1155,6 +1173,7 @@ function renderPaperDetails(paper) {
       ${inlineAbstract}
     </div>
     ${listDetails}
+    ${renderBranchWorkspacePanel(likeId, workspaceLookup)}
   `;
 }
 

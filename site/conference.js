@@ -2,8 +2,9 @@ import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLik
 import { bindQueueButtons, initQueue, subscribeQueue } from "./paper_queue.js?v=033bd186d1";
 import { repairLikeLaterConflicts } from "./paper_selection.js?v=964dbe6c53";
 import { mountAppToolbar } from "./app_toolbar.js?v=c5124e8940";
-import { buildBranchReviewKey, createBranchReviewController, initBranchReportPage } from "./branch_page.js?v=f27a328acc";
+import { buildBranchReviewKey, createBranchReviewController, initBranchReportPage } from "./branch_page.js?v=0c9bc4f3d6";
 import { bindBranchListDetails, renderBranchDetailGroup, renderBranchDetailSection, renderBranchListDetails } from "./branch_details.js?v=bf87e132c5";
+import { bindBranchWorkspace, createBranchWorkspaceLookup, initBranchWorkspace, renderBranchWorkspacePanel } from "./branch_workspace.js?v=1fbefaa5d2";
 import { createLatestTaskRunner } from "./request_gate.js?v=f527e8e81d";
 import { createFloatingTocController } from "./floating_toc.js?v=a9ffd5aa93";
 import { validateConferenceManifest, validateConferenceReport } from "./site_contract.js?v=be9ddc76a7";
@@ -94,6 +95,13 @@ init().catch((error) => {
 
 async function init() {
   initSubjectAutoLoadObserver();
+  initBranchWorkspace({
+    onSettingsChange: () => {
+      if (state.report) {
+        renderReport();
+      }
+    },
+  });
   await initBranchReportPage({
     pageKey: "conference",
     toolbarPrefix: "conference",
@@ -112,6 +120,11 @@ async function init() {
       bindReviewToggle();
     },
     renderReviewState,
+    onLibraryStateChange: () => {
+      if (state.report) {
+        renderReport();
+      }
+    },
     onManifestLoaded: (manifest) => {
       state.manifest = manifest;
       populateScopeFilters(manifest.reports || []);
@@ -384,6 +397,7 @@ function renderReport() {
   }
 
   const report = state.report;
+  const workspaceLookup = createBranchWorkspaceLookup();
   likeRecords.clear();
   const visiblePapers = getVisiblePapers(report);
   const sections = groupBySubject(visiblePapers);
@@ -391,10 +405,10 @@ function renderReport() {
   renderOverview(report, visiblePapers, sections);
   renderTagMap(report);
   renderSubjectDistribution(report, visiblePapers);
-  renderSpotlight(report, visiblePapers);
+  renderSpotlight(report, visiblePapers, workspaceLookup);
   renderSubjectRadar(visiblePapers);
   renderResults(report, visiblePapers, sections);
-  renderSubjectSections(report, sections);
+  renderSubjectSections(report, sections, workspaceLookup);
   floatingToc.render([
     { id: "conference-overview-section", label: "Overview" },
     { id: "conference-tags-section", label: "Current Tags" },
@@ -410,6 +424,7 @@ function renderReport() {
   bindLikeButtons(document, likeRecords);
   bindQueueButtons(document, likeRecords);
   bindBranchListDetails(document);
+  bindBranchWorkspace(document, { recordLookup: likeRecords });
 }
 
 function bindSubjectSectionActions() {
@@ -670,7 +685,7 @@ function renderSubjectDistribution(report, visiblePapers) {
     .join("");
 }
 
-function renderSpotlight(report, visiblePapers) {
+function renderSpotlight(report, visiblePapers, workspaceLookup) {
   const root = document.querySelector("#conference-spotlight");
   const focusPapers = visiblePapers.filter((paper) => focusTopicKeys.has(paper.topic_key)).slice(0, 6);
   const papers = focusPapers.length ? focusPapers : visiblePapers.slice(0, 6);
@@ -680,7 +695,7 @@ function renderSpotlight(report, visiblePapers) {
     return;
   }
 
-  root.innerHTML = papers.map((paper) => renderPaperCard(paper, "conference-paper-card spotlight")).join("");
+  root.innerHTML = papers.map((paper) => renderPaperCard(paper, "conference-paper-card spotlight", workspaceLookup)).join("");
 }
 
 function renderSubjectRadar(visiblePapers) {
@@ -754,7 +769,7 @@ function renderResults(report, visiblePapers, sections) {
   resetFiltersButton.disabled = !activeFilters.length;
 }
 
-function renderSubjectSections(report, sections) {
+function renderSubjectSections(report, sections, workspaceLookup) {
   const root = document.querySelector("#conference-subject-sections");
   if (!sections.length) {
     root.innerHTML = `<div class="glass-card empty-state">No subjects match the current filters.</div>`;
@@ -783,7 +798,7 @@ function renderSubjectSections(report, sections) {
             </div>
           </div>
           <div class="conference-paper-grid">
-            ${visiblePapers.map((paper) => renderPaperCard(paper, "conference-paper-card")).join("")}
+            ${visiblePapers.map((paper) => renderPaperCard(paper, "conference-paper-card", workspaceLookup)).join("")}
           </div>
           <div class="conference-subject-footer">
             <span class="conference-subject-progress">Showing ${visiblePapers.length} of ${section.papers.length} papers</span>
@@ -816,7 +831,8 @@ function renderSubjectSections(report, sections) {
   refreshSubjectAutoLoadObserver();
 }
 
-function renderPaperCard(paper, className) {
+function renderPaperCard(paper, className, workspaceLookup = createBranchWorkspaceLookup()) {
+  const likeId = rememberLikeRecord(paper);
   const authors = paper.authors?.length ? escapeHtml(paper.authors.join(", ")) : "Unknown";
   const listAuthors = paper.authors?.length ? escapeHtml(paper.authors.join(", ")) : "";
   const abstract = paper.abstract
@@ -852,7 +868,7 @@ function renderPaperCard(paper, className) {
       paper.abstract ? renderBranchDetailSection({ label: "Abstract", body: escapeHtml(paper.abstract), muted: true, collapsible: true }) : "",
     ].join(""),
     {
-      detailKey: rememberLikeRecord(paper),
+      detailKey: likeId,
     }
   );
   return `
@@ -867,6 +883,7 @@ function renderPaperCard(paper, className) {
         ${abstract}
       </div>
       ${listDetails}
+      ${renderBranchWorkspacePanel(likeId, workspaceLookup)}
       <div class="paper-links">
         ${paper.pdf_url || paper.abs_url ? renderPaperLink(paper.pdf_url || paper.abs_url, "OpenReview", "openreview") : ""}
         ${paper.detail_url ? renderPaperLink(paper.detail_url, "Cool", "cool") : ""}

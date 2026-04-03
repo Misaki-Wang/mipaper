@@ -6,7 +6,7 @@ const dailySource = readFileSync(new URL("../site/app.js", import.meta.url), "ut
 const stylesSource = readFileSync(new URL("../site/styles.css", import.meta.url), "utf8");
 
 test("daily topic lead markup uses the same card skeleton as other papers", () => {
-  assert.match(dailySource, /function buildTopicLeadMarkup\(paper, topic\) \{/);
+  assert.match(dailySource, /function buildTopicLeadMarkup\(paper, topic, workspaceLookup\) \{/);
   assert.match(dailySource, /<div class="paper-card-top">/);
   assert.match(dailySource, /<div class="paper-links">/);
   assert.doesNotMatch(dailySource, /<div class="topic-lead-main">/);

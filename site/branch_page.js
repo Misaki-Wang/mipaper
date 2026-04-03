@@ -26,6 +26,7 @@ export async function initBranchReportPage({
   likeRecords,
   bindPageControls,
   renderReviewState,
+  onLibraryStateChange,
   onManifestLoaded,
   isManifestEmpty = (manifest) => !manifest?.reports?.length,
   onEmptyManifest,
@@ -33,6 +34,23 @@ export async function initBranchReportPage({
   loadReport,
   manifestValidator,
 }) {
+  let libraryStateChangeQueued = false;
+  const scheduleLibraryStateChange = () => {
+    if (typeof onLibraryStateChange !== "function" || libraryStateChangeQueued) {
+      return;
+    }
+    libraryStateChangeQueued = true;
+    const flush = () => {
+      libraryStateChangeQueued = false;
+      onLibraryStateChange();
+    };
+    if (typeof window !== "undefined" && typeof window.requestAnimationFrame === "function") {
+      window.requestAnimationFrame(flush);
+      return;
+    }
+    setTimeout(flush, 0);
+  };
+
   initToolbarPreferences({ pageKey });
   bindFilterMenu({
     button: sidebarToggleButton,
@@ -46,8 +64,14 @@ export async function initBranchReportPage({
   bindBranchAuthToolbar(toolbarPrefix);
   bindBackToTop(backToTopButton);
   bindPageControls();
-  subscribeLikes(() => bindLikeButtons(document, likeRecords));
-  subscribeQueue(() => bindQueueButtons(document, likeRecords));
+  subscribeLikes(() => {
+    bindLikeButtons(document, likeRecords);
+    scheduleLibraryStateChange();
+  });
+  subscribeQueue(() => {
+    bindQueueButtons(document, likeRecords);
+    scheduleLibraryStateChange();
+  });
   subscribePageReviews(() => renderReviewState());
   await Promise.all([initLikesSync(), initReviewSync(), initQueue()]);
   repairLikeLaterConflicts();
