@@ -1,4 +1,4 @@
 0 21 * * 1-5 cd /path/to/mipaper && /usr/bin/env bash scripts/run_cool_daily_job.sh >> logs/cool-daily.cron.log 2>&1
 0 23 * * * cd /path/to/mipaper && /usr/bin/env bash scripts/run_hf_daily_job.sh >> logs/hf-daily.cron.log 2>&1
 0 12 * * 1 cd /path/to/mipaper && /usr/bin/env bash scripts/run_trending_job.sh >> logs/trending.cron.log 2>&1
-0 9 * * 6 cd /path/to/mipaper && /usr/bin/env bash scripts/run_magazine_job.sh >> logs/magazine.cron.log 2>&1
+0 12 * * 5 cd /path/to/mipaper && /usr/bin/env bash scripts/run_magazine_job.sh >> logs/magazine.cron.log 2>&1

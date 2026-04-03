@@ -78,11 +78,13 @@ class SchedulerHelpersTest(unittest.TestCase):
             trending_backfill_dates("2026-03-02", "Asia/Shanghai", last_success_date="2026-03-16", now=now),
         )
 
-    def test_magazine_backfill_dates_waits_until_friday(self) -> None:
+    def test_magazine_backfill_dates_waits_until_friday_noon(self) -> None:
         thursday = datetime.fromisoformat("2026-04-02T12:00:00+08:00")
-        friday = datetime.fromisoformat("2026-04-03T12:00:00+08:00")
+        friday_morning = datetime.fromisoformat("2026-04-03T11:59:00+08:00")
+        friday_noon = datetime.fromisoformat("2026-04-03T12:00:00+08:00")
         self.assertEqual([], magazine_backfill_dates("2026-03-02", "Asia/Shanghai", now=thursday))
-        self.assertEqual(["2026-04-03"], magazine_backfill_dates("2026-03-02", "Asia/Shanghai", now=friday))
+        self.assertEqual([], magazine_backfill_dates("2026-03-02", "Asia/Shanghai", now=friday_morning))
+        self.assertEqual(["2026-04-03"], magazine_backfill_dates("2026-03-02", "Asia/Shanghai", now=friday_noon))
 
     def test_magazine_backfill_dates_runs_once_per_iso_week(self) -> None:
         saturday = datetime.fromisoformat("2026-04-04T09:00:00+08:00")

@@ -111,11 +111,14 @@ def magazine_backfill_dates(
     last_success_date: str | None = None,
     now: datetime | None = None,
 ) -> list[str]:
-    current_date = local_now(timezone_name, now).date()
+    current_datetime = local_now(timezone_name, now)
+    current_date = current_datetime.date()
     anchor_date = parse_iso_date(start_date)
     if current_date < anchor_date:
         return []
     if current_date.weekday() < 4:
+        return []
+    if current_date.weekday() == 4 and (current_datetime.hour, current_datetime.minute) < (12, 0):
         return []
     if last_success_date and iso_week_key(parse_iso_date(last_success_date)) == iso_week_key(current_date):
         return []

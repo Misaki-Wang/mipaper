@@ -190,9 +190,9 @@ There are four scheduled jobs. The paper jobs default to local Codex classificat
   - Captures one GitHub Trending weekly snapshot for the current ISO week
   - Runs at most once per week even if manually triggered multiple times
 - `Magazine`
-  - `Saturday 09:00`
+  - `Friday 12:00`
   - Syncs the latest published issue from `ruanyf/weekly/docs/issue-*.md`
-  - Waits until Friday before allowing the current ISO week to publish
+  - Waits until Friday `12:00` before allowing the current ISO week to publish
   - Runs at most once per week even if manually triggered multiple times
 
 The scheduler keeps its own local state in `state/scheduled_jobs.json` by default. If the machine is off for several days, the next scheduled run resumes from the last successful business date instead of skipping the gap.
@@ -246,7 +246,7 @@ Use an explicit test clock:
 python3 scripts/run_scheduled_job.py --job cool_daily --skip-push --now 2026-03-10T21:00:00+08:00
 python3 scripts/run_scheduled_job.py --job hf_daily --skip-push --now 2026-03-10T23:00:00+08:00
 python3 scripts/run_scheduled_job.py --job trending --skip-push --now 2026-03-16T12:00:00+08:00
-python3 scripts/run_scheduled_job.py --job magazine --skip-push --now 2026-04-04T09:00:00+08:00
+python3 scripts/run_scheduled_job.py --job magazine --skip-push --now 2026-04-03T12:00:00+08:00
 ```
 
 ### macOS launchd
