@@ -16,6 +16,8 @@ import { renderWorkspaceMarkdownPreviewContent } from "./workspace_markdown.js?v
 let workspacePanelDefaultMode = readWorkspacePanelDefaultMode();
 const workspacePanelOverrides = new Map();
 const pendingWorkspaceEditorActivations = new Map();
+const workspacePanelRoots = new Set();
+let syncingWorkspacePanelsFromDefault = false;
 let workspaceSettingsBound = false;
 
 function getWorkspaceStatusTone(value) {
@@ -300,6 +302,7 @@ export function initBranchWorkspace({ onSettingsChange } = {}) {
       return;
     }
     workspacePanelDefaultMode = nextMode;
+    syncRegisteredWorkspacePanels({ resetOverrides: true });
     if (typeof onSettingsChange === "function") {
       onSettingsChange();
     }
@@ -325,6 +328,7 @@ export function bindBranchWorkspace(root = document, { recordLookup } = {}) {
     return;
   }
 
+  workspacePanelRoots.add(root);
   bindWorkspacePanels(root);
 
   root.querySelectorAll("[data-workspace-editor-toggle]").forEach((surface) => {
@@ -444,12 +448,44 @@ function bindWorkspacePanels(root) {
     details.dataset.workspaceBound = "true";
     details.addEventListener("toggle", () => {
       const likeId = details.dataset.workspacePanel || "";
-      if (!likeId) {
+      if (!likeId || syncingWorkspacePanelsFromDefault) {
         return;
       }
       workspacePanelOverrides.set(likeId, details.open);
     });
   });
+}
+
+function syncRegisteredWorkspacePanels({ resetOverrides = false } = {}) {
+  if (resetOverrides) {
+    workspacePanelOverrides.clear();
+  }
+
+  workspacePanelRoots.forEach((root) => {
+    syncWorkspacePanels(root);
+  });
+}
+
+function syncWorkspacePanels(root) {
+  if (!root?.querySelectorAll) {
+    return;
+  }
+
+  syncingWorkspacePanelsFromDefault = true;
+  try {
+    root.querySelectorAll("[data-workspace-panel]").forEach((details) => {
+      const likeId = details.dataset.workspacePanel || "";
+      if (!likeId) {
+        return;
+      }
+      const nextOpen = isWorkspacePanelOpen(likeId);
+      if (details.open !== nextOpen) {
+        details.open = nextOpen;
+      }
+    });
+  } finally {
+    syncingWorkspacePanelsFromDefault = false;
+  }
 }
 
 function resolveBranchRecord(recordLookup, likeId) {

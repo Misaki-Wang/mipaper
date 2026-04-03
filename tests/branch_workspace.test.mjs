@@ -23,6 +23,13 @@ test("branch workspace helper exposes a tracked panel and an empty-state starter
   assert.match(helperSource, /pendingWorkspaceEditorActivations/);
 });
 
+test("branch workspace listens to workspace default changes and reapplies them to existing panels", () => {
+  assert.match(helperSource, /workspacePanelOverrides\.clear\(\)/);
+  assert.match(helperSource, /syncRegisteredWorkspacePanels\(\{ resetOverrides: true \}\)/);
+  assert.match(helperSource, /const workspacePanelRoots = new Set\(\)/);
+  assert.match(helperSource, /syncingWorkspacePanelsFromDefault = true/);
+});
+
 test("renderBranchWorkspacePanel falls back to a lightweight starter for unsaved items", () => {
   const markup = renderBranchWorkspacePanel("paper-1", {
     get() {
