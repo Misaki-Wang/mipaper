@@ -1,10 +1,128 @@
 {
   "branch_key": "daily",
   "branch_label": "Cool Daily",
-  "generated_at": "2026-04-02T20:54:52Z",
-  "reports_count": 72,
-  "default_report_path": "data/daily/reports/2026-04-02/cs.AI-2026-04-02.json",
+  "generated_at": "2026-04-04T04:00:29Z",
+  "reports_count": 74,
+  "default_report_path": "data/daily/reports/2026-04-03/cs.AI-2026-04-03.json",
   "reports": [
+    {
+      "branch_key": "daily",
+      "branch_label": "Cool Daily",
+      "data_path": "data/daily/reports/2026-04-03/cs.AI-2026-04-03.json",
+      "slug": "cs.AI-2026-04-03",
+      "report_date": "2026-04-03",
+      "category": "cs.AI",
+      "total_papers": 188,
+      "classifier": "codex",
+      "generated_at": "2026-04-03T15:45:10Z",
+      "source_url": "https://papers.cool/arxiv/cs.AI?date=2026-04-03&show=1000",
+      "focus_topics": [
+        {
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "count": 6,
+          "share": 3.19
+        },
+        {
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 9,
+          "share": 4.79
+        },
+        {
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "count": 6,
+          "share": 3.19
+        }
+      ],
+      "top_topics": [
+        {
+          "topic_label": "Domain Applications",
+          "count": 39,
+          "share": 20.74
+        },
+        {
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "count": 30,
+          "share": 15.96
+        },
+        {
+          "topic_label": "Agents and Planning",
+          "count": 25,
+          "share": 13.3
+        },
+        {
+          "topic_label": "Multimodal Understanding and Vision",
+          "count": 16,
+          "share": 8.51
+        },
+        {
+          "topic_label": "LLMs and Language",
+          "count": 15,
+          "share": 7.98
+        }
+      ]
+    },
+    {
+      "branch_key": "daily",
+      "branch_label": "Cool Daily",
+      "data_path": "data/daily/reports/2026-04-03/cs.CL-2026-04-03.json",
+      "slug": "cs.CL-2026-04-03",
+      "report_date": "2026-04-03",
+      "category": "cs.CL",
+      "total_papers": 89,
+      "classifier": "codex",
+      "generated_at": "2026-04-04T00:44:24Z",
+      "source_url": "https://papers.cool/arxiv/cs.CL?date=2026-04-03&show=1000",
+      "focus_topics": [
+        {
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "count": 3,
+          "share": 3.37
+        },
+        {
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 1,
+          "share": 1.12
+        },
+        {
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "count": 0,
+          "share": 0.0
+        }
+      ],
+      "top_topics": [
+        {
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "count": 22,
+          "share": 24.72
+        },
+        {
+          "topic_label": "Domain Applications",
+          "count": 12,
+          "share": 13.48
+        },
+        {
+          "topic_label": "LLMs and Language",
+          "count": 11,
+          "share": 12.36
+        },
+        {
+          "topic_label": "Learning, Optimization, and Theory",
+          "count": 10,
+          "share": 11.24
+        },
+        {
+          "topic_label": "Multimodal Understanding and Vision",
+          "count": 9,
+          "share": 10.11
+        }
+      ]
+    },
     {
       "branch_key": "daily",
       "branch_label": "Cool Daily",
@@ -4263,85 +4381,85 @@
     {
       "branch_key": "daily",
       "branch_label": "Cool Daily",
-      "data_path": "data/daily/reports/2026-04-02/cs.AI-2026-04-02.json",
-      "slug": "cs.AI-2026-04-02",
-      "report_date": "2026-04-02",
+      "data_path": "data/daily/reports/2026-04-03/cs.AI-2026-04-03.json",
+      "slug": "cs.AI-2026-04-03",
+      "report_date": "2026-04-03",
       "category": "cs.AI",
-      "total_papers": 173,
+      "total_papers": 188,
       "classifier": "codex",
-      "generated_at": "2026-04-02T18:37:25Z",
-      "source_url": "https://papers.cool/arxiv/cs.AI?date=2026-04-02&show=1000",
+      "generated_at": "2026-04-03T15:45:10Z",
+      "source_url": "https://papers.cool/arxiv/cs.AI?date=2026-04-03&show=1000",
       "focus_topics": [
         {
           "topic_key": "generative_foundations",
           "topic_label": "Generative Foundations",
-          "count": 2,
-          "share": 1.16
+          "count": 6,
+          "share": 3.19
         },
         {
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
-          "count": 5,
-          "share": 2.89
+          "count": 9,
+          "share": 4.79
         },
         {
           "topic_key": "multimodal_agents",
           "topic_label": "Multimodal Agents",
           "count": 6,
-          "share": 3.47
+          "share": 3.19
         }
       ],
       "top_topics": [
         {
           "topic_label": "Domain Applications",
-          "count": 33,
-          "share": 19.08
+          "count": 39,
+          "share": 20.74
         },
         {
           "topic_label": "Reasoning, Alignment, and Evaluation",
-          "count": 29,
-          "share": 16.76
+          "count": 30,
+          "share": 15.96
         },
         {
           "topic_label": "Agents and Planning",
-          "count": 24,
-          "share": 13.87
+          "count": 25,
+          "share": 13.3
+        },
+        {
+          "topic_label": "Multimodal Understanding and Vision",
+          "count": 16,
+          "share": 8.51
         },
         {
           "topic_label": "LLMs and Language",
-          "count": 19,
-          "share": 10.98
-        },
-        {
-          "topic_label": "Learning, Optimization, and Theory",
-          "count": 17,
-          "share": 9.83
+          "count": 15,
+          "share": 7.98
         }
       ]
     },
     {
       "branch_key": "daily",
       "branch_label": "Cool Daily",
-      "data_path": "data/daily/reports/2026-04-02/cs.CL-2026-04-02.json",
-      "slug": "cs.CL-2026-04-02",
-      "report_date": "2026-04-02",
+      "data_path": "data/daily/reports/2026-04-03/cs.CL-2026-04-03.json",
+      "slug": "cs.CL-2026-04-03",
+      "report_date": "2026-04-03",
       "category": "cs.CL",
-      "total_papers": 105,
+      "total_papers": 89,
       "classifier": "codex",
-      "generated_at": "2026-04-02T19:36:31Z",
-      "source_url": "https://papers.cool/arxiv/cs.CL?date=2026-04-02&show=1000",
+      "generated_at": "2026-04-04T00:44:24Z",
+      "source_url": "https://papers.cool/arxiv/cs.CL?date=2026-04-03&show=1000",
       "focus_topics": [
         {
           "topic_key": "generative_foundations",
           "topic_label": "Generative Foundations",
           "count": 3,
-          "share": 2.86
+          "share": 3.37
         },
         {
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
-          "count": 2,
-          "share": 1.9
+          "count": 1,
+          "share": 1.12
         },
         {
           "topic_key": "multimodal_agents",
@@ -4353,28 +4471,28 @@
       "top_topics": [
         {
           "topic_label": "Reasoning, Alignment, and Evaluation",
-          "count": 23,
-          "share": 21.9
-        },
-        {
-          "topic_label": "LLMs and Language",
-          "count": 20,
-          "share": 19.05
-        },
-        {
-          "topic_label": "Agents and Planning",
-          "count": 13,
-          "share": 12.38
+          "count": 22,
+          "share": 24.72
         },
         {
           "topic_label": "Domain Applications",
+          "count": 12,
+          "share": 13.48
+        },
+        {
+          "topic_label": "LLMs and Language",
           "count": 11,
-          "share": 10.48
+          "share": 12.36
+        },
+        {
+          "topic_label": "Learning, Optimization, and Theory",
+          "count": 10,
+          "share": 11.24
         },
         {
           "topic_label": "Multimodal Understanding and Vision",
-          "count": 11,
-          "share": 10.48
+          "count": 9,
+          "share": 10.11
         }
       ]
     },

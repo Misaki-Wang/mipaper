@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-04-02T19:17:04Z",
+  "generated_at": "2026-04-04T03:24:37Z",
   "report_kind": "hf_daily",
   "report_date": "2026-04-02",
   "source_url": "https://huggingface.co/papers/date/2026-04-02",
   "classifier": "codex",
-  "total_papers": 26,
+  "total_papers": 30,
   "focus_topics": [
     {
       "topic_key": "generative_foundations",
@@ -16,71 +16,70 @@
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
       "count": 1,
-      "share": 3.85
+      "share": 3.33
     },
     {
       "topic_key": "multimodal_agents",
       "topic_label": "Multimodal Agents",
       "count": 2,
-      "share": 7.69
+      "share": 6.67
     }
   ],
   "topic_distribution": [
     {
       "topic_label": "Datasets and Benchmarks",
       "count": 7,
-      "share": 26.92
+      "share": 23.33
+    },
+    {
+      "topic_label": "LLMs and Language",
+      "count": 7,
+      "share": 23.33
     },
     {
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "count": 5,
-      "share": 19.23
-    },
-    {
-      "topic_label": "LLMs and Language",
-      "count": 3,
-      "share": 11.54
+      "share": 16.67
     },
     {
       "topic_label": "Agents and Planning",
-      "count": 2,
-      "share": 7.69
+      "count": 3,
+      "share": 10.0
     },
     {
       "topic_label": "Domain Applications",
       "count": 2,
-      "share": 7.69
-    },
-    {
-      "topic_label": "Learning, Optimization, and Theory",
-      "count": 2,
-      "share": 7.69
+      "share": 6.67
     },
     {
       "topic_label": "Multimodal Agents",
       "count": 2,
-      "share": 7.69
+      "share": 6.67
+    },
+    {
+      "topic_label": "Multimodal Understanding and Vision",
+      "count": 2,
+      "share": 6.67
     },
     {
       "topic_label": "Multimodal Generative Modeling",
       "count": 1,
-      "share": 3.85
-    },
-    {
-      "topic_label": "Multimodal Understanding and Vision",
-      "count": 1,
-      "share": 3.85
+      "share": 3.33
     },
     {
       "topic_label": "Retrieval, Knowledge, and RAG",
       "count": 1,
-      "share": 3.85
+      "share": 3.33
     }
   ],
   "top_submitters": [
     {
       "submitted_by": "taesiri",
       "count": 5
+    },
+    {
+      "submitted_by": "Aman Mehta",
+      "count": 1
     },
     {
       "submitted_by": "Chenxu Wang",
@@ -96,10 +95,6 @@
     },
     {
       "submitted_by": "Gleb",
-      "count": 1
-    },
-    {
-      "submitted_by": "Hang Yu",
       "count": 1
     }
   ],
@@ -129,8 +124,8 @@
       "github_url": "",
       "submitted_by": "Chenxu Wang",
       "submitted_at": "2026-04-02T04:39:41.858Z",
-      "upvotes": 165,
-      "comments": 2,
+      "upvotes": 170,
+      "comments": 4,
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
@@ -159,13 +154,13 @@
       "github_url": "",
       "submitted_by": "Patrice Bechard",
       "submitted_at": "2026-04-02T00:15:23.904Z",
-      "upvotes": 65,
-      "comments": 2,
+      "upvotes": 77,
+      "comments": 7,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.97
     },
     {
       "report_date": "2026-04-02",
@@ -203,13 +198,13 @@
       "github_url": "",
       "submitted_by": "Fangda Ye",
       "submitted_at": "2026-04-02T01:48:50.117Z",
-      "upvotes": 52,
-      "comments": 2,
+      "upvotes": 60,
+      "comments": 5,
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.98
+      "classification_confidence": 0.9
     },
     {
       "report_date": "2026-04-02",
@@ -235,13 +230,13 @@
       "github_url": "",
       "submitted_by": "Vincent Han",
       "submitted_at": "2026-04-02T01:24:39.006Z",
-      "upvotes": 36,
-      "comments": 2,
+      "upvotes": 40,
+      "comments": 3,
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.83
     },
     {
       "report_date": "2026-04-02",
@@ -264,13 +259,13 @@
       "github_url": "",
       "submitted_by": "Zehai He",
       "submitted_at": "2026-04-02T01:56:52.001Z",
-      "upvotes": 32,
-      "comments": 2,
+      "upvotes": 38,
+      "comments": 3,
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.96
+      "classification_confidence": 0.84
     },
     {
       "report_date": "2026-04-02",
@@ -296,8 +291,8 @@
       "github_url": "",
       "submitted_by": "Hang Yu",
       "submitted_at": "2026-04-02T01:30:53.313Z",
-      "upvotes": 25,
-      "comments": 2,
+      "upvotes": 28,
+      "comments": 3,
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
@@ -319,43 +314,54 @@
       "github_url": "",
       "submitted_by": "Gleb",
       "submitted_at": "2026-04-02T06:21:03.973Z",
-      "upvotes": 22,
-      "comments": 2,
+      "upvotes": 25,
+      "comments": 3,
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.9
     },
     {
       "report_date": "2026-04-02",
-      "paper_id": "2604.00025",
-      "title": "Brevity Constraints Reverse Performance Hierarchies in Language Models",
+      "paper_id": "2604.01221",
+      "title": "HippoCamp: Benchmarking Contextual Agents on Personal Computers",
       "authors": [
-        "MD Azizul Hakim"
+        "Zhe Yang",
+        "Shulin Tian",
+        "Kairui Hu",
+        "Shuai Liu",
+        "Hoang-Nhat Nguyen",
+        "Yichi Zhang",
+        "Zujin Guo",
+        "Mengying Yu",
+        "Zinan Zhang",
+        "Jingkang Yang",
+        "Chen Change Loy",
+        "Ziwei Liu"
       ],
-      "abstract": "Standard evaluation protocols reveal a counterintuitive phenomenon: on 7.7% of benchmark problems spanning five datasets, larger language models underperform smaller ones by 28.4 percentage points despite 10-100x more parameters. Through systematic evaluation of 31 models (0.5B-405B parameters) across 1,485 problems, we identify the mechanism as spontaneous scale-dependent verbosity that introduces errors through overelaboration. Causal intervention experiments demonstrate this reflects correctable prompt design rather than fundamental capability limitations. Constraining large models to produce brief responses improves accuracy by 26 percentage points and reduces performance gaps by up to two-thirds. Most critically, brevity constraints completely reverse performance hierarchies on mathematical reasoning and scientific knowledge benchmarks, with large models achieving 7.7-15.9 percentage point advantages over small models -- direct inversions of the original gaps. These reversals prove large models possess superior latent capabilities that universal prompting masks. We validate findings through three independent contamination tests and demonstrate inverse scaling operates continuously across the full parameter spectrum, with dataset-specific optimal scales ranging from 0.5B to 3.0B parameters. Our results establish that maximizing large model performance requires scale-aware prompt engineering rather than universal evaluation protocols, with immediate implications for deployment: prompt adaptation simultaneously improves accuracy and reduces computational costs.",
-      "hf_url": "https://huggingface.co/papers/2604.00025",
-      "arxiv_url": "https://arxiv.org/abs/2604.00025",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.00025",
-      "papers_cool_url": "https://papers.cool/arxiv/2604.00025",
+      "abstract": "We present HippoCamp, a new benchmark designed to evaluate agents' capabilities on multimodal file management. Unlike existing agent benchmarks that focus on tasks like web interaction, tool use, or software automation in generic settings, HippoCamp evaluates agents in user-centric environments to model individual user profiles and search massive personal files for context-aware reasoning. Our benchmark instantiates device-scale file systems over real-world profiles spanning diverse modalities, comprising 42.4 GB of data across over 2K real-world files. Building upon the raw files, we construct 581 QA pairs to assess agents' capabilities in search, evidence perception, and multi-step reasoning. To facilitate fine-grained analysis, we provide 46.1K densely annotated structured trajectories for step-wise failure diagnosis. We evaluate a wide range of state-of-the-art multimodal large language models (MLLMs) and agentic methods on HippoCamp. Our comprehensive experiments reveal a significant performance gap: even the most advanced commercial models achieve only 48.3% accuracy in user profiling, struggling particularly with long-horizon retrieval and cross-modal reasoning within dense personal file systems. Furthermore, our step-wise failure diagnosis identifies multimodal perception and evidence grounding as the primary bottlenecks. Ultimately, HippoCamp exposes the critical limitations of current agents in realistic, user-centric environments and provides a robust foundation for developing next-generation personal AI assistants.",
+      "hf_url": "https://huggingface.co/papers/2604.01221",
+      "arxiv_url": "https://arxiv.org/abs/2604.01221",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.01221",
+      "papers_cool_url": "https://papers.cool/arxiv/2604.01221",
       "github_url": "",
-      "submitted_by": "Md.Azizul Hakim",
-      "submitted_at": "2026-04-02T12:03:51.837Z",
-      "upvotes": 16,
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-04-02T00:37:41.531Z",
+      "upvotes": 21,
       "comments": 1,
-      "topic_key": "reasoning_alignment_eval",
-      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "topic_key": "datasets_benchmarks",
+      "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.88
+      "classification_confidence": 0.92
     }
   ],
   "topics": [
     {
       "topic_label": "Datasets and Benchmarks",
       "count": 7,
-      "share": 26.92,
+      "share": 23.33,
       "papers": [
         {
           "report_date": "2026-04-02",
@@ -393,13 +399,13 @@
           "github_url": "",
           "submitted_by": "Fangda Ye",
           "submitted_at": "2026-04-02T01:48:50.117Z",
-          "upvotes": 52,
-          "comments": 2,
+          "upvotes": 60,
+          "comments": 5,
           "topic_key": "datasets_benchmarks",
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.98
+          "classification_confidence": 0.9
         },
         {
           "report_date": "2026-04-02",
@@ -425,13 +431,13 @@
           "github_url": "",
           "submitted_by": "Vincent Han",
           "submitted_at": "2026-04-02T01:24:39.006Z",
-          "upvotes": 36,
-          "comments": 2,
+          "upvotes": 40,
+          "comments": 3,
           "topic_key": "datasets_benchmarks",
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.95
+          "classification_confidence": 0.83
         },
         {
           "report_date": "2026-04-02",
@@ -454,13 +460,13 @@
           "github_url": "",
           "submitted_by": "Zehai He",
           "submitted_at": "2026-04-02T01:56:52.001Z",
-          "upvotes": 32,
-          "comments": 2,
+          "upvotes": 38,
+          "comments": 3,
           "topic_key": "datasets_benchmarks",
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.96
+          "classification_confidence": 0.84
         },
         {
           "report_date": "2026-04-02",
@@ -486,8 +492,8 @@
           "github_url": "",
           "submitted_by": "Hang Yu",
           "submitted_at": "2026-04-02T01:30:53.313Z",
-          "upvotes": 25,
-          "comments": 2,
+          "upvotes": 28,
+          "comments": 3,
           "topic_key": "datasets_benchmarks",
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
@@ -520,13 +526,13 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-04-02T00:37:41.531Z",
-          "upvotes": 15,
-          "comments": 0,
+          "upvotes": 21,
+          "comments": 1,
           "topic_key": "datasets_benchmarks",
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.97
+          "classification_confidence": 0.92
         },
         {
           "report_date": "2026-04-02",
@@ -554,13 +560,13 @@
           "github_url": "",
           "submitted_by": "Yuhao Dong",
           "submitted_at": "2026-04-02T01:02:07.189Z",
-          "upvotes": 14,
-          "comments": 1,
+          "upvotes": 15,
+          "comments": 2,
           "topic_key": "datasets_benchmarks",
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.98
+          "classification_confidence": 0.97
         },
         {
           "report_date": "2026-04-02",
@@ -586,20 +592,204 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-04-02T01:38:01.776Z",
-          "upvotes": 5,
-          "comments": 1,
+          "upvotes": 7,
+          "comments": 2,
           "topic_key": "datasets_benchmarks",
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.79
+          "classification_confidence": 0.78
+        }
+      ]
+    },
+    {
+      "topic_label": "LLMs and Language",
+      "count": 7,
+      "share": 23.33,
+      "papers": [
+        {
+          "report_date": "2026-04-02",
+          "paper_id": "2604.00025",
+          "title": "Brevity Constraints Reverse Performance Hierarchies in Language Models",
+          "authors": [
+            "MD Azizul Hakim"
+          ],
+          "abstract": "Standard evaluation protocols reveal a counterintuitive phenomenon: on 7.7% of benchmark problems spanning five datasets, larger language models underperform smaller ones by 28.4 percentage points despite 10-100x more parameters. Through systematic evaluation of 31 models (0.5B-405B parameters) across 1,485 problems, we identify the mechanism as spontaneous scale-dependent verbosity that introduces errors through overelaboration. Causal intervention experiments demonstrate this reflects correctable prompt design rather than fundamental capability limitations. Constraining large models to produce brief responses improves accuracy by 26 percentage points and reduces performance gaps by up to two-thirds. Most critically, brevity constraints completely reverse performance hierarchies on mathematical reasoning and scientific knowledge benchmarks, with large models achieving 7.7-15.9 percentage point advantages over small models -- direct inversions of the original gaps. These reversals prove large models possess superior latent capabilities that universal prompting masks. We validate findings through three independent contamination tests and demonstrate inverse scaling operates continuously across the full parameter spectrum, with dataset-specific optimal scales ranging from 0.5B to 3.0B parameters. Our results establish that maximizing large model performance requires scale-aware prompt engineering rather than universal evaluation protocols, with immediate implications for deployment: prompt adaptation simultaneously improves accuracy and reduces computational costs.",
+          "hf_url": "https://huggingface.co/papers/2604.00025",
+          "arxiv_url": "https://arxiv.org/abs/2604.00025",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.00025",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.00025",
+          "github_url": "",
+          "submitted_by": "Md.Azizul Hakim",
+          "submitted_at": "2026-04-02T12:03:51.837Z",
+          "upvotes": 18,
+          "comments": 2,
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.78
+        },
+        {
+          "report_date": "2026-04-02",
+          "paper_id": "2604.01193",
+          "title": "Embarrassingly Simple Self-Distillation Improves Code Generation",
+          "authors": [
+            "Ruixiang Zhang",
+            "Richard He Bai",
+            "Huangjie Zheng",
+            "Navdeep Jaitly",
+            "Ronan Collobert",
+            "Yizhe Zhang"
+          ],
+          "abstract": "Can a large language model (LLM) improve at code generation using only its own raw outputs, without a verifier, a teacher model, or reinforcement learning? We answer in the affirmative with simple self-distillation (SSD): sample solutions from the model with certain temperature and truncation configurations, then fine-tune on those samples with standard supervised fine-tuning. SSD improves Qwen3-30B-Instruct from 42.4% to 55.3% pass@1 on LiveCodeBench v6, with gains concentrating on harder problems, and it generalizes across Qwen and Llama models at 4B, 8B, and 30B scale, including both instruct and thinking variants. To understand why such a simple method can work, we trace these gains to a precision-exploration conflict in LLM decoding and show that SSD reshapes token distributions in a context-dependent way, suppressing distractor tails where precision matters while preserving useful diversity where exploration matters. Taken together, SSD offers a complementary post-training direction for improving LLM code generation.",
+          "hf_url": "https://huggingface.co/papers/2604.01193",
+          "arxiv_url": "https://arxiv.org/abs/2604.01193",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.01193",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.01193",
+          "github_url": "",
+          "submitted_by": "taesiri",
+          "submitted_at": "2026-04-02T00:59:29.361Z",
+          "upvotes": 17,
+          "comments": 2,
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.93
+        },
+        {
+          "report_date": "2026-04-02",
+          "paper_id": "2604.01220",
+          "title": "Universal YOCO for Efficient Depth Scaling",
+          "authors": [
+            "Yutao Sun",
+            "Li Dong",
+            "Tianzhu Ye",
+            "Shaohan Huang",
+            "Jianyong Wang",
+            "Furu Wei"
+          ],
+          "abstract": "The rise of test-time scaling has remarkably boosted the reasoning and agentic proficiency of Large Language Models (LLMs). Yet, standard Transformers struggle to scale inference-time compute efficiently, as conventional looping strategies suffer from high computational overhead and a KV cache that inflates alongside model depth. We present Universal YOCO (YOCO-U), which combines the YOCO decoder-decoder architecture with recursive computation to achieve a synergistic effect greater than either alone. Built on the YOCO framework, YOCO-U implements a Universal Self-Decoder that performs multiple iterations via parameter sharing, while confining the iterative process to shallow, efficient-attention layers. This combination yields a favorable capability-efficiency tradeoff that neither YOCO nor recursion achieves independently. The YOCO architecture provides a constant global KV cache and linear pre-filling, while partial recursion enhances representational depth with limited overhead. Together, YOCO-U improves token utility and scaling behavior while maintaining efficient inference. Empirical results confirm that YOCO-U remains highly competitive in general and long-context benchmarks, demonstrating that the integration of efficient-attention architectures and recursive computation is a promising direction for scalable LLMs.",
+          "hf_url": "https://huggingface.co/papers/2604.01220",
+          "arxiv_url": "https://arxiv.org/abs/2604.01220",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.01220",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.01220",
+          "github_url": "",
+          "submitted_by": "Li Dong",
+          "submitted_at": "2026-04-02T01:17:19.303Z",
+          "upvotes": 13,
+          "comments": 2,
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.58
+        },
+        {
+          "report_date": "2026-04-02",
+          "paper_id": "2604.00626",
+          "title": "A Survey of On-Policy Distillation for Large Language Models",
+          "authors": [
+            "Mingyang Song",
+            "Mao Zheng"
+          ],
+          "abstract": "Knowledge distillation has become a primary mechanism for transferring reasoning and domain expertise from frontier Large Language Models (LLMs) to smaller, deployable students. However, the dominant paradigm remains off-policy: students train on static teacher-generated data and never encounter their own errors during learning. This train--test mismatch, an instance of exposure bias, causes prediction errors to compound autoregressively at inference time. On-Policy Distillation (OPD) addresses this by letting the student generate its own trajectories and receive teacher feedback on these self-generated outputs, grounding distillation in the theory of interactive imitation learning. Despite rapid growth spanning divergence minimization, reward-guided learning, and self-play, the OPD literature remains fragmented with no unified treatment. This survey provides the first comprehensive overview of OPD for LLMs. We introduce a unified f-divergence framework over on-policy samples and organize the landscape along three orthogonal dimensions: feedback signal (logit-based, outcome-based, or self-play), teacher access (white-box, black-box, or teacher-free), and loss granularity (token-level, sequence-level, or hybrid). We systematically analyze representative methods, examine industrial deployments, and identify open problems including distillation scaling laws, uncertainty-aware feedback, and agent-level distillation.",
+          "hf_url": "https://huggingface.co/papers/2604.00626",
+          "arxiv_url": "https://arxiv.org/abs/2604.00626",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.00626",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.00626",
+          "github_url": "",
+          "submitted_by": "Mingyang Song",
+          "submitted_at": "2026-04-02T06:51:37.973Z",
+          "upvotes": 5,
+          "comments": 2,
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.94
+        },
+        {
+          "report_date": "2026-04-02",
+          "paper_id": "2604.01029",
+          "title": "Revision or Re-Solving? Decomposing Second-Pass Gains in Multi-LLM Pipelines",
+          "authors": [
+            "Jingjie Ning",
+            "Xueqi Li",
+            "Chengyu Yu"
+          ],
+          "abstract": "Multi-LLM revision pipelines, in which a second model reviews and improves a draft produced by a first, are widely assumed to derive their gains from genuine error correction. We question this assumption with a controlled decomposition experiment that uses four matched conditions to separate second-pass gains into three additive components: re-solving, scaffold, and content. We evaluate this design across two model pairs on three benchmarks spanning knowledge-intensive MCQ and competitive programming. Our results show that the gains of multi-LLM revision are not monolithic, but depend on task structure, draft quality, and the type of draft information. On MCQ tasks, where the answer space is constrained and drafts provide little structural guidance, most gains are consistent with stronger-model re-solving, and directly routing queries to the stronger model can be more effective than revising a weak draft. On code generation tasks, however, two-stage prompting remains useful because even semantically null drafts can provide substantial structural scaffolding, while weak draft content can be harmful. Finally, role-reversed experiments show that strong drafts clearly benefit weak reviewers. Ultimately, our findings demonstrate that the utility of multi-LLM revision is dynamically bottlenecked by task structure and draft quality, necessitating more targeted pipeline designs rather than blanket revision strategies.",
+          "hf_url": "https://huggingface.co/papers/2604.01029",
+          "arxiv_url": "https://arxiv.org/abs/2604.01029",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.01029",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.01029",
+          "github_url": "",
+          "submitted_by": "Ethan Ning",
+          "submitted_at": "2026-04-02T01:26:01.351Z",
+          "upvotes": 4,
+          "comments": 2,
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.81
+        },
+        {
+          "report_date": "2026-04-02",
+          "paper_id": "2603.29002",
+          "title": "Understand and Accelerate Memory Processing Pipeline for Disaggregated LLM Inference",
+          "authors": [
+            "Zifan He",
+            "Rui Ma",
+            "Yizhou Sun",
+            "Jason Cong"
+          ],
+          "abstract": "Modern large language models (LLMs) increasingly depends on efficient long-context processing and generation mechanisms, including sparse attention, retrieval-augmented generation (RAG), and compressed contextual memory, to support complex reasoning. We show that these optimizations can be unified into a four-step memory processing pipeline: Prepare Memory, Compute Relevancy, Retrieval, and Apply to Inference. Through systematic profiling, we identify a 22%-97% memory processing overhead in LLM inference and strong heterogeneity in its computational characteristics. Motivated by this insight, we argue that heterogeneous systems are well-suited to accelerate memory processing and thus end-to-end inference. We demonstrate this approach on a GPU-FPGA system by offloading sparse, irregular, and memory-bounded operations to FPGAs while retaining compute-intensive operations on GPUs. Evaluated on an AMD MI210 GPU and an Alveo U55C FPGA, our system is 1.04sim2.2times faster and requires 1.11sim4.7times less energy across multiple LLM inference optimizations than the GPU baseline (similar results hold on NVIDIA A100). These results establish heterogeneous systems as a practical direction for efficient LLM memory processing and inform future heterogeneous hardware design.",
+          "hf_url": "https://huggingface.co/papers/2603.29002",
+          "arxiv_url": "https://arxiv.org/abs/2603.29002",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.29002",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.29002",
+          "github_url": "",
+          "submitted_by": "Zifan He",
+          "submitted_at": "2026-04-02T04:09:58.590Z",
+          "upvotes": 4,
+          "comments": 2,
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.83
+        },
+        {
+          "report_date": "2026-04-02",
+          "paper_id": "2604.01168",
+          "title": "S0 Tuning: Zero-Overhead Adaptation of Hybrid Recurrent-Attention Models",
+          "authors": [
+            "Jack Young"
+          ],
+          "abstract": "Using roughly 48 execution-verified HumanEval training solutions, tuning a single initial state matrix per recurrent layer, with zero inference overhead, outperforms LoRA by +10.8 pp (p < 0.001) on HumanEval. The method, which we call S0 tuning, optimizes one state matrix per recurrent layer while freezing all model weights. On Qwen3.5-4B (GatedDeltaNet hybrid), S0 tuning improves greedy pass@1 by +23.6 +/- 1.7 pp (10 seeds). On FalconH1-7B (Mamba-2 hybrid), S0 reaches 71.8% +/- 1.3 and LoRA reaches 71.4% +/- 2.4 (3 seeds), statistically indistinguishable at this sample size while requiring no weight merging. Cross-domain transfer is significant on MATH-500 (+4.8 pp, p = 0.00002, 8 seeds) and GSM8K (+2.8 pp, p = 0.0003, 10 seeds); a text-to-SQL benchmark (Spider) shows no transfer, consistent with the trajectory-steering mechanism. A prefix-tuning control on a pure Transformer (Qwen2.5-3B) degrades performance by -13.9 pp under all nine configurations tested. On Qwen3.5, a per-step state-offset variant reaches +27.1 pp, above both S0 and LoRA but with per-step inference cost. Taken together, the results show that recurrent state initialization is a strong zero-inference-overhead PEFT surface for hybrid language models when verified supervision is scarce. The tuned state is a ~48 MB file; task switching requires no weight merging or model reload. Code and library: https://github.com/jackyoung27/s0-tuning.",
+          "hf_url": "https://huggingface.co/papers/2604.01168",
+          "arxiv_url": "https://arxiv.org/abs/2604.01168",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.01168",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.01168",
+          "github_url": "",
+          "submitted_by": "Jack Young",
+          "submitted_at": "2026-04-02T14:04:28.786Z",
+          "upvotes": 3,
+          "comments": 3,
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.74
         }
       ]
     },
     {
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "count": 5,
-      "share": 19.23,
+      "share": 16.67,
       "papers": [
         {
           "report_date": "2026-04-02",
@@ -626,8 +816,8 @@
           "github_url": "",
           "submitted_by": "Chenxu Wang",
           "submitted_at": "2026-04-02T04:39:41.858Z",
-          "upvotes": 165,
-          "comments": 2,
+          "upvotes": 170,
+          "comments": 4,
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
@@ -649,36 +839,13 @@
           "github_url": "",
           "submitted_by": "Gleb",
           "submitted_at": "2026-04-02T06:21:03.973Z",
-          "upvotes": 22,
-          "comments": 2,
+          "upvotes": 25,
+          "comments": 3,
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.95
-        },
-        {
-          "report_date": "2026-04-02",
-          "paper_id": "2604.00025",
-          "title": "Brevity Constraints Reverse Performance Hierarchies in Language Models",
-          "authors": [
-            "MD Azizul Hakim"
-          ],
-          "abstract": "Standard evaluation protocols reveal a counterintuitive phenomenon: on 7.7% of benchmark problems spanning five datasets, larger language models underperform smaller ones by 28.4 percentage points despite 10-100x more parameters. Through systematic evaluation of 31 models (0.5B-405B parameters) across 1,485 problems, we identify the mechanism as spontaneous scale-dependent verbosity that introduces errors through overelaboration. Causal intervention experiments demonstrate this reflects correctable prompt design rather than fundamental capability limitations. Constraining large models to produce brief responses improves accuracy by 26 percentage points and reduces performance gaps by up to two-thirds. Most critically, brevity constraints completely reverse performance hierarchies on mathematical reasoning and scientific knowledge benchmarks, with large models achieving 7.7-15.9 percentage point advantages over small models -- direct inversions of the original gaps. These reversals prove large models possess superior latent capabilities that universal prompting masks. We validate findings through three independent contamination tests and demonstrate inverse scaling operates continuously across the full parameter spectrum, with dataset-specific optimal scales ranging from 0.5B to 3.0B parameters. Our results establish that maximizing large model performance requires scale-aware prompt engineering rather than universal evaluation protocols, with immediate implications for deployment: prompt adaptation simultaneously improves accuracy and reduces computational costs.",
-          "hf_url": "https://huggingface.co/papers/2604.00025",
-          "arxiv_url": "https://arxiv.org/abs/2604.00025",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.00025",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.00025",
-          "github_url": "",
-          "submitted_by": "Md.Azizul Hakim",
-          "submitted_at": "2026-04-02T12:03:51.837Z",
-          "upvotes": 16,
-          "comments": 1,
-          "topic_key": "reasoning_alignment_eval",
-          "topic_label": "Reasoning, Alignment, and Evaluation",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.88
+          "classification_confidence": 0.9
         },
         {
           "report_date": "2026-04-02",
@@ -700,13 +867,13 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-04-02T01:40:09.739Z",
-          "upvotes": 6,
-          "comments": 0,
+          "upvotes": 10,
+          "comments": 1,
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.97
+          "classification_confidence": 0.95
         },
         {
           "report_date": "2026-04-02",
@@ -744,105 +911,46 @@
           "github_url": "",
           "submitted_by": "Zhengyang Tang",
           "submitted_at": "2026-04-02T13:20:49.869Z",
-          "upvotes": 1,
-          "comments": 1,
+          "upvotes": 5,
+          "comments": 2,
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
           "classification_confidence": 0.97
-        }
-      ]
-    },
-    {
-      "topic_label": "LLMs and Language",
-      "count": 3,
-      "share": 11.54,
-      "papers": [
-        {
-          "report_date": "2026-04-02",
-          "paper_id": "2604.01193",
-          "title": "Embarrassingly Simple Self-Distillation Improves Code Generation",
-          "authors": [
-            "Ruixiang Zhang",
-            "Richard He Bai",
-            "Huangjie Zheng",
-            "Navdeep Jaitly",
-            "Ronan Collobert",
-            "Yizhe Zhang"
-          ],
-          "abstract": "Can a large language model (LLM) improve at code generation using only its own raw outputs, without a verifier, a teacher model, or reinforcement learning? We answer in the affirmative with simple self-distillation (SSD): sample solutions from the model with certain temperature and truncation configurations, then fine-tune on those samples with standard supervised fine-tuning. SSD improves Qwen3-30B-Instruct from 42.4% to 55.3% pass@1 on LiveCodeBench v6, with gains concentrating on harder problems, and it generalizes across Qwen and Llama models at 4B, 8B, and 30B scale, including both instruct and thinking variants. To understand why such a simple method can work, we trace these gains to a precision-exploration conflict in LLM decoding and show that SSD reshapes token distributions in a context-dependent way, suppressing distractor tails where precision matters while preserving useful diversity where exploration matters. Taken together, SSD offers a complementary post-training direction for improving LLM code generation.",
-          "hf_url": "https://huggingface.co/papers/2604.01193",
-          "arxiv_url": "https://arxiv.org/abs/2604.01193",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.01193",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.01193",
-          "github_url": "",
-          "submitted_by": "taesiri",
-          "submitted_at": "2026-04-02T00:59:29.361Z",
-          "upvotes": 9,
-          "comments": 1,
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.93
         },
         {
           "report_date": "2026-04-02",
-          "paper_id": "2604.00626",
-          "title": "A Survey of On-Policy Distillation for Large Language Models",
+          "paper_id": "2604.01194",
+          "title": "AgentWatcher: A Rule-based Prompt Injection Monitor",
           "authors": [
-            "Mingyang Song",
-            "Mao Zheng"
+            "Yanting Wang",
+            "Wei Zou",
+            "Runpeng Geng",
+            "Jinyuan Jia"
           ],
-          "abstract": "Knowledge distillation has become a primary mechanism for transferring reasoning and domain expertise from frontier Large Language Models (LLMs) to smaller, deployable students. However, the dominant paradigm remains off-policy: students train on static teacher-generated data and never encounter their own errors during learning. This train--test mismatch, an instance of exposure bias, causes prediction errors to compound autoregressively at inference time. On-Policy Distillation (OPD) addresses this by letting the student generate its own trajectories and receive teacher feedback on these self-generated outputs, grounding distillation in the theory of interactive imitation learning. Despite rapid growth spanning divergence minimization, reward-guided learning, and self-play, the OPD literature remains fragmented with no unified treatment. This survey provides the first comprehensive overview of OPD for LLMs. We introduce a unified f-divergence framework over on-policy samples and organize the landscape along three orthogonal dimensions: feedback signal (logit-based, outcome-based, or self-play), teacher access (white-box, black-box, or teacher-free), and loss granularity (token-level, sequence-level, or hybrid). We systematically analyze representative methods, examine industrial deployments, and identify open problems including distillation scaling laws, uncertainty-aware feedback, and agent-level distillation.",
-          "hf_url": "https://huggingface.co/papers/2604.00626",
-          "arxiv_url": "https://arxiv.org/abs/2604.00626",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.00626",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.00626",
+          "abstract": "Large language models (LLMs) and their applications, such as agents, are highly vulnerable to prompt injection attacks. State-of-the-art prompt injection detection methods have the following limitations: (1) their effectiveness degrades significantly as context length increases, and (2) they lack explicit rules that define what constitutes prompt injection, causing detection decisions to be implicit, opaque, and difficult to reason about. In this work, we propose AgentWatcher to address the above two limitations. To address the first limitation, AgentWatcher attributes the LLM's output (e.g., the action of an agent) to a small set of causally influential context segments. By focusing detection on a relatively short text, AgentWatcher can be scalable to long contexts. To address the second limitation, we define a set of rules specifying what does and does not constitute a prompt injection, and use a monitor LLM to reason over these rules based on the attributed text, making the detection decisions more explainable. We conduct a comprehensive evaluation on tool-use agent benchmarks and long-context understanding datasets. The experimental results demonstrate that AgentWatcher can effectively detect prompt injection and maintain utility without attacks. The code is available at https://github.com/wang-yanting/AgentWatcher.",
+          "hf_url": "https://huggingface.co/papers/2604.01194",
+          "arxiv_url": "https://arxiv.org/abs/2604.01194",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.01194",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.01194",
           "github_url": "",
-          "submitted_by": "Mingyang Song",
-          "submitted_at": "2026-04-02T06:51:37.973Z",
-          "upvotes": 4,
-          "comments": 1,
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
+          "submitted_by": "yanting wang",
+          "submitted_at": "2026-04-02T18:00:42.448Z",
+          "upvotes": 1,
+          "comments": 2,
+          "topic_key": "reasoning_alignment_eval",
+          "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.97
-        },
-        {
-          "report_date": "2026-04-02",
-          "paper_id": "2603.29002",
-          "title": "Understand and Accelerate Memory Processing Pipeline for Disaggregated LLM Inference",
-          "authors": [
-            "Zifan He",
-            "Rui Ma",
-            "Yizhou Sun",
-            "Jason Cong"
-          ],
-          "abstract": "Modern large language models (LLMs) increasingly depends on efficient long-context processing and generation mechanisms, including sparse attention, retrieval-augmented generation (RAG), and compressed contextual memory, to support complex reasoning. We show that these optimizations can be unified into a four-step memory processing pipeline: Prepare Memory, Compute Relevancy, Retrieval, and Apply to Inference. Through systematic profiling, we identify a 22%-97% memory processing overhead in LLM inference and strong heterogeneity in its computational characteristics. Motivated by this insight, we argue that heterogeneous systems are well-suited to accelerate memory processing and thus end-to-end inference. We demonstrate this approach on a GPU-FPGA system by offloading sparse, irregular, and memory-bounded operations to FPGAs while retaining compute-intensive operations on GPUs. Evaluated on an AMD MI210 GPU and an Alveo U55C FPGA, our system is 1.04sim2.2times faster and requires 1.11sim4.7times less energy across multiple LLM inference optimizations than the GPU baseline (similar results hold on NVIDIA A100). These results establish heterogeneous systems as a practical direction for efficient LLM memory processing and inform future heterogeneous hardware design.",
-          "hf_url": "https://huggingface.co/papers/2603.29002",
-          "arxiv_url": "https://arxiv.org/abs/2603.29002",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.29002",
-          "papers_cool_url": "https://papers.cool/arxiv/2603.29002",
-          "github_url": "",
-          "submitted_by": "Zifan He",
-          "submitted_at": "2026-04-02T04:09:58.590Z",
-          "upvotes": 2,
-          "comments": 1,
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.78
+          "classification_confidence": 0.96
         }
       ]
     },
     {
       "topic_label": "Agents and Planning",
-      "count": 2,
-      "share": 7.69,
+      "count": 3,
+      "share": 10.0,
       "papers": [
         {
           "report_date": "2026-04-02",
@@ -866,7 +974,48 @@
           "github_url": "",
           "submitted_by": "Patrice Bechard",
           "submitted_at": "2026-04-02T00:15:23.904Z",
-          "upvotes": 65,
+          "upvotes": 77,
+          "comments": 7,
+          "topic_key": "agents_planning",
+          "topic_label": "Agents and Planning",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.97
+        },
+        {
+          "report_date": "2026-04-02",
+          "paper_id": "2604.00892",
+          "title": "When Users Change Their Mind: Evaluating Interruptible Agents in Long-Horizon Web Navigation",
+          "authors": [
+            "Henry Peng Zou",
+            "Chunyu Miao",
+            "Wei-Chieh Huang",
+            "Yankai Chen",
+            "Yue Zhou",
+            "Hanrong Zhang",
+            "Yaozu Wu",
+            "Liancheng Fang",
+            "Zhengyao Gu",
+            "Zhen Zhang",
+            "Kening Zheng",
+            "Fangxin Wang",
+            "Yi Nian",
+            "Shanghao Li",
+            "Wenzhe Fan",
+            "Langzhou He",
+            "Weizhi Zhang",
+            "Xue Liu",
+            "Philip S. Yu"
+          ],
+          "abstract": "As LLM agents transition from short, static problem solving to executing complex, long-horizon tasks in dynamic environments, the ability to handle user interruptions, such as adding requirement or revising goals, during mid-task execution is becoming a core requirement for realistic deployment. However, existing benchmarks largely assume uninterrupted agent behavior or study interruptions only in short, unconstrained language tasks. In this paper, we present the first systematic study of interruptible agents in long-horizon, environmentally grounded web navigation tasks, where actions induce persistent state changes. We formalize three realistic interruption types, including addition, revision, and retraction, and introduce InterruptBench, a benchmark derived from WebArena-Lite that synthesizes high-quality interruption scenarios under strict semantic constraints. Using a unified interruption simulation framework, we evaluate six strong LLM backbones across single- and multi-turn interruption settings, analyzing both their effectiveness in adapting to updated intents and their efficiency in recovering from mid-task changes. Our results show that handling user interruptions effectively and efficiently during long-horizon agentic tasks remains challenging for powerful large-scale LLMs. Code and dataset are available at https://github.com/HenryPengZou/InterruptBench.",
+          "hf_url": "https://huggingface.co/papers/2604.00892",
+          "arxiv_url": "https://arxiv.org/abs/2604.00892",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.00892",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.00892",
+          "github_url": "",
+          "submitted_by": "Henry Peng Zou",
+          "submitted_at": "2026-04-02T17:31:09.130Z",
+          "upvotes": 4,
           "comments": 2,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
@@ -876,35 +1025,33 @@
         },
         {
           "report_date": "2026-04-02",
-          "paper_id": "2604.01029",
-          "title": "Revision or Re-Solving? Decomposing Second-Pass Gains in Multi-LLM Pipelines",
+          "paper_id": "2603.25764",
+          "title": "Consistency Amplifies: How Behavioral Variance Shapes Agent Accuracy",
           "authors": [
-            "Jingjie Ning",
-            "Xueqi Li",
-            "Chengyu Yu"
+            "Aman Mehta"
           ],
-          "abstract": "Multi-LLM revision pipelines, in which a second model reviews and improves a draft produced by a first, are widely assumed to derive their gains from genuine error correction. We question this assumption with a controlled decomposition experiment that uses four matched conditions to separate second-pass gains into three additive components: re-solving, scaffold, and content. We evaluate this design across two model pairs on three benchmarks spanning knowledge-intensive MCQ and competitive programming. Our results show that the gains of multi-LLM revision are not monolithic, but depend on task structure, draft quality, and the type of draft information. On MCQ tasks, where the answer space is constrained and drafts provide little structural guidance, most gains are consistent with stronger-model re-solving, and directly routing queries to the stronger model can be more effective than revising a weak draft. On code generation tasks, however, two-stage prompting remains useful because even semantically null drafts can provide substantial structural scaffolding, while weak draft content can be harmful. Finally, role-reversed experiments show that strong drafts clearly benefit weak reviewers. Ultimately, our findings demonstrate that the utility of multi-LLM revision is dynamically bottlenecked by task structure and draft quality, necessitating more targeted pipeline designs rather than blanket revision strategies.",
-          "hf_url": "https://huggingface.co/papers/2604.01029",
-          "arxiv_url": "https://arxiv.org/abs/2604.01029",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.01029",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.01029",
+          "abstract": "As LLM-based agents are deployed in production systems, understanding their behavioral consistency (whether they produce similar action sequences when given identical tasks) becomes critical for reliability. We study consistency in the context of SWE-bench, a challenging software engineering benchmark requiring complex, multi-step reasoning. Comparing Claude~4.5~Sonnet, GPT-5, and Llama-3.1-70B across 50 runs each (10 tasks times 5 runs), we find that across models, higher consistency aligns with higher accuracy: Claude achieves the lowest variance (CV: 15.2\\%) and highest accuracy (58\\%), GPT-5 is intermediate (CV: 32.2\\%, accuracy: 32\\%), and Llama shows the highest variance (CV: 47.0\\%) with lowest accuracy (4\\%). However, within a model, consistency can amplify both correct and incorrect interpretations. Our analysis reveals a critical nuance: consistency amplifies outcomes rather than guaranteeing correctness. 71\\% of Claude's failures stem from \"consistent wrong interpretation\": making the same incorrect assumption across all runs. Interestingly, GPT-5 achieves similar early strategic agreement as Claude (diverging at step 3.4 vs.\\ 3.2) but exhibits 2.1times higher variance, suggesting that divergence timing alone does not determine consistency. These findings suggest that for production deployment, interpretation accuracy matters more than execution consistency, with implications for agent evaluation and training.",
+          "hf_url": "https://huggingface.co/papers/2603.25764",
+          "arxiv_url": "https://arxiv.org/abs/2603.25764",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2603.25764",
+          "papers_cool_url": "https://papers.cool/arxiv/2603.25764",
           "github_url": "",
-          "submitted_by": "Ethan Ning",
-          "submitted_at": "2026-04-02T01:26:01.351Z",
-          "upvotes": 2,
-          "comments": 1,
+          "submitted_by": "Aman Mehta",
+          "submitted_at": "2026-04-02T17:38:07.004Z",
+          "upvotes": 3,
+          "comments": 2,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.71
+          "classification_confidence": 0.9
         }
       ]
     },
     {
       "topic_label": "Domain Applications",
       "count": 2,
-      "share": 7.69,
+      "share": 6.67,
       "papers": [
         {
           "report_date": "2026-04-02",
@@ -932,13 +1079,13 @@
           "github_url": "",
           "submitted_by": "Mingming Ha",
           "submitted_at": "2026-04-02T04:12:05.566Z",
-          "upvotes": 3,
-          "comments": 1,
+          "upvotes": 6,
+          "comments": 2,
           "topic_key": "domain_applications",
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.64
+          "classification_confidence": 0.68
         },
         {
           "report_date": "2026-04-02",
@@ -961,8 +1108,8 @@
           "github_url": "",
           "submitted_by": "Saswata Bose",
           "submitted_at": "2026-04-02T07:20:25.024Z",
-          "upvotes": 0,
-          "comments": 1,
+          "upvotes": 1,
+          "comments": 2,
           "topic_key": "domain_applications",
           "topic_label": "Domain Applications",
           "matched_terms": [],
@@ -972,67 +1119,9 @@
       ]
     },
     {
-      "topic_label": "Learning, Optimization, and Theory",
-      "count": 2,
-      "share": 7.69,
-      "papers": [
-        {
-          "report_date": "2026-04-02",
-          "paper_id": "2604.01220",
-          "title": "Universal YOCO for Efficient Depth Scaling",
-          "authors": [
-            "Yutao Sun",
-            "Li Dong",
-            "Tianzhu Ye",
-            "Shaohan Huang",
-            "Jianyong Wang",
-            "Furu Wei"
-          ],
-          "abstract": "The rise of test-time scaling has remarkably boosted the reasoning and agentic proficiency of Large Language Models (LLMs). Yet, standard Transformers struggle to scale inference-time compute efficiently, as conventional looping strategies suffer from high computational overhead and a KV cache that inflates alongside model depth. We present Universal YOCO (YOCO-U), which combines the YOCO decoder-decoder architecture with recursive computation to achieve a synergistic effect greater than either alone. Built on the YOCO framework, YOCO-U implements a Universal Self-Decoder that performs multiple iterations via parameter sharing, while confining the iterative process to shallow, efficient-attention layers. This combination yields a favorable capability-efficiency tradeoff that neither YOCO nor recursion achieves independently. The YOCO architecture provides a constant global KV cache and linear pre-filling, while partial recursion enhances representational depth with limited overhead. Together, YOCO-U improves token utility and scaling behavior while maintaining efficient inference. Empirical results confirm that YOCO-U remains highly competitive in general and long-context benchmarks, demonstrating that the integration of efficient-attention architectures and recursive computation is a promising direction for scalable LLMs.",
-          "hf_url": "https://huggingface.co/papers/2604.01220",
-          "arxiv_url": "https://arxiv.org/abs/2604.01220",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.01220",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.01220",
-          "github_url": "",
-          "submitted_by": "Li Dong",
-          "submitted_at": "2026-04-02T01:17:19.303Z",
-          "upvotes": 11,
-          "comments": 1,
-          "topic_key": "learning_theory",
-          "topic_label": "Learning, Optimization, and Theory",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.57
-        },
-        {
-          "report_date": "2026-04-02",
-          "paper_id": "2604.01168",
-          "title": "S0 Tuning: Zero-Overhead Adaptation of Hybrid Recurrent-Attention Models",
-          "authors": [
-            "Jack Young"
-          ],
-          "abstract": "Using roughly 48 execution-verified HumanEval training solutions, tuning a single initial state matrix per recurrent layer, with zero inference overhead, outperforms LoRA by +10.8 pp (p < 0.001) on HumanEval. The method, which we call S0 tuning, optimizes one state matrix per recurrent layer while freezing all model weights. On Qwen3.5-4B (GatedDeltaNet hybrid), S0 tuning improves greedy pass@1 by +23.6 +/- 1.7 pp (10 seeds). On FalconH1-7B (Mamba-2 hybrid), S0 reaches 71.8% +/- 1.3 and LoRA reaches 71.4% +/- 2.4 (3 seeds), statistically indistinguishable at this sample size while requiring no weight merging. Cross-domain transfer is significant on MATH-500 (+4.8 pp, p = 0.00002, 8 seeds) and GSM8K (+2.8 pp, p = 0.0003, 10 seeds); a text-to-SQL benchmark (Spider) shows no transfer, consistent with the trajectory-steering mechanism. A prefix-tuning control on a pure Transformer (Qwen2.5-3B) degrades performance by -13.9 pp under all nine configurations tested. On Qwen3.5, a per-step state-offset variant reaches +27.1 pp, above both S0 and LoRA but with per-step inference cost. Taken together, the results show that recurrent state initialization is a strong zero-inference-overhead PEFT surface for hybrid language models when verified supervision is scarce. The tuned state is a ~48 MB file; task switching requires no weight merging or model reload. Code and library: https://github.com/jackyoung27/s0-tuning.",
-          "hf_url": "https://huggingface.co/papers/2604.01168",
-          "arxiv_url": "https://arxiv.org/abs/2604.01168",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.01168",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.01168",
-          "github_url": "",
-          "submitted_by": "Jack Young",
-          "submitted_at": "2026-04-02T14:04:28.786Z",
-          "upvotes": 1,
-          "comments": 2,
-          "topic_key": "learning_theory",
-          "topic_label": "Learning, Optimization, and Theory",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.8
-        }
-      ]
-    },
-    {
       "topic_label": "Multimodal Agents",
       "count": 2,
-      "share": 7.69,
+      "share": 6.67,
       "papers": [
         {
           "report_date": "2026-04-02",
@@ -1052,13 +1141,13 @@
           "github_url": "",
           "submitted_by": "WANG HAIBO",
           "submitted_at": "2026-04-02T00:06:16.425Z",
-          "upvotes": 4,
-          "comments": 1,
+          "upvotes": 6,
+          "comments": 2,
           "topic_key": "multimodal_agents",
           "topic_label": "Multimodal Agents",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.87
+          "classification_confidence": 0.95
         },
         {
           "report_date": "2026-04-02",
@@ -1088,7 +1177,7 @@
           "submitted_by": "Yang Liu",
           "submitted_at": "2026-04-02T00:54:33.620Z",
           "upvotes": 3,
-          "comments": 1,
+          "comments": 2,
           "topic_key": "multimodal_agents",
           "topic_label": "Multimodal Agents",
           "matched_terms": [],
@@ -1098,9 +1187,67 @@
       ]
     },
     {
+      "topic_label": "Multimodal Understanding and Vision",
+      "count": 2,
+      "share": 6.67,
+      "papers": [
+        {
+          "report_date": "2026-04-02",
+          "paper_id": "2604.00886",
+          "title": "PixelPrune: Pixel-Level Adaptive Visual Token Reduction via Predictive Coding",
+          "authors": [
+            "Nan Wang",
+            "Zhiwei Jin",
+            "Chen Chen",
+            "Haonan Lu"
+          ],
+          "abstract": "Document understanding and GUI interaction are among the highest-value applications of Vision-Language Models (VLMs), yet they impose exceptionally heavy computational burden: fine-grained text and small UI elements demand high-resolution inputs that produce tens of thousands of visual tokens. We observe that this cost is largely wasteful -- across document and GUI benchmarks, only 22--71\\% of image patches are pixel-unique, the rest being exact duplicates of another patch in the same image. We propose PixelPrune, which exploits this pixel-level redundancy through predictive-coding-based compression, pruning redundant patches before the Vision Transformer (ViT) encoder. Because it operates in pixel space prior to any neural computation, PixelPrune accelerates both the ViT encoder and the downstream LLM, covering the full inference pipeline. The method is training-free, requires no learnable parameters, and supports pixel-lossless compression (τ{=}0) as well as controlled lossy compression (τ{>}0). Experiments across three model scales and document and GUI benchmarks show that PixelPrune maintains competitive task accuracy while delivering up to 4.2times inference speedup and 1.9times training acceleration. Code is available at https://github.com/OPPO-Mente-Lab/PixelPrune.",
+          "hf_url": "https://huggingface.co/papers/2604.00886",
+          "arxiv_url": "https://arxiv.org/abs/2604.00886",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.00886",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.00886",
+          "github_url": "",
+          "submitted_by": "NAN",
+          "submitted_at": "2026-04-02T23:00:22.360Z",
+          "upvotes": 4,
+          "comments": 2,
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.84
+        },
+        {
+          "report_date": "2026-04-02",
+          "paper_id": "2604.00913",
+          "title": "Benchmarking and Mechanistic Analysis of Vision-Language Models for Cross-Depiction Assembly Instruction Alignment",
+          "authors": [
+            "Zhuchenyang Liu",
+            "Yao Zhang",
+            "Yu Xiao"
+          ],
+          "abstract": "2D assembly diagrams are often abstract and hard to follow, creating a need for intelligent assistants that can monitor progress, detect errors, and provide step-by-step guidance. In mixed reality settings, such systems must recognize completed and ongoing steps from the camera feed and align them with the diagram instructions. Vision Language Models (VLMs) show promise for this task, but face a depiction gap because assembly diagrams and video frames share few visual features. To systematically assess this gap, we construct IKEA-Bench, a benchmark of 1,623 questions across 6 task types on 29 IKEA furniture products, and evaluate 19 VLMs (2B-38B) under three alignment strategies. Our key findings: (1) assembly instruction understanding is recoverable via text, but text simultaneously degrades diagram-to-video alignment; (2) architecture family predicts alignment accuracy more strongly than parameter count; (3) video understanding remains a hard bottleneck unaffected by strategy. A three-level mechanistic analysis further reveals that diagrams and video occupy disjoint ViT subspaces, and that adding text shifts models from visual to text-driven reasoning. These results identify visual encoding as the primary target for improving cross-depiction robustness. Project page: https://ryenhails.github.io/IKEA-Bench/",
+          "hf_url": "https://huggingface.co/papers/2604.00913",
+          "arxiv_url": "https://arxiv.org/abs/2604.00913",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.00913",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.00913",
+          "github_url": "",
+          "submitted_by": "Zhuchenyang Liu",
+          "submitted_at": "2026-04-02T03:23:43.450Z",
+          "upvotes": 3,
+          "comments": 3,
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.91
+        }
+      ]
+    },
+    {
       "topic_label": "Multimodal Generative Modeling",
       "count": 1,
-      "share": 3.85,
+      "share": 3.33,
       "papers": [
         {
           "report_date": "2026-04-02",
@@ -1120,8 +1267,8 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-04-02T00:22:27.135Z",
-          "upvotes": 10,
-          "comments": 0,
+          "upvotes": 16,
+          "comments": 1,
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
@@ -1131,41 +1278,9 @@
       ]
     },
     {
-      "topic_label": "Multimodal Understanding and Vision",
-      "count": 1,
-      "share": 3.85,
-      "papers": [
-        {
-          "report_date": "2026-04-02",
-          "paper_id": "2604.00913",
-          "title": "Benchmarking and Mechanistic Analysis of Vision-Language Models for Cross-Depiction Assembly Instruction Alignment",
-          "authors": [
-            "Zhuchenyang Liu",
-            "Yao Zhang",
-            "Yu Xiao"
-          ],
-          "abstract": "2D assembly diagrams are often abstract and hard to follow, creating a need for intelligent assistants that can monitor progress, detect errors, and provide step-by-step guidance. In mixed reality settings, such systems must recognize completed and ongoing steps from the camera feed and align them with the diagram instructions. Vision Language Models (VLMs) show promise for this task, but face a depiction gap because assembly diagrams and video frames share few visual features. To systematically assess this gap, we construct IKEA-Bench, a benchmark of 1,623 questions across 6 task types on 29 IKEA furniture products, and evaluate 19 VLMs (2B-38B) under three alignment strategies. Our key findings: (1) assembly instruction understanding is recoverable via text, but text simultaneously degrades diagram-to-video alignment; (2) architecture family predicts alignment accuracy more strongly than parameter count; (3) video understanding remains a hard bottleneck unaffected by strategy. A three-level mechanistic analysis further reveals that diagrams and video occupy disjoint ViT subspaces, and that adding text shifts models from visual to text-driven reasoning. These results identify visual encoding as the primary target for improving cross-depiction robustness. Project page: https://ryenhails.github.io/IKEA-Bench/",
-          "hf_url": "https://huggingface.co/papers/2604.00913",
-          "arxiv_url": "https://arxiv.org/abs/2604.00913",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.00913",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.00913",
-          "github_url": "",
-          "submitted_by": "Zhuchenyang Liu",
-          "submitted_at": "2026-04-02T03:23:43.450Z",
-          "upvotes": 2,
-          "comments": 2,
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.82
-        }
-      ]
-    },
-    {
       "topic_label": "Retrieval, Knowledge, and RAG",
       "count": 1,
-      "share": 3.85,
+      "share": 3.33,
       "papers": [
         {
           "report_date": "2026-04-02",
@@ -1186,13 +1301,13 @@
           "github_url": "",
           "submitted_by": "Zhiyuan Peng",
           "submitted_at": "2026-04-02T04:50:05.461Z",
-          "upvotes": 2,
-          "comments": 1,
+          "upvotes": 3,
+          "comments": 2,
           "topic_key": "retrieval_knowledge",
           "topic_label": "Retrieval, Knowledge, and RAG",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.85
+          "classification_confidence": 0.78
         }
       ]
     }
@@ -1223,8 +1338,8 @@
       "github_url": "",
       "submitted_by": "Chenxu Wang",
       "submitted_at": "2026-04-02T04:39:41.858Z",
-      "upvotes": 165,
-      "comments": 2,
+      "upvotes": 170,
+      "comments": 4,
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
@@ -1253,13 +1368,13 @@
       "github_url": "",
       "submitted_by": "Patrice Bechard",
       "submitted_at": "2026-04-02T00:15:23.904Z",
-      "upvotes": 65,
-      "comments": 2,
+      "upvotes": 77,
+      "comments": 7,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.97
     },
     {
       "report_date": "2026-04-02",
@@ -1297,13 +1412,13 @@
       "github_url": "",
       "submitted_by": "Fangda Ye",
       "submitted_at": "2026-04-02T01:48:50.117Z",
-      "upvotes": 52,
-      "comments": 2,
+      "upvotes": 60,
+      "comments": 5,
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.98
+      "classification_confidence": 0.9
     },
     {
       "report_date": "2026-04-02",
@@ -1329,13 +1444,13 @@
       "github_url": "",
       "submitted_by": "Vincent Han",
       "submitted_at": "2026-04-02T01:24:39.006Z",
-      "upvotes": 36,
-      "comments": 2,
+      "upvotes": 40,
+      "comments": 3,
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.83
     },
     {
       "report_date": "2026-04-02",
@@ -1358,13 +1473,13 @@
       "github_url": "",
       "submitted_by": "Zehai He",
       "submitted_at": "2026-04-02T01:56:52.001Z",
-      "upvotes": 32,
-      "comments": 2,
+      "upvotes": 38,
+      "comments": 3,
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.96
+      "classification_confidence": 0.84
     },
     {
       "report_date": "2026-04-02",
@@ -1390,8 +1505,8 @@
       "github_url": "",
       "submitted_by": "Hang Yu",
       "submitted_at": "2026-04-02T01:30:53.313Z",
-      "upvotes": 25,
-      "comments": 2,
+      "upvotes": 28,
+      "comments": 3,
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
@@ -1413,36 +1528,13 @@
       "github_url": "",
       "submitted_by": "Gleb",
       "submitted_at": "2026-04-02T06:21:03.973Z",
-      "upvotes": 22,
-      "comments": 2,
+      "upvotes": 25,
+      "comments": 3,
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
-    },
-    {
-      "report_date": "2026-04-02",
-      "paper_id": "2604.00025",
-      "title": "Brevity Constraints Reverse Performance Hierarchies in Language Models",
-      "authors": [
-        "MD Azizul Hakim"
-      ],
-      "abstract": "Standard evaluation protocols reveal a counterintuitive phenomenon: on 7.7% of benchmark problems spanning five datasets, larger language models underperform smaller ones by 28.4 percentage points despite 10-100x more parameters. Through systematic evaluation of 31 models (0.5B-405B parameters) across 1,485 problems, we identify the mechanism as spontaneous scale-dependent verbosity that introduces errors through overelaboration. Causal intervention experiments demonstrate this reflects correctable prompt design rather than fundamental capability limitations. Constraining large models to produce brief responses improves accuracy by 26 percentage points and reduces performance gaps by up to two-thirds. Most critically, brevity constraints completely reverse performance hierarchies on mathematical reasoning and scientific knowledge benchmarks, with large models achieving 7.7-15.9 percentage point advantages over small models -- direct inversions of the original gaps. These reversals prove large models possess superior latent capabilities that universal prompting masks. We validate findings through three independent contamination tests and demonstrate inverse scaling operates continuously across the full parameter spectrum, with dataset-specific optimal scales ranging from 0.5B to 3.0B parameters. Our results establish that maximizing large model performance requires scale-aware prompt engineering rather than universal evaluation protocols, with immediate implications for deployment: prompt adaptation simultaneously improves accuracy and reduces computational costs.",
-      "hf_url": "https://huggingface.co/papers/2604.00025",
-      "arxiv_url": "https://arxiv.org/abs/2604.00025",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.00025",
-      "papers_cool_url": "https://papers.cool/arxiv/2604.00025",
-      "github_url": "",
-      "submitted_by": "Md.Azizul Hakim",
-      "submitted_at": "2026-04-02T12:03:51.837Z",
-      "upvotes": 16,
-      "comments": 1,
-      "topic_key": "reasoning_alignment_eval",
-      "topic_label": "Reasoning, Alignment, and Evaluation",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.88
+      "classification_confidence": 0.9
     },
     {
       "report_date": "2026-04-02",
@@ -1470,13 +1562,90 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-04-02T00:37:41.531Z",
-      "upvotes": 15,
-      "comments": 0,
+      "upvotes": 21,
+      "comments": 1,
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.97
+      "classification_confidence": 0.92
+    },
+    {
+      "report_date": "2026-04-02",
+      "paper_id": "2604.00025",
+      "title": "Brevity Constraints Reverse Performance Hierarchies in Language Models",
+      "authors": [
+        "MD Azizul Hakim"
+      ],
+      "abstract": "Standard evaluation protocols reveal a counterintuitive phenomenon: on 7.7% of benchmark problems spanning five datasets, larger language models underperform smaller ones by 28.4 percentage points despite 10-100x more parameters. Through systematic evaluation of 31 models (0.5B-405B parameters) across 1,485 problems, we identify the mechanism as spontaneous scale-dependent verbosity that introduces errors through overelaboration. Causal intervention experiments demonstrate this reflects correctable prompt design rather than fundamental capability limitations. Constraining large models to produce brief responses improves accuracy by 26 percentage points and reduces performance gaps by up to two-thirds. Most critically, brevity constraints completely reverse performance hierarchies on mathematical reasoning and scientific knowledge benchmarks, with large models achieving 7.7-15.9 percentage point advantages over small models -- direct inversions of the original gaps. These reversals prove large models possess superior latent capabilities that universal prompting masks. We validate findings through three independent contamination tests and demonstrate inverse scaling operates continuously across the full parameter spectrum, with dataset-specific optimal scales ranging from 0.5B to 3.0B parameters. Our results establish that maximizing large model performance requires scale-aware prompt engineering rather than universal evaluation protocols, with immediate implications for deployment: prompt adaptation simultaneously improves accuracy and reduces computational costs.",
+      "hf_url": "https://huggingface.co/papers/2604.00025",
+      "arxiv_url": "https://arxiv.org/abs/2604.00025",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.00025",
+      "papers_cool_url": "https://papers.cool/arxiv/2604.00025",
+      "github_url": "",
+      "submitted_by": "Md.Azizul Hakim",
+      "submitted_at": "2026-04-02T12:03:51.837Z",
+      "upvotes": 18,
+      "comments": 2,
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.78
+    },
+    {
+      "report_date": "2026-04-02",
+      "paper_id": "2604.01193",
+      "title": "Embarrassingly Simple Self-Distillation Improves Code Generation",
+      "authors": [
+        "Ruixiang Zhang",
+        "Richard He Bai",
+        "Huangjie Zheng",
+        "Navdeep Jaitly",
+        "Ronan Collobert",
+        "Yizhe Zhang"
+      ],
+      "abstract": "Can a large language model (LLM) improve at code generation using only its own raw outputs, without a verifier, a teacher model, or reinforcement learning? We answer in the affirmative with simple self-distillation (SSD): sample solutions from the model with certain temperature and truncation configurations, then fine-tune on those samples with standard supervised fine-tuning. SSD improves Qwen3-30B-Instruct from 42.4% to 55.3% pass@1 on LiveCodeBench v6, with gains concentrating on harder problems, and it generalizes across Qwen and Llama models at 4B, 8B, and 30B scale, including both instruct and thinking variants. To understand why such a simple method can work, we trace these gains to a precision-exploration conflict in LLM decoding and show that SSD reshapes token distributions in a context-dependent way, suppressing distractor tails where precision matters while preserving useful diversity where exploration matters. Taken together, SSD offers a complementary post-training direction for improving LLM code generation.",
+      "hf_url": "https://huggingface.co/papers/2604.01193",
+      "arxiv_url": "https://arxiv.org/abs/2604.01193",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.01193",
+      "papers_cool_url": "https://papers.cool/arxiv/2604.01193",
+      "github_url": "",
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-04-02T00:59:29.361Z",
+      "upvotes": 17,
+      "comments": 2,
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.93
+    },
+    {
+      "report_date": "2026-04-02",
+      "paper_id": "2603.26661",
+      "title": "GaussianGPT: Towards Autoregressive 3D Gaussian Scene Generation",
+      "authors": [
+        "Nicolas von Lützow",
+        "Barbara Rössle",
+        "Katharina Schmid",
+        "Matthias Nießner"
+      ],
+      "abstract": "Most recent advances in 3D generative modeling rely on diffusion or flow-matching formulations. We instead explore a fully autoregressive alternative and introduce GaussianGPT, a transformer-based model that directly generates 3D Gaussians via next-token prediction, thus facilitating full 3D scene generation. We first compress Gaussian primitives into a discrete latent grid using a sparse 3D convolutional autoencoder with vector quantization. The resulting tokens are serialized and modeled using a causal transformer with 3D rotary positional embedding, enabling sequential generation of spatial structure and appearance. Unlike diffusion-based methods that refine scenes holistically, our formulation constructs scenes step-by-step, naturally supporting completion, outpainting, controllable sampling via temperature, and flexible generation horizons. This formulation leverages the compositional inductive biases and scalability of autoregressive modeling while operating on explicit representations compatible with modern neural rendering pipelines, positioning autoregressive transformers as a complementary paradigm for controllable and context-aware 3D generation.",
+      "hf_url": "https://huggingface.co/papers/2603.26661",
+      "arxiv_url": "https://arxiv.org/abs/2603.26661",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.26661",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.26661",
+      "github_url": "",
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-04-02T00:22:27.135Z",
+      "upvotes": 16,
+      "comments": 1,
+      "topic_key": "multimodal_generative",
+      "topic_label": "Multimodal Generative Modeling",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.98
     },
     {
       "report_date": "2026-04-02",
@@ -1504,13 +1673,13 @@
       "github_url": "",
       "submitted_by": "Yuhao Dong",
       "submitted_at": "2026-04-02T01:02:07.189Z",
-      "upvotes": 14,
-      "comments": 1,
+      "upvotes": 15,
+      "comments": 2,
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.98
+      "classification_confidence": 0.97
     },
     {
       "report_date": "2026-04-02",
@@ -1532,67 +1701,13 @@
       "github_url": "",
       "submitted_by": "Li Dong",
       "submitted_at": "2026-04-02T01:17:19.303Z",
-      "upvotes": 11,
-      "comments": 1,
-      "topic_key": "learning_theory",
-      "topic_label": "Learning, Optimization, and Theory",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.57
-    },
-    {
-      "report_date": "2026-04-02",
-      "paper_id": "2603.26661",
-      "title": "GaussianGPT: Towards Autoregressive 3D Gaussian Scene Generation",
-      "authors": [
-        "Nicolas von Lützow",
-        "Barbara Rössle",
-        "Katharina Schmid",
-        "Matthias Nießner"
-      ],
-      "abstract": "Most recent advances in 3D generative modeling rely on diffusion or flow-matching formulations. We instead explore a fully autoregressive alternative and introduce GaussianGPT, a transformer-based model that directly generates 3D Gaussians via next-token prediction, thus facilitating full 3D scene generation. We first compress Gaussian primitives into a discrete latent grid using a sparse 3D convolutional autoencoder with vector quantization. The resulting tokens are serialized and modeled using a causal transformer with 3D rotary positional embedding, enabling sequential generation of spatial structure and appearance. Unlike diffusion-based methods that refine scenes holistically, our formulation constructs scenes step-by-step, naturally supporting completion, outpainting, controllable sampling via temperature, and flexible generation horizons. This formulation leverages the compositional inductive biases and scalability of autoregressive modeling while operating on explicit representations compatible with modern neural rendering pipelines, positioning autoregressive transformers as a complementary paradigm for controllable and context-aware 3D generation.",
-      "hf_url": "https://huggingface.co/papers/2603.26661",
-      "arxiv_url": "https://arxiv.org/abs/2603.26661",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.26661",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.26661",
-      "github_url": "",
-      "submitted_by": "taesiri",
-      "submitted_at": "2026-04-02T00:22:27.135Z",
-      "upvotes": 10,
-      "comments": 0,
-      "topic_key": "multimodal_generative",
-      "topic_label": "Multimodal Generative Modeling",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.98
-    },
-    {
-      "report_date": "2026-04-02",
-      "paper_id": "2604.01193",
-      "title": "Embarrassingly Simple Self-Distillation Improves Code Generation",
-      "authors": [
-        "Ruixiang Zhang",
-        "Richard He Bai",
-        "Huangjie Zheng",
-        "Navdeep Jaitly",
-        "Ronan Collobert",
-        "Yizhe Zhang"
-      ],
-      "abstract": "Can a large language model (LLM) improve at code generation using only its own raw outputs, without a verifier, a teacher model, or reinforcement learning? We answer in the affirmative with simple self-distillation (SSD): sample solutions from the model with certain temperature and truncation configurations, then fine-tune on those samples with standard supervised fine-tuning. SSD improves Qwen3-30B-Instruct from 42.4% to 55.3% pass@1 on LiveCodeBench v6, with gains concentrating on harder problems, and it generalizes across Qwen and Llama models at 4B, 8B, and 30B scale, including both instruct and thinking variants. To understand why such a simple method can work, we trace these gains to a precision-exploration conflict in LLM decoding and show that SSD reshapes token distributions in a context-dependent way, suppressing distractor tails where precision matters while preserving useful diversity where exploration matters. Taken together, SSD offers a complementary post-training direction for improving LLM code generation.",
-      "hf_url": "https://huggingface.co/papers/2604.01193",
-      "arxiv_url": "https://arxiv.org/abs/2604.01193",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.01193",
-      "papers_cool_url": "https://papers.cool/arxiv/2604.01193",
-      "github_url": "",
-      "submitted_by": "taesiri",
-      "submitted_at": "2026-04-02T00:59:29.361Z",
-      "upvotes": 9,
-      "comments": 1,
+      "upvotes": 13,
+      "comments": 2,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.93
+      "classification_confidence": 0.58
     },
     {
       "report_date": "2026-04-02",
@@ -1614,13 +1729,13 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-04-02T01:40:09.739Z",
-      "upvotes": 6,
-      "comments": 0,
+      "upvotes": 10,
+      "comments": 1,
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.97
+      "classification_confidence": 0.95
     },
     {
       "report_date": "2026-04-02",
@@ -1646,63 +1761,13 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-04-02T01:38:01.776Z",
-      "upvotes": 5,
-      "comments": 1,
+      "upvotes": 7,
+      "comments": 2,
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.79
-    },
-    {
-      "report_date": "2026-04-02",
-      "paper_id": "2604.00626",
-      "title": "A Survey of On-Policy Distillation for Large Language Models",
-      "authors": [
-        "Mingyang Song",
-        "Mao Zheng"
-      ],
-      "abstract": "Knowledge distillation has become a primary mechanism for transferring reasoning and domain expertise from frontier Large Language Models (LLMs) to smaller, deployable students. However, the dominant paradigm remains off-policy: students train on static teacher-generated data and never encounter their own errors during learning. This train--test mismatch, an instance of exposure bias, causes prediction errors to compound autoregressively at inference time. On-Policy Distillation (OPD) addresses this by letting the student generate its own trajectories and receive teacher feedback on these self-generated outputs, grounding distillation in the theory of interactive imitation learning. Despite rapid growth spanning divergence minimization, reward-guided learning, and self-play, the OPD literature remains fragmented with no unified treatment. This survey provides the first comprehensive overview of OPD for LLMs. We introduce a unified f-divergence framework over on-policy samples and organize the landscape along three orthogonal dimensions: feedback signal (logit-based, outcome-based, or self-play), teacher access (white-box, black-box, or teacher-free), and loss granularity (token-level, sequence-level, or hybrid). We systematically analyze representative methods, examine industrial deployments, and identify open problems including distillation scaling laws, uncertainty-aware feedback, and agent-level distillation.",
-      "hf_url": "https://huggingface.co/papers/2604.00626",
-      "arxiv_url": "https://arxiv.org/abs/2604.00626",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.00626",
-      "papers_cool_url": "https://papers.cool/arxiv/2604.00626",
-      "github_url": "",
-      "submitted_by": "Mingyang Song",
-      "submitted_at": "2026-04-02T06:51:37.973Z",
-      "upvotes": 4,
-      "comments": 1,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.97
-    },
-    {
-      "report_date": "2026-04-02",
-      "paper_id": "2604.00528",
-      "title": "Think, Act, Build: An Agentic Framework with Vision Language Models for Zero-Shot 3D Visual Grounding",
-      "authors": [
-        "Haibo Wang",
-        "Zihao Lin",
-        "Zhiyang Xu",
-        "Lifu Huang"
-      ],
-      "abstract": "3D Visual Grounding (3D-VG) aims to localize objects in 3D scenes via natural language descriptions. While recent advancements leveraging Vision-Language Models (VLMs) have explored zero-shot possibilities, they typically suffer from a static workflow relying on preprocessed 3D point clouds, essentially degrading grounding into proposal matching. To bypass this reliance, our core motivation is to decouple the task: leveraging 2D VLMs to resolve complex spatial semantics, while relying on deterministic multi-view geometry to instantiate the 3D structure. Driven by this insight, we propose \"Think, Act, Build (TAB)\", a dynamic agentic framework that reformulates 3D-VG tasks as a generative 2D-to-3D reconstruction paradigm operating directly on raw RGB-D streams. Specifically, guided by a specialized 3D-VG skill, our VLM agent dynamically invokes visual tools to track and reconstruct the target across 2D frames. Crucially, to overcome the multi-view coverage deficit caused by strict VLM semantic tracking, we introduce the Semantic-Anchored Geometric Expansion, a mechanism that first anchors the target in a reference video clip and then leverages multi-view geometry to propagate its spatial location across unobserved frames. This enables the agent to \"Build\" the target's 3D representation by aggregating these multi-view features via camera parameters, directly mapping 2D visual cues to 3D coordinates. Furthermore, to ensure rigorous assessment, we identify flaws such as reference ambiguity and category errors in existing benchmarks and manually refine the incorrect queries. Extensive experiments on ScanRefer and Nr3D demonstrate that our framework, relying entirely on open-source models, significantly outperforms previous zero-shot methods and even surpasses fully supervised baselines.",
-      "hf_url": "https://huggingface.co/papers/2604.00528",
-      "arxiv_url": "https://arxiv.org/abs/2604.00528",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.00528",
-      "papers_cool_url": "https://papers.cool/arxiv/2604.00528",
-      "github_url": "",
-      "submitted_by": "WANG HAIBO",
-      "submitted_at": "2026-04-02T00:06:16.425Z",
-      "upvotes": 4,
-      "comments": 1,
-      "topic_key": "multimodal_agents",
-      "topic_label": "Multimodal Agents",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.87
+      "classification_confidence": 0.78
     },
     {
       "report_date": "2026-04-02",
@@ -1730,174 +1795,39 @@
       "github_url": "",
       "submitted_by": "Mingming Ha",
       "submitted_at": "2026-04-02T04:12:05.566Z",
-      "upvotes": 3,
-      "comments": 1,
+      "upvotes": 6,
+      "comments": 2,
       "topic_key": "domain_applications",
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.64
+      "classification_confidence": 0.68
     },
     {
       "report_date": "2026-04-02",
-      "paper_id": "2603.25406",
-      "title": "MMaDA-VLA: Large Diffusion Vision-Language-Action Model with Unified Multi-Modal Instruction and Generation",
+      "paper_id": "2604.00528",
+      "title": "Think, Act, Build: An Agentic Framework with Vision Language Models for Zero-Shot 3D Visual Grounding",
       "authors": [
-        "Yang Liu",
-        "Pengxiang Ding",
-        "Tengyue Jiang",
-        "Xudong Wang",
-        "Wenxuan Song",
-        "Minghui Lin",
-        "Han Zhao",
-        "Hongyin Zhang",
-        "Zifeng Zhuang",
-        "Wei Zhao",
-        "Siteng Huang",
-        "Jinkui Shi",
-        "Donglin Wang"
+        "Haibo Wang",
+        "Zihao Lin",
+        "Zhiyang Xu",
+        "Lifu Huang"
       ],
-      "abstract": "Vision-Language-Action (VLA) models aim to control robots for manipulation from visual observations and natural-language instructions. However, existing hierarchical and autoregressive paradigms often introduce architectural overhead, suffer from temporal inconsistency and long-horizon error accumulation, and lack a mechanism to capture environment dynamics without extra modules. To this end, we present MMaDA-VLA, a fully native pre-trained large diffusion VLA model that unifies multi-modal understanding and generation in a single framework. Our key idea is a native discrete diffusion formulation that embeds language, images, and continuous robot controls into one discrete token space and trains a single backbone with masked token denoising to jointly generate a future goal observation and an action chunk in parallel. Iterative denoising enables global, order-free refinement, improving long-horizon consistency while grounding actions in predicted future visual outcomes without auxiliary world models. Experiments across simulation benchmarks and real-world tasks show state-of-the-art performance, achieving 98.0% average success on LIBERO and 4.78 average length on CALVIN.",
-      "hf_url": "https://huggingface.co/papers/2603.25406",
-      "arxiv_url": "https://arxiv.org/abs/2603.25406",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.25406",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.25406",
+      "abstract": "3D Visual Grounding (3D-VG) aims to localize objects in 3D scenes via natural language descriptions. While recent advancements leveraging Vision-Language Models (VLMs) have explored zero-shot possibilities, they typically suffer from a static workflow relying on preprocessed 3D point clouds, essentially degrading grounding into proposal matching. To bypass this reliance, our core motivation is to decouple the task: leveraging 2D VLMs to resolve complex spatial semantics, while relying on deterministic multi-view geometry to instantiate the 3D structure. Driven by this insight, we propose \"Think, Act, Build (TAB)\", a dynamic agentic framework that reformulates 3D-VG tasks as a generative 2D-to-3D reconstruction paradigm operating directly on raw RGB-D streams. Specifically, guided by a specialized 3D-VG skill, our VLM agent dynamically invokes visual tools to track and reconstruct the target across 2D frames. Crucially, to overcome the multi-view coverage deficit caused by strict VLM semantic tracking, we introduce the Semantic-Anchored Geometric Expansion, a mechanism that first anchors the target in a reference video clip and then leverages multi-view geometry to propagate its spatial location across unobserved frames. This enables the agent to \"Build\" the target's 3D representation by aggregating these multi-view features via camera parameters, directly mapping 2D visual cues to 3D coordinates. Furthermore, to ensure rigorous assessment, we identify flaws such as reference ambiguity and category errors in existing benchmarks and manually refine the incorrect queries. Extensive experiments on ScanRefer and Nr3D demonstrate that our framework, relying entirely on open-source models, significantly outperforms previous zero-shot methods and even surpasses fully supervised baselines.",
+      "hf_url": "https://huggingface.co/papers/2604.00528",
+      "arxiv_url": "https://arxiv.org/abs/2604.00528",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.00528",
+      "papers_cool_url": "https://papers.cool/arxiv/2604.00528",
       "github_url": "",
-      "submitted_by": "Yang Liu",
-      "submitted_at": "2026-04-02T00:54:33.620Z",
-      "upvotes": 3,
-      "comments": 1,
+      "submitted_by": "WANG HAIBO",
+      "submitted_at": "2026-04-02T00:06:16.425Z",
+      "upvotes": 6,
+      "comments": 2,
       "topic_key": "multimodal_agents",
       "topic_label": "Multimodal Agents",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.99
-    },
-    {
-      "report_date": "2026-04-02",
-      "paper_id": "2604.01029",
-      "title": "Revision or Re-Solving? Decomposing Second-Pass Gains in Multi-LLM Pipelines",
-      "authors": [
-        "Jingjie Ning",
-        "Xueqi Li",
-        "Chengyu Yu"
-      ],
-      "abstract": "Multi-LLM revision pipelines, in which a second model reviews and improves a draft produced by a first, are widely assumed to derive their gains from genuine error correction. We question this assumption with a controlled decomposition experiment that uses four matched conditions to separate second-pass gains into three additive components: re-solving, scaffold, and content. We evaluate this design across two model pairs on three benchmarks spanning knowledge-intensive MCQ and competitive programming. Our results show that the gains of multi-LLM revision are not monolithic, but depend on task structure, draft quality, and the type of draft information. On MCQ tasks, where the answer space is constrained and drafts provide little structural guidance, most gains are consistent with stronger-model re-solving, and directly routing queries to the stronger model can be more effective than revising a weak draft. On code generation tasks, however, two-stage prompting remains useful because even semantically null drafts can provide substantial structural scaffolding, while weak draft content can be harmful. Finally, role-reversed experiments show that strong drafts clearly benefit weak reviewers. Ultimately, our findings demonstrate that the utility of multi-LLM revision is dynamically bottlenecked by task structure and draft quality, necessitating more targeted pipeline designs rather than blanket revision strategies.",
-      "hf_url": "https://huggingface.co/papers/2604.01029",
-      "arxiv_url": "https://arxiv.org/abs/2604.01029",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.01029",
-      "papers_cool_url": "https://papers.cool/arxiv/2604.01029",
-      "github_url": "",
-      "submitted_by": "Ethan Ning",
-      "submitted_at": "2026-04-02T01:26:01.351Z",
-      "upvotes": 2,
-      "comments": 1,
-      "topic_key": "agents_planning",
-      "topic_label": "Agents and Planning",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.71
-    },
-    {
-      "report_date": "2026-04-02",
-      "paper_id": "2604.00913",
-      "title": "Benchmarking and Mechanistic Analysis of Vision-Language Models for Cross-Depiction Assembly Instruction Alignment",
-      "authors": [
-        "Zhuchenyang Liu",
-        "Yao Zhang",
-        "Yu Xiao"
-      ],
-      "abstract": "2D assembly diagrams are often abstract and hard to follow, creating a need for intelligent assistants that can monitor progress, detect errors, and provide step-by-step guidance. In mixed reality settings, such systems must recognize completed and ongoing steps from the camera feed and align them with the diagram instructions. Vision Language Models (VLMs) show promise for this task, but face a depiction gap because assembly diagrams and video frames share few visual features. To systematically assess this gap, we construct IKEA-Bench, a benchmark of 1,623 questions across 6 task types on 29 IKEA furniture products, and evaluate 19 VLMs (2B-38B) under three alignment strategies. Our key findings: (1) assembly instruction understanding is recoverable via text, but text simultaneously degrades diagram-to-video alignment; (2) architecture family predicts alignment accuracy more strongly than parameter count; (3) video understanding remains a hard bottleneck unaffected by strategy. A three-level mechanistic analysis further reveals that diagrams and video occupy disjoint ViT subspaces, and that adding text shifts models from visual to text-driven reasoning. These results identify visual encoding as the primary target for improving cross-depiction robustness. Project page: https://ryenhails.github.io/IKEA-Bench/",
-      "hf_url": "https://huggingface.co/papers/2604.00913",
-      "arxiv_url": "https://arxiv.org/abs/2604.00913",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.00913",
-      "papers_cool_url": "https://papers.cool/arxiv/2604.00913",
-      "github_url": "",
-      "submitted_by": "Zhuchenyang Liu",
-      "submitted_at": "2026-04-02T03:23:43.450Z",
-      "upvotes": 2,
-      "comments": 2,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.82
-    },
-    {
-      "report_date": "2026-04-02",
-      "paper_id": "2603.29247",
-      "title": "MemRerank: Preference Memory for Personalized Product Reranking",
-      "authors": [
-        "Zhiyuan Peng",
-        "Xuyang Wu",
-        "Huaixiao Tou",
-        "Yi Fang",
-        "Yi Gong"
-      ],
-      "abstract": "LLM-based shopping agents increasingly rely on long purchase histories and multi-turn interactions for personalization, yet naively appending raw history to prompts is often ineffective due to noise, length, and relevance mismatch. We propose MemRerank, a preference memory framework that distills user purchase history into concise, query-independent signals for personalized product reranking. To study this problem, we build an end-to-end benchmark and evaluation framework centered on an LLM-based 1-in-5 selection task, which measures both memory quality and downstream reranking utility. We further train the memory extractor with reinforcement learning (RL), using downstream reranking performance as supervision. Experiments with two LLM-based rerankers show that MemRerank consistently outperforms no-memory, raw-history, and off-the-shelf memory baselines, yielding up to +10.61 absolute points in 1-in-5 accuracy. These results suggest that explicit preference memory is a practical and effective building block for personalization in agentic e-commerce systems.",
-      "hf_url": "https://huggingface.co/papers/2603.29247",
-      "arxiv_url": "https://arxiv.org/abs/2603.29247",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.29247",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.29247",
-      "github_url": "",
-      "submitted_by": "Zhiyuan Peng",
-      "submitted_at": "2026-04-02T04:50:05.461Z",
-      "upvotes": 2,
-      "comments": 1,
-      "topic_key": "retrieval_knowledge",
-      "topic_label": "Retrieval, Knowledge, and RAG",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.85
-    },
-    {
-      "report_date": "2026-04-02",
-      "paper_id": "2603.29002",
-      "title": "Understand and Accelerate Memory Processing Pipeline for Disaggregated LLM Inference",
-      "authors": [
-        "Zifan He",
-        "Rui Ma",
-        "Yizhou Sun",
-        "Jason Cong"
-      ],
-      "abstract": "Modern large language models (LLMs) increasingly depends on efficient long-context processing and generation mechanisms, including sparse attention, retrieval-augmented generation (RAG), and compressed contextual memory, to support complex reasoning. We show that these optimizations can be unified into a four-step memory processing pipeline: Prepare Memory, Compute Relevancy, Retrieval, and Apply to Inference. Through systematic profiling, we identify a 22%-97% memory processing overhead in LLM inference and strong heterogeneity in its computational characteristics. Motivated by this insight, we argue that heterogeneous systems are well-suited to accelerate memory processing and thus end-to-end inference. We demonstrate this approach on a GPU-FPGA system by offloading sparse, irregular, and memory-bounded operations to FPGAs while retaining compute-intensive operations on GPUs. Evaluated on an AMD MI210 GPU and an Alveo U55C FPGA, our system is 1.04sim2.2times faster and requires 1.11sim4.7times less energy across multiple LLM inference optimizations than the GPU baseline (similar results hold on NVIDIA A100). These results establish heterogeneous systems as a practical direction for efficient LLM memory processing and inform future heterogeneous hardware design.",
-      "hf_url": "https://huggingface.co/papers/2603.29002",
-      "arxiv_url": "https://arxiv.org/abs/2603.29002",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.29002",
-      "papers_cool_url": "https://papers.cool/arxiv/2603.29002",
-      "github_url": "",
-      "submitted_by": "Zifan He",
-      "submitted_at": "2026-04-02T04:09:58.590Z",
-      "upvotes": 2,
-      "comments": 1,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.78
-    },
-    {
-      "report_date": "2026-04-02",
-      "paper_id": "2604.01168",
-      "title": "S0 Tuning: Zero-Overhead Adaptation of Hybrid Recurrent-Attention Models",
-      "authors": [
-        "Jack Young"
-      ],
-      "abstract": "Using roughly 48 execution-verified HumanEval training solutions, tuning a single initial state matrix per recurrent layer, with zero inference overhead, outperforms LoRA by +10.8 pp (p < 0.001) on HumanEval. The method, which we call S0 tuning, optimizes one state matrix per recurrent layer while freezing all model weights. On Qwen3.5-4B (GatedDeltaNet hybrid), S0 tuning improves greedy pass@1 by +23.6 +/- 1.7 pp (10 seeds). On FalconH1-7B (Mamba-2 hybrid), S0 reaches 71.8% +/- 1.3 and LoRA reaches 71.4% +/- 2.4 (3 seeds), statistically indistinguishable at this sample size while requiring no weight merging. Cross-domain transfer is significant on MATH-500 (+4.8 pp, p = 0.00002, 8 seeds) and GSM8K (+2.8 pp, p = 0.0003, 10 seeds); a text-to-SQL benchmark (Spider) shows no transfer, consistent with the trajectory-steering mechanism. A prefix-tuning control on a pure Transformer (Qwen2.5-3B) degrades performance by -13.9 pp under all nine configurations tested. On Qwen3.5, a per-step state-offset variant reaches +27.1 pp, above both S0 and LoRA but with per-step inference cost. Taken together, the results show that recurrent state initialization is a strong zero-inference-overhead PEFT surface for hybrid language models when verified supervision is scarce. The tuned state is a ~48 MB file; task switching requires no weight merging or model reload. Code and library: https://github.com/jackyoung27/s0-tuning.",
-      "hf_url": "https://huggingface.co/papers/2604.01168",
-      "arxiv_url": "https://arxiv.org/abs/2604.01168",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.01168",
-      "papers_cool_url": "https://papers.cool/arxiv/2604.01168",
-      "github_url": "",
-      "submitted_by": "Jack Young",
-      "submitted_at": "2026-04-02T14:04:28.786Z",
-      "upvotes": 1,
-      "comments": 2,
-      "topic_key": "learning_theory",
-      "topic_label": "Learning, Optimization, and Theory",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.8
+      "classification_confidence": 0.95
     },
     {
       "report_date": "2026-04-02",
@@ -1935,13 +1865,314 @@
       "github_url": "",
       "submitted_by": "Zhengyang Tang",
       "submitted_at": "2026-04-02T13:20:49.869Z",
-      "upvotes": 1,
-      "comments": 1,
+      "upvotes": 5,
+      "comments": 2,
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
       "classification_confidence": 0.97
+    },
+    {
+      "report_date": "2026-04-02",
+      "paper_id": "2604.00626",
+      "title": "A Survey of On-Policy Distillation for Large Language Models",
+      "authors": [
+        "Mingyang Song",
+        "Mao Zheng"
+      ],
+      "abstract": "Knowledge distillation has become a primary mechanism for transferring reasoning and domain expertise from frontier Large Language Models (LLMs) to smaller, deployable students. However, the dominant paradigm remains off-policy: students train on static teacher-generated data and never encounter their own errors during learning. This train--test mismatch, an instance of exposure bias, causes prediction errors to compound autoregressively at inference time. On-Policy Distillation (OPD) addresses this by letting the student generate its own trajectories and receive teacher feedback on these self-generated outputs, grounding distillation in the theory of interactive imitation learning. Despite rapid growth spanning divergence minimization, reward-guided learning, and self-play, the OPD literature remains fragmented with no unified treatment. This survey provides the first comprehensive overview of OPD for LLMs. We introduce a unified f-divergence framework over on-policy samples and organize the landscape along three orthogonal dimensions: feedback signal (logit-based, outcome-based, or self-play), teacher access (white-box, black-box, or teacher-free), and loss granularity (token-level, sequence-level, or hybrid). We systematically analyze representative methods, examine industrial deployments, and identify open problems including distillation scaling laws, uncertainty-aware feedback, and agent-level distillation.",
+      "hf_url": "https://huggingface.co/papers/2604.00626",
+      "arxiv_url": "https://arxiv.org/abs/2604.00626",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.00626",
+      "papers_cool_url": "https://papers.cool/arxiv/2604.00626",
+      "github_url": "",
+      "submitted_by": "Mingyang Song",
+      "submitted_at": "2026-04-02T06:51:37.973Z",
+      "upvotes": 5,
+      "comments": 2,
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.94
+    },
+    {
+      "report_date": "2026-04-02",
+      "paper_id": "2604.01029",
+      "title": "Revision or Re-Solving? Decomposing Second-Pass Gains in Multi-LLM Pipelines",
+      "authors": [
+        "Jingjie Ning",
+        "Xueqi Li",
+        "Chengyu Yu"
+      ],
+      "abstract": "Multi-LLM revision pipelines, in which a second model reviews and improves a draft produced by a first, are widely assumed to derive their gains from genuine error correction. We question this assumption with a controlled decomposition experiment that uses four matched conditions to separate second-pass gains into three additive components: re-solving, scaffold, and content. We evaluate this design across two model pairs on three benchmarks spanning knowledge-intensive MCQ and competitive programming. Our results show that the gains of multi-LLM revision are not monolithic, but depend on task structure, draft quality, and the type of draft information. On MCQ tasks, where the answer space is constrained and drafts provide little structural guidance, most gains are consistent with stronger-model re-solving, and directly routing queries to the stronger model can be more effective than revising a weak draft. On code generation tasks, however, two-stage prompting remains useful because even semantically null drafts can provide substantial structural scaffolding, while weak draft content can be harmful. Finally, role-reversed experiments show that strong drafts clearly benefit weak reviewers. Ultimately, our findings demonstrate that the utility of multi-LLM revision is dynamically bottlenecked by task structure and draft quality, necessitating more targeted pipeline designs rather than blanket revision strategies.",
+      "hf_url": "https://huggingface.co/papers/2604.01029",
+      "arxiv_url": "https://arxiv.org/abs/2604.01029",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.01029",
+      "papers_cool_url": "https://papers.cool/arxiv/2604.01029",
+      "github_url": "",
+      "submitted_by": "Ethan Ning",
+      "submitted_at": "2026-04-02T01:26:01.351Z",
+      "upvotes": 4,
+      "comments": 2,
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.81
+    },
+    {
+      "report_date": "2026-04-02",
+      "paper_id": "2604.00886",
+      "title": "PixelPrune: Pixel-Level Adaptive Visual Token Reduction via Predictive Coding",
+      "authors": [
+        "Nan Wang",
+        "Zhiwei Jin",
+        "Chen Chen",
+        "Haonan Lu"
+      ],
+      "abstract": "Document understanding and GUI interaction are among the highest-value applications of Vision-Language Models (VLMs), yet they impose exceptionally heavy computational burden: fine-grained text and small UI elements demand high-resolution inputs that produce tens of thousands of visual tokens. We observe that this cost is largely wasteful -- across document and GUI benchmarks, only 22--71\\% of image patches are pixel-unique, the rest being exact duplicates of another patch in the same image. We propose PixelPrune, which exploits this pixel-level redundancy through predictive-coding-based compression, pruning redundant patches before the Vision Transformer (ViT) encoder. Because it operates in pixel space prior to any neural computation, PixelPrune accelerates both the ViT encoder and the downstream LLM, covering the full inference pipeline. The method is training-free, requires no learnable parameters, and supports pixel-lossless compression (τ{=}0) as well as controlled lossy compression (τ{>}0). Experiments across three model scales and document and GUI benchmarks show that PixelPrune maintains competitive task accuracy while delivering up to 4.2times inference speedup and 1.9times training acceleration. Code is available at https://github.com/OPPO-Mente-Lab/PixelPrune.",
+      "hf_url": "https://huggingface.co/papers/2604.00886",
+      "arxiv_url": "https://arxiv.org/abs/2604.00886",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.00886",
+      "papers_cool_url": "https://papers.cool/arxiv/2604.00886",
+      "github_url": "",
+      "submitted_by": "NAN",
+      "submitted_at": "2026-04-02T23:00:22.360Z",
+      "upvotes": 4,
+      "comments": 2,
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.84
+    },
+    {
+      "report_date": "2026-04-02",
+      "paper_id": "2604.00892",
+      "title": "When Users Change Their Mind: Evaluating Interruptible Agents in Long-Horizon Web Navigation",
+      "authors": [
+        "Henry Peng Zou",
+        "Chunyu Miao",
+        "Wei-Chieh Huang",
+        "Yankai Chen",
+        "Yue Zhou",
+        "Hanrong Zhang",
+        "Yaozu Wu",
+        "Liancheng Fang",
+        "Zhengyao Gu",
+        "Zhen Zhang",
+        "Kening Zheng",
+        "Fangxin Wang",
+        "Yi Nian",
+        "Shanghao Li",
+        "Wenzhe Fan",
+        "Langzhou He",
+        "Weizhi Zhang",
+        "Xue Liu",
+        "Philip S. Yu"
+      ],
+      "abstract": "As LLM agents transition from short, static problem solving to executing complex, long-horizon tasks in dynamic environments, the ability to handle user interruptions, such as adding requirement or revising goals, during mid-task execution is becoming a core requirement for realistic deployment. However, existing benchmarks largely assume uninterrupted agent behavior or study interruptions only in short, unconstrained language tasks. In this paper, we present the first systematic study of interruptible agents in long-horizon, environmentally grounded web navigation tasks, where actions induce persistent state changes. We formalize three realistic interruption types, including addition, revision, and retraction, and introduce InterruptBench, a benchmark derived from WebArena-Lite that synthesizes high-quality interruption scenarios under strict semantic constraints. Using a unified interruption simulation framework, we evaluate six strong LLM backbones across single- and multi-turn interruption settings, analyzing both their effectiveness in adapting to updated intents and their efficiency in recovering from mid-task changes. Our results show that handling user interruptions effectively and efficiently during long-horizon agentic tasks remains challenging for powerful large-scale LLMs. Code and dataset are available at https://github.com/HenryPengZou/InterruptBench.",
+      "hf_url": "https://huggingface.co/papers/2604.00892",
+      "arxiv_url": "https://arxiv.org/abs/2604.00892",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.00892",
+      "papers_cool_url": "https://papers.cool/arxiv/2604.00892",
+      "github_url": "",
+      "submitted_by": "Henry Peng Zou",
+      "submitted_at": "2026-04-02T17:31:09.130Z",
+      "upvotes": 4,
+      "comments": 2,
+      "topic_key": "agents_planning",
+      "topic_label": "Agents and Planning",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.95
+    },
+    {
+      "report_date": "2026-04-02",
+      "paper_id": "2603.29002",
+      "title": "Understand and Accelerate Memory Processing Pipeline for Disaggregated LLM Inference",
+      "authors": [
+        "Zifan He",
+        "Rui Ma",
+        "Yizhou Sun",
+        "Jason Cong"
+      ],
+      "abstract": "Modern large language models (LLMs) increasingly depends on efficient long-context processing and generation mechanisms, including sparse attention, retrieval-augmented generation (RAG), and compressed contextual memory, to support complex reasoning. We show that these optimizations can be unified into a four-step memory processing pipeline: Prepare Memory, Compute Relevancy, Retrieval, and Apply to Inference. Through systematic profiling, we identify a 22%-97% memory processing overhead in LLM inference and strong heterogeneity in its computational characteristics. Motivated by this insight, we argue that heterogeneous systems are well-suited to accelerate memory processing and thus end-to-end inference. We demonstrate this approach on a GPU-FPGA system by offloading sparse, irregular, and memory-bounded operations to FPGAs while retaining compute-intensive operations on GPUs. Evaluated on an AMD MI210 GPU and an Alveo U55C FPGA, our system is 1.04sim2.2times faster and requires 1.11sim4.7times less energy across multiple LLM inference optimizations than the GPU baseline (similar results hold on NVIDIA A100). These results establish heterogeneous systems as a practical direction for efficient LLM memory processing and inform future heterogeneous hardware design.",
+      "hf_url": "https://huggingface.co/papers/2603.29002",
+      "arxiv_url": "https://arxiv.org/abs/2603.29002",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.29002",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.29002",
+      "github_url": "",
+      "submitted_by": "Zifan He",
+      "submitted_at": "2026-04-02T04:09:58.590Z",
+      "upvotes": 4,
+      "comments": 2,
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.83
+    },
+    {
+      "report_date": "2026-04-02",
+      "paper_id": "2604.01168",
+      "title": "S0 Tuning: Zero-Overhead Adaptation of Hybrid Recurrent-Attention Models",
+      "authors": [
+        "Jack Young"
+      ],
+      "abstract": "Using roughly 48 execution-verified HumanEval training solutions, tuning a single initial state matrix per recurrent layer, with zero inference overhead, outperforms LoRA by +10.8 pp (p < 0.001) on HumanEval. The method, which we call S0 tuning, optimizes one state matrix per recurrent layer while freezing all model weights. On Qwen3.5-4B (GatedDeltaNet hybrid), S0 tuning improves greedy pass@1 by +23.6 +/- 1.7 pp (10 seeds). On FalconH1-7B (Mamba-2 hybrid), S0 reaches 71.8% +/- 1.3 and LoRA reaches 71.4% +/- 2.4 (3 seeds), statistically indistinguishable at this sample size while requiring no weight merging. Cross-domain transfer is significant on MATH-500 (+4.8 pp, p = 0.00002, 8 seeds) and GSM8K (+2.8 pp, p = 0.0003, 10 seeds); a text-to-SQL benchmark (Spider) shows no transfer, consistent with the trajectory-steering mechanism. A prefix-tuning control on a pure Transformer (Qwen2.5-3B) degrades performance by -13.9 pp under all nine configurations tested. On Qwen3.5, a per-step state-offset variant reaches +27.1 pp, above both S0 and LoRA but with per-step inference cost. Taken together, the results show that recurrent state initialization is a strong zero-inference-overhead PEFT surface for hybrid language models when verified supervision is scarce. The tuned state is a ~48 MB file; task switching requires no weight merging or model reload. Code and library: https://github.com/jackyoung27/s0-tuning.",
+      "hf_url": "https://huggingface.co/papers/2604.01168",
+      "arxiv_url": "https://arxiv.org/abs/2604.01168",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.01168",
+      "papers_cool_url": "https://papers.cool/arxiv/2604.01168",
+      "github_url": "",
+      "submitted_by": "Jack Young",
+      "submitted_at": "2026-04-02T14:04:28.786Z",
+      "upvotes": 3,
+      "comments": 3,
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.74
+    },
+    {
+      "report_date": "2026-04-02",
+      "paper_id": "2604.00913",
+      "title": "Benchmarking and Mechanistic Analysis of Vision-Language Models for Cross-Depiction Assembly Instruction Alignment",
+      "authors": [
+        "Zhuchenyang Liu",
+        "Yao Zhang",
+        "Yu Xiao"
+      ],
+      "abstract": "2D assembly diagrams are often abstract and hard to follow, creating a need for intelligent assistants that can monitor progress, detect errors, and provide step-by-step guidance. In mixed reality settings, such systems must recognize completed and ongoing steps from the camera feed and align them with the diagram instructions. Vision Language Models (VLMs) show promise for this task, but face a depiction gap because assembly diagrams and video frames share few visual features. To systematically assess this gap, we construct IKEA-Bench, a benchmark of 1,623 questions across 6 task types on 29 IKEA furniture products, and evaluate 19 VLMs (2B-38B) under three alignment strategies. Our key findings: (1) assembly instruction understanding is recoverable via text, but text simultaneously degrades diagram-to-video alignment; (2) architecture family predicts alignment accuracy more strongly than parameter count; (3) video understanding remains a hard bottleneck unaffected by strategy. A three-level mechanistic analysis further reveals that diagrams and video occupy disjoint ViT subspaces, and that adding text shifts models from visual to text-driven reasoning. These results identify visual encoding as the primary target for improving cross-depiction robustness. Project page: https://ryenhails.github.io/IKEA-Bench/",
+      "hf_url": "https://huggingface.co/papers/2604.00913",
+      "arxiv_url": "https://arxiv.org/abs/2604.00913",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.00913",
+      "papers_cool_url": "https://papers.cool/arxiv/2604.00913",
+      "github_url": "",
+      "submitted_by": "Zhuchenyang Liu",
+      "submitted_at": "2026-04-02T03:23:43.450Z",
+      "upvotes": 3,
+      "comments": 3,
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.91
+    },
+    {
+      "report_date": "2026-04-02",
+      "paper_id": "2603.29247",
+      "title": "MemRerank: Preference Memory for Personalized Product Reranking",
+      "authors": [
+        "Zhiyuan Peng",
+        "Xuyang Wu",
+        "Huaixiao Tou",
+        "Yi Fang",
+        "Yi Gong"
+      ],
+      "abstract": "LLM-based shopping agents increasingly rely on long purchase histories and multi-turn interactions for personalization, yet naively appending raw history to prompts is often ineffective due to noise, length, and relevance mismatch. We propose MemRerank, a preference memory framework that distills user purchase history into concise, query-independent signals for personalized product reranking. To study this problem, we build an end-to-end benchmark and evaluation framework centered on an LLM-based 1-in-5 selection task, which measures both memory quality and downstream reranking utility. We further train the memory extractor with reinforcement learning (RL), using downstream reranking performance as supervision. Experiments with two LLM-based rerankers show that MemRerank consistently outperforms no-memory, raw-history, and off-the-shelf memory baselines, yielding up to +10.61 absolute points in 1-in-5 accuracy. These results suggest that explicit preference memory is a practical and effective building block for personalization in agentic e-commerce systems.",
+      "hf_url": "https://huggingface.co/papers/2603.29247",
+      "arxiv_url": "https://arxiv.org/abs/2603.29247",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.29247",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.29247",
+      "github_url": "",
+      "submitted_by": "Zhiyuan Peng",
+      "submitted_at": "2026-04-02T04:50:05.461Z",
+      "upvotes": 3,
+      "comments": 2,
+      "topic_key": "retrieval_knowledge",
+      "topic_label": "Retrieval, Knowledge, and RAG",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.78
+    },
+    {
+      "report_date": "2026-04-02",
+      "paper_id": "2603.25406",
+      "title": "MMaDA-VLA: Large Diffusion Vision-Language-Action Model with Unified Multi-Modal Instruction and Generation",
+      "authors": [
+        "Yang Liu",
+        "Pengxiang Ding",
+        "Tengyue Jiang",
+        "Xudong Wang",
+        "Wenxuan Song",
+        "Minghui Lin",
+        "Han Zhao",
+        "Hongyin Zhang",
+        "Zifeng Zhuang",
+        "Wei Zhao",
+        "Siteng Huang",
+        "Jinkui Shi",
+        "Donglin Wang"
+      ],
+      "abstract": "Vision-Language-Action (VLA) models aim to control robots for manipulation from visual observations and natural-language instructions. However, existing hierarchical and autoregressive paradigms often introduce architectural overhead, suffer from temporal inconsistency and long-horizon error accumulation, and lack a mechanism to capture environment dynamics without extra modules. To this end, we present MMaDA-VLA, a fully native pre-trained large diffusion VLA model that unifies multi-modal understanding and generation in a single framework. Our key idea is a native discrete diffusion formulation that embeds language, images, and continuous robot controls into one discrete token space and trains a single backbone with masked token denoising to jointly generate a future goal observation and an action chunk in parallel. Iterative denoising enables global, order-free refinement, improving long-horizon consistency while grounding actions in predicted future visual outcomes without auxiliary world models. Experiments across simulation benchmarks and real-world tasks show state-of-the-art performance, achieving 98.0% average success on LIBERO and 4.78 average length on CALVIN.",
+      "hf_url": "https://huggingface.co/papers/2603.25406",
+      "arxiv_url": "https://arxiv.org/abs/2603.25406",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.25406",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.25406",
+      "github_url": "",
+      "submitted_by": "Yang Liu",
+      "submitted_at": "2026-04-02T00:54:33.620Z",
+      "upvotes": 3,
+      "comments": 2,
+      "topic_key": "multimodal_agents",
+      "topic_label": "Multimodal Agents",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.99
+    },
+    {
+      "report_date": "2026-04-02",
+      "paper_id": "2603.25764",
+      "title": "Consistency Amplifies: How Behavioral Variance Shapes Agent Accuracy",
+      "authors": [
+        "Aman Mehta"
+      ],
+      "abstract": "As LLM-based agents are deployed in production systems, understanding their behavioral consistency (whether they produce similar action sequences when given identical tasks) becomes critical for reliability. We study consistency in the context of SWE-bench, a challenging software engineering benchmark requiring complex, multi-step reasoning. Comparing Claude~4.5~Sonnet, GPT-5, and Llama-3.1-70B across 50 runs each (10 tasks times 5 runs), we find that across models, higher consistency aligns with higher accuracy: Claude achieves the lowest variance (CV: 15.2\\%) and highest accuracy (58\\%), GPT-5 is intermediate (CV: 32.2\\%, accuracy: 32\\%), and Llama shows the highest variance (CV: 47.0\\%) with lowest accuracy (4\\%). However, within a model, consistency can amplify both correct and incorrect interpretations. Our analysis reveals a critical nuance: consistency amplifies outcomes rather than guaranteeing correctness. 71\\% of Claude's failures stem from \"consistent wrong interpretation\": making the same incorrect assumption across all runs. Interestingly, GPT-5 achieves similar early strategic agreement as Claude (diverging at step 3.4 vs.\\ 3.2) but exhibits 2.1times higher variance, suggesting that divergence timing alone does not determine consistency. These findings suggest that for production deployment, interpretation accuracy matters more than execution consistency, with implications for agent evaluation and training.",
+      "hf_url": "https://huggingface.co/papers/2603.25764",
+      "arxiv_url": "https://arxiv.org/abs/2603.25764",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2603.25764",
+      "papers_cool_url": "https://papers.cool/arxiv/2603.25764",
+      "github_url": "",
+      "submitted_by": "Aman Mehta",
+      "submitted_at": "2026-04-02T17:38:07.004Z",
+      "upvotes": 3,
+      "comments": 2,
+      "topic_key": "agents_planning",
+      "topic_label": "Agents and Planning",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.9
+    },
+    {
+      "report_date": "2026-04-02",
+      "paper_id": "2604.01194",
+      "title": "AgentWatcher: A Rule-based Prompt Injection Monitor",
+      "authors": [
+        "Yanting Wang",
+        "Wei Zou",
+        "Runpeng Geng",
+        "Jinyuan Jia"
+      ],
+      "abstract": "Large language models (LLMs) and their applications, such as agents, are highly vulnerable to prompt injection attacks. State-of-the-art prompt injection detection methods have the following limitations: (1) their effectiveness degrades significantly as context length increases, and (2) they lack explicit rules that define what constitutes prompt injection, causing detection decisions to be implicit, opaque, and difficult to reason about. In this work, we propose AgentWatcher to address the above two limitations. To address the first limitation, AgentWatcher attributes the LLM's output (e.g., the action of an agent) to a small set of causally influential context segments. By focusing detection on a relatively short text, AgentWatcher can be scalable to long contexts. To address the second limitation, we define a set of rules specifying what does and does not constitute a prompt injection, and use a monitor LLM to reason over these rules based on the attributed text, making the detection decisions more explainable. We conduct a comprehensive evaluation on tool-use agent benchmarks and long-context understanding datasets. The experimental results demonstrate that AgentWatcher can effectively detect prompt injection and maintain utility without attacks. The code is available at https://github.com/wang-yanting/AgentWatcher.",
+      "hf_url": "https://huggingface.co/papers/2604.01194",
+      "arxiv_url": "https://arxiv.org/abs/2604.01194",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.01194",
+      "papers_cool_url": "https://papers.cool/arxiv/2604.01194",
+      "github_url": "",
+      "submitted_by": "yanting wang",
+      "submitted_at": "2026-04-02T18:00:42.448Z",
+      "upvotes": 1,
+      "comments": 2,
+      "topic_key": "reasoning_alignment_eval",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "matched_terms": [],
+      "classification_source": "codex",
+      "classification_confidence": 0.96
     },
     {
       "report_date": "2026-04-02",
@@ -1964,8 +2195,8 @@
       "github_url": "",
       "submitted_by": "Saswata Bose",
       "submitted_at": "2026-04-02T07:20:25.024Z",
-      "upvotes": 0,
-      "comments": 1,
+      "upvotes": 1,
+      "comments": 2,
       "topic_key": "domain_applications",
       "topic_label": "Domain Applications",
       "matched_terms": [],
