@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-04-04T04:00:30Z",
-  "reports_count": 112,
+  "generated_at": "2026-04-04T04:10:24Z",
+  "reports_count": 113,
   "branches": [
     {
       "branch_key": "daily",
       "branch_label": "Cool Daily",
-      "reports_count": 74,
+      "reports_count": 75,
       "default_report_path": "data/daily/reports/2026-04-03/cs.AI-2026-04-03.json",
       "manifest_path": "data/daily/manifest.json"
     },
@@ -149,6 +149,66 @@
           "topic_label": "Multimodal Understanding and Vision",
           "count": 9,
           "share": 10.11
+        }
+      ]
+    },
+    {
+      "branch_key": "daily",
+      "branch_label": "Cool Daily",
+      "search_text": "daily Cool Daily cs.CV-2026-04-03 data/daily/reports/2026-04-03/cs.CV-2026-04-03.json https://papers.cool/arxiv/cs.CV?date=2026-04-03&show=1000 codex 2026-04-03 cs.CV Generative Foundations Multimodal Generative Modeling Multimodal Agents Multimodal Understanding and Vision Domain Applications Multimodal Generative Modeling Datasets and Benchmarks Learning, Optimization, and Theory",
+      "data_path": "data/daily/reports/2026-04-03/cs.CV-2026-04-03.json",
+      "slug": "cs.CV-2026-04-03",
+      "report_date": "2026-04-03",
+      "category": "cs.CV",
+      "total_papers": 149,
+      "classifier": "codex",
+      "generated_at": "2026-04-04T04:10:24Z",
+      "source_url": "https://papers.cool/arxiv/cs.CV?date=2026-04-03&show=1000",
+      "focus_topics": [
+        {
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "count": 7,
+          "share": 4.7
+        },
+        {
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 18,
+          "share": 12.08
+        },
+        {
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "count": 7,
+          "share": 4.7
+        }
+      ],
+      "top_topics": [
+        {
+          "topic_label": "Multimodal Understanding and Vision",
+          "count": 52,
+          "share": 34.9
+        },
+        {
+          "topic_label": "Domain Applications",
+          "count": 24,
+          "share": 16.11
+        },
+        {
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 18,
+          "share": 12.08
+        },
+        {
+          "topic_label": "Datasets and Benchmarks",
+          "count": 9,
+          "share": 6.04
+        },
+        {
+          "topic_label": "Learning, Optimization, and Theory",
+          "count": 8,
+          "share": 5.37
         }
       ]
     },
