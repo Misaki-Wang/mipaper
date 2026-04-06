@@ -1,10 +1,90 @@
 {
   "branch_key": "hf-daily",
   "branch_label": "HF Daily",
-  "generated_at": "2026-04-06T04:08:58Z",
-  "reports_count": 25,
-  "default_report_path": "data/hf-daily/reports/2026-04-03/hf-daily-2026-04-03.json",
+  "generated_at": "2026-04-06T18:12:00Z",
+  "reports_count": 26,
+  "default_report_path": "data/hf-daily/reports/2026-04-06/hf-daily-2026-04-06.json",
   "reports": [
+    {
+      "branch_key": "hf-daily",
+      "branch_label": "HF Daily",
+      "data_path": "data/hf-daily/reports/2026-04-06/hf-daily-2026-04-06.json",
+      "slug": "hf-daily-2026-04-06",
+      "report_date": "2026-04-06",
+      "total_papers": 11,
+      "classifier": "codex",
+      "generated_at": "2026-04-06T17:56:33Z",
+      "source_url": "https://huggingface.co/papers/date/2026-04-06",
+      "focus_topics": [
+        {
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "count": 1,
+          "share": 9.09
+        },
+        {
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 0,
+          "share": 0.0
+        },
+        {
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "count": 2,
+          "share": 18.18
+        }
+      ],
+      "top_topics": [
+        {
+          "topic_label": "Multimodal Understanding and Vision",
+          "count": 4,
+          "share": 36.36
+        },
+        {
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "count": 3,
+          "share": 27.27
+        },
+        {
+          "topic_label": "Multimodal Agents",
+          "count": 2,
+          "share": 18.18
+        },
+        {
+          "topic_label": "Datasets and Benchmarks",
+          "count": 1,
+          "share": 9.09
+        },
+        {
+          "topic_label": "Generative Foundations",
+          "count": 1,
+          "share": 9.09
+        }
+      ],
+      "top_submitters": [
+        {
+          "submitted_by": "taesiri",
+          "count": 5
+        },
+        {
+          "submitted_by": "Ankur Sikarwar",
+          "count": 1
+        },
+        {
+          "submitted_by": "Prince Wang",
+          "count": 1
+        },
+        {
+          "submitted_by": "Yujiao Shen",
+          "count": 1
+        },
+        {
+          "submitted_by": "Yuseung \"Phillip\" Lee",
+          "count": 1
+        }
+      ]
+    },
     {
       "branch_key": "hf-daily",
       "branch_label": "HF Daily",
