@@ -1,10 +1,139 @@
 {
   "branch_key": "trending",
   "branch_label": "Trending",
-  "generated_at": "2026-03-30T05:03:10Z",
-  "reports_count": 5,
-  "default_report_path": "data/trending/reports/2026-03-30/trending-2026-03-30.json",
+  "generated_at": "2026-04-06T04:00:05Z",
+  "reports_count": 6,
+  "default_report_path": "data/trending/reports/2026-04-06/trending-2026-04-06.json",
   "reports": [
+    {
+      "branch_key": "trending",
+      "branch_label": "Trending",
+      "data_path": "data/trending/reports/2026-04-06/trending-2026-04-06.json",
+      "slug": "trending-2026-04-06",
+      "snapshot_date": "2026-04-06",
+      "since": "weekly",
+      "total_repositories": 13,
+      "generated_at": "2026-04-06T04:00:04Z",
+      "source_url": "https://github.com/trending?since=weekly&spoken_language_code=",
+      "top_languages": [
+        {
+          "language": "Python",
+          "count": 8,
+          "share": 61.53846153846154
+        },
+        {
+          "language": "TypeScript",
+          "count": 4,
+          "share": 30.76923076923077
+        },
+        {
+          "language": "Unknown",
+          "count": 1,
+          "share": 7.6923076923076925
+        }
+      ],
+      "top_repositories": [
+        {
+          "snapshot_date": "2026-04-06",
+          "repo_id": "luongnv89/claude-howto",
+          "owner": "luongnv89",
+          "name": "claude-howto",
+          "full_name": "luongnv89/claude-howto",
+          "repo_url": "https://github.com/luongnv89/claude-howto",
+          "description": "A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that bring immediate value.",
+          "language": "Python",
+          "stars": 20543,
+          "forks": 2455,
+          "stars_this_week": 15128,
+          "built_by": [
+            "luongnv89",
+            "claude",
+            "wjhrdy",
+            "VikalpP"
+          ]
+        },
+        {
+          "snapshot_date": "2026-04-06",
+          "repo_id": "yeachan-heo/oh-my-codex",
+          "owner": "Yeachan-Heo",
+          "name": "oh-my-codex",
+          "full_name": "Yeachan-Heo/oh-my-codex",
+          "repo_url": "https://github.com/Yeachan-Heo/oh-my-codex",
+          "description": "OmX - Oh My codeX: Your codex is not alone. Add hooks, agent teams, HUDs, and so much more.",
+          "language": "TypeScript",
+          "stars": 16745,
+          "forks": 1594,
+          "stars_this_week": 13476,
+          "built_by": [
+            "Yeachan-Heo",
+            "claude",
+            "HaD0Yun",
+            "dependabot",
+            "junhoyeo"
+          ]
+        },
+        {
+          "snapshot_date": "2026-04-06",
+          "repo_id": "siddharthvaddem/openscreen",
+          "owner": "siddharthvaddem",
+          "name": "openscreen",
+          "full_name": "siddharthvaddem/openscreen",
+          "repo_url": "https://github.com/siddharthvaddem/openscreen",
+          "description": "Create stunning demos for free. Open-source, no subscriptions, no watermarks, and free for commercial use. An alternative to Screen Studio.",
+          "language": "TypeScript",
+          "stars": 22736,
+          "forks": 1520,
+          "stars_this_week": 12682,
+          "built_by": [
+            "siddharthvaddem",
+            "EtienneLescot",
+            "prayaslashkari",
+            "marcusschiesser",
+            "FabLrc"
+          ]
+        },
+        {
+          "snapshot_date": "2026-04-06",
+          "repo_id": "microsoft/vibevoice",
+          "owner": "microsoft",
+          "name": "VibeVoice",
+          "full_name": "microsoft/VibeVoice",
+          "repo_url": "https://github.com/microsoft/VibeVoice",
+          "description": "Open-Source Frontier Voice AI",
+          "language": "Python",
+          "stars": 36498,
+          "forks": 4191,
+          "stars_this_week": 10543,
+          "built_by": [
+            "YaoyaoChang",
+            "MSLDCherryPick",
+            "Copilot",
+            "pengzhiliang",
+            "MSJwyu"
+          ]
+        },
+        {
+          "snapshot_date": "2026-04-06",
+          "repo_id": "nousresearch/hermes-agent",
+          "owner": "NousResearch",
+          "name": "hermes-agent",
+          "full_name": "NousResearch/hermes-agent",
+          "repo_url": "https://github.com/NousResearch/hermes-agent",
+          "description": "The agent that grows with you",
+          "language": "Python",
+          "stars": 26572,
+          "forks": 3481,
+          "stars_this_week": 9940,
+          "built_by": [
+            "teknium1",
+            "0xbyt4",
+            "kshitijk4poor",
+            "erosika",
+            "claude"
+          ]
+        }
+      ]
+    },
     {
       "branch_key": "trending",
       "branch_label": "Trending",
