@@ -7,32 +7,31 @@
 
 ## Focus Topics
 
-- Generative Foundations: 5 papers (6.41%)
+- Generative Foundations: 4 papers (5.13%)
 - Multimodal Generative Modeling: 1 papers (1.28%)
 - Multimodal Agents: 1 papers (1.28%)
 
 ## Topic Distribution Analysis
 
-- Reasoning, Alignment, and Evaluation: 23 papers (29.49%)
+- Reasoning, Alignment, and Evaluation: 24 papers (30.77%)
 - LLMs and Language: 19 papers (24.36%)
+- Retrieval, Knowledge, and RAG: 7 papers (8.97%)
 - Agents and Planning: 5 papers (6.41%)
 - Datasets and Benchmarks: 5 papers (6.41%)
 - Domain Applications: 5 papers (6.41%)
-- Generative Foundations: 5 papers (6.41%)
 - Multimodal Understanding and Vision: 5 papers (6.41%)
-- Retrieval, Knowledge, and RAG: 5 papers (6.41%)
-- Learning, Optimization, and Theory: 3 papers (3.85%)
+- Generative Foundations: 4 papers (5.13%)
+- Learning, Optimization, and Theory: 2 papers (2.56%)
 - Multimodal Agents: 1 papers (1.28%)
 - Multimodal Generative Modeling: 1 papers (1.28%)
-- Other AI: 1 papers (1.28%)
 
 ### Brief Notes
 
-- The largest topic today is “Reasoning, Alignment, and Evaluation”, with 23 papers, accounting for 29.49%。
-- The top 3 topics account for 60.26%，concentrated。
-- Long-tail topics with only one paper: 3 items。
+- The largest topic today is “Reasoning, Alignment, and Evaluation”, with 24 papers, accounting for 30.77%。
+- The top 3 topics account for 64.10%，concentrated。
+- Long-tail topics with only one paper: 2 items。
 
-## Reasoning, Alignment, and Evaluation (23 papers, 29.49%)
+## Reasoning, Alignment, and Evaluation (24 papers, 30.77%)
 
 - [BAS: A Decision-Theoretic Approach to Evaluating Large Language Model Confidence](https://arxiv.org/pdf/2604.03216)
   - Authors: Sean Wu, Fredrik K. Gustafsson, Edward Phillips, Boyan Gao, Anshul Thakur, David A. Clifton
@@ -68,13 +67,6 @@
     <summary>Abstract</summary>
 
     Large Reasoning Models (LRMs) have recently achieved remarkable success in complex reasoning tasks. However, closer scrutiny reveals persistent failure modes compromising performance and cost: I) Intra-step level, marked by calculation or derivation errors; II) Inter-step level, involving oscillation and stagnation; and III) Instance level, causing maladaptive over-thinking. Existing endeavors target isolated levels without unification, while their black-box nature and reliance on RL hinder explainability and controllability. To bridge these gaps, we conduct an in-depth white-box analysis, identifying key neurons (Mixture of Neurons, MoN) and their fluctuation patterns associated with distinct failures. Building upon these insights, we propose NeuReasoner, an explainable, controllable, and unified reasoning framework driven by MoN. Technically, NeuReasoner integrates lightweight MLPs for failure detection with a special token-triggered self-correction mechanism learned via SFT. During inference, special tokens are inserted upon failure detection to actuate controllable remedial behaviors. Extensive evaluations across six benchmarks, six backbone models (8B~70B) against nine competitive baselines, demonstrate that NeuReasoner achieves performance gains of up to 27.0% while reducing token consumption by 19.6% ~ 63.3%.
-    </details>
-- [GRADE: Probing Knowledge Gaps in LLMs through Gradient Subspace Dynamics](https://arxiv.org/pdf/2604.02830)
-  - Authors: Yujing Wang, Yuanbang Liang, Yukun Lai, Hainan Zhang, Hanqi Yan
-  - <details>
-    <summary>Abstract</summary>
-
-    Detecting whether a model's internal knowledge is sufficient to correctly answer a given question is a fundamental challenge in deploying responsible LLMs. In addition to verbalising the confidence by LLM self-report, more recent methods explore the model internals, such as the hidden states of the response tokens to capture how much knowledge is activated. We argue that such activated knowledge may not align with what the query requires, e.g., capturing the stylistic and length-related features that are uninformative for answering the query. To fill the gap, we propose GRADE (Gradient Dynamics for knowledge gap detection), which quantifies the knowledge gap via the cross-layer rank ratio of the gradient to that of the corresponding hidden state subspace. This is motivated by the property of gradients as estimators of the required knowledge updates for a given target. We validate \modelname{} on six benchmarks, demonstrating its effectiveness and robustness to input perturbations. In addition, we present a case study showing how the gradient chain can generate interpretable explanations of knowledge gaps for long-form answers.
     </details>
 - [Rubrics to Tokens: Bridging Response-level Rubrics and Token-level Rewards in Instruction Following Tasks](https://arxiv.org/pdf/2604.02795)
   - Authors: Tianze Xu, Yanzhao Zheng, Pengrui Lu, Lyumanshan Ye, Yong Wu, Zhentao Zhang, Yuanqiang Yu, Chao Ma, Jihuai Zhu, Pengfei Liu, Baohua Dong, Hangcheng Zhu, Ruohui Huang, Gang Yu
@@ -125,6 +117,13 @@
 
     As Large Language Models (LLMs) increasingly power decision-making systems across critical domains, understanding and mitigating their biases becomes essential for responsible AI deployment. Although bias assessment frameworks have proliferated for attributes such as race and gender, socioeconomic status bias remains significantly underexplored despite its widespread implications in the real world. We introduce SocioEval, a template-based framework for systematically evaluating socioeconomic bias in foundation models through decision-making tasks. Our hierarchical framework encompasses 8 themes and 18 topics, generating 240 prompts across 6 class-pair combinations. We evaluated 13 frontier LLMs on 3,120 responses using a rigorous three-stage annotation protocol, revealing substantial variation in bias rates (0.42\%-33.75\%). Our findings demonstrate that bias manifests differently across themes lifestyle judgments show 10$\times$ higher bias than education-related decisions and that deployment safeguards effectively prevent explicit discrimination but show brittleness to domain-specific stereotypes. SocioEval provides a scalable, extensible foundation for auditing class-based bias in language models.
     </details>
+- [Reinforcement Learning-based Knowledge Distillation with LLM-as-a-Judge](https://arxiv.org/pdf/2604.02621)
+  - Authors: Yiyang Shen, Lifu Tu, Weiran Wang
+  - <details>
+    <summary>Abstract</summary>
+
+    Reinforcement Learning (RL) has been shown to substantially improve the reasoning capability of small and large language models (LLMs), but existing approaches typically rely on verifiable rewards, hence ground truth labels. We propose an RL framework that uses rewards from an LLM that acts as a judge evaluating model outputs over large amounts of unlabeled data, enabling label-free knowledge distillation and replacing the need of ground truth supervision. Notably, the judge operates with a single-token output, making reward computation efficient. When combined with verifiable rewards, our approach yields substantial performance gains across math reasoning benchmarks. These results suggest that LLM-based evaluators can produce effective training signals for RL fine-tuning.
+    </details>
 - [Failing to Falsify: Evaluating and Mitigating Confirmation Bias in Language Models](https://arxiv.org/pdf/2604.02485)
   - Authors: Ayush Rajesh Jhaveri, Anthony GX-Chen, Ilia Sucholutsky, Eunsol Choi
   - <details>
@@ -138,6 +137,13 @@
     <summary>Abstract</summary>
 
     Large language models exhibit sycophancy: the tendency to shift outputs toward user-expressed stances, regardless of correctness or consistency. While prior work has studied this issue and its impacts, rigorous computational linguistic metrics are needed to identify when models are being sycophantic. Here, we introduce SWAY, an unsupervised computational linguistic measure of sycophancy. We develop a counterfactual prompting mechanism to identify how much a model's agreement shifts under positive versus negative linguistic pressure, isolating framing effects from content. Applying this metric to benchmark 6 models, we find that sycophancy increases with epistemic commitment. Leveraging our metric, we introduce a counterfactual mitigation strategy teaching models to consider what the answer would be if opposite assumptions were suggested. While baseline mitigation instructing to be explicitly anti-sycophantic yields moderate reductions, and can backfire, our counterfactual CoT mitigation drives sycophancy to near zero across models, commitment levels, and clause types, while not suppressing responsiveness to genuine evidence. Overall, we contribute a metric for benchmarking sycophancy and a mitigation informed by it.
+    </details>
+- [Using LLM-as-a-Judge/Jury to Advance Scalable, Clinically-Validated Safety Evaluations of Model Responses to Users Demonstrating Psychosis](https://arxiv.org/pdf/2604.02359)
+  - Authors: May Lynn Reese, Markela Zeneli, Mindy Ng, Jacob Haimes, Andreea Damien, Elizabeth Stade
+  - <details>
+    <summary>Abstract</summary>
+
+    General-purpose Large Language Models (LLMs) are becoming widely adopted by people for mental health support. Yet emerging evidence suggests there are significant risks associated with high-frequency use, particularly for individuals suffering from psychosis, as LLMs may reinforce delusions and hallucinations. Existing evaluations of LLMs in mental health contexts are limited by a lack of clinical validation and scalability of assessment. To address these issues, this research focuses on psychosis as a critical condition for LLM safety evaluation by (1) developing and validating seven clinician-informed safety criteria, (2) constructing a human-consensus dataset, and (3) testing automated assessment using an LLM as an evaluator (LLM-as-a-Judge) or taking the majority vote of several LLM judges (LLM-as-a-Jury). Results indicate that LLM-as-a-Judge aligns closely with the human consensus (Cohen's $κ_{\text{human} \times \text{gemini}} = 0.75$, $κ_{\text{human} \times \text{qwen}} = 0.68$, $κ_{\text{human} \times \text{kimi}} = 0.56$) and that the best judge slightly outperforms LLM-as-a-Jury (Cohen's $κ_{\text{human} \times \text{jury}} = 0.74$). Overall, these findings have promising implications for clinically grounded, scalable methods in LLM safety evaluations for mental health contexts.
     </details>
 - [BibTeX Citation Hallucinations in Scientific Publishing Agents: Evaluation and Mitigation](https://arxiv.org/pdf/2604.03159)
   - Authors: Delip Rao, Chris Callison-Burch
@@ -198,6 +204,13 @@
 
 ## LLMs and Language (19 papers, 24.36%)
 
+- [Learning the Signature of Memorization in Autoregressive Language Models](https://arxiv.org/pdf/2604.03199)
+  - Authors: David Ilić, Kostadin Cvejoski, David Stanojević, Evgeny Grigorenko
+  - <details>
+    <summary>Abstract</summary>
+
+    All prior membership inference attacks for fine-tuned language models use hand-crafted heuristics (e.g., loss thresholding, Min-K\%, reference calibration), each bounded by the designer's intuition. We introduce the first transferable learned attack, enabled by the observation that fine-tuning any model on any corpus yields unlimited labeled data, since membership is known by construction. This removes the shadow model bottleneck and brings membership inference into the deep learning era: learning what matters rather than designing it, with generalization through training diversity and scale. We discover that fine-tuning language models produces an invariant signature of memorization detectable across architectural families and data domains. We train a membership inference classifier exclusively on transformer-based models. It transfers zero-shot to Mamba (state-space), RWKV-4 (linear attention), and RecurrentGemma (gated recurrence), achieving 0.963, 0.972, and 0.936 AUC respectively. Each evaluation combines an architecture and dataset never seen during training, yet all three exceed performance on held-out transformers (0.908 AUC). These four families share no computational mechanisms, their only commonality is gradient descent on cross-entropy loss. Even simple likelihood-based methods exhibit strong transfer, confirming the signature exists independently of the detection method. Our method, Learned Transfer MIA (LT-MIA), captures this signal most effectively by reframing membership inference as sequence classification over per-token distributional statistics. On transformers, LT-MIA achieves 2.8$\times$ higher TPR at 0.1\% FPR than the strongest baseline. The method also transfers to code (0.865 AUC) despite training only on natural language texts. Code and trained classifier available at https://github.com/JetBrains-Research/learned-mia.
+    </details>
 - [Reliability Gated Multi-Teacher Distillation for Low Resource Abstractive Summarization](https://arxiv.org/pdf/2604.03192)
   - Authors: Dipto Sumit, Ankan Kumar Roy, Sadia Khair Rodela, Atia Haque Asha, Mourchona Afrin, Niloy Farhan, Farig Yousuf Sadeque
   - <details>
@@ -289,13 +302,6 @@
 
     This work aims to shine a spotlight on the topic of metalanguage. We first define metalanguage, link it to NLP and LLMs, and then discuss our two labs' metalanguage-centered efforts. Finally, we discuss four dimensions of metalanguage and metalinguistic tasks, offering a list of understudied future research directions.
     </details>
-- [Reinforcement Learning-based Knowledge Distillation with LLM-as-a-Judge](https://arxiv.org/pdf/2604.02621)
-  - Authors: Yiyang Shen, Lifu Tu, Weiran Wang
-  - <details>
-    <summary>Abstract</summary>
-
-    Reinforcement Learning (RL) has been shown to substantially improve the reasoning capability of small and large language models (LLMs), but existing approaches typically rely on verifiable rewards, hence ground truth labels. We propose an RL framework that uses rewards from an LLM that acts as a judge evaluating model outputs over large amounts of unlabeled data, enabling label-free knowledge distillation and replacing the need of ground truth supervision. Notably, the judge operates with a single-token output, making reward computation efficient. When combined with verifiable rewards, our approach yields substantial performance gains across math reasoning benchmarks. These results suggest that LLM-based evaluators can produce effective training signals for RL fine-tuning.
-    </details>
 - [An Empirical Study of Many-Shot In-Context Learning for Machine Translation of Low-Resource Languages](https://arxiv.org/pdf/2604.02596)
   - Authors: Yinhan Lu, Gaganpreet Jhajj, Chen Zhang, Anietie Andy, David Ifeoluwa Adelani
   - <details>
@@ -317,19 +323,71 @@
 
     Modeling coherence in text has been a task that has excited NLP researchers since a long time. It has applications in detecting incoherent structures and helping the author fix them. There has been recent work in using neural networks to extract a skeleton from one sentence, and then use that skeleton to generate the next sentence for coherent narrative story generation. In this project, we aim to study if the consistency of skeletons across subsequent sentences is a good metric to characterize the coherence of a given body of text. We propose a new Sentence/Skeleton Similarity Network (SSN) for modeling coherence across pairs of sentences, and show that this network performs much better than baseline similarity techniques like cosine similarity and Euclidean distance. Although skeletons appear to be promising candidates for modeling coherence, our results show that sentence-level models outperform those on skeletons for evaluating textual coherence, thus indicating that the current state-of-the-art coherence modeling techniques are going in the right direction by dealing with sentences rather than their sub-parts.
     </details>
-- [PRISM: LLM-Guided Semantic Clustering for High-Precision Topics](https://arxiv.org/pdf/2604.03180)
-  - Authors: Connor Douglas, Utkucan Balci, Joseph Aylett-Bullock
-  - <details>
-    <summary>Abstract</summary>
-
-    In this paper, we propose Precision-Informed Semantic Modeling (PRISM), a structured topic modeling framework combining the benefits of rich representations captured by LLMs with the low cost and interpretability of latent semantic clustering methods. PRISM fine-tunes a sentence encoding model using a sparse set of LLM- provided labels on samples drawn from some corpus of interest. We segment this embedding space with thresholded clustering, yielding clusters that separate closely related topics within some narrow domain. Across multiple corpora, PRISM improves topic separability over state-of-the-art local topic models and even over clustering on large, frontier embedding models while requiring only a small number of LLM queries to train. This work contributes to several research streams by providing (i) a student-teacher pipeline to distill sparse LLM supervision into a lightweight model for topic discovery; (ii) an analysis of the efficacy of sampling strategies to improve local geometry for cluster separability; and (iii) an effective approach for web-scale text analysis, enabling researchers and practitioners to track nuanced claims and subtopics online with an interpretable, locally deployable framework.
-    </details>
 - [Prompt Compression in the Wild: Measuring Latency, Rate Adherence, and Quality for Faster LLM Inference](https://arxiv.org/pdf/2604.02985)
   - Authors: Cornelius Kummer, Lena Jurkschat, Michael Färber, Sahar Vahdati
   - <details>
     <summary>Abstract</summary>
 
     With the wide adoption of language models for IR -- and specifically RAG systems -- the latency of the underlying LLM becomes a crucial bottleneck, since the long contexts of retrieved passages lead large prompts and therefore, compute increase. Prompt compression, which reduces the size of input prompts while aiming to preserve performance on downstream tasks, has established itself as a cost-effective and low-latency method for accelerating inference in large language models. However, its usefulness depends on whether the additional preprocessing time during generation is offset by faster decoding. We present the first systematic, large-scale study of this trade-off, with thousands of runs and 30,000 queries across several open-source LLMs and three GPU classes. Our evaluation separates compression overhead from decoding latency while tracking output quality and memory usage. LLMLingua achieves up to 18% end-to-end speed-ups, when prompt length, compression ratio, and hardware capacity are well matched, with response quality remaining statistically unchanged across summarization, code generation, and question answering tasks. Outside this operating window, however, the compression step dominates and cancels out the gains. We also show that effective compression can reduce memory usage enough to offload workloads from data center GPUs to commodity cards, with only a 0.3s increase in latency. Our open-source profiler predicts the latency break-even point for each model-hardware setup, providing practical guidance on when prompt compression delivers real-world benefits.
+    </details>
+- [On the Geometric Structure of Layer Updates in Deep Language Models](https://arxiv.org/pdf/2604.02459)
+  - Authors: Jun-Sik Yoo
+  - <details>
+    <summary>Abstract</summary>
+
+    We study the geometric structure of layer updates in deep language models. Rather than analyzing what information is encoded in intermediate representations, we ask how representations change from one layer to the next. We show that layerwise updates admit a decomposition into a dominant tokenwise component and a residual that is not captured by restricted tokenwise function classes. Across multiple architectures, including Transformers and state-space models, we find that the full layer update is almost perfectly aligned with the tokenwise component, while the residual exhibits substantially weaker alignment, larger angular deviation, and significantly lower projection onto the dominant tokenwise subspace. This indicates that the residual is not merely a small correction, but a geometrically distinct component of the transformation. This geometric separation has functional consequences: approximation error under the restricted tokenwise model is strongly associated with output perturbation, with Spearman correlations often exceeding 0.7 and reaching up to 0.95 in larger models. Together, these results suggest that most layerwise updates behave like structured reparameterizations along a dominant direction, while functionally significant computation is concentrated in a geometrically distinct residual component. Our framework provides a simple, architecture-agnostic method for probing the geometric and functional structure of layer updates in modern language models.
+    </details>
+
+## Retrieval, Knowledge, and RAG (7 papers, 8.97%)
+
+- [Beyond the Parameters: A Technical Survey of Contextual Enrichment in Large Language Models: From In-Context Prompting to Causal Retrieval-Augmented Generation](https://arxiv.org/pdf/2604.03174)
+  - Authors: Prakhar Bansal, Shivangi Agarwal
+  - <details>
+    <summary>Abstract</summary>
+
+    Large language models (LLMs) encode vast world knowledge in their parameters, yet they remain fundamentally limited by static knowledge, finite context windows, and weakly structured causal reasoning. This survey provides a unified account of augmentation strategies along a single axis: the degree of structured context supplied at inference time. We cover in-context learning and prompt engineering, Retrieval-Augmented Generation (RAG), GraphRAG, and CausalRAG. Beyond conceptual comparison, we provide a transparent literature-screening protocol, a claim-audit framework, and a structured cross-paper evidence synthesis that distinguishes higher-confidence findings from emerging results. The paper concludes with a deployment-oriented decision framework and concrete research priorities for trustworthy retrieval-augmented NLP.
+    </details>
+- [Domain-Adapted Retrieval for In-Context Annotation of Pedagogical Dialogue Acts](https://arxiv.org/pdf/2604.03127)
+  - Authors: Jinsook Lee, Kirk Vanacore, Zhuqian Zhou, Bakhtawar Ahtisham, Rene F. Kizilcec
+  - <details>
+    <summary>Abstract</summary>
+
+    Automated annotation of pedagogical dialogue is a high-stakes task where LLMs often fail without sufficient domain grounding. We present a domain-adapted RAG pipeline for tutoring move annotation. Rather than fine-tuning the generative model, we adapt retrieval by fine-tuning a lightweight embedding model on tutoring corpora and indexing dialogues at the utterance level to retrieve labeled few-shot demonstrations. Evaluated across two real tutoring dialogue datasets (TalkMoves and Eedi) and three LLM backbones (GPT-5.2, Claude Sonnet 4.6, Qwen3-32b), our best configuration achieves Cohen's $κ$ of 0.526-0.580 on TalkMoves and 0.659-0.743 on Eedi, substantially outperforming no-retrieval baselines ($κ= 0.275$-$0.413$ and $0.160$-$0.410$). An ablation study reveals that utterance-level indexing, rather than embedding quality alone, is the primary driver of these gains, with top-1 label match rates improving from 39.7\% to 62.0\% on TalkMoves and 52.9\% to 73.1\% on Eedi under domain-adapted retrieval. Retrieval also corrects systematic label biases present in zero-shot prompting and yields the largest improvements for rare and context-dependent labels. These findings suggest that adapting the retrieval component alone is a practical and effective path toward expert-level pedagogical dialogue annotation while keeping the generative model frozen.
+    </details>
+- [LogicPoison: Logical Attacks on Graph Retrieval-Augmented Generation](https://arxiv.org/pdf/2604.02954)
+  - Authors: Yilin Xiao, Jin Chen, Qinggang Zhang, Yujing Zhang, Chuang Zhou, Longhao Yang, Lingfei Ren, Xin Yang, Xiao Huang
+  - <details>
+    <summary>Abstract</summary>
+
+    Graph-based Retrieval-Augmented Generation (GraphRAG) enhances the reasoning capabilities of Large Language Models (LLMs) by grounding their responses in structured knowledge graphs. Leveraging community detection and relation filtering techniques, GraphRAG systems demonstrate inherent resistance to traditional RAG attacks, such as text poisoning and prompt injection. However, in this paper, we find that the security of GraphRAG systems fundamentally relies on the topological integrity of the underlying graph, which can be undermined by implicitly corrupting the logical connections, without altering surface-level text semantics. To exploit this vulnerability, we propose \textsc{LogicPoison}, a novel attack framework that targets logical reasoning rather than injecting false contents. Specifically, \textsc{LogicPoison} employs a type-preserving entity swapping mechanism to perturb both global logic hubs for disrupting overall graph connectivity and query-specific reasoning bridges for severing essential multi-hop inference paths. This approach effectively reroutes valid reasoning into dead ends while maintaining surface-level textual plausibility. Comprehensive experiments across multiple benchmarks demonstrate that \textsc{LogicPoison} successfully bypasses GraphRAG's defenses, significantly degrading performance and outperforming state-of-the-art baselines in both effectiveness and stealth. Our code is available at \textcolor{blue}https://github.com/Jord8061/logicPoison.
+    </details>
+- [GRADE: Probing Knowledge Gaps in LLMs through Gradient Subspace Dynamics](https://arxiv.org/pdf/2604.02830)
+  - Authors: Yujing Wang, Yuanbang Liang, Yukun Lai, Hainan Zhang, Hanqi Yan
+  - <details>
+    <summary>Abstract</summary>
+
+    Detecting whether a model's internal knowledge is sufficient to correctly answer a given question is a fundamental challenge in deploying responsible LLMs. In addition to verbalising the confidence by LLM self-report, more recent methods explore the model internals, such as the hidden states of the response tokens to capture how much knowledge is activated. We argue that such activated knowledge may not align with what the query requires, e.g., capturing the stylistic and length-related features that are uninformative for answering the query. To fill the gap, we propose GRADE (Gradient Dynamics for knowledge gap detection), which quantifies the knowledge gap via the cross-layer rank ratio of the gradient to that of the corresponding hidden state subspace. This is motivated by the property of gradients as estimators of the required knowledge updates for a given target. We validate \modelname{} on six benchmarks, demonstrating its effectiveness and robustness to input perturbations. In addition, we present a case study showing how the gradient chain can generate interpretable explanations of knowledge gaps for long-form answers.
+    </details>
+- [When Modalities Remember: Continual Learning for Multimodal Knowledge Graphs](https://arxiv.org/pdf/2604.02778)
+  - Authors: Linyu Li, Zhi Jin, Yichi Zhang, Dongming Jin, Yuanpeng He, Haoran Duan, Gadeng Luosang, Nyima Tashi
+  - <details>
+    <summary>Abstract</summary>
+
+    Real-world multimodal knowledge graphs (MMKGs) are dynamic, with new entities, relations, and multimodal knowledge emerging over time. Existing continual knowledge graph reasoning (CKGR) methods focus on structural triples and cannot fully exploit multimodal signals from new entities. Existing multimodal knowledge graph reasoning (MMKGR) methods, however, usually assume static graphs and suffer catastrophic forgetting as graphs evolve. To address this gap, we present a systematic study of continual multimodal knowledge graph reasoning (CMMKGR). We construct several continual multimodal knowledge graph benchmarks from existing MMKG datasets and propose MRCKG, a new CMMKGR model. Specifically, MRCKG employs a multimodal-structural collaborative curriculum to schedule progressive learning based on the structural connectivity of new triples to the historical graph and their multimodal compatibility. It also introduces a cross-modal knowledge preservation mechanism to mitigate forgetting through entity representation stability, relational semantic consistency, and modality anchoring. In addition, a multimodal contrastive replay scheme with a two-stage optimization strategy reinforces learned knowledge via multimodal importance sampling and representation alignment. Experiments on multiple datasets show that MRCKG preserves previously learned multimodal knowledge while substantially improving the learning of new knowledge.
+    </details>
+- [Principled and Scalable Diversity-Aware Retrieval via Cardinality-Constrained Binary Quadratic Programming](https://arxiv.org/pdf/2604.02554)
+  - Authors: Qiheng Lu, Nicholas D. Sidiropoulos
+  - <details>
+    <summary>Abstract</summary>
+
+    Diversity-aware retrieval is essential for Retrieval-Augmented Generation (RAG), yet existing methods lack theoretical guarantees and face scalability issues as the number of retrieved passages $k$ increases. We propose a principled formulation of diversity retrieval as a cardinality-constrained binary quadratic programming (CCBQP), which explicitly balances relevance and semantic diversity through an interpretable trade-off parameter. Inspired by recent advances in combinatorial optimization, we develop a non-convex tight continuous relaxation and a Frank--Wolfe based algorithm with landscape analysis and convergence guarantees. Extensive experiments demonstrate that our method consistently dominates baselines on the relevance-diversity Pareto frontier, while achieving significant speedup.
+    </details>
+- [PRISM: LLM-Guided Semantic Clustering for High-Precision Topics](https://arxiv.org/pdf/2604.03180)
+  - Authors: Connor Douglas, Utkucan Balci, Joseph Aylett-Bullock
+  - <details>
+    <summary>Abstract</summary>
+
+    In this paper, we propose Precision-Informed Semantic Modeling (PRISM), a structured topic modeling framework combining the benefits of rich representations captured by LLMs with the low cost and interpretability of latent semantic clustering methods. PRISM fine-tunes a sentence encoding model using a sparse set of LLM- provided labels on samples drawn from some corpus of interest. We segment this embedding space with thresholded clustering, yielding clusters that separate closely related topics within some narrow domain. Across multiple corpora, PRISM improves topic separability over state-of-the-art local topic models and even over clustering on large, frontier embedding models while requiring only a small number of LLM queries to train. This work contributes to several research streams by providing (i) a student-teacher pipeline to distill sparse LLM supervision into a lightweight model for topic discovery; (ii) an analysis of the efficacy of sampling strategies to improve local geometry for cluster separability; and (iii) an effective approach for web-scale text analysis, enabling researchers and practitioners to track nuanced claims and subtopics online with an interpretable, locally deployable framework.
     </details>
 
 ## Agents and Planning (5 papers, 6.41%)
@@ -410,6 +468,13 @@
 
 ## Domain Applications (5 papers, 6.41%)
 
+- [How Annotation Trains Annotators: Competence Development in Social Influence Recognition](https://arxiv.org/pdf/2604.02951)
+  - Authors: Maciej Markiewicz, Beata Bajcar, Wiktoria Mieleszczenko-Kowszewicz, Aleksander Szczęsny, Tomasz Adamczyk, Grzegorz Chodak, Karolina Ostrowska, Aleksandra Sawczuk, Jolanta Babiak, Jagoda Szklarczyk, Przemysław Kazienko
+  - <details>
+    <summary>Abstract</summary>
+
+    Human data annotation, especially when involving experts, is often treated as an objective reference. However, many annotation tasks are inherently subjective, and annotators' judgments may evolve over time. This study investigates changes in the quality of annotators' work from a competence perspective during a process of social influence recognition. The study involved 25 annotators from five different groups, including both experts and non-experts, who annotated a dataset of 1,021 dialogues with 20 social influence techniques, along with intentions, reactions, and consequences. An initial subset of 150 texts was annotated twice - before and after the main annotation process - to enable comparison. To measure competence shifts, we combined qualitative and quantitative analyses of the annotated data, semi-structured interviews with annotators, self-assessment surveys, and Large Language Model training and evaluation on the comparison dataset. The results indicate a significant increase in annotators' self-perceived competence and confidence. Moreover, observed changes in data quality suggest that the annotation process may enhance annotator competence and that this effect is more pronounced in expert groups. The observed shifts in annotator competence have a visible impact on the performance of LLMs trained on their annotated data.
+    </details>
 - [Train Yourself as an LLM: Exploring Effects of AI Literacy on Persuasion via Role-playing LLM Training](https://arxiv.org/pdf/2604.02637)
   - Authors: Qihui Fan, Min Ge, Chenyan Jia, Weiyan Shi
   - <details>
@@ -431,57 +496,12 @@
 
     Decoding speech information from scalp EEG remains difficult due to low SNR and spatial blurring. We present CIPHER (Conformer-based Inference of Phonemes from High-density EEG Representations), a dual-pathway model using (i) ERP features and (ii) broadband DDA coefficients. On OpenNeuro ds006104 (24 participants, two studies with concurrent TMS), binary articulatory tasks reach near-ceiling performance but are highly confound-vulnerable (acoustic onset separability and TMS-target blocking). On the primary 11-class CVC phoneme task under full Study 2 LOSO (16 held-out subjects), performance is substantially lower (real-word WER: ERP 0.671 +/- 0.080, DDA 0.688 +/- 0.096, indicating limited fine-grained discriminability. We therefore position this work as a benchmark and feature-comparison study rather than an EEG-to-text system, and we constrain neural-representation claims to confound-controlled evidence.
     </details>
-- [Using LLM-as-a-Judge/Jury to Advance Scalable, Clinically-Validated Safety Evaluations of Model Responses to Users Demonstrating Psychosis](https://arxiv.org/pdf/2604.02359)
-  - Authors: May Lynn Reese, Markela Zeneli, Mindy Ng, Jacob Haimes, Andreea Damien, Elizabeth Stade
-  - <details>
-    <summary>Abstract</summary>
-
-    General-purpose Large Language Models (LLMs) are becoming widely adopted by people for mental health support. Yet emerging evidence suggests there are significant risks associated with high-frequency use, particularly for individuals suffering from psychosis, as LLMs may reinforce delusions and hallucinations. Existing evaluations of LLMs in mental health contexts are limited by a lack of clinical validation and scalability of assessment. To address these issues, this research focuses on psychosis as a critical condition for LLM safety evaluation by (1) developing and validating seven clinician-informed safety criteria, (2) constructing a human-consensus dataset, and (3) testing automated assessment using an LLM as an evaluator (LLM-as-a-Judge) or taking the majority vote of several LLM judges (LLM-as-a-Jury). Results indicate that LLM-as-a-Judge aligns closely with the human consensus (Cohen's $κ_{\text{human} \times \text{gemini}} = 0.75$, $κ_{\text{human} \times \text{qwen}} = 0.68$, $κ_{\text{human} \times \text{kimi}} = 0.56$) and that the best judge slightly outperforms LLM-as-a-Jury (Cohen's $κ_{\text{human} \times \text{jury}} = 0.74$). Overall, these findings have promising implications for clinically grounded, scalable methods in LLM safety evaluations for mental health contexts.
-    </details>
 - [Measuring What Cannot Be Surveyed: LLMs as Instruments for Latent Cognitive Variables in Labor Economics](https://arxiv.org/pdf/2604.02403)
   - Authors: Cristian Espinal Maya
   - <details>
     <summary>Abstract</summary>
 
     This paper establishes the theoretical and practical foundations for using Large Language Models (LLMs) as measurement instruments for latent economic variables -- specifically variables that describe the cognitive content of occupational tasks at a level of granularity not achievable with existing survey instruments. I formalize four conditions under which LLM-generated scores constitute valid instruments: semantic exogeneity, construct relevance, monotonicity, and model invariance. I then apply this framework to the Augmented Human Capital Index (AHC_o), constructed from 18,796 O*NET task statements scored by Claude Haiku 4.5, and validated against six existing AI exposure indices. The index shows strong convergent validity (r = 0.85 with Eloundou GPT-gamma, r = 0.79 with Felten AIOE) and discriminant validity. Principal component analysis confirms that AI-related occupational measures span two distinct dimensions -- augmentation and substitution. Inter-rater reliability across two LLM models (n = 3,666 paired scores) yields Pearson r = 0.76 and Krippendorff's alpha = 0.71. Prompt sensitivity analysis across four alternative framings shows that task-level rankings are robust. Obviously Related Instrumental Variables (ORIV) estimation recovers coefficients 25% larger than OLS, consistent with classical measurement error attenuation. The methodology generalizes beyond labor economics to any domain where semantic content must be quantified at scale.
-    </details>
-
-## Generative Foundations (5 papers, 6.41%)
-
-- [Learning the Signature of Memorization in Autoregressive Language Models](https://arxiv.org/pdf/2604.03199)
-  - Authors: David Ilić, Kostadin Cvejoski, David Stanojević, Evgeny Grigorenko
-  - <details>
-    <summary>Abstract</summary>
-
-    All prior membership inference attacks for fine-tuned language models use hand-crafted heuristics (e.g., loss thresholding, Min-K\%, reference calibration), each bounded by the designer's intuition. We introduce the first transferable learned attack, enabled by the observation that fine-tuning any model on any corpus yields unlimited labeled data, since membership is known by construction. This removes the shadow model bottleneck and brings membership inference into the deep learning era: learning what matters rather than designing it, with generalization through training diversity and scale. We discover that fine-tuning language models produces an invariant signature of memorization detectable across architectural families and data domains. We train a membership inference classifier exclusively on transformer-based models. It transfers zero-shot to Mamba (state-space), RWKV-4 (linear attention), and RecurrentGemma (gated recurrence), achieving 0.963, 0.972, and 0.936 AUC respectively. Each evaluation combines an architecture and dataset never seen during training, yet all three exceed performance on held-out transformers (0.908 AUC). These four families share no computational mechanisms, their only commonality is gradient descent on cross-entropy loss. Even simple likelihood-based methods exhibit strong transfer, confirming the signature exists independently of the detection method. Our method, Learned Transfer MIA (LT-MIA), captures this signal most effectively by reframing membership inference as sequence classification over per-token distributional statistics. On transformers, LT-MIA achieves 2.8$\times$ higher TPR at 0.1\% FPR than the strongest baseline. The method also transfers to code (0.865 AUC) despite training only on natural language texts. Code and trained classifier available at https://github.com/JetBrains-Research/learned-mia.
-    </details>
-- [Dependency-Guided Parallel Decoding in Discrete Diffusion Language Models](https://arxiv.org/pdf/2604.02560)
-  - Authors: Liran Ringel, Ameen Ali, Yaniv Romano
-  - <details>
-    <summary>Abstract</summary>
-
-    Discrete diffusion language models (dLLMs) accelerate text generation by unmasking multiple tokens in parallel. However, parallel decoding introduces a distributional mismatch: it approximates the joint conditional using a fully factorized product of per-token marginals, which degrades output quality when selected tokens are strongly dependent. We propose DEMASK (DEpendency-guided unMASKing), a lightweight dependency predictor that attaches to the final hidden states of a dLLM. In a single forward pass, it estimates pairwise conditional influences between masked positions. Using these predictions, a greedy selection algorithm identifies positions with bounded cumulative dependency for simultaneous unmasking. Under a sub-additivity assumption, we prove this bounds the total variation distance between our parallel sampling and the model's joint. Empirically, DEMASK achieves 1.7-2.2$\times$ speedup on Dream-7B while matching or improving accuracy compared to confidence-based and KL-based baselines.
-    </details>
-- [InCoder-32B-Thinking: Industrial Code World Model for Thinking](https://arxiv.org/pdf/2604.03144)
-  - Authors: Jian Yang, Wei Zhang, Jiajun Wu, Junhang Cheng, Tuney Zheng, Fanglin Xu, Weicheng Gu, Lin Jing, Yaxin Du, Joseph Li, Yizhi Li, Yan Xing, Chuan Hao, Ran Tao, Ruihao Gong, Aishan Liu, Zhoujun Li, Mingjie Tang, Chenghua Lin, Siheng Chen, Wayne Xin Zhao, Xianglong Liu, Ming Zhou, Bryan Dai, Weifeng Lv
-  - <details>
-    <summary>Abstract</summary>
-
-    Industrial software development across chip design, GPU optimization, and embedded systems lacks expert reasoning traces showing how engineers reason about hardware constraints and timing semantics. In this work, we propose InCoder-32B-Thinking, trained on the data from the Error-driven Chain-of-Thought (ECoT) synthesis framework with an industrial code world model (ICWM) to generate reasoning traces. Specifically, ECoT generates reasoning chains by synthesizing the thinking content from multi-turn dialogue with environmental error feedback, explicitly modeling the error-correction process. ICWM is trained on domain-specific execution traces from Verilog simulation, GPU profiling, etc., learns the causal dynamics of how code affects hardware behavior, and enables self-verification by predicting execution outcomes before actual compilation. All synthesized reasoning traces are validated through domain toolchains, creating training data matching the natural reasoning depth distribution of industrial tasks. Evaluation on 14 general (81.3% on LiveCodeBench v5) and 9 industrial benchmarks (84.0% in CAD-Coder and 38.0% on KernelBench) shows InCoder-32B-Thinking achieves top-tier open-source results across all domains.GPU Optimization
-    </details>
-- [Generative Frontiers: Why Evaluation Matters for Diffusion Language Models](https://arxiv.org/pdf/2604.02718)
-  - Authors: Patrick Pynadath, Jiaxin Shi, Ruqi Zhang
-  - <details>
-    <summary>Abstract</summary>
-
-    Diffusion language models have seen exciting recent progress, offering far more flexibility in generative trajectories than autoregressive models. This flexibility has motivated a growing body of research into new approaches to diffusion language modeling, which typically begins at the scale of GPT-2 small (150 million parameters). However, these advances introduce new issues with evaluation methodology. In this technical note, we discuss the limitations of current methodology and propose principled augmentations to ensure reliable comparisons. We first discuss why OpenWebText has become the standard benchmark, and why alternatives such as LM1B are inherently less meaningful. We then discuss the limitations of likelihood evaluations for diffusion models, and explain why relying on generative perplexity alone as a metric can lead to uninformative results. To address this, we show that generative perplexity and entropy are two components of the KL divergence to a reference distribution. This decomposition explains generative perplexity's sensitivity to entropy, and naturally suggests generative frontiers as a principled method for evaluating model generative quality. We conclude with empirical observations on model quality at this scale. We include a blog post with interactive content to illustrate the argument at https://patrickpynadath1.github.io/blog/eval_methodology/.
-    </details>
-- [Not All Denoising Steps Are Equal: Model Scheduling for Faster Masked Diffusion Language Models](https://arxiv.org/pdf/2604.02340)
-  - Authors: Ivan Sedykh, Nikita Sorokin, Valentin Malykh
-  - <details>
-    <summary>Abstract</summary>
-
-    Recent advances in masked diffusion language models (MDLMs) narrow the quality gap to autoregressive LMs, but their sampling remains expensive because generation requires many full-sequence denoising passes with a large Transformer and, unlike autoregressive decoding, cannot benefit from KV caching. In this work, we exploit the flexibility of the diffusion framework and study model scheduling, where a smaller MDLM replaces the full model at a subset of denoising steps. On OpenWebText, we show that early and late denoising steps are substantially more robust to such replacement than middle steps, enabling up to a 17% reduction in FLOPs with only modest degradation in generative perplexity. We support these findings with a step-importance analysis based on loss and KL divergence between small and large models across timesteps, as well as an exhaustive search over coarse step segments, both of which identify the middle of the diffusion trajectory as most sensitive. Our results suggest that simple, architecture-agnostic scheduling rules can significantly accelerate MDLM sampling while largely preserving generation quality as measured by generative perplexity.
     </details>
 
 ## Multimodal Understanding and Vision (5 papers, 6.41%)
@@ -522,45 +542,38 @@
     MoE-PEFT methods combine Mixture of Experts with parameter-efficient fine-tuning for multi-task adaptation, but require separate adapters per expert causing trainable parameters to scale linearly with expert count and limiting applicability to adapter-based architectures. We propose LiME (Lightweight Mixture of Experts), which achieves expert specialization through lightweight modulation rather than adapter replication. Instead of separate adapters, LiME uses a single shared PEFT module and modulates its output with lightweight expert vectors, reducing expert parameters while generalizing to any PEFT method. Notably, LiME introduces zero-parameter routing by leveraging existing frozen and adapted representations eliminating learned router parameters typically required per layer. Theoretically, we prove that (i) more experts preserve more task-relevant information and (ii) modulation approximates full expert-specific PEFT with bounded error. LiME further incorporates n-gram windowed routing and adaptive expert selection (Auto Top-K) based on routing confidence. Experiments on MMT-47, a multimodal multi-task benchmark with 47 tasks spanning text, image, and video, demonstrate that LiME achieves competitive or superior performance while using up to 4x fewer trainable parameters and up to 29% faster training compared to corresponding MoE-PEFT baselines.
     </details>
 
-## Retrieval, Knowledge, and RAG (5 papers, 6.41%)
+## Generative Foundations (4 papers, 5.13%)
 
-- [Beyond the Parameters: A Technical Survey of Contextual Enrichment in Large Language Models: From In-Context Prompting to Causal Retrieval-Augmented Generation](https://arxiv.org/pdf/2604.03174)
-  - Authors: Prakhar Bansal, Shivangi Agarwal
+- [Dependency-Guided Parallel Decoding in Discrete Diffusion Language Models](https://arxiv.org/pdf/2604.02560)
+  - Authors: Liran Ringel, Ameen Ali, Yaniv Romano
   - <details>
     <summary>Abstract</summary>
 
-    Large language models (LLMs) encode vast world knowledge in their parameters, yet they remain fundamentally limited by static knowledge, finite context windows, and weakly structured causal reasoning. This survey provides a unified account of augmentation strategies along a single axis: the degree of structured context supplied at inference time. We cover in-context learning and prompt engineering, Retrieval-Augmented Generation (RAG), GraphRAG, and CausalRAG. Beyond conceptual comparison, we provide a transparent literature-screening protocol, a claim-audit framework, and a structured cross-paper evidence synthesis that distinguishes higher-confidence findings from emerging results. The paper concludes with a deployment-oriented decision framework and concrete research priorities for trustworthy retrieval-augmented NLP.
+    Discrete diffusion language models (dLLMs) accelerate text generation by unmasking multiple tokens in parallel. However, parallel decoding introduces a distributional mismatch: it approximates the joint conditional using a fully factorized product of per-token marginals, which degrades output quality when selected tokens are strongly dependent. We propose DEMASK (DEpendency-guided unMASKing), a lightweight dependency predictor that attaches to the final hidden states of a dLLM. In a single forward pass, it estimates pairwise conditional influences between masked positions. Using these predictions, a greedy selection algorithm identifies positions with bounded cumulative dependency for simultaneous unmasking. Under a sub-additivity assumption, we prove this bounds the total variation distance between our parallel sampling and the model's joint. Empirically, DEMASK achieves 1.7-2.2$\times$ speedup on Dream-7B while matching or improving accuracy compared to confidence-based and KL-based baselines.
     </details>
-- [Domain-Adapted Retrieval for In-Context Annotation of Pedagogical Dialogue Acts](https://arxiv.org/pdf/2604.03127)
-  - Authors: Jinsook Lee, Kirk Vanacore, Zhuqian Zhou, Bakhtawar Ahtisham, Rene F. Kizilcec
+- [InCoder-32B-Thinking: Industrial Code World Model for Thinking](https://arxiv.org/pdf/2604.03144)
+  - Authors: Jian Yang, Wei Zhang, Jiajun Wu, Junhang Cheng, Tuney Zheng, Fanglin Xu, Weicheng Gu, Lin Jing, Yaxin Du, Joseph Li, Yizhi Li, Yan Xing, Chuan Hao, Ran Tao, Ruihao Gong, Aishan Liu, Zhoujun Li, Mingjie Tang, Chenghua Lin, Siheng Chen, Wayne Xin Zhao, Xianglong Liu, Ming Zhou, Bryan Dai, Weifeng Lv
   - <details>
     <summary>Abstract</summary>
 
-    Automated annotation of pedagogical dialogue is a high-stakes task where LLMs often fail without sufficient domain grounding. We present a domain-adapted RAG pipeline for tutoring move annotation. Rather than fine-tuning the generative model, we adapt retrieval by fine-tuning a lightweight embedding model on tutoring corpora and indexing dialogues at the utterance level to retrieve labeled few-shot demonstrations. Evaluated across two real tutoring dialogue datasets (TalkMoves and Eedi) and three LLM backbones (GPT-5.2, Claude Sonnet 4.6, Qwen3-32b), our best configuration achieves Cohen's $κ$ of 0.526-0.580 on TalkMoves and 0.659-0.743 on Eedi, substantially outperforming no-retrieval baselines ($κ= 0.275$-$0.413$ and $0.160$-$0.410$). An ablation study reveals that utterance-level indexing, rather than embedding quality alone, is the primary driver of these gains, with top-1 label match rates improving from 39.7\% to 62.0\% on TalkMoves and 52.9\% to 73.1\% on Eedi under domain-adapted retrieval. Retrieval also corrects systematic label biases present in zero-shot prompting and yields the largest improvements for rare and context-dependent labels. These findings suggest that adapting the retrieval component alone is a practical and effective path toward expert-level pedagogical dialogue annotation while keeping the generative model frozen.
+    Industrial software development across chip design, GPU optimization, and embedded systems lacks expert reasoning traces showing how engineers reason about hardware constraints and timing semantics. In this work, we propose InCoder-32B-Thinking, trained on the data from the Error-driven Chain-of-Thought (ECoT) synthesis framework with an industrial code world model (ICWM) to generate reasoning traces. Specifically, ECoT generates reasoning chains by synthesizing the thinking content from multi-turn dialogue with environmental error feedback, explicitly modeling the error-correction process. ICWM is trained on domain-specific execution traces from Verilog simulation, GPU profiling, etc., learns the causal dynamics of how code affects hardware behavior, and enables self-verification by predicting execution outcomes before actual compilation. All synthesized reasoning traces are validated through domain toolchains, creating training data matching the natural reasoning depth distribution of industrial tasks. Evaluation on 14 general (81.3% on LiveCodeBench v5) and 9 industrial benchmarks (84.0% in CAD-Coder and 38.0% on KernelBench) shows InCoder-32B-Thinking achieves top-tier open-source results across all domains.GPU Optimization
     </details>
-- [LogicPoison: Logical Attacks on Graph Retrieval-Augmented Generation](https://arxiv.org/pdf/2604.02954)
-  - Authors: Yilin Xiao, Jin Chen, Qinggang Zhang, Yujing Zhang, Chuang Zhou, Longhao Yang, Lingfei Ren, Xin Yang, Xiao Huang
+- [Generative Frontiers: Why Evaluation Matters for Diffusion Language Models](https://arxiv.org/pdf/2604.02718)
+  - Authors: Patrick Pynadath, Jiaxin Shi, Ruqi Zhang
   - <details>
     <summary>Abstract</summary>
 
-    Graph-based Retrieval-Augmented Generation (GraphRAG) enhances the reasoning capabilities of Large Language Models (LLMs) by grounding their responses in structured knowledge graphs. Leveraging community detection and relation filtering techniques, GraphRAG systems demonstrate inherent resistance to traditional RAG attacks, such as text poisoning and prompt injection. However, in this paper, we find that the security of GraphRAG systems fundamentally relies on the topological integrity of the underlying graph, which can be undermined by implicitly corrupting the logical connections, without altering surface-level text semantics. To exploit this vulnerability, we propose \textsc{LogicPoison}, a novel attack framework that targets logical reasoning rather than injecting false contents. Specifically, \textsc{LogicPoison} employs a type-preserving entity swapping mechanism to perturb both global logic hubs for disrupting overall graph connectivity and query-specific reasoning bridges for severing essential multi-hop inference paths. This approach effectively reroutes valid reasoning into dead ends while maintaining surface-level textual plausibility. Comprehensive experiments across multiple benchmarks demonstrate that \textsc{LogicPoison} successfully bypasses GraphRAG's defenses, significantly degrading performance and outperforming state-of-the-art baselines in both effectiveness and stealth. Our code is available at \textcolor{blue}https://github.com/Jord8061/logicPoison.
+    Diffusion language models have seen exciting recent progress, offering far more flexibility in generative trajectories than autoregressive models. This flexibility has motivated a growing body of research into new approaches to diffusion language modeling, which typically begins at the scale of GPT-2 small (150 million parameters). However, these advances introduce new issues with evaluation methodology. In this technical note, we discuss the limitations of current methodology and propose principled augmentations to ensure reliable comparisons. We first discuss why OpenWebText has become the standard benchmark, and why alternatives such as LM1B are inherently less meaningful. We then discuss the limitations of likelihood evaluations for diffusion models, and explain why relying on generative perplexity alone as a metric can lead to uninformative results. To address this, we show that generative perplexity and entropy are two components of the KL divergence to a reference distribution. This decomposition explains generative perplexity's sensitivity to entropy, and naturally suggests generative frontiers as a principled method for evaluating model generative quality. We conclude with empirical observations on model quality at this scale. We include a blog post with interactive content to illustrate the argument at https://patrickpynadath1.github.io/blog/eval_methodology/.
     </details>
-- [When Modalities Remember: Continual Learning for Multimodal Knowledge Graphs](https://arxiv.org/pdf/2604.02778)
-  - Authors: Linyu Li, Zhi Jin, Yichi Zhang, Dongming Jin, Yuanpeng He, Haoran Duan, Gadeng Luosang, Nyima Tashi
+- [Not All Denoising Steps Are Equal: Model Scheduling for Faster Masked Diffusion Language Models](https://arxiv.org/pdf/2604.02340)
+  - Authors: Ivan Sedykh, Nikita Sorokin, Valentin Malykh
   - <details>
     <summary>Abstract</summary>
 
-    Real-world multimodal knowledge graphs (MMKGs) are dynamic, with new entities, relations, and multimodal knowledge emerging over time. Existing continual knowledge graph reasoning (CKGR) methods focus on structural triples and cannot fully exploit multimodal signals from new entities. Existing multimodal knowledge graph reasoning (MMKGR) methods, however, usually assume static graphs and suffer catastrophic forgetting as graphs evolve. To address this gap, we present a systematic study of continual multimodal knowledge graph reasoning (CMMKGR). We construct several continual multimodal knowledge graph benchmarks from existing MMKG datasets and propose MRCKG, a new CMMKGR model. Specifically, MRCKG employs a multimodal-structural collaborative curriculum to schedule progressive learning based on the structural connectivity of new triples to the historical graph and their multimodal compatibility. It also introduces a cross-modal knowledge preservation mechanism to mitigate forgetting through entity representation stability, relational semantic consistency, and modality anchoring. In addition, a multimodal contrastive replay scheme with a two-stage optimization strategy reinforces learned knowledge via multimodal importance sampling and representation alignment. Experiments on multiple datasets show that MRCKG preserves previously learned multimodal knowledge while substantially improving the learning of new knowledge.
-    </details>
-- [Principled and Scalable Diversity-Aware Retrieval via Cardinality-Constrained Binary Quadratic Programming](https://arxiv.org/pdf/2604.02554)
-  - Authors: Qiheng Lu, Nicholas D. Sidiropoulos
-  - <details>
-    <summary>Abstract</summary>
-
-    Diversity-aware retrieval is essential for Retrieval-Augmented Generation (RAG), yet existing methods lack theoretical guarantees and face scalability issues as the number of retrieved passages $k$ increases. We propose a principled formulation of diversity retrieval as a cardinality-constrained binary quadratic programming (CCBQP), which explicitly balances relevance and semantic diversity through an interpretable trade-off parameter. Inspired by recent advances in combinatorial optimization, we develop a non-convex tight continuous relaxation and a Frank--Wolfe based algorithm with landscape analysis and convergence guarantees. Extensive experiments demonstrate that our method consistently dominates baselines on the relevance-diversity Pareto frontier, while achieving significant speedup.
+    Recent advances in masked diffusion language models (MDLMs) narrow the quality gap to autoregressive LMs, but their sampling remains expensive because generation requires many full-sequence denoising passes with a large Transformer and, unlike autoregressive decoding, cannot benefit from KV caching. In this work, we exploit the flexibility of the diffusion framework and study model scheduling, where a smaller MDLM replaces the full model at a subset of denoising steps. On OpenWebText, we show that early and late denoising steps are substantially more robust to such replacement than middle steps, enabling up to a 17% reduction in FLOPs with only modest degradation in generative perplexity. We support these findings with a step-importance analysis based on loss and KL divergence between small and large models across timesteps, as well as an exhaustive search over coarse step segments, both of which identify the middle of the diffusion trajectory as most sensitive. Our results suggest that simple, architecture-agnostic scheduling rules can significantly accelerate MDLM sampling while largely preserving generation quality as measured by generative perplexity.
     </details>
 
-## Learning, Optimization, and Theory (3 papers, 3.85%)
+## Learning, Optimization, and Theory (2 papers, 2.56%)
 
 - [Self-Distilled RLVR](https://arxiv.org/pdf/2604.03128)
   - Authors: Chenxu Yang, Chuanyu Qin, Qingyi Si, Minghui Chen, Naibin Gu, Dingyu Yao, Zheng Lin, Weiping Wang, Jiaqi Wang, Nan Duan
@@ -568,13 +581,6 @@
     <summary>Abstract</summary>
 
     On-policy distillation (OPD) has become a popular training paradigm in the LLM community. This paradigm selects a larger model as the teacher to provide dense, fine-grained signals for each sampled trajectory, in contrast to reinforcement learning with verifiable rewards (RLVR), which only obtains sparse signals from verifiable outcomes in the environment. Recently, the community has explored on-policy self-distillation (OPSD), where the same model serves as both teacher and student, with the teacher receiving additional privileged information such as reference answers to enable self-evolution. This paper demonstrates that learning signals solely derived from the privileged teacher result in severe information leakage and unstable long-term training. Accordingly, we identify the optimal niche for self-distillation and propose \textbf{RLSD} (\textbf{RL}VR with \textbf{S}elf-\textbf{D}istillation). Specifically, we leverage self-distillation to obtain token-level policy differences for determining fine-grained update magnitudes, while continuing to use RLVR to derive reliable update directions from environmental feedback (e.g., response correctness). This enables RLSD to simultaneously harness the strengths of both RLVR and OPSD, achieving a higher convergence ceiling and superior training stability.
-    </details>
-- [On the Geometric Structure of Layer Updates in Deep Language Models](https://arxiv.org/pdf/2604.02459)
-  - Authors: Jun-Sik Yoo
-  - <details>
-    <summary>Abstract</summary>
-
-    We study the geometric structure of layer updates in deep language models. Rather than analyzing what information is encoded in intermediate representations, we ask how representations change from one layer to the next. We show that layerwise updates admit a decomposition into a dominant tokenwise component and a residual that is not captured by restricted tokenwise function classes. Across multiple architectures, including Transformers and state-space models, we find that the full layer update is almost perfectly aligned with the tokenwise component, while the residual exhibits substantially weaker alignment, larger angular deviation, and significantly lower projection onto the dominant tokenwise subspace. This indicates that the residual is not merely a small correction, but a geometrically distinct component of the transformation. This geometric separation has functional consequences: approximation error under the restricted tokenwise model is strongly associated with output perturbation, with Spearman correlations often exceeding 0.7 and reaching up to 0.95 in larger models. Together, these results suggest that most layerwise updates behave like structured reparameterizations along a dominant direction, while functionally significant computation is concentrated in a geometrically distinct residual component. Our framework provides a simple, architecture-agnostic method for probing the geometric and functional structure of layer updates in modern language models.
     </details>
 - [SIEVE: Sample-Efficient Parametric Learning from Natural Language](https://arxiv.org/pdf/2604.02339)
   - Authors: Parth Asawa, Alexandros G. Dimakis, Matei Zaharia
@@ -602,14 +608,4 @@
     <summary>Abstract</summary>
 
     Language models are known to exhibit various forms of cultural bias in decision-making tasks, yet much less is known about their degree of cultural familiarity in open-ended text generation tasks. In this paper, we introduce the task of culturally-adapted art description generation, where models describe artworks for audiences from different cultural groups who vary in their familiarity with the cultural symbols and narratives embedded in the artwork. To evaluate cultural competence in this pragmatic generation task, we propose a framework based on culturally grounded question answering. We find that base models are only marginally adequate for this task, but, through a pragmatic speaker model, we can improve simulated listener comprehension by up to 8.2%. A human study further confirms that the model with higher pragmatic competence is rated as more helpful for comprehension by 8.0%.
-    </details>
-
-## Other AI (1 papers, 1.28%)
-
-- [How Annotation Trains Annotators: Competence Development in Social Influence Recognition](https://arxiv.org/pdf/2604.02951)
-  - Authors: Maciej Markiewicz, Beata Bajcar, Wiktoria Mieleszczenko-Kowszewicz, Aleksander Szczęsny, Tomasz Adamczyk, Grzegorz Chodak, Karolina Ostrowska, Aleksandra Sawczuk, Jolanta Babiak, Jagoda Szklarczyk, Przemysław Kazienko
-  - <details>
-    <summary>Abstract</summary>
-
-    Human data annotation, especially when involving experts, is often treated as an objective reference. However, many annotation tasks are inherently subjective, and annotators' judgments may evolve over time. This study investigates changes in the quality of annotators' work from a competence perspective during a process of social influence recognition. The study involved 25 annotators from five different groups, including both experts and non-experts, who annotated a dataset of 1,021 dialogues with 20 social influence techniques, along with intentions, reactions, and consequences. An initial subset of 150 texts was annotated twice - before and after the main annotation process - to enable comparison. To measure competence shifts, we combined qualitative and quantitative analyses of the annotated data, semi-structured interviews with annotators, self-assessment surveys, and Large Language Model training and evaluation on the comparison dataset. The results indicate a significant increase in annotators' self-perceived competence and confidence. Moreover, observed changes in data quality suggest that the annotation process may enhance annotator competence and that this effect is more pronounced in expert groups. The observed shifts in annotator competence have a visible impact on the performance of LLMs trained on their annotated data.
     </details>
