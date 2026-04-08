@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-08T07:05:36Z",
-  "reports_count": 121,
+  "generated_at": "2026-04-08T15:27:45Z",
+  "reports_count": 122,
   "branches": [
     {
       "branch_key": "daily",
@@ -12,8 +12,8 @@
     {
       "branch_key": "hf-daily",
       "branch_label": "HF Daily",
-      "reports_count": 27,
-      "default_report_path": "data/hf-daily/reports/2026-04-07/hf-daily-2026-04-07.json",
+      "reports_count": 28,
+      "default_report_path": "data/hf-daily/reports/2026-04-08/hf-daily-2026-04-08.json",
       "manifest_path": "data/hf-daily/manifest.json"
     },
     {
@@ -215,14 +215,14 @@
     {
       "branch_key": "daily",
       "branch_label": "Cool Daily",
-      "search_text": "daily Cool Daily cs.AI-2026-04-06 data/daily/reports/2026-04-06/cs.AI-2026-04-06.json https://papers.cool/arxiv/cs.AI?date=2026-04-06&show=1000 codex 2026-04-06 cs.AI Generative Foundations Multimodal Generative Modeling Multimodal Agents Domain Applications Reasoning, Alignment, and Evaluation Agents and Planning LLMs and Language Multimodal Understanding and Vision",
+      "search_text": "daily Cool Daily cs.AI-2026-04-06 data/daily/reports/2026-04-06/cs.AI-2026-04-06.json https://papers.cool/arxiv/cs.AI?date=2026-04-06&show=1000 codex 2026-04-06 cs.AI Generative Foundations Multimodal Generative Modeling Multimodal Agents Agents and Planning Domain Applications LLMs and Language Reasoning, Alignment, and Evaluation Multimodal Understanding and Vision",
       "data_path": "data/daily/reports/2026-04-06/cs.AI-2026-04-06.json",
       "slug": "cs.AI-2026-04-06",
       "report_date": "2026-04-06",
       "category": "cs.AI",
       "total_papers": 165,
       "classifier": "codex",
-      "generated_at": "2026-04-07T14:23:07Z",
+      "generated_at": "2026-04-08T14:30:46Z",
       "source_url": "https://papers.cool/arxiv/cs.AI?date=2026-04-06&show=1000",
       "focus_topics": [
         {
@@ -234,62 +234,62 @@
         {
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
-          "count": 6,
-          "share": 3.64
+          "count": 5,
+          "share": 3.03
         },
         {
           "topic_key": "multimodal_agents",
           "topic_label": "Multimodal Agents",
-          "count": 7,
-          "share": 4.24
+          "count": 6,
+          "share": 3.64
         }
       ],
       "top_topics": [
         {
-          "topic_label": "Domain Applications",
+          "topic_label": "Agents and Planning",
           "count": 27,
           "share": 16.36
         },
         {
-          "topic_label": "Reasoning, Alignment, and Evaluation",
-          "count": 26,
-          "share": 15.76
-        },
-        {
-          "topic_label": "Agents and Planning",
-          "count": 23,
-          "share": 13.94
+          "topic_label": "Domain Applications",
+          "count": 24,
+          "share": 14.55
         },
         {
           "topic_label": "LLMs and Language",
+          "count": 22,
+          "share": 13.33
+        },
+        {
+          "topic_label": "Reasoning, Alignment, and Evaluation",
           "count": 21,
           "share": 12.73
         },
         {
           "topic_label": "Multimodal Understanding and Vision",
-          "count": 14,
-          "share": 8.48
+          "count": 16,
+          "share": 9.7
         }
       ]
     },
     {
       "branch_key": "daily",
       "branch_label": "Cool Daily",
-      "search_text": "daily Cool Daily cs.CL-2026-04-06 data/daily/reports/2026-04-06/cs.CL-2026-04-06.json https://papers.cool/arxiv/cs.CL?date=2026-04-06&show=1000 codex 2026-04-06 cs.CL Generative Foundations Multimodal Generative Modeling Multimodal Agents Reasoning, Alignment, and Evaluation LLMs and Language Retrieval, Knowledge, and RAG Agents and Planning Datasets and Benchmarks",
+      "search_text": "daily Cool Daily cs.CL-2026-04-06 data/daily/reports/2026-04-06/cs.CL-2026-04-06.json https://papers.cool/arxiv/cs.CL?date=2026-04-06&show=1000 codex 2026-04-06 cs.CL Generative Foundations Multimodal Generative Modeling Multimodal Agents Reasoning, Alignment, and Evaluation LLMs and Language Retrieval, Knowledge, and RAG Agents and Planning Generative Foundations",
       "data_path": "data/daily/reports/2026-04-06/cs.CL-2026-04-06.json",
       "slug": "cs.CL-2026-04-06",
       "report_date": "2026-04-06",
       "category": "cs.CL",
       "total_papers": 78,
       "classifier": "codex",
-      "generated_at": "2026-04-07T14:54:36Z",
+      "generated_at": "2026-04-08T15:00:13Z",
       "source_url": "https://papers.cool/arxiv/cs.CL?date=2026-04-06&show=1000",
       "focus_topics": [
         {
           "topic_key": "generative_foundations",
           "topic_label": "Generative Foundations",
-          "count": 4,
-          "share": 5.13
+          "count": 5,
+          "share": 6.41
         },
         {
           "topic_key": "multimodal_generative",
@@ -312,8 +312,8 @@
         },
         {
           "topic_label": "LLMs and Language",
-          "count": 19,
-          "share": 24.36
+          "count": 17,
+          "share": 21.79
         },
         {
           "topic_label": "Retrieval, Knowledge, and RAG",
@@ -326,7 +326,7 @@
           "share": 6.41
         },
         {
-          "topic_label": "Datasets and Benchmarks",
+          "topic_label": "Generative Foundations",
           "count": 5,
           "share": 6.41
         }
@@ -4895,59 +4895,140 @@
     {
       "branch_key": "hf-daily",
       "branch_label": "HF Daily",
-      "search_text": "hf-daily HF Daily hf-daily-2026-04-07 data/hf-daily/reports/2026-04-07/hf-daily-2026-04-07.json https://huggingface.co/papers/date/2026-04-07 codex 2026-04-07 Generative Foundations Multimodal Generative Modeling Multimodal Agents Reasoning, Alignment, and Evaluation Multimodal Understanding and Vision Agents and Planning Multimodal Generative Modeling Datasets and Benchmarks taesiri hxz Bin Wang Bingru-Li Chanyoung Kim",
+      "search_text": "hf-daily HF Daily hf-daily-2026-04-08 data/hf-daily/reports/2026-04-08/hf-daily-2026-04-08.json https://huggingface.co/papers/date/2026-04-08 codex 2026-04-08 Generative Foundations Multimodal Generative Modeling Multimodal Agents LLMs and Language Agents and Planning Datasets and Benchmarks Reasoning, Alignment, and Evaluation Domain Applications taesiri Adam Kovacs Changxin Ke Chaoyou Fu Difan Jiao",
+      "data_path": "data/hf-daily/reports/2026-04-08/hf-daily-2026-04-08.json",
+      "slug": "hf-daily-2026-04-08",
+      "report_date": "2026-04-08",
+      "total_papers": 26,
+      "classifier": "codex",
+      "generated_at": "2026-04-08T15:27:45Z",
+      "source_url": "https://huggingface.co/papers/date/2026-04-08",
+      "focus_topics": [
+        {
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "count": 2,
+          "share": 7.69
+        },
+        {
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 1,
+          "share": 3.85
+        },
+        {
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "count": 2,
+          "share": 7.69
+        }
+      ],
+      "top_topics": [
+        {
+          "topic_label": "LLMs and Language",
+          "count": 4,
+          "share": 15.38
+        },
+        {
+          "topic_label": "Agents and Planning",
+          "count": 3,
+          "share": 11.54
+        },
+        {
+          "topic_label": "Datasets and Benchmarks",
+          "count": 3,
+          "share": 11.54
+        },
+        {
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "count": 3,
+          "share": 11.54
+        },
+        {
+          "topic_label": "Domain Applications",
+          "count": 2,
+          "share": 7.69
+        }
+      ],
+      "top_submitters": [
+        {
+          "submitted_by": "taesiri",
+          "count": 5
+        },
+        {
+          "submitted_by": "Adam Kovacs",
+          "count": 1
+        },
+        {
+          "submitted_by": "Changxin Ke",
+          "count": 1
+        },
+        {
+          "submitted_by": "Chaoyou Fu",
+          "count": 1
+        },
+        {
+          "submitted_by": "Difan Jiao",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "branch_key": "hf-daily",
+      "branch_label": "HF Daily",
+      "search_text": "hf-daily HF Daily hf-daily-2026-04-07 data/hf-daily/reports/2026-04-07/hf-daily-2026-04-07.json https://huggingface.co/papers/date/2026-04-07 codex 2026-04-07 Generative Foundations Multimodal Generative Modeling Multimodal Agents Agents and Planning Multimodal Understanding and Vision Reasoning, Alignment, and Evaluation Domain Applications Multimodal Generative Modeling taesiri hxz Bin Wang Bingru-Li Chanyoung Kim",
       "data_path": "data/hf-daily/reports/2026-04-07/hf-daily-2026-04-07.json",
       "slug": "hf-daily-2026-04-07",
       "report_date": "2026-04-07",
-      "total_papers": 32,
+      "total_papers": 37,
       "classifier": "codex",
-      "generated_at": "2026-04-07T15:48:46Z",
+      "generated_at": "2026-04-08T15:10:33Z",
       "source_url": "https://huggingface.co/papers/date/2026-04-07",
       "focus_topics": [
         {
           "topic_key": "generative_foundations",
           "topic_label": "Generative Foundations",
-          "count": 1,
-          "share": 3.12
+          "count": 2,
+          "share": 5.41
         },
         {
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
-          "count": 4,
-          "share": 12.5
+          "count": 3,
+          "share": 8.11
         },
         {
           "topic_key": "multimodal_agents",
           "topic_label": "Multimodal Agents",
-          "count": 1,
-          "share": 3.12
+          "count": 2,
+          "share": 5.41
         }
       ],
       "top_topics": [
         {
-          "topic_label": "Reasoning, Alignment, and Evaluation",
-          "count": 7,
-          "share": 21.88
+          "topic_label": "Agents and Planning",
+          "count": 6,
+          "share": 16.22
         },
         {
           "topic_label": "Multimodal Understanding and Vision",
-          "count": 5,
-          "share": 15.62
+          "count": 6,
+          "share": 16.22
         },
         {
-          "topic_label": "Agents and Planning",
-          "count": 4,
-          "share": 12.5
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "count": 6,
+          "share": 16.22
+        },
+        {
+          "topic_label": "Domain Applications",
+          "count": 3,
+          "share": 8.11
         },
         {
           "topic_label": "Multimodal Generative Modeling",
-          "count": 4,
-          "share": 12.5
-        },
-        {
-          "topic_label": "Datasets and Benchmarks",
-          "count": 2,
-          "share": 6.25
+          "count": 3,
+          "share": 8.11
         }
       ],
       "top_submitters": [

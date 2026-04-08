@@ -1,65 +1,145 @@
 {
   "branch_key": "hf-daily",
   "branch_label": "HF Daily",
-  "generated_at": "2026-04-07T15:48:47Z",
-  "reports_count": 27,
-  "default_report_path": "data/hf-daily/reports/2026-04-07/hf-daily-2026-04-07.json",
+  "generated_at": "2026-04-08T15:27:45Z",
+  "reports_count": 28,
+  "default_report_path": "data/hf-daily/reports/2026-04-08/hf-daily-2026-04-08.json",
   "reports": [
+    {
+      "branch_key": "hf-daily",
+      "branch_label": "HF Daily",
+      "data_path": "data/hf-daily/reports/2026-04-08/hf-daily-2026-04-08.json",
+      "slug": "hf-daily-2026-04-08",
+      "report_date": "2026-04-08",
+      "total_papers": 26,
+      "classifier": "codex",
+      "generated_at": "2026-04-08T15:27:45Z",
+      "source_url": "https://huggingface.co/papers/date/2026-04-08",
+      "focus_topics": [
+        {
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "count": 2,
+          "share": 7.69
+        },
+        {
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 1,
+          "share": 3.85
+        },
+        {
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "count": 2,
+          "share": 7.69
+        }
+      ],
+      "top_topics": [
+        {
+          "topic_label": "LLMs and Language",
+          "count": 4,
+          "share": 15.38
+        },
+        {
+          "topic_label": "Agents and Planning",
+          "count": 3,
+          "share": 11.54
+        },
+        {
+          "topic_label": "Datasets and Benchmarks",
+          "count": 3,
+          "share": 11.54
+        },
+        {
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "count": 3,
+          "share": 11.54
+        },
+        {
+          "topic_label": "Domain Applications",
+          "count": 2,
+          "share": 7.69
+        }
+      ],
+      "top_submitters": [
+        {
+          "submitted_by": "taesiri",
+          "count": 5
+        },
+        {
+          "submitted_by": "Adam Kovacs",
+          "count": 1
+        },
+        {
+          "submitted_by": "Changxin Ke",
+          "count": 1
+        },
+        {
+          "submitted_by": "Chaoyou Fu",
+          "count": 1
+        },
+        {
+          "submitted_by": "Difan Jiao",
+          "count": 1
+        }
+      ]
+    },
     {
       "branch_key": "hf-daily",
       "branch_label": "HF Daily",
       "data_path": "data/hf-daily/reports/2026-04-07/hf-daily-2026-04-07.json",
       "slug": "hf-daily-2026-04-07",
       "report_date": "2026-04-07",
-      "total_papers": 32,
+      "total_papers": 37,
       "classifier": "codex",
-      "generated_at": "2026-04-07T15:48:46Z",
+      "generated_at": "2026-04-08T15:10:33Z",
       "source_url": "https://huggingface.co/papers/date/2026-04-07",
       "focus_topics": [
         {
           "topic_key": "generative_foundations",
           "topic_label": "Generative Foundations",
-          "count": 1,
-          "share": 3.12
+          "count": 2,
+          "share": 5.41
         },
         {
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
-          "count": 4,
-          "share": 12.5
+          "count": 3,
+          "share": 8.11
         },
         {
           "topic_key": "multimodal_agents",
           "topic_label": "Multimodal Agents",
-          "count": 1,
-          "share": 3.12
+          "count": 2,
+          "share": 5.41
         }
       ],
       "top_topics": [
         {
-          "topic_label": "Reasoning, Alignment, and Evaluation",
-          "count": 7,
-          "share": 21.88
+          "topic_label": "Agents and Planning",
+          "count": 6,
+          "share": 16.22
         },
         {
           "topic_label": "Multimodal Understanding and Vision",
-          "count": 5,
-          "share": 15.62
+          "count": 6,
+          "share": 16.22
         },
         {
-          "topic_label": "Agents and Planning",
-          "count": 4,
-          "share": 12.5
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "count": 6,
+          "share": 16.22
+        },
+        {
+          "topic_label": "Domain Applications",
+          "count": 3,
+          "share": 8.11
         },
         {
           "topic_label": "Multimodal Generative Modeling",
-          "count": 4,
-          "share": 12.5
-        },
-        {
-          "topic_label": "Datasets and Benchmarks",
-          "count": 2,
-          "share": 6.25
+          "count": 3,
+          "share": 8.11
         }
       ],
       "top_submitters": [

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-07T14:54:36Z",
+  "generated_at": "2026-04-08T15:00:13Z",
   "category": "cs.CL",
   "report_date": "2026-04-06",
   "source_url": "https://papers.cool/arxiv/cs.CL?date=2026-04-06&show=1000",
@@ -9,8 +9,8 @@
     {
       "topic_key": "generative_foundations",
       "topic_label": "Generative Foundations",
-      "count": 4,
-      "share": 5.13
+      "count": 5,
+      "share": 6.41
     },
     {
       "topic_key": "multimodal_generative",
@@ -33,8 +33,8 @@
     },
     {
       "topic_label": "LLMs and Language",
-      "count": 19,
-      "share": 24.36
+      "count": 17,
+      "share": 21.79
     },
     {
       "topic_label": "Retrieval, Knowledge, and RAG",
@@ -47,12 +47,7 @@
       "share": 6.41
     },
     {
-      "topic_label": "Datasets and Benchmarks",
-      "count": 5,
-      "share": 6.41
-    },
-    {
-      "topic_label": "Domain Applications",
+      "topic_label": "Generative Foundations",
       "count": 5,
       "share": 6.41
     },
@@ -62,12 +57,22 @@
       "share": 6.41
     },
     {
-      "topic_label": "Generative Foundations",
+      "topic_label": "Datasets and Benchmarks",
+      "count": 4,
+      "share": 5.13
+    },
+    {
+      "topic_label": "Domain Applications",
       "count": 4,
       "share": 5.13
     },
     {
       "topic_label": "Learning, Optimization, and Theory",
+      "count": 3,
+      "share": 3.85
+    },
+    {
+      "topic_label": "Other AI",
       "count": 2,
       "share": 2.56
     },
@@ -110,7 +115,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.94
+          "classification_confidence": 0.92
         },
         {
           "paper_id": "2604.03173",
@@ -131,7 +136,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.93
+          "classification_confidence": 0.89
         },
         {
           "paper_id": "2604.03141",
@@ -182,7 +187,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.93
+          "classification_confidence": 0.94
         },
         {
           "paper_id": "2604.02972",
@@ -206,7 +211,30 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.65
+          "classification_confidence": 0.72
+        },
+        {
+          "paper_id": "2604.02830",
+          "title": "GRADE: Probing Knowledge Gaps in LLMs through Gradient Subspace Dynamics",
+          "abs_url": "https://arxiv.org/abs/2604.02830",
+          "pdf_url": "https://arxiv.org/pdf/2604.02830",
+          "detail_url": "https://papers.cool/arxiv/2604.02830",
+          "authors": [
+            "Yujing Wang",
+            "Yuanbang Liang",
+            "Yukun Lai",
+            "Hainan Zhang",
+            "Hanqi Yan"
+          ],
+          "subjects": [
+            "Computation and Language"
+          ],
+          "abstract": "Detecting whether a model's internal knowledge is sufficient to correctly answer a given question is a fundamental challenge in deploying responsible LLMs. In addition to verbalising the confidence by LLM self-report, more recent methods explore the model internals, such as the hidden states of the response tokens to capture how much knowledge is activated. We argue that such activated knowledge may not align with what the query requires, e.g., capturing the stylistic and length-related features that are uninformative for answering the query. To fill the gap, we propose GRADE (Gradient Dynamics for knowledge gap detection), which quantifies the knowledge gap via the cross-layer rank ratio of the gradient to that of the corresponding hidden state subspace. This is motivated by the property of gradients as estimators of the required knowledge updates for a given target. We validate \\modelname{} on six benchmarks, demonstrating its effectiveness and robustness to input perturbations. In addition, we present a case study showing how the gradient chain can generate interpretable explanations of knowledge gaps for long-form answers.",
+          "topic_key": "reasoning_alignment_eval",
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.8
         },
         {
           "paper_id": "2604.02795",
@@ -239,7 +267,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.89
+          "classification_confidence": 0.86
         },
         {
           "paper_id": "2604.02772",
@@ -262,7 +290,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.88
+          "classification_confidence": 0.91
         },
         {
           "paper_id": "2604.02713",
@@ -284,7 +312,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.89
+          "classification_confidence": 0.87
         },
         {
           "paper_id": "2604.02709",
@@ -315,7 +343,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.96
+          "classification_confidence": 0.95
         },
         {
           "paper_id": "2604.02699",
@@ -335,7 +363,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.84
+          "classification_confidence": 0.77
         },
         {
           "paper_id": "2604.02669",
@@ -383,7 +411,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.95
+          "classification_confidence": 0.96
         },
         {
           "paper_id": "2604.02621",
@@ -405,7 +433,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.81
+          "classification_confidence": 0.79
         },
         {
           "paper_id": "2604.02485",
@@ -449,32 +477,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.94
-        },
-        {
-          "paper_id": "2604.02359",
-          "title": "Using LLM-as-a-Judge/Jury to Advance Scalable, Clinically-Validated Safety Evaluations of Model Responses to Users Demonstrating Psychosis",
-          "abs_url": "https://arxiv.org/abs/2604.02359",
-          "pdf_url": "https://arxiv.org/pdf/2604.02359",
-          "detail_url": "https://papers.cool/arxiv/2604.02359",
-          "authors": [
-            "May Lynn Reese",
-            "Markela Zeneli",
-            "Mindy Ng",
-            "Jacob Haimes",
-            "Andreea Damien",
-            "Elizabeth Stade"
-          ],
-          "subjects": [
-            "Computation and Language",
-            "Artificial Intelligence"
-          ],
-          "abstract": "General-purpose Large Language Models (LLMs) are becoming widely adopted by people for mental health support. Yet emerging evidence suggests there are significant risks associated with high-frequency use, particularly for individuals suffering from psychosis, as LLMs may reinforce delusions and hallucinations. Existing evaluations of LLMs in mental health contexts are limited by a lack of clinical validation and scalability of assessment. To address these issues, this research focuses on psychosis as a critical condition for LLM safety evaluation by (1) developing and validating seven clinician-informed safety criteria, (2) constructing a human-consensus dataset, and (3) testing automated assessment using an LLM as an evaluator (LLM-as-a-Judge) or taking the majority vote of several LLM judges (LLM-as-a-Jury). Results indicate that LLM-as-a-Judge aligns closely with the human consensus (Cohen's $κ_{\\text{human} \\times \\text{gemini}} = 0.75$, $κ_{\\text{human} \\times \\text{qwen}} = 0.68$, $κ_{\\text{human} \\times \\text{kimi}} = 0.56$) and that the best judge slightly outperforms LLM-as-a-Jury (Cohen's $κ_{\\text{human} \\times \\text{jury}} = 0.74$). Overall, these findings have promising implications for clinically grounded, scalable methods in LLM safety evaluations for mental health contexts.",
-          "topic_key": "reasoning_alignment_eval",
-          "topic_label": "Reasoning, Alignment, and Evaluation",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.95
+          "classification_confidence": 0.96
         },
         {
           "paper_id": "2604.03159",
@@ -495,7 +498,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.9
+          "classification_confidence": 0.85
         },
         {
           "paper_id": "2604.03121",
@@ -530,7 +533,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.97
+          "classification_confidence": 0.98
         },
         {
           "paper_id": "2604.03081",
@@ -558,7 +561,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.93
+          "classification_confidence": 0.94
         },
         {
           "paper_id": "2604.02986",
@@ -583,7 +586,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.94
+          "classification_confidence": 0.95
         },
         {
           "paper_id": "2604.02967",
@@ -607,7 +610,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.69
+          "classification_confidence": 0.76
         },
         {
           "paper_id": "2604.02585",
@@ -628,7 +631,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.95
+          "classification_confidence": 0.97
         },
         {
           "paper_id": "2604.02578",
@@ -652,7 +655,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.74
+          "classification_confidence": 0.67
         },
         {
           "paper_id": "2604.02450",
@@ -676,39 +679,15 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.88
+          "classification_confidence": 0.81
         }
       ]
     },
     {
       "topic_label": "LLMs and Language",
-      "count": 19,
-      "share": 24.36,
+      "count": 17,
+      "share": 21.79,
       "papers": [
-        {
-          "paper_id": "2604.03199",
-          "title": "Learning the Signature of Memorization in Autoregressive Language Models",
-          "abs_url": "https://arxiv.org/abs/2604.03199",
-          "pdf_url": "https://arxiv.org/pdf/2604.03199",
-          "detail_url": "https://papers.cool/arxiv/2604.03199",
-          "authors": [
-            "David Ilić",
-            "Kostadin Cvejoski",
-            "David Stanojević",
-            "Evgeny Grigorenko"
-          ],
-          "subjects": [
-            "Computation and Language",
-            "Cryptography and Security",
-            "Machine Learning"
-          ],
-          "abstract": "All prior membership inference attacks for fine-tuned language models use hand-crafted heuristics (e.g., loss thresholding, Min-K\\%, reference calibration), each bounded by the designer's intuition. We introduce the first transferable learned attack, enabled by the observation that fine-tuning any model on any corpus yields unlimited labeled data, since membership is known by construction. This removes the shadow model bottleneck and brings membership inference into the deep learning era: learning what matters rather than designing it, with generalization through training diversity and scale. We discover that fine-tuning language models produces an invariant signature of memorization detectable across architectural families and data domains. We train a membership inference classifier exclusively on transformer-based models. It transfers zero-shot to Mamba (state-space), RWKV-4 (linear attention), and RecurrentGemma (gated recurrence), achieving 0.963, 0.972, and 0.936 AUC respectively. Each evaluation combines an architecture and dataset never seen during training, yet all three exceed performance on held-out transformers (0.908 AUC). These four families share no computational mechanisms, their only commonality is gradient descent on cross-entropy loss. Even simple likelihood-based methods exhibit strong transfer, confirming the signature exists independently of the detection method. Our method, Learned Transfer MIA (LT-MIA), captures this signal most effectively by reframing membership inference as sequence classification over per-token distributional statistics. On transformers, LT-MIA achieves 2.8$\\times$ higher TPR at 0.1\\% FPR than the strongest baseline. The method also transfers to code (0.865 AUC) despite training only on natural language texts. Code and trained classifier available at https://github.com/JetBrains-Research/learned-mia.",
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.81
-        },
         {
           "paper_id": "2604.03192",
           "title": "Reliability Gated Multi-Teacher Distillation for Low Resource Abstractive Summarization",
@@ -733,7 +712,7 @@
           "topic_label": "LLMs and Language",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.83
+          "classification_confidence": 0.75
         },
         {
           "paper_id": "2604.03147",
@@ -781,7 +760,7 @@
           "topic_label": "LLMs and Language",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.68
+          "classification_confidence": 0.73
         },
         {
           "paper_id": "2604.03110",
@@ -804,7 +783,7 @@
           "topic_label": "LLMs and Language",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.84
+          "classification_confidence": 0.76
         },
         {
           "paper_id": "2604.03057",
@@ -827,7 +806,7 @@
           "topic_label": "LLMs and Language",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.75
+          "classification_confidence": 0.83
         },
         {
           "paper_id": "2604.03044",
@@ -915,7 +894,7 @@
           "topic_label": "LLMs and Language",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.95
+          "classification_confidence": 0.92
         },
         {
           "paper_id": "2604.03004",
@@ -941,7 +920,7 @@
           "topic_label": "LLMs and Language",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.86
+          "classification_confidence": 0.81
         },
         {
           "paper_id": "2604.02926",
@@ -962,7 +941,7 @@
           "topic_label": "LLMs and Language",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.6
+          "classification_confidence": 0.7
         },
         {
           "paper_id": "2604.02881",
@@ -984,7 +963,7 @@
           "topic_label": "LLMs and Language",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.74
+          "classification_confidence": 0.84
         },
         {
           "paper_id": "2604.02866",
@@ -1008,7 +987,7 @@
           "topic_label": "LLMs and Language",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.78
+          "classification_confidence": 0.73
         },
         {
           "paper_id": "2604.02819",
@@ -1031,7 +1010,7 @@
           "topic_label": "LLMs and Language",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.77
+          "classification_confidence": 0.76
         },
         {
           "paper_id": "2604.02650",
@@ -1054,7 +1033,7 @@
           "topic_label": "LLMs and Language",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.78
+          "classification_confidence": 0.8
         },
         {
           "paper_id": "2604.02645",
@@ -1075,7 +1054,7 @@
           "topic_label": "LLMs and Language",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.65
+          "classification_confidence": 0.69
         },
         {
           "paper_id": "2604.02596",
@@ -1098,7 +1077,7 @@
           "topic_label": "LLMs and Language",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.89
+          "classification_confidence": 0.91
         },
         {
           "paper_id": "2604.02512",
@@ -1139,7 +1118,7 @@
           "topic_label": "LLMs and Language",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.67
+          "classification_confidence": 0.69
         },
         {
           "paper_id": "2604.02985",
@@ -1163,28 +1142,7 @@
           "topic_label": "LLMs and Language",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.91
-        },
-        {
-          "paper_id": "2604.02459",
-          "title": "On the Geometric Structure of Layer Updates in Deep Language Models",
-          "abs_url": "https://arxiv.org/abs/2604.02459",
-          "pdf_url": "https://arxiv.org/pdf/2604.02459",
-          "detail_url": "https://papers.cool/arxiv/2604.02459",
-          "authors": [
-            "Jun-Sik Yoo"
-          ],
-          "subjects": [
-            "Machine Learning",
-            "Artificial Intelligence",
-            "Computation and Language"
-          ],
-          "abstract": "We study the geometric structure of layer updates in deep language models. Rather than analyzing what information is encoded in intermediate representations, we ask how representations change from one layer to the next. We show that layerwise updates admit a decomposition into a dominant tokenwise component and a residual that is not captured by restricted tokenwise function classes. Across multiple architectures, including Transformers and state-space models, we find that the full layer update is almost perfectly aligned with the tokenwise component, while the residual exhibits substantially weaker alignment, larger angular deviation, and significantly lower projection onto the dominant tokenwise subspace. This indicates that the residual is not merely a small correction, but a geometrically distinct component of the transformation. This geometric separation has functional consequences: approximation error under the restricted tokenwise model is strongly associated with output perturbation, with Spearman correlations often exceeding 0.7 and reaching up to 0.95 in larger models. Together, these results suggest that most layerwise updates behave like structured reparameterizations along a dominant direction, while functionally significant computation is concentrated in a geometrically distinct residual component. Our framework provides a simple, architecture-agnostic method for probing the geometric and functional structure of layer updates in modern language models.",
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.62
+          "classification_confidence": 0.92
         }
       ]
     },
@@ -1212,7 +1170,7 @@
           "topic_label": "Retrieval, Knowledge, and RAG",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.98
+          "classification_confidence": 0.97
         },
         {
           "paper_id": "2604.03127",
@@ -1236,7 +1194,7 @@
           "topic_label": "Retrieval, Knowledge, and RAG",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.88
+          "classification_confidence": 0.91
         },
         {
           "paper_id": "2604.02954",
@@ -1264,30 +1222,7 @@
           "topic_label": "Retrieval, Knowledge, and RAG",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.97
-        },
-        {
-          "paper_id": "2604.02830",
-          "title": "GRADE: Probing Knowledge Gaps in LLMs through Gradient Subspace Dynamics",
-          "abs_url": "https://arxiv.org/abs/2604.02830",
-          "pdf_url": "https://arxiv.org/pdf/2604.02830",
-          "detail_url": "https://papers.cool/arxiv/2604.02830",
-          "authors": [
-            "Yujing Wang",
-            "Yuanbang Liang",
-            "Yukun Lai",
-            "Hainan Zhang",
-            "Hanqi Yan"
-          ],
-          "subjects": [
-            "Computation and Language"
-          ],
-          "abstract": "Detecting whether a model's internal knowledge is sufficient to correctly answer a given question is a fundamental challenge in deploying responsible LLMs. In addition to verbalising the confidence by LLM self-report, more recent methods explore the model internals, such as the hidden states of the response tokens to capture how much knowledge is activated. We argue that such activated knowledge may not align with what the query requires, e.g., capturing the stylistic and length-related features that are uninformative for answering the query. To fill the gap, we propose GRADE (Gradient Dynamics for knowledge gap detection), which quantifies the knowledge gap via the cross-layer rank ratio of the gradient to that of the corresponding hidden state subspace. This is motivated by the property of gradients as estimators of the required knowledge updates for a given target. We validate \\modelname{} on six benchmarks, demonstrating its effectiveness and robustness to input perturbations. In addition, we present a case study showing how the gradient chain can generate interpretable explanations of knowledge gaps for long-form answers.",
-          "topic_key": "retrieval_knowledge",
-          "topic_label": "Retrieval, Knowledge, and RAG",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.7
+          "classification_confidence": 0.96
         },
         {
           "paper_id": "2604.02778",
@@ -1313,7 +1248,31 @@
           "topic_label": "Retrieval, Knowledge, and RAG",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.69
+          "classification_confidence": 0.67
+        },
+        {
+          "paper_id": "2604.02640",
+          "title": "Overcoming the \"Impracticality\" of RAG: Proposing a Real-World Benchmark and Multi-Dimensional Diagnostic Framework",
+          "abs_url": "https://arxiv.org/abs/2604.02640",
+          "pdf_url": "https://arxiv.org/pdf/2604.02640",
+          "detail_url": "https://papers.cool/arxiv/2604.02640",
+          "authors": [
+            "Kenichirou Narita",
+            "Siqi Peng",
+            "Taku Fukui",
+            "Moyuru Yamada",
+            "Satoshi Munakata",
+            "Satoru Takahashi"
+          ],
+          "subjects": [
+            "Computation and Language"
+          ],
+          "abstract": "Performance evaluation of Retrieval-Augmented Generation (RAG) systems within enterprise environments is governed by multi-dimensional and composite factors extending far beyond simple final accuracy checks. These factors include reasoning complexity, retrieval difficulty, the diverse structure of documents, and stringent requirements for operational explainability. Existing academic benchmarks fail to systematically diagnose these interlocking challenges, resulting in a critical gap where models achieving high performance scores fail to meet the expected reliability in practical deployment. To bridge this discrepancy, this research proposes a multi-dimensional diagnostic framework by defining a four-axis difficulty taxonomy and integrating it into an enterprise RAG benchmark to diagnose potential system weaknesses.",
+          "topic_key": "retrieval_knowledge",
+          "topic_label": "Retrieval, Knowledge, and RAG",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.98
         },
         {
           "paper_id": "2604.02554",
@@ -1334,7 +1293,7 @@
           "topic_label": "Retrieval, Knowledge, and RAG",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.96
+          "classification_confidence": 0.97
         },
         {
           "paper_id": "2604.03180",
@@ -1358,7 +1317,7 @@
           "topic_label": "Retrieval, Knowledge, and RAG",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.62
+          "classification_confidence": 0.71
         }
       ]
     },
@@ -1389,7 +1348,7 @@
           "topic_label": "Agents and Planning",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.95
+          "classification_confidence": 0.84
         },
         {
           "paper_id": "2604.02668",
@@ -1417,7 +1376,7 @@
           "topic_label": "Agents and Planning",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.93
+          "classification_confidence": 0.92
         },
         {
           "paper_id": "2604.02460",
@@ -1438,7 +1397,7 @@
           "topic_label": "Agents and Planning",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.97
+          "classification_confidence": 0.95
         },
         {
           "paper_id": "2604.03098",
@@ -1469,7 +1428,7 @@
           "topic_label": "Agents and Planning",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.9
+          "classification_confidence": 0.86
         },
         {
           "paper_id": "2604.02910",
@@ -1495,14 +1454,286 @@
           "topic_label": "Agents and Planning",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.89
+          "classification_confidence": 0.9
+        }
+      ]
+    },
+    {
+      "topic_label": "Generative Foundations",
+      "count": 5,
+      "share": 6.41,
+      "papers": [
+        {
+          "paper_id": "2604.03199",
+          "title": "Learning the Signature of Memorization in Autoregressive Language Models",
+          "abs_url": "https://arxiv.org/abs/2604.03199",
+          "pdf_url": "https://arxiv.org/pdf/2604.03199",
+          "detail_url": "https://papers.cool/arxiv/2604.03199",
+          "authors": [
+            "David Ilić",
+            "Kostadin Cvejoski",
+            "David Stanojević",
+            "Evgeny Grigorenko"
+          ],
+          "subjects": [
+            "Computation and Language",
+            "Cryptography and Security",
+            "Machine Learning"
+          ],
+          "abstract": "All prior membership inference attacks for fine-tuned language models use hand-crafted heuristics (e.g., loss thresholding, Min-K\\%, reference calibration), each bounded by the designer's intuition. We introduce the first transferable learned attack, enabled by the observation that fine-tuning any model on any corpus yields unlimited labeled data, since membership is known by construction. This removes the shadow model bottleneck and brings membership inference into the deep learning era: learning what matters rather than designing it, with generalization through training diversity and scale. We discover that fine-tuning language models produces an invariant signature of memorization detectable across architectural families and data domains. We train a membership inference classifier exclusively on transformer-based models. It transfers zero-shot to Mamba (state-space), RWKV-4 (linear attention), and RecurrentGemma (gated recurrence), achieving 0.963, 0.972, and 0.936 AUC respectively. Each evaluation combines an architecture and dataset never seen during training, yet all three exceed performance on held-out transformers (0.908 AUC). These four families share no computational mechanisms, their only commonality is gradient descent on cross-entropy loss. Even simple likelihood-based methods exhibit strong transfer, confirming the signature exists independently of the detection method. Our method, Learned Transfer MIA (LT-MIA), captures this signal most effectively by reframing membership inference as sequence classification over per-token distributional statistics. On transformers, LT-MIA achieves 2.8$\\times$ higher TPR at 0.1\\% FPR than the strongest baseline. The method also transfers to code (0.865 AUC) despite training only on natural language texts. Code and trained classifier available at https://github.com/JetBrains-Research/learned-mia.",
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.94
+        },
+        {
+          "paper_id": "2604.02560",
+          "title": "Dependency-Guided Parallel Decoding in Discrete Diffusion Language Models",
+          "abs_url": "https://arxiv.org/abs/2604.02560",
+          "pdf_url": "https://arxiv.org/pdf/2604.02560",
+          "detail_url": "https://papers.cool/arxiv/2604.02560",
+          "authors": [
+            "Liran Ringel",
+            "Ameen Ali",
+            "Yaniv Romano"
+          ],
+          "subjects": [
+            "Computation and Language"
+          ],
+          "abstract": "Discrete diffusion language models (dLLMs) accelerate text generation by unmasking multiple tokens in parallel. However, parallel decoding introduces a distributional mismatch: it approximates the joint conditional using a fully factorized product of per-token marginals, which degrades output quality when selected tokens are strongly dependent. We propose DEMASK (DEpendency-guided unMASKing), a lightweight dependency predictor that attaches to the final hidden states of a dLLM. In a single forward pass, it estimates pairwise conditional influences between masked positions. Using these predictions, a greedy selection algorithm identifies positions with bounded cumulative dependency for simultaneous unmasking. Under a sub-additivity assumption, we prove this bounds the total variation distance between our parallel sampling and the model's joint. Empirically, DEMASK achieves 1.7-2.2$\\times$ speedup on Dream-7B while matching or improving accuracy compared to confidence-based and KL-based baselines.",
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.97
+        },
+        {
+          "paper_id": "2604.03144",
+          "title": "InCoder-32B-Thinking: Industrial Code World Model for Thinking",
+          "abs_url": "https://arxiv.org/abs/2604.03144",
+          "pdf_url": "https://arxiv.org/pdf/2604.03144",
+          "detail_url": "https://papers.cool/arxiv/2604.03144",
+          "authors": [
+            "Jian Yang",
+            "Wei Zhang",
+            "Jiajun Wu",
+            "Junhang Cheng",
+            "Tuney Zheng",
+            "Fanglin Xu",
+            "Weicheng Gu",
+            "Lin Jing",
+            "Yaxin Du",
+            "Joseph Li",
+            "Yizhi Li",
+            "Yan Xing",
+            "Chuan Hao",
+            "Ran Tao",
+            "Ruihao Gong",
+            "Aishan Liu",
+            "Zhoujun Li",
+            "Mingjie Tang",
+            "Chenghua Lin",
+            "Siheng Chen",
+            "Wayne Xin Zhao",
+            "Xianglong Liu",
+            "Ming Zhou",
+            "Bryan Dai",
+            "Weifeng Lv"
+          ],
+          "subjects": [
+            "Hardware Architecture",
+            "Artificial Intelligence",
+            "Computation and Language"
+          ],
+          "abstract": "Industrial software development across chip design, GPU optimization, and embedded systems lacks expert reasoning traces showing how engineers reason about hardware constraints and timing semantics. In this work, we propose InCoder-32B-Thinking, trained on the data from the Error-driven Chain-of-Thought (ECoT) synthesis framework with an industrial code world model (ICWM) to generate reasoning traces. Specifically, ECoT generates reasoning chains by synthesizing the thinking content from multi-turn dialogue with environmental error feedback, explicitly modeling the error-correction process. ICWM is trained on domain-specific execution traces from Verilog simulation, GPU profiling, etc., learns the causal dynamics of how code affects hardware behavior, and enables self-verification by predicting execution outcomes before actual compilation. All synthesized reasoning traces are validated through domain toolchains, creating training data matching the natural reasoning depth distribution of industrial tasks. Evaluation on 14 general (81.3% on LiveCodeBench v5) and 9 industrial benchmarks (84.0% in CAD-Coder and 38.0% on KernelBench) shows InCoder-32B-Thinking achieves top-tier open-source results across all domains.GPU Optimization",
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.72
+        },
+        {
+          "paper_id": "2604.02718",
+          "title": "Generative Frontiers: Why Evaluation Matters for Diffusion Language Models",
+          "abs_url": "https://arxiv.org/abs/2604.02718",
+          "pdf_url": "https://arxiv.org/pdf/2604.02718",
+          "detail_url": "https://papers.cool/arxiv/2604.02718",
+          "authors": [
+            "Patrick Pynadath",
+            "Jiaxin Shi",
+            "Ruqi Zhang"
+          ],
+          "subjects": [
+            "Machine Learning",
+            "Computation and Language"
+          ],
+          "abstract": "Diffusion language models have seen exciting recent progress, offering far more flexibility in generative trajectories than autoregressive models. This flexibility has motivated a growing body of research into new approaches to diffusion language modeling, which typically begins at the scale of GPT-2 small (150 million parameters). However, these advances introduce new issues with evaluation methodology. In this technical note, we discuss the limitations of current methodology and propose principled augmentations to ensure reliable comparisons. We first discuss why OpenWebText has become the standard benchmark, and why alternatives such as LM1B are inherently less meaningful. We then discuss the limitations of likelihood evaluations for diffusion models, and explain why relying on generative perplexity alone as a metric can lead to uninformative results. To address this, we show that generative perplexity and entropy are two components of the KL divergence to a reference distribution. This decomposition explains generative perplexity's sensitivity to entropy, and naturally suggests generative frontiers as a principled method for evaluating model generative quality. We conclude with empirical observations on model quality at this scale. We include a blog post with interactive content to illustrate the argument at https://patrickpynadath1.github.io/blog/eval_methodology/.",
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.98
+        },
+        {
+          "paper_id": "2604.02340",
+          "title": "Not All Denoising Steps Are Equal: Model Scheduling for Faster Masked Diffusion Language Models",
+          "abs_url": "https://arxiv.org/abs/2604.02340",
+          "pdf_url": "https://arxiv.org/pdf/2604.02340",
+          "detail_url": "https://papers.cool/arxiv/2604.02340",
+          "authors": [
+            "Ivan Sedykh",
+            "Nikita Sorokin",
+            "Valentin Malykh"
+          ],
+          "subjects": [
+            "Machine Learning",
+            "Computation and Language"
+          ],
+          "abstract": "Recent advances in masked diffusion language models (MDLMs) narrow the quality gap to autoregressive LMs, but their sampling remains expensive because generation requires many full-sequence denoising passes with a large Transformer and, unlike autoregressive decoding, cannot benefit from KV caching. In this work, we exploit the flexibility of the diffusion framework and study model scheduling, where a smaller MDLM replaces the full model at a subset of denoising steps. On OpenWebText, we show that early and late denoising steps are substantially more robust to such replacement than middle steps, enabling up to a 17% reduction in FLOPs with only modest degradation in generative perplexity. We support these findings with a step-importance analysis based on loss and KL divergence between small and large models across timesteps, as well as an exhaustive search over coarse step segments, both of which identify the middle of the diffusion trajectory as most sensitive. Our results suggest that simple, architecture-agnostic scheduling rules can significantly accelerate MDLM sampling while largely preserving generation quality as measured by generative perplexity.",
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.98
+        }
+      ]
+    },
+    {
+      "topic_label": "Multimodal Understanding and Vision",
+      "count": 5,
+      "share": 6.41,
+      "papers": [
+        {
+          "paper_id": "2604.03074",
+          "title": "Speaker-Reasoner: Scaling Interaction Turns and Reasoning Patterns for Timestamped Speaker-Attributed ASR",
+          "abs_url": "https://arxiv.org/abs/2604.03074",
+          "pdf_url": "https://arxiv.org/pdf/2604.03074",
+          "detail_url": "https://papers.cool/arxiv/2604.03074",
+          "authors": [
+            "Zhennan Lin",
+            "Shuai Wang",
+            "Zhaokai Sun",
+            "Pengyuan Xie",
+            "Chuan Xie",
+            "Jie Liu",
+            "Qiang Zhang",
+            "Lei Xie"
+          ],
+          "subjects": [
+            "Audio and Speech Processing",
+            "Computation and Language",
+            "Sound"
+          ],
+          "abstract": "Transcribing and understanding multi-speaker conversations requires speech recognition, speaker attribution, and timestamp localization. While speech LLMs excel at single-speaker tasks, multi-speaker scenarios remain challenging due to overlapping speech, backchannels, rapid turn-taking, and context window constraints. We propose Speaker-Reasoner, an end-to-end Speech LLM with agentic multi-turn temporal reasoning. Instead of single-pass inference, the model iteratively analyzes global audio structure, autonomously predicts temporal boundaries, and performs fine-grained segment analysis, jointly modeling speaker identity, gender, timestamps, and transcription. A speaker-aware cache further extends processing to audio exceeding the training context window. Trained with a three-stage progressive strategy, Speaker-Reasoner achieves consistent improvements over strong baselines on AliMeeting and AISHELL-4 datasets, particularly in handling overlapping speech and complex turn-taking.",
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.82
+        },
+        {
+          "paper_id": "2604.02784",
+          "title": "EnsemHalDet: Robust VLM Hallucination Detection via Ensemble of Internal State Detectors",
+          "abs_url": "https://arxiv.org/abs/2604.02784",
+          "pdf_url": "https://arxiv.org/pdf/2604.02784",
+          "detail_url": "https://papers.cool/arxiv/2604.02784",
+          "authors": [
+            "Ryuhei Miyazato",
+            "Shunsuke Kitada",
+            "Kei Harada"
+          ],
+          "subjects": [
+            "Computer Vision and Pattern Recognition",
+            "Computation and Language"
+          ],
+          "abstract": "Vision-Language Models (VLMs) excel at multimodal tasks, but they remain vulnerable to hallucinations that are factually incorrect or ungrounded in the input image. Recent work suggests that hallucination detection using internal representations is more efficient and accurate than approaches that rely solely on model outputs. However, existing internal-representation-based methods typically rely on a single representation or detector, limiting their ability to capture diverse hallucination signals. In this paper, we propose EnsemHalDet, an ensemble-based hallucination detection framework that leverages multiple internal representations of VLMs, including attention outputs and hidden states. EnsemHalDet trains independent detectors for each representation and combines them through ensemble learning. Experimental results across multiple VQA datasets and VLMs show that EnsemHalDet consistently outperforms prior methods and single-detector models in terms of AUC. These results demonstrate that ensembling diverse internal signals significantly improves robustness in multimodal hallucination detection.",
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.85
+        },
+        {
+          "paper_id": "2604.02486",
+          "title": "VLMs Need Words: Vision Language Models Ignore Visual Detail In Favor of Semantic Anchors",
+          "abs_url": "https://arxiv.org/abs/2604.02486",
+          "pdf_url": "https://arxiv.org/pdf/2604.02486",
+          "detail_url": "https://papers.cool/arxiv/2604.02486",
+          "authors": [
+            "Haz Sameen Shahgir",
+            "Xiaofu Chen",
+            "Yu Fu",
+            "Erfan Shayegani",
+            "Nael Abu-Ghazaleh",
+            "Yova Kementchedjhieva",
+            "Yue Dong"
+          ],
+          "subjects": [
+            "Computer Vision and Pattern Recognition",
+            "Computation and Language"
+          ],
+          "abstract": "Vision Language Models (VLMs) achieve impressive performance across a wide range of multimodal tasks. However, on some tasks that demand fine-grained visual perception, they often fail even when the required information is present in their internal representations. In this work, we demonstrate that this gap arises from their narrow training pipeline which focuses on moving visual information to the textual space. Consequently, VLMs can only reason about visual entities that can be mapped to known concepts in the language space, leaving vision-focused tasks such as visual correspondence and reasoning about novel visual entities poorly supported. As a result, VLMs are severely limited in several important multimodal capabilities because they rely on brittle, hallucinated textual descriptions of visual entities that they cannot map to textual representations. We verify this behavior through visual correspondence tasks, in which VLMs must detect matching entities between two images. Testing across semantic, shape, and face correspondence tasks, we find that VLMs perform much better when the relevant entities are nameable in language than when they are unnameable. Mechanistically, our Logit Lens analyses confirm that VLMs explicitly assign semantic labels to nameable entities and surface more unique corresponding tokens compared to unnameable entities. Furthermore, we show that teaching completely arbitrary names for unknown entities improves performance, yet task-specific finetuning yields even stronger generalization without relying on language priors. Our findings suggest that current VLM failures on visual tasks reflect learned shortcuts from their training, rather than a fundamental limitation of multimodal architectures.",
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.97
+        },
+        {
+          "paper_id": "2604.02371",
+          "title": "Internalized Reasoning for Long-Context Visual Document Understanding",
+          "abs_url": "https://arxiv.org/abs/2604.02371",
+          "pdf_url": "https://arxiv.org/pdf/2604.02371",
+          "detail_url": "https://papers.cool/arxiv/2604.02371",
+          "authors": [
+            "Austin Veselka"
+          ],
+          "subjects": [
+            "Computer Vision and Pattern Recognition",
+            "Artificial Intelligence",
+            "Computation and Language"
+          ],
+          "abstract": "Visual long-document understanding is critical for enterprise, legal, and scientific applications, yet the best performing open recipes have not explored reasoning, a capability which has driven leaps in math and code performance. We introduce a synthetic data pipeline for reasoning in long-document understanding that generates thinking traces by scoring each page for question relevance, extracting textual evidence and ordering it from most to least relevant. We apply SFT to the resulting traces within \\texttt{<think>} tags, gated by a \\texttt{<cot>} control token, and the resulting reasoning capability is internalized via low-strength model merging. We study Qwen3 VL 32B and Mistral Small 3.1 24B. With Qwen3 VL, we achieve 58.3 on MMLongBenchDoc, surpassing the 7$\\times$ larger Qwen3 VL 235B A22B (57.0). With Mistral, we show that synthetic reasoning outperforms distillation from the Thinking version's traces by 3.8 points on MMLBD-C, and internalized reasoning exhibits 12.4$\\times$ fewer mean output tokens compared to explicit reasoning. We release our pipeline for reproducibility and further exploration.",
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.95
+        },
+        {
+          "paper_id": "2604.02338",
+          "title": "LiME: Lightweight Mixture of Experts for Efficient Multimodal Multi-task Learning",
+          "abs_url": "https://arxiv.org/abs/2604.02338",
+          "pdf_url": "https://arxiv.org/pdf/2604.02338",
+          "detail_url": "https://papers.cool/arxiv/2604.02338",
+          "authors": [
+            "Md Kowsher",
+            "Haris Mansoor",
+            "Nusrat Jahan Prottasha",
+            "Ozlem Garibay",
+            "Victor Zhu",
+            "Zhengping Ji",
+            "Chen Chen"
+          ],
+          "subjects": [
+            "Machine Learning",
+            "Computation and Language",
+            "Computer Vision and Pattern Recognition"
+          ],
+          "abstract": "MoE-PEFT methods combine Mixture of Experts with parameter-efficient fine-tuning for multi-task adaptation, but require separate adapters per expert causing trainable parameters to scale linearly with expert count and limiting applicability to adapter-based architectures. We propose LiME (Lightweight Mixture of Experts), which achieves expert specialization through lightweight modulation rather than adapter replication. Instead of separate adapters, LiME uses a single shared PEFT module and modulates its output with lightweight expert vectors, reducing expert parameters while generalizing to any PEFT method. Notably, LiME introduces zero-parameter routing by leveraging existing frozen and adapted representations eliminating learned router parameters typically required per layer. Theoretically, we prove that (i) more experts preserve more task-relevant information and (ii) modulation approximates full expert-specific PEFT with bounded error. LiME further incorporates n-gram windowed routing and adaptive expert selection (Auto Top-K) based on routing confidence. Experiments on MMT-47, a multimodal multi-task benchmark with 47 tasks spanning text, image, and video, demonstrate that LiME achieves competitive or superior performance while using up to 4x fewer trainable parameters and up to 29% faster training compared to corresponding MoE-PEFT baselines.",
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.83
         }
       ]
     },
     {
       "topic_label": "Datasets and Benchmarks",
-      "count": 5,
-      "share": 6.41,
+      "count": 4,
+      "share": 5.13,
       "papers": [
         {
           "paper_id": "2604.02904",
@@ -1525,31 +1756,7 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.99
-        },
-        {
-          "paper_id": "2604.02640",
-          "title": "Overcoming the \"Impracticality\" of RAG: Proposing a Real-World Benchmark and Multi-Dimensional Diagnostic Framework",
-          "abs_url": "https://arxiv.org/abs/2604.02640",
-          "pdf_url": "https://arxiv.org/pdf/2604.02640",
-          "detail_url": "https://papers.cool/arxiv/2604.02640",
-          "authors": [
-            "Kenichirou Narita",
-            "Siqi Peng",
-            "Taku Fukui",
-            "Moyuru Yamada",
-            "Satoshi Munakata",
-            "Satoru Takahashi"
-          ],
-          "subjects": [
-            "Computation and Language"
-          ],
-          "abstract": "Performance evaluation of Retrieval-Augmented Generation (RAG) systems within enterprise environments is governed by multi-dimensional and composite factors extending far beyond simple final accuracy checks. These factors include reasoning complexity, retrieval difficulty, the diverse structure of documents, and stringent requirements for operational explainability. Existing academic benchmarks fail to systematically diagnose these interlocking challenges, resulting in a critical gap where models achieving high performance scores fail to meet the expected reliability in practical deployment. To bridge this discrepancy, this research proposes a multi-dimensional diagnostic framework by defining a four-axis difficulty taxonomy and integrating it into an enterprise RAG benchmark to diagnose potential system weaknesses.",
-          "topic_key": "datasets_benchmarks",
-          "topic_label": "Datasets and Benchmarks",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.95
+          "classification_confidence": 0.98
         },
         {
           "paper_id": "2604.02729",
@@ -1629,7 +1836,7 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.96
+          "classification_confidence": 0.94
         },
         {
           "paper_id": "2604.02367",
@@ -1650,67 +1857,15 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.84
+          "classification_confidence": 0.79
         }
       ]
     },
     {
       "topic_label": "Domain Applications",
-      "count": 5,
-      "share": 6.41,
+      "count": 4,
+      "share": 5.13,
       "papers": [
-        {
-          "paper_id": "2604.02951",
-          "title": "How Annotation Trains Annotators: Competence Development in Social Influence Recognition",
-          "abs_url": "https://arxiv.org/abs/2604.02951",
-          "pdf_url": "https://arxiv.org/pdf/2604.02951",
-          "detail_url": "https://papers.cool/arxiv/2604.02951",
-          "authors": [
-            "Maciej Markiewicz",
-            "Beata Bajcar",
-            "Wiktoria Mieleszczenko-Kowszewicz",
-            "Aleksander Szczęsny",
-            "Tomasz Adamczyk",
-            "Grzegorz Chodak",
-            "Karolina Ostrowska",
-            "Aleksandra Sawczuk",
-            "Jolanta Babiak",
-            "Jagoda Szklarczyk",
-            "Przemysław Kazienko"
-          ],
-          "subjects": [
-            "Computation and Language",
-            "Artificial Intelligence"
-          ],
-          "abstract": "Human data annotation, especially when involving experts, is often treated as an objective reference. However, many annotation tasks are inherently subjective, and annotators' judgments may evolve over time. This study investigates changes in the quality of annotators' work from a competence perspective during a process of social influence recognition. The study involved 25 annotators from five different groups, including both experts and non-experts, who annotated a dataset of 1,021 dialogues with 20 social influence techniques, along with intentions, reactions, and consequences. An initial subset of 150 texts was annotated twice - before and after the main annotation process - to enable comparison. To measure competence shifts, we combined qualitative and quantitative analyses of the annotated data, semi-structured interviews with annotators, self-assessment surveys, and Large Language Model training and evaluation on the comparison dataset. The results indicate a significant increase in annotators' self-perceived competence and confidence. Moreover, observed changes in data quality suggest that the annotation process may enhance annotator competence and that this effect is more pronounced in expert groups. The observed shifts in annotator competence have a visible impact on the performance of LLMs trained on their annotated data.",
-          "topic_key": "domain_applications",
-          "topic_label": "Domain Applications",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.61
-        },
-        {
-          "paper_id": "2604.02637",
-          "title": "Train Yourself as an LLM: Exploring Effects of AI Literacy on Persuasion via Role-playing LLM Training",
-          "abs_url": "https://arxiv.org/abs/2604.02637",
-          "pdf_url": "https://arxiv.org/pdf/2604.02637",
-          "detail_url": "https://papers.cool/arxiv/2604.02637",
-          "authors": [
-            "Qihui Fan",
-            "Min Ge",
-            "Chenyan Jia",
-            "Weiyan Shi"
-          ],
-          "subjects": [
-            "Computation and Language"
-          ],
-          "abstract": "As large language models (LLMs) become increasingly persuasive, there is concern that people's opinions and decisions may be influenced across various contexts at scale. Prior mitigation (e.g., AI detectors and disclaimers) largely treats people as passive recipients of AI-generated information. To provide a more proactive intervention against persuasive AI, we introduce $\\textbf{LLMimic}$, a role-play-based, interactive, gamified AI literacy tutorial, where participants assume the role of an LLM and progress through three key stages of the training pipeline (pretraining, SFT, and RLHF). We conducted a $2 \\times 3$ between-subjects study ($N = 274$) where participants either (1) watched an AI history video (control) or (2) interacted with LLMimic (treatment), and then engaged in one of three realistic AI persuasion scenarios: (a) charity donation persuasion, (b) malicious money solicitation, or (c) hotel recommendation. Our results show that LLMimic significantly improved participants' AI literacy ($p < .001$), reduced persuasion success across scenarios ($p < .05$), and enhanced truthfulness and social responsibility levels ($p<0.01$) in the hotel scenario. These findings suggest that LLMimic offers a scalable, human-centered approach to improving AI literacy and supporting more informed interactions with persuasive AI.",
-          "topic_key": "domain_applications",
-          "topic_label": "Domain Applications",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.56
-        },
         {
           "paper_id": "2604.02537",
           "title": "PolyJarvis: LLM Agent for Autonomous Polymer MD Simulations",
@@ -1731,7 +1886,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.79
+          "classification_confidence": 0.74
         },
         {
           "paper_id": "2604.02362",
@@ -1752,7 +1907,32 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.78
+          "classification_confidence": 0.8
+        },
+        {
+          "paper_id": "2604.02359",
+          "title": "Using LLM-as-a-Judge/Jury to Advance Scalable, Clinically-Validated Safety Evaluations of Model Responses to Users Demonstrating Psychosis",
+          "abs_url": "https://arxiv.org/abs/2604.02359",
+          "pdf_url": "https://arxiv.org/pdf/2604.02359",
+          "detail_url": "https://papers.cool/arxiv/2604.02359",
+          "authors": [
+            "May Lynn Reese",
+            "Markela Zeneli",
+            "Mindy Ng",
+            "Jacob Haimes",
+            "Andreea Damien",
+            "Elizabeth Stade"
+          ],
+          "subjects": [
+            "Computation and Language",
+            "Artificial Intelligence"
+          ],
+          "abstract": "General-purpose Large Language Models (LLMs) are becoming widely adopted by people for mental health support. Yet emerging evidence suggests there are significant risks associated with high-frequency use, particularly for individuals suffering from psychosis, as LLMs may reinforce delusions and hallucinations. Existing evaluations of LLMs in mental health contexts are limited by a lack of clinical validation and scalability of assessment. To address these issues, this research focuses on psychosis as a critical condition for LLM safety evaluation by (1) developing and validating seven clinician-informed safety criteria, (2) constructing a human-consensus dataset, and (3) testing automated assessment using an LLM as an evaluator (LLM-as-a-Judge) or taking the majority vote of several LLM judges (LLM-as-a-Jury). Results indicate that LLM-as-a-Judge aligns closely with the human consensus (Cohen's $κ_{\\text{human} \\times \\text{gemini}} = 0.75$, $κ_{\\text{human} \\times \\text{qwen}} = 0.68$, $κ_{\\text{human} \\times \\text{kimi}} = 0.56$) and that the best judge slightly outperforms LLM-as-a-Jury (Cohen's $κ_{\\text{human} \\times \\text{jury}} = 0.74$). Overall, these findings have promising implications for clinically grounded, scalable methods in LLM safety evaluations for mental health contexts.",
+          "topic_key": "domain_applications",
+          "topic_label": "Domain Applications",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.91
         },
         {
           "paper_id": "2604.02403",
@@ -1773,262 +1953,14 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.82
-        }
-      ]
-    },
-    {
-      "topic_label": "Multimodal Understanding and Vision",
-      "count": 5,
-      "share": 6.41,
-      "papers": [
-        {
-          "paper_id": "2604.03074",
-          "title": "Speaker-Reasoner: Scaling Interaction Turns and Reasoning Patterns for Timestamped Speaker-Attributed ASR",
-          "abs_url": "https://arxiv.org/abs/2604.03074",
-          "pdf_url": "https://arxiv.org/pdf/2604.03074",
-          "detail_url": "https://papers.cool/arxiv/2604.03074",
-          "authors": [
-            "Zhennan Lin",
-            "Shuai Wang",
-            "Zhaokai Sun",
-            "Pengyuan Xie",
-            "Chuan Xie",
-            "Jie Liu",
-            "Qiang Zhang",
-            "Lei Xie"
-          ],
-          "subjects": [
-            "Audio and Speech Processing",
-            "Computation and Language",
-            "Sound"
-          ],
-          "abstract": "Transcribing and understanding multi-speaker conversations requires speech recognition, speaker attribution, and timestamp localization. While speech LLMs excel at single-speaker tasks, multi-speaker scenarios remain challenging due to overlapping speech, backchannels, rapid turn-taking, and context window constraints. We propose Speaker-Reasoner, an end-to-end Speech LLM with agentic multi-turn temporal reasoning. Instead of single-pass inference, the model iteratively analyzes global audio structure, autonomously predicts temporal boundaries, and performs fine-grained segment analysis, jointly modeling speaker identity, gender, timestamps, and transcription. A speaker-aware cache further extends processing to audio exceeding the training context window. Trained with a three-stage progressive strategy, Speaker-Reasoner achieves consistent improvements over strong baselines on AliMeeting and AISHELL-4 datasets, particularly in handling overlapping speech and complex turn-taking.",
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.8
-        },
-        {
-          "paper_id": "2604.02784",
-          "title": "EnsemHalDet: Robust VLM Hallucination Detection via Ensemble of Internal State Detectors",
-          "abs_url": "https://arxiv.org/abs/2604.02784",
-          "pdf_url": "https://arxiv.org/pdf/2604.02784",
-          "detail_url": "https://papers.cool/arxiv/2604.02784",
-          "authors": [
-            "Ryuhei Miyazato",
-            "Shunsuke Kitada",
-            "Kei Harada"
-          ],
-          "subjects": [
-            "Computer Vision and Pattern Recognition",
-            "Computation and Language"
-          ],
-          "abstract": "Vision-Language Models (VLMs) excel at multimodal tasks, but they remain vulnerable to hallucinations that are factually incorrect or ungrounded in the input image. Recent work suggests that hallucination detection using internal representations is more efficient and accurate than approaches that rely solely on model outputs. However, existing internal-representation-based methods typically rely on a single representation or detector, limiting their ability to capture diverse hallucination signals. In this paper, we propose EnsemHalDet, an ensemble-based hallucination detection framework that leverages multiple internal representations of VLMs, including attention outputs and hidden states. EnsemHalDet trains independent detectors for each representation and combines them through ensemble learning. Experimental results across multiple VQA datasets and VLMs show that EnsemHalDet consistently outperforms prior methods and single-detector models in terms of AUC. These results demonstrate that ensembling diverse internal signals significantly improves robustness in multimodal hallucination detection.",
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.85
-        },
-        {
-          "paper_id": "2604.02486",
-          "title": "VLMs Need Words: Vision Language Models Ignore Visual Detail In Favor of Semantic Anchors",
-          "abs_url": "https://arxiv.org/abs/2604.02486",
-          "pdf_url": "https://arxiv.org/pdf/2604.02486",
-          "detail_url": "https://papers.cool/arxiv/2604.02486",
-          "authors": [
-            "Haz Sameen Shahgir",
-            "Xiaofu Chen",
-            "Yu Fu",
-            "Erfan Shayegani",
-            "Nael Abu-Ghazaleh",
-            "Yova Kementchedjhieva",
-            "Yue Dong"
-          ],
-          "subjects": [
-            "Computer Vision and Pattern Recognition",
-            "Computation and Language"
-          ],
-          "abstract": "Vision Language Models (VLMs) achieve impressive performance across a wide range of multimodal tasks. However, on some tasks that demand fine-grained visual perception, they often fail even when the required information is present in their internal representations. In this work, we demonstrate that this gap arises from their narrow training pipeline which focuses on moving visual information to the textual space. Consequently, VLMs can only reason about visual entities that can be mapped to known concepts in the language space, leaving vision-focused tasks such as visual correspondence and reasoning about novel visual entities poorly supported. As a result, VLMs are severely limited in several important multimodal capabilities because they rely on brittle, hallucinated textual descriptions of visual entities that they cannot map to textual representations. We verify this behavior through visual correspondence tasks, in which VLMs must detect matching entities between two images. Testing across semantic, shape, and face correspondence tasks, we find that VLMs perform much better when the relevant entities are nameable in language than when they are unnameable. Mechanistically, our Logit Lens analyses confirm that VLMs explicitly assign semantic labels to nameable entities and surface more unique corresponding tokens compared to unnameable entities. Furthermore, we show that teaching completely arbitrary names for unknown entities improves performance, yet task-specific finetuning yields even stronger generalization without relying on language priors. Our findings suggest that current VLM failures on visual tasks reflect learned shortcuts from their training, rather than a fundamental limitation of multimodal architectures.",
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.98
-        },
-        {
-          "paper_id": "2604.02371",
-          "title": "Internalized Reasoning for Long-Context Visual Document Understanding",
-          "abs_url": "https://arxiv.org/abs/2604.02371",
-          "pdf_url": "https://arxiv.org/pdf/2604.02371",
-          "detail_url": "https://papers.cool/arxiv/2604.02371",
-          "authors": [
-            "Austin Veselka"
-          ],
-          "subjects": [
-            "Computer Vision and Pattern Recognition",
-            "Artificial Intelligence",
-            "Computation and Language"
-          ],
-          "abstract": "Visual long-document understanding is critical for enterprise, legal, and scientific applications, yet the best performing open recipes have not explored reasoning, a capability which has driven leaps in math and code performance. We introduce a synthetic data pipeline for reasoning in long-document understanding that generates thinking traces by scoring each page for question relevance, extracting textual evidence and ordering it from most to least relevant. We apply SFT to the resulting traces within \\texttt{<think>} tags, gated by a \\texttt{<cot>} control token, and the resulting reasoning capability is internalized via low-strength model merging. We study Qwen3 VL 32B and Mistral Small 3.1 24B. With Qwen3 VL, we achieve 58.3 on MMLongBenchDoc, surpassing the 7$\\times$ larger Qwen3 VL 235B A22B (57.0). With Mistral, we show that synthetic reasoning outperforms distillation from the Thinking version's traces by 3.8 points on MMLBD-C, and internalized reasoning exhibits 12.4$\\times$ fewer mean output tokens compared to explicit reasoning. We release our pipeline for reproducibility and further exploration.",
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.95
-        },
-        {
-          "paper_id": "2604.02338",
-          "title": "LiME: Lightweight Mixture of Experts for Efficient Multimodal Multi-task Learning",
-          "abs_url": "https://arxiv.org/abs/2604.02338",
-          "pdf_url": "https://arxiv.org/pdf/2604.02338",
-          "detail_url": "https://papers.cool/arxiv/2604.02338",
-          "authors": [
-            "Md Kowsher",
-            "Haris Mansoor",
-            "Nusrat Jahan Prottasha",
-            "Ozlem Garibay",
-            "Victor Zhu",
-            "Zhengping Ji",
-            "Chen Chen"
-          ],
-          "subjects": [
-            "Machine Learning",
-            "Computation and Language",
-            "Computer Vision and Pattern Recognition"
-          ],
-          "abstract": "MoE-PEFT methods combine Mixture of Experts with parameter-efficient fine-tuning for multi-task adaptation, but require separate adapters per expert causing trainable parameters to scale linearly with expert count and limiting applicability to adapter-based architectures. We propose LiME (Lightweight Mixture of Experts), which achieves expert specialization through lightweight modulation rather than adapter replication. Instead of separate adapters, LiME uses a single shared PEFT module and modulates its output with lightweight expert vectors, reducing expert parameters while generalizing to any PEFT method. Notably, LiME introduces zero-parameter routing by leveraging existing frozen and adapted representations eliminating learned router parameters typically required per layer. Theoretically, we prove that (i) more experts preserve more task-relevant information and (ii) modulation approximates full expert-specific PEFT with bounded error. LiME further incorporates n-gram windowed routing and adaptive expert selection (Auto Top-K) based on routing confidence. Experiments on MMT-47, a multimodal multi-task benchmark with 47 tasks spanning text, image, and video, demonstrate that LiME achieves competitive or superior performance while using up to 4x fewer trainable parameters and up to 29% faster training compared to corresponding MoE-PEFT baselines.",
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.84
-        }
-      ]
-    },
-    {
-      "topic_label": "Generative Foundations",
-      "count": 4,
-      "share": 5.13,
-      "papers": [
-        {
-          "paper_id": "2604.02560",
-          "title": "Dependency-Guided Parallel Decoding in Discrete Diffusion Language Models",
-          "abs_url": "https://arxiv.org/abs/2604.02560",
-          "pdf_url": "https://arxiv.org/pdf/2604.02560",
-          "detail_url": "https://papers.cool/arxiv/2604.02560",
-          "authors": [
-            "Liran Ringel",
-            "Ameen Ali",
-            "Yaniv Romano"
-          ],
-          "subjects": [
-            "Computation and Language"
-          ],
-          "abstract": "Discrete diffusion language models (dLLMs) accelerate text generation by unmasking multiple tokens in parallel. However, parallel decoding introduces a distributional mismatch: it approximates the joint conditional using a fully factorized product of per-token marginals, which degrades output quality when selected tokens are strongly dependent. We propose DEMASK (DEpendency-guided unMASKing), a lightweight dependency predictor that attaches to the final hidden states of a dLLM. In a single forward pass, it estimates pairwise conditional influences between masked positions. Using these predictions, a greedy selection algorithm identifies positions with bounded cumulative dependency for simultaneous unmasking. Under a sub-additivity assumption, we prove this bounds the total variation distance between our parallel sampling and the model's joint. Empirically, DEMASK achieves 1.7-2.2$\\times$ speedup on Dream-7B while matching or improving accuracy compared to confidence-based and KL-based baselines.",
-          "topic_key": "generative_foundations",
-          "topic_label": "Generative Foundations",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.97
-        },
-        {
-          "paper_id": "2604.03144",
-          "title": "InCoder-32B-Thinking: Industrial Code World Model for Thinking",
-          "abs_url": "https://arxiv.org/abs/2604.03144",
-          "pdf_url": "https://arxiv.org/pdf/2604.03144",
-          "detail_url": "https://papers.cool/arxiv/2604.03144",
-          "authors": [
-            "Jian Yang",
-            "Wei Zhang",
-            "Jiajun Wu",
-            "Junhang Cheng",
-            "Tuney Zheng",
-            "Fanglin Xu",
-            "Weicheng Gu",
-            "Lin Jing",
-            "Yaxin Du",
-            "Joseph Li",
-            "Yizhi Li",
-            "Yan Xing",
-            "Chuan Hao",
-            "Ran Tao",
-            "Ruihao Gong",
-            "Aishan Liu",
-            "Zhoujun Li",
-            "Mingjie Tang",
-            "Chenghua Lin",
-            "Siheng Chen",
-            "Wayne Xin Zhao",
-            "Xianglong Liu",
-            "Ming Zhou",
-            "Bryan Dai",
-            "Weifeng Lv"
-          ],
-          "subjects": [
-            "Hardware Architecture",
-            "Artificial Intelligence",
-            "Computation and Language"
-          ],
-          "abstract": "Industrial software development across chip design, GPU optimization, and embedded systems lacks expert reasoning traces showing how engineers reason about hardware constraints and timing semantics. In this work, we propose InCoder-32B-Thinking, trained on the data from the Error-driven Chain-of-Thought (ECoT) synthesis framework with an industrial code world model (ICWM) to generate reasoning traces. Specifically, ECoT generates reasoning chains by synthesizing the thinking content from multi-turn dialogue with environmental error feedback, explicitly modeling the error-correction process. ICWM is trained on domain-specific execution traces from Verilog simulation, GPU profiling, etc., learns the causal dynamics of how code affects hardware behavior, and enables self-verification by predicting execution outcomes before actual compilation. All synthesized reasoning traces are validated through domain toolchains, creating training data matching the natural reasoning depth distribution of industrial tasks. Evaluation on 14 general (81.3% on LiveCodeBench v5) and 9 industrial benchmarks (84.0% in CAD-Coder and 38.0% on KernelBench) shows InCoder-32B-Thinking achieves top-tier open-source results across all domains.GPU Optimization",
-          "topic_key": "generative_foundations",
-          "topic_label": "Generative Foundations",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.79
-        },
-        {
-          "paper_id": "2604.02718",
-          "title": "Generative Frontiers: Why Evaluation Matters for Diffusion Language Models",
-          "abs_url": "https://arxiv.org/abs/2604.02718",
-          "pdf_url": "https://arxiv.org/pdf/2604.02718",
-          "detail_url": "https://papers.cool/arxiv/2604.02718",
-          "authors": [
-            "Patrick Pynadath",
-            "Jiaxin Shi",
-            "Ruqi Zhang"
-          ],
-          "subjects": [
-            "Machine Learning",
-            "Computation and Language"
-          ],
-          "abstract": "Diffusion language models have seen exciting recent progress, offering far more flexibility in generative trajectories than autoregressive models. This flexibility has motivated a growing body of research into new approaches to diffusion language modeling, which typically begins at the scale of GPT-2 small (150 million parameters). However, these advances introduce new issues with evaluation methodology. In this technical note, we discuss the limitations of current methodology and propose principled augmentations to ensure reliable comparisons. We first discuss why OpenWebText has become the standard benchmark, and why alternatives such as LM1B are inherently less meaningful. We then discuss the limitations of likelihood evaluations for diffusion models, and explain why relying on generative perplexity alone as a metric can lead to uninformative results. To address this, we show that generative perplexity and entropy are two components of the KL divergence to a reference distribution. This decomposition explains generative perplexity's sensitivity to entropy, and naturally suggests generative frontiers as a principled method for evaluating model generative quality. We conclude with empirical observations on model quality at this scale. We include a blog post with interactive content to illustrate the argument at https://patrickpynadath1.github.io/blog/eval_methodology/.",
-          "topic_key": "generative_foundations",
-          "topic_label": "Generative Foundations",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.98
-        },
-        {
-          "paper_id": "2604.02340",
-          "title": "Not All Denoising Steps Are Equal: Model Scheduling for Faster Masked Diffusion Language Models",
-          "abs_url": "https://arxiv.org/abs/2604.02340",
-          "pdf_url": "https://arxiv.org/pdf/2604.02340",
-          "detail_url": "https://papers.cool/arxiv/2604.02340",
-          "authors": [
-            "Ivan Sedykh",
-            "Nikita Sorokin",
-            "Valentin Malykh"
-          ],
-          "subjects": [
-            "Machine Learning",
-            "Computation and Language"
-          ],
-          "abstract": "Recent advances in masked diffusion language models (MDLMs) narrow the quality gap to autoregressive LMs, but their sampling remains expensive because generation requires many full-sequence denoising passes with a large Transformer and, unlike autoregressive decoding, cannot benefit from KV caching. In this work, we exploit the flexibility of the diffusion framework and study model scheduling, where a smaller MDLM replaces the full model at a subset of denoising steps. On OpenWebText, we show that early and late denoising steps are substantially more robust to such replacement than middle steps, enabling up to a 17% reduction in FLOPs with only modest degradation in generative perplexity. We support these findings with a step-importance analysis based on loss and KL divergence between small and large models across timesteps, as well as an exhaustive search over coarse step segments, both of which identify the middle of the diffusion trajectory as most sensitive. Our results suggest that simple, architecture-agnostic scheduling rules can significantly accelerate MDLM sampling while largely preserving generation quality as measured by generative perplexity.",
-          "topic_key": "generative_foundations",
-          "topic_label": "Generative Foundations",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.98
+          "classification_confidence": 0.89
         }
       ]
     },
     {
       "topic_label": "Learning, Optimization, and Theory",
-      "count": 2,
-      "share": 2.56,
+      "count": 3,
+      "share": 3.85,
       "papers": [
         {
           "paper_id": "2604.03128",
@@ -2057,7 +1989,28 @@
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.52
+          "classification_confidence": 0.61
+        },
+        {
+          "paper_id": "2604.02459",
+          "title": "On the Geometric Structure of Layer Updates in Deep Language Models",
+          "abs_url": "https://arxiv.org/abs/2604.02459",
+          "pdf_url": "https://arxiv.org/pdf/2604.02459",
+          "detail_url": "https://papers.cool/arxiv/2604.02459",
+          "authors": [
+            "Jun-Sik Yoo"
+          ],
+          "subjects": [
+            "Machine Learning",
+            "Artificial Intelligence",
+            "Computation and Language"
+          ],
+          "abstract": "We study the geometric structure of layer updates in deep language models. Rather than analyzing what information is encoded in intermediate representations, we ask how representations change from one layer to the next. We show that layerwise updates admit a decomposition into a dominant tokenwise component and a residual that is not captured by restricted tokenwise function classes. Across multiple architectures, including Transformers and state-space models, we find that the full layer update is almost perfectly aligned with the tokenwise component, while the residual exhibits substantially weaker alignment, larger angular deviation, and significantly lower projection onto the dominant tokenwise subspace. This indicates that the residual is not merely a small correction, but a geometrically distinct component of the transformation. This geometric separation has functional consequences: approximation error under the restricted tokenwise model is strongly associated with output perturbation, with Spearman correlations often exceeding 0.7 and reaching up to 0.95 in larger models. Together, these results suggest that most layerwise updates behave like structured reparameterizations along a dominant direction, while functionally significant computation is concentrated in a geometrically distinct residual component. Our framework provides a simple, architecture-agnostic method for probing the geometric and functional structure of layer updates in modern language models.",
+          "topic_key": "learning_theory",
+          "topic_label": "Learning, Optimization, and Theory",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.73
         },
         {
           "paper_id": "2604.02339",
@@ -2079,7 +2032,66 @@
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.72
+          "classification_confidence": 0.82
+        }
+      ]
+    },
+    {
+      "topic_label": "Other AI",
+      "count": 2,
+      "share": 2.56,
+      "papers": [
+        {
+          "paper_id": "2604.02951",
+          "title": "How Annotation Trains Annotators: Competence Development in Social Influence Recognition",
+          "abs_url": "https://arxiv.org/abs/2604.02951",
+          "pdf_url": "https://arxiv.org/pdf/2604.02951",
+          "detail_url": "https://papers.cool/arxiv/2604.02951",
+          "authors": [
+            "Maciej Markiewicz",
+            "Beata Bajcar",
+            "Wiktoria Mieleszczenko-Kowszewicz",
+            "Aleksander Szczęsny",
+            "Tomasz Adamczyk",
+            "Grzegorz Chodak",
+            "Karolina Ostrowska",
+            "Aleksandra Sawczuk",
+            "Jolanta Babiak",
+            "Jagoda Szklarczyk",
+            "Przemysław Kazienko"
+          ],
+          "subjects": [
+            "Computation and Language",
+            "Artificial Intelligence"
+          ],
+          "abstract": "Human data annotation, especially when involving experts, is often treated as an objective reference. However, many annotation tasks are inherently subjective, and annotators' judgments may evolve over time. This study investigates changes in the quality of annotators' work from a competence perspective during a process of social influence recognition. The study involved 25 annotators from five different groups, including both experts and non-experts, who annotated a dataset of 1,021 dialogues with 20 social influence techniques, along with intentions, reactions, and consequences. An initial subset of 150 texts was annotated twice - before and after the main annotation process - to enable comparison. To measure competence shifts, we combined qualitative and quantitative analyses of the annotated data, semi-structured interviews with annotators, self-assessment surveys, and Large Language Model training and evaluation on the comparison dataset. The results indicate a significant increase in annotators' self-perceived competence and confidence. Moreover, observed changes in data quality suggest that the annotation process may enhance annotator competence and that this effect is more pronounced in expert groups. The observed shifts in annotator competence have a visible impact on the performance of LLMs trained on their annotated data.",
+          "topic_key": "other_ai",
+          "topic_label": "Other AI",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.62
+        },
+        {
+          "paper_id": "2604.02637",
+          "title": "Train Yourself as an LLM: Exploring Effects of AI Literacy on Persuasion via Role-playing LLM Training",
+          "abs_url": "https://arxiv.org/abs/2604.02637",
+          "pdf_url": "https://arxiv.org/pdf/2604.02637",
+          "detail_url": "https://papers.cool/arxiv/2604.02637",
+          "authors": [
+            "Qihui Fan",
+            "Min Ge",
+            "Chenyan Jia",
+            "Weiyan Shi"
+          ],
+          "subjects": [
+            "Computation and Language"
+          ],
+          "abstract": "As large language models (LLMs) become increasingly persuasive, there is concern that people's opinions and decisions may be influenced across various contexts at scale. Prior mitigation (e.g., AI detectors and disclaimers) largely treats people as passive recipients of AI-generated information. To provide a more proactive intervention against persuasive AI, we introduce $\\textbf{LLMimic}$, a role-play-based, interactive, gamified AI literacy tutorial, where participants assume the role of an LLM and progress through three key stages of the training pipeline (pretraining, SFT, and RLHF). We conducted a $2 \\times 3$ between-subjects study ($N = 274$) where participants either (1) watched an AI history video (control) or (2) interacted with LLMimic (treatment), and then engaged in one of three realistic AI persuasion scenarios: (a) charity donation persuasion, (b) malicious money solicitation, or (c) hotel recommendation. Our results show that LLMimic significantly improved participants' AI literacy ($p < .001$), reduced persuasion success across scenarios ($p < .05$), and enhanced truthfulness and social responsibility levels ($p<0.01$) in the hotel scenario. These findings suggest that LLMimic offers a scalable, human-centered approach to improving AI literacy and supporting more informed interactions with persuasive AI.",
+          "topic_key": "other_ai",
+          "topic_label": "Other AI",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.58
         }
       ]
     },
@@ -2112,7 +2124,7 @@
           "topic_label": "Multimodal Agents",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.99
+          "classification_confidence": 0.97
         }
       ]
     },
@@ -2143,7 +2155,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.85
+          "classification_confidence": 0.84
         }
       ]
     }
@@ -2171,7 +2183,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.94
+      "classification_confidence": 0.92
     },
     {
       "paper_id": "2604.03199",
@@ -2191,11 +2203,11 @@
         "Machine Learning"
       ],
       "abstract": "All prior membership inference attacks for fine-tuned language models use hand-crafted heuristics (e.g., loss thresholding, Min-K\\%, reference calibration), each bounded by the designer's intuition. We introduce the first transferable learned attack, enabled by the observation that fine-tuning any model on any corpus yields unlimited labeled data, since membership is known by construction. This removes the shadow model bottleneck and brings membership inference into the deep learning era: learning what matters rather than designing it, with generalization through training diversity and scale. We discover that fine-tuning language models produces an invariant signature of memorization detectable across architectural families and data domains. We train a membership inference classifier exclusively on transformer-based models. It transfers zero-shot to Mamba (state-space), RWKV-4 (linear attention), and RecurrentGemma (gated recurrence), achieving 0.963, 0.972, and 0.936 AUC respectively. Each evaluation combines an architecture and dataset never seen during training, yet all three exceed performance on held-out transformers (0.908 AUC). These four families share no computational mechanisms, their only commonality is gradient descent on cross-entropy loss. Even simple likelihood-based methods exhibit strong transfer, confirming the signature exists independently of the detection method. Our method, Learned Transfer MIA (LT-MIA), captures this signal most effectively by reframing membership inference as sequence classification over per-token distributional statistics. On transformers, LT-MIA achieves 2.8$\\times$ higher TPR at 0.1\\% FPR than the strongest baseline. The method also transfers to code (0.865 AUC) despite training only on natural language texts. Code and trained classifier available at https://github.com/JetBrains-Research/learned-mia.",
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
+      "topic_key": "generative_foundations",
+      "topic_label": "Generative Foundations",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.81
+      "classification_confidence": 0.94
     },
     {
       "paper_id": "2604.03192",
@@ -2221,7 +2233,7 @@
       "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.83
+      "classification_confidence": 0.75
     },
     {
       "paper_id": "2604.03174",
@@ -2242,7 +2254,7 @@
       "topic_label": "Retrieval, Knowledge, and RAG",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.98
+      "classification_confidence": 0.97
     },
     {
       "paper_id": "2604.03173",
@@ -2263,7 +2275,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.93
+      "classification_confidence": 0.89
     },
     {
       "paper_id": "2604.03147",
@@ -2332,7 +2344,7 @@
       "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.68
+      "classification_confidence": 0.73
     },
     {
       "paper_id": "2604.03127",
@@ -2356,7 +2368,7 @@
       "topic_label": "Retrieval, Knowledge, and RAG",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.88
+      "classification_confidence": 0.91
     },
     {
       "paper_id": "2604.03110",
@@ -2379,7 +2391,7 @@
       "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.84
+      "classification_confidence": 0.76
     },
     {
       "paper_id": "2604.03058",
@@ -2409,7 +2421,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.93
+      "classification_confidence": 0.94
     },
     {
       "paper_id": "2604.03057",
@@ -2432,7 +2444,7 @@
       "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.75
+      "classification_confidence": 0.83
     },
     {
       "paper_id": "2604.03044",
@@ -2520,7 +2532,7 @@
       "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.92
     },
     {
       "paper_id": "2604.03004",
@@ -2546,7 +2558,7 @@
       "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.86
+      "classification_confidence": 0.81
     },
     {
       "paper_id": "2604.02972",
@@ -2570,7 +2582,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.65
+      "classification_confidence": 0.72
     },
     {
       "paper_id": "2604.02954",
@@ -2598,7 +2610,7 @@
       "topic_label": "Retrieval, Knowledge, and RAG",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.97
+      "classification_confidence": 0.96
     },
     {
       "paper_id": "2604.02951",
@@ -2624,11 +2636,11 @@
         "Artificial Intelligence"
       ],
       "abstract": "Human data annotation, especially when involving experts, is often treated as an objective reference. However, many annotation tasks are inherently subjective, and annotators' judgments may evolve over time. This study investigates changes in the quality of annotators' work from a competence perspective during a process of social influence recognition. The study involved 25 annotators from five different groups, including both experts and non-experts, who annotated a dataset of 1,021 dialogues with 20 social influence techniques, along with intentions, reactions, and consequences. An initial subset of 150 texts was annotated twice - before and after the main annotation process - to enable comparison. To measure competence shifts, we combined qualitative and quantitative analyses of the annotated data, semi-structured interviews with annotators, self-assessment surveys, and Large Language Model training and evaluation on the comparison dataset. The results indicate a significant increase in annotators' self-perceived competence and confidence. Moreover, observed changes in data quality suggest that the annotation process may enhance annotator competence and that this effect is more pronounced in expert groups. The observed shifts in annotator competence have a visible impact on the performance of LLMs trained on their annotated data.",
-      "topic_key": "domain_applications",
-      "topic_label": "Domain Applications",
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.61
+      "classification_confidence": 0.62
     },
     {
       "paper_id": "2604.02926",
@@ -2649,7 +2661,7 @@
       "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.6
+      "classification_confidence": 0.7
     },
     {
       "paper_id": "2604.02923",
@@ -2673,7 +2685,7 @@
       "topic_label": "Agents and Planning",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.84
     },
     {
       "paper_id": "2604.02904",
@@ -2696,7 +2708,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.99
+      "classification_confidence": 0.98
     },
     {
       "paper_id": "2604.02881",
@@ -2718,7 +2730,7 @@
       "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.74
+      "classification_confidence": 0.84
     },
     {
       "paper_id": "2604.02866",
@@ -2742,7 +2754,7 @@
       "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.78
+      "classification_confidence": 0.73
     },
     {
       "paper_id": "2604.02830",
@@ -2761,11 +2773,11 @@
         "Computation and Language"
       ],
       "abstract": "Detecting whether a model's internal knowledge is sufficient to correctly answer a given question is a fundamental challenge in deploying responsible LLMs. In addition to verbalising the confidence by LLM self-report, more recent methods explore the model internals, such as the hidden states of the response tokens to capture how much knowledge is activated. We argue that such activated knowledge may not align with what the query requires, e.g., capturing the stylistic and length-related features that are uninformative for answering the query. To fill the gap, we propose GRADE (Gradient Dynamics for knowledge gap detection), which quantifies the knowledge gap via the cross-layer rank ratio of the gradient to that of the corresponding hidden state subspace. This is motivated by the property of gradients as estimators of the required knowledge updates for a given target. We validate \\modelname{} on six benchmarks, demonstrating its effectiveness and robustness to input perturbations. In addition, we present a case study showing how the gradient chain can generate interpretable explanations of knowledge gaps for long-form answers.",
-      "topic_key": "retrieval_knowledge",
-      "topic_label": "Retrieval, Knowledge, and RAG",
+      "topic_key": "reasoning_alignment_eval",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.7
+      "classification_confidence": 0.8
     },
     {
       "paper_id": "2604.02819",
@@ -2788,7 +2800,7 @@
       "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.77
+      "classification_confidence": 0.76
     },
     {
       "paper_id": "2604.02795",
@@ -2821,7 +2833,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.89
+      "classification_confidence": 0.86
     },
     {
       "paper_id": "2604.02778",
@@ -2847,7 +2859,7 @@
       "topic_label": "Retrieval, Knowledge, and RAG",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.69
+      "classification_confidence": 0.67
     },
     {
       "paper_id": "2604.02772",
@@ -2870,7 +2882,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.88
+      "classification_confidence": 0.91
     },
     {
       "paper_id": "2604.02713",
@@ -2892,7 +2904,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.89
+      "classification_confidence": 0.87
     },
     {
       "paper_id": "2604.02709",
@@ -2923,7 +2935,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.96
+      "classification_confidence": 0.95
     },
     {
       "paper_id": "2604.02699",
@@ -2943,7 +2955,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.84
+      "classification_confidence": 0.77
     },
     {
       "paper_id": "2604.02669",
@@ -2995,7 +3007,7 @@
       "topic_label": "Agents and Planning",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.93
+      "classification_confidence": 0.92
     },
     {
       "paper_id": "2604.02660",
@@ -3019,7 +3031,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.96
     },
     {
       "paper_id": "2604.02650",
@@ -3042,7 +3054,7 @@
       "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.78
+      "classification_confidence": 0.8
     },
     {
       "paper_id": "2604.02645",
@@ -3063,7 +3075,7 @@
       "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.65
+      "classification_confidence": 0.69
     },
     {
       "paper_id": "2604.02640",
@@ -3083,11 +3095,11 @@
         "Computation and Language"
       ],
       "abstract": "Performance evaluation of Retrieval-Augmented Generation (RAG) systems within enterprise environments is governed by multi-dimensional and composite factors extending far beyond simple final accuracy checks. These factors include reasoning complexity, retrieval difficulty, the diverse structure of documents, and stringent requirements for operational explainability. Existing academic benchmarks fail to systematically diagnose these interlocking challenges, resulting in a critical gap where models achieving high performance scores fail to meet the expected reliability in practical deployment. To bridge this discrepancy, this research proposes a multi-dimensional diagnostic framework by defining a four-axis difficulty taxonomy and integrating it into an enterprise RAG benchmark to diagnose potential system weaknesses.",
-      "topic_key": "datasets_benchmarks",
-      "topic_label": "Datasets and Benchmarks",
+      "topic_key": "retrieval_knowledge",
+      "topic_label": "Retrieval, Knowledge, and RAG",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.98
     },
     {
       "paper_id": "2604.02637",
@@ -3105,11 +3117,11 @@
         "Computation and Language"
       ],
       "abstract": "As large language models (LLMs) become increasingly persuasive, there is concern that people's opinions and decisions may be influenced across various contexts at scale. Prior mitigation (e.g., AI detectors and disclaimers) largely treats people as passive recipients of AI-generated information. To provide a more proactive intervention against persuasive AI, we introduce $\\textbf{LLMimic}$, a role-play-based, interactive, gamified AI literacy tutorial, where participants assume the role of an LLM and progress through three key stages of the training pipeline (pretraining, SFT, and RLHF). We conducted a $2 \\times 3$ between-subjects study ($N = 274$) where participants either (1) watched an AI history video (control) or (2) interacted with LLMimic (treatment), and then engaged in one of three realistic AI persuasion scenarios: (a) charity donation persuasion, (b) malicious money solicitation, or (c) hotel recommendation. Our results show that LLMimic significantly improved participants' AI literacy ($p < .001$), reduced persuasion success across scenarios ($p < .05$), and enhanced truthfulness and social responsibility levels ($p<0.01$) in the hotel scenario. These findings suggest that LLMimic offers a scalable, human-centered approach to improving AI literacy and supporting more informed interactions with persuasive AI.",
-      "topic_key": "domain_applications",
-      "topic_label": "Domain Applications",
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.56
+      "classification_confidence": 0.58
     },
     {
       "paper_id": "2604.02621",
@@ -3131,7 +3143,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.81
+      "classification_confidence": 0.79
     },
     {
       "paper_id": "2604.02596",
@@ -3154,7 +3166,7 @@
       "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.89
+      "classification_confidence": 0.91
     },
     {
       "paper_id": "2604.02560",
@@ -3199,7 +3211,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.85
+      "classification_confidence": 0.84
     },
     {
       "paper_id": "2604.02554",
@@ -3220,7 +3232,7 @@
       "topic_label": "Retrieval, Knowledge, and RAG",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.96
+      "classification_confidence": 0.97
     },
     {
       "paper_id": "2604.02537",
@@ -3242,7 +3254,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.79
+      "classification_confidence": 0.74
     },
     {
       "paper_id": "2604.02512",
@@ -3306,7 +3318,7 @@
       "topic_label": "Agents and Planning",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.97
+      "classification_confidence": 0.95
     },
     {
       "paper_id": "2604.02451",
@@ -3327,7 +3339,7 @@
       "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.67
+      "classification_confidence": 0.69
     },
     {
       "paper_id": "2604.02423",
@@ -3348,7 +3360,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.94
+      "classification_confidence": 0.96
     },
     {
       "paper_id": "2604.02362",
@@ -3369,7 +3381,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.78
+      "classification_confidence": 0.8
     },
     {
       "paper_id": "2604.02359",
@@ -3390,11 +3402,11 @@
         "Artificial Intelligence"
       ],
       "abstract": "General-purpose Large Language Models (LLMs) are becoming widely adopted by people for mental health support. Yet emerging evidence suggests there are significant risks associated with high-frequency use, particularly for individuals suffering from psychosis, as LLMs may reinforce delusions and hallucinations. Existing evaluations of LLMs in mental health contexts are limited by a lack of clinical validation and scalability of assessment. To address these issues, this research focuses on psychosis as a critical condition for LLM safety evaluation by (1) developing and validating seven clinician-informed safety criteria, (2) constructing a human-consensus dataset, and (3) testing automated assessment using an LLM as an evaluator (LLM-as-a-Judge) or taking the majority vote of several LLM judges (LLM-as-a-Jury). Results indicate that LLM-as-a-Judge aligns closely with the human consensus (Cohen's $κ_{\\text{human} \\times \\text{gemini}} = 0.75$, $κ_{\\text{human} \\times \\text{qwen}} = 0.68$, $κ_{\\text{human} \\times \\text{kimi}} = 0.56$) and that the best judge slightly outperforms LLM-as-a-Jury (Cohen's $κ_{\\text{human} \\times \\text{jury}} = 0.74$). Overall, these findings have promising implications for clinically grounded, scalable methods in LLM safety evaluations for mental health contexts.",
-      "topic_key": "reasoning_alignment_eval",
-      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "topic_key": "domain_applications",
+      "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.91
     },
     {
       "paper_id": "2604.03180",
@@ -3418,7 +3430,7 @@
       "topic_label": "Retrieval, Knowledge, and RAG",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.62
+      "classification_confidence": 0.71
     },
     {
       "paper_id": "2604.03159",
@@ -3439,7 +3451,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.9
+      "classification_confidence": 0.85
     },
     {
       "paper_id": "2604.03144",
@@ -3484,7 +3496,7 @@
       "topic_label": "Generative Foundations",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.79
+      "classification_confidence": 0.72
     },
     {
       "paper_id": "2604.03128",
@@ -3513,7 +3525,7 @@
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.52
+      "classification_confidence": 0.61
     },
     {
       "paper_id": "2604.03121",
@@ -3548,7 +3560,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.97
+      "classification_confidence": 0.98
     },
     {
       "paper_id": "2604.03098",
@@ -3579,7 +3591,7 @@
       "topic_label": "Agents and Planning",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.9
+      "classification_confidence": 0.86
     },
     {
       "paper_id": "2604.03081",
@@ -3607,7 +3619,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.93
+      "classification_confidence": 0.94
     },
     {
       "paper_id": "2604.03074",
@@ -3635,7 +3647,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.8
+      "classification_confidence": 0.82
     },
     {
       "paper_id": "2604.02986",
@@ -3660,7 +3672,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.94
+      "classification_confidence": 0.95
     },
     {
       "paper_id": "2604.02985",
@@ -3684,7 +3696,7 @@
       "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.91
+      "classification_confidence": 0.92
     },
     {
       "paper_id": "2604.02967",
@@ -3708,7 +3720,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.69
+      "classification_confidence": 0.76
     },
     {
       "paper_id": "2604.02965",
@@ -3734,7 +3746,7 @@
       "topic_label": "Multimodal Agents",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.99
+      "classification_confidence": 0.97
     },
     {
       "paper_id": "2604.02910",
@@ -3760,7 +3772,7 @@
       "topic_label": "Agents and Planning",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.89
+      "classification_confidence": 0.9
     },
     {
       "paper_id": "2604.02784",
@@ -3855,7 +3867,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.97
     },
     {
       "paper_id": "2604.02578",
@@ -3879,7 +3891,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.74
+      "classification_confidence": 0.67
     },
     {
       "paper_id": "2604.02486",
@@ -3905,7 +3917,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.98
+      "classification_confidence": 0.97
     },
     {
       "paper_id": "2604.02459",
@@ -3922,11 +3934,11 @@
         "Computation and Language"
       ],
       "abstract": "We study the geometric structure of layer updates in deep language models. Rather than analyzing what information is encoded in intermediate representations, we ask how representations change from one layer to the next. We show that layerwise updates admit a decomposition into a dominant tokenwise component and a residual that is not captured by restricted tokenwise function classes. Across multiple architectures, including Transformers and state-space models, we find that the full layer update is almost perfectly aligned with the tokenwise component, while the residual exhibits substantially weaker alignment, larger angular deviation, and significantly lower projection onto the dominant tokenwise subspace. This indicates that the residual is not merely a small correction, but a geometrically distinct component of the transformation. This geometric separation has functional consequences: approximation error under the restricted tokenwise model is strongly associated with output perturbation, with Spearman correlations often exceeding 0.7 and reaching up to 0.95 in larger models. Together, these results suggest that most layerwise updates behave like structured reparameterizations along a dominant direction, while functionally significant computation is concentrated in a geometrically distinct residual component. Our framework provides a simple, architecture-agnostic method for probing the geometric and functional structure of layer updates in modern language models.",
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.62
+      "classification_confidence": 0.73
     },
     {
       "paper_id": "2604.02450",
@@ -3950,7 +3962,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.88
+      "classification_confidence": 0.81
     },
     {
       "paper_id": "2604.02403",
@@ -3971,7 +3983,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.82
+      "classification_confidence": 0.89
     },
     {
       "paper_id": "2604.02371",
@@ -4042,7 +4054,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.96
+      "classification_confidence": 0.94
     },
     {
       "paper_id": "2604.02367",
@@ -4063,7 +4075,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.84
+      "classification_confidence": 0.79
     },
     {
       "paper_id": "2604.02340",
@@ -4107,7 +4119,7 @@
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.72
+      "classification_confidence": 0.82
     },
     {
       "paper_id": "2604.02338",
@@ -4134,7 +4146,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.84
+      "classification_confidence": 0.83
     }
   ]
 }
