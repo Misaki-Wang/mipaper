@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-07T15:16:39Z",
+  "generated_at": "2026-04-08T15:29:57Z",
   "category": "cs.CV",
   "report_date": "2026-04-06",
   "source_url": "https://papers.cool/arxiv/cs.CV?date=2026-04-06&show=1000",
@@ -9,14 +9,14 @@
     {
       "topic_key": "generative_foundations",
       "topic_label": "Generative Foundations",
-      "count": 5,
-      "share": 4.17
+      "count": 3,
+      "share": 2.5
     },
     {
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
-      "count": 16,
-      "share": 13.33
+      "count": 19,
+      "share": 15.83
     },
     {
       "topic_key": "multimodal_agents",
@@ -33,33 +33,28 @@
     },
     {
       "topic_label": "Domain Applications",
-      "count": 17,
-      "share": 14.17
+      "count": 20,
+      "share": 16.67
     },
     {
       "topic_label": "Multimodal Generative Modeling",
-      "count": 16,
-      "share": 13.33
+      "count": 19,
+      "share": 15.83
     },
     {
       "topic_label": "Reasoning, Alignment, and Evaluation",
-      "count": 13,
-      "share": 10.83
+      "count": 11,
+      "share": 9.17
     },
     {
       "topic_label": "Datasets and Benchmarks",
-      "count": 9,
-      "share": 7.5
+      "count": 7,
+      "share": 5.83
     },
     {
       "topic_label": "Robotics and Embodied AI",
-      "count": 6,
-      "share": 5.0
-    },
-    {
-      "topic_label": "Generative Foundations",
-      "count": 5,
-      "share": 4.17
+      "count": 7,
+      "share": 5.83
     },
     {
       "topic_label": "Multimodal Agents",
@@ -68,13 +63,23 @@
     },
     {
       "topic_label": "Agents and Planning",
-      "count": 4,
-      "share": 3.33
+      "count": 3,
+      "share": 2.5
+    },
+    {
+      "topic_label": "Generative Foundations",
+      "count": 3,
+      "share": 2.5
     },
     {
       "topic_label": "Learning, Optimization, and Theory",
-      "count": 4,
-      "share": 3.33
+      "count": 3,
+      "share": 2.5
+    },
+    {
+      "topic_label": "LLMs and Language",
+      "count": 1,
+      "share": 0.83
     },
     {
       "topic_label": "Other AI",
@@ -116,7 +121,38 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.94
+          "classification_confidence": 0.95
+        },
+        {
+          "paper_id": "2604.03212",
+          "title": "ProtoFlow: Mitigating Forgetting in Class-Incremental Remote Sensing Segmentation via Low-Curvature Prototype Flow",
+          "abs_url": "https://arxiv.org/abs/2604.03212",
+          "pdf_url": "https://arxiv.org/pdf/2604.03212",
+          "detail_url": "https://papers.cool/arxiv/2604.03212",
+          "authors": [
+            "Jiekai Wu",
+            "Rong Fu",
+            "Chuangqi Li",
+            "Zijian Zhang",
+            "Guangxin Wu",
+            "Hao Zhang",
+            "Shiyin Lin",
+            "Jianyuan Ni",
+            "Yang Li",
+            "Dongxu Zhang",
+            "Amir H. Gandomi",
+            "Simon Fong",
+            "Pengbin Feng"
+          ],
+          "subjects": [
+            "Computer Vision and Pattern Recognition"
+          ],
+          "abstract": "Remote sensing segmentation in real deployment is inherently continual: new semantic categories emerge, and acquisition conditions shift across seasons, cities, and sensors. Despite recent progress, many incremental approaches still treat training steps as isolated updates, which leaves representation drift and forgetting insufficiently controlled. We present ProtoFlow, a time-aware prototype dynamics framework that models class prototypes as trajectories and learns their evolution with an explicit temporal vector field. By jointly enforcing low-curvature motion and inter-class separation, ProtoFlow stabilizes prototype geometry throughout incremental learning. Experiments on standard class- and domain-incremental remote sensing benchmarks show consistent gains over strong baselines, including up to 1.5-2.0 points improvement in mIoUall, together with reduced forgetting. These results suggest that explicitly modeling temporal prototype evolution is a practical and interpretable strategy for robust continual remote sensing segmentation.",
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.67
         },
         {
           "paper_id": "2604.03176",
@@ -142,7 +178,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.86
+          "classification_confidence": 0.96
         },
         {
           "paper_id": "2604.03172",
@@ -163,50 +199,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.61
-        },
-        {
-          "paper_id": "2604.03072",
-          "title": "MI-Pruner: Crossmodal Mutual Information-guided Token Pruner for Efficient MLLMs",
-          "abs_url": "https://arxiv.org/abs/2604.03072",
-          "pdf_url": "https://arxiv.org/pdf/2604.03072",
-          "detail_url": "https://papers.cool/arxiv/2604.03072",
-          "authors": [
-            "Jiameng Li",
-            "Aleksei Tiulpin",
-            "Matthew B. Blaschko"
-          ],
-          "subjects": [
-            "Computer Vision and Pattern Recognition"
-          ],
-          "abstract": "For multimodal large language models (MLLMs), visual information is relatively sparse compared with text. As a result, research on visual pruning emerges for efficient inference. Current approaches typically measure token importance based on the attention scores in the visual encoder or in the LLM decoder, then select visual tokens with high attention scores while pruning others. In this paper, we pursue a different and more surgical approach. Instead of relying on mechanism-specific signals, we directly compute Mutual Information (MI) between visual and textual features themselves, prior to their interaction. This allows us to explicitly measure crossmodal dependency at the feature levels. Our MI-Pruner is simple, efficient and non-intrusive, requiring no access to internal attention maps or architectural modifications. Experimental results demonstrate that our approach outperforms previous attention-based pruning methods with minimal latency.",
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.88
-        },
-        {
-          "paper_id": "2604.03069",
-          "title": "SparseSplat: Towards Applicable Feed-Forward 3D Gaussian Splatting with Pixel-Unaligned Prediction",
-          "abs_url": "https://arxiv.org/abs/2604.03069",
-          "pdf_url": "https://arxiv.org/pdf/2604.03069",
-          "detail_url": "https://papers.cool/arxiv/2604.03069",
-          "authors": [
-            "Zicheng Zhang",
-            "Xiangting Meng",
-            "Ke Wu",
-            "Wenchao Ding"
-          ],
-          "subjects": [
-            "Computer Vision and Pattern Recognition"
-          ],
-          "abstract": "Recent progress in feed-forward 3D Gaussian Splatting (3DGS) has notably improved rendering quality. However, the spatially uniform and highly redundant 3DGS map generated by previous feed-forward 3DGS methods limits their integration into downstream reconstruction tasks. We propose SparseSplat, the first feed-forward 3DGS model that adaptively adjusts Gaussian density according to scene structure and information richness of local regions, yielding highly compact 3DGS maps. To achieve this, we propose entropy-based probabilistic sampling, generating large, sparse Gaussians in textureless areas and assigning small, dense Gaussians to regions with rich information. Additionally, we designed a specialized point cloud network that efficiently encodes local context and decodes it into 3DGS attributes, addressing the receptive field mismatch between the general 3DGS optimization pipeline and feed-forward models. Extensive experimental results demonstrate that SparseSplat can achieve state-of-the-art rendering quality with only 22% of the Gaussians and maintain reasonable rendering quality with only 1.5% of the Gaussians. Project page: https://victkk.github.io/SparseSplat-page/.",
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.72
+          "classification_confidence": 0.63
         },
         {
           "paper_id": "2604.03002",
@@ -230,31 +223,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.89
-        },
-        {
-          "paper_id": "2604.02996",
-          "title": "Rendering Multi-Human and Multi-Object with 3D Gaussian Splatting",
-          "abs_url": "https://arxiv.org/abs/2604.02996",
-          "pdf_url": "https://arxiv.org/pdf/2604.02996",
-          "detail_url": "https://papers.cool/arxiv/2604.02996",
-          "authors": [
-            "Weiquan Wang",
-            "Jun Xiao",
-            "Feifei Shao",
-            "Yi Yang",
-            "Yueting Zhuang",
-            "Long Chen"
-          ],
-          "subjects": [
-            "Computer Vision and Pattern Recognition"
-          ],
-          "abstract": "Reconstructing dynamic scenes with multiple interacting humans and objects from sparse-view inputs is a critical yet challenging task, essential for creating high-fidelity digital twins for robotics and VR/AR. This problem, which we term Multi-Human Multi-Object (MHMO) rendering, presents two significant obstacles: achieving view-consistent representations for individual instances under severe mutual occlusion, and explicitly modeling the complex and combinatorial dependencies that arise from their interactions. To overcome these challenges, we propose MM-GS, a novel hierarchical framework built upon 3D Gaussian Splatting. Our method first employs a Per-Instance Multi-View Fusion module to establish a robust and consistent representation for each instance by aggregating visual information across all available views. Subsequently, a Scene-Level Instance Interaction module operates on a global scene graph to reason about relationships between all participants, refining their attributes to capture subtle interaction effects. Extensive experiments on challenging datasets demonstrate that our method significantly outperforms strong baselines, producing state-of-the-art results with high-fidelity details and plausible inter-instance contacts.",
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.74
+          "classification_confidence": 0.9
         },
         {
           "paper_id": "2604.02966",
@@ -277,7 +246,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.84
+          "classification_confidence": 0.81
         },
         {
           "paper_id": "2604.02956",
@@ -299,7 +268,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.87
+          "classification_confidence": 0.93
         },
         {
           "paper_id": "2604.02948",
@@ -322,7 +291,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.93
+          "classification_confidence": 0.95
         },
         {
           "paper_id": "2604.02935",
@@ -346,7 +315,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.91
+          "classification_confidence": 0.96
         },
         {
           "paper_id": "2604.02903",
@@ -370,7 +339,54 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.89
+          "classification_confidence": 0.9
+        },
+        {
+          "paper_id": "2604.02893",
+          "title": "Toward an Artificial General Teacher: Procedural Geometry Data Generation and Visual Grounding with Vision-Language Models",
+          "abs_url": "https://arxiv.org/abs/2604.02893",
+          "pdf_url": "https://arxiv.org/pdf/2604.02893",
+          "detail_url": "https://papers.cool/arxiv/2604.02893",
+          "authors": [
+            "Hai Nguyen-Truong",
+            "Alper Balbay",
+            "Tunga Bayrak"
+          ],
+          "subjects": [
+            "Computer Vision and Pattern Recognition",
+            "Artificial Intelligence",
+            "Machine Learning"
+          ],
+          "abstract": "We study visual explanation in geometry education as a Referring Image Segmentation (RIS) problem: given a diagram and a natural language description, the task is to produce a pixel-level mask for the referred geometric element. However, existing RIS models trained on natural image benchmarks such as RefCOCO fail catastrophically on geometric diagrams due to the fundamental domain shift between photographic scenes and abstract, textureless schematics. To address the absence of suitable training data, we present a fully automated procedural data engine that generates over 200,000 synthetic geometry diagrams with pixel-perfect segmentation masks and linguistically diverse referring expressions, requiring zero manual annotation. We further propose domain-specific fine-tuning of vision-language models (VLMs), demonstrating that a fine-tuned Florence-2 achieves 49% IoU and 85% Buffered IoU (BIoU), compared to <1% IoU in zero-shot settings. We introduce Buffered IoU, a geometry-aware evaluation metric that accounts for thin-structure localization, and show that it better reflects true segmentation quality than standard IoU. Our results establish a foundation for building Artificial General Teachers (AGTs) capable of providing visually grounded, step-by-step explanations of geometry problems.",
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.78
+        },
+        {
+          "paper_id": "2604.02891",
+          "title": "Progressive Video Condensation with MLLM Agent for Long-form Video Understanding",
+          "abs_url": "https://arxiv.org/abs/2604.02891",
+          "pdf_url": "https://arxiv.org/pdf/2604.02891",
+          "detail_url": "https://papers.cool/arxiv/2604.02891",
+          "authors": [
+            "Yufei Yin",
+            "Yuchen Xing",
+            "Qianke Meng",
+            "Minghao Chen",
+            "Yan Yang",
+            "Zhou Yu"
+          ],
+          "subjects": [
+            "Computer Vision and Pattern Recognition"
+          ],
+          "abstract": "Understanding long videos requires extracting query-relevant information from long sequences under tight compute budgets. Existing text-then-LLM pipelines lose fine-grained visual cues, while video-based multimodal large language models (MLLMs) can keep visual details but are too frame-hungry and computationally expensive. In this work, we aim to harness MLLMs for efficient video understanding. We propose ProVCA, a progressive video condensation agent that iteratively locates key video frames at multiple granularities. ProVCA first adopts a segment localization module to identify the video segment relevant to the query, then a snippet selection module to select important snippets based on similarity, and finally a keyframe refinement module to pinpoint specific keyframes in those snippets. By progressively narrowing the scope from coarse segments to fine frames, ProVCA identifies a small set of keyframes for MLLM-based reasoning. ProVCA achieves state-of-the-art zero-shot accuracies of 69.3\\% on EgoSchema, 80.5\\% on NExT-QA, and 77.7\\% on IntentQA, while using fewer frames than previous training-free methods.",
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.72
         },
         {
           "paper_id": "2604.02880",
@@ -396,7 +412,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.87
+          "classification_confidence": 0.81
         },
         {
           "paper_id": "2604.02871",
@@ -419,7 +435,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.68
+          "classification_confidence": 0.61
         },
         {
           "paper_id": "2604.02870",
@@ -443,7 +459,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.89
+          "classification_confidence": 0.84
         },
         {
           "paper_id": "2604.02860",
@@ -467,7 +483,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.94
+          "classification_confidence": 0.93
         },
         {
           "paper_id": "2604.02845",
@@ -489,7 +505,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.82
+          "classification_confidence": 0.83
         },
         {
           "paper_id": "2604.02836",
@@ -512,7 +528,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.74
+          "classification_confidence": 0.63
         },
         {
           "paper_id": "2604.02816",
@@ -536,7 +552,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.89
+          "classification_confidence": 0.88
         },
         {
           "paper_id": "2604.02808",
@@ -557,7 +573,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.92
+          "classification_confidence": 0.9
         },
         {
           "paper_id": "2604.02785",
@@ -582,7 +598,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.77
+          "classification_confidence": 0.76
         },
         {
           "paper_id": "2604.02764",
@@ -607,7 +623,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.69
+          "classification_confidence": 0.67
         },
         {
           "paper_id": "2604.02753",
@@ -671,7 +687,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.85
+          "classification_confidence": 0.8
         },
         {
           "paper_id": "2604.02689",
@@ -695,7 +711,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.83
+          "classification_confidence": 0.84
         },
         {
           "paper_id": "2604.02654",
@@ -721,29 +737,6 @@
           "classification_confidence": 0.88
         },
         {
-          "paper_id": "2604.02639",
-          "title": "Cross-Vehicle 3D Geometric Consistency for Self-Supervised Surround Depth Estimation on Articulated Vehicles",
-          "abs_url": "https://arxiv.org/abs/2604.02639",
-          "pdf_url": "https://arxiv.org/pdf/2604.02639",
-          "detail_url": "https://papers.cool/arxiv/2604.02639",
-          "authors": [
-            "Weimin Liu",
-            "Jiyuan Qiu",
-            "Wenjun Wang",
-            "Joshua H. Meng"
-          ],
-          "subjects": [
-            "Computer Vision and Pattern Recognition",
-            "Artificial Intelligence"
-          ],
-          "abstract": "Surround depth estimation provides a cost-effective alternative to LiDAR for 3D perception in autonomous driving. While recent self-supervised methods explore multi-camera settings to improve scale awareness and scene coverage, they are primarily designed for passenger vehicles and rarely consider articulated vehicles or robotics platforms. The articulated structure introduces complex cross-segment geometry and motion coupling, making consistent depth reasoning across views more challenging. In this work, we propose \\textbf{ArticuSurDepth}, a self-supervised framework for surround-view depth estimation on articulated vehicles that enhances depth learning through cross-view and cross-vehicle geometric consistency guided by structural priors from vision foundation model. Specifically, we introduce multi-view spatial context enrichment strategy and a cross-view surface normal constraint to improve structural coherence across spatial and temporal contexts. We further incorporate camera height regularization with ground plane-awareness to encourage metric depth estimation, together with cross-vehicle pose consistency that bridges motion estimation between articulated segments. To validate our proposed method, an articulated vehicle experiment platform was established with a dataset collected over it. Experiment results demonstrate state-of-the-art (SoTA) performance of depth estimation on our self-collected dataset as well as on DDAD, nuScenes, and KITTI benchmarks.",
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.72
-        },
-        {
           "paper_id": "2604.02603",
           "title": "Rascene: High-Fidelity 3D Scene Imaging with mmWave Communication Signals",
           "abs_url": "https://arxiv.org/abs/2604.02603",
@@ -763,7 +756,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.72
+          "classification_confidence": 0.8
         },
         {
           "paper_id": "2604.02593",
@@ -807,7 +800,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.86
+          "classification_confidence": 0.82
         },
         {
           "paper_id": "2604.02570",
@@ -830,7 +823,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.72
+          "classification_confidence": 0.74
         },
         {
           "paper_id": "2604.02546",
@@ -854,7 +847,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.9
+          "classification_confidence": 0.86
         },
         {
           "paper_id": "2604.02509",
@@ -879,7 +872,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.63
+          "classification_confidence": 0.64
         },
         {
           "paper_id": "2604.02497",
@@ -901,7 +894,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.88
+          "classification_confidence": 0.85
         },
         {
           "paper_id": "2604.02492",
@@ -926,7 +919,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.85
+          "classification_confidence": 0.84
         },
         {
           "paper_id": "2604.02486",
@@ -955,6 +948,53 @@
           "classification_confidence": 0.94
         },
         {
+          "paper_id": "2604.02397",
+          "title": "Variational Encoder--Multi-Decoder (VE-MD) for Privacy-by-functional-design (Group) Emotion Recognition",
+          "abs_url": "https://arxiv.org/abs/2604.02397",
+          "pdf_url": "https://arxiv.org/pdf/2604.02397",
+          "detail_url": "https://papers.cool/arxiv/2604.02397",
+          "authors": [
+            "Anderson Augusma",
+            "Dominique Vaufreydaz",
+            "Fédérique Letué"
+          ],
+          "subjects": [
+            "Computer Vision and Pattern Recognition",
+            "Artificial Intelligence"
+          ],
+          "abstract": "Group Emotion Recognition (GER) aims to infer collective affect in social environments such as classrooms, crowds, and public events. Many existing approaches rely on explicit individual-level processing, including cropped faces, person tracking, or per-person feature extraction, which makes the analysis pipeline person-centric and raises privacy concerns in deployment scenarios where only group-level understanding is needed. This research proposes VE-MD, a Variational Encoder-Multi-Decoder framework for group emotion recognition under a privacy-aware functional design. Rather than providing formal anonymization or cryptographic privacy guarantees, VE-MD is designed to avoid explicit individual monitoring by constraining the model to predict only aggregate group-level affect, without identity recognition or per-person emotion outputs. VE-MD learns a shared latent representation jointly optimized for emotion classification and internal prediction of body and facial structural representations. Two structural decoding strategies are investigated: a transformer-based PersonQuery decoder and a dense Heatmap decoder that naturally accommodates variable group sizes. Experiments on six in-the-wild datasets, including two GER and four Individual Emotion Recognition (IER) benchmarks, show that structural supervision consistently improves representation learning. More importantly, the results reveal a clear distinction between GER and IER: optimizing the latent space alone is often insufficient for GER because it tends to attenuate interaction-related cues, whereas preserving explicit structural outputs improves collective affect inference. In contrast, projected structural representations seem to act as an effective denoising bottleneck for IER. VE-MD achieves state-of-the-art performance on GAF-3.0 (up to 90.06%) and VGAF (82.25% with multimodal fusion with audio). These results show that preserving interaction-related structural information is particularly beneficial for group-level affect modeling without relying on prior individual feature extraction. On IER datasets using multimodal fusion with audio modality, VE-MD outperforms SOTA on SamSemo (77.9%, adding text modality) while achieving competitive performances on MER-MULTI (63.8%), DFEW (70.7%) and EngageNet (69.0).",
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.58
+        },
+        {
+          "paper_id": "2604.02396",
+          "title": "Environment-Aware Channel Prediction for Vehicular Communications: A Multimodal Visual Feature Fusion Framework",
+          "abs_url": "https://arxiv.org/abs/2604.02396",
+          "pdf_url": "https://arxiv.org/pdf/2604.02396",
+          "detail_url": "https://papers.cool/arxiv/2604.02396",
+          "authors": [
+            "Xuejian Zhang",
+            "Ruisi He",
+            "Minseok Kim",
+            "Inocent Calist",
+            "Mi Yang",
+            "Ziyi Qi"
+          ],
+          "subjects": [
+            "Computer Vision and Pattern Recognition",
+            "Artificial Intelligence"
+          ],
+          "abstract": "The deep integration of communication with intelligence and sensing, as a defining vision of 6G, renders environment-aware channel prediction a key enabling technology. As a representative 6G application, vehicular communications require accurate and forward-looking channel prediction under stringent reliability, latency, and adaptability demands. Traditional empirical and deterministic models remain limited in balancing accuracy, generalization, and deployability, while the growing availability of onboard and roadside sensing devices offers a promising source of environmental priors. This paper proposes an environment-aware channel prediction framework based on multimodal visual feature fusion. Using GPS data and vehicle-side panoramic RGB images, together with semantic segmentation and depth estimation, the framework extracts semantic, depth, and position features through a three-branch architecture and performs adaptive multimodal fusion via a squeeze-excitation attention gating module. For 360-dimensional angular power spectrum (APS) prediction, a dedicated regression head and a composite multi-constraint loss are further designed. As a result, joint prediction of path loss (PL), delay spread (DS), azimuth spread of arrival (ASA), azimuth spread of departure (ASD), and APS is achieved. Experiments on a synchronized urban V2I measurement dataset yield the best root mean square error (RMSE) of 3.26 dB for PL, RMSEs of 37.66 ns, 5.05 degrees, and 5.08 degrees for DS, ASA, and ASD, respectively, and mean/median APS cosine similarities of 0.9342/0.9571, demonstrating strong accuracy, generalization, and practical potential for intelligent channel prediction in 6G vehicular communications.",
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.8
+        },
+        {
           "paper_id": "2604.02371",
           "title": "Internalized Reasoning for Long-Context Visual Document Understanding",
           "abs_url": "https://arxiv.org/abs/2604.02371",
@@ -973,32 +1013,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.88
-        },
-        {
-          "paper_id": "2604.02742",
-          "title": "Task-Guided Prompting for Unified Remote Sensing Image Restoration",
-          "abs_url": "https://arxiv.org/abs/2604.02742",
-          "pdf_url": "https://arxiv.org/pdf/2604.02742",
-          "detail_url": "https://papers.cool/arxiv/2604.02742",
-          "authors": [
-            "Wenli Huang",
-            "Yang Wu",
-            "Xiaomeng Xin",
-            "Zhihong Liu",
-            "Jinjun Wang",
-            "Ye Deng"
-          ],
-          "subjects": [
-            "Image and Video Processing",
-            "Computer Vision and Pattern Recognition"
-          ],
-          "abstract": "Remote sensing image restoration (RSIR) is essential for recovering high-fidelity imagery from degraded observations, enabling accurate downstream analysis. However, most existing methods focus on single degradation types within homogeneous data, restricting their practicality in real-world scenarios where multiple degradations often across diverse spectral bands or sensor modalities, creating a significant operational bottleneck. To address this fundamental gap, we propose TGPNet, a unified framework capable of handling denoising, cloud removal, shadow removal, deblurring, and SAR despeckling within a single, unified architecture. The core of our framework is a novel Task-Guided Prompting (TGP) strategy. TGP leverages learnable, task-specific embeddings to generate degradation-aware cues, which then hierarchically modulate features throughout the decoder. This task-adaptive mechanism allows the network to precisely tailor its restoration process for distinct degradation patterns while maintaining a single set of shared weights. To validate our framework, we construct a unified RSIR benchmark covering RGB, multispectral, SAR, and thermal infrared modalities for five aforementioned restoration tasks. Experimental results demonstrate that TGPNet achieves state-of-the-art performance on both unified multi-task scenarios and unseen composite degradations, surpassing even specialized models in individual domains such as cloud removal. By successfully unifying heterogeneous degradation removal within a single adaptive framework, this work presents a significant advancement for multi-task RSIR, offering a practical and scalable solution for operational pipelines. The code and benchmark will be released at https://github.com/huangwenwenlili/TGPNet.",
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.74
+          "classification_confidence": 0.85
         },
         {
           "paper_id": "2604.02338",
@@ -1025,14 +1040,14 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.82
+          "classification_confidence": 0.73
         }
       ]
     },
     {
       "topic_label": "Domain Applications",
-      "count": 17,
-      "share": 14.17,
+      "count": 20,
+      "share": 16.67,
       "papers": [
         {
           "paper_id": "2604.03203",
@@ -1060,7 +1075,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.95
+          "classification_confidence": 0.97
         },
         {
           "paper_id": "2604.03134",
@@ -1083,7 +1098,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.88
+          "classification_confidence": 0.89
         },
         {
           "paper_id": "2604.03094",
@@ -1105,7 +1120,26 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.92
+          "classification_confidence": 0.85
+        },
+        {
+          "paper_id": "2604.02977",
+          "title": "Effect of Input Resolution on Retinal Vessel Segmentation Performance: An Empirical Study Across Five Datasets",
+          "abs_url": "https://arxiv.org/abs/2604.02977",
+          "pdf_url": "https://arxiv.org/pdf/2604.02977",
+          "detail_url": "https://papers.cool/arxiv/2604.02977",
+          "authors": [
+            "Amarnath R"
+          ],
+          "subjects": [
+            "Computer Vision and Pattern Recognition"
+          ],
+          "abstract": "Most deep learning pipelines for retinal vessel segmentation resize fundus images to satisfy GPU memory constraints and enable uniform batch processing. However, the impact of this resizing on thin vessel detection remains underexplored. When high resolution images are downsampled, thin vessels are reduced to subpixel structures, causing irreversible information loss even before the data enters the network. Standard volumetric metrics such as the Dice score do not capture this loss because thick vessel pixels dominate the evaluation. We investigated this effect by training a baseline UNet at multiple downsampling ratios across five fundus datasets (DRIVE, STARE, CHASE_DB1, HRF, and FIVES) with native widths ranging from 565 to 3504 pixels, keeping all other settings fixed. We introduce a width-stratified sensitivity metric that evaluates thin (half-width <3 pixels), medium (3 to 7 pixels), and thick (>7 pixels) vessel detection separately, using native resolution width estimates derived from a Euclidean distance transform. Results show that for high-resolution datasets (HRF, FIVES), thin vessel sensitivity improves monotonically as images are downsampled toward the encoder's effective operating range, peaking at processed widths between 256 and 876 pixels. For low-to-mid resolution datasets (DRIVE, STARE, CHASE_DB1), thin vessel sensitivity is highest at or near native resolution and degrades with any downsampling. Across all five datasets, aggressive downsampling reduced thin vessel sensitivity by up to 15.8 percentage points (DRIVE) while Dice remained relatively stable, confirming that Dice alone is insufficient for evaluating microvascular segmentation.",
+          "topic_key": "domain_applications",
+          "topic_label": "Domain Applications",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.9
         },
         {
           "paper_id": "2604.02905",
@@ -1131,7 +1165,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.81
+          "classification_confidence": 0.82
         },
         {
           "paper_id": "2604.02877",
@@ -1153,7 +1187,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.83
+          "classification_confidence": 0.77
         },
         {
           "paper_id": "2604.02748",
@@ -1174,7 +1208,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.94
+          "classification_confidence": 0.95
         },
         {
           "paper_id": "2604.02719",
@@ -1205,7 +1239,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.86
+          "classification_confidence": 0.82
         },
         {
           "paper_id": "2604.02695",
@@ -1225,7 +1259,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.79
+          "classification_confidence": 0.87
         },
         {
           "paper_id": "2604.02627",
@@ -1252,7 +1286,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.9
+          "classification_confidence": 0.89
         },
         {
           "paper_id": "2604.02616",
@@ -1276,7 +1310,30 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.92
+          "classification_confidence": 0.96
+        },
+        {
+          "paper_id": "2604.02543",
+          "title": "Overconfidence and Calibration in Medical VQA: Empirical Findings and Hallucination-Aware Mitigation",
+          "abs_url": "https://arxiv.org/abs/2604.02543",
+          "pdf_url": "https://arxiv.org/pdf/2604.02543",
+          "detail_url": "https://papers.cool/arxiv/2604.02543",
+          "authors": [
+            "Ji Young Byun",
+            "Young-Jin Park",
+            "Jean-Philippe Corbeil",
+            "Asma Ben Abacha"
+          ],
+          "subjects": [
+            "Computer Vision and Pattern Recognition",
+            "Machine Learning"
+          ],
+          "abstract": "As vision-language models (VLMs) are increasingly deployed in clinical decision support, more than accuracy is required: knowing when to trust their predictions is equally critical. Yet, a comprehensive and systematic investigation into the overconfidence of these models remains notably scarce in the medical domain. We address this gap through a comprehensive empirical study of confidence calibration in VLMs, spanning three model families (Qwen3-VL, InternVL3, LLaVA-NeXT), three model scales (2B--38B), and multiple confidence estimation prompting strategies, across three medical visual question answering (VQA) benchmarks. Our study yields three key findings: First, overconfidence persists across model families and is not resolved by scaling or prompting, such as chain-of-thought and verbalized confidence variants. Second, simple post-hoc calibration approaches, such as Platt scaling, reduce calibration error and consistently outperform the prompt-based strategy. Third, due to their (strict) monotonicity, these post-hoc calibration methods are inherently limited in improving the discriminative quality of predictions, leaving AUROC at the same level. Motivated by these findings, we investigate hallucination-aware calibration (HAC), which incorporates vision-grounded hallucination detection signals as complementary inputs to refine confidence estimates. We find that leveraging these hallucination signals improves both calibration and AUROC, with the largest gains on open-ended questions. Overall, our findings suggest post-hoc calibration as standard practice for medical VLM deployment over raw confidence estimates, and highlight the practical usefulness of hallucination signals to enable more reliable use of VLMs in medical VQA.",
+          "topic_key": "domain_applications",
+          "topic_label": "Domain Applications",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.93
         },
         {
           "paper_id": "2604.02502",
@@ -1324,7 +1381,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.8
+          "classification_confidence": 0.85
         },
         {
           "paper_id": "2604.02446",
@@ -1346,32 +1403,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.75
-        },
-        {
-          "paper_id": "2604.02396",
-          "title": "Environment-Aware Channel Prediction for Vehicular Communications: A Multimodal Visual Feature Fusion Framework",
-          "abs_url": "https://arxiv.org/abs/2604.02396",
-          "pdf_url": "https://arxiv.org/pdf/2604.02396",
-          "detail_url": "https://papers.cool/arxiv/2604.02396",
-          "authors": [
-            "Xuejian Zhang",
-            "Ruisi He",
-            "Minseok Kim",
-            "Inocent Calist",
-            "Mi Yang",
-            "Ziyi Qi"
-          ],
-          "subjects": [
-            "Computer Vision and Pattern Recognition",
-            "Artificial Intelligence"
-          ],
-          "abstract": "The deep integration of communication with intelligence and sensing, as a defining vision of 6G, renders environment-aware channel prediction a key enabling technology. As a representative 6G application, vehicular communications require accurate and forward-looking channel prediction under stringent reliability, latency, and adaptability demands. Traditional empirical and deterministic models remain limited in balancing accuracy, generalization, and deployability, while the growing availability of onboard and roadside sensing devices offers a promising source of environmental priors. This paper proposes an environment-aware channel prediction framework based on multimodal visual feature fusion. Using GPS data and vehicle-side panoramic RGB images, together with semantic segmentation and depth estimation, the framework extracts semantic, depth, and position features through a three-branch architecture and performs adaptive multimodal fusion via a squeeze-excitation attention gating module. For 360-dimensional angular power spectrum (APS) prediction, a dedicated regression head and a composite multi-constraint loss are further designed. As a result, joint prediction of path loss (PL), delay spread (DS), azimuth spread of arrival (ASA), azimuth spread of departure (ASD), and APS is achieved. Experiments on a synchronized urban V2I measurement dataset yield the best root mean square error (RMSE) of 3.26 dB for PL, RMSEs of 37.66 ns, 5.05 degrees, and 5.08 degrees for DS, ASA, and ASD, respectively, and mean/median APS cosine similarities of 0.9342/0.9571, demonstrating strong accuracy, generalization, and practical potential for intelligent channel prediction in 6G vehicular communications.",
-          "topic_key": "domain_applications",
-          "topic_label": "Domain Applications",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.67
+          "classification_confidence": 0.82
         },
         {
           "paper_id": "2604.03224",
@@ -1399,7 +1431,57 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.95
+          "classification_confidence": 0.86
+        },
+        {
+          "paper_id": "2604.02868",
+          "title": "Few-Shot Distribution-Aligned Flow Matching for Data Synthesis in Medical Image Segmentation",
+          "abs_url": "https://arxiv.org/abs/2604.02868",
+          "pdf_url": "https://arxiv.org/pdf/2604.02868",
+          "detail_url": "https://papers.cool/arxiv/2604.02868",
+          "authors": [
+            "Jie Yang",
+            "Ziqi Ye",
+            "Aihua Ke",
+            "Jian Luo",
+            "Bo Cai",
+            "Xiaosong Wang"
+          ],
+          "subjects": [
+            "Image and Video Processing",
+            "Computer Vision and Pattern Recognition"
+          ],
+          "abstract": "Data heterogeneity hinders clinical deployment of medical image analysis models, and generative data augmentation helps mitigate this issue. However, recent diffusion-based methods that synthesize image-mask pairs often ignore distribution shifts between generated and real images across scenarios, and such mismatches can markedly degrade downstream performance. To address this issue, we propose AlignFlow, a flow matching model that aligns with the target reference image distribution via differentiable reward fine-tuning, and remains effective even when only a small number of reference images are provided. Specifically, we divide the training of the flow matching model into two stages: in the first stage, the model fits the training data to generate plausible images; Then, we introduce a distribution alignment mechanism and employ differentiable reward to steer the generated images toward the distribution of the given samples from the target domain. In addition, to enhance the diversity of generated masks, we also design a flow matching based mask generation to complement the diversity in regions of interest. Extensive experiments demonstrate the effectiveness of our approach, i.e., performance improvement by 3.5-4.0% in mDice and 3.5-5.6% in mIoU across a variety of datasets and scenarios.",
+          "topic_key": "domain_applications",
+          "topic_label": "Domain Applications",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.8
+        },
+        {
+          "paper_id": "2604.02742",
+          "title": "Task-Guided Prompting for Unified Remote Sensing Image Restoration",
+          "abs_url": "https://arxiv.org/abs/2604.02742",
+          "pdf_url": "https://arxiv.org/pdf/2604.02742",
+          "detail_url": "https://papers.cool/arxiv/2604.02742",
+          "authors": [
+            "Wenli Huang",
+            "Yang Wu",
+            "Xiaomeng Xin",
+            "Zhihong Liu",
+            "Jinjun Wang",
+            "Ye Deng"
+          ],
+          "subjects": [
+            "Image and Video Processing",
+            "Computer Vision and Pattern Recognition"
+          ],
+          "abstract": "Remote sensing image restoration (RSIR) is essential for recovering high-fidelity imagery from degraded observations, enabling accurate downstream analysis. However, most existing methods focus on single degradation types within homogeneous data, restricting their practicality in real-world scenarios where multiple degradations often across diverse spectral bands or sensor modalities, creating a significant operational bottleneck. To address this fundamental gap, we propose TGPNet, a unified framework capable of handling denoising, cloud removal, shadow removal, deblurring, and SAR despeckling within a single, unified architecture. The core of our framework is a novel Task-Guided Prompting (TGP) strategy. TGP leverages learnable, task-specific embeddings to generate degradation-aware cues, which then hierarchically modulate features throughout the decoder. This task-adaptive mechanism allows the network to precisely tailor its restoration process for distinct degradation patterns while maintaining a single set of shared weights. To validate our framework, we construct a unified RSIR benchmark covering RGB, multispectral, SAR, and thermal infrared modalities for five aforementioned restoration tasks. Experimental results demonstrate that TGPNet achieves state-of-the-art performance on both unified multi-task scenarios and unseen composite degradations, surpassing even specialized models in individual domains such as cloud removal. By successfully unifying heterogeneous degradation removal within a single adaptive framework, this work presents a significant advancement for multi-task RSIR, offering a practical and scalable solution for operational pipelines. The code and benchmark will be released at https://github.com/huangwenwenlili/TGPNet.",
+          "topic_key": "domain_applications",
+          "topic_label": "Domain Applications",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.73
         },
         {
           "paper_id": "2604.02564",
@@ -1422,7 +1504,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.78
+          "classification_confidence": 0.87
         },
         {
           "paper_id": "2604.02448",
@@ -1450,14 +1532,14 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.95
+          "classification_confidence": 0.94
         }
       ]
     },
     {
       "topic_label": "Multimodal Generative Modeling",
-      "count": 16,
-      "share": 13.33,
+      "count": 19,
+      "share": 15.83,
       "papers": [
         {
           "paper_id": "2604.03118",
@@ -1485,7 +1567,29 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.97
+          "classification_confidence": 0.98
+        },
+        {
+          "paper_id": "2604.03069",
+          "title": "SparseSplat: Towards Applicable Feed-Forward 3D Gaussian Splatting with Pixel-Unaligned Prediction",
+          "abs_url": "https://arxiv.org/abs/2604.03069",
+          "pdf_url": "https://arxiv.org/pdf/2604.03069",
+          "detail_url": "https://papers.cool/arxiv/2604.03069",
+          "authors": [
+            "Zicheng Zhang",
+            "Xiangting Meng",
+            "Ke Wu",
+            "Wenchao Ding"
+          ],
+          "subjects": [
+            "Computer Vision and Pattern Recognition"
+          ],
+          "abstract": "Recent progress in feed-forward 3D Gaussian Splatting (3DGS) has notably improved rendering quality. However, the spatially uniform and highly redundant 3DGS map generated by previous feed-forward 3DGS methods limits their integration into downstream reconstruction tasks. We propose SparseSplat, the first feed-forward 3DGS model that adaptively adjusts Gaussian density according to scene structure and information richness of local regions, yielding highly compact 3DGS maps. To achieve this, we propose entropy-based probabilistic sampling, generating large, sparse Gaussians in textureless areas and assigning small, dense Gaussians to regions with rich information. Additionally, we designed a specialized point cloud network that efficiently encodes local context and decodes it into 3DGS attributes, addressing the receptive field mismatch between the general 3DGS optimization pipeline and feed-forward models. Extensive experimental results demonstrate that SparseSplat can achieve state-of-the-art rendering quality with only 22% of the Gaussians and maintain reasonable rendering quality with only 1.5% of the Gaussians. Project page: https://victkk.github.io/SparseSplat-page/.",
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.78
         },
         {
           "paper_id": "2604.03039",
@@ -1509,31 +1613,31 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.9
+          "classification_confidence": 0.93
         },
         {
-          "paper_id": "2604.02979",
-          "title": "Not All Frames Deserve Full Computation: Accelerating Autoregressive Video Generation via Selective Computation and Predictive Extrapolation",
-          "abs_url": "https://arxiv.org/abs/2604.02979",
-          "pdf_url": "https://arxiv.org/pdf/2604.02979",
-          "detail_url": "https://papers.cool/arxiv/2604.02979",
+          "paper_id": "2604.02996",
+          "title": "Rendering Multi-Human and Multi-Object with 3D Gaussian Splatting",
+          "abs_url": "https://arxiv.org/abs/2604.02996",
+          "pdf_url": "https://arxiv.org/pdf/2604.02996",
+          "detail_url": "https://papers.cool/arxiv/2604.02996",
           "authors": [
-            "Hanshuai Cui",
-            "Zhiqing Tang",
-            "Zhi Yao",
-            "Fanshuai Meng",
-            "Weijia Jia",
-            "Wei Zhao"
+            "Weiquan Wang",
+            "Jun Xiao",
+            "Feifei Shao",
+            "Yi Yang",
+            "Yueting Zhuang",
+            "Long Chen"
           ],
           "subjects": [
             "Computer Vision and Pattern Recognition"
           ],
-          "abstract": "Autoregressive (AR) video diffusion models enable long-form video generation but remain expensive due to repeated multi-step denoising. Existing training-free acceleration methods rely on binary cache-or-recompute decisions, overlooking intermediate cases where direct reuse is too coarse yet full recomputation is unnecessary. Moreover, asynchronous AR schedules assign different noise levels to co-generated frames, yet existing methods process the entire valid interval uniformly. To address these AR-specific inefficiencies, we present SCOPE, a training-free framework for efficient AR video diffusion. SCOPE introduces a tri-modal scheduler over cache, predict, and recompute, where prediction via noise-level Taylor extrapolation fills the gap between reuse and recomputation with explicit stability controls backed by error propagation analysis. It further introduces selective computation that restricts execution to the active frame interval. On MAGI-1 and SkyReels-V2, SCOPE achieves up to 4.73x speedup while maintaining quality comparable to the original output, outperforming all training-free baselines.",
+          "abstract": "Reconstructing dynamic scenes with multiple interacting humans and objects from sparse-view inputs is a critical yet challenging task, essential for creating high-fidelity digital twins for robotics and VR/AR. This problem, which we term Multi-Human Multi-Object (MHMO) rendering, presents two significant obstacles: achieving view-consistent representations for individual instances under severe mutual occlusion, and explicitly modeling the complex and combinatorial dependencies that arise from their interactions. To overcome these challenges, we propose MM-GS, a novel hierarchical framework built upon 3D Gaussian Splatting. Our method first employs a Per-Instance Multi-View Fusion module to establish a robust and consistent representation for each instance by aggregating visual information across all available views. Subsequently, a Scene-Level Instance Interaction module operates on a global scene graph to reason about relationships between all participants, refining their attributes to capture subtle interaction effects. Extensive experiments on challenging datasets demonstrate that our method significantly outperforms strong baselines, producing state-of-the-art results with high-fidelity details and plausible inter-instance contacts.",
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.98
+          "classification_confidence": 0.79
         },
         {
           "paper_id": "2604.02973",
@@ -1554,7 +1658,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.96
+          "classification_confidence": 0.94
         },
         {
           "paper_id": "2604.02941",
@@ -1579,6 +1683,27 @@
           "classification_confidence": 0.97
         },
         {
+          "paper_id": "2604.02915",
+          "title": "GP-4DGS: Probabilistic 4D Gaussian Splatting from Monocular Video via Variational Gaussian Processes",
+          "abs_url": "https://arxiv.org/abs/2604.02915",
+          "pdf_url": "https://arxiv.org/pdf/2604.02915",
+          "detail_url": "https://papers.cool/arxiv/2604.02915",
+          "authors": [
+            "Mijeong Kim",
+            "Jungtaek Kim",
+            "Bohyung Han"
+          ],
+          "subjects": [
+            "Computer Vision and Pattern Recognition"
+          ],
+          "abstract": "We present GP-4DGS, a novel framework that integrates Gaussian Processes (GPs) into 4D Gaussian Splatting (4DGS) for principled probabilistic modeling of dynamic scenes. While existing 4DGS methods focus on deterministic reconstruction, they are inherently limited in capturing motion ambiguity and lack mechanisms to assess prediction reliability. By leveraging the kernel-based probabilistic nature of GPs, our approach introduces three key capabilities: (i) uncertainty quantification for motion predictions, (ii) motion estimation for unobserved or sparsely sampled regions, and (iii) temporal extrapolation beyond observed training frames. To scale GPs to the large number of Gaussian primitives in 4DGS, we design spatio-temporal kernels that capture the correlation structure of deformation fields and adopt variational Gaussian Processes with inducing points for tractable inference. Our experiments show that GP-4DGS enhances reconstruction quality while providing reliable uncertainty estimates that effectively identify regions of high motion ambiguity. By addressing these challenges, our work takes a meaningful step toward bridging probabilistic modeling and neural graphics.",
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.74
+        },
+        {
           "paper_id": "2604.02883",
           "title": "Information-Regularized Constrained Inversion for Stable Avatar Editing from Sparse Supervision",
           "abs_url": "https://arxiv.org/abs/2604.02883",
@@ -1596,7 +1721,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.82
+          "classification_confidence": 0.87
         },
         {
           "paper_id": "2604.02867",
@@ -1620,7 +1745,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.81
+          "classification_confidence": 0.66
         },
         {
           "paper_id": "2604.02847",
@@ -1641,7 +1766,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.91
+          "classification_confidence": 0.94
         },
         {
           "paper_id": "2604.02828",
@@ -1668,7 +1793,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.61
+          "classification_confidence": 0.68
         },
         {
           "paper_id": "2604.02817",
@@ -1692,7 +1817,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.96
+          "classification_confidence": 0.97
         },
         {
           "paper_id": "2604.02799",
@@ -1717,7 +1842,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.81
+          "classification_confidence": 0.84
         },
         {
           "paper_id": "2604.02787",
@@ -1742,7 +1867,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.93
+          "classification_confidence": 0.9
         },
         {
           "paper_id": "2604.02752",
@@ -1766,7 +1891,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.73
+          "classification_confidence": 0.76
         },
         {
           "paper_id": "2604.02736",
@@ -1836,14 +1961,37 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.69
+          "classification_confidence": 0.9
+        },
+        {
+          "paper_id": "2604.02355",
+          "title": "From Broad Exploration to Stable Synthesis: Entropy-Guided Optimization for Autoregressive Image Generation",
+          "abs_url": "https://arxiv.org/abs/2604.02355",
+          "pdf_url": "https://arxiv.org/pdf/2604.02355",
+          "detail_url": "https://papers.cool/arxiv/2604.02355",
+          "authors": [
+            "Han Song",
+            "Yucheng Zhou",
+            "Jianbing Shen",
+            "Yu Cheng"
+          ],
+          "subjects": [
+            "Machine Learning",
+            "Computer Vision and Pattern Recognition"
+          ],
+          "abstract": "Combining Chain-of-Thought (CoT) with Reinforcement Learning (RL) improves text-to-image (T2I) generation, yet the underlying interaction between CoT's exploration and RL's optimization remains unclear. We present a systematic entropy-based analysis that yields three key insights: (1) CoT expands the generative exploration space, while RL contracts it toward high-reward regions; (2) final reward is strongly negatively correlated with both the mean and variance of image-token entropy, highlighting the need to reduce uncertainty and instability; and (3) the entropy of the textual CoT directly governs downstream image quality, with lower-entropy CoTs leading to better generations. Motivated by these findings, we propose Entropy-Guided Group Relative Policy Optimization (EG-GRPO), a fine-tuning strategy that reallocates optimization budget by uncertainty: low-entropy tokens are excluded from reward-driven updates to preserve stability, while high-entropy tokens receive an entropy bonus that encourages structured exploration without collapse. Experiments on standard T2I benchmarks demonstrate that EG-GRPO achieves state-of-the-art performance.",
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.72
         }
       ]
     },
     {
       "topic_label": "Reasoning, Alignment, and Evaluation",
-      "count": 13,
-      "share": 10.83,
+      "count": 11,
+      "share": 9.17,
       "papers": [
         {
           "paper_id": "2604.03117",
@@ -1890,7 +2038,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.76
+          "classification_confidence": 0.72
         },
         {
           "paper_id": "2604.03061",
@@ -1934,7 +2082,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.9
+          "classification_confidence": 0.94
         },
         {
           "paper_id": "2604.02896",
@@ -1959,7 +2107,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.76
+          "classification_confidence": 0.79
         },
         {
           "paper_id": "2604.02784",
@@ -1981,7 +2129,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.9
+          "classification_confidence": 0.94
         },
         {
           "paper_id": "2604.02780",
@@ -2003,7 +2151,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.88
+          "classification_confidence": 0.86
         },
         {
           "paper_id": "2604.02694",
@@ -2033,30 +2181,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.79
-        },
-        {
-          "paper_id": "2604.02543",
-          "title": "Overconfidence and Calibration in Medical VQA: Empirical Findings and Hallucination-Aware Mitigation",
-          "abs_url": "https://arxiv.org/abs/2604.02543",
-          "pdf_url": "https://arxiv.org/pdf/2604.02543",
-          "detail_url": "https://papers.cool/arxiv/2604.02543",
-          "authors": [
-            "Ji Young Byun",
-            "Young-Jin Park",
-            "Jean-Philippe Corbeil",
-            "Asma Ben Abacha"
-          ],
-          "subjects": [
-            "Computer Vision and Pattern Recognition",
-            "Machine Learning"
-          ],
-          "abstract": "As vision-language models (VLMs) are increasingly deployed in clinical decision support, more than accuracy is required: knowing when to trust their predictions is equally critical. Yet, a comprehensive and systematic investigation into the overconfidence of these models remains notably scarce in the medical domain. We address this gap through a comprehensive empirical study of confidence calibration in VLMs, spanning three model families (Qwen3-VL, InternVL3, LLaVA-NeXT), three model scales (2B--38B), and multiple confidence estimation prompting strategies, across three medical visual question answering (VQA) benchmarks. Our study yields three key findings: First, overconfidence persists across model families and is not resolved by scaling or prompting, such as chain-of-thought and verbalized confidence variants. Second, simple post-hoc calibration approaches, such as Platt scaling, reduce calibration error and consistently outperform the prompt-based strategy. Third, due to their (strict) monotonicity, these post-hoc calibration methods are inherently limited in improving the discriminative quality of predictions, leaving AUROC at the same level. Motivated by these findings, we investigate hallucination-aware calibration (HAC), which incorporates vision-grounded hallucination detection signals as complementary inputs to refine confidence estimates. We find that leveraging these hallucination signals improves both calibration and AUROC, with the largest gains on open-ended questions. Overall, our findings suggest post-hoc calibration as standard practice for medical VLM deployment over raw confidence estimates, and highlight the practical usefulness of hallucination signals to enable more reliable use of VLMs in medical VQA.",
-          "topic_key": "reasoning_alignment_eval",
-          "topic_label": "Reasoning, Alignment, and Evaluation",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.83
+          "classification_confidence": 0.84
         },
         {
           "paper_id": "2604.02532",
@@ -2078,7 +2203,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.91
+          "classification_confidence": 0.88
         },
         {
           "paper_id": "2604.02457",
@@ -2099,29 +2224,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.77
-        },
-        {
-          "paper_id": "2604.02397",
-          "title": "Variational Encoder--Multi-Decoder (VE-MD) for Privacy-by-functional-design (Group) Emotion Recognition",
-          "abs_url": "https://arxiv.org/abs/2604.02397",
-          "pdf_url": "https://arxiv.org/pdf/2604.02397",
-          "detail_url": "https://papers.cool/arxiv/2604.02397",
-          "authors": [
-            "Anderson Augusma",
-            "Dominique Vaufreydaz",
-            "Fédérique Letué"
-          ],
-          "subjects": [
-            "Computer Vision and Pattern Recognition",
-            "Artificial Intelligence"
-          ],
-          "abstract": "Group Emotion Recognition (GER) aims to infer collective affect in social environments such as classrooms, crowds, and public events. Many existing approaches rely on explicit individual-level processing, including cropped faces, person tracking, or per-person feature extraction, which makes the analysis pipeline person-centric and raises privacy concerns in deployment scenarios where only group-level understanding is needed. This research proposes VE-MD, a Variational Encoder-Multi-Decoder framework for group emotion recognition under a privacy-aware functional design. Rather than providing formal anonymization or cryptographic privacy guarantees, VE-MD is designed to avoid explicit individual monitoring by constraining the model to predict only aggregate group-level affect, without identity recognition or per-person emotion outputs. VE-MD learns a shared latent representation jointly optimized for emotion classification and internal prediction of body and facial structural representations. Two structural decoding strategies are investigated: a transformer-based PersonQuery decoder and a dense Heatmap decoder that naturally accommodates variable group sizes. Experiments on six in-the-wild datasets, including two GER and four Individual Emotion Recognition (IER) benchmarks, show that structural supervision consistently improves representation learning. More importantly, the results reveal a clear distinction between GER and IER: optimizing the latent space alone is often insufficient for GER because it tends to attenuate interaction-related cues, whereas preserving explicit structural outputs improves collective affect inference. In contrast, projected structural representations seem to act as an effective denoising bottleneck for IER. VE-MD achieves state-of-the-art performance on GAF-3.0 (up to 90.06%) and VGAF (82.25% with multimodal fusion with audio). These results show that preserving interaction-related structural information is particularly beneficial for group-level affect modeling without relying on prior individual feature extraction. On IER datasets using multimodal fusion with audio modality, VE-MD outperforms SOTA on SamSemo (77.9%, adding text modality) while achieving competitive performances on MER-MULTI (63.8%), DFEW (70.7%) and EngageNet (69.0).",
-          "topic_key": "reasoning_alignment_eval",
-          "topic_label": "Reasoning, Alignment, and Evaluation",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.58
+          "classification_confidence": 0.86
         },
         {
           "paper_id": "2604.03179",
@@ -2150,14 +2253,14 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.87
+          "classification_confidence": 0.78
         }
       ]
     },
     {
       "topic_label": "Datasets and Benchmarks",
-      "count": 9,
-      "share": 7.5,
+      "count": 7,
+      "share": 5.83,
       "papers": [
         {
           "paper_id": "2604.03198",
@@ -2263,26 +2366,7 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.95
-        },
-        {
-          "paper_id": "2604.02977",
-          "title": "Effect of Input Resolution on Retinal Vessel Segmentation Performance: An Empirical Study Across Five Datasets",
-          "abs_url": "https://arxiv.org/abs/2604.02977",
-          "pdf_url": "https://arxiv.org/pdf/2604.02977",
-          "detail_url": "https://papers.cool/arxiv/2604.02977",
-          "authors": [
-            "Amarnath R"
-          ],
-          "subjects": [
-            "Computer Vision and Pattern Recognition"
-          ],
-          "abstract": "Most deep learning pipelines for retinal vessel segmentation resize fundus images to satisfy GPU memory constraints and enable uniform batch processing. However, the impact of this resizing on thin vessel detection remains underexplored. When high resolution images are downsampled, thin vessels are reduced to subpixel structures, causing irreversible information loss even before the data enters the network. Standard volumetric metrics such as the Dice score do not capture this loss because thick vessel pixels dominate the evaluation. We investigated this effect by training a baseline UNet at multiple downsampling ratios across five fundus datasets (DRIVE, STARE, CHASE_DB1, HRF, and FIVES) with native widths ranging from 565 to 3504 pixels, keeping all other settings fixed. We introduce a width-stratified sensitivity metric that evaluates thin (half-width <3 pixels), medium (3 to 7 pixels), and thick (>7 pixels) vessel detection separately, using native resolution width estimates derived from a Euclidean distance transform. Results show that for high-resolution datasets (HRF, FIVES), thin vessel sensitivity improves monotonically as images are downsampled toward the encoder's effective operating range, peaking at processed widths between 256 and 876 pixels. For low-to-mid resolution datasets (DRIVE, STARE, CHASE_DB1), thin vessel sensitivity is highest at or near native resolution and degrades with any downsampling. Across all five datasets, aggressive downsampling reduced thin vessel sensitivity by up to 15.8 percentage points (DRIVE) while Dice remained relatively stable, confirming that Dice alone is insufficient for evaluating microvascular segmentation.",
-          "topic_key": "datasets_benchmarks",
-          "topic_label": "Datasets and Benchmarks",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.79
+          "classification_confidence": 0.88
         },
         {
           "paper_id": "2604.02934",
@@ -2315,30 +2399,7 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.94
-        },
-        {
-          "paper_id": "2604.02893",
-          "title": "Toward an Artificial General Teacher: Procedural Geometry Data Generation and Visual Grounding with Vision-Language Models",
-          "abs_url": "https://arxiv.org/abs/2604.02893",
-          "pdf_url": "https://arxiv.org/pdf/2604.02893",
-          "detail_url": "https://papers.cool/arxiv/2604.02893",
-          "authors": [
-            "Hai Nguyen-Truong",
-            "Alper Balbay",
-            "Tunga Bayrak"
-          ],
-          "subjects": [
-            "Computer Vision and Pattern Recognition",
-            "Artificial Intelligence",
-            "Machine Learning"
-          ],
-          "abstract": "We study visual explanation in geometry education as a Referring Image Segmentation (RIS) problem: given a diagram and a natural language description, the task is to produce a pixel-level mask for the referred geometric element. However, existing RIS models trained on natural image benchmarks such as RefCOCO fail catastrophically on geometric diagrams due to the fundamental domain shift between photographic scenes and abstract, textureless schematics. To address the absence of suitable training data, we present a fully automated procedural data engine that generates over 200,000 synthetic geometry diagrams with pixel-perfect segmentation masks and linguistically diverse referring expressions, requiring zero manual annotation. We further propose domain-specific fine-tuning of vision-language models (VLMs), demonstrating that a fine-tuned Florence-2 achieves 49% IoU and 85% Buffered IoU (BIoU), compared to <1% IoU in zero-shot settings. We introduce Buffered IoU, a geometry-aware evaluation metric that accounts for thin-structure localization, and show that it better reflects true segmentation quality than standard IoU. Our results establish a foundation for building Artificial General Teachers (AGTs) capable of providing visually grounded, step-by-step explanations of geometry problems.",
-          "topic_key": "datasets_benchmarks",
-          "topic_label": "Datasets and Benchmarks",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.62
+          "classification_confidence": 0.92
         },
         {
           "paper_id": "2604.02804",
@@ -2364,7 +2425,7 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.95
+          "classification_confidence": 0.94
         },
         {
           "paper_id": "2604.02773",
@@ -2390,7 +2451,7 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.78
+          "classification_confidence": 0.75
         },
         {
           "paper_id": "2604.03112",
@@ -2443,14 +2504,14 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.97
+          "classification_confidence": 0.96
         }
       ]
     },
     {
       "topic_label": "Robotics and Embodied AI",
-      "count": 6,
-      "share": 5.0,
+      "count": 7,
+      "share": 5.83,
       "papers": [
         {
           "paper_id": "2604.03120",
@@ -2475,7 +2536,7 @@
           "topic_label": "Robotics and Embodied AI",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.8
+          "classification_confidence": 0.73
         },
         {
           "paper_id": "2604.02930",
@@ -2499,7 +2560,7 @@
           "topic_label": "Robotics and Embodied AI",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.84
+          "classification_confidence": 0.83
         },
         {
           "paper_id": "2604.02829",
@@ -2524,7 +2585,7 @@
           "topic_label": "Robotics and Embodied AI",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.92
+          "classification_confidence": 0.91
         },
         {
           "paper_id": "2604.02696",
@@ -2547,7 +2608,30 @@
           "topic_label": "Robotics and Embodied AI",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.89
+          "classification_confidence": 0.92
+        },
+        {
+          "paper_id": "2604.02639",
+          "title": "Cross-Vehicle 3D Geometric Consistency for Self-Supervised Surround Depth Estimation on Articulated Vehicles",
+          "abs_url": "https://arxiv.org/abs/2604.02639",
+          "pdf_url": "https://arxiv.org/pdf/2604.02639",
+          "detail_url": "https://papers.cool/arxiv/2604.02639",
+          "authors": [
+            "Weimin Liu",
+            "Jiyuan Qiu",
+            "Wenjun Wang",
+            "Joshua H. Meng"
+          ],
+          "subjects": [
+            "Computer Vision and Pattern Recognition",
+            "Artificial Intelligence"
+          ],
+          "abstract": "Surround depth estimation provides a cost-effective alternative to LiDAR for 3D perception in autonomous driving. While recent self-supervised methods explore multi-camera settings to improve scale awareness and scene coverage, they are primarily designed for passenger vehicles and rarely consider articulated vehicles or robotics platforms. The articulated structure introduces complex cross-segment geometry and motion coupling, making consistent depth reasoning across views more challenging. In this work, we propose \\textbf{ArticuSurDepth}, a self-supervised framework for surround-view depth estimation on articulated vehicles that enhances depth learning through cross-view and cross-vehicle geometric consistency guided by structural priors from vision foundation model. Specifically, we introduce multi-view spatial context enrichment strategy and a cross-view surface normal constraint to improve structural coherence across spatial and temporal contexts. We further incorporate camera height regularization with ground plane-awareness to encourage metric depth estimation, together with cross-vehicle pose consistency that bridges motion estimation between articulated segments. To validate our proposed method, an articulated vehicle experiment platform was established with a dataset collected over it. Experiment results demonstrate state-of-the-art (SoTA) performance of depth estimation on our self-collected dataset as well as on DDAD, nuScenes, and KITTI benchmarks.",
+          "topic_key": "robotics_embodied",
+          "topic_label": "Robotics and Embodied AI",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.74
         },
         {
           "paper_id": "2604.03037",
@@ -2575,7 +2659,7 @@
           "topic_label": "Robotics and Embodied AI",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.93
+          "classification_confidence": 0.9
         },
         {
           "paper_id": "2604.02707",
@@ -2604,132 +2688,7 @@
           "topic_label": "Robotics and Embodied AI",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.96
-        }
-      ]
-    },
-    {
-      "topic_label": "Generative Foundations",
-      "count": 5,
-      "share": 4.17,
-      "papers": [
-        {
-          "paper_id": "2604.03225",
-          "title": "VOSR: A Vision-Only Generative Model for Image Super-Resolution",
-          "abs_url": "https://arxiv.org/abs/2604.03225",
-          "pdf_url": "https://arxiv.org/pdf/2604.03225",
-          "detail_url": "https://papers.cool/arxiv/2604.03225",
-          "authors": [
-            "Rongyuan Wu",
-            "Lingchen Sun",
-            "Zhengqiang Zhang",
-            "Xiangtao Kong",
-            "Jixin Zhao",
-            "Shihao Wang",
-            "Lei Zhang"
-          ],
-          "subjects": [
-            "Computer Vision and Pattern Recognition"
-          ],
-          "abstract": "Most of the recent generative image super-resolution (SR) methods rely on adapting large text-to-image (T2I) diffusion models pretrained on web-scale text-image data. While effective, this paradigm starts from a generic T2I generator, despite that SR is fundamentally a low-resolution (LR) input-conditioned image restoration task. In this work, we investigate whether an SR model trained purely on visual data can rival T2I-based ones. To this end, we propose VOSR, a Vision-Only generative framework for SR. We first extract semantically rich and spatially grounded features from the LR input using a pretrained vision encoder as visual semantic guidance. We then revisit classifier-free guidance for training generative models and show that the standard unconditional branch is ill-suited to restoration models trained from scratch. We therefore replace it with a restoration-oriented guidance strategy that preserves weak LR anchors. Built upon these designs, we first train a multi-step VOSR model from scratch and then distill it into a one-step model for efficient inference. VOSR requires less than one-tenth of the training cost of representative T2I-based SR methods, yet in both multi-step and one-step settings, it achieves competitive or even better perceptual quality and efficiency, while producing more faithful structures with fewer hallucinations on both synthetic and real-world benchmarks. Our results, for the first time, show that high-quality generative SR can be achieved without multimodal pretraining. The code and models can be found at https://github.com/cswry/VOSR.",
-          "topic_key": "generative_foundations",
-          "topic_label": "Generative Foundations",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.97
-        },
-        {
-          "paper_id": "2604.02915",
-          "title": "GP-4DGS: Probabilistic 4D Gaussian Splatting from Monocular Video via Variational Gaussian Processes",
-          "abs_url": "https://arxiv.org/abs/2604.02915",
-          "pdf_url": "https://arxiv.org/pdf/2604.02915",
-          "detail_url": "https://papers.cool/arxiv/2604.02915",
-          "authors": [
-            "Mijeong Kim",
-            "Jungtaek Kim",
-            "Bohyung Han"
-          ],
-          "subjects": [
-            "Computer Vision and Pattern Recognition"
-          ],
-          "abstract": "We present GP-4DGS, a novel framework that integrates Gaussian Processes (GPs) into 4D Gaussian Splatting (4DGS) for principled probabilistic modeling of dynamic scenes. While existing 4DGS methods focus on deterministic reconstruction, they are inherently limited in capturing motion ambiguity and lack mechanisms to assess prediction reliability. By leveraging the kernel-based probabilistic nature of GPs, our approach introduces three key capabilities: (i) uncertainty quantification for motion predictions, (ii) motion estimation for unobserved or sparsely sampled regions, and (iii) temporal extrapolation beyond observed training frames. To scale GPs to the large number of Gaussian primitives in 4DGS, we design spatio-temporal kernels that capture the correlation structure of deformation fields and adopt variational Gaussian Processes with inducing points for tractable inference. Our experiments show that GP-4DGS enhances reconstruction quality while providing reliable uncertainty estimates that effectively identify regions of high motion ambiguity. By addressing these challenges, our work takes a meaningful step toward bridging probabilistic modeling and neural graphics.",
-          "topic_key": "generative_foundations",
-          "topic_label": "Generative Foundations",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.82
-        },
-        {
-          "paper_id": "2604.02392",
-          "title": "Beyond Fixed Inference: Quantitative Flow Matching for Adaptive Image Denoising",
-          "abs_url": "https://arxiv.org/abs/2604.02392",
-          "pdf_url": "https://arxiv.org/pdf/2604.02392",
-          "detail_url": "https://papers.cool/arxiv/2604.02392",
-          "authors": [
-            "Jigang Duan",
-            "Genwei Ma",
-            "Xu Jiang",
-            "Wenfeng Xu",
-            "Ping Yang",
-            "Xing Zhao"
-          ],
-          "subjects": [
-            "Computer Vision and Pattern Recognition"
-          ],
-          "abstract": "Diffusion and flow-based generative models have shown strong potential for image restoration. However, image denoising under unknown and varying noise conditions remains challenging, because the learned vector fields may become inconsistent across different noise levels, leading to degraded restoration quality under mismatch between training and inference. To address this issue, we propose a quantitative flow matching framework for adaptive image denoising. The method first estimates the input noise level from local pixel statistics, and then uses this quantitative estimate to adapt the inference trajectory, including the starting point, the number of integration steps, and the step-size schedule. In this way, the denoising process is better aligned with the actual corruption level of each input, reducing unnecessary computation for lightly corrupted images while providing sufficient refinement for heavily degraded ones. By coupling quantitative noise estimation with noise-adaptive flow inference, the proposed method improves both restoration accuracy and inference efficiency. Extensive experiments on natural, medical, and microscopy images demonstrate its robustness and strong generalization across diverse noise levels and imaging conditions.",
-          "topic_key": "generative_foundations",
-          "topic_label": "Generative Foundations",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.95
-        },
-        {
-          "paper_id": "2604.02868",
-          "title": "Few-Shot Distribution-Aligned Flow Matching for Data Synthesis in Medical Image Segmentation",
-          "abs_url": "https://arxiv.org/abs/2604.02868",
-          "pdf_url": "https://arxiv.org/pdf/2604.02868",
-          "detail_url": "https://papers.cool/arxiv/2604.02868",
-          "authors": [
-            "Jie Yang",
-            "Ziqi Ye",
-            "Aihua Ke",
-            "Jian Luo",
-            "Bo Cai",
-            "Xiaosong Wang"
-          ],
-          "subjects": [
-            "Image and Video Processing",
-            "Computer Vision and Pattern Recognition"
-          ],
-          "abstract": "Data heterogeneity hinders clinical deployment of medical image analysis models, and generative data augmentation helps mitigate this issue. However, recent diffusion-based methods that synthesize image-mask pairs often ignore distribution shifts between generated and real images across scenarios, and such mismatches can markedly degrade downstream performance. To address this issue, we propose AlignFlow, a flow matching model that aligns with the target reference image distribution via differentiable reward fine-tuning, and remains effective even when only a small number of reference images are provided. Specifically, we divide the training of the flow matching model into two stages: in the first stage, the model fits the training data to generate plausible images; Then, we introduce a distribution alignment mechanism and employ differentiable reward to steer the generated images toward the distribution of the given samples from the target domain. In addition, to enhance the diversity of generated masks, we also design a flow matching based mask generation to complement the diversity in regions of interest. Extensive experiments demonstrate the effectiveness of our approach, i.e., performance improvement by 3.5-4.0% in mDice and 3.5-5.6% in mIoU across a variety of datasets and scenarios.",
-          "topic_key": "generative_foundations",
-          "topic_label": "Generative Foundations",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.94
-        },
-        {
-          "paper_id": "2604.02355",
-          "title": "From Broad Exploration to Stable Synthesis: Entropy-Guided Optimization for Autoregressive Image Generation",
-          "abs_url": "https://arxiv.org/abs/2604.02355",
-          "pdf_url": "https://arxiv.org/pdf/2604.02355",
-          "detail_url": "https://papers.cool/arxiv/2604.02355",
-          "authors": [
-            "Han Song",
-            "Yucheng Zhou",
-            "Jianbing Shen",
-            "Yu Cheng"
-          ],
-          "subjects": [
-            "Machine Learning",
-            "Computer Vision and Pattern Recognition"
-          ],
-          "abstract": "Combining Chain-of-Thought (CoT) with Reinforcement Learning (RL) improves text-to-image (T2I) generation, yet the underlying interaction between CoT's exploration and RL's optimization remains unclear. We present a systematic entropy-based analysis that yields three key insights: (1) CoT expands the generative exploration space, while RL contracts it toward high-reward regions; (2) final reward is strongly negatively correlated with both the mean and variance of image-token entropy, highlighting the need to reduce uncertainty and instability; and (3) the entropy of the textual CoT directly governs downstream image quality, with lower-entropy CoTs leading to better generations. Motivated by these findings, we propose Entropy-Guided Group Relative Policy Optimization (EG-GRPO), a fine-tuning strategy that reallocates optimization budget by uncertainty: low-entropy tokens are excluded from reward-driven updates to preserve stability, while high-entropy tokens receive an entropy bonus that encourages structured exploration without collapse. Experiments on standard T2I benchmarks demonstrate that EG-GRPO achieves state-of-the-art performance.",
-          "topic_key": "generative_foundations",
-          "topic_label": "Generative Foundations",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.97
+          "classification_confidence": 0.98
         }
       ]
     },
@@ -2738,6 +2697,28 @@
       "count": 5,
       "share": 4.17,
       "papers": [
+        {
+          "paper_id": "2604.03040",
+          "title": "QVAD: A Question-Centric Agentic Framework for Efficient and Training-Free Video Anomaly Detection",
+          "abs_url": "https://arxiv.org/abs/2604.03040",
+          "pdf_url": "https://arxiv.org/pdf/2604.03040",
+          "detail_url": "https://papers.cool/arxiv/2604.03040",
+          "authors": [
+            "Lokman Bekit",
+            "Hamza Karim",
+            "Nghia T Nguyen",
+            "Yasin Yilmaz"
+          ],
+          "subjects": [
+            "Computer Vision and Pattern Recognition"
+          ],
+          "abstract": "Video Anomaly Detection (VAD) is a fundamental challenge in computer vision, particularly due to the open-set nature of anomalies. While recent training-free approaches utilizing Vision-Language Models (VLMs) have shown promise, they typically rely on massive, resource-intensive foundation models to compensate for the ambiguity of static prompts. We argue that the bottleneck in VAD is not necessarily model capacity, but rather the static nature of inquiry. We propose QVAD, a question-centric agentic framework that treats VLM-LLM interaction as a dynamic dialogue. By iteratively refining queries based on visual context, our LLM agent guides smaller VLMs to produce high-fidelity captions and precise semantic reasoning without parameter updates. This ``prompt-updating\" mechanism effectively unlocks the latent capabilities of lightweight models, enabling state-of-the-art performance on UCF-Crime, XD-Violence, and UBNormal using a fraction of the parameters required by competing methods. We further demonstrate exceptional generalizability on the single-scene ComplexVAD dataset. Crucially, QVAD achieves high inference speeds with minimal memory footprints, making advanced VAD capabilities deployable on resource-constrained edge devices.",
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.95
+        },
         {
           "paper_id": "2604.02908",
           "title": "SentiAvatar: Towards Expressive and Interactive Digital Humans",
@@ -2764,7 +2745,7 @@
           "topic_label": "Multimodal Agents",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.58
+          "classification_confidence": 0.53
         },
         {
           "paper_id": "2604.02714",
@@ -2783,30 +2764,6 @@
             "Computer Vision and Pattern Recognition"
           ],
           "abstract": "End-to-end autonomous driving models based on Vision-Language-Action (VLA) architectures have shown promising results by learning driving policies through behavior cloning on expert demonstrations. However, imitation learning inherently limits the model to replicating observed behaviors without exploring diverse driving strategies, leaving it brittle in novel or out-of-distribution scenarios. Reinforcement learning (RL) offers a natural remedy by enabling policy exploration beyond the expert distribution. Yet VLA models, typically trained on offline datasets, lack directly observable state transitions, necessitating a learned world model to anticipate action consequences. In this work, we propose a unified understanding-and-generation framework that leverages world modeling to simultaneously enable meaningful exploration and provide dense supervision. Specifically, we augment trajectory prediction with future RGB and depth image generation as dense world modeling objectives, requiring the model to learn fine-grained visual and geometric representations that substantially enrich the planning backbone. Beyond serving as a supervisory signal, the world model further acts as a source of intrinsic reward for policy exploration: its image prediction uncertainty naturally measures a trajectory's novelty relative to the training distribution, where high uncertainty indicates out-of-distribution scenarios that, if safe, represent valuable learning opportunities. We incorporate this exploration signal into a safety-gated reward and optimize the policy via Group Relative Policy Optimization (GRPO). Experiments on the NAVSIM and nuScenes benchmarks demonstrate the effectiveness of our approach, achieving a state-of-the-art PDMS score of 93.7 and an EPDMS of 88.8 on NAVSIM. The code and demo will be publicly available at https://zihaosheng.github.io/ExploreVLA/.",
-          "topic_key": "multimodal_agents",
-          "topic_label": "Multimodal Agents",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.94
-        },
-        {
-          "paper_id": "2604.02409",
-          "title": "LumiVideo: An Intelligent Agentic System for Video Color Grading",
-          "abs_url": "https://arxiv.org/abs/2604.02409",
-          "pdf_url": "https://arxiv.org/pdf/2604.02409",
-          "detail_url": "https://papers.cool/arxiv/2604.02409",
-          "authors": [
-            "Yuchen Guo",
-            "Junli Gong",
-            "Hongmin Cai",
-            "Yiu-ming Cheung",
-            "Weifeng Su"
-          ],
-          "subjects": [
-            "Computer Vision and Pattern Recognition",
-            "Artificial Intelligence"
-          ],
-          "abstract": "Video color grading is a critical post-production process that transforms flat, log-encoded raw footage into emotionally resonant cinematic visuals. Existing automated methods act as static, black-box executors that directly output edited pixels, lacking both interpretability and the iterative control required by professionals. We introduce LumiVideo, an agentic system that mimics the cognitive workflow of professional colorists through four stages: Perception, Reasoning, Execution, and Reflection. Given only raw log video, LumiVideo autonomously produces a cinematic base grade by analyzing the scene's physical lighting and semantic content. Its Reasoning engine synergizes an LLM's internalized cinematic knowledge with a Retrieval-Augmented Generation (RAG) framework via a Tree of Thoughts (ToT) search to navigate the non-linear color parameter space. Rather than generating pixels, the system compiles the deduced parameters into industry-standard ASC-CDL configurations and a globally consistent 3D LUT, analytically guaranteeing temporal consistency. An optional Reflection loop then allows creators to refine the result via natural language feedback. We further introduce LumiGrade, the first log-encoded video benchmark for evaluating automated grading. Experiments show that LumiVideo approaches human expert quality in fully automatic mode while enabling precise iterative control when directed.",
           "topic_key": "multimodal_agents",
           "topic_label": "Multimodal Agents",
           "matched_terms": [],
@@ -2867,14 +2824,14 @@
           "topic_label": "Multimodal Agents",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.97
+          "classification_confidence": 0.9
         }
       ]
     },
     {
       "topic_label": "Agents and Planning",
-      "count": 4,
-      "share": 3.33,
+      "count": 3,
+      "share": 2.5,
       "papers": [
         {
           "paper_id": "2604.03156",
@@ -2899,53 +2856,7 @@
           "topic_label": "Agents and Planning",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.93
-        },
-        {
-          "paper_id": "2604.03040",
-          "title": "QVAD: A Question-Centric Agentic Framework for Efficient and Training-Free Video Anomaly Detection",
-          "abs_url": "https://arxiv.org/abs/2604.03040",
-          "pdf_url": "https://arxiv.org/pdf/2604.03040",
-          "detail_url": "https://papers.cool/arxiv/2604.03040",
-          "authors": [
-            "Lokman Bekit",
-            "Hamza Karim",
-            "Nghia T Nguyen",
-            "Yasin Yilmaz"
-          ],
-          "subjects": [
-            "Computer Vision and Pattern Recognition"
-          ],
-          "abstract": "Video Anomaly Detection (VAD) is a fundamental challenge in computer vision, particularly due to the open-set nature of anomalies. While recent training-free approaches utilizing Vision-Language Models (VLMs) have shown promise, they typically rely on massive, resource-intensive foundation models to compensate for the ambiguity of static prompts. We argue that the bottleneck in VAD is not necessarily model capacity, but rather the static nature of inquiry. We propose QVAD, a question-centric agentic framework that treats VLM-LLM interaction as a dynamic dialogue. By iteratively refining queries based on visual context, our LLM agent guides smaller VLMs to produce high-fidelity captions and precise semantic reasoning without parameter updates. This ``prompt-updating\" mechanism effectively unlocks the latent capabilities of lightweight models, enabling state-of-the-art performance on UCF-Crime, XD-Violence, and UBNormal using a fraction of the parameters required by competing methods. We further demonstrate exceptional generalizability on the single-scene ComplexVAD dataset. Crucially, QVAD achieves high inference speeds with minimal memory footprints, making advanced VAD capabilities deployable on resource-constrained edge devices.",
-          "topic_key": "agents_planning",
-          "topic_label": "Agents and Planning",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.78
-        },
-        {
-          "paper_id": "2604.02891",
-          "title": "Progressive Video Condensation with MLLM Agent for Long-form Video Understanding",
-          "abs_url": "https://arxiv.org/abs/2604.02891",
-          "pdf_url": "https://arxiv.org/pdf/2604.02891",
-          "detail_url": "https://papers.cool/arxiv/2604.02891",
-          "authors": [
-            "Yufei Yin",
-            "Yuchen Xing",
-            "Qianke Meng",
-            "Minghao Chen",
-            "Yan Yang",
-            "Zhou Yu"
-          ],
-          "subjects": [
-            "Computer Vision and Pattern Recognition"
-          ],
-          "abstract": "Understanding long videos requires extracting query-relevant information from long sequences under tight compute budgets. Existing text-then-LLM pipelines lose fine-grained visual cues, while video-based multimodal large language models (MLLMs) can keep visual details but are too frame-hungry and computationally expensive. In this work, we aim to harness MLLMs for efficient video understanding. We propose ProVCA, a progressive video condensation agent that iteratively locates key video frames at multiple granularities. ProVCA first adopts a segment localization module to identify the video segment relevant to the query, then a snippet selection module to select important snippets based on similarity, and finally a keyframe refinement module to pinpoint specific keyframes in those snippets. By progressively narrowing the scope from coarse segments to fine frames, ProVCA identifies a small set of keyframes for MLLM-based reasoning. ProVCA achieves state-of-the-art zero-shot accuracies of 69.3\\% on EgoSchema, 80.5\\% on NExT-QA, and 77.7\\% on IntentQA, while using fewer frames than previous training-free methods.",
-          "topic_key": "agents_planning",
-          "topic_label": "Agents and Planning",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.72
+          "classification_confidence": 0.9
         },
         {
           "paper_id": "2604.02447",
@@ -2966,46 +2877,119 @@
           "topic_label": "Agents and Planning",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.86
+          "classification_confidence": 0.72
+        },
+        {
+          "paper_id": "2604.02409",
+          "title": "LumiVideo: An Intelligent Agentic System for Video Color Grading",
+          "abs_url": "https://arxiv.org/abs/2604.02409",
+          "pdf_url": "https://arxiv.org/pdf/2604.02409",
+          "detail_url": "https://papers.cool/arxiv/2604.02409",
+          "authors": [
+            "Yuchen Guo",
+            "Junli Gong",
+            "Hongmin Cai",
+            "Yiu-ming Cheung",
+            "Weifeng Su"
+          ],
+          "subjects": [
+            "Computer Vision and Pattern Recognition",
+            "Artificial Intelligence"
+          ],
+          "abstract": "Video color grading is a critical post-production process that transforms flat, log-encoded raw footage into emotionally resonant cinematic visuals. Existing automated methods act as static, black-box executors that directly output edited pixels, lacking both interpretability and the iterative control required by professionals. We introduce LumiVideo, an agentic system that mimics the cognitive workflow of professional colorists through four stages: Perception, Reasoning, Execution, and Reflection. Given only raw log video, LumiVideo autonomously produces a cinematic base grade by analyzing the scene's physical lighting and semantic content. Its Reasoning engine synergizes an LLM's internalized cinematic knowledge with a Retrieval-Augmented Generation (RAG) framework via a Tree of Thoughts (ToT) search to navigate the non-linear color parameter space. Rather than generating pixels, the system compiles the deduced parameters into industry-standard ASC-CDL configurations and a globally consistent 3D LUT, analytically guaranteeing temporal consistency. An optional Reflection loop then allows creators to refine the result via natural language feedback. We further introduce LumiGrade, the first log-encoded video benchmark for evaluating automated grading. Experiments show that LumiVideo approaches human expert quality in fully automatic mode while enabling precise iterative control when directed.",
+          "topic_key": "agents_planning",
+          "topic_label": "Agents and Planning",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.78
+        }
+      ]
+    },
+    {
+      "topic_label": "Generative Foundations",
+      "count": 3,
+      "share": 2.5,
+      "papers": [
+        {
+          "paper_id": "2604.03225",
+          "title": "VOSR: A Vision-Only Generative Model for Image Super-Resolution",
+          "abs_url": "https://arxiv.org/abs/2604.03225",
+          "pdf_url": "https://arxiv.org/pdf/2604.03225",
+          "detail_url": "https://papers.cool/arxiv/2604.03225",
+          "authors": [
+            "Rongyuan Wu",
+            "Lingchen Sun",
+            "Zhengqiang Zhang",
+            "Xiangtao Kong",
+            "Jixin Zhao",
+            "Shihao Wang",
+            "Lei Zhang"
+          ],
+          "subjects": [
+            "Computer Vision and Pattern Recognition"
+          ],
+          "abstract": "Most of the recent generative image super-resolution (SR) methods rely on adapting large text-to-image (T2I) diffusion models pretrained on web-scale text-image data. While effective, this paradigm starts from a generic T2I generator, despite that SR is fundamentally a low-resolution (LR) input-conditioned image restoration task. In this work, we investigate whether an SR model trained purely on visual data can rival T2I-based ones. To this end, we propose VOSR, a Vision-Only generative framework for SR. We first extract semantically rich and spatially grounded features from the LR input using a pretrained vision encoder as visual semantic guidance. We then revisit classifier-free guidance for training generative models and show that the standard unconditional branch is ill-suited to restoration models trained from scratch. We therefore replace it with a restoration-oriented guidance strategy that preserves weak LR anchors. Built upon these designs, we first train a multi-step VOSR model from scratch and then distill it into a one-step model for efficient inference. VOSR requires less than one-tenth of the training cost of representative T2I-based SR methods, yet in both multi-step and one-step settings, it achieves competitive or even better perceptual quality and efficiency, while producing more faithful structures with fewer hallucinations on both synthetic and real-world benchmarks. Our results, for the first time, show that high-quality generative SR can be achieved without multimodal pretraining. The code and models can be found at https://github.com/cswry/VOSR.",
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.98
+        },
+        {
+          "paper_id": "2604.02979",
+          "title": "Not All Frames Deserve Full Computation: Accelerating Autoregressive Video Generation via Selective Computation and Predictive Extrapolation",
+          "abs_url": "https://arxiv.org/abs/2604.02979",
+          "pdf_url": "https://arxiv.org/pdf/2604.02979",
+          "detail_url": "https://papers.cool/arxiv/2604.02979",
+          "authors": [
+            "Hanshuai Cui",
+            "Zhiqing Tang",
+            "Zhi Yao",
+            "Fanshuai Meng",
+            "Weijia Jia",
+            "Wei Zhao"
+          ],
+          "subjects": [
+            "Computer Vision and Pattern Recognition"
+          ],
+          "abstract": "Autoregressive (AR) video diffusion models enable long-form video generation but remain expensive due to repeated multi-step denoising. Existing training-free acceleration methods rely on binary cache-or-recompute decisions, overlooking intermediate cases where direct reuse is too coarse yet full recomputation is unnecessary. Moreover, asynchronous AR schedules assign different noise levels to co-generated frames, yet existing methods process the entire valid interval uniformly. To address these AR-specific inefficiencies, we present SCOPE, a training-free framework for efficient AR video diffusion. SCOPE introduces a tri-modal scheduler over cache, predict, and recompute, where prediction via noise-level Taylor extrapolation fills the gap between reuse and recomputation with explicit stability controls backed by error propagation analysis. It further introduces selective computation that restricts execution to the active frame interval. On MAGI-1 and SkyReels-V2, SCOPE achieves up to 4.73x speedup while maintaining quality comparable to the original output, outperforming all training-free baselines.",
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.97
+        },
+        {
+          "paper_id": "2604.02392",
+          "title": "Beyond Fixed Inference: Quantitative Flow Matching for Adaptive Image Denoising",
+          "abs_url": "https://arxiv.org/abs/2604.02392",
+          "pdf_url": "https://arxiv.org/pdf/2604.02392",
+          "detail_url": "https://papers.cool/arxiv/2604.02392",
+          "authors": [
+            "Jigang Duan",
+            "Genwei Ma",
+            "Xu Jiang",
+            "Wenfeng Xu",
+            "Ping Yang",
+            "Xing Zhao"
+          ],
+          "subjects": [
+            "Computer Vision and Pattern Recognition"
+          ],
+          "abstract": "Diffusion and flow-based generative models have shown strong potential for image restoration. However, image denoising under unknown and varying noise conditions remains challenging, because the learned vector fields may become inconsistent across different noise levels, leading to degraded restoration quality under mismatch between training and inference. To address this issue, we propose a quantitative flow matching framework for adaptive image denoising. The method first estimates the input noise level from local pixel statistics, and then uses this quantitative estimate to adapt the inference trajectory, including the starting point, the number of integration steps, and the step-size schedule. In this way, the denoising process is better aligned with the actual corruption level of each input, reducing unnecessary computation for lightly corrupted images while providing sufficient refinement for heavily degraded ones. By coupling quantitative noise estimation with noise-adaptive flow inference, the proposed method improves both restoration accuracy and inference efficiency. Extensive experiments on natural, medical, and microscopy images demonstrate its robustness and strong generalization across diverse noise levels and imaging conditions.",
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.95
         }
       ]
     },
     {
       "topic_label": "Learning, Optimization, and Theory",
-      "count": 4,
-      "share": 3.33,
+      "count": 3,
+      "share": 2.5,
       "papers": [
-        {
-          "paper_id": "2604.03212",
-          "title": "ProtoFlow: Mitigating Forgetting in Class-Incremental Remote Sensing Segmentation via Low-Curvature Prototype Flow",
-          "abs_url": "https://arxiv.org/abs/2604.03212",
-          "pdf_url": "https://arxiv.org/pdf/2604.03212",
-          "detail_url": "https://papers.cool/arxiv/2604.03212",
-          "authors": [
-            "Jiekai Wu",
-            "Rong Fu",
-            "Chuangqi Li",
-            "Zijian Zhang",
-            "Guangxin Wu",
-            "Hao Zhang",
-            "Shiyin Lin",
-            "Jianyuan Ni",
-            "Yang Li",
-            "Dongxu Zhang",
-            "Amir H. Gandomi",
-            "Simon Fong",
-            "Pengbin Feng"
-          ],
-          "subjects": [
-            "Computer Vision and Pattern Recognition"
-          ],
-          "abstract": "Remote sensing segmentation in real deployment is inherently continual: new semantic categories emerge, and acquisition conditions shift across seasons, cities, and sensors. Despite recent progress, many incremental approaches still treat training steps as isolated updates, which leaves representation drift and forgetting insufficiently controlled. We present ProtoFlow, a time-aware prototype dynamics framework that models class prototypes as trajectories and learns their evolution with an explicit temporal vector field. By jointly enforcing low-curvature motion and inter-class separation, ProtoFlow stabilizes prototype geometry throughout incremental learning. Experiments on standard class- and domain-incremental remote sensing benchmarks show consistent gains over strong baselines, including up to 1.5-2.0 points improvement in mIoUall, together with reduced forgetting. These results suggest that explicitly modeling temporal prototype evolution is a practical and interpretable strategy for robust continual remote sensing segmentation.",
-          "topic_key": "learning_theory",
-          "topic_label": "Learning, Optimization, and Theory",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.78
-        },
         {
           "paper_id": "2604.02946",
           "title": "Learning from Synthetic Data via Provenance-Based Input Gradient Guidance",
@@ -3030,7 +3014,7 @@
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.72
+          "classification_confidence": 0.68
         },
         {
           "paper_id": "2604.02846",
@@ -3053,7 +3037,7 @@
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.63
+          "classification_confidence": 0.58
         },
         {
           "paper_id": "2604.02468",
@@ -3078,7 +3062,35 @@
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.79
+          "classification_confidence": 0.84
+        }
+      ]
+    },
+    {
+      "topic_label": "LLMs and Language",
+      "count": 1,
+      "share": 0.83,
+      "papers": [
+        {
+          "paper_id": "2604.03072",
+          "title": "MI-Pruner: Crossmodal Mutual Information-guided Token Pruner for Efficient MLLMs",
+          "abs_url": "https://arxiv.org/abs/2604.03072",
+          "pdf_url": "https://arxiv.org/pdf/2604.03072",
+          "detail_url": "https://papers.cool/arxiv/2604.03072",
+          "authors": [
+            "Jiameng Li",
+            "Aleksei Tiulpin",
+            "Matthew B. Blaschko"
+          ],
+          "subjects": [
+            "Computer Vision and Pattern Recognition"
+          ],
+          "abstract": "For multimodal large language models (MLLMs), visual information is relatively sparse compared with text. As a result, research on visual pruning emerges for efficient inference. Current approaches typically measure token importance based on the attention scores in the visual encoder or in the LLM decoder, then select visual tokens with high attention scores while pruning others. In this paper, we pursue a different and more surgical approach. Instead of relying on mechanism-specific signals, we directly compute Mutual Information (MI) between visual and textual features themselves, prior to their interaction. This allows us to explicitly measure crossmodal dependency at the feature levels. Our MI-Pruner is simple, efficient and non-intrusive, requiring no access to internal attention maps or architectural modifications. Experimental results demonstrate that our approach outperforms previous attention-based pruning methods with minimal latency.",
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.74
         }
       ]
     },
@@ -3116,7 +3128,7 @@
           "topic_label": "Other AI",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.77
+          "classification_confidence": 0.51
         }
       ]
     },
@@ -3150,7 +3162,7 @@
           "topic_label": "Retrieval, Knowledge, and RAG",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.88
+          "classification_confidence": 0.95
         }
       ]
     }
@@ -3179,7 +3191,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.94
+      "classification_confidence": 0.95
     },
     {
       "paper_id": "2604.03225",
@@ -3204,7 +3216,7 @@
       "topic_label": "Generative Foundations",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.97
+      "classification_confidence": 0.98
     },
     {
       "paper_id": "2604.03212",
@@ -3231,11 +3243,11 @@
         "Computer Vision and Pattern Recognition"
       ],
       "abstract": "Remote sensing segmentation in real deployment is inherently continual: new semantic categories emerge, and acquisition conditions shift across seasons, cities, and sensors. Despite recent progress, many incremental approaches still treat training steps as isolated updates, which leaves representation drift and forgetting insufficiently controlled. We present ProtoFlow, a time-aware prototype dynamics framework that models class prototypes as trajectories and learns their evolution with an explicit temporal vector field. By jointly enforcing low-curvature motion and inter-class separation, ProtoFlow stabilizes prototype geometry throughout incremental learning. Experiments on standard class- and domain-incremental remote sensing benchmarks show consistent gains over strong baselines, including up to 1.5-2.0 points improvement in mIoUall, together with reduced forgetting. These results suggest that explicitly modeling temporal prototype evolution is a practical and interpretable strategy for robust continual remote sensing segmentation.",
-      "topic_key": "learning_theory",
-      "topic_label": "Learning, Optimization, and Theory",
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.78
+      "classification_confidence": 0.67
     },
     {
       "paper_id": "2604.03203",
@@ -3263,7 +3275,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.97
     },
     {
       "paper_id": "2604.03198",
@@ -3370,7 +3382,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.86
+      "classification_confidence": 0.96
     },
     {
       "paper_id": "2604.03172",
@@ -3391,7 +3403,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.61
+      "classification_confidence": 0.63
     },
     {
       "paper_id": "2604.03156",
@@ -3416,7 +3428,7 @@
       "topic_label": "Agents and Planning",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.93
+      "classification_confidence": 0.9
     },
     {
       "paper_id": "2604.03134",
@@ -3439,7 +3451,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.88
+      "classification_confidence": 0.89
     },
     {
       "paper_id": "2604.03120",
@@ -3464,7 +3476,7 @@
       "topic_label": "Robotics and Embodied AI",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.8
+      "classification_confidence": 0.73
     },
     {
       "paper_id": "2604.03118",
@@ -3492,7 +3504,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.97
+      "classification_confidence": 0.98
     },
     {
       "paper_id": "2604.03117",
@@ -3544,7 +3556,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.88
     },
     {
       "paper_id": "2604.03094",
@@ -3566,7 +3578,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.92
+      "classification_confidence": 0.85
     },
     {
       "paper_id": "2604.03072",
@@ -3583,11 +3595,11 @@
         "Computer Vision and Pattern Recognition"
       ],
       "abstract": "For multimodal large language models (MLLMs), visual information is relatively sparse compared with text. As a result, research on visual pruning emerges for efficient inference. Current approaches typically measure token importance based on the attention scores in the visual encoder or in the LLM decoder, then select visual tokens with high attention scores while pruning others. In this paper, we pursue a different and more surgical approach. Instead of relying on mechanism-specific signals, we directly compute Mutual Information (MI) between visual and textual features themselves, prior to their interaction. This allows us to explicitly measure crossmodal dependency at the feature levels. Our MI-Pruner is simple, efficient and non-intrusive, requiring no access to internal attention maps or architectural modifications. Experimental results demonstrate that our approach outperforms previous attention-based pruning methods with minimal latency.",
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.88
+      "classification_confidence": 0.74
     },
     {
       "paper_id": "2604.03069",
@@ -3605,11 +3617,11 @@
         "Computer Vision and Pattern Recognition"
       ],
       "abstract": "Recent progress in feed-forward 3D Gaussian Splatting (3DGS) has notably improved rendering quality. However, the spatially uniform and highly redundant 3DGS map generated by previous feed-forward 3DGS methods limits their integration into downstream reconstruction tasks. We propose SparseSplat, the first feed-forward 3DGS model that adaptively adjusts Gaussian density according to scene structure and information richness of local regions, yielding highly compact 3DGS maps. To achieve this, we propose entropy-based probabilistic sampling, generating large, sparse Gaussians in textureless areas and assigning small, dense Gaussians to regions with rich information. Additionally, we designed a specialized point cloud network that efficiently encodes local context and decodes it into 3DGS attributes, addressing the receptive field mismatch between the general 3DGS optimization pipeline and feed-forward models. Extensive experimental results demonstrate that SparseSplat can achieve state-of-the-art rendering quality with only 22% of the Gaussians and maintain reasonable rendering quality with only 1.5% of the Gaussians. Project page: https://victkk.github.io/SparseSplat-page/.",
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
+      "topic_key": "multimodal_generative",
+      "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.72
+      "classification_confidence": 0.78
     },
     {
       "paper_id": "2604.03064",
@@ -3629,7 +3641,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.76
+      "classification_confidence": 0.72
     },
     {
       "paper_id": "2604.03061",
@@ -3673,7 +3685,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.9
+      "classification_confidence": 0.94
     },
     {
       "paper_id": "2604.03040",
@@ -3691,11 +3703,11 @@
         "Computer Vision and Pattern Recognition"
       ],
       "abstract": "Video Anomaly Detection (VAD) is a fundamental challenge in computer vision, particularly due to the open-set nature of anomalies. While recent training-free approaches utilizing Vision-Language Models (VLMs) have shown promise, they typically rely on massive, resource-intensive foundation models to compensate for the ambiguity of static prompts. We argue that the bottleneck in VAD is not necessarily model capacity, but rather the static nature of inquiry. We propose QVAD, a question-centric agentic framework that treats VLM-LLM interaction as a dynamic dialogue. By iteratively refining queries based on visual context, our LLM agent guides smaller VLMs to produce high-fidelity captions and precise semantic reasoning without parameter updates. This ``prompt-updating\" mechanism effectively unlocks the latent capabilities of lightweight models, enabling state-of-the-art performance on UCF-Crime, XD-Violence, and UBNormal using a fraction of the parameters required by competing methods. We further demonstrate exceptional generalizability on the single-scene ComplexVAD dataset. Crucially, QVAD achieves high inference speeds with minimal memory footprints, making advanced VAD capabilities deployable on resource-constrained edge devices.",
-      "topic_key": "agents_planning",
-      "topic_label": "Agents and Planning",
+      "topic_key": "multimodal_agents",
+      "topic_label": "Multimodal Agents",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.78
+      "classification_confidence": 0.95
     },
     {
       "paper_id": "2604.03039",
@@ -3719,7 +3731,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.9
+      "classification_confidence": 0.93
     },
     {
       "paper_id": "2604.03002",
@@ -3743,7 +3755,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.89
+      "classification_confidence": 0.9
     },
     {
       "paper_id": "2604.02996",
@@ -3763,11 +3775,11 @@
         "Computer Vision and Pattern Recognition"
       ],
       "abstract": "Reconstructing dynamic scenes with multiple interacting humans and objects from sparse-view inputs is a critical yet challenging task, essential for creating high-fidelity digital twins for robotics and VR/AR. This problem, which we term Multi-Human Multi-Object (MHMO) rendering, presents two significant obstacles: achieving view-consistent representations for individual instances under severe mutual occlusion, and explicitly modeling the complex and combinatorial dependencies that arise from their interactions. To overcome these challenges, we propose MM-GS, a novel hierarchical framework built upon 3D Gaussian Splatting. Our method first employs a Per-Instance Multi-View Fusion module to establish a robust and consistent representation for each instance by aggregating visual information across all available views. Subsequently, a Scene-Level Instance Interaction module operates on a global scene graph to reason about relationships between all participants, refining their attributes to capture subtle interaction effects. Extensive experiments on challenging datasets demonstrate that our method significantly outperforms strong baselines, producing state-of-the-art results with high-fidelity details and plausible inter-instance contacts.",
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
+      "topic_key": "multimodal_generative",
+      "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.74
+      "classification_confidence": 0.79
     },
     {
       "paper_id": "2604.02979",
@@ -3787,11 +3799,11 @@
         "Computer Vision and Pattern Recognition"
       ],
       "abstract": "Autoregressive (AR) video diffusion models enable long-form video generation but remain expensive due to repeated multi-step denoising. Existing training-free acceleration methods rely on binary cache-or-recompute decisions, overlooking intermediate cases where direct reuse is too coarse yet full recomputation is unnecessary. Moreover, asynchronous AR schedules assign different noise levels to co-generated frames, yet existing methods process the entire valid interval uniformly. To address these AR-specific inefficiencies, we present SCOPE, a training-free framework for efficient AR video diffusion. SCOPE introduces a tri-modal scheduler over cache, predict, and recompute, where prediction via noise-level Taylor extrapolation fills the gap between reuse and recomputation with explicit stability controls backed by error propagation analysis. It further introduces selective computation that restricts execution to the active frame interval. On MAGI-1 and SkyReels-V2, SCOPE achieves up to 4.73x speedup while maintaining quality comparable to the original output, outperforming all training-free baselines.",
-      "topic_key": "multimodal_generative",
-      "topic_label": "Multimodal Generative Modeling",
+      "topic_key": "generative_foundations",
+      "topic_label": "Generative Foundations",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.98
+      "classification_confidence": 0.97
     },
     {
       "paper_id": "2604.02977",
@@ -3806,11 +3818,11 @@
         "Computer Vision and Pattern Recognition"
       ],
       "abstract": "Most deep learning pipelines for retinal vessel segmentation resize fundus images to satisfy GPU memory constraints and enable uniform batch processing. However, the impact of this resizing on thin vessel detection remains underexplored. When high resolution images are downsampled, thin vessels are reduced to subpixel structures, causing irreversible information loss even before the data enters the network. Standard volumetric metrics such as the Dice score do not capture this loss because thick vessel pixels dominate the evaluation. We investigated this effect by training a baseline UNet at multiple downsampling ratios across five fundus datasets (DRIVE, STARE, CHASE_DB1, HRF, and FIVES) with native widths ranging from 565 to 3504 pixels, keeping all other settings fixed. We introduce a width-stratified sensitivity metric that evaluates thin (half-width <3 pixels), medium (3 to 7 pixels), and thick (>7 pixels) vessel detection separately, using native resolution width estimates derived from a Euclidean distance transform. Results show that for high-resolution datasets (HRF, FIVES), thin vessel sensitivity improves monotonically as images are downsampled toward the encoder's effective operating range, peaking at processed widths between 256 and 876 pixels. For low-to-mid resolution datasets (DRIVE, STARE, CHASE_DB1), thin vessel sensitivity is highest at or near native resolution and degrades with any downsampling. Across all five datasets, aggressive downsampling reduced thin vessel sensitivity by up to 15.8 percentage points (DRIVE) while Dice remained relatively stable, confirming that Dice alone is insufficient for evaluating microvascular segmentation.",
-      "topic_key": "datasets_benchmarks",
-      "topic_label": "Datasets and Benchmarks",
+      "topic_key": "domain_applications",
+      "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.79
+      "classification_confidence": 0.9
     },
     {
       "paper_id": "2604.02973",
@@ -3831,7 +3843,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.96
+      "classification_confidence": 0.94
     },
     {
       "paper_id": "2604.02966",
@@ -3854,7 +3866,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.84
+      "classification_confidence": 0.81
     },
     {
       "paper_id": "2604.02956",
@@ -3876,7 +3888,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.87
+      "classification_confidence": 0.93
     },
     {
       "paper_id": "2604.02948",
@@ -3899,7 +3911,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.93
+      "classification_confidence": 0.95
     },
     {
       "paper_id": "2604.02946",
@@ -3925,7 +3937,7 @@
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.72
+      "classification_confidence": 0.68
     },
     {
       "paper_id": "2604.02941",
@@ -3971,7 +3983,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.91
+      "classification_confidence": 0.96
     },
     {
       "paper_id": "2604.02934",
@@ -4004,7 +4016,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.94
+      "classification_confidence": 0.92
     },
     {
       "paper_id": "2604.02930",
@@ -4028,7 +4040,7 @@
       "topic_label": "Robotics and Embodied AI",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.84
+      "classification_confidence": 0.83
     },
     {
       "paper_id": "2604.02915",
@@ -4045,11 +4057,11 @@
         "Computer Vision and Pattern Recognition"
       ],
       "abstract": "We present GP-4DGS, a novel framework that integrates Gaussian Processes (GPs) into 4D Gaussian Splatting (4DGS) for principled probabilistic modeling of dynamic scenes. While existing 4DGS methods focus on deterministic reconstruction, they are inherently limited in capturing motion ambiguity and lack mechanisms to assess prediction reliability. By leveraging the kernel-based probabilistic nature of GPs, our approach introduces three key capabilities: (i) uncertainty quantification for motion predictions, (ii) motion estimation for unobserved or sparsely sampled regions, and (iii) temporal extrapolation beyond observed training frames. To scale GPs to the large number of Gaussian primitives in 4DGS, we design spatio-temporal kernels that capture the correlation structure of deformation fields and adopt variational Gaussian Processes with inducing points for tractable inference. Our experiments show that GP-4DGS enhances reconstruction quality while providing reliable uncertainty estimates that effectively identify regions of high motion ambiguity. By addressing these challenges, our work takes a meaningful step toward bridging probabilistic modeling and neural graphics.",
-      "topic_key": "generative_foundations",
-      "topic_label": "Generative Foundations",
+      "topic_key": "multimodal_generative",
+      "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.82
+      "classification_confidence": 0.74
     },
     {
       "paper_id": "2604.02908",
@@ -4077,7 +4089,7 @@
       "topic_label": "Multimodal Agents",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.58
+      "classification_confidence": 0.53
     },
     {
       "paper_id": "2604.02905",
@@ -4103,7 +4115,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.81
+      "classification_confidence": 0.82
     },
     {
       "paper_id": "2604.02903",
@@ -4127,7 +4139,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.89
+      "classification_confidence": 0.9
     },
     {
       "paper_id": "2604.02896",
@@ -4152,7 +4164,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.76
+      "classification_confidence": 0.79
     },
     {
       "paper_id": "2604.02893",
@@ -4171,11 +4183,11 @@
         "Machine Learning"
       ],
       "abstract": "We study visual explanation in geometry education as a Referring Image Segmentation (RIS) problem: given a diagram and a natural language description, the task is to produce a pixel-level mask for the referred geometric element. However, existing RIS models trained on natural image benchmarks such as RefCOCO fail catastrophically on geometric diagrams due to the fundamental domain shift between photographic scenes and abstract, textureless schematics. To address the absence of suitable training data, we present a fully automated procedural data engine that generates over 200,000 synthetic geometry diagrams with pixel-perfect segmentation masks and linguistically diverse referring expressions, requiring zero manual annotation. We further propose domain-specific fine-tuning of vision-language models (VLMs), demonstrating that a fine-tuned Florence-2 achieves 49% IoU and 85% Buffered IoU (BIoU), compared to <1% IoU in zero-shot settings. We introduce Buffered IoU, a geometry-aware evaluation metric that accounts for thin-structure localization, and show that it better reflects true segmentation quality than standard IoU. Our results establish a foundation for building Artificial General Teachers (AGTs) capable of providing visually grounded, step-by-step explanations of geometry problems.",
-      "topic_key": "datasets_benchmarks",
-      "topic_label": "Datasets and Benchmarks",
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.62
+      "classification_confidence": 0.78
     },
     {
       "paper_id": "2604.02891",
@@ -4195,8 +4207,8 @@
         "Computer Vision and Pattern Recognition"
       ],
       "abstract": "Understanding long videos requires extracting query-relevant information from long sequences under tight compute budgets. Existing text-then-LLM pipelines lose fine-grained visual cues, while video-based multimodal large language models (MLLMs) can keep visual details but are too frame-hungry and computationally expensive. In this work, we aim to harness MLLMs for efficient video understanding. We propose ProVCA, a progressive video condensation agent that iteratively locates key video frames at multiple granularities. ProVCA first adopts a segment localization module to identify the video segment relevant to the query, then a snippet selection module to select important snippets based on similarity, and finally a keyframe refinement module to pinpoint specific keyframes in those snippets. By progressively narrowing the scope from coarse segments to fine frames, ProVCA identifies a small set of keyframes for MLLM-based reasoning. ProVCA achieves state-of-the-art zero-shot accuracies of 69.3\\% on EgoSchema, 80.5\\% on NExT-QA, and 77.7\\% on IntentQA, while using fewer frames than previous training-free methods.",
-      "topic_key": "agents_planning",
-      "topic_label": "Agents and Planning",
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
       "classification_confidence": 0.72
@@ -4219,7 +4231,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.82
+      "classification_confidence": 0.87
     },
     {
       "paper_id": "2604.02880",
@@ -4245,7 +4257,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.87
+      "classification_confidence": 0.81
     },
     {
       "paper_id": "2604.02877",
@@ -4267,7 +4279,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.83
+      "classification_confidence": 0.77
     },
     {
       "paper_id": "2604.02871",
@@ -4290,7 +4302,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.68
+      "classification_confidence": 0.61
     },
     {
       "paper_id": "2604.02870",
@@ -4314,7 +4326,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.89
+      "classification_confidence": 0.84
     },
     {
       "paper_id": "2604.02867",
@@ -4338,7 +4350,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.81
+      "classification_confidence": 0.66
     },
     {
       "paper_id": "2604.02860",
@@ -4362,7 +4374,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.94
+      "classification_confidence": 0.93
     },
     {
       "paper_id": "2604.02847",
@@ -4383,7 +4395,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.91
+      "classification_confidence": 0.94
     },
     {
       "paper_id": "2604.02846",
@@ -4406,7 +4418,7 @@
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.63
+      "classification_confidence": 0.58
     },
     {
       "paper_id": "2604.02845",
@@ -4428,7 +4440,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.82
+      "classification_confidence": 0.83
     },
     {
       "paper_id": "2604.02836",
@@ -4451,7 +4463,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.74
+      "classification_confidence": 0.63
     },
     {
       "paper_id": "2604.02829",
@@ -4476,7 +4488,7 @@
       "topic_label": "Robotics and Embodied AI",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.92
+      "classification_confidence": 0.91
     },
     {
       "paper_id": "2604.02828",
@@ -4503,7 +4515,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.61
+      "classification_confidence": 0.68
     },
     {
       "paper_id": "2604.02817",
@@ -4527,7 +4539,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.96
+      "classification_confidence": 0.97
     },
     {
       "paper_id": "2604.02816",
@@ -4551,7 +4563,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.89
+      "classification_confidence": 0.88
     },
     {
       "paper_id": "2604.02808",
@@ -4572,7 +4584,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.92
+      "classification_confidence": 0.9
     },
     {
       "paper_id": "2604.02804",
@@ -4598,7 +4610,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.94
     },
     {
       "paper_id": "2604.02799",
@@ -4623,7 +4635,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.81
+      "classification_confidence": 0.84
     },
     {
       "paper_id": "2604.02787",
@@ -4648,7 +4660,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.93
+      "classification_confidence": 0.9
     },
     {
       "paper_id": "2604.02785",
@@ -4673,7 +4685,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.77
+      "classification_confidence": 0.76
     },
     {
       "paper_id": "2604.02784",
@@ -4695,7 +4707,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.9
+      "classification_confidence": 0.94
     },
     {
       "paper_id": "2604.02780",
@@ -4717,7 +4729,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.88
+      "classification_confidence": 0.86
     },
     {
       "paper_id": "2604.02773",
@@ -4743,7 +4755,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.78
+      "classification_confidence": 0.75
     },
     {
       "paper_id": "2604.02764",
@@ -4768,7 +4780,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.69
+      "classification_confidence": 0.67
     },
     {
       "paper_id": "2604.02753",
@@ -4825,7 +4837,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.73
+      "classification_confidence": 0.76
     },
     {
       "paper_id": "2604.02748",
@@ -4846,7 +4858,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.94
+      "classification_confidence": 0.95
     },
     {
       "paper_id": "2604.02736",
@@ -4900,7 +4912,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.86
+      "classification_confidence": 0.82
     },
     {
       "paper_id": "2604.02714",
@@ -4923,7 +4935,7 @@
       "topic_label": "Multimodal Agents",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.94
+      "classification_confidence": 0.93
     },
     {
       "paper_id": "2604.02696",
@@ -4946,7 +4958,7 @@
       "topic_label": "Robotics and Embodied AI",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.89
+      "classification_confidence": 0.92
     },
     {
       "paper_id": "2604.02695",
@@ -4966,7 +4978,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.79
+      "classification_confidence": 0.87
     },
     {
       "paper_id": "2604.02694",
@@ -4996,7 +5008,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.79
+      "classification_confidence": 0.84
     },
     {
       "paper_id": "2604.02692",
@@ -5027,7 +5039,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.85
+      "classification_confidence": 0.8
     },
     {
       "paper_id": "2604.02689",
@@ -5051,7 +5063,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.83
+      "classification_confidence": 0.84
     },
     {
       "paper_id": "2604.02654",
@@ -5093,11 +5105,11 @@
         "Artificial Intelligence"
       ],
       "abstract": "Surround depth estimation provides a cost-effective alternative to LiDAR for 3D perception in autonomous driving. While recent self-supervised methods explore multi-camera settings to improve scale awareness and scene coverage, they are primarily designed for passenger vehicles and rarely consider articulated vehicles or robotics platforms. The articulated structure introduces complex cross-segment geometry and motion coupling, making consistent depth reasoning across views more challenging. In this work, we propose \\textbf{ArticuSurDepth}, a self-supervised framework for surround-view depth estimation on articulated vehicles that enhances depth learning through cross-view and cross-vehicle geometric consistency guided by structural priors from vision foundation model. Specifically, we introduce multi-view spatial context enrichment strategy and a cross-view surface normal constraint to improve structural coherence across spatial and temporal contexts. We further incorporate camera height regularization with ground plane-awareness to encourage metric depth estimation, together with cross-vehicle pose consistency that bridges motion estimation between articulated segments. To validate our proposed method, an articulated vehicle experiment platform was established with a dataset collected over it. Experiment results demonstrate state-of-the-art (SoTA) performance of depth estimation on our self-collected dataset as well as on DDAD, nuScenes, and KITTI benchmarks.",
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
+      "topic_key": "robotics_embodied",
+      "topic_label": "Robotics and Embodied AI",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.72
+      "classification_confidence": 0.74
     },
     {
       "paper_id": "2604.02627",
@@ -5124,7 +5136,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.9
+      "classification_confidence": 0.89
     },
     {
       "paper_id": "2604.02616",
@@ -5148,7 +5160,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.92
+      "classification_confidence": 0.96
     },
     {
       "paper_id": "2604.02603",
@@ -5170,7 +5182,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.72
+      "classification_confidence": 0.8
     },
     {
       "paper_id": "2604.02593",
@@ -5214,7 +5226,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.86
+      "classification_confidence": 0.82
     },
     {
       "paper_id": "2604.02583",
@@ -5241,7 +5253,7 @@
       "topic_label": "Retrieval, Knowledge, and RAG",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.88
+      "classification_confidence": 0.95
     },
     {
       "paper_id": "2604.02570",
@@ -5264,7 +5276,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.72
+      "classification_confidence": 0.74
     },
     {
       "paper_id": "2604.02546",
@@ -5288,7 +5300,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.9
+      "classification_confidence": 0.86
     },
     {
       "paper_id": "2604.02543",
@@ -5307,11 +5319,11 @@
         "Machine Learning"
       ],
       "abstract": "As vision-language models (VLMs) are increasingly deployed in clinical decision support, more than accuracy is required: knowing when to trust their predictions is equally critical. Yet, a comprehensive and systematic investigation into the overconfidence of these models remains notably scarce in the medical domain. We address this gap through a comprehensive empirical study of confidence calibration in VLMs, spanning three model families (Qwen3-VL, InternVL3, LLaVA-NeXT), three model scales (2B--38B), and multiple confidence estimation prompting strategies, across three medical visual question answering (VQA) benchmarks. Our study yields three key findings: First, overconfidence persists across model families and is not resolved by scaling or prompting, such as chain-of-thought and verbalized confidence variants. Second, simple post-hoc calibration approaches, such as Platt scaling, reduce calibration error and consistently outperform the prompt-based strategy. Third, due to their (strict) monotonicity, these post-hoc calibration methods are inherently limited in improving the discriminative quality of predictions, leaving AUROC at the same level. Motivated by these findings, we investigate hallucination-aware calibration (HAC), which incorporates vision-grounded hallucination detection signals as complementary inputs to refine confidence estimates. We find that leveraging these hallucination signals improves both calibration and AUROC, with the largest gains on open-ended questions. Overall, our findings suggest post-hoc calibration as standard practice for medical VLM deployment over raw confidence estimates, and highlight the practical usefulness of hallucination signals to enable more reliable use of VLMs in medical VQA.",
-      "topic_key": "reasoning_alignment_eval",
-      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "topic_key": "domain_applications",
+      "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.83
+      "classification_confidence": 0.93
     },
     {
       "paper_id": "2604.02532",
@@ -5333,7 +5345,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.91
+      "classification_confidence": 0.88
     },
     {
       "paper_id": "2604.02509",
@@ -5358,7 +5370,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.63
+      "classification_confidence": 0.64
     },
     {
       "paper_id": "2604.02502",
@@ -5402,7 +5414,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.88
+      "classification_confidence": 0.85
     },
     {
       "paper_id": "2604.02492",
@@ -5427,7 +5439,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.85
+      "classification_confidence": 0.84
     },
     {
       "paper_id": "2604.02486",
@@ -5501,7 +5513,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.8
+      "classification_confidence": 0.85
     },
     {
       "paper_id": "2604.02468",
@@ -5526,7 +5538,7 @@
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.79
+      "classification_confidence": 0.84
     },
     {
       "paper_id": "2604.02467",
@@ -5551,7 +5563,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.69
+      "classification_confidence": 0.9
     },
     {
       "paper_id": "2604.02457",
@@ -5572,7 +5584,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.77
+      "classification_confidence": 0.86
     },
     {
       "paper_id": "2604.02447",
@@ -5593,7 +5605,7 @@
       "topic_label": "Agents and Planning",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.86
+      "classification_confidence": 0.72
     },
     {
       "paper_id": "2604.02446",
@@ -5615,7 +5627,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.75
+      "classification_confidence": 0.82
     },
     {
       "paper_id": "2604.02409",
@@ -5635,11 +5647,11 @@
         "Artificial Intelligence"
       ],
       "abstract": "Video color grading is a critical post-production process that transforms flat, log-encoded raw footage into emotionally resonant cinematic visuals. Existing automated methods act as static, black-box executors that directly output edited pixels, lacking both interpretability and the iterative control required by professionals. We introduce LumiVideo, an agentic system that mimics the cognitive workflow of professional colorists through four stages: Perception, Reasoning, Execution, and Reflection. Given only raw log video, LumiVideo autonomously produces a cinematic base grade by analyzing the scene's physical lighting and semantic content. Its Reasoning engine synergizes an LLM's internalized cinematic knowledge with a Retrieval-Augmented Generation (RAG) framework via a Tree of Thoughts (ToT) search to navigate the non-linear color parameter space. Rather than generating pixels, the system compiles the deduced parameters into industry-standard ASC-CDL configurations and a globally consistent 3D LUT, analytically guaranteeing temporal consistency. An optional Reflection loop then allows creators to refine the result via natural language feedback. We further introduce LumiGrade, the first log-encoded video benchmark for evaluating automated grading. Experiments show that LumiVideo approaches human expert quality in fully automatic mode while enabling precise iterative control when directed.",
-      "topic_key": "multimodal_agents",
-      "topic_label": "Multimodal Agents",
+      "topic_key": "agents_planning",
+      "topic_label": "Agents and Planning",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.93
+      "classification_confidence": 0.78
     },
     {
       "paper_id": "2604.02397",
@@ -5657,8 +5669,8 @@
         "Artificial Intelligence"
       ],
       "abstract": "Group Emotion Recognition (GER) aims to infer collective affect in social environments such as classrooms, crowds, and public events. Many existing approaches rely on explicit individual-level processing, including cropped faces, person tracking, or per-person feature extraction, which makes the analysis pipeline person-centric and raises privacy concerns in deployment scenarios where only group-level understanding is needed. This research proposes VE-MD, a Variational Encoder-Multi-Decoder framework for group emotion recognition under a privacy-aware functional design. Rather than providing formal anonymization or cryptographic privacy guarantees, VE-MD is designed to avoid explicit individual monitoring by constraining the model to predict only aggregate group-level affect, without identity recognition or per-person emotion outputs. VE-MD learns a shared latent representation jointly optimized for emotion classification and internal prediction of body and facial structural representations. Two structural decoding strategies are investigated: a transformer-based PersonQuery decoder and a dense Heatmap decoder that naturally accommodates variable group sizes. Experiments on six in-the-wild datasets, including two GER and four Individual Emotion Recognition (IER) benchmarks, show that structural supervision consistently improves representation learning. More importantly, the results reveal a clear distinction between GER and IER: optimizing the latent space alone is often insufficient for GER because it tends to attenuate interaction-related cues, whereas preserving explicit structural outputs improves collective affect inference. In contrast, projected structural representations seem to act as an effective denoising bottleneck for IER. VE-MD achieves state-of-the-art performance on GAF-3.0 (up to 90.06%) and VGAF (82.25% with multimodal fusion with audio). These results show that preserving interaction-related structural information is particularly beneficial for group-level affect modeling without relying on prior individual feature extraction. On IER datasets using multimodal fusion with audio modality, VE-MD outperforms SOTA on SamSemo (77.9%, adding text modality) while achieving competitive performances on MER-MULTI (63.8%), DFEW (70.7%) and EngageNet (69.0).",
-      "topic_key": "reasoning_alignment_eval",
-      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
       "classification_confidence": 0.58
@@ -5682,11 +5694,11 @@
         "Artificial Intelligence"
       ],
       "abstract": "The deep integration of communication with intelligence and sensing, as a defining vision of 6G, renders environment-aware channel prediction a key enabling technology. As a representative 6G application, vehicular communications require accurate and forward-looking channel prediction under stringent reliability, latency, and adaptability demands. Traditional empirical and deterministic models remain limited in balancing accuracy, generalization, and deployability, while the growing availability of onboard and roadside sensing devices offers a promising source of environmental priors. This paper proposes an environment-aware channel prediction framework based on multimodal visual feature fusion. Using GPS data and vehicle-side panoramic RGB images, together with semantic segmentation and depth estimation, the framework extracts semantic, depth, and position features through a three-branch architecture and performs adaptive multimodal fusion via a squeeze-excitation attention gating module. For 360-dimensional angular power spectrum (APS) prediction, a dedicated regression head and a composite multi-constraint loss are further designed. As a result, joint prediction of path loss (PL), delay spread (DS), azimuth spread of arrival (ASA), azimuth spread of departure (ASD), and APS is achieved. Experiments on a synchronized urban V2I measurement dataset yield the best root mean square error (RMSE) of 3.26 dB for PL, RMSEs of 37.66 ns, 5.05 degrees, and 5.08 degrees for DS, ASA, and ASD, respectively, and mean/median APS cosine similarities of 0.9342/0.9571, demonstrating strong accuracy, generalization, and practical potential for intelligent channel prediction in 6G vehicular communications.",
-      "topic_key": "domain_applications",
-      "topic_label": "Domain Applications",
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.67
+      "classification_confidence": 0.8
     },
     {
       "paper_id": "2604.02392",
@@ -5731,7 +5743,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.88
+      "classification_confidence": 0.85
     },
     {
       "paper_id": "2604.03224",
@@ -5759,7 +5771,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.86
     },
     {
       "paper_id": "2604.03191",
@@ -5815,7 +5827,7 @@
       "topic_label": "Multimodal Agents",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.97
+      "classification_confidence": 0.9
     },
     {
       "paper_id": "2604.03179",
@@ -5844,7 +5856,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.87
+      "classification_confidence": 0.78
     },
     {
       "paper_id": "2604.03112",
@@ -5895,7 +5907,7 @@
       "topic_label": "Robotics and Embodied AI",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.93
+      "classification_confidence": 0.9
     },
     {
       "paper_id": "2604.02868",
@@ -5916,11 +5928,11 @@
         "Computer Vision and Pattern Recognition"
       ],
       "abstract": "Data heterogeneity hinders clinical deployment of medical image analysis models, and generative data augmentation helps mitigate this issue. However, recent diffusion-based methods that synthesize image-mask pairs often ignore distribution shifts between generated and real images across scenarios, and such mismatches can markedly degrade downstream performance. To address this issue, we propose AlignFlow, a flow matching model that aligns with the target reference image distribution via differentiable reward fine-tuning, and remains effective even when only a small number of reference images are provided. Specifically, we divide the training of the flow matching model into two stages: in the first stage, the model fits the training data to generate plausible images; Then, we introduce a distribution alignment mechanism and employ differentiable reward to steer the generated images toward the distribution of the given samples from the target domain. In addition, to enhance the diversity of generated masks, we also design a flow matching based mask generation to complement the diversity in regions of interest. Extensive experiments demonstrate the effectiveness of our approach, i.e., performance improvement by 3.5-4.0% in mDice and 3.5-5.6% in mIoU across a variety of datasets and scenarios.",
-      "topic_key": "generative_foundations",
-      "topic_label": "Generative Foundations",
+      "topic_key": "domain_applications",
+      "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.94
+      "classification_confidence": 0.8
     },
     {
       "paper_id": "2604.02742",
@@ -5941,11 +5953,11 @@
         "Computer Vision and Pattern Recognition"
       ],
       "abstract": "Remote sensing image restoration (RSIR) is essential for recovering high-fidelity imagery from degraded observations, enabling accurate downstream analysis. However, most existing methods focus on single degradation types within homogeneous data, restricting their practicality in real-world scenarios where multiple degradations often across diverse spectral bands or sensor modalities, creating a significant operational bottleneck. To address this fundamental gap, we propose TGPNet, a unified framework capable of handling denoising, cloud removal, shadow removal, deblurring, and SAR despeckling within a single, unified architecture. The core of our framework is a novel Task-Guided Prompting (TGP) strategy. TGP leverages learnable, task-specific embeddings to generate degradation-aware cues, which then hierarchically modulate features throughout the decoder. This task-adaptive mechanism allows the network to precisely tailor its restoration process for distinct degradation patterns while maintaining a single set of shared weights. To validate our framework, we construct a unified RSIR benchmark covering RGB, multispectral, SAR, and thermal infrared modalities for five aforementioned restoration tasks. Experimental results demonstrate that TGPNet achieves state-of-the-art performance on both unified multi-task scenarios and unseen composite degradations, surpassing even specialized models in individual domains such as cloud removal. By successfully unifying heterogeneous degradation removal within a single adaptive framework, this work presents a significant advancement for multi-task RSIR, offering a practical and scalable solution for operational pipelines. The code and benchmark will be released at https://github.com/huangwenwenlili/TGPNet.",
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
+      "topic_key": "domain_applications",
+      "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.74
+      "classification_confidence": 0.73
     },
     {
       "paper_id": "2604.02710",
@@ -5975,7 +5987,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.97
+      "classification_confidence": 0.96
     },
     {
       "paper_id": "2604.02707",
@@ -6004,7 +6016,7 @@
       "topic_label": "Robotics and Embodied AI",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.96
+      "classification_confidence": 0.98
     },
     {
       "paper_id": "2604.02624",
@@ -6035,7 +6047,7 @@
       "topic_label": "Other AI",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.77
+      "classification_confidence": 0.51
     },
     {
       "paper_id": "2604.02564",
@@ -6058,7 +6070,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.78
+      "classification_confidence": 0.87
     },
     {
       "paper_id": "2604.02448",
@@ -6086,7 +6098,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.94
     },
     {
       "paper_id": "2604.02355",
@@ -6105,11 +6117,11 @@
         "Computer Vision and Pattern Recognition"
       ],
       "abstract": "Combining Chain-of-Thought (CoT) with Reinforcement Learning (RL) improves text-to-image (T2I) generation, yet the underlying interaction between CoT's exploration and RL's optimization remains unclear. We present a systematic entropy-based analysis that yields three key insights: (1) CoT expands the generative exploration space, while RL contracts it toward high-reward regions; (2) final reward is strongly negatively correlated with both the mean and variance of image-token entropy, highlighting the need to reduce uncertainty and instability; and (3) the entropy of the textual CoT directly governs downstream image quality, with lower-entropy CoTs leading to better generations. Motivated by these findings, we propose Entropy-Guided Group Relative Policy Optimization (EG-GRPO), a fine-tuning strategy that reallocates optimization budget by uncertainty: low-entropy tokens are excluded from reward-driven updates to preserve stability, while high-entropy tokens receive an entropy bonus that encourages structured exploration without collapse. Experiments on standard T2I benchmarks demonstrate that EG-GRPO achieves state-of-the-art performance.",
-      "topic_key": "generative_foundations",
-      "topic_label": "Generative Foundations",
+      "topic_key": "multimodal_generative",
+      "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.97
+      "classification_confidence": 0.72
     },
     {
       "paper_id": "2604.02338",
@@ -6136,7 +6148,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.82
+      "classification_confidence": 0.73
     }
   ]
 }
