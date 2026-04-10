@@ -7,24 +7,24 @@ import {
   subscribeAuth,
   subscribeLikes,
   syncLikesNow,
-} from "./likes.js?v=010cf1b2c9";
-import { initReviewSync, subscribePageReviews, syncPageReviewsNow } from "./reading_state.js?v=dd3f79ade0";
-import { initQueue, readQueue, subscribeQueue } from "./paper_queue.js?v=033bd186d1";
-import { bindBranchAuthToolbar } from "./branch_auth.js?v=66a12f1edc";
-import { mountAppToolbar } from "./app_toolbar.js?v=c5124e8940";
-import { bindBranchNav } from "./branch_nav.js?v=2ab092d7f1";
-import { bindLibraryNav } from "./library_nav.js?v=7b6e095589";
-import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=88024f7cbb";
-import { initToolbarPreferences } from "./toolbar_preferences.js?v=c889d6e375";
-import { bindBackToTop } from "./page_shell.js?v=b0d53b671d";
+} from "./likes.js?v=ba36cad68f";
+import { initReviewSync, subscribePageReviews, syncPageReviewsNow } from "./reading_state.js?v=899ae0e06e";
+import { initQueue, readQueue, subscribeQueue } from "./paper_queue.js?v=ff29dc7136";
+import { bindBranchAuthToolbar } from "./branch_auth.js?v=b7069cb92e";
+import { mountAppToolbar } from "./app_toolbar.js?v=9e20b56564";
+import { bindBranchNav } from "./branch_nav.js?v=a49fec45f2";
+import { bindLibraryNav } from "./library_nav.js?v=5953cd21bd";
+import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=bb18f8dbce";
+import { initToolbarPreferences } from "./toolbar_preferences.js?v=212307620c";
+import { bindBackToTop } from "./page_shell.js?v=6f7312b616";
 import { escapeAttribute, escapeHtml, fetchJson, formatDateTime } from "./ui_utils.js?v=e2da3b3a11";
-import { getToReadSnapshots, loadSnapshotQueueData } from "./like_page_snapshots.js?v=9b7df40d25";
+import { getToReadSnapshots, loadSnapshotQueueData } from "./like_page_snapshots.js?v=8fd02855ed";
 import {
   initSavedViewsSync,
   readSavedViews as readSavedViewsStore,
   subscribeSavedViews,
   syncSavedViewsNow,
-} from "./like_saved_views_store.js?v=90877ca133";
+} from "./like_saved_views_store.js?v=cf7710fa7f";
 import {
   ACCOUNT_PANEL_PREFERENCE_OPTIONS,
   DEFAULT_ACCOUNT_PANEL_PREFERENCE_PINS,
@@ -32,7 +32,7 @@ import {
   setAccountPanelPreferencePins,
   setToolbarAutoHidePreference,
   subscribeUserSettings,
-} from "./user_settings.js?v=6c7496f04b";
+} from "./user_settings.js?v=c349b29d8c";
 
 mountAppToolbar("#settings-toolbar-root", {
   prefix: "settings",

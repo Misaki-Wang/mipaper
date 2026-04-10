@@ -1,13 +1,13 @@
-import { bindLikeButtons, initLikesSync, subscribeLikes } from "./likes.js?v=010cf1b2c9";
-import { bindQueueButtons, initQueue, subscribeQueue } from "./paper_queue.js?v=033bd186d1";
-import { repairLikeLaterConflicts } from "./paper_selection.js?v=964dbe6c53";
-import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js?v=dd3f79ade0";
-import { bindBranchAuthToolbar } from "./branch_auth.js?v=66a12f1edc";
-import { bindBranchNav } from "./branch_nav.js?v=2ab092d7f1";
-import { bindLibraryNav } from "./library_nav.js?v=7b6e095589";
-import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=88024f7cbb";
-import { initToolbarPreferences } from "./toolbar_preferences.js?v=c889d6e375";
-import { bindBackToTop, bindFilterMenu } from "./page_shell.js?v=b0d53b671d";
+import { bindLikeButtons, initLikesSync, subscribeLikes } from "./likes.js?v=ba36cad68f";
+import { bindQueueButtons, initQueue, subscribeQueue } from "./paper_queue.js?v=ff29dc7136";
+import { repairLikeLaterConflicts } from "./paper_selection.js?v=d534813cfb";
+import { createPageReviewKey, initReviewSync, isPageReviewed, setPageReviewed, subscribePageReviews } from "./reading_state.js?v=899ae0e06e";
+import { bindBranchAuthToolbar } from "./branch_auth.js?v=b7069cb92e";
+import { bindBranchNav } from "./branch_nav.js?v=a49fec45f2";
+import { bindLibraryNav } from "./library_nav.js?v=5953cd21bd";
+import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=bb18f8dbce";
+import { initToolbarPreferences } from "./toolbar_preferences.js?v=212307620c";
+import { bindBackToTop, bindFilterMenu } from "./page_shell.js?v=6f7312b616";
 import { fetchJson } from "./ui_utils.js?v=e2da3b3a11";
 
 export function buildBranchReviewKey(reviewScope, currentPath) {

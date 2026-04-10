@@ -1,9 +1,9 @@
-import { mountAppToolbar } from "./app_toolbar.js?v=c5124e8940";
-import { createBranchReviewController, initBranchReportPage } from "./branch_page.js?v=f27a328acc";
-import { createFloatingTocController } from "./floating_toc.js?v=a9ffd5aa93";
+import { mountAppToolbar } from "./app_toolbar.js?v=9e20b56564";
+import { createBranchReviewController, initBranchReportPage } from "./branch_page.js?v=af401d595c";
+import { createFloatingTocController } from "./floating_toc.js?v=451f2dee9a";
 import { validateMagazineManifest, validateMagazineReport } from "./site_contract.js?v=be9ddc76a7";
 import { escapeAttribute, escapeHtml, fetchJson, formatZhTime, getErrorMessage } from "./ui_utils.js?v=e2da3b3a11";
-import { renderWorkspaceMarkdown } from "./workspace_markdown.js?v=7d091b73bd";
+import { renderWorkspaceMarkdown } from "./workspace_markdown.js?v=d54c057ce0";
 
 mountAppToolbar("#magazine-toolbar-root", {
   prefix: "magazine",

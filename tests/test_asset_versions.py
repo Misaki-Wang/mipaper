@@ -23,9 +23,9 @@ class AssetVersionsTest(unittest.TestCase):
 
             result = update_site_asset_versions(site_dir)
 
-            a_version = compute_asset_version(site_dir / "a.js")
-            b_version = compute_asset_version(site_dir / "b.js")
-            c_version = compute_asset_version(site_dir / "c.js")
+            a_version = compute_asset_version(site_dir / "a.js", site_dir=site_dir)
+            b_version = compute_asset_version(site_dir / "b.js", site_dir=site_dir)
+            c_version = compute_asset_version(site_dir / "c.js", site_dir=site_dir)
 
             self.assertEqual(
                 {
@@ -72,8 +72,8 @@ class AssetVersionsTest(unittest.TestCase):
 
             result = update_site_asset_versions(site_dir)
 
-            shared_version = compute_asset_version(site_dir / "shared.js")
-            nested_version = compute_asset_version(pages_dir / "nested.js")
+            shared_version = compute_asset_version(site_dir / "shared.js", site_dir=site_dir)
+            nested_version = compute_asset_version(pages_dir / "nested.js", site_dir=site_dir)
 
             self.assertIn(
                 f'from "../shared.js?v={shared_version}"',
@@ -107,6 +107,36 @@ class AssetVersionsTest(unittest.TestCase):
 
             with self.assertRaisesRegex(ValueError, "escapes site root"):
                 update_site_asset_versions(site_dir)
+
+    def test_update_site_asset_versions_propagates_dependency_version_changes_to_entrypoints(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            site_dir = Path(tmpdir) / "site"
+            site_dir.mkdir(parents=True)
+
+            dep_path = site_dir / "dep.js"
+            entry_path = site_dir / "entry.js"
+            html_path = site_dir / "index.html"
+
+            dep_path.write_text('export const value = "one";\n', encoding="utf-8")
+            entry_path.write_text('import { value } from "./dep.js";\nconsole.log(value);\n', encoding="utf-8")
+            html_path.write_text('<script type="module" src="./entry.js"></script>\n', encoding="utf-8")
+
+            update_site_asset_versions(site_dir)
+            first_entry_version = compute_asset_version(entry_path, site_dir=site_dir)
+            first_html = html_path.read_text(encoding="utf-8")
+            self.assertIn(f'src="./entry.js?v={first_entry_version}"', first_html)
+
+            dep_path.write_text('export const value = "two";\n', encoding="utf-8")
+            update_site_asset_versions(site_dir)
+
+            second_entry_version = compute_asset_version(entry_path, site_dir=site_dir)
+            second_dep_version = compute_asset_version(dep_path, site_dir=site_dir)
+            second_html = html_path.read_text(encoding="utf-8")
+            second_entry = entry_path.read_text(encoding="utf-8")
+
+            self.assertNotEqual(first_entry_version, second_entry_version)
+            self.assertIn(f'from "./dep.js?v={second_dep_version}"', second_entry)
+            self.assertIn(f'src="./entry.js?v={second_entry_version}"', second_html)
 
 
 if __name__ == "__main__":

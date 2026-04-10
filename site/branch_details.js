@@ -1,4 +1,4 @@
-import { readDetailPanelDefaultMode } from "./user_settings.js?v=6c7496f04b";
+import { readDetailPanelDefaultMode } from "./user_settings.js?v=c349b29d8c";
 
 const branchDetailOverrides = new Map();
 

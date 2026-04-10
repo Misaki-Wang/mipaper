@@ -1,4 +1,4 @@
-import { getAccessPolicy, getGitHubRedirectTo, getSupabaseClient, isSupabaseConfigured, loadRuntimeConfig } from "./supabase.js?v=606e1fd811";
+import { getAccessPolicy, getGitHubRedirectTo, getSupabaseClient, isSupabaseConfigured, loadRuntimeConfig } from "./supabase.js?v=4643c9ce04";
 import {
   compareSyncTimestamps,
   createSyncTimestamp,
@@ -9,7 +9,7 @@ import {
   getSyncDeviceId,
   mergeSyncRecords,
 } from "./sync_utils.js?v=8b7af265fa";
-import { movePaperToLikes } from "./paper_selection.js?v=964dbe6c53";
+import { movePaperToLikes } from "./paper_selection.js?v=d534813cfb";
 
 const LIKES_STORAGE_KEY = "cool-paper-liked-papers-v1";
 const LIKES_META_KEY = "cool-paper-liked-papers-meta-v1";

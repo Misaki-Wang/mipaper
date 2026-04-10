@@ -1,4 +1,4 @@
-import { getSupabaseClient, isSupabaseConfigured, loadRuntimeConfig } from "./supabase.js?v=606e1fd811";
+import { getSupabaseClient, isSupabaseConfigured, loadRuntimeConfig } from "./supabase.js?v=4643c9ce04";
 import {
   compareSyncTimestamps,
   createSyncTimestamp,

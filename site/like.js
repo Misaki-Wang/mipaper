@@ -7,24 +7,24 @@ import {
   subscribeLikes,
   updateLikedPaper,
   updateLikedPapers,
-} from "./likes.js?v=010cf1b2c9";
-import { getSupabaseClient, isSupabaseConfigured, loadRuntimeConfig } from "./supabase.js?v=606e1fd811";
-import { initReviewSync, setPageReviewed, subscribePageReviews } from "./reading_state.js?v=dd3f79ade0";
-import { bindQueueButtons, initQueue, isInQueue, readQueue, subscribeQueue } from "./paper_queue.js?v=033bd186d1";
-import { bindBranchAuthToolbar } from "./branch_auth.js?v=66a12f1edc";
-import { mountAppToolbar } from "./app_toolbar.js?v=c5124e8940";
-import { repairLikeLaterConflicts } from "./paper_selection.js?v=964dbe6c53";
-import { bindBranchNav } from "./branch_nav.js?v=2ab092d7f1";
-import { bindLibraryNav } from "./library_nav.js?v=7b6e095589";
-import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=88024f7cbb";
-import { initToolbarPreferences, setPageViewMode } from "./toolbar_preferences.js?v=c889d6e375";
-import { bindBackToTop, bindFilterMenu } from "./page_shell.js?v=b0d53b671d";
+} from "./likes.js?v=ba36cad68f";
+import { getSupabaseClient, isSupabaseConfigured, loadRuntimeConfig } from "./supabase.js?v=4643c9ce04";
+import { initReviewSync, setPageReviewed, subscribePageReviews } from "./reading_state.js?v=899ae0e06e";
+import { bindQueueButtons, initQueue, isInQueue, readQueue, subscribeQueue } from "./paper_queue.js?v=ff29dc7136";
+import { bindBranchAuthToolbar } from "./branch_auth.js?v=b7069cb92e";
+import { mountAppToolbar } from "./app_toolbar.js?v=9e20b56564";
+import { repairLikeLaterConflicts } from "./paper_selection.js?v=d534813cfb";
+import { bindBranchNav } from "./branch_nav.js?v=a49fec45f2";
+import { bindLibraryNav } from "./library_nav.js?v=5953cd21bd";
+import { bindToolbarQuickAdd } from "./toolbar_quick_add.js?v=bb18f8dbce";
+import { initToolbarPreferences, setPageViewMode } from "./toolbar_preferences.js?v=212307620c";
+import { bindBackToTop, bindFilterMenu } from "./page_shell.js?v=6f7312b616";
 import { createShowMoreAutoLoadController } from "./show_more_autoload.js?v=5f324a6f25";
 import { escapeAttribute, escapeHtml, fetchJson, formatDateTime, getErrorMessage } from "./ui_utils.js?v=e2da3b3a11";
 import {
   renderWorkspaceMarkdownExcerpt,
   renderWorkspaceMarkdownPreviewContent,
-} from "./workspace_markdown.js?v=7d091b73bd";
+} from "./workspace_markdown.js?v=d54c057ce0";
 import {
   LIKE_TIME_FORMAT,
   PRIORITY_OPTIONS,
@@ -37,7 +37,7 @@ import {
   getWorkflowStatusLabel,
   getWorkflowStatusValue,
 } from "./like_page_labels.js?v=aaa244a29d";
-import { createSavedViewId, getActiveFilters, normalizeFilterState, areFilterStatesEqual } from "./like_page_saved_views.js?v=4379d3608e";
+import { createSavedViewId, getActiveFilters, normalizeFilterState, areFilterStatesEqual } from "./like_page_saved_views.js?v=c411bee649";
 import {
   CUSTOM_TAG_PALETTE,
   applyCustomTagToRecord,
@@ -51,7 +51,7 @@ import {
   reorderCustomTagsInRecord,
   updateCustomTagDefinitionInRecord,
 } from "./like_page_tags.js?v=dce6e52df9";
-import { formatWeekLabel, getSnapshotSourceKind, getToReadSnapshots, loadSnapshotQueueData } from "./like_page_snapshots.js?v=9b7df40d25";
+import { formatWeekLabel, getSnapshotSourceKind, getToReadSnapshots, loadSnapshotQueueData } from "./like_page_snapshots.js?v=8fd02855ed";
 import { getLikeSortLabel, normalizeLikeSortMode, sortLikes } from "./like_page_sorting.js?v=6ae385c61b";
 import {
   initSavedViewsSync,
@@ -59,9 +59,9 @@ import {
   removeSavedView as removeSavedViewStore,
   subscribeSavedViews,
   upsertSavedView,
-} from "./like_saved_views_store.js?v=90877ca133";
-import { installManualLibraryTestCases } from "./manual_test_cases.js?v=2bdd5fc135";
-import { readWorkspacePanelDefaultMode, subscribeUserSettings } from "./user_settings.js?v=6c7496f04b";
+} from "./like_saved_views_store.js?v=cf7710fa7f";
+import { installManualLibraryTestCases } from "./manual_test_cases.js?v=72f3ceaad6";
+import { readWorkspacePanelDefaultMode, subscribeUserSettings } from "./user_settings.js?v=c349b29d8c";
 
 mountAppToolbar("#like-toolbar-root", {
   prefix: "like",

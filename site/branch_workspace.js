@@ -1,6 +1,6 @@
-import { readLikes, updateLikedPaper } from "./likes.js?v=010cf1b2c9";
-import { readQueue, updateQueuedPaper } from "./paper_queue.js?v=033bd186d1";
-import { movePaperToLikes, movePaperToLater } from "./paper_selection.js?v=964dbe6c53";
+import { readLikes, updateLikedPaper } from "./likes.js?v=ba36cad68f";
+import { readQueue, updateQueuedPaper } from "./paper_queue.js?v=ff29dc7136";
+import { movePaperToLikes, movePaperToLater } from "./paper_selection.js?v=d534813cfb";
 import {
   PRIORITY_OPTIONS,
   WORKFLOW_STATUS_OPTIONS,
@@ -9,9 +9,9 @@ import {
   getWorkflowStatusLabel,
   getWorkflowStatusValue,
 } from "./like_page_labels.js?v=aaa244a29d";
-import { readWorkspacePanelDefaultMode, subscribeUserSettings } from "./user_settings.js?v=6c7496f04b";
+import { readWorkspacePanelDefaultMode, subscribeUserSettings } from "./user_settings.js?v=c349b29d8c";
 import { escapeAttribute, escapeHtml } from "./ui_utils.js?v=e2da3b3a11";
-import { renderWorkspaceMarkdownPreviewContent } from "./workspace_markdown.js?v=7d091b73bd";
+import { renderWorkspaceMarkdownPreviewContent } from "./workspace_markdown.js?v=d54c057ce0";
 
 let workspacePanelDefaultMode = readWorkspacePanelDefaultMode();
 const workspacePanelOverrides = new Map();

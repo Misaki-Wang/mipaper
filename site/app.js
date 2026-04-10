@@ -1,14 +1,14 @@
-import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js?v=010cf1b2c9";
-import { bindQueueButtons, initQueue, isInQueue, subscribeQueue } from "./paper_queue.js?v=033bd186d1";
-import { repairLikeLaterConflicts } from "./paper_selection.js?v=964dbe6c53";
+import { bindLikeButtons, createLikeRecord, initLikesSync, isLiked, subscribeLikes } from "./likes.js?v=ba36cad68f";
+import { bindQueueButtons, initQueue, isInQueue, subscribeQueue } from "./paper_queue.js?v=ff29dc7136";
+import { repairLikeLaterConflicts } from "./paper_selection.js?v=d534813cfb";
 import { createCalendarPicker } from "./calendar_picker.js?v=4b01d6ac6c";
-import { mountAppToolbar } from "./app_toolbar.js?v=c5124e8940";
-import { buildBranchReviewKey, createBranchReviewController, initBranchReportPage } from "./branch_page.js?v=0c9bc4f3d6";
-import { bindBranchListDetails, renderBranchDetailSection, renderBranchListDetails } from "./branch_details.js?v=bf87e132c5";
-import { bindBranchWorkspace, createBranchWorkspaceLookup, initBranchWorkspace, renderBranchWorkspacePanel } from "./branch_workspace.js?v=6c7532eca9";
+import { mountAppToolbar } from "./app_toolbar.js?v=9e20b56564";
+import { buildBranchReviewKey, createBranchReviewController, initBranchReportPage } from "./branch_page.js?v=af401d595c";
+import { bindBranchListDetails, renderBranchDetailSection, renderBranchListDetails } from "./branch_details.js?v=da436b4e5f";
+import { bindBranchWorkspace, createBranchWorkspaceLookup, initBranchWorkspace, renderBranchWorkspacePanel } from "./branch_workspace.js?v=1aef1e429e";
 import { createLatestTaskRunner } from "./request_gate.js?v=f527e8e81d";
 import { buildCadenceSummary } from "./daily_cadence.js?v=a064eed5f2";
-import { createFloatingTocController } from "./floating_toc.js?v=a9ffd5aa93";
+import { createFloatingTocController } from "./floating_toc.js?v=451f2dee9a";
 import { validateDailyManifest, validateDailyReport } from "./site_contract.js?v=be9ddc76a7";
 import { escapeAttribute, escapeHtml, fetchJson, formatZhTime, getErrorMessage } from "./ui_utils.js?v=e2da3b3a11";
 

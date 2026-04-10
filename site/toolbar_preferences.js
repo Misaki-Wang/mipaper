@@ -13,7 +13,7 @@ import {
   setThemeMode,
   setWorkspacePanelDefaultMode,
   subscribeUserSettings,
-} from "./user_settings.js?v=6c7496f04b";
+} from "./user_settings.js?v=c349b29d8c";
 
 const viewModeCallbacks = new Map();
 

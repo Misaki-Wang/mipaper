@@ -1,5 +1,5 @@
-import { createLikeRecord, readLikes } from "./likes.js?v=010cf1b2c9";
-import { readQueue } from "./paper_queue.js?v=033bd186d1";
+import { createLikeRecord, readLikes } from "./likes.js?v=ba36cad68f";
+import { readQueue } from "./paper_queue.js?v=ff29dc7136";
 import { createSyncTimestamp, getSyncDeviceId, mergeSyncRecords } from "./sync_utils.js?v=8b7af265fa";
 
 const LIKES_STORAGE_KEY = "cool-paper-liked-papers-v1";
