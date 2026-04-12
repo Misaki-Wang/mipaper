@@ -1,32 +1,112 @@
 {
   "branch_key": "hf-daily",
   "branch_label": "HF Daily",
-  "generated_at": "2026-04-09T19:23:41Z",
-  "reports_count": 29,
-  "default_report_path": "data/hf-daily/reports/2026-04-09/hf-daily-2026-04-09.json",
+  "generated_at": "2026-04-12T15:14:45Z",
+  "reports_count": 30,
+  "default_report_path": "data/hf-daily/reports/2026-04-10/hf-daily-2026-04-10.json",
   "reports": [
+    {
+      "branch_key": "hf-daily",
+      "branch_label": "HF Daily",
+      "data_path": "data/hf-daily/reports/2026-04-10/hf-daily-2026-04-10.json",
+      "slug": "hf-daily-2026-04-10",
+      "report_date": "2026-04-10",
+      "total_papers": 42,
+      "classifier": "codex",
+      "generated_at": "2026-04-12T15:14:45Z",
+      "source_url": "https://huggingface.co/papers/date/2026-04-10",
+      "focus_topics": [
+        {
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "count": 2,
+          "share": 4.76
+        },
+        {
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 7,
+          "share": 16.67
+        },
+        {
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "count": 5,
+          "share": 11.9
+        }
+      ],
+      "top_topics": [
+        {
+          "topic_label": "Multimodal Understanding and Vision",
+          "count": 8,
+          "share": 19.05
+        },
+        {
+          "topic_label": "Datasets and Benchmarks",
+          "count": 7,
+          "share": 16.67
+        },
+        {
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 7,
+          "share": 16.67
+        },
+        {
+          "topic_label": "Multimodal Agents",
+          "count": 5,
+          "share": 11.9
+        },
+        {
+          "topic_label": "Agents and Planning",
+          "count": 4,
+          "share": 9.52
+        }
+      ],
+      "top_submitters": [
+        {
+          "submitted_by": "taesiri",
+          "count": 5
+        },
+        {
+          "submitted_by": "Ismini Lourentzou",
+          "count": 2
+        },
+        {
+          "submitted_by": "Aditya Kanade",
+          "count": 1
+        },
+        {
+          "submitted_by": "Boxi Cao",
+          "count": 1
+        },
+        {
+          "submitted_by": "Chenyu Zhou",
+          "count": 1
+        }
+      ]
+    },
     {
       "branch_key": "hf-daily",
       "branch_label": "HF Daily",
       "data_path": "data/hf-daily/reports/2026-04-09/hf-daily-2026-04-09.json",
       "slug": "hf-daily-2026-04-09",
       "report_date": "2026-04-09",
-      "total_papers": 26,
+      "total_papers": 29,
       "classifier": "codex",
-      "generated_at": "2026-04-09T19:23:40Z",
+      "generated_at": "2026-04-12T15:10:09Z",
       "source_url": "https://huggingface.co/papers/date/2026-04-09",
       "focus_topics": [
         {
           "topic_key": "generative_foundations",
           "topic_label": "Generative Foundations",
           "count": 5,
-          "share": 19.23
+          "share": 17.24
         },
         {
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
-          "count": 2,
-          "share": 7.69
+          "count": 3,
+          "share": 10.34
         },
         {
           "topic_key": "multimodal_agents",
@@ -37,29 +117,29 @@
       ],
       "top_topics": [
         {
-          "topic_label": "Generative Foundations",
+          "topic_label": "Agents and Planning",
           "count": 5,
-          "share": 19.23
+          "share": 17.24
         },
         {
-          "topic_label": "Agents and Planning",
-          "count": 4,
-          "share": 15.38
+          "topic_label": "Generative Foundations",
+          "count": 5,
+          "share": 17.24
+        },
+        {
+          "topic_label": "Learning, Optimization, and Theory",
+          "count": 3,
+          "share": 10.34
+        },
+        {
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 3,
+          "share": 10.34
         },
         {
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "count": 3,
-          "share": 11.54
-        },
-        {
-          "topic_label": "Retrieval, Knowledge, and RAG",
-          "count": 3,
-          "share": 11.54
-        },
-        {
-          "topic_label": "Datasets and Benchmarks",
-          "count": 2,
-          "share": 7.69
+          "share": 10.34
         }
       ],
       "top_submitters": [
@@ -72,15 +152,15 @@
           "count": 1
         },
         {
+          "submitted_by": "Bing Wang",
+          "count": 1
+        },
+        {
           "submitted_by": "Debangshu Banerjee",
           "count": 1
         },
         {
           "submitted_by": "Deepti Ghadiyaram",
-          "count": 1
-        },
-        {
-          "submitted_by": "Guangyao Dou",
           "count": 1
         }
       ]
@@ -91,55 +171,55 @@
       "data_path": "data/hf-daily/reports/2026-04-08/hf-daily-2026-04-08.json",
       "slug": "hf-daily-2026-04-08",
       "report_date": "2026-04-08",
-      "total_papers": 26,
+      "total_papers": 30,
       "classifier": "codex",
-      "generated_at": "2026-04-08T15:27:45Z",
+      "generated_at": "2026-04-12T15:07:49Z",
       "source_url": "https://huggingface.co/papers/date/2026-04-08",
       "focus_topics": [
         {
           "topic_key": "generative_foundations",
           "topic_label": "Generative Foundations",
           "count": 2,
-          "share": 7.69
+          "share": 6.67
         },
         {
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
-          "count": 1,
-          "share": 3.85
+          "count": 2,
+          "share": 6.67
         },
         {
           "topic_key": "multimodal_agents",
           "topic_label": "Multimodal Agents",
           "count": 2,
-          "share": 7.69
+          "share": 6.67
         }
       ],
       "top_topics": [
         {
-          "topic_label": "LLMs and Language",
-          "count": 4,
-          "share": 15.38
+          "topic_label": "Agents and Planning",
+          "count": 7,
+          "share": 23.33
         },
         {
-          "topic_label": "Agents and Planning",
+          "topic_label": "LLMs and Language",
+          "count": 4,
+          "share": 13.33
+        },
+        {
+          "topic_label": "Retrieval, Knowledge, and RAG",
           "count": 3,
-          "share": 11.54
+          "share": 10.0
         },
         {
           "topic_label": "Datasets and Benchmarks",
-          "count": 3,
-          "share": 11.54
-        },
-        {
-          "topic_label": "Reasoning, Alignment, and Evaluation",
-          "count": 3,
-          "share": 11.54
+          "count": 2,
+          "share": 6.67
         },
         {
           "topic_label": "Domain Applications",
           "count": 2,
-          "share": 7.69
+          "share": 6.67
         }
       ],
       "top_submitters": [
@@ -152,15 +232,15 @@
           "count": 1
         },
         {
+          "submitted_by": "Boris Knyazev",
+          "count": 1
+        },
+        {
           "submitted_by": "Changxin Ke",
           "count": 1
         },
         {
           "submitted_by": "Chaoyou Fu",
-          "count": 1
-        },
-        {
-          "submitted_by": "Difan Jiao",
           "count": 1
         }
       ]
@@ -173,7 +253,7 @@
       "report_date": "2026-04-07",
       "total_papers": 37,
       "classifier": "codex",
-      "generated_at": "2026-04-08T15:10:33Z",
+      "generated_at": "2026-04-12T15:05:16Z",
       "source_url": "https://huggingface.co/papers/date/2026-04-07",
       "focus_topics": [
         {
@@ -185,26 +265,26 @@
         {
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
-          "count": 3,
-          "share": 8.11
+          "count": 4,
+          "share": 10.81
         },
         {
           "topic_key": "multimodal_agents",
           "topic_label": "Multimodal Agents",
-          "count": 2,
-          "share": 5.41
+          "count": 1,
+          "share": 2.7
         }
       ],
       "top_topics": [
         {
           "topic_label": "Agents and Planning",
-          "count": 6,
-          "share": 16.22
+          "count": 8,
+          "share": 21.62
         },
         {
           "topic_label": "Multimodal Understanding and Vision",
-          "count": 6,
-          "share": 16.22
+          "count": 7,
+          "share": 18.92
         },
         {
           "topic_label": "Reasoning, Alignment, and Evaluation",
@@ -212,12 +292,12 @@
           "share": 16.22
         },
         {
-          "topic_label": "Domain Applications",
-          "count": 3,
-          "share": 8.11
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 4,
+          "share": 10.81
         },
         {
-          "topic_label": "Multimodal Generative Modeling",
+          "topic_label": "Domain Applications",
           "count": 3,
           "share": 8.11
         }
@@ -251,55 +331,55 @@
       "data_path": "data/hf-daily/reports/2026-04-06/hf-daily-2026-04-06.json",
       "slug": "hf-daily-2026-04-06",
       "report_date": "2026-04-06",
-      "total_papers": 11,
+      "total_papers": 17,
       "classifier": "codex",
-      "generated_at": "2026-04-06T17:56:33Z",
+      "generated_at": "2026-04-12T15:02:32Z",
       "source_url": "https://huggingface.co/papers/date/2026-04-06",
       "focus_topics": [
         {
           "topic_key": "generative_foundations",
           "topic_label": "Generative Foundations",
           "count": 1,
-          "share": 9.09
+          "share": 5.88
         },
         {
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
-          "count": 0,
-          "share": 0.0
+          "count": 1,
+          "share": 5.88
         },
         {
           "topic_key": "multimodal_agents",
           "topic_label": "Multimodal Agents",
-          "count": 2,
-          "share": 18.18
+          "count": 3,
+          "share": 17.65
         }
       ],
       "top_topics": [
         {
           "topic_label": "Multimodal Understanding and Vision",
-          "count": 4,
-          "share": 36.36
-        },
-        {
-          "topic_label": "Reasoning, Alignment, and Evaluation",
-          "count": 3,
-          "share": 27.27
-        },
-        {
-          "topic_label": "Multimodal Agents",
-          "count": 2,
-          "share": 18.18
+          "count": 5,
+          "share": 29.41
         },
         {
           "topic_label": "Datasets and Benchmarks",
+          "count": 3,
+          "share": 17.65
+        },
+        {
+          "topic_label": "Multimodal Agents",
+          "count": 3,
+          "share": 17.65
+        },
+        {
+          "topic_label": "Agents and Planning",
           "count": 1,
-          "share": 9.09
+          "share": 5.88
         },
         {
           "topic_label": "Generative Foundations",
           "count": 1,
-          "share": 9.09
+          "share": 5.88
         }
       ],
       "top_submitters": [
@@ -312,15 +392,15 @@
           "count": 1
         },
         {
-          "submitted_by": "Prince Wang",
+          "submitted_by": "Haz Sameen Shahgir",
           "count": 1
         },
         {
-          "submitted_by": "Yujiao Shen",
+          "submitted_by": "JeffWang",
           "count": 1
         },
         {
-          "submitted_by": "Yuseung \"Phillip\" Lee",
+          "submitted_by": "Jian Chen",
           "count": 1
         }
       ]
