@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-12T15:14:45Z",
-  "reports_count": 134,
+  "generated_at": "2026-04-14T05:48:01Z",
+  "reports_count": 136,
   "branches": [
     {
       "branch_key": "daily",
@@ -12,8 +12,8 @@
     {
       "branch_key": "hf-daily",
       "branch_label": "HF Daily",
-      "reports_count": 30,
-      "default_report_path": "data/hf-daily/reports/2026-04-10/hf-daily-2026-04-10.json",
+      "reports_count": 32,
+      "default_report_path": "data/hf-daily/reports/2026-04-14/hf-daily-2026-04-14.json",
       "manifest_path": "data/hf-daily/manifest.json"
     },
     {
@@ -5429,6 +5429,168 @@
           "topic_label": "Datasets and Benchmarks",
           "count": 9,
           "share": 7.38
+        }
+      ]
+    },
+    {
+      "branch_key": "hf-daily",
+      "branch_label": "HF Daily",
+      "search_text": "hf-daily HF Daily hf-daily-2026-04-14 data/hf-daily/reports/2026-04-14/hf-daily-2026-04-14.json https://huggingface.co/papers/date/2026-04-14 codex 2026-04-14 Generative Foundations Multimodal Generative Modeling Multimodal Agents Agents and Planning Multimodal Understanding and Vision Domain Applications Generative Foundations Multimodal Generative Modeling taesiri An Luo Chenchen Zhang Donghao Zhou Eddie",
+      "data_path": "data/hf-daily/reports/2026-04-14/hf-daily-2026-04-14.json",
+      "slug": "hf-daily-2026-04-14",
+      "report_date": "2026-04-14",
+      "total_papers": 24,
+      "classifier": "codex",
+      "generated_at": "2026-04-14T05:48:00Z",
+      "source_url": "https://huggingface.co/papers/date/2026-04-14",
+      "focus_topics": [
+        {
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "count": 3,
+          "share": 12.5
+        },
+        {
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 3,
+          "share": 12.5
+        },
+        {
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "count": 0,
+          "share": 0.0
+        }
+      ],
+      "top_topics": [
+        {
+          "topic_label": "Agents and Planning",
+          "count": 7,
+          "share": 29.17
+        },
+        {
+          "topic_label": "Multimodal Understanding and Vision",
+          "count": 4,
+          "share": 16.67
+        },
+        {
+          "topic_label": "Domain Applications",
+          "count": 3,
+          "share": 12.5
+        },
+        {
+          "topic_label": "Generative Foundations",
+          "count": 3,
+          "share": 12.5
+        },
+        {
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 3,
+          "share": 12.5
+        }
+      ],
+      "top_submitters": [
+        {
+          "submitted_by": "taesiri",
+          "count": 3
+        },
+        {
+          "submitted_by": "An Luo",
+          "count": 1
+        },
+        {
+          "submitted_by": "Chenchen Zhang",
+          "count": 1
+        },
+        {
+          "submitted_by": "Donghao Zhou",
+          "count": 1
+        },
+        {
+          "submitted_by": "Eddie",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "branch_key": "hf-daily",
+      "branch_label": "HF Daily",
+      "search_text": "hf-daily HF Daily hf-daily-2026-04-13 data/hf-daily/reports/2026-04-13/hf-daily-2026-04-13.json https://huggingface.co/papers/date/2026-04-13 codex 2026-04-13 Generative Foundations Multimodal Generative Modeling Multimodal Agents LLMs and Language Multimodal Generative Modeling Multimodal Understanding and Vision Datasets and Benchmarks Generative Foundations taesiri Chanhyuk Choi Chen Lifeng Deepti Ghadiyaram Dewei Zhou",
+      "data_path": "data/hf-daily/reports/2026-04-13/hf-daily-2026-04-13.json",
+      "slug": "hf-daily-2026-04-13",
+      "report_date": "2026-04-13",
+      "total_papers": 29,
+      "classifier": "codex",
+      "generated_at": "2026-04-14T05:45:50Z",
+      "source_url": "https://huggingface.co/papers/date/2026-04-13",
+      "focus_topics": [
+        {
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "count": 3,
+          "share": 10.34
+        },
+        {
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 4,
+          "share": 13.79
+        },
+        {
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "count": 0,
+          "share": 0.0
+        }
+      ],
+      "top_topics": [
+        {
+          "topic_label": "LLMs and Language",
+          "count": 5,
+          "share": 17.24
+        },
+        {
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 4,
+          "share": 13.79
+        },
+        {
+          "topic_label": "Multimodal Understanding and Vision",
+          "count": 4,
+          "share": 13.79
+        },
+        {
+          "topic_label": "Datasets and Benchmarks",
+          "count": 3,
+          "share": 10.34
+        },
+        {
+          "topic_label": "Generative Foundations",
+          "count": 3,
+          "share": 10.34
+        }
+      ],
+      "top_submitters": [
+        {
+          "submitted_by": "taesiri",
+          "count": 5
+        },
+        {
+          "submitted_by": "Chanhyuk Choi",
+          "count": 1
+        },
+        {
+          "submitted_by": "Chen Lifeng",
+          "count": 1
+        },
+        {
+          "submitted_by": "Deepti Ghadiyaram",
+          "count": 1
+        },
+        {
+          "submitted_by": "Dewei Zhou",
+          "count": 1
         }
       ]
     },
