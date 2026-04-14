@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-14T06:11:21Z",
+  "generated_at": "2026-04-14T13:27:24Z",
   "category": "cs.CV",
   "report_date": "2026-04-13",
   "source_url": "https://papers.cool/arxiv/cs.CV?date=2026-04-13&show=1000",
@@ -9,27 +9,27 @@
     {
       "topic_key": "generative_foundations",
       "topic_label": "Generative Foundations",
-      "count": 9,
-      "share": 6.16
+      "count": 8,
+      "share": 5.48
     },
     {
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
-      "count": 17,
-      "share": 11.64
+      "count": 18,
+      "share": 12.33
     },
     {
       "topic_key": "multimodal_agents",
       "topic_label": "Multimodal Agents",
-      "count": 9,
-      "share": 6.16
+      "count": 8,
+      "share": 5.48
     }
   ],
   "topic_distribution": [
     {
       "topic_label": "Multimodal Understanding and Vision",
-      "count": 41,
-      "share": 28.08
+      "count": 43,
+      "share": 29.45
     },
     {
       "topic_label": "Domain Applications",
@@ -38,8 +38,8 @@
     },
     {
       "topic_label": "Multimodal Generative Modeling",
-      "count": 17,
-      "share": 11.64
+      "count": 18,
+      "share": 12.33
     },
     {
       "topic_label": "Datasets and Benchmarks",
@@ -53,13 +53,13 @@
     },
     {
       "topic_label": "Generative Foundations",
-      "count": 9,
-      "share": 6.16
+      "count": 8,
+      "share": 5.48
     },
     {
       "topic_label": "Multimodal Agents",
-      "count": 9,
-      "share": 6.16
+      "count": 8,
+      "share": 5.48
     },
     {
       "topic_label": "Learning, Optimization, and Theory",
@@ -68,8 +68,8 @@
     },
     {
       "topic_label": "Robotics and Embodied AI",
-      "count": 7,
-      "share": 4.79
+      "count": 6,
+      "share": 4.11
     },
     {
       "topic_label": "Retrieval, Knowledge, and RAG",
@@ -90,8 +90,8 @@
   "topics": [
     {
       "topic_label": "Multimodal Understanding and Vision",
-      "count": 41,
-      "share": 28.08,
+      "count": 43,
+      "share": 29.45,
       "papers": [
         {
           "paper_id": "2604.09547",
@@ -116,7 +116,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.86
+          "classification_confidence": 0.88
         },
         {
           "paper_id": "2604.09532",
@@ -144,7 +144,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.88
+          "classification_confidence": 0.86
         },
         {
           "paper_id": "2604.09531",
@@ -170,7 +170,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.83
+          "classification_confidence": 0.82
         },
         {
           "paper_id": "2604.09511",
@@ -193,7 +193,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.68
+          "classification_confidence": 0.72
         },
         {
           "paper_id": "2604.09480",
@@ -217,7 +217,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.72
+          "classification_confidence": 0.7
         },
         {
           "paper_id": "2604.09473",
@@ -246,7 +246,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.69
+          "classification_confidence": 0.68
         },
         {
           "paper_id": "2604.09425",
@@ -289,7 +289,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.71
+          "classification_confidence": 0.64
         },
         {
           "paper_id": "2604.09366",
@@ -318,7 +318,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.81
+          "classification_confidence": 0.78
         },
         {
           "paper_id": "2604.09364",
@@ -342,7 +342,35 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.82
+          "classification_confidence": 0.75
+        },
+        {
+          "paper_id": "2604.09349",
+          "title": "Visually-Guided Policy Optimization for Multimodal Reasoning",
+          "abs_url": "https://arxiv.org/abs/2604.09349",
+          "pdf_url": "https://arxiv.org/pdf/2604.09349",
+          "detail_url": "https://papers.cool/arxiv/2604.09349",
+          "authors": [
+            "Zengbin Wang",
+            "Feng Xiong",
+            "Liang Lin",
+            "Xuecai Hu",
+            "Yong Wang",
+            "Yanlin Wang",
+            "Man Zhang",
+            "Xiangxiang Chu"
+          ],
+          "subjects": [
+            "Computer Vision and Pattern Recognition",
+            "Artificial Intelligence",
+            "Computation and Language"
+          ],
+          "abstract": "Reinforcement learning with verifiable rewards (RLVR) has significantly advanced the reasoning ability of vision-language models (VLMs). However, the inherent text-dominated nature of VLMs often leads to insufficient visual faithfulness, characterized by sparse attention activation to visual tokens. More importantly, our empirical analysis reveals that temporal visual forgetting along reasoning steps exacerbates this deficiency. To bridge this gap, we propose Visually-Guided Policy Optimization (VGPO), a novel framework to reinforce visual focus during policy optimization. Specifically, VGPO initially introduces a Visual Attention Compensation mechanism that leverages visual similarity to localize and amplify visual cues, while progressively elevating visual expectations in later steps to counteract visual forgetting. Building on this mechanism, we implement a dual-grained advantage re-weighting strategy: the intra-trajectory level highlights tokens exhibiting relatively high visual activation, while the inter-trajectory level prioritizes trajectories demonstrating superior visual accumulation. Extensive experiments demonstrate that VGPO achieves better visual activation and superior performance in mathematical multimodal reasoning and visual-dependent tasks.",
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.72
         },
         {
           "paper_id": "2604.09324",
@@ -364,7 +392,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.67
+          "classification_confidence": 0.66
         },
         {
           "paper_id": "2604.09305",
@@ -384,7 +412,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.73
+          "classification_confidence": 0.72
         },
         {
           "paper_id": "2604.09260",
@@ -407,32 +435,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.71
-        },
-        {
-          "paper_id": "2604.09232",
-          "title": "Neural Distribution Prior for LiDAR Out-of-Distribution Detection",
-          "abs_url": "https://arxiv.org/abs/2604.09232",
-          "pdf_url": "https://arxiv.org/pdf/2604.09232",
-          "detail_url": "https://papers.cool/arxiv/2604.09232",
-          "authors": [
-            "Zizhao Li",
-            "Zhengkang Xiang",
-            "Jiayang Ao",
-            "Feng Liu",
-            "Joseph West",
-            "Kourosh Khoshelham"
-          ],
-          "subjects": [
-            "Computer Vision and Pattern Recognition",
-            "Artificial Intelligence"
-          ],
-          "abstract": "LiDAR-based perception is critical for autonomous driving due to its robustness to poor lighting and visibility conditions. Yet, current models operate under the closed-set assumption and often fail to recognize unexpected out-of-distribution (OOD) objects in the open world. Existing OOD scoring functions exhibit limited performance because they ignore the pronounced class imbalance inherent in LiDAR OOD detection and assume a uniform class distribution. To address this limitation, we propose the Neural Distribution Prior (NDP), a framework that models the distributional structure of network predictions and adaptively reweights OOD scores based on alignment with a learned distribution prior. NDP dynamically captures the logit distribution patterns of training data and corrects class-dependent confidence bias through an attention-based module. We further introduce a Perlin noise-based OOD synthesis strategy that generates diverse auxiliary OOD samples from input scans, enabling robust OOD training without external datasets. Extensive experiments on the SemanticKITTI and STU benchmarks demonstrate that NDP substantially improves OOD detection performance, achieving a point-level AP of 61.31\\% on the STU test set, which is more than 10$\\times$ higher than the previous best result. Our framework is compatible with various existing OOD scoring formulations, providing an effective solution for open-world LiDAR perception.",
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.69
+          "classification_confidence": 0.76
         },
         {
           "paper_id": "2604.09220",
@@ -453,7 +456,28 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.61
+          "classification_confidence": 0.62
+        },
+        {
+          "paper_id": "2604.09210",
+          "title": "Adding Another Dimension to Image-based Animal Detection",
+          "abs_url": "https://arxiv.org/abs/2604.09210",
+          "pdf_url": "https://arxiv.org/pdf/2604.09210",
+          "detail_url": "https://papers.cool/arxiv/2604.09210",
+          "authors": [
+            "Vandita Shukla",
+            "Fabio Remondino",
+            "Benjamin Risse"
+          ],
+          "subjects": [
+            "Computer Vision and Pattern Recognition"
+          ],
+          "abstract": "Monocular imaging of animals inherently reduces 3D structures to 2D projections. Detection algorithms lead to 2D bounding boxes that lack information about animal's orientation relative to the camera. To build 3D detection methods for RGB animal images, there is a lack of labeled datasets; such labeling processes require 3D input streams along with RGB data. We present a pipeline that utilises Skinned Multi Animal Linear models to estimate 3D bounding boxes and to project them as robust labels into 2D image space using a dedicated camera pose refinement algorithm. To assess which sides of the animal are captured, cuboid face visibility metrics are computed. These 3D bounding boxes and metrics form a crucial step toward developing and benchmarking future monocular 3D animal detection algorithms. We evaluate our method on the Animal3D dataset, demonstrating accurate performance across species and settings.",
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.62
         },
         {
           "paper_id": "2604.09206",
@@ -482,7 +506,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.72
+          "classification_confidence": 0.78
         },
         {
           "paper_id": "2604.09199",
@@ -529,7 +553,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.74
+          "classification_confidence": 0.72
         },
         {
           "paper_id": "2604.09164",
@@ -549,7 +573,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.78
+          "classification_confidence": 0.68
         },
         {
           "paper_id": "2604.09145",
@@ -571,7 +595,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.66
+          "classification_confidence": 0.65
         },
         {
           "paper_id": "2604.09142",
@@ -595,7 +619,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.8
+          "classification_confidence": 0.78
         },
         {
           "paper_id": "2604.09127",
@@ -618,7 +642,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.77
+          "classification_confidence": 0.7
         },
         {
           "paper_id": "2604.09125",
@@ -639,7 +663,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.7
+          "classification_confidence": 0.63
         },
         {
           "paper_id": "2604.09096",
@@ -686,7 +710,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.65
+          "classification_confidence": 0.7
         },
         {
           "paper_id": "2604.09018",
@@ -710,7 +734,34 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.75
+          "classification_confidence": 0.72
+        },
+        {
+          "paper_id": "2604.09000",
+          "title": "StreamMeCo: Long-Term Agent Memory Compression for Efficient Streaming Video Understanding",
+          "abs_url": "https://arxiv.org/abs/2604.09000",
+          "pdf_url": "https://arxiv.org/pdf/2604.09000",
+          "detail_url": "https://papers.cool/arxiv/2604.09000",
+          "authors": [
+            "Junxi Wang",
+            "Te Sun",
+            "Jiayi Zhu",
+            "Junxian Li",
+            "Haowen Xu",
+            "Zichen Wen",
+            "Xuming Hu",
+            "Zhiyu Li",
+            "Linfeng Zhang"
+          ],
+          "subjects": [
+            "Computer Vision and Pattern Recognition"
+          ],
+          "abstract": "Vision agent memory has shown remarkable effectiveness in streaming video understanding. However, storing such memory for videos incurs substantial memory overhead, leading to high costs in both storage and computation. To address this issue, we propose StreamMeCo, an efficient Stream Agent Memory Compression framework. Specifically, based on the connectivity of the memory graph, StreamMeCo introduces edge-free minmax sampling for the isolated nodes and an edge-aware weight pruning for connected nodes, evicting the redundant memory nodes while maintaining the accuracy. In addition, we introduce a time-decay memory retrieval mechanism to further eliminate the performance degradation caused by memory compression. Extensive experiments on three challenging benchmark datasets (M3-Bench-robot, M3-Bench-web and Video-MME-Long) demonstrate that under 70% memory graph compression, StreamMeCo achieves a 1.87* speedup in memory retrieval while delivering an average accuracy improvement of 1.0%. Our code is available at https://github.com/Celina-love-sweet/StreamMeCo.",
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.78
         },
         {
           "paper_id": "2604.08966",
@@ -733,7 +784,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.84
+          "classification_confidence": 0.82
         },
         {
           "paper_id": "2604.08943",
@@ -781,7 +832,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.82
+          "classification_confidence": 0.78
         },
         {
           "paper_id": "2604.08916",
@@ -802,7 +853,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.78
+          "classification_confidence": 0.8
         },
         {
           "paper_id": "2604.08903",
@@ -825,7 +876,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.67
+          "classification_confidence": 0.62
         },
         {
           "paper_id": "2604.08893",
@@ -865,7 +916,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.75
+          "classification_confidence": 0.76
         },
         {
           "paper_id": "2604.08762",
@@ -889,7 +940,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.78
+          "classification_confidence": 0.79
         },
         {
           "paper_id": "2604.08761",
@@ -931,7 +982,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.76
+          "classification_confidence": 0.73
         },
         {
           "paper_id": "2604.08701",
@@ -956,7 +1007,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.62
+          "classification_confidence": 0.65
         },
         {
           "paper_id": "2604.08694",
@@ -977,7 +1028,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.76
+          "classification_confidence": 0.74
         },
         {
           "paper_id": "2604.08626",
@@ -1012,7 +1063,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.76
+          "classification_confidence": 0.73
         },
         {
           "paper_id": "2604.09321",
@@ -1042,7 +1093,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.78
+          "classification_confidence": 0.75
         },
         {
           "paper_id": "2604.08598",
@@ -1065,7 +1116,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.71
+          "classification_confidence": 0.72
         }
       ]
     },
@@ -1096,28 +1147,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.58
-        },
-        {
-          "paper_id": "2604.09210",
-          "title": "Adding Another Dimension to Image-based Animal Detection",
-          "abs_url": "https://arxiv.org/abs/2604.09210",
-          "pdf_url": "https://arxiv.org/pdf/2604.09210",
-          "detail_url": "https://papers.cool/arxiv/2604.09210",
-          "authors": [
-            "Vandita Shukla",
-            "Fabio Remondino",
-            "Benjamin Risse"
-          ],
-          "subjects": [
-            "Computer Vision and Pattern Recognition"
-          ],
-          "abstract": "Monocular imaging of animals inherently reduces 3D structures to 2D projections. Detection algorithms lead to 2D bounding boxes that lack information about animal's orientation relative to the camera. To build 3D detection methods for RGB animal images, there is a lack of labeled datasets; such labeling processes require 3D input streams along with RGB data. We present a pipeline that utilises Skinned Multi Animal Linear models to estimate 3D bounding boxes and to project them as robust labels into 2D image space using a dedicated camera pose refinement algorithm. To assess which sides of the animal are captured, cuboid face visibility metrics are computed. These 3D bounding boxes and metrics form a crucial step toward developing and benchmarking future monocular 3D animal detection algorithms. We evaluate our method on the Animal3D dataset, demonstrating accurate performance across species and settings.",
-          "topic_key": "domain_applications",
-          "topic_label": "Domain Applications",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.68
+          "classification_confidence": 0.72
         },
         {
           "paper_id": "2604.09197",
@@ -1164,7 +1194,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.95
+          "classification_confidence": 0.94
         },
         {
           "paper_id": "2604.09169",
@@ -1188,7 +1218,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.86
+          "classification_confidence": 0.82
         },
         {
           "paper_id": "2604.09151",
@@ -1208,7 +1238,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.84
+          "classification_confidence": 0.86
         },
         {
           "paper_id": "2604.09076",
@@ -1280,7 +1310,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.82
+          "classification_confidence": 0.84
         },
         {
           "paper_id": "2604.09047",
@@ -1305,7 +1335,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.74
+          "classification_confidence": 0.68
         },
         {
           "paper_id": "2604.09009",
@@ -1350,7 +1380,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.7
+          "classification_confidence": 0.62
         },
         {
           "paper_id": "2604.08936",
@@ -1374,7 +1404,31 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.78
+          "classification_confidence": 0.84
+        },
+        {
+          "paper_id": "2604.08896",
+          "title": "GeoMMBench and GeoMMAgent: Toward Expert-Level Multimodal Intelligence in Geoscience and Remote Sensing",
+          "abs_url": "https://arxiv.org/abs/2604.08896",
+          "pdf_url": "https://arxiv.org/pdf/2604.08896",
+          "detail_url": "https://papers.cool/arxiv/2604.08896",
+          "authors": [
+            "Aoran Xiao",
+            "Shihao Cheng",
+            "Yonghao Xu",
+            "Yexian Ren",
+            "Hongruixuan Chen",
+            "Naoto Yokoya"
+          ],
+          "subjects": [
+            "Computer Vision and Pattern Recognition"
+          ],
+          "abstract": "Recent advances in multimodal large language models (MLLMs) have accelerated progress in domain-oriented AI, yet their development in geoscience and remote sensing (RS) remains constrained by distinctive challenges: wide-ranging disciplinary knowledge, heterogeneous sensor modalities, and a fragmented spectrum of tasks. To bridge these gaps, we introduce GeoMMBench, a comprehensive multimodal question-answering benchmark covering diverse RS disciplines, sensors, and tasks, enabling broader and more rigorous evaluation than prior benchmarks. Using GeoMMBench, we assess 36 open-source and proprietary large language models, uncovering systematic deficiencies in domain knowledge, perceptual grounding, and reasoning--capabilities essential for expert-level geospatial interpretation. Beyond evaluation, we propose GeoMMAgent, a multi-agent framework that strategically integrates retrieval, perception, and reasoning through domain-specific RS models and tools. Extensive experimental results demonstrate that GeoMMAgent significantly outperforms standalone LLMs, underscoring the importance of tool-augmented agents for dynamically tackling complex geoscience and RS challenges.",
+          "topic_key": "domain_applications",
+          "topic_label": "Domain Applications",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.74
         },
         {
           "paper_id": "2604.08815",
@@ -1400,7 +1454,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.82
+          "classification_confidence": 0.86
         },
         {
           "paper_id": "2604.08722",
@@ -1423,7 +1477,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.68
+          "classification_confidence": 0.69
         },
         {
           "paper_id": "2604.08711",
@@ -1447,7 +1501,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.64
+          "classification_confidence": 0.68
         },
         {
           "paper_id": "2604.08610",
@@ -1468,7 +1522,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.68
+          "classification_confidence": 0.7
         },
         {
           "paper_id": "2604.08609",
@@ -1489,7 +1543,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.8
+          "classification_confidence": 0.82
         },
         {
           "paper_id": "2604.09468",
@@ -1515,7 +1569,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.9
+          "classification_confidence": 0.92
         },
         {
           "paper_id": "2604.09370",
@@ -1538,7 +1592,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.83
+          "classification_confidence": 0.82
         },
         {
           "paper_id": "2604.09280",
@@ -1568,7 +1622,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.9
+          "classification_confidence": 0.91
         },
         {
           "paper_id": "2604.08868",
@@ -1592,7 +1646,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.85
+          "classification_confidence": 0.91
         },
         {
           "paper_id": "2604.08781",
@@ -1621,35 +1675,43 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.87
+          "classification_confidence": 0.88
         }
       ]
     },
     {
       "topic_label": "Multimodal Generative Modeling",
-      "count": 17,
-      "share": 11.64,
+      "count": 18,
+      "share": 12.33,
       "papers": [
         {
-          "paper_id": "2604.09405",
-          "title": "EGLOCE: Training-Free Energy-Guided Latent Optimization for Concept Erasure",
-          "abs_url": "https://arxiv.org/abs/2604.09405",
-          "pdf_url": "https://arxiv.org/pdf/2604.09405",
-          "detail_url": "https://papers.cool/arxiv/2604.09405",
+          "paper_id": "2604.09429",
+          "title": "Rays as Pixels: Learning A Joint Distribution of Videos and Camera Trajectories",
+          "abs_url": "https://arxiv.org/abs/2604.09429",
+          "pdf_url": "https://arxiv.org/pdf/2604.09429",
+          "detail_url": "https://papers.cool/arxiv/2604.09429",
           "authors": [
-            "Junyeong Ahn",
-            "Seojin Yoon",
-            "Sungyong Baik"
+            "Wonbong Jang",
+            "Shikun Liu",
+            "Soubhik Sanyal",
+            "Juan Camilo Perez",
+            "Kam Woh Ng",
+            "Sanskar Agrawal",
+            "Juan-Manuel Perez-Rua",
+            "Yiannis Douratsos",
+            "Tao Xiang"
           ],
           "subjects": [
-            "Computer Vision and Pattern Recognition"
+            "Computer Vision and Pattern Recognition",
+            "Artificial Intelligence",
+            "Machine Learning"
           ],
-          "abstract": "As text-to-image diffusion models grow increasingly prevalent, the ability to remove specific concepts-mostly explicit content and many copyrighted characters or styles-has become essential for safety and compliance. Existing unlearning approaches often require costly re-training, modify parameters at the cost of degradation of unrelated concept fidelity, or depend on indirect inference-time adjustment that compromise the effectiveness of concept erasure. Inspired by the success of energy-guided sampling for preservation of the condition of diffusion models, we introduce Energy-Guided Latent Optimization for Concept Erasure (EGLOCE), a training-free approach that removes unwanted concepts by re-directing noisy latent during inference. Our method employs a dual-objective framework: a repulsion energy that steers generation away from target concepts via gradient descent in latent space, and a retention energy that preserves semantic alignment to the original prompt. Combined with previous approaches that either require erroneous modified model weights or provide weak inference-time guidance, EGLOCE operates entirely at inference and enhances erasure performance, enabling plug-and-play integration. Extensive experiments demonstrate that EGLOCE improves concept removal while maintaining image quality and prompt alignment across baselines, even with adversarial attacks. To the best of our knowledge, our work is the first to establish a new paradigm for safe and controllable image generation through dual energy-based guidance during sampling.",
+          "abstract": "Recovering camera parameters from images and rendering scenes from novel viewpoints have long been treated as separate tasks in computer vision and graphics. This separation breaks down when image coverage is sparse or poses are ambiguous, since each task needs what the other produces. We propose Rays as Pixels, a Video Diffusion Model (VDM) that learns a joint distribution over videos and camera trajectories. We represent each camera as dense ray pixels (raxels) and denoise them jointly with video frames through Decoupled Self-Cross Attention mechanism. A single trained model handles three tasks: predicting camera trajectories from video, jointly generating video and camera trajectory from input images, and generating video from input images along a target camera trajectory. Because the model can both predict trajectories from a video and generate views conditioned on its own predictions, we evaluate it through a closed-loop self-consistency test, demonstrating that its forward and inverse predictions agree. Notably, trajectory prediction requires far fewer denoising steps than video generation, even a few denoising steps suffice for self-consistency. We report results on pose estimation and camera-controlled video generation.",
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.72
+          "classification_confidence": 0.78
         },
         {
           "paper_id": "2604.09386",
@@ -1672,6 +1734,32 @@
           "matched_terms": [],
           "classification_source": "codex",
           "classification_confidence": 0.9
+        },
+        {
+          "paper_id": "2604.09304",
+          "title": "GeRM: A Generative Rendering Model From Physically Realistic to Photorealistic",
+          "abs_url": "https://arxiv.org/abs/2604.09304",
+          "pdf_url": "https://arxiv.org/pdf/2604.09304",
+          "detail_url": "https://papers.cool/arxiv/2604.09304",
+          "authors": [
+            "Jiayuan Lu",
+            "Rengan Xie",
+            "Xuancheng Jin",
+            "Zhizhen Wu",
+            "Qi Ye",
+            "Tian Xie",
+            "Hujun Bao",
+            "Rui Wang. Yuchi Huo"
+          ],
+          "subjects": [
+            "Computer Vision and Pattern Recognition"
+          ],
+          "abstract": "For decades, Physically-Based Rendering (PBR) is the fundation of synthesizing photorealisitic images, and therefore sometimes roughly referred as Photorealistic Rendering (PRR). While PBR is indeed a mathematical simulation of light transport that guarantees physical reality, photorealism has additional reliance on the realistic digital model of geometry and appearance of the real world, leaving a barely explored gap from PBR to PRR (P2P). Consequently, the path toward photorealism faces a critical dilemma: the explicit simulation of PRR encumbered by unreachable realistic digital models for real-world existence, while implicit generation models sacrifice controllability and geometric consistency. Based on this insight, this paper presents the problem, data, and approach of mitigating P2P gap, followed by the first multi-modal generative rendering model, dubbed GeRM, to unify PBR and PRR. GeRM integrates physical attributes like G-buffers with text prompts, and progressive incremental injection to generate controllable photorealistic images, allowing users to fluidly navigate the continuum between strict physical fidelity and perceptual photorealism. Technically, we model the transition between PBR and PRR images as a distribution transfer and aim to learn a distribution transfer vector field (DTV Field) to guide this process. To define the learning objective, we first leverage a multi-agent VLM framework to construct an expert-guided pairwise P2P transfer dataset, named P2P-50K, where each paired sample in the dataset corresponds to a transfer vector in the DTV Field. Subsequently, we propose a multi-condition ControlNet to learn the DTV Field, which synthesizes PBR images and progressively transitions them into PRR images, guided by G-buffers, text prompts, and cues for enhanced regions.",
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.82
         },
         {
           "paper_id": "2604.09231",
@@ -1730,7 +1818,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.93
+          "classification_confidence": 0.94
         },
         {
           "paper_id": "2604.09168",
@@ -1754,7 +1842,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.82
+          "classification_confidence": 0.88
         },
         {
           "paper_id": "2604.09132",
@@ -1807,7 +1895,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.86
+          "classification_confidence": 0.84
         },
         {
           "paper_id": "2604.09057",
@@ -1835,7 +1923,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.98
+          "classification_confidence": 0.97
         },
         {
           "paper_id": "2604.09022",
@@ -1855,7 +1943,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.9
+          "classification_confidence": 0.86
         },
         {
           "paper_id": "2604.08922",
@@ -1906,7 +1994,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.72
+          "classification_confidence": 0.79
         },
         {
           "paper_id": "2604.08836",
@@ -1929,7 +2017,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.86
+          "classification_confidence": 0.87
         },
         {
           "paper_id": "2604.08760",
@@ -1950,7 +2038,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.94
+          "classification_confidence": 0.96
         },
         {
           "paper_id": "2604.08716",
@@ -1971,7 +2059,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.9
+          "classification_confidence": 0.91
         },
         {
           "paper_id": "2604.08646",
@@ -1997,7 +2085,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.93
+          "classification_confidence": 0.94
         },
         {
           "paper_id": "2604.08799",
@@ -2021,7 +2109,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.66
+          "classification_confidence": 0.62
         },
         {
           "paper_id": "2604.08746",
@@ -2049,7 +2137,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.92
+          "classification_confidence": 0.94
         }
       ]
     },
@@ -2116,7 +2204,7 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.66
+          "classification_confidence": 0.76
         },
         {
           "paper_id": "2604.09352",
@@ -2175,7 +2263,7 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.92
+          "classification_confidence": 0.9
         },
         {
           "paper_id": "2604.09037",
@@ -2207,7 +2295,7 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.84
+          "classification_confidence": 0.82
         },
         {
           "paper_id": "2604.09030",
@@ -2260,7 +2348,7 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.95
+          "classification_confidence": 0.9
         },
         {
           "paper_id": "2604.09023",
@@ -2317,7 +2405,7 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.94
+          "classification_confidence": 0.95
         },
         {
           "paper_id": "2604.08884",
@@ -2382,7 +2470,7 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.86
+          "classification_confidence": 0.85
         },
         {
           "paper_id": "2604.08741",
@@ -2405,7 +2493,7 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.9
+          "classification_confidence": 0.89
         },
         {
           "paper_id": "2604.08615",
@@ -2432,7 +2520,7 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.86
+          "classification_confidence": 0.82
         },
         {
           "paper_id": "2604.08613",
@@ -2481,7 +2569,7 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.72
+          "classification_confidence": 0.66
         },
         {
           "paper_id": "2604.09313",
@@ -2506,7 +2594,7 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.57
+          "classification_confidence": 0.61
         }
       ]
     },
@@ -2539,34 +2627,6 @@
           "classification_confidence": 0.78
         },
         {
-          "paper_id": "2604.09349",
-          "title": "Visually-Guided Policy Optimization for Multimodal Reasoning",
-          "abs_url": "https://arxiv.org/abs/2604.09349",
-          "pdf_url": "https://arxiv.org/pdf/2604.09349",
-          "detail_url": "https://papers.cool/arxiv/2604.09349",
-          "authors": [
-            "Zengbin Wang",
-            "Feng Xiong",
-            "Liang Lin",
-            "Xuecai Hu",
-            "Yong Wang",
-            "Yanlin Wang",
-            "Man Zhang",
-            "Xiangxiang Chu"
-          ],
-          "subjects": [
-            "Computer Vision and Pattern Recognition",
-            "Artificial Intelligence",
-            "Computation and Language"
-          ],
-          "abstract": "Reinforcement learning with verifiable rewards (RLVR) has significantly advanced the reasoning ability of vision-language models (VLMs). However, the inherent text-dominated nature of VLMs often leads to insufficient visual faithfulness, characterized by sparse attention activation to visual tokens. More importantly, our empirical analysis reveals that temporal visual forgetting along reasoning steps exacerbates this deficiency. To bridge this gap, we propose Visually-Guided Policy Optimization (VGPO), a novel framework to reinforce visual focus during policy optimization. Specifically, VGPO initially introduces a Visual Attention Compensation mechanism that leverages visual similarity to localize and amplify visual cues, while progressively elevating visual expectations in later steps to counteract visual forgetting. Building on this mechanism, we implement a dual-grained advantage re-weighting strategy: the intra-trajectory level highlights tokens exhibiting relatively high visual activation, while the inter-trajectory level prioritizes trajectories demonstrating superior visual accumulation. Extensive experiments demonstrate that VGPO achieves better visual activation and superior performance in mathematical multimodal reasoning and visual-dependent tasks.",
-          "topic_key": "reasoning_alignment_eval",
-          "topic_label": "Reasoning, Alignment, and Evaluation",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.64
-        },
-        {
           "paper_id": "2604.09327",
           "title": "From Frames to Events: Rethinking Evaluation in Human-Centric Video Anomaly Detection",
           "abs_url": "https://arxiv.org/abs/2604.09327",
@@ -2587,7 +2647,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.74
+          "classification_confidence": 0.75
         },
         {
           "paper_id": "2604.09253",
@@ -2615,7 +2675,32 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.91
+          "classification_confidence": 0.86
+        },
+        {
+          "paper_id": "2604.09232",
+          "title": "Neural Distribution Prior for LiDAR Out-of-Distribution Detection",
+          "abs_url": "https://arxiv.org/abs/2604.09232",
+          "pdf_url": "https://arxiv.org/pdf/2604.09232",
+          "detail_url": "https://papers.cool/arxiv/2604.09232",
+          "authors": [
+            "Zizhao Li",
+            "Zhengkang Xiang",
+            "Jiayang Ao",
+            "Feng Liu",
+            "Joseph West",
+            "Kourosh Khoshelham"
+          ],
+          "subjects": [
+            "Computer Vision and Pattern Recognition",
+            "Artificial Intelligence"
+          ],
+          "abstract": "LiDAR-based perception is critical for autonomous driving due to its robustness to poor lighting and visibility conditions. Yet, current models operate under the closed-set assumption and often fail to recognize unexpected out-of-distribution (OOD) objects in the open world. Existing OOD scoring functions exhibit limited performance because they ignore the pronounced class imbalance inherent in LiDAR OOD detection and assume a uniform class distribution. To address this limitation, we propose the Neural Distribution Prior (NDP), a framework that models the distributional structure of network predictions and adaptively reweights OOD scores based on alignment with a learned distribution prior. NDP dynamically captures the logit distribution patterns of training data and corrects class-dependent confidence bias through an attention-based module. We further introduce a Perlin noise-based OOD synthesis strategy that generates diverse auxiliary OOD samples from input scans, enabling robust OOD training without external datasets. Extensive experiments on the SemanticKITTI and STU benchmarks demonstrate that NDP substantially improves OOD detection performance, achieving a point-level AP of 61.31\\% on the STU test set, which is more than 10$\\times$ higher than the previous best result. Our framework is compatible with various existing OOD scoring formulations, providing an effective solution for open-world LiDAR perception.",
+          "topic_key": "reasoning_alignment_eval",
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.7
         },
         {
           "paper_id": "2604.09106",
@@ -2636,7 +2721,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.68
+          "classification_confidence": 0.74
         },
         {
           "paper_id": "2604.09024",
@@ -2661,7 +2746,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.88
+          "classification_confidence": 0.86
         },
         {
           "paper_id": "2604.08881",
@@ -2686,7 +2771,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.88
+          "classification_confidence": 0.9
         },
         {
           "paper_id": "2604.08847",
@@ -2732,7 +2817,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.78
+          "classification_confidence": 0.81
         },
         {
           "paper_id": "2604.08641",
@@ -2755,7 +2840,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.68
+          "classification_confidence": 0.74
         },
         {
           "paper_id": "2604.09391",
@@ -2776,7 +2861,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.7
+          "classification_confidence": 0.72
         },
         {
           "paper_id": "2604.09101",
@@ -2801,7 +2886,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.74
+          "classification_confidence": 0.72
         },
         {
           "paper_id": "2604.08846",
@@ -2830,7 +2915,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.76
+          "classification_confidence": 0.74
         },
         {
           "paper_id": "2604.08572",
@@ -2851,14 +2936,14 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.78
+          "classification_confidence": 0.76
         }
       ]
     },
     {
       "topic_label": "Generative Foundations",
-      "count": 9,
-      "share": 6.16,
+      "count": 8,
+      "share": 5.48,
       "papers": [
         {
           "paper_id": "2604.09436",
@@ -2879,62 +2964,28 @@
           "topic_label": "Generative Foundations",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.93
+          "classification_confidence": 0.9
         },
         {
-          "paper_id": "2604.09429",
-          "title": "Rays as Pixels: Learning A Joint Distribution of Videos and Camera Trajectories",
-          "abs_url": "https://arxiv.org/abs/2604.09429",
-          "pdf_url": "https://arxiv.org/pdf/2604.09429",
-          "detail_url": "https://papers.cool/arxiv/2604.09429",
+          "paper_id": "2604.09405",
+          "title": "EGLOCE: Training-Free Energy-Guided Latent Optimization for Concept Erasure",
+          "abs_url": "https://arxiv.org/abs/2604.09405",
+          "pdf_url": "https://arxiv.org/pdf/2604.09405",
+          "detail_url": "https://papers.cool/arxiv/2604.09405",
           "authors": [
-            "Wonbong Jang",
-            "Shikun Liu",
-            "Soubhik Sanyal",
-            "Juan Camilo Perez",
-            "Kam Woh Ng",
-            "Sanskar Agrawal",
-            "Juan-Manuel Perez-Rua",
-            "Yiannis Douratsos",
-            "Tao Xiang"
-          ],
-          "subjects": [
-            "Computer Vision and Pattern Recognition",
-            "Artificial Intelligence",
-            "Machine Learning"
-          ],
-          "abstract": "Recovering camera parameters from images and rendering scenes from novel viewpoints have long been treated as separate tasks in computer vision and graphics. This separation breaks down when image coverage is sparse or poses are ambiguous, since each task needs what the other produces. We propose Rays as Pixels, a Video Diffusion Model (VDM) that learns a joint distribution over videos and camera trajectories. We represent each camera as dense ray pixels (raxels) and denoise them jointly with video frames through Decoupled Self-Cross Attention mechanism. A single trained model handles three tasks: predicting camera trajectories from video, jointly generating video and camera trajectory from input images, and generating video from input images along a target camera trajectory. Because the model can both predict trajectories from a video and generate views conditioned on its own predictions, we evaluate it through a closed-loop self-consistency test, demonstrating that its forward and inverse predictions agree. Notably, trajectory prediction requires far fewer denoising steps than video generation, even a few denoising steps suffice for self-consistency. We report results on pose estimation and camera-controlled video generation.",
-          "topic_key": "generative_foundations",
-          "topic_label": "Generative Foundations",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.74
-        },
-        {
-          "paper_id": "2604.09304",
-          "title": "GeRM: A Generative Rendering Model From Physically Realistic to Photorealistic",
-          "abs_url": "https://arxiv.org/abs/2604.09304",
-          "pdf_url": "https://arxiv.org/pdf/2604.09304",
-          "detail_url": "https://papers.cool/arxiv/2604.09304",
-          "authors": [
-            "Jiayuan Lu",
-            "Rengan Xie",
-            "Xuancheng Jin",
-            "Zhizhen Wu",
-            "Qi Ye",
-            "Tian Xie",
-            "Hujun Bao",
-            "Rui Wang. Yuchi Huo"
+            "Junyeong Ahn",
+            "Seojin Yoon",
+            "Sungyong Baik"
           ],
           "subjects": [
             "Computer Vision and Pattern Recognition"
           ],
-          "abstract": "For decades, Physically-Based Rendering (PBR) is the fundation of synthesizing photorealisitic images, and therefore sometimes roughly referred as Photorealistic Rendering (PRR). While PBR is indeed a mathematical simulation of light transport that guarantees physical reality, photorealism has additional reliance on the realistic digital model of geometry and appearance of the real world, leaving a barely explored gap from PBR to PRR (P2P). Consequently, the path toward photorealism faces a critical dilemma: the explicit simulation of PRR encumbered by unreachable realistic digital models for real-world existence, while implicit generation models sacrifice controllability and geometric consistency. Based on this insight, this paper presents the problem, data, and approach of mitigating P2P gap, followed by the first multi-modal generative rendering model, dubbed GeRM, to unify PBR and PRR. GeRM integrates physical attributes like G-buffers with text prompts, and progressive incremental injection to generate controllable photorealistic images, allowing users to fluidly navigate the continuum between strict physical fidelity and perceptual photorealism. Technically, we model the transition between PBR and PRR images as a distribution transfer and aim to learn a distribution transfer vector field (DTV Field) to guide this process. To define the learning objective, we first leverage a multi-agent VLM framework to construct an expert-guided pairwise P2P transfer dataset, named P2P-50K, where each paired sample in the dataset corresponds to a transfer vector in the DTV Field. Subsequently, we propose a multi-condition ControlNet to learn the DTV Field, which synthesizes PBR images and progressively transitions them into PRR images, guided by G-buffers, text prompts, and cues for enhanced regions.",
+          "abstract": "As text-to-image diffusion models grow increasingly prevalent, the ability to remove specific concepts-mostly explicit content and many copyrighted characters or styles-has become essential for safety and compliance. Existing unlearning approaches often require costly re-training, modify parameters at the cost of degradation of unrelated concept fidelity, or depend on indirect inference-time adjustment that compromise the effectiveness of concept erasure. Inspired by the success of energy-guided sampling for preservation of the condition of diffusion models, we introduce Energy-Guided Latent Optimization for Concept Erasure (EGLOCE), a training-free approach that removes unwanted concepts by re-directing noisy latent during inference. Our method employs a dual-objective framework: a repulsion energy that steers generation away from target concepts via gradient descent in latent space, and a retention energy that preserves semantic alignment to the original prompt. Combined with previous approaches that either require erroneous modified model weights or provide weak inference-time guidance, EGLOCE operates entirely at inference and enhances erasure performance, enabling plug-and-play integration. Extensive experiments demonstrate that EGLOCE improves concept removal while maintaining image quality and prompt alignment across baselines, even with adversarial attacks. To the best of our knowledge, our work is the first to establish a new paradigm for safe and controllable image generation through dual energy-based guidance during sampling.",
           "topic_key": "generative_foundations",
           "topic_label": "Generative Foundations",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.82
+          "classification_confidence": 0.72
         },
         {
           "paper_id": "2604.09213",
@@ -2955,7 +3006,7 @@
           "topic_label": "Generative Foundations",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.76
+          "classification_confidence": 0.84
         },
         {
           "paper_id": "2604.09181",
@@ -2977,7 +3028,7 @@
           "topic_label": "Generative Foundations",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.96
+          "classification_confidence": 0.95
         },
         {
           "paper_id": "2604.09063",
@@ -3001,7 +3052,7 @@
           "topic_label": "Generative Foundations",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.72
+          "classification_confidence": 0.78
         },
         {
           "paper_id": "2604.08995",
@@ -3064,7 +3115,7 @@
           "topic_label": "Generative Foundations",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.81
+          "classification_confidence": 0.83
         },
         {
           "paper_id": "2604.08828",
@@ -3085,14 +3136,14 @@
           "topic_label": "Generative Foundations",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.91
+          "classification_confidence": 0.92
         }
       ]
     },
     {
       "topic_label": "Multimodal Agents",
-      "count": 9,
-      "share": 6.16,
+      "count": 8,
+      "share": 5.48,
       "papers": [
         {
           "paper_id": "2604.09535",
@@ -3121,32 +3172,7 @@
           "topic_label": "Multimodal Agents",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.62
-        },
-        {
-          "paper_id": "2604.09508",
-          "title": "VISOR: Agentic Visual Retrieval-Augmented Generation via Iterative Search and Over-horizon Reasoning",
-          "abs_url": "https://arxiv.org/abs/2604.09508",
-          "pdf_url": "https://arxiv.org/pdf/2604.09508",
-          "detail_url": "https://papers.cool/arxiv/2604.09508",
-          "authors": [
-            "Yucheng Shen",
-            "Jiulong Wu",
-            "Jizhou Huang",
-            "Dawei Yin",
-            "Lingyong Yan",
-            "Min Cao"
-          ],
-          "subjects": [
-            "Computer Vision and Pattern Recognition",
-            "Artificial Intelligence"
-          ],
-          "abstract": "Visual Retrieval-Augmented Generation (VRAG) empowers Vision-Language Models to retrieve and reason over visually rich documents. To tackle complex queries requiring multi-step reasoning, agentic VRAG systems interleave reasoning with iterative retrieval.. However, existing agentic VRAG faces two critical bottlenecks. (1) Visual Evidence Sparsity: key evidence is scattered across pages yet processed in isolation, hindering cross-page reasoning; moreover, fine-grained intra-image evidence often requires precise visual actions, whose misuse degrades retrieval quality; (2) Search Drift in Long Horizons: the accumulation of visual tokens across retrieved pages dilutes context and causes cognitive overload, leading agents to deviate from their search objective. To address these challenges, we propose VISOR (Visual Retrieval-Augmented Generation via Iterative Search and Over-horizon Reasoning), a unified single-agent framework. VISOR features a structured Evidence Space for progressive cross-page reasoning, coupled with a Visual Action Evaluation and Correction mechanism to manage visual actions. Additionally, we introduce a Dynamic Trajectory with Sliding Window and Intent Injection to mitigate search drift. They anchor the evidence space while discarding earlier raw interactions, preventing context from being overwhelmed by visual tokens. We train VISOR using a Group Relative Policy Optimization-based Reinforcement Learning (GRPO-based RL) pipeline with state masking and credit assignment tailored for dynamic context reconstruction. Extensive experiments on ViDoSeek, SlideVQA, and MMLongBench demonstrate that VISOR achieves state-of-the-art performance with superior efficiency for long-horizon visual reasoning tasks.",
-          "topic_key": "multimodal_agents",
-          "topic_label": "Multimodal Agents",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.82
+          "classification_confidence": 0.66
         },
         {
           "paper_id": "2604.09059",
@@ -3171,7 +3197,7 @@
           "topic_label": "Multimodal Agents",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.98
+          "classification_confidence": 0.96
         },
         {
           "paper_id": "2604.08945",
@@ -3195,31 +3221,7 @@
           "topic_label": "Multimodal Agents",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.9
-        },
-        {
-          "paper_id": "2604.08896",
-          "title": "GeoMMBench and GeoMMAgent: Toward Expert-Level Multimodal Intelligence in Geoscience and Remote Sensing",
-          "abs_url": "https://arxiv.org/abs/2604.08896",
-          "pdf_url": "https://arxiv.org/pdf/2604.08896",
-          "detail_url": "https://papers.cool/arxiv/2604.08896",
-          "authors": [
-            "Aoran Xiao",
-            "Shihao Cheng",
-            "Yonghao Xu",
-            "Yexian Ren",
-            "Hongruixuan Chen",
-            "Naoto Yokoya"
-          ],
-          "subjects": [
-            "Computer Vision and Pattern Recognition"
-          ],
-          "abstract": "Recent advances in multimodal large language models (MLLMs) have accelerated progress in domain-oriented AI, yet their development in geoscience and remote sensing (RS) remains constrained by distinctive challenges: wide-ranging disciplinary knowledge, heterogeneous sensor modalities, and a fragmented spectrum of tasks. To bridge these gaps, we introduce GeoMMBench, a comprehensive multimodal question-answering benchmark covering diverse RS disciplines, sensors, and tasks, enabling broader and more rigorous evaluation than prior benchmarks. Using GeoMMBench, we assess 36 open-source and proprietary large language models, uncovering systematic deficiencies in domain knowledge, perceptual grounding, and reasoning--capabilities essential for expert-level geospatial interpretation. Beyond evaluation, we propose GeoMMAgent, a multi-agent framework that strategically integrates retrieval, perception, and reasoning through domain-specific RS models and tools. Extensive experimental results demonstrate that GeoMMAgent significantly outperforms standalone LLMs, underscoring the importance of tool-augmented agents for dynamically tackling complex geoscience and RS challenges.",
-          "topic_key": "multimodal_agents",
-          "topic_label": "Multimodal Agents",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.74
+          "classification_confidence": 0.82
         },
         {
           "paper_id": "2604.08719",
@@ -3247,7 +3249,7 @@
           "topic_label": "Multimodal Agents",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.86
+          "classification_confidence": 0.88
         },
         {
           "paper_id": "2604.08645",
@@ -3271,7 +3273,7 @@
           "topic_label": "Multimodal Agents",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.95
+          "classification_confidence": 0.92
         },
         {
           "paper_id": "2604.09330",
@@ -3303,7 +3305,31 @@
           "topic_label": "Multimodal Agents",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.86
+          "classification_confidence": 0.91
+        },
+        {
+          "paper_id": "2604.09326",
+          "title": "Multimodal Anomaly Detection for Human-Robot Interaction",
+          "abs_url": "https://arxiv.org/abs/2604.09326",
+          "pdf_url": "https://arxiv.org/pdf/2604.09326",
+          "detail_url": "https://papers.cool/arxiv/2604.09326",
+          "authors": [
+            "Guilherme Ribeiro",
+            "Iordanis Antypas",
+            "Leonardo Bizzaro",
+            "João Bimbo",
+            "Nuno Cruz Garcia"
+          ],
+          "subjects": [
+            "Robotics",
+            "Computer Vision and Pattern Recognition"
+          ],
+          "abstract": "Ensuring safety and reliability in human-robot interaction (HRI) requires the timely detection of unexpected events that could lead to system failures or unsafe behaviours. Anomaly detection thus plays a critical role in enabling robots to recognize and respond to deviations from normal operation during collaborative tasks. While reconstruction models have been actively explored in HRI, approaches that operate directly on feature vectors remain largely unexplored. In this work, we propose MADRI, a framework that first transforms video streams into semantically meaningful feature vectors before performing reconstruction-based anomaly detection. Additionally, we augment these visual feature vectors with the robot's internal sensors' readings and a Scene Graph, enabling the model to capture both external anomalies in the visual environment and internal failures within the robot itself. To evaluate our approach, we collected a custom dataset consisting of a simple pick-and-place robotic task under normal and anomalous conditions. Experimental results demonstrate that reconstruction on vision-based feature vectors alone is effective for detecting anomalies, while incorporating other modalities further improves detection performance, highlighting the benefits of multimodal feature reconstruction for robust anomaly detection in human-robot collaboration.",
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.76
         },
         {
           "paper_id": "2604.09244",
@@ -3334,7 +3360,7 @@
           "topic_label": "Multimodal Agents",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.88
+          "classification_confidence": 0.93
         }
       ]
     },
@@ -3367,7 +3393,7 @@
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.82
+          "classification_confidence": 0.74
         },
         {
           "paper_id": "2604.09045",
@@ -3389,7 +3415,7 @@
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.62
+          "classification_confidence": 0.66
         },
         {
           "paper_id": "2604.08965",
@@ -3410,7 +3436,7 @@
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.76
+          "classification_confidence": 0.68
         },
         {
           "paper_id": "2604.08894",
@@ -3436,7 +3462,7 @@
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.58
+          "classification_confidence": 0.52
         },
         {
           "paper_id": "2604.08639",
@@ -3485,7 +3511,7 @@
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.76
+          "classification_confidence": 0.73
         },
         {
           "paper_id": "2604.08573",
@@ -3507,14 +3533,14 @@
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.73
+          "classification_confidence": 0.79
         }
       ]
     },
     {
       "topic_label": "Robotics and Embodied AI",
-      "count": 7,
-      "share": 4.79,
+      "count": 6,
+      "share": 4.11,
       "papers": [
         {
           "paper_id": "2604.09478",
@@ -3536,7 +3562,7 @@
           "topic_label": "Robotics and Embodied AI",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.78
+          "classification_confidence": 0.74
         },
         {
           "paper_id": "2604.09445",
@@ -3558,7 +3584,7 @@
           "topic_label": "Robotics and Embodied AI",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.67
+          "classification_confidence": 0.64
         },
         {
           "paper_id": "2604.08921",
@@ -3582,7 +3608,7 @@
           "topic_label": "Robotics and Embodied AI",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.84
+          "classification_confidence": 0.88
         },
         {
           "paper_id": "2604.08718",
@@ -3612,31 +3638,7 @@
           "topic_label": "Robotics and Embodied AI",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.78
-        },
-        {
-          "paper_id": "2604.09326",
-          "title": "Multimodal Anomaly Detection for Human-Robot Interaction",
-          "abs_url": "https://arxiv.org/abs/2604.09326",
-          "pdf_url": "https://arxiv.org/pdf/2604.09326",
-          "detail_url": "https://papers.cool/arxiv/2604.09326",
-          "authors": [
-            "Guilherme Ribeiro",
-            "Iordanis Antypas",
-            "Leonardo Bizzaro",
-            "João Bimbo",
-            "Nuno Cruz Garcia"
-          ],
-          "subjects": [
-            "Robotics",
-            "Computer Vision and Pattern Recognition"
-          ],
-          "abstract": "Ensuring safety and reliability in human-robot interaction (HRI) requires the timely detection of unexpected events that could lead to system failures or unsafe behaviours. Anomaly detection thus plays a critical role in enabling robots to recognize and respond to deviations from normal operation during collaborative tasks. While reconstruction models have been actively explored in HRI, approaches that operate directly on feature vectors remain largely unexplored. In this work, we propose MADRI, a framework that first transforms video streams into semantically meaningful feature vectors before performing reconstruction-based anomaly detection. Additionally, we augment these visual feature vectors with the robot's internal sensors' readings and a Scene Graph, enabling the model to capture both external anomalies in the visual environment and internal failures within the robot itself. To evaluate our approach, we collected a custom dataset consisting of a simple pick-and-place robotic task under normal and anomalous conditions. Experimental results demonstrate that reconstruction on vision-based feature vectors alone is effective for detecting anomalies, while incorporating other modalities further improves detection performance, highlighting the benefits of multimodal feature reconstruction for robust anomaly detection in human-robot collaboration.",
-          "topic_key": "robotics_embodied",
-          "topic_label": "Robotics and Embodied AI",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.74
+          "classification_confidence": 0.8
         },
         {
           "paper_id": "2604.09282",
@@ -3657,7 +3659,7 @@
           "topic_label": "Robotics and Embodied AI",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.55
+          "classification_confidence": 0.59
         },
         {
           "paper_id": "2604.09038",
@@ -3685,7 +3687,7 @@
           "topic_label": "Robotics and Embodied AI",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.72
+          "classification_confidence": 0.78
         }
       ]
     },
@@ -3694,6 +3696,31 @@
       "count": 3,
       "share": 2.05,
       "papers": [
+        {
+          "paper_id": "2604.09508",
+          "title": "VISOR: Agentic Visual Retrieval-Augmented Generation via Iterative Search and Over-horizon Reasoning",
+          "abs_url": "https://arxiv.org/abs/2604.09508",
+          "pdf_url": "https://arxiv.org/pdf/2604.09508",
+          "detail_url": "https://papers.cool/arxiv/2604.09508",
+          "authors": [
+            "Yucheng Shen",
+            "Jiulong Wu",
+            "Jizhou Huang",
+            "Dawei Yin",
+            "Lingyong Yan",
+            "Min Cao"
+          ],
+          "subjects": [
+            "Computer Vision and Pattern Recognition",
+            "Artificial Intelligence"
+          ],
+          "abstract": "Visual Retrieval-Augmented Generation (VRAG) empowers Vision-Language Models to retrieve and reason over visually rich documents. To tackle complex queries requiring multi-step reasoning, agentic VRAG systems interleave reasoning with iterative retrieval.. However, existing agentic VRAG faces two critical bottlenecks. (1) Visual Evidence Sparsity: key evidence is scattered across pages yet processed in isolation, hindering cross-page reasoning; moreover, fine-grained intra-image evidence often requires precise visual actions, whose misuse degrades retrieval quality; (2) Search Drift in Long Horizons: the accumulation of visual tokens across retrieved pages dilutes context and causes cognitive overload, leading agents to deviate from their search objective. To address these challenges, we propose VISOR (Visual Retrieval-Augmented Generation via Iterative Search and Over-horizon Reasoning), a unified single-agent framework. VISOR features a structured Evidence Space for progressive cross-page reasoning, coupled with a Visual Action Evaluation and Correction mechanism to manage visual actions. Additionally, we introduce a Dynamic Trajectory with Sliding Window and Intent Injection to mitigate search drift. They anchor the evidence space while discarding earlier raw interactions, preventing context from being overwhelmed by visual tokens. We train VISOR using a Group Relative Policy Optimization-based Reinforcement Learning (GRPO-based RL) pipeline with state masking and credit assignment tailored for dynamic context reconstruction. Extensive experiments on ViDoSeek, SlideVQA, and MMLongBench demonstrate that VISOR achieves state-of-the-art performance with superior efficiency for long-horizon visual reasoning tasks.",
+          "topic_key": "retrieval_knowledge",
+          "topic_label": "Retrieval, Knowledge, and RAG",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.76
+        },
         {
           "paper_id": "2604.09114",
           "title": "FIRE-CIR: Fine-grained Reasoning for Composed Fashion Image Retrieval",
@@ -3715,34 +3742,7 @@
           "topic_label": "Retrieval, Knowledge, and RAG",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.92
-        },
-        {
-          "paper_id": "2604.09000",
-          "title": "StreamMeCo: Long-Term Agent Memory Compression for Efficient Streaming Video Understanding",
-          "abs_url": "https://arxiv.org/abs/2604.09000",
-          "pdf_url": "https://arxiv.org/pdf/2604.09000",
-          "detail_url": "https://papers.cool/arxiv/2604.09000",
-          "authors": [
-            "Junxi Wang",
-            "Te Sun",
-            "Jiayi Zhu",
-            "Junxian Li",
-            "Haowen Xu",
-            "Zichen Wen",
-            "Xuming Hu",
-            "Zhiyu Li",
-            "Linfeng Zhang"
-          ],
-          "subjects": [
-            "Computer Vision and Pattern Recognition"
-          ],
-          "abstract": "Vision agent memory has shown remarkable effectiveness in streaming video understanding. However, storing such memory for videos incurs substantial memory overhead, leading to high costs in both storage and computation. To address this issue, we propose StreamMeCo, an efficient Stream Agent Memory Compression framework. Specifically, based on the connectivity of the memory graph, StreamMeCo introduces edge-free minmax sampling for the isolated nodes and an edge-aware weight pruning for connected nodes, evicting the redundant memory nodes while maintaining the accuracy. In addition, we introduce a time-decay memory retrieval mechanism to further eliminate the performance degradation caused by memory compression. Extensive experiments on three challenging benchmark datasets (M3-Bench-robot, M3-Bench-web and Video-MME-Long) demonstrate that under 70% memory graph compression, StreamMeCo achieves a 1.87* speedup in memory retrieval while delivering an average accuracy improvement of 1.0%. Our code is available at https://github.com/Celina-love-sweet/StreamMeCo.",
-          "topic_key": "retrieval_knowledge",
-          "topic_label": "Retrieval, Knowledge, and RAG",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.78
+          "classification_confidence": 0.9
         },
         {
           "paper_id": "2604.08877",
@@ -3763,7 +3763,7 @@
           "topic_label": "Retrieval, Knowledge, and RAG",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.7
+          "classification_confidence": 0.82
         }
       ]
     },
@@ -3798,7 +3798,7 @@
           "topic_label": "Agents and Planning",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.78
+          "classification_confidence": 0.76
         },
         {
           "paper_id": "2604.09368",
@@ -3854,7 +3854,7 @@
           "topic_label": "Other AI",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.34
+          "classification_confidence": 0.35
         }
       ]
     }
@@ -3883,7 +3883,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.86
+      "classification_confidence": 0.88
     },
     {
       "paper_id": "2604.09535",
@@ -3912,7 +3912,7 @@
       "topic_label": "Multimodal Agents",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.62
+      "classification_confidence": 0.66
     },
     {
       "paper_id": "2604.09532",
@@ -3940,7 +3940,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.88
+      "classification_confidence": 0.86
     },
     {
       "paper_id": "2604.09531",
@@ -3966,7 +3966,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.83
+      "classification_confidence": 0.82
     },
     {
       "paper_id": "2604.09529",
@@ -4014,7 +4014,7 @@
       "topic_label": "Other AI",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.34
+      "classification_confidence": 0.35
     },
     {
       "paper_id": "2604.09511",
@@ -4037,7 +4037,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.68
+      "classification_confidence": 0.72
     },
     {
       "paper_id": "2604.09508",
@@ -4058,11 +4058,11 @@
         "Artificial Intelligence"
       ],
       "abstract": "Visual Retrieval-Augmented Generation (VRAG) empowers Vision-Language Models to retrieve and reason over visually rich documents. To tackle complex queries requiring multi-step reasoning, agentic VRAG systems interleave reasoning with iterative retrieval.. However, existing agentic VRAG faces two critical bottlenecks. (1) Visual Evidence Sparsity: key evidence is scattered across pages yet processed in isolation, hindering cross-page reasoning; moreover, fine-grained intra-image evidence often requires precise visual actions, whose misuse degrades retrieval quality; (2) Search Drift in Long Horizons: the accumulation of visual tokens across retrieved pages dilutes context and causes cognitive overload, leading agents to deviate from their search objective. To address these challenges, we propose VISOR (Visual Retrieval-Augmented Generation via Iterative Search and Over-horizon Reasoning), a unified single-agent framework. VISOR features a structured Evidence Space for progressive cross-page reasoning, coupled with a Visual Action Evaluation and Correction mechanism to manage visual actions. Additionally, we introduce a Dynamic Trajectory with Sliding Window and Intent Injection to mitigate search drift. They anchor the evidence space while discarding earlier raw interactions, preventing context from being overwhelmed by visual tokens. We train VISOR using a Group Relative Policy Optimization-based Reinforcement Learning (GRPO-based RL) pipeline with state masking and credit assignment tailored for dynamic context reconstruction. Extensive experiments on ViDoSeek, SlideVQA, and MMLongBench demonstrate that VISOR achieves state-of-the-art performance with superior efficiency for long-horizon visual reasoning tasks.",
-      "topic_key": "multimodal_agents",
-      "topic_label": "Multimodal Agents",
+      "topic_key": "retrieval_knowledge",
+      "topic_label": "Retrieval, Knowledge, and RAG",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.82
+      "classification_confidence": 0.76
     },
     {
       "paper_id": "2604.09480",
@@ -4086,7 +4086,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.72
+      "classification_confidence": 0.7
     },
     {
       "paper_id": "2604.09478",
@@ -4108,7 +4108,7 @@
       "topic_label": "Robotics and Embodied AI",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.78
+      "classification_confidence": 0.74
     },
     {
       "paper_id": "2604.09473",
@@ -4137,7 +4137,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.69
+      "classification_confidence": 0.68
     },
     {
       "paper_id": "2604.09445",
@@ -4159,7 +4159,7 @@
       "topic_label": "Robotics and Embodied AI",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.67
+      "classification_confidence": 0.64
     },
     {
       "paper_id": "2604.09436",
@@ -4180,7 +4180,7 @@
       "topic_label": "Generative Foundations",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.93
+      "classification_confidence": 0.9
     },
     {
       "paper_id": "2604.09429",
@@ -4205,11 +4205,11 @@
         "Machine Learning"
       ],
       "abstract": "Recovering camera parameters from images and rendering scenes from novel viewpoints have long been treated as separate tasks in computer vision and graphics. This separation breaks down when image coverage is sparse or poses are ambiguous, since each task needs what the other produces. We propose Rays as Pixels, a Video Diffusion Model (VDM) that learns a joint distribution over videos and camera trajectories. We represent each camera as dense ray pixels (raxels) and denoise them jointly with video frames through Decoupled Self-Cross Attention mechanism. A single trained model handles three tasks: predicting camera trajectories from video, jointly generating video and camera trajectory from input images, and generating video from input images along a target camera trajectory. Because the model can both predict trajectories from a video and generate views conditioned on its own predictions, we evaluate it through a closed-loop self-consistency test, demonstrating that its forward and inverse predictions agree. Notably, trajectory prediction requires far fewer denoising steps than video generation, even a few denoising steps suffice for self-consistency. We report results on pose estimation and camera-controlled video generation.",
-      "topic_key": "generative_foundations",
-      "topic_label": "Generative Foundations",
+      "topic_key": "multimodal_generative",
+      "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.74
+      "classification_confidence": 0.78
     },
     {
       "paper_id": "2604.09425",
@@ -4290,7 +4290,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.66
+      "classification_confidence": 0.76
     },
     {
       "paper_id": "2604.09411",
@@ -4312,7 +4312,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.71
+      "classification_confidence": 0.64
     },
     {
       "paper_id": "2604.09405",
@@ -4329,8 +4329,8 @@
         "Computer Vision and Pattern Recognition"
       ],
       "abstract": "As text-to-image diffusion models grow increasingly prevalent, the ability to remove specific concepts-mostly explicit content and many copyrighted characters or styles-has become essential for safety and compliance. Existing unlearning approaches often require costly re-training, modify parameters at the cost of degradation of unrelated concept fidelity, or depend on indirect inference-time adjustment that compromise the effectiveness of concept erasure. Inspired by the success of energy-guided sampling for preservation of the condition of diffusion models, we introduce Energy-Guided Latent Optimization for Concept Erasure (EGLOCE), a training-free approach that removes unwanted concepts by re-directing noisy latent during inference. Our method employs a dual-objective framework: a repulsion energy that steers generation away from target concepts via gradient descent in latent space, and a retention energy that preserves semantic alignment to the original prompt. Combined with previous approaches that either require erroneous modified model weights or provide weak inference-time guidance, EGLOCE operates entirely at inference and enhances erasure performance, enabling plug-and-play integration. Extensive experiments demonstrate that EGLOCE improves concept removal while maintaining image quality and prompt alignment across baselines, even with adversarial attacks. To the best of our knowledge, our work is the first to establish a new paradigm for safe and controllable image generation through dual energy-based guidance during sampling.",
-      "topic_key": "multimodal_generative",
-      "topic_label": "Multimodal Generative Modeling",
+      "topic_key": "generative_foundations",
+      "topic_label": "Generative Foundations",
       "matched_terms": [],
       "classification_source": "codex",
       "classification_confidence": 0.72
@@ -4379,7 +4379,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.58
+      "classification_confidence": 0.72
     },
     {
       "paper_id": "2604.09366",
@@ -4408,7 +4408,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.81
+      "classification_confidence": 0.78
     },
     {
       "paper_id": "2604.09364",
@@ -4432,7 +4432,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.82
+      "classification_confidence": 0.75
     },
     {
       "paper_id": "2604.09352",
@@ -4486,11 +4486,11 @@
         "Computation and Language"
       ],
       "abstract": "Reinforcement learning with verifiable rewards (RLVR) has significantly advanced the reasoning ability of vision-language models (VLMs). However, the inherent text-dominated nature of VLMs often leads to insufficient visual faithfulness, characterized by sparse attention activation to visual tokens. More importantly, our empirical analysis reveals that temporal visual forgetting along reasoning steps exacerbates this deficiency. To bridge this gap, we propose Visually-Guided Policy Optimization (VGPO), a novel framework to reinforce visual focus during policy optimization. Specifically, VGPO initially introduces a Visual Attention Compensation mechanism that leverages visual similarity to localize and amplify visual cues, while progressively elevating visual expectations in later steps to counteract visual forgetting. Building on this mechanism, we implement a dual-grained advantage re-weighting strategy: the intra-trajectory level highlights tokens exhibiting relatively high visual activation, while the inter-trajectory level prioritizes trajectories demonstrating superior visual accumulation. Extensive experiments demonstrate that VGPO achieves better visual activation and superior performance in mathematical multimodal reasoning and visual-dependent tasks.",
-      "topic_key": "reasoning_alignment_eval",
-      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.64
+      "classification_confidence": 0.72
     },
     {
       "paper_id": "2604.09327",
@@ -4513,7 +4513,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.74
+      "classification_confidence": 0.75
     },
     {
       "paper_id": "2604.09324",
@@ -4535,7 +4535,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.67
+      "classification_confidence": 0.66
     },
     {
       "paper_id": "2604.09305",
@@ -4555,7 +4555,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.73
+      "classification_confidence": 0.72
     },
     {
       "paper_id": "2604.09304",
@@ -4577,8 +4577,8 @@
         "Computer Vision and Pattern Recognition"
       ],
       "abstract": "For decades, Physically-Based Rendering (PBR) is the fundation of synthesizing photorealisitic images, and therefore sometimes roughly referred as Photorealistic Rendering (PRR). While PBR is indeed a mathematical simulation of light transport that guarantees physical reality, photorealism has additional reliance on the realistic digital model of geometry and appearance of the real world, leaving a barely explored gap from PBR to PRR (P2P). Consequently, the path toward photorealism faces a critical dilemma: the explicit simulation of PRR encumbered by unreachable realistic digital models for real-world existence, while implicit generation models sacrifice controllability and geometric consistency. Based on this insight, this paper presents the problem, data, and approach of mitigating P2P gap, followed by the first multi-modal generative rendering model, dubbed GeRM, to unify PBR and PRR. GeRM integrates physical attributes like G-buffers with text prompts, and progressive incremental injection to generate controllable photorealistic images, allowing users to fluidly navigate the continuum between strict physical fidelity and perceptual photorealism. Technically, we model the transition between PBR and PRR images as a distribution transfer and aim to learn a distribution transfer vector field (DTV Field) to guide this process. To define the learning objective, we first leverage a multi-agent VLM framework to construct an expert-guided pairwise P2P transfer dataset, named P2P-50K, where each paired sample in the dataset corresponds to a transfer vector in the DTV Field. Subsequently, we propose a multi-condition ControlNet to learn the DTV Field, which synthesizes PBR images and progressively transitions them into PRR images, guided by G-buffers, text prompts, and cues for enhanced regions.",
-      "topic_key": "generative_foundations",
-      "topic_label": "Generative Foundations",
+      "topic_key": "multimodal_generative",
+      "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
       "classification_confidence": 0.82
@@ -4604,7 +4604,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.71
+      "classification_confidence": 0.76
     },
     {
       "paper_id": "2604.09253",
@@ -4632,7 +4632,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.91
+      "classification_confidence": 0.86
     },
     {
       "paper_id": "2604.09249",
@@ -4661,7 +4661,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.92
+      "classification_confidence": 0.9
     },
     {
       "paper_id": "2604.09232",
@@ -4682,11 +4682,11 @@
         "Artificial Intelligence"
       ],
       "abstract": "LiDAR-based perception is critical for autonomous driving due to its robustness to poor lighting and visibility conditions. Yet, current models operate under the closed-set assumption and often fail to recognize unexpected out-of-distribution (OOD) objects in the open world. Existing OOD scoring functions exhibit limited performance because they ignore the pronounced class imbalance inherent in LiDAR OOD detection and assume a uniform class distribution. To address this limitation, we propose the Neural Distribution Prior (NDP), a framework that models the distributional structure of network predictions and adaptively reweights OOD scores based on alignment with a learned distribution prior. NDP dynamically captures the logit distribution patterns of training data and corrects class-dependent confidence bias through an attention-based module. We further introduce a Perlin noise-based OOD synthesis strategy that generates diverse auxiliary OOD samples from input scans, enabling robust OOD training without external datasets. Extensive experiments on the SemanticKITTI and STU benchmarks demonstrate that NDP substantially improves OOD detection performance, achieving a point-level AP of 61.31\\% on the STU test set, which is more than 10$\\times$ higher than the previous best result. Our framework is compatible with various existing OOD scoring formulations, providing an effective solution for open-world LiDAR perception.",
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
+      "topic_key": "reasoning_alignment_eval",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.69
+      "classification_confidence": 0.7
     },
     {
       "paper_id": "2604.09231",
@@ -4735,7 +4735,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.61
+      "classification_confidence": 0.62
     },
     {
       "paper_id": "2604.09213",
@@ -4756,7 +4756,7 @@
       "topic_label": "Generative Foundations",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.76
+      "classification_confidence": 0.84
     },
     {
       "paper_id": "2604.09210",
@@ -4773,11 +4773,11 @@
         "Computer Vision and Pattern Recognition"
       ],
       "abstract": "Monocular imaging of animals inherently reduces 3D structures to 2D projections. Detection algorithms lead to 2D bounding boxes that lack information about animal's orientation relative to the camera. To build 3D detection methods for RGB animal images, there is a lack of labeled datasets; such labeling processes require 3D input streams along with RGB data. We present a pipeline that utilises Skinned Multi Animal Linear models to estimate 3D bounding boxes and to project them as robust labels into 2D image space using a dedicated camera pose refinement algorithm. To assess which sides of the animal are captured, cuboid face visibility metrics are computed. These 3D bounding boxes and metrics form a crucial step toward developing and benchmarking future monocular 3D animal detection algorithms. We evaluate our method on the Animal3D dataset, demonstrating accurate performance across species and settings.",
-      "topic_key": "domain_applications",
-      "topic_label": "Domain Applications",
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.68
+      "classification_confidence": 0.62
     },
     {
       "paper_id": "2604.09206",
@@ -4806,7 +4806,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.72
+      "classification_confidence": 0.78
     },
     {
       "paper_id": "2604.09201",
@@ -4837,7 +4837,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.93
+      "classification_confidence": 0.94
     },
     {
       "paper_id": "2604.09199",
@@ -4906,7 +4906,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.94
     },
     {
       "paper_id": "2604.09181",
@@ -4928,7 +4928,7 @@
       "topic_label": "Generative Foundations",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.96
+      "classification_confidence": 0.95
     },
     {
       "paper_id": "2604.09169",
@@ -4952,7 +4952,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.86
+      "classification_confidence": 0.82
     },
     {
       "paper_id": "2604.09168",
@@ -4976,7 +4976,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.82
+      "classification_confidence": 0.88
     },
     {
       "paper_id": "2604.09167",
@@ -5001,7 +5001,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.74
+      "classification_confidence": 0.72
     },
     {
       "paper_id": "2604.09164",
@@ -5021,7 +5021,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.78
+      "classification_confidence": 0.68
     },
     {
       "paper_id": "2604.09151",
@@ -5041,7 +5041,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.84
+      "classification_confidence": 0.86
     },
     {
       "paper_id": "2604.09145",
@@ -5063,7 +5063,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.66
+      "classification_confidence": 0.65
     },
     {
       "paper_id": "2604.09142",
@@ -5087,7 +5087,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.8
+      "classification_confidence": 0.78
     },
     {
       "paper_id": "2604.09132",
@@ -5141,7 +5141,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.77
+      "classification_confidence": 0.7
     },
     {
       "paper_id": "2604.09125",
@@ -5162,7 +5162,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.7
+      "classification_confidence": 0.63
     },
     {
       "paper_id": "2604.09114",
@@ -5185,7 +5185,7 @@
       "topic_label": "Retrieval, Knowledge, and RAG",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.92
+      "classification_confidence": 0.9
     },
     {
       "paper_id": "2604.09106",
@@ -5206,7 +5206,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.68
+      "classification_confidence": 0.74
     },
     {
       "paper_id": "2604.09100",
@@ -5228,7 +5228,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.86
+      "classification_confidence": 0.84
     },
     {
       "paper_id": "2604.09096",
@@ -5279,7 +5279,7 @@
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.82
+      "classification_confidence": 0.74
     },
     {
       "paper_id": "2604.09076",
@@ -5325,7 +5325,7 @@
       "topic_label": "Generative Foundations",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.72
+      "classification_confidence": 0.78
     },
     {
       "paper_id": "2604.09062",
@@ -5371,7 +5371,7 @@
       "topic_label": "Multimodal Agents",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.98
+      "classification_confidence": 0.96
     },
     {
       "paper_id": "2604.09057",
@@ -5399,7 +5399,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.98
+      "classification_confidence": 0.97
     },
     {
       "paper_id": "2604.09051",
@@ -5428,7 +5428,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.82
+      "classification_confidence": 0.84
     },
     {
       "paper_id": "2604.09047",
@@ -5453,7 +5453,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.74
+      "classification_confidence": 0.68
     },
     {
       "paper_id": "2604.09045",
@@ -5475,7 +5475,7 @@
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.62
+      "classification_confidence": 0.66
     },
     {
       "paper_id": "2604.09037",
@@ -5507,7 +5507,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.84
+      "classification_confidence": 0.82
     },
     {
       "paper_id": "2604.09030",
@@ -5560,7 +5560,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.9
     },
     {
       "paper_id": "2604.09025",
@@ -5582,7 +5582,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.65
+      "classification_confidence": 0.7
     },
     {
       "paper_id": "2604.09024",
@@ -5607,7 +5607,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.88
+      "classification_confidence": 0.86
     },
     {
       "paper_id": "2604.09023",
@@ -5658,7 +5658,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.9
+      "classification_confidence": 0.86
     },
     {
       "paper_id": "2604.09018",
@@ -5682,7 +5682,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.75
+      "classification_confidence": 0.72
     },
     {
       "paper_id": "2604.09009",
@@ -5729,8 +5729,8 @@
         "Computer Vision and Pattern Recognition"
       ],
       "abstract": "Vision agent memory has shown remarkable effectiveness in streaming video understanding. However, storing such memory for videos incurs substantial memory overhead, leading to high costs in both storage and computation. To address this issue, we propose StreamMeCo, an efficient Stream Agent Memory Compression framework. Specifically, based on the connectivity of the memory graph, StreamMeCo introduces edge-free minmax sampling for the isolated nodes and an edge-aware weight pruning for connected nodes, evicting the redundant memory nodes while maintaining the accuracy. In addition, we introduce a time-decay memory retrieval mechanism to further eliminate the performance degradation caused by memory compression. Extensive experiments on three challenging benchmark datasets (M3-Bench-robot, M3-Bench-web and Video-MME-Long) demonstrate that under 70% memory graph compression, StreamMeCo achieves a 1.87* speedup in memory retrieval while delivering an average accuracy improvement of 1.0%. Our code is available at https://github.com/Celina-love-sweet/StreamMeCo.",
-      "topic_key": "retrieval_knowledge",
-      "topic_label": "Retrieval, Knowledge, and RAG",
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
       "classification_confidence": 0.78
@@ -5800,7 +5800,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.94
+      "classification_confidence": 0.95
     },
     {
       "paper_id": "2604.08990",
@@ -5828,7 +5828,7 @@
       "topic_label": "Agents and Planning",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.78
+      "classification_confidence": 0.76
     },
     {
       "paper_id": "2604.08966",
@@ -5851,7 +5851,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.84
+      "classification_confidence": 0.82
     },
     {
       "paper_id": "2604.08965",
@@ -5872,7 +5872,7 @@
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.76
+      "classification_confidence": 0.68
     },
     {
       "paper_id": "2604.08956",
@@ -5893,7 +5893,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.7
+      "classification_confidence": 0.62
     },
     {
       "paper_id": "2604.08945",
@@ -5917,7 +5917,7 @@
       "topic_label": "Multimodal Agents",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.9
+      "classification_confidence": 0.82
     },
     {
       "paper_id": "2604.08943",
@@ -5965,7 +5965,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.78
+      "classification_confidence": 0.84
     },
     {
       "paper_id": "2604.08924",
@@ -5989,7 +5989,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.82
+      "classification_confidence": 0.78
     },
     {
       "paper_id": "2604.08922",
@@ -6037,7 +6037,7 @@
       "topic_label": "Robotics and Embodied AI",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.84
+      "classification_confidence": 0.88
     },
     {
       "paper_id": "2604.08916",
@@ -6058,7 +6058,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.78
+      "classification_confidence": 0.8
     },
     {
       "paper_id": "2604.08915",
@@ -6085,7 +6085,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.72
+      "classification_confidence": 0.79
     },
     {
       "paper_id": "2604.08903",
@@ -6108,7 +6108,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.67
+      "classification_confidence": 0.62
     },
     {
       "paper_id": "2604.08896",
@@ -6128,8 +6128,8 @@
         "Computer Vision and Pattern Recognition"
       ],
       "abstract": "Recent advances in multimodal large language models (MLLMs) have accelerated progress in domain-oriented AI, yet their development in geoscience and remote sensing (RS) remains constrained by distinctive challenges: wide-ranging disciplinary knowledge, heterogeneous sensor modalities, and a fragmented spectrum of tasks. To bridge these gaps, we introduce GeoMMBench, a comprehensive multimodal question-answering benchmark covering diverse RS disciplines, sensors, and tasks, enabling broader and more rigorous evaluation than prior benchmarks. Using GeoMMBench, we assess 36 open-source and proprietary large language models, uncovering systematic deficiencies in domain knowledge, perceptual grounding, and reasoning--capabilities essential for expert-level geospatial interpretation. Beyond evaluation, we propose GeoMMAgent, a multi-agent framework that strategically integrates retrieval, perception, and reasoning through domain-specific RS models and tools. Extensive experimental results demonstrate that GeoMMAgent significantly outperforms standalone LLMs, underscoring the importance of tool-augmented agents for dynamically tackling complex geoscience and RS challenges.",
-      "topic_key": "multimodal_agents",
-      "topic_label": "Multimodal Agents",
+      "topic_key": "domain_applications",
+      "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
       "classification_confidence": 0.74
@@ -6212,7 +6212,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.88
+      "classification_confidence": 0.9
     },
     {
       "paper_id": "2604.08877",
@@ -6233,7 +6233,7 @@
       "topic_label": "Retrieval, Knowledge, and RAG",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.7
+      "classification_confidence": 0.82
     },
     {
       "paper_id": "2604.08858",
@@ -6253,7 +6253,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.75
+      "classification_confidence": 0.76
     },
     {
       "paper_id": "2604.08847",
@@ -6299,7 +6299,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.86
+      "classification_confidence": 0.87
     },
     {
       "paper_id": "2604.08819",
@@ -6322,7 +6322,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.78
+      "classification_confidence": 0.81
     },
     {
       "paper_id": "2604.08815",
@@ -6348,7 +6348,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.82
+      "classification_confidence": 0.86
     },
     {
       "paper_id": "2604.08810",
@@ -6378,7 +6378,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.86
+      "classification_confidence": 0.85
     },
     {
       "paper_id": "2604.08762",
@@ -6402,7 +6402,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.78
+      "classification_confidence": 0.79
     },
     {
       "paper_id": "2604.08761",
@@ -6444,7 +6444,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.94
+      "classification_confidence": 0.96
     },
     {
       "paper_id": "2604.08741",
@@ -6467,7 +6467,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.9
+      "classification_confidence": 0.89
     },
     {
       "paper_id": "2604.08722",
@@ -6490,7 +6490,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.68
+      "classification_confidence": 0.69
     },
     {
       "paper_id": "2604.08719",
@@ -6518,7 +6518,7 @@
       "topic_label": "Multimodal Agents",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.86
+      "classification_confidence": 0.88
     },
     {
       "paper_id": "2604.08718",
@@ -6548,7 +6548,7 @@
       "topic_label": "Robotics and Embodied AI",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.78
+      "classification_confidence": 0.8
     },
     {
       "paper_id": "2604.08716",
@@ -6569,7 +6569,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.9
+      "classification_confidence": 0.91
     },
     {
       "paper_id": "2604.08711",
@@ -6593,7 +6593,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.64
+      "classification_confidence": 0.68
     },
     {
       "paper_id": "2604.08704",
@@ -6614,7 +6614,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.76
+      "classification_confidence": 0.73
     },
     {
       "paper_id": "2604.08701",
@@ -6639,7 +6639,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.62
+      "classification_confidence": 0.65
     },
     {
       "paper_id": "2604.08694",
@@ -6660,7 +6660,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.76
+      "classification_confidence": 0.74
     },
     {
       "paper_id": "2604.08646",
@@ -6686,7 +6686,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.93
+      "classification_confidence": 0.94
     },
     {
       "paper_id": "2604.08645",
@@ -6710,7 +6710,7 @@
       "topic_label": "Multimodal Agents",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.92
     },
     {
       "paper_id": "2604.08641",
@@ -6733,7 +6733,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.68
+      "classification_confidence": 0.74
     },
     {
       "paper_id": "2604.08626",
@@ -6768,7 +6768,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.76
+      "classification_confidence": 0.73
     },
     {
       "paper_id": "2604.08615",
@@ -6795,7 +6795,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.86
+      "classification_confidence": 0.82
     },
     {
       "paper_id": "2604.08613",
@@ -6840,7 +6840,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.68
+      "classification_confidence": 0.7
     },
     {
       "paper_id": "2604.08609",
@@ -6861,7 +6861,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.8
+      "classification_confidence": 0.82
     },
     {
       "paper_id": "2604.09468",
@@ -6887,7 +6887,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.9
+      "classification_confidence": 0.92
     },
     {
       "paper_id": "2604.09421",
@@ -6912,7 +6912,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.72
+      "classification_confidence": 0.66
     },
     {
       "paper_id": "2604.09391",
@@ -6933,7 +6933,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.7
+      "classification_confidence": 0.72
     },
     {
       "paper_id": "2604.09370",
@@ -6956,7 +6956,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.83
+      "classification_confidence": 0.82
     },
     {
       "paper_id": "2604.09368",
@@ -7012,7 +7012,7 @@
       "topic_label": "Multimodal Agents",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.86
+      "classification_confidence": 0.91
     },
     {
       "paper_id": "2604.09326",
@@ -7032,11 +7032,11 @@
         "Computer Vision and Pattern Recognition"
       ],
       "abstract": "Ensuring safety and reliability in human-robot interaction (HRI) requires the timely detection of unexpected events that could lead to system failures or unsafe behaviours. Anomaly detection thus plays a critical role in enabling robots to recognize and respond to deviations from normal operation during collaborative tasks. While reconstruction models have been actively explored in HRI, approaches that operate directly on feature vectors remain largely unexplored. In this work, we propose MADRI, a framework that first transforms video streams into semantically meaningful feature vectors before performing reconstruction-based anomaly detection. Additionally, we augment these visual feature vectors with the robot's internal sensors' readings and a Scene Graph, enabling the model to capture both external anomalies in the visual environment and internal failures within the robot itself. To evaluate our approach, we collected a custom dataset consisting of a simple pick-and-place robotic task under normal and anomalous conditions. Experimental results demonstrate that reconstruction on vision-based feature vectors alone is effective for detecting anomalies, while incorporating other modalities further improves detection performance, highlighting the benefits of multimodal feature reconstruction for robust anomaly detection in human-robot collaboration.",
-      "topic_key": "robotics_embodied",
-      "topic_label": "Robotics and Embodied AI",
+      "topic_key": "multimodal_agents",
+      "topic_label": "Multimodal Agents",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.74
+      "classification_confidence": 0.76
     },
     {
       "paper_id": "2604.09321",
@@ -7066,7 +7066,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.78
+      "classification_confidence": 0.75
     },
     {
       "paper_id": "2604.09313",
@@ -7091,7 +7091,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.57
+      "classification_confidence": 0.61
     },
     {
       "paper_id": "2604.09282",
@@ -7112,7 +7112,7 @@
       "topic_label": "Robotics and Embodied AI",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.55
+      "classification_confidence": 0.59
     },
     {
       "paper_id": "2604.09280",
@@ -7142,7 +7142,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.9
+      "classification_confidence": 0.91
     },
     {
       "paper_id": "2604.09244",
@@ -7173,7 +7173,7 @@
       "topic_label": "Multimodal Agents",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.88
+      "classification_confidence": 0.93
     },
     {
       "paper_id": "2604.09227",
@@ -7195,7 +7195,7 @@
       "topic_label": "Generative Foundations",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.81
+      "classification_confidence": 0.83
     },
     {
       "paper_id": "2604.09101",
@@ -7220,7 +7220,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.74
+      "classification_confidence": 0.72
     },
     {
       "paper_id": "2604.09038",
@@ -7248,7 +7248,7 @@
       "topic_label": "Robotics and Embodied AI",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.72
+      "classification_confidence": 0.78
     },
     {
       "paper_id": "2604.08894",
@@ -7274,7 +7274,7 @@
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.58
+      "classification_confidence": 0.52
     },
     {
       "paper_id": "2604.08868",
@@ -7298,7 +7298,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.85
+      "classification_confidence": 0.91
     },
     {
       "paper_id": "2604.08846",
@@ -7327,7 +7327,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.76
+      "classification_confidence": 0.74
     },
     {
       "paper_id": "2604.08828",
@@ -7348,7 +7348,7 @@
       "topic_label": "Generative Foundations",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.91
+      "classification_confidence": 0.92
     },
     {
       "paper_id": "2604.08799",
@@ -7372,7 +7372,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.66
+      "classification_confidence": 0.62
     },
     {
       "paper_id": "2604.08781",
@@ -7401,7 +7401,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.87
+      "classification_confidence": 0.88
     },
     {
       "paper_id": "2604.08746",
@@ -7429,7 +7429,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.92
+      "classification_confidence": 0.94
     },
     {
       "paper_id": "2604.08639",
@@ -7478,7 +7478,7 @@
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.76
+      "classification_confidence": 0.73
     },
     {
       "paper_id": "2604.08598",
@@ -7501,7 +7501,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.71
+      "classification_confidence": 0.72
     },
     {
       "paper_id": "2604.08573",
@@ -7523,7 +7523,7 @@
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.73
+      "classification_confidence": 0.79
     },
     {
       "paper_id": "2604.08572",
@@ -7544,7 +7544,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.78
+      "classification_confidence": 0.76
     }
   ]
 }
