@@ -381,17 +381,22 @@ def send_update_notification(job: str, date_window: list[str], timezone_name: st
     print("Notification: email sent")
 
 
-def run_command_with_retries(command: list[str], retries: int = 3) -> None:
+def run_command_with_retries(command: list[str], retries: int = 3, timeout_seconds: int | None = None) -> None:
     attempts = max(1, retries)
     for attempt in range(1, attempts + 1):
         try:
-            run_command(command)
+            print("+", " ".join(command))
+            subprocess.run(command, cwd=ROOT_DIR, check=True, timeout=timeout_seconds)
             return
-        except subprocess.CalledProcessError as exc:
+        except (subprocess.CalledProcessError, subprocess.TimeoutExpired) as exc:
             if attempt >= attempts:
                 raise
+            if isinstance(exc, subprocess.TimeoutExpired):
+                detail = f"timed out after {timeout_seconds} seconds"
+            else:
+                detail = f"exit code {exc.returncode}"
             print(
-                f"Retrying after exit code {exc.returncode} "
+                f"Retrying after {detail} "
                 f"({attempt}/{attempts - 1}): {' '.join(command)}"
             )
             time.sleep(attempt * 5)
@@ -416,7 +421,8 @@ def commit_and_push(job: str, date_window: list[str], remote: str, branch: str) 
 
     message = f"chore(auto): update {job} {summarize_date_window(date_window)}"
     run_command(["git", "commit", "-m", message])
-    run_command_with_retries(["git", "push", remote, resolved_branch], retries=3)
+    push_timeout = int(os.environ.get("COOL_PAPER_GIT_PUSH_TIMEOUT_SECONDS", "180"))
+    run_command_with_retries(["git", "push", remote, resolved_branch], retries=3, timeout_seconds=push_timeout)
 
 
 def main() -> int:
