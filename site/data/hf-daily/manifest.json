@@ -1,10 +1,90 @@
 {
   "branch_key": "hf-daily",
   "branch_label": "HF Daily",
-  "generated_at": "2026-04-14T05:48:01Z",
-  "reports_count": 32,
-  "default_report_path": "data/hf-daily/reports/2026-04-14/hf-daily-2026-04-14.json",
+  "generated_at": "2026-04-15T16:19:08Z",
+  "reports_count": 33,
+  "default_report_path": "data/hf-daily/reports/2026-04-15/hf-daily-2026-04-15.json",
   "reports": [
+    {
+      "branch_key": "hf-daily",
+      "branch_label": "HF Daily",
+      "data_path": "data/hf-daily/reports/2026-04-15/hf-daily-2026-04-15.json",
+      "slug": "hf-daily-2026-04-15",
+      "report_date": "2026-04-15",
+      "total_papers": 31,
+      "classifier": "codex",
+      "generated_at": "2026-04-15T16:19:07Z",
+      "source_url": "https://huggingface.co/papers/date/2026-04-15",
+      "focus_topics": [
+        {
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "count": 3,
+          "share": 9.68
+        },
+        {
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 5,
+          "share": 16.13
+        },
+        {
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "count": 2,
+          "share": 6.45
+        }
+      ],
+      "top_topics": [
+        {
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "count": 6,
+          "share": 19.35
+        },
+        {
+          "topic_label": "Agents and Planning",
+          "count": 5,
+          "share": 16.13
+        },
+        {
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 5,
+          "share": 16.13
+        },
+        {
+          "topic_label": "Datasets and Benchmarks",
+          "count": 3,
+          "share": 9.68
+        },
+        {
+          "topic_label": "Generative Foundations",
+          "count": 3,
+          "share": 9.68
+        }
+      ],
+      "top_submitters": [
+        {
+          "submitted_by": "taesiri",
+          "count": 5
+        },
+        {
+          "submitted_by": "Aman Chadha",
+          "count": 1
+        },
+        {
+          "submitted_by": "Amir Hossein Kargaran",
+          "count": 1
+        },
+        {
+          "submitted_by": "Arda Senocak",
+          "count": 1
+        },
+        {
+          "submitted_by": "Bingxiang He",
+          "count": 1
+        }
+      ]
+    },
     {
       "branch_key": "hf-daily",
       "branch_label": "HF Daily",
