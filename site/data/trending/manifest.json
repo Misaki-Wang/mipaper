@@ -1,10 +1,150 @@
 {
   "branch_key": "trending",
   "branch_label": "Trending",
-  "generated_at": "2026-04-13T04:00:13Z",
-  "reports_count": 7,
-  "default_report_path": "data/trending/reports/2026-04-13/trending-2026-04-13.json",
+  "generated_at": "2026-04-21T05:20:10Z",
+  "reports_count": 8,
+  "default_report_path": "data/trending/reports/2026-04-21/trending-2026-04-21.json",
   "reports": [
+    {
+      "branch_key": "trending",
+      "branch_label": "Trending",
+      "data_path": "data/trending/reports/2026-04-21/trending-2026-04-21.json",
+      "slug": "trending-2026-04-21",
+      "snapshot_date": "2026-04-21",
+      "since": "weekly",
+      "total_repositories": 16,
+      "generated_at": "2026-04-21T05:19:59Z",
+      "source_url": "https://github.com/trending?since=weekly&spoken_language_code=",
+      "top_languages": [
+        {
+          "language": "Python",
+          "count": 7,
+          "share": 43.75
+        },
+        {
+          "language": "TypeScript",
+          "count": 3,
+          "share": 18.75
+        },
+        {
+          "language": "Assembly",
+          "count": 1,
+          "share": 6.25
+        },
+        {
+          "language": "Dart",
+          "count": 1,
+          "share": 6.25
+        },
+        {
+          "language": "JavaScript",
+          "count": 1,
+          "share": 6.25
+        }
+      ],
+      "top_repositories": [
+        {
+          "snapshot_date": "2026-04-21",
+          "repo_id": "forrestchang/andrej-karpathy-skills",
+          "owner": "forrestchang",
+          "name": "andrej-karpathy-skills",
+          "full_name": "forrestchang/andrej-karpathy-skills",
+          "repo_url": "https://github.com/forrestchang/andrej-karpathy-skills",
+          "description": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
+          "language": "",
+          "stars": 68147,
+          "forks": 6103,
+          "stars_this_week": 44394,
+          "built_by": [
+            "forrestchang",
+            "claude",
+            "back1ply",
+            "herobrine19",
+            "szkocot"
+          ]
+        },
+        {
+          "snapshot_date": "2026-04-21",
+          "repo_id": "nousresearch/hermes-agent",
+          "owner": "NousResearch",
+          "name": "hermes-agent",
+          "full_name": "NousResearch/hermes-agent",
+          "repo_url": "https://github.com/NousResearch/hermes-agent",
+          "description": "The agent that grows with you",
+          "language": "Python",
+          "stars": 106038,
+          "forks": 15180,
+          "stars_this_week": 30630,
+          "built_by": [
+            "teknium1",
+            "OutThisLife",
+            "0xbyt4",
+            "kshitijk4poor",
+            "claude"
+          ]
+        },
+        {
+          "snapshot_date": "2026-04-21",
+          "repo_id": "thedotmack/claude-mem",
+          "owner": "thedotmack",
+          "name": "claude-mem",
+          "full_name": "thedotmack/claude-mem",
+          "repo_url": "https://github.com/thedotmack/claude-mem",
+          "description": "A Claude Code plugin that automatically captures everything Claude does during your coding sessions, compresses it with AI (using Claude's agent-sdk), and injects relevant context back into future sessions.",
+          "language": "TypeScript",
+          "stars": 64536,
+          "forks": 5431,
+          "stars_this_week": 12472,
+          "built_by": [
+            "thedotmack",
+            "claude",
+            "Copilot",
+            "ousamabenyounes",
+            "rodboev"
+          ]
+        },
+        {
+          "snapshot_date": "2026-04-21",
+          "repo_id": "microsoft/markitdown",
+          "owner": "microsoft",
+          "name": "markitdown",
+          "full_name": "microsoft/markitdown",
+          "repo_url": "https://github.com/microsoft/markitdown",
+          "description": "Python tool for converting files and office documents to Markdown.",
+          "language": "Python",
+          "stars": 113524,
+          "forks": 7377,
+          "stars_this_week": 7084,
+          "built_by": [
+            "afourney",
+            "gagb",
+            "sugatoray",
+            "PetrAPConsulting",
+            "l-lumin"
+          ]
+        },
+        {
+          "snapshot_date": "2026-04-21",
+          "repo_id": "multica-ai/multica",
+          "owner": "multica-ai",
+          "name": "multica",
+          "full_name": "multica-ai/multica",
+          "repo_url": "https://github.com/multica-ai/multica",
+          "description": "The open-source managed agents platform. Turn coding agents into real teammates — assign tasks, track progress, compound skills.",
+          "language": "TypeScript",
+          "stars": 17832,
+          "forks": 2189,
+          "stars_this_week": 7009,
+          "built_by": [
+            "claude",
+            "forrestchang",
+            "NevilleQingNY",
+            "Bohan-J",
+            "ldnvnbl"
+          ]
+        }
+      ]
+    },
     {
       "branch_key": "trending",
       "branch_label": "Trending",

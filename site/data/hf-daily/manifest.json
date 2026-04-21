@@ -1,10 +1,250 @@
 {
   "branch_key": "hf-daily",
   "branch_label": "HF Daily",
-  "generated_at": "2026-04-16T15:29:49Z",
-  "reports_count": 34,
-  "default_report_path": "data/hf-daily/reports/2026-04-16/hf-daily-2026-04-16.json",
+  "generated_at": "2026-04-21T05:20:10Z",
+  "reports_count": 37,
+  "default_report_path": "data/hf-daily/reports/2026-04-21/hf-daily-2026-04-21.json",
   "reports": [
+    {
+      "branch_key": "hf-daily",
+      "branch_label": "HF Daily",
+      "data_path": "data/hf-daily/reports/2026-04-21/hf-daily-2026-04-21.json",
+      "slug": "hf-daily-2026-04-21",
+      "report_date": "2026-04-21",
+      "total_papers": 26,
+      "classifier": "codex",
+      "generated_at": "2026-04-21T05:19:43Z",
+      "source_url": "https://huggingface.co/papers/date/2026-04-21",
+      "focus_topics": [
+        {
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "count": 1,
+          "share": 3.85
+        },
+        {
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 2,
+          "share": 7.69
+        },
+        {
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "count": 1,
+          "share": 3.85
+        }
+      ],
+      "top_topics": [
+        {
+          "topic_label": "Agents and Planning",
+          "count": 5,
+          "share": 19.23
+        },
+        {
+          "topic_label": "Datasets and Benchmarks",
+          "count": 5,
+          "share": 19.23
+        },
+        {
+          "topic_label": "Domain Applications",
+          "count": 3,
+          "share": 11.54
+        },
+        {
+          "topic_label": "Learning, Optimization, and Theory",
+          "count": 3,
+          "share": 11.54
+        },
+        {
+          "topic_label": "Multimodal Understanding and Vision",
+          "count": 3,
+          "share": 11.54
+        }
+      ],
+      "top_submitters": [
+        {
+          "submitted_by": "taesiri",
+          "count": 5
+        },
+        {
+          "submitted_by": "Prashant Raju",
+          "count": 2
+        },
+        {
+          "submitted_by": "Andrew Luo",
+          "count": 1
+        },
+        {
+          "submitted_by": "Bo Li",
+          "count": 1
+        },
+        {
+          "submitted_by": "Connor T. Jerzak",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "branch_key": "hf-daily",
+      "branch_label": "HF Daily",
+      "data_path": "data/hf-daily/reports/2026-04-20/hf-daily-2026-04-20.json",
+      "slug": "hf-daily-2026-04-20",
+      "report_date": "2026-04-20",
+      "total_papers": 28,
+      "classifier": "codex",
+      "generated_at": "2026-04-21T05:19:44Z",
+      "source_url": "https://huggingface.co/papers/date/2026-04-20",
+      "focus_topics": [
+        {
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "count": 2,
+          "share": 7.14
+        },
+        {
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 2,
+          "share": 7.14
+        },
+        {
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "count": 0,
+          "share": 0.0
+        }
+      ],
+      "top_topics": [
+        {
+          "topic_label": "Datasets and Benchmarks",
+          "count": 6,
+          "share": 21.43
+        },
+        {
+          "topic_label": "Multimodal Understanding and Vision",
+          "count": 4,
+          "share": 14.29
+        },
+        {
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "count": 4,
+          "share": 14.29
+        },
+        {
+          "topic_label": "Agents and Planning",
+          "count": 3,
+          "share": 10.71
+        },
+        {
+          "topic_label": "Learning, Optimization, and Theory",
+          "count": 3,
+          "share": 10.71
+        }
+      ],
+      "top_submitters": [
+        {
+          "submitted_by": "taesiri",
+          "count": 3
+        },
+        {
+          "submitted_by": "Alexey Khoroshilov",
+          "count": 1
+        },
+        {
+          "submitted_by": "Andrey Moskalenko",
+          "count": 1
+        },
+        {
+          "submitted_by": "Biao Wang",
+          "count": 1
+        },
+        {
+          "submitted_by": "Chaoyou Fu",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "branch_key": "hf-daily",
+      "branch_label": "HF Daily",
+      "data_path": "data/hf-daily/reports/2026-04-17/hf-daily-2026-04-17.json",
+      "slug": "hf-daily-2026-04-17",
+      "report_date": "2026-04-17",
+      "total_papers": 29,
+      "classifier": "codex",
+      "generated_at": "2026-04-21T05:19:49Z",
+      "source_url": "https://huggingface.co/papers/date/2026-04-17",
+      "focus_topics": [
+        {
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "count": 2,
+          "share": 6.9
+        },
+        {
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 5,
+          "share": 17.24
+        },
+        {
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "count": 2,
+          "share": 6.9
+        }
+      ],
+      "top_topics": [
+        {
+          "topic_label": "LLMs and Language",
+          "count": 5,
+          "share": 17.24
+        },
+        {
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 5,
+          "share": 17.24
+        },
+        {
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "count": 5,
+          "share": 17.24
+        },
+        {
+          "topic_label": "Retrieval, Knowledge, and RAG",
+          "count": 3,
+          "share": 10.34
+        },
+        {
+          "topic_label": "Domain Applications",
+          "count": 2,
+          "share": 6.9
+        }
+      ],
+      "top_submitters": [
+        {
+          "submitted_by": "taesiri",
+          "count": 5
+        },
+        {
+          "submitted_by": "Adina Yakefu",
+          "count": 1
+        },
+        {
+          "submitted_by": "Akira Kawabata",
+          "count": 1
+        },
+        {
+          "submitted_by": "Bhardwaj",
+          "count": 1
+        },
+        {
+          "submitted_by": "Chuangtao Chen",
+          "count": 1
+        }
+      ]
+    },
     {
       "branch_key": "hf-daily",
       "branch_label": "HF Daily",

@@ -82,9 +82,16 @@ class SchedulerHelpersTest(unittest.TestCase):
         thursday = datetime.fromisoformat("2026-04-02T12:00:00+08:00")
         friday_morning = datetime.fromisoformat("2026-04-03T11:59:00+08:00")
         friday_noon = datetime.fromisoformat("2026-04-03T12:00:00+08:00")
-        self.assertEqual([], magazine_backfill_dates("2026-03-02", "Asia/Shanghai", now=thursday))
-        self.assertEqual([], magazine_backfill_dates("2026-03-02", "Asia/Shanghai", now=friday_morning))
+        self.assertEqual(["2026-03-27"], magazine_backfill_dates("2026-03-02", "Asia/Shanghai", now=thursday))
+        self.assertEqual(["2026-03-27"], magazine_backfill_dates("2026-03-02", "Asia/Shanghai", now=friday_morning))
         self.assertEqual(["2026-04-03"], magazine_backfill_dates("2026-03-02", "Asia/Shanghai", now=friday_noon))
+
+    def test_magazine_backfill_dates_catches_up_missed_friday(self) -> None:
+        tuesday = datetime.fromisoformat("2026-04-21T13:00:00+08:00")
+        self.assertEqual(
+            ["2026-04-17"],
+            magazine_backfill_dates("2026-03-02", "Asia/Shanghai", last_success_date="2026-04-10", now=tuesday),
+        )
 
     def test_magazine_backfill_dates_runs_once_per_iso_week(self) -> None:
         saturday = datetime.fromisoformat("2026-04-04T09:00:00+08:00")

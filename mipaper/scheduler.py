@@ -116,13 +116,20 @@ def magazine_backfill_dates(
     anchor_date = parse_iso_date(start_date)
     if current_date < anchor_date:
         return []
+
+    candidate_date = current_date
     if current_date.weekday() < 4:
+        candidate_date = current_date - timedelta(days=current_date.weekday() + 3)
+    elif current_date.weekday() == 4 and (current_datetime.hour, current_datetime.minute) < (12, 0):
+        candidate_date = current_date - timedelta(days=7)
+    elif current_date.weekday() > 4:
+        candidate_date = current_date - timedelta(days=current_date.weekday() - 4)
+
+    if candidate_date < anchor_date:
         return []
-    if current_date.weekday() == 4 and (current_datetime.hour, current_datetime.minute) < (12, 0):
+    if last_success_date and iso_week_key(parse_iso_date(last_success_date)) == iso_week_key(candidate_date):
         return []
-    if last_success_date and iso_week_key(parse_iso_date(last_success_date)) == iso_week_key(current_date):
-        return []
-    return [current_date.isoformat()]
+    return [candidate_date.isoformat()]
 
 
 def load_schedule_state(path: Path) -> dict:
