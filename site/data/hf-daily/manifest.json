@@ -1,10 +1,90 @@
 {
   "branch_key": "hf-daily",
   "branch_label": "HF Daily",
-  "generated_at": "2026-04-21T05:20:10Z",
-  "reports_count": 37,
-  "default_report_path": "data/hf-daily/reports/2026-04-21/hf-daily-2026-04-21.json",
+  "generated_at": "2026-04-22T15:02:21Z",
+  "reports_count": 38,
+  "default_report_path": "data/hf-daily/reports/2026-04-22/hf-daily-2026-04-22.json",
   "reports": [
+    {
+      "branch_key": "hf-daily",
+      "branch_label": "HF Daily",
+      "data_path": "data/hf-daily/reports/2026-04-22/hf-daily-2026-04-22.json",
+      "slug": "hf-daily-2026-04-22",
+      "report_date": "2026-04-22",
+      "total_papers": 35,
+      "classifier": "codex",
+      "generated_at": "2026-04-22T15:02:20Z",
+      "source_url": "https://huggingface.co/papers/date/2026-04-22",
+      "focus_topics": [
+        {
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "count": 1,
+          "share": 2.86
+        },
+        {
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 9,
+          "share": 25.71
+        },
+        {
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "count": 0,
+          "share": 0.0
+        }
+      ],
+      "top_topics": [
+        {
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 9,
+          "share": 25.71
+        },
+        {
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "count": 6,
+          "share": 17.14
+        },
+        {
+          "topic_label": "Learning, Optimization, and Theory",
+          "count": 4,
+          "share": 11.43
+        },
+        {
+          "topic_label": "Agents and Planning",
+          "count": 3,
+          "share": 8.57
+        },
+        {
+          "topic_label": "Domain Applications",
+          "count": 3,
+          "share": 8.57
+        }
+      ],
+      "top_submitters": [
+        {
+          "submitted_by": "taesiri",
+          "count": 5
+        },
+        {
+          "submitted_by": "Aditya Kanade",
+          "count": 2
+        },
+        {
+          "submitted_by": "Qingcheng Zeng",
+          "count": 2
+        },
+        {
+          "submitted_by": "ChonghuinanWang",
+          "count": 1
+        },
+        {
+          "submitted_by": "Gene Chou",
+          "count": 1
+        }
+      ]
+    },
     {
       "branch_key": "hf-daily",
       "branch_label": "HF Daily",
