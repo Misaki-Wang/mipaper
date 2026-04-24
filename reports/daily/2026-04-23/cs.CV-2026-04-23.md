@@ -8,17 +8,17 @@
 ## Focus Topics
 
 - Generative Foundations: 9 papers (8.49%)
-- Multimodal Generative Modeling: 16 papers (15.09%)
+- Multimodal Generative Modeling: 14 papers (13.21%)
 - Multimodal Agents: 5 papers (4.72%)
 
 ## Topic Distribution Analysis
 
 - Multimodal Understanding and Vision: 26 papers (24.53%)
-- Domain Applications: 16 papers (15.09%)
-- Multimodal Generative Modeling: 16 papers (15.09%)
-- Datasets and Benchmarks: 12 papers (11.32%)
+- Domain Applications: 19 papers (17.92%)
+- Multimodal Generative Modeling: 14 papers (13.21%)
+- Datasets and Benchmarks: 10 papers (9.43%)
 - Generative Foundations: 9 papers (8.49%)
-- Reasoning, Alignment, and Evaluation: 8 papers (7.55%)
+- Reasoning, Alignment, and Evaluation: 9 papers (8.49%)
 - Learning, Optimization, and Theory: 6 papers (5.66%)
 - Multimodal Agents: 5 papers (4.72%)
 - Retrieval, Knowledge, and RAG: 3 papers (2.83%)
@@ -29,7 +29,7 @@
 ### Brief Notes
 
 - The largest topic today is “Multimodal Understanding and Vision”, with 26 papers, accounting for 24.53%。
-- The top 3 topics account for 54.71%，dispersed。
+- The top 3 topics account for 55.66%，dispersed。
 - Long-tail topics with only one paper: 2 items。
 
 ## Multimodal Understanding and Vision (26 papers, 24.53%)
@@ -61,13 +61,6 @@
     <summary>Abstract</summary>
 
     Amodal segmentation is a challenging task that aims to predict the complete geometric shape of objects, including their occluded regions. Although existing methods primarily focus on amodal segmentation within the training domain, these approaches often lack the generalization capacity to extend effectively to novel object categories and unseen contexts. This paper introduces Amodal SAM, a unified framework that leverages SAM (Segment Anything Model) for both amodal image and amodal video segmentation. Amodal SAM preserves the powerful generalization ability of SAM while extending its inherent capabilities to the amodal segmentation task. The improvements lie in three aspects: (1) a lightweight Spatial Completion Adapter that enables occluded region reconstruction, (2) a Target-Aware Occlusion Synthesis (TAOS) pipeline that addresses the scarcity of amodal annotations by generating diverse synthetic training data, and (3) novel learning objectives that enforce regional consistency and topological regularization. Extensive experiments demonstrate that Amodal SAM achieves state-of-the-art performance on standard benchmarks, while simultaneously exhibiting robust generalization to novel scenarios. We anticipate that this research will advance the field toward practical amodal segmentation systems capable of operating effectively in unconstrained real-world environments.
-    </details>
-- [SSL-R1: Self-Supervised Visual Reinforcement Post-Training for Multimodal Large Language Models](https://arxiv.org/pdf/2604.20705)
-  - Authors: Jiahao Xie, Alessio Tonioni, Nathalie Rauschmayr, Federico Tombari, Bernt Schiele
-  - <details>
-    <summary>Abstract</summary>
-
-    Reinforcement learning (RL) with verifiable rewards (RLVR) has demonstrated the great potential of enhancing the reasoning abilities in multimodal large language models (MLLMs). However, the reliance on language-centric priors and expensive manual annotations prevents MLLMs' intrinsic visual understanding and scalable reward designs. In this work, we introduce SSL-R1, a generic self-supervised RL framework that derives verifiable rewards directly from images. To this end, we revisit self-supervised learning (SSL) in visual domains and reformulate widely-used SSL tasks into a set of verifiable visual puzzles for RL post-training, requiring neither human nor external model supervision. Training MLLMs on these tasks substantially improves their performance on multimodal understanding and reasoning benchmarks, highlighting the potential of leveraging vision-centric self-supervised tasks for MLLM post-training. We think this work will provide useful experience in devising effective self-supervised verifiable rewards to enable RL at scale. Project page: https://github.com/Jiahao000/SSL-R1.
     </details>
 - [Random Walk on Point Clouds for Feature Detection](https://arxiv.org/pdf/2604.20474)
   - Authors: Yuhe Zhang, Zhikun Tu, Zhi Li, Jian Gao, Bao Guo, Shunli Zhang
@@ -110,13 +103,6 @@
     <summary>Abstract</summary>
 
     In this paper, a deep learning framework is proposed for automatic facial emotion based on deep convolutional networks. In order to increase the generalization ability and the robustness of the method, the dataset size is increased by merging three publicly available facial emotion datasets: CK+, FER+ and KDEF. Despite the increase in dataset size, the minority classes still suffer from insufficient number of training samples, leading to data imbalance. The data imbalance problem is minimized by online and offline augmentation techniques and random weighted sampling. Experimental results demonstrate that the proposed method can recognize the seven basic emotions with 82% accuracy. The results demonstrate the effectiveness of the proposed approach in tackling the challenges of data imbalance and improving classification performance in facial emotion recognition.
-    </details>
-- [Efficient INT8 Single-Image Super-Resolution via Deployment-Aware Quantization and Teacher-Guided Training](https://arxiv.org/pdf/2604.20291)
-  - Authors: Pham Phuong Nam Nguyen, Nam Tien Le, Thi Kim Trang Vo, Nhu Tinh Anh Nguyen
-  - <details>
-    <summary>Abstract</summary>
-
-    Efficient single-image super-resolution (SISR) requires balancing reconstruction fidelity, model compactness, and robustness under low-bit deployment, which is especially challenging for x3 SR. We present a deployment-oriented quantized SISR framework based on an extract-refine-upsample design. The student performs most computation in the low-resolution space and uses a lightweight re-parameterizable backbone with PixelShuffle reconstruction, yielding a compact inference graph. To improve quality without significantly increasing complexity, we adopt a three-stage training pipeline: Stage 1 learns a basic reconstruction mapping with spatial supervision; Stage 2 refines fidelity using Charbonnier loss, DCT-domain supervision, and confidence-weighted output-level distillation from a Mamba-based teacher; and Stage 3 applies quantization-aware training directly on the fused deploy graph. We further use weight clipping and BatchNorm recalibration to improve quantization stability. On the MAI 2026 Quantized 4K Image Super-Resolution Challenge test set, our final AIO MAI submission achieves 29.79 dB PSNR and 0.8634 SSIM, obtaining a final score of 1.8 under the target mobile INT8 deployment setting. Ablation on Stage 3 optimization shows that teacher-guided supervision improves the dynamic INT8 TFLite reconstruction from 29.91 dB/0.853 to 30.0003 dB/0.856, while the fixed-shape deployable INT8 TFLite artifact attains 30.006 dB/0.857.
     </details>
 - [Fourier Series Coder: A Novel Perspective on Angle Boundary Discontinuity Problem for Oriented Object Detection](https://arxiv.org/pdf/2604.20281)
   - Authors: Minghong Wei, Pu Cao, Zhihao Chen, Zhiyuan Zang, Lu Yang, Qing Song
@@ -216,8 +202,22 @@
 
     Driver gaze estimation is essential for understanding the driver's situational awareness of surrounding traffic. Existing gaze estimation models use driver facial information to predict the Point-of-Gaze (PoG) or the 3D gaze direction vector. We propose a benchmark dataset, Urban Driving-Face Scene Gaze (UD-FSG), comprising synchronized driver-face and traffic-scene images. The scene images provide cues about surrounding traffic, which can help improve the gaze estimation model, along with the face images. We propose SGAP-Gaze, Scene-Grid Attention based Point-of-Gaze estimation network, trained and tested on our UD-FSG dataset, which explicitly incorporates the scene images into the gaze estimation modelling. The gaze estimation network integrates driver face, eye, iris, and scene contextual information. First, the extracted features from facial modalities are fused to form a gaze intent vector. Then, attention scores are computed over the spatial scene grid using a Transformer-based attention mechanism fusing face and scene image features to obtain the PoG. The proposed SGAP-Gaze model achieves a mean pixel error of 104.73 on the UD-FSG dataset and 63.48 on LBW dataset, achieving a 23.5% reduction in mean pixel error compared to state-of-the-art driver gaze estimation models. The spatial pixel distribution analysis shows that SGAP-Gaze consistently achieves lower mean pixel error than existing methods across all spatial ranges, including the outer regions of the scene, which are rare but critical for understanding driver attention. These results highlight the effectiveness of integrating multi-modal gaze cues with scene-aware attention for a robust driver PoG estimation model in real-world driving environments.
     </details>
+- [TactileEval: A Step Towards Automated Fine-Grained Evaluation and Editing of Tactile Graphics](https://arxiv.org/pdf/2604.19829)
+  - Authors: Adnan Khan, Abbas Akkasi, Majid Komeili
+  - <details>
+    <summary>Abstract</summary>
 
-## Domain Applications (16 papers, 15.09%)
+    Tactile graphics require careful expert validation before reaching blind and visually impaired (BVI) learners, yet existing datasets provide only coarse holistic quality ratings that offer no actionable repair signal. We present TactileEval, a three-stage pipeline that takes a first step toward automating this process. Drawing on expert free-text comments from the TactileNet dataset, we establish a five-category quality taxonomy; encompassing view angle, part completeness, background clutter, texture separation, and line quality aligned with BANA standards. We subsequently gathered 14,095 structured annotations via Amazon Mechanical Turk, spanning 66 object classes organized into six distinct families. A reproducible ViT-L/14 feature probe trained on this data achieves 85.70% overall test accuracy across 30 different tasks, with consistent difficulty ordering suggesting the taxonomy suggesting the taxonomy captures meaningful perceptual structure. Building on these evaluations, we present a ViT-guided automated editing pipeline that routes classifier scores through family-specific prompt templates to produce targeted corrections via gpt-image-1 image editing. Code, data, and models are available at https://TactileEval.github.io/
+    </details>
+- [From Image to Music Language: A Two-Stage Structure Decoding Approach for Complex Polyphonic OMR](https://arxiv.org/pdf/2604.20522)
+  - Authors: Nan Xu, Shiheng Li, Shengchao Hou
+  - <details>
+    <summary>Abstract</summary>
+
+    We propose a new approach for the second stage of a practical two-stage Optical Music Recognition (OMR) pipeline. Given symbol and event candidates from the visual pipeline, we decode them into an editable, verifiable, and exportable score structure. We focus on complex polyphonic staff notation, especially piano scores, where voice separation and intra-measure timing are the main bottlenecks. Our approach formulates second-stage decoding as a structure decoding problem and uses topology recognition with probability-guided search (BeadSolver) as its core method. We also describe a data strategy that combines procedural generation with recognition-feedback annotations. The result is a practical decoding component for real OMR systems and a path to accumulate structured score data for future end-to-end, multimodal, and RL-style methods.
+    </details>
+
+## Domain Applications (19 papers, 17.92%)
 
 - [Global Offshore Wind Infrastructure: Deployment and Operational Dynamics from Dense Sentinel-1 Time Series](https://arxiv.org/pdf/2604.20822)
   - Authors: Thorsten Hoeser, Felix Bachofer, Claudia Kuenzer
@@ -225,6 +225,13 @@
     <summary>Abstract</summary>
 
     The offshore wind energy sector is expanding rapidly, increasing the need for independent, high-temporal-resolution monitoring of infrastructure deployment and operation at global scale. While Earth Observation based offshore wind infrastructure mapping has matured for spatial localization, existing open datasets lack temporally dense and semantically fine-grained information on construction and operational dynamics. We introduce a global Sentinel-1 synthetic aperture radar (SAR) time series data corpus that resolves deployment and operational phases of offshore wind infrastructure from 2016Q1 to 2025Q1. Building on an updated object detection workflow, we compile 15,606 time series at detected infrastructure locations, with overall 14,840,637 events as analysis-ready 1D SAR backscatter profiles, one profile per Sentinel-1 acquisition and location. To enable direct use and benchmarking, we release (i) the analysis ready 1D SAR profiles, (ii) event-level baseline semantic labels generated by a rule-based classifier, and (iii) an expert-annotated benchmark dataset of 553 time series with 328,657 event labels. The baseline classifier achieves a macro F1 score of 0.84 in event-wise evaluation and an area under the collapsed edit similarity-quality threshold curve (AUC) of 0.785, indicating temporal coherence. We demonstrate that the resulting corpus supports global-scale analyses of deployment dynamics, the identification of differences in regional deployment patterns, vessel interactions, and operational events, and provides a reference for developing and comparing time series classification methods for offshore wind infrastructure monitoring.
+    </details>
+- [Physics-Informed Conditional Diffusion for Motion-Robust Retinal Temporal Laser Speckle Contrast Imaging](https://arxiv.org/pdf/2604.20594)
+  - Authors: Qian Chen, Yuehao Chen, Qiang Wang, Lei Zhu, Yanye Lu, Qiushi Ren
+  - <details>
+    <summary>Abstract</summary>
+
+    Retinal laser speckle contrast imaging (LSCI) is a noninvasive optical modality for monitoring retinal blood flow dynamics. However, conventional temporal LSCI (tLSCI) reconstruction relies on sufficiently long speckle sequences to obtain stable temporal statistics, which makes it vulnerable to acquisition disturbances and limits effective temporal resolution. A physically informed reconstruction framework, termed RetinaDiff (Retinal Diffusion Model), is proposed for retinal tLSCI that is robust to motion and requires only a few frames. In RetinaDiff, registration based on phase correlation is first applied to stabilize the raw speckle sequence before contrast computation, reducing interframe misalignment so that fluctuations at each pixel primarily reflect true flow dynamics. This step provides a physics prior corrected for motion and a high quality multiframe tLSCI reference. Next, guided by the physics prior, a conditional diffusion model performs inverse reconstruction by jointly conditioning on the registered speckle sequence and the corrected prior. Experiments on data acquired with a retinal LSCI system developed in house show improved structural continuity and statistical stability compared with direct reconstruction from few frames and representative baselines. The framework also remains effective in a small number of extremely challenging cases, where both the direct 5-frame input and the conventional multiframe reconstruction are severely degraded. Overall, this work provides a practical and physically grounded route for reliable retinal tLSCI reconstruction from extremely limited frames. The source code and model weights will be publicly available at https://github.com/QianChen113/RetinaDiff.
     </details>
 - [Structure-Augmented Standard Plane Detection with Temporal Aggregation in Blind-Sweep Fetal Ultrasound](https://arxiv.org/pdf/2604.20591)
   - Authors: Keli Niu, He Zhao, Qianhui Men
@@ -239,6 +246,13 @@
     <summary>Abstract</summary>
 
     Purpose: Gaze-following, the task of inferring where individuals are looking, has been widely studied in computer vision, advancing research in visual attention modeling, social scene understanding, and human-robot interaction. However, gaze-following has never been explored in the operating room (OR), a complex, high-stakes environment where visual attention plays an important role in surgical workflow analysis. In this work, we introduce the concept of gaze-following to the surgical domain, and demonstrate its great potential for understanding clinical roles, surgical phases, and team communications in the OR. Methods: We extend the 4D-OR dataset with gaze-following annotations, and extend the Team-OR dataset with gaze-following and a new team communication activity annotations. Then, we propose novel approaches to address clinical role prediction, surgical phase recognition, and team communication detection using a gaze-following model. For role and phase recognition, we propose a gaze heatmap-based approach that uses gaze predictions solely; for team communication detection, we train a spatial-temporal model in a self-supervised way that encodes gaze-based clip features, and then feed the features into a temporal activity detection model. Results: Experimental results on the 4D-OR and Team-OR datasets demonstrate that our approach achieves state-of-the-art performance on all downstream tasks. Quantitatively, our approach obtains F1 scores of 0.92 for clinical role prediction and 0.95 for surgical phase recognition. Furthermore, it significantly outperforms existing baselines in team communication detection, improving previous best performances by over 30%. Conclusion: We introduce gaze-following in the OR as a novel research direction in surgical data science, highlighting its great potential to advance surgical workflow analysis in computer-assisted interventions.
+    </details>
+- [SignDATA: Data Pipeline for Sign Language Translation](https://arxiv.org/pdf/2604.20357)
+  - Authors: Kuanwei Chen, Tingyi Lin
+  - <details>
+    <summary>Abstract</summary>
+
+    Sign-language datasets are difficult to preprocess consistently because they vary in annotation schema, clip timing, signer framing, and privacy constraints. Existing work usually reports downstream models, while the preprocessing pipeline that converts raw video into training-ready pose or video artifacts remains fragmented, backend-specific, and weakly documented. We present SignDATA, a config-driven preprocessing toolkit that standardizes heterogeneous sign-language corpora into comparable outputs for learning. The system supports two end-to-end recipes: a pose recipe that performs acquisition, manifesting, person localization, clipping, cropping, landmark extraction, normalization, and WebDataset export, and a video recipe that replaces pose extraction with signer-cropped video packaging. SignDATA exposes interchangeable MediaPipe and MMPose backends behind a common interface, typed job schemas, experiment-level overrides, and per-stage checkpointing with config- and manifest-aware hashes. We validate the toolkit through a research-oriented evaluation design centered on backend comparison, preprocessing ablations, and privacy-aware video generation on datasets. Our contribution is a reproducible preprocessing layer for sign-language research that makes extractor choice, normalization policy, and privacy tradeoffs explicit, configurable, and empirically comparable.Code is available at https://github.com/balaboom123/signdata-slt.
     </details>
 - [Dual Causal Inference: Integrating Backdoor Adjustment and Instrumental Variable Learning for Medical VQA](https://arxiv.org/pdf/2604.20306)
   - Authors: Zibo Xu, Qiang Li, Ke Lu, Jin Wang, Weizhi Nie, Yuting Su
@@ -289,6 +303,13 @@
 
     The contemporary media landscape is characterized by sensational short videos. While prior research examines the effects of individual multimodal features, the collective impact of multimodal features on viewer engagement with short videos remains unknown. Grounded in the theoretical framework of Message Sensation Value (MSV), this study develops and tests a computational model of MSV with multimodal feature analysis and human evaluation of 1,200 short videos. This model that predicts sensory and behavioral engagement was further validated across two unseen datasets from three short video platforms (combined N = 14,492). While MSV is positively associated with sensory engagement, it shows an inverted U-shaped relationship with behavioral engagement: Higher MSV elicits stronger sensory stimulation, but moderate MSV optimizes behavioral engagement. This research advances the theoretical understanding of short video engagement and introduces a robust computational tool for short video research.
     </details>
+- [CrackForward: Context-Aware Severity Stage Crack Synthesis for Data Augmentation](https://arxiv.org/pdf/2604.19941)
+  - Authors: Nassim Sadallah, Mohand Saïd Allili
+  - <details>
+    <summary>Abstract</summary>
+
+    Reliable crack detection and segmentation are vital for structural health monitoring, yet the scarcity of well-annotated data constitutes a major challenge. To address this limitation, we propose a novel context-aware generative framework designed to synthesize realistic crack growth patterns for data augmentation. Unlike existing methods that primarily manipulate textures or background content, CrackForward explicitly models crack morphology by combining directional crack elongation with learned thickening and branching. Our framework integrates two key innovations: (i) a contextually guided crack expansion module, which uses local directional cues and adaptive random walk to simulate realistic propagation paths; and (ii) a two-stage U-Net-style generator that learns to reproduce spatially varying crack characteristics such as thickness, branching, and growth. Experimental results show that the generated samples preserve target-stage saturation and thickness characteristics and improve the performance of several crack segmentation architectures. These results indicate that structure-aware synthetic crack generation can provide more informative training data than conventional augmentation alone.
+    </details>
 - [Infection-Reasoner: A Compact Vision-Language Model for Wound Infection Classification with Evidence-Grounded Clinical Reasoning](https://arxiv.org/pdf/2604.19937)
   - Authors: Palawat Busaranuvong, Reza Saadati Fard, Emmanuel Agu, Deepak Kumar, Shefalika Gautam, Bengisu Tulu, Diane Strong
   - <details>
@@ -332,7 +353,7 @@
     We present a hybrid multi-phase page matching algorithm for automated comparison of Japanese building permit document sets. Building permit review in Japan requires cross-referencing large PDF document sets across revision cycles, a process that is labor-intensive and error-prone when performed manually. The algorithm combines longest common subsequence (LCS) structural alignment, a seven-phase consensus matching pipeline, and a dynamic programming optimal alignment stage to robustly pair pages across revisions even when page order, numbering, or content changes substantially. A subsequent multi-layer diff engine -- comprising text-level, table-level, and pixel-level visual differencing -- produces highlighted difference reports. Evaluation on real-world permit document sets achieves F1=0.80 and precision=1.00 on a manually annotated ground-truth benchmark, with zero false-positive matched pairs.
     </details>
 
-## Multimodal Generative Modeling (16 papers, 15.09%)
+## Multimodal Generative Modeling (14 papers, 13.21%)
 
 - [LLaDA2.0-Uni: Unifying Multimodal Understanding and Generation with Diffusion Large Language Model](https://arxiv.org/pdf/2604.20796)
   - Authors: Inclusion AI, Tiwei Bie, Haoxing Chen, Tieyuan Chen, Zhenglin Cheng, Long Cui, Kai Gan, Zhicheng Huang, Zhenzhong Lan, Haoquan Li, Jianguo Li, Tao Lin, Qi Qin, Hongjun Wang, Xiaomei Wang, Haoyuan Wu, Yi Xin, Junbo Zhao
@@ -362,13 +383,6 @@
 
     Relighting a person from a single photo is an attractive but ill-posed task, as a 2D image ambiguously entangles 3D geometry, intrinsic appearance, and illumination. Current methods either use sequential pipelines that suffer from error accumulation, or they do not explicitly leverage 3D geometry during relighting, which limits physical consistency. Since relighting and estimation of 3D geometry are mutually beneficial tasks, we propose a unified Multi-Modal Diffusion Transformer (DiT) that jointly solves for both: GeoRelight. We make this possible through two key technical contributions: isotropic NDC-Orthographic Depth (iNOD), a distortion-free 3D representation compatible with latent diffusion models; and a strategic mixed-data training method that combines synthetic and auto-labeled real data. By solving geometry and relighting jointly, GeoRelight achieves better performance than both sequential models and previous systems that ignored geometry.
     </details>
-- [Physics-Informed Conditional Diffusion for Motion-Robust Retinal Temporal Laser Speckle Contrast Imaging](https://arxiv.org/pdf/2604.20594)
-  - Authors: Qian Chen, Yuehao Chen, Qiang Wang, Lei Zhu, Yanye Lu, Qiushi Ren
-  - <details>
-    <summary>Abstract</summary>
-
-    Retinal laser speckle contrast imaging (LSCI) is a noninvasive optical modality for monitoring retinal blood flow dynamics. However, conventional temporal LSCI (tLSCI) reconstruction relies on sufficiently long speckle sequences to obtain stable temporal statistics, which makes it vulnerable to acquisition disturbances and limits effective temporal resolution. A physically informed reconstruction framework, termed RetinaDiff (Retinal Diffusion Model), is proposed for retinal tLSCI that is robust to motion and requires only a few frames. In RetinaDiff, registration based on phase correlation is first applied to stabilize the raw speckle sequence before contrast computation, reducing interframe misalignment so that fluctuations at each pixel primarily reflect true flow dynamics. This step provides a physics prior corrected for motion and a high quality multiframe tLSCI reference. Next, guided by the physics prior, a conditional diffusion model performs inverse reconstruction by jointly conditioning on the registered speckle sequence and the corrected prior. Experiments on data acquired with a retinal LSCI system developed in house show improved structural continuity and statistical stability compared with direct reconstruction from few frames and representative baselines. The framework also remains effective in a small number of extremely challenging cases, where both the direct 5-frame input and the conventional multiframe reconstruction are severely degraded. Overall, this work provides a practical and physically grounded route for reliable retinal tLSCI reconstruction from extremely limited frames. The source code and model weights will be publicly available at https://github.com/QianChen113/RetinaDiff.
-    </details>
 - [DynamicRad: Content-Adaptive Sparse Attention for Long Video Diffusion](https://arxiv.org/pdf/2604.20470)
   - Authors: Yongji Long, Shijun Liang, Jintao Li, Yun Li
   - <details>
@@ -382,6 +396,13 @@
     <summary>Abstract</summary>
 
     GAN-based facial attribute editing is widely used in virtual avatars and social media but often suffers from attribute entanglement, where modifying one face attribute unintentionally alters others. While supervised disentangled representation learning can address this, it relies heavily on labeled data, incurring high annotation costs. To address these challenges, we propose MD-Face, a label-free disentangled representation learning framework based on Mixture of Experts (MoE). MD-Face utilizes a MoE backbone with a gating mechanism that dynamically allocates experts, enabling the model to learn semantic vectors with greater independence. To further enhance attribute entanglement, we introduce a geometry-aware loss, which aligns each semantic vector with its corresponding Semantic Boundary Vector (SBV) through a Jacobian-based pushforward method. Experiments with ProGAN and StyleGAN show that MD-Face outperforms unsupervised baselines and competes with supervised ones. Compared to diffusion-based methods, it offers better image quality and lower inference latency, making it ideal for interactive editing.
+    </details>
+- [Efficient INT8 Single-Image Super-Resolution via Deployment-Aware Quantization and Teacher-Guided Training](https://arxiv.org/pdf/2604.20291)
+  - Authors: Pham Phuong Nam Nguyen, Nam Tien Le, Thi Kim Trang Vo, Nhu Tinh Anh Nguyen
+  - <details>
+    <summary>Abstract</summary>
+
+    Efficient single-image super-resolution (SISR) requires balancing reconstruction fidelity, model compactness, and robustness under low-bit deployment, which is especially challenging for x3 SR. We present a deployment-oriented quantized SISR framework based on an extract-refine-upsample design. The student performs most computation in the low-resolution space and uses a lightweight re-parameterizable backbone with PixelShuffle reconstruction, yielding a compact inference graph. To improve quality without significantly increasing complexity, we adopt a three-stage training pipeline: Stage 1 learns a basic reconstruction mapping with spatial supervision; Stage 2 refines fidelity using Charbonnier loss, DCT-domain supervision, and confidence-weighted output-level distillation from a Mamba-based teacher; and Stage 3 applies quantization-aware training directly on the fused deploy graph. We further use weight clipping and BatchNorm recalibration to improve quantization stability. On the MAI 2026 Quantized 4K Image Super-Resolution Challenge test set, our final AIO MAI submission achieves 29.79 dB PSNR and 0.8634 SSIM, obtaining a final score of 1.8 under the target mobile INT8 deployment setting. Ablation on Stage 3 optimization shows that teacher-guided supervision improves the dynamic INT8 TFLite reconstruction from 29.91 dB/0.853 to 30.0003 dB/0.856, while the fixed-shape deployable INT8 TFLite artifact attains 30.006 dB/0.857.
     </details>
 - [Rethinking Where to Edit: Task-Aware Localization for Instruction-Based Image Editing](https://arxiv.org/pdf/2604.20258)
   - Authors: Jingxuan He, Xiyu Wang, Mengyu Zheng, Xiangyu Zeng, Yunke Wang, Chang Xu
@@ -418,13 +439,6 @@
 
     Current text-to-image models struggle to provide precise camera control using natural language alone. In this work, we present a framework for precise camera control with global scene understanding in text-to-image generation by learning parametric camera tokens. We fine-tune image generation models for viewpoint-conditioned text-to-image generation on a curated dataset that combines 3D-rendered images for geometric supervision and photorealistic augmentations for appearance and background diversity. Qualitative and quantitative experiments demonstrate that our method achieves state-of-the-art accuracy while preserving image quality and prompt fidelity. Unlike prior methods that overfit to object-specific appearance correlations, our viewpoint tokens learn factorized geometric representations that transfer to unseen object categories. Our work shows that text-vision latent spaces can be endowed with explicit 3D camera structure, offering a pathway toward geometrically-aware prompts for text-to-image generation. Project page: https://randdl.github.io/viewtoken_control/
     </details>
-- [CrackForward: Context-Aware Severity Stage Crack Synthesis for Data Augmentation](https://arxiv.org/pdf/2604.19941)
-  - Authors: Nassim Sadallah, Mohand Saïd Allili
-  - <details>
-    <summary>Abstract</summary>
-
-    Reliable crack detection and segmentation are vital for structural health monitoring, yet the scarcity of well-annotated data constitutes a major challenge. To address this limitation, we propose a novel context-aware generative framework designed to synthesize realistic crack growth patterns for data augmentation. Unlike existing methods that primarily manipulate textures or background content, CrackForward explicitly models crack morphology by combining directional crack elongation with learned thickening and branching. Our framework integrates two key innovations: (i) a contextually guided crack expansion module, which uses local directional cues and adaptive random walk to simulate realistic propagation paths; and (ii) a two-stage U-Net-style generator that learns to reproduce spatially varying crack characteristics such as thickness, branching, and growth. Experimental results show that the generated samples preserve target-stage saturation and thickness characteristics and improve the performance of several crack segmentation architectures. These results indicate that structure-aware synthetic crack generation can provide more informative training data than conventional augmentation alone.
-    </details>
 - [SceneOrchestra: Efficient Agentic 3D Scene Synthesis via Full Tool-Call Trajectory Generation](https://arxiv.org/pdf/2604.19907)
   - Authors: Yun He, Kelin Yu, Matthias Zwicker
   - <details>
@@ -439,15 +453,8 @@
 
     We present Wan-Image, a unified visual generation system explicitly engineered to paradigm-shift image generation models from casual synthesizers into professional-grade productivity tools. While contemporary diffusion models excel at aesthetic generation, they frequently encounter critical bottlenecks in rigorous design workflows that demand absolute controllability, complex typography rendering, and strict identity preservation. To address these challenges, Wan-Image features a natively unified multi-modal architecture by synergizing the cognitive capabilities of large language models with the high-fidelity pixel synthesis of diffusion transformers, which seamlessly translates highly nuanced user intents into precise visual outputs. It is fundamentally powered by large-scale multi-modal data scaling, a systematic fine-grained annotation engine, and curated reinforcement learning data to surpass basic instruction following and unlock expert-level professional capabilities. These include ultra-long complex text rendering, hyper-diverse portrait generation, palette-guided generation, multi-subject identity preservation, coherent sequential visual generation, precise multi-modal interactive editing, native alpha-channel generation, and high-efficiency 4K synthesis. Across diverse human evaluations, Wan-Image exceeds Seedream 5.0 Lite and GPT Image 1.5 in overall performance, reaching parity with Nano Banana Pro in challenging tasks. Ultimately, Wan-Image revolutionizes visual content creation across e-commerce, entertainment, education, and personal productivity, redefining the boundaries of professional visual synthesis.
     </details>
-- [From Image to Music Language: A Two-Stage Structure Decoding Approach for Complex Polyphonic OMR](https://arxiv.org/pdf/2604.20522)
-  - Authors: Nan Xu, Shiheng Li, Shengchao Hou
-  - <details>
-    <summary>Abstract</summary>
 
-    We propose a new approach for the second stage of a practical two-stage Optical Music Recognition (OMR) pipeline. Given symbol and event candidates from the visual pipeline, we decode them into an editable, verifiable, and exportable score structure. We focus on complex polyphonic staff notation, especially piano scores, where voice separation and intra-measure timing are the main bottlenecks. Our approach formulates second-stage decoding as a structure decoding problem and uses topology recognition with probability-guided search (BeadSolver) as its core method. We also describe a data strategy that combines procedural generation with recognition-feedback annotations. The result is a practical decoding component for real OMR systems and a path to accumulate structured score data for future end-to-end, multimodal, and RL-style methods.
-    </details>
-
-## Datasets and Benchmarks (12 papers, 11.32%)
+## Datasets and Benchmarks (10 papers, 9.43%)
 
 - [OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model](https://arxiv.org/pdf/2604.20806)
   - Authors: Qiguang Chen, Chengyu Luan, Jiajun Wu, Qiming Yu, Yi Yang, Yizhuo Li, Jingqi Tong, Xiachong Feng, Libo Qin, Wanxiang Che
@@ -476,13 +483,6 @@
     <summary>Abstract</summary>
 
     Safety-critical traffic reasoning requires contrastive consistency: models must detect true hazards when an accident occurs, and reliably reject plausible-but-false hypotheses under near-identical counterfactual scenes. We present CCTVBench, a Contrastive Consistency Traffic VideoQA Benchmark built on paired real accident videos and world-model-generated counterfactual counterparts, together with minimally different, mutually exclusive hypothesis questions. CCTVBench enforces a single structured decision pattern over each video question quadruple and provides actionable diagnostics that decompose failures into positive omission, positive swap, negative hallucination, and mutual-exclusivity violation, while separating video versus question consistency. Experiments across open-source and proprietary video LLMs reveal a large and persistent gap between standard per-instance QA metrics and quadruple-level contrastive consistency, with unreliable none-of-the-above rejection as a key bottleneck. Finally, we introduce C-TCD, a contrastive decoding approach leveraging a semantically exclusive counterpart video as the contrast input at inference time, improving both instance-level QA and contrastive consistency.
-    </details>
-- [SignDATA: Data Pipeline for Sign Language Translation](https://arxiv.org/pdf/2604.20357)
-  - Authors: Kuanwei Chen, Tingyi Lin
-  - <details>
-    <summary>Abstract</summary>
-
-    Sign-language datasets are difficult to preprocess consistently because they vary in annotation schema, clip timing, signer framing, and privacy constraints. Existing work usually reports downstream models, while the preprocessing pipeline that converts raw video into training-ready pose or video artifacts remains fragmented, backend-specific, and weakly documented. We present SignDATA, a config-driven preprocessing toolkit that standardizes heterogeneous sign-language corpora into comparable outputs for learning. The system supports two end-to-end recipes: a pose recipe that performs acquisition, manifesting, person localization, clipping, cropping, landmark extraction, normalization, and WebDataset export, and a video recipe that replaces pose extraction with signer-cropped video packaging. SignDATA exposes interchangeable MediaPipe and MMPose backends behind a common interface, typed job schemas, experiment-level overrides, and per-stage checkpointing with config- and manifest-aware hashes. We validate the toolkit through a research-oriented evaluation design centered on backend comparison, preprocessing ablations, and privacy-aware video generation on datasets. Our contribution is a reproducible preprocessing layer for sign-language research that makes extractor choice, normalization policy, and privacy tradeoffs explicit, configurable, and empirically comparable.Code is available at https://github.com/balaboom123/signdata-slt.
     </details>
 - [X-PCR: A Benchmark for Cross-modality Progressive Clinical Reasoning in Ophthalmic Diagnosis](https://arxiv.org/pdf/2604.20350)
   - Authors: Gui Wang, Zehao Zhong, YongSong Zhou, Yudong Li, Ende Wu, Wooi Ping Cheah, Rong Qu, Jianfeng Ren, Linlin Shen
@@ -525,13 +525,6 @@
     <summary>Abstract</summary>
 
     Vision-language models (VLMs) are increasingly used in settings where sensitivity to low-level image degradations matters, including content moderation, image restoration, and quality monitoring. Yet their ability to recognize distortion type and severity remains poorly understood. We present DistortBench, a diagnostic benchmark for no-reference distortion perception in VLMs. DistortBench contains 13,500 four-choice questions covering 27 distortion types, six perceptual categories, and five severity levels: 25 distortions inherit KADID-10k calibrations, while two added rotation distortions use monotonic angle-based levels. We evaluate 18 VLMs, including 17 open-weight models from five families and one proprietary model. Despite strong performance on high-level vision-language tasks, the best model reaches only 61.9% accuracy, just below the human majority-vote baseline of 65.7% (average individual: 60.2%), indicating that low-level perceptual understanding remains a major weakness of current VLMs. Our analysis further reveals weak and non-monotonic scaling with model size, performance drops in most base--thinking pairs, and distinct severity-response patterns across model families. We hope DistortBench will serve as a useful benchmark for measuring and improving low-level visual perception in VLMs.
-    </details>
-- [TactileEval: A Step Towards Automated Fine-Grained Evaluation and Editing of Tactile Graphics](https://arxiv.org/pdf/2604.19829)
-  - Authors: Adnan Khan, Abbas Akkasi, Majid Komeili
-  - <details>
-    <summary>Abstract</summary>
-
-    Tactile graphics require careful expert validation before reaching blind and visually impaired (BVI) learners, yet existing datasets provide only coarse holistic quality ratings that offer no actionable repair signal. We present TactileEval, a three-stage pipeline that takes a first step toward automating this process. Drawing on expert free-text comments from the TactileNet dataset, we establish a five-category quality taxonomy; encompassing view angle, part completeness, background clutter, texture separation, and line quality aligned with BANA standards. We subsequently gathered 14,095 structured annotations via Amazon Mechanical Turk, spanning 66 object classes organized into six distinct families. A reproducible ViT-L/14 feature probe trained on this data achieves 85.70% overall test accuracy across 30 different tasks, with consistent difficulty ordering suggesting the taxonomy suggesting the taxonomy captures meaningful perceptual structure. Building on these evaluations, we present a ViT-guided automated editing pipeline that routes classifier scores through family-specific prompt templates to produce targeted corrections via gpt-image-1 image editing. Code, data, and models are available at https://TactileEval.github.io/
     </details>
 
 ## Generative Foundations (9 papers, 8.49%)
@@ -600,8 +593,15 @@
     Mode collapse remains a fundamental challenge in training generative adversarial networks (GANs). While existing works have primarily focused on inter-mode collapse, such as mode dropping, intra-mode collapse-where many latent variables map to the same or highly similar outputs-has received significantly less attention. In this work, we propose a pairing regularizer jointly optimized with the generator to mitigate the many-to-one collapse by enforcing local consistency between latent variables and generated samples. We show that the effect of pairing regularization depends on the dominant failure mode of training. In collapse-prone regimes with limited exploration, pairing encourages structured local exploration, leading to improved coverage and higher recall. In contrast, under stabilized training with sufficient exploration, pairing refines the generator's induced data density by discouraging redundant mappings, thereby improving precision without sacrificing recall. Extensive experiments on both toy distributions and real-image benchmarks demonstrate that the proposed regularizer effectively complements existing stabilization techniques by directly addressing intra-mode collapse.
     </details>
 
-## Reasoning, Alignment, and Evaluation (8 papers, 7.55%)
+## Reasoning, Alignment, and Evaluation (9 papers, 8.49%)
 
+- [SSL-R1: Self-Supervised Visual Reinforcement Post-Training for Multimodal Large Language Models](https://arxiv.org/pdf/2604.20705)
+  - Authors: Jiahao Xie, Alessio Tonioni, Nathalie Rauschmayr, Federico Tombari, Bernt Schiele
+  - <details>
+    <summary>Abstract</summary>
+
+    Reinforcement learning (RL) with verifiable rewards (RLVR) has demonstrated the great potential of enhancing the reasoning abilities in multimodal large language models (MLLMs). However, the reliance on language-centric priors and expensive manual annotations prevents MLLMs' intrinsic visual understanding and scalable reward designs. In this work, we introduce SSL-R1, a generic self-supervised RL framework that derives verifiable rewards directly from images. To this end, we revisit self-supervised learning (SSL) in visual domains and reformulate widely-used SSL tasks into a set of verifiable visual puzzles for RL post-training, requiring neither human nor external model supervision. Training MLLMs on these tasks substantially improves their performance on multimodal understanding and reasoning benchmarks, highlighting the potential of leveraging vision-centric self-supervised tasks for MLLM post-training. We think this work will provide useful experience in devising effective self-supervised verifiable rewards to enable RL at scale. Project page: https://github.com/Jiahao000/SSL-R1.
+    </details>
 - [R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs](https://arxiv.org/pdf/2604.20696)
   - Authors: Jiahao Xie, Alessio Tonioni, Nathalie Rauschmayr, Federico Tombari, Bernt Schiele
   - <details>

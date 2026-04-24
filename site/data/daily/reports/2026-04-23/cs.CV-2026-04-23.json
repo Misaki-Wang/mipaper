@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23T13:27:24Z",
+  "generated_at": "2026-04-24T13:26:11Z",
   "category": "cs.CV",
   "report_date": "2026-04-23",
   "source_url": "https://papers.cool/arxiv/cs.CV?date=2026-04-23&show=1000",
@@ -15,8 +15,8 @@
     {
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
-      "count": 16,
-      "share": 15.09
+      "count": 14,
+      "share": 13.21
     },
     {
       "topic_key": "multimodal_agents",
@@ -33,18 +33,18 @@
     },
     {
       "topic_label": "Domain Applications",
-      "count": 16,
-      "share": 15.09
+      "count": 19,
+      "share": 17.92
     },
     {
       "topic_label": "Multimodal Generative Modeling",
-      "count": 16,
-      "share": 15.09
+      "count": 14,
+      "share": 13.21
     },
     {
       "topic_label": "Datasets and Benchmarks",
-      "count": 12,
-      "share": 11.32
+      "count": 10,
+      "share": 9.43
     },
     {
       "topic_label": "Generative Foundations",
@@ -53,8 +53,8 @@
     },
     {
       "topic_label": "Reasoning, Alignment, and Evaluation",
-      "count": 8,
-      "share": 7.55
+      "count": 9,
+      "share": 8.49
     },
     {
       "topic_label": "Learning, Optimization, and Theory",
@@ -111,7 +111,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.8
+          "classification_confidence": 0.84
         },
         {
           "paper_id": "2604.20800",
@@ -135,7 +135,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.86
+          "classification_confidence": 0.85
         },
         {
           "paper_id": "2604.20760",
@@ -181,30 +181,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.94
-        },
-        {
-          "paper_id": "2604.20705",
-          "title": "SSL-R1: Self-Supervised Visual Reinforcement Post-Training for Multimodal Large Language Models",
-          "abs_url": "https://arxiv.org/abs/2604.20705",
-          "pdf_url": "https://arxiv.org/pdf/2604.20705",
-          "detail_url": "https://papers.cool/arxiv/2604.20705",
-          "authors": [
-            "Jiahao Xie",
-            "Alessio Tonioni",
-            "Nathalie Rauschmayr",
-            "Federico Tombari",
-            "Bernt Schiele"
-          ],
-          "subjects": [
-            "Computer Vision and Pattern Recognition"
-          ],
-          "abstract": "Reinforcement learning (RL) with verifiable rewards (RLVR) has demonstrated the great potential of enhancing the reasoning abilities in multimodal large language models (MLLMs). However, the reliance on language-centric priors and expensive manual annotations prevents MLLMs' intrinsic visual understanding and scalable reward designs. In this work, we introduce SSL-R1, a generic self-supervised RL framework that derives verifiable rewards directly from images. To this end, we revisit self-supervised learning (SSL) in visual domains and reformulate widely-used SSL tasks into a set of verifiable visual puzzles for RL post-training, requiring neither human nor external model supervision. Training MLLMs on these tasks substantially improves their performance on multimodal understanding and reasoning benchmarks, highlighting the potential of leveraging vision-centric self-supervised tasks for MLLM post-training. We think this work will provide useful experience in devising effective self-supervised verifiable rewards to enable RL at scale. Project page: https://github.com/Jiahao000/SSL-R1.",
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.74
+          "classification_confidence": 0.93
         },
         {
           "paper_id": "2604.20474",
@@ -228,7 +205,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.76
+          "classification_confidence": 0.74
         },
         {
           "paper_id": "2604.20473",
@@ -251,7 +228,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.83
+          "classification_confidence": 0.82
         },
         {
           "paper_id": "2604.20395",
@@ -300,7 +277,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.9
+          "classification_confidence": 0.88
         },
         {
           "paper_id": "2604.20361",
@@ -322,7 +299,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.82
+          "classification_confidence": 0.84
         },
         {
           "paper_id": "2604.20307",
@@ -341,29 +318,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.91
-        },
-        {
-          "paper_id": "2604.20291",
-          "title": "Efficient INT8 Single-Image Super-Resolution via Deployment-Aware Quantization and Teacher-Guided Training",
-          "abs_url": "https://arxiv.org/abs/2604.20291",
-          "pdf_url": "https://arxiv.org/pdf/2604.20291",
-          "detail_url": "https://papers.cool/arxiv/2604.20291",
-          "authors": [
-            "Pham Phuong Nam Nguyen",
-            "Nam Tien Le",
-            "Thi Kim Trang Vo",
-            "Nhu Tinh Anh Nguyen"
-          ],
-          "subjects": [
-            "Computer Vision and Pattern Recognition"
-          ],
-          "abstract": "Efficient single-image super-resolution (SISR) requires balancing reconstruction fidelity, model compactness, and robustness under low-bit deployment, which is especially challenging for x3 SR. We present a deployment-oriented quantized SISR framework based on an extract-refine-upsample design. The student performs most computation in the low-resolution space and uses a lightweight re-parameterizable backbone with PixelShuffle reconstruction, yielding a compact inference graph. To improve quality without significantly increasing complexity, we adopt a three-stage training pipeline: Stage 1 learns a basic reconstruction mapping with spatial supervision; Stage 2 refines fidelity using Charbonnier loss, DCT-domain supervision, and confidence-weighted output-level distillation from a Mamba-based teacher; and Stage 3 applies quantization-aware training directly on the fused deploy graph. We further use weight clipping and BatchNorm recalibration to improve quantization stability. On the MAI 2026 Quantized 4K Image Super-Resolution Challenge test set, our final AIO MAI submission achieves 29.79 dB PSNR and 0.8634 SSIM, obtaining a final score of 1.8 under the target mobile INT8 deployment setting. Ablation on Stage 3 optimization shows that teacher-guided supervision improves the dynamic INT8 TFLite reconstruction from 29.91 dB/0.853 to 30.0003 dB/0.856, while the fixed-shape deployable INT8 TFLite artifact attains 30.006 dB/0.857.",
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.78
+          "classification_confidence": 0.94
         },
         {
           "paper_id": "2604.20281",
@@ -387,7 +342,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.93
+          "classification_confidence": 0.95
         },
         {
           "paper_id": "2604.20243",
@@ -408,7 +363,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.79
+          "classification_confidence": 0.84
         },
         {
           "paper_id": "2604.20191",
@@ -455,7 +410,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.86
+          "classification_confidence": 0.91
         },
         {
           "paper_id": "2604.20123",
@@ -478,7 +433,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.9
+          "classification_confidence": 0.93
         },
         {
           "paper_id": "2604.20093",
@@ -499,7 +454,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.81
+          "classification_confidence": 0.89
         },
         {
           "paper_id": "2604.20046",
@@ -522,7 +477,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.68
+          "classification_confidence": 0.72
         },
         {
           "paper_id": "2604.19999",
@@ -542,7 +497,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.88
+          "classification_confidence": 0.87
         },
         {
           "paper_id": "2604.19989",
@@ -563,7 +518,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.86
+          "classification_confidence": 0.9
         },
         {
           "paper_id": "2604.19976",
@@ -588,7 +543,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.81
+          "classification_confidence": 0.84
         },
         {
           "paper_id": "2604.19945",
@@ -613,7 +568,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.73
+          "classification_confidence": 0.67
         },
         {
           "paper_id": "2604.19923",
@@ -638,7 +593,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.83
+          "classification_confidence": 0.88
         },
         {
           "paper_id": "2604.19902",
@@ -669,7 +624,7 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.68
+          "classification_confidence": 0.65
         },
         {
           "paper_id": "2604.19888",
@@ -689,14 +644,57 @@
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.87
+          "classification_confidence": 0.83
+        },
+        {
+          "paper_id": "2604.19829",
+          "title": "TactileEval: A Step Towards Automated Fine-Grained Evaluation and Editing of Tactile Graphics",
+          "abs_url": "https://arxiv.org/abs/2604.19829",
+          "pdf_url": "https://arxiv.org/pdf/2604.19829",
+          "detail_url": "https://papers.cool/arxiv/2604.19829",
+          "authors": [
+            "Adnan Khan",
+            "Abbas Akkasi",
+            "Majid Komeili"
+          ],
+          "subjects": [
+            "Computer Vision and Pattern Recognition"
+          ],
+          "abstract": "Tactile graphics require careful expert validation before reaching blind and visually impaired (BVI) learners, yet existing datasets provide only coarse holistic quality ratings that offer no actionable repair signal. We present TactileEval, a three-stage pipeline that takes a first step toward automating this process. Drawing on expert free-text comments from the TactileNet dataset, we establish a five-category quality taxonomy; encompassing view angle, part completeness, background clutter, texture separation, and line quality aligned with BANA standards. We subsequently gathered 14,095 structured annotations via Amazon Mechanical Turk, spanning 66 object classes organized into six distinct families. A reproducible ViT-L/14 feature probe trained on this data achieves 85.70% overall test accuracy across 30 different tasks, with consistent difficulty ordering suggesting the taxonomy suggesting the taxonomy captures meaningful perceptual structure. Building on these evaluations, we present a ViT-guided automated editing pipeline that routes classifier scores through family-specific prompt templates to produce targeted corrections via gpt-image-1 image editing. Code, data, and models are available at https://TactileEval.github.io/",
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.66
+        },
+        {
+          "paper_id": "2604.20522",
+          "title": "From Image to Music Language: A Two-Stage Structure Decoding Approach for Complex Polyphonic OMR",
+          "abs_url": "https://arxiv.org/abs/2604.20522",
+          "pdf_url": "https://arxiv.org/pdf/2604.20522",
+          "detail_url": "https://papers.cool/arxiv/2604.20522",
+          "authors": [
+            "Nan Xu",
+            "Shiheng Li",
+            "Shengchao Hou"
+          ],
+          "subjects": [
+            "Sound",
+            "Computer Vision and Pattern Recognition"
+          ],
+          "abstract": "We propose a new approach for the second stage of a practical two-stage Optical Music Recognition (OMR) pipeline. Given symbol and event candidates from the visual pipeline, we decode them into an editable, verifiable, and exportable score structure. We focus on complex polyphonic staff notation, especially piano scores, where voice separation and intra-measure timing are the main bottlenecks. Our approach formulates second-stage decoding as a structure decoding problem and uses topology recognition with probability-guided search (BeadSolver) as its core method. We also describe a data strategy that combines procedural generation with recognition-feedback annotations. The result is a practical decoding component for real OMR systems and a path to accumulate structured score data for future end-to-end, multimodal, and RL-style methods.",
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.74
         }
       ]
     },
     {
       "topic_label": "Domain Applications",
-      "count": 16,
-      "share": 15.09,
+      "count": 19,
+      "share": 17.92,
       "papers": [
         {
           "paper_id": "2604.20822",
@@ -718,7 +716,31 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.92
+          "classification_confidence": 0.91
+        },
+        {
+          "paper_id": "2604.20594",
+          "title": "Physics-Informed Conditional Diffusion for Motion-Robust Retinal Temporal Laser Speckle Contrast Imaging",
+          "abs_url": "https://arxiv.org/abs/2604.20594",
+          "pdf_url": "https://arxiv.org/pdf/2604.20594",
+          "detail_url": "https://papers.cool/arxiv/2604.20594",
+          "authors": [
+            "Qian Chen",
+            "Yuehao Chen",
+            "Qiang Wang",
+            "Lei Zhu",
+            "Yanye Lu",
+            "Qiushi Ren"
+          ],
+          "subjects": [
+            "Computer Vision and Pattern Recognition"
+          ],
+          "abstract": "Retinal laser speckle contrast imaging (LSCI) is a noninvasive optical modality for monitoring retinal blood flow dynamics. However, conventional temporal LSCI (tLSCI) reconstruction relies on sufficiently long speckle sequences to obtain stable temporal statistics, which makes it vulnerable to acquisition disturbances and limits effective temporal resolution. A physically informed reconstruction framework, termed RetinaDiff (Retinal Diffusion Model), is proposed for retinal tLSCI that is robust to motion and requires only a few frames. In RetinaDiff, registration based on phase correlation is first applied to stabilize the raw speckle sequence before contrast computation, reducing interframe misalignment so that fluctuations at each pixel primarily reflect true flow dynamics. This step provides a physics prior corrected for motion and a high quality multiframe tLSCI reference. Next, guided by the physics prior, a conditional diffusion model performs inverse reconstruction by jointly conditioning on the registered speckle sequence and the corrected prior. Experiments on data acquired with a retinal LSCI system developed in house show improved structural continuity and statistical stability compared with direct reconstruction from few frames and representative baselines. The framework also remains effective in a small number of extremely challenging cases, where both the direct 5-frame input and the conventional multiframe reconstruction are severely degraded. Overall, this work provides a practical and physically grounded route for reliable retinal tLSCI reconstruction from extremely limited frames. The source code and model weights will be publicly available at https://github.com/QianChen113/RetinaDiff.",
+          "topic_key": "domain_applications",
+          "topic_label": "Domain Applications",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.93
         },
         {
           "paper_id": "2604.20591",
@@ -739,7 +761,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.94
+          "classification_confidence": 0.96
         },
         {
           "paper_id": "2604.20574",
@@ -768,6 +790,27 @@
           "classification_confidence": 0.62
         },
         {
+          "paper_id": "2604.20357",
+          "title": "SignDATA: Data Pipeline for Sign Language Translation",
+          "abs_url": "https://arxiv.org/abs/2604.20357",
+          "pdf_url": "https://arxiv.org/pdf/2604.20357",
+          "detail_url": "https://papers.cool/arxiv/2604.20357",
+          "authors": [
+            "Kuanwei Chen",
+            "Tingyi Lin"
+          ],
+          "subjects": [
+            "Computer Vision and Pattern Recognition",
+            "Computation and Language"
+          ],
+          "abstract": "Sign-language datasets are difficult to preprocess consistently because they vary in annotation schema, clip timing, signer framing, and privacy constraints. Existing work usually reports downstream models, while the preprocessing pipeline that converts raw video into training-ready pose or video artifacts remains fragmented, backend-specific, and weakly documented. We present SignDATA, a config-driven preprocessing toolkit that standardizes heterogeneous sign-language corpora into comparable outputs for learning. The system supports two end-to-end recipes: a pose recipe that performs acquisition, manifesting, person localization, clipping, cropping, landmark extraction, normalization, and WebDataset export, and a video recipe that replaces pose extraction with signer-cropped video packaging. SignDATA exposes interchangeable MediaPipe and MMPose backends behind a common interface, typed job schemas, experiment-level overrides, and per-stage checkpointing with config- and manifest-aware hashes. We validate the toolkit through a research-oriented evaluation design centered on backend comparison, preprocessing ablations, and privacy-aware video generation on datasets. Our contribution is a reproducible preprocessing layer for sign-language research that makes extractor choice, normalization policy, and privacy tradeoffs explicit, configurable, and empirically comparable.Code is available at https://github.com/balaboom123/signdata-slt.",
+          "topic_key": "domain_applications",
+          "topic_label": "Domain Applications",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.7
+        },
+        {
           "paper_id": "2604.20306",
           "title": "Dual Causal Inference: Integrating Backdoor Adjustment and Instrumental Variable Learning for Medical VQA",
           "abs_url": "https://arxiv.org/abs/2604.20306",
@@ -790,7 +833,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.89
+          "classification_confidence": 0.9
         },
         {
           "paper_id": "2604.20286",
@@ -812,7 +855,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.96
+          "classification_confidence": 0.97
         },
         {
           "paper_id": "2604.20268",
@@ -889,7 +932,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.88
+          "classification_confidence": 0.9
         },
         {
           "paper_id": "2604.20026",
@@ -912,7 +955,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.86
+          "classification_confidence": 0.92
         },
         {
           "paper_id": "2604.19995",
@@ -935,7 +978,27 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.66
+          "classification_confidence": 0.62
+        },
+        {
+          "paper_id": "2604.19941",
+          "title": "CrackForward: Context-Aware Severity Stage Crack Synthesis for Data Augmentation",
+          "abs_url": "https://arxiv.org/abs/2604.19941",
+          "pdf_url": "https://arxiv.org/pdf/2604.19941",
+          "detail_url": "https://papers.cool/arxiv/2604.19941",
+          "authors": [
+            "Nassim Sadallah",
+            "Mohand Saïd Allili"
+          ],
+          "subjects": [
+            "Computer Vision and Pattern Recognition"
+          ],
+          "abstract": "Reliable crack detection and segmentation are vital for structural health monitoring, yet the scarcity of well-annotated data constitutes a major challenge. To address this limitation, we propose a novel context-aware generative framework designed to synthesize realistic crack growth patterns for data augmentation. Unlike existing methods that primarily manipulate textures or background content, CrackForward explicitly models crack morphology by combining directional crack elongation with learned thickening and branching. Our framework integrates two key innovations: (i) a contextually guided crack expansion module, which uses local directional cues and adaptive random walk to simulate realistic propagation paths; and (ii) a two-stage U-Net-style generator that learns to reproduce spatially varying crack characteristics such as thickness, branching, and growth. Experimental results show that the generated samples preserve target-stage saturation and thickness characteristics and improve the performance of several crack segmentation architectures. These results indicate that structure-aware synthetic crack generation can provide more informative training data than conventional augmentation alone.",
+          "topic_key": "domain_applications",
+          "topic_label": "Domain Applications",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.84
         },
         {
           "paper_id": "2604.19937",
@@ -961,7 +1024,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.92
+          "classification_confidence": 0.95
         },
         {
           "paper_id": "2604.19823",
@@ -1018,7 +1081,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.74
+          "classification_confidence": 0.78
         },
         {
           "paper_id": "2604.19979",
@@ -1044,7 +1107,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.61
+          "classification_confidence": 0.56
         },
         {
           "paper_id": "2604.19798",
@@ -1069,7 +1132,7 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.9
+          "classification_confidence": 0.84
         },
         {
           "paper_id": "2604.19770",
@@ -1089,14 +1152,14 @@
           "topic_label": "Domain Applications",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.94
+          "classification_confidence": 0.88
         }
       ]
     },
     {
       "topic_label": "Multimodal Generative Modeling",
-      "count": 16,
-      "share": 15.09,
+      "count": 14,
+      "share": 13.21,
       "papers": [
         {
           "paper_id": "2604.20796",
@@ -1132,7 +1195,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.99
+          "classification_confidence": 0.98
         },
         {
           "paper_id": "2604.20784",
@@ -1158,7 +1221,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.89
+          "classification_confidence": 0.79
         },
         {
           "paper_id": "2604.20730",
@@ -1184,7 +1247,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.98
+          "classification_confidence": 0.97
         },
         {
           "paper_id": "2604.20715",
@@ -1211,31 +1274,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.96
-        },
-        {
-          "paper_id": "2604.20594",
-          "title": "Physics-Informed Conditional Diffusion for Motion-Robust Retinal Temporal Laser Speckle Contrast Imaging",
-          "abs_url": "https://arxiv.org/abs/2604.20594",
-          "pdf_url": "https://arxiv.org/pdf/2604.20594",
-          "detail_url": "https://papers.cool/arxiv/2604.20594",
-          "authors": [
-            "Qian Chen",
-            "Yuehao Chen",
-            "Qiang Wang",
-            "Lei Zhu",
-            "Yanye Lu",
-            "Qiushi Ren"
-          ],
-          "subjects": [
-            "Computer Vision and Pattern Recognition"
-          ],
-          "abstract": "Retinal laser speckle contrast imaging (LSCI) is a noninvasive optical modality for monitoring retinal blood flow dynamics. However, conventional temporal LSCI (tLSCI) reconstruction relies on sufficiently long speckle sequences to obtain stable temporal statistics, which makes it vulnerable to acquisition disturbances and limits effective temporal resolution. A physically informed reconstruction framework, termed RetinaDiff (Retinal Diffusion Model), is proposed for retinal tLSCI that is robust to motion and requires only a few frames. In RetinaDiff, registration based on phase correlation is first applied to stabilize the raw speckle sequence before contrast computation, reducing interframe misalignment so that fluctuations at each pixel primarily reflect true flow dynamics. This step provides a physics prior corrected for motion and a high quality multiframe tLSCI reference. Next, guided by the physics prior, a conditional diffusion model performs inverse reconstruction by jointly conditioning on the registered speckle sequence and the corrected prior. Experiments on data acquired with a retinal LSCI system developed in house show improved structural continuity and statistical stability compared with direct reconstruction from few frames and representative baselines. The framework also remains effective in a small number of extremely challenging cases, where both the direct 5-frame input and the conventional multiframe reconstruction are severely degraded. Overall, this work provides a practical and physically grounded route for reliable retinal tLSCI reconstruction from extremely limited frames. The source code and model weights will be publicly available at https://github.com/QianChen113/RetinaDiff.",
-          "topic_key": "multimodal_generative",
-          "topic_label": "Multimodal Generative Modeling",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.95
+          "classification_confidence": 0.92
         },
         {
           "paper_id": "2604.20470",
@@ -1257,7 +1296,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.99
+          "classification_confidence": 0.98
         },
         {
           "paper_id": "2604.20317",
@@ -1276,6 +1315,28 @@
             "Computer Vision and Pattern Recognition"
           ],
           "abstract": "GAN-based facial attribute editing is widely used in virtual avatars and social media but often suffers from attribute entanglement, where modifying one face attribute unintentionally alters others. While supervised disentangled representation learning can address this, it relies heavily on labeled data, incurring high annotation costs. To address these challenges, we propose MD-Face, a label-free disentangled representation learning framework based on Mixture of Experts (MoE). MD-Face utilizes a MoE backbone with a gating mechanism that dynamically allocates experts, enabling the model to learn semantic vectors with greater independence. To further enhance attribute entanglement, we introduce a geometry-aware loss, which aligns each semantic vector with its corresponding Semantic Boundary Vector (SBV) through a Jacobian-based pushforward method. Experiments with ProGAN and StyleGAN show that MD-Face outperforms unsupervised baselines and competes with supervised ones. Compared to diffusion-based methods, it offers better image quality and lower inference latency, making it ideal for interactive editing.",
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.95
+        },
+        {
+          "paper_id": "2604.20291",
+          "title": "Efficient INT8 Single-Image Super-Resolution via Deployment-Aware Quantization and Teacher-Guided Training",
+          "abs_url": "https://arxiv.org/abs/2604.20291",
+          "pdf_url": "https://arxiv.org/pdf/2604.20291",
+          "detail_url": "https://papers.cool/arxiv/2604.20291",
+          "authors": [
+            "Pham Phuong Nam Nguyen",
+            "Nam Tien Le",
+            "Thi Kim Trang Vo",
+            "Nhu Tinh Anh Nguyen"
+          ],
+          "subjects": [
+            "Computer Vision and Pattern Recognition"
+          ],
+          "abstract": "Efficient single-image super-resolution (SISR) requires balancing reconstruction fidelity, model compactness, and robustness under low-bit deployment, which is especially challenging for x3 SR. We present a deployment-oriented quantized SISR framework based on an extract-refine-upsample design. The student performs most computation in the low-resolution space and uses a lightweight re-parameterizable backbone with PixelShuffle reconstruction, yielding a compact inference graph. To improve quality without significantly increasing complexity, we adopt a three-stage training pipeline: Stage 1 learns a basic reconstruction mapping with spatial supervision; Stage 2 refines fidelity using Charbonnier loss, DCT-domain supervision, and confidence-weighted output-level distillation from a Mamba-based teacher; and Stage 3 applies quantization-aware training directly on the fused deploy graph. We further use weight clipping and BatchNorm recalibration to improve quantization stability. On the MAI 2026 Quantized 4K Image Super-Resolution Challenge test set, our final AIO MAI submission achieves 29.79 dB PSNR and 0.8634 SSIM, obtaining a final score of 1.8 under the target mobile INT8 deployment setting. Ablation on Stage 3 optimization shows that teacher-guided supervision improves the dynamic INT8 TFLite reconstruction from 29.91 dB/0.853 to 30.0003 dB/0.856, while the fixed-shape deployable INT8 TFLite artifact attains 30.006 dB/0.857.",
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
@@ -1304,7 +1365,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.96
+          "classification_confidence": 0.97
         },
         {
           "paper_id": "2604.20226",
@@ -1328,7 +1389,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.84
+          "classification_confidence": 0.92
         },
         {
           "paper_id": "2604.20155",
@@ -1351,7 +1412,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.77
+          "classification_confidence": 0.74
         },
         {
           "paper_id": "2604.20038",
@@ -1374,7 +1435,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.95
+          "classification_confidence": 0.94
         },
         {
           "paper_id": "2604.19954",
@@ -1398,26 +1459,6 @@
           "classification_confidence": 0.98
         },
         {
-          "paper_id": "2604.19941",
-          "title": "CrackForward: Context-Aware Severity Stage Crack Synthesis for Data Augmentation",
-          "abs_url": "https://arxiv.org/abs/2604.19941",
-          "pdf_url": "https://arxiv.org/pdf/2604.19941",
-          "detail_url": "https://papers.cool/arxiv/2604.19941",
-          "authors": [
-            "Nassim Sadallah",
-            "Mohand Saïd Allili"
-          ],
-          "subjects": [
-            "Computer Vision and Pattern Recognition"
-          ],
-          "abstract": "Reliable crack detection and segmentation are vital for structural health monitoring, yet the scarcity of well-annotated data constitutes a major challenge. To address this limitation, we propose a novel context-aware generative framework designed to synthesize realistic crack growth patterns for data augmentation. Unlike existing methods that primarily manipulate textures or background content, CrackForward explicitly models crack morphology by combining directional crack elongation with learned thickening and branching. Our framework integrates two key innovations: (i) a contextually guided crack expansion module, which uses local directional cues and adaptive random walk to simulate realistic propagation paths; and (ii) a two-stage U-Net-style generator that learns to reproduce spatially varying crack characteristics such as thickness, branching, and growth. Experimental results show that the generated samples preserve target-stage saturation and thickness characteristics and improve the performance of several crack segmentation architectures. These results indicate that structure-aware synthetic crack generation can provide more informative training data than conventional augmentation alone.",
-          "topic_key": "multimodal_generative",
-          "topic_label": "Multimodal Generative Modeling",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.74
-        },
-        {
           "paper_id": "2604.19907",
           "title": "SceneOrchestra: Efficient Agentic 3D Scene Synthesis via Full Tool-Call Trajectory Generation",
           "abs_url": "https://arxiv.org/abs/2604.19907",
@@ -1436,7 +1477,7 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.93
+          "classification_confidence": 0.86
         },
         {
           "paper_id": "2604.19858",
@@ -1510,36 +1551,14 @@
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.95
-        },
-        {
-          "paper_id": "2604.20522",
-          "title": "From Image to Music Language: A Two-Stage Structure Decoding Approach for Complex Polyphonic OMR",
-          "abs_url": "https://arxiv.org/abs/2604.20522",
-          "pdf_url": "https://arxiv.org/pdf/2604.20522",
-          "detail_url": "https://papers.cool/arxiv/2604.20522",
-          "authors": [
-            "Nan Xu",
-            "Shiheng Li",
-            "Shengchao Hou"
-          ],
-          "subjects": [
-            "Sound",
-            "Computer Vision and Pattern Recognition"
-          ],
-          "abstract": "We propose a new approach for the second stage of a practical two-stage Optical Music Recognition (OMR) pipeline. Given symbol and event candidates from the visual pipeline, we decode them into an editable, verifiable, and exportable score structure. We focus on complex polyphonic staff notation, especially piano scores, where voice separation and intra-measure timing are the main bottlenecks. Our approach formulates second-stage decoding as a structure decoding problem and uses topology recognition with probability-guided search (BeadSolver) as its core method. We also describe a data strategy that combines procedural generation with recognition-feedback annotations. The result is a practical decoding component for real OMR systems and a path to accumulate structured score data for future end-to-end, multimodal, and RL-style methods.",
-          "topic_key": "multimodal_generative",
-          "topic_label": "Multimodal Generative Modeling",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.79
+          "classification_confidence": 0.97
         }
       ]
     },
     {
       "topic_label": "Datasets and Benchmarks",
-      "count": 12,
-      "share": 11.32,
+      "count": 10,
+      "share": 9.43,
       "papers": [
         {
           "paper_id": "2604.20806",
@@ -1569,7 +1588,7 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.98
+          "classification_confidence": 0.97
         },
         {
           "paper_id": "2604.20623",
@@ -1593,7 +1612,7 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.97
+          "classification_confidence": 0.98
         },
         {
           "paper_id": "2604.20543",
@@ -1619,7 +1638,7 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.93
+          "classification_confidence": 0.97
         },
         {
           "paper_id": "2604.20460",
@@ -1646,27 +1665,6 @@
           "matched_terms": [],
           "classification_source": "codex",
           "classification_confidence": 0.98
-        },
-        {
-          "paper_id": "2604.20357",
-          "title": "SignDATA: Data Pipeline for Sign Language Translation",
-          "abs_url": "https://arxiv.org/abs/2604.20357",
-          "pdf_url": "https://arxiv.org/pdf/2604.20357",
-          "detail_url": "https://papers.cool/arxiv/2604.20357",
-          "authors": [
-            "Kuanwei Chen",
-            "Tingyi Lin"
-          ],
-          "subjects": [
-            "Computer Vision and Pattern Recognition",
-            "Computation and Language"
-          ],
-          "abstract": "Sign-language datasets are difficult to preprocess consistently because they vary in annotation schema, clip timing, signer framing, and privacy constraints. Existing work usually reports downstream models, while the preprocessing pipeline that converts raw video into training-ready pose or video artifacts remains fragmented, backend-specific, and weakly documented. We present SignDATA, a config-driven preprocessing toolkit that standardizes heterogeneous sign-language corpora into comparable outputs for learning. The system supports two end-to-end recipes: a pose recipe that performs acquisition, manifesting, person localization, clipping, cropping, landmark extraction, normalization, and WebDataset export, and a video recipe that replaces pose extraction with signer-cropped video packaging. SignDATA exposes interchangeable MediaPipe and MMPose backends behind a common interface, typed job schemas, experiment-level overrides, and per-stage checkpointing with config- and manifest-aware hashes. We validate the toolkit through a research-oriented evaluation design centered on backend comparison, preprocessing ablations, and privacy-aware video generation on datasets. Our contribution is a reproducible preprocessing layer for sign-language research that makes extractor choice, normalization policy, and privacy tradeoffs explicit, configurable, and empirically comparable.Code is available at https://github.com/balaboom123/signdata-slt.",
-          "topic_key": "datasets_benchmarks",
-          "topic_label": "Datasets and Benchmarks",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.9
         },
         {
           "paper_id": "2604.20350",
@@ -1718,7 +1716,7 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.94
+          "classification_confidence": 0.97
         },
         {
           "paper_id": "2604.20190",
@@ -1742,7 +1740,7 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.98
+          "classification_confidence": 0.97
         },
         {
           "paper_id": "2604.20157",
@@ -1767,7 +1765,7 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.95
+          "classification_confidence": 0.93
         },
         {
           "paper_id": "2604.20000",
@@ -1792,7 +1790,7 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.97
+          "classification_confidence": 0.98
         },
         {
           "paper_id": "2604.19966",
@@ -1816,28 +1814,7 @@
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.98
-        },
-        {
-          "paper_id": "2604.19829",
-          "title": "TactileEval: A Step Towards Automated Fine-Grained Evaluation and Editing of Tactile Graphics",
-          "abs_url": "https://arxiv.org/abs/2604.19829",
-          "pdf_url": "https://arxiv.org/pdf/2604.19829",
-          "detail_url": "https://papers.cool/arxiv/2604.19829",
-          "authors": [
-            "Adnan Khan",
-            "Abbas Akkasi",
-            "Majid Komeili"
-          ],
-          "subjects": [
-            "Computer Vision and Pattern Recognition"
-          ],
-          "abstract": "Tactile graphics require careful expert validation before reaching blind and visually impaired (BVI) learners, yet existing datasets provide only coarse holistic quality ratings that offer no actionable repair signal. We present TactileEval, a three-stage pipeline that takes a first step toward automating this process. Drawing on expert free-text comments from the TactileNet dataset, we establish a five-category quality taxonomy; encompassing view angle, part completeness, background clutter, texture separation, and line quality aligned with BANA standards. We subsequently gathered 14,095 structured annotations via Amazon Mechanical Turk, spanning 66 object classes organized into six distinct families. A reproducible ViT-L/14 feature probe trained on this data achieves 85.70% overall test accuracy across 30 different tasks, with consistent difficulty ordering suggesting the taxonomy suggesting the taxonomy captures meaningful perceptual structure. Building on these evaluations, we present a ViT-guided automated editing pipeline that routes classifier scores through family-specific prompt templates to produce targeted corrections via gpt-image-1 image editing. Code, data, and models are available at https://TactileEval.github.io/",
-          "topic_key": "datasets_benchmarks",
-          "topic_label": "Datasets and Benchmarks",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.76
+          "classification_confidence": 0.97
         }
       ]
     },
@@ -1874,7 +1851,7 @@
           "topic_label": "Generative Foundations",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.72
+          "classification_confidence": 0.75
         },
         {
           "paper_id": "2604.20354",
@@ -1897,7 +1874,7 @@
           "topic_label": "Generative Foundations",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.97
+          "classification_confidence": 0.96
         },
         {
           "paper_id": "2604.20329",
@@ -1941,7 +1918,7 @@
           "topic_label": "Generative Foundations",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.78
+          "classification_confidence": 0.85
         },
         {
           "paper_id": "2604.20289",
@@ -1972,7 +1949,7 @@
           "topic_label": "Generative Foundations",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.97
+          "classification_confidence": 0.94
         },
         {
           "paper_id": "2604.20128",
@@ -1997,7 +1974,7 @@
           "topic_label": "Generative Foundations",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.82
+          "classification_confidence": 0.79
         },
         {
           "paper_id": "2604.20041",
@@ -2045,7 +2022,7 @@
           "topic_label": "Generative Foundations",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.96
+          "classification_confidence": 0.97
         },
         {
           "paper_id": "2604.20245",
@@ -2068,7 +2045,7 @@
           "topic_label": "Generative Foundations",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.71
+          "classification_confidence": 0.58
         },
         {
           "paper_id": "2604.20130",
@@ -2090,15 +2067,38 @@
           "topic_label": "Generative Foundations",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.97
+          "classification_confidence": 0.96
         }
       ]
     },
     {
       "topic_label": "Reasoning, Alignment, and Evaluation",
-      "count": 8,
-      "share": 7.55,
+      "count": 9,
+      "share": 8.49,
       "papers": [
+        {
+          "paper_id": "2604.20705",
+          "title": "SSL-R1: Self-Supervised Visual Reinforcement Post-Training for Multimodal Large Language Models",
+          "abs_url": "https://arxiv.org/abs/2604.20705",
+          "pdf_url": "https://arxiv.org/pdf/2604.20705",
+          "detail_url": "https://papers.cool/arxiv/2604.20705",
+          "authors": [
+            "Jiahao Xie",
+            "Alessio Tonioni",
+            "Nathalie Rauschmayr",
+            "Federico Tombari",
+            "Bernt Schiele"
+          ],
+          "subjects": [
+            "Computer Vision and Pattern Recognition"
+          ],
+          "abstract": "Reinforcement learning (RL) with verifiable rewards (RLVR) has demonstrated the great potential of enhancing the reasoning abilities in multimodal large language models (MLLMs). However, the reliance on language-centric priors and expensive manual annotations prevents MLLMs' intrinsic visual understanding and scalable reward designs. In this work, we introduce SSL-R1, a generic self-supervised RL framework that derives verifiable rewards directly from images. To this end, we revisit self-supervised learning (SSL) in visual domains and reformulate widely-used SSL tasks into a set of verifiable visual puzzles for RL post-training, requiring neither human nor external model supervision. Training MLLMs on these tasks substantially improves their performance on multimodal understanding and reasoning benchmarks, highlighting the potential of leveraging vision-centric self-supervised tasks for MLLM post-training. We think this work will provide useful experience in devising effective self-supervised verifiable rewards to enable RL at scale. Project page: https://github.com/Jiahao000/SSL-R1.",
+          "topic_key": "reasoning_alignment_eval",
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "matched_terms": [],
+          "classification_source": "codex",
+          "classification_confidence": 0.72
+        },
         {
           "paper_id": "2604.20696",
           "title": "R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs",
@@ -2120,7 +2120,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.85
+          "classification_confidence": 0.9
         },
         {
           "paper_id": "2604.20665",
@@ -2141,7 +2141,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.86
+          "classification_confidence": 0.88
         },
         {
           "paper_id": "2604.20585",
@@ -2163,7 +2163,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.72
+          "classification_confidence": 0.7
         },
         {
           "paper_id": "2604.20544",
@@ -2186,7 +2186,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.88
+          "classification_confidence": 0.86
         },
         {
           "paper_id": "2604.20366",
@@ -2211,7 +2211,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.87
+          "classification_confidence": 0.9
         },
         {
           "paper_id": "2604.20047",
@@ -2235,7 +2235,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.96
+          "classification_confidence": 0.94
         },
         {
           "paper_id": "2604.20027",
@@ -2255,7 +2255,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.87
+          "classification_confidence": 0.8
         },
         {
           "paper_id": "2604.19834",
@@ -2279,7 +2279,7 @@
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.64
+          "classification_confidence": 0.69
         }
       ]
     },
@@ -2308,7 +2308,7 @@
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.77
+          "classification_confidence": 0.73
         },
         {
           "paper_id": "2604.20392",
@@ -2330,7 +2330,7 @@
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.77
+          "classification_confidence": 0.81
         },
         {
           "paper_id": "2604.20368",
@@ -2357,7 +2357,7 @@
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.74
+          "classification_confidence": 0.79
         },
         {
           "paper_id": "2604.20328",
@@ -2381,7 +2381,7 @@
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.6
+          "classification_confidence": 0.56
         },
         {
           "paper_id": "2604.20825",
@@ -2408,7 +2408,7 @@
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.91
+          "classification_confidence": 0.83
         },
         {
           "paper_id": "2604.20083",
@@ -2429,7 +2429,7 @@
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.84
+          "classification_confidence": 0.73
         }
       ]
     },
@@ -2458,7 +2458,7 @@
           "topic_label": "Multimodal Agents",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.82
+          "classification_confidence": 0.86
         },
         {
           "paper_id": "2604.20486",
@@ -2533,7 +2533,7 @@
           "topic_label": "Multimodal Agents",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.96
+          "classification_confidence": 0.97
         },
         {
           "paper_id": "2604.19839",
@@ -2557,7 +2557,7 @@
           "topic_label": "Multimodal Agents",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.91
+          "classification_confidence": 0.95
         }
       ]
     },
@@ -2612,7 +2612,7 @@
           "topic_label": "Retrieval, Knowledge, and RAG",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.9
+          "classification_confidence": 0.83
         },
         {
           "paper_id": "2604.20318",
@@ -2692,7 +2692,7 @@
           "topic_label": "Robotics and Embodied AI",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.85
+          "classification_confidence": 0.82
         },
         {
           "paper_id": "2604.20745",
@@ -2752,7 +2752,7 @@
           "topic_label": "Agents and Planning",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.92
+          "classification_confidence": 0.96
         }
       ]
     },
@@ -2782,7 +2782,7 @@
           "topic_label": "Other AI",
           "matched_terms": [],
           "classification_source": "codex",
-          "classification_confidence": 0.55
+          "classification_confidence": 0.44
         }
       ]
     }
@@ -2808,7 +2808,7 @@
       "topic_label": "Multimodal Agents",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.82
+      "classification_confidence": 0.86
     },
     {
       "paper_id": "2604.20822",
@@ -2830,7 +2830,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.92
+      "classification_confidence": 0.91
     },
     {
       "paper_id": "2604.20813",
@@ -2850,7 +2850,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.8
+      "classification_confidence": 0.84
     },
     {
       "paper_id": "2604.20806",
@@ -2880,7 +2880,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.98
+      "classification_confidence": 0.97
     },
     {
       "paper_id": "2604.20800",
@@ -2904,7 +2904,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.86
+      "classification_confidence": 0.85
     },
     {
       "paper_id": "2604.20796",
@@ -2940,7 +2940,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.99
+      "classification_confidence": 0.98
     },
     {
       "paper_id": "2604.20784",
@@ -2966,7 +2966,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.89
+      "classification_confidence": 0.79
     },
     {
       "paper_id": "2604.20760",
@@ -3012,7 +3012,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.94
+      "classification_confidence": 0.93
     },
     {
       "paper_id": "2604.20730",
@@ -3038,7 +3038,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.98
+      "classification_confidence": 0.97
     },
     {
       "paper_id": "2604.20715",
@@ -3065,7 +3065,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.96
+      "classification_confidence": 0.92
     },
     {
       "paper_id": "2604.20705",
@@ -3084,11 +3084,11 @@
         "Computer Vision and Pattern Recognition"
       ],
       "abstract": "Reinforcement learning (RL) with verifiable rewards (RLVR) has demonstrated the great potential of enhancing the reasoning abilities in multimodal large language models (MLLMs). However, the reliance on language-centric priors and expensive manual annotations prevents MLLMs' intrinsic visual understanding and scalable reward designs. In this work, we introduce SSL-R1, a generic self-supervised RL framework that derives verifiable rewards directly from images. To this end, we revisit self-supervised learning (SSL) in visual domains and reformulate widely-used SSL tasks into a set of verifiable visual puzzles for RL post-training, requiring neither human nor external model supervision. Training MLLMs on these tasks substantially improves their performance on multimodal understanding and reasoning benchmarks, highlighting the potential of leveraging vision-centric self-supervised tasks for MLLM post-training. We think this work will provide useful experience in devising effective self-supervised verifiable rewards to enable RL at scale. Project page: https://github.com/Jiahao000/SSL-R1.",
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
+      "topic_key": "reasoning_alignment_eval",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.74
+      "classification_confidence": 0.72
     },
     {
       "paper_id": "2604.20696",
@@ -3111,7 +3111,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.85
+      "classification_confidence": 0.9
     },
     {
       "paper_id": "2604.20665",
@@ -3132,7 +3132,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.86
+      "classification_confidence": 0.88
     },
     {
       "paper_id": "2604.20650",
@@ -3179,7 +3179,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.97
+      "classification_confidence": 0.98
     },
     {
       "paper_id": "2604.20606",
@@ -3201,7 +3201,7 @@
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.77
+      "classification_confidence": 0.73
     },
     {
       "paper_id": "2604.20594",
@@ -3221,11 +3221,11 @@
         "Computer Vision and Pattern Recognition"
       ],
       "abstract": "Retinal laser speckle contrast imaging (LSCI) is a noninvasive optical modality for monitoring retinal blood flow dynamics. However, conventional temporal LSCI (tLSCI) reconstruction relies on sufficiently long speckle sequences to obtain stable temporal statistics, which makes it vulnerable to acquisition disturbances and limits effective temporal resolution. A physically informed reconstruction framework, termed RetinaDiff (Retinal Diffusion Model), is proposed for retinal tLSCI that is robust to motion and requires only a few frames. In RetinaDiff, registration based on phase correlation is first applied to stabilize the raw speckle sequence before contrast computation, reducing interframe misalignment so that fluctuations at each pixel primarily reflect true flow dynamics. This step provides a physics prior corrected for motion and a high quality multiframe tLSCI reference. Next, guided by the physics prior, a conditional diffusion model performs inverse reconstruction by jointly conditioning on the registered speckle sequence and the corrected prior. Experiments on data acquired with a retinal LSCI system developed in house show improved structural continuity and statistical stability compared with direct reconstruction from few frames and representative baselines. The framework also remains effective in a small number of extremely challenging cases, where both the direct 5-frame input and the conventional multiframe reconstruction are severely degraded. Overall, this work provides a practical and physically grounded route for reliable retinal tLSCI reconstruction from extremely limited frames. The source code and model weights will be publicly available at https://github.com/QianChen113/RetinaDiff.",
-      "topic_key": "multimodal_generative",
-      "topic_label": "Multimodal Generative Modeling",
+      "topic_key": "domain_applications",
+      "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.93
     },
     {
       "paper_id": "2604.20591",
@@ -3246,7 +3246,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.94
+      "classification_confidence": 0.96
     },
     {
       "paper_id": "2604.20585",
@@ -3268,7 +3268,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.72
+      "classification_confidence": 0.7
     },
     {
       "paper_id": "2604.20574",
@@ -3324,7 +3324,7 @@
       "topic_label": "Generative Foundations",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.72
+      "classification_confidence": 0.75
     },
     {
       "paper_id": "2604.20544",
@@ -3347,7 +3347,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.88
+      "classification_confidence": 0.86
     },
     {
       "paper_id": "2604.20543",
@@ -3373,7 +3373,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.93
+      "classification_confidence": 0.97
     },
     {
       "paper_id": "2604.20486",
@@ -3422,7 +3422,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.76
+      "classification_confidence": 0.74
     },
     {
       "paper_id": "2604.20473",
@@ -3445,7 +3445,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.83
+      "classification_confidence": 0.82
     },
     {
       "paper_id": "2604.20470",
@@ -3467,7 +3467,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.99
+      "classification_confidence": 0.98
     },
     {
       "paper_id": "2604.20460",
@@ -3566,7 +3566,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.9
+      "classification_confidence": 0.88
     },
     {
       "paper_id": "2604.20392",
@@ -3588,7 +3588,7 @@
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.77
+      "classification_confidence": 0.81
     },
     {
       "paper_id": "2604.20368",
@@ -3615,7 +3615,7 @@
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.74
+      "classification_confidence": 0.79
     },
     {
       "paper_id": "2604.20366",
@@ -3640,7 +3640,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.87
+      "classification_confidence": 0.9
     },
     {
       "paper_id": "2604.20361",
@@ -3662,7 +3662,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.82
+      "classification_confidence": 0.84
     },
     {
       "paper_id": "2604.20358",
@@ -3686,7 +3686,7 @@
       "topic_label": "Retrieval, Knowledge, and RAG",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.9
+      "classification_confidence": 0.83
     },
     {
       "paper_id": "2604.20357",
@@ -3703,11 +3703,11 @@
         "Computation and Language"
       ],
       "abstract": "Sign-language datasets are difficult to preprocess consistently because they vary in annotation schema, clip timing, signer framing, and privacy constraints. Existing work usually reports downstream models, while the preprocessing pipeline that converts raw video into training-ready pose or video artifacts remains fragmented, backend-specific, and weakly documented. We present SignDATA, a config-driven preprocessing toolkit that standardizes heterogeneous sign-language corpora into comparable outputs for learning. The system supports two end-to-end recipes: a pose recipe that performs acquisition, manifesting, person localization, clipping, cropping, landmark extraction, normalization, and WebDataset export, and a video recipe that replaces pose extraction with signer-cropped video packaging. SignDATA exposes interchangeable MediaPipe and MMPose backends behind a common interface, typed job schemas, experiment-level overrides, and per-stage checkpointing with config- and manifest-aware hashes. We validate the toolkit through a research-oriented evaluation design centered on backend comparison, preprocessing ablations, and privacy-aware video generation on datasets. Our contribution is a reproducible preprocessing layer for sign-language research that makes extractor choice, normalization policy, and privacy tradeoffs explicit, configurable, and empirically comparable.Code is available at https://github.com/balaboom123/signdata-slt.",
-      "topic_key": "datasets_benchmarks",
-      "topic_label": "Datasets and Benchmarks",
+      "topic_key": "domain_applications",
+      "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.9
+      "classification_confidence": 0.7
     },
     {
       "paper_id": "2604.20354",
@@ -3730,7 +3730,7 @@
       "topic_label": "Generative Foundations",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.97
+      "classification_confidence": 0.96
     },
     {
       "paper_id": "2604.20350",
@@ -3782,7 +3782,7 @@
       "topic_label": "Robotics and Embodied AI",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.85
+      "classification_confidence": 0.82
     },
     {
       "paper_id": "2604.20329",
@@ -3826,7 +3826,7 @@
       "topic_label": "Generative Foundations",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.78
+      "classification_confidence": 0.85
     },
     {
       "paper_id": "2604.20328",
@@ -3850,7 +3850,7 @@
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.6
+      "classification_confidence": 0.56
     },
     {
       "paper_id": "2604.20319",
@@ -3875,7 +3875,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.94
+      "classification_confidence": 0.97
     },
     {
       "paper_id": "2604.20318",
@@ -3923,7 +3923,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.89
+      "classification_confidence": 0.95
     },
     {
       "paper_id": "2604.20307",
@@ -3942,7 +3942,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.91
+      "classification_confidence": 0.94
     },
     {
       "paper_id": "2604.20306",
@@ -3967,7 +3967,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.89
+      "classification_confidence": 0.9
     },
     {
       "paper_id": "2604.20291",
@@ -3985,11 +3985,11 @@
         "Computer Vision and Pattern Recognition"
       ],
       "abstract": "Efficient single-image super-resolution (SISR) requires balancing reconstruction fidelity, model compactness, and robustness under low-bit deployment, which is especially challenging for x3 SR. We present a deployment-oriented quantized SISR framework based on an extract-refine-upsample design. The student performs most computation in the low-resolution space and uses a lightweight re-parameterizable backbone with PixelShuffle reconstruction, yielding a compact inference graph. To improve quality without significantly increasing complexity, we adopt a three-stage training pipeline: Stage 1 learns a basic reconstruction mapping with spatial supervision; Stage 2 refines fidelity using Charbonnier loss, DCT-domain supervision, and confidence-weighted output-level distillation from a Mamba-based teacher; and Stage 3 applies quantization-aware training directly on the fused deploy graph. We further use weight clipping and BatchNorm recalibration to improve quantization stability. On the MAI 2026 Quantized 4K Image Super-Resolution Challenge test set, our final AIO MAI submission achieves 29.79 dB PSNR and 0.8634 SSIM, obtaining a final score of 1.8 under the target mobile INT8 deployment setting. Ablation on Stage 3 optimization shows that teacher-guided supervision improves the dynamic INT8 TFLite reconstruction from 29.91 dB/0.853 to 30.0003 dB/0.856, while the fixed-shape deployable INT8 TFLite artifact attains 30.006 dB/0.857.",
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
+      "topic_key": "multimodal_generative",
+      "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.78
+      "classification_confidence": 0.89
     },
     {
       "paper_id": "2604.20289",
@@ -4020,7 +4020,7 @@
       "topic_label": "Generative Foundations",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.97
+      "classification_confidence": 0.94
     },
     {
       "paper_id": "2604.20286",
@@ -4042,7 +4042,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.96
+      "classification_confidence": 0.97
     },
     {
       "paper_id": "2604.20281",
@@ -4066,7 +4066,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.93
+      "classification_confidence": 0.95
     },
     {
       "paper_id": "2604.20268",
@@ -4119,7 +4119,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.96
+      "classification_confidence": 0.97
     },
     {
       "paper_id": "2604.20243",
@@ -4140,7 +4140,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.79
+      "classification_confidence": 0.84
     },
     {
       "paper_id": "2604.20226",
@@ -4164,7 +4164,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.84
+      "classification_confidence": 0.92
     },
     {
       "paper_id": "2604.20213",
@@ -4241,7 +4241,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.98
+      "classification_confidence": 0.97
     },
     {
       "paper_id": "2604.20169",
@@ -4260,7 +4260,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.86
+      "classification_confidence": 0.91
     },
     {
       "paper_id": "2604.20157",
@@ -4285,7 +4285,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.93
     },
     {
       "paper_id": "2604.20155",
@@ -4308,7 +4308,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.77
+      "classification_confidence": 0.74
     },
     {
       "paper_id": "2604.20136",
@@ -4340,7 +4340,7 @@
       "topic_label": "Agents and Planning",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.92
+      "classification_confidence": 0.96
     },
     {
       "paper_id": "2604.20128",
@@ -4365,7 +4365,7 @@
       "topic_label": "Generative Foundations",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.82
+      "classification_confidence": 0.79
     },
     {
       "paper_id": "2604.20123",
@@ -4388,7 +4388,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.9
+      "classification_confidence": 0.93
     },
     {
       "paper_id": "2604.20093",
@@ -4409,7 +4409,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.81
+      "classification_confidence": 0.89
     },
     {
       "paper_id": "2604.20047",
@@ -4433,7 +4433,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.96
+      "classification_confidence": 0.94
     },
     {
       "paper_id": "2604.20046",
@@ -4456,7 +4456,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.68
+      "classification_confidence": 0.72
     },
     {
       "paper_id": "2604.20041",
@@ -4503,7 +4503,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.94
     },
     {
       "paper_id": "2604.20030",
@@ -4526,7 +4526,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.88
+      "classification_confidence": 0.9
     },
     {
       "paper_id": "2604.20027",
@@ -4546,7 +4546,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.87
+      "classification_confidence": 0.8
     },
     {
       "paper_id": "2604.20026",
@@ -4569,7 +4569,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.86
+      "classification_confidence": 0.92
     },
     {
       "paper_id": "2604.20012",
@@ -4619,7 +4619,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.97
+      "classification_confidence": 0.98
     },
     {
       "paper_id": "2604.19999",
@@ -4639,7 +4639,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.88
+      "classification_confidence": 0.87
     },
     {
       "paper_id": "2604.19995",
@@ -4662,7 +4662,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.66
+      "classification_confidence": 0.62
     },
     {
       "paper_id": "2604.19989",
@@ -4683,7 +4683,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.86
+      "classification_confidence": 0.9
     },
     {
       "paper_id": "2604.19976",
@@ -4708,7 +4708,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.81
+      "classification_confidence": 0.84
     },
     {
       "paper_id": "2604.19966",
@@ -4732,7 +4732,7 @@
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.98
+      "classification_confidence": 0.97
     },
     {
       "paper_id": "2604.19954",
@@ -4778,7 +4778,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.73
+      "classification_confidence": 0.67
     },
     {
       "paper_id": "2604.19941",
@@ -4794,11 +4794,11 @@
         "Computer Vision and Pattern Recognition"
       ],
       "abstract": "Reliable crack detection and segmentation are vital for structural health monitoring, yet the scarcity of well-annotated data constitutes a major challenge. To address this limitation, we propose a novel context-aware generative framework designed to synthesize realistic crack growth patterns for data augmentation. Unlike existing methods that primarily manipulate textures or background content, CrackForward explicitly models crack morphology by combining directional crack elongation with learned thickening and branching. Our framework integrates two key innovations: (i) a contextually guided crack expansion module, which uses local directional cues and adaptive random walk to simulate realistic propagation paths; and (ii) a two-stage U-Net-style generator that learns to reproduce spatially varying crack characteristics such as thickness, branching, and growth. Experimental results show that the generated samples preserve target-stage saturation and thickness characteristics and improve the performance of several crack segmentation architectures. These results indicate that structure-aware synthetic crack generation can provide more informative training data than conventional augmentation alone.",
-      "topic_key": "multimodal_generative",
-      "topic_label": "Multimodal Generative Modeling",
+      "topic_key": "domain_applications",
+      "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.74
+      "classification_confidence": 0.84
     },
     {
       "paper_id": "2604.19937",
@@ -4824,7 +4824,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.92
+      "classification_confidence": 0.95
     },
     {
       "paper_id": "2604.19923",
@@ -4849,7 +4849,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.83
+      "classification_confidence": 0.88
     },
     {
       "paper_id": "2604.19907",
@@ -4870,7 +4870,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.93
+      "classification_confidence": 0.86
     },
     {
       "paper_id": "2604.19902",
@@ -4901,7 +4901,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.68
+      "classification_confidence": 0.65
     },
     {
       "paper_id": "2604.19888",
@@ -4921,7 +4921,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.87
+      "classification_confidence": 0.83
     },
     {
       "paper_id": "2604.19858",
@@ -4995,7 +4995,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.95
+      "classification_confidence": 0.97
     },
     {
       "paper_id": "2604.19844",
@@ -5020,7 +5020,7 @@
       "topic_label": "Multimodal Agents",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.96
+      "classification_confidence": 0.97
     },
     {
       "paper_id": "2604.19839",
@@ -5044,7 +5044,7 @@
       "topic_label": "Multimodal Agents",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.91
+      "classification_confidence": 0.95
     },
     {
       "paper_id": "2604.19834",
@@ -5068,7 +5068,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.64
+      "classification_confidence": 0.69
     },
     {
       "paper_id": "2604.19829",
@@ -5085,11 +5085,11 @@
         "Computer Vision and Pattern Recognition"
       ],
       "abstract": "Tactile graphics require careful expert validation before reaching blind and visually impaired (BVI) learners, yet existing datasets provide only coarse holistic quality ratings that offer no actionable repair signal. We present TactileEval, a three-stage pipeline that takes a first step toward automating this process. Drawing on expert free-text comments from the TactileNet dataset, we establish a five-category quality taxonomy; encompassing view angle, part completeness, background clutter, texture separation, and line quality aligned with BANA standards. We subsequently gathered 14,095 structured annotations via Amazon Mechanical Turk, spanning 66 object classes organized into six distinct families. A reproducible ViT-L/14 feature probe trained on this data achieves 85.70% overall test accuracy across 30 different tasks, with consistent difficulty ordering suggesting the taxonomy suggesting the taxonomy captures meaningful perceptual structure. Building on these evaluations, we present a ViT-guided automated editing pipeline that routes classifier scores through family-specific prompt templates to produce targeted corrections via gpt-image-1 image editing. Code, data, and models are available at https://TactileEval.github.io/",
-      "topic_key": "datasets_benchmarks",
-      "topic_label": "Datasets and Benchmarks",
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.76
+      "classification_confidence": 0.66
     },
     {
       "paper_id": "2604.19823",
@@ -5143,7 +5143,7 @@
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.91
+      "classification_confidence": 0.83
     },
     {
       "paper_id": "2604.20816",
@@ -5167,7 +5167,7 @@
       "topic_label": "Generative Foundations",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.96
+      "classification_confidence": 0.97
     },
     {
       "paper_id": "2604.20745",
@@ -5206,11 +5206,11 @@
         "Computer Vision and Pattern Recognition"
       ],
       "abstract": "We propose a new approach for the second stage of a practical two-stage Optical Music Recognition (OMR) pipeline. Given symbol and event candidates from the visual pipeline, we decode them into an editable, verifiable, and exportable score structure. We focus on complex polyphonic staff notation, especially piano scores, where voice separation and intra-measure timing are the main bottlenecks. Our approach formulates second-stage decoding as a structure decoding problem and uses topology recognition with probability-guided search (BeadSolver) as its core method. We also describe a data strategy that combines procedural generation with recognition-feedback annotations. The result is a practical decoding component for real OMR systems and a path to accumulate structured score data for future end-to-end, multimodal, and RL-style methods.",
-      "topic_key": "multimodal_generative",
-      "topic_label": "Multimodal Generative Modeling",
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.79
+      "classification_confidence": 0.74
     },
     {
       "paper_id": "2604.20511",
@@ -5240,7 +5240,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.74
+      "classification_confidence": 0.78
     },
     {
       "paper_id": "2604.20245",
@@ -5263,7 +5263,7 @@
       "topic_label": "Generative Foundations",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.71
+      "classification_confidence": 0.58
     },
     {
       "paper_id": "2604.20154",
@@ -5286,7 +5286,7 @@
       "topic_label": "Other AI",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.55
+      "classification_confidence": 0.44
     },
     {
       "paper_id": "2604.20130",
@@ -5308,7 +5308,7 @@
       "topic_label": "Generative Foundations",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.97
+      "classification_confidence": 0.96
     },
     {
       "paper_id": "2604.20083",
@@ -5329,7 +5329,7 @@
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.84
+      "classification_confidence": 0.73
     },
     {
       "paper_id": "2604.19979",
@@ -5355,7 +5355,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.61
+      "classification_confidence": 0.56
     },
     {
       "paper_id": "2604.19798",
@@ -5380,7 +5380,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.9
+      "classification_confidence": 0.84
     },
     {
       "paper_id": "2604.19770",
@@ -5400,7 +5400,7 @@
       "topic_label": "Domain Applications",
       "matched_terms": [],
       "classification_source": "codex",
-      "classification_confidence": 0.94
+      "classification_confidence": 0.88
     }
   ]
 }
