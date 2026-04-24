@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-24T13:55:50Z",
-  "reports_count": 175,
+  "generated_at": "2026-04-24T15:02:09Z",
+  "reports_count": 176,
   "branches": [
     {
       "branch_key": "daily",
@@ -12,8 +12,8 @@
     {
       "branch_key": "hf-daily",
       "branch_label": "HF Daily",
-      "reports_count": 39,
-      "default_report_path": "data/hf-daily/reports/2026-04-23/hf-daily-2026-04-23.json",
+      "reports_count": 40,
+      "default_report_path": "data/hf-daily/reports/2026-04-24/hf-daily-2026-04-24.json",
       "manifest_path": "data/hf-daily/manifest.json"
     },
     {
@@ -7229,6 +7229,87 @@
           "topic_label": "Datasets and Benchmarks",
           "count": 9,
           "share": 7.38
+        }
+      ]
+    },
+    {
+      "branch_key": "hf-daily",
+      "branch_label": "HF Daily",
+      "search_text": "hf-daily HF Daily hf-daily-2026-04-24 data/hf-daily/reports/2026-04-24/hf-daily-2026-04-24.json https://huggingface.co/papers/date/2026-04-24 codex 2026-04-24 Generative Foundations Multimodal Generative Modeling Multimodal Agents Multimodal Generative Modeling Multimodal Understanding and Vision Domain Applications LLMs and Language Multimodal Agents taesiri Franck Dernoncourt Cihang Xie Dzigen Jathurshan Pradeepkumar",
+      "data_path": "data/hf-daily/reports/2026-04-24/hf-daily-2026-04-24.json",
+      "slug": "hf-daily-2026-04-24",
+      "report_date": "2026-04-24",
+      "total_papers": 19,
+      "classifier": "codex",
+      "generated_at": "2026-04-24T15:02:08Z",
+      "source_url": "https://huggingface.co/papers/date/2026-04-24",
+      "focus_topics": [
+        {
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "count": 1,
+          "share": 5.26
+        },
+        {
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 4,
+          "share": 21.05
+        },
+        {
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "count": 2,
+          "share": 10.53
+        }
+      ],
+      "top_topics": [
+        {
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 4,
+          "share": 21.05
+        },
+        {
+          "topic_label": "Multimodal Understanding and Vision",
+          "count": 3,
+          "share": 15.79
+        },
+        {
+          "topic_label": "Domain Applications",
+          "count": 2,
+          "share": 10.53
+        },
+        {
+          "topic_label": "LLMs and Language",
+          "count": 2,
+          "share": 10.53
+        },
+        {
+          "topic_label": "Multimodal Agents",
+          "count": 2,
+          "share": 10.53
+        }
+      ],
+      "top_submitters": [
+        {
+          "submitted_by": "taesiri",
+          "count": 3
+        },
+        {
+          "submitted_by": "Franck Dernoncourt",
+          "count": 2
+        },
+        {
+          "submitted_by": "Cihang Xie",
+          "count": 1
+        },
+        {
+          "submitted_by": "Dzigen",
+          "count": 1
+        },
+        {
+          "submitted_by": "Jathurshan Pradeepkumar",
+          "count": 1
         }
       ]
     },
