@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-25T15:51:03Z",
+  "generated_at": "2026-04-26T15:42:35Z",
   "report_kind": "hf_daily",
   "report_date": "2026-04-20",
   "source_url": "https://huggingface.co/papers/date/2026-04-20",
@@ -9,14 +9,14 @@
     {
       "topic_key": "generative_foundations",
       "topic_label": "Generative Foundations",
-      "count": 2,
-      "share": 7.14
+      "count": 0,
+      "share": 0.0
     },
     {
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
-      "count": 5,
-      "share": 17.86
+      "count": 0,
+      "share": 0.0
     },
     {
       "topic_key": "multimodal_agents",
@@ -27,62 +27,47 @@
   ],
   "topic_distribution": [
     {
-      "topic_label": "Datasets and Benchmarks",
-      "count": 5,
-      "share": 17.86
-    },
-    {
-      "topic_label": "Multimodal Generative Modeling",
-      "count": 5,
-      "share": 17.86
-    },
-    {
-      "topic_label": "Agents and Planning",
-      "count": 3,
-      "share": 10.71
-    },
-    {
       "topic_label": "Multimodal Understanding and Vision",
-      "count": 3,
-      "share": 10.71
-    },
-    {
-      "topic_label": "Domain Applications",
-      "count": 2,
-      "share": 7.14
-    },
-    {
-      "topic_label": "Generative Foundations",
-      "count": 2,
-      "share": 7.14
-    },
-    {
-      "topic_label": "LLMs and Language",
-      "count": 2,
-      "share": 7.14
-    },
-    {
-      "topic_label": "Learning, Optimization, and Theory",
-      "count": 2,
-      "share": 7.14
+      "count": 6,
+      "share": 21.43
     },
     {
       "topic_label": "Other AI",
-      "count": 1,
-      "share": 3.57
+      "count": 5,
+      "share": 17.86
+    },
+    {
+      "topic_label": "LLMs and Language",
+      "count": 4,
+      "share": 14.29
+    },
+    {
+      "topic_label": "Learning, Optimization, and Theory",
+      "count": 3,
+      "share": 10.71
     },
     {
       "topic_label": "Reasoning, Alignment, and Evaluation",
-      "count": 1,
-      "share": 3.57
+      "count": 3,
+      "share": 10.71
+    },
+    {
+      "topic_label": "Agents and Planning",
+      "count": 2,
+      "share": 7.14
+    },
+    {
+      "topic_label": "Datasets and Benchmarks",
+      "count": 2,
+      "share": 7.14
     },
     {
       "topic_label": "Retrieval, Knowledge, and RAG",
-      "count": 1,
-      "share": 3.57
+      "count": 2,
+      "share": 7.14
     },
     {
-      "topic_label": "Robotics and Embodied AI",
+      "topic_label": "Domain Applications",
       "count": 1,
       "share": 3.57
     }
@@ -133,13 +118,15 @@
       "github_url": "",
       "submitted_by": "xiaochonglinghu",
       "submitted_at": "2026-04-20T07:56:13.917Z",
-      "upvotes": 72,
+      "upvotes": 73,
       "comments": 3,
-      "topic_key": "generative_foundations",
-      "topic_label": "Generative Foundations",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.98
+      "topic_key": "reasoning_alignment_eval",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "matched_terms": [
+        "\\bbias\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-20",
@@ -167,13 +154,15 @@
       "github_url": "",
       "submitted_by": "Xiaofan Li",
       "submitted_at": "2026-04-20T10:02:53.104Z",
-      "upvotes": 59,
+      "upvotes": 60,
       "comments": 2,
       "topic_key": "learning_theory",
       "topic_label": "Learning, Optimization, and Theory",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.62
+      "matched_terms": [
+        "\\boptimization\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-20",
@@ -192,13 +181,16 @@
       "github_url": "",
       "submitted_by": "Moshe kimhi",
       "submitted_at": "2026-04-20T04:15:01.382Z",
-      "upvotes": 55,
+      "upvotes": 56,
       "comments": 5,
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.64
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
+      "matched_terms": [
+        "\\boptimization\\b",
+        "\\bneural networks?\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-20",
@@ -215,13 +207,13 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-04-20T00:34:46.438Z",
-      "upvotes": 52,
+      "upvotes": 55,
       "comments": 2,
-      "topic_key": "multimodal_generative",
-      "topic_label": "Multimodal Generative Modeling",
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.71
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-20",
@@ -246,9 +238,11 @@
       "comments": 3,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.82
+      "matched_terms": [
+        "\\bmultimodal\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-20",
@@ -272,9 +266,11 @@
       "comments": 3,
       "topic_key": "retrieval_knowledge",
       "topic_label": "Retrieval, Knowledge, and RAG",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.99
+      "matched_terms": [
+        "\\bretrieval\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-20",
@@ -294,11 +290,11 @@
       "submitted_at": "2026-04-20T23:47:32.850Z",
       "upvotes": 23,
       "comments": 3,
-      "topic_key": "agents_planning",
-      "topic_label": "Agents and Planning",
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.84
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-20",
@@ -323,119 +319,130 @@
       "comments": 3,
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.78
+      "matched_terms": [
+        "\\breasoning\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     }
   ],
   "topics": [
     {
-      "topic_label": "Datasets and Benchmarks",
-      "count": 5,
-      "share": 17.86,
+      "topic_label": "Multimodal Understanding and Vision",
+      "count": 6,
+      "share": 21.43,
       "papers": [
         {
           "report_date": "2026-04-20",
-          "paper_id": "2604.15151",
-          "title": "QuantCode-Bench: A Benchmark for Evaluating the Ability of Large Language Models to Generate Executable Algorithmic Trading Strategies",
+          "paper_id": "2604.13074",
+          "title": "PersonaVLM: Long-Term Personalized Multimodal LLMs",
           "authors": [
-            "Alexey Khoroshilov",
-            "Alexey Chernysh",
-            "Orkhan Ekhtibarov",
-            "Nini Kamkia",
-            "Dmitry Zmitrovich"
+            "Chang Nie",
+            "Chaoyou Fu",
+            "Yifan Zhang",
+            "Haihua Yang",
+            "Caifeng Shan"
           ],
-          "abstract": "Large language models have demonstrated strong performance on general-purpose programming tasks, yet their ability to generate executable algorithmic trading strategies remains underexplored. Unlike standard code benchmarks, trading-strategy generation requires simultaneous mastery of domain-specific financial logic, knowledge of a specialized API, and the ability to produce code that is not only syntactically correct but also leads to actual trades on historical data. In this work, we present QuantCode-Bench, a benchmark for the systematic evaluation of modern LLMs in generating strategies for the Backtrader framework from textual descriptions in English. The benchmark contains 400 tasks of varying difficulty collected from Reddit, TradingView, StackExchange, GitHub, and synthetic sources. Evaluation is conducted through a multi-stage pipeline that checks syntactic correctness, successful backtest execution, the presence of trades, and semantic alignment with the task description using an LLM judge. We compare state-of-the-art models in two settings: single-turn, where the strategy must be generated correctly on the first attempt, and agentic multi-turn, where the model receives iterative feedback and may repair its errors. We analyze the failure modes across different stages of the pipeline and show that the main limitations of current models are not related to syntax, but rather to the correct operationalization of trading logic, proper API usage, and adherence to task semantics. These findings suggest that trading strategy generation constitutes a distinct class of domain-specific code generation tasks in which success requires not only technical correctness, but also alignment between natural-language descriptions, financial logic, and the observable behavior of the strategy on data.",
-          "hf_url": "https://huggingface.co/papers/2604.15151",
-          "arxiv_url": "https://arxiv.org/abs/2604.15151",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.15151",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.15151",
+          "abstract": "Multimodal Large Language Models (MLLMs) serve as daily assistants for millions. However, their ability to generate responses aligned with individual preferences remains limited. Prior approaches enable only static, single-turn personalization through input augmentation or output alignment, and thus fail to capture users' evolving preferences and personality over time (see Fig.1). In this paper, we introduce PersonaVLM, an innovative personalized multimodal agent framework designed for long-term personalization. It transforms a general-purpose MLLM into a personalized assistant by integrating three key capabilities: (a) Remembering: It proactively extracts and summarizes chronological multimodal memories from interactions, consolidating them into a personalized database. (b) Reasoning: It conducts multi-turn reasoning by retrieving and integrating relevant memories from the database. (c) Response Alignment: It infers the user's evolving personality throughout long-term interactions to ensure outputs remain aligned with their unique characteristics. For evaluation, we establish Persona-MME, a comprehensive benchmark comprising over 2,000 curated interaction cases, designed to assess long-term MLLM personalization across seven key aspects and 14 fine-grained tasks. Extensive experiments validate our method's effectiveness, improving the baseline by 22.4% (Persona-MME) and 9.8% (PERSONAMEM) under a 128k context, while outperforming GPT-4o by 5.2% and 2.0%, respectively. Project page: https://PersonaVLM.github.io.",
+          "hf_url": "https://huggingface.co/papers/2604.13074",
+          "arxiv_url": "https://arxiv.org/abs/2604.13074",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.13074",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.13074",
           "github_url": "",
-          "submitted_by": "Alexey Khoroshilov",
-          "submitted_at": "2026-04-20T08:24:25.679Z",
-          "upvotes": 15,
-          "comments": 2,
-          "topic_key": "datasets_benchmarks",
-          "topic_label": "Datasets and Benchmarks",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.98
+          "submitted_by": "Chaoyou Fu",
+          "submitted_at": "2026-04-20T00:16:26.668Z",
+          "upvotes": 46,
+          "comments": 3,
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [
+            "\\bmultimodal\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
         },
         {
           "report_date": "2026-04-20",
-          "paper_id": "2604.15411",
-          "title": "PRL-Bench: A Comprehensive Benchmark Evaluating LLMs' Capabilities in Frontier Physics Research",
+          "paper_id": "2604.16503",
+          "title": "Motif-Video 2B: Technical Report",
           "authors": [
-            "Tingjia Miao",
-            "Wenkai Jin",
-            "Muhua Zhang",
-            "Jinxin Tan",
-            "Yuelin Hu",
-            "Tu Guo",
-            "Jiejun Zhang",
-            "Yuhan Wang",
-            "Wenbo Li",
-            "Yinuo Gao",
-            "Shuo Chen",
-            "Weiqi Jiang",
-            "Yayun Hu",
-            "Zixing Lei",
-            "Xianghe Pang",
-            "Zexi Liu",
-            "Yuzhi Zhang",
-            "Linfeng Zhang",
-            "Kun Chen",
-            "Wei Wang",
-            "Weinan E",
-            "Siheng Chen"
+            "Junghwan Lim",
+            "Wai Ting Cheung",
+            "Minsu Ha",
+            "Beomgyu Kim",
+            "Taewhan Kim",
+            "Haesol Lee",
+            "Dongpin Oh",
+            "Jeesoo Lee",
+            "Taehyun Kim",
+            "Minjae Kim",
+            "Sungmin Lee",
+            "Hyeyeon Cho",
+            "Dahye Choi",
+            "Jaeheui Her",
+            "Jaeyeon Huh",
+            "Hanbin Jung",
+            "Changjin Kang",
+            "Dongseok Kim",
+            "Jangwoong Kim",
+            "Youngrok Kim",
+            "Hyukjin Kweon",
+            "Hongjoo Lee",
+            "Jeongdoo Lee",
+            "Junhyeok Lee",
+            "Eunhwan Park",
+            "Yeongjae Park",
+            "Bokki Ryu",
+            "Dongjoo Weon"
           ],
-          "abstract": "The paradigm of agentic science requires AI systems to conduct robust reasoning and engage in long-horizon, autonomous exploration. However, current scientific benchmarks remain confined to domain knowledge comprehension and complex reasoning, failing to evaluate the exploratory nature and procedural complexity of real-world research. In this work, we present research-oriented evaluations in theoretical and computational physics, a natural testbed with comprehensive domain knowledge, complex reasoning, and verifiable end-to-end workflows without reliance on experiments. Here we introduce PRL-Bench (Physics Research by LLMs), a benchmark designed to systematically map the capability boundaries of LLMs in executing end-to-end physics research. Constructed from 100 curated papers from the latest issues of Physical Review Letters since August 2025 and validated by domain experts, PRL-Bench covers five major theory- and computation-intensive subfields of modern physics: astrophysics, condensed matter physics, high-energy physics, quantum information, and statistical physics. Each task in the benchmark is designed to replicate the core properties of authentic scientific research, including exploration-oriented formulation, long-horizon workflows, and objective verifiability, thereby reconstructing the essential reasoning processes and research workflows of real physics research. Evaluation across frontier models shows that performance remains limited, with the best overall score below 50, revealing a pronounced gap between current LLM capabilities and the demands of real scientific research. PRL-Bench serves a reliable testbed for accessing next generation AI scientists advancing AI systems toward autonomous scientific discovery.",
-          "hf_url": "https://huggingface.co/papers/2604.15411",
-          "arxiv_url": "https://arxiv.org/abs/2604.15411",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.15411",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.15411",
+          "abstract": "Training strong video generation models usually requires massive datasets, large parameter counts, and substantial compute. In this work, we ask whether strong text-to-video quality is possible at a much smaller budget: fewer than 10M clips and less than 100,000 H200 GPU hours. Our core claim is that part of the answer lies in how model capacity is organized, not only in how much of it is used. In video generation, prompt alignment, temporal consistency, and fine-detail recovery can interfere with one another when they are handled through the same pathway. Motif-Video 2B addresses this by separating these roles architecturally, rather than relying on scale alone. The model combines two key ideas. First, Shared Cross-Attention strengthens text control when video token sequences become long. Second, a three-part backbone separates early fusion, joint representation learning, and detail refinement. To make this design effective under a limited compute budget, we pair it with an efficient training recipe based on dynamic token routing and early-phase feature alignment to a frozen pretrained video encoder. Our analysis shows that later blocks develop clearer cross-frame attention structure than standard single-stream baselines. On VBench, Motif-Video~2B reaches 83.76\\%, surpassing Wan2.1 14B while using 7times fewer parameters and substantially less training data. These results suggest that careful architectural specialization, combined with an efficiency-oriented training recipe, can narrow or exceed the quality gap typically associated with much larger video models.",
+          "hf_url": "https://huggingface.co/papers/2604.16503",
+          "arxiv_url": "https://arxiv.org/abs/2604.16503",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.16503",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.16503",
           "github_url": "",
-          "submitted_by": "taesiri",
-          "submitted_at": "2026-04-20T00:37:48.471Z",
-          "upvotes": 4,
-          "comments": 1,
-          "topic_key": "datasets_benchmarks",
-          "topic_label": "Datasets and Benchmarks",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.97
+          "submitted_by": "leejunhyeok",
+          "submitted_at": "2026-04-20T23:23:52.510Z",
+          "upvotes": 20,
+          "comments": 3,
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [
+            "\\bvideo\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
         },
         {
           "report_date": "2026-04-20",
-          "paper_id": "2604.15715",
-          "title": "GTA-2: Benchmarking General Tool Agents from Atomic Tool-Use to Open-Ended Workflows",
+          "paper_id": "2604.16299",
+          "title": "Repurposing 3D Generative Model for Autoregressive Layout Generation",
           "authors": [
-            "Jize Wang",
-            "Xuanxuan Liu",
-            "Yining Li",
-            "Songyang Zhang",
-            "Yijun Wang",
-            "Zifei Shan",
-            "Xinyi Le",
-            "Cailian Chen",
-            "Xinping Guan",
-            "Dacheng Tao"
+            "Haoran Feng",
+            "Yifan Niu",
+            "Zehuan Huang",
+            "Yang-Tian Sun",
+            "Chunchao Guo",
+            "Yuxin Peng",
+            "Lu Sheng"
           ],
-          "abstract": "The development of general-purpose agents requires a shift from executing simple instructions to completing complex, real-world productivity workflows. However, current tool-use benchmarks remain misaligned with real-world requirements, relying on AI-generated queries, dummy tools, and limited system-level coordination. To address this, we propose GTA-2, a hierarchical benchmark for General Tool Agents (GTA) spanning atomic tool use and open-ended workflows. Built on real-world authenticity, it leverages real user queries, deployed tools, and multimodal contexts. (i) GTA-Atomic, inherited from our prior GTA benchmark, evaluates short-horizon, closed-ended tool-use precision. (ii) GTA-Workflow introduces long-horizon, open-ended tasks for realistic end-to-end completion. To evaluate open-ended deliverables, we propose a recursive checkpoint-based evaluation mechanism that decomposes objectives into verifiable sub-goals, enabling unified evaluation of both model capabilities and agent execution frameworks (i.e., execution harnesses). Experiments reveal a pronounced capability cliff: while frontier models already struggle on atomic tasks (below 50%), they largely fail on workflows, with top models achieving only 14.39% success. Further analysis shows that checkpoint-guided feedback improves performance, while advanced frameworks such as Manus and OpenClaw substantially enhance workflow completion, highlighting the importance of execution harness design beyond the underlying model capacity. These findings provide guidance for developing reliable personal and professional assistants. Dataset and code will be available at https://github.com/open-compass/GTA.",
-          "hf_url": "https://huggingface.co/papers/2604.15715",
-          "arxiv_url": "https://arxiv.org/abs/2604.15715",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.15715",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.15715",
+          "abstract": "We introduce LaviGen, a framework that repurposes 3D generative models for 3D layout generation. Unlike previous methods that infer object layouts from textual descriptions, LaviGen operates directly in the native 3D space, formulating layout generation as an autoregressive process that explicitly models geometric relations and physical constraints among objects, producing coherent and physically plausible 3D scenes. To further enhance this process, we propose an adapted 3D diffusion model that integrates scene, object, and instruction information and employs a dual-guidance self-rollout distillation mechanism to improve efficiency and spatial accuracy. Extensive experiments on the LayoutVLM benchmark show LaviGen achieves superior 3D layout generation performance, with 19% higher physical plausibility than the state of the art and 65% faster computation. Our code is publicly available at https://github.com/fenghora/LaviGen.",
+          "hf_url": "https://huggingface.co/papers/2604.16299",
+          "arxiv_url": "https://arxiv.org/abs/2604.16299",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.16299",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.16299",
           "github_url": "",
-          "submitted_by": "Jize",
-          "submitted_at": "2026-04-20T01:42:51.026Z",
-          "upvotes": 3,
+          "submitted_by": "Haoran Feng",
+          "submitted_at": "2026-04-20T03:28:02.218Z",
+          "upvotes": 12,
           "comments": 2,
-          "topic_key": "datasets_benchmarks",
-          "topic_label": "Datasets and Benchmarks",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.94
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [
+            "\\b3d\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
         },
         {
           "report_date": "2026-04-20",
@@ -469,11 +476,14 @@
           "submitted_at": "2026-04-20T00:20:28.601Z",
           "upvotes": 3,
           "comments": 1,
-          "topic_key": "datasets_benchmarks",
-          "topic_label": "Datasets and Benchmarks",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.97
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [
+            "\\bvisual\\b",
+            "\\bvideo\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
         },
         {
           "report_date": "2026-04-20",
@@ -534,143 +544,13 @@
           "submitted_at": "2026-04-20T06:18:55.865Z",
           "upvotes": 3,
           "comments": 2,
-          "topic_key": "datasets_benchmarks",
-          "topic_label": "Datasets and Benchmarks",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.96
-        }
-      ]
-    },
-    {
-      "topic_label": "Multimodal Generative Modeling",
-      "count": 5,
-      "share": 17.86,
-      "papers": [
-        {
-          "report_date": "2026-04-20",
-          "paper_id": "2604.15804",
-          "title": "Qwen3.5-Omni Technical Report",
-          "authors": [
-            "Qwen Team"
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [
+            "\\bvideo\\b"
           ],
-          "abstract": "In this work, we present Qwen3.5-Omni, the latest advancement in the Qwen-Omni model family. Representing a significant evolution over its predecessor, Qwen3.5-Omni scales to hundreds of billions of parameters and supports a 256k context length. By leveraging a massive dataset comprising heterogeneous text-vision pairs and over 100 million hours of audio-visual content, the model demonstrates robust omni-modality capabilities. Qwen3.5-Omni-plus achieves SOTA results across 215 audio and audio-visual understanding, reasoning, and interaction subtasks and benchmarks, surpassing Gemini-3.1 Pro in key audio tasks and matching it in comprehensive audio-visual understanding. Architecturally, Qwen3.5-Omni employs a Hybrid Attention Mixture-of-Experts (MoE) framework for both Thinker and Talker, enabling efficient long-sequence inference. The model facilitates sophisticated interaction, supporting over 10 hours of audio understanding and 400 seconds of 720P video (at 1 FPS). To address the inherent instability and unnaturalness in streaming speech synthesis, often caused by encoding efficiency discrepancies between text and speech tokenizers, we introduce ARIA. ARIA dynamically aligns text and speech units, significantly enhancing the stability and prosody of conversational speech with minimal latency impact. Furthermore, Qwen3.5-Omni expands linguistic boundaries, supporting multilingual understanding and speech generation across 10 languages with human-like emotional nuance. Finally, Qwen3.5-Omni exhibits superior audio-visual grounding capabilities, generating script-level structured captions with precise temporal synchronization and automated scene segmentation. Remarkably, we observed the emergence of a new capability in omnimodal models: directly performing coding based on audio-visual instructions, which we call Audio-Visual Vibe Coding.",
-          "hf_url": "https://huggingface.co/papers/2604.15804",
-          "arxiv_url": "https://arxiv.org/abs/2604.15804",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.15804",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.15804",
-          "github_url": "",
-          "submitted_by": "taesiri",
-          "submitted_at": "2026-04-20T00:34:46.438Z",
-          "upvotes": 52,
-          "comments": 2,
-          "topic_key": "multimodal_generative",
-          "topic_label": "Multimodal Generative Modeling",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.71
-        },
-        {
-          "report_date": "2026-04-20",
-          "paper_id": "2604.16503",
-          "title": "Motif-Video 2B: Technical Report",
-          "authors": [
-            "Junghwan Lim",
-            "Wai Ting Cheung",
-            "Minsu Ha",
-            "Beomgyu Kim",
-            "Taewhan Kim",
-            "Haesol Lee",
-            "Dongpin Oh",
-            "Jeesoo Lee",
-            "Taehyun Kim",
-            "Minjae Kim",
-            "Sungmin Lee",
-            "Hyeyeon Cho",
-            "Dahye Choi",
-            "Jaeheui Her",
-            "Jaeyeon Huh",
-            "Hanbin Jung",
-            "Changjin Kang",
-            "Dongseok Kim",
-            "Jangwoong Kim",
-            "Youngrok Kim",
-            "Hyukjin Kweon",
-            "Hongjoo Lee",
-            "Jeongdoo Lee",
-            "Junhyeok Lee",
-            "Eunhwan Park",
-            "Yeongjae Park",
-            "Bokki Ryu",
-            "Dongjoo Weon"
-          ],
-          "abstract": "Training strong video generation models usually requires massive datasets, large parameter counts, and substantial compute. In this work, we ask whether strong text-to-video quality is possible at a much smaller budget: fewer than 10M clips and less than 100,000 H200 GPU hours. Our core claim is that part of the answer lies in how model capacity is organized, not only in how much of it is used. In video generation, prompt alignment, temporal consistency, and fine-detail recovery can interfere with one another when they are handled through the same pathway. Motif-Video 2B addresses this by separating these roles architecturally, rather than relying on scale alone. The model combines two key ideas. First, Shared Cross-Attention strengthens text control when video token sequences become long. Second, a three-part backbone separates early fusion, joint representation learning, and detail refinement. To make this design effective under a limited compute budget, we pair it with an efficient training recipe based on dynamic token routing and early-phase feature alignment to a frozen pretrained video encoder. Our analysis shows that later blocks develop clearer cross-frame attention structure than standard single-stream baselines. On VBench, Motif-Video~2B reaches 83.76\\%, surpassing Wan2.1 14B while using 7times fewer parameters and substantially less training data. These results suggest that careful architectural specialization, combined with an efficiency-oriented training recipe, can narrow or exceed the quality gap typically associated with much larger video models.",
-          "hf_url": "https://huggingface.co/papers/2604.16503",
-          "arxiv_url": "https://arxiv.org/abs/2604.16503",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.16503",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.16503",
-          "github_url": "",
-          "submitted_by": "leejunhyeok",
-          "submitted_at": "2026-04-20T23:23:52.510Z",
-          "upvotes": 20,
-          "comments": 3,
-          "topic_key": "multimodal_generative",
-          "topic_label": "Multimodal Generative Modeling",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.94
-        },
-        {
-          "report_date": "2026-04-20",
-          "paper_id": "2604.16299",
-          "title": "Repurposing 3D Generative Model for Autoregressive Layout Generation",
-          "authors": [
-            "Haoran Feng",
-            "Yifan Niu",
-            "Zehuan Huang",
-            "Yang-Tian Sun",
-            "Chunchao Guo",
-            "Yuxin Peng",
-            "Lu Sheng"
-          ],
-          "abstract": "We introduce LaviGen, a framework that repurposes 3D generative models for 3D layout generation. Unlike previous methods that infer object layouts from textual descriptions, LaviGen operates directly in the native 3D space, formulating layout generation as an autoregressive process that explicitly models geometric relations and physical constraints among objects, producing coherent and physically plausible 3D scenes. To further enhance this process, we propose an adapted 3D diffusion model that integrates scene, object, and instruction information and employs a dual-guidance self-rollout distillation mechanism to improve efficiency and spatial accuracy. Extensive experiments on the LayoutVLM benchmark show LaviGen achieves superior 3D layout generation performance, with 19% higher physical plausibility than the state of the art and 65% faster computation. Our code is publicly available at https://github.com/fenghora/LaviGen.",
-          "hf_url": "https://huggingface.co/papers/2604.16299",
-          "arxiv_url": "https://arxiv.org/abs/2604.16299",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.16299",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.16299",
-          "github_url": "",
-          "submitted_by": "Haoran Feng",
-          "submitted_at": "2026-04-20T03:28:02.218Z",
-          "upvotes": 12,
-          "comments": 2,
-          "topic_key": "multimodal_generative",
-          "topic_label": "Multimodal Generative Modeling",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.88
-        },
-        {
-          "report_date": "2026-04-20",
-          "paper_id": "2604.16254",
-          "title": "ArtifactNet: Detecting AI-Generated Music via Forensic Residual Physics",
-          "authors": [
-            "Heewon Oh"
-          ],
-          "abstract": "We present ArtifactNet, a lightweight framework that detects AI-generated music by reframing the problem as forensic physics -- extracting and analyzing the physical artifacts that neural audio codecs inevitably imprint on generated audio. A bounded-mask UNet (ArtifactUNet, 3.6M parameters) extracts codec residuals from magnitude spectrograms, which are then decomposed via HPSS into 7-channel forensic features for classification by a compact CNN (0.4M parameters; 4.0M total). We introduce ArtifactBench, a multi-generator evaluation benchmark comprising 6,183 tracks (4,383 AI from 22 generators and 1,800 real from 6 diverse sources). Each track is tagged with bench_origin for fair zero-shot evaluation. On the unseen test partition (n=2,263), ArtifactNet achieves F1 = 0.9829 with FPR = 1.49%, compared to CLAM (F1 = 0.7576, FPR = 69.26%) and SpecTTTra (F1 = 0.7713, FPR = 19.43%) evaluated under identical conditions with published checkpoints. Codec-aware training (4-way WAV/MP3/AAC/Opus augmentation) further reduces cross-codec probability drift by 83% (Delta = 0.95 -> 0.16), resolving the primary codec-invariance failure mode. These results establish forensic physics -- direct extraction of codec-level artifacts -- as a more generalizable and parameter-efficient paradigm for AI music detection than representation learning, using 49x fewer parameters than CLAM and 4.8x fewer than SpecTTTra.",
-          "hf_url": "https://huggingface.co/papers/2604.16254",
-          "arxiv_url": "https://arxiv.org/abs/2604.16254",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.16254",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.16254",
-          "github_url": "",
-          "submitted_by": "Heewon Oh",
-          "submitted_at": "2026-04-20T01:19:39.354Z",
-          "upvotes": 3,
-          "comments": 2,
-          "topic_key": "multimodal_generative",
-          "topic_label": "Multimodal Generative Modeling",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.56
+          "classification_source": "rule",
+          "classification_confidence": null
         },
         {
           "report_date": "2026-04-20",
@@ -695,19 +575,46 @@
           "submitted_at": "2026-04-20T10:32:43.122Z",
           "upvotes": 2,
           "comments": 2,
-          "topic_key": "multimodal_generative",
-          "topic_label": "Multimodal Generative Modeling",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.99
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [
+            "\\bvideo\\b",
+            "\\bspeech\\b",
+            "\\bdiffusion\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
         }
       ]
     },
     {
-      "topic_label": "Agents and Planning",
-      "count": 3,
-      "share": 10.71,
+      "topic_label": "Other AI",
+      "count": 5,
+      "share": 17.86,
       "papers": [
+        {
+          "report_date": "2026-04-20",
+          "paper_id": "2604.15804",
+          "title": "Qwen3.5-Omni Technical Report",
+          "authors": [
+            "Qwen Team"
+          ],
+          "abstract": "In this work, we present Qwen3.5-Omni, the latest advancement in the Qwen-Omni model family. Representing a significant evolution over its predecessor, Qwen3.5-Omni scales to hundreds of billions of parameters and supports a 256k context length. By leveraging a massive dataset comprising heterogeneous text-vision pairs and over 100 million hours of audio-visual content, the model demonstrates robust omni-modality capabilities. Qwen3.5-Omni-plus achieves SOTA results across 215 audio and audio-visual understanding, reasoning, and interaction subtasks and benchmarks, surpassing Gemini-3.1 Pro in key audio tasks and matching it in comprehensive audio-visual understanding. Architecturally, Qwen3.5-Omni employs a Hybrid Attention Mixture-of-Experts (MoE) framework for both Thinker and Talker, enabling efficient long-sequence inference. The model facilitates sophisticated interaction, supporting over 10 hours of audio understanding and 400 seconds of 720P video (at 1 FPS). To address the inherent instability and unnaturalness in streaming speech synthesis, often caused by encoding efficiency discrepancies between text and speech tokenizers, we introduce ARIA. ARIA dynamically aligns text and speech units, significantly enhancing the stability and prosody of conversational speech with minimal latency impact. Furthermore, Qwen3.5-Omni expands linguistic boundaries, supporting multilingual understanding and speech generation across 10 languages with human-like emotional nuance. Finally, Qwen3.5-Omni exhibits superior audio-visual grounding capabilities, generating script-level structured captions with precise temporal synchronization and automated scene segmentation. Remarkably, we observed the emergence of a new capability in omnimodal models: directly performing coding based on audio-visual instructions, which we call Audio-Visual Vibe Coding.",
+          "hf_url": "https://huggingface.co/papers/2604.15804",
+          "arxiv_url": "https://arxiv.org/abs/2604.15804",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.15804",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.15804",
+          "github_url": "",
+          "submitted_by": "taesiri",
+          "submitted_at": "2026-04-20T00:34:46.438Z",
+          "upvotes": 55,
+          "comments": 2,
+          "topic_key": "other_ai",
+          "topic_label": "Other AI",
+          "matched_terms": [],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
         {
           "report_date": "2026-04-20",
           "paper_id": "2604.14518",
@@ -726,103 +633,117 @@
           "submitted_at": "2026-04-20T23:47:32.850Z",
           "upvotes": 23,
           "comments": 3,
-          "topic_key": "agents_planning",
-          "topic_label": "Agents and Planning",
+          "topic_key": "other_ai",
+          "topic_label": "Other AI",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.84
+          "classification_source": "rule",
+          "classification_confidence": null
         },
         {
           "report_date": "2026-04-20",
-          "paper_id": "2604.10261",
-          "title": "The Amazing Agent Race: Strong Tool Users, Weak Navigators",
+          "paper_id": "2604.10571",
+          "title": "Universal statistical signatures of evolution in artificial intelligence architectures",
           "authors": [
-            "Zae Myung Kim",
-            "Dongseok Lee",
-            "Jaehyung Kim",
-            "Vipul Raheja",
-            "Dongyeop Kang"
+            "Theodor Spiro"
           ],
-          "abstract": "Existing tool-use benchmarks for LLM agents are overwhelmingly linear: our analysis of six benchmarks shows 55 to 100% of instances are simple chains of 2 to 5 steps. We introduce The Amazing Agent Race (AAR), a benchmark featuring directed acyclic graph (DAG) puzzles (or \"legs\") with fork-merge tool chains. We release 1,400 instances across two variants: sequential (800 legs) and compositional (600 DAG legs). Agents must navigate Wikipedia, execute multi-step tool chains, and aggregate results into a verifiable answer. Legs are procedurally generated from Wikipedia seeds across four difficulty levels with live-API validation. Three complementary metrics (finish-line accuracy, pit-stop visit rate, and roadblock completion rate) separately diagnose navigation, tool-use, and arithmetic failures. Evaluating three agent frameworks on 1,400 legs, the best achieves only 37.2% accuracy. Navigation errors dominate (27 to 52% of trials) while tool-use errors remain below 17%, and agent architecture matters as much as model scale (Claude Code matches Codex CLI at 37% with 6x fewer tokens). The compositional structure of AAR reveals that agents fail not at calling tools but at navigating to the right pages, a blind spot invisible to linear benchmarks. The project page can be accessed at: https://minnesotanlp.github.io/the-amazing-agent-race",
-          "hf_url": "https://huggingface.co/papers/2604.10261",
-          "arxiv_url": "https://arxiv.org/abs/2604.10261",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.10261",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.10261",
+          "abstract": "We test whether artificial intelligence architectural evolution obeys the same statistical laws as biological evolution. Compiling 935 ablation experiments from 161 publications, we show that the distribution of fitness effects (DFE) of architectural modifications follows a heavy-tailed Student's t-distribution with proportions (68% deleterious, 19% neutral, 13% beneficial for major ablations, n=568) that place AI between compact viral genomes and simple eukaryotes. The DFE shape matches D. melanogaster (normalized KS=0.07) and S. cerevisiae (KS=0.09); the elevated beneficial fraction (13% vs. 1-6% in biology) quantifies the advantage of directed over blind search while preserving the distributional form. Architectural origination follows logistic dynamics (R^2=0.994) with punctuated equilibria and adaptive radiation into domain niches. Fourteen architectural traits were independently invented 3-5 times, paralleling biological convergences. These results demonstrate that the statistical structure of evolution is substrate-independent, determined by fitness landscape topology rather than the mechanism of selection.",
+          "hf_url": "https://huggingface.co/papers/2604.10571",
+          "arxiv_url": "https://arxiv.org/abs/2604.10571",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.10571",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.10571",
           "github_url": "",
-          "submitted_by": "Zae Myung Kim",
-          "submitted_at": "2026-04-20T15:32:39.513Z",
-          "upvotes": 7,
-          "comments": 2,
-          "topic_key": "agents_planning",
-          "topic_label": "Agents and Planning",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.95
-        },
-        {
-          "report_date": "2026-04-20",
-          "paper_id": "2511.15915",
-          "title": "AccelOpt: A Self-Improving LLM Agentic System for AI Accelerator Kernel Optimization",
-          "authors": [
-            "Genghan Zhang",
-            "Shaowei Zhu",
-            "Anjiang Wei",
-            "Zhenyu Song",
-            "Allen Nie",
-            "Zhen Jia",
-            "Nandita Vijaykumar",
-            "Yida Wang",
-            "Kunle Olukotun"
-          ],
-          "abstract": "We present AccelOpt, a self-improving large language model (LLM) agentic system that autonomously optimizes kernels for emerging AI acclerators, eliminating the need for expert-provided hardware-specific optimization knowledge. AccelOpt explores the kernel optimization space through iterative generation, informed by an optimization memory that curates experiences and insights from previously encountered slow-fast kernel pairs. We build NKIBench, a new benchmark suite of AWS Trainium accelerator kernels with varying complexity extracted from real-world LLM workloads to evaluate the effectiveness of AccelOpt. Our evaluation confirms that AccelOpt's capability improves over time, boosting the average percentage of peak throughput from 49% to 61% on Trainium 1 and from 45% to 59% on Trainium 2 for NKIBench kernels. Moreover, AccelOpt is highly cost-effective: using open-source models, it matches the kernel improvements of Claude Sonnet 4 while being 26times cheaper. The code is open-sourced at https://github.com/zhang677/AccelOpt.",
-          "hf_url": "https://huggingface.co/papers/2511.15915",
-          "arxiv_url": "https://arxiv.org/abs/2511.15915",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2511.15915",
-          "papers_cool_url": "https://papers.cool/arxiv/2511.15915",
-          "github_url": "",
-          "submitted_by": "Genghan Zhang",
-          "submitted_at": "2026-04-20T03:45:34.526Z",
+          "submitted_by": "Theodor Spiro",
+          "submitted_at": "2026-04-20T16:49:28.681Z",
           "upvotes": 4,
           "comments": 2,
-          "topic_key": "agents_planning",
-          "topic_label": "Agents and Planning",
+          "topic_key": "other_ai",
+          "topic_label": "Other AI",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.9
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
+        {
+          "report_date": "2026-04-20",
+          "paper_id": "2604.16254",
+          "title": "ArtifactNet: Detecting AI-Generated Music via Forensic Residual Physics",
+          "authors": [
+            "Heewon Oh"
+          ],
+          "abstract": "We present ArtifactNet, a lightweight framework that detects AI-generated music by reframing the problem as forensic physics -- extracting and analyzing the physical artifacts that neural audio codecs inevitably imprint on generated audio. A bounded-mask UNet (ArtifactUNet, 3.6M parameters) extracts codec residuals from magnitude spectrograms, which are then decomposed via HPSS into 7-channel forensic features for classification by a compact CNN (0.4M parameters; 4.0M total). We introduce ArtifactBench, a multi-generator evaluation benchmark comprising 6,183 tracks (4,383 AI from 22 generators and 1,800 real from 6 diverse sources). Each track is tagged with bench_origin for fair zero-shot evaluation. On the unseen test partition (n=2,263), ArtifactNet achieves F1 = 0.9829 with FPR = 1.49%, compared to CLAM (F1 = 0.7576, FPR = 69.26%) and SpecTTTra (F1 = 0.7713, FPR = 19.43%) evaluated under identical conditions with published checkpoints. Codec-aware training (4-way WAV/MP3/AAC/Opus augmentation) further reduces cross-codec probability drift by 83% (Delta = 0.95 -> 0.16), resolving the primary codec-invariance failure mode. These results establish forensic physics -- direct extraction of codec-level artifacts -- as a more generalizable and parameter-efficient paradigm for AI music detection than representation learning, using 49x fewer parameters than CLAM and 4.8x fewer than SpecTTTra.",
+          "hf_url": "https://huggingface.co/papers/2604.16254",
+          "arxiv_url": "https://arxiv.org/abs/2604.16254",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.16254",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.16254",
+          "github_url": "",
+          "submitted_by": "Heewon Oh",
+          "submitted_at": "2026-04-20T01:19:39.354Z",
+          "upvotes": 3,
+          "comments": 2,
+          "topic_key": "other_ai",
+          "topic_label": "Other AI",
+          "matched_terms": [],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
+        {
+          "report_date": "2026-04-20",
+          "paper_id": "2604.14663",
+          "title": "EdgeDetect: Importance-Aware Gradient Compression with Homomorphic Aggregation for Federated Intrusion Detection",
+          "authors": [
+            "Noor Islam S. Mohammad"
+          ],
+          "abstract": "Federated learning (FL) enables collaborative intrusion detection without raw data exchange, but conventional FL incurs high communication overhead from full-precision gradient transmission and remains vulnerable to gradient inference attacks. This paper presents EdgeDetect, a communication-efficient and privacy-aware federated IDS for bandwidth-constrained 6G-IoT environments. EdgeDetect introduces gradient smartification, a median-based statistical binarization that compresses local updates to {+1,-1} representations, reducing uplink payload by 32times while preserving convergence. We further integrate Paillier homomorphic encryption over binarized gradients, protecting against honest-but-curious servers without exposing individual updates. Experiments on CIC-IDS2017 (2.8M flows, 7 attack classes) demonstrate 98.0% multi-class accuracy and 97.9% macro F1-score, matching centralized baselines, while reducing per-round communication from 450~MB to 14~MB (96.9% reduction). Raspberry Pi-4 deployment confirms edge feasibility: 4.2~MB memory, 0.8~ms latency, and 12~mJ per inference with <0.5% accuracy loss. Under 5% poisoning attacks and severe imbalance, EdgeDetect maintains 87% accuracy and 0.95 minority class F1 (p<0.001), establishing a practical accuracy, communication, and privacy tradeoff for next-generation edge intrusion detection.",
+          "hf_url": "https://huggingface.co/papers/2604.14663",
+          "arxiv_url": "https://arxiv.org/abs/2604.14663",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.14663",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.14663",
+          "github_url": "",
+          "submitted_by": "Noor Islam S. Mohammad",
+          "submitted_at": "2026-04-20T06:49:11.002Z",
+          "upvotes": 3,
+          "comments": 2,
+          "topic_key": "other_ai",
+          "topic_label": "Other AI",
+          "matched_terms": [],
+          "classification_source": "rule",
+          "classification_confidence": null
         }
       ]
     },
     {
-      "topic_label": "Multimodal Understanding and Vision",
-      "count": 3,
-      "share": 10.71,
+      "topic_label": "LLMs and Language",
+      "count": 4,
+      "share": 14.29,
       "papers": [
         {
           "report_date": "2026-04-20",
-          "paper_id": "2604.13074",
-          "title": "PersonaVLM: Long-Term Personalized Multimodal LLMs",
+          "paper_id": "2604.15151",
+          "title": "QuantCode-Bench: A Benchmark for Evaluating the Ability of Large Language Models to Generate Executable Algorithmic Trading Strategies",
           "authors": [
-            "Chang Nie",
-            "Chaoyou Fu",
-            "Yifan Zhang",
-            "Haihua Yang",
-            "Caifeng Shan"
+            "Alexey Khoroshilov",
+            "Alexey Chernysh",
+            "Orkhan Ekhtibarov",
+            "Nini Kamkia",
+            "Dmitry Zmitrovich"
           ],
-          "abstract": "Multimodal Large Language Models (MLLMs) serve as daily assistants for millions. However, their ability to generate responses aligned with individual preferences remains limited. Prior approaches enable only static, single-turn personalization through input augmentation or output alignment, and thus fail to capture users' evolving preferences and personality over time (see Fig.1). In this paper, we introduce PersonaVLM, an innovative personalized multimodal agent framework designed for long-term personalization. It transforms a general-purpose MLLM into a personalized assistant by integrating three key capabilities: (a) Remembering: It proactively extracts and summarizes chronological multimodal memories from interactions, consolidating them into a personalized database. (b) Reasoning: It conducts multi-turn reasoning by retrieving and integrating relevant memories from the database. (c) Response Alignment: It infers the user's evolving personality throughout long-term interactions to ensure outputs remain aligned with their unique characteristics. For evaluation, we establish Persona-MME, a comprehensive benchmark comprising over 2,000 curated interaction cases, designed to assess long-term MLLM personalization across seven key aspects and 14 fine-grained tasks. Extensive experiments validate our method's effectiveness, improving the baseline by 22.4% (Persona-MME) and 9.8% (PERSONAMEM) under a 128k context, while outperforming GPT-4o by 5.2% and 2.0%, respectively. Project page: https://PersonaVLM.github.io.",
-          "hf_url": "https://huggingface.co/papers/2604.13074",
-          "arxiv_url": "https://arxiv.org/abs/2604.13074",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.13074",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.13074",
+          "abstract": "Large language models have demonstrated strong performance on general-purpose programming tasks, yet their ability to generate executable algorithmic trading strategies remains underexplored. Unlike standard code benchmarks, trading-strategy generation requires simultaneous mastery of domain-specific financial logic, knowledge of a specialized API, and the ability to produce code that is not only syntactically correct but also leads to actual trades on historical data. In this work, we present QuantCode-Bench, a benchmark for the systematic evaluation of modern LLMs in generating strategies for the Backtrader framework from textual descriptions in English. The benchmark contains 400 tasks of varying difficulty collected from Reddit, TradingView, StackExchange, GitHub, and synthetic sources. Evaluation is conducted through a multi-stage pipeline that checks syntactic correctness, successful backtest execution, the presence of trades, and semantic alignment with the task description using an LLM judge. We compare state-of-the-art models in two settings: single-turn, where the strategy must be generated correctly on the first attempt, and agentic multi-turn, where the model receives iterative feedback and may repair its errors. We analyze the failure modes across different stages of the pipeline and show that the main limitations of current models are not related to syntax, but rather to the correct operationalization of trading logic, proper API usage, and adherence to task semantics. These findings suggest that trading strategy generation constitutes a distinct class of domain-specific code generation tasks in which success requires not only technical correctness, but also alignment between natural-language descriptions, financial logic, and the observable behavior of the strategy on data.",
+          "hf_url": "https://huggingface.co/papers/2604.15151",
+          "arxiv_url": "https://arxiv.org/abs/2604.15151",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.15151",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.15151",
           "github_url": "",
-          "submitted_by": "Chaoyou Fu",
-          "submitted_at": "2026-04-20T00:16:26.668Z",
-          "upvotes": 46,
-          "comments": 3,
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.82
+          "submitted_by": "Alexey Khoroshilov",
+          "submitted_at": "2026-04-20T08:24:25.679Z",
+          "upvotes": 15,
+          "comments": 2,
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [
+            "\\blanguage models?\\b",
+            "\\blanguage\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
         },
         {
           "report_date": "2026-04-20",
@@ -857,194 +778,16 @@
           "github_url": "",
           "submitted_by": "bingyi",
           "submitted_at": "2026-04-20T06:25:00.083Z",
-          "upvotes": 10,
-          "comments": 2,
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.97
-        },
-        {
-          "report_date": "2026-04-20",
-          "paper_id": "2604.14568",
-          "title": "Learning Adaptive Reasoning Paths for Efficient Visual Reasoning",
-          "authors": [
-            "Yixu Huang",
-            "Tinghui Zhu",
-            "Muhao Chen"
-          ],
-          "abstract": "Visual reasoning models (VRMs) have recently shown strong cross-modal reasoning capabilities by integrating visual perception with language reasoning. However, they often suffer from overthinking, producing unnecessarily long reasoning chains for any tasks. We attribute this issue to Reasoning Path Redundancy in visual reasoning: many visual questions do not require the full reasoning process. To address this, we propose AVR, an adaptive visual reasoning framework that decomposes visual reasoning into three cognitive functions: visual perception, logical reasoning, and answer application. It further enables models to dynamically choose among three response formats: Full Format, Perception-Only Format, and Direct Answer. AVR is trained with FS-GRPO, an adaptation of Group Relative Policy Optimization that encourages the model to select the most efficient reasoning format while preserving correctness. Experiments on multiple vision-language benchmarks show that AVR reduces token usage by 50--90\\% while maintaining overall accuracy, especially in perception-intensive tasks. These results demonstrate that adaptive visual reasoning can effectively mitigate overthinking in VRMs. Code and data are available at: https://github.com/RunRiotComeOn/AVR.",
-          "hf_url": "https://huggingface.co/papers/2604.14568",
-          "arxiv_url": "https://arxiv.org/abs/2604.14568",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.14568",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.14568",
-          "github_url": "",
-          "submitted_by": "Tinghui Zhu",
-          "submitted_at": "2026-04-20T01:49:01.103Z",
-          "upvotes": 8,
-          "comments": 2,
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.84
-        }
-      ]
-    },
-    {
-      "topic_label": "Domain Applications",
-      "count": 2,
-      "share": 7.14,
-      "papers": [
-        {
-          "report_date": "2026-04-20",
-          "paper_id": "2604.14663",
-          "title": "EdgeDetect: Importance-Aware Gradient Compression with Homomorphic Aggregation for Federated Intrusion Detection",
-          "authors": [
-            "Noor Islam S. Mohammad"
-          ],
-          "abstract": "Federated learning (FL) enables collaborative intrusion detection without raw data exchange, but conventional FL incurs high communication overhead from full-precision gradient transmission and remains vulnerable to gradient inference attacks. This paper presents EdgeDetect, a communication-efficient and privacy-aware federated IDS for bandwidth-constrained 6G-IoT environments. EdgeDetect introduces gradient smartification, a median-based statistical binarization that compresses local updates to {+1,-1} representations, reducing uplink payload by 32times while preserving convergence. We further integrate Paillier homomorphic encryption over binarized gradients, protecting against honest-but-curious servers without exposing individual updates. Experiments on CIC-IDS2017 (2.8M flows, 7 attack classes) demonstrate 98.0% multi-class accuracy and 97.9% macro F1-score, matching centralized baselines, while reducing per-round communication from 450~MB to 14~MB (96.9% reduction). Raspberry Pi-4 deployment confirms edge feasibility: 4.2~MB memory, 0.8~ms latency, and 12~mJ per inference with <0.5% accuracy loss. Under 5% poisoning attacks and severe imbalance, EdgeDetect maintains 87% accuracy and 0.95 minority class F1 (p<0.001), establishing a practical accuracy, communication, and privacy tradeoff for next-generation edge intrusion detection.",
-          "hf_url": "https://huggingface.co/papers/2604.14663",
-          "arxiv_url": "https://arxiv.org/abs/2604.14663",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.14663",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.14663",
-          "github_url": "",
-          "submitted_by": "Noor Islam S. Mohammad",
-          "submitted_at": "2026-04-20T06:49:11.002Z",
-          "upvotes": 3,
-          "comments": 2,
-          "topic_key": "domain_applications",
-          "topic_label": "Domain Applications",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.81
-        },
-        {
-          "report_date": "2026-04-20",
-          "paper_id": "2604.15950",
-          "title": "TwinTrack: Post-hoc Multi-Rater Calibration for Medical Image Segmentation",
-          "authors": [
-            "Tristan Kirscher",
-            "Alexandra Ertl",
-            "Klaus Maier-Hein",
-            "Xavier Coubez",
-            "Philippe Meyer",
-            "Sylvain Faisan"
-          ],
-          "abstract": "Pancreatic ductal adenocarcinoma (PDAC) segmentation on contrast-enhanced CT is inherently ambiguous: inter-rater disagreement among experts reflects genuine uncertainty rather than annotation noise. Standard deep learning approaches assume a single ground truth, producing probabilistic outputs that can be poorly calibrated and difficult to interpret under such ambiguity. We present TwinTrack, a framework that addresses this gap through post-hoc calibration of ensemble segmentation probabilities to the empirical mean human response (MHR) -the fraction of expert annotators labeling a voxel as tumor. Calibrated probabilities are thus directly interpretable as the expected proportion of annotators assigning the tumor label, explicitly modeling inter-rater disagreement. The proposed post-hoc calibration procedure is simple and requires only a small multi-rater calibration set. It consistently improves calibration metrics over standard approaches when evaluated on the MICCAI 2025 CURVAS-PDACVI multi-rater benchmark.",
-          "hf_url": "https://huggingface.co/papers/2604.15950",
-          "arxiv_url": "https://arxiv.org/abs/2604.15950",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.15950",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.15950",
-          "github_url": "",
-          "submitted_by": "Tristan",
-          "submitted_at": "2026-04-20T06:48:03.845Z",
-          "upvotes": 1,
-          "comments": 2,
-          "topic_key": "domain_applications",
-          "topic_label": "Domain Applications",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.96
-        }
-      ]
-    },
-    {
-      "topic_label": "Generative Foundations",
-      "count": 2,
-      "share": 7.14,
-      "papers": [
-        {
-          "report_date": "2026-04-20",
-          "paper_id": "2604.16044",
-          "title": "Elucidating the SNR-t Bias of Diffusion Probabilistic Models",
-          "authors": [
-            "Meng Yu",
-            "Lei Sun",
-            "Jianhao Zeng",
-            "Xiangxiang Chu",
-            "Kun Zhan"
-          ],
-          "abstract": "Diffusion Probabilistic Models have demonstrated remarkable performance across a wide range of generative tasks. However, we have observed that these models often suffer from a Signal-to-Noise Ratio-timestep (SNR-t) bias. This bias refers to the misalignment between the SNR of the denoising sample and its corresponding timestep during the inference phase. Specifically, during training, the SNR of a sample is strictly coupled with its timestep. However, this correspondence is disrupted during inference, leading to error accumulation and impairing the generation quality. We provide comprehensive empirical evidence and theoretical analysis to substantiate this phenomenon and propose a simple yet effective differential correction method to mitigate the SNR-t bias. Recognizing that diffusion models typically reconstruct low-frequency components before focusing on high-frequency details during the reverse denoising process, we decompose samples into various frequency components and apply differential correction to each component individually. Extensive experiments show that our approach significantly improves the generation quality of various diffusion models (IDDPM, ADM, DDIM, A-DPM, EA-DPM, EDM, PFGM++, and FLUX) on datasets of various resolutions with negligible computational overhead. The code is at https://github.com/AMAP-ML/DCW.",
-          "hf_url": "https://huggingface.co/papers/2604.16044",
-          "arxiv_url": "https://arxiv.org/abs/2604.16044",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.16044",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.16044",
-          "github_url": "",
-          "submitted_by": "xiaochonglinghu",
-          "submitted_at": "2026-04-20T07:56:13.917Z",
-          "upvotes": 72,
-          "comments": 3,
-          "topic_key": "generative_foundations",
-          "topic_label": "Generative Foundations",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.98
-        },
-        {
-          "report_date": "2026-04-20",
-          "paper_id": "2604.15453",
-          "title": "(1D) Ordered Tokens Enable Efficient Test-Time Search",
-          "authors": [
-            "Zhitong Gao",
-            "Parham Rezaei",
-            "Ali Cy",
-            "Mingqiao Ye",
-            "Nataša Jovanović",
-            "Jesse Allardice",
-            "Afshin Dehghan",
-            "Amir Zamir",
-            "Roman Bachmann",
-            "Oğuzhan Fatih Kar"
-          ],
-          "abstract": "Tokenization is a key component of autoregressive (AR) generative models, converting raw data into more manageable units for modeling. Commonly, tokens describe local information, such as regions of pixels in images or word pieces in text, and AR generation predicts these tokens in a fixed order. A worthwhile question is whether token structures affect the ability to steer the generation through test-time search, where multiple candidate generations are explored and evaluated by a verifier. Using image generation as our testbed, we hypothesize that recent 1D ordered tokenizers with coarse-to-fine structure can be more amenable to search than classical 2D grid structures. This is rooted in the fact that the intermediate states in coarse-to-fine sequences carry semantic meaning that verifiers can reliably evaluate, enabling effective steering during generation. Through controlled experiments, we find that AR models trained on coarse-to-fine ordered tokens exhibit improved test-time scaling behavior compared to grid-based counterparts. Moreover, we demonstrate that, thanks to the ordered structure, pure test-time search over token sequences (i.e., without training an AR model) can perform training-free text-to-image generation when guided by an image-text verifier. Beyond this, we systematically study how classical search algorithms (best-of-N, beam search, lookahead search) interact with different token structures, as well as the role of different verifiers and AR priors. Our results highlight the impact of token structure on inference-time scalability and provide practical guidance for test-time scaling in AR models.",
-          "hf_url": "https://huggingface.co/papers/2604.15453",
-          "arxiv_url": "https://arxiv.org/abs/2604.15453",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.15453",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.15453",
-          "github_url": "",
-          "submitted_by": "Mingqiao Ye",
-          "submitted_at": "2026-04-20T07:31:08.913Z",
-          "upvotes": 18,
-          "comments": 2,
-          "topic_key": "generative_foundations",
-          "topic_label": "Generative Foundations",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.58
-        }
-      ]
-    },
-    {
-      "topic_label": "LLMs and Language",
-      "count": 2,
-      "share": 7.14,
-      "papers": [
-        {
-          "report_date": "2026-04-20",
-          "paper_id": "2604.16027",
-          "title": "Where does output diversity collapse in post-training?",
-          "authors": [
-            "Constantinos Karouzos",
-            "Xingwei Tan",
-            "Nikolaos Aletras"
-          ],
-          "abstract": "Post-trained language models produce less varied outputs than their base counterparts. This output diversity collapse undermines inference-time scaling methods that rely on varied samples, and risks homogenizing model outputs on creative and value-laden tasks. Prior work attributes collapse to specific post-training methods, without separating the role of training data composition from the method, or the generation format from the model weights. We trace output diversity through three parallel post-training lineages of Olmo 3, Think (chain-of-thought distillation), Instruct (broad multi-source data), and RL-Zero, across 15 tasks and four text diversity metrics. We find that the location of collapse co-varies with data composition: the Think lineage loses most semantic diversity at supervised fine-tuning, and the effect of DPO is larger in Instruct than in Think. Suppressing chain-of-thought reasoning at inference in Think models drops accuracy on hard tasks, yet leaves answer-level diversity unchanged, showing that the collapse is embedded in the model weights by training data, not imposed by the generation format. Decomposing diversity loss on six verifiable tasks into a quality-control component (removal of incorrect outputs) and a residual component (genuine narrowing among correct outputs) reveals that the split is task-dependent, and Think models retain more correct-answer diversity than Instruct despite collapsing more in aggregate. Our results indicate that diversity collapse is determined during training by data composition and cannot be addressed at inference time alone.",
-          "hf_url": "https://huggingface.co/papers/2604.16027",
-          "arxiv_url": "https://arxiv.org/abs/2604.16027",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.16027",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.16027",
-          "github_url": "",
-          "submitted_by": "Xingwei Tan",
-          "submitted_at": "2026-04-20T11:23:06.017Z",
-          "upvotes": 22,
+          "upvotes": 11,
           "comments": 2,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.69
+          "matched_terms": [
+            "\\btext\\b",
+            "\\blanguage\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
         },
         {
           "report_date": "2026-04-20",
@@ -1070,16 +813,52 @@
           "comments": 2,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.84
+          "matched_terms": [
+            "\\blanguage models?\\b",
+            "\\blanguage\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
+        {
+          "report_date": "2026-04-20",
+          "paper_id": "2511.15915",
+          "title": "AccelOpt: A Self-Improving LLM Agentic System for AI Accelerator Kernel Optimization",
+          "authors": [
+            "Genghan Zhang",
+            "Shaowei Zhu",
+            "Anjiang Wei",
+            "Zhenyu Song",
+            "Allen Nie",
+            "Zhen Jia",
+            "Nandita Vijaykumar",
+            "Yida Wang",
+            "Kunle Olukotun"
+          ],
+          "abstract": "We present AccelOpt, a self-improving large language model (LLM) agentic system that autonomously optimizes kernels for emerging AI acclerators, eliminating the need for expert-provided hardware-specific optimization knowledge. AccelOpt explores the kernel optimization space through iterative generation, informed by an optimization memory that curates experiences and insights from previously encountered slow-fast kernel pairs. We build NKIBench, a new benchmark suite of AWS Trainium accelerator kernels with varying complexity extracted from real-world LLM workloads to evaluate the effectiveness of AccelOpt. Our evaluation confirms that AccelOpt's capability improves over time, boosting the average percentage of peak throughput from 49% to 61% on Trainium 1 and from 45% to 59% on Trainium 2 for NKIBench kernels. Moreover, AccelOpt is highly cost-effective: using open-source models, it matches the kernel improvements of Claude Sonnet 4 while being 26times cheaper. The code is open-sourced at https://github.com/zhang677/AccelOpt.",
+          "hf_url": "https://huggingface.co/papers/2511.15915",
+          "arxiv_url": "https://arxiv.org/abs/2511.15915",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2511.15915",
+          "papers_cool_url": "https://papers.cool/arxiv/2511.15915",
+          "github_url": "",
+          "submitted_by": "Genghan Zhang",
+          "submitted_at": "2026-04-20T03:45:34.526Z",
+          "upvotes": 4,
+          "comments": 2,
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [
+            "\\b\\w*llms?\\w*\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
         }
       ]
     },
     {
       "topic_label": "Learning, Optimization, and Theory",
-      "count": 2,
-      "share": 7.14,
+      "count": 3,
+      "share": 10.71,
       "papers": [
         {
           "report_date": "2026-04-20",
@@ -1107,44 +886,16 @@
           "github_url": "",
           "submitted_by": "Xiaofan Li",
           "submitted_at": "2026-04-20T10:02:53.104Z",
-          "upvotes": 59,
+          "upvotes": 60,
           "comments": 2,
           "topic_key": "learning_theory",
           "topic_label": "Learning, Optimization, and Theory",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.62
-        },
-        {
-          "report_date": "2026-04-20",
-          "paper_id": "2604.10571",
-          "title": "Universal statistical signatures of evolution in artificial intelligence architectures",
-          "authors": [
-            "Theodor Spiro"
+          "matched_terms": [
+            "\\boptimization\\b"
           ],
-          "abstract": "We test whether artificial intelligence architectural evolution obeys the same statistical laws as biological evolution. Compiling 935 ablation experiments from 161 publications, we show that the distribution of fitness effects (DFE) of architectural modifications follows a heavy-tailed Student's t-distribution with proportions (68% deleterious, 19% neutral, 13% beneficial for major ablations, n=568) that place AI between compact viral genomes and simple eukaryotes. The DFE shape matches D. melanogaster (normalized KS=0.07) and S. cerevisiae (KS=0.09); the elevated beneficial fraction (13% vs. 1-6% in biology) quantifies the advantage of directed over blind search while preserving the distributional form. Architectural origination follows logistic dynamics (R^2=0.994) with punctuated equilibria and adaptive radiation into domain niches. Fourteen architectural traits were independently invented 3-5 times, paralleling biological convergences. These results demonstrate that the statistical structure of evolution is substrate-independent, determined by fitness landscape topology rather than the mechanism of selection.",
-          "hf_url": "https://huggingface.co/papers/2604.10571",
-          "arxiv_url": "https://arxiv.org/abs/2604.10571",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.10571",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.10571",
-          "github_url": "",
-          "submitted_by": "Theodor Spiro",
-          "submitted_at": "2026-04-20T16:49:28.681Z",
-          "upvotes": 4,
-          "comments": 2,
-          "topic_key": "learning_theory",
-          "topic_label": "Learning, Optimization, and Theory",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.67
-        }
-      ]
-    },
-    {
-      "topic_label": "Other AI",
-      "count": 1,
-      "share": 3.57,
-      "papers": [
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
         {
           "report_date": "2026-04-20",
           "paper_id": "2502.07408",
@@ -1162,21 +913,80 @@
           "github_url": "",
           "submitted_by": "Moshe kimhi",
           "submitted_at": "2026-04-20T04:15:01.382Z",
-          "upvotes": 55,
+          "upvotes": 56,
           "comments": 5,
-          "topic_key": "other_ai",
-          "topic_label": "Other AI",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.64
+          "topic_key": "learning_theory",
+          "topic_label": "Learning, Optimization, and Theory",
+          "matched_terms": [
+            "\\boptimization\\b",
+            "\\bneural networks?\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
+        {
+          "report_date": "2026-04-20",
+          "paper_id": "2604.16027",
+          "title": "Where does output diversity collapse in post-training?",
+          "authors": [
+            "Constantinos Karouzos",
+            "Xingwei Tan",
+            "Nikolaos Aletras"
+          ],
+          "abstract": "Post-trained language models produce less varied outputs than their base counterparts. This output diversity collapse undermines inference-time scaling methods that rely on varied samples, and risks homogenizing model outputs on creative and value-laden tasks. Prior work attributes collapse to specific post-training methods, without separating the role of training data composition from the method, or the generation format from the model weights. We trace output diversity through three parallel post-training lineages of Olmo 3, Think (chain-of-thought distillation), Instruct (broad multi-source data), and RL-Zero, across 15 tasks and four text diversity metrics. We find that the location of collapse co-varies with data composition: the Think lineage loses most semantic diversity at supervised fine-tuning, and the effect of DPO is larger in Instruct than in Think. Suppressing chain-of-thought reasoning at inference in Think models drops accuracy on hard tasks, yet leaves answer-level diversity unchanged, showing that the collapse is embedded in the model weights by training data, not imposed by the generation format. Decomposing diversity loss on six verifiable tasks into a quality-control component (removal of incorrect outputs) and a residual component (genuine narrowing among correct outputs) reveals that the split is task-dependent, and Think models retain more correct-answer diversity than Instruct despite collapsing more in aggregate. Our results indicate that diversity collapse is determined during training by data composition and cannot be addressed at inference time alone.",
+          "hf_url": "https://huggingface.co/papers/2604.16027",
+          "arxiv_url": "https://arxiv.org/abs/2604.16027",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.16027",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.16027",
+          "github_url": "",
+          "submitted_by": "Xingwei Tan",
+          "submitted_at": "2026-04-20T11:23:06.017Z",
+          "upvotes": 22,
+          "comments": 2,
+          "topic_key": "learning_theory",
+          "topic_label": "Learning, Optimization, and Theory",
+          "matched_terms": [
+            "\\btraining\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
         }
       ]
     },
     {
       "topic_label": "Reasoning, Alignment, and Evaluation",
-      "count": 1,
-      "share": 3.57,
+      "count": 3,
+      "share": 10.71,
       "papers": [
+        {
+          "report_date": "2026-04-20",
+          "paper_id": "2604.16044",
+          "title": "Elucidating the SNR-t Bias of Diffusion Probabilistic Models",
+          "authors": [
+            "Meng Yu",
+            "Lei Sun",
+            "Jianhao Zeng",
+            "Xiangxiang Chu",
+            "Kun Zhan"
+          ],
+          "abstract": "Diffusion Probabilistic Models have demonstrated remarkable performance across a wide range of generative tasks. However, we have observed that these models often suffer from a Signal-to-Noise Ratio-timestep (SNR-t) bias. This bias refers to the misalignment between the SNR of the denoising sample and its corresponding timestep during the inference phase. Specifically, during training, the SNR of a sample is strictly coupled with its timestep. However, this correspondence is disrupted during inference, leading to error accumulation and impairing the generation quality. We provide comprehensive empirical evidence and theoretical analysis to substantiate this phenomenon and propose a simple yet effective differential correction method to mitigate the SNR-t bias. Recognizing that diffusion models typically reconstruct low-frequency components before focusing on high-frequency details during the reverse denoising process, we decompose samples into various frequency components and apply differential correction to each component individually. Extensive experiments show that our approach significantly improves the generation quality of various diffusion models (IDDPM, ADM, DDIM, A-DPM, EA-DPM, EDM, PFGM++, and FLUX) on datasets of various resolutions with negligible computational overhead. The code is at https://github.com/AMAP-ML/DCW.",
+          "hf_url": "https://huggingface.co/papers/2604.16044",
+          "arxiv_url": "https://arxiv.org/abs/2604.16044",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.16044",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.16044",
+          "github_url": "",
+          "submitted_by": "xiaochonglinghu",
+          "submitted_at": "2026-04-20T07:56:13.917Z",
+          "upvotes": 73,
+          "comments": 3,
+          "topic_key": "reasoning_alignment_eval",
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "matched_terms": [
+            "\\bbias\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
         {
           "report_date": "2026-04-20",
           "paper_id": "2604.16029",
@@ -1200,49 +1010,115 @@
           "comments": 3,
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.78
+          "matched_terms": [
+            "\\breasoning\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
+        {
+          "report_date": "2026-04-20",
+          "paper_id": "2604.14568",
+          "title": "Learning Adaptive Reasoning Paths for Efficient Visual Reasoning",
+          "authors": [
+            "Yixu Huang",
+            "Tinghui Zhu",
+            "Muhao Chen"
+          ],
+          "abstract": "Visual reasoning models (VRMs) have recently shown strong cross-modal reasoning capabilities by integrating visual perception with language reasoning. However, they often suffer from overthinking, producing unnecessarily long reasoning chains for any tasks. We attribute this issue to Reasoning Path Redundancy in visual reasoning: many visual questions do not require the full reasoning process. To address this, we propose AVR, an adaptive visual reasoning framework that decomposes visual reasoning into three cognitive functions: visual perception, logical reasoning, and answer application. It further enables models to dynamically choose among three response formats: Full Format, Perception-Only Format, and Direct Answer. AVR is trained with FS-GRPO, an adaptation of Group Relative Policy Optimization that encourages the model to select the most efficient reasoning format while preserving correctness. Experiments on multiple vision-language benchmarks show that AVR reduces token usage by 50--90\\% while maintaining overall accuracy, especially in perception-intensive tasks. These results demonstrate that adaptive visual reasoning can effectively mitigate overthinking in VRMs. Code and data are available at: https://github.com/RunRiotComeOn/AVR.",
+          "hf_url": "https://huggingface.co/papers/2604.14568",
+          "arxiv_url": "https://arxiv.org/abs/2604.14568",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.14568",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.14568",
+          "github_url": "",
+          "submitted_by": "Tinghui Zhu",
+          "submitted_at": "2026-04-20T01:49:01.103Z",
+          "upvotes": 8,
+          "comments": 2,
+          "topic_key": "reasoning_alignment_eval",
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "matched_terms": [
+            "\\breasoning\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
         }
       ]
     },
     {
-      "topic_label": "Retrieval, Knowledge, and RAG",
-      "count": 1,
-      "share": 3.57,
+      "topic_label": "Agents and Planning",
+      "count": 2,
+      "share": 7.14,
       "papers": [
         {
           "report_date": "2026-04-20",
-          "paper_id": "2604.04936",
-          "title": "Web Retrieval-Aware Chunking (W-RAC) for Efficient and Cost-Effective Retrieval-Augmented Generation Systems",
+          "paper_id": "2604.10261",
+          "title": "The Amazing Agent Race: Strong Tool Users, Weak Navigators",
           "authors": [
-            "Uday Allu",
-            "Sonu Kedia",
-            "Tanmay Odapally",
-            "Biddwan Ahmed"
+            "Zae Myung Kim",
+            "Dongseok Lee",
+            "Jaehyung Kim",
+            "Vipul Raheja",
+            "Dongyeop Kang"
           ],
-          "abstract": "Retrieval-Augmented Generation (RAG) systems critically depend on effective document chunking strategies to balance retrieval quality, latency, and operational cost. Traditional chunking approaches, such as fixed-size, rule-based, or fully agentic chunking, often suffer from high token consumption, redundant text generation, limited scalability, and poor debuggability, especially for large-scale web content ingestion. In this paper, we propose Web Retrieval-Aware Chunking (W-RAC), a novel, cost-efficient chunking framework designed specifically for web-based documents. W-RAC decouples text extraction from semantic chunk planning by representing parsed web content as structured, ID-addressable units and leveraging large language models (LLMs) only for retrieval-aware grouping decisions rather than text generation. This significantly reduces token usage, eliminates hallucination risks, and improves system observability.Experimental analysis and architectural comparison demonstrate that W-RAC achieves comparable or better retrieval performance than traditional chunking approaches while reducing chunking-related LLM costs by an order of magnitude.",
-          "hf_url": "https://huggingface.co/papers/2604.04936",
-          "arxiv_url": "https://arxiv.org/abs/2604.04936",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.04936",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.04936",
+          "abstract": "Existing tool-use benchmarks for LLM agents are overwhelmingly linear: our analysis of six benchmarks shows 55 to 100% of instances are simple chains of 2 to 5 steps. We introduce The Amazing Agent Race (AAR), a benchmark featuring directed acyclic graph (DAG) puzzles (or \"legs\") with fork-merge tool chains. We release 1,400 instances across two variants: sequential (800 legs) and compositional (600 DAG legs). Agents must navigate Wikipedia, execute multi-step tool chains, and aggregate results into a verifiable answer. Legs are procedurally generated from Wikipedia seeds across four difficulty levels with live-API validation. Three complementary metrics (finish-line accuracy, pit-stop visit rate, and roadblock completion rate) separately diagnose navigation, tool-use, and arithmetic failures. Evaluating three agent frameworks on 1,400 legs, the best achieves only 37.2% accuracy. Navigation errors dominate (27 to 52% of trials) while tool-use errors remain below 17%, and agent architecture matters as much as model scale (Claude Code matches Codex CLI at 37% with 6x fewer tokens). The compositional structure of AAR reveals that agents fail not at calling tools but at navigating to the right pages, a blind spot invisible to linear benchmarks. The project page can be accessed at: https://minnesotanlp.github.io/the-amazing-agent-race",
+          "hf_url": "https://huggingface.co/papers/2604.10261",
+          "arxiv_url": "https://arxiv.org/abs/2604.10261",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.10261",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.10261",
           "github_url": "",
-          "submitted_by": "Uday Allu",
-          "submitted_at": "2026-04-20T04:09:08.684Z",
-          "upvotes": 26,
-          "comments": 3,
-          "topic_key": "retrieval_knowledge",
-          "topic_label": "Retrieval, Knowledge, and RAG",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.99
+          "submitted_by": "Zae Myung Kim",
+          "submitted_at": "2026-04-20T15:32:39.513Z",
+          "upvotes": 7,
+          "comments": 2,
+          "topic_key": "agents_planning",
+          "topic_label": "Agents and Planning",
+          "matched_terms": [
+            "\\bagents?\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
+        {
+          "report_date": "2026-04-20",
+          "paper_id": "2604.15715",
+          "title": "GTA-2: Benchmarking General Tool Agents from Atomic Tool-Use to Open-Ended Workflows",
+          "authors": [
+            "Jize Wang",
+            "Xuanxuan Liu",
+            "Yining Li",
+            "Songyang Zhang",
+            "Yijun Wang",
+            "Zifei Shan",
+            "Xinyi Le",
+            "Cailian Chen",
+            "Xinping Guan",
+            "Dacheng Tao"
+          ],
+          "abstract": "The development of general-purpose agents requires a shift from executing simple instructions to completing complex, real-world productivity workflows. However, current tool-use benchmarks remain misaligned with real-world requirements, relying on AI-generated queries, dummy tools, and limited system-level coordination. To address this, we propose GTA-2, a hierarchical benchmark for General Tool Agents (GTA) spanning atomic tool use and open-ended workflows. Built on real-world authenticity, it leverages real user queries, deployed tools, and multimodal contexts. (i) GTA-Atomic, inherited from our prior GTA benchmark, evaluates short-horizon, closed-ended tool-use precision. (ii) GTA-Workflow introduces long-horizon, open-ended tasks for realistic end-to-end completion. To evaluate open-ended deliverables, we propose a recursive checkpoint-based evaluation mechanism that decomposes objectives into verifiable sub-goals, enabling unified evaluation of both model capabilities and agent execution frameworks (i.e., execution harnesses). Experiments reveal a pronounced capability cliff: while frontier models already struggle on atomic tasks (below 50%), they largely fail on workflows, with top models achieving only 14.39% success. Further analysis shows that checkpoint-guided feedback improves performance, while advanced frameworks such as Manus and OpenClaw substantially enhance workflow completion, highlighting the importance of execution harness design beyond the underlying model capacity. These findings provide guidance for developing reliable personal and professional assistants. Dataset and code will be available at https://github.com/open-compass/GTA.",
+          "hf_url": "https://huggingface.co/papers/2604.15715",
+          "arxiv_url": "https://arxiv.org/abs/2604.15715",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.15715",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.15715",
+          "github_url": "",
+          "submitted_by": "Jize",
+          "submitted_at": "2026-04-20T01:42:51.026Z",
+          "upvotes": 3,
+          "comments": 2,
+          "topic_key": "agents_planning",
+          "topic_label": "Agents and Planning",
+          "matched_terms": [
+            "\\bagents?\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
         }
       ]
     },
     {
-      "topic_label": "Robotics and Embodied AI",
-      "count": 1,
-      "share": 3.57,
+      "topic_label": "Datasets and Benchmarks",
+      "count": 2,
+      "share": 7.14,
       "papers": [
         {
           "report_date": "2026-04-20",
@@ -1268,11 +1144,165 @@
           "submitted_at": "2026-04-20T13:29:42.066Z",
           "upvotes": 7,
           "comments": 2,
-          "topic_key": "robotics_embodied",
-          "topic_label": "Robotics and Embodied AI",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.94
+          "topic_key": "datasets_benchmarks",
+          "topic_label": "Datasets and Benchmarks",
+          "matched_terms": [
+            "\\bbenchmark(s)?\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
+        {
+          "report_date": "2026-04-20",
+          "paper_id": "2604.15411",
+          "title": "PRL-Bench: A Comprehensive Benchmark Evaluating LLMs' Capabilities in Frontier Physics Research",
+          "authors": [
+            "Tingjia Miao",
+            "Wenkai Jin",
+            "Muhua Zhang",
+            "Jinxin Tan",
+            "Yuelin Hu",
+            "Tu Guo",
+            "Jiejun Zhang",
+            "Yuhan Wang",
+            "Wenbo Li",
+            "Yinuo Gao",
+            "Shuo Chen",
+            "Weiqi Jiang",
+            "Yayun Hu",
+            "Zixing Lei",
+            "Xianghe Pang",
+            "Zexi Liu",
+            "Yuzhi Zhang",
+            "Linfeng Zhang",
+            "Kun Chen",
+            "Wei Wang",
+            "Weinan E",
+            "Siheng Chen"
+          ],
+          "abstract": "The paradigm of agentic science requires AI systems to conduct robust reasoning and engage in long-horizon, autonomous exploration. However, current scientific benchmarks remain confined to domain knowledge comprehension and complex reasoning, failing to evaluate the exploratory nature and procedural complexity of real-world research. In this work, we present research-oriented evaluations in theoretical and computational physics, a natural testbed with comprehensive domain knowledge, complex reasoning, and verifiable end-to-end workflows without reliance on experiments. Here we introduce PRL-Bench (Physics Research by LLMs), a benchmark designed to systematically map the capability boundaries of LLMs in executing end-to-end physics research. Constructed from 100 curated papers from the latest issues of Physical Review Letters since August 2025 and validated by domain experts, PRL-Bench covers five major theory- and computation-intensive subfields of modern physics: astrophysics, condensed matter physics, high-energy physics, quantum information, and statistical physics. Each task in the benchmark is designed to replicate the core properties of authentic scientific research, including exploration-oriented formulation, long-horizon workflows, and objective verifiability, thereby reconstructing the essential reasoning processes and research workflows of real physics research. Evaluation across frontier models shows that performance remains limited, with the best overall score below 50, revealing a pronounced gap between current LLM capabilities and the demands of real scientific research. PRL-Bench serves a reliable testbed for accessing next generation AI scientists advancing AI systems toward autonomous scientific discovery.",
+          "hf_url": "https://huggingface.co/papers/2604.15411",
+          "arxiv_url": "https://arxiv.org/abs/2604.15411",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.15411",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.15411",
+          "github_url": "",
+          "submitted_by": "taesiri",
+          "submitted_at": "2026-04-20T00:37:48.471Z",
+          "upvotes": 4,
+          "comments": 1,
+          "topic_key": "datasets_benchmarks",
+          "topic_label": "Datasets and Benchmarks",
+          "matched_terms": [
+            "\\bbenchmark(s)?\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        }
+      ]
+    },
+    {
+      "topic_label": "Retrieval, Knowledge, and RAG",
+      "count": 2,
+      "share": 7.14,
+      "papers": [
+        {
+          "report_date": "2026-04-20",
+          "paper_id": "2604.04936",
+          "title": "Web Retrieval-Aware Chunking (W-RAC) for Efficient and Cost-Effective Retrieval-Augmented Generation Systems",
+          "authors": [
+            "Uday Allu",
+            "Sonu Kedia",
+            "Tanmay Odapally",
+            "Biddwan Ahmed"
+          ],
+          "abstract": "Retrieval-Augmented Generation (RAG) systems critically depend on effective document chunking strategies to balance retrieval quality, latency, and operational cost. Traditional chunking approaches, such as fixed-size, rule-based, or fully agentic chunking, often suffer from high token consumption, redundant text generation, limited scalability, and poor debuggability, especially for large-scale web content ingestion. In this paper, we propose Web Retrieval-Aware Chunking (W-RAC), a novel, cost-efficient chunking framework designed specifically for web-based documents. W-RAC decouples text extraction from semantic chunk planning by representing parsed web content as structured, ID-addressable units and leveraging large language models (LLMs) only for retrieval-aware grouping decisions rather than text generation. This significantly reduces token usage, eliminates hallucination risks, and improves system observability.Experimental analysis and architectural comparison demonstrate that W-RAC achieves comparable or better retrieval performance than traditional chunking approaches while reducing chunking-related LLM costs by an order of magnitude.",
+          "hf_url": "https://huggingface.co/papers/2604.04936",
+          "arxiv_url": "https://arxiv.org/abs/2604.04936",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.04936",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.04936",
+          "github_url": "",
+          "submitted_by": "Uday Allu",
+          "submitted_at": "2026-04-20T04:09:08.684Z",
+          "upvotes": 26,
+          "comments": 3,
+          "topic_key": "retrieval_knowledge",
+          "topic_label": "Retrieval, Knowledge, and RAG",
+          "matched_terms": [
+            "\\bretrieval\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
+        {
+          "report_date": "2026-04-20",
+          "paper_id": "2604.15453",
+          "title": "(1D) Ordered Tokens Enable Efficient Test-Time Search",
+          "authors": [
+            "Zhitong Gao",
+            "Parham Rezaei",
+            "Ali Cy",
+            "Mingqiao Ye",
+            "Nataša Jovanović",
+            "Jesse Allardice",
+            "Afshin Dehghan",
+            "Amir Zamir",
+            "Roman Bachmann",
+            "Oğuzhan Fatih Kar"
+          ],
+          "abstract": "Tokenization is a key component of autoregressive (AR) generative models, converting raw data into more manageable units for modeling. Commonly, tokens describe local information, such as regions of pixels in images or word pieces in text, and AR generation predicts these tokens in a fixed order. A worthwhile question is whether token structures affect the ability to steer the generation through test-time search, where multiple candidate generations are explored and evaluated by a verifier. Using image generation as our testbed, we hypothesize that recent 1D ordered tokenizers with coarse-to-fine structure can be more amenable to search than classical 2D grid structures. This is rooted in the fact that the intermediate states in coarse-to-fine sequences carry semantic meaning that verifiers can reliably evaluate, enabling effective steering during generation. Through controlled experiments, we find that AR models trained on coarse-to-fine ordered tokens exhibit improved test-time scaling behavior compared to grid-based counterparts. Moreover, we demonstrate that, thanks to the ordered structure, pure test-time search over token sequences (i.e., without training an AR model) can perform training-free text-to-image generation when guided by an image-text verifier. Beyond this, we systematically study how classical search algorithms (best-of-N, beam search, lookahead search) interact with different token structures, as well as the role of different verifiers and AR priors. Our results highlight the impact of token structure on inference-time scalability and provide practical guidance for test-time scaling in AR models.",
+          "hf_url": "https://huggingface.co/papers/2604.15453",
+          "arxiv_url": "https://arxiv.org/abs/2604.15453",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.15453",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.15453",
+          "github_url": "",
+          "submitted_by": "Mingqiao Ye",
+          "submitted_at": "2026-04-20T07:31:08.913Z",
+          "upvotes": 18,
+          "comments": 2,
+          "topic_key": "retrieval_knowledge",
+          "topic_label": "Retrieval, Knowledge, and RAG",
+          "matched_terms": [
+            "\\bsearch\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        }
+      ]
+    },
+    {
+      "topic_label": "Domain Applications",
+      "count": 1,
+      "share": 3.57,
+      "papers": [
+        {
+          "report_date": "2026-04-20",
+          "paper_id": "2604.15950",
+          "title": "TwinTrack: Post-hoc Multi-Rater Calibration for Medical Image Segmentation",
+          "authors": [
+            "Tristan Kirscher",
+            "Alexandra Ertl",
+            "Klaus Maier-Hein",
+            "Xavier Coubez",
+            "Philippe Meyer",
+            "Sylvain Faisan"
+          ],
+          "abstract": "Pancreatic ductal adenocarcinoma (PDAC) segmentation on contrast-enhanced CT is inherently ambiguous: inter-rater disagreement among experts reflects genuine uncertainty rather than annotation noise. Standard deep learning approaches assume a single ground truth, producing probabilistic outputs that can be poorly calibrated and difficult to interpret under such ambiguity. We present TwinTrack, a framework that addresses this gap through post-hoc calibration of ensemble segmentation probabilities to the empirical mean human response (MHR) -the fraction of expert annotators labeling a voxel as tumor. Calibrated probabilities are thus directly interpretable as the expected proportion of annotators assigning the tumor label, explicitly modeling inter-rater disagreement. The proposed post-hoc calibration procedure is simple and requires only a small multi-rater calibration set. It consistently improves calibration metrics over standard approaches when evaluated on the MICCAI 2025 CURVAS-PDACVI multi-rater benchmark.",
+          "hf_url": "https://huggingface.co/papers/2604.15950",
+          "arxiv_url": "https://arxiv.org/abs/2604.15950",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.15950",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.15950",
+          "github_url": "",
+          "submitted_by": "Tristan",
+          "submitted_at": "2026-04-20T06:48:03.845Z",
+          "upvotes": 1,
+          "comments": 2,
+          "topic_key": "domain_applications",
+          "topic_label": "Domain Applications",
+          "matched_terms": [
+            "\\bmedical\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
         }
       ]
     }
@@ -1297,13 +1327,15 @@
       "github_url": "",
       "submitted_by": "xiaochonglinghu",
       "submitted_at": "2026-04-20T07:56:13.917Z",
-      "upvotes": 72,
+      "upvotes": 73,
       "comments": 3,
-      "topic_key": "generative_foundations",
-      "topic_label": "Generative Foundations",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.98
+      "topic_key": "reasoning_alignment_eval",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "matched_terms": [
+        "\\bbias\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-20",
@@ -1331,13 +1363,15 @@
       "github_url": "",
       "submitted_by": "Xiaofan Li",
       "submitted_at": "2026-04-20T10:02:53.104Z",
-      "upvotes": 59,
+      "upvotes": 60,
       "comments": 2,
       "topic_key": "learning_theory",
       "topic_label": "Learning, Optimization, and Theory",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.62
+      "matched_terms": [
+        "\\boptimization\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-20",
@@ -1356,13 +1390,16 @@
       "github_url": "",
       "submitted_by": "Moshe kimhi",
       "submitted_at": "2026-04-20T04:15:01.382Z",
-      "upvotes": 55,
+      "upvotes": 56,
       "comments": 5,
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.64
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
+      "matched_terms": [
+        "\\boptimization\\b",
+        "\\bneural networks?\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-20",
@@ -1379,13 +1416,13 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-04-20T00:34:46.438Z",
-      "upvotes": 52,
+      "upvotes": 55,
       "comments": 2,
-      "topic_key": "multimodal_generative",
-      "topic_label": "Multimodal Generative Modeling",
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.71
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-20",
@@ -1410,9 +1447,11 @@
       "comments": 3,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.82
+      "matched_terms": [
+        "\\bmultimodal\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-20",
@@ -1436,9 +1475,11 @@
       "comments": 3,
       "topic_key": "retrieval_knowledge",
       "topic_label": "Retrieval, Knowledge, and RAG",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.99
+      "matched_terms": [
+        "\\bretrieval\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-20",
@@ -1463,9 +1504,11 @@
       "comments": 3,
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.78
+      "matched_terms": [
+        "\\breasoning\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-20",
@@ -1485,11 +1528,11 @@
       "submitted_at": "2026-04-20T23:47:32.850Z",
       "upvotes": 23,
       "comments": 3,
-      "topic_key": "agents_planning",
-      "topic_label": "Agents and Planning",
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.84
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-20",
@@ -1510,11 +1553,13 @@
       "submitted_at": "2026-04-20T11:23:06.017Z",
       "upvotes": 22,
       "comments": 2,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.69
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
+      "matched_terms": [
+        "\\btraining\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-20",
@@ -1560,11 +1605,13 @@
       "submitted_at": "2026-04-20T23:23:52.510Z",
       "upvotes": 20,
       "comments": 3,
-      "topic_key": "multimodal_generative",
-      "topic_label": "Multimodal Generative Modeling",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.94
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
+      "matched_terms": [
+        "\\bvideo\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-20",
@@ -1592,11 +1639,13 @@
       "submitted_at": "2026-04-20T07:31:08.913Z",
       "upvotes": 18,
       "comments": 2,
-      "topic_key": "generative_foundations",
-      "topic_label": "Generative Foundations",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.58
+      "topic_key": "retrieval_knowledge",
+      "topic_label": "Retrieval, Knowledge, and RAG",
+      "matched_terms": [
+        "\\bsearch\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-20",
@@ -1619,11 +1668,14 @@
       "submitted_at": "2026-04-20T08:24:25.679Z",
       "upvotes": 15,
       "comments": 2,
-      "topic_key": "datasets_benchmarks",
-      "topic_label": "Datasets and Benchmarks",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.98
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [
+        "\\blanguage models?\\b",
+        "\\blanguage\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-20",
@@ -1648,11 +1700,13 @@
       "submitted_at": "2026-04-20T03:28:02.218Z",
       "upvotes": 12,
       "comments": 2,
-      "topic_key": "multimodal_generative",
-      "topic_label": "Multimodal Generative Modeling",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.88
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
+      "matched_terms": [
+        "\\b3d\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-20",
@@ -1687,13 +1741,16 @@
       "github_url": "",
       "submitted_by": "bingyi",
       "submitted_at": "2026-04-20T06:25:00.083Z",
-      "upvotes": 10,
+      "upvotes": 11,
       "comments": 2,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.97
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [
+        "\\btext\\b",
+        "\\blanguage\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-20",
@@ -1714,11 +1771,13 @@
       "submitted_at": "2026-04-20T01:49:01.103Z",
       "upvotes": 8,
       "comments": 2,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.84
+      "topic_key": "reasoning_alignment_eval",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "matched_terms": [
+        "\\breasoning\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-20",
@@ -1743,9 +1802,11 @@
       "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.95
+      "matched_terms": [
+        "\\bagents?\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-20",
@@ -1771,11 +1832,13 @@
       "submitted_at": "2026-04-20T13:29:42.066Z",
       "upvotes": 7,
       "comments": 2,
-      "topic_key": "robotics_embodied",
-      "topic_label": "Robotics and Embodied AI",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.94
+      "topic_key": "datasets_benchmarks",
+      "topic_label": "Datasets and Benchmarks",
+      "matched_terms": [
+        "\\bbenchmark(s)?\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-20",
@@ -1801,9 +1864,12 @@
       "comments": 2,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.84
+      "matched_terms": [
+        "\\blanguage models?\\b",
+        "\\blanguage\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-20",
@@ -1845,9 +1911,11 @@
       "comments": 1,
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.97
+      "matched_terms": [
+        "\\bbenchmark(s)?\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-20",
@@ -1874,11 +1942,13 @@
       "submitted_at": "2026-04-20T03:45:34.526Z",
       "upvotes": 4,
       "comments": 2,
-      "topic_key": "agents_planning",
-      "topic_label": "Agents and Planning",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.9
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [
+        "\\b\\w*llms?\\w*\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-20",
@@ -1897,11 +1967,11 @@
       "submitted_at": "2026-04-20T16:49:28.681Z",
       "upvotes": 4,
       "comments": 2,
-      "topic_key": "learning_theory",
-      "topic_label": "Learning, Optimization, and Theory",
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.67
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-20",
@@ -1929,11 +1999,13 @@
       "submitted_at": "2026-04-20T01:42:51.026Z",
       "upvotes": 3,
       "comments": 2,
-      "topic_key": "datasets_benchmarks",
-      "topic_label": "Datasets and Benchmarks",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.94
+      "topic_key": "agents_planning",
+      "topic_label": "Agents and Planning",
+      "matched_terms": [
+        "\\bagents?\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-20",
@@ -1952,11 +2024,11 @@
       "submitted_at": "2026-04-20T01:19:39.354Z",
       "upvotes": 3,
       "comments": 2,
-      "topic_key": "multimodal_generative",
-      "topic_label": "Multimodal Generative Modeling",
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.56
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-20",
@@ -1990,11 +2062,14 @@
       "submitted_at": "2026-04-20T00:20:28.601Z",
       "upvotes": 3,
       "comments": 1,
-      "topic_key": "datasets_benchmarks",
-      "topic_label": "Datasets and Benchmarks",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.97
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
+      "matched_terms": [
+        "\\bvisual\\b",
+        "\\bvideo\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-20",
@@ -2055,11 +2130,13 @@
       "submitted_at": "2026-04-20T06:18:55.865Z",
       "upvotes": 3,
       "comments": 2,
-      "topic_key": "datasets_benchmarks",
-      "topic_label": "Datasets and Benchmarks",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.96
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
+      "matched_terms": [
+        "\\bvideo\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-20",
@@ -2078,11 +2155,11 @@
       "submitted_at": "2026-04-20T06:49:11.002Z",
       "upvotes": 3,
       "comments": 2,
-      "topic_key": "domain_applications",
-      "topic_label": "Domain Applications",
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.81
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-20",
@@ -2107,11 +2184,15 @@
       "submitted_at": "2026-04-20T10:32:43.122Z",
       "upvotes": 2,
       "comments": 2,
-      "topic_key": "multimodal_generative",
-      "topic_label": "Multimodal Generative Modeling",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.99
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
+      "matched_terms": [
+        "\\bvideo\\b",
+        "\\bspeech\\b",
+        "\\bdiffusion\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-20",
@@ -2137,9 +2218,11 @@
       "comments": 2,
       "topic_key": "domain_applications",
       "topic_label": "Domain Applications",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.96
+      "matched_terms": [
+        "\\bmedical\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     }
   ]
 }

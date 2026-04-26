@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T02:21:47Z",
+  "generated_at": "2026-04-26T20:22:46Z",
   "report_kind": "hf_daily",
   "report_date": "2026-04-24",
   "source_url": "https://huggingface.co/papers/date/2026-04-24",
@@ -9,37 +9,42 @@
     {
       "topic_key": "generative_foundations",
       "topic_label": "Generative Foundations",
-      "count": 1,
-      "share": 4.55
+      "count": 0,
+      "share": 0.0
     },
     {
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
-      "count": 4,
-      "share": 18.18
+      "count": 0,
+      "share": 0.0
     },
     {
       "topic_key": "multimodal_agents",
       "topic_label": "Multimodal Agents",
-      "count": 3,
-      "share": 13.64
+      "count": 0,
+      "share": 0.0
     }
   ],
   "topic_distribution": [
     {
-      "topic_label": "Multimodal Generative Modeling",
+      "topic_label": "Multimodal Understanding and Vision",
+      "count": 5,
+      "share": 22.73
+    },
+    {
+      "topic_label": "LLMs and Language",
       "count": 4,
       "share": 18.18
     },
     {
-      "topic_label": "Multimodal Agents",
-      "count": 3,
-      "share": 13.64
+      "topic_label": "Learning, Optimization, and Theory",
+      "count": 4,
+      "share": 18.18
     },
     {
-      "topic_label": "Multimodal Understanding and Vision",
-      "count": 3,
-      "share": 13.64
+      "topic_label": "Other AI",
+      "count": 4,
+      "share": 18.18
     },
     {
       "topic_label": "Datasets and Benchmarks",
@@ -47,37 +52,12 @@
       "share": 9.09
     },
     {
-      "topic_label": "Domain Applications",
-      "count": 2,
-      "share": 9.09
-    },
-    {
-      "topic_label": "LLMs and Language",
+      "topic_label": "Retrieval, Knowledge, and RAG",
       "count": 2,
       "share": 9.09
     },
     {
       "topic_label": "Reasoning, Alignment, and Evaluation",
-      "count": 2,
-      "share": 9.09
-    },
-    {
-      "topic_label": "Agents and Planning",
-      "count": 1,
-      "share": 4.55
-    },
-    {
-      "topic_label": "Generative Foundations",
-      "count": 1,
-      "share": 4.55
-    },
-    {
-      "topic_label": "Learning, Optimization, and Theory",
-      "count": 1,
-      "share": 4.55
-    },
-    {
-      "topic_label": "Retrieval, Knowledge, and RAG",
       "count": 1,
       "share": 4.55
     }
@@ -130,13 +110,15 @@
       "github_url": "",
       "submitted_by": "Rui Dai",
       "submitted_at": "2026-04-24T09:39:11.227Z",
-      "upvotes": 80,
+      "upvotes": 81,
       "comments": 3,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.82
+      "topic_key": "reasoning_alignment_eval",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "matched_terms": [
+        "\\breasoning\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-24",
@@ -164,9 +146,12 @@
       "comments": 3,
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.95
+      "matched_terms": [
+        "\\bbenchmark(s)?\\b",
+        "\\bsuite\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-24",
@@ -190,11 +175,13 @@
       "submitted_at": "2026-04-24T00:53:51.931Z",
       "upvotes": 27,
       "comments": 3,
-      "topic_key": "multimodal_agents",
-      "topic_label": "Multimodal Agents",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.9
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
+      "matched_terms": [
+        "\\blearning\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-24",
@@ -220,9 +207,11 @@
       "comments": 4,
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.97
+      "matched_terms": [
+        "\\bdataset(s)?\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-24",
@@ -246,13 +235,15 @@
       "github_url": "",
       "submitted_by": "Xiyang Wu",
       "submitted_at": "2026-04-24T02:38:50.802Z",
-      "upvotes": 16,
+      "upvotes": 17,
       "comments": 2,
-      "topic_key": "agents_planning",
-      "topic_label": "Agents and Planning",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.96
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [
+        "\\b\\w*llms?\\w*\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-24",
@@ -277,13 +268,15 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-04-24T00:48:58.642Z",
-      "upvotes": 15,
-      "comments": 2,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.8
+      "upvotes": 16,
+      "comments": 3,
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
+      "matched_terms": [
+        "\\blearning\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-24",
@@ -313,13 +306,15 @@
       "github_url": "",
       "submitted_by": "Cihang Xie",
       "submitted_at": "2026-04-24T01:43:15.614Z",
-      "upvotes": 12,
+      "upvotes": 13,
       "comments": 2,
-      "topic_key": "multimodal_agents",
-      "topic_label": "Multimodal Agents",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.88
+      "topic_key": "retrieval_knowledge",
+      "topic_label": "Retrieval, Knowledge, and RAG",
+      "matched_terms": [
+        "\\bsearch\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-24",
@@ -343,19 +338,461 @@
       "submitted_at": "2026-04-24T01:53:33.572Z",
       "upvotes": 10,
       "comments": 3,
-      "topic_key": "domain_applications",
-      "topic_label": "Domain Applications",
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.85
+      "classification_source": "rule",
+      "classification_confidence": null
     }
   ],
   "topics": [
     {
-      "topic_label": "Multimodal Generative Modeling",
+      "topic_label": "Multimodal Understanding and Vision",
+      "count": 5,
+      "share": 22.73,
+      "papers": [
+        {
+          "report_date": "2026-04-24",
+          "paper_id": "2604.21915",
+          "title": "Vista4D: Video Reshooting with 4D Point Clouds",
+          "authors": [
+            "Kuan Heng Lin",
+            "Zhizheng Liu",
+            "Pablo Salamanca",
+            "Yash Kant",
+            "Ryan Burgert",
+            "Yuancheng Xu",
+            "Koichi Namekata",
+            "Yiwei Zhao",
+            "Bolei Zhou",
+            "Micah Goldblum",
+            "Paul Debevec",
+            "Ning Yu"
+          ],
+          "abstract": "We present Vista4D, a robust and flexible video reshooting framework that grounds the input video and target cameras in a 4D point cloud. Specifically, given an input video, our method re-synthesizes the scene with the same dynamics from a different camera trajectory and viewpoint. Existing video reshooting methods often struggle with depth estimation artifacts of real-world dynamic videos, while also failing to preserve content appearance and failing to maintain precise camera control for challenging new trajectories. We build a 4D-grounded point cloud representation with static pixel segmentation and 4D reconstruction to explicitly preserve seen content and provide rich camera signals, and we train with reconstructed multiview dynamic data for robustness against point cloud artifacts during real-world inference. Our results demonstrate improved 4D consistency, camera control, and visual quality compared to state-of-the-art baselines under a variety of videos and camera paths. Moreover, our method generalizes to real-world applications such as dynamic scene expansion and 4D scene recomposition. See our project page for results, code, and models: https://eyeline-labs.github.io/Vista4D",
+          "hf_url": "https://huggingface.co/papers/2604.21915",
+          "arxiv_url": "https://arxiv.org/abs/2604.21915",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.21915",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.21915",
+          "github_url": "",
+          "submitted_by": "Kuan Heng (Jordan) Lin",
+          "submitted_at": "2026-04-24T13:20:45.706Z",
+          "upvotes": 9,
+          "comments": 2,
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [
+            "\\bvideo\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
+        {
+          "report_date": "2026-04-24",
+          "paper_id": "2604.10268",
+          "title": "EditCrafter: Tuning-free High-Resolution Image Editing via Pretrained Diffusion Model",
+          "authors": [
+            "Kunho Kim",
+            "Sumin Seo",
+            "Yongjun Cho",
+            "Hyungjin Chung"
+          ],
+          "abstract": "We propose EditCrafter, a high-resolution image editing method that operates without tuning, leveraging pretrained text-to-image (T2I) diffusion models to process images at resolutions significantly exceeding those used during training. Leveraging the generative priors of large-scale T2I diffusion models enables the development of a wide array of novel generation and editing applications. Although numerous image editing methods have been proposed based on diffusion models and exhibit high-quality editing results, they are difficult to apply to images with arbitrary aspect ratios or higher resolutions since they only work at the training resolutions (512x512 or 1024x1024). Naively applying patch-wise editing fails with unrealistic object structures and repetition. To address these challenges, we introduce EditCrafter, a simple yet effective editing pipeline. EditCrafter operates by first performing tiled inversion, which preserves the original identity of the input high-resolution image. We further propose a noise-damped manifold-constrained classifier-free guidance (NDCFG++) that is tailored for high resolution image editing from the inverted latent. Our experiments show that the our EditCrafter can achieve impressive editing results across various resolutions without fine-tuning and optimization.",
+          "hf_url": "https://huggingface.co/papers/2604.10268",
+          "arxiv_url": "https://arxiv.org/abs/2604.10268",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.10268",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.10268",
+          "github_url": "",
+          "submitted_by": "Kunho Kim",
+          "submitted_at": "2026-04-24T05:51:53.003Z",
+          "upvotes": 9,
+          "comments": 2,
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [
+            "\\bimage\\b",
+            "\\bdiffusion\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
+        {
+          "report_date": "2026-04-24",
+          "paper_id": "2604.21904",
+          "title": "UniGenDet: A Unified Generative-Discriminative Framework for Co-Evolutionary Image Generation and Generated Image Detection",
+          "authors": [
+            "Yanran Zhang",
+            "Wenzhao Zheng",
+            "Yifei Li",
+            "Bingyao Yu",
+            "Yu Zheng",
+            "Lei Chen",
+            "Jiwen Lu",
+            "Jie Zhou"
+          ],
+          "abstract": "In recent years, significant progress has been made in both image generation and generated image detection. Despite their rapid, yet largely independent, development, these two fields have evolved distinct architectural paradigms: the former predominantly relies on generative networks, while the latter favors discriminative frameworks. A recent trend in both domains is the use of adversarial information to enhance performance, revealing potential for synergy. However, the significant architectural divergence between them presents considerable challenges. Departing from previous approaches, we propose UniGenDet: a Unified generative-discriminative framework for co-evolutionary image Generation and generated image Detection. To bridge the task gap, we design a symbiotic multimodal self-attention mechanism and a unified fine-tuning algorithm. This synergy allows the generation task to improve the interpretability of authenticity identification, while authenticity criteria guide the creation of higher-fidelity images. Furthermore, we introduce a detector-informed generative alignment mechanism to facilitate seamless information exchange. Extensive experiments on multiple datasets demonstrate that our method achieves state-of-the-art performance. Code: https://github.com/Zhangyr2022/UniGenDet{https://github.com/Zhangyr2022/UniGenDet}.",
+          "hf_url": "https://huggingface.co/papers/2604.21904",
+          "arxiv_url": "https://arxiv.org/abs/2604.21904",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.21904",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.21904",
+          "github_url": "",
+          "submitted_by": "Yanran Zhang",
+          "submitted_at": "2026-04-24T01:49:10.622Z",
+          "upvotes": 4,
+          "comments": 4,
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [
+            "\\bimage\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
+        {
+          "report_date": "2026-04-24",
+          "paper_id": "2604.17492",
+          "title": "Coevolving Representations in Joint Image-Feature Diffusion",
+          "authors": [
+            "Theodoros Kouzelis",
+            "Spyros Gidaris",
+            "Nikos Komodakis"
+          ],
+          "abstract": "Joint image-feature generative modeling has recently emerged as an effective strategy for improving diffusion training by coupling low-level VAE latents with high-level semantic features extracted from pre-trained visual encoders. However, existing approaches rely on a fixed representation space, constructed independently of the generative objective and kept unchanged during training. We argue that the representation space guiding diffusion should itself adapt to the generative task. To this end, we propose Coevolving Representation Diffusion (CoReDi), a framework in which the semantic representation space evolves during training by learning a lightweight linear projection jointly with the diffusion model. While naively optimizing this projection leads to degenerate solutions, we show that stable coevolution can be achieved through a combination of stop-gradient targets, normalization, and targeted regularization that prevents feature collapse. This formulation enables the semantic space to progressively specialize to the needs of image synthesis, improving its complementarity with image latents. We apply CoReDi to both VAE latent diffusion and pixel-space diffusion, demonstrating that adaptive semantic representations improve generative modeling across both settings. Experiments show that CoReDi achieves faster convergence and higher sample quality compared to joint diffusion models operating in fixed representation spaces.",
+          "hf_url": "https://huggingface.co/papers/2604.17492",
+          "arxiv_url": "https://arxiv.org/abs/2604.17492",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.17492",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.17492",
+          "github_url": "",
+          "submitted_by": "Kouzelis",
+          "submitted_at": "2026-04-24T14:34:36.013Z",
+          "upvotes": 3,
+          "comments": 2,
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [
+            "\\bimage\\b",
+            "\\bdiffusion\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
+        {
+          "report_date": "2026-04-24",
+          "paper_id": "2604.08645",
+          "title": "3D-VCD: Hallucination Mitigation in 3D-LLM Embodied Agents through Visual Contrastive Decoding",
+          "authors": [
+            "Makanjuola Ogunleye",
+            "Eman Abdelrahman",
+            "Ismini Lourentzou"
+          ],
+          "abstract": "Large multimodal models are increasingly used as the reasoning core of embodied agents operating in 3D environments, yet they remain prone to hallucinations that can produce unsafe and ungrounded decisions. Existing inference-time hallucination mitigation methods largely target 2D vision-language settings and do not transfer to embodied 3D reasoning, where failures arise from object presence, spatial layout, and geometric grounding rather than pixel-level inconsistencies. We introduce 3D-VCD, the first inference-time visual contrastive decoding framework for hallucination mitigation in 3D embodied agents. 3D-VCD constructs a distorted 3D scene graph by applying semantic and geometric perturbations to object-centric representations, such as category substitutions and coordinate or extent corruption. By contrasting predictions under the original and distorted 3D contexts, our method suppresses tokens that are insensitive to grounded scene evidence and are therefore likely driven by language priors. We evaluate 3D-VCD on the 3D-POPE and HEAL benchmarks and show that it consistently improves grounded reasoning without any retraining, establishing inference-time contrastive decoding over structured 3D representations as an effective and practical route to more reliable embodied intelligence.",
+          "hf_url": "https://huggingface.co/papers/2604.08645",
+          "arxiv_url": "https://arxiv.org/abs/2604.08645",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.08645",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.08645",
+          "github_url": "",
+          "submitted_by": "Ismini Lourentzou",
+          "submitted_at": "2026-04-24T15:20:57.183Z",
+          "upvotes": 1,
+          "comments": 2,
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [
+            "\\bvisual\\b",
+            "\\b3d\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        }
+      ]
+    },
+    {
+      "topic_label": "LLMs and Language",
       "count": 4,
       "share": 18.18,
       "papers": [
+        {
+          "report_date": "2026-04-24",
+          "paper_id": "2604.20987",
+          "title": "Co-Evolving LLM Decision and Skill Bank Agents for Long-Horizon Tasks",
+          "authors": [
+            "Xiyang Wu",
+            "Zongxia Li",
+            "Guangyao Shi",
+            "Alexander Duffy",
+            "Tyler Marques",
+            "Matthew Lyle Olson",
+            "Tianyi Zhou",
+            "Dinesh Manocha"
+          ],
+          "abstract": "Long horizon interactive environments are a testbed for evaluating agents skill usage abilities. These environments demand multi step reasoning, the chaining of multiple skills over many timesteps, and robust decision making under delayed rewards and partial observability. Games are a good testbed for evaluating agent skill usage in environments. Large Language Models (LLMs) offer a promising alternative as game playing agents, but they often struggle with consistent long horizon decision making because they lack a mechanism to discover, retain, and reuse structured skills across episodes. We present COSPLAY, a co evolution framework in which an LLM decision agent retrieves skills from a learnable skill bank to guide action taking, while an agent managed skill pipeline discovers reusable skills from the agents unlabeled rollouts to form a skill bank. Our framework improves both the decision agent to learn better skill retrieval and action generation, while the skill bank agent continually extracts, refines, and updates skills together with their contracts. Experiments across six game environments show that COSPLAY with an 8B base model achieves over 25.1 percent average reward improvement against four frontier LLM baselines on single player game benchmarks while remaining competitive on multi player social reasoning games.",
+          "hf_url": "https://huggingface.co/papers/2604.20987",
+          "arxiv_url": "https://arxiv.org/abs/2604.20987",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.20987",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.20987",
+          "github_url": "",
+          "submitted_by": "Xiyang Wu",
+          "submitted_at": "2026-04-24T02:38:50.802Z",
+          "upvotes": 17,
+          "comments": 2,
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [
+            "\\b\\w*llms?\\w*\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
+        {
+          "report_date": "2026-04-24",
+          "paper_id": "2604.20244",
+          "title": "Hybrid Policy Distillation for LLMs",
+          "authors": [
+            "Wenhong Zhu",
+            "Ruobing Xie",
+            "Rui Wang",
+            "Pengfei Liu"
+          ],
+          "abstract": "Knowledge distillation (KD) is a powerful paradigm for compressing large language models (LLMs), whose effectiveness depends on intertwined choices of divergence direction, optimization strategy, and data regime. We break down the design of existing KD methods and present a unified view that establishes connections between them, reformulating KD as a reweighted log-likelihood objective at the token level. We further propose Hybrid Policy Distillation (HPD), which integrates the complementary advantages of forward and reverse KL to balance mode coverage and mode-seeking, and combines off-policy data with lightweight, approximate on-policy sampling. We validate HPD on long-generation math reasoning as well as short-generation dialogue and code tasks, demonstrating improved optimization stability, computational efficiency, and final performance across diverse model families and scales. The code related to this work is available at https://github.com/zwhong714/Hybrid-Policy-Distillation.",
+          "hf_url": "https://huggingface.co/papers/2604.20244",
+          "arxiv_url": "https://arxiv.org/abs/2604.20244",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.20244",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.20244",
+          "github_url": "",
+          "submitted_by": "SII-Wenhong",
+          "submitted_at": "2026-04-24T03:32:20.845Z",
+          "upvotes": 10,
+          "comments": 2,
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [
+            "\\b\\w*llms?\\w*\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
+        {
+          "report_date": "2026-04-24",
+          "paper_id": "2604.20398",
+          "title": "WebGen-R1: Incentivizing Large Language Models to Generate Functional and Aesthetic Websites with Reinforcement Learning",
+          "authors": [
+            "Juyong Jiang",
+            "Chenglin Cai",
+            "Chansung Park",
+            "Jiasi Shen",
+            "Sunghun Kim",
+            "Jianguo Li",
+            "Yue Wang"
+          ],
+          "abstract": "While Large Language Models (LLMs) excel at function-level code generation, project-level tasks such as generating functional and visually aesthetic multi-page websites remain highly challenging. Existing works are often limited to single-page static websites, while agentic frameworks typically rely on multi-turn execution with proprietary models, leading to substantial token costs, high latency, and brittle integration. Training a small LLM end-to-end with reinforcement learning (RL) is a promising alternative, yet it faces a critical bottleneck in designing reliable and computationally feasible rewards for website generation. Unlike single-file coding tasks that can be verified by unit tests, website generation requires evaluating inherently subjective aesthetics, cross-page interactions, and functional correctness. To this end, we propose WebGen-R1, an end-to-end RL framework tailored for project-level website generation. We first introduce a scaffold-driven structured generation paradigm that constrains the large open-ended action space and preserves architectural integrity. We then design a novel cascaded multimodal reward that seamlessly couples structural guarantees with execution-grounded functional feedback and vision-based aesthetic supervision. Extensive experiments demonstrate that our WebGen-R1 substantially transforms a 7B base model from generating nearly nonfunctional websites into producing deployable, aesthetically aligned multi-page websites. Remarkably, our WebGen-R1 not only consistently outperforms heavily scaled open-source models (up to 72B), but also rivals the state-of-the-art DeepSeek-R1 (671B) in functional success, while substantially exceeding it in valid rendering and aesthetic alignment. These results position WebGen-R1 as a viable path for scaling small open models from function-level code generation to project-level web application generation.",
+          "hf_url": "https://huggingface.co/papers/2604.20398",
+          "arxiv_url": "https://arxiv.org/abs/2604.20398",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.20398",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.20398",
+          "github_url": "",
+          "submitted_by": "John",
+          "submitted_at": "2026-04-24T03:42:24.964Z",
+          "upvotes": 3,
+          "comments": 2,
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [
+            "\\blanguage models?\\b",
+            "\\blanguage\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
+        {
+          "report_date": "2026-04-24",
+          "paper_id": "2604.21193",
+          "title": "Trust but Verify: Introducing DAVinCI -- A Framework for Dual Attribution and Verification in Claim Inference for Language Models",
+          "authors": [
+            "Vipula Rawte",
+            "Ryan Rossi",
+            "Franck Dernoncourt",
+            "Nedim Lipka"
+          ],
+          "abstract": "Large Language Models (LLMs) have demonstrated remarkable fluency and versatility across a wide range of NLP tasks, yet they remain prone to factual inaccuracies and hallucinations. This limitation poses significant risks in high-stakes domains such as healthcare, law, and scientific communication, where trust and verifiability are paramount. In this paper, we introduce DAVinCI - a Dual Attribution and Verification framework designed to enhance the factual reliability and interpretability of LLM outputs. DAVinCI operates in two stages: (i) it attributes generated claims to internal model components and external sources; (ii) it verifies each claim using entailment-based reasoning and confidence calibration. We evaluate DAVinCI across multiple datasets, including FEVER and CLIMATE-FEVER, and compare its performance against standard verification-only baselines. Our results show that DAVinCI significantly improves classification accuracy, attribution precision, recall, and F1-score by 5-20%. Through an extensive ablation study, we isolate the contributions of evidence span selection, recalibration thresholds, and retrieval quality. We also release a modular DAVinCI implementation that can be integrated into existing LLM pipelines. By bridging attribution and verification, DAVinCI offers a scalable path to auditable, trustworthy AI systems. This work contributes to the growing effort to make LLMs not only powerful but also accountable.",
+          "hf_url": "https://huggingface.co/papers/2604.21193",
+          "arxiv_url": "https://arxiv.org/abs/2604.21193",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.21193",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.21193",
+          "github_url": "",
+          "submitted_by": "Franck Dernoncourt",
+          "submitted_at": "2026-04-24T01:57:53.109Z",
+          "upvotes": 2,
+          "comments": 2,
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [
+            "\\blanguage models?\\b",
+            "\\blanguage\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        }
+      ]
+    },
+    {
+      "topic_label": "Learning, Optimization, and Theory",
+      "count": 4,
+      "share": 18.18,
+      "papers": [
+        {
+          "report_date": "2026-04-24",
+          "paper_id": "2604.19734",
+          "title": "UniT: Toward a Unified Physical Language for Human-to-Humanoid Policy Learning and World Modeling",
+          "authors": [
+            "Boyu Chen",
+            "Yi Chen",
+            "Lu Qiu",
+            "Jerry Bai",
+            "Yuying Ge",
+            "Yixiao Ge"
+          ],
+          "abstract": "Scaling humanoid foundation models is bottlenecked by the scarcity of robotic data. While massive egocentric human data offers a scalable alternative, bridging the cross-embodiment chasm remains a fundamental challenge due to kinematic mismatches. We introduce UniT (Unified Latent Action Tokenizer via Visual Anchoring), a framework that establishes a unified physical language for human-to-humanoid transfer. Grounded in the philosophy that heterogeneous kinematics share universal visual consequences, UniT employs a tri-branch cross-reconstruction mechanism: actions predict vision to anchor kinematics to physical outcomes, while vision reconstructs actions to filter out irrelevant visual confounders. Concurrently, a fusion branch synergies these purified modalities into a shared discrete latent space of embodiment-agnostic physical intents. We validate UniT across two paradigms: 1) Policy Learning (VLA-UniT): By predicting these unified tokens, it effectively leverages diverse human data to achieve state-of-the-art data efficiency and robust out-of-distribution (OOD) generalization on both humanoid simulation benchmark and real-world deployments, notably demonstrating zero-shot task transfer. 2) World Modeling (WM-UniT): By aligning cross-embodiment dynamics via unified tokens as conditions, it realizes direct human-to-humanoid action transfer. This alignment ensures that human data seamlessly translates into enhanced action controllability for humanoid video generation. Ultimately, by inducing a highly aligned cross-embodiment representation (empirically verified by t-SNE visualizations revealing the convergence of human and humanoid features into a shared manifold), UniT offers a scalable path to distill vast human knowledge into general-purpose humanoid capabilities.",
+          "hf_url": "https://huggingface.co/papers/2604.19734",
+          "arxiv_url": "https://arxiv.org/abs/2604.19734",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.19734",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.19734",
+          "github_url": "",
+          "submitted_by": "Yi Chen",
+          "submitted_at": "2026-04-24T00:53:51.931Z",
+          "upvotes": 27,
+          "comments": 3,
+          "topic_key": "learning_theory",
+          "topic_label": "Learning, Optimization, and Theory",
+          "matched_terms": [
+            "\\blearning\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
+        {
+          "report_date": "2026-04-24",
+          "paper_id": "2604.21931",
+          "title": "Seeing Fast and Slow: Learning the Flow of Time in Videos",
+          "authors": [
+            "Yen-Siang Wu",
+            "Rundong Luo",
+            "Jingsen Zhu",
+            "Tao Tu",
+            "Ali Farhadi",
+            "Matthew Wallingford",
+            "Yu-Chiang Frank Wang",
+            "Steve Marschner",
+            "Wei-Chiu Ma"
+          ],
+          "abstract": "How can we tell whether a video has been sped up or slowed down? How can we generate videos at different speeds? Although videos have been central to modern computer vision research, little attention has been paid to perceiving and controlling the passage of time. In this paper, we study time as a learnable visual concept and develop models for reasoning about and manipulating the flow of time in videos. We first exploit the multimodal cues and temporal structure naturally present in videos to learn, in a self-supervised manner, to detect speed changes and estimate playback speed. We then show that these learned temporal reasoning models enable us to curate the largest slow-motion video dataset to date from noisy in-the-wild sources. Such slow-motion footage, typically filmed by high-speed cameras, contains substantially richer temporal detail than standard videos. Using this data, we further develop models capable of temporal control, including speed-conditioned video generation, which produces motion at specified playback speed, and temporal super-resolution, which tranforms low-FPS, blurry videos into high-FPS sequences with fine-grained temporal details. Our findings highlight time as a manipulable, perceptual dimension in video learning, opening doors to temporally controllable video generation, temporal forensics detection, and potentially richer world-models that understand how events unfold over time.",
+          "hf_url": "https://huggingface.co/papers/2604.21931",
+          "arxiv_url": "https://arxiv.org/abs/2604.21931",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.21931",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.21931",
+          "github_url": "",
+          "submitted_by": "taesiri",
+          "submitted_at": "2026-04-24T00:48:58.642Z",
+          "upvotes": 16,
+          "comments": 3,
+          "topic_key": "learning_theory",
+          "topic_label": "Learning, Optimization, and Theory",
+          "matched_terms": [
+            "\\blearning\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
+        {
+          "report_date": "2026-04-24",
+          "paper_id": "2604.20156",
+          "title": "Temporally Extended Mixture-of-Experts Models",
+          "authors": [
+            "Zeyu Shen",
+            "Peter Henderson"
+          ],
+          "abstract": "Mixture-of-Experts models, now popular for scaling capacity at fixed inference speed, switch experts at nearly every token. Once a model outgrows available GPU memory, this churn can render optimizations like offloading and pre-fetching ineffective. We make the case that the options framework in reinforcement learning is a perfect match to tackle this problem, and argue for temporally extended mixture-of-experts layers. Building on the option-critic framework with deliberation costs, we add a controller to each layer that learns when to switch expert sets and which to load. By applying this to gpt-oss-20b with low-rank adapters and a self-distillation reward, our method reduces switch rates from over 50% to below 5% while retaining up to 90% of base-model accuracy on MATH, MMLU, and MMMLU. This shows that even existing pre-trained models can be converted to temporally extended MoEs with lightweight training, with the deliberation cost allowing model trainers to trade off switching rates against capability. We hope this opens a principled path, grounded in the options framework, for memory-efficient serving and continual learning in ever-growing MoE models.",
+          "hf_url": "https://huggingface.co/papers/2604.20156",
+          "arxiv_url": "https://arxiv.org/abs/2604.20156",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.20156",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.20156",
+          "github_url": "",
+          "submitted_by": "Zeyu Shen",
+          "submitted_at": "2026-04-24T16:13:18.282Z",
+          "upvotes": 3,
+          "comments": 2,
+          "topic_key": "learning_theory",
+          "topic_label": "Learning, Optimization, and Theory",
+          "matched_terms": [
+            "\\bmixture\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
+        {
+          "report_date": "2026-04-24",
+          "paper_id": "2604.21300",
+          "title": "Explainable Disentangled Representation Learning for Generalizable Authorship Attribution in the Era of Generative AI",
+          "authors": [
+            "Hieu Man",
+            "Van-Cuong Pham",
+            "Nghia Trung Ngo",
+            "Franck Dernoncourt",
+            "Thien Huu Nguyen"
+          ],
+          "abstract": "Learning robust representations of authorial style is crucial for authorship attribution and AI-generated text detection. However, existing methods often struggle with content-style entanglement, where models learn spurious correlations between authors' writing styles and topics, leading to poor generalization across domains. To address this challenge, we propose Explainable Authorship Variational Autoencoder (EAVAE), a novel framework that explicitly disentangles style from content through architectural separation-by-design. EAVAE first pretrains style encoders using supervised contrastive learning on diverse authorship data, then finetunes with a Variational Autoencoder (VEA) architecture using separate encoders for style and content representations. Disentanglement is enforced through a novel discriminator that not only distinguishes whether pairs of style/content representations belong to the same or different authors/content sources, but also generates natural language explanation for their decision, simultaneously mitigating confounding information and enhancing interpretability. Extensive experiments demonstrate the effectiveness of EAVAE. On authorship attribution, we achieve state-of-the-art performance on various datasets, including Amazon Reviews, PAN21, and HRS. For AI-generated text detection, EAVAE excels in few-shot learning over the M4 dataset. Code and data repositories are available onlinehttps://github.com/hieum98/avae https://huggingface.co/collections/Hieuman/document-level-authorship-datasets.",
+          "hf_url": "https://huggingface.co/papers/2604.21300",
+          "arxiv_url": "https://arxiv.org/abs/2604.21300",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.21300",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.21300",
+          "github_url": "",
+          "submitted_by": "Franck Dernoncourt",
+          "submitted_at": "2026-04-24T01:57:07.971Z",
+          "upvotes": 2,
+          "comments": 2,
+          "topic_key": "learning_theory",
+          "topic_label": "Learning, Optimization, and Theory",
+          "matched_terms": [
+            "\\blearning\\b",
+            "\\brepresentation(s)?\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        }
+      ]
+    },
+    {
+      "topic_label": "Other AI",
+      "count": 4,
+      "share": 18.18,
+      "papers": [
+        {
+          "report_date": "2026-04-24",
+          "paper_id": "2604.21889",
+          "title": "TingIS: Real-time Risk Event Discovery from Noisy Customer Incidents at Enterprise Scale",
+          "authors": [
+            "Jun Wang",
+            "Ziyin Zhang",
+            "Rui Wang",
+            "Hang Yu",
+            "Peng Di",
+            "Rui Wang"
+          ],
+          "abstract": "Real-time detection and mitigation of technical anomalies are critical for large-scale cloud-native services, where even minutes of downtime can result in massive financial losses and diminished user trust. While customer incidents serve as a vital signal for discovering risks missed by monitoring, extracting actionable intelligence from this data remains challenging due to extreme noise, high throughput, and semantic complexity of diverse business lines. In this paper, we present TingIS, an end-to-end system designed for enterprise-grade incident discovery. At the core of TingIS is a multi-stage event linking engine that synergizes efficient indexing techniques with Large Language Models (LLMs) to make informed decisions on event merging, enabling the stable extraction of actionable incidents from just a handful of diverse user descriptions. This engine is complemented by a cascaded routing mechanism for precise business attribution and a multi-dimensional noise reduction pipeline that integrates domain knowledge, statistical patterns, and behavioral filtering. Deployed in a production environment handling a peak throughput of over 2,000 messages per minute and 300,000 messages per day, TingIS achieves a P90 alert latency of 3.5 minutes and a 95\\% discovery rate for high-priority incidents. Benchmarks constructed from real-world data demonstrate that TingIS significantly outperforms baseline methods in routing accuracy, clustering quality, and Signal-to-Noise Ratio.",
+          "hf_url": "https://huggingface.co/papers/2604.21889",
+          "arxiv_url": "https://arxiv.org/abs/2604.21889",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.21889",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.21889",
+          "github_url": "",
+          "submitted_by": "Ziyin Zhang",
+          "submitted_at": "2026-04-24T01:53:33.572Z",
+          "upvotes": 10,
+          "comments": 3,
+          "topic_key": "other_ai",
+          "topic_label": "Other AI",
+          "matched_terms": [],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
         {
           "report_date": "2026-04-24",
           "paper_id": "2604.21921",
@@ -391,264 +828,36 @@
           "submitted_at": "2026-04-24T00:56:53.719Z",
           "upvotes": 9,
           "comments": 1,
-          "topic_key": "multimodal_generative",
-          "topic_label": "Multimodal Generative Modeling",
+          "topic_key": "other_ai",
+          "topic_label": "Other AI",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.73
+          "classification_source": "rule",
+          "classification_confidence": null
         },
         {
           "report_date": "2026-04-24",
-          "paper_id": "2604.10268",
-          "title": "EditCrafter: Tuning-free High-Resolution Image Editing via Pretrained Diffusion Model",
+          "paper_id": "2604.16926",
+          "title": "Test-Time Adaptation for EEG Foundation Models: A Systematic Study under Real-World Distribution Shifts",
           "authors": [
-            "Kunho Kim",
-            "Sumin Seo",
-            "Yongjun Cho",
-            "Hyungjin Chung"
+            "Gabriel Jason Lee",
+            "Jathurshan Pradeepkumar",
+            "Jimeng Sun"
           ],
-          "abstract": "We propose EditCrafter, a high-resolution image editing method that operates without tuning, leveraging pretrained text-to-image (T2I) diffusion models to process images at resolutions significantly exceeding those used during training. Leveraging the generative priors of large-scale T2I diffusion models enables the development of a wide array of novel generation and editing applications. Although numerous image editing methods have been proposed based on diffusion models and exhibit high-quality editing results, they are difficult to apply to images with arbitrary aspect ratios or higher resolutions since they only work at the training resolutions (512x512 or 1024x1024). Naively applying patch-wise editing fails with unrealistic object structures and repetition. To address these challenges, we introduce EditCrafter, a simple yet effective editing pipeline. EditCrafter operates by first performing tiled inversion, which preserves the original identity of the input high-resolution image. We further propose a noise-damped manifold-constrained classifier-free guidance (NDCFG++) that is tailored for high resolution image editing from the inverted latent. Our experiments show that the our EditCrafter can achieve impressive editing results across various resolutions without fine-tuning and optimization.",
-          "hf_url": "https://huggingface.co/papers/2604.10268",
-          "arxiv_url": "https://arxiv.org/abs/2604.10268",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.10268",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.10268",
+          "abstract": "Electroencephalography (EEG) foundation models have shown strong potential for learning generalizable representations from large-scale neural data, yet their clinical deployment is hindered by distribution shifts across clinical settings, devices, and populations. Test-time adaptation (TTA) offers a promising solution by enabling models to adapt to unlabeled target data during inference without access to source data, a valuable property in healthcare settings constrained by privacy regulations and limited labeled data. However, its effectiveness for EEG remains largely underexplored. In this work, we introduce NeuroAdapt-Bench, a systematic benchmark for evaluating test-time adaptation methods on EEG foundation models under realistic distribution shifts. We evaluate representative TTA approaches from other domains across multiple pretrained foundation models, diverse downstream tasks, and heterogeneous datasets spanning in-distribution, out-of-distribution, and extreme modality shifts (e.g., Ear-EEG). Our results show that standard TTA methods yield inconsistent gains and often degrade performance, with gradient-based approaches particularly prone to heavy degradation. In contrast, optimization-free methods demonstrate greater stability and more reliable improvements. These findings highlight the limitations of existing TTA techniques in EEG, provide guidance for future development, and underscore the need for domain-specific adaptation strategies.",
+          "hf_url": "https://huggingface.co/papers/2604.16926",
+          "arxiv_url": "https://arxiv.org/abs/2604.16926",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.16926",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.16926",
           "github_url": "",
-          "submitted_by": "Kunho Kim",
-          "submitted_at": "2026-04-24T05:51:53.003Z",
-          "upvotes": 9,
+          "submitted_by": "Jathurshan Pradeepkumar",
+          "submitted_at": "2026-04-24T00:17:02.435Z",
+          "upvotes": 2,
           "comments": 2,
-          "topic_key": "multimodal_generative",
-          "topic_label": "Multimodal Generative Modeling",
+          "topic_key": "other_ai",
+          "topic_label": "Other AI",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.99
-        },
-        {
-          "report_date": "2026-04-24",
-          "paper_id": "2604.21915",
-          "title": "Vista4D: Video Reshooting with 4D Point Clouds",
-          "authors": [
-            "Kuan Heng Lin",
-            "Zhizheng Liu",
-            "Pablo Salamanca",
-            "Yash Kant",
-            "Ryan Burgert",
-            "Yuancheng Xu",
-            "Koichi Namekata",
-            "Yiwei Zhao",
-            "Bolei Zhou",
-            "Micah Goldblum",
-            "Paul Debevec",
-            "Ning Yu"
-          ],
-          "abstract": "We present Vista4D, a robust and flexible video reshooting framework that grounds the input video and target cameras in a 4D point cloud. Specifically, given an input video, our method re-synthesizes the scene with the same dynamics from a different camera trajectory and viewpoint. Existing video reshooting methods often struggle with depth estimation artifacts of real-world dynamic videos, while also failing to preserve content appearance and failing to maintain precise camera control for challenging new trajectories. We build a 4D-grounded point cloud representation with static pixel segmentation and 4D reconstruction to explicitly preserve seen content and provide rich camera signals, and we train with reconstructed multiview dynamic data for robustness against point cloud artifacts during real-world inference. Our results demonstrate improved 4D consistency, camera control, and visual quality compared to state-of-the-art baselines under a variety of videos and camera paths. Moreover, our method generalizes to real-world applications such as dynamic scene expansion and 4D scene recomposition. See our project page for results, code, and models: https://eyeline-labs.github.io/Vista4D",
-          "hf_url": "https://huggingface.co/papers/2604.21915",
-          "arxiv_url": "https://arxiv.org/abs/2604.21915",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.21915",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.21915",
-          "github_url": "",
-          "submitted_by": "Kuan Heng (Jordan) Lin",
-          "submitted_at": "2026-04-24T13:20:45.706Z",
-          "upvotes": 8,
-          "comments": 2,
-          "topic_key": "multimodal_generative",
-          "topic_label": "Multimodal Generative Modeling",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.88
-        },
-        {
-          "report_date": "2026-04-24",
-          "paper_id": "2604.21904",
-          "title": "UniGenDet: A Unified Generative-Discriminative Framework for Co-Evolutionary Image Generation and Generated Image Detection",
-          "authors": [
-            "Yanran Zhang",
-            "Wenzhao Zheng",
-            "Yifei Li",
-            "Bingyao Yu",
-            "Yu Zheng",
-            "Lei Chen",
-            "Jiwen Lu",
-            "Jie Zhou"
-          ],
-          "abstract": "In recent years, significant progress has been made in both image generation and generated image detection. Despite their rapid, yet largely independent, development, these two fields have evolved distinct architectural paradigms: the former predominantly relies on generative networks, while the latter favors discriminative frameworks. A recent trend in both domains is the use of adversarial information to enhance performance, revealing potential for synergy. However, the significant architectural divergence between them presents considerable challenges. Departing from previous approaches, we propose UniGenDet: a Unified generative-discriminative framework for co-evolutionary image Generation and generated image Detection. To bridge the task gap, we design a symbiotic multimodal self-attention mechanism and a unified fine-tuning algorithm. This synergy allows the generation task to improve the interpretability of authenticity identification, while authenticity criteria guide the creation of higher-fidelity images. Furthermore, we introduce a detector-informed generative alignment mechanism to facilitate seamless information exchange. Extensive experiments on multiple datasets demonstrate that our method achieves state-of-the-art performance. Code: https://github.com/Zhangyr2022/UniGenDet{https://github.com/Zhangyr2022/UniGenDet}.",
-          "hf_url": "https://huggingface.co/papers/2604.21904",
-          "arxiv_url": "https://arxiv.org/abs/2604.21904",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.21904",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.21904",
-          "github_url": "",
-          "submitted_by": "Yanran Zhang",
-          "submitted_at": "2026-04-24T01:49:10.622Z",
-          "upvotes": 3,
-          "comments": 2,
-          "topic_key": "multimodal_generative",
-          "topic_label": "Multimodal Generative Modeling",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.89
-        }
-      ]
-    },
-    {
-      "topic_label": "Multimodal Agents",
-      "count": 3,
-      "share": 13.64,
-      "papers": [
-        {
-          "report_date": "2026-04-24",
-          "paper_id": "2604.19734",
-          "title": "UniT: Toward a Unified Physical Language for Human-to-Humanoid Policy Learning and World Modeling",
-          "authors": [
-            "Boyu Chen",
-            "Yi Chen",
-            "Lu Qiu",
-            "Jerry Bai",
-            "Yuying Ge",
-            "Yixiao Ge"
-          ],
-          "abstract": "Scaling humanoid foundation models is bottlenecked by the scarcity of robotic data. While massive egocentric human data offers a scalable alternative, bridging the cross-embodiment chasm remains a fundamental challenge due to kinematic mismatches. We introduce UniT (Unified Latent Action Tokenizer via Visual Anchoring), a framework that establishes a unified physical language for human-to-humanoid transfer. Grounded in the philosophy that heterogeneous kinematics share universal visual consequences, UniT employs a tri-branch cross-reconstruction mechanism: actions predict vision to anchor kinematics to physical outcomes, while vision reconstructs actions to filter out irrelevant visual confounders. Concurrently, a fusion branch synergies these purified modalities into a shared discrete latent space of embodiment-agnostic physical intents. We validate UniT across two paradigms: 1) Policy Learning (VLA-UniT): By predicting these unified tokens, it effectively leverages diverse human data to achieve state-of-the-art data efficiency and robust out-of-distribution (OOD) generalization on both humanoid simulation benchmark and real-world deployments, notably demonstrating zero-shot task transfer. 2) World Modeling (WM-UniT): By aligning cross-embodiment dynamics via unified tokens as conditions, it realizes direct human-to-humanoid action transfer. This alignment ensures that human data seamlessly translates into enhanced action controllability for humanoid video generation. Ultimately, by inducing a highly aligned cross-embodiment representation (empirically verified by t-SNE visualizations revealing the convergence of human and humanoid features into a shared manifold), UniT offers a scalable path to distill vast human knowledge into general-purpose humanoid capabilities.",
-          "hf_url": "https://huggingface.co/papers/2604.19734",
-          "arxiv_url": "https://arxiv.org/abs/2604.19734",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.19734",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.19734",
-          "github_url": "",
-          "submitted_by": "Yi Chen",
-          "submitted_at": "2026-04-24T00:53:51.931Z",
-          "upvotes": 27,
-          "comments": 3,
-          "topic_key": "multimodal_agents",
-          "topic_label": "Multimodal Agents",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.9
-        },
-        {
-          "report_date": "2026-04-24",
-          "paper_id": "2604.21375",
-          "title": "VLAA-GUI: Knowing When to Stop, Recover, and Search, A Modular Framework for GUI Automation",
-          "authors": [
-            "Qijun Han",
-            "Haoqin Tu",
-            "Zijun Wang",
-            "Haoyue Dai",
-            "Yiyang Zhou",
-            "Nancy Lau",
-            "Alvaro A. Cardenas",
-            "Yuhui Xu",
-            "Ran Xu",
-            "Caiming Xiong",
-            "Zeyu Zheng",
-            "Huaxiu Yao",
-            "Yuyin Zhou",
-            "Cihang Xie"
-          ],
-          "abstract": "Autonomous GUI agents face two fundamental challenges: early stopping, where agents prematurely declare success without verifiable evidence, and repetitive loops, where agents cycle through the same failing actions without recovery. We present VLAA-GUI, a modular GUI agentic framework built around three integrated components that guide the system on when to Stop, Recover, and Search. First, a mandatory Completeness Verifier enforces UI-observable success criteria and verification at every finish step -- with an agent-level verifier that cross-examines completion claims with decision rules, rejecting those lacking direct visual evidence. Second, a mandatory Loop Breaker provides multi-tier filtering: switching interaction mode after repeated failures, forcing strategy changes after persistent screen-state recurrence, and binding reflection signals to strategy shifts. Third, an on-demand Search Agent searches online for unfamiliar workflows by directly querying a capable LLM with search ability, returning results as plain text. We additionally integrate a Coding Agent for code-intensive actions and a Grounding Agent for precise action grounding, both invoked on demand when required. We evaluate VLAA-GUI across five top-tier backbones, including Opus 4.5, 4.6 and Gemini 3.1 Pro, on two benchmarks with Linux and Windows tasks, achieving top performance on both (77.5% on OSWorld and 61.0% on WindowsAgentArena). Notably, three of the five backbones surpass human performance (72.4%) on OSWorld in a single pass. Ablation studies show that all three proposed components consistently improve a strong backbone, while a weaker backbone benefits more from these tools when the step budget is sufficient. Further analysis also shows that the Loop Breaker nearly halves wasted steps for loop-prone models.",
-          "hf_url": "https://huggingface.co/papers/2604.21375",
-          "arxiv_url": "https://arxiv.org/abs/2604.21375",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.21375",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.21375",
-          "github_url": "",
-          "submitted_by": "Cihang Xie",
-          "submitted_at": "2026-04-24T01:43:15.614Z",
-          "upvotes": 12,
-          "comments": 2,
-          "topic_key": "multimodal_agents",
-          "topic_label": "Multimodal Agents",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.88
-        },
-        {
-          "report_date": "2026-04-24",
-          "paper_id": "2604.08645",
-          "title": "3D-VCD: Hallucination Mitigation in 3D-LLM Embodied Agents through Visual Contrastive Decoding",
-          "authors": [
-            "Makanjuola Ogunleye",
-            "Eman Abdelrahman",
-            "Ismini Lourentzou"
-          ],
-          "abstract": "Large multimodal models are increasingly used as the reasoning core of embodied agents operating in 3D environments, yet they remain prone to hallucinations that can produce unsafe and ungrounded decisions. Existing inference-time hallucination mitigation methods largely target 2D vision-language settings and do not transfer to embodied 3D reasoning, where failures arise from object presence, spatial layout, and geometric grounding rather than pixel-level inconsistencies. We introduce 3D-VCD, the first inference-time visual contrastive decoding framework for hallucination mitigation in 3D embodied agents. 3D-VCD constructs a distorted 3D scene graph by applying semantic and geometric perturbations to object-centric representations, such as category substitutions and coordinate or extent corruption. By contrasting predictions under the original and distorted 3D contexts, our method suppresses tokens that are insensitive to grounded scene evidence and are therefore likely driven by language priors. We evaluate 3D-VCD on the 3D-POPE and HEAL benchmarks and show that it consistently improves grounded reasoning without any retraining, establishing inference-time contrastive decoding over structured 3D representations as an effective and practical route to more reliable embodied intelligence.",
-          "hf_url": "https://huggingface.co/papers/2604.08645",
-          "arxiv_url": "https://arxiv.org/abs/2604.08645",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.08645",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.08645",
-          "github_url": "",
-          "submitted_by": "Ismini Lourentzou",
-          "submitted_at": "2026-04-24T15:20:57.183Z",
-          "upvotes": 0,
-          "comments": 2,
-          "topic_key": "multimodal_agents",
-          "topic_label": "Multimodal Agents",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.97
-        }
-      ]
-    },
-    {
-      "topic_label": "Multimodal Understanding and Vision",
-      "count": 3,
-      "share": 13.64,
-      "papers": [
-        {
-          "report_date": "2026-04-24",
-          "paper_id": "2604.17295",
-          "title": "LLaTiSA: Towards Difficulty-Stratified Time Series Reasoning from Visual Perception to Semantics",
-          "authors": [
-            "Yueyang Ding",
-            "HaoPeng Zhang",
-            "Rui Dai",
-            "Yi Wang",
-            "Tianyu Zong",
-            "Kaikui Liu",
-            "Xiangxiang Chu"
-          ],
-          "abstract": "Comprehensive understanding of time series remains a significant challenge for Large Language Models (LLMs). Current research is hindered by fragmented task definitions and benchmarks with inherent ambiguities, precluding rigorous evaluation and the development of unified Time Series Reasoning Models(TSRMs). To bridge this gap, we formalize Time Series Reasoning (TSR) via a four-level taxonomy of increasing cognitive complexity. We introduce HiTSR, a hierarchical time series reasoning dataset comprising 83k samples with diverse task combinations and verified Chain-of-Thought (CoT) trajectories. Leveraging HiTSR, we propose LLaTiSA, a strong TSRM that integrates visualized patterns with precision-calibrated numerical tables to enhance the temporal perception of Vision-Language Models (VLMs). Through a multi-stage curriculum fine-tuning strategy, LLaTiSA achieves superior performance and exhibits robust out-of-distribution generalization across diverse TSR tasks and real-world scenarios. Our code is available at https://github.com/RainingNovember/LLaTiSA.",
-          "hf_url": "https://huggingface.co/papers/2604.17295",
-          "arxiv_url": "https://arxiv.org/abs/2604.17295",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.17295",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.17295",
-          "github_url": "",
-          "submitted_by": "Rui Dai",
-          "submitted_at": "2026-04-24T09:39:11.227Z",
-          "upvotes": 80,
-          "comments": 3,
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.82
-        },
-        {
-          "report_date": "2026-04-24",
-          "paper_id": "2604.21931",
-          "title": "Seeing Fast and Slow: Learning the Flow of Time in Videos",
-          "authors": [
-            "Yen-Siang Wu",
-            "Rundong Luo",
-            "Jingsen Zhu",
-            "Tao Tu",
-            "Ali Farhadi",
-            "Matthew Wallingford",
-            "Yu-Chiang Frank Wang",
-            "Steve Marschner",
-            "Wei-Chiu Ma"
-          ],
-          "abstract": "How can we tell whether a video has been sped up or slowed down? How can we generate videos at different speeds? Although videos have been central to modern computer vision research, little attention has been paid to perceiving and controlling the passage of time. In this paper, we study time as a learnable visual concept and develop models for reasoning about and manipulating the flow of time in videos. We first exploit the multimodal cues and temporal structure naturally present in videos to learn, in a self-supervised manner, to detect speed changes and estimate playback speed. We then show that these learned temporal reasoning models enable us to curate the largest slow-motion video dataset to date from noisy in-the-wild sources. Such slow-motion footage, typically filmed by high-speed cameras, contains substantially richer temporal detail than standard videos. Using this data, we further develop models capable of temporal control, including speed-conditioned video generation, which produces motion at specified playback speed, and temporal super-resolution, which tranforms low-FPS, blurry videos into high-FPS sequences with fine-grained temporal details. Our findings highlight time as a manipulable, perceptual dimension in video learning, opening doors to temporally controllable video generation, temporal forensics detection, and potentially richer world-models that understand how events unfold over time.",
-          "hf_url": "https://huggingface.co/papers/2604.21931",
-          "arxiv_url": "https://arxiv.org/abs/2604.21931",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.21931",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.21931",
-          "github_url": "",
-          "submitted_by": "taesiri",
-          "submitted_at": "2026-04-24T00:48:58.642Z",
-          "upvotes": 15,
-          "comments": 2,
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.8
+          "classification_source": "rule",
+          "classification_confidence": null
         },
         {
           "report_date": "2026-04-24",
@@ -670,11 +879,11 @@
           "submitted_at": "2026-04-24T09:27:21.478Z",
           "upvotes": 1,
           "comments": 2,
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
+          "topic_key": "other_ai",
+          "topic_label": "Other AI",
           "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.8
+          "classification_source": "rule",
+          "classification_confidence": null
         }
       ]
     },
@@ -709,9 +918,12 @@
           "comments": 3,
           "topic_key": "datasets_benchmarks",
           "topic_label": "Datasets and Benchmarks",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.95
+          "matched_terms": [
+            "\\bbenchmark(s)?\\b",
+            "\\bsuite\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
         },
         {
           "report_date": "2026-04-24",
@@ -737,299 +949,57 @@
           "comments": 4,
           "topic_key": "datasets_benchmarks",
           "topic_label": "Datasets and Benchmarks",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.97
-        }
-      ]
-    },
-    {
-      "topic_label": "Domain Applications",
-      "count": 2,
-      "share": 9.09,
-      "papers": [
-        {
-          "report_date": "2026-04-24",
-          "paper_id": "2604.21889",
-          "title": "TingIS: Real-time Risk Event Discovery from Noisy Customer Incidents at Enterprise Scale",
-          "authors": [
-            "Jun Wang",
-            "Ziyin Zhang",
-            "Rui Wang",
-            "Hang Yu",
-            "Peng Di",
-            "Rui Wang"
+          "matched_terms": [
+            "\\bdataset(s)?\\b"
           ],
-          "abstract": "Real-time detection and mitigation of technical anomalies are critical for large-scale cloud-native services, where even minutes of downtime can result in massive financial losses and diminished user trust. While customer incidents serve as a vital signal for discovering risks missed by monitoring, extracting actionable intelligence from this data remains challenging due to extreme noise, high throughput, and semantic complexity of diverse business lines. In this paper, we present TingIS, an end-to-end system designed for enterprise-grade incident discovery. At the core of TingIS is a multi-stage event linking engine that synergizes efficient indexing techniques with Large Language Models (LLMs) to make informed decisions on event merging, enabling the stable extraction of actionable incidents from just a handful of diverse user descriptions. This engine is complemented by a cascaded routing mechanism for precise business attribution and a multi-dimensional noise reduction pipeline that integrates domain knowledge, statistical patterns, and behavioral filtering. Deployed in a production environment handling a peak throughput of over 2,000 messages per minute and 300,000 messages per day, TingIS achieves a P90 alert latency of 3.5 minutes and a 95\\% discovery rate for high-priority incidents. Benchmarks constructed from real-world data demonstrate that TingIS significantly outperforms baseline methods in routing accuracy, clustering quality, and Signal-to-Noise Ratio.",
-          "hf_url": "https://huggingface.co/papers/2604.21889",
-          "arxiv_url": "https://arxiv.org/abs/2604.21889",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.21889",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.21889",
-          "github_url": "",
-          "submitted_by": "Ziyin Zhang",
-          "submitted_at": "2026-04-24T01:53:33.572Z",
-          "upvotes": 10,
-          "comments": 3,
-          "topic_key": "domain_applications",
-          "topic_label": "Domain Applications",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.85
-        },
-        {
-          "report_date": "2026-04-24",
-          "paper_id": "2604.16926",
-          "title": "Test-Time Adaptation for EEG Foundation Models: A Systematic Study under Real-World Distribution Shifts",
-          "authors": [
-            "Gabriel Jason Lee",
-            "Jathurshan Pradeepkumar",
-            "Jimeng Sun"
-          ],
-          "abstract": "Electroencephalography (EEG) foundation models have shown strong potential for learning generalizable representations from large-scale neural data, yet their clinical deployment is hindered by distribution shifts across clinical settings, devices, and populations. Test-time adaptation (TTA) offers a promising solution by enabling models to adapt to unlabeled target data during inference without access to source data, a valuable property in healthcare settings constrained by privacy regulations and limited labeled data. However, its effectiveness for EEG remains largely underexplored. In this work, we introduce NeuroAdapt-Bench, a systematic benchmark for evaluating test-time adaptation methods on EEG foundation models under realistic distribution shifts. We evaluate representative TTA approaches from other domains across multiple pretrained foundation models, diverse downstream tasks, and heterogeneous datasets spanning in-distribution, out-of-distribution, and extreme modality shifts (e.g., Ear-EEG). Our results show that standard TTA methods yield inconsistent gains and often degrade performance, with gradient-based approaches particularly prone to heavy degradation. In contrast, optimization-free methods demonstrate greater stability and more reliable improvements. These findings highlight the limitations of existing TTA techniques in EEG, provide guidance for future development, and underscore the need for domain-specific adaptation strategies.",
-          "hf_url": "https://huggingface.co/papers/2604.16926",
-          "arxiv_url": "https://arxiv.org/abs/2604.16926",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.16926",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.16926",
-          "github_url": "",
-          "submitted_by": "Jathurshan Pradeepkumar",
-          "submitted_at": "2026-04-24T00:17:02.435Z",
-          "upvotes": 2,
-          "comments": 2,
-          "topic_key": "domain_applications",
-          "topic_label": "Domain Applications",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.84
-        }
-      ]
-    },
-    {
-      "topic_label": "LLMs and Language",
-      "count": 2,
-      "share": 9.09,
-      "papers": [
-        {
-          "report_date": "2026-04-24",
-          "paper_id": "2604.20244",
-          "title": "Hybrid Policy Distillation for LLMs",
-          "authors": [
-            "Wenhong Zhu",
-            "Ruobing Xie",
-            "Rui Wang",
-            "Pengfei Liu"
-          ],
-          "abstract": "Knowledge distillation (KD) is a powerful paradigm for compressing large language models (LLMs), whose effectiveness depends on intertwined choices of divergence direction, optimization strategy, and data regime. We break down the design of existing KD methods and present a unified view that establishes connections between them, reformulating KD as a reweighted log-likelihood objective at the token level. We further propose Hybrid Policy Distillation (HPD), which integrates the complementary advantages of forward and reverse KL to balance mode coverage and mode-seeking, and combines off-policy data with lightweight, approximate on-policy sampling. We validate HPD on long-generation math reasoning as well as short-generation dialogue and code tasks, demonstrating improved optimization stability, computational efficiency, and final performance across diverse model families and scales. The code related to this work is available at https://github.com/zwhong714/Hybrid-Policy-Distillation.",
-          "hf_url": "https://huggingface.co/papers/2604.20244",
-          "arxiv_url": "https://arxiv.org/abs/2604.20244",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.20244",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.20244",
-          "github_url": "",
-          "submitted_by": "SII-Wenhong",
-          "submitted_at": "2026-04-24T03:32:20.845Z",
-          "upvotes": 10,
-          "comments": 2,
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.68
-        },
-        {
-          "report_date": "2026-04-24",
-          "paper_id": "2604.20398",
-          "title": "WebGen-R1: Incentivizing Large Language Models to Generate Functional and Aesthetic Websites with Reinforcement Learning",
-          "authors": [
-            "Juyong Jiang",
-            "Chenglin Cai",
-            "Chansung Park",
-            "Jiasi Shen",
-            "Sunghun Kim",
-            "Jianguo Li",
-            "Yue Wang"
-          ],
-          "abstract": "While Large Language Models (LLMs) excel at function-level code generation, project-level tasks such as generating functional and visually aesthetic multi-page websites remain highly challenging. Existing works are often limited to single-page static websites, while agentic frameworks typically rely on multi-turn execution with proprietary models, leading to substantial token costs, high latency, and brittle integration. Training a small LLM end-to-end with reinforcement learning (RL) is a promising alternative, yet it faces a critical bottleneck in designing reliable and computationally feasible rewards for website generation. Unlike single-file coding tasks that can be verified by unit tests, website generation requires evaluating inherently subjective aesthetics, cross-page interactions, and functional correctness. To this end, we propose WebGen-R1, an end-to-end RL framework tailored for project-level website generation. We first introduce a scaffold-driven structured generation paradigm that constrains the large open-ended action space and preserves architectural integrity. We then design a novel cascaded multimodal reward that seamlessly couples structural guarantees with execution-grounded functional feedback and vision-based aesthetic supervision. Extensive experiments demonstrate that our WebGen-R1 substantially transforms a 7B base model from generating nearly nonfunctional websites into producing deployable, aesthetically aligned multi-page websites. Remarkably, our WebGen-R1 not only consistently outperforms heavily scaled open-source models (up to 72B), but also rivals the state-of-the-art DeepSeek-R1 (671B) in functional success, while substantially exceeding it in valid rendering and aesthetic alignment. These results position WebGen-R1 as a viable path for scaling small open models from function-level code generation to project-level web application generation.",
-          "hf_url": "https://huggingface.co/papers/2604.20398",
-          "arxiv_url": "https://arxiv.org/abs/2604.20398",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.20398",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.20398",
-          "github_url": "",
-          "submitted_by": "John",
-          "submitted_at": "2026-04-24T03:42:24.964Z",
-          "upvotes": 3,
-          "comments": 2,
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.93
-        }
-      ]
-    },
-    {
-      "topic_label": "Reasoning, Alignment, and Evaluation",
-      "count": 2,
-      "share": 9.09,
-      "papers": [
-        {
-          "report_date": "2026-04-24",
-          "paper_id": "2604.21193",
-          "title": "Trust but Verify: Introducing DAVinCI -- A Framework for Dual Attribution and Verification in Claim Inference for Language Models",
-          "authors": [
-            "Vipula Rawte",
-            "Ryan Rossi",
-            "Franck Dernoncourt",
-            "Nedim Lipka"
-          ],
-          "abstract": "Large Language Models (LLMs) have demonstrated remarkable fluency and versatility across a wide range of NLP tasks, yet they remain prone to factual inaccuracies and hallucinations. This limitation poses significant risks in high-stakes domains such as healthcare, law, and scientific communication, where trust and verifiability are paramount. In this paper, we introduce DAVinCI - a Dual Attribution and Verification framework designed to enhance the factual reliability and interpretability of LLM outputs. DAVinCI operates in two stages: (i) it attributes generated claims to internal model components and external sources; (ii) it verifies each claim using entailment-based reasoning and confidence calibration. We evaluate DAVinCI across multiple datasets, including FEVER and CLIMATE-FEVER, and compare its performance against standard verification-only baselines. Our results show that DAVinCI significantly improves classification accuracy, attribution precision, recall, and F1-score by 5-20%. Through an extensive ablation study, we isolate the contributions of evidence span selection, recalibration thresholds, and retrieval quality. We also release a modular DAVinCI implementation that can be integrated into existing LLM pipelines. By bridging attribution and verification, DAVinCI offers a scalable path to auditable, trustworthy AI systems. This work contributes to the growing effort to make LLMs not only powerful but also accountable.",
-          "hf_url": "https://huggingface.co/papers/2604.21193",
-          "arxiv_url": "https://arxiv.org/abs/2604.21193",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.21193",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.21193",
-          "github_url": "",
-          "submitted_by": "Franck Dernoncourt",
-          "submitted_at": "2026-04-24T01:57:53.109Z",
-          "upvotes": 2,
-          "comments": 2,
-          "topic_key": "reasoning_alignment_eval",
-          "topic_label": "Reasoning, Alignment, and Evaluation",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.93
-        },
-        {
-          "report_date": "2026-04-24",
-          "paper_id": "2604.21300",
-          "title": "Explainable Disentangled Representation Learning for Generalizable Authorship Attribution in the Era of Generative AI",
-          "authors": [
-            "Hieu Man",
-            "Van-Cuong Pham",
-            "Nghia Trung Ngo",
-            "Franck Dernoncourt",
-            "Thien Huu Nguyen"
-          ],
-          "abstract": "Learning robust representations of authorial style is crucial for authorship attribution and AI-generated text detection. However, existing methods often struggle with content-style entanglement, where models learn spurious correlations between authors' writing styles and topics, leading to poor generalization across domains. To address this challenge, we propose Explainable Authorship Variational Autoencoder (EAVAE), a novel framework that explicitly disentangles style from content through architectural separation-by-design. EAVAE first pretrains style encoders using supervised contrastive learning on diverse authorship data, then finetunes with a Variational Autoencoder (VEA) architecture using separate encoders for style and content representations. Disentanglement is enforced through a novel discriminator that not only distinguishes whether pairs of style/content representations belong to the same or different authors/content sources, but also generates natural language explanation for their decision, simultaneously mitigating confounding information and enhancing interpretability. Extensive experiments demonstrate the effectiveness of EAVAE. On authorship attribution, we achieve state-of-the-art performance on various datasets, including Amazon Reviews, PAN21, and HRS. For AI-generated text detection, EAVAE excels in few-shot learning over the M4 dataset. Code and data repositories are available onlinehttps://github.com/hieum98/avae https://huggingface.co/collections/Hieuman/document-level-authorship-datasets.",
-          "hf_url": "https://huggingface.co/papers/2604.21300",
-          "arxiv_url": "https://arxiv.org/abs/2604.21300",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.21300",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.21300",
-          "github_url": "",
-          "submitted_by": "Franck Dernoncourt",
-          "submitted_at": "2026-04-24T01:57:07.971Z",
-          "upvotes": 2,
-          "comments": 2,
-          "topic_key": "reasoning_alignment_eval",
-          "topic_label": "Reasoning, Alignment, and Evaluation",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.76
-        }
-      ]
-    },
-    {
-      "topic_label": "Agents and Planning",
-      "count": 1,
-      "share": 4.55,
-      "papers": [
-        {
-          "report_date": "2026-04-24",
-          "paper_id": "2604.20987",
-          "title": "Co-Evolving LLM Decision and Skill Bank Agents for Long-Horizon Tasks",
-          "authors": [
-            "Xiyang Wu",
-            "Zongxia Li",
-            "Guangyao Shi",
-            "Alexander Duffy",
-            "Tyler Marques",
-            "Matthew Lyle Olson",
-            "Tianyi Zhou",
-            "Dinesh Manocha"
-          ],
-          "abstract": "Long horizon interactive environments are a testbed for evaluating agents skill usage abilities. These environments demand multi step reasoning, the chaining of multiple skills over many timesteps, and robust decision making under delayed rewards and partial observability. Games are a good testbed for evaluating agent skill usage in environments. Large Language Models (LLMs) offer a promising alternative as game playing agents, but they often struggle with consistent long horizon decision making because they lack a mechanism to discover, retain, and reuse structured skills across episodes. We present COSPLAY, a co evolution framework in which an LLM decision agent retrieves skills from a learnable skill bank to guide action taking, while an agent managed skill pipeline discovers reusable skills from the agents unlabeled rollouts to form a skill bank. Our framework improves both the decision agent to learn better skill retrieval and action generation, while the skill bank agent continually extracts, refines, and updates skills together with their contracts. Experiments across six game environments show that COSPLAY with an 8B base model achieves over 25.1 percent average reward improvement against four frontier LLM baselines on single player game benchmarks while remaining competitive on multi player social reasoning games.",
-          "hf_url": "https://huggingface.co/papers/2604.20987",
-          "arxiv_url": "https://arxiv.org/abs/2604.20987",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.20987",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.20987",
-          "github_url": "",
-          "submitted_by": "Xiyang Wu",
-          "submitted_at": "2026-04-24T02:38:50.802Z",
-          "upvotes": 16,
-          "comments": 2,
-          "topic_key": "agents_planning",
-          "topic_label": "Agents and Planning",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.96
-        }
-      ]
-    },
-    {
-      "topic_label": "Generative Foundations",
-      "count": 1,
-      "share": 4.55,
-      "papers": [
-        {
-          "report_date": "2026-04-24",
-          "paper_id": "2604.17492",
-          "title": "Coevolving Representations in Joint Image-Feature Diffusion",
-          "authors": [
-            "Theodoros Kouzelis",
-            "Spyros Gidaris",
-            "Nikos Komodakis"
-          ],
-          "abstract": "Joint image-feature generative modeling has recently emerged as an effective strategy for improving diffusion training by coupling low-level VAE latents with high-level semantic features extracted from pre-trained visual encoders. However, existing approaches rely on a fixed representation space, constructed independently of the generative objective and kept unchanged during training. We argue that the representation space guiding diffusion should itself adapt to the generative task. To this end, we propose Coevolving Representation Diffusion (CoReDi), a framework in which the semantic representation space evolves during training by learning a lightweight linear projection jointly with the diffusion model. While naively optimizing this projection leads to degenerate solutions, we show that stable coevolution can be achieved through a combination of stop-gradient targets, normalization, and targeted regularization that prevents feature collapse. This formulation enables the semantic space to progressively specialize to the needs of image synthesis, improving its complementarity with image latents. We apply CoReDi to both VAE latent diffusion and pixel-space diffusion, demonstrating that adaptive semantic representations improve generative modeling across both settings. Experiments show that CoReDi achieves faster convergence and higher sample quality compared to joint diffusion models operating in fixed representation spaces.",
-          "hf_url": "https://huggingface.co/papers/2604.17492",
-          "arxiv_url": "https://arxiv.org/abs/2604.17492",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.17492",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.17492",
-          "github_url": "",
-          "submitted_by": "Kouzelis",
-          "submitted_at": "2026-04-24T14:34:36.013Z",
-          "upvotes": 3,
-          "comments": 2,
-          "topic_key": "generative_foundations",
-          "topic_label": "Generative Foundations",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.9
-        }
-      ]
-    },
-    {
-      "topic_label": "Learning, Optimization, and Theory",
-      "count": 1,
-      "share": 4.55,
-      "papers": [
-        {
-          "report_date": "2026-04-24",
-          "paper_id": "2604.20156",
-          "title": "Temporally Extended Mixture-of-Experts Models",
-          "authors": [
-            "Zeyu Shen",
-            "Peter Henderson"
-          ],
-          "abstract": "Mixture-of-Experts models, now popular for scaling capacity at fixed inference speed, switch experts at nearly every token. Once a model outgrows available GPU memory, this churn can render optimizations like offloading and pre-fetching ineffective. We make the case that the options framework in reinforcement learning is a perfect match to tackle this problem, and argue for temporally extended mixture-of-experts layers. Building on the option-critic framework with deliberation costs, we add a controller to each layer that learns when to switch expert sets and which to load. By applying this to gpt-oss-20b with low-rank adapters and a self-distillation reward, our method reduces switch rates from over 50% to below 5% while retaining up to 90% of base-model accuracy on MATH, MMLU, and MMMLU. This shows that even existing pre-trained models can be converted to temporally extended MoEs with lightweight training, with the deliberation cost allowing model trainers to trade off switching rates against capability. We hope this opens a principled path, grounded in the options framework, for memory-efficient serving and continual learning in ever-growing MoE models.",
-          "hf_url": "https://huggingface.co/papers/2604.20156",
-          "arxiv_url": "https://arxiv.org/abs/2604.20156",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.20156",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.20156",
-          "github_url": "",
-          "submitted_by": "Zeyu Shen",
-          "submitted_at": "2026-04-24T16:13:18.282Z",
-          "upvotes": 3,
-          "comments": 2,
-          "topic_key": "learning_theory",
-          "topic_label": "Learning, Optimization, and Theory",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.67
+          "classification_source": "rule",
+          "classification_confidence": null
         }
       ]
     },
     {
       "topic_label": "Retrieval, Knowledge, and RAG",
-      "count": 1,
-      "share": 4.55,
+      "count": 2,
+      "share": 9.09,
       "papers": [
+        {
+          "report_date": "2026-04-24",
+          "paper_id": "2604.21375",
+          "title": "VLAA-GUI: Knowing When to Stop, Recover, and Search, A Modular Framework for GUI Automation",
+          "authors": [
+            "Qijun Han",
+            "Haoqin Tu",
+            "Zijun Wang",
+            "Haoyue Dai",
+            "Yiyang Zhou",
+            "Nancy Lau",
+            "Alvaro A. Cardenas",
+            "Yuhui Xu",
+            "Ran Xu",
+            "Caiming Xiong",
+            "Zeyu Zheng",
+            "Huaxiu Yao",
+            "Yuyin Zhou",
+            "Cihang Xie"
+          ],
+          "abstract": "Autonomous GUI agents face two fundamental challenges: early stopping, where agents prematurely declare success without verifiable evidence, and repetitive loops, where agents cycle through the same failing actions without recovery. We present VLAA-GUI, a modular GUI agentic framework built around three integrated components that guide the system on when to Stop, Recover, and Search. First, a mandatory Completeness Verifier enforces UI-observable success criteria and verification at every finish step -- with an agent-level verifier that cross-examines completion claims with decision rules, rejecting those lacking direct visual evidence. Second, a mandatory Loop Breaker provides multi-tier filtering: switching interaction mode after repeated failures, forcing strategy changes after persistent screen-state recurrence, and binding reflection signals to strategy shifts. Third, an on-demand Search Agent searches online for unfamiliar workflows by directly querying a capable LLM with search ability, returning results as plain text. We additionally integrate a Coding Agent for code-intensive actions and a Grounding Agent for precise action grounding, both invoked on demand when required. We evaluate VLAA-GUI across five top-tier backbones, including Opus 4.5, 4.6 and Gemini 3.1 Pro, on two benchmarks with Linux and Windows tasks, achieving top performance on both (77.5% on OSWorld and 61.0% on WindowsAgentArena). Notably, three of the five backbones surpass human performance (72.4%) on OSWorld in a single pass. Ablation studies show that all three proposed components consistently improve a strong backbone, while a weaker backbone benefits more from these tools when the step budget is sufficient. Further analysis also shows that the Loop Breaker nearly halves wasted steps for loop-prone models.",
+          "hf_url": "https://huggingface.co/papers/2604.21375",
+          "arxiv_url": "https://arxiv.org/abs/2604.21375",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.21375",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.21375",
+          "github_url": "",
+          "submitted_by": "Cihang Xie",
+          "submitted_at": "2026-04-24T01:43:15.614Z",
+          "upvotes": 13,
+          "comments": 2,
+          "topic_key": "retrieval_knowledge",
+          "topic_label": "Retrieval, Knowledge, and RAG",
+          "matched_terms": [
+            "\\bsearch\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
         {
           "report_date": "2026-04-24",
           "paper_id": "2506.17001",
@@ -1056,9 +1026,51 @@
           "comments": 2,
           "topic_key": "retrieval_knowledge",
           "topic_label": "Retrieval, Knowledge, and RAG",
-          "matched_terms": [],
-          "classification_source": "codex",
-          "classification_confidence": 0.96
+          "matched_terms": [
+            "\\bretrieval\\b",
+            "\\bknowledge\\b",
+            "\\bgraph\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        }
+      ]
+    },
+    {
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "count": 1,
+      "share": 4.55,
+      "papers": [
+        {
+          "report_date": "2026-04-24",
+          "paper_id": "2604.17295",
+          "title": "LLaTiSA: Towards Difficulty-Stratified Time Series Reasoning from Visual Perception to Semantics",
+          "authors": [
+            "Yueyang Ding",
+            "HaoPeng Zhang",
+            "Rui Dai",
+            "Yi Wang",
+            "Tianyu Zong",
+            "Kaikui Liu",
+            "Xiangxiang Chu"
+          ],
+          "abstract": "Comprehensive understanding of time series remains a significant challenge for Large Language Models (LLMs). Current research is hindered by fragmented task definitions and benchmarks with inherent ambiguities, precluding rigorous evaluation and the development of unified Time Series Reasoning Models(TSRMs). To bridge this gap, we formalize Time Series Reasoning (TSR) via a four-level taxonomy of increasing cognitive complexity. We introduce HiTSR, a hierarchical time series reasoning dataset comprising 83k samples with diverse task combinations and verified Chain-of-Thought (CoT) trajectories. Leveraging HiTSR, we propose LLaTiSA, a strong TSRM that integrates visualized patterns with precision-calibrated numerical tables to enhance the temporal perception of Vision-Language Models (VLMs). Through a multi-stage curriculum fine-tuning strategy, LLaTiSA achieves superior performance and exhibits robust out-of-distribution generalization across diverse TSR tasks and real-world scenarios. Our code is available at https://github.com/RainingNovember/LLaTiSA.",
+          "hf_url": "https://huggingface.co/papers/2604.17295",
+          "arxiv_url": "https://arxiv.org/abs/2604.17295",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.17295",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.17295",
+          "github_url": "",
+          "submitted_by": "Rui Dai",
+          "submitted_at": "2026-04-24T09:39:11.227Z",
+          "upvotes": 81,
+          "comments": 3,
+          "topic_key": "reasoning_alignment_eval",
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "matched_terms": [
+            "\\breasoning\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
         }
       ]
     }
@@ -1085,13 +1097,15 @@
       "github_url": "",
       "submitted_by": "Rui Dai",
       "submitted_at": "2026-04-24T09:39:11.227Z",
-      "upvotes": 80,
+      "upvotes": 81,
       "comments": 3,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.82
+      "topic_key": "reasoning_alignment_eval",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "matched_terms": [
+        "\\breasoning\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-24",
@@ -1119,9 +1133,12 @@
       "comments": 3,
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.95
+      "matched_terms": [
+        "\\bbenchmark(s)?\\b",
+        "\\bsuite\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-24",
@@ -1145,11 +1162,13 @@
       "submitted_at": "2026-04-24T00:53:51.931Z",
       "upvotes": 27,
       "comments": 3,
-      "topic_key": "multimodal_agents",
-      "topic_label": "Multimodal Agents",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.9
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
+      "matched_terms": [
+        "\\blearning\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-24",
@@ -1175,9 +1194,11 @@
       "comments": 4,
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.97
+      "matched_terms": [
+        "\\bdataset(s)?\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-24",
@@ -1201,13 +1222,15 @@
       "github_url": "",
       "submitted_by": "Xiyang Wu",
       "submitted_at": "2026-04-24T02:38:50.802Z",
-      "upvotes": 16,
+      "upvotes": 17,
       "comments": 2,
-      "topic_key": "agents_planning",
-      "topic_label": "Agents and Planning",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.96
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [
+        "\\b\\w*llms?\\w*\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-24",
@@ -1232,13 +1255,15 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-04-24T00:48:58.642Z",
-      "upvotes": 15,
-      "comments": 2,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.8
+      "upvotes": 16,
+      "comments": 3,
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
+      "matched_terms": [
+        "\\blearning\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-24",
@@ -1268,13 +1293,15 @@
       "github_url": "",
       "submitted_by": "Cihang Xie",
       "submitted_at": "2026-04-24T01:43:15.614Z",
-      "upvotes": 12,
+      "upvotes": 13,
       "comments": 2,
-      "topic_key": "multimodal_agents",
-      "topic_label": "Multimodal Agents",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.88
+      "topic_key": "retrieval_knowledge",
+      "topic_label": "Retrieval, Knowledge, and RAG",
+      "matched_terms": [
+        "\\bsearch\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-24",
@@ -1298,11 +1325,11 @@
       "submitted_at": "2026-04-24T01:53:33.572Z",
       "upvotes": 10,
       "comments": 3,
-      "topic_key": "domain_applications",
-      "topic_label": "Domain Applications",
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.85
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-24",
@@ -1326,9 +1353,11 @@
       "comments": 2,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.68
+      "matched_terms": [
+        "\\b\\w*llms?\\w*\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-24",
@@ -1365,37 +1394,11 @@
       "submitted_at": "2026-04-24T00:56:53.719Z",
       "upvotes": 9,
       "comments": 1,
-      "topic_key": "multimodal_generative",
-      "topic_label": "Multimodal Generative Modeling",
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.73
-    },
-    {
-      "report_date": "2026-04-24",
-      "paper_id": "2604.10268",
-      "title": "EditCrafter: Tuning-free High-Resolution Image Editing via Pretrained Diffusion Model",
-      "authors": [
-        "Kunho Kim",
-        "Sumin Seo",
-        "Yongjun Cho",
-        "Hyungjin Chung"
-      ],
-      "abstract": "We propose EditCrafter, a high-resolution image editing method that operates without tuning, leveraging pretrained text-to-image (T2I) diffusion models to process images at resolutions significantly exceeding those used during training. Leveraging the generative priors of large-scale T2I diffusion models enables the development of a wide array of novel generation and editing applications. Although numerous image editing methods have been proposed based on diffusion models and exhibit high-quality editing results, they are difficult to apply to images with arbitrary aspect ratios or higher resolutions since they only work at the training resolutions (512x512 or 1024x1024). Naively applying patch-wise editing fails with unrealistic object structures and repetition. To address these challenges, we introduce EditCrafter, a simple yet effective editing pipeline. EditCrafter operates by first performing tiled inversion, which preserves the original identity of the input high-resolution image. We further propose a noise-damped manifold-constrained classifier-free guidance (NDCFG++) that is tailored for high resolution image editing from the inverted latent. Our experiments show that the our EditCrafter can achieve impressive editing results across various resolutions without fine-tuning and optimization.",
-      "hf_url": "https://huggingface.co/papers/2604.10268",
-      "arxiv_url": "https://arxiv.org/abs/2604.10268",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.10268",
-      "papers_cool_url": "https://papers.cool/arxiv/2604.10268",
-      "github_url": "",
-      "submitted_by": "Kunho Kim",
-      "submitted_at": "2026-04-24T05:51:53.003Z",
-      "upvotes": 9,
-      "comments": 2,
-      "topic_key": "multimodal_generative",
-      "topic_label": "Multimodal Generative Modeling",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.99
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-24",
@@ -1423,13 +1426,44 @@
       "github_url": "",
       "submitted_by": "Kuan Heng (Jordan) Lin",
       "submitted_at": "2026-04-24T13:20:45.706Z",
-      "upvotes": 8,
+      "upvotes": 9,
       "comments": 2,
-      "topic_key": "multimodal_generative",
-      "topic_label": "Multimodal Generative Modeling",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.88
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
+      "matched_terms": [
+        "\\bvideo\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
+    },
+    {
+      "report_date": "2026-04-24",
+      "paper_id": "2604.10268",
+      "title": "EditCrafter: Tuning-free High-Resolution Image Editing via Pretrained Diffusion Model",
+      "authors": [
+        "Kunho Kim",
+        "Sumin Seo",
+        "Yongjun Cho",
+        "Hyungjin Chung"
+      ],
+      "abstract": "We propose EditCrafter, a high-resolution image editing method that operates without tuning, leveraging pretrained text-to-image (T2I) diffusion models to process images at resolutions significantly exceeding those used during training. Leveraging the generative priors of large-scale T2I diffusion models enables the development of a wide array of novel generation and editing applications. Although numerous image editing methods have been proposed based on diffusion models and exhibit high-quality editing results, they are difficult to apply to images with arbitrary aspect ratios or higher resolutions since they only work at the training resolutions (512x512 or 1024x1024). Naively applying patch-wise editing fails with unrealistic object structures and repetition. To address these challenges, we introduce EditCrafter, a simple yet effective editing pipeline. EditCrafter operates by first performing tiled inversion, which preserves the original identity of the input high-resolution image. We further propose a noise-damped manifold-constrained classifier-free guidance (NDCFG++) that is tailored for high resolution image editing from the inverted latent. Our experiments show that the our EditCrafter can achieve impressive editing results across various resolutions without fine-tuning and optimization.",
+      "hf_url": "https://huggingface.co/papers/2604.10268",
+      "arxiv_url": "https://arxiv.org/abs/2604.10268",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.10268",
+      "papers_cool_url": "https://papers.cool/arxiv/2604.10268",
+      "github_url": "",
+      "submitted_by": "Kunho Kim",
+      "submitted_at": "2026-04-24T05:51:53.003Z",
+      "upvotes": 9,
+      "comments": 2,
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
+      "matched_terms": [
+        "\\bimage\\b",
+        "\\bdiffusion\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-24",
@@ -1453,13 +1487,15 @@
       "github_url": "",
       "submitted_by": "Yanran Zhang",
       "submitted_at": "2026-04-24T01:49:10.622Z",
-      "upvotes": 3,
-      "comments": 2,
-      "topic_key": "multimodal_generative",
-      "topic_label": "Multimodal Generative Modeling",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.89
+      "upvotes": 4,
+      "comments": 4,
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
+      "matched_terms": [
+        "\\bimage\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-24",
@@ -1481,9 +1517,11 @@
       "comments": 2,
       "topic_key": "learning_theory",
       "topic_label": "Learning, Optimization, and Theory",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.67
+      "matched_terms": [
+        "\\bmixture\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-24",
@@ -1510,9 +1548,12 @@
       "comments": 2,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.93
+      "matched_terms": [
+        "\\blanguage models?\\b",
+        "\\blanguage\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-24",
@@ -1533,11 +1574,14 @@
       "submitted_at": "2026-04-24T14:34:36.013Z",
       "upvotes": 3,
       "comments": 2,
-      "topic_key": "generative_foundations",
-      "topic_label": "Generative Foundations",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.9
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
+      "matched_terms": [
+        "\\bimage\\b",
+        "\\bdiffusion\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-24",
@@ -1559,11 +1603,14 @@
       "submitted_at": "2026-04-24T01:57:53.109Z",
       "upvotes": 2,
       "comments": 2,
-      "topic_key": "reasoning_alignment_eval",
-      "topic_label": "Reasoning, Alignment, and Evaluation",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.93
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [
+        "\\blanguage models?\\b",
+        "\\blanguage\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-24",
@@ -1586,11 +1633,14 @@
       "submitted_at": "2026-04-24T01:57:07.971Z",
       "upvotes": 2,
       "comments": 2,
-      "topic_key": "reasoning_alignment_eval",
-      "topic_label": "Reasoning, Alignment, and Evaluation",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.76
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
+      "matched_terms": [
+        "\\blearning\\b",
+        "\\brepresentation(s)?\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-24",
@@ -1611,11 +1661,11 @@
       "submitted_at": "2026-04-24T00:17:02.435Z",
       "upvotes": 2,
       "comments": 2,
-      "topic_key": "domain_applications",
-      "topic_label": "Domain Applications",
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.84
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-24",
@@ -1637,11 +1687,11 @@
       "submitted_at": "2026-04-24T09:27:21.478Z",
       "upvotes": 1,
       "comments": 2,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
       "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.8
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-24",
@@ -1669,9 +1719,13 @@
       "comments": 2,
       "topic_key": "retrieval_knowledge",
       "topic_label": "Retrieval, Knowledge, and RAG",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.96
+      "matched_terms": [
+        "\\bretrieval\\b",
+        "\\bknowledge\\b",
+        "\\bgraph\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     },
     {
       "report_date": "2026-04-24",
@@ -1690,13 +1744,16 @@
       "github_url": "",
       "submitted_by": "Ismini Lourentzou",
       "submitted_at": "2026-04-24T15:20:57.183Z",
-      "upvotes": 0,
+      "upvotes": 1,
       "comments": 2,
-      "topic_key": "multimodal_agents",
-      "topic_label": "Multimodal Agents",
-      "matched_terms": [],
-      "classification_source": "codex",
-      "classification_confidence": 0.97
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
+      "matched_terms": [
+        "\\bvisual\\b",
+        "\\b3d\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
     }
   ]
 }
