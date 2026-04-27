@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-27T13:13:30Z",
-  "reports_count": 179,
+  "generated_at": "2026-04-27T15:02:00Z",
+  "reports_count": 180,
   "branches": [
     {
       "branch_key": "daily",
@@ -12,8 +12,8 @@
     {
       "branch_key": "hf-daily",
       "branch_label": "HF Daily",
-      "reports_count": 40,
-      "default_report_path": "data/hf-daily/reports/2026-04-24/hf-daily-2026-04-24.json",
+      "reports_count": 41,
+      "default_report_path": "data/hf-daily/reports/2026-04-27/hf-daily-2026-04-27.json",
       "manifest_path": "data/hf-daily/manifest.json"
     },
     {
@@ -7409,6 +7409,87 @@
           "topic_label": "Datasets and Benchmarks",
           "count": 9,
           "share": 7.38
+        }
+      ]
+    },
+    {
+      "branch_key": "hf-daily",
+      "branch_label": "HF Daily",
+      "search_text": "hf-daily HF Daily hf-daily-2026-04-27 data/hf-daily/reports/2026-04-27/hf-daily-2026-04-27.json https://huggingface.co/papers/date/2026-04-27 codex 2026-04-27 Generative Foundations Multimodal Generative Modeling Multimodal Agents Multimodal Understanding and Vision Retrieval, Knowledge, and RAG Learning, Optimization, and Theory Reasoning, Alignment, and Evaluation Agents and Planning taesiri Aheli Poddar Difan Jiao Harshit Joshi Lan Chen",
+      "data_path": "data/hf-daily/reports/2026-04-27/hf-daily-2026-04-27.json",
+      "slug": "hf-daily-2026-04-27",
+      "report_date": "2026-04-27",
+      "total_papers": 15,
+      "classifier": "codex",
+      "generated_at": "2026-04-27T15:01:59Z",
+      "source_url": "https://huggingface.co/papers/date/2026-04-27",
+      "focus_topics": [
+        {
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "count": 0,
+          "share": 0.0
+        },
+        {
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 0,
+          "share": 0.0
+        },
+        {
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "count": 1,
+          "share": 6.67
+        }
+      ],
+      "top_topics": [
+        {
+          "topic_label": "Multimodal Understanding and Vision",
+          "count": 3,
+          "share": 20.0
+        },
+        {
+          "topic_label": "Retrieval, Knowledge, and RAG",
+          "count": 3,
+          "share": 20.0
+        },
+        {
+          "topic_label": "Learning, Optimization, and Theory",
+          "count": 2,
+          "share": 13.33
+        },
+        {
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "count": 2,
+          "share": 13.33
+        },
+        {
+          "topic_label": "Agents and Planning",
+          "count": 1,
+          "share": 6.67
+        }
+      ],
+      "top_submitters": [
+        {
+          "submitted_by": "taesiri",
+          "count": 4
+        },
+        {
+          "submitted_by": "Aheli Poddar",
+          "count": 1
+        },
+        {
+          "submitted_by": "Difan Jiao",
+          "count": 1
+        },
+        {
+          "submitted_by": "Harshit Joshi",
+          "count": 1
+        },
+        {
+          "submitted_by": "Lan Chen",
+          "count": 1
         }
       ]
     },
