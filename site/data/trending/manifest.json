@@ -1,10 +1,147 @@
 {
   "branch_key": "trending",
   "branch_label": "Trending",
-  "generated_at": "2026-04-21T05:20:10Z",
-  "reports_count": 8,
-  "default_report_path": "data/trending/reports/2026-04-21/trending-2026-04-21.json",
+  "generated_at": "2026-04-27T04:00:04Z",
+  "reports_count": 9,
+  "default_report_path": "data/trending/reports/2026-04-27/trending-2026-04-27.json",
   "reports": [
+    {
+      "branch_key": "trending",
+      "branch_label": "Trending",
+      "data_path": "data/trending/reports/2026-04-27/trending-2026-04-27.json",
+      "slug": "trending-2026-04-27",
+      "snapshot_date": "2026-04-27",
+      "since": "weekly",
+      "total_repositories": 14,
+      "generated_at": "2026-04-27T04:00:03Z",
+      "source_url": "https://github.com/trending?since=weekly&spoken_language_code=",
+      "top_languages": [
+        {
+          "language": "Python",
+          "count": 6,
+          "share": 42.857142857142854
+        },
+        {
+          "language": "TypeScript",
+          "count": 3,
+          "share": 21.428571428571427
+        },
+        {
+          "language": "Shell",
+          "count": 2,
+          "share": 14.285714285714285
+        },
+        {
+          "language": "Cuda",
+          "count": 1,
+          "share": 7.142857142857142
+        },
+        {
+          "language": "JavaScript",
+          "count": 1,
+          "share": 7.142857142857142
+        }
+      ],
+      "top_repositories": [
+        {
+          "snapshot_date": "2026-04-27",
+          "repo_id": "forrestchang/andrej-karpathy-skills",
+          "owner": "forrestchang",
+          "name": "andrej-karpathy-skills",
+          "full_name": "forrestchang/andrej-karpathy-skills",
+          "repo_url": "https://github.com/forrestchang/andrej-karpathy-skills",
+          "description": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
+          "language": "",
+          "stars": 91293,
+          "forks": 8740,
+          "stars_this_week": 29944,
+          "built_by": [
+            "forrestchang",
+            "claude",
+            "back1ply",
+            "herobrine19",
+            "szkocot"
+          ]
+        },
+        {
+          "snapshot_date": "2026-04-27",
+          "repo_id": "alishahryar1/free-claude-code",
+          "owner": "Alishahryar1",
+          "name": "free-claude-code",
+          "full_name": "Alishahryar1/free-claude-code",
+          "repo_url": "https://github.com/Alishahryar1/free-claude-code",
+          "description": "Use claude-code for free in the terminal, VSCode extension or via discord like openclaw",
+          "language": "Python",
+          "stars": 14087,
+          "forks": 1987,
+          "stars_this_week": 10335,
+          "built_by": [
+            "Alishahryar1",
+            "cursoragent",
+            "claude",
+            "rishiskhare",
+            "dependabot"
+          ]
+        },
+        {
+          "snapshot_date": "2026-04-27",
+          "repo_id": "fincept-corporation/finceptterminal",
+          "owner": "Fincept-Corporation",
+          "name": "FinceptTerminal",
+          "full_name": "Fincept-Corporation/FinceptTerminal",
+          "repo_url": "https://github.com/Fincept-Corporation/FinceptTerminal",
+          "description": "FinceptTerminal is a modern finance application offering advanced market analytics, investment research, and economic data tools, designed for interactive exploration and data-driven decision-making in a user-friendly environment.",
+          "language": "Python",
+          "stars": 15679,
+          "forks": 2136,
+          "stars_this_week": 10070,
+          "built_by": [
+            "tilakpatel22",
+            "claude",
+            "Jaimin-ptl07",
+            "github-actions",
+            "rudrasheth"
+          ]
+        },
+        {
+          "snapshot_date": "2026-04-27",
+          "repo_id": "z4nzu/hackingtool",
+          "owner": "Z4nzu",
+          "name": "hackingtool",
+          "full_name": "Z4nzu/hackingtool",
+          "repo_url": "https://github.com/Z4nzu/hackingtool",
+          "description": "ALL IN ONE Hacking Tool For Hackers",
+          "language": "Python",
+          "stars": 65775,
+          "forks": 7385,
+          "stars_this_week": 6488,
+          "built_by": [
+            "Z4nzu",
+            "cclauss",
+            "Greatest125",
+            "mokrunka",
+            "W1LDN16H7"
+          ]
+        },
+        {
+          "snapshot_date": "2026-04-27",
+          "repo_id": "mattpocock/skills",
+          "owner": "mattpocock",
+          "name": "skills",
+          "full_name": "mattpocock/skills",
+          "repo_url": "https://github.com/mattpocock/skills",
+          "description": "Agent Skills for real engineers. Straight from my .claude directory.",
+          "language": "Shell",
+          "stars": 24605,
+          "forks": 1994,
+          "stars_this_week": 5013,
+          "built_by": [
+            "mattpocock",
+            "claude"
+          ]
+        }
+      ]
+    },
     {
       "branch_key": "trending",
       "branch_label": "Trending",
