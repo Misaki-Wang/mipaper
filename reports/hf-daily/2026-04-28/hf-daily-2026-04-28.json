@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-04-28T15:48:11Z",
+  "generated_at": "2026-04-29T15:02:03Z",
   "report_kind": "hf_daily",
   "report_date": "2026-04-28",
   "source_url": "https://huggingface.co/papers/date/2026-04-28",
   "classifier": "codex",
-  "total_papers": 28,
+  "total_papers": 35,
   "focus_topics": [
     {
       "topic_key": "generative_foundations",
@@ -16,65 +16,70 @@
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
       "count": 1,
-      "share": 3.57
+      "share": 2.86
     },
     {
       "topic_key": "multimodal_agents",
       "topic_label": "Multimodal Agents",
       "count": 2,
-      "share": 7.14
+      "share": 5.71
     }
   ],
   "topic_distribution": [
     {
+      "topic_label": "Other AI",
+      "count": 6,
+      "share": 17.14
+    },
+    {
       "topic_label": "LLMs and Language",
       "count": 5,
-      "share": 17.86
+      "share": 14.29
     },
     {
       "topic_label": "Multimodal Understanding and Vision",
       "count": 5,
-      "share": 17.86
-    },
-    {
-      "topic_label": "Agents and Planning",
-      "count": 4,
-      "share": 14.29
-    },
-    {
-      "topic_label": "Other AI",
-      "count": 4,
       "share": 14.29
     },
     {
       "topic_label": "Reasoning, Alignment, and Evaluation",
-      "count": 4,
+      "count": 5,
       "share": 14.29
+    },
+    {
+      "topic_label": "Agents and Planning",
+      "count": 4,
+      "share": 11.43
+    },
+    {
+      "topic_label": "Learning, Optimization, and Theory",
+      "count": 3,
+      "share": 8.57
     },
     {
       "topic_label": "Multimodal Agents",
       "count": 2,
-      "share": 7.14
+      "share": 5.71
+    },
+    {
+      "topic_label": "Robotics and Embodied AI",
+      "count": 2,
+      "share": 5.71
     },
     {
       "topic_label": "Domain Applications",
       "count": 1,
-      "share": 3.57
-    },
-    {
-      "topic_label": "Learning, Optimization, and Theory",
-      "count": 1,
-      "share": 3.57
+      "share": 2.86
     },
     {
       "topic_label": "Multimodal Generative Modeling",
       "count": 1,
-      "share": 3.57
+      "share": 2.86
     },
     {
-      "topic_label": "Robotics and Embodied AI",
+      "topic_label": "Retrieval, Knowledge, and RAG",
       "count": 1,
-      "share": 3.57
+      "share": 2.86
     }
   ],
   "top_submitters": [
@@ -87,23 +92,55 @@
       "count": 2
     },
     {
+      "submitted_by": "Aman Chadha",
+      "count": 1
+    },
+    {
       "submitted_by": "Boyang Wang",
       "count": 1
     },
     {
-      "submitted_by": "Han Wang",
+      "submitted_by": "Chirag Agarwal",
       "count": 1
     },
     {
-      "submitted_by": "Hong Jiang",
-      "count": 1
-    },
-    {
-      "submitted_by": "Kristian Schwethelm",
+      "submitted_by": "Dhaval Patel",
       "count": 1
     }
   ],
   "top_upvoted": [
+    {
+      "report_date": "2026-04-28",
+      "paper_id": "2604.22446",
+      "title": "From Skills to Talent: Organising Heterogeneous Agents as a Real-World Company",
+      "authors": [
+        "Zhengxu Yu",
+        "Yu Fu",
+        "Zhiyuan He",
+        "Yuxuan Huang",
+        "Lee Ka Yiu",
+        "Meng Fang",
+        "Weilin Luo",
+        "Jun Wang"
+      ],
+      "abstract": "Individual agent capabilities have advanced rapidly through modular skills and tool integrations, yet multi-agent systems remain constrained by fixed team structures, tightly coupled coordination logic, and session-bound learning. We argue that this reflects a deeper absence: a principled organisational layer that governs how a workforce of agents is assembled, governed, and improved over time, decoupled from what individual agents know. To fill this gap, we introduce OneManCompany (OMC), a framework that elevates multi-agent systems to the organisational level. OMC encapsulates skills, tools, and runtime configurations into portable agent identities called Talents, orchestrated through typed organisational interfaces that abstract over heterogeneous backends. A community-driven Talent Market enables on-demand recruitment, allowing the organisation to close capability gaps and reconfigure itself dynamically during execution. Organisational decision-making is operationalised through an Explore-Execute-Review (E^2R) tree search, which unifies planning, execution, and evaluation in a single hierarchical loop: tasks are decomposed top-down into accountable units and execution outcomes are aggregated bottom-up to drive systematic review and refinement. This loop provides formal guarantees on termination and deadlock freedom while mirroring the feedback mechanisms of human enterprises. Together, these contributions transform multi-agent systems from static, pre-configured pipelines into self-organising and self-improving AI organisations capable of adapting to open-ended tasks across diverse domains. Empirical evaluation on PRDBench shows that OMC achieves an 84.67% success rate, surpassing the state of the art by 15.48 percentage points, with cross-domain case studies further demonstrating its generality.",
+      "hf_url": "https://huggingface.co/papers/2604.22446",
+      "arxiv_url": "https://arxiv.org/abs/2604.22446",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.22446",
+      "papers_cool_url": "https://papers.cool/arxiv/2604.22446",
+      "github_url": "",
+      "submitted_by": "Zhengxu Yu",
+      "submitted_at": "2026-04-28T05:34:52.058Z",
+      "upvotes": 110,
+      "comments": 5,
+      "topic_key": "agents_planning",
+      "topic_label": "Agents and Planning",
+      "matched_terms": [
+        "\\bagents?\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
+    },
     {
       "report_date": "2026-04-28",
       "paper_id": "2604.24764",
@@ -130,46 +167,14 @@
       "github_url": "",
       "submitted_by": "Weijie Wang",
       "submitted_at": "2026-04-28T01:26:45.499Z",
-      "upvotes": 86,
-      "comments": 2,
+      "upvotes": 109,
+      "comments": 3,
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [
         "\\bvideo\\b",
         "\\b3d\\b",
         "\\bgeneration\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null
-    },
-    {
-      "report_date": "2026-04-28",
-      "paper_id": "2604.22446",
-      "title": "From Skills to Talent: Organising Heterogeneous Agents as a Real-World Company",
-      "authors": [
-        "Zhengxu Yu",
-        "Yu Fu",
-        "Zhiyuan He",
-        "Yuxuan Huang",
-        "Lee Ka Yiu",
-        "Meng Fang",
-        "Weilin Luo",
-        "Jun Wang"
-      ],
-      "abstract": "Individual agent capabilities have advanced rapidly through modular skills and tool integrations, yet multi-agent systems remain constrained by fixed team structures, tightly coupled coordination logic, and session-bound learning. We argue that this reflects a deeper absence: a principled organisational layer that governs how a workforce of agents is assembled, governed, and improved over time, decoupled from what individual agents know. To fill this gap, we introduce OneManCompany (OMC), a framework that elevates multi-agent systems to the organisational level. OMC encapsulates skills, tools, and runtime configurations into portable agent identities called Talents, orchestrated through typed organisational interfaces that abstract over heterogeneous backends. A community-driven Talent Market enables on-demand recruitment, allowing the organisation to close capability gaps and reconfigure itself dynamically during execution. Organisational decision-making is operationalised through an Explore-Execute-Review (E^2R) tree search, which unifies planning, execution, and evaluation in a single hierarchical loop: tasks are decomposed top-down into accountable units and execution outcomes are aggregated bottom-up to drive systematic review and refinement. This loop provides formal guarantees on termination and deadlock freedom while mirroring the feedback mechanisms of human enterprises. Together, these contributions transform multi-agent systems from static, pre-configured pipelines into self-organising and self-improving AI organisations capable of adapting to open-ended tasks across diverse domains. Empirical evaluation on PRDBench shows that OMC achieves an 84.67% success rate, surpassing the state of the art by 15.48 percentage points, with cross-domain case studies further demonstrating its generality.",
-      "hf_url": "https://huggingface.co/papers/2604.22446",
-      "arxiv_url": "https://arxiv.org/abs/2604.22446",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.22446",
-      "papers_cool_url": "https://papers.cool/arxiv/2604.22446",
-      "github_url": "",
-      "submitted_by": "Zhengxu Yu",
-      "submitted_at": "2026-04-28T05:34:52.058Z",
-      "upvotes": 73,
-      "comments": 4,
-      "topic_key": "agents_planning",
-      "topic_label": "Agents and Planning",
-      "matched_terms": [
-        "\\bagents?\\b"
       ],
       "classification_source": "rule",
       "classification_confidence": null
@@ -194,48 +199,14 @@
       "github_url": "",
       "submitted_by": "Yiming Zhang",
       "submitted_at": "2026-04-28T02:40:23.512Z",
-      "upvotes": 53,
-      "comments": 1,
+      "upvotes": 59,
+      "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [
         "\\bvisual\\b",
         "\\bvlm\\b",
         "\\b3d\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null
-    },
-    {
-      "report_date": "2026-04-28",
-      "paper_id": "2604.23775",
-      "title": "Vision-Language-Action Safety: Threats, Challenges, Evaluations, and Mechanisms",
-      "authors": [
-        "Qi Li",
-        "Bo Yin",
-        "Weiqi Huang",
-        "Ruhao Liu",
-        "Bojun Zou",
-        "Runpeng Yu",
-        "Jingwen Ye",
-        "Weihao Yu",
-        "Xinchao Wang"
-      ],
-      "abstract": "Vision-Language-Action (VLA) models are emerging as a unified substrate for embodied intelligence. This shift raises a new class of safety challenges, stemming from the embodied nature of VLA systems, including irreversible physical consequences, a multimodal attack surface across vision, language, and state, real-time latency constraints on defense, error propagation over long-horizon trajectories, and vulnerabilities in the data supply chain. Yet the literature remains fragmented across robotic learning, adversarial machine learning, AI alignment, and autonomous systems safety. This survey provides a unified and up-to-date overview of safety in Vision-Language-Action models. We organize the field along two parallel timing axes, attack timing (training-time vs. inference-time and defense timing (training-time vs. inference-time, linking each class of threat to the stage at which it can be mitigated. We first define the scope of VLA safety, distinguishing it from text-only LLM safety and classical robotic safety, and review the foundations of VLA models, including architectures, training paradigms, and inference mechanisms. We then examine the literature through four lenses: Attacks, Defenses, Evaluation, and Deployment. We survey training-time threats such as data poisoning and backdoors, as well as inference-time attacks including adversarial patches, cross-modal perturbations, semantic jailbreaks, and freezing attacks. We review training-time and runtime defenses, analyze existing benchmarks and metrics, and discuss safety challenges across six deployment domains. Finally, we highlight key open problems, including certified robustness for embodied trajectories, physically realizable defenses, safety-aware training, unified runtime safety architectures, and standardized evaluation.",
-      "hf_url": "https://huggingface.co/papers/2604.23775",
-      "arxiv_url": "https://arxiv.org/abs/2604.23775",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.23775",
-      "papers_cool_url": "https://papers.cool/arxiv/2604.23775",
-      "github_url": "",
-      "submitted_by": "LIQIIIII",
-      "submitted_at": "2026-04-28T03:01:19.794Z",
-      "upvotes": 40,
-      "comments": 1,
-      "topic_key": "multimodal_agents",
-      "topic_label": "Multimodal Agents",
-      "matched_terms": [
-        "\\bvision-language\\b",
-        "\\bvision-language-action\\b"
       ],
       "classification_source": "rule",
       "classification_confidence": null
@@ -269,13 +240,47 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-04-28T02:00:24.719Z",
-      "upvotes": 34,
-      "comments": 3,
+      "upvotes": 55,
+      "comments": 4,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [
         "\\bmultimodal\\b",
         "\\bvision\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
+    },
+    {
+      "report_date": "2026-04-28",
+      "paper_id": "2604.23775",
+      "title": "Vision-Language-Action Safety: Threats, Challenges, Evaluations, and Mechanisms",
+      "authors": [
+        "Qi Li",
+        "Bo Yin",
+        "Weiqi Huang",
+        "Ruhao Liu",
+        "Bojun Zou",
+        "Runpeng Yu",
+        "Jingwen Ye",
+        "Weihao Yu",
+        "Xinchao Wang"
+      ],
+      "abstract": "Vision-Language-Action (VLA) models are emerging as a unified substrate for embodied intelligence. This shift raises a new class of safety challenges, stemming from the embodied nature of VLA systems, including irreversible physical consequences, a multimodal attack surface across vision, language, and state, real-time latency constraints on defense, error propagation over long-horizon trajectories, and vulnerabilities in the data supply chain. Yet the literature remains fragmented across robotic learning, adversarial machine learning, AI alignment, and autonomous systems safety. This survey provides a unified and up-to-date overview of safety in Vision-Language-Action models. We organize the field along two parallel timing axes, attack timing (training-time vs. inference-time and defense timing (training-time vs. inference-time, linking each class of threat to the stage at which it can be mitigated. We first define the scope of VLA safety, distinguishing it from text-only LLM safety and classical robotic safety, and review the foundations of VLA models, including architectures, training paradigms, and inference mechanisms. We then examine the literature through four lenses: Attacks, Defenses, Evaluation, and Deployment. We survey training-time threats such as data poisoning and backdoors, as well as inference-time attacks including adversarial patches, cross-modal perturbations, semantic jailbreaks, and freezing attacks. We review training-time and runtime defenses, analyze existing benchmarks and metrics, and discuss safety challenges across six deployment domains. Finally, we highlight key open problems, including certified robustness for embodied trajectories, physically realizable defenses, safety-aware training, unified runtime safety architectures, and standardized evaluation.",
+      "hf_url": "https://huggingface.co/papers/2604.23775",
+      "arxiv_url": "https://arxiv.org/abs/2604.23775",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.23775",
+      "papers_cool_url": "https://papers.cool/arxiv/2604.23775",
+      "github_url": "",
+      "submitted_by": "LIQIIIII",
+      "submitted_at": "2026-04-28T03:01:19.794Z",
+      "upvotes": 42,
+      "comments": 2,
+      "topic_key": "multimodal_agents",
+      "topic_label": "Multimodal Agents",
+      "matched_terms": [
+        "\\bvision-language\\b",
+        "\\bvision-language-action\\b"
       ],
       "classification_source": "rule",
       "classification_confidence": null
@@ -341,8 +346,8 @@
       "github_url": "",
       "submitted_by": "fanqing meng",
       "submitted_at": "2026-04-28T02:23:01.322Z",
-      "upvotes": 23,
-      "comments": 1,
+      "upvotes": 29,
+      "comments": 2,
       "topic_key": "multimodal_agents",
       "topic_label": "Multimodal Agents",
       "matched_terms": [
@@ -372,8 +377,8 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-04-28T01:02:32.247Z",
-      "upvotes": 16,
-      "comments": 1,
+      "upvotes": 26,
+      "comments": 2,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [
@@ -385,31 +390,32 @@
     },
     {
       "report_date": "2026-04-28",
-      "paper_id": "2604.24198",
-      "title": "Rewarding the Scientific Process: Process-Level Reward Modeling for Agentic Data Analysis",
+      "paper_id": "2604.15574",
+      "title": "Why Fine-Tuning Encourages Hallucinations and How to Fix It",
       "authors": [
-        "Zhisong Qiu",
-        "Shuofei Qiao",
-        "Kewei Xu",
-        "Yuqi Zhu",
-        "Lun Du",
-        "Ningyu Zhang",
-        "Huajun Chen"
+        "Guy Kaplan",
+        "Zorik Gekhman",
+        "Zhen Zhu",
+        "Lotem Rozner",
+        "Yuval Reif",
+        "Swabha Swayamdipta",
+        "Derek Hoiem",
+        "Roy Schwartz"
       ],
-      "abstract": "Process Reward Models (PRMs) have achieved remarkable success in augmenting the reasoning capabilities of Large Language Models (LLMs) within static domains such as mathematics. However, their potential in dynamic data analysis tasks remains underexplored. In this work, we first present a empirical study revealing that general-domain PRMs struggle to supervise data analysis agents. Specifically, they fail to detect silent errors, logical flaws that yield incorrect results without triggering interpreter exceptions, and erroneously penalize exploratory actions, mistaking necessary trial-and-error exploration for grounding failures. To bridge this gap, we introduce DataPRM, a novel environment-aware generative process reward model that (1) can serve as an active verifier, autonomously interacting with the environment to probe intermediate execution states and uncover silent errors, and (2) employs a reflection-aware ternary reward strategy that distinguishes between correctable grounding errors and irrecoverable mistakes. We design a scalable pipeline to construct over 8K high-quality training instances for DataPRM via diversity-driven trajectory generation and knowledge-augmented step-level annotation. Experimental results demonstrate that DataPRM improves downstream policy LLMs by 7.21% on ScienceAgentBench and 11.28% on DABStep using Best-of-N inference. Notably, with only 4B parameters, DataPRM outperforms strong baselines, and exhibits robust generalizability across diverse Test-Time Scaling strategies. Furthermore, integrating DataPRM into Reinforcement Learning yields substantial gains over outcome-reward baselines, achieving 78.73% on DABench and 64.84% on TableBench, validating the effectiveness of process reward supervision. Code is available at https://github.com/zjunlp/DataMind.",
-      "hf_url": "https://huggingface.co/papers/2604.24198",
-      "arxiv_url": "https://arxiv.org/abs/2604.24198",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.24198",
-      "papers_cool_url": "https://papers.cool/arxiv/2604.24198",
+      "abstract": "Large language models are prone to hallucinating factually incorrect statements. A key source of these errors is exposure to new factual information through supervised fine-tuning (SFT), which can increase hallucinations w.r.t. knowledge acquired during pre-training. In this work, we explore whether SFT-induced hallucinations can be mitigated using established tools from the continual learning literature, since they arise as a by-product of knowledge degradation during training. We propose a self-distillation-based SFT method that facilitates effective factual learning while minimizing hallucinations w.r.t. pre-existing knowledge by regularizing output-distribution drift. We also show that, in settings where new knowledge acquisition is unnecessary, suppressing factual plasticity by freezing parameter groups, can preserve task performance while reducing hallucinations. Lastly, we investigate the mechanism behind SFT-induced hallucinations through three hypotheses: capacity limitations, behavior cloning, and localized interference. Our experiments show that a main driver is interference among overlapping semantic representations, and that self-distillation succeeds by mitigating this interference.",
+      "hf_url": "https://huggingface.co/papers/2604.15574",
+      "arxiv_url": "https://arxiv.org/abs/2604.15574",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.15574",
+      "papers_cool_url": "https://papers.cool/arxiv/2604.15574",
       "github_url": "",
-      "submitted_by": "Ningyu Zhang",
-      "submitted_at": "2026-04-28T01:06:23.521Z",
-      "upvotes": 14,
-      "comments": 1,
-      "topic_key": "agents_planning",
-      "topic_label": "Agents and Planning",
+      "submitted_by": "Kaplan",
+      "submitted_at": "2026-04-28T19:46:10.737Z",
+      "upvotes": 16,
+      "comments": 2,
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [
-        "\\bagentic\\b"
+        "\\bfine-tuning\\b"
       ],
       "classification_source": "rule",
       "classification_confidence": null
@@ -417,9 +423,173 @@
   ],
   "topics": [
     {
+      "topic_label": "Other AI",
+      "count": 6,
+      "share": 17.14,
+      "papers": [
+        {
+          "report_date": "2026-04-28",
+          "paper_id": "2604.21681",
+          "title": "Sapiens2",
+          "authors": [
+            "Rawal Khirodkar",
+            "He Wen",
+            "Julieta Martinez",
+            "Yuan Dong",
+            "Su Zhaoen",
+            "Shunsuke Saito"
+          ],
+          "abstract": "We present Sapiens2, a model family of high-resolution transformers for human-centric vision focused on generalization, versatility, and high-fidelity outputs. Our model sizes range from 0.4 to 5 billion parameters, with native 1K resolution and hierarchical variants that support 4K. Sapiens2 substantially improves over its predecessor in both pretraining and post-training. First, to learn features that capture low-level details (for dense prediction) and high-level semantics (for zero-shot or few-label settings), we combine masked image reconstruction with self-distilled contrastive objectives. Our evaluations show that this unified pretraining objective is better suited for a wider range of downstream tasks. Second, along the data axis, we pretrain on a curated dataset of 1 billion high-quality human images and improve the quality and quantity of task annotations. Third, architecturally, we incorporate advances from frontier models that enable longer training schedules with improved stability. Our 4K models adopt windowed attention to reason over longer spatial context and are pretrained with 2K output resolution. Sapiens2 sets a new state-of-the-art and improves over the first generation on pose (+4 mAP), body-part segmentation (+24.3 mIoU), normal estimation (45.6% lower angular error) and extends to new tasks such as pointmap and albedo estimation. Code: https://github.com/facebookresearch/sapiens2",
+          "hf_url": "https://huggingface.co/papers/2604.21681",
+          "arxiv_url": "https://arxiv.org/abs/2604.21681",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.21681",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.21681",
+          "github_url": "",
+          "submitted_by": "Rawal Khirodkar",
+          "submitted_at": "2026-04-28T18:34:09.031Z",
+          "upvotes": 11,
+          "comments": 3,
+          "topic_key": "other_ai",
+          "topic_label": "Other AI",
+          "matched_terms": [],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
+        {
+          "report_date": "2026-04-28",
+          "paper_id": "2604.22880",
+          "title": "TexOCR: Advancing Document OCR Models for Compilable Page-to-LaTeX Reconstruction",
+          "authors": [
+            "Chengye Wang",
+            "Lin Fu",
+            "Zexi Kuang",
+            "Yilun Zhao"
+          ],
+          "abstract": "Existing document OCR largely targets plain text or Markdown, discarding the structural and executable properties that make LaTeX essential for scientific publishing. We study page-level reconstruction of scientific PDFs into compilable LaTeX and introduce TexOCR-Bench, a benchmark, and TexOCR-Train, a large-scale training corpus, for this task. TexOCR-Bench features a multi-dimensional evaluation suite that jointly assesses transcription fidelity, structural faithfulness, and end-to-end compilability. Leveraging TexOCR-Train, we train a 2B-parameter model, TexOCR, using supervised fine-tuning (SFT) and reinforcement learning (RL) with verifiable rewards derived from LaTeX unit tests that directly enforce compilability and referential integrity. Experiments across 21 frontier models on TexOCR-Bench show that existing systems frequently violate key document invariants, including consistent section structure, correct float placement, and valid label-reference links, which undermines compilation reliability and downstream usability. Our analysis further reveals that RL with verifiable rewards yields consistent improvements over SFT alone, particularly on structural and compilation metrics.",
+          "hf_url": "https://huggingface.co/papers/2604.22880",
+          "arxiv_url": "https://arxiv.org/abs/2604.22880",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.22880",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.22880",
+          "github_url": "",
+          "submitted_by": "chengyewang",
+          "submitted_at": "2026-04-28T10:08:36.214Z",
+          "upvotes": 7,
+          "comments": 3,
+          "topic_key": "other_ai",
+          "topic_label": "Other AI",
+          "matched_terms": [],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
+        {
+          "report_date": "2026-04-28",
+          "paper_id": "2604.23772",
+          "title": "PageGuide: Browser extension to assist users in navigating a webpage and locating information",
+          "authors": [
+            "Tin Nguyen",
+            "Thang T. Truong",
+            "Runtao Zhou",
+            "Trung Bui",
+            "Chirag Agarwal",
+            "Anh Totti Nguyen"
+          ],
+          "abstract": "Users browsing the web daily struggle to quickly locate relevant information in cluttered pages, complete unfamiliar multi-step tasks, and stay focused amid distracting content. State-of-the-art AI assistants (e.g., ChatGPT, Gemini, Claude) and browser agents (e.g., OpenAI Operator, Browser Use) can answer questions and automate actions, yet they return answers without showing where the information comes from on the page, forcing users to manually verify results and blindly trust every automated steps. We present PageGuide, a browser extension that grounds LLM answers directly in the HTML DOM via visual overlays, addressing three core user needs: (a) Find-locating and highlighting relevant evidence in-situ so users can instantly verify answers on the page; (b) Guide-showing step-by-step instructions (e.g. how to change password) one at a time so users can follow and perform actions by themselves; and (c) Hide-hiding distracting content-giving users a chance to decide to hide an element or not. In a user study (N=94), PageGuide outperform unaided browsing across all modes: Hide accuracy improve by 26 percentage points (86.7% relative gain) and task completion time drops by 70%; Guide completion rate increases by 30 percentage points; and Find reduces manual search effort, with Ctrl+F usage falling by 80% and task time decreasing by 19%. Code and demo is at: pageguide.github.io.",
+          "hf_url": "https://huggingface.co/papers/2604.23772",
+          "arxiv_url": "https://arxiv.org/abs/2604.23772",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.23772",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.23772",
+          "github_url": "",
+          "submitted_by": "TTN",
+          "submitted_at": "2026-04-28T12:19:27.357Z",
+          "upvotes": 4,
+          "comments": 3,
+          "topic_key": "other_ai",
+          "topic_label": "Other AI",
+          "matched_terms": [],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
+        {
+          "report_date": "2026-04-28",
+          "paper_id": "2604.22782",
+          "title": "Stochastic KV Routing: Enabling Adaptive Depth-Wise Cache Sharing",
+          "authors": [
+            "Anastasiia Filippova",
+            "David Grangier",
+            "Marco Cuturi",
+            "João Monteiro"
+          ],
+          "abstract": "Serving transformer language models with high throughput requires caching Key-Values (KVs) to avoid redundant computation during autoregressive generation. The memory footprint of KV caching is significant and heavily impacts serving costs. This work proposes to lessen these memory requirements. While recent work has largely addressed KV cache reduction via compression and eviction along the temporal axis, we argue that the depth dimension offers an orthogonal and robust avenue for optimization. Although prior research suggests that a full cache for every layer is redundant, implementing cross-layer cache sharing remains a practical challenge; existing methods typically suffer from reduced throughput or increased time-to-first-token. In this paper, we demonstrate that dropping a layer's cache offers efficient optimization without information loss. We propose a simple training approach: random cross-layer attention. During training, layers randomly choose to attend either to their own KV states or those of a preceding layer. This stochastic process adapts the model to be robust to various depth-wise cache sharing strategies, ensuring flexibility for unknown hardware constraints at deployment time. Our evaluations show that applying this scheme during pre-training or fine-tuning enables depth-wise cache sharing for various model families. Furthermore, for larger models in data-constrained settings, this approach is suggestive of a regularization-like effect, frequently preserving or improving performance while significantly reducing the cache's memory footprint.",
+          "hf_url": "https://huggingface.co/papers/2604.22782",
+          "arxiv_url": "https://arxiv.org/abs/2604.22782",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.22782",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.22782",
+          "github_url": "",
+          "submitted_by": "taesiri",
+          "submitted_at": "2026-04-28T01:57:34.273Z",
+          "upvotes": 4,
+          "comments": 1,
+          "topic_key": "other_ai",
+          "topic_label": "Other AI",
+          "matched_terms": [],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
+        {
+          "report_date": "2026-04-28",
+          "paper_id": "2604.23644",
+          "title": "RaV-IDP: A Reconstruction-as-Validation Framework for Faithful Intelligent Document Processing",
+          "authors": [
+            "Pritesh Jha"
+          ],
+          "abstract": "Intelligent document processing pipelines extract structured entities (tables, images, and text) from documents for use in downstream systems such as knowledge bases, retrieval-augmented generation, and analytics. A persistent limitation of existing pipelines is that extraction output is produced without any intrinsic mechanism to verify whether it faithfully represents the source. Model-internal confidence scores measure inference certainty, not correspondence to the document, and extraction errors pass silently into downstream consumers. We present Reconstruction as Validation (RaV-IDP), a document processing pipeline that introduces reconstruction as a first-class architectural component. After each entity is extracted, a dedicated reconstructor renders the extracted representation back into a form comparable to the original document region, and a comparator scores fidelity between the reconstruction and the unmodified source crop. This fidelity score is a grounded, label-free quality signal. When fidelity falls below a per-entity-type threshold, a structured GPT-4.1 vision fallback is triggered and the validation loop repeats. We enforce a bootstrap constraint: the comparator always anchors against the original document region, never against the extraction, preventing the validation from becoming circular. We further propose a per-stage evaluation framework pairing each pipeline component with an appropriate benchmark. The code pipeline is publicly available at https://github.com/pritesh-2711/RaV-IDP for experimentation and use.",
+          "hf_url": "https://huggingface.co/papers/2604.23644",
+          "arxiv_url": "https://arxiv.org/abs/2604.23644",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.23644",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.23644",
+          "github_url": "",
+          "submitted_by": "Pritesh Jha",
+          "submitted_at": "2026-04-28T12:06:18.268Z",
+          "upvotes": 1,
+          "comments": 2,
+          "topic_key": "other_ai",
+          "topic_label": "Other AI",
+          "matched_terms": [],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
+        {
+          "report_date": "2026-04-28",
+          "paper_id": "2604.24170",
+          "title": "Credal Concept Bottleneck Models for Epistemic-Aleatoric Uncertainty Decomposition",
+          "authors": [
+            "Tanmoy Mukherjee",
+            "Thomas Bailleux",
+            "Pierre Marquis",
+            "Zied Bouraoui"
+          ],
+          "abstract": "Concept Bottleneck Models (CBMs) predict through human-interpretable concepts, but they typically output point concept probabilities that conflate epistemic uncertainty (reducible model underspecification) with aleatoric uncertainty (irreducible input ambiguity). This makes concept-level uncertainty hard to interpret and, more importantly, hard to act upon. We introduce CREDENCE (Credal Ensemble Concept Estimation), a CBM framework that decomposes concept uncertainty by construction. CREDENCE represents each concept as a credal prediction (a probability interval), derives epistemic uncertainty from disagreement across diverse concept heads, and estimates aleatoric uncertainty via a dedicated ambiguity output trained to match annotator disagreement when available. The resulting signals support prescriptive decisions: automate low-uncertainty cases, prioritize data collection for high-epistemic cases, route high-aleatoric cases to human review, and abstain when both are high. Across several tasks, we show that epistemic uncertainty is positively associated with prediction errors, whereas aleatoric uncertainty closely tracks annotator disagreement, providing guidance beyond error correlation. Our implementation is available at the following link: https://github.com/Tankiit/Credal_Sets/tree/ensemble-credal-cbm",
+          "hf_url": "https://huggingface.co/papers/2604.24170",
+          "arxiv_url": "https://arxiv.org/abs/2604.24170",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.24170",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.24170",
+          "github_url": "",
+          "submitted_by": "Tanmoy Mukherjee",
+          "submitted_at": "2026-04-28T16:15:17.370Z",
+          "upvotes": 0,
+          "comments": 2,
+          "topic_key": "other_ai",
+          "topic_label": "Other AI",
+          "matched_terms": [],
+          "classification_source": "rule",
+          "classification_confidence": null
+        }
+      ]
+    },
+    {
       "topic_label": "LLMs and Language",
       "count": 5,
-      "share": 17.86,
+      "share": 14.29,
       "papers": [
         {
           "report_date": "2026-04-28",
@@ -441,65 +611,8 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-04-28T01:02:32.247Z",
-          "upvotes": 16,
-          "comments": 1,
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [
-            "\\blanguage models?\\b",
-            "\\blanguage\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
-        },
-        {
-          "report_date": "2026-04-28",
-          "paper_id": "2604.24762",
-          "title": "OmniShotCut: Holistic Relational Shot Boundary Detection with Shot-Query Transformer",
-          "authors": [
-            "Boyang Wang",
-            "Guangyi Xu",
-            "Zhipeng Tang",
-            "Jiahui Zhang",
-            "Zezhou Cheng"
-          ],
-          "abstract": "Shot Boundary Detection (SBD) aims to automatically identify shot changes and divide a video into coherent shots. While SBD was widely studied in the literature, existing state-of-the-art methods often produce non-interpretable boundaries on transitions, miss subtle yet harmful discontinuities, and rely on noisy, low-diversity annotations and outdated benchmarks. To alleviate these limitations, we propose OmniShotCut to formulate SBD as structured relational prediction, jointly estimating shot ranges with intra-shot relations and inter-shot relations, by a shot query-based dense video Transformer. To avoid imprecise manual labeling, we adopt a fully synthetic transition synthesis pipeline that automatically reproduces major transition families with precise boundaries and parameterized variants. We also introduce OmniShotCutBench, a modern wide-domain benchmark enabling holistic and diagnostic evaluation.",
-          "hf_url": "https://huggingface.co/papers/2604.24762",
-          "arxiv_url": "https://arxiv.org/abs/2604.24762",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.24762",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.24762",
-          "github_url": "",
-          "submitted_by": "Boyang Wang",
-          "submitted_at": "2026-04-28T02:41:04.048Z",
-          "upvotes": 6,
-          "comments": 1,
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [
-            "\\btransformer(s)?\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
-        },
-        {
-          "report_date": "2026-04-28",
-          "paper_id": "2604.21106",
-          "title": "How Much Is One Recurrence Worth? Iso-Depth Scaling Laws for Looped Language Models",
-          "authors": [
-            "Kristian Schwethelm",
-            "Daniel Rueckert",
-            "Georgios Kaissis"
-          ],
-          "abstract": "We measure how much one extra recurrence is worth to a looped (depth-recurrent) language model, in equivalent unique parameters. From an iso-depth sweep of 116 pretraining runs across recurrence counts r in {1, 2, 4, 8} spanning {sim}50times in training compute, we fit a joint scaling law L = E + A,(N_once + r^φ N_rec)^{-α} + B,D^{-β} and recover a new recurrence-equivalence exponent φ= 0.46. Intuitively, φ tells us whether looping a block r times is equivalent in validation loss to r unique blocks of a non-looped model (full equivalence, φ{=}1) or to a single block run repeatedly with no capacity gain (φ{=}0). Our φ= 0.46 sits in between, so each additional recurrence predictably increases validation loss at matched training compute. For example, at r{=}4 a 410M looped model performs on par with a 580M non-looped model, but incurs the training cost of a 1B non-looped one. We demonstrate the utility of φ as a measurement tool on two probes. Truncated backpropagation lowers φ to 0.38, indicating that the loop mechanism is poorly trained under truncation, even though validation loss decreases. Conversely, hyperconnections raise φ to 0.65, a genuine capacity gain. Our method applies to any looped LM and separates true loop improvements from token-budget gains.",
-          "hf_url": "https://huggingface.co/papers/2604.21106",
-          "arxiv_url": "https://arxiv.org/abs/2604.21106",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.21106",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.21106",
-          "github_url": "",
-          "submitted_by": "Kristian Schwethelm",
-          "submitted_at": "2026-04-28T09:39:50.025Z",
-          "upvotes": 4,
-          "comments": 1,
+          "upvotes": 26,
+          "comments": 2,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
           "matched_terms": [
@@ -531,12 +644,69 @@
           "github_url": "",
           "submitted_by": "wenlong deng",
           "submitted_at": "2026-04-28T04:57:43.018Z",
-          "upvotes": 3,
-          "comments": 1,
+          "upvotes": 15,
+          "comments": 2,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
           "matched_terms": [
             "\\b\\w*llms?\\w*\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
+        {
+          "report_date": "2026-04-28",
+          "paper_id": "2604.24762",
+          "title": "OmniShotCut: Holistic Relational Shot Boundary Detection with Shot-Query Transformer",
+          "authors": [
+            "Boyang Wang",
+            "Guangyi Xu",
+            "Zhipeng Tang",
+            "Jiahui Zhang",
+            "Zezhou Cheng"
+          ],
+          "abstract": "Shot Boundary Detection (SBD) aims to automatically identify shot changes and divide a video into coherent shots. While SBD was widely studied in the literature, existing state-of-the-art methods often produce non-interpretable boundaries on transitions, miss subtle yet harmful discontinuities, and rely on noisy, low-diversity annotations and outdated benchmarks. To alleviate these limitations, we propose OmniShotCut to formulate SBD as structured relational prediction, jointly estimating shot ranges with intra-shot relations and inter-shot relations, by a shot query-based dense video Transformer. To avoid imprecise manual labeling, we adopt a fully synthetic transition synthesis pipeline that automatically reproduces major transition families with precise boundaries and parameterized variants. We also introduce OmniShotCutBench, a modern wide-domain benchmark enabling holistic and diagnostic evaluation.",
+          "hf_url": "https://huggingface.co/papers/2604.24762",
+          "arxiv_url": "https://arxiv.org/abs/2604.24762",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.24762",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.24762",
+          "github_url": "",
+          "submitted_by": "Boyang Wang",
+          "submitted_at": "2026-04-28T02:41:04.048Z",
+          "upvotes": 9,
+          "comments": 2,
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [
+            "\\btransformer(s)?\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
+        {
+          "report_date": "2026-04-28",
+          "paper_id": "2604.21106",
+          "title": "How Much Is One Recurrence Worth? Iso-Depth Scaling Laws for Looped Language Models",
+          "authors": [
+            "Kristian Schwethelm",
+            "Daniel Rueckert",
+            "Georgios Kaissis"
+          ],
+          "abstract": "We measure how much one extra recurrence is worth to a looped (depth-recurrent) language model, in equivalent unique parameters. From an iso-depth sweep of 116 pretraining runs across recurrence counts r in {1, 2, 4, 8} spanning {sim}50times in training compute, we fit a joint scaling law L = E + A,(N_once + r^φ N_rec)^{-α} + B,D^{-β} and recover a new recurrence-equivalence exponent φ= 0.46. Intuitively, φ tells us whether looping a block r times is equivalent in validation loss to r unique blocks of a non-looped model (full equivalence, φ{=}1) or to a single block run repeatedly with no capacity gain (φ{=}0). Our φ= 0.46 sits in between, so each additional recurrence predictably increases validation loss at matched training compute. For example, at r{=}4 a 410M looped model performs on par with a 580M non-looped model, but incurs the training cost of a 1B non-looped one. We demonstrate the utility of φ as a measurement tool on two probes. Truncated backpropagation lowers φ to 0.38, indicating that the loop mechanism is poorly trained under truncation, even though validation loss decreases. Conversely, hyperconnections raise φ to 0.65, a genuine capacity gain. Our method applies to any looped LM and separates true loop improvements from token-budget gains.",
+          "hf_url": "https://huggingface.co/papers/2604.21106",
+          "arxiv_url": "https://arxiv.org/abs/2604.21106",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.21106",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.21106",
+          "github_url": "",
+          "submitted_by": "Kristian Schwethelm",
+          "submitted_at": "2026-04-28T09:39:50.025Z",
+          "upvotes": 5,
+          "comments": 2,
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [
+            "\\blanguage models?\\b",
+            "\\blanguage\\b"
           ],
           "classification_source": "rule",
           "classification_confidence": null
@@ -565,7 +735,7 @@
           "submitted_by": "Yingqian Min",
           "submitted_at": "2026-04-28T06:47:55.080Z",
           "upvotes": 1,
-          "comments": 1,
+          "comments": 2,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
           "matched_terms": [
@@ -580,7 +750,7 @@
     {
       "topic_label": "Multimodal Understanding and Vision",
       "count": 5,
-      "share": 17.86,
+      "share": 14.29,
       "papers": [
         {
           "report_date": "2026-04-28",
@@ -602,8 +772,8 @@
           "github_url": "",
           "submitted_by": "Yiming Zhang",
           "submitted_at": "2026-04-28T02:40:23.512Z",
-          "upvotes": 53,
-          "comments": 1,
+          "upvotes": 59,
+          "comments": 2,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [
@@ -643,8 +813,8 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-04-28T02:00:24.719Z",
-          "upvotes": 34,
-          "comments": 3,
+          "upvotes": 55,
+          "comments": 4,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [
@@ -673,8 +843,8 @@
           "github_url": "",
           "submitted_by": "Hong Jiang",
           "submitted_at": "2026-04-28T10:54:06.831Z",
-          "upvotes": 6,
-          "comments": 1,
+          "upvotes": 8,
+          "comments": 2,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [
@@ -707,7 +877,7 @@
           "submitted_by": "Guray Ozgur",
           "submitted_at": "2026-04-28T06:17:56.878Z",
           "upvotes": 2,
-          "comments": 1,
+          "comments": 2,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [
@@ -739,7 +909,7 @@
           "submitted_by": "Guray Ozgur",
           "submitted_at": "2026-04-28T06:14:16.437Z",
           "upvotes": 1,
-          "comments": 1,
+          "comments": 2,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [
@@ -752,243 +922,8 @@
       ]
     },
     {
-      "topic_label": "Agents and Planning",
-      "count": 4,
-      "share": 14.29,
-      "papers": [
-        {
-          "report_date": "2026-04-28",
-          "paper_id": "2604.22446",
-          "title": "From Skills to Talent: Organising Heterogeneous Agents as a Real-World Company",
-          "authors": [
-            "Zhengxu Yu",
-            "Yu Fu",
-            "Zhiyuan He",
-            "Yuxuan Huang",
-            "Lee Ka Yiu",
-            "Meng Fang",
-            "Weilin Luo",
-            "Jun Wang"
-          ],
-          "abstract": "Individual agent capabilities have advanced rapidly through modular skills and tool integrations, yet multi-agent systems remain constrained by fixed team structures, tightly coupled coordination logic, and session-bound learning. We argue that this reflects a deeper absence: a principled organisational layer that governs how a workforce of agents is assembled, governed, and improved over time, decoupled from what individual agents know. To fill this gap, we introduce OneManCompany (OMC), a framework that elevates multi-agent systems to the organisational level. OMC encapsulates skills, tools, and runtime configurations into portable agent identities called Talents, orchestrated through typed organisational interfaces that abstract over heterogeneous backends. A community-driven Talent Market enables on-demand recruitment, allowing the organisation to close capability gaps and reconfigure itself dynamically during execution. Organisational decision-making is operationalised through an Explore-Execute-Review (E^2R) tree search, which unifies planning, execution, and evaluation in a single hierarchical loop: tasks are decomposed top-down into accountable units and execution outcomes are aggregated bottom-up to drive systematic review and refinement. This loop provides formal guarantees on termination and deadlock freedom while mirroring the feedback mechanisms of human enterprises. Together, these contributions transform multi-agent systems from static, pre-configured pipelines into self-organising and self-improving AI organisations capable of adapting to open-ended tasks across diverse domains. Empirical evaluation on PRDBench shows that OMC achieves an 84.67% success rate, surpassing the state of the art by 15.48 percentage points, with cross-domain case studies further demonstrating its generality.",
-          "hf_url": "https://huggingface.co/papers/2604.22446",
-          "arxiv_url": "https://arxiv.org/abs/2604.22446",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.22446",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.22446",
-          "github_url": "",
-          "submitted_by": "Zhengxu Yu",
-          "submitted_at": "2026-04-28T05:34:52.058Z",
-          "upvotes": 73,
-          "comments": 4,
-          "topic_key": "agents_planning",
-          "topic_label": "Agents and Planning",
-          "matched_terms": [
-            "\\bagents?\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
-        },
-        {
-          "report_date": "2026-04-28",
-          "paper_id": "2604.24198",
-          "title": "Rewarding the Scientific Process: Process-Level Reward Modeling for Agentic Data Analysis",
-          "authors": [
-            "Zhisong Qiu",
-            "Shuofei Qiao",
-            "Kewei Xu",
-            "Yuqi Zhu",
-            "Lun Du",
-            "Ningyu Zhang",
-            "Huajun Chen"
-          ],
-          "abstract": "Process Reward Models (PRMs) have achieved remarkable success in augmenting the reasoning capabilities of Large Language Models (LLMs) within static domains such as mathematics. However, their potential in dynamic data analysis tasks remains underexplored. In this work, we first present a empirical study revealing that general-domain PRMs struggle to supervise data analysis agents. Specifically, they fail to detect silent errors, logical flaws that yield incorrect results without triggering interpreter exceptions, and erroneously penalize exploratory actions, mistaking necessary trial-and-error exploration for grounding failures. To bridge this gap, we introduce DataPRM, a novel environment-aware generative process reward model that (1) can serve as an active verifier, autonomously interacting with the environment to probe intermediate execution states and uncover silent errors, and (2) employs a reflection-aware ternary reward strategy that distinguishes between correctable grounding errors and irrecoverable mistakes. We design a scalable pipeline to construct over 8K high-quality training instances for DataPRM via diversity-driven trajectory generation and knowledge-augmented step-level annotation. Experimental results demonstrate that DataPRM improves downstream policy LLMs by 7.21% on ScienceAgentBench and 11.28% on DABStep using Best-of-N inference. Notably, with only 4B parameters, DataPRM outperforms strong baselines, and exhibits robust generalizability across diverse Test-Time Scaling strategies. Furthermore, integrating DataPRM into Reinforcement Learning yields substantial gains over outcome-reward baselines, achieving 78.73% on DABench and 64.84% on TableBench, validating the effectiveness of process reward supervision. Code is available at https://github.com/zjunlp/DataMind.",
-          "hf_url": "https://huggingface.co/papers/2604.24198",
-          "arxiv_url": "https://arxiv.org/abs/2604.24198",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.24198",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.24198",
-          "github_url": "",
-          "submitted_by": "Ningyu Zhang",
-          "submitted_at": "2026-04-28T01:06:23.521Z",
-          "upvotes": 14,
-          "comments": 1,
-          "topic_key": "agents_planning",
-          "topic_label": "Agents and Planning",
-          "matched_terms": [
-            "\\bagentic\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
-        },
-        {
-          "report_date": "2026-04-28",
-          "paper_id": "2604.21480",
-          "title": "Efficient Agent Evaluation via Diversity-Guided User Simulation",
-          "authors": [
-            "Itay Nakash",
-            "George Kour",
-            "Ateret Anaby-Tavor"
-          ],
-          "abstract": "Large language models (LLMs) are increasingly deployed as customer-facing agents, yet evaluating their reliability remains challenging due to stochastic, multi-turn interactions. Current evaluation protocols rely on linear Monte Carlo rollouts of complete agent-user conversations to estimate success. However, this approach is computationally inefficient, repeatedly regenerating identical early prefixes, and often fails to uncover deep failure modes that arise from rare user behaviors. We introduce DIVERT (Diversity-Induced Evaluation via Branching of Trajectories), an efficient, snapshot-based, coverage-guided user simulation framework for systematic exploration of agent-user interactions. DIVERT captures the full agent-environment state at critical decision points and resumes execution from these snapshots, enabling reuse of shared conversation prefixes and reducing redundant computation. From each junction, the framework branches using targeted, diversity-inducing user responses, allowing directed exploration of alternative interaction paths. By focusing evaluation on semantically diverse and underexplored trajectories, DIVERT improves both efficiency and coverage. Empirical results show that it discovers more failures per token compared to standard linear rollout protocols, while expanding the set of tasks on which failures are identified.",
-          "hf_url": "https://huggingface.co/papers/2604.21480",
-          "arxiv_url": "https://arxiv.org/abs/2604.21480",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.21480",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.21480",
-          "github_url": "",
-          "submitted_by": "itay nakash",
-          "submitted_at": "2026-04-28T03:44:16.603Z",
-          "upvotes": 11,
-          "comments": 1,
-          "topic_key": "agents_planning",
-          "topic_label": "Agents and Planning",
-          "matched_terms": [
-            "\\bagents?\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
-        },
-        {
-          "report_date": "2026-04-28",
-          "paper_id": "2604.24479",
-          "title": "Zero-to-CAD: Agentic Synthesis of Interpretable CAD Programs at Million-Scale Without Real Data",
-          "authors": [
-            "Mohammadmehdi Ataei",
-            "Farzaneh Askari",
-            "Kamal Rahimi Malekshan",
-            "Pradeep Kumar Jayaraman"
-          ],
-          "abstract": "Computer-Aided Design (CAD) models are defined by their construction history: a parametric recipe that encodes design intent. However, existing large-scale 3D datasets predominantly consist of boundary representations (B-Reps) or meshes, stripping away this critical procedural information. To address this scarcity, we introduce Zero-to-CAD, a scalable framework for synthesizing executable CAD construction sequences. We frame synthesis as an agentic search problem: by embedding a large language model (LLM) within a feedback-driven CAD environment, our system iteratively generates, executes, and validates code using tools and documentation lookup to promote geometric validity and operation diversity. This agentic approach enables the synthesis of approximately one million executable, readable, editable CAD sequences, covering a rich vocabulary of operations beyond sketch-and-extrude workflows. We also release a curated subset of 100,000 high-quality models selected for geometric diversity. To demonstrate the dataset's utility, we fine-tune a vision-language model on our synthetic data to reconstruct editable CAD programs from multi-view images, outperforming strong baselines, including GPT-5.2, and effectively bootstrapping sequence generation capabilities without real construction-history training data. Zero-to-CAD bridges the gap between geometric scale and parametric interpretability, offering a vital resource for the next generation of CAD AI.",
-          "hf_url": "https://huggingface.co/papers/2604.24479",
-          "arxiv_url": "https://arxiv.org/abs/2604.24479",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.24479",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.24479",
-          "github_url": "",
-          "submitted_by": "taesiri",
-          "submitted_at": "2026-04-28T02:03:05.685Z",
-          "upvotes": 0,
-          "comments": 0,
-          "topic_key": "agents_planning",
-          "topic_label": "Agents and Planning",
-          "matched_terms": [
-            "\\bagentic\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
-        }
-      ]
-    },
-    {
-      "topic_label": "Other AI",
-      "count": 4,
-      "share": 14.29,
-      "papers": [
-        {
-          "report_date": "2026-04-28",
-          "paper_id": "2604.22880",
-          "title": "TexOCR: Advancing Document OCR Models for Compilable Page-to-LaTeX Reconstruction",
-          "authors": [
-            "Chengye Wang",
-            "Lin Fu",
-            "Zexi Kuang",
-            "Yilun Zhao"
-          ],
-          "abstract": "Existing document OCR largely targets plain text or Markdown, discarding the structural and executable properties that make LaTeX essential for scientific publishing. We study page-level reconstruction of scientific PDFs into compilable LaTeX and introduce TexOCR-Bench, a benchmark, and TexOCR-Train, a large-scale training corpus, for this task. TexOCR-Bench features a multi-dimensional evaluation suite that jointly assesses transcription fidelity, structural faithfulness, and end-to-end compilability. Leveraging TexOCR-Train, we train a 2B-parameter model, TexOCR, using supervised fine-tuning (SFT) and reinforcement learning (RL) with verifiable rewards derived from LaTeX unit tests that directly enforce compilability and referential integrity. Experiments across 21 frontier models on TexOCR-Bench show that existing systems frequently violate key document invariants, including consistent section structure, correct float placement, and valid label-reference links, which undermines compilation reliability and downstream usability. Our analysis further reveals that RL with verifiable rewards yields consistent improvements over SFT alone, particularly on structural and compilation metrics.",
-          "hf_url": "https://huggingface.co/papers/2604.22880",
-          "arxiv_url": "https://arxiv.org/abs/2604.22880",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.22880",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.22880",
-          "github_url": "",
-          "submitted_by": "chengyewang",
-          "submitted_at": "2026-04-28T10:08:36.214Z",
-          "upvotes": 2,
-          "comments": 2,
-          "topic_key": "other_ai",
-          "topic_label": "Other AI",
-          "matched_terms": [],
-          "classification_source": "rule",
-          "classification_confidence": null
-        },
-        {
-          "report_date": "2026-04-28",
-          "paper_id": "2604.23772",
-          "title": "PageGuide: Browser extension to assist users in navigating a webpage and locating information",
-          "authors": [
-            "Tin Nguyen",
-            "Thang T. Truong",
-            "Runtao Zhou",
-            "Trung Bui",
-            "Chirag Agarwal",
-            "Anh Totti Nguyen"
-          ],
-          "abstract": "Users browsing the web daily struggle to quickly locate relevant information in cluttered pages, complete unfamiliar multi-step tasks, and stay focused amid distracting content. State-of-the-art AI assistants (e.g., ChatGPT, Gemini, Claude) and browser agents (e.g., OpenAI Operator, Browser Use) can answer questions and automate actions, yet they return answers without showing where the information comes from on the page, forcing users to manually verify results and blindly trust every automated steps. We present PageGuide, a browser extension that grounds LLM answers directly in the HTML DOM via visual overlays, addressing three core user needs: (a) Find-locating and highlighting relevant evidence in-situ so users can instantly verify answers on the page; (b) Guide-showing step-by-step instructions (e.g. how to change password) one at a time so users can follow and perform actions by themselves; and (c) Hide-hiding distracting content-giving users a chance to decide to hide an element or not. In a user study (N=94), PageGuide outperform unaided browsing across all modes: Hide accuracy improve by 26 percentage points (86.7% relative gain) and task completion time drops by 70%; Guide completion rate increases by 30 percentage points; and Find reduces manual search effort, with Ctrl+F usage falling by 80% and task time decreasing by 19%. Code and demo is at: pageguide.github.io.",
-          "hf_url": "https://huggingface.co/papers/2604.23772",
-          "arxiv_url": "https://arxiv.org/abs/2604.23772",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.23772",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.23772",
-          "github_url": "",
-          "submitted_by": "TTN",
-          "submitted_at": "2026-04-28T12:19:27.357Z",
-          "upvotes": 1,
-          "comments": 1,
-          "topic_key": "other_ai",
-          "topic_label": "Other AI",
-          "matched_terms": [],
-          "classification_source": "rule",
-          "classification_confidence": null
-        },
-        {
-          "report_date": "2026-04-28",
-          "paper_id": "2604.23644",
-          "title": "RaV-IDP: A Reconstruction-as-Validation Framework for Faithful Intelligent Document Processing",
-          "authors": [
-            "Pritesh Jha"
-          ],
-          "abstract": "Intelligent document processing pipelines extract structured entities (tables, images, and text) from documents for use in downstream systems such as knowledge bases, retrieval-augmented generation, and analytics. A persistent limitation of existing pipelines is that extraction output is produced without any intrinsic mechanism to verify whether it faithfully represents the source. Model-internal confidence scores measure inference certainty, not correspondence to the document, and extraction errors pass silently into downstream consumers. We present Reconstruction as Validation (RaV-IDP), a document processing pipeline that introduces reconstruction as a first-class architectural component. After each entity is extracted, a dedicated reconstructor renders the extracted representation back into a form comparable to the original document region, and a comparator scores fidelity between the reconstruction and the unmodified source crop. This fidelity score is a grounded, label-free quality signal. When fidelity falls below a per-entity-type threshold, a structured GPT-4.1 vision fallback is triggered and the validation loop repeats. We enforce a bootstrap constraint: the comparator always anchors against the original document region, never against the extraction, preventing the validation from becoming circular. We further propose a per-stage evaluation framework pairing each pipeline component with an appropriate benchmark. The code pipeline is publicly available at https://github.com/pritesh-2711/RaV-IDP for experimentation and use.",
-          "hf_url": "https://huggingface.co/papers/2604.23644",
-          "arxiv_url": "https://arxiv.org/abs/2604.23644",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.23644",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.23644",
-          "github_url": "",
-          "submitted_by": "Pritesh Jha",
-          "submitted_at": "2026-04-28T12:06:18.268Z",
-          "upvotes": 1,
-          "comments": 1,
-          "topic_key": "other_ai",
-          "topic_label": "Other AI",
-          "matched_terms": [],
-          "classification_source": "rule",
-          "classification_confidence": null
-        },
-        {
-          "report_date": "2026-04-28",
-          "paper_id": "2604.22782",
-          "title": "Stochastic KV Routing: Enabling Adaptive Depth-Wise Cache Sharing",
-          "authors": [
-            "Anastasiia Filippova",
-            "David Grangier",
-            "Marco Cuturi",
-            "João Monteiro"
-          ],
-          "abstract": "Serving transformer language models with high throughput requires caching Key-Values (KVs) to avoid redundant computation during autoregressive generation. The memory footprint of KV caching is significant and heavily impacts serving costs. This work proposes to lessen these memory requirements. While recent work has largely addressed KV cache reduction via compression and eviction along the temporal axis, we argue that the depth dimension offers an orthogonal and robust avenue for optimization. Although prior research suggests that a full cache for every layer is redundant, implementing cross-layer cache sharing remains a practical challenge; existing methods typically suffer from reduced throughput or increased time-to-first-token. In this paper, we demonstrate that dropping a layer's cache offers efficient optimization without information loss. We propose a simple training approach: random cross-layer attention. During training, layers randomly choose to attend either to their own KV states or those of a preceding layer. This stochastic process adapts the model to be robust to various depth-wise cache sharing strategies, ensuring flexibility for unknown hardware constraints at deployment time. Our evaluations show that applying this scheme during pre-training or fine-tuning enables depth-wise cache sharing for various model families. Furthermore, for larger models in data-constrained settings, this approach is suggestive of a regularization-like effect, frequently preserving or improving performance while significantly reducing the cache's memory footprint.",
-          "hf_url": "https://huggingface.co/papers/2604.22782",
-          "arxiv_url": "https://arxiv.org/abs/2604.22782",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.22782",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.22782",
-          "github_url": "",
-          "submitted_by": "taesiri",
-          "submitted_at": "2026-04-28T01:57:34.273Z",
-          "upvotes": 1,
-          "comments": 0,
-          "topic_key": "other_ai",
-          "topic_label": "Other AI",
-          "matched_terms": [],
-          "classification_source": "rule",
-          "classification_confidence": null
-        }
-      ]
-    },
-    {
       "topic_label": "Reasoning, Alignment, and Evaluation",
-      "count": 4,
+      "count": 5,
       "share": 14.29,
       "papers": [
         {
@@ -1013,8 +948,8 @@
           "github_url": "",
           "submitted_by": "Li Bobo",
           "submitted_at": "2026-04-28T04:34:47.603Z",
-          "upvotes": 8,
-          "comments": 2,
+          "upvotes": 13,
+          "comments": 3,
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [
@@ -1044,8 +979,8 @@
           "github_url": "",
           "submitted_by": "Han Wang",
           "submitted_at": "2026-04-28T01:54:58.758Z",
-          "upvotes": 4,
-          "comments": 1,
+          "upvotes": 5,
+          "comments": 2,
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [
@@ -1072,8 +1007,8 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-04-28T01:55:53.901Z",
-          "upvotes": 1,
-          "comments": 0,
+          "upvotes": 2,
+          "comments": 1,
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [
@@ -1098,11 +1033,258 @@
           "submitted_by": "Victor Gallego",
           "submitted_at": "2026-04-28T06:18:53.009Z",
           "upvotes": 1,
-          "comments": 1,
+          "comments": 2,
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [
             "\\bsafety\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
+        {
+          "report_date": "2026-04-28",
+          "paper_id": "2604.23600",
+          "title": "Personality Shapes Gender Bias in Persona-Conditioned LLM Narratives Across English and Hindi: An Empirical Investigation",
+          "authors": [
+            "Tanay Kumar",
+            "Shreya Gautam",
+            "Aman Chadha",
+            "Vinija Jain",
+            "Francesco Pierri"
+          ],
+          "abstract": "Large Language Models (LLMs) are increasingly deployed in persona-driven applications such as education, customer service, and social platforms, where models are prompted to adopt specific personas when interacting with users. While persona conditioning can improve user experience and engagement, it also raises concerns about how personality cues may interact with gender biases and stereotypes. In this work, we present a controlled study of persona-conditioned story generation in English and Hindi, where each story portrays a working professional in India producing context-specific artifacts (e.g., lesson plans, reports, letters) under systematically varied persona gender, occupational role, and personality traits from the HEXACO and Dark Triad frameworks. Across 23,400 generated stories from six state-of-the-art LLMs, we find that personality traits are significantly associated with both the magnitude and direction of gender bias. In particular, Dark Triad personality traits are consistently associated with higher gender-stereotypical representations compared to socially desirable HEXACO traits, though these associations vary across models and languages. Our findings demonstrate that gender bias in LLMs is not static but context-dependent. This suggests that persona-conditioned systems used in real-world applications may introduce uneven representational harms, reinforcing gender stereotypes in generated educational, professional, or social content.",
+          "hf_url": "https://huggingface.co/papers/2604.23600",
+          "arxiv_url": "https://arxiv.org/abs/2604.23600",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.23600",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.23600",
+          "github_url": "",
+          "submitted_by": "Aman Chadha",
+          "submitted_at": "2026-04-28T18:08:09.703Z",
+          "upvotes": 0,
+          "comments": 2,
+          "topic_key": "reasoning_alignment_eval",
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "matched_terms": [
+            "\\bbias\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        }
+      ]
+    },
+    {
+      "topic_label": "Agents and Planning",
+      "count": 4,
+      "share": 11.43,
+      "papers": [
+        {
+          "report_date": "2026-04-28",
+          "paper_id": "2604.22446",
+          "title": "From Skills to Talent: Organising Heterogeneous Agents as a Real-World Company",
+          "authors": [
+            "Zhengxu Yu",
+            "Yu Fu",
+            "Zhiyuan He",
+            "Yuxuan Huang",
+            "Lee Ka Yiu",
+            "Meng Fang",
+            "Weilin Luo",
+            "Jun Wang"
+          ],
+          "abstract": "Individual agent capabilities have advanced rapidly through modular skills and tool integrations, yet multi-agent systems remain constrained by fixed team structures, tightly coupled coordination logic, and session-bound learning. We argue that this reflects a deeper absence: a principled organisational layer that governs how a workforce of agents is assembled, governed, and improved over time, decoupled from what individual agents know. To fill this gap, we introduce OneManCompany (OMC), a framework that elevates multi-agent systems to the organisational level. OMC encapsulates skills, tools, and runtime configurations into portable agent identities called Talents, orchestrated through typed organisational interfaces that abstract over heterogeneous backends. A community-driven Talent Market enables on-demand recruitment, allowing the organisation to close capability gaps and reconfigure itself dynamically during execution. Organisational decision-making is operationalised through an Explore-Execute-Review (E^2R) tree search, which unifies planning, execution, and evaluation in a single hierarchical loop: tasks are decomposed top-down into accountable units and execution outcomes are aggregated bottom-up to drive systematic review and refinement. This loop provides formal guarantees on termination and deadlock freedom while mirroring the feedback mechanisms of human enterprises. Together, these contributions transform multi-agent systems from static, pre-configured pipelines into self-organising and self-improving AI organisations capable of adapting to open-ended tasks across diverse domains. Empirical evaluation on PRDBench shows that OMC achieves an 84.67% success rate, surpassing the state of the art by 15.48 percentage points, with cross-domain case studies further demonstrating its generality.",
+          "hf_url": "https://huggingface.co/papers/2604.22446",
+          "arxiv_url": "https://arxiv.org/abs/2604.22446",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.22446",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.22446",
+          "github_url": "",
+          "submitted_by": "Zhengxu Yu",
+          "submitted_at": "2026-04-28T05:34:52.058Z",
+          "upvotes": 110,
+          "comments": 5,
+          "topic_key": "agents_planning",
+          "topic_label": "Agents and Planning",
+          "matched_terms": [
+            "\\bagents?\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
+        {
+          "report_date": "2026-04-28",
+          "paper_id": "2604.24198",
+          "title": "Rewarding the Scientific Process: Process-Level Reward Modeling for Agentic Data Analysis",
+          "authors": [
+            "Zhisong Qiu",
+            "Shuofei Qiao",
+            "Kewei Xu",
+            "Yuqi Zhu",
+            "Lun Du",
+            "Ningyu Zhang",
+            "Huajun Chen"
+          ],
+          "abstract": "Process Reward Models (PRMs) have achieved remarkable success in augmenting the reasoning capabilities of Large Language Models (LLMs) within static domains such as mathematics. However, their potential in dynamic data analysis tasks remains underexplored. In this work, we first present a empirical study revealing that general-domain PRMs struggle to supervise data analysis agents. Specifically, they fail to detect silent errors, logical flaws that yield incorrect results without triggering interpreter exceptions, and erroneously penalize exploratory actions, mistaking necessary trial-and-error exploration for grounding failures. To bridge this gap, we introduce DataPRM, a novel environment-aware generative process reward model that (1) can serve as an active verifier, autonomously interacting with the environment to probe intermediate execution states and uncover silent errors, and (2) employs a reflection-aware ternary reward strategy that distinguishes between correctable grounding errors and irrecoverable mistakes. We design a scalable pipeline to construct over 8K high-quality training instances for DataPRM via diversity-driven trajectory generation and knowledge-augmented step-level annotation. Experimental results demonstrate that DataPRM improves downstream policy LLMs by 7.21% on ScienceAgentBench and 11.28% on DABStep using Best-of-N inference. Notably, with only 4B parameters, DataPRM outperforms strong baselines, and exhibits robust generalizability across diverse Test-Time Scaling strategies. Furthermore, integrating DataPRM into Reinforcement Learning yields substantial gains over outcome-reward baselines, achieving 78.73% on DABench and 64.84% on TableBench, validating the effectiveness of process reward supervision. Code is available at https://github.com/zjunlp/DataMind.",
+          "hf_url": "https://huggingface.co/papers/2604.24198",
+          "arxiv_url": "https://arxiv.org/abs/2604.24198",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.24198",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.24198",
+          "github_url": "",
+          "submitted_by": "Ningyu Zhang",
+          "submitted_at": "2026-04-28T01:06:23.521Z",
+          "upvotes": 16,
+          "comments": 2,
+          "topic_key": "agents_planning",
+          "topic_label": "Agents and Planning",
+          "matched_terms": [
+            "\\bagentic\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
+        {
+          "report_date": "2026-04-28",
+          "paper_id": "2604.21480",
+          "title": "Efficient Agent Evaluation via Diversity-Guided User Simulation",
+          "authors": [
+            "Itay Nakash",
+            "George Kour",
+            "Ateret Anaby-Tavor"
+          ],
+          "abstract": "Large language models (LLMs) are increasingly deployed as customer-facing agents, yet evaluating their reliability remains challenging due to stochastic, multi-turn interactions. Current evaluation protocols rely on linear Monte Carlo rollouts of complete agent-user conversations to estimate success. However, this approach is computationally inefficient, repeatedly regenerating identical early prefixes, and often fails to uncover deep failure modes that arise from rare user behaviors. We introduce DIVERT (Diversity-Induced Evaluation via Branching of Trajectories), an efficient, snapshot-based, coverage-guided user simulation framework for systematic exploration of agent-user interactions. DIVERT captures the full agent-environment state at critical decision points and resumes execution from these snapshots, enabling reuse of shared conversation prefixes and reducing redundant computation. From each junction, the framework branches using targeted, diversity-inducing user responses, allowing directed exploration of alternative interaction paths. By focusing evaluation on semantically diverse and underexplored trajectories, DIVERT improves both efficiency and coverage. Empirical results show that it discovers more failures per token compared to standard linear rollout protocols, while expanding the set of tasks on which failures are identified.",
+          "hf_url": "https://huggingface.co/papers/2604.21480",
+          "arxiv_url": "https://arxiv.org/abs/2604.21480",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.21480",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.21480",
+          "github_url": "",
+          "submitted_by": "itay nakash",
+          "submitted_at": "2026-04-28T03:44:16.603Z",
+          "upvotes": 12,
+          "comments": 2,
+          "topic_key": "agents_planning",
+          "topic_label": "Agents and Planning",
+          "matched_terms": [
+            "\\bagents?\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
+        {
+          "report_date": "2026-04-28",
+          "paper_id": "2604.24479",
+          "title": "Zero-to-CAD: Agentic Synthesis of Interpretable CAD Programs at Million-Scale Without Real Data",
+          "authors": [
+            "Mohammadmehdi Ataei",
+            "Farzaneh Askari",
+            "Kamal Rahimi Malekshan",
+            "Pradeep Kumar Jayaraman"
+          ],
+          "abstract": "Computer-Aided Design (CAD) models are defined by their construction history: a parametric recipe that encodes design intent. However, existing large-scale 3D datasets predominantly consist of boundary representations (B-Reps) or meshes, stripping away this critical procedural information. To address this scarcity, we introduce Zero-to-CAD, a scalable framework for synthesizing executable CAD construction sequences. We frame synthesis as an agentic search problem: by embedding a large language model (LLM) within a feedback-driven CAD environment, our system iteratively generates, executes, and validates code using tools and documentation lookup to promote geometric validity and operation diversity. This agentic approach enables the synthesis of approximately one million executable, readable, editable CAD sequences, covering a rich vocabulary of operations beyond sketch-and-extrude workflows. We also release a curated subset of 100,000 high-quality models selected for geometric diversity. To demonstrate the dataset's utility, we fine-tune a vision-language model on our synthetic data to reconstruct editable CAD programs from multi-view images, outperforming strong baselines, including GPT-5.2, and effectively bootstrapping sequence generation capabilities without real construction-history training data. Zero-to-CAD bridges the gap between geometric scale and parametric interpretability, offering a vital resource for the next generation of CAD AI.",
+          "hf_url": "https://huggingface.co/papers/2604.24479",
+          "arxiv_url": "https://arxiv.org/abs/2604.24479",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.24479",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.24479",
+          "github_url": "",
+          "submitted_by": "taesiri",
+          "submitted_at": "2026-04-28T02:03:05.685Z",
+          "upvotes": 3,
+          "comments": 1,
+          "topic_key": "agents_planning",
+          "topic_label": "Agents and Planning",
+          "matched_terms": [
+            "\\bagentic\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        }
+      ]
+    },
+    {
+      "topic_label": "Learning, Optimization, and Theory",
+      "count": 3,
+      "share": 8.57,
+      "papers": [
+        {
+          "report_date": "2026-04-28",
+          "paper_id": "2604.15574",
+          "title": "Why Fine-Tuning Encourages Hallucinations and How to Fix It",
+          "authors": [
+            "Guy Kaplan",
+            "Zorik Gekhman",
+            "Zhen Zhu",
+            "Lotem Rozner",
+            "Yuval Reif",
+            "Swabha Swayamdipta",
+            "Derek Hoiem",
+            "Roy Schwartz"
+          ],
+          "abstract": "Large language models are prone to hallucinating factually incorrect statements. A key source of these errors is exposure to new factual information through supervised fine-tuning (SFT), which can increase hallucinations w.r.t. knowledge acquired during pre-training. In this work, we explore whether SFT-induced hallucinations can be mitigated using established tools from the continual learning literature, since they arise as a by-product of knowledge degradation during training. We propose a self-distillation-based SFT method that facilitates effective factual learning while minimizing hallucinations w.r.t. pre-existing knowledge by regularizing output-distribution drift. We also show that, in settings where new knowledge acquisition is unnecessary, suppressing factual plasticity by freezing parameter groups, can preserve task performance while reducing hallucinations. Lastly, we investigate the mechanism behind SFT-induced hallucinations through three hypotheses: capacity limitations, behavior cloning, and localized interference. Our experiments show that a main driver is interference among overlapping semantic representations, and that self-distillation succeeds by mitigating this interference.",
+          "hf_url": "https://huggingface.co/papers/2604.15574",
+          "arxiv_url": "https://arxiv.org/abs/2604.15574",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.15574",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.15574",
+          "github_url": "",
+          "submitted_by": "Kaplan",
+          "submitted_at": "2026-04-28T19:46:10.737Z",
+          "upvotes": 16,
+          "comments": 2,
+          "topic_key": "learning_theory",
+          "topic_label": "Learning, Optimization, and Theory",
+          "matched_terms": [
+            "\\bfine-tuning\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
+        {
+          "report_date": "2026-04-28",
+          "paper_id": "2604.23604",
+          "title": "Learning to Identify Out-of-Distribution Objects for 3D LiDAR Anomaly Segmentation",
+          "authors": [
+            "Simone Mosco",
+            "Daniel Fusaro",
+            "Alberto Pretto"
+          ],
+          "abstract": "Understanding the surrounding environment is fundamental in autonomous driving and robotic perception. Distinguishing between known classes and previously unseen objects is crucial in real-world environments, as done in Anomaly Segmentation. However, research in the 3D field remains limited, with most existing approaches applying post-processing techniques from 2D vision. To cover this lack, we propose a new efficient approach that directly operates in the feature space, modeling the feature distribution of inlier classes to constrain anomalous samples. Moreover, the only publicly available 3D LiDAR anomaly segmentation dataset contains simple scenarios, with few anomaly instances, and exhibits a severe domain gap due to its sensor resolution. To bridge this gap, we introduce a set of mixed real-synthetic datasets for 3D LiDAR anomaly segmentation, built upon established semantic segmentation benchmarks, with multiple out-of-distribution objects and diverse, complex environments. Extensive experiments demonstrate that our approach achieves state-of-the-art and competitive results on the existing real-world dataset and the newly introduced mixed datasets, respectively, validating the effectiveness of our method and the utility of the proposed datasets. Code and datasets are available at https://simom0.github.io/lido-page/.",
+          "hf_url": "https://huggingface.co/papers/2604.23604",
+          "arxiv_url": "https://arxiv.org/abs/2604.23604",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.23604",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.23604",
+          "github_url": "",
+          "submitted_by": "Simone Mosco",
+          "submitted_at": "2026-04-28T12:02:49.014Z",
+          "upvotes": 3,
+          "comments": 2,
+          "topic_key": "learning_theory",
+          "topic_label": "Learning, Optimization, and Theory",
+          "matched_terms": [
+            "\\blearning\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
+        {
+          "report_date": "2026-04-28",
+          "paper_id": "2604.18756",
+          "title": "Towards Understanding the Robustness of Sparse Autoencoders",
+          "authors": [
+            "Ahson Saiyed",
+            "Sabrina Sadiekh",
+            "Chirag Agarwal"
+          ],
+          "abstract": "Large Language Models (LLMs) remain vulnerable to optimization-based jailbreak attacks that exploit internal gradient structure. While Sparse Autoencoders (SAEs) are widely used for interpretability, their robustness implications remain underexplored. We present a study of integrating pretrained SAEs into transformer residual streams at inference time, without modifying model weights or blocking gradients. Across four model families (Gemma, LLaMA, Mistral, Qwen) and two strong white-box attacks (GCG, BEAST) plus three black-box benchmarks, SAE-augmented models achieve up to a 5x reduction in jailbreak success rate relative to the undefended baseline and reduce cross-model attack transferability. Parametric ablations reveal (i) a monotonic dose-response relationship between L0 sparsity and attack success rate, and (ii) a layer-dependent defense-utility tradeoff, where intermediate layers balance robustness and clean performance. These findings are consistent with a representational bottleneck hypothesis: sparse projection reshapes the optimization geometry exploited by jailbreak attacks.",
+          "hf_url": "https://huggingface.co/papers/2604.18756",
+          "arxiv_url": "https://arxiv.org/abs/2604.18756",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.18756",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.18756",
+          "github_url": "",
+          "submitted_by": "Chirag Agarwal",
+          "submitted_at": "2026-04-28T23:47:08.102Z",
+          "upvotes": 1,
+          "comments": 2,
+          "topic_key": "learning_theory",
+          "topic_label": "Learning, Optimization, and Theory",
+          "matched_terms": [
+            "\\bsparse\\b"
           ],
           "classification_source": "rule",
           "classification_confidence": null
@@ -1112,7 +1294,7 @@
     {
       "topic_label": "Multimodal Agents",
       "count": 2,
-      "share": 7.14,
+      "share": 5.71,
       "papers": [
         {
           "report_date": "2026-04-28",
@@ -1137,8 +1319,8 @@
           "github_url": "",
           "submitted_by": "LIQIIIII",
           "submitted_at": "2026-04-28T03:01:19.794Z",
-          "upvotes": 40,
-          "comments": 1,
+          "upvotes": 42,
+          "comments": 2,
           "topic_key": "multimodal_agents",
           "topic_label": "Multimodal Agents",
           "matched_terms": [
@@ -1209,8 +1391,8 @@
           "github_url": "",
           "submitted_by": "fanqing meng",
           "submitted_at": "2026-04-28T02:23:01.322Z",
-          "upvotes": 23,
-          "comments": 1,
+          "upvotes": 29,
+          "comments": 2,
           "topic_key": "multimodal_agents",
           "topic_label": "Multimodal Agents",
           "matched_terms": [
@@ -1223,9 +1405,73 @@
       ]
     },
     {
+      "topic_label": "Robotics and Embodied AI",
+      "count": 2,
+      "share": 5.71,
+      "papers": [
+        {
+          "report_date": "2026-04-28",
+          "paper_id": "2604.23446",
+          "title": "IndustryAssetEQA: A Neurosymbolic Operational Intelligence System for Embodied Question Answering in Industrial Asset Maintenance",
+          "authors": [
+            "Chathurangi Shyalika",
+            "Dhaval Patel",
+            "Amit Sheth"
+          ],
+          "abstract": "Industrial maintenance environments increasingly rely on AI systems to assist operators in understanding asset behavior, diagnosing failures, and evaluating interventions. Although large language models (LLMs) enable fluent natural-language interaction, deployed maintenance assistants routinely produce generic explanations that are weakly grounded in telemetry, omit verifiable provenance, and offer no testable support for counterfactual or action-oriented reasoning that undermine trust in safety-critical settings. We present IndustryAssetEQA, a neurosymbolic operational intelligence system that combines episodic telemetry representations with a Failure Mode Effects Analysis Knowledge Graph (FMEA-KG) to enable Embodied Question Answering (EQA) over industrial assets. We evaluate on four datasets covering four industrial asset types, including rotating machinery, turbofan engines, hydraulic systems, and cyber-physical production systems. Compared to LLM-only baselines, IndustryAssetEQA improves structural validity by up to 0.51, counterfactual accuracy by up to 0.47, and explanation entailment by 0.64, while reducing severe expert-rated overclaims from 28% to 2% (approximately 93% reduction). Code, datasets, and the FMEA-KG are available at https://github.com/IBM/AssetOpsBench/tree/IndustryAssetEQA/IndustryAssetEQA.",
+          "hf_url": "https://huggingface.co/papers/2604.23446",
+          "arxiv_url": "https://arxiv.org/abs/2604.23446",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.23446",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.23446",
+          "github_url": "",
+          "submitted_by": "Dhaval Patel",
+          "submitted_at": "2026-04-28T21:32:50.053Z",
+          "upvotes": 1,
+          "comments": 2,
+          "topic_key": "robotics_embodied",
+          "topic_label": "Robotics and Embodied AI",
+          "matched_terms": [
+            "\\bembodied\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        },
+        {
+          "report_date": "2026-04-28",
+          "paper_id": "2604.16391",
+          "title": "Disentangled Robot Learning via Separate Forward and Inverse Dynamics Pretraining",
+          "authors": [
+            "Wenyao Zhang",
+            "Bozhou Zhang",
+            "Zekun Qi",
+            "Wenjun Zeng",
+            "Xin Jin",
+            "Li Zhang"
+          ],
+          "abstract": "Vision-language-action (VLA) models have shown great potential in building generalist robots, but still face a dilemma-misalignment of 2D image forecasting and 3D action prediction. Besides, such a vision-action entangled training manner limits model learning from large-scale, action-free web video data. To address these issues, we propose DeFI, a novel framework that Decouples visual Forward and Inverse dynamics pretraining to exploit respective data sources, wherein video generation and action prediction are disentangled. We introduce the General Forward Dynamics Model (GFDM), pretrained on diverse human and robot videos for future prediction, and the General Inverse Dynamics Model (GIDM), trained via self-supervised learning to infer latent actions from unlabeled video transitions. These models are then integrated into a unified architecture for end-to-end finetuning on downstream tasks. In this manner, GFDM and GIDM first shine separately and then cooperate for mutual benefit. Extensive experiments on CALVIN ABC-D and SimplerEnv demonstrate state-of-the-art performance, with DeFI achieving an average task length of 4.51 for CALVIN, 51.2% success rate on SimplerEnv-Fractal benchmark and 81.3% success rate in real-world deployment, significantly outperforming prior methods.",
+          "hf_url": "https://huggingface.co/papers/2604.16391",
+          "arxiv_url": "https://arxiv.org/abs/2604.16391",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.16391",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.16391",
+          "github_url": "",
+          "submitted_by": "Zhang",
+          "submitted_at": "2026-04-28T11:43:42.912Z",
+          "upvotes": 1,
+          "comments": 2,
+          "topic_key": "robotics_embodied",
+          "topic_label": "Robotics and Embodied AI",
+          "matched_terms": [
+            "\\brobot(ic|ics)?\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null
+        }
+      ]
+    },
+    {
       "topic_label": "Domain Applications",
       "count": 1,
-      "share": 3.57,
+      "share": 2.86,
       "papers": [
         {
           "report_date": "2026-04-28",
@@ -1255,7 +1501,7 @@
           "submitted_by": "Sebastián Andres Cajas Ordóñez",
           "submitted_at": "2026-04-28T10:41:38.309Z",
           "upvotes": 0,
-          "comments": 1,
+          "comments": 2,
           "topic_key": "domain_applications",
           "topic_label": "Domain Applications",
           "matched_terms": [
@@ -1267,43 +1513,9 @@
       ]
     },
     {
-      "topic_label": "Learning, Optimization, and Theory",
-      "count": 1,
-      "share": 3.57,
-      "papers": [
-        {
-          "report_date": "2026-04-28",
-          "paper_id": "2604.23604",
-          "title": "Learning to Identify Out-of-Distribution Objects for 3D LiDAR Anomaly Segmentation",
-          "authors": [
-            "Simone Mosco",
-            "Daniel Fusaro",
-            "Alberto Pretto"
-          ],
-          "abstract": "Understanding the surrounding environment is fundamental in autonomous driving and robotic perception. Distinguishing between known classes and previously unseen objects is crucial in real-world environments, as done in Anomaly Segmentation. However, research in the 3D field remains limited, with most existing approaches applying post-processing techniques from 2D vision. To cover this lack, we propose a new efficient approach that directly operates in the feature space, modeling the feature distribution of inlier classes to constrain anomalous samples. Moreover, the only publicly available 3D LiDAR anomaly segmentation dataset contains simple scenarios, with few anomaly instances, and exhibits a severe domain gap due to its sensor resolution. To bridge this gap, we introduce a set of mixed real-synthetic datasets for 3D LiDAR anomaly segmentation, built upon established semantic segmentation benchmarks, with multiple out-of-distribution objects and diverse, complex environments. Extensive experiments demonstrate that our approach achieves state-of-the-art and competitive results on the existing real-world dataset and the newly introduced mixed datasets, respectively, validating the effectiveness of our method and the utility of the proposed datasets. Code and datasets are available at https://simom0.github.io/lido-page/.",
-          "hf_url": "https://huggingface.co/papers/2604.23604",
-          "arxiv_url": "https://arxiv.org/abs/2604.23604",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.23604",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.23604",
-          "github_url": "",
-          "submitted_by": "Simone Mosco",
-          "submitted_at": "2026-04-28T12:02:49.014Z",
-          "upvotes": 2,
-          "comments": 1,
-          "topic_key": "learning_theory",
-          "topic_label": "Learning, Optimization, and Theory",
-          "matched_terms": [
-            "\\blearning\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null
-        }
-      ]
-    },
-    {
       "topic_label": "Multimodal Generative Modeling",
       "count": 1,
-      "share": 3.57,
+      "share": 2.86,
       "papers": [
         {
           "report_date": "2026-04-28",
@@ -1331,8 +1543,8 @@
           "github_url": "",
           "submitted_by": "Weijie Wang",
           "submitted_at": "2026-04-28T01:26:45.499Z",
-          "upvotes": 86,
-          "comments": 2,
+          "upvotes": 109,
+          "comments": 3,
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
           "matched_terms": [
@@ -1346,36 +1558,35 @@
       ]
     },
     {
-      "topic_label": "Robotics and Embodied AI",
+      "topic_label": "Retrieval, Knowledge, and RAG",
       "count": 1,
-      "share": 3.57,
+      "share": 2.86,
       "papers": [
         {
           "report_date": "2026-04-28",
-          "paper_id": "2604.16391",
-          "title": "Disentangled Robot Learning via Separate Forward and Inverse Dynamics Pretraining",
+          "paper_id": "2604.24040",
+          "title": "Improving Robustness of Tabular Retrieval via Representational Stability",
           "authors": [
-            "Wenyao Zhang",
-            "Bozhou Zhang",
-            "Zekun Qi",
-            "Wenjun Zeng",
-            "Xin Jin",
-            "Li Zhang"
+            "Kushal Raj Bhandari",
+            "Adarsh Singh",
+            "Jianxi Gao",
+            "Soham Dan",
+            "Vivek Gupta"
           ],
-          "abstract": "Vision-language-action (VLA) models have shown great potential in building generalist robots, but still face a dilemma-misalignment of 2D image forecasting and 3D action prediction. Besides, such a vision-action entangled training manner limits model learning from large-scale, action-free web video data. To address these issues, we propose DeFI, a novel framework that Decouples visual Forward and Inverse dynamics pretraining to exploit respective data sources, wherein video generation and action prediction are disentangled. We introduce the General Forward Dynamics Model (GFDM), pretrained on diverse human and robot videos for future prediction, and the General Inverse Dynamics Model (GIDM), trained via self-supervised learning to infer latent actions from unlabeled video transitions. These models are then integrated into a unified architecture for end-to-end finetuning on downstream tasks. In this manner, GFDM and GIDM first shine separately and then cooperate for mutual benefit. Extensive experiments on CALVIN ABC-D and SimplerEnv demonstrate state-of-the-art performance, with DeFI achieving an average task length of 4.51 for CALVIN, 51.2% success rate on SimplerEnv-Fractal benchmark and 81.3% success rate in real-world deployment, significantly outperforming prior methods.",
-          "hf_url": "https://huggingface.co/papers/2604.16391",
-          "arxiv_url": "https://arxiv.org/abs/2604.16391",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.16391",
-          "papers_cool_url": "https://papers.cool/arxiv/2604.16391",
+          "abstract": "Transformer-based table retrieval systems flatten structured tables into token sequences, making retrieval sensitive to the choice of serialization even when table semantics remain unchanged. We show that semantically equivalent serializations, such as csv, tsv, html, markdown, and ddl, can produce substantially different embeddings and retrieval results across multiple benchmarks and retriever families. To address this instability, we treat serialization embedding as noisy views of a shared semantic signal and use its centroid as a canonical target representation. We show that centroid averaging suppresses format-specific variation and can recover the semantic content common to different serializations when format-induced shifts differ across tables. Empirically, centroid representations outrank individual formats in aggregate pairwise comparisons across MPNet, BGE-M3, ReasonIR, and SPLADE. We further introduce a lightweight residual bottleneck adapter on top of a frozen encoder that maps single-serialization embeddings towards centroid targets while preserving variance and enforcing covariance regularization. The adapter improves robustness for several dense retrievers, though gains are model-dependent and weaker for sparse lexical retrieval. These results identify serialization sensitivity as a major source of retrieval variance and show the promise of post hoc geometric correction for serialization-invariant table retrieval. Our code, datasets, and models are available at https://github.com/KBhandari11/Centroid-Aligned-Table-Retrieval{https://github.com/KBhandari11/Centroid-Aligned-Table-Retrieval}.",
+          "hf_url": "https://huggingface.co/papers/2604.24040",
+          "arxiv_url": "https://arxiv.org/abs/2604.24040",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2604.24040",
+          "papers_cool_url": "https://papers.cool/arxiv/2604.24040",
           "github_url": "",
-          "submitted_by": "Zhang",
-          "submitted_at": "2026-04-28T11:43:42.912Z",
+          "submitted_by": "Kushal Raj Bhandari",
+          "submitted_at": "2026-04-28T19:08:08.795Z",
           "upvotes": 1,
-          "comments": 1,
-          "topic_key": "robotics_embodied",
-          "topic_label": "Robotics and Embodied AI",
+          "comments": 2,
+          "topic_key": "retrieval_knowledge",
+          "topic_label": "Retrieval, Knowledge, and RAG",
           "matched_terms": [
-            "\\brobot(ic|ics)?\\b"
+            "\\bretrieval\\b"
           ],
           "classification_source": "rule",
           "classification_confidence": null
@@ -1384,6 +1595,38 @@
     }
   ],
   "papers": [
+    {
+      "report_date": "2026-04-28",
+      "paper_id": "2604.22446",
+      "title": "From Skills to Talent: Organising Heterogeneous Agents as a Real-World Company",
+      "authors": [
+        "Zhengxu Yu",
+        "Yu Fu",
+        "Zhiyuan He",
+        "Yuxuan Huang",
+        "Lee Ka Yiu",
+        "Meng Fang",
+        "Weilin Luo",
+        "Jun Wang"
+      ],
+      "abstract": "Individual agent capabilities have advanced rapidly through modular skills and tool integrations, yet multi-agent systems remain constrained by fixed team structures, tightly coupled coordination logic, and session-bound learning. We argue that this reflects a deeper absence: a principled organisational layer that governs how a workforce of agents is assembled, governed, and improved over time, decoupled from what individual agents know. To fill this gap, we introduce OneManCompany (OMC), a framework that elevates multi-agent systems to the organisational level. OMC encapsulates skills, tools, and runtime configurations into portable agent identities called Talents, orchestrated through typed organisational interfaces that abstract over heterogeneous backends. A community-driven Talent Market enables on-demand recruitment, allowing the organisation to close capability gaps and reconfigure itself dynamically during execution. Organisational decision-making is operationalised through an Explore-Execute-Review (E^2R) tree search, which unifies planning, execution, and evaluation in a single hierarchical loop: tasks are decomposed top-down into accountable units and execution outcomes are aggregated bottom-up to drive systematic review and refinement. This loop provides formal guarantees on termination and deadlock freedom while mirroring the feedback mechanisms of human enterprises. Together, these contributions transform multi-agent systems from static, pre-configured pipelines into self-organising and self-improving AI organisations capable of adapting to open-ended tasks across diverse domains. Empirical evaluation on PRDBench shows that OMC achieves an 84.67% success rate, surpassing the state of the art by 15.48 percentage points, with cross-domain case studies further demonstrating its generality.",
+      "hf_url": "https://huggingface.co/papers/2604.22446",
+      "arxiv_url": "https://arxiv.org/abs/2604.22446",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.22446",
+      "papers_cool_url": "https://papers.cool/arxiv/2604.22446",
+      "github_url": "",
+      "submitted_by": "Zhengxu Yu",
+      "submitted_at": "2026-04-28T05:34:52.058Z",
+      "upvotes": 110,
+      "comments": 5,
+      "topic_key": "agents_planning",
+      "topic_label": "Agents and Planning",
+      "matched_terms": [
+        "\\bagents?\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
+    },
     {
       "report_date": "2026-04-28",
       "paper_id": "2604.24764",
@@ -1410,46 +1653,14 @@
       "github_url": "",
       "submitted_by": "Weijie Wang",
       "submitted_at": "2026-04-28T01:26:45.499Z",
-      "upvotes": 86,
-      "comments": 2,
+      "upvotes": 109,
+      "comments": 3,
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
       "matched_terms": [
         "\\bvideo\\b",
         "\\b3d\\b",
         "\\bgeneration\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null
-    },
-    {
-      "report_date": "2026-04-28",
-      "paper_id": "2604.22446",
-      "title": "From Skills to Talent: Organising Heterogeneous Agents as a Real-World Company",
-      "authors": [
-        "Zhengxu Yu",
-        "Yu Fu",
-        "Zhiyuan He",
-        "Yuxuan Huang",
-        "Lee Ka Yiu",
-        "Meng Fang",
-        "Weilin Luo",
-        "Jun Wang"
-      ],
-      "abstract": "Individual agent capabilities have advanced rapidly through modular skills and tool integrations, yet multi-agent systems remain constrained by fixed team structures, tightly coupled coordination logic, and session-bound learning. We argue that this reflects a deeper absence: a principled organisational layer that governs how a workforce of agents is assembled, governed, and improved over time, decoupled from what individual agents know. To fill this gap, we introduce OneManCompany (OMC), a framework that elevates multi-agent systems to the organisational level. OMC encapsulates skills, tools, and runtime configurations into portable agent identities called Talents, orchestrated through typed organisational interfaces that abstract over heterogeneous backends. A community-driven Talent Market enables on-demand recruitment, allowing the organisation to close capability gaps and reconfigure itself dynamically during execution. Organisational decision-making is operationalised through an Explore-Execute-Review (E^2R) tree search, which unifies planning, execution, and evaluation in a single hierarchical loop: tasks are decomposed top-down into accountable units and execution outcomes are aggregated bottom-up to drive systematic review and refinement. This loop provides formal guarantees on termination and deadlock freedom while mirroring the feedback mechanisms of human enterprises. Together, these contributions transform multi-agent systems from static, pre-configured pipelines into self-organising and self-improving AI organisations capable of adapting to open-ended tasks across diverse domains. Empirical evaluation on PRDBench shows that OMC achieves an 84.67% success rate, surpassing the state of the art by 15.48 percentage points, with cross-domain case studies further demonstrating its generality.",
-      "hf_url": "https://huggingface.co/papers/2604.22446",
-      "arxiv_url": "https://arxiv.org/abs/2604.22446",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.22446",
-      "papers_cool_url": "https://papers.cool/arxiv/2604.22446",
-      "github_url": "",
-      "submitted_by": "Zhengxu Yu",
-      "submitted_at": "2026-04-28T05:34:52.058Z",
-      "upvotes": 73,
-      "comments": 4,
-      "topic_key": "agents_planning",
-      "topic_label": "Agents and Planning",
-      "matched_terms": [
-        "\\bagents?\\b"
       ],
       "classification_source": "rule",
       "classification_confidence": null
@@ -1474,48 +1685,14 @@
       "github_url": "",
       "submitted_by": "Yiming Zhang",
       "submitted_at": "2026-04-28T02:40:23.512Z",
-      "upvotes": 53,
-      "comments": 1,
+      "upvotes": 59,
+      "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [
         "\\bvisual\\b",
         "\\bvlm\\b",
         "\\b3d\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null
-    },
-    {
-      "report_date": "2026-04-28",
-      "paper_id": "2604.23775",
-      "title": "Vision-Language-Action Safety: Threats, Challenges, Evaluations, and Mechanisms",
-      "authors": [
-        "Qi Li",
-        "Bo Yin",
-        "Weiqi Huang",
-        "Ruhao Liu",
-        "Bojun Zou",
-        "Runpeng Yu",
-        "Jingwen Ye",
-        "Weihao Yu",
-        "Xinchao Wang"
-      ],
-      "abstract": "Vision-Language-Action (VLA) models are emerging as a unified substrate for embodied intelligence. This shift raises a new class of safety challenges, stemming from the embodied nature of VLA systems, including irreversible physical consequences, a multimodal attack surface across vision, language, and state, real-time latency constraints on defense, error propagation over long-horizon trajectories, and vulnerabilities in the data supply chain. Yet the literature remains fragmented across robotic learning, adversarial machine learning, AI alignment, and autonomous systems safety. This survey provides a unified and up-to-date overview of safety in Vision-Language-Action models. We organize the field along two parallel timing axes, attack timing (training-time vs. inference-time and defense timing (training-time vs. inference-time, linking each class of threat to the stage at which it can be mitigated. We first define the scope of VLA safety, distinguishing it from text-only LLM safety and classical robotic safety, and review the foundations of VLA models, including architectures, training paradigms, and inference mechanisms. We then examine the literature through four lenses: Attacks, Defenses, Evaluation, and Deployment. We survey training-time threats such as data poisoning and backdoors, as well as inference-time attacks including adversarial patches, cross-modal perturbations, semantic jailbreaks, and freezing attacks. We review training-time and runtime defenses, analyze existing benchmarks and metrics, and discuss safety challenges across six deployment domains. Finally, we highlight key open problems, including certified robustness for embodied trajectories, physically realizable defenses, safety-aware training, unified runtime safety architectures, and standardized evaluation.",
-      "hf_url": "https://huggingface.co/papers/2604.23775",
-      "arxiv_url": "https://arxiv.org/abs/2604.23775",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.23775",
-      "papers_cool_url": "https://papers.cool/arxiv/2604.23775",
-      "github_url": "",
-      "submitted_by": "LIQIIIII",
-      "submitted_at": "2026-04-28T03:01:19.794Z",
-      "upvotes": 40,
-      "comments": 1,
-      "topic_key": "multimodal_agents",
-      "topic_label": "Multimodal Agents",
-      "matched_terms": [
-        "\\bvision-language\\b",
-        "\\bvision-language-action\\b"
       ],
       "classification_source": "rule",
       "classification_confidence": null
@@ -1549,13 +1726,47 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-04-28T02:00:24.719Z",
-      "upvotes": 34,
-      "comments": 3,
+      "upvotes": 55,
+      "comments": 4,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [
         "\\bmultimodal\\b",
         "\\bvision\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
+    },
+    {
+      "report_date": "2026-04-28",
+      "paper_id": "2604.23775",
+      "title": "Vision-Language-Action Safety: Threats, Challenges, Evaluations, and Mechanisms",
+      "authors": [
+        "Qi Li",
+        "Bo Yin",
+        "Weiqi Huang",
+        "Ruhao Liu",
+        "Bojun Zou",
+        "Runpeng Yu",
+        "Jingwen Ye",
+        "Weihao Yu",
+        "Xinchao Wang"
+      ],
+      "abstract": "Vision-Language-Action (VLA) models are emerging as a unified substrate for embodied intelligence. This shift raises a new class of safety challenges, stemming from the embodied nature of VLA systems, including irreversible physical consequences, a multimodal attack surface across vision, language, and state, real-time latency constraints on defense, error propagation over long-horizon trajectories, and vulnerabilities in the data supply chain. Yet the literature remains fragmented across robotic learning, adversarial machine learning, AI alignment, and autonomous systems safety. This survey provides a unified and up-to-date overview of safety in Vision-Language-Action models. We organize the field along two parallel timing axes, attack timing (training-time vs. inference-time and defense timing (training-time vs. inference-time, linking each class of threat to the stage at which it can be mitigated. We first define the scope of VLA safety, distinguishing it from text-only LLM safety and classical robotic safety, and review the foundations of VLA models, including architectures, training paradigms, and inference mechanisms. We then examine the literature through four lenses: Attacks, Defenses, Evaluation, and Deployment. We survey training-time threats such as data poisoning and backdoors, as well as inference-time attacks including adversarial patches, cross-modal perturbations, semantic jailbreaks, and freezing attacks. We review training-time and runtime defenses, analyze existing benchmarks and metrics, and discuss safety challenges across six deployment domains. Finally, we highlight key open problems, including certified robustness for embodied trajectories, physically realizable defenses, safety-aware training, unified runtime safety architectures, and standardized evaluation.",
+      "hf_url": "https://huggingface.co/papers/2604.23775",
+      "arxiv_url": "https://arxiv.org/abs/2604.23775",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.23775",
+      "papers_cool_url": "https://papers.cool/arxiv/2604.23775",
+      "github_url": "",
+      "submitted_by": "LIQIIIII",
+      "submitted_at": "2026-04-28T03:01:19.794Z",
+      "upvotes": 42,
+      "comments": 2,
+      "topic_key": "multimodal_agents",
+      "topic_label": "Multimodal Agents",
+      "matched_terms": [
+        "\\bvision-language\\b",
+        "\\bvision-language-action\\b"
       ],
       "classification_source": "rule",
       "classification_confidence": null
@@ -1621,8 +1832,8 @@
       "github_url": "",
       "submitted_by": "fanqing meng",
       "submitted_at": "2026-04-28T02:23:01.322Z",
-      "upvotes": 23,
-      "comments": 1,
+      "upvotes": 29,
+      "comments": 2,
       "topic_key": "multimodal_agents",
       "topic_label": "Multimodal Agents",
       "matched_terms": [
@@ -1652,8 +1863,8 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-04-28T01:02:32.247Z",
-      "upvotes": 16,
-      "comments": 1,
+      "upvotes": 26,
+      "comments": 2,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [
@@ -1684,8 +1895,8 @@
       "github_url": "",
       "submitted_by": "Ningyu Zhang",
       "submitted_at": "2026-04-28T01:06:23.521Z",
-      "upvotes": 14,
-      "comments": 1,
+      "upvotes": 16,
+      "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
       "matched_terms": [
@@ -1696,27 +1907,64 @@
     },
     {
       "report_date": "2026-04-28",
-      "paper_id": "2604.21480",
-      "title": "Efficient Agent Evaluation via Diversity-Guided User Simulation",
+      "paper_id": "2604.15574",
+      "title": "Why Fine-Tuning Encourages Hallucinations and How to Fix It",
       "authors": [
-        "Itay Nakash",
-        "George Kour",
-        "Ateret Anaby-Tavor"
+        "Guy Kaplan",
+        "Zorik Gekhman",
+        "Zhen Zhu",
+        "Lotem Rozner",
+        "Yuval Reif",
+        "Swabha Swayamdipta",
+        "Derek Hoiem",
+        "Roy Schwartz"
       ],
-      "abstract": "Large language models (LLMs) are increasingly deployed as customer-facing agents, yet evaluating their reliability remains challenging due to stochastic, multi-turn interactions. Current evaluation protocols rely on linear Monte Carlo rollouts of complete agent-user conversations to estimate success. However, this approach is computationally inefficient, repeatedly regenerating identical early prefixes, and often fails to uncover deep failure modes that arise from rare user behaviors. We introduce DIVERT (Diversity-Induced Evaluation via Branching of Trajectories), an efficient, snapshot-based, coverage-guided user simulation framework for systematic exploration of agent-user interactions. DIVERT captures the full agent-environment state at critical decision points and resumes execution from these snapshots, enabling reuse of shared conversation prefixes and reducing redundant computation. From each junction, the framework branches using targeted, diversity-inducing user responses, allowing directed exploration of alternative interaction paths. By focusing evaluation on semantically diverse and underexplored trajectories, DIVERT improves both efficiency and coverage. Empirical results show that it discovers more failures per token compared to standard linear rollout protocols, while expanding the set of tasks on which failures are identified.",
-      "hf_url": "https://huggingface.co/papers/2604.21480",
-      "arxiv_url": "https://arxiv.org/abs/2604.21480",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.21480",
-      "papers_cool_url": "https://papers.cool/arxiv/2604.21480",
+      "abstract": "Large language models are prone to hallucinating factually incorrect statements. A key source of these errors is exposure to new factual information through supervised fine-tuning (SFT), which can increase hallucinations w.r.t. knowledge acquired during pre-training. In this work, we explore whether SFT-induced hallucinations can be mitigated using established tools from the continual learning literature, since they arise as a by-product of knowledge degradation during training. We propose a self-distillation-based SFT method that facilitates effective factual learning while minimizing hallucinations w.r.t. pre-existing knowledge by regularizing output-distribution drift. We also show that, in settings where new knowledge acquisition is unnecessary, suppressing factual plasticity by freezing parameter groups, can preserve task performance while reducing hallucinations. Lastly, we investigate the mechanism behind SFT-induced hallucinations through three hypotheses: capacity limitations, behavior cloning, and localized interference. Our experiments show that a main driver is interference among overlapping semantic representations, and that self-distillation succeeds by mitigating this interference.",
+      "hf_url": "https://huggingface.co/papers/2604.15574",
+      "arxiv_url": "https://arxiv.org/abs/2604.15574",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.15574",
+      "papers_cool_url": "https://papers.cool/arxiv/2604.15574",
       "github_url": "",
-      "submitted_by": "itay nakash",
-      "submitted_at": "2026-04-28T03:44:16.603Z",
-      "upvotes": 11,
-      "comments": 1,
-      "topic_key": "agents_planning",
-      "topic_label": "Agents and Planning",
+      "submitted_by": "Kaplan",
+      "submitted_at": "2026-04-28T19:46:10.737Z",
+      "upvotes": 16,
+      "comments": 2,
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [
-        "\\bagents?\\b"
+        "\\bfine-tuning\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
+    },
+    {
+      "report_date": "2026-04-28",
+      "paper_id": "2508.10180",
+      "title": "For-Value: Efficient Forward-Only Data Valuation for finetuning LLMs and VLMs",
+      "authors": [
+        "Wenlong Deng",
+        "Qi Zeng",
+        "Jiaming Zhang",
+        "Minghui Chen",
+        "Zixin Ding",
+        "Christos Thrampoulidis",
+        "Boying Gong",
+        "Xiaoxiao Li"
+      ],
+      "abstract": "Data valuation is essential for enhancing the transparency and accountability of large language models (LLMs) and vision-language models (VLMs). However, existing methods typically rely on gradient computations, making them computationally prohibitive for billion-parameter models and precluding batch parallelization. In this work, we introduce For-Value, a forward-only data valuation framework that enables efficient batch-scalable value estimation while maintaining effectiveness. Leveraging the expressive power of pretrained LLMs/VLMs, we theoretically demonstrate that data valuation can be captured by the alignment between the final hidden representations and prediction errors at the last layer. In light of this insight, For-Value computes data value using a simple closed-form expression with a single forward pass, eliminating the need for costly backpropagation and enabling efficient batch calculating at scale. Extensive experiments show that For-Value matches or outperforms gradient-based baselines in detecting influential data and mislabeled data, while achieving significant efficiency improvements.",
+      "hf_url": "https://huggingface.co/papers/2508.10180",
+      "arxiv_url": "https://arxiv.org/abs/2508.10180",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2508.10180",
+      "papers_cool_url": "https://papers.cool/arxiv/2508.10180",
+      "github_url": "",
+      "submitted_by": "wenlong deng",
+      "submitted_at": "2026-04-28T04:57:43.018Z",
+      "upvotes": 15,
+      "comments": 2,
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [
+        "\\b\\w*llms?\\w*\\b"
       ],
       "classification_source": "rule",
       "classification_confidence": null
@@ -1743,13 +1991,68 @@
       "github_url": "",
       "submitted_by": "Li Bobo",
       "submitted_at": "2026-04-28T04:34:47.603Z",
-      "upvotes": 8,
-      "comments": 2,
+      "upvotes": 13,
+      "comments": 3,
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [
         "\\balignment\\b"
       ],
+      "classification_source": "rule",
+      "classification_confidence": null
+    },
+    {
+      "report_date": "2026-04-28",
+      "paper_id": "2604.21480",
+      "title": "Efficient Agent Evaluation via Diversity-Guided User Simulation",
+      "authors": [
+        "Itay Nakash",
+        "George Kour",
+        "Ateret Anaby-Tavor"
+      ],
+      "abstract": "Large language models (LLMs) are increasingly deployed as customer-facing agents, yet evaluating their reliability remains challenging due to stochastic, multi-turn interactions. Current evaluation protocols rely on linear Monte Carlo rollouts of complete agent-user conversations to estimate success. However, this approach is computationally inefficient, repeatedly regenerating identical early prefixes, and often fails to uncover deep failure modes that arise from rare user behaviors. We introduce DIVERT (Diversity-Induced Evaluation via Branching of Trajectories), an efficient, snapshot-based, coverage-guided user simulation framework for systematic exploration of agent-user interactions. DIVERT captures the full agent-environment state at critical decision points and resumes execution from these snapshots, enabling reuse of shared conversation prefixes and reducing redundant computation. From each junction, the framework branches using targeted, diversity-inducing user responses, allowing directed exploration of alternative interaction paths. By focusing evaluation on semantically diverse and underexplored trajectories, DIVERT improves both efficiency and coverage. Empirical results show that it discovers more failures per token compared to standard linear rollout protocols, while expanding the set of tasks on which failures are identified.",
+      "hf_url": "https://huggingface.co/papers/2604.21480",
+      "arxiv_url": "https://arxiv.org/abs/2604.21480",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.21480",
+      "papers_cool_url": "https://papers.cool/arxiv/2604.21480",
+      "github_url": "",
+      "submitted_by": "itay nakash",
+      "submitted_at": "2026-04-28T03:44:16.603Z",
+      "upvotes": 12,
+      "comments": 2,
+      "topic_key": "agents_planning",
+      "topic_label": "Agents and Planning",
+      "matched_terms": [
+        "\\bagents?\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
+    },
+    {
+      "report_date": "2026-04-28",
+      "paper_id": "2604.21681",
+      "title": "Sapiens2",
+      "authors": [
+        "Rawal Khirodkar",
+        "He Wen",
+        "Julieta Martinez",
+        "Yuan Dong",
+        "Su Zhaoen",
+        "Shunsuke Saito"
+      ],
+      "abstract": "We present Sapiens2, a model family of high-resolution transformers for human-centric vision focused on generalization, versatility, and high-fidelity outputs. Our model sizes range from 0.4 to 5 billion parameters, with native 1K resolution and hierarchical variants that support 4K. Sapiens2 substantially improves over its predecessor in both pretraining and post-training. First, to learn features that capture low-level details (for dense prediction) and high-level semantics (for zero-shot or few-label settings), we combine masked image reconstruction with self-distilled contrastive objectives. Our evaluations show that this unified pretraining objective is better suited for a wider range of downstream tasks. Second, along the data axis, we pretrain on a curated dataset of 1 billion high-quality human images and improve the quality and quantity of task annotations. Third, architecturally, we incorporate advances from frontier models that enable longer training schedules with improved stability. Our 4K models adopt windowed attention to reason over longer spatial context and are pretrained with 2K output resolution. Sapiens2 sets a new state-of-the-art and improves over the first generation on pose (+4 mAP), body-part segmentation (+24.3 mIoU), normal estimation (45.6% lower angular error) and extends to new tasks such as pointmap and albedo estimation. Code: https://github.com/facebookresearch/sapiens2",
+      "hf_url": "https://huggingface.co/papers/2604.21681",
+      "arxiv_url": "https://arxiv.org/abs/2604.21681",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.21681",
+      "papers_cool_url": "https://papers.cool/arxiv/2604.21681",
+      "github_url": "",
+      "submitted_by": "Rawal Khirodkar",
+      "submitted_at": "2026-04-28T18:34:09.031Z",
+      "upvotes": 11,
+      "comments": 3,
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
+      "matched_terms": [],
       "classification_source": "rule",
       "classification_confidence": null
     },
@@ -1772,8 +2075,8 @@
       "github_url": "",
       "submitted_by": "Boyang Wang",
       "submitted_at": "2026-04-28T02:41:04.048Z",
-      "upvotes": 6,
-      "comments": 1,
+      "upvotes": 9,
+      "comments": 2,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [
@@ -1801,14 +2104,40 @@
       "github_url": "",
       "submitted_by": "Hong Jiang",
       "submitted_at": "2026-04-28T10:54:06.831Z",
-      "upvotes": 6,
-      "comments": 1,
+      "upvotes": 8,
+      "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [
         "\\bimage\\b",
         "\\bvideo\\b"
       ],
+      "classification_source": "rule",
+      "classification_confidence": null
+    },
+    {
+      "report_date": "2026-04-28",
+      "paper_id": "2604.22880",
+      "title": "TexOCR: Advancing Document OCR Models for Compilable Page-to-LaTeX Reconstruction",
+      "authors": [
+        "Chengye Wang",
+        "Lin Fu",
+        "Zexi Kuang",
+        "Yilun Zhao"
+      ],
+      "abstract": "Existing document OCR largely targets plain text or Markdown, discarding the structural and executable properties that make LaTeX essential for scientific publishing. We study page-level reconstruction of scientific PDFs into compilable LaTeX and introduce TexOCR-Bench, a benchmark, and TexOCR-Train, a large-scale training corpus, for this task. TexOCR-Bench features a multi-dimensional evaluation suite that jointly assesses transcription fidelity, structural faithfulness, and end-to-end compilability. Leveraging TexOCR-Train, we train a 2B-parameter model, TexOCR, using supervised fine-tuning (SFT) and reinforcement learning (RL) with verifiable rewards derived from LaTeX unit tests that directly enforce compilability and referential integrity. Experiments across 21 frontier models on TexOCR-Bench show that existing systems frequently violate key document invariants, including consistent section structure, correct float placement, and valid label-reference links, which undermines compilation reliability and downstream usability. Our analysis further reveals that RL with verifiable rewards yields consistent improvements over SFT alone, particularly on structural and compilation metrics.",
+      "hf_url": "https://huggingface.co/papers/2604.22880",
+      "arxiv_url": "https://arxiv.org/abs/2604.22880",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.22880",
+      "papers_cool_url": "https://papers.cool/arxiv/2604.22880",
+      "github_url": "",
+      "submitted_by": "chengyewang",
+      "submitted_at": "2026-04-28T10:08:36.214Z",
+      "upvotes": 7,
+      "comments": 3,
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
+      "matched_terms": [],
       "classification_source": "rule",
       "classification_confidence": null
     },
@@ -1833,8 +2162,8 @@
       "github_url": "",
       "submitted_by": "Han Wang",
       "submitted_at": "2026-04-28T01:54:58.758Z",
-      "upvotes": 4,
-      "comments": 1,
+      "upvotes": 5,
+      "comments": 2,
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [
@@ -1860,160 +2189,8 @@
       "github_url": "",
       "submitted_by": "Kristian Schwethelm",
       "submitted_at": "2026-04-28T09:39:50.025Z",
-      "upvotes": 4,
-      "comments": 1,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
-      "matched_terms": [
-        "\\blanguage models?\\b",
-        "\\blanguage\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null
-    },
-    {
-      "report_date": "2026-04-28",
-      "paper_id": "2508.10180",
-      "title": "For-Value: Efficient Forward-Only Data Valuation for finetuning LLMs and VLMs",
-      "authors": [
-        "Wenlong Deng",
-        "Qi Zeng",
-        "Jiaming Zhang",
-        "Minghui Chen",
-        "Zixin Ding",
-        "Christos Thrampoulidis",
-        "Boying Gong",
-        "Xiaoxiao Li"
-      ],
-      "abstract": "Data valuation is essential for enhancing the transparency and accountability of large language models (LLMs) and vision-language models (VLMs). However, existing methods typically rely on gradient computations, making them computationally prohibitive for billion-parameter models and precluding batch parallelization. In this work, we introduce For-Value, a forward-only data valuation framework that enables efficient batch-scalable value estimation while maintaining effectiveness. Leveraging the expressive power of pretrained LLMs/VLMs, we theoretically demonstrate that data valuation can be captured by the alignment between the final hidden representations and prediction errors at the last layer. In light of this insight, For-Value computes data value using a simple closed-form expression with a single forward pass, eliminating the need for costly backpropagation and enabling efficient batch calculating at scale. Extensive experiments show that For-Value matches or outperforms gradient-based baselines in detecting influential data and mislabeled data, while achieving significant efficiency improvements.",
-      "hf_url": "https://huggingface.co/papers/2508.10180",
-      "arxiv_url": "https://arxiv.org/abs/2508.10180",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2508.10180",
-      "papers_cool_url": "https://papers.cool/arxiv/2508.10180",
-      "github_url": "",
-      "submitted_by": "wenlong deng",
-      "submitted_at": "2026-04-28T04:57:43.018Z",
-      "upvotes": 3,
-      "comments": 1,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
-      "matched_terms": [
-        "\\b\\w*llms?\\w*\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null
-    },
-    {
-      "report_date": "2026-04-28",
-      "paper_id": "2604.23604",
-      "title": "Learning to Identify Out-of-Distribution Objects for 3D LiDAR Anomaly Segmentation",
-      "authors": [
-        "Simone Mosco",
-        "Daniel Fusaro",
-        "Alberto Pretto"
-      ],
-      "abstract": "Understanding the surrounding environment is fundamental in autonomous driving and robotic perception. Distinguishing between known classes and previously unseen objects is crucial in real-world environments, as done in Anomaly Segmentation. However, research in the 3D field remains limited, with most existing approaches applying post-processing techniques from 2D vision. To cover this lack, we propose a new efficient approach that directly operates in the feature space, modeling the feature distribution of inlier classes to constrain anomalous samples. Moreover, the only publicly available 3D LiDAR anomaly segmentation dataset contains simple scenarios, with few anomaly instances, and exhibits a severe domain gap due to its sensor resolution. To bridge this gap, we introduce a set of mixed real-synthetic datasets for 3D LiDAR anomaly segmentation, built upon established semantic segmentation benchmarks, with multiple out-of-distribution objects and diverse, complex environments. Extensive experiments demonstrate that our approach achieves state-of-the-art and competitive results on the existing real-world dataset and the newly introduced mixed datasets, respectively, validating the effectiveness of our method and the utility of the proposed datasets. Code and datasets are available at https://simom0.github.io/lido-page/.",
-      "hf_url": "https://huggingface.co/papers/2604.23604",
-      "arxiv_url": "https://arxiv.org/abs/2604.23604",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.23604",
-      "papers_cool_url": "https://papers.cool/arxiv/2604.23604",
-      "github_url": "",
-      "submitted_by": "Simone Mosco",
-      "submitted_at": "2026-04-28T12:02:49.014Z",
-      "upvotes": 2,
-      "comments": 1,
-      "topic_key": "learning_theory",
-      "topic_label": "Learning, Optimization, and Theory",
-      "matched_terms": [
-        "\\blearning\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null
-    },
-    {
-      "report_date": "2026-04-28",
-      "paper_id": "2604.22880",
-      "title": "TexOCR: Advancing Document OCR Models for Compilable Page-to-LaTeX Reconstruction",
-      "authors": [
-        "Chengye Wang",
-        "Lin Fu",
-        "Zexi Kuang",
-        "Yilun Zhao"
-      ],
-      "abstract": "Existing document OCR largely targets plain text or Markdown, discarding the structural and executable properties that make LaTeX essential for scientific publishing. We study page-level reconstruction of scientific PDFs into compilable LaTeX and introduce TexOCR-Bench, a benchmark, and TexOCR-Train, a large-scale training corpus, for this task. TexOCR-Bench features a multi-dimensional evaluation suite that jointly assesses transcription fidelity, structural faithfulness, and end-to-end compilability. Leveraging TexOCR-Train, we train a 2B-parameter model, TexOCR, using supervised fine-tuning (SFT) and reinforcement learning (RL) with verifiable rewards derived from LaTeX unit tests that directly enforce compilability and referential integrity. Experiments across 21 frontier models on TexOCR-Bench show that existing systems frequently violate key document invariants, including consistent section structure, correct float placement, and valid label-reference links, which undermines compilation reliability and downstream usability. Our analysis further reveals that RL with verifiable rewards yields consistent improvements over SFT alone, particularly on structural and compilation metrics.",
-      "hf_url": "https://huggingface.co/papers/2604.22880",
-      "arxiv_url": "https://arxiv.org/abs/2604.22880",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.22880",
-      "papers_cool_url": "https://papers.cool/arxiv/2604.22880",
-      "github_url": "",
-      "submitted_by": "chengyewang",
-      "submitted_at": "2026-04-28T10:08:36.214Z",
-      "upvotes": 2,
+      "upvotes": 5,
       "comments": 2,
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
-      "matched_terms": [],
-      "classification_source": "rule",
-      "classification_confidence": null
-    },
-    {
-      "report_date": "2026-04-28",
-      "paper_id": "2604.22841",
-      "title": "ATTN-FIQA: Interpretable Attention-based Face Image Quality Assessment with Vision Transformers",
-      "authors": [
-        "Guray Ozgur",
-        "Tahar Chettaoui",
-        "Eduarda Caldeira",
-        "Jan Niklas Kolf",
-        "Marco Huber",
-        "Andrea Atzori",
-        "Naser Damer",
-        "Fadi Boutros"
-      ],
-      "abstract": "Face Image Quality Assessment (FIQA) aims to assess the recognition utility of face samples and is essential for reliable face recognition (FR) systems. Existing approaches require computationally expensive procedures such as multiple forward passes, backpropagation, or additional training, and only recent work has focused on the use of Vision Transformers. Recent studies highlighted that these architectures inherently function as saliency learners with attention patterns naturally encoding spatial importance. This work proposes ATTN-FIQA, a novel training-free approach that investigates whether pre-softmax attention scores from pre-trained Vision Transformer-based face recognition models can serve as quality indicators. We hypothesize that attention magnitudes intrinsically encode quality: high-quality images with discriminative facial features enable strong query-key alignments producing focused, high-magnitude attention patterns, while degraded images generate diffuse, low-magnitude patterns. ATTN-FIQA extracts pre-softmax attention matrices from the final transformer block, aggregate multi-head attention information across all patches, and compute image-level quality scores through simple averaging, requiring only a single forward pass through pre-trained models without architectural modifications, backpropagation, or additional training. Through comprehensive evaluation across eight benchmark datasets and four FR models, this work demonstrates that attention-based quality scores effectively correlate with face image quality and provide spatial interpretability, revealing which facial regions contribute most to quality determination.",
-      "hf_url": "https://huggingface.co/papers/2604.22841",
-      "arxiv_url": "https://arxiv.org/abs/2604.22841",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.22841",
-      "papers_cool_url": "https://papers.cool/arxiv/2604.22841",
-      "github_url": "",
-      "submitted_by": "Guray Ozgur",
-      "submitted_at": "2026-04-28T06:17:56.878Z",
-      "upvotes": 2,
-      "comments": 1,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [
-        "\\bvision\\b",
-        "\\bimage\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null
-    },
-    {
-      "report_date": "2026-04-28",
-      "paper_id": "2604.24583",
-      "title": "Improving Vision-language Models with Perception-centric Process Reward Models",
-      "authors": [
-        "Yingqian Min",
-        "Kun Zhou",
-        "Yifan Li",
-        "Yuhuan Wu",
-        "Han Peng",
-        "Yifan Du",
-        "Wayne Xin Zhao",
-        "Min Yang",
-        "Ji-Rong Wen"
-      ],
-      "abstract": "Recent advancements in reinforcement learning with verifiable rewards (RLVR) have significantly improved the complex reasoning ability of vision-language models (VLMs). However, its outcome-level supervision is too coarse to diagnose and correct errors within the reasoning chain. To this end, we propose Perceval, a process reward model (PRM) that enables token-level error grounding, which can extract image-related claims from the response and compare them one by one with the visual evidence in the image, ultimately returning claims that contain perceptual errors. Perceval is trained with perception-intensive supervised training data. We then integrate Perceval into the RL training process to train the policy models. Specifically, compared to traditional GRPO, which applies sequence-level advantages, we apply token-level advantages by targeting penalties on hallucinated spans identified by Perceval, thus enabling fine-grained supervision signals. In addition to augmenting the training process, Perceval can also assist VLMs during the inference stage. Using Perceval, we can truncate the erroneous portions of the model's response, and then either have the model regenerate the response directly or induce the model to reflect on its previous output. This process can be repeated multiple times to achieve test-time scaling. Experiments show significant improvements on benchmarks from various domains across multiple reasoning VLMs trained with RL, highlighting the promise of perception-centric supervision as a general-purpose strategy. For test-time scaling, it also demonstrates consistent performance gains over other strategies, such as major voting. Our code and data will be publicly released at https://github.com/RUCAIBox/Perceval.",
-      "hf_url": "https://huggingface.co/papers/2604.24583",
-      "arxiv_url": "https://arxiv.org/abs/2604.24583",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.24583",
-      "papers_cool_url": "https://papers.cool/arxiv/2604.24583",
-      "github_url": "",
-      "submitted_by": "Yingqian Min",
-      "submitted_at": "2026-04-28T06:47:55.080Z",
-      "upvotes": 1,
-      "comments": 1,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [
@@ -2043,7 +2220,33 @@
       "github_url": "",
       "submitted_by": "TTN",
       "submitted_at": "2026-04-28T12:19:27.357Z",
-      "upvotes": 1,
+      "upvotes": 4,
+      "comments": 3,
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
+      "matched_terms": [],
+      "classification_source": "rule",
+      "classification_confidence": null
+    },
+    {
+      "report_date": "2026-04-28",
+      "paper_id": "2604.22782",
+      "title": "Stochastic KV Routing: Enabling Adaptive Depth-Wise Cache Sharing",
+      "authors": [
+        "Anastasiia Filippova",
+        "David Grangier",
+        "Marco Cuturi",
+        "João Monteiro"
+      ],
+      "abstract": "Serving transformer language models with high throughput requires caching Key-Values (KVs) to avoid redundant computation during autoregressive generation. The memory footprint of KV caching is significant and heavily impacts serving costs. This work proposes to lessen these memory requirements. While recent work has largely addressed KV cache reduction via compression and eviction along the temporal axis, we argue that the depth dimension offers an orthogonal and robust avenue for optimization. Although prior research suggests that a full cache for every layer is redundant, implementing cross-layer cache sharing remains a practical challenge; existing methods typically suffer from reduced throughput or increased time-to-first-token. In this paper, we demonstrate that dropping a layer's cache offers efficient optimization without information loss. We propose a simple training approach: random cross-layer attention. During training, layers randomly choose to attend either to their own KV states or those of a preceding layer. This stochastic process adapts the model to be robust to various depth-wise cache sharing strategies, ensuring flexibility for unknown hardware constraints at deployment time. Our evaluations show that applying this scheme during pre-training or fine-tuning enables depth-wise cache sharing for various model families. Furthermore, for larger models in data-constrained settings, this approach is suggestive of a regularization-like effect, frequently preserving or improving performance while significantly reducing the cache's memory footprint.",
+      "hf_url": "https://huggingface.co/papers/2604.22782",
+      "arxiv_url": "https://arxiv.org/abs/2604.22782",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.22782",
+      "papers_cool_url": "https://papers.cool/arxiv/2604.22782",
+      "github_url": "",
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-04-28T01:57:34.273Z",
+      "upvotes": 4,
       "comments": 1,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
@@ -2053,24 +2256,56 @@
     },
     {
       "report_date": "2026-04-28",
-      "paper_id": "2604.23644",
-      "title": "RaV-IDP: A Reconstruction-as-Validation Framework for Faithful Intelligent Document Processing",
+      "paper_id": "2604.24479",
+      "title": "Zero-to-CAD: Agentic Synthesis of Interpretable CAD Programs at Million-Scale Without Real Data",
       "authors": [
-        "Pritesh Jha"
+        "Mohammadmehdi Ataei",
+        "Farzaneh Askari",
+        "Kamal Rahimi Malekshan",
+        "Pradeep Kumar Jayaraman"
       ],
-      "abstract": "Intelligent document processing pipelines extract structured entities (tables, images, and text) from documents for use in downstream systems such as knowledge bases, retrieval-augmented generation, and analytics. A persistent limitation of existing pipelines is that extraction output is produced without any intrinsic mechanism to verify whether it faithfully represents the source. Model-internal confidence scores measure inference certainty, not correspondence to the document, and extraction errors pass silently into downstream consumers. We present Reconstruction as Validation (RaV-IDP), a document processing pipeline that introduces reconstruction as a first-class architectural component. After each entity is extracted, a dedicated reconstructor renders the extracted representation back into a form comparable to the original document region, and a comparator scores fidelity between the reconstruction and the unmodified source crop. This fidelity score is a grounded, label-free quality signal. When fidelity falls below a per-entity-type threshold, a structured GPT-4.1 vision fallback is triggered and the validation loop repeats. We enforce a bootstrap constraint: the comparator always anchors against the original document region, never against the extraction, preventing the validation from becoming circular. We further propose a per-stage evaluation framework pairing each pipeline component with an appropriate benchmark. The code pipeline is publicly available at https://github.com/pritesh-2711/RaV-IDP for experimentation and use.",
-      "hf_url": "https://huggingface.co/papers/2604.23644",
-      "arxiv_url": "https://arxiv.org/abs/2604.23644",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.23644",
-      "papers_cool_url": "https://papers.cool/arxiv/2604.23644",
+      "abstract": "Computer-Aided Design (CAD) models are defined by their construction history: a parametric recipe that encodes design intent. However, existing large-scale 3D datasets predominantly consist of boundary representations (B-Reps) or meshes, stripping away this critical procedural information. To address this scarcity, we introduce Zero-to-CAD, a scalable framework for synthesizing executable CAD construction sequences. We frame synthesis as an agentic search problem: by embedding a large language model (LLM) within a feedback-driven CAD environment, our system iteratively generates, executes, and validates code using tools and documentation lookup to promote geometric validity and operation diversity. This agentic approach enables the synthesis of approximately one million executable, readable, editable CAD sequences, covering a rich vocabulary of operations beyond sketch-and-extrude workflows. We also release a curated subset of 100,000 high-quality models selected for geometric diversity. To demonstrate the dataset's utility, we fine-tune a vision-language model on our synthetic data to reconstruct editable CAD programs from multi-view images, outperforming strong baselines, including GPT-5.2, and effectively bootstrapping sequence generation capabilities without real construction-history training data. Zero-to-CAD bridges the gap between geometric scale and parametric interpretability, offering a vital resource for the next generation of CAD AI.",
+      "hf_url": "https://huggingface.co/papers/2604.24479",
+      "arxiv_url": "https://arxiv.org/abs/2604.24479",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.24479",
+      "papers_cool_url": "https://papers.cool/arxiv/2604.24479",
       "github_url": "",
-      "submitted_by": "Pritesh Jha",
-      "submitted_at": "2026-04-28T12:06:18.268Z",
-      "upvotes": 1,
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-04-28T02:03:05.685Z",
+      "upvotes": 3,
       "comments": 1,
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
-      "matched_terms": [],
+      "topic_key": "agents_planning",
+      "topic_label": "Agents and Planning",
+      "matched_terms": [
+        "\\bagentic\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
+    },
+    {
+      "report_date": "2026-04-28",
+      "paper_id": "2604.23604",
+      "title": "Learning to Identify Out-of-Distribution Objects for 3D LiDAR Anomaly Segmentation",
+      "authors": [
+        "Simone Mosco",
+        "Daniel Fusaro",
+        "Alberto Pretto"
+      ],
+      "abstract": "Understanding the surrounding environment is fundamental in autonomous driving and robotic perception. Distinguishing between known classes and previously unseen objects is crucial in real-world environments, as done in Anomaly Segmentation. However, research in the 3D field remains limited, with most existing approaches applying post-processing techniques from 2D vision. To cover this lack, we propose a new efficient approach that directly operates in the feature space, modeling the feature distribution of inlier classes to constrain anomalous samples. Moreover, the only publicly available 3D LiDAR anomaly segmentation dataset contains simple scenarios, with few anomaly instances, and exhibits a severe domain gap due to its sensor resolution. To bridge this gap, we introduce a set of mixed real-synthetic datasets for 3D LiDAR anomaly segmentation, built upon established semantic segmentation benchmarks, with multiple out-of-distribution objects and diverse, complex environments. Extensive experiments demonstrate that our approach achieves state-of-the-art and competitive results on the existing real-world dataset and the newly introduced mixed datasets, respectively, validating the effectiveness of our method and the utility of the proposed datasets. Code and datasets are available at https://simom0.github.io/lido-page/.",
+      "hf_url": "https://huggingface.co/papers/2604.23604",
+      "arxiv_url": "https://arxiv.org/abs/2604.23604",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.23604",
+      "papers_cool_url": "https://papers.cool/arxiv/2604.23604",
+      "github_url": "",
+      "submitted_by": "Simone Mosco",
+      "submitted_at": "2026-04-28T12:02:49.014Z",
+      "upvotes": 3,
+      "comments": 2,
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
+      "matched_terms": [
+        "\\blearning\\b"
+      ],
       "classification_source": "rule",
       "classification_confidence": null
     },
@@ -2092,12 +2327,158 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-04-28T01:55:53.901Z",
-      "upvotes": 1,
-      "comments": 0,
+      "upvotes": 2,
+      "comments": 1,
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [
         "\\bevaluation\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
+    },
+    {
+      "report_date": "2026-04-28",
+      "paper_id": "2604.22841",
+      "title": "ATTN-FIQA: Interpretable Attention-based Face Image Quality Assessment with Vision Transformers",
+      "authors": [
+        "Guray Ozgur",
+        "Tahar Chettaoui",
+        "Eduarda Caldeira",
+        "Jan Niklas Kolf",
+        "Marco Huber",
+        "Andrea Atzori",
+        "Naser Damer",
+        "Fadi Boutros"
+      ],
+      "abstract": "Face Image Quality Assessment (FIQA) aims to assess the recognition utility of face samples and is essential for reliable face recognition (FR) systems. Existing approaches require computationally expensive procedures such as multiple forward passes, backpropagation, or additional training, and only recent work has focused on the use of Vision Transformers. Recent studies highlighted that these architectures inherently function as saliency learners with attention patterns naturally encoding spatial importance. This work proposes ATTN-FIQA, a novel training-free approach that investigates whether pre-softmax attention scores from pre-trained Vision Transformer-based face recognition models can serve as quality indicators. We hypothesize that attention magnitudes intrinsically encode quality: high-quality images with discriminative facial features enable strong query-key alignments producing focused, high-magnitude attention patterns, while degraded images generate diffuse, low-magnitude patterns. ATTN-FIQA extracts pre-softmax attention matrices from the final transformer block, aggregate multi-head attention information across all patches, and compute image-level quality scores through simple averaging, requiring only a single forward pass through pre-trained models without architectural modifications, backpropagation, or additional training. Through comprehensive evaluation across eight benchmark datasets and four FR models, this work demonstrates that attention-based quality scores effectively correlate with face image quality and provide spatial interpretability, revealing which facial regions contribute most to quality determination.",
+      "hf_url": "https://huggingface.co/papers/2604.22841",
+      "arxiv_url": "https://arxiv.org/abs/2604.22841",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.22841",
+      "papers_cool_url": "https://papers.cool/arxiv/2604.22841",
+      "github_url": "",
+      "submitted_by": "Guray Ozgur",
+      "submitted_at": "2026-04-28T06:17:56.878Z",
+      "upvotes": 2,
+      "comments": 2,
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
+      "matched_terms": [
+        "\\bvision\\b",
+        "\\bimage\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
+    },
+    {
+      "report_date": "2026-04-28",
+      "paper_id": "2604.24040",
+      "title": "Improving Robustness of Tabular Retrieval via Representational Stability",
+      "authors": [
+        "Kushal Raj Bhandari",
+        "Adarsh Singh",
+        "Jianxi Gao",
+        "Soham Dan",
+        "Vivek Gupta"
+      ],
+      "abstract": "Transformer-based table retrieval systems flatten structured tables into token sequences, making retrieval sensitive to the choice of serialization even when table semantics remain unchanged. We show that semantically equivalent serializations, such as csv, tsv, html, markdown, and ddl, can produce substantially different embeddings and retrieval results across multiple benchmarks and retriever families. To address this instability, we treat serialization embedding as noisy views of a shared semantic signal and use its centroid as a canonical target representation. We show that centroid averaging suppresses format-specific variation and can recover the semantic content common to different serializations when format-induced shifts differ across tables. Empirically, centroid representations outrank individual formats in aggregate pairwise comparisons across MPNet, BGE-M3, ReasonIR, and SPLADE. We further introduce a lightweight residual bottleneck adapter on top of a frozen encoder that maps single-serialization embeddings towards centroid targets while preserving variance and enforcing covariance regularization. The adapter improves robustness for several dense retrievers, though gains are model-dependent and weaker for sparse lexical retrieval. These results identify serialization sensitivity as a major source of retrieval variance and show the promise of post hoc geometric correction for serialization-invariant table retrieval. Our code, datasets, and models are available at https://github.com/KBhandari11/Centroid-Aligned-Table-Retrieval{https://github.com/KBhandari11/Centroid-Aligned-Table-Retrieval}.",
+      "hf_url": "https://huggingface.co/papers/2604.24040",
+      "arxiv_url": "https://arxiv.org/abs/2604.24040",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.24040",
+      "papers_cool_url": "https://papers.cool/arxiv/2604.24040",
+      "github_url": "",
+      "submitted_by": "Kushal Raj Bhandari",
+      "submitted_at": "2026-04-28T19:08:08.795Z",
+      "upvotes": 1,
+      "comments": 2,
+      "topic_key": "retrieval_knowledge",
+      "topic_label": "Retrieval, Knowledge, and RAG",
+      "matched_terms": [
+        "\\bretrieval\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
+    },
+    {
+      "report_date": "2026-04-28",
+      "paper_id": "2604.24583",
+      "title": "Improving Vision-language Models with Perception-centric Process Reward Models",
+      "authors": [
+        "Yingqian Min",
+        "Kun Zhou",
+        "Yifan Li",
+        "Yuhuan Wu",
+        "Han Peng",
+        "Yifan Du",
+        "Wayne Xin Zhao",
+        "Min Yang",
+        "Ji-Rong Wen"
+      ],
+      "abstract": "Recent advancements in reinforcement learning with verifiable rewards (RLVR) have significantly improved the complex reasoning ability of vision-language models (VLMs). However, its outcome-level supervision is too coarse to diagnose and correct errors within the reasoning chain. To this end, we propose Perceval, a process reward model (PRM) that enables token-level error grounding, which can extract image-related claims from the response and compare them one by one with the visual evidence in the image, ultimately returning claims that contain perceptual errors. Perceval is trained with perception-intensive supervised training data. We then integrate Perceval into the RL training process to train the policy models. Specifically, compared to traditional GRPO, which applies sequence-level advantages, we apply token-level advantages by targeting penalties on hallucinated spans identified by Perceval, thus enabling fine-grained supervision signals. In addition to augmenting the training process, Perceval can also assist VLMs during the inference stage. Using Perceval, we can truncate the erroneous portions of the model's response, and then either have the model regenerate the response directly or induce the model to reflect on its previous output. This process can be repeated multiple times to achieve test-time scaling. Experiments show significant improvements on benchmarks from various domains across multiple reasoning VLMs trained with RL, highlighting the promise of perception-centric supervision as a general-purpose strategy. For test-time scaling, it also demonstrates consistent performance gains over other strategies, such as major voting. Our code and data will be publicly released at https://github.com/RUCAIBox/Perceval.",
+      "hf_url": "https://huggingface.co/papers/2604.24583",
+      "arxiv_url": "https://arxiv.org/abs/2604.24583",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.24583",
+      "papers_cool_url": "https://papers.cool/arxiv/2604.24583",
+      "github_url": "",
+      "submitted_by": "Yingqian Min",
+      "submitted_at": "2026-04-28T06:47:55.080Z",
+      "upvotes": 1,
+      "comments": 2,
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [
+        "\\blanguage models?\\b",
+        "\\blanguage\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null
+    },
+    {
+      "report_date": "2026-04-28",
+      "paper_id": "2604.23644",
+      "title": "RaV-IDP: A Reconstruction-as-Validation Framework for Faithful Intelligent Document Processing",
+      "authors": [
+        "Pritesh Jha"
+      ],
+      "abstract": "Intelligent document processing pipelines extract structured entities (tables, images, and text) from documents for use in downstream systems such as knowledge bases, retrieval-augmented generation, and analytics. A persistent limitation of existing pipelines is that extraction output is produced without any intrinsic mechanism to verify whether it faithfully represents the source. Model-internal confidence scores measure inference certainty, not correspondence to the document, and extraction errors pass silently into downstream consumers. We present Reconstruction as Validation (RaV-IDP), a document processing pipeline that introduces reconstruction as a first-class architectural component. After each entity is extracted, a dedicated reconstructor renders the extracted representation back into a form comparable to the original document region, and a comparator scores fidelity between the reconstruction and the unmodified source crop. This fidelity score is a grounded, label-free quality signal. When fidelity falls below a per-entity-type threshold, a structured GPT-4.1 vision fallback is triggered and the validation loop repeats. We enforce a bootstrap constraint: the comparator always anchors against the original document region, never against the extraction, preventing the validation from becoming circular. We further propose a per-stage evaluation framework pairing each pipeline component with an appropriate benchmark. The code pipeline is publicly available at https://github.com/pritesh-2711/RaV-IDP for experimentation and use.",
+      "hf_url": "https://huggingface.co/papers/2604.23644",
+      "arxiv_url": "https://arxiv.org/abs/2604.23644",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.23644",
+      "papers_cool_url": "https://papers.cool/arxiv/2604.23644",
+      "github_url": "",
+      "submitted_by": "Pritesh Jha",
+      "submitted_at": "2026-04-28T12:06:18.268Z",
+      "upvotes": 1,
+      "comments": 2,
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
+      "matched_terms": [],
+      "classification_source": "rule",
+      "classification_confidence": null
+    },
+    {
+      "report_date": "2026-04-28",
+      "paper_id": "2604.23446",
+      "title": "IndustryAssetEQA: A Neurosymbolic Operational Intelligence System for Embodied Question Answering in Industrial Asset Maintenance",
+      "authors": [
+        "Chathurangi Shyalika",
+        "Dhaval Patel",
+        "Amit Sheth"
+      ],
+      "abstract": "Industrial maintenance environments increasingly rely on AI systems to assist operators in understanding asset behavior, diagnosing failures, and evaluating interventions. Although large language models (LLMs) enable fluent natural-language interaction, deployed maintenance assistants routinely produce generic explanations that are weakly grounded in telemetry, omit verifiable provenance, and offer no testable support for counterfactual or action-oriented reasoning that undermine trust in safety-critical settings. We present IndustryAssetEQA, a neurosymbolic operational intelligence system that combines episodic telemetry representations with a Failure Mode Effects Analysis Knowledge Graph (FMEA-KG) to enable Embodied Question Answering (EQA) over industrial assets. We evaluate on four datasets covering four industrial asset types, including rotating machinery, turbofan engines, hydraulic systems, and cyber-physical production systems. Compared to LLM-only baselines, IndustryAssetEQA improves structural validity by up to 0.51, counterfactual accuracy by up to 0.47, and explanation entailment by 0.64, while reducing severe expert-rated overclaims from 28% to 2% (approximately 93% reduction). Code, datasets, and the FMEA-KG are available at https://github.com/IBM/AssetOpsBench/tree/IndustryAssetEQA/IndustryAssetEQA.",
+      "hf_url": "https://huggingface.co/papers/2604.23446",
+      "arxiv_url": "https://arxiv.org/abs/2604.23446",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.23446",
+      "papers_cool_url": "https://papers.cool/arxiv/2604.23446",
+      "github_url": "",
+      "submitted_by": "Dhaval Patel",
+      "submitted_at": "2026-04-28T21:32:50.053Z",
+      "upvotes": 1,
+      "comments": 2,
+      "topic_key": "robotics_embodied",
+      "topic_label": "Robotics and Embodied AI",
+      "matched_terms": [
+        "\\bembodied\\b"
       ],
       "classification_source": "rule",
       "classification_confidence": null
@@ -2118,7 +2499,7 @@
       "submitted_by": "Victor Gallego",
       "submitted_at": "2026-04-28T06:18:53.009Z",
       "upvotes": 1,
-      "comments": 1,
+      "comments": 2,
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [
@@ -2149,7 +2530,7 @@
       "submitted_by": "Guray Ozgur",
       "submitted_at": "2026-04-28T06:14:16.437Z",
       "upvotes": 1,
-      "comments": 1,
+      "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [
@@ -2161,27 +2542,28 @@
     },
     {
       "report_date": "2026-04-28",
-      "paper_id": "2604.22782",
-      "title": "Stochastic KV Routing: Enabling Adaptive Depth-Wise Cache Sharing",
+      "paper_id": "2604.18756",
+      "title": "Towards Understanding the Robustness of Sparse Autoencoders",
       "authors": [
-        "Anastasiia Filippova",
-        "David Grangier",
-        "Marco Cuturi",
-        "João Monteiro"
+        "Ahson Saiyed",
+        "Sabrina Sadiekh",
+        "Chirag Agarwal"
       ],
-      "abstract": "Serving transformer language models with high throughput requires caching Key-Values (KVs) to avoid redundant computation during autoregressive generation. The memory footprint of KV caching is significant and heavily impacts serving costs. This work proposes to lessen these memory requirements. While recent work has largely addressed KV cache reduction via compression and eviction along the temporal axis, we argue that the depth dimension offers an orthogonal and robust avenue for optimization. Although prior research suggests that a full cache for every layer is redundant, implementing cross-layer cache sharing remains a practical challenge; existing methods typically suffer from reduced throughput or increased time-to-first-token. In this paper, we demonstrate that dropping a layer's cache offers efficient optimization without information loss. We propose a simple training approach: random cross-layer attention. During training, layers randomly choose to attend either to their own KV states or those of a preceding layer. This stochastic process adapts the model to be robust to various depth-wise cache sharing strategies, ensuring flexibility for unknown hardware constraints at deployment time. Our evaluations show that applying this scheme during pre-training or fine-tuning enables depth-wise cache sharing for various model families. Furthermore, for larger models in data-constrained settings, this approach is suggestive of a regularization-like effect, frequently preserving or improving performance while significantly reducing the cache's memory footprint.",
-      "hf_url": "https://huggingface.co/papers/2604.22782",
-      "arxiv_url": "https://arxiv.org/abs/2604.22782",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.22782",
-      "papers_cool_url": "https://papers.cool/arxiv/2604.22782",
+      "abstract": "Large Language Models (LLMs) remain vulnerable to optimization-based jailbreak attacks that exploit internal gradient structure. While Sparse Autoencoders (SAEs) are widely used for interpretability, their robustness implications remain underexplored. We present a study of integrating pretrained SAEs into transformer residual streams at inference time, without modifying model weights or blocking gradients. Across four model families (Gemma, LLaMA, Mistral, Qwen) and two strong white-box attacks (GCG, BEAST) plus three black-box benchmarks, SAE-augmented models achieve up to a 5x reduction in jailbreak success rate relative to the undefended baseline and reduce cross-model attack transferability. Parametric ablations reveal (i) a monotonic dose-response relationship between L0 sparsity and attack success rate, and (ii) a layer-dependent defense-utility tradeoff, where intermediate layers balance robustness and clean performance. These findings are consistent with a representational bottleneck hypothesis: sparse projection reshapes the optimization geometry exploited by jailbreak attacks.",
+      "hf_url": "https://huggingface.co/papers/2604.18756",
+      "arxiv_url": "https://arxiv.org/abs/2604.18756",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.18756",
+      "papers_cool_url": "https://papers.cool/arxiv/2604.18756",
       "github_url": "",
-      "submitted_by": "taesiri",
-      "submitted_at": "2026-04-28T01:57:34.273Z",
+      "submitted_by": "Chirag Agarwal",
+      "submitted_at": "2026-04-28T23:47:08.102Z",
       "upvotes": 1,
-      "comments": 0,
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
-      "matched_terms": [],
+      "comments": 2,
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
+      "matched_terms": [
+        "\\bsparse\\b"
+      ],
       "classification_source": "rule",
       "classification_confidence": null
     },
@@ -2206,12 +2588,38 @@
       "submitted_by": "Zhang",
       "submitted_at": "2026-04-28T11:43:42.912Z",
       "upvotes": 1,
-      "comments": 1,
+      "comments": 2,
       "topic_key": "robotics_embodied",
       "topic_label": "Robotics and Embodied AI",
       "matched_terms": [
         "\\brobot(ic|ics)?\\b"
       ],
+      "classification_source": "rule",
+      "classification_confidence": null
+    },
+    {
+      "report_date": "2026-04-28",
+      "paper_id": "2604.24170",
+      "title": "Credal Concept Bottleneck Models for Epistemic-Aleatoric Uncertainty Decomposition",
+      "authors": [
+        "Tanmoy Mukherjee",
+        "Thomas Bailleux",
+        "Pierre Marquis",
+        "Zied Bouraoui"
+      ],
+      "abstract": "Concept Bottleneck Models (CBMs) predict through human-interpretable concepts, but they typically output point concept probabilities that conflate epistemic uncertainty (reducible model underspecification) with aleatoric uncertainty (irreducible input ambiguity). This makes concept-level uncertainty hard to interpret and, more importantly, hard to act upon. We introduce CREDENCE (Credal Ensemble Concept Estimation), a CBM framework that decomposes concept uncertainty by construction. CREDENCE represents each concept as a credal prediction (a probability interval), derives epistemic uncertainty from disagreement across diverse concept heads, and estimates aleatoric uncertainty via a dedicated ambiguity output trained to match annotator disagreement when available. The resulting signals support prescriptive decisions: automate low-uncertainty cases, prioritize data collection for high-epistemic cases, route high-aleatoric cases to human review, and abstain when both are high. Across several tasks, we show that epistemic uncertainty is positively associated with prediction errors, whereas aleatoric uncertainty closely tracks annotator disagreement, providing guidance beyond error correlation. Our implementation is available at the following link: https://github.com/Tankiit/Credal_Sets/tree/ensemble-credal-cbm",
+      "hf_url": "https://huggingface.co/papers/2604.24170",
+      "arxiv_url": "https://arxiv.org/abs/2604.24170",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.24170",
+      "papers_cool_url": "https://papers.cool/arxiv/2604.24170",
+      "github_url": "",
+      "submitted_by": "Tanmoy Mukherjee",
+      "submitted_at": "2026-04-28T16:15:17.370Z",
+      "upvotes": 0,
+      "comments": 2,
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
+      "matched_terms": [],
       "classification_source": "rule",
       "classification_confidence": null
     },
@@ -2243,7 +2651,7 @@
       "submitted_by": "Sebastián Andres Cajas Ordóñez",
       "submitted_at": "2026-04-28T10:41:38.309Z",
       "upvotes": 0,
-      "comments": 1,
+      "comments": 2,
       "topic_key": "domain_applications",
       "topic_label": "Domain Applications",
       "matched_terms": [
@@ -2254,28 +2662,29 @@
     },
     {
       "report_date": "2026-04-28",
-      "paper_id": "2604.24479",
-      "title": "Zero-to-CAD: Agentic Synthesis of Interpretable CAD Programs at Million-Scale Without Real Data",
+      "paper_id": "2604.23600",
+      "title": "Personality Shapes Gender Bias in Persona-Conditioned LLM Narratives Across English and Hindi: An Empirical Investigation",
       "authors": [
-        "Mohammadmehdi Ataei",
-        "Farzaneh Askari",
-        "Kamal Rahimi Malekshan",
-        "Pradeep Kumar Jayaraman"
+        "Tanay Kumar",
+        "Shreya Gautam",
+        "Aman Chadha",
+        "Vinija Jain",
+        "Francesco Pierri"
       ],
-      "abstract": "Computer-Aided Design (CAD) models are defined by their construction history: a parametric recipe that encodes design intent. However, existing large-scale 3D datasets predominantly consist of boundary representations (B-Reps) or meshes, stripping away this critical procedural information. To address this scarcity, we introduce Zero-to-CAD, a scalable framework for synthesizing executable CAD construction sequences. We frame synthesis as an agentic search problem: by embedding a large language model (LLM) within a feedback-driven CAD environment, our system iteratively generates, executes, and validates code using tools and documentation lookup to promote geometric validity and operation diversity. This agentic approach enables the synthesis of approximately one million executable, readable, editable CAD sequences, covering a rich vocabulary of operations beyond sketch-and-extrude workflows. We also release a curated subset of 100,000 high-quality models selected for geometric diversity. To demonstrate the dataset's utility, we fine-tune a vision-language model on our synthetic data to reconstruct editable CAD programs from multi-view images, outperforming strong baselines, including GPT-5.2, and effectively bootstrapping sequence generation capabilities without real construction-history training data. Zero-to-CAD bridges the gap between geometric scale and parametric interpretability, offering a vital resource for the next generation of CAD AI.",
-      "hf_url": "https://huggingface.co/papers/2604.24479",
-      "arxiv_url": "https://arxiv.org/abs/2604.24479",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.24479",
-      "papers_cool_url": "https://papers.cool/arxiv/2604.24479",
+      "abstract": "Large Language Models (LLMs) are increasingly deployed in persona-driven applications such as education, customer service, and social platforms, where models are prompted to adopt specific personas when interacting with users. While persona conditioning can improve user experience and engagement, it also raises concerns about how personality cues may interact with gender biases and stereotypes. In this work, we present a controlled study of persona-conditioned story generation in English and Hindi, where each story portrays a working professional in India producing context-specific artifacts (e.g., lesson plans, reports, letters) under systematically varied persona gender, occupational role, and personality traits from the HEXACO and Dark Triad frameworks. Across 23,400 generated stories from six state-of-the-art LLMs, we find that personality traits are significantly associated with both the magnitude and direction of gender bias. In particular, Dark Triad personality traits are consistently associated with higher gender-stereotypical representations compared to socially desirable HEXACO traits, though these associations vary across models and languages. Our findings demonstrate that gender bias in LLMs is not static but context-dependent. This suggests that persona-conditioned systems used in real-world applications may introduce uneven representational harms, reinforcing gender stereotypes in generated educational, professional, or social content.",
+      "hf_url": "https://huggingface.co/papers/2604.23600",
+      "arxiv_url": "https://arxiv.org/abs/2604.23600",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2604.23600",
+      "papers_cool_url": "https://papers.cool/arxiv/2604.23600",
       "github_url": "",
-      "submitted_by": "taesiri",
-      "submitted_at": "2026-04-28T02:03:05.685Z",
+      "submitted_by": "Aman Chadha",
+      "submitted_at": "2026-04-28T18:08:09.703Z",
       "upvotes": 0,
-      "comments": 0,
-      "topic_key": "agents_planning",
-      "topic_label": "Agents and Planning",
+      "comments": 2,
+      "topic_key": "reasoning_alignment_eval",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [
-        "\\bagentic\\b"
+        "\\bbias\\b"
       ],
       "classification_source": "rule",
       "classification_confidence": null
