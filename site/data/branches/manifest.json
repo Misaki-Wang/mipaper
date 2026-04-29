@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-04-28T15:48:12Z",
-  "reports_count": 184,
+  "generated_at": "2026-04-29T13:20:16Z",
+  "reports_count": 187,
   "branches": [
     {
       "branch_key": "daily",
       "branch_label": "Cool Daily",
-      "reports_count": 126,
-      "default_report_path": "data/daily/reports/2026-04-28/cs.AI-2026-04-28.json",
+      "reports_count": 129,
+      "default_report_path": "data/daily/reports/2026-04-29/cs.AI-2026-04-29.json",
       "manifest_path": "data/daily/manifest.json"
     },
     {
@@ -32,6 +32,186 @@
     }
   ],
   "reports": [
+    {
+      "branch_key": "daily",
+      "branch_label": "Cool Daily",
+      "search_text": "daily Cool Daily cs.AI-2026-04-29 data/daily/reports/2026-04-29/cs.AI-2026-04-29.json https://papers.cool/arxiv/cs.AI?date=2026-04-29&show=1000 codex 2026-04-29 cs.AI Generative Foundations Multimodal Generative Modeling Multimodal Agents LLMs and Language Other AI Learning, Optimization, and Theory Agents and Planning Reasoning, Alignment, and Evaluation",
+      "data_path": "data/daily/reports/2026-04-29/cs.AI-2026-04-29.json",
+      "slug": "cs.AI-2026-04-29",
+      "report_date": "2026-04-29",
+      "category": "cs.AI",
+      "total_papers": 178,
+      "classifier": "codex",
+      "generated_at": "2026-04-29T13:10:39Z",
+      "source_url": "https://papers.cool/arxiv/cs.AI?date=2026-04-29&show=1000",
+      "focus_topics": [
+        {
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "count": 0,
+          "share": 0.0
+        },
+        {
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 1,
+          "share": 0.56
+        },
+        {
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "count": 0,
+          "share": 0.0
+        }
+      ],
+      "top_topics": [
+        {
+          "topic_label": "LLMs and Language",
+          "count": 39,
+          "share": 21.91
+        },
+        {
+          "topic_label": "Other AI",
+          "count": 34,
+          "share": 19.1
+        },
+        {
+          "topic_label": "Learning, Optimization, and Theory",
+          "count": 27,
+          "share": 15.17
+        },
+        {
+          "topic_label": "Agents and Planning",
+          "count": 23,
+          "share": 12.92
+        },
+        {
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "count": 18,
+          "share": 10.11
+        }
+      ]
+    },
+    {
+      "branch_key": "daily",
+      "branch_label": "Cool Daily",
+      "search_text": "daily Cool Daily cs.CL-2026-04-29 data/daily/reports/2026-04-29/cs.CL-2026-04-29.json https://papers.cool/arxiv/cs.CL?date=2026-04-29&show=1000 codex 2026-04-29 cs.CL Generative Foundations Multimodal Generative Modeling Multimodal Agents LLMs and Language Learning, Optimization, and Theory Reasoning, Alignment, and Evaluation Agents and Planning Other AI",
+      "data_path": "data/daily/reports/2026-04-29/cs.CL-2026-04-29.json",
+      "slug": "cs.CL-2026-04-29",
+      "report_date": "2026-04-29",
+      "category": "cs.CL",
+      "total_papers": 80,
+      "classifier": "codex",
+      "generated_at": "2026-04-29T13:14:31Z",
+      "source_url": "https://papers.cool/arxiv/cs.CL?date=2026-04-29&show=1000",
+      "focus_topics": [
+        {
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "count": 0,
+          "share": 0.0
+        },
+        {
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 0,
+          "share": 0.0
+        },
+        {
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "count": 0,
+          "share": 0.0
+        }
+      ],
+      "top_topics": [
+        {
+          "topic_label": "LLMs and Language",
+          "count": 26,
+          "share": 32.5
+        },
+        {
+          "topic_label": "Learning, Optimization, and Theory",
+          "count": 10,
+          "share": 12.5
+        },
+        {
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "count": 9,
+          "share": 11.25
+        },
+        {
+          "topic_label": "Agents and Planning",
+          "count": 7,
+          "share": 8.75
+        },
+        {
+          "topic_label": "Other AI",
+          "count": 7,
+          "share": 8.75
+        }
+      ]
+    },
+    {
+      "branch_key": "daily",
+      "branch_label": "Cool Daily",
+      "search_text": "daily Cool Daily cs.CV-2026-04-29 data/daily/reports/2026-04-29/cs.CV-2026-04-29.json https://papers.cool/arxiv/cs.CV?date=2026-04-29&show=1000 codex 2026-04-29 cs.CV Generative Foundations Multimodal Generative Modeling Multimodal Agents Multimodal Understanding and Vision Other AI Learning, Optimization, and Theory Datasets and Benchmarks Reasoning, Alignment, and Evaluation",
+      "data_path": "data/daily/reports/2026-04-29/cs.CV-2026-04-29.json",
+      "slug": "cs.CV-2026-04-29",
+      "report_date": "2026-04-29",
+      "category": "cs.CV",
+      "total_papers": 86,
+      "classifier": "codex",
+      "generated_at": "2026-04-29T13:20:15Z",
+      "source_url": "https://papers.cool/arxiv/cs.CV?date=2026-04-29&show=1000",
+      "focus_topics": [
+        {
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "count": 0,
+          "share": 0.0
+        },
+        {
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 2,
+          "share": 2.33
+        },
+        {
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "count": 1,
+          "share": 1.16
+        }
+      ],
+      "top_topics": [
+        {
+          "topic_label": "Multimodal Understanding and Vision",
+          "count": 34,
+          "share": 39.53
+        },
+        {
+          "topic_label": "Other AI",
+          "count": 17,
+          "share": 19.77
+        },
+        {
+          "topic_label": "Learning, Optimization, and Theory",
+          "count": 7,
+          "share": 8.14
+        },
+        {
+          "topic_label": "Datasets and Benchmarks",
+          "count": 6,
+          "share": 6.98
+        },
+        {
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "count": 6,
+          "share": 6.98
+        }
+      ]
+    },
     {
       "branch_key": "daily",
       "branch_label": "Cool Daily",
