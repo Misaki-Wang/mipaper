@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import os
+import socket
 import smtplib
 from email.message import EmailMessage
 
@@ -14,25 +15,45 @@ class EmailNotifier:
         self.sender = require_env("COOL_PAPER_EMAIL_FROM")
         self.recipients = resolve_recipients()
         self.security = os.getenv("COOL_PAPER_SMTP_SECURITY", "starttls").lower()
+        self.timeout = float(os.getenv("COOL_PAPER_SMTP_TIMEOUT_SECONDS", "30"))
 
-    def send(self, subject: str, body: str) -> None:
+    def send(self, subject: str, body: str, html_body: str | None = None) -> None:
         message = EmailMessage()
         message["Subject"] = subject
         message["From"] = self.sender
         message["To"] = ", ".join(self.recipients)
         message.set_content(body)
+        if html_body:
+            message.add_alternative(html_body, subtype="html")
 
         if self.security == "ssl":
-            with smtplib.SMTP_SSL(self.host, self.port) as smtp:
-                smtp.login(self.username, self.password)
-                smtp.send_message(message)
+            self._send_with_retry(message, use_ssl=True)
             return
 
-        with smtplib.SMTP(self.host, self.port) as smtp:
-            if self.security == "starttls":
-                smtp.starttls()
-            smtp.login(self.username, self.password)
-            smtp.send_message(message)
+        self._send_with_retry(message, use_ssl=False)
+
+    def _send_with_retry(self, message: EmailMessage, *, use_ssl: bool) -> None:
+        errors: list[OSError] = []
+        for host in smtp_host_candidates(self.host, self.port):
+            try:
+                if use_ssl:
+                    with smtplib.SMTP_SSL(host, self.port, timeout=self.timeout) as smtp:
+                        smtp.login(self.username, self.password)
+                        smtp.send_message(message)
+                    return
+
+                with smtplib.SMTP(host, self.port, timeout=self.timeout) as smtp:
+                    if self.security == "starttls":
+                        smtp.starttls()
+                    smtp.login(self.username, self.password)
+                    smtp.send_message(message)
+                return
+            except OSError as exc:
+                errors.append(exc)
+
+        if errors:
+            raise errors[-1]
+        raise OSError(f"No SMTP host candidates resolved for {self.host}:{self.port}")
 
 
 def require_env(name: str) -> str:
@@ -56,3 +77,17 @@ def resolve_recipients() -> list[str]:
 
 def parse_csv_emails(value: str) -> list[str]:
     return [item.strip() for item in str(value or "").split(",") if item.strip()]
+
+
+def smtp_host_candidates(host: str, port: int) -> list[str]:
+    candidates = [host]
+    try:
+        infos = socket.getaddrinfo(host, port, family=socket.AF_INET, proto=socket.IPPROTO_TCP)
+    except OSError:
+        return candidates
+
+    for info in infos:
+        address = info[4][0]
+        if address not in candidates:
+            candidates.append(address)
+    return candidates

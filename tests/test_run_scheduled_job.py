@@ -9,6 +9,7 @@ from unittest import mock
 import scripts.run_scheduled_job as scheduled_job
 from scripts.run_scheduled_job import (
     build_classifier_args,
+    build_hf_daily_notification_html,
     build_hf_daily_notification_section,
     build_notification_body,
     build_notification_subject,
@@ -152,6 +153,50 @@ class RunScheduledJobTest(unittest.TestCase):
         self.assertIn("- Trend: Multimodal work is rising.", section)
         self.assertIn("[Multimodal]", section)
         self.assertIn("- [Vision Test][7 upvotes][Tests a vision-language model.]", section)
+
+    def test_build_hf_daily_notification_html_renders_digest_table(self) -> None:
+        with TemporaryDirectory() as tmp_dir:
+            base_dir = Path(tmp_dir)
+            report_date = "2026-03-19"
+            report_path = base_dir / report_date / f"hf-daily-{report_date}.json"
+            report_path.parent.mkdir(parents=True, exist_ok=True)
+            report_path.write_text(
+                json.dumps(
+                    {
+                        "report_date": report_date,
+                        "classifier": "codex",
+                        "total_papers": 1,
+                        "daily_digest": {
+                            "main_hotspots": ["Multimodal: 1 papers."],
+                            "trend_summary": "Multimodal work is rising.",
+                        },
+                        "topics": [
+                            {
+                                "topic_label": "Multimodal",
+                                "papers": [
+                                    {
+                                        "title": "Vision <Test>",
+                                        "hf_url": "https://huggingface.co/papers/1",
+                                        "upvotes": 7,
+                                        "upvote_label": "7 upvotes",
+                                        "one_sentence_summary": "Tests a vision-language model.",
+                                    }
+                                ],
+                            }
+                        ],
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            html = build_hf_daily_notification_html([report_date], "Asia/Shanghai", base_dir=base_dir)
+
+        self.assertIn("Daily paper brief", html)
+        self.assertIn("Main hotspots", html)
+        self.assertIn("Multimodal work is rising.", html)
+        self.assertIn("Vision &lt;Test&gt;", html)
+        self.assertIn("7 upvotes", html)
+        self.assertIn("One-line summary", html)
 
     def test_normalize_job_name_maps_legacy_weekly_to_magazine(self) -> None:
         self.assertEqual("magazine", normalize_job_name("weekly"))

@@ -9,6 +9,7 @@ import subprocess
 import sys
 import time
 from datetime import datetime
+from html import escape
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -384,7 +385,7 @@ def build_hf_daily_notification_section(date_window: list[str], base_dir: Path =
             lines.append(f"- {report_date}: report JSON unavailable at {report_path}")
             continue
 
-        report = json.loads(report_path.read_text(encoding="utf-8"))
+        report = load_hf_daily_report(report_date, base_dir=base_dir)
         digest = report.get("daily_digest") or {}
         lines.extend(
             [
@@ -401,15 +402,7 @@ def build_hf_daily_notification_section(date_window: list[str], base_dir: Path =
         lines.append(f"{report_date} categorized papers:")
         for topic in report.get("topics", []):
             topic_label = topic.get("topic_label", "Uncategorized")
-            papers = sorted(
-                topic.get("papers", []),
-                key=lambda paper: (
-                    paper.get("upvotes") if isinstance(paper.get("upvotes"), int) else -1,
-                    paper.get("comments") if isinstance(paper.get("comments"), int) else -1,
-                    paper.get("title", ""),
-                ),
-                reverse=True,
-            )
+            papers = sorted_hf_topic_papers(topic.get("papers", []))
             lines.append(f"[{topic_label}]")
             for paper in papers:
                 title = paper.get("title", "Untitled")
@@ -417,6 +410,23 @@ def build_hf_daily_notification_section(date_window: list[str], base_dir: Path =
                 summary = paper.get("one_sentence_summary") or paper.get("summary") or "No one-sentence summary available."
                 lines.append(f"- [{title}][{upvote}][{summary}]")
     return lines
+
+
+def load_hf_daily_report(report_date: str, base_dir: Path = HF_DAILY_REPORTS_DIR) -> dict:
+    report_path = hf_daily_report_json_path(report_date, base_dir=base_dir)
+    return json.loads(report_path.read_text(encoding="utf-8"))
+
+
+def sorted_hf_topic_papers(papers: list[dict]) -> list[dict]:
+    return sorted(
+        papers,
+        key=lambda paper: (
+            paper.get("upvotes") if isinstance(paper.get("upvotes"), int) else -1,
+            paper.get("comments") if isinstance(paper.get("comments"), int) else -1,
+            paper.get("title", ""),
+        ),
+        reverse=True,
+    )
 
 
 def format_email_upvote(value: object) -> str:
@@ -427,6 +437,124 @@ def format_email_upvote(value: object) -> str:
     return f"{value} upvotes"
 
 
+def build_notification_html_body(
+    job: str,
+    date_window: list[str],
+    timezone_name: str,
+    now: datetime | None = None,
+) -> str | None:
+    if job != "hf_daily":
+        return None
+    return build_hf_daily_notification_html(date_window, timezone_name, now=now)
+
+
+def build_hf_daily_notification_html(
+    date_window: list[str],
+    timezone_name: str,
+    now: datetime | None = None,
+    base_dir: Path = HF_DAILY_REPORTS_DIR,
+) -> str:
+    page_url = resolve_public_page_url("hf_daily")
+    updated_at = local_now(timezone_name, now).isoformat()
+    report_sections: list[str] = []
+
+    for report_date in date_window:
+        report_path = hf_daily_report_json_path(report_date, base_dir=base_dir)
+        if not report_path.exists():
+            report_sections.append(
+                f"""
+                <section style="margin:24px 0;padding:18px;border:1px solid #f3c5c5;border-radius:10px;background:#fff7f7;">
+                  <h2 style="margin:0 0 8px;font-size:18px;color:#991b1b;">{escape(report_date)}</h2>
+                  <p style="margin:0;color:#7f1d1d;">Report JSON unavailable at {escape(str(report_path))}</p>
+                </section>
+                """
+            )
+            continue
+
+        report = load_hf_daily_report(report_date, base_dir=base_dir)
+        digest = report.get("daily_digest") or {}
+        hotspots = digest.get("main_hotspots", [])
+        trend_summary = digest.get("trend_summary", "")
+        topic_blocks = []
+        for topic in report.get("topics", []):
+            topic_label = topic.get("topic_label", "Uncategorized")
+            papers = sorted_hf_topic_papers(topic.get("papers", []))
+            rows = []
+            for paper in papers:
+                title = paper.get("title", "Untitled")
+                upvote = paper.get("upvote_label") or format_email_upvote(paper.get("upvotes"))
+                summary = paper.get("one_sentence_summary") or paper.get("summary") or "No one-sentence summary available."
+                href = paper.get("hf_url") or paper.get("arxiv_pdf_url") or paper.get("arxiv_url") or ""
+                title_html = (
+                    f'<a href="{escape(href, quote=True)}" style="color:#155eef;text-decoration:none;">{escape(title)}</a>'
+                    if href
+                    else escape(title)
+                )
+                rows.append(
+                    f"""
+                    <tr>
+                      <td style="padding:10px 12px;border-top:1px solid #e5e7eb;vertical-align:top;font-weight:600;color:#111827;">{title_html}</td>
+                      <td style="padding:10px 12px;border-top:1px solid #e5e7eb;vertical-align:top;white-space:nowrap;color:#4b5563;">{escape(upvote)}</td>
+                      <td style="padding:10px 12px;border-top:1px solid #e5e7eb;vertical-align:top;color:#374151;line-height:1.5;">{escape(summary)}</td>
+                    </tr>
+                    """
+                )
+
+            topic_blocks.append(
+                f"""
+                <section style="margin:22px 0 0;">
+                  <h3 style="margin:0 0 10px;font-size:16px;color:#111827;">{escape(topic_label)} <span style="font-weight:400;color:#6b7280;">({len(papers)} papers)</span></h3>
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border:1px solid #e5e7eb;border-radius:10px;overflow:hidden;background:#ffffff;">
+                    <thead>
+                      <tr style="background:#f8fafc;">
+                        <th align="left" style="padding:9px 12px;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:#64748b;">Title</th>
+                        <th align="left" style="padding:9px 12px;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:#64748b;">Upvote</th>
+                        <th align="left" style="padding:9px 12px;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:#64748b;">One-line summary</th>
+                      </tr>
+                    </thead>
+                    <tbody>{''.join(rows)}</tbody>
+                  </table>
+                </section>
+                """
+            )
+
+        report_sections.append(
+            f"""
+            <section style="margin:24px 0;padding:20px;border:1px solid #dbeafe;border-radius:12px;background:#ffffff;">
+              <h2 style="margin:0 0 8px;font-size:20px;color:#0f172a;">HF Daily {escape(report_date)}</h2>
+              <p style="margin:0 0 14px;color:#475569;">{escape(str(report.get('total_papers', 0)))} papers · classifier: {escape(str(report.get('classifier', '-')))}</p>
+              <div style="margin:16px 0;padding:14px 16px;border-radius:10px;background:#eff6ff;border:1px solid #bfdbfe;">
+                <h3 style="margin:0 0 8px;font-size:15px;color:#1e3a8a;">Main hotspots</h3>
+                <ul style="margin:0;padding-left:20px;color:#1f2937;line-height:1.55;">{''.join(f'<li>{escape(item)}</li>' for item in hotspots)}</ul>
+              </div>
+              <div style="margin:16px 0;padding:14px 16px;border-radius:10px;background:#f8fafc;border:1px solid #e2e8f0;">
+                <h3 style="margin:0 0 8px;font-size:15px;color:#334155;">Trend signal</h3>
+                <p style="margin:0;color:#334155;line-height:1.6;">{escape(trend_summary)}</p>
+              </div>
+              {''.join(topic_blocks)}
+            </section>
+            """
+        )
+
+    return f"""<!doctype html>
+<html>
+  <body style="margin:0;padding:0;background:#f1f5f9;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;color:#111827;">
+    <div style="max-width:920px;margin:0 auto;padding:28px 18px;">
+      <header style="padding:22px 24px;border-radius:14px;background:#0f172a;color:#ffffff;">
+        <p style="margin:0 0 6px;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#bfdbfe;">MiPaper HF Daily</p>
+        <h1 style="margin:0;font-size:24px;line-height:1.25;">Daily paper brief</h1>
+        <p style="margin:12px 0 0;color:#cbd5e1;line-height:1.5;">Updated at {escape(updated_at)} · Date window: {escape(summarize_date_window(date_window))}</p>
+        <p style="margin:14px 0 0;"><a href="{escape(page_url, quote=True)}" style="display:inline-block;padding:9px 14px;border-radius:8px;background:#2563eb;color:#ffffff;text-decoration:none;font-weight:600;">Open HF Daily branch</a></p>
+      </header>
+      {''.join(report_sections)}
+      <footer style="padding:6px 2px 18px;color:#64748b;font-size:12px;line-height:1.5;">
+        This email includes the same report data published to the HF Daily branch. Plain-text fallback is included for clients that do not render HTML.
+      </footer>
+    </div>
+  </body>
+</html>"""
+
+
 def send_update_notification(job: str, date_window: list[str], timezone_name: str, now: datetime | None = None) -> None:
     if not should_send_email_notification():
         print("Notification: skipped")
@@ -434,7 +562,8 @@ def send_update_notification(job: str, date_window: list[str], timezone_name: st
 
     subject = build_notification_subject(job, date_window)
     body = build_notification_body(job, date_window, timezone_name, now=now)
-    EmailNotifier().send(subject=subject, body=body)
+    html_body = build_notification_html_body(job, date_window, timezone_name, now=now)
+    EmailNotifier().send(subject=subject, body=body, html_body=html_body)
     print("Notification: email sent")
 
 
