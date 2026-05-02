@@ -484,7 +484,7 @@ def build_hf_daily_notification_html(
                 title = paper.get("title", "Untitled")
                 upvote = paper.get("upvote_label") or format_email_upvote(paper.get("upvotes"))
                 summary = paper.get("one_sentence_summary") or paper.get("summary") or "No one-sentence summary available."
-                href = paper.get("hf_url") or paper.get("arxiv_pdf_url") or paper.get("arxiv_url") or ""
+                href = paper.get("arxiv_pdf_url") or paper.get("arxiv_url") or paper.get("hf_url") or ""
                 title_html = (
                     f'<a href="{escape(href, quote=True)}" style="color:#155eef;text-decoration:none;">{escape(title)}</a>'
                     if href

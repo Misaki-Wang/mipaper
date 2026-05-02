@@ -177,6 +177,7 @@ class RunScheduledJobTest(unittest.TestCase):
                                     {
                                         "title": "Vision <Test>",
                                         "hf_url": "https://huggingface.co/papers/1",
+                                        "arxiv_pdf_url": "https://arxiv.org/pdf/2603.00001",
                                         "upvotes": 7,
                                         "upvote_label": "7 upvotes",
                                         "one_sentence_summary": "Tests a vision-language model.",
@@ -194,6 +195,8 @@ class RunScheduledJobTest(unittest.TestCase):
         self.assertIn("Daily paper brief", html)
         self.assertIn("Main hotspots", html)
         self.assertIn("Multimodal work is rising.", html)
+        self.assertIn('href="https://arxiv.org/pdf/2603.00001"', html)
+        self.assertNotIn('href="https://huggingface.co/papers/1"', html)
         self.assertIn("Vision &lt;Test&gt;", html)
         self.assertIn("7 upvotes", html)
         self.assertIn("One-line summary", html)
