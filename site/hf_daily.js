@@ -331,21 +331,26 @@ function renderHero(report, visiblePapers) {
 function renderOverview(report, visiblePapers, topics) {
   const topTopic = report.topic_distribution?.[0];
   const topSubmitter = report.top_submitters?.[0];
+  const digest = report.daily_digest || {};
   const focusCount = visiblePapers.filter((paper) => focusTopicKeys.has(paper.topic_key)).length;
   const focusShare = visiblePapers.length ? (focusCount / visiblePapers.length) * 100 : 0;
   document.querySelector("#hf-overview-title").textContent = `${report.report_date} HF Daily Overview`;
   document.querySelector("#hf-source-link").href = report.source_url;
   document.querySelector("#hf-source-link").textContent = "Source";
-  document.querySelector("#hf-overview-summary").textContent = topTopic
+  document.querySelector("#hf-overview-summary").textContent = digest.main_hotspots?.length
+    ? digest.main_hotspots.join(" ")
+    : topTopic
     ? `${topTopic.topic_label} is the top topic for the day, with ${topTopic.count} papers and ${topTopic.share.toFixed(2)}% share.`
     : "This report does not have a topic distribution yet.";
   document.querySelector("#hf-submitter-summary").textContent = topSubmitter
     ? `${topSubmitter.submitted_by} is the most active submitter today, with ${topSubmitter.count} papers。`
     : "The page does not expose stable submitter statistics.";
-  document.querySelector("#hf-focus-summary").textContent = `${focusCount} papers hit your focus topics, accounting for ${focusShare.toFixed(
+  document.querySelector("#hf-focus-summary").textContent =
+    digest.trend_summary ||
+    `${focusCount} papers hit your focus topics, accounting for ${focusShare.toFixed(2)}% of the current view.`;
+  document.querySelector("#hf-breadth-summary").textContent = `Currently visible: ${visiblePapers.length} papers across ${topics.length} topics; focus topics cover ${focusCount} papers / ${focusShare.toFixed(
     2
-  )}% of the current view.`;
-  document.querySelector("#hf-breadth-summary").textContent = `Currently visible: ${visiblePapers.length} papers across ${topics.length} topics.`;
+  )}%.`;
 }
 
 function renderDistribution(report, visiblePapers) {
@@ -558,6 +563,7 @@ function renderPaperCard(paper, workspaceLookup = createBranchWorkspaceLookup())
     <article class="conference-paper-card">
       <div class="conference-paper-top">${metaBadges}</div>
       <h4>${escapeHtml(paper.title)}</h4>
+      <p class="paper-summary">${escapeHtml(getPaperOneSentenceSummary(paper))}</p>
       <div class="branch-card-inline-details">
         ${inlineAuthors}
         ${abstract}
@@ -567,6 +573,19 @@ function renderPaperCard(paper, workspaceLookup = createBranchWorkspaceLookup())
       <div class="paper-links">${links}</div>
     </article>
   `;
+}
+
+function getPaperOneSentenceSummary(paper) {
+  if (paper.one_sentence_summary) {
+    return paper.one_sentence_summary;
+  }
+  const abstract = (paper.abstract || "").replace(/\s+/g, " ").trim();
+  if (!abstract) {
+    return `This paper contributes to ${paper.topic_label || "AI research"} through the problem framed in its title.`;
+  }
+  const match = abstract.match(/(?<=[.!?])\s+(?=[A-Z0-9])/);
+  const summary = match ? abstract.slice(0, match.index).trim() : abstract;
+  return summary.length > 220 ? `${summary.slice(0, 219).trim().replace(/\s+\S*$/, "")}…` : summary;
 }
 
 function renderPaperLink({ href, label, brand }) {

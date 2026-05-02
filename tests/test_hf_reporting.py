@@ -36,6 +36,9 @@ class HFDailyReportingTest(unittest.TestCase):
         )
 
         self.assertIn("## Top Submitters", markdown)
+        self.assertIn("## Today's Hotspots and Trend", markdown)
+        self.assertIn("## Categorized Paper Briefs", markdown)
+        self.assertIn("[Upvote: 42] A compact summary.", markdown)
         self.assertIn("taesiri: 1 papers", markdown)
         self.assertIn("Upvotes: 42", markdown)
         self.assertIn("[Cool](https://papers.cool/arxiv/2603.01234)", markdown)
@@ -44,6 +47,8 @@ class HFDailyReportingTest(unittest.TestCase):
         self.assertEqual("taesiri", payload["top_submitters"][0]["submitted_by"])
         self.assertEqual("https://huggingface.co/papers/2603.01234", payload["papers"][0]["hf_url"])
         self.assertEqual("https://papers.cool/arxiv/2603.01234", payload["papers"][0]["papers_cool_url"])
+        self.assertEqual("A compact summary.", payload["papers"][0]["one_sentence_summary"])
+        self.assertIn("trend_summary", payload["daily_digest"])
 
 
 if __name__ == "__main__":

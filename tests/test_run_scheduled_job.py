@@ -9,6 +9,7 @@ from unittest import mock
 import scripts.run_scheduled_job as scheduled_job
 from scripts.run_scheduled_job import (
     build_classifier_args,
+    build_hf_daily_notification_section,
     build_notification_body,
     build_notification_subject,
     normalize_job_name,
@@ -113,6 +114,44 @@ class RunScheduledJobTest(unittest.TestCase):
         self.assertIn("Job: Magazine", body)
         self.assertIn("Page: magazine.html", body)
         self.assertIn("Source: ruanyf/weekly", body)
+
+    def test_build_hf_daily_notification_section_lists_digest_and_papers(self) -> None:
+        with TemporaryDirectory() as tmp_dir:
+            base_dir = Path(tmp_dir)
+            report_date = "2026-03-19"
+            report_path = base_dir / report_date / f"hf-daily-{report_date}.json"
+            report_path.parent.mkdir(parents=True, exist_ok=True)
+            report_path.write_text(
+                json.dumps(
+                    {
+                        "daily_digest": {
+                            "main_hotspots": ["Multimodal: 1 papers."],
+                            "trend_summary": "Multimodal work is rising.",
+                        },
+                        "topics": [
+                            {
+                                "topic_label": "Multimodal",
+                                "papers": [
+                                    {
+                                        "title": "Vision Test",
+                                        "upvotes": 7,
+                                        "upvote_label": "7 upvotes",
+                                        "one_sentence_summary": "Tests a vision-language model.",
+                                    }
+                                ],
+                            }
+                        ],
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            section = "\n".join(build_hf_daily_notification_section([report_date], base_dir=base_dir))
+
+        self.assertIn("HF Daily digest:", section)
+        self.assertIn("- Trend: Multimodal work is rising.", section)
+        self.assertIn("[Multimodal]", section)
+        self.assertIn("- [Vision Test][7 upvotes][Tests a vision-language model.]", section)
 
     def test_normalize_job_name_maps_legacy_weekly_to_magazine(self) -> None:
         self.assertEqual("magazine", normalize_job_name("weekly"))

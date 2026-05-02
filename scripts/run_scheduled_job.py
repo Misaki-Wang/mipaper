@@ -18,7 +18,7 @@ if str(ROOT_DIR) not in sys.path:
 
 from mipaper.notifiers import EmailNotifier
 from mipaper.paths import SCHEDULE_STATE_PATH
-from mipaper.paths import DAILY_REPORTS_DIR
+from mipaper.paths import DAILY_REPORTS_DIR, HF_DAILY_REPORTS_DIR
 from mipaper.scheduler import (
     cool_daily_backfill_dates,
     hf_daily_backfill_dates,
@@ -355,6 +355,8 @@ def build_notification_body(job: str, date_window: list[str], timezone_name: str
     if job == "cool_daily":
         categories = os.environ.get("COOL_PAPER_CATEGORIES", "cs.AI cs.CL cs.CV").split()
         lines.append(f"Categories: {', '.join(categories)}")
+    elif job == "hf_daily":
+        lines.extend(build_hf_daily_notification_section(date_window))
     elif job == "trending":
         lines.append(f"Window: {os.environ.get('COOL_PAPER_TRENDING_WINDOW', 'weekly')}")
     elif job == "magazine":
@@ -368,6 +370,61 @@ def build_notification_body(job: str, date_window: list[str], timezone_name: str
         ]
     )
     return "\n".join(lines)
+
+
+def hf_daily_report_json_path(report_date: str, base_dir: Path = HF_DAILY_REPORTS_DIR) -> Path:
+    return base_dir / report_date / f"hf-daily-{report_date}.json"
+
+
+def build_hf_daily_notification_section(date_window: list[str], base_dir: Path = HF_DAILY_REPORTS_DIR) -> list[str]:
+    lines = ["", "HF Daily digest:"]
+    for report_date in date_window:
+        report_path = hf_daily_report_json_path(report_date, base_dir=base_dir)
+        if not report_path.exists():
+            lines.append(f"- {report_date}: report JSON unavailable at {report_path}")
+            continue
+
+        report = json.loads(report_path.read_text(encoding="utf-8"))
+        digest = report.get("daily_digest") or {}
+        lines.extend(
+            [
+                "",
+                f"{report_date} hotspots:",
+                *[f"- {item}" for item in digest.get("main_hotspots", [])],
+            ]
+        )
+        trend_summary = digest.get("trend_summary", "")
+        if trend_summary:
+            lines.append(f"- Trend: {trend_summary}")
+
+        lines.append("")
+        lines.append(f"{report_date} categorized papers:")
+        for topic in report.get("topics", []):
+            topic_label = topic.get("topic_label", "Uncategorized")
+            papers = sorted(
+                topic.get("papers", []),
+                key=lambda paper: (
+                    paper.get("upvotes") if isinstance(paper.get("upvotes"), int) else -1,
+                    paper.get("comments") if isinstance(paper.get("comments"), int) else -1,
+                    paper.get("title", ""),
+                ),
+                reverse=True,
+            )
+            lines.append(f"[{topic_label}]")
+            for paper in papers:
+                title = paper.get("title", "Untitled")
+                upvote = paper.get("upvote_label") or format_email_upvote(paper.get("upvotes"))
+                summary = paper.get("one_sentence_summary") or paper.get("summary") or "No one-sentence summary available."
+                lines.append(f"- [{title}][{upvote}][{summary}]")
+    return lines
+
+
+def format_email_upvote(value: object) -> str:
+    if not isinstance(value, int):
+        return "N/A upvotes"
+    if value == 1:
+        return "1 upvote"
+    return f"{value} upvotes"
 
 
 def send_update_notification(job: str, date_window: list[str], timezone_name: str, now: datetime | None = None) -> None:
