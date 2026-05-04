@@ -1,10 +1,147 @@
 {
   "branch_key": "trending",
   "branch_label": "Trending",
-  "generated_at": "2026-04-27T04:00:04Z",
-  "reports_count": 9,
-  "default_report_path": "data/trending/reports/2026-04-27/trending-2026-04-27.json",
+  "generated_at": "2026-05-04T07:07:46Z",
+  "reports_count": 10,
+  "default_report_path": "data/trending/reports/2026-05-04/trending-2026-05-04.json",
   "reports": [
+    {
+      "branch_key": "trending",
+      "branch_label": "Trending",
+      "data_path": "data/trending/reports/2026-05-04/trending-2026-05-04.json",
+      "slug": "trending-2026-05-04",
+      "snapshot_date": "2026-05-04",
+      "since": "weekly",
+      "total_repositories": 12,
+      "generated_at": "2026-05-04T07:07:45Z",
+      "source_url": "https://github.com/trending?since=weekly&spoken_language_code=",
+      "top_languages": [
+        {
+          "language": "Python",
+          "count": 6,
+          "share": 50.0
+        },
+        {
+          "language": "TypeScript",
+          "count": 3,
+          "share": 25.0
+        },
+        {
+          "language": "Go",
+          "count": 1,
+          "share": 8.333333333333332
+        },
+        {
+          "language": "Shell",
+          "count": 1,
+          "share": 8.333333333333332
+        },
+        {
+          "language": "Unknown",
+          "count": 1,
+          "share": 8.333333333333332
+        }
+      ],
+      "top_repositories": [
+        {
+          "snapshot_date": "2026-05-04",
+          "repo_id": "mattpocock/skills",
+          "owner": "mattpocock",
+          "name": "skills",
+          "full_name": "mattpocock/skills",
+          "repo_url": "https://github.com/mattpocock/skills",
+          "description": "Skills for Real Engineers. Straight from my .claude directory.",
+          "language": "Shell",
+          "stars": 57513,
+          "forks": 4916,
+          "stars_this_week": 34848,
+          "built_by": [
+            "mattpocock",
+            "claude"
+          ]
+        },
+        {
+          "snapshot_date": "2026-05-04",
+          "repo_id": "forrestchang/andrej-karpathy-skills",
+          "owner": "forrestchang",
+          "name": "andrej-karpathy-skills",
+          "full_name": "forrestchang/andrej-karpathy-skills",
+          "repo_url": "https://github.com/forrestchang/andrej-karpathy-skills",
+          "description": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
+          "language": "",
+          "stars": 109793,
+          "forks": 10939,
+          "stars_this_week": 18662,
+          "built_by": [
+            "forrestchang",
+            "claude",
+            "back1ply",
+            "herobrine19",
+            "szkocot"
+          ]
+        },
+        {
+          "snapshot_date": "2026-05-04",
+          "repo_id": "tauricresearch/tradingagents",
+          "owner": "TauricResearch",
+          "name": "TradingAgents",
+          "full_name": "TauricResearch/TradingAgents",
+          "repo_url": "https://github.com/TauricResearch/TradingAgents",
+          "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+          "language": "Python",
+          "stars": 65815,
+          "forks": 12751,
+          "stars_this_week": 11252,
+          "built_by": [
+            "Yijia-Xiao",
+            "EdwardoSunny",
+            "luohy15",
+            "claude",
+            "CadeYu"
+          ]
+        },
+        {
+          "snapshot_date": "2026-05-04",
+          "repo_id": "alishahryar1/free-claude-code",
+          "owner": "Alishahryar1",
+          "name": "free-claude-code",
+          "full_name": "Alishahryar1/free-claude-code",
+          "repo_url": "https://github.com/Alishahryar1/free-claude-code",
+          "description": "Use claude-code for free in the terminal, VSCode extension or discord like OpenClaw (voice supported)",
+          "language": "Python",
+          "stars": 20845,
+          "forks": 2991,
+          "stars_this_week": 8276,
+          "built_by": [
+            "Alishahryar1",
+            "cursoragent",
+            "claude",
+            "rishiskhare",
+            "dependabot"
+          ]
+        },
+        {
+          "snapshot_date": "2026-05-04",
+          "repo_id": "z4nzu/hackingtool",
+          "owner": "Z4nzu",
+          "name": "hackingtool",
+          "full_name": "Z4nzu/hackingtool",
+          "repo_url": "https://github.com/Z4nzu/hackingtool",
+          "description": "ALL IN ONE Hacking Tool For Hackers",
+          "language": "Python",
+          "stars": 71047,
+          "forks": 8023,
+          "stars_this_week": 6104,
+          "built_by": [
+            "Z4nzu",
+            "cclauss",
+            "Greatest125",
+            "mokrunka",
+            "W1LDN16H7"
+          ]
+        }
+      ]
+    },
     {
       "branch_key": "trending",
       "branch_label": "Trending",
