@@ -2,7 +2,14 @@ import os
 import unittest
 from unittest import mock
 
-from mipaper.notifiers import EmailNotifier, parse_csv_emails, resolve_recipients, smtp_host_candidates
+from mipaper.notifiers import (
+    EmailNotifier,
+    SMTPProxyConfig,
+    parse_csv_emails,
+    resolve_recipients,
+    resolve_smtp_proxy_config,
+    smtp_host_candidates,
+)
 
 
 class NotifiersTest(unittest.TestCase):
@@ -57,6 +64,7 @@ class NotifiersTest(unittest.TestCase):
                 "COOL_PAPER_EMAIL_FROM": "from@example.com",
                 "COOL_PAPER_EMAIL_TO": "to@example.com",
                 "COOL_PAPER_SMTP_SECURITY": "none",
+                "COOL_PAPER_SMTP_PROXY": "direct",
             },
             clear=False,
         ), mock.patch("mipaper.notifiers.socket.getaddrinfo", return_value=[]), mock.patch(
@@ -81,6 +89,52 @@ class NotifiersTest(unittest.TestCase):
                 ["smtp.example.com", "192.0.2.10", "192.0.2.11"],
                 smtp_host_candidates("smtp.example.com", 587),
             )
+
+    def test_resolve_smtp_proxy_config_uses_explicit_proxy_port(self) -> None:
+        with mock.patch.dict(
+            os.environ,
+            {
+                "COOL_PAPER_SMTP_PROXY": "auto",
+                "COOL_PAPER_SMTP_PROXY_HOST": "",
+                "COOL_PAPER_SMTP_PROXY_PORT": "7890",
+                "COOL_PAPER_SMTP_PROXY_URL": "",
+                "HTTPS_PROXY": "",
+                "https_proxy": "",
+                "HTTP_PROXY": "",
+                "http_proxy": "",
+                "ALL_PROXY": "",
+                "all_proxy": "",
+            },
+            clear=False,
+        ):
+            self.assertEqual(SMTPProxyConfig("127.0.0.1", 7890), resolve_smtp_proxy_config())
+
+    def test_email_notifier_uses_proxy_smtp_client_when_proxy_configured(self) -> None:
+        with mock.patch.dict(
+            os.environ,
+            {
+                "COOL_PAPER_SMTP_HOST": "smtp.example.com",
+                "COOL_PAPER_SMTP_PORT": "587",
+                "COOL_PAPER_SMTP_USERNAME": "user",
+                "COOL_PAPER_SMTP_PASSWORD": "password",
+                "COOL_PAPER_EMAIL_FROM": "from@example.com",
+                "COOL_PAPER_EMAIL_TO": "to@example.com",
+                "COOL_PAPER_SMTP_SECURITY": "none",
+                "COOL_PAPER_SMTP_PROXY_HOST": "127.0.0.1",
+                "COOL_PAPER_SMTP_PROXY_PORT": "7890",
+            },
+            clear=False,
+        ), mock.patch("mipaper.notifiers.smtp_client") as smtp_client:
+            smtp = smtp_client.return_value.__enter__.return_value
+            EmailNotifier().send("Subject", "Plain body")
+
+        smtp_client.assert_called_once_with(
+            "smtp.example.com",
+            587,
+            timeout=30.0,
+            proxy=SMTPProxyConfig("127.0.0.1", 7890),
+        )
+        self.assertTrue(smtp.login.called)
 
 
 if __name__ == "__main__":
