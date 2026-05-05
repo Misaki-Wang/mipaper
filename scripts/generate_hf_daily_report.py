@@ -12,6 +12,7 @@ if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
 from mipaper.codex_classifier import classify_with_claude, classify_with_codex
+from mipaper.classifier_metadata import resolve_effective_classifier
 from mipaper.fetcher import build_hf_daily_url, fetch_feed_html, parse_hf_daily_html
 from mipaper.hf_reporting import build_hf_json_payload, render_markdown_hf_report, write_hf_outputs
 from mipaper.paths import HF_DAILY_REPORTS_DIR, hf_daily_report_dir
@@ -92,17 +93,18 @@ def main() -> int:
         )
     else:
         papers = assign_topics(papers)
+    classifier_name = resolve_effective_classifier(args.classifier, papers)
     markdown_text = render_markdown_hf_report(
         report_date=report_date,
         source_url=source_url,
         papers=papers,
-        classifier_name=args.classifier,
+        classifier_name=classifier_name,
     )
     payload = build_hf_json_payload(
         report_date=report_date,
         source_url=source_url,
         papers=papers,
-        classifier_name=args.classifier,
+        classifier_name=classifier_name,
     )
 
     base_name = f"hf-daily-{report_date}"
@@ -111,7 +113,7 @@ def main() -> int:
     print(f"- Markdown: {markdown_path}")
     print(f"- JSON: {json_path}")
     print(f"- Papers: {len(papers)}")
-    print(f"- Classifier: {args.classifier}")
+    print(f"- Classifier: {classifier_name}")
     return 0
 
 

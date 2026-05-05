@@ -10,6 +10,7 @@ if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
 from mipaper.codex_classifier import classify_with_claude, classify_with_codex
+from mipaper.classifier_metadata import resolve_effective_classifier
 from mipaper.conference_reporting import (
     build_conference_json_payload,
     render_markdown_conference_report,
@@ -81,6 +82,7 @@ def main() -> int:
         )
     else:
         papers = assign_topics(papers)
+    classifier_name = resolve_effective_classifier(args.classifier, papers)
 
     fetch_metadata = {
         "declared_total": declared_total,
@@ -92,14 +94,14 @@ def main() -> int:
         venue=args.venue,
         source_url=source_url,
         papers=papers,
-        classifier_name=args.classifier,
+        classifier_name=classifier_name,
         fetch_metadata=fetch_metadata,
     )
     payload = build_conference_json_payload(
         venue=args.venue,
         source_url=source_url,
         papers=papers,
-        classifier_name=args.classifier,
+        classifier_name=classifier_name,
         fetch_metadata=fetch_metadata,
     )
 
@@ -113,7 +115,7 @@ def main() -> int:
         print(f"- Venue total: {declared_total}")
     if requested_show is not None:
         print(f"- Requested show: {requested_show}")
-    print(f"- Classifier: {args.classifier}")
+    print(f"- Classifier: {classifier_name}")
     return 0
 
 

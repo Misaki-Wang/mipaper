@@ -12,6 +12,7 @@ if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
 from mipaper.codex_classifier import classify_with_claude, classify_with_codex
+from mipaper.classifier_metadata import resolve_effective_classifier
 from mipaper.fetcher import DEFAULT_SHOW, build_feed_url, fetch_feed_html, parse_feed_html
 from mipaper.notifiers import EmailNotifier
 from mipaper.paths import DAILY_REPORTS_DIR, daily_report_dir
@@ -110,20 +111,21 @@ def main() -> int:
         )
     else:
         papers = assign_topics(papers)
+    classifier_name = resolve_effective_classifier(args.classifier, papers)
 
     markdown_text = render_markdown_report(
         category=args.category,
         report_date=report_date,
         source_url=source_url,
         papers=papers,
-        classifier_name=args.classifier,
+        classifier_name=classifier_name,
     )
     payload = build_json_payload(
         category=args.category,
         report_date=report_date,
         source_url=source_url,
         papers=papers,
-        classifier_name=args.classifier,
+        classifier_name=classifier_name,
     )
     base_name = f"{args.category}-{report_date}"
     markdown_path, json_path = write_outputs(output_dir, base_name, markdown_text, payload)
@@ -132,7 +134,7 @@ def main() -> int:
     print(f"- Markdown: {markdown_path}")
     print(f"- JSON: {json_path}")
     print(f"- Papers: {len(papers)}")
-    print(f"- Classifier: {args.classifier}")
+    print(f"- Classifier: {classifier_name}")
 
     if args.notify == "email":
         subject = f"[MiPaper] {args.category} {report_date} Daily Paper Classification Report"
