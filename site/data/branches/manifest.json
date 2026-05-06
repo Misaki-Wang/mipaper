@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-05T03:40:44Z",
-  "reports_count": 196,
+  "generated_at": "2026-05-06T15:10:37Z",
+  "reports_count": 197,
   "branches": [
     {
       "branch_key": "daily",
@@ -12,8 +12,8 @@
     {
       "branch_key": "hf-daily",
       "branch_label": "HF Daily",
-      "reports_count": 48,
-      "default_report_path": "data/hf-daily/reports/2026-05-05/hf-daily-2026-05-05.json",
+      "reports_count": 49,
+      "default_report_path": "data/hf-daily/reports/2026-05-06/hf-daily-2026-05-06.json",
       "manifest_path": "data/hf-daily/manifest.json"
     },
     {
@@ -7949,6 +7949,87 @@
           "topic_label": "Datasets and Benchmarks",
           "count": 9,
           "share": 7.38
+        }
+      ]
+    },
+    {
+      "branch_key": "hf-daily",
+      "branch_label": "HF Daily",
+      "search_text": "hf-daily HF Daily hf-daily-2026-05-06 data/hf-daily/reports/2026-05-06/hf-daily-2026-05-06.json https://huggingface.co/papers/date/2026-05-06 rule 2026-05-06 Generative Foundations Multimodal Generative Modeling Multimodal Agents Agents and Planning Datasets and Benchmarks Learning, Optimization, and Theory Multimodal Understanding and Vision Other AI taesiri Chenchen Zhang LiXinran Mathsion Wong Minbyul Jeong",
+      "data_path": "data/hf-daily/reports/2026-05-06/hf-daily-2026-05-06.json",
+      "slug": "hf-daily-2026-05-06",
+      "report_date": "2026-05-06",
+      "total_papers": 20,
+      "classifier": "rule",
+      "generated_at": "2026-05-06T15:10:36Z",
+      "source_url": "https://huggingface.co/papers/date/2026-05-06",
+      "focus_topics": [
+        {
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "count": 0,
+          "share": 0.0
+        },
+        {
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 0,
+          "share": 0.0
+        },
+        {
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "count": 0,
+          "share": 0.0
+        }
+      ],
+      "top_topics": [
+        {
+          "topic_label": "Agents and Planning",
+          "count": 6,
+          "share": 30.0
+        },
+        {
+          "topic_label": "Datasets and Benchmarks",
+          "count": 3,
+          "share": 15.0
+        },
+        {
+          "topic_label": "Learning, Optimization, and Theory",
+          "count": 3,
+          "share": 15.0
+        },
+        {
+          "topic_label": "Multimodal Understanding and Vision",
+          "count": 3,
+          "share": 15.0
+        },
+        {
+          "topic_label": "Other AI",
+          "count": 3,
+          "share": 15.0
+        }
+      ],
+      "top_submitters": [
+        {
+          "submitted_by": "taesiri",
+          "count": 4
+        },
+        {
+          "submitted_by": "Chenchen Zhang",
+          "count": 1
+        },
+        {
+          "submitted_by": "LiXinran",
+          "count": 1
+        },
+        {
+          "submitted_by": "Mathsion Wong",
+          "count": 1
+        },
+        {
+          "submitted_by": "Minbyul Jeong",
+          "count": 1
         }
       ]
     },
