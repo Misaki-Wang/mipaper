@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-08T15:06:56Z",
-  "reports_count": 199,
+  "generated_at": "2026-05-11T05:22:11Z",
+  "reports_count": 201,
   "branches": [
     {
       "branch_key": "daily",
@@ -12,8 +12,8 @@
     {
       "branch_key": "hf-daily",
       "branch_label": "HF Daily",
-      "reports_count": 51,
-      "default_report_path": "data/hf-daily/reports/2026-05-08/hf-daily-2026-05-08.json",
+      "reports_count": 52,
+      "default_report_path": "data/hf-daily/reports/2026-05-11/hf-daily-2026-05-11.json",
       "manifest_path": "data/hf-daily/manifest.json"
     },
     {
@@ -26,8 +26,8 @@
     {
       "branch_key": "magazine",
       "branch_label": "Magazine",
-      "reports_count": 10,
-      "default_report_path": "data/magazine/reports/issue-394/magazine-issue-394.json",
+      "reports_count": 11,
+      "default_report_path": "data/magazine/reports/issue-395/magazine-issue-395.json",
       "manifest_path": "data/magazine/manifest.json"
     }
   ],
@@ -7955,6 +7955,87 @@
     {
       "branch_key": "hf-daily",
       "branch_label": "HF Daily",
+      "search_text": "hf-daily HF Daily hf-daily-2026-05-11 data/hf-daily/reports/2026-05-11/hf-daily-2026-05-11.json https://huggingface.co/papers/date/2026-05-11 rule 2026-05-11 Generative Foundations Multimodal Generative Modeling Multimodal Agents LLMs and Language Other AI Multimodal Understanding and Vision Learning, Optimization, and Theory Agents and Planning taesiri Chengsong Huang Dan Jacobellis Do Xuan Long Haoze Sun",
+      "data_path": "data/hf-daily/reports/2026-05-11/hf-daily-2026-05-11.json",
+      "slug": "hf-daily-2026-05-11",
+      "report_date": "2026-05-11",
+      "total_papers": 30,
+      "classifier": "rule",
+      "generated_at": "2026-05-11T05:21:52Z",
+      "source_url": "https://huggingface.co/papers/date/2026-05-11",
+      "focus_topics": [
+        {
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "count": 0,
+          "share": 0.0
+        },
+        {
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 0,
+          "share": 0.0
+        },
+        {
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "count": 2,
+          "share": 6.67
+        }
+      ],
+      "top_topics": [
+        {
+          "topic_label": "LLMs and Language",
+          "count": 7,
+          "share": 23.33
+        },
+        {
+          "topic_label": "Other AI",
+          "count": 7,
+          "share": 23.33
+        },
+        {
+          "topic_label": "Multimodal Understanding and Vision",
+          "count": 6,
+          "share": 20.0
+        },
+        {
+          "topic_label": "Learning, Optimization, and Theory",
+          "count": 4,
+          "share": 13.33
+        },
+        {
+          "topic_label": "Agents and Planning",
+          "count": 2,
+          "share": 6.67
+        }
+      ],
+      "top_submitters": [
+        {
+          "submitted_by": "taesiri",
+          "count": 5
+        },
+        {
+          "submitted_by": "Chengsong Huang",
+          "count": 1
+        },
+        {
+          "submitted_by": "Dan Jacobellis",
+          "count": 1
+        },
+        {
+          "submitted_by": "Do Xuan Long",
+          "count": 1
+        },
+        {
+          "submitted_by": "Haoze Sun",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "branch_key": "hf-daily",
+      "branch_label": "HF Daily",
       "search_text": "hf-daily HF Daily hf-daily-2026-05-08 data/hf-daily/reports/2026-05-08/hf-daily-2026-05-08.json https://huggingface.co/papers/date/2026-05-08 rule 2026-05-08 Generative Foundations Multimodal Generative Modeling Multimodal Agents Reasoning, Alignment, and Evaluation Multimodal Understanding and Vision Agents and Planning LLMs and Language Learning, Optimization, and Theory taesiri Ajay Jaiswal Canyu Zhao Chengsong Huang Chonghan, Qin",
       "data_path": "data/hf-daily/reports/2026-05-08/hf-daily-2026-05-08.json",
       "slug": "hf-daily-2026-05-08",
@@ -12426,6 +12507,53 @@
           "topic_label": "Domain Applications",
           "count": 112,
           "share": 4.12
+        }
+      ]
+    },
+    {
+      "branch_key": "magazine",
+      "branch_label": "Magazine",
+      "search_text": "magazine Magazine issue-395 data/magazine/reports/issue-395/magazine-issue-395.json https://github.com/ruanyf/weekly/blob/master/docs/issue-395.md 2026-05-08 科技爱好者周刊（第 395 期）：软件开发的第三种方式 这里记录每周值得分享的科技内容，周五发布。\n\n本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。 封面图 软件开发的第三种方式 大模型流行度排行榜 科技动态 文章 工具",
+      "data_path": "data/magazine/reports/issue-395/magazine-issue-395.json",
+      "slug": "issue-395",
+      "issue_number": 395,
+      "issue_title": "科技爱好者周刊（第 395 期）：软件开发的第三种方式",
+      "sync_date": "2026-05-08",
+      "sections_count": 12,
+      "generated_at": "2026-05-11T05:22:10Z",
+      "source_url": "https://github.com/ruanyf/weekly/blob/master/docs/issue-395.md",
+      "cover_image_url": "https://cdn.beekka.com/blogimg/asset/202605/bg2026050602.webp",
+      "excerpt": "这里记录每周值得分享的科技内容，周五发布。\n\n本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。",
+      "headings": [
+        {
+          "title": "封面图",
+          "slug": "magazine-section-1",
+          "level": 2
+        },
+        {
+          "title": "软件开发的第三种方式",
+          "slug": "magazine-section-2",
+          "level": 2
+        },
+        {
+          "title": "大模型流行度排行榜",
+          "slug": "magazine-section-3",
+          "level": 2
+        },
+        {
+          "title": "科技动态",
+          "slug": "magazine-section-4",
+          "level": 2
+        },
+        {
+          "title": "文章",
+          "slug": "magazine-section-5",
+          "level": 2
+        },
+        {
+          "title": "工具",
+          "slug": "magazine-section-6",
+          "level": 2
         }
       ]
     },

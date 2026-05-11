@@ -1,10 +1,147 @@
 {
   "branch_key": "trending",
   "branch_label": "Trending",
-  "generated_at": "2026-05-04T07:07:46Z",
-  "reports_count": 10,
-  "default_report_path": "data/trending/reports/2026-05-04/trending-2026-05-04.json",
+  "generated_at": "2026-05-11T05:22:07Z",
+  "reports_count": 11,
+  "default_report_path": "data/trending/reports/2026-05-11/trending-2026-05-11.json",
   "reports": [
+    {
+      "branch_key": "trending",
+      "branch_label": "Trending",
+      "data_path": "data/trending/reports/2026-05-11/trending-2026-05-11.json",
+      "slug": "trending-2026-05-11",
+      "snapshot_date": "2026-05-11",
+      "since": "weekly",
+      "total_repositories": 19,
+      "generated_at": "2026-05-11T05:22:07Z",
+      "source_url": "https://github.com/trending?since=weekly&spoken_language_code=",
+      "top_languages": [
+        {
+          "language": "Python",
+          "count": 6,
+          "share": 31.57894736842105
+        },
+        {
+          "language": "TypeScript",
+          "count": 5,
+          "share": 26.31578947368421
+        },
+        {
+          "language": "JavaScript",
+          "count": 2,
+          "share": 10.526315789473683
+        },
+        {
+          "language": "Rust",
+          "count": 2,
+          "share": 10.526315789473683
+        },
+        {
+          "language": "Shell",
+          "count": 2,
+          "share": 10.526315789473683
+        }
+      ],
+      "top_repositories": [
+        {
+          "snapshot_date": "2026-05-11",
+          "repo_id": "hmbown/deepseek-tui",
+          "owner": "Hmbown",
+          "name": "DeepSeek-TUI",
+          "full_name": "Hmbown/DeepSeek-TUI",
+          "repo_url": "https://github.com/Hmbown/DeepSeek-TUI",
+          "description": "Coding agent for DeepSeek models that runs in your terminal",
+          "language": "Rust",
+          "stars": 24346,
+          "forks": 1998,
+          "stars_this_week": 22034,
+          "built_by": [
+            "Hmbown",
+            "claude",
+            "reidliu41",
+            "axobase001",
+            "Oliver-ZPLiu"
+          ]
+        },
+        {
+          "snapshot_date": "2026-05-11",
+          "repo_id": "mattpocock/skills",
+          "owner": "mattpocock",
+          "name": "skills",
+          "full_name": "mattpocock/skills",
+          "repo_url": "https://github.com/mattpocock/skills",
+          "description": "Skills for Real Engineers. Straight from my .claude directory.",
+          "language": "Shell",
+          "stars": 69594,
+          "forks": 6010,
+          "stars_this_week": 12722,
+          "built_by": [
+            "mattpocock",
+            "claude"
+          ]
+        },
+        {
+          "snapshot_date": "2026-05-11",
+          "repo_id": "ruvnet/ruflo",
+          "owner": "ruvnet",
+          "name": "ruflo",
+          "full_name": "ruvnet/ruflo",
+          "repo_url": "https://github.com/ruvnet/ruflo",
+          "description": "🌊 The leading agent orchestration platform for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous workflows, and build conversational AI systems. Features enterprise-grade architecture, self-learning swarm intelligence, RAG integration, and native Claude Code / Codex Integration",
+          "language": "TypeScript",
+          "stars": 48589,
+          "forks": 5385,
+          "stars_this_week": 10779,
+          "built_by": [
+            "ruvnet",
+            "claude",
+            "alexx-ftw",
+            "lanemc",
+            "tommy-ca"
+          ]
+        },
+        {
+          "snapshot_date": "2026-05-11",
+          "repo_id": "addyosmani/agent-skills",
+          "owner": "addyosmani",
+          "name": "agent-skills",
+          "full_name": "addyosmani/agent-skills",
+          "repo_url": "https://github.com/addyosmani/agent-skills",
+          "description": "Production-grade engineering skills for AI coding agents.",
+          "language": "Shell",
+          "stars": 38761,
+          "forks": 4285,
+          "stars_this_week": 10738,
+          "built_by": [
+            "addyosmani",
+            "federicobartoli",
+            "nucliweb",
+            "dj2313",
+            "claude"
+          ]
+        },
+        {
+          "snapshot_date": "2026-05-11",
+          "repo_id": "anthropics/financial-services",
+          "owner": "anthropics",
+          "name": "financial-services",
+          "full_name": "anthropics/financial-services",
+          "repo_url": "https://github.com/anthropics/financial-services",
+          "description": "",
+          "language": "Python",
+          "stars": 19245,
+          "forks": 2496,
+          "stars_this_week": 10272,
+          "built_by": [
+            "cxyback",
+            "manar-ant",
+            "mihilmy",
+            "tobinsouth",
+            "viveknair"
+          ]
+        }
+      ]
+    },
     {
       "branch_key": "trending",
       "branch_label": "Trending",
