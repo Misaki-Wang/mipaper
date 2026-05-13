@@ -1,10 +1,150 @@
 {
   "branch_key": "trending",
   "branch_label": "Trending",
-  "generated_at": "2026-05-12T12:03:50Z",
-  "reports_count": 12,
-  "default_report_path": "data/trending/reports/2026-05-12/trending-2026-05-12.json",
+  "generated_at": "2026-05-13T06:49:52Z",
+  "reports_count": 13,
+  "default_report_path": "data/trending/reports/2026-05-13/trending-2026-05-13.json",
   "reports": [
+    {
+      "branch_key": "trending",
+      "branch_label": "Trending",
+      "data_path": "data/trending/reports/2026-05-13/trending-2026-05-13.json",
+      "slug": "trending-2026-05-13",
+      "snapshot_date": "2026-05-13",
+      "since": "weekly",
+      "total_repositories": 18,
+      "generated_at": "2026-05-13T06:49:50Z",
+      "source_url": "https://github.com/trending?since=weekly&spoken_language_code=",
+      "top_languages": [
+        {
+          "language": "Python",
+          "count": 8,
+          "share": 44.44444444444444
+        },
+        {
+          "language": "TypeScript",
+          "count": 6,
+          "share": 33.33333333333333
+        },
+        {
+          "language": "JavaScript",
+          "count": 1,
+          "share": 5.555555555555555
+        },
+        {
+          "language": "Ruby",
+          "count": 1,
+          "share": 5.555555555555555
+        },
+        {
+          "language": "Rust",
+          "count": 1,
+          "share": 5.555555555555555
+        }
+      ],
+      "top_repositories": [
+        {
+          "snapshot_date": "2026-05-13",
+          "repo_id": "hmbown/deepseek-tui",
+          "owner": "Hmbown",
+          "name": "DeepSeek-TUI",
+          "full_name": "Hmbown/DeepSeek-TUI",
+          "repo_url": "https://github.com/Hmbown/DeepSeek-TUI",
+          "description": "Coding agent for DeepSeek models that runs in your terminal",
+          "language": "Rust",
+          "stars": 26956,
+          "forks": 2252,
+          "stars_this_week": 20835,
+          "built_by": [
+            "Hmbown",
+            "claude",
+            "reidliu41",
+            "linzhiqin2003",
+            "Oliver-ZPLiu"
+          ]
+        },
+        {
+          "snapshot_date": "2026-05-13",
+          "repo_id": "anthropics/financial-services",
+          "owner": "anthropics",
+          "name": "financial-services",
+          "full_name": "anthropics/financial-services",
+          "repo_url": "https://github.com/anthropics/financial-services",
+          "description": "",
+          "language": "Python",
+          "stars": 21773,
+          "forks": 2931,
+          "stars_this_week": 13176,
+          "built_by": [
+            "cxyback",
+            "manar-ant",
+            "mihilmy",
+            "tobinsouth",
+            "viveknair"
+          ]
+        },
+        {
+          "snapshot_date": "2026-05-13",
+          "repo_id": "addyosmani/agent-skills",
+          "owner": "addyosmani",
+          "name": "agent-skills",
+          "full_name": "addyosmani/agent-skills",
+          "repo_url": "https://github.com/addyosmani/agent-skills",
+          "description": "Production-grade engineering skills for AI coding agents.",
+          "language": "Shell",
+          "stars": 40547,
+          "forks": 4467,
+          "stars_this_week": 11791,
+          "built_by": [
+            "addyosmani",
+            "federicobartoli",
+            "nucliweb",
+            "dj2313",
+            "claude"
+          ]
+        },
+        {
+          "snapshot_date": "2026-05-13",
+          "repo_id": "ruvnet/ruflo",
+          "owner": "ruvnet",
+          "name": "ruflo",
+          "full_name": "ruvnet/ruflo",
+          "repo_url": "https://github.com/ruvnet/ruflo",
+          "description": "🌊 The leading agent orchestration platform for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous workflows, and build conversational AI systems. Features enterprise-grade architecture, self-learning swarm intelligence, RAG integration, and native Claude Code / Codex Integration",
+          "language": "TypeScript",
+          "stars": 49896,
+          "forks": 5550,
+          "stars_this_week": 7088,
+          "built_by": [
+            "ruvnet",
+            "claude",
+            "alexx-ftw",
+            "lanemc",
+            "tommy-ca"
+          ]
+        },
+        {
+          "snapshot_date": "2026-05-13",
+          "repo_id": "tauricresearch/tradingagents",
+          "owner": "TauricResearch",
+          "name": "TradingAgents",
+          "full_name": "TauricResearch/TradingAgents",
+          "repo_url": "https://github.com/TauricResearch/TradingAgents",
+          "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+          "language": "Python",
+          "stars": 74576,
+          "forks": 14539,
+          "stars_this_week": 5683,
+          "built_by": [
+            "Yijia-Xiao",
+            "EdwardoSunny",
+            "luohy15",
+            "claude",
+            "CadeYu"
+          ]
+        }
+      ]
+    },
     {
       "branch_key": "trending",
       "branch_label": "Trending",
