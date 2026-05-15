@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-14T19:00:25Z",
-  "reports_count": 205,
+  "generated_at": "2026-05-15T07:22:26Z",
+  "reports_count": 206,
   "branches": [
     {
       "branch_key": "daily",
@@ -26,8 +26,8 @@
     {
       "branch_key": "magazine",
       "branch_label": "Magazine",
-      "reports_count": 11,
-      "default_report_path": "data/magazine/reports/issue-395/magazine-issue-395.json",
+      "reports_count": 12,
+      "default_report_path": "data/magazine/reports/issue-396/magazine-issue-396.json",
       "manifest_path": "data/magazine/manifest.json"
     }
   ],
@@ -7961,7 +7961,7 @@
       "report_date": "2026-05-15",
       "total_papers": 48,
       "classifier": "rule",
-      "generated_at": "2026-05-14T19:00:24Z",
+      "generated_at": "2026-05-14T19:00:20Z",
       "source_url": "https://huggingface.co/papers/date/2026-05-15",
       "focus_topics": [
         {
@@ -8036,13 +8036,13 @@
     {
       "branch_key": "hf-daily",
       "branch_label": "HF Daily",
-      "search_text": "hf-daily HF Daily hf-daily-2026-05-14 data/hf-daily/reports/2026-05-14/hf-daily-2026-05-14.json https://huggingface.co/papers/date/2026-05-14 rule 2026-05-14 Generative Foundations Multimodal Generative Modeling Multimodal Agents Learning, Optimization, and Theory Datasets and Benchmarks Multimodal Understanding and Vision Agents and Planning Other AI taesiri Eilam Shapira An Luo Andrew Chen Baibei Ji",
+      "search_text": "hf-daily HF Daily hf-daily-2026-05-14 data/hf-daily/reports/2026-05-14/hf-daily-2026-05-14.json https://huggingface.co/papers/date/2026-05-14 rule 2026-05-14 Generative Foundations Multimodal Generative Modeling Multimodal Agents LLMs and Language Multimodal Understanding and Vision Agents and Planning Other AI Learning, Optimization, and Theory taesiri Liangqi Yuan Yuanzhi Wang Andrea Gurioli Arnas Uselis",
       "data_path": "data/hf-daily/reports/2026-05-14/hf-daily-2026-05-14.json",
       "slug": "hf-daily-2026-05-14",
       "report_date": "2026-05-14",
-      "total_papers": 48,
+      "total_papers": 64,
       "classifier": "rule",
-      "generated_at": "2026-05-14T19:00:23Z",
+      "generated_at": "2026-05-13T19:00:19Z",
       "source_url": "https://huggingface.co/papers/date/2026-05-14",
       "focus_topics": [
         {
@@ -8054,122 +8054,41 @@
         {
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
-          "count": 0,
-          "share": 0.0
+          "count": 1,
+          "share": 1.56
         },
         {
           "topic_key": "multimodal_agents",
           "topic_label": "Multimodal Agents",
           "count": 1,
-          "share": 2.08
-        }
-      ],
-      "top_topics": [
-        {
-          "topic_label": "Learning, Optimization, and Theory",
-          "count": 10,
-          "share": 20.83
-        },
-        {
-          "topic_label": "Datasets and Benchmarks",
-          "count": 7,
-          "share": 14.58
-        },
-        {
-          "topic_label": "Multimodal Understanding and Vision",
-          "count": 7,
-          "share": 14.58
-        },
-        {
-          "topic_label": "Agents and Planning",
-          "count": 6,
-          "share": 12.5
-        },
-        {
-          "topic_label": "Other AI",
-          "count": 5,
-          "share": 10.42
-        }
-      ],
-      "top_submitters": [
-        {
-          "submitted_by": "taesiri",
-          "count": 5
-        },
-        {
-          "submitted_by": "Eilam Shapira",
-          "count": 2
-        },
-        {
-          "submitted_by": "An Luo",
-          "count": 1
-        },
-        {
-          "submitted_by": "Andrew Chen",
-          "count": 1
-        },
-        {
-          "submitted_by": "Baibei Ji",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "branch_key": "hf-daily",
-      "branch_label": "HF Daily",
-      "search_text": "hf-daily HF Daily hf-daily-2026-05-13 data/hf-daily/reports/2026-05-13/hf-daily-2026-05-13.json https://huggingface.co/papers/date/2026-05-13 rule 2026-05-13 Generative Foundations Multimodal Generative Modeling Multimodal Agents LLMs and Language Multimodal Understanding and Vision Agents and Planning Other AI Learning, Optimization, and Theory taesiri Liangqi Yuan Yuanzhi Wang Zeyu Zhang Aman Chadha",
-      "data_path": "data/hf-daily/reports/2026-05-13/hf-daily-2026-05-13.json",
-      "slug": "hf-daily-2026-05-13",
-      "report_date": "2026-05-13",
-      "total_papers": 71,
-      "classifier": "rule",
-      "generated_at": "2026-05-14T19:00:23Z",
-      "source_url": "https://huggingface.co/papers/date/2026-05-13",
-      "focus_topics": [
-        {
-          "topic_key": "generative_foundations",
-          "topic_label": "Generative Foundations",
-          "count": 0,
-          "share": 0.0
-        },
-        {
-          "topic_key": "multimodal_generative",
-          "topic_label": "Multimodal Generative Modeling",
-          "count": 1,
-          "share": 1.41
-        },
-        {
-          "topic_key": "multimodal_agents",
-          "topic_label": "Multimodal Agents",
-          "count": 2,
-          "share": 2.82
+          "share": 1.56
         }
       ],
       "top_topics": [
         {
           "topic_label": "LLMs and Language",
-          "count": 14,
-          "share": 19.72
+          "count": 13,
+          "share": 20.31
         },
         {
           "topic_label": "Multimodal Understanding and Vision",
-          "count": 13,
-          "share": 18.31
+          "count": 12,
+          "share": 18.75
         },
         {
           "topic_label": "Agents and Planning",
-          "count": 11,
-          "share": 15.49
+          "count": 10,
+          "share": 15.62
         },
         {
           "topic_label": "Other AI",
           "count": 10,
-          "share": 14.08
+          "share": 15.62
         },
         {
           "topic_label": "Learning, Optimization, and Theory",
           "count": 6,
-          "share": 8.45
+          "share": 9.38
         }
       ],
       "top_submitters": [
@@ -8186,11 +8105,11 @@
           "count": 2
         },
         {
-          "submitted_by": "Zeyu Zhang",
-          "count": 2
+          "submitted_by": "Andrea Gurioli",
+          "count": 1
         },
         {
-          "submitted_by": "Aman Chadha",
+          "submitted_by": "Arnas Uselis",
           "count": 1
         }
       ]
@@ -8198,14 +8117,14 @@
     {
       "branch_key": "hf-daily",
       "branch_label": "HF Daily",
-      "search_text": "hf-daily HF Daily hf-daily-2026-05-12 data/hf-daily/reports/2026-05-12/hf-daily-2026-05-12.json https://huggingface.co/papers/date/2026-05-12 rule 2026-05-12 Generative Foundations Multimodal Generative Modeling Multimodal Agents LLMs and Language Agents and Planning Learning, Optimization, and Theory Other AI Multimodal Understanding and Vision taesiri Rui Liu Wenxuan Song Yuanyi Wang Aleksandr Samarin",
-      "data_path": "data/hf-daily/reports/2026-05-12/hf-daily-2026-05-12.json",
-      "slug": "hf-daily-2026-05-12",
-      "report_date": "2026-05-12",
-      "total_papers": 68,
+      "search_text": "hf-daily HF Daily hf-daily-2026-05-13 data/hf-daily/reports/2026-05-13/hf-daily-2026-05-13.json https://huggingface.co/papers/date/2026-05-13 rule 2026-05-13 Generative Foundations Multimodal Generative Modeling Multimodal Agents LLMs and Language Agents and Planning Learning, Optimization, and Theory Other AI Multimodal Understanding and Vision taesiri Rui Liu Wenxuan Song Yuanyi Wang Aleksandr Samarin",
+      "data_path": "data/hf-daily/reports/2026-05-13/hf-daily-2026-05-13.json",
+      "slug": "hf-daily-2026-05-13",
+      "report_date": "2026-05-13",
+      "total_papers": 63,
       "classifier": "rule",
-      "generated_at": "2026-05-14T19:00:22Z",
-      "source_url": "https://huggingface.co/papers/date/2026-05-12",
+      "generated_at": "2026-05-12T19:00:20Z",
+      "source_url": "https://huggingface.co/papers/date/2026-05-13",
       "focus_topics": [
         {
           "topic_key": "generative_foundations",
@@ -8217,40 +8136,40 @@
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
           "count": 4,
-          "share": 5.88
+          "share": 6.35
         },
         {
           "topic_key": "multimodal_agents",
           "topic_label": "Multimodal Agents",
           "count": 2,
-          "share": 2.94
+          "share": 3.17
         }
       ],
       "top_topics": [
         {
           "topic_label": "LLMs and Language",
-          "count": 15,
-          "share": 22.06
+          "count": 13,
+          "share": 20.63
         },
         {
           "topic_label": "Agents and Planning",
           "count": 9,
-          "share": 13.24
+          "share": 14.29
         },
         {
           "topic_label": "Learning, Optimization, and Theory",
-          "count": 9,
-          "share": 13.24
+          "count": 8,
+          "share": 12.7
         },
         {
           "topic_label": "Other AI",
-          "count": 9,
-          "share": 13.24
+          "count": 8,
+          "share": 12.7
         },
         {
           "topic_label": "Multimodal Understanding and Vision",
-          "count": 8,
-          "share": 11.76
+          "count": 7,
+          "share": 11.11
         }
       ],
       "top_submitters": [
@@ -8272,6 +8191,87 @@
         },
         {
           "submitted_by": "Aleksandr Samarin",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "branch_key": "hf-daily",
+      "branch_label": "HF Daily",
+      "search_text": "hf-daily HF Daily hf-daily-2026-05-12 data/hf-daily/reports/2026-05-12/hf-daily-2026-05-12.json https://huggingface.co/papers/date/2026-05-12 rule 2026-05-12 Generative Foundations Multimodal Generative Modeling Multimodal Agents LLMs and Language Multimodal Understanding and Vision Other AI Learning, Optimization, and Theory Agents and Planning taesiri Adam Huang Akshat Singh Jaswal Amin Karimi Monsefi Arjhun Swaminathan",
+      "data_path": "data/hf-daily/reports/2026-05-12/hf-daily-2026-05-12.json",
+      "slug": "hf-daily-2026-05-12",
+      "report_date": "2026-05-12",
+      "total_papers": 50,
+      "classifier": "rule",
+      "generated_at": "2026-05-11T19:00:08Z",
+      "source_url": "https://huggingface.co/papers/date/2026-05-12",
+      "focus_topics": [
+        {
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "count": 0,
+          "share": 0.0
+        },
+        {
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 0,
+          "share": 0.0
+        },
+        {
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "count": 2,
+          "share": 4.0
+        }
+      ],
+      "top_topics": [
+        {
+          "topic_label": "LLMs and Language",
+          "count": 11,
+          "share": 22.0
+        },
+        {
+          "topic_label": "Multimodal Understanding and Vision",
+          "count": 11,
+          "share": 22.0
+        },
+        {
+          "topic_label": "Other AI",
+          "count": 10,
+          "share": 20.0
+        },
+        {
+          "topic_label": "Learning, Optimization, and Theory",
+          "count": 9,
+          "share": 18.0
+        },
+        {
+          "topic_label": "Agents and Planning",
+          "count": 3,
+          "share": 6.0
+        }
+      ],
+      "top_submitters": [
+        {
+          "submitted_by": "taesiri",
+          "count": 5
+        },
+        {
+          "submitted_by": "Adam Huang",
+          "count": 1
+        },
+        {
+          "submitted_by": "Akshat Singh Jaswal",
+          "count": 1
+        },
+        {
+          "submitted_by": "Amin Karimi Monsefi",
+          "count": 1
+        },
+        {
+          "submitted_by": "Arjhun Swaminathan",
           "count": 1
         }
       ]
@@ -12831,6 +12831,53 @@
           "topic_label": "Domain Applications",
           "count": 112,
           "share": 4.12
+        }
+      ]
+    },
+    {
+      "branch_key": "magazine",
+      "branch_label": "Magazine",
+      "search_text": "magazine Magazine issue-396 data/magazine/reports/issue-396/magazine-issue-396.json https://github.com/ruanyf/weekly/blob/master/docs/issue-396.md 2026-05-15 科技爱好者周刊（第 396 期）：互联网通信的替代方案 这里记录每周值得分享的科技内容，周五发布。\n\n本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。 封面图 互联网通信的替代方案 开源 AI 开发平台 MonkeyCode 逆向验证码 科技动态 文章",
+      "data_path": "data/magazine/reports/issue-396/magazine-issue-396.json",
+      "slug": "issue-396",
+      "issue_number": 396,
+      "issue_title": "科技爱好者周刊（第 396 期）：互联网通信的替代方案",
+      "sync_date": "2026-05-15",
+      "sections_count": 13,
+      "generated_at": "2026-05-15T07:19:48Z",
+      "source_url": "https://github.com/ruanyf/weekly/blob/master/docs/issue-396.md",
+      "cover_image_url": "https://cdn.beekka.com/blogimg/asset/202605/bg2026051414.webp",
+      "excerpt": "这里记录每周值得分享的科技内容，周五发布。\n\n本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。",
+      "headings": [
+        {
+          "title": "封面图",
+          "slug": "magazine-section-1",
+          "level": 2
+        },
+        {
+          "title": "互联网通信的替代方案",
+          "slug": "magazine-section-2",
+          "level": 2
+        },
+        {
+          "title": "开源 AI 开发平台 MonkeyCode",
+          "slug": "magazine-section-3",
+          "level": 2
+        },
+        {
+          "title": "逆向验证码",
+          "slug": "magazine-section-4",
+          "level": 2
+        },
+        {
+          "title": "科技动态",
+          "slug": "magazine-section-5",
+          "level": 2
+        },
+        {
+          "title": "文章",
+          "slug": "magazine-section-6",
+          "level": 2
         }
       ]
     },
