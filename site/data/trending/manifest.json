@@ -1,10 +1,147 @@
 {
   "branch_key": "trending",
   "branch_label": "Trending",
-  "generated_at": "2026-05-13T06:49:52Z",
-  "reports_count": 13,
-  "default_report_path": "data/trending/reports/2026-05-13/trending-2026-05-13.json",
+  "generated_at": "2026-05-17T13:35:18Z",
+  "reports_count": 14,
+  "default_report_path": "data/trending/reports/2026-05-17/trending-2026-05-17.json",
   "reports": [
+    {
+      "branch_key": "trending",
+      "branch_label": "Trending",
+      "data_path": "data/trending/reports/2026-05-17/trending-2026-05-17.json",
+      "slug": "trending-2026-05-17",
+      "snapshot_date": "2026-05-17",
+      "since": "weekly",
+      "total_repositories": 15,
+      "generated_at": "2026-05-17T13:35:14Z",
+      "source_url": "https://github.com/trending?since=weekly&spoken_language_code=",
+      "top_languages": [
+        {
+          "language": "Rust",
+          "count": 4,
+          "share": 26.666666666666668
+        },
+        {
+          "language": "TypeScript",
+          "count": 4,
+          "share": 26.666666666666668
+        },
+        {
+          "language": "Python",
+          "count": 3,
+          "share": 20.0
+        },
+        {
+          "language": "Shell",
+          "count": 2,
+          "share": 13.333333333333334
+        },
+        {
+          "language": "Go",
+          "count": 1,
+          "share": 6.666666666666667
+        }
+      ],
+      "top_repositories": [
+        {
+          "snapshot_date": "2026-05-17",
+          "repo_id": "mattpocock/skills",
+          "owner": "mattpocock",
+          "name": "skills",
+          "full_name": "mattpocock/skills",
+          "repo_url": "https://github.com/mattpocock/skills",
+          "description": "Skills for Real Engineers. Straight from my .claude directory.",
+          "language": "Shell",
+          "stars": 88015,
+          "forks": 7672,
+          "stars_this_week": 18795,
+          "built_by": [
+            "mattpocock",
+            "claude"
+          ]
+        },
+        {
+          "snapshot_date": "2026-05-17",
+          "repo_id": "obra/superpowers",
+          "owner": "obra",
+          "name": "superpowers",
+          "full_name": "obra/superpowers",
+          "repo_url": "https://github.com/obra/superpowers",
+          "description": "An agentic skills framework & software development methodology that works.",
+          "language": "Shell",
+          "stars": 194714,
+          "forks": 17310,
+          "stars_this_week": 9939,
+          "built_by": [
+            "obra",
+            "claude",
+            "arittr",
+            "clkao",
+            "jjshanks"
+          ]
+        },
+        {
+          "snapshot_date": "2026-05-17",
+          "repo_id": "cloakhq/cloakbrowser",
+          "owner": "CloakHQ",
+          "name": "CloakBrowser",
+          "full_name": "CloakHQ/CloakBrowser",
+          "repo_url": "https://github.com/CloakHQ/CloakBrowser",
+          "description": "Stealth Chromium that passes every bot detection test. Drop-in Playwright replacement with source-level fingerprint patches. 30/30 tests passed.",
+          "language": "Python",
+          "stars": 13199,
+          "forks": 1025,
+          "stars_this_week": 8618,
+          "built_by": [
+            "Cloak-HQ",
+            "evelaa123",
+            "Durafen",
+            "dependabot",
+            "kitiho"
+          ]
+        },
+        {
+          "snapshot_date": "2026-05-17",
+          "repo_id": "hmbown/deepseek-tui",
+          "owner": "Hmbown",
+          "name": "DeepSeek-TUI",
+          "full_name": "Hmbown/DeepSeek-TUI",
+          "repo_url": "https://github.com/Hmbown/DeepSeek-TUI",
+          "description": "Coding agent for DeepSeek models that runs in your terminal",
+          "language": "Rust",
+          "stars": 30997,
+          "forks": 2612,
+          "stars_this_week": 7543,
+          "built_by": [
+            "Hmbown",
+            "claude",
+            "Oliver-ZPLiu",
+            "reidliu41",
+            "linzhiqin2003"
+          ]
+        },
+        {
+          "snapshot_date": "2026-05-17",
+          "repo_id": "anthropics/financial-services",
+          "owner": "anthropics",
+          "name": "financial-services",
+          "full_name": "anthropics/financial-services",
+          "repo_url": "https://github.com/anthropics/financial-services",
+          "description": "",
+          "language": "Python",
+          "stars": 24101,
+          "forks": 3330,
+          "stars_this_week": 6935,
+          "built_by": [
+            "cxyback",
+            "mihilmy",
+            "manar-ant",
+            "tobinsouth",
+            "viveknair"
+          ]
+        }
+      ]
+    },
     {
       "branch_key": "trending",
       "branch_label": "Trending",
