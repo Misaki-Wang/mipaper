@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-21T19:40:11Z",
-  "reports_count": 211,
+  "generated_at": "2026-05-22T08:00:03Z",
+  "reports_count": 212,
   "branches": [
     {
       "branch_key": "daily",
@@ -26,8 +26,8 @@
     {
       "branch_key": "magazine",
       "branch_label": "Magazine",
-      "reports_count": 12,
-      "default_report_path": "data/magazine/reports/issue-396/magazine-issue-396.json",
+      "reports_count": 13,
+      "default_report_path": "data/magazine/reports/issue-397/magazine-issue-397.json",
       "manifest_path": "data/magazine/manifest.json"
     }
   ],
@@ -13236,6 +13236,53 @@
           "topic_label": "Domain Applications",
           "count": 112,
           "share": 4.12
+        }
+      ]
+    },
+    {
+      "branch_key": "magazine",
+      "branch_label": "Magazine",
+      "search_text": "magazine Magazine issue-397 data/magazine/reports/issue-397/magazine-issue-397.json https://github.com/ruanyf/weekly/blob/master/docs/issue-397.md 2026-05-22 科技爱好者周刊（第 397 期）：财富正在向 AI 集中 这里记录每周值得分享的科技内容，周五发布。\n\n本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。 封面图 财富正在向 AI 集中 别用 AI 估算碳水含量 微软淘汰短信验证码 亚马逊供应链服务 打字机模型",
+      "data_path": "data/magazine/reports/issue-397/magazine-issue-397.json",
+      "slug": "issue-397",
+      "issue_number": 397,
+      "issue_title": "科技爱好者周刊（第 397 期）：财富正在向 AI 集中",
+      "sync_date": "2026-05-22",
+      "sections_count": 14,
+      "generated_at": "2026-05-22T08:00:02Z",
+      "source_url": "https://github.com/ruanyf/weekly/blob/master/docs/issue-397.md",
+      "cover_image_url": "https://cdn.beekka.com/blogimg/asset/202605/bg2026051711.webp",
+      "excerpt": "这里记录每周值得分享的科技内容，周五发布。\n\n本杂志开源，欢迎投稿。另有《谁在招人》服务，发布程序员招聘信息。合作请邮件联系（yifeng.ruan@gmail.com）。",
+      "headings": [
+        {
+          "title": "封面图",
+          "slug": "magazine-section-1",
+          "level": 2
+        },
+        {
+          "title": "财富正在向 AI 集中",
+          "slug": "magazine-section-2",
+          "level": 2
+        },
+        {
+          "title": "别用 AI 估算碳水含量",
+          "slug": "magazine-section-3",
+          "level": 2
+        },
+        {
+          "title": "微软淘汰短信验证码",
+          "slug": "magazine-section-4",
+          "level": 2
+        },
+        {
+          "title": "亚马逊供应链服务",
+          "slug": "magazine-section-5",
+          "level": 2
+        },
+        {
+          "title": "打字机模型",
+          "slug": "magazine-section-6",
+          "level": 2
         }
       ]
     },
