@@ -1,7 +1,7 @@
 {
   "branch_key": "hf-daily",
   "branch_label": "HF Daily",
-  "generated_at": "2026-05-21T19:40:11Z",
+  "generated_at": "2026-05-22T19:00:10Z",
   "reports_count": 61,
   "default_report_path": "data/hf-daily/reports/2026-05-22/hf-daily-2026-05-22.json",
   "reports": [
@@ -11,9 +11,9 @@
       "data_path": "data/hf-daily/reports/2026-05-22/hf-daily-2026-05-22.json",
       "slug": "hf-daily-2026-05-22",
       "report_date": "2026-05-22",
-      "total_papers": 38,
+      "total_papers": 46,
       "classifier": "rule",
-      "generated_at": "2026-05-21T19:40:10Z",
+      "generated_at": "2026-05-22T19:00:09Z",
       "source_url": "https://huggingface.co/papers/date/2026-05-22",
       "focus_topics": [
         {
@@ -31,35 +31,35 @@
         {
           "topic_key": "multimodal_agents",
           "topic_label": "Multimodal Agents",
-          "count": 0,
-          "share": 0.0
+          "count": 1,
+          "share": 2.17
         }
       ],
       "top_topics": [
         {
-          "topic_label": "LLMs and Language",
-          "count": 9,
-          "share": 23.68
+          "topic_label": "Multimodal Understanding and Vision",
+          "count": 12,
+          "share": 26.09
+        },
+        {
+          "topic_label": "Learning, Optimization, and Theory",
+          "count": 10,
+          "share": 21.74
         },
         {
           "topic_label": "Agents and Planning",
           "count": 7,
-          "share": 18.42
+          "share": 15.22
         },
         {
-          "topic_label": "Multimodal Understanding and Vision",
+          "topic_label": "LLMs and Language",
           "count": 6,
-          "share": 15.79
+          "share": 13.04
         },
         {
           "topic_label": "Other AI",
-          "count": 6,
-          "share": 15.79
-        },
-        {
-          "topic_label": "Reasoning, Alignment, and Evaluation",
-          "count": 4,
-          "share": 10.53
+          "count": 5,
+          "share": 10.87
         }
       ],
       "top_submitters": [
@@ -68,19 +68,19 @@
           "count": 5
         },
         {
-          "submitted_by": "Anis Radianis",
+          "submitted_by": "Arkil Patel",
           "count": 1
         },
         {
-          "submitted_by": "Dhaval Patel",
+          "submitted_by": "Ben",
           "count": 1
         },
         {
-          "submitted_by": "Emaad Khwaja",
+          "submitted_by": "Breeze Chen",
           "count": 1
         },
         {
-          "submitted_by": "Guanglong Sun",
+          "submitted_by": "Dimitris Karkalousos",
           "count": 1
         }
       ]
@@ -91,9 +91,9 @@
       "data_path": "data/hf-daily/reports/2026-05-21/hf-daily-2026-05-21.json",
       "slug": "hf-daily-2026-05-21",
       "report_date": "2026-05-21",
-      "total_papers": 38,
+      "total_papers": 43,
       "classifier": "rule",
-      "generated_at": "2026-05-21T19:40:09Z",
+      "generated_at": "2026-05-22T19:00:08Z",
       "source_url": "https://huggingface.co/papers/date/2026-05-21",
       "focus_topics": [
         {
@@ -118,34 +118,38 @@
       "top_topics": [
         {
           "topic_label": "LLMs and Language",
-          "count": 9,
-          "share": 23.68
+          "count": 12,
+          "share": 27.91
         },
         {
           "topic_label": "Agents and Planning",
           "count": 7,
-          "share": 18.42
+          "share": 16.28
         },
         {
           "topic_label": "Multimodal Understanding and Vision",
-          "count": 6,
-          "share": 15.79
+          "count": 7,
+          "share": 16.28
         },
         {
           "topic_label": "Other AI",
-          "count": 6,
-          "share": 15.79
+          "count": 7,
+          "share": 16.28
         },
         {
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "count": 4,
-          "share": 10.53
+          "share": 9.3
         }
       ],
       "top_submitters": [
         {
           "submitted_by": "taesiri",
           "count": 5
+        },
+        {
+          "submitted_by": "Fangzhou Wu",
+          "count": 2
         },
         {
           "submitted_by": "Anis Radianis",
@@ -158,10 +162,6 @@
         {
           "submitted_by": "Emaad Khwaja",
           "count": 1
-        },
-        {
-          "submitted_by": "Guanglong Sun",
-          "count": 1
         }
       ]
     },
@@ -173,7 +173,7 @@
       "report_date": "2026-05-20",
       "total_papers": 53,
       "classifier": "rule",
-      "generated_at": "2026-05-21T19:40:09Z",
+      "generated_at": "2026-05-22T19:00:07Z",
       "source_url": "https://huggingface.co/papers/date/2026-05-20",
       "focus_topics": [
         {
@@ -253,7 +253,7 @@
       "report_date": "2026-05-19",
       "total_papers": 48,
       "classifier": "rule",
-      "generated_at": "2026-05-21T19:16:15Z",
+      "generated_at": "2026-05-22T19:00:06Z",
       "source_url": "https://huggingface.co/papers/date/2026-05-19",
       "focus_topics": [
         {
@@ -333,7 +333,7 @@
       "report_date": "2026-05-18",
       "total_papers": 43,
       "classifier": "rule",
-      "generated_at": "2026-05-21T19:16:15Z",
+      "generated_at": "2026-05-22T19:00:04Z",
       "source_url": "https://huggingface.co/papers/date/2026-05-18",
       "focus_topics": [
         {
