@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-22T19:00:07Z",
+  "generated_at": "2026-05-23T19:00:05Z",
   "report_kind": "hf_daily",
   "report_date": "2026-05-20",
   "source_url": "https://huggingface.co/papers/date/2026-05-20",
@@ -78,13 +78,13 @@
       "LLMs and Language: 10 papers (18.87%); representative paper: Harnessing LLM Agents with Skill Programs.",
       "Learning, Optimization, and Theory: 8 papers (15.09%); representative paper: CEPO: RLVR Self-Distillation using Contrastive Evidence Policy Optimization."
     ],
-    "trend_summary": "Today's dominant clusters are Other AI / LLMs and Language / Learning, Optimization, and Theory; this suggests that attention is spread across application adaptation, evaluation, and model reliability. The strongest visible attention is on “Anti-Self-Distillation for Reasoning RL via Pointwise Mutual Information” (186 upvotes).",
+    "trend_summary": "Today's dominant clusters are Other AI / LLMs and Language / Learning, Optimization, and Theory; this suggests that attention is spread across application adaptation, evaluation, and model reliability. The strongest visible attention is on “Anti-Self-Distillation for Reasoning RL via Pointwise Mutual Information” (189 upvotes).",
     "category_summaries": [
       {
         "topic_label": "Other AI",
         "count": 12,
         "share": 22.64,
-        "summary": "Other AI contributes 12 papers (22.64%), led by “Active Learners as Efficient PRP Rerankers” with 93 upvotes."
+        "summary": "Other AI contributes 12 papers (22.64%), led by “Active Learners as Efficient PRP Rerankers” with 94 upvotes."
       },
       {
         "topic_label": "LLMs and Language",
@@ -102,31 +102,31 @@
         "topic_label": "Agents and Planning",
         "count": 7,
         "share": 13.21,
-        "summary": "Agents and Planning contributes 7 papers (13.21%), led by “AutoResearchClaw: Self-Reinforcing Autonomous Research with Human-AI Collaboration” with 112 upvotes."
+        "summary": "Agents and Planning contributes 7 papers (13.21%), led by “AutoResearchClaw: Self-Reinforcing Autonomous Research with Human-AI Collaboration” with 151 upvotes."
       },
       {
         "topic_label": "Reasoning, Alignment, and Evaluation",
         "count": 7,
         "share": 13.21,
-        "summary": "Reasoning, Alignment, and Evaluation contributes 7 papers (13.21%), led by “Anti-Self-Distillation for Reasoning RL via Pointwise Mutual Information” with 186 upvotes."
+        "summary": "Reasoning, Alignment, and Evaluation contributes 7 papers (13.21%), led by “Anti-Self-Distillation for Reasoning RL via Pointwise Mutual Information” with 189 upvotes."
       },
       {
         "topic_label": "Multimodal Understanding and Vision",
         "count": 5,
         "share": 9.43,
-        "summary": "Multimodal Understanding and Vision contributes 5 papers (9.43%), led by “When Vision Speaks for Sound” with 95 upvotes."
+        "summary": "Multimodal Understanding and Vision contributes 5 papers (9.43%), led by “When Vision Speaks for Sound” with 104 upvotes."
       },
       {
         "topic_label": "Robotics and Embodied AI",
         "count": 2,
         "share": 3.77,
-        "summary": "Robotics and Embodied AI contributes 2 papers (3.77%), led by “ESI-Bench: Towards Embodied Spatial Intelligence that Closes the Perception-Action Loop” with 5 upvotes."
+        "summary": "Robotics and Embodied AI contributes 2 papers (3.77%), led by “Zero-Shot Sim-to-Real Robot Learning: A Dexterous Manipulation Study on Reactive Catching” with 5 upvotes."
       },
       {
         "topic_label": "Datasets and Benchmarks",
         "count": 1,
         "share": 1.89,
-        "summary": "Datasets and Benchmarks contributes 1 papers (1.89%), led by “PixVerve: Advancing Native UHR Image Generation to 100MP with a Large-Scale High-Quality Dataset” with 10 upvotes."
+        "summary": "Datasets and Benchmarks contributes 1 papers (1.89%), led by “PixVerve: Advancing Native UHR Image Generation to 100MP with a Large-Scale High-Quality Dataset” with 11 upvotes."
       },
       {
         "topic_label": "Multimodal Generative Modeling",
@@ -138,8 +138,8 @@
     "top_papers": [
       {
         "title": "Anti-Self-Distillation for Reasoning RL via Pointwise Mutual Information",
-        "upvotes": 186,
-        "upvote_label": "186 upvotes",
+        "upvotes": 189,
+        "upvote_label": "189 upvotes",
         "topic_label": "Reasoning, Alignment, and Evaluation",
         "summary": "On-policy self-distillation, where a student is pulled toward a copy of itself conditioned on privileged context (e.g., a verified solution or feedback), offers a promising direction for advancing reasoning capability…",
         "hf_url": "https://huggingface.co/papers/2605.11609",
@@ -149,8 +149,8 @@
       },
       {
         "title": "AutoResearchClaw: Self-Reinforcing Autonomous Research with Human-AI Collaboration",
-        "upvotes": 112,
-        "upvote_label": "112 upvotes",
+        "upvotes": 151,
+        "upvote_label": "151 upvotes",
         "topic_label": "Agents and Planning",
         "summary": "Automating scientific discovery requires more than generating papers from ideas.",
         "hf_url": "https://huggingface.co/papers/2605.20025",
@@ -160,8 +160,8 @@
       },
       {
         "title": "When Vision Speaks for Sound",
-        "upvotes": 95,
-        "upvote_label": "95 upvotes",
+        "upvotes": 104,
+        "upvote_label": "104 upvotes",
         "topic_label": "Multimodal Understanding and Vision",
         "summary": "Despite rapid progress in video-capable MLLMs, we find that their apparent audio understanding in videos is often vision-driven: models rely on visual cues to infer or hallucinate acoustic information, rather than…",
         "hf_url": "https://huggingface.co/papers/2605.16403",
@@ -171,8 +171,8 @@
       },
       {
         "title": "Active Learners as Efficient PRP Rerankers",
-        "upvotes": 93,
-        "upvote_label": "93 upvotes",
+        "upvotes": 94,
+        "upvote_label": "94 upvotes",
         "topic_label": "Other AI",
         "summary": "Pairwise Ranking Prompting (PRP) elicits pairwise preference judgments from an LLM, which are then aggregated into a ranking, usually via classical sorting algorithms.",
         "hf_url": "https://huggingface.co/papers/2605.14236",
@@ -241,7 +241,7 @@
       "github_url": "",
       "submitted_by": "floyed shen",
       "submitted_at": "2026-05-20T00:00:00.000Z",
-      "upvotes": 186,
+      "upvotes": 189,
       "comments": 4,
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
@@ -251,7 +251,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "On-policy self-distillation, where a student is pulled toward a copy of itself conditioned on privileged context (e.g., a verified solution or feedback), offers a promising direction for advancing reasoning capability…",
-      "upvote_label": "186 upvotes"
+      "upvote_label": "189 upvotes"
     },
     {
       "report_date": "2026-05-20",
@@ -302,7 +302,7 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-05-20T00:00:00.000Z",
-      "upvotes": 112,
+      "upvotes": 151,
       "comments": 1,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -312,7 +312,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Automating scientific discovery requires more than generating papers from ideas.",
-      "upvote_label": "112 upvotes"
+      "upvote_label": "151 upvotes"
     },
     {
       "report_date": "2026-05-20",
@@ -337,7 +337,7 @@
       "github_url": "",
       "submitted_by": "Tinghui Zhu",
       "submitted_at": "2026-05-20T00:00:00.000Z",
-      "upvotes": 95,
+      "upvotes": 104,
       "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -347,7 +347,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Despite rapid progress in video-capable MLLMs, we find that their apparent audio understanding in videos is often vision-driven: models rely on visual cues to infer or hallucinate acoustic information, rather than…",
-      "upvote_label": "95 upvotes"
+      "upvote_label": "104 upvotes"
     },
     {
       "report_date": "2026-05-20",
@@ -369,7 +369,7 @@
       "github_url": "",
       "submitted_by": "Luciano Del Corro",
       "submitted_at": "2026-05-20T00:00:00.000Z",
-      "upvotes": 93,
+      "upvotes": 94,
       "comments": 4,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
@@ -377,7 +377,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Pairwise Ranking Prompting (PRP) elicits pairwise preference judgments from an LLM, which are then aggregated into a ranking, usually via classical sorting algorithms.",
-      "upvote_label": "93 upvotes"
+      "upvote_label": "94 upvotes"
     },
     {
       "report_date": "2026-05-20",
@@ -438,7 +438,7 @@
       "github_url": "",
       "submitted_by": "suu",
       "submitted_at": "2026-05-20T00:00:00.000Z",
-      "upvotes": 55,
+      "upvotes": 56,
       "comments": 1,
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
@@ -448,7 +448,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "We present GoLongRL, a fully open-source, capability-oriented post-training recipe for long-context reinforcement learning with verifiable rewards (RLVR).",
-      "upvote_label": "55 upvotes"
+      "upvote_label": "56 upvotes"
     },
     {
       "report_date": "2026-05-20",
@@ -511,7 +511,7 @@
       "github_url": "",
       "submitted_by": "shawnxzhu",
       "submitted_at": "2026-05-20T00:00:00.000Z",
-      "upvotes": 46,
+      "upvotes": 48,
       "comments": 1,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -521,7 +521,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Equipping LLMs with tool-use capabilities via Agentic Reinforcement Learning (Agentic RL) is bottlenecked by two challenges: the lack of scalable, robust execution environments and the scarcity of realistic training…",
-      "upvote_label": "46 upvotes"
+      "upvote_label": "48 upvotes"
     }
   ],
   "topics": [
@@ -529,7 +529,7 @@
       "topic_label": "Other AI",
       "count": 12,
       "share": 22.64,
-      "summary": "Other AI contributes 12 papers (22.64%), led by “Active Learners as Efficient PRP Rerankers” with 93 upvotes.",
+      "summary": "Other AI contributes 12 papers (22.64%), led by “Active Learners as Efficient PRP Rerankers” with 94 upvotes.",
       "papers": [
         {
           "report_date": "2026-05-20",
@@ -551,7 +551,7 @@
           "github_url": "",
           "submitted_by": "Luciano Del Corro",
           "submitted_at": "2026-05-20T00:00:00.000Z",
-          "upvotes": 93,
+          "upvotes": 94,
           "comments": 4,
           "topic_key": "other_ai",
           "topic_label": "Other AI",
@@ -559,7 +559,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Pairwise Ranking Prompting (PRP) elicits pairwise preference judgments from an LLM, which are then aggregated into a ranking, usually via classical sorting algorithms.",
-          "upvote_label": "93 upvotes"
+          "upvote_label": "94 upvotes"
         },
         {
           "report_date": "2026-05-20",
@@ -615,7 +615,7 @@
           "github_url": "",
           "submitted_by": "kailaisun",
           "submitted_at": "2026-05-20T00:00:00.000Z",
-          "upvotes": 10,
+          "upvotes": 11,
           "comments": 1,
           "topic_key": "other_ai",
           "topic_label": "Other AI",
@@ -623,7 +623,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Urban Building Energy Modeling plays a critical role in achieving the United Nations' Sustainable Development Goals 7 and 11.",
-          "upvote_label": "10 upvotes"
+          "upvote_label": "11 upvotes"
         },
         {
           "report_date": "2026-05-20",
@@ -644,7 +644,7 @@
           "github_url": "",
           "submitted_by": "Ji Shi",
           "submitted_at": "2026-05-20T00:00:00.000Z",
-          "upvotes": 8,
+          "upvotes": 9,
           "comments": 1,
           "topic_key": "other_ai",
           "topic_label": "Other AI",
@@ -652,7 +652,75 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "3D Gaussian Splatting (3DGS) enables real-time novel view synthesis with high visual quality.",
-          "upvote_label": "8 upvotes"
+          "upvote_label": "9 upvotes"
+        },
+        {
+          "report_date": "2026-05-20",
+          "paper_id": "2605.20104",
+          "title": "Draft Less, Retrieve More: Hybrid Tree Construction for Speculative Decoding",
+          "authors": [
+            "Yuhao Shen",
+            "Tianyu Liu",
+            "Xinyi Hu",
+            "Quan Kong",
+            "Baolin Zhang",
+            "Jun Dai",
+            "Jun Zhang",
+            "Shuang Ge",
+            "Lei Chen",
+            "Yue Li",
+            "Mingcheng Wan",
+            "Cong Wang"
+          ],
+          "abstract": "Speculative decoding (SD) accelerates large language model inference by leveraging a draft-then-verify paradigm. To maximize the acceptance rate, recent methods construct expansive draft trees, which unfortunately incur severe VRAM bandwidth and computational overheads that bottleneck end-to-end speedups. While dynamic-depth pruning can reduce this latency by removing marginal branches, it also discards potentially valid candidates, preventing the acceptance rate from reaching the upper bound of dense trees. In this paper, we identify a critical opportunity in resource allocation: the transition from dense to pruned drafting frees up significant computational budget. To break this Pareto tradeoff, we introduce Graft, a compensation framework that couples pruning and retrieval as mutually reinforcing operations. Pruning supplies sufficient budget for retrieval, while retrieval compensates for pruning-induced coverage loss and recovers accepted length. By employing a sequential `prune-then-graft' mechanism, Graft attaches highly predictive retrieved tokens into positions opened by pruning, filling the topological gaps with near-zero overhead. Graft is entirely training-free and lossless. Comprehensive evaluations show that Graft establishes a new Pareto frontier across practical deployment settings, including short-context generation, long-context generation, and large-scale models. On short-context benchmarks, it achieves up to 5.41times speedup and improves average speedup over EAGLE-3 by up to 21.8% on the large-scale Qwen3-235B. We also provide a preliminary exploration of applying Graft to the DFlash-style block drafting paradigm, offering initial evidence and insights for extending grafting beyond autoregressive draft trees.",
+          "hf_url": "https://huggingface.co/papers/2605.20104",
+          "arxiv_url": "https://arxiv.org/abs/2605.20104",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2605.20104",
+          "papers_cool_url": "https://papers.cool/arxiv/2605.20104",
+          "github_url": "",
+          "submitted_by": "taesiri",
+          "submitted_at": "2026-05-20T00:00:00.000Z",
+          "upvotes": 7,
+          "comments": 1,
+          "topic_key": "other_ai",
+          "topic_label": "Other AI",
+          "matched_terms": [],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "Speculative decoding (SD) accelerates large language model inference by leveraging a draft-then-verify paradigm.",
+          "upvote_label": "7 upvotes"
+        },
+        {
+          "report_date": "2026-05-20",
+          "paper_id": "2605.20164",
+          "title": "Not Every Rubric Teaches Equally: Policy-Aware Rubric Rewards for RLVR",
+          "authors": [
+            "Utkarsh Tyagi",
+            "Xingang Guo",
+            "MohammadHossein Rezaei",
+            "Daniel George",
+            "Anas Mahmoud",
+            "Jackson Lee",
+            "Bing Liu",
+            "Yunzhong He"
+          ],
+          "abstract": "Reinforcement learning with verifiable rewards has made post-training highly effective when correctness can be checked automatically. However, many important model behaviors require satisfying several qualitative criteria at once. Rubric-based rewards address this setting by grading prompt-specific criteria and aggregating them into a scalar reward. Yet standard static aggregations conflate a criterion's human-assigned importance with its current usefulness as an optimization signal. We show that this assumption breaks down in rubric RL: many important criteria are already saturated or currently unreachable, while criteria that distinguish rollouts are not necessarily those with the largest human weights. We introduce POW3R, a policy-aware rubric reward framework that preserves human weights and category balance as the rubric objective while adapting criterion-level reward weights during training. POW3R uses rollout-level contrast to emphasize criteria that currently separate the policy's outputs, making the GRPO reward more informative without changing the underlying evaluation target. Across three base policies on two datasets spanning multimodal and text-only settings, POW3R wins 24 of 30 base-policy/metric comparisons, improving both mean rubric reward and strict completion (the fraction of prompts whose response satisfies every required rubric criterion) over vanilla GRPO with rubric rewards, and reaches the same plateau in 2.5--4times fewer training steps. Rubric rewards should therefore distinguish what should matter in the final answer from what can teach the current policy.",
+          "hf_url": "https://huggingface.co/papers/2605.20164",
+          "arxiv_url": "https://arxiv.org/abs/2605.20164",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2605.20164",
+          "papers_cool_url": "https://papers.cool/arxiv/2605.20164",
+          "github_url": "",
+          "submitted_by": "Utkarsh Tyagi",
+          "submitted_at": "2026-05-20T00:00:00.000Z",
+          "upvotes": 6,
+          "comments": 1,
+          "topic_key": "other_ai",
+          "topic_label": "Other AI",
+          "matched_terms": [],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "Reinforcement learning with verifiable rewards has made post-training highly effective when correctness can be checked automatically.",
+          "upvote_label": "6 upvotes"
         },
         {
           "report_date": "2026-05-20",
@@ -681,74 +749,6 @@
           "classification_confidence": null,
           "one_sentence_summary": "This paper tackles the task of learning to generate signals over triangle meshes in a triangulation-agnostic manner, meaning the trained model can be applied to different meshes and triangulations effectively.",
           "upvote_label": "6 upvotes"
-        },
-        {
-          "report_date": "2026-05-20",
-          "paper_id": "2605.20104",
-          "title": "Draft Less, Retrieve More: Hybrid Tree Construction for Speculative Decoding",
-          "authors": [
-            "Yuhao Shen",
-            "Tianyu Liu",
-            "Xinyi Hu",
-            "Quan Kong",
-            "Baolin Zhang",
-            "Jun Dai",
-            "Jun Zhang",
-            "Shuang Ge",
-            "Lei Chen",
-            "Yue Li",
-            "Mingcheng Wan",
-            "Cong Wang"
-          ],
-          "abstract": "Speculative decoding (SD) accelerates large language model inference by leveraging a draft-then-verify paradigm. To maximize the acceptance rate, recent methods construct expansive draft trees, which unfortunately incur severe VRAM bandwidth and computational overheads that bottleneck end-to-end speedups. While dynamic-depth pruning can reduce this latency by removing marginal branches, it also discards potentially valid candidates, preventing the acceptance rate from reaching the upper bound of dense trees. In this paper, we identify a critical opportunity in resource allocation: the transition from dense to pruned drafting frees up significant computational budget. To break this Pareto tradeoff, we introduce Graft, a compensation framework that couples pruning and retrieval as mutually reinforcing operations. Pruning supplies sufficient budget for retrieval, while retrieval compensates for pruning-induced coverage loss and recovers accepted length. By employing a sequential `prune-then-graft' mechanism, Graft attaches highly predictive retrieved tokens into positions opened by pruning, filling the topological gaps with near-zero overhead. Graft is entirely training-free and lossless. Comprehensive evaluations show that Graft establishes a new Pareto frontier across practical deployment settings, including short-context generation, long-context generation, and large-scale models. On short-context benchmarks, it achieves up to 5.41times speedup and improves average speedup over EAGLE-3 by up to 21.8% on the large-scale Qwen3-235B. We also provide a preliminary exploration of applying Graft to the DFlash-style block drafting paradigm, offering initial evidence and insights for extending grafting beyond autoregressive draft trees.",
-          "hf_url": "https://huggingface.co/papers/2605.20104",
-          "arxiv_url": "https://arxiv.org/abs/2605.20104",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2605.20104",
-          "papers_cool_url": "https://papers.cool/arxiv/2605.20104",
-          "github_url": "",
-          "submitted_by": "taesiri",
-          "submitted_at": "2026-05-20T00:00:00.000Z",
-          "upvotes": 6,
-          "comments": 1,
-          "topic_key": "other_ai",
-          "topic_label": "Other AI",
-          "matched_terms": [],
-          "classification_source": "rule",
-          "classification_confidence": null,
-          "one_sentence_summary": "Speculative decoding (SD) accelerates large language model inference by leveraging a draft-then-verify paradigm.",
-          "upvote_label": "6 upvotes"
-        },
-        {
-          "report_date": "2026-05-20",
-          "paper_id": "2605.20164",
-          "title": "Not Every Rubric Teaches Equally: Policy-Aware Rubric Rewards for RLVR",
-          "authors": [
-            "Utkarsh Tyagi",
-            "Xingang Guo",
-            "MohammadHossein Rezaei",
-            "Daniel George",
-            "Anas Mahmoud",
-            "Jackson Lee",
-            "Bing Liu",
-            "Yunzhong He"
-          ],
-          "abstract": "Reinforcement learning with verifiable rewards has made post-training highly effective when correctness can be checked automatically. However, many important model behaviors require satisfying several qualitative criteria at once. Rubric-based rewards address this setting by grading prompt-specific criteria and aggregating them into a scalar reward. Yet standard static aggregations conflate a criterion's human-assigned importance with its current usefulness as an optimization signal. We show that this assumption breaks down in rubric RL: many important criteria are already saturated or currently unreachable, while criteria that distinguish rollouts are not necessarily those with the largest human weights. We introduce POW3R, a policy-aware rubric reward framework that preserves human weights and category balance as the rubric objective while adapting criterion-level reward weights during training. POW3R uses rollout-level contrast to emphasize criteria that currently separate the policy's outputs, making the GRPO reward more informative without changing the underlying evaluation target. Across three base policies on two datasets spanning multimodal and text-only settings, POW3R wins 24 of 30 base-policy/metric comparisons, improving both mean rubric reward and strict completion (the fraction of prompts whose response satisfies every required rubric criterion) over vanilla GRPO with rubric rewards, and reaches the same plateau in 2.5--4times fewer training steps. Rubric rewards should therefore distinguish what should matter in the final answer from what can teach the current policy.",
-          "hf_url": "https://huggingface.co/papers/2605.20164",
-          "arxiv_url": "https://arxiv.org/abs/2605.20164",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2605.20164",
-          "papers_cool_url": "https://papers.cool/arxiv/2605.20164",
-          "github_url": "",
-          "submitted_by": "Utkarsh Tyagi",
-          "submitted_at": "2026-05-20T00:00:00.000Z",
-          "upvotes": 5,
-          "comments": 1,
-          "topic_key": "other_ai",
-          "topic_label": "Other AI",
-          "matched_terms": [],
-          "classification_source": "rule",
-          "classification_confidence": null,
-          "one_sentence_summary": "Reinforcement learning with verifiable rewards has made post-training highly effective when correctness can be checked automatically.",
-          "upvote_label": "5 upvotes"
         },
         {
           "report_date": "2026-05-20",
@@ -815,6 +815,38 @@
         },
         {
           "report_date": "2026-05-20",
+          "paper_id": "2605.17360",
+          "title": "Omni-DuplexEval: Evaluating Real-time Duplex Omni-modal Interaction",
+          "authors": [
+            "Chaoqun He",
+            "Mingyang Xiang",
+            "Yingjing Xu",
+            "Bokai Xu",
+            "Junbo Cui",
+            "Jie Zhou",
+            "Yuan Yao",
+            "Lijie Wen"
+          ],
+          "abstract": "Real-time duplex interaction is essential for multimodal AI systems operating in real-world scenarios, where models must continuously process streaming inputs and respond at appropriate moments. However, most existing multimodal large language models (MLLMs) are evaluated in offline settings, where the entire video input is processed before any response is generated. While recent work has started to explore real-time duplex MLLMs, there is still no comprehensive benchmark or automatic evaluation method for this setting. To address this gap, we propose Omni-DuplexEval, a benchmark for systematically evaluating real-time duplex interaction. The benchmark consists of two complementary scenarios: (1) Real-Time Description, which evaluates the ability to generate continuous, time-aligned responses that track evolving multimodal inputs, and (2) Proactive Reminder, which evaluates the ability to identify salient events and respond at appropriate moments. Omni-DuplexEval contains 660 videos with fine-grained, human-annotated labels and precise temporal metadata, spanning 9 tasks grounded in real-world scenarios, where all questions are formulated as open-ended queries. We further introduce an automatic evaluation framework based on LLM-as-a-Judge, which enables systematic assessment by jointly evaluating response-content alignment and response timing through timestamp-aware and sequential reasoning, achieving strong alignment with human judgments. Experiments on state-of-the-art duplex MLLMs reveal substantial limitations. The best-performing model achieves only 39.6% overall, while scoring only 20.0% on Proactive Reminder. Our analysis identifies two key challenges: models struggle to balance timely responses with coherent, holistic content generation, and they often fail to determine both when to respond and what to produce. We hope our work facilitates further progress in MLLMs.",
+          "hf_url": "https://huggingface.co/papers/2605.17360",
+          "arxiv_url": "https://arxiv.org/abs/2605.17360",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2605.17360",
+          "papers_cool_url": "https://papers.cool/arxiv/2605.17360",
+          "github_url": "",
+          "submitted_by": "Chaoqun He",
+          "submitted_at": "2026-05-20T00:00:00.000Z",
+          "upvotes": 3,
+          "comments": 1,
+          "topic_key": "other_ai",
+          "topic_label": "Other AI",
+          "matched_terms": [],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "Real-time duplex interaction is essential for multimodal AI systems operating in real-world scenarios, where models must continuously process streaming inputs and respond at appropriate moments.",
+          "upvote_label": "3 upvotes"
+        },
+        {
+          "report_date": "2026-05-20",
           "paper_id": "2605.19516",
           "title": "Base Models Look Human To AI Detectors",
           "authors": [
@@ -840,38 +872,6 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "As AI-generated text enters the real-world at scale, institutions increasingly use commercial AI-text detectors, especially in education and academic-integrity workflows.",
-          "upvote_label": "2 upvotes"
-        },
-        {
-          "report_date": "2026-05-20",
-          "paper_id": "2605.17360",
-          "title": "Omni-DuplexEval: Evaluating Real-time Duplex Omni-modal Interaction",
-          "authors": [
-            "Chaoqun He",
-            "Mingyang Xiang",
-            "Yingjing Xu",
-            "Bokai Xu",
-            "Junbo Cui",
-            "Jie Zhou",
-            "Yuan Yao",
-            "Lijie Wen"
-          ],
-          "abstract": "Real-time duplex interaction is essential for multimodal AI systems operating in real-world scenarios, where models must continuously process streaming inputs and respond at appropriate moments. However, most existing multimodal large language models (MLLMs) are evaluated in offline settings, where the entire video input is processed before any response is generated. While recent work has started to explore real-time duplex MLLMs, there is still no comprehensive benchmark or automatic evaluation method for this setting. To address this gap, we propose Omni-DuplexEval, a benchmark for systematically evaluating real-time duplex interaction. The benchmark consists of two complementary scenarios: (1) Real-Time Description, which evaluates the ability to generate continuous, time-aligned responses that track evolving multimodal inputs, and (2) Proactive Reminder, which evaluates the ability to identify salient events and respond at appropriate moments. Omni-DuplexEval contains 660 videos with fine-grained, human-annotated labels and precise temporal metadata, spanning 9 tasks grounded in real-world scenarios, where all questions are formulated as open-ended queries. We further introduce an automatic evaluation framework based on LLM-as-a-Judge, which enables systematic assessment by jointly evaluating response-content alignment and response timing through timestamp-aware and sequential reasoning, achieving strong alignment with human judgments. Experiments on state-of-the-art duplex MLLMs reveal substantial limitations. The best-performing model achieves only 39.6% overall, while scoring only 20.0% on Proactive Reminder. Our analysis identifies two key challenges: models struggle to balance timely responses with coherent, holistic content generation, and they often fail to determine both when to respond and what to produce. We hope our work facilitates further progress in MLLMs.",
-          "hf_url": "https://huggingface.co/papers/2605.17360",
-          "arxiv_url": "https://arxiv.org/abs/2605.17360",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2605.17360",
-          "papers_cool_url": "https://papers.cool/arxiv/2605.17360",
-          "github_url": "",
-          "submitted_by": "Chaoqun He",
-          "submitted_at": "2026-05-20T00:00:00.000Z",
-          "upvotes": 2,
-          "comments": 1,
-          "topic_key": "other_ai",
-          "topic_label": "Other AI",
-          "matched_terms": [],
-          "classification_source": "rule",
-          "classification_confidence": null,
-          "one_sentence_summary": "Real-time duplex interaction is essential for multimodal AI systems operating in real-world scenarios, where models must continuously process streaming inputs and respond at appropriate moments.",
           "upvote_label": "2 upvotes"
         },
         {
@@ -1011,7 +1011,7 @@
           "github_url": "",
           "submitted_by": "Chuanyang Jin",
           "submitted_at": "2026-05-20T00:00:00.000Z",
-          "upvotes": 12,
+          "upvotes": 15,
           "comments": 1,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
@@ -1021,7 +1021,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Conversational AI has now reached billions of users, yet existing datasets capture only what people say, not what they think.",
-          "upvote_label": "12 upvotes"
+          "upvote_label": "15 upvotes"
         },
         {
           "report_date": "2026-05-20",
@@ -1041,7 +1041,7 @@
           "github_url": "",
           "submitted_by": "Zhuohan Gu",
           "submitted_at": "2026-05-20T00:00:00.000Z",
-          "upvotes": 6,
+          "upvotes": 7,
           "comments": 1,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
@@ -1051,7 +1051,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Large language model (LLM) agents increasingly operate over long and recurring external contexts, like document corpora and code repositories.",
-          "upvote_label": "6 upvotes"
+          "upvote_label": "7 upvotes"
         },
         {
           "report_date": "2026-05-20",
@@ -1144,7 +1144,7 @@
           "github_url": "",
           "submitted_by": "Francis Kulumba",
           "submitted_at": "2026-05-20T00:00:00.000Z",
-          "upvotes": 4,
+          "upvotes": 5,
           "comments": 1,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
@@ -1155,7 +1155,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Authorship attribution models fine-tuned with the same pretrained encoder, data, and loss can differ four-fold in performance depending only on their scoring mechanism.",
-          "upvote_label": "4 upvotes"
+          "upvote_label": "5 upvotes"
         },
         {
           "report_date": "2026-05-20",
@@ -1178,7 +1178,7 @@
           "github_url": "",
           "submitted_by": "Zijie Xin",
           "submitted_at": "2026-05-20T00:00:00.000Z",
-          "upvotes": 4,
+          "upvotes": 5,
           "comments": 1,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
@@ -1189,7 +1189,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Omni-modal large language models (om-LLMs) achieve unified audio-visual understanding by encoding video and audio into temporally aligned token sequences interleaved at the window level.",
-          "upvote_label": "4 upvotes"
+          "upvote_label": "5 upvotes"
         },
         {
           "report_date": "2026-05-20",
@@ -1239,7 +1239,7 @@
           "github_url": "",
           "submitted_by": "John Halloran",
           "submitted_at": "2026-05-20T00:00:00.000Z",
-          "upvotes": 2,
+          "upvotes": 3,
           "comments": 1,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
@@ -1249,7 +1249,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Large language models (LLMs) are highly susceptible to backdoor attacks (BAs), wherein training samples are poisoned using trigger-based harmful content.",
-          "upvote_label": "2 upvotes"
+          "upvote_label": "3 upvotes"
         }
       ]
     },
@@ -1324,6 +1324,35 @@
         },
         {
           "report_date": "2026-05-20",
+          "paper_id": "2605.18855",
+          "title": "Delta Attention Residuals",
+          "authors": [
+            "Cheng Luo",
+            "Zefan Cai",
+            "Junjie Hu"
+          ],
+          "abstract": "Attention Residuals replace standard additive residual connections with learned softmax attention over previous layer outputs, enabling selective cross-layer routing. However, standard Attention Residuals still attend over cumulative hidden states in previous layers, which are highly redundant. We show that this redundancy leads to routing collapse in deeper layers: attention weights become low-contrast and closer to uniform (max weight {approx}0.2), limiting the model's ability to select informative states in previous layers. This raises a key but underexplored design question: what layer-wise representations should be routed in Attention Residuals? To answer this question, we propose Delta Attention Residuals, which attend over deltas -- the change introduced by each sublayer (v_i = h_{i+1} - h_i) -- instead of cumulative states. Delta representations are structurally diverse and yield higher-contrast attention distributions (max weight {approx}0.6), enabling more selective and effective routing across layers. This principle applies at both per-sublayer and block granularity. Across all tested scales (220M--7.6B), Delta Attention Residuals consistently outperform both standard residuals and Attention Residuals, with 1.7--8.2\\% validation perplexity gains. Delta Attention Residuals also enables converting pretrained checkpoints into Delta Attention Residuals via standard fine-tuning. Code is available at https://github.com/wdlctc/delta-attention-residuals-code.",
+          "hf_url": "https://huggingface.co/papers/2605.18855",
+          "arxiv_url": "https://arxiv.org/abs/2605.18855",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2605.18855",
+          "papers_cool_url": "https://papers.cool/arxiv/2605.18855",
+          "github_url": "",
+          "submitted_by": "taesiri",
+          "submitted_at": "2026-05-20T00:00:00.000Z",
+          "upvotes": 8,
+          "comments": 4,
+          "topic_key": "learning_theory",
+          "topic_label": "Learning, Optimization, and Theory",
+          "matched_terms": [
+            "\\battention\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "Attention Residuals replace standard additive residual connections with learned softmax attention over previous layer outputs, enabling selective cross-layer routing.",
+          "upvote_label": "8 upvotes"
+        },
+        {
+          "report_date": "2026-05-20",
           "paper_id": "2605.09640",
           "title": "Overcoming Catastrophic Forgetting in Visual Continual Learning with Reinforcement Fine-Tuning",
           "authors": [
@@ -1340,7 +1369,7 @@
           "github_url": "",
           "submitted_by": "HanzhongGuo",
           "submitted_at": "2026-05-20T00:00:00.000Z",
-          "upvotes": 7,
+          "upvotes": 8,
           "comments": 2,
           "topic_key": "learning_theory",
           "topic_label": "Learning, Optimization, and Theory",
@@ -1351,7 +1380,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Recent studies suggest that Reinforcement Fine-Tuning (RFT) is inherently more resilient to catastrophic forgetting than Supervised Fine-Tuning (SFT).",
-          "upvote_label": "7 upvotes"
+          "upvote_label": "8 upvotes"
         },
         {
           "report_date": "2026-05-20",
@@ -1374,7 +1403,7 @@
           "github_url": "",
           "submitted_by": "Chaojian Li",
           "submitted_at": "2026-05-20T00:00:00.000Z",
-          "upvotes": 6,
+          "upvotes": 7,
           "comments": 1,
           "topic_key": "learning_theory",
           "topic_label": "Learning, Optimization, and Theory",
@@ -1385,36 +1414,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Training 3D Gaussian Splatting (3DGS) at billion-primitive scale is fundamentally memory-bound: each Gaussian primitive carries a large attribute vector, and the aggregate parameter table quickly exceeds GPU capacity,…",
-          "upvote_label": "6 upvotes"
-        },
-        {
-          "report_date": "2026-05-20",
-          "paper_id": "2605.18855",
-          "title": "Delta Attention Residuals",
-          "authors": [
-            "Cheng Luo",
-            "Zefan Cai",
-            "Junjie Hu"
-          ],
-          "abstract": "Attention Residuals replace standard additive residual connections with learned softmax attention over previous layer outputs, enabling selective cross-layer routing. However, standard Attention Residuals still attend over cumulative hidden states in previous layers, which are highly redundant. We show that this redundancy leads to routing collapse in deeper layers: attention weights become low-contrast and closer to uniform (max weight {approx}0.2), limiting the model's ability to select informative states in previous layers. This raises a key but underexplored design question: what layer-wise representations should be routed in Attention Residuals? To answer this question, we propose Delta Attention Residuals, which attend over deltas -- the change introduced by each sublayer (v_i = h_{i+1} - h_i) -- instead of cumulative states. Delta representations are structurally diverse and yield higher-contrast attention distributions (max weight {approx}0.6), enabling more selective and effective routing across layers. This principle applies at both per-sublayer and block granularity. Across all tested scales (220M--7.6B), Delta Attention Residuals consistently outperform both standard residuals and Attention Residuals, with 1.7--8.2\\% validation perplexity gains. Delta Attention Residuals also enables converting pretrained checkpoints into Delta Attention Residuals via standard fine-tuning. Code is available at https://github.com/wdlctc/delta-attention-residuals-code.",
-          "hf_url": "https://huggingface.co/papers/2605.18855",
-          "arxiv_url": "https://arxiv.org/abs/2605.18855",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2605.18855",
-          "papers_cool_url": "https://papers.cool/arxiv/2605.18855",
-          "github_url": "",
-          "submitted_by": "taesiri",
-          "submitted_at": "2026-05-20T00:00:00.000Z",
-          "upvotes": 6,
-          "comments": 4,
-          "topic_key": "learning_theory",
-          "topic_label": "Learning, Optimization, and Theory",
-          "matched_terms": [
-            "\\battention\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null,
-          "one_sentence_summary": "Attention Residuals replace standard additive residual connections with learned softmax attention over previous layer outputs, enabling selective cross-layer routing.",
-          "upvote_label": "6 upvotes"
+          "upvote_label": "7 upvotes"
         },
         {
           "report_date": "2026-05-20",
@@ -1437,7 +1437,7 @@
           "github_url": "",
           "submitted_by": "Aswin Ravikumar Rangsasamy Veerasamy",
           "submitted_at": "2026-05-20T00:00:00.000Z",
-          "upvotes": 4,
+          "upvotes": 5,
           "comments": 2,
           "topic_key": "learning_theory",
           "topic_label": "Learning, Optimization, and Theory",
@@ -1448,7 +1448,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "The effectiveness of Reinforcement Learning (RL) in Large Language Models (LLMs) depends on the nature and diversity of the data used before and during RL.",
-          "upvote_label": "4 upvotes"
+          "upvote_label": "5 upvotes"
         },
         {
           "report_date": "2026-05-20",
@@ -1470,7 +1470,7 @@
           "github_url": "",
           "submitted_by": "Egor Shvetsov",
           "submitted_at": "2026-05-20T00:00:00.000Z",
-          "upvotes": 2,
+          "upvotes": 3,
           "comments": 1,
           "topic_key": "learning_theory",
           "topic_label": "Learning, Optimization, and Theory",
@@ -1480,7 +1480,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "The design of modern neural architectures has converged through incremental empirical choices, yet the mechanisms governing their training dynamics remain only partially understood.",
-          "upvote_label": "2 upvotes"
+          "upvote_label": "3 upvotes"
         },
         {
           "report_date": "2026-05-20",
@@ -1516,7 +1516,7 @@
       "topic_label": "Agents and Planning",
       "count": 7,
       "share": 13.21,
-      "summary": "Agents and Planning contributes 7 papers (13.21%), led by “AutoResearchClaw: Self-Reinforcing Autonomous Research with Human-AI Collaboration” with 112 upvotes.",
+      "summary": "Agents and Planning contributes 7 papers (13.21%), led by “AutoResearchClaw: Self-Reinforcing Autonomous Research with Human-AI Collaboration” with 151 upvotes.",
       "papers": [
         {
           "report_date": "2026-05-20",
@@ -1567,7 +1567,7 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-05-20T00:00:00.000Z",
-          "upvotes": 112,
+          "upvotes": 151,
           "comments": 1,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
@@ -1577,7 +1577,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Automating scientific discovery requires more than generating papers from ideas.",
-          "upvote_label": "112 upvotes"
+          "upvote_label": "151 upvotes"
         },
         {
           "report_date": "2026-05-20",
@@ -1641,7 +1641,7 @@
           "github_url": "",
           "submitted_by": "shawnxzhu",
           "submitted_at": "2026-05-20T00:00:00.000Z",
-          "upvotes": 46,
+          "upvotes": 48,
           "comments": 1,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
@@ -1651,7 +1651,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Equipping LLMs with tool-use capabilities via Agentic Reinforcement Learning (Agentic RL) is bottlenecked by two challenges: the lack of scalable, robust execution environments and the scarcity of realistic training…",
-          "upvote_label": "46 upvotes"
+          "upvote_label": "48 upvotes"
         },
         {
           "report_date": "2026-05-20",
@@ -1674,7 +1674,7 @@
           "github_url": "",
           "submitted_by": "Yongsheng Yu",
           "submitted_at": "2026-05-20T00:00:00.000Z",
-          "upvotes": 27,
+          "upvotes": 29,
           "comments": 1,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
@@ -1685,7 +1685,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Recent video editing models have converged on a unified conditioning design: a single diffusion transformer jointly consumes text, source video, and reference images, and one set of weights covers replacement,…",
-          "upvote_label": "27 upvotes"
+          "upvote_label": "29 upvotes"
         },
         {
           "report_date": "2026-05-20",
@@ -1735,7 +1735,7 @@
           "github_url": "",
           "submitted_by": "Riddhi Mohan Sharma",
           "submitted_at": "2026-05-20T00:00:00.000Z",
-          "upvotes": 3,
+          "upvotes": 4,
           "comments": 1,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
@@ -1745,7 +1745,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "As autonomous agentic systems scale across regulated critical infrastructures, the lack of mechanistic, hardware-rooted enforcement for high-frequency policy updates presents a fundamental safety gap.",
-          "upvote_label": "3 upvotes"
+          "upvote_label": "4 upvotes"
         },
         {
           "report_date": "2026-05-20",
@@ -1781,7 +1781,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "count": 7,
       "share": 13.21,
-      "summary": "Reasoning, Alignment, and Evaluation contributes 7 papers (13.21%), led by “Anti-Self-Distillation for Reasoning RL via Pointwise Mutual Information” with 186 upvotes.",
+      "summary": "Reasoning, Alignment, and Evaluation contributes 7 papers (13.21%), led by “Anti-Self-Distillation for Reasoning RL via Pointwise Mutual Information” with 189 upvotes.",
       "papers": [
         {
           "report_date": "2026-05-20",
@@ -1804,7 +1804,7 @@
           "github_url": "",
           "submitted_by": "floyed shen",
           "submitted_at": "2026-05-20T00:00:00.000Z",
-          "upvotes": 186,
+          "upvotes": 189,
           "comments": 4,
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
@@ -1814,7 +1814,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "On-policy self-distillation, where a student is pulled toward a copy of itself conditioned on privileged context (e.g., a verified solution or feedback), offers a promising direction for advancing reasoning capability…",
-          "upvote_label": "186 upvotes"
+          "upvote_label": "189 upvotes"
         },
         {
           "report_date": "2026-05-20",
@@ -1842,7 +1842,7 @@
           "github_url": "",
           "submitted_by": "suu",
           "submitted_at": "2026-05-20T00:00:00.000Z",
-          "upvotes": 55,
+          "upvotes": 56,
           "comments": 1,
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
@@ -1852,7 +1852,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "We present GoLongRL, a fully open-source, capability-oriented post-training recipe for long-context reinforcement learning with verifiable rewards (RLVR).",
-          "upvote_label": "55 upvotes"
+          "upvote_label": "56 upvotes"
         },
         {
           "report_date": "2026-05-20",
@@ -1875,7 +1875,7 @@
           "github_url": "",
           "submitted_by": "hongjiyang",
           "submitted_at": "2026-05-20T00:00:00.000Z",
-          "upvotes": 33,
+          "upvotes": 34,
           "comments": 1,
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
@@ -1885,7 +1885,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Recent diffusion models achieve strong photorealism and fluency in video generation, yet remain fragile under abstract, sparse or complex conditions, leading to poor performance in professional production workflows…",
-          "upvote_label": "33 upvotes"
+          "upvote_label": "34 upvotes"
         },
         {
           "report_date": "2026-05-20",
@@ -2032,7 +2032,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "count": 5,
       "share": 9.43,
-      "summary": "Multimodal Understanding and Vision contributes 5 papers (9.43%), led by “When Vision Speaks for Sound” with 95 upvotes.",
+      "summary": "Multimodal Understanding and Vision contributes 5 papers (9.43%), led by “When Vision Speaks for Sound” with 104 upvotes.",
       "papers": [
         {
           "report_date": "2026-05-20",
@@ -2057,7 +2057,7 @@
           "github_url": "",
           "submitted_by": "Tinghui Zhu",
           "submitted_at": "2026-05-20T00:00:00.000Z",
-          "upvotes": 95,
+          "upvotes": 104,
           "comments": 2,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
@@ -2067,7 +2067,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Despite rapid progress in video-capable MLLMs, we find that their apparent audio understanding in videos is often vision-driven: models rely on visual cues to infer or hallucinate acoustic information, rather than…",
-          "upvote_label": "95 upvotes"
+          "upvote_label": "104 upvotes"
         },
         {
           "report_date": "2026-05-20",
@@ -2106,7 +2106,7 @@
           "github_url": "",
           "submitted_by": "Yujie Wei",
           "submitted_at": "2026-05-20T00:00:00.000Z",
-          "upvotes": 13,
+          "upvotes": 14,
           "comments": 1,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
@@ -2117,7 +2117,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Video generation is rapidly evolving from single-shot synthesis to complex multi-shot audio-video (MSAV) narratives to meet real-world demands.",
-          "upvote_label": "13 upvotes"
+          "upvote_label": "14 upvotes"
         },
         {
           "report_date": "2026-05-20",
@@ -2141,7 +2141,7 @@
           "github_url": "",
           "submitted_by": "Tinghui Zhu",
           "submitted_at": "2026-05-20T00:00:00.000Z",
-          "upvotes": 10,
+          "upvotes": 11,
           "comments": 2,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
@@ -2151,7 +2151,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Video diffusion models have made rapid progress in perceptual realism and temporal coherence, but they remain primarily optimized for plausible generation rather than verifiable reasoning.",
-          "upvote_label": "10 upvotes"
+          "upvote_label": "11 upvotes"
         },
         {
           "report_date": "2026-05-20",
@@ -2209,7 +2209,7 @@
           "github_url": "",
           "submitted_by": "Mor Ventura",
           "submitted_at": "2026-05-20T00:00:00.000Z",
-          "upvotes": 3,
+          "upvotes": 4,
           "comments": 1,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
@@ -2219,7 +2219,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Humans naturally communicate through abstract concepts like \"mood\".",
-          "upvote_label": "3 upvotes"
+          "upvote_label": "4 upvotes"
         }
       ]
     },
@@ -2227,7 +2227,7 @@
       "topic_label": "Robotics and Embodied AI",
       "count": 2,
       "share": 3.77,
-      "summary": "Robotics and Embodied AI contributes 2 papers (3.77%), led by “ESI-Bench: Towards Embodied Spatial Intelligence that Closes the Perception-Action Loop” with 5 upvotes.",
+      "summary": "Robotics and Embodied AI contributes 2 papers (3.77%), led by “Zero-Shot Sim-to-Real Robot Learning: A Dexterous Manipulation Study on Reactive Catching” with 5 upvotes.",
       "papers": [
         {
           "report_date": "2026-05-20",
@@ -2281,7 +2281,7 @@
           "github_url": "",
           "submitted_by": "Rajkumar rawal",
           "submitted_at": "2026-05-20T00:00:00.000Z",
-          "upvotes": 4,
+          "upvotes": 5,
           "comments": 2,
           "topic_key": "robotics_embodied",
           "topic_label": "Robotics and Embodied AI",
@@ -2292,7 +2292,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Dexterous manipulation is physics-intensive and highly sensitive to modeling errors and perception noise, making sim-to-real transfer prohibitively challenging.",
-          "upvote_label": "4 upvotes"
+          "upvote_label": "5 upvotes"
         }
       ]
     },
@@ -2300,7 +2300,7 @@
       "topic_label": "Datasets and Benchmarks",
       "count": 1,
       "share": 1.89,
-      "summary": "Datasets and Benchmarks contributes 1 papers (1.89%), led by “PixVerve: Advancing Native UHR Image Generation to 100MP with a Large-Scale High-Quality Dataset” with 10 upvotes.",
+      "summary": "Datasets and Benchmarks contributes 1 papers (1.89%), led by “PixVerve: Advancing Native UHR Image Generation to 100MP with a Large-Scale High-Quality Dataset” with 11 upvotes.",
       "papers": [
         {
           "report_date": "2026-05-20",
@@ -2330,7 +2330,7 @@
           "github_url": "",
           "submitted_by": "HAOYANG",
           "submitted_at": "2026-05-20T00:00:00.000Z",
-          "upvotes": 10,
+          "upvotes": 11,
           "comments": 3,
           "topic_key": "datasets_benchmarks",
           "topic_label": "Datasets and Benchmarks",
@@ -2340,7 +2340,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Text-to-Image (T2I) models have recently seen notable progress around 1K and 2K resolution.",
-          "upvote_label": "10 upvotes"
+          "upvote_label": "11 upvotes"
         }
       ]
     },
@@ -2406,7 +2406,7 @@
       "github_url": "",
       "submitted_by": "floyed shen",
       "submitted_at": "2026-05-20T00:00:00.000Z",
-      "upvotes": 186,
+      "upvotes": 189,
       "comments": 4,
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
@@ -2416,7 +2416,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "On-policy self-distillation, where a student is pulled toward a copy of itself conditioned on privileged context (e.g., a verified solution or feedback), offers a promising direction for advancing reasoning capability…",
-      "upvote_label": "186 upvotes"
+      "upvote_label": "189 upvotes"
     },
     {
       "report_date": "2026-05-20",
@@ -2467,7 +2467,7 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-05-20T00:00:00.000Z",
-      "upvotes": 112,
+      "upvotes": 151,
       "comments": 1,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -2477,7 +2477,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Automating scientific discovery requires more than generating papers from ideas.",
-      "upvote_label": "112 upvotes"
+      "upvote_label": "151 upvotes"
     },
     {
       "report_date": "2026-05-20",
@@ -2502,7 +2502,7 @@
       "github_url": "",
       "submitted_by": "Tinghui Zhu",
       "submitted_at": "2026-05-20T00:00:00.000Z",
-      "upvotes": 95,
+      "upvotes": 104,
       "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -2512,7 +2512,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Despite rapid progress in video-capable MLLMs, we find that their apparent audio understanding in videos is often vision-driven: models rely on visual cues to infer or hallucinate acoustic information, rather than…",
-      "upvote_label": "95 upvotes"
+      "upvote_label": "104 upvotes"
     },
     {
       "report_date": "2026-05-20",
@@ -2534,7 +2534,7 @@
       "github_url": "",
       "submitted_by": "Luciano Del Corro",
       "submitted_at": "2026-05-20T00:00:00.000Z",
-      "upvotes": 93,
+      "upvotes": 94,
       "comments": 4,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
@@ -2542,7 +2542,45 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Pairwise Ranking Prompting (PRP) elicits pairwise preference judgments from an LLM, which are then aggregated into a ranking, usually via classical sorting algorithms.",
-      "upvote_label": "93 upvotes"
+      "upvote_label": "94 upvotes"
+    },
+    {
+      "report_date": "2026-05-20",
+      "paper_id": "2605.19577",
+      "title": "GoLongRL: Capability-Oriented Long Context Reinforcement Learning with Multitask Alignment",
+      "authors": [
+        "Minxuan Lv",
+        "Tiehua Mei",
+        "Tanlong Du",
+        "Junmin Chen",
+        "Zhenpeng Su",
+        "Ziyang Chen",
+        "Ziqi Wang",
+        "Zhennan Wu",
+        "Ruotong Pan",
+        "jian Liang",
+        "Ruiming Tang",
+        "Han Li"
+      ],
+      "abstract": "We present GoLongRL, a fully open-source, capability-oriented post-training recipe for long-context reinforcement learning with verifiable rewards (RLVR). Existing long-context RL methods often treat data construction as a matter of designing increasingly complex retrieval paths, leading to homogeneous task coverage and reward formulations that inadequately reflect practical long-context requirements. Our work offers two contributions. (1) Capability-oriented data construction with full open release. We openly release a dataset of 23K RLVR samples, the complete construction pipeline, and all training code. Guided by a taxonomy of long-context capabilities, the dataset spans 9 task types, each paired with its natural evaluation metric. It comprises curated open-source samples from established corpora and synthetic samples whose QA pairs are generated from real source documents such as books, academic papers, and multi-turn dialogues. Under the same vanilla GRPO setup, our dataset alone outperforms the closed-source QwenLong-L1.5 dataset. Moreover, our Qwen3-30B-A3B model trained on this data delivers long-context performance comparable to DeepSeek-R1-0528 and Qwen3-235B-A22B-Thinking-2507, suggesting that broader coverage and greater reward diversity substantially benefit long-context capability improvement. (2) TMN-Reweight for heterogeneous multitask optimization. To address optimization challenges from heterogeneous rewards, we propose TMN-Reweight, which combines task-level mean normalization for cross-task reward scale alignment with difficulty-adaptive weighting for more reliable advantage estimation. TMN-Reweight further improves average performance over vanilla GRPO, with general capabilities preserved or improved across reported evaluations.",
+      "hf_url": "https://huggingface.co/papers/2605.19577",
+      "arxiv_url": "https://arxiv.org/abs/2605.19577",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.19577",
+      "papers_cool_url": "https://papers.cool/arxiv/2605.19577",
+      "github_url": "",
+      "submitted_by": "suu",
+      "submitted_at": "2026-05-20T00:00:00.000Z",
+      "upvotes": 56,
+      "comments": 1,
+      "topic_key": "reasoning_alignment_eval",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "matched_terms": [
+        "\\balignment\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "We present GoLongRL, a fully open-source, capability-oriented post-training recipe for long-context reinforcement learning with verifiable rewards (RLVR).",
+      "upvote_label": "56 upvotes"
     },
     {
       "report_date": "2026-05-20",
@@ -2576,44 +2614,6 @@
       "classification_confidence": null,
       "one_sentence_summary": "We present OpenComputer, a verifier-grounded framework for constructing verifiable software worlds for computer-use agents.",
       "upvote_label": "56 upvotes"
-    },
-    {
-      "report_date": "2026-05-20",
-      "paper_id": "2605.19577",
-      "title": "GoLongRL: Capability-Oriented Long Context Reinforcement Learning with Multitask Alignment",
-      "authors": [
-        "Minxuan Lv",
-        "Tiehua Mei",
-        "Tanlong Du",
-        "Junmin Chen",
-        "Zhenpeng Su",
-        "Ziyang Chen",
-        "Ziqi Wang",
-        "Zhennan Wu",
-        "Ruotong Pan",
-        "jian Liang",
-        "Ruiming Tang",
-        "Han Li"
-      ],
-      "abstract": "We present GoLongRL, a fully open-source, capability-oriented post-training recipe for long-context reinforcement learning with verifiable rewards (RLVR). Existing long-context RL methods often treat data construction as a matter of designing increasingly complex retrieval paths, leading to homogeneous task coverage and reward formulations that inadequately reflect practical long-context requirements. Our work offers two contributions. (1) Capability-oriented data construction with full open release. We openly release a dataset of 23K RLVR samples, the complete construction pipeline, and all training code. Guided by a taxonomy of long-context capabilities, the dataset spans 9 task types, each paired with its natural evaluation metric. It comprises curated open-source samples from established corpora and synthetic samples whose QA pairs are generated from real source documents such as books, academic papers, and multi-turn dialogues. Under the same vanilla GRPO setup, our dataset alone outperforms the closed-source QwenLong-L1.5 dataset. Moreover, our Qwen3-30B-A3B model trained on this data delivers long-context performance comparable to DeepSeek-R1-0528 and Qwen3-235B-A22B-Thinking-2507, suggesting that broader coverage and greater reward diversity substantially benefit long-context capability improvement. (2) TMN-Reweight for heterogeneous multitask optimization. To address optimization challenges from heterogeneous rewards, we propose TMN-Reweight, which combines task-level mean normalization for cross-task reward scale alignment with difficulty-adaptive weighting for more reliable advantage estimation. TMN-Reweight further improves average performance over vanilla GRPO, with general capabilities preserved or improved across reported evaluations.",
-      "hf_url": "https://huggingface.co/papers/2605.19577",
-      "arxiv_url": "https://arxiv.org/abs/2605.19577",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.19577",
-      "papers_cool_url": "https://papers.cool/arxiv/2605.19577",
-      "github_url": "",
-      "submitted_by": "suu",
-      "submitted_at": "2026-05-20T00:00:00.000Z",
-      "upvotes": 55,
-      "comments": 1,
-      "topic_key": "reasoning_alignment_eval",
-      "topic_label": "Reasoning, Alignment, and Evaluation",
-      "matched_terms": [
-        "\\balignment\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "We present GoLongRL, a fully open-source, capability-oriented post-training recipe for long-context reinforcement learning with verifiable rewards (RLVR).",
-      "upvote_label": "55 upvotes"
     },
     {
       "report_date": "2026-05-20",
@@ -2676,7 +2676,7 @@
       "github_url": "",
       "submitted_by": "shawnxzhu",
       "submitted_at": "2026-05-20T00:00:00.000Z",
-      "upvotes": 46,
+      "upvotes": 48,
       "comments": 1,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -2686,7 +2686,40 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Equipping LLMs with tool-use capabilities via Agentic Reinforcement Learning (Agentic RL) is bottlenecked by two challenges: the lack of scalable, robust execution environments and the scarcity of realistic training…",
-      "upvote_label": "46 upvotes"
+      "upvote_label": "48 upvotes"
+    },
+    {
+      "report_date": "2026-05-20",
+      "paper_id": "2605.19995",
+      "title": "CogOmniControl: Reasoning-Driven Controllable Video Generation via Creative Intent Cognition",
+      "authors": [
+        "Hongji Yang",
+        "Songlian Li",
+        "Yucheng Zhou",
+        "Xiaotong Zhao",
+        "Alan Zhao",
+        "Chengzhong Xu",
+        "Jianbing Shen"
+      ],
+      "abstract": "Recent diffusion models achieve strong photorealism and fluency in video generation, yet remain fragile under abstract, sparse or complex conditions, leading to poor performance in professional production workflows such as storyboard sketches and clay render conditions. Existing video generation models, either inject conditions through adapters or couple a generic vision-language model (VLM) within a diffusion backbone, leaving a capability gap and failing to produce the videos that align with the user's creative intent. We present CogOmniControl, a reasoning-driven framework that factorizes controllable video generation into creative intent cognition and generation. Specifically, we train a specialized CogVLM using authentic anime production data. Compared to generic VLMs, it generates more professional and clear outputs, accurately cognizing user creative intent from sparse and abstract conditions and tuning these cues into dense reasoning output. Besides, CogOmniDiT unifies the controls from various conditions through in-context generation and is aligned to the CogVLM reasoning outputs via reinforcement learning. Furthermore, leveraging CogVLM's robust capability in guiding video generation, we release its potential in planning specific evaluators and enable a Best-of-N selection for the generated videos. This integration transforms the entire framework into a closed-loop \"harness-like\" architecture. We further introduce CogReasonBench and CogControlBench, built from professional workflows data that carry genuine creative intent rather than simulated ones. Experiments on two benchmarks show that CogOmniControl surpassed the existing open-source models. The project website: https://um-lab.github.io/CogOmniControl/",
+      "hf_url": "https://huggingface.co/papers/2605.19995",
+      "arxiv_url": "https://arxiv.org/abs/2605.19995",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.19995",
+      "papers_cool_url": "https://papers.cool/arxiv/2605.19995",
+      "github_url": "",
+      "submitted_by": "hongjiyang",
+      "submitted_at": "2026-05-20T00:00:00.000Z",
+      "upvotes": 34,
+      "comments": 1,
+      "topic_key": "reasoning_alignment_eval",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "matched_terms": [
+        "\\breasoning\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Recent diffusion models achieve strong photorealism and fluency in video generation, yet remain fragile under abstract, sparse or complex conditions, leading to poor performance in professional production workflows…",
+      "upvote_label": "34 upvotes"
     },
     {
       "report_date": "2026-05-20",
@@ -2720,39 +2753,6 @@
     },
     {
       "report_date": "2026-05-20",
-      "paper_id": "2605.19995",
-      "title": "CogOmniControl: Reasoning-Driven Controllable Video Generation via Creative Intent Cognition",
-      "authors": [
-        "Hongji Yang",
-        "Songlian Li",
-        "Yucheng Zhou",
-        "Xiaotong Zhao",
-        "Alan Zhao",
-        "Chengzhong Xu",
-        "Jianbing Shen"
-      ],
-      "abstract": "Recent diffusion models achieve strong photorealism and fluency in video generation, yet remain fragile under abstract, sparse or complex conditions, leading to poor performance in professional production workflows such as storyboard sketches and clay render conditions. Existing video generation models, either inject conditions through adapters or couple a generic vision-language model (VLM) within a diffusion backbone, leaving a capability gap and failing to produce the videos that align with the user's creative intent. We present CogOmniControl, a reasoning-driven framework that factorizes controllable video generation into creative intent cognition and generation. Specifically, we train a specialized CogVLM using authentic anime production data. Compared to generic VLMs, it generates more professional and clear outputs, accurately cognizing user creative intent from sparse and abstract conditions and tuning these cues into dense reasoning output. Besides, CogOmniDiT unifies the controls from various conditions through in-context generation and is aligned to the CogVLM reasoning outputs via reinforcement learning. Furthermore, leveraging CogVLM's robust capability in guiding video generation, we release its potential in planning specific evaluators and enable a Best-of-N selection for the generated videos. This integration transforms the entire framework into a closed-loop \"harness-like\" architecture. We further introduce CogReasonBench and CogControlBench, built from professional workflows data that carry genuine creative intent rather than simulated ones. Experiments on two benchmarks show that CogOmniControl surpassed the existing open-source models. The project website: https://um-lab.github.io/CogOmniControl/",
-      "hf_url": "https://huggingface.co/papers/2605.19995",
-      "arxiv_url": "https://arxiv.org/abs/2605.19995",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.19995",
-      "papers_cool_url": "https://papers.cool/arxiv/2605.19995",
-      "github_url": "",
-      "submitted_by": "hongjiyang",
-      "submitted_at": "2026-05-20T00:00:00.000Z",
-      "upvotes": 33,
-      "comments": 1,
-      "topic_key": "reasoning_alignment_eval",
-      "topic_label": "Reasoning, Alignment, and Evaluation",
-      "matched_terms": [
-        "\\breasoning\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Recent diffusion models achieve strong photorealism and fluency in video generation, yet remain fragile under abstract, sparse or complex conditions, leading to poor performance in professional production workflows…",
-      "upvote_label": "33 upvotes"
-    },
-    {
-      "report_date": "2026-05-20",
       "paper_id": "2605.18748",
       "title": "Aurora: Unified Video Editing with a Tool-Using Agent",
       "authors": [
@@ -2772,7 +2772,7 @@
       "github_url": "",
       "submitted_by": "Yongsheng Yu",
       "submitted_at": "2026-05-20T00:00:00.000Z",
-      "upvotes": 27,
+      "upvotes": 29,
       "comments": 1,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -2783,7 +2783,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Recent video editing models have converged on a unified conditioning design: a single diffusion transformer jointly consumes text, source video, and reference images, and one set of weights covers replacement,…",
-      "upvote_label": "27 upvotes"
+      "upvote_label": "29 upvotes"
     },
     {
       "report_date": "2026-05-20",
@@ -2837,6 +2837,41 @@
     },
     {
       "report_date": "2026-05-20",
+      "paper_id": "2605.20087",
+      "title": "ThoughtTrace: Understanding User Thoughts in Real-World LLM Interactions",
+      "authors": [
+        "Chuanyang Jin",
+        "Binze Li",
+        "Haopeng Xie",
+        "Cathy Mengying Fang",
+        "Tianjian Li",
+        "Shayne Longpre",
+        "Hongxiang Gu",
+        "Maximillian Chen",
+        "Tianmin Shu"
+      ],
+      "abstract": "Conversational AI has now reached billions of users, yet existing datasets capture only what people say, not what they think. We introduce ThoughtTrace, the first large-scale dataset that pairs real-world multi-turn human--AI conversations with users' self-reported thoughts: their reasons for sending prompts and reactions to assistant responses. ThoughtTrace comprises 1,058 users, 2,155 conversations, 17,058 turns, and 10,174 thought annotations collected across 20 language models. Our analysis shows that ThoughtTrace captures long-horizon, topically diverse interactions, and that thoughts are semantically distinct from messages, difficult for frontier LLMs to infer from context, diverse in content, and tied to conversation stages. We further demonstrate the utility of thoughts for downstream modeling. First, thoughts improve user-behavior prediction as inference-time context. Second, thought-guided rewrites provide fine-grained alignment signals for training personalized assistants. Together, ThoughtTrace establishes user thoughts as a new data modality for studying the cognitive dynamics behind human--AI interaction and provides a foundation for building assistants that better understand and adapt to users' latent goals, preferences, and needs.",
+      "hf_url": "https://huggingface.co/papers/2605.20087",
+      "arxiv_url": "https://arxiv.org/abs/2605.20087",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.20087",
+      "papers_cool_url": "https://papers.cool/arxiv/2605.20087",
+      "github_url": "",
+      "submitted_by": "Chuanyang Jin",
+      "submitted_at": "2026-05-20T00:00:00.000Z",
+      "upvotes": 15,
+      "comments": 1,
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [
+        "\\b\\w*llms?\\w*\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Conversational AI has now reached billions of users, yet existing datasets capture only what people say, not what they think.",
+      "upvote_label": "15 upvotes"
+    },
+    {
+      "report_date": "2026-05-20",
       "paper_id": "2605.18758",
       "title": "OmniGUI: Benchmarking GUI Agents in Omni-Modal Smartphone Environments",
       "authors": [
@@ -2867,6 +2902,56 @@
       "classification_confidence": null,
       "one_sentence_summary": "Current benchmarks for graphical user interface (GUI) agents predominantly rely on static screenshots.",
       "upvote_label": "15 upvotes"
+    },
+    {
+      "report_date": "2026-05-20",
+      "paper_id": "2605.20183",
+      "title": "MSAVBench: Towards Comprehensive and Reliable Evaluation of Multi-Shot Audio-Video Generation",
+      "authors": [
+        "Yujie Wei",
+        "Yujin Han",
+        "Zhekai Chen",
+        "Yongming Li",
+        "Kaixun Jiang",
+        "Zhihang Liu",
+        "Quanhao Li",
+        "Zhiwu Qing",
+        "Xiang Wang",
+        "Zhen Xing",
+        "Ruihang Chu",
+        "Lingyi Hong",
+        "Yefei He",
+        "Junjie Zhou",
+        "Junqiu Yu",
+        "Yang Shi",
+        "Difan Zou",
+        "Kai Zhu",
+        "Shiwei Zhang",
+        "Yingya Zhang",
+        "Yu Liu",
+        "Xihui Liu",
+        "Hongming Shan"
+      ],
+      "abstract": "Video generation is rapidly evolving from single-shot synthesis to complex multi-shot audio-video (MSAV) narratives to meet real-world demands. However, evaluating such frontier models remains a fundamental challenge. Existing benchmarks are limited in scope and data diversity, and rely on rigid evaluation pipelines, preventing systematic and reliable assessment of modern MSAV models. To bridge these gaps, we introduce MSAVBench, the first comprehensive benchmark and adaptive hybrid evaluation framework for multi-shot audio-video generation. Our benchmark spans four key dimensions, video, audio, shot, and reference, covering diverse task settings, varying shot counts of up to 15, and challenging non-realistic scenarios. Our evaluation framework improves robustness through an adaptive self-correction mechanism for shot segmentation, instance-wise rubrics for subjective metrics, and tool-grounded evidence extraction for complex judgments. Furthermore, MSAVBench achieves high alignment with human judgments, reaching a Spearman rank correlation of 91.5%. Our systematic evaluation of 19 state-of-the-art closed- and open-source models shows that current systems still struggle with director-level control and fine-grained audio-visual synchronization, while modular or agentic generation pipelines offer a promising path toward narrowing the gap between open- and closed-source models. We will release the benchmark data and evaluation code to facilitate future research.",
+      "hf_url": "https://huggingface.co/papers/2605.20183",
+      "arxiv_url": "https://arxiv.org/abs/2605.20183",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.20183",
+      "papers_cool_url": "https://papers.cool/arxiv/2605.20183",
+      "github_url": "",
+      "submitted_by": "Yujie Wei",
+      "submitted_at": "2026-05-20T00:00:00.000Z",
+      "upvotes": 14,
+      "comments": 1,
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
+      "matched_terms": [
+        "\\bvideo\\b",
+        "\\baudio\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Video generation is rapidly evolving from single-shot synthesis to complex multi-shot audio-video (MSAV) narratives to meet real-world demands.",
+      "upvote_label": "14 upvotes"
     },
     {
       "report_date": "2026-05-20",
@@ -2942,88 +3027,109 @@
     },
     {
       "report_date": "2026-05-20",
-      "paper_id": "2605.20183",
-      "title": "MSAVBench: Towards Comprehensive and Reliable Evaluation of Multi-Shot Audio-Video Generation",
+      "paper_id": "2605.20147",
+      "title": "PixVerve: Advancing Native UHR Image Generation to 100MP with a Large-Scale High-Quality Dataset",
       "authors": [
-        "Yujie Wei",
-        "Yujin Han",
-        "Zhekai Chen",
-        "Yongming Li",
-        "Kaixun Jiang",
-        "Zhihang Liu",
-        "Quanhao Li",
-        "Zhiwu Qing",
-        "Xiang Wang",
-        "Zhen Xing",
-        "Ruihang Chu",
-        "Lingyi Hong",
-        "Yefei He",
-        "Junjie Zhou",
-        "Junqiu Yu",
-        "Yang Shi",
-        "Difan Zou",
-        "Kai Zhu",
-        "Shiwei Zhang",
-        "Yingya Zhang",
-        "Yu Liu",
-        "Xihui Liu",
-        "Hongming Shan"
+        "Haojun Chen",
+        "Haoyang He",
+        "Chengming Xu",
+        "Qingdong He",
+        "Junwei Zhu",
+        "Yabiao Wang",
+        "Zhucun Xue",
+        "Xianfang Zeng",
+        "Zhennan Chen",
+        "Xiaobin Hu",
+        "Hao Zhao",
+        "Yong Liu",
+        "Jiangning Zhang",
+        "Dacheng Tao"
       ],
-      "abstract": "Video generation is rapidly evolving from single-shot synthesis to complex multi-shot audio-video (MSAV) narratives to meet real-world demands. However, evaluating such frontier models remains a fundamental challenge. Existing benchmarks are limited in scope and data diversity, and rely on rigid evaluation pipelines, preventing systematic and reliable assessment of modern MSAV models. To bridge these gaps, we introduce MSAVBench, the first comprehensive benchmark and adaptive hybrid evaluation framework for multi-shot audio-video generation. Our benchmark spans four key dimensions, video, audio, shot, and reference, covering diverse task settings, varying shot counts of up to 15, and challenging non-realistic scenarios. Our evaluation framework improves robustness through an adaptive self-correction mechanism for shot segmentation, instance-wise rubrics for subjective metrics, and tool-grounded evidence extraction for complex judgments. Furthermore, MSAVBench achieves high alignment with human judgments, reaching a Spearman rank correlation of 91.5%. Our systematic evaluation of 19 state-of-the-art closed- and open-source models shows that current systems still struggle with director-level control and fine-grained audio-visual synchronization, while modular or agentic generation pipelines offer a promising path toward narrowing the gap between open- and closed-source models. We will release the benchmark data and evaluation code to facilitate future research.",
-      "hf_url": "https://huggingface.co/papers/2605.20183",
-      "arxiv_url": "https://arxiv.org/abs/2605.20183",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.20183",
-      "papers_cool_url": "https://papers.cool/arxiv/2605.20183",
+      "abstract": "Text-to-Image (T2I) models have recently seen notable progress around 1K and 2K resolution. With the extreme desire for better visual experience and the rapid development of imaging technology, the demand for Ultra-High-Resolution (UHR) image generation has grown significantly. However, UHR image generation poses great challenges due to the scarcity and complexity of high-resolution content. In this paper, we first introduce PixVerve-95K, a high-quality, open-source UHR T2I dataset curated with a carefully designed data pipeline, which contains 95K images across diverse scenarios (each image has a minimum pixel-count of 100M) and seven-dimensional annotations. Based on our large-scale image-text dataset, we take a pioneering step to extend various T2I foundation models to native 100MP generation with three training schemes. Finally, leveraging both conventional metrics and multimodal large language model-based assessments, our proposed PixVerve-Bench benchmark establishes a comprehensive evaluation protocol for UHR images encompassing visual quality and semantic alignment. Extensive experimental results on our benchmark and the constructive exploration of training strategies collaboratively provide valuable insights for future breakthroughs.",
+      "hf_url": "https://huggingface.co/papers/2605.20147",
+      "arxiv_url": "https://arxiv.org/abs/2605.20147",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.20147",
+      "papers_cool_url": "https://papers.cool/arxiv/2605.20147",
       "github_url": "",
-      "submitted_by": "Yujie Wei",
+      "submitted_by": "HAOYANG",
       "submitted_at": "2026-05-20T00:00:00.000Z",
-      "upvotes": 13,
-      "comments": 1,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
+      "upvotes": 11,
+      "comments": 3,
+      "topic_key": "datasets_benchmarks",
+      "topic_label": "Datasets and Benchmarks",
       "matched_terms": [
-        "\\bvideo\\b",
-        "\\baudio\\b"
+        "\\bdataset(s)?\\b"
       ],
       "classification_source": "rule",
       "classification_confidence": null,
-      "one_sentence_summary": "Video generation is rapidly evolving from single-shot synthesis to complex multi-shot audio-video (MSAV) narratives to meet real-world demands.",
-      "upvote_label": "13 upvotes"
+      "one_sentence_summary": "Text-to-Image (T2I) models have recently seen notable progress around 1K and 2K resolution.",
+      "upvote_label": "11 upvotes"
     },
     {
       "report_date": "2026-05-20",
-      "paper_id": "2605.20087",
-      "title": "ThoughtTrace: Understanding User Thoughts in Real-World LLM Interactions",
+      "paper_id": "2605.18101",
+      "title": "SENSE: Satellite-based ENergy Synthesis for Sustainable Environment",
       "authors": [
-        "Chuanyang Jin",
-        "Binze Li",
-        "Haopeng Xie",
-        "Cathy Mengying Fang",
-        "Tianjian Li",
-        "Shayne Longpre",
-        "Hongxiang Gu",
-        "Maximillian Chen",
-        "Tianmin Shu"
+        "Kailai Sun",
+        "Mingyi He",
+        "Heye Huang",
+        "Can Rong",
+        "Alok Prakash",
+        "Baoshen Guo",
+        "Shenhao Wang",
+        "Jinhua Zhao"
       ],
-      "abstract": "Conversational AI has now reached billions of users, yet existing datasets capture only what people say, not what they think. We introduce ThoughtTrace, the first large-scale dataset that pairs real-world multi-turn human--AI conversations with users' self-reported thoughts: their reasons for sending prompts and reactions to assistant responses. ThoughtTrace comprises 1,058 users, 2,155 conversations, 17,058 turns, and 10,174 thought annotations collected across 20 language models. Our analysis shows that ThoughtTrace captures long-horizon, topically diverse interactions, and that thoughts are semantically distinct from messages, difficult for frontier LLMs to infer from context, diverse in content, and tied to conversation stages. We further demonstrate the utility of thoughts for downstream modeling. First, thoughts improve user-behavior prediction as inference-time context. Second, thought-guided rewrites provide fine-grained alignment signals for training personalized assistants. Together, ThoughtTrace establishes user thoughts as a new data modality for studying the cognitive dynamics behind human--AI interaction and provides a foundation for building assistants that better understand and adapt to users' latent goals, preferences, and needs.",
-      "hf_url": "https://huggingface.co/papers/2605.20087",
-      "arxiv_url": "https://arxiv.org/abs/2605.20087",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.20087",
-      "papers_cool_url": "https://papers.cool/arxiv/2605.20087",
+      "abstract": "Urban Building Energy Modeling plays a critical role in achieving the United Nations' Sustainable Development Goals 7 and 11. Although existing studies based on satellite imagery and deep learning have achieved remarkable progress, many challenges exist: most existing studies are inherently predictive, failing to reflect the generative nature of urban planning; although generative AI and diffusion models have seen explosive growth in satellite imagery, they lack the urban functional generation (e.g., energy layer); third, aligned high-quality high-resolution building energy data with satellite imagery is limited and scarce. Here we propose SENSE (Satellite-based ENergy Synthesis for Sustainable Environment), a unified generative UBEM framework that jointly synthesizes realistic urban satellite imagery and aligned high-quality building energy consumption and height maps. By conditioning on road networks and urban density metrics, SENSE, based on a controllable diffusion model, leverages the knowledge learned by large vision models to generate urban building energy consumption and height information (annotations) in the latent space. Experiments across four cities (New York City, Boston, Lyon, Busan) demonstrate that SENSE achieves high visual fidelity and strong physical consistency, satisfying the ASHRAE standard metric. Experiments demonstrate that SENSE can generate enough annotated synthetic data using less than 20% labeled energy data, boosting downstream prediction performance by 10% IoU. Compared to SOTA urban energy prediction methods, SENSE significantly reduced prediction error (reduced 3%-11% NMBE and 1%-9% CVRMSE). This study offers an energy-efficiency urban planning and physical generation solution for urban science, energy science and building science. The dataset and code: https://huggingface.co/datasets/skl24/MUSE and https://github.com/kailaisun/GenAI4Urban-Energy/.",
+      "hf_url": "https://huggingface.co/papers/2605.18101",
+      "arxiv_url": "https://arxiv.org/abs/2605.18101",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.18101",
+      "papers_cool_url": "https://papers.cool/arxiv/2605.18101",
       "github_url": "",
-      "submitted_by": "Chuanyang Jin",
+      "submitted_by": "kailaisun",
       "submitted_at": "2026-05-20T00:00:00.000Z",
-      "upvotes": 12,
+      "upvotes": 11,
       "comments": 1,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
+      "matched_terms": [],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Urban Building Energy Modeling plays a critical role in achieving the United Nations' Sustainable Development Goals 7 and 11.",
+      "upvote_label": "11 upvotes"
+    },
+    {
+      "report_date": "2026-05-20",
+      "paper_id": "2605.15458",
+      "title": "Video Models Can Reason with Verifiable Rewards",
+      "authors": [
+        "Tinghui Zhu",
+        "Sheng Zhang",
+        "James Y. Huang",
+        "Selena Song",
+        "Xiaofei Wen",
+        "Yuankai Li",
+        "Hoifung Poon",
+        "Muhao Chen"
+      ],
+      "abstract": "Video diffusion models have made rapid progress in perceptual realism and temporal coherence, but they remain primarily optimized for plausible generation rather than verifiable reasoning. This limitation is especially pronounced in tasks where generated videos must satisfy explicit spatial, temporal, or logical constraints. Inspired by the role of reinforcement learning with verifiable rewards (RLVR) in reasoning-oriented language models, we introduce VideoRLVR, a practical recipe for optimizing video diffusion models with rule-based feedback. VideoRLVR formulates video reasoning as the generation of verifiable visual trajectories and consists of an SDE-GRPO optimization backbone, dense decomposed rewards, and an Early-Step Focus strategy for efficient training. The Early-Step Focus strategy restricts policy optimization to the early denoising phase, reducing training latency by about 40% while preserving performance. We evaluate VideoRLVR on Maze, FlowFree, and Sokoban, three procedurally generated domains with objective success criteria. Across these tasks, VideoRLVR consistently improves over supervised fine-tuning baselines, with dense decomposed rewards proving especially important in low-success-rate settings. Our RL-optimized model also outperforms the evaluated proprietary and open-source video generation models on these verifiable reasoning benchmarks and out-of-domain benchmarks. These results suggest that verifiable RL can move video models beyond perceptual imitation toward more reliable rule-consistent visual reasoning.",
+      "hf_url": "https://huggingface.co/papers/2605.15458",
+      "arxiv_url": "https://arxiv.org/abs/2605.15458",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.15458",
+      "papers_cool_url": "https://papers.cool/arxiv/2605.15458",
+      "github_url": "",
+      "submitted_by": "Tinghui Zhu",
+      "submitted_at": "2026-05-20T00:00:00.000Z",
+      "upvotes": 11,
+      "comments": 2,
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [
-        "\\b\\w*llms?\\w*\\b"
+        "\\bvideo\\b"
       ],
       "classification_source": "rule",
       "classification_confidence": null,
-      "one_sentence_summary": "Conversational AI has now reached billions of users, yet existing datasets capture only what people say, not what they think.",
-      "upvote_label": "12 upvotes"
+      "one_sentence_summary": "Video diffusion models have made rapid progress in perceptual realism and temporal coherence, but they remain primarily optimized for plausible generation rather than verifiable reasoning.",
+      "upvote_label": "11 upvotes"
     },
     {
       "report_date": "2026-05-20",
@@ -3053,78 +3159,6 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "4D mesh generation has recently emerged as a powerful paradigm for recovering dynamic 3D structure from videos, but existing methods remain slow, computationally expensive, and difficult to scale to longer sequences.",
-      "upvote_label": "10 upvotes"
-    },
-    {
-      "report_date": "2026-05-20",
-      "paper_id": "2605.20147",
-      "title": "PixVerve: Advancing Native UHR Image Generation to 100MP with a Large-Scale High-Quality Dataset",
-      "authors": [
-        "Haojun Chen",
-        "Haoyang He",
-        "Chengming Xu",
-        "Qingdong He",
-        "Junwei Zhu",
-        "Yabiao Wang",
-        "Zhucun Xue",
-        "Xianfang Zeng",
-        "Zhennan Chen",
-        "Xiaobin Hu",
-        "Hao Zhao",
-        "Yong Liu",
-        "Jiangning Zhang",
-        "Dacheng Tao"
-      ],
-      "abstract": "Text-to-Image (T2I) models have recently seen notable progress around 1K and 2K resolution. With the extreme desire for better visual experience and the rapid development of imaging technology, the demand for Ultra-High-Resolution (UHR) image generation has grown significantly. However, UHR image generation poses great challenges due to the scarcity and complexity of high-resolution content. In this paper, we first introduce PixVerve-95K, a high-quality, open-source UHR T2I dataset curated with a carefully designed data pipeline, which contains 95K images across diverse scenarios (each image has a minimum pixel-count of 100M) and seven-dimensional annotations. Based on our large-scale image-text dataset, we take a pioneering step to extend various T2I foundation models to native 100MP generation with three training schemes. Finally, leveraging both conventional metrics and multimodal large language model-based assessments, our proposed PixVerve-Bench benchmark establishes a comprehensive evaluation protocol for UHR images encompassing visual quality and semantic alignment. Extensive experimental results on our benchmark and the constructive exploration of training strategies collaboratively provide valuable insights for future breakthroughs.",
-      "hf_url": "https://huggingface.co/papers/2605.20147",
-      "arxiv_url": "https://arxiv.org/abs/2605.20147",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.20147",
-      "papers_cool_url": "https://papers.cool/arxiv/2605.20147",
-      "github_url": "",
-      "submitted_by": "HAOYANG",
-      "submitted_at": "2026-05-20T00:00:00.000Z",
-      "upvotes": 10,
-      "comments": 3,
-      "topic_key": "datasets_benchmarks",
-      "topic_label": "Datasets and Benchmarks",
-      "matched_terms": [
-        "\\bdataset(s)?\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Text-to-Image (T2I) models have recently seen notable progress around 1K and 2K resolution.",
-      "upvote_label": "10 upvotes"
-    },
-    {
-      "report_date": "2026-05-20",
-      "paper_id": "2605.18101",
-      "title": "SENSE: Satellite-based ENergy Synthesis for Sustainable Environment",
-      "authors": [
-        "Kailai Sun",
-        "Mingyi He",
-        "Heye Huang",
-        "Can Rong",
-        "Alok Prakash",
-        "Baoshen Guo",
-        "Shenhao Wang",
-        "Jinhua Zhao"
-      ],
-      "abstract": "Urban Building Energy Modeling plays a critical role in achieving the United Nations' Sustainable Development Goals 7 and 11. Although existing studies based on satellite imagery and deep learning have achieved remarkable progress, many challenges exist: most existing studies are inherently predictive, failing to reflect the generative nature of urban planning; although generative AI and diffusion models have seen explosive growth in satellite imagery, they lack the urban functional generation (e.g., energy layer); third, aligned high-quality high-resolution building energy data with satellite imagery is limited and scarce. Here we propose SENSE (Satellite-based ENergy Synthesis for Sustainable Environment), a unified generative UBEM framework that jointly synthesizes realistic urban satellite imagery and aligned high-quality building energy consumption and height maps. By conditioning on road networks and urban density metrics, SENSE, based on a controllable diffusion model, leverages the knowledge learned by large vision models to generate urban building energy consumption and height information (annotations) in the latent space. Experiments across four cities (New York City, Boston, Lyon, Busan) demonstrate that SENSE achieves high visual fidelity and strong physical consistency, satisfying the ASHRAE standard metric. Experiments demonstrate that SENSE can generate enough annotated synthetic data using less than 20% labeled energy data, boosting downstream prediction performance by 10% IoU. Compared to SOTA urban energy prediction methods, SENSE significantly reduced prediction error (reduced 3%-11% NMBE and 1%-9% CVRMSE). This study offers an energy-efficiency urban planning and physical generation solution for urban science, energy science and building science. The dataset and code: https://huggingface.co/datasets/skl24/MUSE and https://github.com/kailaisun/GenAI4Urban-Energy/.",
-      "hf_url": "https://huggingface.co/papers/2605.18101",
-      "arxiv_url": "https://arxiv.org/abs/2605.18101",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.18101",
-      "papers_cool_url": "https://papers.cool/arxiv/2605.18101",
-      "github_url": "",
-      "submitted_by": "kailaisun",
-      "submitted_at": "2026-05-20T00:00:00.000Z",
-      "upvotes": 10,
-      "comments": 1,
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
-      "matched_terms": [],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Urban Building Energy Modeling plays a critical role in achieving the United Nations' Sustainable Development Goals 7 and 11.",
       "upvote_label": "10 upvotes"
     },
     {
@@ -3160,40 +3194,6 @@
     },
     {
       "report_date": "2026-05-20",
-      "paper_id": "2605.15458",
-      "title": "Video Models Can Reason with Verifiable Rewards",
-      "authors": [
-        "Tinghui Zhu",
-        "Sheng Zhang",
-        "James Y. Huang",
-        "Selena Song",
-        "Xiaofei Wen",
-        "Yuankai Li",
-        "Hoifung Poon",
-        "Muhao Chen"
-      ],
-      "abstract": "Video diffusion models have made rapid progress in perceptual realism and temporal coherence, but they remain primarily optimized for plausible generation rather than verifiable reasoning. This limitation is especially pronounced in tasks where generated videos must satisfy explicit spatial, temporal, or logical constraints. Inspired by the role of reinforcement learning with verifiable rewards (RLVR) in reasoning-oriented language models, we introduce VideoRLVR, a practical recipe for optimizing video diffusion models with rule-based feedback. VideoRLVR formulates video reasoning as the generation of verifiable visual trajectories and consists of an SDE-GRPO optimization backbone, dense decomposed rewards, and an Early-Step Focus strategy for efficient training. The Early-Step Focus strategy restricts policy optimization to the early denoising phase, reducing training latency by about 40% while preserving performance. We evaluate VideoRLVR on Maze, FlowFree, and Sokoban, three procedurally generated domains with objective success criteria. Across these tasks, VideoRLVR consistently improves over supervised fine-tuning baselines, with dense decomposed rewards proving especially important in low-success-rate settings. Our RL-optimized model also outperforms the evaluated proprietary and open-source video generation models on these verifiable reasoning benchmarks and out-of-domain benchmarks. These results suggest that verifiable RL can move video models beyond perceptual imitation toward more reliable rule-consistent visual reasoning.",
-      "hf_url": "https://huggingface.co/papers/2605.15458",
-      "arxiv_url": "https://arxiv.org/abs/2605.15458",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.15458",
-      "papers_cool_url": "https://papers.cool/arxiv/2605.15458",
-      "github_url": "",
-      "submitted_by": "Tinghui Zhu",
-      "submitted_at": "2026-05-20T00:00:00.000Z",
-      "upvotes": 10,
-      "comments": 2,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [
-        "\\bvideo\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Video diffusion models have made rapid progress in perceptual realism and temporal coherence, but they remain primarily optimized for plausible generation rather than verifiable reasoning.",
-      "upvote_label": "10 upvotes"
-    },
-    {
-      "report_date": "2026-05-20",
       "paper_id": "2605.18263",
       "title": "RT-Splatting: Joint Reflection-Transmission Modeling with Gaussian Splatting",
       "authors": [
@@ -3211,7 +3211,7 @@
       "github_url": "",
       "submitted_by": "Ji Shi",
       "submitted_at": "2026-05-20T00:00:00.000Z",
-      "upvotes": 8,
+      "upvotes": 9,
       "comments": 1,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
@@ -3219,6 +3219,35 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "3D Gaussian Splatting (3DGS) enables real-time novel view synthesis with high visual quality.",
+      "upvote_label": "9 upvotes"
+    },
+    {
+      "report_date": "2026-05-20",
+      "paper_id": "2605.18855",
+      "title": "Delta Attention Residuals",
+      "authors": [
+        "Cheng Luo",
+        "Zefan Cai",
+        "Junjie Hu"
+      ],
+      "abstract": "Attention Residuals replace standard additive residual connections with learned softmax attention over previous layer outputs, enabling selective cross-layer routing. However, standard Attention Residuals still attend over cumulative hidden states in previous layers, which are highly redundant. We show that this redundancy leads to routing collapse in deeper layers: attention weights become low-contrast and closer to uniform (max weight {approx}0.2), limiting the model's ability to select informative states in previous layers. This raises a key but underexplored design question: what layer-wise representations should be routed in Attention Residuals? To answer this question, we propose Delta Attention Residuals, which attend over deltas -- the change introduced by each sublayer (v_i = h_{i+1} - h_i) -- instead of cumulative states. Delta representations are structurally diverse and yield higher-contrast attention distributions (max weight {approx}0.6), enabling more selective and effective routing across layers. This principle applies at both per-sublayer and block granularity. Across all tested scales (220M--7.6B), Delta Attention Residuals consistently outperform both standard residuals and Attention Residuals, with 1.7--8.2\\% validation perplexity gains. Delta Attention Residuals also enables converting pretrained checkpoints into Delta Attention Residuals via standard fine-tuning. Code is available at https://github.com/wdlctc/delta-attention-residuals-code.",
+      "hf_url": "https://huggingface.co/papers/2605.18855",
+      "arxiv_url": "https://arxiv.org/abs/2605.18855",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.18855",
+      "papers_cool_url": "https://papers.cool/arxiv/2605.18855",
+      "github_url": "",
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-05-20T00:00:00.000Z",
+      "upvotes": 8,
+      "comments": 4,
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
+      "matched_terms": [
+        "\\battention\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Attention Residuals replace standard additive residual connections with learned softmax attention over previous layer outputs, enabling selective cross-layer routing.",
       "upvote_label": "8 upvotes"
     },
     {
@@ -3239,7 +3268,7 @@
       "github_url": "",
       "submitted_by": "HanzhongGuo",
       "submitted_at": "2026-05-20T00:00:00.000Z",
-      "upvotes": 7,
+      "upvotes": 8,
       "comments": 2,
       "topic_key": "learning_theory",
       "topic_label": "Learning, Optimization, and Theory",
@@ -3250,35 +3279,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Recent studies suggest that Reinforcement Fine-Tuning (RFT) is inherently more resilient to catastrophic forgetting than Supervised Fine-Tuning (SFT).",
-      "upvote_label": "7 upvotes"
-    },
-    {
-      "report_date": "2026-05-20",
-      "paper_id": "2605.19305",
-      "title": "Matérn Noise for Triangulation-Agnostic Flow Matching on Meshes",
-      "authors": [
-        "Tianshu Kuai",
-        "Arman Maesumi",
-        "Daniel Ritchie",
-        "Noam Aigerman"
-      ],
-      "abstract": "This paper tackles the task of learning to generate signals over triangle meshes in a triangulation-agnostic manner, meaning the trained model can be applied to different meshes and triangulations effectively. Practically, the paper adapts the flow matching (FM) paradigm to a mesh-based, triangulation-agnostic setting. Theoretically, it proposes a specific noise distribution which is triangulation agnostic, to be used inside the FM model's denoising process. While noise distributions are usually trivial to devise for, e.g., images, devising a triangulation-agnostic distribution proves to be a much more difficult task. We formulate a mathematical definition of triangulation agnosticism of distributions, via their spectrum. We then show that a discretization of a specific Gaussian random field called a Matérn process holds these desired properties, and provides a simple and efficient sampling algorithm. We use it as our noise model, and adapt FM to the triangulation-agnostic setting by using a state-of-the-art approach for learning signals on meshes in the gradient domain -- PoissonNet -- as the denoiser. We conduct experiments on elaborate tasks such as sampling elastic rest states, and generating poses of humanoids. Our method is shown to be capable of producing highly realistic results for meshes of over one million triangles, significantly exceeding the state-of-the-art in quality and diversity.",
-      "hf_url": "https://huggingface.co/papers/2605.19305",
-      "arxiv_url": "https://arxiv.org/abs/2605.19305",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.19305",
-      "papers_cool_url": "https://papers.cool/arxiv/2605.19305",
-      "github_url": "",
-      "submitted_by": "Tianshu Kuai",
-      "submitted_at": "2026-05-20T00:00:00.000Z",
-      "upvotes": 6,
-      "comments": 1,
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
-      "matched_terms": [],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "This paper tackles the task of learning to generate signals over triangle meshes in a triangulation-agnostic manner, meaning the trained model can be applied to different meshes and triangulations effectively.",
-      "upvote_label": "6 upvotes"
+      "upvote_label": "8 upvotes"
     },
     {
       "report_date": "2026-05-20",
@@ -3301,7 +3302,7 @@
       "github_url": "",
       "submitted_by": "Chaojian Li",
       "submitted_at": "2026-05-20T00:00:00.000Z",
-      "upvotes": 6,
+      "upvotes": 7,
       "comments": 1,
       "topic_key": "learning_theory",
       "topic_label": "Learning, Optimization, and Theory",
@@ -3312,7 +3313,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Training 3D Gaussian Splatting (3DGS) at billion-primitive scale is fundamentally memory-bound: each Gaussian primitive carries a large attribute vector, and the aggregate parameter table quickly exceeds GPU capacity,…",
-      "upvote_label": "6 upvotes"
+      "upvote_label": "7 upvotes"
     },
     {
       "report_date": "2026-05-20",
@@ -3332,7 +3333,7 @@
       "github_url": "",
       "submitted_by": "Zhuohan Gu",
       "submitted_at": "2026-05-20T00:00:00.000Z",
-      "upvotes": 6,
+      "upvotes": 7,
       "comments": 1,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
@@ -3342,7 +3343,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Large language model (LLM) agents increasingly operate over long and recurring external contexts, like document corpora and code repositories.",
-      "upvote_label": "6 upvotes"
+      "upvote_label": "7 upvotes"
     },
     {
       "report_date": "2026-05-20",
@@ -3370,7 +3371,7 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-05-20T00:00:00.000Z",
-      "upvotes": 6,
+      "upvotes": 7,
       "comments": 1,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
@@ -3378,35 +3379,66 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Speculative decoding (SD) accelerates large language model inference by leveraging a draft-then-verify paradigm.",
+      "upvote_label": "7 upvotes"
+    },
+    {
+      "report_date": "2026-05-20",
+      "paper_id": "2605.20164",
+      "title": "Not Every Rubric Teaches Equally: Policy-Aware Rubric Rewards for RLVR",
+      "authors": [
+        "Utkarsh Tyagi",
+        "Xingang Guo",
+        "MohammadHossein Rezaei",
+        "Daniel George",
+        "Anas Mahmoud",
+        "Jackson Lee",
+        "Bing Liu",
+        "Yunzhong He"
+      ],
+      "abstract": "Reinforcement learning with verifiable rewards has made post-training highly effective when correctness can be checked automatically. However, many important model behaviors require satisfying several qualitative criteria at once. Rubric-based rewards address this setting by grading prompt-specific criteria and aggregating them into a scalar reward. Yet standard static aggregations conflate a criterion's human-assigned importance with its current usefulness as an optimization signal. We show that this assumption breaks down in rubric RL: many important criteria are already saturated or currently unreachable, while criteria that distinguish rollouts are not necessarily those with the largest human weights. We introduce POW3R, a policy-aware rubric reward framework that preserves human weights and category balance as the rubric objective while adapting criterion-level reward weights during training. POW3R uses rollout-level contrast to emphasize criteria that currently separate the policy's outputs, making the GRPO reward more informative without changing the underlying evaluation target. Across three base policies on two datasets spanning multimodal and text-only settings, POW3R wins 24 of 30 base-policy/metric comparisons, improving both mean rubric reward and strict completion (the fraction of prompts whose response satisfies every required rubric criterion) over vanilla GRPO with rubric rewards, and reaches the same plateau in 2.5--4times fewer training steps. Rubric rewards should therefore distinguish what should matter in the final answer from what can teach the current policy.",
+      "hf_url": "https://huggingface.co/papers/2605.20164",
+      "arxiv_url": "https://arxiv.org/abs/2605.20164",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.20164",
+      "papers_cool_url": "https://papers.cool/arxiv/2605.20164",
+      "github_url": "",
+      "submitted_by": "Utkarsh Tyagi",
+      "submitted_at": "2026-05-20T00:00:00.000Z",
+      "upvotes": 6,
+      "comments": 1,
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
+      "matched_terms": [],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Reinforcement learning with verifiable rewards has made post-training highly effective when correctness can be checked automatically.",
       "upvote_label": "6 upvotes"
     },
     {
       "report_date": "2026-05-20",
-      "paper_id": "2605.18855",
-      "title": "Delta Attention Residuals",
+      "paper_id": "2605.19305",
+      "title": "Matérn Noise for Triangulation-Agnostic Flow Matching on Meshes",
       "authors": [
-        "Cheng Luo",
-        "Zefan Cai",
-        "Junjie Hu"
+        "Tianshu Kuai",
+        "Arman Maesumi",
+        "Daniel Ritchie",
+        "Noam Aigerman"
       ],
-      "abstract": "Attention Residuals replace standard additive residual connections with learned softmax attention over previous layer outputs, enabling selective cross-layer routing. However, standard Attention Residuals still attend over cumulative hidden states in previous layers, which are highly redundant. We show that this redundancy leads to routing collapse in deeper layers: attention weights become low-contrast and closer to uniform (max weight {approx}0.2), limiting the model's ability to select informative states in previous layers. This raises a key but underexplored design question: what layer-wise representations should be routed in Attention Residuals? To answer this question, we propose Delta Attention Residuals, which attend over deltas -- the change introduced by each sublayer (v_i = h_{i+1} - h_i) -- instead of cumulative states. Delta representations are structurally diverse and yield higher-contrast attention distributions (max weight {approx}0.6), enabling more selective and effective routing across layers. This principle applies at both per-sublayer and block granularity. Across all tested scales (220M--7.6B), Delta Attention Residuals consistently outperform both standard residuals and Attention Residuals, with 1.7--8.2\\% validation perplexity gains. Delta Attention Residuals also enables converting pretrained checkpoints into Delta Attention Residuals via standard fine-tuning. Code is available at https://github.com/wdlctc/delta-attention-residuals-code.",
-      "hf_url": "https://huggingface.co/papers/2605.18855",
-      "arxiv_url": "https://arxiv.org/abs/2605.18855",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.18855",
-      "papers_cool_url": "https://papers.cool/arxiv/2605.18855",
+      "abstract": "This paper tackles the task of learning to generate signals over triangle meshes in a triangulation-agnostic manner, meaning the trained model can be applied to different meshes and triangulations effectively. Practically, the paper adapts the flow matching (FM) paradigm to a mesh-based, triangulation-agnostic setting. Theoretically, it proposes a specific noise distribution which is triangulation agnostic, to be used inside the FM model's denoising process. While noise distributions are usually trivial to devise for, e.g., images, devising a triangulation-agnostic distribution proves to be a much more difficult task. We formulate a mathematical definition of triangulation agnosticism of distributions, via their spectrum. We then show that a discretization of a specific Gaussian random field called a Matérn process holds these desired properties, and provides a simple and efficient sampling algorithm. We use it as our noise model, and adapt FM to the triangulation-agnostic setting by using a state-of-the-art approach for learning signals on meshes in the gradient domain -- PoissonNet -- as the denoiser. We conduct experiments on elaborate tasks such as sampling elastic rest states, and generating poses of humanoids. Our method is shown to be capable of producing highly realistic results for meshes of over one million triangles, significantly exceeding the state-of-the-art in quality and diversity.",
+      "hf_url": "https://huggingface.co/papers/2605.19305",
+      "arxiv_url": "https://arxiv.org/abs/2605.19305",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.19305",
+      "papers_cool_url": "https://papers.cool/arxiv/2605.19305",
       "github_url": "",
-      "submitted_by": "taesiri",
+      "submitted_by": "Tianshu Kuai",
       "submitted_at": "2026-05-20T00:00:00.000Z",
       "upvotes": 6,
-      "comments": 4,
-      "topic_key": "learning_theory",
-      "topic_label": "Learning, Optimization, and Theory",
-      "matched_terms": [
-        "\\battention\\b"
-      ],
+      "comments": 1,
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
+      "matched_terms": [],
       "classification_source": "rule",
       "classification_confidence": null,
-      "one_sentence_summary": "Attention Residuals replace standard additive residual connections with learned softmax attention over previous layer outputs, enabling selective cross-layer routing.",
+      "one_sentence_summary": "This paper tackles the task of learning to generate signals over triangle meshes in a triangulation-agnostic manner, meaning the trained model can be applied to different meshes and triangulations effectively.",
       "upvote_label": "6 upvotes"
     },
     {
@@ -3441,38 +3473,6 @@
       "classification_confidence": null,
       "one_sentence_summary": "Multiple-choice QA benchmarks usually evaluate small language models (SLMs) as direct answerers, but deployed language-model systems increasingly rely on external scaffolds such as tools, code, and repeated model calls.",
       "upvote_label": "6 upvotes"
-    },
-    {
-      "report_date": "2026-05-20",
-      "paper_id": "2605.20164",
-      "title": "Not Every Rubric Teaches Equally: Policy-Aware Rubric Rewards for RLVR",
-      "authors": [
-        "Utkarsh Tyagi",
-        "Xingang Guo",
-        "MohammadHossein Rezaei",
-        "Daniel George",
-        "Anas Mahmoud",
-        "Jackson Lee",
-        "Bing Liu",
-        "Yunzhong He"
-      ],
-      "abstract": "Reinforcement learning with verifiable rewards has made post-training highly effective when correctness can be checked automatically. However, many important model behaviors require satisfying several qualitative criteria at once. Rubric-based rewards address this setting by grading prompt-specific criteria and aggregating them into a scalar reward. Yet standard static aggregations conflate a criterion's human-assigned importance with its current usefulness as an optimization signal. We show that this assumption breaks down in rubric RL: many important criteria are already saturated or currently unreachable, while criteria that distinguish rollouts are not necessarily those with the largest human weights. We introduce POW3R, a policy-aware rubric reward framework that preserves human weights and category balance as the rubric objective while adapting criterion-level reward weights during training. POW3R uses rollout-level contrast to emphasize criteria that currently separate the policy's outputs, making the GRPO reward more informative without changing the underlying evaluation target. Across three base policies on two datasets spanning multimodal and text-only settings, POW3R wins 24 of 30 base-policy/metric comparisons, improving both mean rubric reward and strict completion (the fraction of prompts whose response satisfies every required rubric criterion) over vanilla GRPO with rubric rewards, and reaches the same plateau in 2.5--4times fewer training steps. Rubric rewards should therefore distinguish what should matter in the final answer from what can teach the current policy.",
-      "hf_url": "https://huggingface.co/papers/2605.20164",
-      "arxiv_url": "https://arxiv.org/abs/2605.20164",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.20164",
-      "papers_cool_url": "https://papers.cool/arxiv/2605.20164",
-      "github_url": "",
-      "submitted_by": "Utkarsh Tyagi",
-      "submitted_at": "2026-05-20T00:00:00.000Z",
-      "upvotes": 5,
-      "comments": 1,
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
-      "matched_terms": [],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Reinforcement learning with verifiable rewards has made post-training highly effective when correctness can be checked automatically.",
-      "upvote_label": "5 upvotes"
     },
     {
       "report_date": "2026-05-20",
@@ -3512,6 +3512,71 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Can a single LLM-based optimization system match specialized tools across fundamentally different domains?",
+      "upvote_label": "5 upvotes"
+    },
+    {
+      "report_date": "2026-05-20",
+      "paper_id": "2605.19908",
+      "title": "Where Does Authorship Signal Emerge in Encoder-Based Language Models?",
+      "authors": [
+        "Francis Kulumba",
+        "Guillaume Vimont",
+        "Laurent Romary",
+        "Florian Cafiero"
+      ],
+      "abstract": "Authorship attribution models fine-tuned with the same pretrained encoder, data, and loss can differ four-fold in performance depending only on their scoring mechanism. We use mechanistic interpretability tools to explain this gap. Stylistic features such as word length, punctuation density, and function-word frequency are equally available at every layer in every model, including in an off-the-shelf control encoder, hence the gap not coming from representation quality. Instead, causal intervention shows that the scorer determines where the encoder consolidates authorship signal. Mean pooling forces consolidation by early to mid layers, while late interaction defers it to later layers. We further derive this difference from the gradient structure of each scorer, and training dynamics reveal distinct learning trajectories that follow from that difference.",
+      "hf_url": "https://huggingface.co/papers/2605.19908",
+      "arxiv_url": "https://arxiv.org/abs/2605.19908",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.19908",
+      "papers_cool_url": "https://papers.cool/arxiv/2605.19908",
+      "github_url": "",
+      "submitted_by": "Francis Kulumba",
+      "submitted_at": "2026-05-20T00:00:00.000Z",
+      "upvotes": 5,
+      "comments": 1,
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [
+        "\\blanguage models?\\b",
+        "\\blanguage\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Authorship attribution models fine-tuned with the same pretrained encoder, data, and loss can differ four-fold in performance depending only on their scoring mechanism.",
+      "upvote_label": "5 upvotes"
+    },
+    {
+      "report_date": "2026-05-20",
+      "paper_id": "2605.20035",
+      "title": "Stage-adaptive Token Selection for Efficient Omni-modal LLMs",
+      "authors": [
+        "Zijie Xin",
+        "Jie Yang",
+        "Ruixiang Zhao",
+        "Tianyi Wang",
+        "Fengyun Rao",
+        "Jing Lyu",
+        "Xirong Li"
+      ],
+      "abstract": "Omni-modal large language models (om-LLMs) achieve unified audio-visual understanding by encoding video and audio into temporally aligned token sequences interleaved at the window level. However, processing these dense non-textual tokens throughout the LLM incurs substantial computational overhead. Although training-free token selection can reduce this cost, existing methods either focus on visual-only inputs or prune om-LLM tokens only before the LLM with fixed per-modality ratios, failing to capture how cross-modal token importance evolves across layers. To address this limitation, we first analyze the layer-wise token dependency of om-LLMs. We find that visual and audio dependencies follow a block-wise pattern and gradually weaken with depth, indicating that many late-layer non-textual tokens become redundant after cross-modal fusion. Motivated by this observation, we propose SEATS, a training-free, stage-adaptive token selection method for efficient om-LLM inference. Before the LLM, SEATS removes spatiotemporal redundancy via attention-weighted diversity selection. Inside the LLM, it progressively prunes tokens across blocks and dynamically allocates the retention budget from temporal windows to modalities using query relevance scores. In late layers, it removes all remaining non-textual tokens once cross-modal fusion is complete. Experiments on Qwen2.5-Omni and Qwen3-Omni demonstrate that SEATS effectively improves inference efficiency. Retaining only 10% of visual and audio tokens, it achieves a 9.3x FLOPs reduction and a 4.8x prefill speedup while preserving 96.3% of the original performance.",
+      "hf_url": "https://huggingface.co/papers/2605.20035",
+      "arxiv_url": "https://arxiv.org/abs/2605.20035",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.20035",
+      "papers_cool_url": "https://papers.cool/arxiv/2605.20035",
+      "github_url": "",
+      "submitted_by": "Zijie Xin",
+      "submitted_at": "2026-05-20T00:00:00.000Z",
+      "upvotes": 5,
+      "comments": 1,
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [
+        "\\b\\w*llms?\\w*\\b",
+        "\\btoken(s)?\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Omni-modal large language models (om-LLMs) achieve unified audio-visual understanding by encoding video and audio into temporally aligned token sequences interleaved at the window level.",
       "upvote_label": "5 upvotes"
     },
     {
@@ -3617,34 +3682,68 @@
     },
     {
       "report_date": "2026-05-20",
-      "paper_id": "2605.19908",
-      "title": "Where Does Authorship Signal Emerge in Encoder-Based Language Models?",
+      "paper_id": "2605.09789",
+      "title": "Zero-Shot Sim-to-Real Robot Learning: A Dexterous Manipulation Study on Reactive Catching",
       "authors": [
-        "Francis Kulumba",
-        "Guillaume Vimont",
-        "Laurent Romary",
-        "Florian Cafiero"
+        "Kejia Ren",
+        "Gaotian Wang",
+        "Andrew S. Morgan",
+        "Kaiyu Hang"
       ],
-      "abstract": "Authorship attribution models fine-tuned with the same pretrained encoder, data, and loss can differ four-fold in performance depending only on their scoring mechanism. We use mechanistic interpretability tools to explain this gap. Stylistic features such as word length, punctuation density, and function-word frequency are equally available at every layer in every model, including in an off-the-shelf control encoder, hence the gap not coming from representation quality. Instead, causal intervention shows that the scorer determines where the encoder consolidates authorship signal. Mean pooling forces consolidation by early to mid layers, while late interaction defers it to later layers. We further derive this difference from the gradient structure of each scorer, and training dynamics reveal distinct learning trajectories that follow from that difference.",
-      "hf_url": "https://huggingface.co/papers/2605.19908",
-      "arxiv_url": "https://arxiv.org/abs/2605.19908",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.19908",
-      "papers_cool_url": "https://papers.cool/arxiv/2605.19908",
+      "abstract": "Dexterous manipulation is physics-intensive and highly sensitive to modeling errors and perception noise, making sim-to-real transfer prohibitively challenging. Domain randomization (DR) is commonly used to improve the robustness of learned policies for such tasks, but conventional DR randomizes one instance per episode, offering very limited exposure to the variability of real-world dynamics. To this end, we propose Domain-Randomized Instance Set (DRIS), which represents and propagates a set of randomized instances simultaneously, providing richer approximation of uncertain dynamics and enabling policies to learn actions that account for multiple possible outcomes. Supported by theoretical analysis, we show that DRIS yields more robust policies and alleviates the need for real-world fine-tuning, even with a modest number of instances (e.g., 10). We demonstrate this on a challenging reactive catching task. Unlike traditional catching setups that use end-effectors designed to mechanically stabilize the object (e.g., curved or enclosing surfaces), our system uses a flat plate that offers no passive stabilization, making the task highly sensitive to noise and requiring rapid reactive motions. The learned policies exhibit strong robustness to uncertainties and achieve reliable zero-shot sim-to-real transfer.",
+      "hf_url": "https://huggingface.co/papers/2605.09789",
+      "arxiv_url": "https://arxiv.org/abs/2605.09789",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.09789",
+      "papers_cool_url": "https://papers.cool/arxiv/2605.09789",
       "github_url": "",
-      "submitted_by": "Francis Kulumba",
+      "submitted_by": "Rajkumar rawal",
       "submitted_at": "2026-05-20T00:00:00.000Z",
-      "upvotes": 4,
-      "comments": 1,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
+      "upvotes": 5,
+      "comments": 2,
+      "topic_key": "robotics_embodied",
+      "topic_label": "Robotics and Embodied AI",
       "matched_terms": [
-        "\\blanguage models?\\b",
-        "\\blanguage\\b"
+        "\\brobot(ic|ics)?\\b",
+        "\\bmanipulation\\b"
       ],
       "classification_source": "rule",
       "classification_confidence": null,
-      "one_sentence_summary": "Authorship attribution models fine-tuned with the same pretrained encoder, data, and loss can differ four-fold in performance depending only on their scoring mechanism.",
-      "upvote_label": "4 upvotes"
+      "one_sentence_summary": "Dexterous manipulation is physics-intensive and highly sensitive to modeling errors and perception noise, making sim-to-real transfer prohibitively challenging.",
+      "upvote_label": "5 upvotes"
+    },
+    {
+      "report_date": "2026-05-20",
+      "paper_id": "2605.08472",
+      "title": "Mid-Training with Self-Generated Data Improves Reinforcement Learning in Language Models",
+      "authors": [
+        "Aswin RRV",
+        "Jacob Dineen",
+        "Divij Handa",
+        "Mihir Parmar",
+        "Ben Zhou",
+        "Swaroop Mishra",
+        "Chitta Baral"
+      ],
+      "abstract": "The effectiveness of Reinforcement Learning (RL) in Large Language Models (LLMs) depends on the nature and diversity of the data used before and during RL. In particular, reasoning problems can often be approached in multiple ways that rely on different forms of reasoning, and exposure to only a limited range of such approaches in the training data may limit the effectiveness of RL. Motivated by this, we investigate using diverse self-generated data during mid-training as an intermediate step before RL training. Specifically, we adopt a bootstrapped data-generation framework guided by George Polya's problem-solving approaches for generating multiple variants of correct answers for each question in the training data, and then perform fine-tuning. We first provide a theoretical perspective on how mid-training on such data improves RL and explain how policy-gradient updates can incentivize combining multiple approaches. We then empirically demonstrate that RL-trained models initialized with our mid-training data achieve consistent improvements across various mathematical reasoning benchmarks and other OOD tasks like code generation and narrative reasoning. Overall, our investigative study shows that a language model learning multiple problem-solving approaches, through self-generated data helps subsequent RL.",
+      "hf_url": "https://huggingface.co/papers/2605.08472",
+      "arxiv_url": "https://arxiv.org/abs/2605.08472",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.08472",
+      "papers_cool_url": "https://papers.cool/arxiv/2605.08472",
+      "github_url": "",
+      "submitted_by": "Aswin Ravikumar Rangsasamy Veerasamy",
+      "submitted_at": "2026-05-20T00:00:00.000Z",
+      "upvotes": 5,
+      "comments": 2,
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
+      "matched_terms": [
+        "\\blearning\\b",
+        "\\btraining\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "The effectiveness of Reinforcement Learning (RL) in Large Language Models (LLMs) depends on the nature and diversity of the data used before and during RL.",
+      "upvote_label": "5 upvotes"
     },
     {
       "report_date": "2026-05-20",
@@ -3681,36 +3780,29 @@
     },
     {
       "report_date": "2026-05-20",
-      "paper_id": "2605.20035",
-      "title": "Stage-adaptive Token Selection for Efficient Omni-modal LLMs",
+      "paper_id": "2605.17909",
+      "title": "Ethical Hyper-Velocity (EHV): A Provably Deterministic Governance-Aware JIT Compiler Architecture for Agentic Systems",
       "authors": [
-        "Zijie Xin",
-        "Jie Yang",
-        "Ruixiang Zhao",
-        "Tianyi Wang",
-        "Fengyun Rao",
-        "Jing Lyu",
-        "Xirong Li"
+        "Riddhi Mohan Sharma"
       ],
-      "abstract": "Omni-modal large language models (om-LLMs) achieve unified audio-visual understanding by encoding video and audio into temporally aligned token sequences interleaved at the window level. However, processing these dense non-textual tokens throughout the LLM incurs substantial computational overhead. Although training-free token selection can reduce this cost, existing methods either focus on visual-only inputs or prune om-LLM tokens only before the LLM with fixed per-modality ratios, failing to capture how cross-modal token importance evolves across layers. To address this limitation, we first analyze the layer-wise token dependency of om-LLMs. We find that visual and audio dependencies follow a block-wise pattern and gradually weaken with depth, indicating that many late-layer non-textual tokens become redundant after cross-modal fusion. Motivated by this observation, we propose SEATS, a training-free, stage-adaptive token selection method for efficient om-LLM inference. Before the LLM, SEATS removes spatiotemporal redundancy via attention-weighted diversity selection. Inside the LLM, it progressively prunes tokens across blocks and dynamically allocates the retention budget from temporal windows to modalities using query relevance scores. In late layers, it removes all remaining non-textual tokens once cross-modal fusion is complete. Experiments on Qwen2.5-Omni and Qwen3-Omni demonstrate that SEATS effectively improves inference efficiency. Retaining only 10% of visual and audio tokens, it achieves a 9.3x FLOPs reduction and a 4.8x prefill speedup while preserving 96.3% of the original performance.",
-      "hf_url": "https://huggingface.co/papers/2605.20035",
-      "arxiv_url": "https://arxiv.org/abs/2605.20035",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.20035",
-      "papers_cool_url": "https://papers.cool/arxiv/2605.20035",
+      "abstract": "As autonomous agentic systems scale across regulated critical infrastructures, the lack of mechanistic, hardware-rooted enforcement for high-frequency policy updates presents a fundamental safety gap. We introduce Ethical Hyper-Velocity (EHV), a novel architectural framework for the formal verification of AI governance policies at runtime. Unlike retrospective auditing frameworks (ISO/IEC 42001, NIST AI RMF) which introduce 14-30 day latencies, EHV relocates the Policy Enforcement Point (PEP) into the inference pipeline via a Governance-Aware Just-In-Time (JIT) Compiler. By integrating Conflict-free Replicated Data Types (CRDTs) for policy synchronization and Epoch-based Attestation Caching within Trusted Execution Environments (TEEs), EHV achieves Sub-millisecond Formal Determinism (SMFD). We demonstrate via TLA+ formal verification that non-compliant agentic actions are computationally unreachable within the system's bounded operating state space. We prove that O(1) runtime enforcement can eliminate the traditional trade-off between deployment velocity and governance integrity, reducing Governance Latency from O(days) to O(1).",
+      "hf_url": "https://huggingface.co/papers/2605.17909",
+      "arxiv_url": "https://arxiv.org/abs/2605.17909",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.17909",
+      "papers_cool_url": "https://papers.cool/arxiv/2605.17909",
       "github_url": "",
-      "submitted_by": "Zijie Xin",
+      "submitted_by": "Riddhi Mohan Sharma",
       "submitted_at": "2026-05-20T00:00:00.000Z",
       "upvotes": 4,
       "comments": 1,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
+      "topic_key": "agents_planning",
+      "topic_label": "Agents and Planning",
       "matched_terms": [
-        "\\b\\w*llms?\\w*\\b",
-        "\\btoken(s)?\\b"
+        "\\bagentic\\b"
       ],
       "classification_source": "rule",
       "classification_confidence": null,
-      "one_sentence_summary": "Omni-modal large language models (om-LLMs) achieve unified audio-visual understanding by encoding video and audio into temporally aligned token sequences interleaved at the window level.",
+      "one_sentence_summary": "As autonomous agentic systems scale across regulated critical infrastructures, the lack of mechanistic, hardware-rooted enforcement for high-frequency policy updates presents a fundamental safety gap.",
       "upvote_label": "4 upvotes"
     },
     {
@@ -3743,6 +3835,37 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Backdoor attacks on language models pose a growing security concern, yet the internal mechanisms by which a trigger sequence hijacks model computations remain poorly understood.",
+      "upvote_label": "4 upvotes"
+    },
+    {
+      "report_date": "2026-05-20",
+      "paper_id": "2605.14842",
+      "title": "Editor's Choice: Evaluating Abstract Intent in Image Editing through Atomic Entity Analysis",
+      "authors": [
+        "Mor Ventura",
+        "Roy Hirsch",
+        "Yonatan Bitton",
+        "Regev Cohen",
+        "Roi Reichart"
+      ],
+      "abstract": "Humans naturally communicate through abstract concepts like \"mood\". However, current image editing benchmarks focus primarily on explicit, literal commands, leaving abstract instructions largely underexplored. In this work, we first formalize the definition and taxonomy of abstract image editing. To measure instruction-following in this challenging domain, we introduce Entity-Rubrics, a framework that breaks down abstract edits into individual, entity-level assessments and achieves strong correlation with human judgment. Alongside this framework, we contribute AbstractEdit, the first benchmark dedicated to abstract image editing across diverse real-world scenes. Evaluating 11 leading models on this dataset reveals a fundamental challenge: standard architectures struggle to balance intent and preservation, commonly defaulting to under-editing or over-editing. Our analysis demonstrates that driving meaningful improvements relies heavily on integrating advanced LLM text encoders and iterative thinking. Looking forward, our entity-based paradigm can generalize beyond assessment to serve as a reward model, enable models to correctly interpret abstract communication, or highlight specific failures in test-time critique loops. Ultimately, we hope this work serves as a stepping stone toward seamless multimodal interaction, closing the gap between rigid machine execution and the natural, open-ended way humans communicate.",
+      "hf_url": "https://huggingface.co/papers/2605.14842",
+      "arxiv_url": "https://arxiv.org/abs/2605.14842",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.14842",
+      "papers_cool_url": "https://papers.cool/arxiv/2605.14842",
+      "github_url": "",
+      "submitted_by": "Mor Ventura",
+      "submitted_at": "2026-05-20T00:00:00.000Z",
+      "upvotes": 4,
+      "comments": 1,
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
+      "matched_terms": [
+        "\\bimage\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Humans naturally communicate through abstract concepts like \"mood\".",
       "upvote_label": "4 upvotes"
     },
     {
@@ -3780,94 +3903,94 @@
     },
     {
       "report_date": "2026-05-20",
-      "paper_id": "2605.09789",
-      "title": "Zero-Shot Sim-to-Real Robot Learning: A Dexterous Manipulation Study on Reactive Catching",
+      "paper_id": "2605.19147",
+      "title": "Be Kind, Rewrite: Benign Projections via Rewriting Defend Against LLM Data Poisoning Attacks",
       "authors": [
-        "Kejia Ren",
-        "Gaotian Wang",
-        "Andrew S. Morgan",
-        "Kaiyu Hang"
+        "John T. Halloran",
+        "Noopur S. Bhatt"
       ],
-      "abstract": "Dexterous manipulation is physics-intensive and highly sensitive to modeling errors and perception noise, making sim-to-real transfer prohibitively challenging. Domain randomization (DR) is commonly used to improve the robustness of learned policies for such tasks, but conventional DR randomizes one instance per episode, offering very limited exposure to the variability of real-world dynamics. To this end, we propose Domain-Randomized Instance Set (DRIS), which represents and propagates a set of randomized instances simultaneously, providing richer approximation of uncertain dynamics and enabling policies to learn actions that account for multiple possible outcomes. Supported by theoretical analysis, we show that DRIS yields more robust policies and alleviates the need for real-world fine-tuning, even with a modest number of instances (e.g., 10). We demonstrate this on a challenging reactive catching task. Unlike traditional catching setups that use end-effectors designed to mechanically stabilize the object (e.g., curved or enclosing surfaces), our system uses a flat plate that offers no passive stabilization, making the task highly sensitive to noise and requiring rapid reactive motions. The learned policies exhibit strong robustness to uncertainties and achieve reliable zero-shot sim-to-real transfer.",
-      "hf_url": "https://huggingface.co/papers/2605.09789",
-      "arxiv_url": "https://arxiv.org/abs/2605.09789",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.09789",
-      "papers_cool_url": "https://papers.cool/arxiv/2605.09789",
+      "abstract": "Large language models (LLMs) are highly susceptible to backdoor attacks (BAs), wherein training samples are poisoned using trigger-based harmful content. Furthermore, existing defenses have proven ineffective when extensively tested across BA patterns. To better combat BAs, we explore the use of LLM rewriting as a proactive defense against data poisoning. First, we theoretically show that when LLM rewriting utilizes open-book benign samples--termed open-book benign rewriting (OBBR)--the probability of a rewritten output being benign is strictly greater than that of closed-book rewriting. Thus, OBBR neutralizes harmful content by projecting training samples to the space of benign prompts. We then show that, in contrast to previous defenses, OBBR effectively mitigates a large number of existing BAs: across five known BAs and four widely used LLMs, OBBR increases safety performance by an average 51% compared to state-of-the-art BA defenses and 25.7% compared to closed-book rewriting methods. Finally, we show that OBBR is computationally efficient relative to other BA defenses, does not degrade model performance on natural language tasks after fine-tuning, and is capable of defending against non-trigger based data poisoning attacks.",
+      "hf_url": "https://huggingface.co/papers/2605.19147",
+      "arxiv_url": "https://arxiv.org/abs/2605.19147",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.19147",
+      "papers_cool_url": "https://papers.cool/arxiv/2605.19147",
       "github_url": "",
-      "submitted_by": "Rajkumar rawal",
-      "submitted_at": "2026-05-20T00:00:00.000Z",
-      "upvotes": 4,
-      "comments": 2,
-      "topic_key": "robotics_embodied",
-      "topic_label": "Robotics and Embodied AI",
-      "matched_terms": [
-        "\\brobot(ic|ics)?\\b",
-        "\\bmanipulation\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Dexterous manipulation is physics-intensive and highly sensitive to modeling errors and perception noise, making sim-to-real transfer prohibitively challenging.",
-      "upvote_label": "4 upvotes"
-    },
-    {
-      "report_date": "2026-05-20",
-      "paper_id": "2605.08472",
-      "title": "Mid-Training with Self-Generated Data Improves Reinforcement Learning in Language Models",
-      "authors": [
-        "Aswin RRV",
-        "Jacob Dineen",
-        "Divij Handa",
-        "Mihir Parmar",
-        "Ben Zhou",
-        "Swaroop Mishra",
-        "Chitta Baral"
-      ],
-      "abstract": "The effectiveness of Reinforcement Learning (RL) in Large Language Models (LLMs) depends on the nature and diversity of the data used before and during RL. In particular, reasoning problems can often be approached in multiple ways that rely on different forms of reasoning, and exposure to only a limited range of such approaches in the training data may limit the effectiveness of RL. Motivated by this, we investigate using diverse self-generated data during mid-training as an intermediate step before RL training. Specifically, we adopt a bootstrapped data-generation framework guided by George Polya's problem-solving approaches for generating multiple variants of correct answers for each question in the training data, and then perform fine-tuning. We first provide a theoretical perspective on how mid-training on such data improves RL and explain how policy-gradient updates can incentivize combining multiple approaches. We then empirically demonstrate that RL-trained models initialized with our mid-training data achieve consistent improvements across various mathematical reasoning benchmarks and other OOD tasks like code generation and narrative reasoning. Overall, our investigative study shows that a language model learning multiple problem-solving approaches, through self-generated data helps subsequent RL.",
-      "hf_url": "https://huggingface.co/papers/2605.08472",
-      "arxiv_url": "https://arxiv.org/abs/2605.08472",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.08472",
-      "papers_cool_url": "https://papers.cool/arxiv/2605.08472",
-      "github_url": "",
-      "submitted_by": "Aswin Ravikumar Rangsasamy Veerasamy",
-      "submitted_at": "2026-05-20T00:00:00.000Z",
-      "upvotes": 4,
-      "comments": 2,
-      "topic_key": "learning_theory",
-      "topic_label": "Learning, Optimization, and Theory",
-      "matched_terms": [
-        "\\blearning\\b",
-        "\\btraining\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "The effectiveness of Reinforcement Learning (RL) in Large Language Models (LLMs) depends on the nature and diversity of the data used before and during RL.",
-      "upvote_label": "4 upvotes"
-    },
-    {
-      "report_date": "2026-05-20",
-      "paper_id": "2605.17909",
-      "title": "Ethical Hyper-Velocity (EHV): A Provably Deterministic Governance-Aware JIT Compiler Architecture for Agentic Systems",
-      "authors": [
-        "Riddhi Mohan Sharma"
-      ],
-      "abstract": "As autonomous agentic systems scale across regulated critical infrastructures, the lack of mechanistic, hardware-rooted enforcement for high-frequency policy updates presents a fundamental safety gap. We introduce Ethical Hyper-Velocity (EHV), a novel architectural framework for the formal verification of AI governance policies at runtime. Unlike retrospective auditing frameworks (ISO/IEC 42001, NIST AI RMF) which introduce 14-30 day latencies, EHV relocates the Policy Enforcement Point (PEP) into the inference pipeline via a Governance-Aware Just-In-Time (JIT) Compiler. By integrating Conflict-free Replicated Data Types (CRDTs) for policy synchronization and Epoch-based Attestation Caching within Trusted Execution Environments (TEEs), EHV achieves Sub-millisecond Formal Determinism (SMFD). We demonstrate via TLA+ formal verification that non-compliant agentic actions are computationally unreachable within the system's bounded operating state space. We prove that O(1) runtime enforcement can eliminate the traditional trade-off between deployment velocity and governance integrity, reducing Governance Latency from O(days) to O(1).",
-      "hf_url": "https://huggingface.co/papers/2605.17909",
-      "arxiv_url": "https://arxiv.org/abs/2605.17909",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.17909",
-      "papers_cool_url": "https://papers.cool/arxiv/2605.17909",
-      "github_url": "",
-      "submitted_by": "Riddhi Mohan Sharma",
+      "submitted_by": "John Halloran",
       "submitted_at": "2026-05-20T00:00:00.000Z",
       "upvotes": 3,
       "comments": 1,
-      "topic_key": "agents_planning",
-      "topic_label": "Agents and Planning",
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
       "matched_terms": [
-        "\\bagentic\\b"
+        "\\b\\w*llms?\\w*\\b"
       ],
       "classification_source": "rule",
       "classification_confidence": null,
-      "one_sentence_summary": "As autonomous agentic systems scale across regulated critical infrastructures, the lack of mechanistic, hardware-rooted enforcement for high-frequency policy updates presents a fundamental safety gap.",
+      "one_sentence_summary": "Large language models (LLMs) are highly susceptible to backdoor attacks (BAs), wherein training samples are poisoned using trigger-based harmful content.",
+      "upvote_label": "3 upvotes"
+    },
+    {
+      "report_date": "2026-05-20",
+      "paper_id": "2605.17659",
+      "title": "Bug or Feature^2: Weight Drift, Activation Sparsity, and Spikes",
+      "authors": [
+        "Egor Shvetsov",
+        "Aleksandr Serkov",
+        "Shokorov Viacheslav",
+        "Redko Dmitry",
+        "Vladislav Goloshchapov",
+        "Evgeny Burnaev"
+      ],
+      "abstract": "The design of modern neural architectures has converged through incremental empirical choices, yet the mechanisms governing their training dynamics remain only partially understood. We identify and analyze a negative weight drift induced by the interaction between standard losses and positively biased activation functions. We prove that under MSE or cross-entropy loss, the gradient with respect to positive pre-activations is non-negative in expectation at initialization, driving downstream weights toward negative values during early training. The drift is intrinsic to optimization rather than data, and persists across architectures (MLP, ResNet, ViT, GPT-nano, MP-SENe) and asymmetric activation functions (ReLU, GELU, SiLU). Coupled with ReLU, weight drift produces activation sparsity reaching up to 90\\% in GPT-nano. We characterize the sparsity-accuracy tradeoff across 79 configurations and identify a sharp accuracy cliff above sim70\\% activation sparsity. While ReLU^2 achieves a good sparsity--accuracy ratio in GPT-nano, it pathologically amplifies identified activation spikes in intermediate transformer layers. Clipping resolves this while preserving the representational benefits of squaring: clipped ReLU^2 outperforms its unclipped version, and GELU^2 achieves the lowest validation loss on GPT-nano. Code is available at https://github.com/On-Point-RND/BugOrFeature.",
+      "hf_url": "https://huggingface.co/papers/2605.17659",
+      "arxiv_url": "https://arxiv.org/abs/2605.17659",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.17659",
+      "papers_cool_url": "https://papers.cool/arxiv/2605.17659",
+      "github_url": "",
+      "submitted_by": "Egor Shvetsov",
+      "submitted_at": "2026-05-20T00:00:00.000Z",
+      "upvotes": 3,
+      "comments": 1,
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
+      "matched_terms": [
+        "\\bactivation(s)?\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "The design of modern neural architectures has converged through incremental empirical choices, yet the mechanisms governing their training dynamics remain only partially understood.",
+      "upvote_label": "3 upvotes"
+    },
+    {
+      "report_date": "2026-05-20",
+      "paper_id": "2605.17360",
+      "title": "Omni-DuplexEval: Evaluating Real-time Duplex Omni-modal Interaction",
+      "authors": [
+        "Chaoqun He",
+        "Mingyang Xiang",
+        "Yingjing Xu",
+        "Bokai Xu",
+        "Junbo Cui",
+        "Jie Zhou",
+        "Yuan Yao",
+        "Lijie Wen"
+      ],
+      "abstract": "Real-time duplex interaction is essential for multimodal AI systems operating in real-world scenarios, where models must continuously process streaming inputs and respond at appropriate moments. However, most existing multimodal large language models (MLLMs) are evaluated in offline settings, where the entire video input is processed before any response is generated. While recent work has started to explore real-time duplex MLLMs, there is still no comprehensive benchmark or automatic evaluation method for this setting. To address this gap, we propose Omni-DuplexEval, a benchmark for systematically evaluating real-time duplex interaction. The benchmark consists of two complementary scenarios: (1) Real-Time Description, which evaluates the ability to generate continuous, time-aligned responses that track evolving multimodal inputs, and (2) Proactive Reminder, which evaluates the ability to identify salient events and respond at appropriate moments. Omni-DuplexEval contains 660 videos with fine-grained, human-annotated labels and precise temporal metadata, spanning 9 tasks grounded in real-world scenarios, where all questions are formulated as open-ended queries. We further introduce an automatic evaluation framework based on LLM-as-a-Judge, which enables systematic assessment by jointly evaluating response-content alignment and response timing through timestamp-aware and sequential reasoning, achieving strong alignment with human judgments. Experiments on state-of-the-art duplex MLLMs reveal substantial limitations. The best-performing model achieves only 39.6% overall, while scoring only 20.0% on Proactive Reminder. Our analysis identifies two key challenges: models struggle to balance timely responses with coherent, holistic content generation, and they often fail to determine both when to respond and what to produce. We hope our work facilitates further progress in MLLMs.",
+      "hf_url": "https://huggingface.co/papers/2605.17360",
+      "arxiv_url": "https://arxiv.org/abs/2605.17360",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.17360",
+      "papers_cool_url": "https://papers.cool/arxiv/2605.17360",
+      "github_url": "",
+      "submitted_by": "Chaoqun He",
+      "submitted_at": "2026-05-20T00:00:00.000Z",
+      "upvotes": 3,
+      "comments": 1,
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
+      "matched_terms": [],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Real-time duplex interaction is essential for multimodal AI systems operating in real-world scenarios, where models must continuously process streaming inputs and respond at appropriate moments.",
       "upvote_label": "3 upvotes"
     },
     {
@@ -3905,37 +4028,6 @@
     },
     {
       "report_date": "2026-05-20",
-      "paper_id": "2605.14842",
-      "title": "Editor's Choice: Evaluating Abstract Intent in Image Editing through Atomic Entity Analysis",
-      "authors": [
-        "Mor Ventura",
-        "Roy Hirsch",
-        "Yonatan Bitton",
-        "Regev Cohen",
-        "Roi Reichart"
-      ],
-      "abstract": "Humans naturally communicate through abstract concepts like \"mood\". However, current image editing benchmarks focus primarily on explicit, literal commands, leaving abstract instructions largely underexplored. In this work, we first formalize the definition and taxonomy of abstract image editing. To measure instruction-following in this challenging domain, we introduce Entity-Rubrics, a framework that breaks down abstract edits into individual, entity-level assessments and achieves strong correlation with human judgment. Alongside this framework, we contribute AbstractEdit, the first benchmark dedicated to abstract image editing across diverse real-world scenes. Evaluating 11 leading models on this dataset reveals a fundamental challenge: standard architectures struggle to balance intent and preservation, commonly defaulting to under-editing or over-editing. Our analysis demonstrates that driving meaningful improvements relies heavily on integrating advanced LLM text encoders and iterative thinking. Looking forward, our entity-based paradigm can generalize beyond assessment to serve as a reward model, enable models to correctly interpret abstract communication, or highlight specific failures in test-time critique loops. Ultimately, we hope this work serves as a stepping stone toward seamless multimodal interaction, closing the gap between rigid machine execution and the natural, open-ended way humans communicate.",
-      "hf_url": "https://huggingface.co/papers/2605.14842",
-      "arxiv_url": "https://arxiv.org/abs/2605.14842",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.14842",
-      "papers_cool_url": "https://papers.cool/arxiv/2605.14842",
-      "github_url": "",
-      "submitted_by": "Mor Ventura",
-      "submitted_at": "2026-05-20T00:00:00.000Z",
-      "upvotes": 3,
-      "comments": 1,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [
-        "\\bimage\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Humans naturally communicate through abstract concepts like \"mood\".",
-      "upvote_label": "3 upvotes"
-    },
-    {
-      "report_date": "2026-05-20",
       "paper_id": "2605.19516",
       "title": "Base Models Look Human To AI Detectors",
       "authors": [
@@ -3961,98 +4053,6 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "As AI-generated text enters the real-world at scale, institutions increasingly use commercial AI-text detectors, especially in education and academic-integrity workflows.",
-      "upvote_label": "2 upvotes"
-    },
-    {
-      "report_date": "2026-05-20",
-      "paper_id": "2605.19147",
-      "title": "Be Kind, Rewrite: Benign Projections via Rewriting Defend Against LLM Data Poisoning Attacks",
-      "authors": [
-        "John T. Halloran",
-        "Noopur S. Bhatt"
-      ],
-      "abstract": "Large language models (LLMs) are highly susceptible to backdoor attacks (BAs), wherein training samples are poisoned using trigger-based harmful content. Furthermore, existing defenses have proven ineffective when extensively tested across BA patterns. To better combat BAs, we explore the use of LLM rewriting as a proactive defense against data poisoning. First, we theoretically show that when LLM rewriting utilizes open-book benign samples--termed open-book benign rewriting (OBBR)--the probability of a rewritten output being benign is strictly greater than that of closed-book rewriting. Thus, OBBR neutralizes harmful content by projecting training samples to the space of benign prompts. We then show that, in contrast to previous defenses, OBBR effectively mitigates a large number of existing BAs: across five known BAs and four widely used LLMs, OBBR increases safety performance by an average 51% compared to state-of-the-art BA defenses and 25.7% compared to closed-book rewriting methods. Finally, we show that OBBR is computationally efficient relative to other BA defenses, does not degrade model performance on natural language tasks after fine-tuning, and is capable of defending against non-trigger based data poisoning attacks.",
-      "hf_url": "https://huggingface.co/papers/2605.19147",
-      "arxiv_url": "https://arxiv.org/abs/2605.19147",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.19147",
-      "papers_cool_url": "https://papers.cool/arxiv/2605.19147",
-      "github_url": "",
-      "submitted_by": "John Halloran",
-      "submitted_at": "2026-05-20T00:00:00.000Z",
-      "upvotes": 2,
-      "comments": 1,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
-      "matched_terms": [
-        "\\b\\w*llms?\\w*\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Large language models (LLMs) are highly susceptible to backdoor attacks (BAs), wherein training samples are poisoned using trigger-based harmful content.",
-      "upvote_label": "2 upvotes"
-    },
-    {
-      "report_date": "2026-05-20",
-      "paper_id": "2605.17659",
-      "title": "Bug or Feature^2: Weight Drift, Activation Sparsity, and Spikes",
-      "authors": [
-        "Egor Shvetsov",
-        "Aleksandr Serkov",
-        "Shokorov Viacheslav",
-        "Redko Dmitry",
-        "Vladislav Goloshchapov",
-        "Evgeny Burnaev"
-      ],
-      "abstract": "The design of modern neural architectures has converged through incremental empirical choices, yet the mechanisms governing their training dynamics remain only partially understood. We identify and analyze a negative weight drift induced by the interaction between standard losses and positively biased activation functions. We prove that under MSE or cross-entropy loss, the gradient with respect to positive pre-activations is non-negative in expectation at initialization, driving downstream weights toward negative values during early training. The drift is intrinsic to optimization rather than data, and persists across architectures (MLP, ResNet, ViT, GPT-nano, MP-SENe) and asymmetric activation functions (ReLU, GELU, SiLU). Coupled with ReLU, weight drift produces activation sparsity reaching up to 90\\% in GPT-nano. We characterize the sparsity-accuracy tradeoff across 79 configurations and identify a sharp accuracy cliff above sim70\\% activation sparsity. While ReLU^2 achieves a good sparsity--accuracy ratio in GPT-nano, it pathologically amplifies identified activation spikes in intermediate transformer layers. Clipping resolves this while preserving the representational benefits of squaring: clipped ReLU^2 outperforms its unclipped version, and GELU^2 achieves the lowest validation loss on GPT-nano. Code is available at https://github.com/On-Point-RND/BugOrFeature.",
-      "hf_url": "https://huggingface.co/papers/2605.17659",
-      "arxiv_url": "https://arxiv.org/abs/2605.17659",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.17659",
-      "papers_cool_url": "https://papers.cool/arxiv/2605.17659",
-      "github_url": "",
-      "submitted_by": "Egor Shvetsov",
-      "submitted_at": "2026-05-20T00:00:00.000Z",
-      "upvotes": 2,
-      "comments": 1,
-      "topic_key": "learning_theory",
-      "topic_label": "Learning, Optimization, and Theory",
-      "matched_terms": [
-        "\\bactivation(s)?\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "The design of modern neural architectures has converged through incremental empirical choices, yet the mechanisms governing their training dynamics remain only partially understood.",
-      "upvote_label": "2 upvotes"
-    },
-    {
-      "report_date": "2026-05-20",
-      "paper_id": "2605.17360",
-      "title": "Omni-DuplexEval: Evaluating Real-time Duplex Omni-modal Interaction",
-      "authors": [
-        "Chaoqun He",
-        "Mingyang Xiang",
-        "Yingjing Xu",
-        "Bokai Xu",
-        "Junbo Cui",
-        "Jie Zhou",
-        "Yuan Yao",
-        "Lijie Wen"
-      ],
-      "abstract": "Real-time duplex interaction is essential for multimodal AI systems operating in real-world scenarios, where models must continuously process streaming inputs and respond at appropriate moments. However, most existing multimodal large language models (MLLMs) are evaluated in offline settings, where the entire video input is processed before any response is generated. While recent work has started to explore real-time duplex MLLMs, there is still no comprehensive benchmark or automatic evaluation method for this setting. To address this gap, we propose Omni-DuplexEval, a benchmark for systematically evaluating real-time duplex interaction. The benchmark consists of two complementary scenarios: (1) Real-Time Description, which evaluates the ability to generate continuous, time-aligned responses that track evolving multimodal inputs, and (2) Proactive Reminder, which evaluates the ability to identify salient events and respond at appropriate moments. Omni-DuplexEval contains 660 videos with fine-grained, human-annotated labels and precise temporal metadata, spanning 9 tasks grounded in real-world scenarios, where all questions are formulated as open-ended queries. We further introduce an automatic evaluation framework based on LLM-as-a-Judge, which enables systematic assessment by jointly evaluating response-content alignment and response timing through timestamp-aware and sequential reasoning, achieving strong alignment with human judgments. Experiments on state-of-the-art duplex MLLMs reveal substantial limitations. The best-performing model achieves only 39.6% overall, while scoring only 20.0% on Proactive Reminder. Our analysis identifies two key challenges: models struggle to balance timely responses with coherent, holistic content generation, and they often fail to determine both when to respond and what to produce. We hope our work facilitates further progress in MLLMs.",
-      "hf_url": "https://huggingface.co/papers/2605.17360",
-      "arxiv_url": "https://arxiv.org/abs/2605.17360",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.17360",
-      "papers_cool_url": "https://papers.cool/arxiv/2605.17360",
-      "github_url": "",
-      "submitted_by": "Chaoqun He",
-      "submitted_at": "2026-05-20T00:00:00.000Z",
-      "upvotes": 2,
-      "comments": 1,
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
-      "matched_terms": [],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Real-time duplex interaction is essential for multimodal AI systems operating in real-world scenarios, where models must continuously process streaming inputs and respond at appropriate moments.",
       "upvote_label": "2 upvotes"
     },
     {
