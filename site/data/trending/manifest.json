@@ -1,10 +1,150 @@
 {
   "branch_key": "trending",
   "branch_label": "Trending",
-  "generated_at": "2026-05-17T13:35:18Z",
-  "reports_count": 14,
-  "default_report_path": "data/trending/reports/2026-05-17/trending-2026-05-17.json",
+  "generated_at": "2026-05-25T08:00:08Z",
+  "reports_count": 15,
+  "default_report_path": "data/trending/reports/2026-05-25/trending-2026-05-25.json",
   "reports": [
+    {
+      "branch_key": "trending",
+      "branch_label": "Trending",
+      "data_path": "data/trending/reports/2026-05-25/trending-2026-05-25.json",
+      "slug": "trending-2026-05-25",
+      "snapshot_date": "2026-05-25",
+      "since": "weekly",
+      "total_repositories": 17,
+      "generated_at": "2026-05-25T08:00:07Z",
+      "source_url": "https://github.com/trending?since=weekly&spoken_language_code=",
+      "top_languages": [
+        {
+          "language": "TypeScript",
+          "count": 7,
+          "share": 41.17647058823529
+        },
+        {
+          "language": "Python",
+          "count": 5,
+          "share": 29.411764705882355
+        },
+        {
+          "language": "Rust",
+          "count": 2,
+          "share": 11.76470588235294
+        },
+        {
+          "language": "JavaScript",
+          "count": 1,
+          "share": 5.88235294117647
+        },
+        {
+          "language": "Shell",
+          "count": 1,
+          "share": 5.88235294117647
+        }
+      ],
+      "top_repositories": [
+        {
+          "snapshot_date": "2026-05-25",
+          "repo_id": "colbymchenry/codegraph",
+          "owner": "colbymchenry",
+          "name": "codegraph",
+          "full_name": "colbymchenry/codegraph",
+          "repo_url": "https://github.com/colbymchenry/codegraph",
+          "description": "Pre-indexed code knowledge graph for Claude Code, Codex, Cursor, OpenCode, and Hermes Agent — fewer tokens, fewer tool calls, 100% local",
+          "language": "TypeScript",
+          "stars": 23467,
+          "forks": 1288,
+          "stars_this_week": 18136,
+          "built_by": [
+            "colbymchenry",
+            "claude",
+            "omonien",
+            "andreinknv",
+            "MO2k4"
+          ]
+        },
+        {
+          "snapshot_date": "2026-05-25",
+          "repo_id": "tinyhumansai/openhuman",
+          "owner": "tinyhumansai",
+          "name": "openhuman",
+          "full_name": "tinyhumansai/openhuman",
+          "repo_url": "https://github.com/tinyhumansai/openhuman",
+          "description": "Your Personal AI super intelligence. Private, Simple and extremely powerful.",
+          "language": "Rust",
+          "stars": 27445,
+          "forks": 2540,
+          "stars_this_week": 15194,
+          "built_by": [
+            "senamakel",
+            "claude",
+            "graycyrus",
+            "github-actions",
+            "M3gA-Mind"
+          ]
+        },
+        {
+          "snapshot_date": "2026-05-25",
+          "repo_id": "imbad0202/academic-research-skills",
+          "owner": "Imbad0202",
+          "name": "academic-research-skills",
+          "full_name": "Imbad0202/academic-research-skills",
+          "repo_url": "https://github.com/Imbad0202/academic-research-skills",
+          "description": "Academic Research Skills for Claude Code: research → write → review → revise → finalize",
+          "language": "Python",
+          "stars": 20986,
+          "forks": 1782,
+          "stars_this_week": 11401,
+          "built_by": [
+            "Imbad0202",
+            "claude",
+            "madtriceps",
+            "2023Anita",
+            "xiaolai"
+          ]
+        },
+        {
+          "snapshot_date": "2026-05-25",
+          "repo_id": "obra/superpowers",
+          "owner": "obra",
+          "name": "superpowers",
+          "full_name": "obra/superpowers",
+          "repo_url": "https://github.com/obra/superpowers",
+          "description": "An agentic skills framework & software development methodology that works.",
+          "language": "Shell",
+          "stars": 205485,
+          "forks": 18313,
+          "stars_this_week": 10171,
+          "built_by": [
+            "obra",
+            "claude",
+            "arittr",
+            "clkao",
+            "jjshanks"
+          ]
+        },
+        {
+          "snapshot_date": "2026-05-25",
+          "repo_id": "lum1104/understand-anything",
+          "owner": "Lum1104",
+          "name": "Understand-Anything",
+          "full_name": "Lum1104/Understand-Anything",
+          "repo_url": "https://github.com/Lum1104/Understand-Anything",
+          "description": "Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex, Cursor, Copilot, Gemini CLI, and more.",
+          "language": "TypeScript",
+          "stars": 28126,
+          "forks": 2372,
+          "stars_this_week": 9102,
+          "built_by": [
+            "Lum1104",
+            "claude",
+            "berkcangumusisik",
+            "zhushen12580",
+            "fishinakleinbottle"
+          ]
+        }
+      ]
+    },
     {
       "branch_key": "trending",
       "branch_label": "Trending",
