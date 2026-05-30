@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-29T19:00:06Z",
+  "generated_at": "2026-05-30T19:00:06Z",
   "report_kind": "hf_daily",
   "report_date": "2026-05-27",
   "source_url": "https://huggingface.co/papers/date/2026-05-27",
@@ -73,13 +73,13 @@
       "Agents and Planning: 9 papers (22.50%); representative paper: MobileGym: A Verifiable and Highly Parallel Simulation Platform for Mobile GUI Agent Research.",
       "Other AI: 7 papers (17.50%); representative paper: SpatialBench: Is Your Spatial Foundation Model an All-Round Player?."
     ],
-    "trend_summary": "Today's dominant clusters are Multimodal Understanding and Vision / Agents and Planning / Other AI; this suggests several parallel trends: multimodal work is moving from isolated perception toward generation, agents, and action; agent papers emphasize tool use, planning, and deployable workflows. The strongest visible attention is on “LocateAnything: Fast and High-Quality Vision-Language Grounding with Parallel Box Decoding” (115 upvotes).",
+    "trend_summary": "Today's dominant clusters are Multimodal Understanding and Vision / Agents and Planning / Other AI; this suggests several parallel trends: multimodal work is moving from isolated perception toward generation, agents, and action; agent papers emphasize tool use, planning, and deployable workflows. The strongest visible attention is on “LocateAnything: Fast and High-Quality Vision-Language Grounding with Parallel Box Decoding” (124 upvotes).",
     "category_summaries": [
       {
         "topic_label": "Multimodal Understanding and Vision",
         "count": 10,
         "share": 25.0,
-        "summary": "Multimodal Understanding and Vision contributes 10 papers (25.00%), led by “LocateAnything: Fast and High-Quality Vision-Language Grounding with Parallel Box Decoding” with 115 upvotes."
+        "summary": "Multimodal Understanding and Vision contributes 10 papers (25.00%), led by “LocateAnything: Fast and High-Quality Vision-Language Grounding with Parallel Box Decoding” with 124 upvotes."
       },
       {
         "topic_label": "Agents and Planning",
@@ -91,7 +91,7 @@
         "topic_label": "Other AI",
         "count": 7,
         "share": 17.5,
-        "summary": "Other AI contributes 7 papers (17.50%), led by “SpatialBench: Is Your Spatial Foundation Model an All-Round Player?” with 64 upvotes."
+        "summary": "Other AI contributes 7 papers (17.50%), led by “SpatialBench: Is Your Spatial Foundation Model an All-Round Player?” with 67 upvotes."
       },
       {
         "topic_label": "LLMs and Language",
@@ -103,7 +103,7 @@
         "topic_label": "Learning, Optimization, and Theory",
         "count": 3,
         "share": 7.5,
-        "summary": "Learning, Optimization, and Theory contributes 3 papers (7.50%), led by “The MiniMax-M2 Series: Mini Activations Unleashing Max Real-World Intelligence” with 31 upvotes."
+        "summary": "Learning, Optimization, and Theory contributes 3 papers (7.50%), led by “The MiniMax-M2 Series: Mini Activations Unleashing Max Real-World Intelligence” with 32 upvotes."
       },
       {
         "topic_label": "Reasoning, Alignment, and Evaluation",
@@ -115,20 +115,20 @@
         "topic_label": "Multimodal Agents",
         "count": 1,
         "share": 2.5,
-        "summary": "Multimodal Agents contributes 1 papers (2.50%), led by “QUACK: Questioning, Understanding, and Auditing Communicated Knowledge in Multimodal Social Deduction Agents” with 16 upvotes."
+        "summary": "Multimodal Agents contributes 1 papers (2.50%), led by “QUACK: Questioning, Understanding, and Auditing Communicated Knowledge in Multimodal Social Deduction Agents” with 18 upvotes."
       },
       {
         "topic_label": "Retrieval, Knowledge, and RAG",
         "count": 1,
         "share": 2.5,
-        "summary": "Retrieval, Knowledge, and RAG contributes 1 papers (2.50%), led by “Share More, Search Less: Collaborative Parallel Thinking for Efficient Test-Time Scaling” with 26 upvotes."
+        "summary": "Retrieval, Knowledge, and RAG contributes 1 papers (2.50%), led by “Share More, Search Less: Collaborative Parallel Thinking for Efficient Test-Time Scaling” with 27 upvotes."
       }
     ],
     "top_papers": [
       {
         "title": "LocateAnything: Fast and High-Quality Vision-Language Grounding with Parallel Box Decoding",
-        "upvotes": 115,
-        "upvote_label": "115 upvotes",
+        "upvotes": 124,
+        "upvote_label": "124 upvotes",
         "topic_label": "Multimodal Understanding and Vision",
         "summary": "Vision-language models (VLMs) commonly formulate visual grounding and detection as a coordinate-token generation problem, serializing each 2D box into multiple 1D tokens that are learned and decoded largely…",
         "hf_url": "https://huggingface.co/papers/2605.27365",
@@ -149,8 +149,8 @@
       },
       {
         "title": "SpatialBench: Is Your Spatial Foundation Model an All-Round Player?",
-        "upvotes": 64,
-        "upvote_label": "64 upvotes",
+        "upvotes": 67,
+        "upvote_label": "67 upvotes",
         "topic_label": "Other AI",
         "summary": "While spatial foundation models have demonstrated impressive performance on standard datasets, a critical question remains: are they truly all-round players capable of generalizing robustly across diverse downstream…",
         "hf_url": "https://huggingface.co/papers/2605.27367",
@@ -236,7 +236,7 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-05-27T00:00:00.000Z",
-      "upvotes": 115,
+      "upvotes": 124,
       "comments": 4,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -246,7 +246,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Vision-language models (VLMs) commonly formulate visual grounding and detection as a coordinate-token generation problem, serializing each 2D box into multiple 1D tokens that are learned and decoded largely…",
-      "upvote_label": "115 upvotes"
+      "upvote_label": "124 upvotes"
     },
     {
       "report_date": "2026-05-27",
@@ -327,7 +327,7 @@
       "github_url": "",
       "submitted_by": "leoli",
       "submitted_at": "2026-05-27T00:00:00.000Z",
-      "upvotes": 64,
+      "upvotes": 67,
       "comments": 4,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
@@ -335,7 +335,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "While spatial foundation models have demonstrated impressive performance on standard datasets, a critical question remains: are they truly all-round players capable of generalizing robustly across diverse downstream…",
-      "upvote_label": "64 upvotes"
+      "upvote_label": "67 upvotes"
     },
     {
       "report_date": "2026-05-27",
@@ -712,7 +712,7 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-05-27T00:00:00.000Z",
-      "upvotes": 31,
+      "upvotes": 32,
       "comments": 1,
       "topic_key": "learning_theory",
       "topic_label": "Learning, Optimization, and Theory",
@@ -722,7 +722,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "We introduce the MiniMax-M2 series, a family of Mixture-of-Experts language models built around the principle that mini activations can unleash maximum real-world intelligence.",
-      "upvote_label": "31 upvotes"
+      "upvote_label": "32 upvotes"
     }
   ],
   "topics": [
@@ -730,7 +730,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "count": 10,
       "share": 25.0,
-      "summary": "Multimodal Understanding and Vision contributes 10 papers (25.00%), led by “LocateAnything: Fast and High-Quality Vision-Language Grounding with Parallel Box Decoding” with 115 upvotes.",
+      "summary": "Multimodal Understanding and Vision contributes 10 papers (25.00%), led by “LocateAnything: Fast and High-Quality Vision-Language Grounding with Parallel Box Decoding” with 124 upvotes.",
       "papers": [
         {
           "report_date": "2026-05-27",
@@ -759,7 +759,7 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-05-27T00:00:00.000Z",
-          "upvotes": 115,
+          "upvotes": 124,
           "comments": 4,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
@@ -769,7 +769,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Vision-language models (VLMs) commonly formulate visual grounding and detection as a coordinate-token generation problem, serializing each 2D box into multiple 1D tokens that are learned and decoded largely…",
-          "upvote_label": "115 upvotes"
+          "upvote_label": "124 upvotes"
         },
         {
           "report_date": "2026-05-27",
@@ -927,7 +927,7 @@
           "submitted_by": "Guanyu Zhou",
           "submitted_at": "2026-05-27T00:00:00.000Z",
           "upvotes": 28,
-          "comments": 2,
+          "comments": 3,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [
@@ -1041,7 +1041,7 @@
           "github_url": "",
           "submitted_by": "Niels Rogge",
           "submitted_at": "2026-05-27T00:00:00.000Z",
-          "upvotes": 16,
+          "upvotes": 17,
           "comments": 2,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
@@ -1051,7 +1051,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "We introduce Gemini Embedding 2, a native multimodal embedding model that allows embedding video, audio, image, and text modalities in a unified representation space.",
-          "upvote_label": "16 upvotes"
+          "upvote_label": "17 upvotes"
         },
         {
           "report_date": "2026-05-27",
@@ -1136,7 +1136,7 @@
           "github_url": "",
           "submitted_by": "Xing Cong",
           "submitted_at": "2026-05-27T00:00:00.000Z",
-          "upvotes": 6,
+          "upvotes": 7,
           "comments": 2,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
@@ -1146,7 +1146,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Diffusion Transformers (DiT) achieve strong performance in image generation but incur substantial inference costs.",
-          "upvote_label": "6 upvotes"
+          "upvote_label": "7 upvotes"
         },
         {
           "report_date": "2026-05-27",
@@ -1247,7 +1247,7 @@
           "github_url": "",
           "submitted_by": "Qinghong (Kevin) Lin",
           "submitted_at": "2026-05-27T00:00:00.000Z",
-          "upvotes": 29,
+          "upvotes": 30,
           "comments": 3,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
@@ -1258,7 +1258,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "We study series-level cinematic remaking, a long-horizon video-to-video generation problem that localizes full episodes or films via stylization or actor replacement while strictly preserving narrative structure,…",
-          "upvote_label": "29 upvotes"
+          "upvote_label": "30 upvotes"
         },
         {
           "report_date": "2026-05-27",
@@ -1279,7 +1279,7 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-05-27T00:00:00.000Z",
-          "upvotes": 18,
+          "upvotes": 19,
           "comments": 1,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
@@ -1289,7 +1289,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Large language model (LLM) agents rely on reusable skills to solve complex tasks.",
-          "upvote_label": "18 upvotes"
+          "upvote_label": "19 upvotes"
         },
         {
           "report_date": "2026-05-27",
@@ -1353,7 +1353,7 @@
           "github_url": "",
           "submitted_by": "Dingwei Chen",
           "submitted_at": "2026-05-27T00:00:00.000Z",
-          "upvotes": 12,
+          "upvotes": 13,
           "comments": 2,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
@@ -1363,7 +1363,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Agentic reinforcement learning (RL) has proven effective for training LLM-based agents with external tool-use capabilities.",
-          "upvote_label": "12 upvotes"
+          "upvote_label": "13 upvotes"
         },
         {
           "report_date": "2026-05-27",
@@ -1423,7 +1423,7 @@
           "github_url": "",
           "submitted_by": "dominic J",
           "submitted_at": "2026-05-27T00:00:00.000Z",
-          "upvotes": 9,
+          "upvotes": 10,
           "comments": 2,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
@@ -1434,7 +1434,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Multi-agent LLM systems improve reasoning by combining outputs from multiple agents, but interaction-heavy methods can introduce error propagation and high communication overhead.",
-          "upvote_label": "9 upvotes"
+          "upvote_label": "10 upvotes"
         },
         {
           "report_date": "2026-05-27",
@@ -1508,7 +1508,7 @@
       "topic_label": "Other AI",
       "count": 7,
       "share": 17.5,
-      "summary": "Other AI contributes 7 papers (17.50%), led by “SpatialBench: Is Your Spatial Foundation Model an All-Round Player?” with 64 upvotes.",
+      "summary": "Other AI contributes 7 papers (17.50%), led by “SpatialBench: Is Your Spatial Foundation Model an All-Round Player?” with 67 upvotes.",
       "papers": [
         {
           "report_date": "2026-05-27",
@@ -1537,7 +1537,7 @@
           "github_url": "",
           "submitted_by": "leoli",
           "submitted_at": "2026-05-27T00:00:00.000Z",
-          "upvotes": 64,
+          "upvotes": 67,
           "comments": 4,
           "topic_key": "other_ai",
           "topic_label": "Other AI",
@@ -1545,7 +1545,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "While spatial foundation models have demonstrated impressive performance on standard datasets, a critical question remains: are they truly all-round players capable of generalizing robustly across diverse downstream…",
-          "upvote_label": "64 upvotes"
+          "upvote_label": "67 upvotes"
         },
         {
           "report_date": "2026-05-27",
@@ -1951,7 +1951,7 @@
       "topic_label": "Learning, Optimization, and Theory",
       "count": 3,
       "share": 7.5,
-      "summary": "Learning, Optimization, and Theory contributes 3 papers (7.50%), led by “The MiniMax-M2 Series: Mini Activations Unleashing Max Real-World Intelligence” with 31 upvotes.",
+      "summary": "Learning, Optimization, and Theory contributes 3 papers (7.50%), led by “The MiniMax-M2 Series: Mini Activations Unleashing Max Real-World Intelligence” with 32 upvotes.",
       "papers": [
         {
           "report_date": "2026-05-27",
@@ -2173,7 +2173,7 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-05-27T00:00:00.000Z",
-          "upvotes": 31,
+          "upvotes": 32,
           "comments": 1,
           "topic_key": "learning_theory",
           "topic_label": "Learning, Optimization, and Theory",
@@ -2183,7 +2183,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "We introduce the MiniMax-M2 series, a family of Mixture-of-Experts language models built around the principle that mini activations can unleash maximum real-world intelligence.",
-          "upvote_label": "31 upvotes"
+          "upvote_label": "32 upvotes"
         },
         {
           "report_date": "2026-05-27",
@@ -2364,7 +2364,7 @@
       "topic_label": "Multimodal Agents",
       "count": 1,
       "share": 2.5,
-      "summary": "Multimodal Agents contributes 1 papers (2.50%), led by “QUACK: Questioning, Understanding, and Auditing Communicated Knowledge in Multimodal Social Deduction Agents” with 16 upvotes.",
+      "summary": "Multimodal Agents contributes 1 papers (2.50%), led by “QUACK: Questioning, Understanding, and Auditing Communicated Knowledge in Multimodal Social Deduction Agents” with 18 upvotes.",
       "papers": [
         {
           "report_date": "2026-05-27",
@@ -2395,7 +2395,7 @@
           "github_url": "",
           "submitted_by": "Ye Yuan",
           "submitted_at": "2026-05-27T00:00:00.000Z",
-          "upvotes": 16,
+          "upvotes": 18,
           "comments": 2,
           "topic_key": "multimodal_agents",
           "topic_label": "Multimodal Agents",
@@ -2406,7 +2406,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Social deduction games have become a popular testbed for probing reasoning, deception, coordination, and belief modeling in Large Language Model (LLM) agents.",
-          "upvote_label": "16 upvotes"
+          "upvote_label": "18 upvotes"
         }
       ]
     },
@@ -2414,7 +2414,7 @@
       "topic_label": "Retrieval, Knowledge, and RAG",
       "count": 1,
       "share": 2.5,
-      "summary": "Retrieval, Knowledge, and RAG contributes 1 papers (2.50%), led by “Share More, Search Less: Collaborative Parallel Thinking for Efficient Test-Time Scaling” with 26 upvotes.",
+      "summary": "Retrieval, Knowledge, and RAG contributes 1 papers (2.50%), led by “Share More, Search Less: Collaborative Parallel Thinking for Efficient Test-Time Scaling” with 27 upvotes.",
       "papers": [
         {
           "report_date": "2026-05-27",
@@ -2442,7 +2442,7 @@
           "github_url": "",
           "submitted_by": "bitwxl",
           "submitted_at": "2026-05-27T00:00:00.000Z",
-          "upvotes": 26,
+          "upvotes": 27,
           "comments": 2,
           "topic_key": "retrieval_knowledge",
           "topic_label": "Retrieval, Knowledge, and RAG",
@@ -2452,7 +2452,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Test-Time Scaling (TTS) enhances the reasoning capabilities of large language models by allocating additional inference compute to explore the solution space.",
-          "upvote_label": "26 upvotes"
+          "upvote_label": "27 upvotes"
         }
       ]
     }
@@ -2485,7 +2485,7 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-05-27T00:00:00.000Z",
-      "upvotes": 115,
+      "upvotes": 124,
       "comments": 4,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -2495,7 +2495,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Vision-language models (VLMs) commonly formulate visual grounding and detection as a coordinate-token generation problem, serializing each 2D box into multiple 1D tokens that are learned and decoded largely…",
-      "upvote_label": "115 upvotes"
+      "upvote_label": "124 upvotes"
     },
     {
       "report_date": "2026-05-27",
@@ -2576,7 +2576,7 @@
       "github_url": "",
       "submitted_by": "leoli",
       "submitted_at": "2026-05-27T00:00:00.000Z",
-      "upvotes": 64,
+      "upvotes": 67,
       "comments": 4,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
@@ -2584,7 +2584,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "While spatial foundation models have demonstrated impressive performance on standard datasets, a critical question remains: are they truly all-round players capable of generalizing robustly across diverse downstream…",
-      "upvote_label": "64 upvotes"
+      "upvote_label": "67 upvotes"
     },
     {
       "report_date": "2026-05-27",
@@ -2961,7 +2961,7 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-05-27T00:00:00.000Z",
-      "upvotes": 31,
+      "upvotes": 32,
       "comments": 1,
       "topic_key": "learning_theory",
       "topic_label": "Learning, Optimization, and Theory",
@@ -2971,7 +2971,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "We introduce the MiniMax-M2 series, a family of Mixture-of-Experts language models built around the principle that mini activations can unleash maximum real-world intelligence.",
-      "upvote_label": "31 upvotes"
+      "upvote_label": "32 upvotes"
     },
     {
       "report_date": "2026-05-27",
@@ -2992,7 +2992,7 @@
       "github_url": "",
       "submitted_by": "Qinghong (Kevin) Lin",
       "submitted_at": "2026-05-27T00:00:00.000Z",
-      "upvotes": 29,
+      "upvotes": 30,
       "comments": 3,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -3003,7 +3003,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "We study series-level cinematic remaking, a long-horizon video-to-video generation problem that localizes full episodes or films via stylization or actor replacement while strictly preserving narrative structure,…",
-      "upvote_label": "29 upvotes"
+      "upvote_label": "30 upvotes"
     },
     {
       "report_date": "2026-05-27",
@@ -3025,7 +3025,7 @@
       "submitted_by": "Guanyu Zhou",
       "submitted_at": "2026-05-27T00:00:00.000Z",
       "upvotes": 28,
-      "comments": 2,
+      "comments": 3,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [
@@ -3062,7 +3062,7 @@
       "github_url": "",
       "submitted_by": "bitwxl",
       "submitted_at": "2026-05-27T00:00:00.000Z",
-      "upvotes": 26,
+      "upvotes": 27,
       "comments": 2,
       "topic_key": "retrieval_knowledge",
       "topic_label": "Retrieval, Knowledge, and RAG",
@@ -3072,7 +3072,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Test-Time Scaling (TTS) enhances the reasoning capabilities of large language models by allocating additional inference compute to explore the solution space.",
-      "upvote_label": "26 upvotes"
+      "upvote_label": "27 upvotes"
     },
     {
       "report_date": "2026-05-27",
@@ -3147,7 +3147,7 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-05-27T00:00:00.000Z",
-      "upvotes": 18,
+      "upvotes": 19,
       "comments": 1,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -3157,6 +3157,48 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Large language model (LLM) agents rely on reusable skills to solve complex tasks.",
+      "upvote_label": "19 upvotes"
+    },
+    {
+      "report_date": "2026-05-27",
+      "paper_id": "2605.27068",
+      "title": "QUACK: Questioning, Understanding, and Auditing Communicated Knowledge in Multimodal Social Deduction Agents",
+      "authors": [
+        "Ye Yuan",
+        "Rui Song",
+        "Weien Li",
+        "Zeyu Li",
+        "Haochen Liu",
+        "Xiangyu Kong",
+        "Changjiang Han",
+        "Yonghan Yang",
+        "Zichen Zhao",
+        "Zixuan Dong",
+        "Fuyuan Lyu",
+        "Bowei He",
+        "Haolun Wu",
+        "Jikun Kang",
+        "Xue Liu"
+      ],
+      "abstract": "Social deduction games have become a popular testbed for probing reasoning, deception, coordination, and belief modeling in Large Language Model (LLM) agents. However, most environments are scored only by game outcomes such as win rates and largely remain to text-only interaction, making it difficult to tell whether an agent's language is actually grounded in what it perceived and did, or to identify the failure modes underlying its behavior. To address this gap, we introduce QUACK, an open-source environment and evaluation framework for auditing the grounding of agent language in multimodal social reasoning. QUACK evaluates agents at three levels: game outcomes, behavioral trajectories, and utterance-level consistency. Its core Statement Verification Pipeline reconstructs each agent's ground-truth trajectory from engine logs and checks every discussion claim against it, automatically flagging spatial hallucination, unsupported accusation, deception collapse, and language-action inconsistency. Evaluating three frontier VLMs in both homogeneous and cross-model adversarial settings, we find that even the strongest agent hallucinates 15.1% of its verifiable spatial claims and makes over half of its accusations without grounded evidence. We release the full engine, evaluation framework, toolkit, and logs at https://github.com/AAAAA-Academia-Attractions/QUACK.",
+      "hf_url": "https://huggingface.co/papers/2605.27068",
+      "arxiv_url": "https://arxiv.org/abs/2605.27068",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.27068",
+      "papers_cool_url": "https://papers.cool/arxiv/2605.27068",
+      "github_url": "",
+      "submitted_by": "Ye Yuan",
+      "submitted_at": "2026-05-27T00:00:00.000Z",
+      "upvotes": 18,
+      "comments": 2,
+      "topic_key": "multimodal_agents",
+      "topic_label": "Multimodal Agents",
+      "matched_terms": [
+        "\\bmultimodal\\b",
+        "\\bagents?\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Social deduction games have become a popular testbed for probing reasoning, deception, coordination, and belief modeling in Large Language Model (LLM) agents.",
       "upvote_label": "18 upvotes"
     },
     {
@@ -3262,7 +3304,7 @@
       "github_url": "",
       "submitted_by": "Niels Rogge",
       "submitted_at": "2026-05-27T00:00:00.000Z",
-      "upvotes": 16,
+      "upvotes": 17,
       "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -3272,49 +3314,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "We introduce Gemini Embedding 2, a native multimodal embedding model that allows embedding video, audio, image, and text modalities in a unified representation space.",
-      "upvote_label": "16 upvotes"
-    },
-    {
-      "report_date": "2026-05-27",
-      "paper_id": "2605.27068",
-      "title": "QUACK: Questioning, Understanding, and Auditing Communicated Knowledge in Multimodal Social Deduction Agents",
-      "authors": [
-        "Ye Yuan",
-        "Rui Song",
-        "Weien Li",
-        "Zeyu Li",
-        "Haochen Liu",
-        "Xiangyu Kong",
-        "Changjiang Han",
-        "Yonghan Yang",
-        "Zichen Zhao",
-        "Zixuan Dong",
-        "Fuyuan Lyu",
-        "Bowei He",
-        "Haolun Wu",
-        "Jikun Kang",
-        "Xue Liu"
-      ],
-      "abstract": "Social deduction games have become a popular testbed for probing reasoning, deception, coordination, and belief modeling in Large Language Model (LLM) agents. However, most environments are scored only by game outcomes such as win rates and largely remain to text-only interaction, making it difficult to tell whether an agent's language is actually grounded in what it perceived and did, or to identify the failure modes underlying its behavior. To address this gap, we introduce QUACK, an open-source environment and evaluation framework for auditing the grounding of agent language in multimodal social reasoning. QUACK evaluates agents at three levels: game outcomes, behavioral trajectories, and utterance-level consistency. Its core Statement Verification Pipeline reconstructs each agent's ground-truth trajectory from engine logs and checks every discussion claim against it, automatically flagging spatial hallucination, unsupported accusation, deception collapse, and language-action inconsistency. Evaluating three frontier VLMs in both homogeneous and cross-model adversarial settings, we find that even the strongest agent hallucinates 15.1% of its verifiable spatial claims and makes over half of its accusations without grounded evidence. We release the full engine, evaluation framework, toolkit, and logs at https://github.com/AAAAA-Academia-Attractions/QUACK.",
-      "hf_url": "https://huggingface.co/papers/2605.27068",
-      "arxiv_url": "https://arxiv.org/abs/2605.27068",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.27068",
-      "papers_cool_url": "https://papers.cool/arxiv/2605.27068",
-      "github_url": "",
-      "submitted_by": "Ye Yuan",
-      "submitted_at": "2026-05-27T00:00:00.000Z",
-      "upvotes": 16,
-      "comments": 2,
-      "topic_key": "multimodal_agents",
-      "topic_label": "Multimodal Agents",
-      "matched_terms": [
-        "\\bmultimodal\\b",
-        "\\bagents?\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Social deduction games have become a popular testbed for probing reasoning, deception, coordination, and belief modeling in Large Language Model (LLM) agents.",
-      "upvote_label": "16 upvotes"
+      "upvote_label": "17 upvotes"
     },
     {
       "report_date": "2026-05-27",
@@ -3440,7 +3440,7 @@
       "github_url": "",
       "submitted_by": "Dingwei Chen",
       "submitted_at": "2026-05-27T00:00:00.000Z",
-      "upvotes": 12,
+      "upvotes": 13,
       "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -3450,7 +3450,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Agentic reinforcement learning (RL) has proven effective for training LLM-based agents with external tool-use capabilities.",
-      "upvote_label": "12 upvotes"
+      "upvote_label": "13 upvotes"
     },
     {
       "report_date": "2026-05-27",
@@ -3592,6 +3592,39 @@
     },
     {
       "report_date": "2026-05-27",
+      "paper_id": "2605.25188",
+      "title": "DarkForest: Less Talk, Higher Accuracy for Multi-Agent LLMs",
+      "authors": [
+        "Yi Li",
+        "Songtao Wei",
+        "Dongming Jiang",
+        "Zhichun Guo",
+        "Qiannan Li",
+        "Bingzhe Li"
+      ],
+      "abstract": "Multi-agent LLM systems improve reasoning by combining outputs from multiple agents, but interaction-heavy methods can introduce error propagation and high communication overhead. When agents exchange raw responses or reasoning traces, incorrect intermediate reasoning may be adopted and amplified, leading to confident but wrong consensus; multi-round communication also increases token consumption, latency, and inference cost. In this paper, we propose a controlled-communication coordination framework named DarkForest. DarkForest first keeps agents independent, so each agent produces an answer without seeing the others' outputs. It then parses the raw responses into structured candidate records, groups semantically equivalent candidates into clusters, and estimates a calibrated belief distribution over these clusters using agent reliability, confidence, parse quality, support-pattern reliability, and independence corrections. A coordinator receives only policy-permitted evidence from this belief state with controlled communication. Experiments on six reasoning benchmarks show that DarkForest achieves leading overall quality, improves the strongest baseline by up to 30.7\\% on benchmark metrics, and reduces token consumption by up to 6.5times compared with communication-heavy baselines.",
+      "hf_url": "https://huggingface.co/papers/2605.25188",
+      "arxiv_url": "https://arxiv.org/abs/2605.25188",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.25188",
+      "papers_cool_url": "https://papers.cool/arxiv/2605.25188",
+      "github_url": "",
+      "submitted_by": "dominic J",
+      "submitted_at": "2026-05-27T00:00:00.000Z",
+      "upvotes": 10,
+      "comments": 2,
+      "topic_key": "agents_planning",
+      "topic_label": "Agents and Planning",
+      "matched_terms": [
+        "\\bmulti-agent\\b",
+        "\\bagents?\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Multi-agent LLM systems improve reasoning by combining outputs from multiple agents, but interaction-heavy methods can introduce error propagation and high communication overhead.",
+      "upvote_label": "10 upvotes"
+    },
+    {
+      "report_date": "2026-05-27",
       "paper_id": "2605.26045",
       "title": "Confidence and Calibration of Activation Oracles for Reliable Interpretation of Language Model Internals",
       "authors": [
@@ -3618,39 +3651,6 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Activation oracles aim to make the activations of other models legible to humans and yield promising results compared to white-box interpretability techniques.",
-      "upvote_label": "9 upvotes"
-    },
-    {
-      "report_date": "2026-05-27",
-      "paper_id": "2605.25188",
-      "title": "DarkForest: Less Talk, Higher Accuracy for Multi-Agent LLMs",
-      "authors": [
-        "Yi Li",
-        "Songtao Wei",
-        "Dongming Jiang",
-        "Zhichun Guo",
-        "Qiannan Li",
-        "Bingzhe Li"
-      ],
-      "abstract": "Multi-agent LLM systems improve reasoning by combining outputs from multiple agents, but interaction-heavy methods can introduce error propagation and high communication overhead. When agents exchange raw responses or reasoning traces, incorrect intermediate reasoning may be adopted and amplified, leading to confident but wrong consensus; multi-round communication also increases token consumption, latency, and inference cost. In this paper, we propose a controlled-communication coordination framework named DarkForest. DarkForest first keeps agents independent, so each agent produces an answer without seeing the others' outputs. It then parses the raw responses into structured candidate records, groups semantically equivalent candidates into clusters, and estimates a calibrated belief distribution over these clusters using agent reliability, confidence, parse quality, support-pattern reliability, and independence corrections. A coordinator receives only policy-permitted evidence from this belief state with controlled communication. Experiments on six reasoning benchmarks show that DarkForest achieves leading overall quality, improves the strongest baseline by up to 30.7\\% on benchmark metrics, and reduces token consumption by up to 6.5times compared with communication-heavy baselines.",
-      "hf_url": "https://huggingface.co/papers/2605.25188",
-      "arxiv_url": "https://arxiv.org/abs/2605.25188",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.25188",
-      "papers_cool_url": "https://papers.cool/arxiv/2605.25188",
-      "github_url": "",
-      "submitted_by": "dominic J",
-      "submitted_at": "2026-05-27T00:00:00.000Z",
-      "upvotes": 9,
-      "comments": 2,
-      "topic_key": "agents_planning",
-      "topic_label": "Agents and Planning",
-      "matched_terms": [
-        "\\bmulti-agent\\b",
-        "\\bagents?\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Multi-agent LLM systems improve reasoning by combining outputs from multiple agents, but interaction-heavy methods can introduce error propagation and high communication overhead.",
       "upvote_label": "9 upvotes"
     },
     {
@@ -3691,6 +3691,38 @@
     },
     {
       "report_date": "2026-05-27",
+      "paper_id": "2605.26632",
+      "title": "RT-Lynx: Putting the GEMM Sparsity In a Right Way for Diffusion Models",
+      "authors": [
+        "Xing Cong",
+        "Hanlin Tang",
+        "Kan Liu",
+        "Lan Tao",
+        "Lin Qu",
+        "Chenhao Xie"
+      ],
+      "abstract": "Diffusion Transformers (DiT) achieve strong performance in image generation but incur substantial inference costs. While prior work has reduced this cost via quantization and distillation, semi-structured sparsity, which can nearly halve FLOPs, remains underexplored. A key reason is that most existing approaches focus on weight sparsification, and pruning 50% of the weights can remove critical model capacity and degrade generation quality. Our study, however, shows that DiT activations are intrinsically sparse and significantly more robust to N:M semi-structured sparsification than weights. Motivated by this observation, we advocate a paradigm shift from weight sparsification to activation sparsification. We propose RT-Lynx, which applies N:M sparsification to activations and incorporates error-compensation techniques to mitigate accuracy loss. We further implement highly optimized CUDA kernels tailored to this setting, achieving up to a 1.55x speedup on average in linear layers. Extensive experiments across multiple diffusion models demonstrate that our method preserves the generation quality of the original models while substantially accelerating inference.",
+      "hf_url": "https://huggingface.co/papers/2605.26632",
+      "arxiv_url": "https://arxiv.org/abs/2605.26632",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.26632",
+      "papers_cool_url": "https://papers.cool/arxiv/2605.26632",
+      "github_url": "",
+      "submitted_by": "Xing Cong",
+      "submitted_at": "2026-05-27T00:00:00.000Z",
+      "upvotes": 7,
+      "comments": 2,
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
+      "matched_terms": [
+        "\\bdiffusion\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Diffusion Transformers (DiT) achieve strong performance in image generation but incur substantial inference costs.",
+      "upvote_label": "7 upvotes"
+    },
+    {
+      "report_date": "2026-05-27",
       "paper_id": "2605.26111",
       "title": "Squeezing Capacity from Multimodal Large Language Models for Subject-driven Generation",
       "authors": [
@@ -3720,38 +3752,6 @@
       "classification_confidence": null,
       "one_sentence_summary": "Subject-driven image generation aims to synthesize new images that preserve the identity of the given subject while following textual instructions.",
       "upvote_label": "7 upvotes"
-    },
-    {
-      "report_date": "2026-05-27",
-      "paper_id": "2605.26632",
-      "title": "RT-Lynx: Putting the GEMM Sparsity In a Right Way for Diffusion Models",
-      "authors": [
-        "Xing Cong",
-        "Hanlin Tang",
-        "Kan Liu",
-        "Lan Tao",
-        "Lin Qu",
-        "Chenhao Xie"
-      ],
-      "abstract": "Diffusion Transformers (DiT) achieve strong performance in image generation but incur substantial inference costs. While prior work has reduced this cost via quantization and distillation, semi-structured sparsity, which can nearly halve FLOPs, remains underexplored. A key reason is that most existing approaches focus on weight sparsification, and pruning 50% of the weights can remove critical model capacity and degrade generation quality. Our study, however, shows that DiT activations are intrinsically sparse and significantly more robust to N:M semi-structured sparsification than weights. Motivated by this observation, we advocate a paradigm shift from weight sparsification to activation sparsification. We propose RT-Lynx, which applies N:M sparsification to activations and incorporates error-compensation techniques to mitigate accuracy loss. We further implement highly optimized CUDA kernels tailored to this setting, achieving up to a 1.55x speedup on average in linear layers. Extensive experiments across multiple diffusion models demonstrate that our method preserves the generation quality of the original models while substantially accelerating inference.",
-      "hf_url": "https://huggingface.co/papers/2605.26632",
-      "arxiv_url": "https://arxiv.org/abs/2605.26632",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.26632",
-      "papers_cool_url": "https://papers.cool/arxiv/2605.26632",
-      "github_url": "",
-      "submitted_by": "Xing Cong",
-      "submitted_at": "2026-05-27T00:00:00.000Z",
-      "upvotes": 6,
-      "comments": 2,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [
-        "\\bdiffusion\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Diffusion Transformers (DiT) achieve strong performance in image generation but incur substantial inference costs.",
-      "upvote_label": "6 upvotes"
     },
     {
       "report_date": "2026-05-27",

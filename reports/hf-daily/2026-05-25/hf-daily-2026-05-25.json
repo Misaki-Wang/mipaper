@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-29T19:00:03Z",
+  "generated_at": "2026-05-30T19:00:04Z",
   "report_kind": "hf_daily",
   "report_date": "2026-05-25",
   "source_url": "https://huggingface.co/papers/date/2026-05-25",
@@ -78,19 +78,19 @@
       "Agents and Planning: 5 papers (17.86%); representative paper: SkillOpt: Executive Strategy for Self-Evolving Agent Skills.",
       "LLMs and Language: 4 papers (14.29%); representative paper: LLMs as Noisy Channels: A Shannon Perspective on Model Capacity and Scaling Laws."
     ],
-    "trend_summary": "Today's dominant clusters are Multimodal Understanding and Vision / Agents and Planning / LLMs and Language; this suggests several parallel trends: multimodal work is moving from isolated perception toward generation, agents, and action; agent papers emphasize tool use, planning, and deployable workflows. The strongest visible attention is on “SkillOpt: Executive Strategy for Self-Evolving Agent Skills” (201 upvotes).",
+    "trend_summary": "Today's dominant clusters are Multimodal Understanding and Vision / Agents and Planning / LLMs and Language; this suggests several parallel trends: multimodal work is moving from isolated perception toward generation, agents, and action; agent papers emphasize tool use, planning, and deployable workflows. The strongest visible attention is on “SkillOpt: Executive Strategy for Self-Evolving Agent Skills” (204 upvotes).",
     "category_summaries": [
       {
         "topic_label": "Multimodal Understanding and Vision",
         "count": 7,
         "share": 25.0,
-        "summary": "Multimodal Understanding and Vision contributes 7 papers (25.00%), led by “Rethinking Cross-Layer Information Routing in Diffusion Transformers” with 104 upvotes."
+        "summary": "Multimodal Understanding and Vision contributes 7 papers (25.00%), led by “Rethinking Cross-Layer Information Routing in Diffusion Transformers” with 106 upvotes."
       },
       {
         "topic_label": "Agents and Planning",
         "count": 5,
         "share": 17.86,
-        "summary": "Agents and Planning contributes 5 papers (17.86%), led by “SkillOpt: Executive Strategy for Self-Evolving Agent Skills” with 201 upvotes."
+        "summary": "Agents and Planning contributes 5 papers (17.86%), led by “SkillOpt: Executive Strategy for Self-Evolving Agent Skills” with 204 upvotes."
       },
       {
         "topic_label": "LLMs and Language",
@@ -114,7 +114,7 @@
         "topic_label": "Multimodal Generative Modeling",
         "count": 2,
         "share": 7.14,
-        "summary": "Multimodal Generative Modeling contributes 2 papers (7.14%), led by “RankE: End-to-End Post-Training for Discrete Text-to-Image Generation with Decoder Co-Evolution” with 16 upvotes."
+        "summary": "Multimodal Generative Modeling contributes 2 papers (7.14%), led by “RankE: End-to-End Post-Training for Discrete Text-to-Image Generation with Decoder Co-Evolution” with 17 upvotes."
       },
       {
         "topic_label": "Datasets and Benchmarks",
@@ -138,8 +138,8 @@
     "top_papers": [
       {
         "title": "SkillOpt: Executive Strategy for Self-Evolving Agent Skills",
-        "upvotes": 201,
-        "upvote_label": "201 upvotes",
+        "upvotes": 204,
+        "upvote_label": "204 upvotes",
         "topic_label": "Agents and Planning",
         "summary": "Agent skills today are hand-crafted, generated one-shot, or evolved through loosely controlled self-revision, none of which behaves like a deep-learning optimizer for the skill, and none of which reliably improves…",
         "hf_url": "https://huggingface.co/papers/2605.23904",
@@ -149,8 +149,8 @@
       },
       {
         "title": "Rethinking Cross-Layer Information Routing in Diffusion Transformers",
-        "upvotes": 104,
-        "upvote_label": "104 upvotes",
+        "upvotes": 106,
+        "upvote_label": "106 upvotes",
         "topic_label": "Multimodal Understanding and Vision",
         "summary": "Diffusion Transformers (DiTs) have become a de facto backbone of modern visual generation, and nearly every major axis of their design -- tokenization, attention, conditioning, objectives, and latent autoencoders --…",
         "hf_url": "https://huggingface.co/papers/2605.20708",
@@ -160,8 +160,8 @@
       },
       {
         "title": "Lens: Rethinking Training Efficiency for Foundational Text-to-Image Models",
-        "upvotes": 103,
-        "upvote_label": "103 upvotes",
+        "upvotes": 104,
+        "upvote_label": "104 upvotes",
         "topic_label": "Multimodal Understanding and Vision",
         "summary": "We introduce Lens, a 3.8B-parameter T2I model that achieves performance competitive with, and in several cases surpassing, state-of-the-art models with more than 6B parameters across various benchmarks, while…",
         "hf_url": "https://huggingface.co/papers/2605.21573",
@@ -249,7 +249,7 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-05-25T00:00:00.000Z",
-      "upvotes": 201,
+      "upvotes": 204,
       "comments": 3,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -259,7 +259,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Agent skills today are hand-crafted, generated one-shot, or evolved through loosely controlled self-revision, none of which behaves like a deep-learning optimizer for the skill, and none of which reliably improves…",
-      "upvote_label": "201 upvotes"
+      "upvote_label": "204 upvotes"
     },
     {
       "report_date": "2026-05-25",
@@ -287,7 +287,7 @@
       "github_url": "",
       "submitted_by": "Maohua Li",
       "submitted_at": "2026-05-25T00:00:00.000Z",
-      "upvotes": 104,
+      "upvotes": 106,
       "comments": 5,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -297,7 +297,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Diffusion Transformers (DiTs) have become a de facto backbone of modern visual generation, and nearly every major axis of their design -- tokenization, attention, conditioning, objectives, and latent autoencoders --…",
-      "upvote_label": "104 upvotes"
+      "upvote_label": "106 upvotes"
     },
     {
       "report_date": "2026-05-25",
@@ -334,7 +334,7 @@
       "github_url": "",
       "submitted_by": "Jinjing Zhao",
       "submitted_at": "2026-05-25T00:00:00.000Z",
-      "upvotes": 103,
+      "upvotes": 104,
       "comments": 3,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -344,7 +344,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "We introduce Lens, a 3.8B-parameter T2I model that achieves performance competitive with, and in several cases surpassing, state-of-the-art models with more than 6B parameters across various benchmarks, while…",
-      "upvote_label": "103 upvotes"
+      "upvote_label": "104 upvotes"
     },
     {
       "report_date": "2026-05-25",
@@ -530,7 +530,7 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-05-25T00:00:00.000Z",
-      "upvotes": 41,
+      "upvotes": 42,
       "comments": 1,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -540,7 +540,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Most practical high-resolution text-to-image systems, including latent diffusion and autoregressive models, perform generation in a compact latent space, and a decoder maps the generated latents back to pixels.",
-      "upvote_label": "41 upvotes"
+      "upvote_label": "42 upvotes"
     },
     {
       "report_date": "2026-05-25",
@@ -622,7 +622,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "count": 7,
       "share": 25.0,
-      "summary": "Multimodal Understanding and Vision contributes 7 papers (25.00%), led by “Rethinking Cross-Layer Information Routing in Diffusion Transformers” with 104 upvotes.",
+      "summary": "Multimodal Understanding and Vision contributes 7 papers (25.00%), led by “Rethinking Cross-Layer Information Routing in Diffusion Transformers” with 106 upvotes.",
       "papers": [
         {
           "report_date": "2026-05-25",
@@ -650,7 +650,7 @@
           "github_url": "",
           "submitted_by": "Maohua Li",
           "submitted_at": "2026-05-25T00:00:00.000Z",
-          "upvotes": 104,
+          "upvotes": 106,
           "comments": 5,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
@@ -660,7 +660,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Diffusion Transformers (DiTs) have become a de facto backbone of modern visual generation, and nearly every major axis of their design -- tokenization, attention, conditioning, objectives, and latent autoencoders --…",
-          "upvote_label": "104 upvotes"
+          "upvote_label": "106 upvotes"
         },
         {
           "report_date": "2026-05-25",
@@ -697,7 +697,7 @@
           "github_url": "",
           "submitted_by": "Jinjing Zhao",
           "submitted_at": "2026-05-25T00:00:00.000Z",
-          "upvotes": 103,
+          "upvotes": 104,
           "comments": 3,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
@@ -707,7 +707,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "We introduce Lens, a 3.8B-parameter T2I model that achieves performance competitive with, and in several cases surpassing, state-of-the-art models with more than 6B parameters across various benchmarks, while…",
-          "upvote_label": "103 upvotes"
+          "upvote_label": "104 upvotes"
         },
         {
           "report_date": "2026-05-25",
@@ -730,7 +730,7 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-05-25T00:00:00.000Z",
-          "upvotes": 41,
+          "upvotes": 42,
           "comments": 1,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
@@ -740,7 +740,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Most practical high-resolution text-to-image systems, including latent diffusion and autoregressive models, perform generation in a compact latent space, and a decoder maps the generated latents back to pixels.",
-          "upvote_label": "41 upvotes"
+          "upvote_label": "42 upvotes"
         },
         {
           "report_date": "2026-05-25",
@@ -871,7 +871,7 @@
       "topic_label": "Agents and Planning",
       "count": 5,
       "share": 17.86,
-      "summary": "Agents and Planning contributes 5 papers (17.86%), led by “SkillOpt: Executive Strategy for Self-Evolving Agent Skills” with 201 upvotes.",
+      "summary": "Agents and Planning contributes 5 papers (17.86%), led by “SkillOpt: Executive Strategy for Self-Evolving Agent Skills” with 204 upvotes.",
       "papers": [
         {
           "report_date": "2026-05-25",
@@ -902,7 +902,7 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-05-25T00:00:00.000Z",
-          "upvotes": 201,
+          "upvotes": 204,
           "comments": 3,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
@@ -912,7 +912,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Agent skills today are hand-crafted, generated one-shot, or evolved through loosely controlled self-revision, none of which behaves like a deep-learning optimizer for the skill, and none of which reliably improves…",
-          "upvote_label": "201 upvotes"
+          "upvote_label": "204 upvotes"
         },
         {
           "report_date": "2026-05-25",
@@ -1530,7 +1530,7 @@
       "topic_label": "Multimodal Generative Modeling",
       "count": 2,
       "share": 7.14,
-      "summary": "Multimodal Generative Modeling contributes 2 papers (7.14%), led by “RankE: End-to-End Post-Training for Discrete Text-to-Image Generation with Decoder Co-Evolution” with 16 upvotes.",
+      "summary": "Multimodal Generative Modeling contributes 2 papers (7.14%), led by “RankE: End-to-End Post-Training for Discrete Text-to-Image Generation with Decoder Co-Evolution” with 17 upvotes.",
       "papers": [
         {
           "report_date": "2026-05-25",
@@ -1554,7 +1554,7 @@
           "github_url": "",
           "submitted_by": "Siyong Jian",
           "submitted_at": "2026-05-25T00:00:00.000Z",
-          "upvotes": 16,
+          "upvotes": 17,
           "comments": 3,
           "topic_key": "multimodal_generative",
           "topic_label": "Multimodal Generative Modeling",
@@ -1566,7 +1566,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Discrete autoregressive (AR) text-to-image (T2I) models pair a VQ tokenizer with an AR policy, and current post-training pipelines optimize only the policy while keeping the VQ decoder frozen.",
-          "upvote_label": "16 upvotes"
+          "upvote_label": "17 upvotes"
         },
         {
           "report_date": "2026-05-25",
@@ -1752,7 +1752,7 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-05-25T00:00:00.000Z",
-      "upvotes": 201,
+      "upvotes": 204,
       "comments": 3,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -1762,7 +1762,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Agent skills today are hand-crafted, generated one-shot, or evolved through loosely controlled self-revision, none of which behaves like a deep-learning optimizer for the skill, and none of which reliably improves…",
-      "upvote_label": "201 upvotes"
+      "upvote_label": "204 upvotes"
     },
     {
       "report_date": "2026-05-25",
@@ -1790,7 +1790,7 @@
       "github_url": "",
       "submitted_by": "Maohua Li",
       "submitted_at": "2026-05-25T00:00:00.000Z",
-      "upvotes": 104,
+      "upvotes": 106,
       "comments": 5,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -1800,7 +1800,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Diffusion Transformers (DiTs) have become a de facto backbone of modern visual generation, and nearly every major axis of their design -- tokenization, attention, conditioning, objectives, and latent autoencoders --…",
-      "upvote_label": "104 upvotes"
+      "upvote_label": "106 upvotes"
     },
     {
       "report_date": "2026-05-25",
@@ -1837,7 +1837,7 @@
       "github_url": "",
       "submitted_by": "Jinjing Zhao",
       "submitted_at": "2026-05-25T00:00:00.000Z",
-      "upvotes": 103,
+      "upvotes": 104,
       "comments": 3,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -1847,7 +1847,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "We introduce Lens, a 3.8B-parameter T2I model that achieves performance competitive with, and in several cases surpassing, state-of-the-art models with more than 6B parameters across various benchmarks, while…",
-      "upvote_label": "103 upvotes"
+      "upvote_label": "104 upvotes"
     },
     {
       "report_date": "2026-05-25",
@@ -2033,7 +2033,7 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-05-25T00:00:00.000Z",
-      "upvotes": 41,
+      "upvotes": 42,
       "comments": 1,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -2043,7 +2043,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Most practical high-resolution text-to-image systems, including latent diffusion and autoregressive models, perform generation in a compact latent space, and a decoder maps the generated latents back to pixels.",
-      "upvote_label": "41 upvotes"
+      "upvote_label": "42 upvotes"
     },
     {
       "report_date": "2026-05-25",
@@ -2236,7 +2236,7 @@
       "github_url": "",
       "submitted_by": "Siyong Jian",
       "submitted_at": "2026-05-25T00:00:00.000Z",
-      "upvotes": 16,
+      "upvotes": 17,
       "comments": 3,
       "topic_key": "multimodal_generative",
       "topic_label": "Multimodal Generative Modeling",
@@ -2248,7 +2248,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Discrete autoregressive (AR) text-to-image (T2I) models pair a VQ tokenizer with an AR policy, and current post-training pipelines optimize only the policy while keeping the VQ decoder frozen.",
-      "upvote_label": "16 upvotes"
+      "upvote_label": "17 upvotes"
     },
     {
       "report_date": "2026-05-25",

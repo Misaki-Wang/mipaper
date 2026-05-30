@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-29T19:00:07Z",
+  "generated_at": "2026-05-30T19:00:07Z",
   "report_kind": "hf_daily",
   "report_date": "2026-05-28",
   "source_url": "https://huggingface.co/papers/date/2026-05-28",
@@ -83,19 +83,19 @@
       "Multimodal Understanding and Vision: 11 papers (18.33%); representative paper: From Pixels to Words -- Towards Native One-Vision Models at Scale.",
       "Learning, Optimization, and Theory: 9 papers (15.00%); representative paper: ProRL: Effective Reinforcement Learning for Proactive Recommendation via Rectified Policy Gradient Estimation."
     ],
-    "trend_summary": "Today's dominant clusters are Agents and Planning / Multimodal Understanding and Vision / Learning, Optimization, and Theory; this suggests several parallel trends: multimodal work is moving from isolated perception toward generation, agents, and action; agent papers emphasize tool use, planning, and deployable workflows. The strongest visible attention is on “Gamma-World: Generative Multi-Agent World Modeling Beyond Two Players” (254 upvotes).",
+    "trend_summary": "Today's dominant clusters are Agents and Planning / Multimodal Understanding and Vision / Learning, Optimization, and Theory; this suggests several parallel trends: multimodal work is moving from isolated perception toward generation, agents, and action; agent papers emphasize tool use, planning, and deployable workflows. The strongest visible attention is on “Gamma-World: Generative Multi-Agent World Modeling Beyond Two Players” (356 upvotes).",
     "category_summaries": [
       {
         "topic_label": "Agents and Planning",
         "count": 15,
         "share": 25.0,
-        "summary": "Agents and Planning contributes 15 papers (25.00%), led by “Gamma-World: Generative Multi-Agent World Modeling Beyond Two Players” with 254 upvotes."
+        "summary": "Agents and Planning contributes 15 papers (25.00%), led by “Gamma-World: Generative Multi-Agent World Modeling Beyond Two Players” with 356 upvotes."
       },
       {
         "topic_label": "Multimodal Understanding and Vision",
         "count": 11,
         "share": 18.33,
-        "summary": "Multimodal Understanding and Vision contributes 11 papers (18.33%), led by “From Pixels to Words -- Towards Native One-Vision Models at Scale” with 65 upvotes."
+        "summary": "Multimodal Understanding and Vision contributes 11 papers (18.33%), led by “From Pixels to Words -- Towards Native One-Vision Models at Scale” with 66 upvotes."
       },
       {
         "topic_label": "Learning, Optimization, and Theory",
@@ -107,7 +107,7 @@
         "topic_label": "LLMs and Language",
         "count": 8,
         "share": 13.33,
-        "summary": "LLMs and Language contributes 8 papers (13.33%), led by “Self-Improving Language Models with Bidirectional Evolutionary Search” with 50 upvotes."
+        "summary": "LLMs and Language contributes 8 papers (13.33%), led by “Self-Improving Language Models with Bidirectional Evolutionary Search” with 52 upvotes."
       },
       {
         "topic_label": "Other AI",
@@ -125,7 +125,7 @@
         "topic_label": "Retrieval, Knowledge, and RAG",
         "count": 2,
         "share": 3.33,
-        "summary": "Retrieval, Knowledge, and RAG contributes 2 papers (3.33%), led by “Rethinking Memory as Continuously Evolving Connectivity” with 22 upvotes."
+        "summary": "Retrieval, Knowledge, and RAG contributes 2 papers (3.33%), led by “Rethinking Memory as Continuously Evolving Connectivity” with 25 upvotes."
       },
       {
         "topic_label": "Robotics and Embodied AI",
@@ -143,20 +143,31 @@
         "topic_label": "Multimodal Agents",
         "count": 1,
         "share": 1.67,
-        "summary": "Multimodal Agents contributes 1 papers (1.67%), led by “Agent Explorative Policy Optimization for Multimodal Agentic Reasoning” with 76 upvotes."
+        "summary": "Multimodal Agents contributes 1 papers (1.67%), led by “Agent Explorative Policy Optimization for Multimodal Agentic Reasoning” with 78 upvotes."
       }
     ],
     "top_papers": [
       {
         "title": "Gamma-World: Generative Multi-Agent World Modeling Beyond Two Players",
-        "upvotes": 254,
-        "upvote_label": "254 upvotes",
+        "upvotes": 356,
+        "upvote_label": "356 upvotes",
         "topic_label": "Agents and Planning",
         "summary": "World models for interactive video generation have largely focused on single-agent settings, where future observations are generated from a single control signal.",
         "hf_url": "https://huggingface.co/papers/2605.28816",
         "arxiv_url": "https://arxiv.org/abs/2605.28816",
         "arxiv_pdf_url": "https://arxiv.org/pdf/2605.28816",
         "papers_cool_url": "https://papers.cool/arxiv/2605.28816"
+      },
+      {
+        "title": "Agent Explorative Policy Optimization for Multimodal Agentic Reasoning",
+        "upvotes": 78,
+        "upvote_label": "78 upvotes",
+        "topic_label": "Multimodal Agents",
+        "summary": "Vision-language models with extended reasoning succeed on complex problems, but many real-world problems require external tools that internal reasoning alone often cannot resolve.",
+        "hf_url": "https://huggingface.co/papers/2605.28774",
+        "arxiv_url": "https://arxiv.org/abs/2605.28774",
+        "arxiv_pdf_url": "https://arxiv.org/pdf/2605.28774",
+        "papers_cool_url": "https://papers.cool/arxiv/2605.28774"
       },
       {
         "title": "ProRL: Effective Reinforcement Learning for Proactive Recommendation via Rectified Policy Gradient Estimation",
@@ -170,20 +181,9 @@
         "papers_cool_url": "https://papers.cool/arxiv/2605.28293"
       },
       {
-        "title": "Agent Explorative Policy Optimization for Multimodal Agentic Reasoning",
-        "upvotes": 76,
-        "upvote_label": "76 upvotes",
-        "topic_label": "Multimodal Agents",
-        "summary": "Vision-language models with extended reasoning succeed on complex problems, but many real-world problems require external tools that internal reasoning alone often cannot resolve.",
-        "hf_url": "https://huggingface.co/papers/2605.28774",
-        "arxiv_url": "https://arxiv.org/abs/2605.28774",
-        "arxiv_pdf_url": "https://arxiv.org/pdf/2605.28774",
-        "papers_cool_url": "https://papers.cool/arxiv/2605.28774"
-      },
-      {
         "title": "From Pixels to Words -- Towards Native One-Vision Models at Scale",
-        "upvotes": 65,
-        "upvote_label": "65 upvotes",
+        "upvotes": 66,
+        "upvote_label": "66 upvotes",
         "topic_label": "Multimodal Understanding and Vision",
         "summary": "Current vision-language models (VLMs) typically stitch together separate image encoders and language decoders via multi-stage alignment, a modular framework that inevitably fragments pixel-level signals across frames…",
         "hf_url": "https://huggingface.co/papers/2605.28820",
@@ -193,8 +193,8 @@
       },
       {
         "title": "Self-Improving Language Models with Bidirectional Evolutionary Search",
-        "upvotes": 50,
-        "upvote_label": "50 upvotes",
+        "upvotes": 52,
+        "upvote_label": "52 upvotes",
         "topic_label": "LLMs and Language",
         "summary": "Search has been proposed as an effective method for self-improving language models and agentic systems, both for post-training sample generation and for inference.",
         "hf_url": "https://huggingface.co/papers/2605.28814",
@@ -255,7 +255,7 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-05-28T00:00:00.000Z",
-      "upvotes": 254,
+      "upvotes": 356,
       "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -266,7 +266,42 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "World models for interactive video generation have largely focused on single-agent settings, where future observations are generated from a single control signal.",
-      "upvote_label": "254 upvotes"
+      "upvote_label": "356 upvotes"
+    },
+    {
+      "report_date": "2026-05-28",
+      "paper_id": "2605.28774",
+      "title": "Agent Explorative Policy Optimization for Multimodal Agentic Reasoning",
+      "authors": [
+        "Minki Kang",
+        "Shizhe Diao",
+        "Ryo Hachiuma",
+        "Sung Ju Hwang",
+        "Pavlo Molchanov",
+        "Yu-Chiang Frank Wang",
+        "Byung-Kwan Lee"
+      ],
+      "abstract": "Vision-language models with extended reasoning succeed on complex problems, but many real-world problems require external tools that internal reasoning alone often cannot resolve. Agentic reasoning therefore interleaves two behaviors with a structural asymmetry: thinking (the self-contained default) and tool use (a high-variance auxiliary acting). We refer to this asymmetry as the Thinking-Acting Gap. Under standard RL recipes like GRPO, the gap manifests as two diagnostic symptoms during training: tool use is attempted on only ~30% of rollouts, and when attempted, the tool-using rollouts within a group are all-wrong on ~40% of questions, suppressing the learning signal at the tool calls that needed it. We propose AXPO (Agent eXplorative Policy Optimization): for each all-wrong tool-using subgroup, AXPO fixes the thinking prefix and resamples the tool call and its continuation, paired with uncertainty-based prefix selection. Across nine multimodal benchmarks and three scales of Qwen3-VL-Thinking, SFT+AXPO outperforms SFT+GRPO at average (+1.8pp Pass@1 and +1.8pp Pass@4 at 8B on average) and 8B with SFT+AXPO surpasses the 32B Base on Pass@4 with 4 times fewer parameters.",
+      "hf_url": "https://huggingface.co/papers/2605.28774",
+      "arxiv_url": "https://arxiv.org/abs/2605.28774",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.28774",
+      "papers_cool_url": "https://papers.cool/arxiv/2605.28774",
+      "github_url": "",
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-05-28T00:00:00.000Z",
+      "upvotes": 78,
+      "comments": 4,
+      "topic_key": "multimodal_agents",
+      "topic_label": "Multimodal Agents",
+      "matched_terms": [
+        "\\bmultimodal\\b",
+        "\\bagents?\\b",
+        "\\bagentic\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Vision-language models with extended reasoning succeed on complex problems, but many real-world problems require external tools that internal reasoning alone often cannot resolve.",
+      "upvote_label": "78 upvotes"
     },
     {
       "report_date": "2026-05-28",
@@ -304,41 +339,6 @@
     },
     {
       "report_date": "2026-05-28",
-      "paper_id": "2605.28774",
-      "title": "Agent Explorative Policy Optimization for Multimodal Agentic Reasoning",
-      "authors": [
-        "Minki Kang",
-        "Shizhe Diao",
-        "Ryo Hachiuma",
-        "Sung Ju Hwang",
-        "Pavlo Molchanov",
-        "Yu-Chiang Frank Wang",
-        "Byung-Kwan Lee"
-      ],
-      "abstract": "Vision-language models with extended reasoning succeed on complex problems, but many real-world problems require external tools that internal reasoning alone often cannot resolve. Agentic reasoning therefore interleaves two behaviors with a structural asymmetry: thinking (the self-contained default) and tool use (a high-variance auxiliary acting). We refer to this asymmetry as the Thinking-Acting Gap. Under standard RL recipes like GRPO, the gap manifests as two diagnostic symptoms during training: tool use is attempted on only ~30% of rollouts, and when attempted, the tool-using rollouts within a group are all-wrong on ~40% of questions, suppressing the learning signal at the tool calls that needed it. We propose AXPO (Agent eXplorative Policy Optimization): for each all-wrong tool-using subgroup, AXPO fixes the thinking prefix and resamples the tool call and its continuation, paired with uncertainty-based prefix selection. Across nine multimodal benchmarks and three scales of Qwen3-VL-Thinking, SFT+AXPO outperforms SFT+GRPO at average (+1.8pp Pass@1 and +1.8pp Pass@4 at 8B on average) and 8B with SFT+AXPO surpasses the 32B Base on Pass@4 with 4 times fewer parameters.",
-      "hf_url": "https://huggingface.co/papers/2605.28774",
-      "arxiv_url": "https://arxiv.org/abs/2605.28774",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.28774",
-      "papers_cool_url": "https://papers.cool/arxiv/2605.28774",
-      "github_url": "",
-      "submitted_by": "taesiri",
-      "submitted_at": "2026-05-28T00:00:00.000Z",
-      "upvotes": 76,
-      "comments": 4,
-      "topic_key": "multimodal_agents",
-      "topic_label": "Multimodal Agents",
-      "matched_terms": [
-        "\\bmultimodal\\b",
-        "\\bagents?\\b",
-        "\\bagentic\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Vision-language models with extended reasoning succeed on complex problems, but many real-world problems require external tools that internal reasoning alone often cannot resolve.",
-      "upvote_label": "76 upvotes"
-    },
-    {
-      "report_date": "2026-05-28",
       "paper_id": "2605.28820",
       "title": "From Pixels to Words -- Towards Native One-Vision Models at Scale",
       "authors": [
@@ -372,7 +372,7 @@
       "github_url": "",
       "submitted_by": "Haiwen Diao",
       "submitted_at": "2026-05-28T00:00:00.000Z",
-      "upvotes": 65,
+      "upvotes": 66,
       "comments": 3,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -382,7 +382,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Current vision-language models (VLMs) typically stitch together separate image encoders and language decoders via multi-stage alignment, a modular framework that inevitably fragments pixel-level signals across frames…",
-      "upvote_label": "65 upvotes"
+      "upvote_label": "66 upvotes"
     },
     {
       "report_date": "2026-05-28",
@@ -405,7 +405,7 @@
       "github_url": "",
       "submitted_by": "Guowei Xu",
       "submitted_at": "2026-05-28T00:00:00.000Z",
-      "upvotes": 50,
+      "upvotes": 52,
       "comments": 3,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
@@ -416,7 +416,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Search has been proposed as an effective method for self-improving language models and agentic systems, both for post-training sample generation and for inference.",
-      "upvote_label": "50 upvotes"
+      "upvote_label": "52 upvotes"
     },
     {
       "report_date": "2026-05-28",
@@ -524,7 +524,7 @@
       "topic_label": "Agents and Planning",
       "count": 15,
       "share": 25.0,
-      "summary": "Agents and Planning contributes 15 papers (25.00%), led by “Gamma-World: Generative Multi-Agent World Modeling Beyond Two Players” with 254 upvotes.",
+      "summary": "Agents and Planning contributes 15 papers (25.00%), led by “Gamma-World: Generative Multi-Agent World Modeling Beyond Two Players” with 356 upvotes.",
       "papers": [
         {
           "report_date": "2026-05-28",
@@ -550,7 +550,7 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-05-28T00:00:00.000Z",
-          "upvotes": 254,
+          "upvotes": 356,
           "comments": 2,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
@@ -561,7 +561,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "World models for interactive video generation have largely focused on single-agent settings, where future observations are generated from a single control signal.",
-          "upvote_label": "254 upvotes"
+          "upvote_label": "356 upvotes"
         },
         {
           "report_date": "2026-05-28",
@@ -651,7 +651,7 @@
           "github_url": "",
           "submitted_by": "Rui",
           "submitted_at": "2026-05-28T00:00:00.000Z",
-          "upvotes": 29,
+          "upvotes": 31,
           "comments": 2,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
@@ -661,7 +661,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Autonomous research agents produce competitive solutions and professional-looking manuscripts, yet their outputs contain verifiability failures undetectable by surface-level evaluation: fabricated citations,…",
-          "upvote_label": "29 upvotes"
+          "upvote_label": "31 upvotes"
         },
         {
           "report_date": "2026-05-28",
@@ -685,7 +685,7 @@
           "github_url": "",
           "submitted_by": "Jianing Zhu",
           "submitted_at": "2026-05-28T00:00:00.000Z",
-          "upvotes": 26,
+          "upvotes": 27,
           "comments": 2,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
@@ -695,7 +695,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Long-lived AI agents are increasingly deployed as persistent operational systems, yet they are still evaluated like freshly initialized models.",
-          "upvote_label": "26 upvotes"
+          "upvote_label": "27 upvotes"
         },
         {
           "report_date": "2026-05-28",
@@ -807,7 +807,7 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-05-28T00:00:00.000Z",
-          "upvotes": 4,
+          "upvotes": 5,
           "comments": 2,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
@@ -817,7 +817,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Scientific research proceeds through iterative cycles of hypothesis generation, experiment design, execution, and revision.",
-          "upvote_label": "4 upvotes"
+          "upvote_label": "5 upvotes"
         },
         {
           "report_date": "2026-05-28",
@@ -881,6 +881,37 @@
           "classification_confidence": null,
           "one_sentence_summary": "AI coding agents are increasingly used to write real-world software, but ensuring that their outputs are correct remains a fundamental challenge.",
           "upvote_label": "3 upvotes"
+        },
+        {
+          "report_date": "2026-05-28",
+          "paper_id": "2605.27762",
+          "title": "PEAM: Parametric Embodied Agent Memory through Contrastive Internalization of Experience in Minecraft",
+          "authors": [
+            "Yuchen Guo",
+            "Junli Gong",
+            "Hongmin Cai",
+            "Yiu-ming Cheung",
+            "Weifeng Su"
+          ],
+          "abstract": "We present PEAM, a Parametric Embodied Agent Memory framework in Minecraft that transforms agent memory from inference-time retrieval into parameter-resident skills internalized through experience. PEAM pairs a slow deliberative LLM for open-ended reasoning with a fast parametric module for reflexive execution of consolidated skills. The fast module is a multimodal Mixture-of-Experts LoRA architecture with per-category physically isolated adapters, enabling parameter-level continual learning without catastrophic forgetting. We treat failure as a first-class training signal: failure--correction trajectory pairs are internalized through a joint behavioral-cloning and contrastive objective, so the agent learns not only what succeeds but also how corrected actions differ from failed ones. To govern consolidation, PEAM introduces a parameterization-worthiness score for deciding which experience should be internalized, and a scale-free self-triggered consolidation mechanism for deciding when to internalize without task-specific hand-tuned thresholds, making the agent self-evolving as the trigger transfers across task distributions without re-tuning. Experiments in Minecraft show that PEAM improves long-horizon task performance, mitigates forgetting on previously consolidated skills, and improves parametric-versus-retrieval efficiency over retrieval-based embodied agents and parametric memory variants.",
+          "hf_url": "https://huggingface.co/papers/2605.27762",
+          "arxiv_url": "https://arxiv.org/abs/2605.27762",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2605.27762",
+          "papers_cool_url": "https://papers.cool/arxiv/2605.27762",
+          "github_url": "",
+          "submitted_by": "taesiri",
+          "submitted_at": "2026-05-28T00:00:00.000Z",
+          "upvotes": 2,
+          "comments": 1,
+          "topic_key": "agents_planning",
+          "topic_label": "Agents and Planning",
+          "matched_terms": [
+            "\\bagents?\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "We present PEAM, a Parametric Embodied Agent Memory framework in Minecraft that transforms agent memory from inference-time retrieval into parameter-resident skills internalized through experience.",
+          "upvote_label": "2 upvotes"
         },
         {
           "report_date": "2026-05-28",
@@ -963,8 +994,8 @@
           "github_url": "",
           "submitted_by": "Aman Priyanshu",
           "submitted_at": "2026-05-28T00:00:00.000Z",
-          "upvotes": 0,
-          "comments": 2,
+          "upvotes": 1,
+          "comments": 3,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
           "matched_terms": [
@@ -974,38 +1005,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "LLM safety evaluations predominantly test models in isolation, yet deployed AI agents increasingly operate within persistent social environments alongside other agents.",
-          "upvote_label": "0 upvotes"
-        },
-        {
-          "report_date": "2026-05-28",
-          "paper_id": "2605.27762",
-          "title": "PEAM: Parametric Embodied Agent Memory through Contrastive Internalization of Experience in Minecraft",
-          "authors": [
-            "Yuchen Guo",
-            "Junli Gong",
-            "Hongmin Cai",
-            "Yiu-ming Cheung",
-            "Weifeng Su"
-          ],
-          "abstract": "We present PEAM, a Parametric Embodied Agent Memory framework in Minecraft that transforms agent memory from inference-time retrieval into parameter-resident skills internalized through experience. PEAM pairs a slow deliberative LLM for open-ended reasoning with a fast parametric module for reflexive execution of consolidated skills. The fast module is a multimodal Mixture-of-Experts LoRA architecture with per-category physically isolated adapters, enabling parameter-level continual learning without catastrophic forgetting. We treat failure as a first-class training signal: failure--correction trajectory pairs are internalized through a joint behavioral-cloning and contrastive objective, so the agent learns not only what succeeds but also how corrected actions differ from failed ones. To govern consolidation, PEAM introduces a parameterization-worthiness score for deciding which experience should be internalized, and a scale-free self-triggered consolidation mechanism for deciding when to internalize without task-specific hand-tuned thresholds, making the agent self-evolving as the trigger transfers across task distributions without re-tuning. Experiments in Minecraft show that PEAM improves long-horizon task performance, mitigates forgetting on previously consolidated skills, and improves parametric-versus-retrieval efficiency over retrieval-based embodied agents and parametric memory variants.",
-          "hf_url": "https://huggingface.co/papers/2605.27762",
-          "arxiv_url": "https://arxiv.org/abs/2605.27762",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2605.27762",
-          "papers_cool_url": "https://papers.cool/arxiv/2605.27762",
-          "github_url": "",
-          "submitted_by": "taesiri",
-          "submitted_at": "2026-05-28T00:00:00.000Z",
-          "upvotes": 0,
-          "comments": 1,
-          "topic_key": "agents_planning",
-          "topic_label": "Agents and Planning",
-          "matched_terms": [
-            "\\bagents?\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null,
-          "one_sentence_summary": "We present PEAM, a Parametric Embodied Agent Memory framework in Minecraft that transforms agent memory from inference-time retrieval into parameter-resident skills internalized through experience.",
-          "upvote_label": "0 upvotes"
+          "upvote_label": "1 upvote"
         }
       ]
     },
@@ -1013,7 +1013,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "count": 11,
       "share": 18.33,
-      "summary": "Multimodal Understanding and Vision contributes 11 papers (18.33%), led by “From Pixels to Words -- Towards Native One-Vision Models at Scale” with 65 upvotes.",
+      "summary": "Multimodal Understanding and Vision contributes 11 papers (18.33%), led by “From Pixels to Words -- Towards Native One-Vision Models at Scale” with 66 upvotes.",
       "papers": [
         {
           "report_date": "2026-05-28",
@@ -1050,7 +1050,7 @@
           "github_url": "",
           "submitted_by": "Haiwen Diao",
           "submitted_at": "2026-05-28T00:00:00.000Z",
-          "upvotes": 65,
+          "upvotes": 66,
           "comments": 3,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
@@ -1060,7 +1060,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Current vision-language models (VLMs) typically stitch together separate image encoders and language decoders via multi-stage alignment, a modular framework that inevitably fragments pixel-level signals across frames…",
-          "upvote_label": "65 upvotes"
+          "upvote_label": "66 upvotes"
         },
         {
           "report_date": "2026-05-28",
@@ -1114,7 +1114,7 @@
           "github_url": "",
           "submitted_by": "Qian Yang",
           "submitted_at": "2026-05-28T00:00:00.000Z",
-          "upvotes": 16,
+          "upvotes": 17,
           "comments": 2,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
@@ -1125,7 +1125,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Cross-view spatial reasoning remains a weak spot for vision-language models (VLMs): they often reason in language and lose the fine-grained geometry needed for the task.",
-          "upvote_label": "16 upvotes"
+          "upvote_label": "17 upvotes"
         },
         {
           "report_date": "2026-05-28",
@@ -1153,7 +1153,7 @@
           "github_url": "",
           "submitted_by": "Kewei Zhang",
           "submitted_at": "2026-05-28T00:00:00.000Z",
-          "upvotes": 15,
+          "upvotes": 16,
           "comments": 2,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
@@ -1164,7 +1164,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "End-to-end autonomous driving via Vision-Language-Action (VLA) models demands a precarious balance between high-fidelity trajectory planning and efficient inference.",
-          "upvote_label": "15 upvotes"
+          "upvote_label": "16 upvotes"
         },
         {
           "report_date": "2026-05-28",
@@ -1193,7 +1193,7 @@
           "github_url": "",
           "submitted_by": "Cheng Qian",
           "submitted_at": "2026-05-28T00:00:00.000Z",
-          "upvotes": 15,
+          "upvotes": 16,
           "comments": 2,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
@@ -1203,7 +1203,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Large multimodal models (LMMs) have rapidly advanced in perception and reasoning; however, it remains unclear whether these capabilities generalize to discovering visually grounded solutions in open-ended…",
-          "upvote_label": "15 upvotes"
+          "upvote_label": "16 upvotes"
         },
         {
           "report_date": "2026-05-28",
@@ -1245,6 +1245,39 @@
         },
         {
           "report_date": "2026-05-28",
+          "paper_id": "2605.26032",
+          "title": "Everything at Every Scale: Scale-Invariant Diffusion with Continuous Super-Resolution",
+          "authors": [
+            "Zixin Jessie Chen",
+            "Zhuo Chen",
+            "Archer Wang",
+            "Jeff Gore",
+            "William T. Freeman",
+            "Congyue Deng",
+            "Marin Soljačić"
+          ],
+          "abstract": "Creating images from noise is image generation; reconstructing fine details from coarse inputs is super-resolution. Despite their practical differences, both can be understood as reversing information loss across scales. We introduce SKILD, a Scale-invariant K-Space Image Learning Diffusion model that unifies generation and continuous super-resolution within a single unconditional framework. Both natural images and critical physical systems exhibit scale invariance, and we leverage it to design a forward process that attenuates image content from fine to coarse scales while injecting spectrum-matched Gaussian noise, making scale an explicit coordinate of the diffusion dynamics. The same trained reverse process performs generation and continuous super-resolution by varying only the starting timestep: no task-specific architecture, no conditioning branch, no classifier-free guidance, no retraining per scale factor. Empirically, SKILD reaches FID 2.65 and Inception Score 9.63 on unconditional CIFAR-10, performs 2times--8times super-resolution on ImageNet from a single unconditional checkpoint while outperforming conditional models across perceptual metrics, and reconstructs critical Ising models whose connected four-point correlations closely track the ground truth.",
+          "hf_url": "https://huggingface.co/papers/2605.26032",
+          "arxiv_url": "https://arxiv.org/abs/2605.26032",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2605.26032",
+          "papers_cool_url": "https://papers.cool/arxiv/2605.26032",
+          "github_url": "",
+          "submitted_by": "Zhuo Chen",
+          "submitted_at": "2026-05-28T00:00:00.000Z",
+          "upvotes": 10,
+          "comments": 2,
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [
+            "\\bdiffusion\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "Creating images from noise is image generation; reconstructing fine details from coarse inputs is super-resolution.",
+          "upvote_label": "10 upvotes"
+        },
+        {
+          "report_date": "2026-05-28",
           "paper_id": "2605.28805",
           "title": "OmniVerifier-M1: Multimodal Meta-Verifier with Explicit Structured Recalibration",
           "authors": [
@@ -1277,39 +1310,6 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Visual outcomes are increasingly central to multimodal large language models, making reliable and fine-grained verification essential for scaling generalist foundation models.",
-          "upvote_label": "8 upvotes"
-        },
-        {
-          "report_date": "2026-05-28",
-          "paper_id": "2605.26032",
-          "title": "Everything at Every Scale: Scale-Invariant Diffusion with Continuous Super-Resolution",
-          "authors": [
-            "Zixin Jessie Chen",
-            "Zhuo Chen",
-            "Archer Wang",
-            "Jeff Gore",
-            "William T. Freeman",
-            "Congyue Deng",
-            "Marin Soljačić"
-          ],
-          "abstract": "Creating images from noise is image generation; reconstructing fine details from coarse inputs is super-resolution. Despite their practical differences, both can be understood as reversing information loss across scales. We introduce SKILD, a Scale-invariant K-Space Image Learning Diffusion model that unifies generation and continuous super-resolution within a single unconditional framework. Both natural images and critical physical systems exhibit scale invariance, and we leverage it to design a forward process that attenuates image content from fine to coarse scales while injecting spectrum-matched Gaussian noise, making scale an explicit coordinate of the diffusion dynamics. The same trained reverse process performs generation and continuous super-resolution by varying only the starting timestep: no task-specific architecture, no conditioning branch, no classifier-free guidance, no retraining per scale factor. Empirically, SKILD reaches FID 2.65 and Inception Score 9.63 on unconditional CIFAR-10, performs 2times--8times super-resolution on ImageNet from a single unconditional checkpoint while outperforming conditional models across perceptual metrics, and reconstructs critical Ising models whose connected four-point correlations closely track the ground truth.",
-          "hf_url": "https://huggingface.co/papers/2605.26032",
-          "arxiv_url": "https://arxiv.org/abs/2605.26032",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2605.26032",
-          "papers_cool_url": "https://papers.cool/arxiv/2605.26032",
-          "github_url": "",
-          "submitted_by": "Zhuo Chen",
-          "submitted_at": "2026-05-28T00:00:00.000Z",
-          "upvotes": 8,
-          "comments": 2,
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [
-            "\\bdiffusion\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null,
-          "one_sentence_summary": "Creating images from noise is image generation; reconstructing fine details from coarse inputs is super-resolution.",
           "upvote_label": "8 upvotes"
         },
         {
@@ -1714,7 +1714,7 @@
       "topic_label": "LLMs and Language",
       "count": 8,
       "share": 13.33,
-      "summary": "LLMs and Language contributes 8 papers (13.33%), led by “Self-Improving Language Models with Bidirectional Evolutionary Search” with 50 upvotes.",
+      "summary": "LLMs and Language contributes 8 papers (13.33%), led by “Self-Improving Language Models with Bidirectional Evolutionary Search” with 52 upvotes.",
       "papers": [
         {
           "report_date": "2026-05-28",
@@ -1737,7 +1737,7 @@
           "github_url": "",
           "submitted_by": "Guowei Xu",
           "submitted_at": "2026-05-28T00:00:00.000Z",
-          "upvotes": 50,
+          "upvotes": 52,
           "comments": 3,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
@@ -1748,7 +1748,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Search has been proposed as an effective method for self-improving language models and agentic systems, both for post-training sample generation and for inference.",
-          "upvote_label": "50 upvotes"
+          "upvote_label": "52 upvotes"
         },
         {
           "report_date": "2026-05-28",
@@ -2337,7 +2337,7 @@
       "topic_label": "Retrieval, Knowledge, and RAG",
       "count": 2,
       "share": 3.33,
-      "summary": "Retrieval, Knowledge, and RAG contributes 2 papers (3.33%), led by “Rethinking Memory as Continuously Evolving Connectivity” with 22 upvotes.",
+      "summary": "Retrieval, Knowledge, and RAG contributes 2 papers (3.33%), led by “Rethinking Memory as Continuously Evolving Connectivity” with 25 upvotes.",
       "papers": [
         {
           "report_date": "2026-05-28",
@@ -2368,7 +2368,7 @@
           "github_url": "",
           "submitted_by": "Ningyu Zhang",
           "submitted_at": "2026-05-28T00:00:00.000Z",
-          "upvotes": 22,
+          "upvotes": 25,
           "comments": 2,
           "topic_key": "retrieval_knowledge",
           "topic_label": "Retrieval, Knowledge, and RAG",
@@ -2378,7 +2378,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Existing memory-augmented LLM agents often treat memory as a static repository with pre-defined representations and fixed retrieval pipelines, which is brittle in dynamic agentic environments where feedback, task…",
-          "upvote_label": "22 upvotes"
+          "upvote_label": "25 upvotes"
         },
         {
           "report_date": "2026-05-28",
@@ -2395,7 +2395,7 @@
           "github_url": "",
           "submitted_by": "HuangMeow",
           "submitted_at": "2026-05-28T00:00:00.000Z",
-          "upvotes": 9,
+          "upvotes": 11,
           "comments": 2,
           "topic_key": "retrieval_knowledge",
           "topic_label": "Retrieval, Knowledge, and RAG",
@@ -2405,7 +2405,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "LLM-based agents score well on search benchmarks, yet real users consistently find results unsatisfying, revealing a persistent evaluation-experience gap.",
-          "upvote_label": "9 upvotes"
+          "upvote_label": "11 upvotes"
         }
       ]
     },
@@ -2541,7 +2541,7 @@
       "topic_label": "Multimodal Agents",
       "count": 1,
       "share": 1.67,
-      "summary": "Multimodal Agents contributes 1 papers (1.67%), led by “Agent Explorative Policy Optimization for Multimodal Agentic Reasoning” with 76 upvotes.",
+      "summary": "Multimodal Agents contributes 1 papers (1.67%), led by “Agent Explorative Policy Optimization for Multimodal Agentic Reasoning” with 78 upvotes.",
       "papers": [
         {
           "report_date": "2026-05-28",
@@ -2564,7 +2564,7 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-05-28T00:00:00.000Z",
-          "upvotes": 76,
+          "upvotes": 78,
           "comments": 4,
           "topic_key": "multimodal_agents",
           "topic_label": "Multimodal Agents",
@@ -2576,7 +2576,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Vision-language models with extended reasoning succeed on complex problems, but many real-world problems require external tools that internal reasoning alone often cannot resolve.",
-          "upvote_label": "76 upvotes"
+          "upvote_label": "78 upvotes"
         }
       ]
     }
@@ -2606,7 +2606,7 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-05-28T00:00:00.000Z",
-      "upvotes": 254,
+      "upvotes": 356,
       "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -2617,7 +2617,42 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "World models for interactive video generation have largely focused on single-agent settings, where future observations are generated from a single control signal.",
-      "upvote_label": "254 upvotes"
+      "upvote_label": "356 upvotes"
+    },
+    {
+      "report_date": "2026-05-28",
+      "paper_id": "2605.28774",
+      "title": "Agent Explorative Policy Optimization for Multimodal Agentic Reasoning",
+      "authors": [
+        "Minki Kang",
+        "Shizhe Diao",
+        "Ryo Hachiuma",
+        "Sung Ju Hwang",
+        "Pavlo Molchanov",
+        "Yu-Chiang Frank Wang",
+        "Byung-Kwan Lee"
+      ],
+      "abstract": "Vision-language models with extended reasoning succeed on complex problems, but many real-world problems require external tools that internal reasoning alone often cannot resolve. Agentic reasoning therefore interleaves two behaviors with a structural asymmetry: thinking (the self-contained default) and tool use (a high-variance auxiliary acting). We refer to this asymmetry as the Thinking-Acting Gap. Under standard RL recipes like GRPO, the gap manifests as two diagnostic symptoms during training: tool use is attempted on only ~30% of rollouts, and when attempted, the tool-using rollouts within a group are all-wrong on ~40% of questions, suppressing the learning signal at the tool calls that needed it. We propose AXPO (Agent eXplorative Policy Optimization): for each all-wrong tool-using subgroup, AXPO fixes the thinking prefix and resamples the tool call and its continuation, paired with uncertainty-based prefix selection. Across nine multimodal benchmarks and three scales of Qwen3-VL-Thinking, SFT+AXPO outperforms SFT+GRPO at average (+1.8pp Pass@1 and +1.8pp Pass@4 at 8B on average) and 8B with SFT+AXPO surpasses the 32B Base on Pass@4 with 4 times fewer parameters.",
+      "hf_url": "https://huggingface.co/papers/2605.28774",
+      "arxiv_url": "https://arxiv.org/abs/2605.28774",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.28774",
+      "papers_cool_url": "https://papers.cool/arxiv/2605.28774",
+      "github_url": "",
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-05-28T00:00:00.000Z",
+      "upvotes": 78,
+      "comments": 4,
+      "topic_key": "multimodal_agents",
+      "topic_label": "Multimodal Agents",
+      "matched_terms": [
+        "\\bmultimodal\\b",
+        "\\bagents?\\b",
+        "\\bagentic\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Vision-language models with extended reasoning succeed on complex problems, but many real-world problems require external tools that internal reasoning alone often cannot resolve.",
+      "upvote_label": "78 upvotes"
     },
     {
       "report_date": "2026-05-28",
@@ -2655,41 +2690,6 @@
     },
     {
       "report_date": "2026-05-28",
-      "paper_id": "2605.28774",
-      "title": "Agent Explorative Policy Optimization for Multimodal Agentic Reasoning",
-      "authors": [
-        "Minki Kang",
-        "Shizhe Diao",
-        "Ryo Hachiuma",
-        "Sung Ju Hwang",
-        "Pavlo Molchanov",
-        "Yu-Chiang Frank Wang",
-        "Byung-Kwan Lee"
-      ],
-      "abstract": "Vision-language models with extended reasoning succeed on complex problems, but many real-world problems require external tools that internal reasoning alone often cannot resolve. Agentic reasoning therefore interleaves two behaviors with a structural asymmetry: thinking (the self-contained default) and tool use (a high-variance auxiliary acting). We refer to this asymmetry as the Thinking-Acting Gap. Under standard RL recipes like GRPO, the gap manifests as two diagnostic symptoms during training: tool use is attempted on only ~30% of rollouts, and when attempted, the tool-using rollouts within a group are all-wrong on ~40% of questions, suppressing the learning signal at the tool calls that needed it. We propose AXPO (Agent eXplorative Policy Optimization): for each all-wrong tool-using subgroup, AXPO fixes the thinking prefix and resamples the tool call and its continuation, paired with uncertainty-based prefix selection. Across nine multimodal benchmarks and three scales of Qwen3-VL-Thinking, SFT+AXPO outperforms SFT+GRPO at average (+1.8pp Pass@1 and +1.8pp Pass@4 at 8B on average) and 8B with SFT+AXPO surpasses the 32B Base on Pass@4 with 4 times fewer parameters.",
-      "hf_url": "https://huggingface.co/papers/2605.28774",
-      "arxiv_url": "https://arxiv.org/abs/2605.28774",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.28774",
-      "papers_cool_url": "https://papers.cool/arxiv/2605.28774",
-      "github_url": "",
-      "submitted_by": "taesiri",
-      "submitted_at": "2026-05-28T00:00:00.000Z",
-      "upvotes": 76,
-      "comments": 4,
-      "topic_key": "multimodal_agents",
-      "topic_label": "Multimodal Agents",
-      "matched_terms": [
-        "\\bmultimodal\\b",
-        "\\bagents?\\b",
-        "\\bagentic\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Vision-language models with extended reasoning succeed on complex problems, but many real-world problems require external tools that internal reasoning alone often cannot resolve.",
-      "upvote_label": "76 upvotes"
-    },
-    {
-      "report_date": "2026-05-28",
       "paper_id": "2605.28820",
       "title": "From Pixels to Words -- Towards Native One-Vision Models at Scale",
       "authors": [
@@ -2723,7 +2723,7 @@
       "github_url": "",
       "submitted_by": "Haiwen Diao",
       "submitted_at": "2026-05-28T00:00:00.000Z",
-      "upvotes": 65,
+      "upvotes": 66,
       "comments": 3,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -2733,7 +2733,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Current vision-language models (VLMs) typically stitch together separate image encoders and language decoders via multi-stage alignment, a modular framework that inevitably fragments pixel-level signals across frames…",
-      "upvote_label": "65 upvotes"
+      "upvote_label": "66 upvotes"
     },
     {
       "report_date": "2026-05-28",
@@ -2756,7 +2756,7 @@
       "github_url": "",
       "submitted_by": "Guowei Xu",
       "submitted_at": "2026-05-28T00:00:00.000Z",
-      "upvotes": 50,
+      "upvotes": 52,
       "comments": 3,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
@@ -2767,7 +2767,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Search has been proposed as an effective method for self-improving language models and agentic systems, both for post-training sample generation and for inference.",
-      "upvote_label": "50 upvotes"
+      "upvote_label": "52 upvotes"
     },
     {
       "report_date": "2026-05-28",
@@ -2970,7 +2970,7 @@
       "github_url": "",
       "submitted_by": "Rui",
       "submitted_at": "2026-05-28T00:00:00.000Z",
-      "upvotes": 29,
+      "upvotes": 31,
       "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -2980,7 +2980,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Autonomous research agents produce competitive solutions and professional-looking manuscripts, yet their outputs contain verifiability failures undetectable by surface-level evaluation: fabricated citations,…",
-      "upvote_label": "29 upvotes"
+      "upvote_label": "31 upvotes"
     },
     {
       "report_date": "2026-05-28",
@@ -3004,7 +3004,7 @@
       "github_url": "",
       "submitted_by": "Jianing Zhu",
       "submitted_at": "2026-05-28T00:00:00.000Z",
-      "upvotes": 26,
+      "upvotes": 27,
       "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -3014,7 +3014,48 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Long-lived AI agents are increasingly deployed as persistent operational systems, yet they are still evaluated like freshly initialized models.",
-      "upvote_label": "26 upvotes"
+      "upvote_label": "27 upvotes"
+    },
+    {
+      "report_date": "2026-05-28",
+      "paper_id": "2605.28773",
+      "title": "Rethinking Memory as Continuously Evolving Connectivity",
+      "authors": [
+        "Jizhan Fang",
+        "Buqiang Xu",
+        "Zhixian Wang",
+        "Haoliang Cao",
+        "Xinle Deng",
+        "Baohua Dong",
+        "Hangcheng Zhu",
+        "Ruohui Huang",
+        "Gang Yu",
+        "Ying Wei",
+        "Guozhou Zheng",
+        "Feiyu Xiong",
+        "Haofen Wang",
+        "Huajun Chen",
+        "Ningyu Zhang"
+      ],
+      "abstract": "Existing memory-augmented LLM agents often treat memory as a static repository with pre-defined representations and fixed retrieval pipelines, which is brittle in dynamic agentic environments where feedback, task variation, and heterogeneous signals continuously reshape what should be remembered and how it should be connected. To address this, we propose FluxMem, a connectivity-evolving memory framework that models memory as a heterogeneous graph and progressively refines its topology through three stages: initial connection formation, feedback-driven refinement, and long-term consolidation. During execution, FluxMem repairs missing links, prunes interference, aligns abstraction granularity, and distills recurrent successful trajectories into reusable procedural circuits, guided by one metric for memory generalizability and evolutionary maturity. Across three fundamentally distinct benchmarks including LoCoMo, Mind2Web, and GAIA, FluxMem achieves consistent state-of-the-art performance, demonstrating strong adaptation and generalization in complex agentic environments. The code will be open-sourced in https://github.com/zjunlp/LightMem.",
+      "hf_url": "https://huggingface.co/papers/2605.28773",
+      "arxiv_url": "https://arxiv.org/abs/2605.28773",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.28773",
+      "papers_cool_url": "https://papers.cool/arxiv/2605.28773",
+      "github_url": "",
+      "submitted_by": "Ningyu Zhang",
+      "submitted_at": "2026-05-28T00:00:00.000Z",
+      "upvotes": 25,
+      "comments": 2,
+      "topic_key": "retrieval_knowledge",
+      "topic_label": "Retrieval, Knowledge, and RAG",
+      "matched_terms": [
+        "\\bmemory\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Existing memory-augmented LLM agents often treat memory as a static repository with pre-defined representations and fixed retrieval pipelines, which is brittle in dynamic agentic environments where feedback, task…",
+      "upvote_label": "25 upvotes"
     },
     {
       "report_date": "2026-05-28",
@@ -3046,47 +3087,6 @@
       "classification_confidence": null,
       "one_sentence_summary": "Agent skills provide a lightweight way to adapt LLM agents to specialized domains by storing reusable procedural knowledge in structured files.",
       "upvote_label": "23 upvotes"
-    },
-    {
-      "report_date": "2026-05-28",
-      "paper_id": "2605.28773",
-      "title": "Rethinking Memory as Continuously Evolving Connectivity",
-      "authors": [
-        "Jizhan Fang",
-        "Buqiang Xu",
-        "Zhixian Wang",
-        "Haoliang Cao",
-        "Xinle Deng",
-        "Baohua Dong",
-        "Hangcheng Zhu",
-        "Ruohui Huang",
-        "Gang Yu",
-        "Ying Wei",
-        "Guozhou Zheng",
-        "Feiyu Xiong",
-        "Haofen Wang",
-        "Huajun Chen",
-        "Ningyu Zhang"
-      ],
-      "abstract": "Existing memory-augmented LLM agents often treat memory as a static repository with pre-defined representations and fixed retrieval pipelines, which is brittle in dynamic agentic environments where feedback, task variation, and heterogeneous signals continuously reshape what should be remembered and how it should be connected. To address this, we propose FluxMem, a connectivity-evolving memory framework that models memory as a heterogeneous graph and progressively refines its topology through three stages: initial connection formation, feedback-driven refinement, and long-term consolidation. During execution, FluxMem repairs missing links, prunes interference, aligns abstraction granularity, and distills recurrent successful trajectories into reusable procedural circuits, guided by one metric for memory generalizability and evolutionary maturity. Across three fundamentally distinct benchmarks including LoCoMo, Mind2Web, and GAIA, FluxMem achieves consistent state-of-the-art performance, demonstrating strong adaptation and generalization in complex agentic environments. The code will be open-sourced in https://github.com/zjunlp/LightMem.",
-      "hf_url": "https://huggingface.co/papers/2605.28773",
-      "arxiv_url": "https://arxiv.org/abs/2605.28773",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.28773",
-      "papers_cool_url": "https://papers.cool/arxiv/2605.28773",
-      "github_url": "",
-      "submitted_by": "Ningyu Zhang",
-      "submitted_at": "2026-05-28T00:00:00.000Z",
-      "upvotes": 22,
-      "comments": 2,
-      "topic_key": "retrieval_knowledge",
-      "topic_label": "Retrieval, Knowledge, and RAG",
-      "matched_terms": [
-        "\\bmemory\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Existing memory-augmented LLM agents often treat memory as a static repository with pre-defined representations and fixed retrieval pipelines, which is brittle in dynamic agentic environments where feedback, task…",
-      "upvote_label": "22 upvotes"
     },
     {
       "report_date": "2026-05-28",
@@ -3273,7 +3273,7 @@
       "github_url": "",
       "submitted_by": "Qian Yang",
       "submitted_at": "2026-05-28T00:00:00.000Z",
-      "upvotes": 16,
+      "upvotes": 17,
       "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -3284,7 +3284,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Cross-view spatial reasoning remains a weak spot for vision-language models (VLMs): they often reason in language and lose the fine-grained geometry needed for the task.",
-      "upvote_label": "16 upvotes"
+      "upvote_label": "17 upvotes"
     },
     {
       "report_date": "2026-05-28",
@@ -3312,7 +3312,7 @@
       "github_url": "",
       "submitted_by": "Kewei Zhang",
       "submitted_at": "2026-05-28T00:00:00.000Z",
-      "upvotes": 15,
+      "upvotes": 16,
       "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -3323,7 +3323,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "End-to-end autonomous driving via Vision-Language-Action (VLA) models demands a precarious balance between high-fidelity trajectory planning and efficient inference.",
-      "upvote_label": "15 upvotes"
+      "upvote_label": "16 upvotes"
     },
     {
       "report_date": "2026-05-28",
@@ -3352,7 +3352,7 @@
       "github_url": "",
       "submitted_by": "Cheng Qian",
       "submitted_at": "2026-05-28T00:00:00.000Z",
-      "upvotes": 15,
+      "upvotes": 16,
       "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -3362,7 +3362,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Large multimodal models (LMMs) have rapidly advanced in perception and reasoning; however, it remains unclear whether these capabilities generalize to discovering visually grounded solutions in open-ended…",
-      "upvote_label": "15 upvotes"
+      "upvote_label": "16 upvotes"
     },
     {
       "report_date": "2026-05-28",
@@ -3507,6 +3507,33 @@
     },
     {
       "report_date": "2026-05-28",
+      "paper_id": "2605.27882",
+      "title": "VibeSearchBench: Benchmarking Long-horizon Proactive Search in the Wild",
+      "authors": [
+        "Xiaohongshu Inc"
+      ],
+      "abstract": "LLM-based agents score well on search benchmarks, yet real users consistently find results unsatisfying, revealing a persistent evaluation-experience gap. We attribute this gap to existing benchmarks' reliance on over-specified queries, single-turn interactions, and fixed-schema evaluation, none of which reflect real search behavior where users and agents collaboratively refine vague intent through multi-turn dialogue. We term this paradigm VibeSearch and introduce VibeSearchBench, a benchmark comprising 200 manually curated bilingual (Chinese and English) tasks across 20 domains, split into VibeSearch-Pro (professional) and VibeSearch-Daily (daily-life) subsets. Each task pairs a user persona with a schema-free ground-truth knowledge graph, and is evaluated through a progressive-disclosure user simulator and a graph-matching evaluation framework. We benchmark seven frontier models under both the ReAct framework and the OpenClaw agent harness. Results show that all models remain substantially inadequate for VibeSearch (best F1: 30.30), highlighting the need for fundamental advances in long-context reasoning, proactive intent elicitation, and structured knowledge construction.",
+      "hf_url": "https://huggingface.co/papers/2605.27882",
+      "arxiv_url": "https://arxiv.org/abs/2605.27882",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.27882",
+      "papers_cool_url": "https://papers.cool/arxiv/2605.27882",
+      "github_url": "",
+      "submitted_by": "HuangMeow",
+      "submitted_at": "2026-05-28T00:00:00.000Z",
+      "upvotes": 11,
+      "comments": 2,
+      "topic_key": "retrieval_knowledge",
+      "topic_label": "Retrieval, Knowledge, and RAG",
+      "matched_terms": [
+        "\\bsearch\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "LLM-based agents score well on search benchmarks, yet real users consistently find results unsatisfying, revealing a persistent evaluation-experience gap.",
+      "upvote_label": "11 upvotes"
+    },
+    {
+      "report_date": "2026-05-28",
       "paper_id": "2605.28763",
       "title": "CubePart: An Open-Vocabulary Part-Controllable 3D Generator",
       "authors": [
@@ -3606,30 +3633,36 @@
     },
     {
       "report_date": "2026-05-28",
-      "paper_id": "2605.27882",
-      "title": "VibeSearchBench: Benchmarking Long-horizon Proactive Search in the Wild",
+      "paper_id": "2605.26032",
+      "title": "Everything at Every Scale: Scale-Invariant Diffusion with Continuous Super-Resolution",
       "authors": [
-        "Xiaohongshu Inc"
+        "Zixin Jessie Chen",
+        "Zhuo Chen",
+        "Archer Wang",
+        "Jeff Gore",
+        "William T. Freeman",
+        "Congyue Deng",
+        "Marin Soljačić"
       ],
-      "abstract": "LLM-based agents score well on search benchmarks, yet real users consistently find results unsatisfying, revealing a persistent evaluation-experience gap. We attribute this gap to existing benchmarks' reliance on over-specified queries, single-turn interactions, and fixed-schema evaluation, none of which reflect real search behavior where users and agents collaboratively refine vague intent through multi-turn dialogue. We term this paradigm VibeSearch and introduce VibeSearchBench, a benchmark comprising 200 manually curated bilingual (Chinese and English) tasks across 20 domains, split into VibeSearch-Pro (professional) and VibeSearch-Daily (daily-life) subsets. Each task pairs a user persona with a schema-free ground-truth knowledge graph, and is evaluated through a progressive-disclosure user simulator and a graph-matching evaluation framework. We benchmark seven frontier models under both the ReAct framework and the OpenClaw agent harness. Results show that all models remain substantially inadequate for VibeSearch (best F1: 30.30), highlighting the need for fundamental advances in long-context reasoning, proactive intent elicitation, and structured knowledge construction.",
-      "hf_url": "https://huggingface.co/papers/2605.27882",
-      "arxiv_url": "https://arxiv.org/abs/2605.27882",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.27882",
-      "papers_cool_url": "https://papers.cool/arxiv/2605.27882",
+      "abstract": "Creating images from noise is image generation; reconstructing fine details from coarse inputs is super-resolution. Despite their practical differences, both can be understood as reversing information loss across scales. We introduce SKILD, a Scale-invariant K-Space Image Learning Diffusion model that unifies generation and continuous super-resolution within a single unconditional framework. Both natural images and critical physical systems exhibit scale invariance, and we leverage it to design a forward process that attenuates image content from fine to coarse scales while injecting spectrum-matched Gaussian noise, making scale an explicit coordinate of the diffusion dynamics. The same trained reverse process performs generation and continuous super-resolution by varying only the starting timestep: no task-specific architecture, no conditioning branch, no classifier-free guidance, no retraining per scale factor. Empirically, SKILD reaches FID 2.65 and Inception Score 9.63 on unconditional CIFAR-10, performs 2times--8times super-resolution on ImageNet from a single unconditional checkpoint while outperforming conditional models across perceptual metrics, and reconstructs critical Ising models whose connected four-point correlations closely track the ground truth.",
+      "hf_url": "https://huggingface.co/papers/2605.26032",
+      "arxiv_url": "https://arxiv.org/abs/2605.26032",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.26032",
+      "papers_cool_url": "https://papers.cool/arxiv/2605.26032",
       "github_url": "",
-      "submitted_by": "HuangMeow",
+      "submitted_by": "Zhuo Chen",
       "submitted_at": "2026-05-28T00:00:00.000Z",
-      "upvotes": 9,
+      "upvotes": 10,
       "comments": 2,
-      "topic_key": "retrieval_knowledge",
-      "topic_label": "Retrieval, Knowledge, and RAG",
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [
-        "\\bsearch\\b"
+        "\\bdiffusion\\b"
       ],
       "classification_source": "rule",
       "classification_confidence": null,
-      "one_sentence_summary": "LLM-based agents score well on search benchmarks, yet real users consistently find results unsatisfying, revealing a persistent evaluation-experience gap.",
-      "upvote_label": "9 upvotes"
+      "one_sentence_summary": "Creating images from noise is image generation; reconstructing fine details from coarse inputs is super-resolution.",
+      "upvote_label": "10 upvotes"
     },
     {
       "report_date": "2026-05-28",
@@ -3761,39 +3794,6 @@
     },
     {
       "report_date": "2026-05-28",
-      "paper_id": "2605.26032",
-      "title": "Everything at Every Scale: Scale-Invariant Diffusion with Continuous Super-Resolution",
-      "authors": [
-        "Zixin Jessie Chen",
-        "Zhuo Chen",
-        "Archer Wang",
-        "Jeff Gore",
-        "William T. Freeman",
-        "Congyue Deng",
-        "Marin Soljačić"
-      ],
-      "abstract": "Creating images from noise is image generation; reconstructing fine details from coarse inputs is super-resolution. Despite their practical differences, both can be understood as reversing information loss across scales. We introduce SKILD, a Scale-invariant K-Space Image Learning Diffusion model that unifies generation and continuous super-resolution within a single unconditional framework. Both natural images and critical physical systems exhibit scale invariance, and we leverage it to design a forward process that attenuates image content from fine to coarse scales while injecting spectrum-matched Gaussian noise, making scale an explicit coordinate of the diffusion dynamics. The same trained reverse process performs generation and continuous super-resolution by varying only the starting timestep: no task-specific architecture, no conditioning branch, no classifier-free guidance, no retraining per scale factor. Empirically, SKILD reaches FID 2.65 and Inception Score 9.63 on unconditional CIFAR-10, performs 2times--8times super-resolution on ImageNet from a single unconditional checkpoint while outperforming conditional models across perceptual metrics, and reconstructs critical Ising models whose connected four-point correlations closely track the ground truth.",
-      "hf_url": "https://huggingface.co/papers/2605.26032",
-      "arxiv_url": "https://arxiv.org/abs/2605.26032",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.26032",
-      "papers_cool_url": "https://papers.cool/arxiv/2605.26032",
-      "github_url": "",
-      "submitted_by": "Zhuo Chen",
-      "submitted_at": "2026-05-28T00:00:00.000Z",
-      "upvotes": 8,
-      "comments": 2,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [
-        "\\bdiffusion\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Creating images from noise is image generation; reconstructing fine details from coarse inputs is super-resolution.",
-      "upvote_label": "8 upvotes"
-    },
-    {
-      "report_date": "2026-05-28",
       "paper_id": "2605.28819",
       "title": "PEFT-Arena: Understanding Parameter-Efficient Finetuning from a Stability-Plasticity Perspective",
       "authors": [
@@ -3821,6 +3821,35 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Parameter-efficient finetuning (PEFT) has become the standard approach for adapting large language models, yet evaluations largely emphasize downstream accuracy while overlooking the retention of pretrained capabilities.",
+      "upvote_label": "5 upvotes"
+    },
+    {
+      "report_date": "2026-05-28",
+      "paper_id": "2605.28655",
+      "title": "AutoScientists: Self-Organizing Agent Teams for Long-Running Scientific Experimentation",
+      "authors": [
+        "Shanghua Gao",
+        "Ada Fang",
+        "Marinka Zitnik"
+      ],
+      "abstract": "Scientific research proceeds through iterative cycles of hypothesis generation, experiment design, execution, and revision. AI agents can automate parts of this process, but existing approaches typically follow a single research trajectory or coordinate through a central planner with fixed objectives. As a result, they struggle to sustain parallel exploration, adapt as experimental evidence changes, or preserve knowledge of failed directions over long-running experiments. We introduce AutoScientists, a decentralized team of AI agents for long-running computational scientific experimentation. Agents interpret a shared experimental state, self-organize into teams around promising hypotheses, critique proposals before using experimental compute, and share successes and failures to reduce redundant exploration. Under matched experimental budgets, AutoScientists improves over prior AI agents across biomedical machine learning, language-model training optimization, and protein fitness prediction. On BioML-Bench, spanning biomedical imaging, protein engineering, single-cell omics, and drug discovery, AutoScientists achieves a mean leaderboard percentile of 74.4% across 24 tasks, improving over the strongest AI agent by +8.33%. On GPT training optimization, AutoScientists reaches a target validation bits-per-byte 1.9x faster than Autoresearch and continues discovering improvements from a starting champion where the single-agent approach finds none (7 vs. 0 accepted improvements). On ProteinGym fitness prediction, AutoScientists discovers a method for ACE2-Spike binding that improves over the current state-of-the-art model by +12.5% in Spearman correlation. Applied without modification across all 217 ProteinGym assays, the same method improves over the prior state of the art by +6.5% (Spearman correlation).",
+      "hf_url": "https://huggingface.co/papers/2605.28655",
+      "arxiv_url": "https://arxiv.org/abs/2605.28655",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.28655",
+      "papers_cool_url": "https://papers.cool/arxiv/2605.28655",
+      "github_url": "",
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-05-28T00:00:00.000Z",
+      "upvotes": 5,
+      "comments": 2,
+      "topic_key": "agents_planning",
+      "topic_label": "Agents and Planning",
+      "matched_terms": [
+        "\\bagents?\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Scientific research proceeds through iterative cycles of hypothesis generation, experiment design, execution, and revision.",
       "upvote_label": "5 upvotes"
     },
     {
@@ -3854,35 +3883,6 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Reinforcement Learning from Verifiable Rewards (RLVR) has emerged as the standard paradigm for improving reasoning capability of large language models, while Multi-Token Prediction (MTP) has been a widely adopted…",
-      "upvote_label": "4 upvotes"
-    },
-    {
-      "report_date": "2026-05-28",
-      "paper_id": "2605.28655",
-      "title": "AutoScientists: Self-Organizing Agent Teams for Long-Running Scientific Experimentation",
-      "authors": [
-        "Shanghua Gao",
-        "Ada Fang",
-        "Marinka Zitnik"
-      ],
-      "abstract": "Scientific research proceeds through iterative cycles of hypothesis generation, experiment design, execution, and revision. AI agents can automate parts of this process, but existing approaches typically follow a single research trajectory or coordinate through a central planner with fixed objectives. As a result, they struggle to sustain parallel exploration, adapt as experimental evidence changes, or preserve knowledge of failed directions over long-running experiments. We introduce AutoScientists, a decentralized team of AI agents for long-running computational scientific experimentation. Agents interpret a shared experimental state, self-organize into teams around promising hypotheses, critique proposals before using experimental compute, and share successes and failures to reduce redundant exploration. Under matched experimental budgets, AutoScientists improves over prior AI agents across biomedical machine learning, language-model training optimization, and protein fitness prediction. On BioML-Bench, spanning biomedical imaging, protein engineering, single-cell omics, and drug discovery, AutoScientists achieves a mean leaderboard percentile of 74.4% across 24 tasks, improving over the strongest AI agent by +8.33%. On GPT training optimization, AutoScientists reaches a target validation bits-per-byte 1.9x faster than Autoresearch and continues discovering improvements from a starting champion where the single-agent approach finds none (7 vs. 0 accepted improvements). On ProteinGym fitness prediction, AutoScientists discovers a method for ACE2-Spike binding that improves over the current state-of-the-art model by +12.5% in Spearman correlation. Applied without modification across all 217 ProteinGym assays, the same method improves over the prior state of the art by +6.5% (Spearman correlation).",
-      "hf_url": "https://huggingface.co/papers/2605.28655",
-      "arxiv_url": "https://arxiv.org/abs/2605.28655",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.28655",
-      "papers_cool_url": "https://papers.cool/arxiv/2605.28655",
-      "github_url": "",
-      "submitted_by": "taesiri",
-      "submitted_at": "2026-05-28T00:00:00.000Z",
-      "upvotes": 4,
-      "comments": 2,
-      "topic_key": "agents_planning",
-      "topic_label": "Agents and Planning",
-      "matched_terms": [
-        "\\bagents?\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Scientific research proceeds through iterative cycles of hypothesis generation, experiment design, execution, and revision.",
       "upvote_label": "4 upvotes"
     },
     {
@@ -4168,6 +4168,37 @@
     },
     {
       "report_date": "2026-05-28",
+      "paper_id": "2605.27762",
+      "title": "PEAM: Parametric Embodied Agent Memory through Contrastive Internalization of Experience in Minecraft",
+      "authors": [
+        "Yuchen Guo",
+        "Junli Gong",
+        "Hongmin Cai",
+        "Yiu-ming Cheung",
+        "Weifeng Su"
+      ],
+      "abstract": "We present PEAM, a Parametric Embodied Agent Memory framework in Minecraft that transforms agent memory from inference-time retrieval into parameter-resident skills internalized through experience. PEAM pairs a slow deliberative LLM for open-ended reasoning with a fast parametric module for reflexive execution of consolidated skills. The fast module is a multimodal Mixture-of-Experts LoRA architecture with per-category physically isolated adapters, enabling parameter-level continual learning without catastrophic forgetting. We treat failure as a first-class training signal: failure--correction trajectory pairs are internalized through a joint behavioral-cloning and contrastive objective, so the agent learns not only what succeeds but also how corrected actions differ from failed ones. To govern consolidation, PEAM introduces a parameterization-worthiness score for deciding which experience should be internalized, and a scale-free self-triggered consolidation mechanism for deciding when to internalize without task-specific hand-tuned thresholds, making the agent self-evolving as the trigger transfers across task distributions without re-tuning. Experiments in Minecraft show that PEAM improves long-horizon task performance, mitigates forgetting on previously consolidated skills, and improves parametric-versus-retrieval efficiency over retrieval-based embodied agents and parametric memory variants.",
+      "hf_url": "https://huggingface.co/papers/2605.27762",
+      "arxiv_url": "https://arxiv.org/abs/2605.27762",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.27762",
+      "papers_cool_url": "https://papers.cool/arxiv/2605.27762",
+      "github_url": "",
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-05-28T00:00:00.000Z",
+      "upvotes": 2,
+      "comments": 1,
+      "topic_key": "agents_planning",
+      "topic_label": "Agents and Planning",
+      "matched_terms": [
+        "\\bagents?\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "We present PEAM, a Parametric Embodied Agent Memory framework in Minecraft that transforms agent memory from inference-time retrieval into parameter-resident skills internalized through experience.",
+      "upvote_label": "2 upvotes"
+    },
+    {
+      "report_date": "2026-05-28",
       "paper_id": "2605.25707",
       "title": "AgentHijack: Benchmarking Computer Use Agent Robustness to Common Environment Corruptions",
       "authors": [
@@ -4258,6 +4289,36 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Understanding 3D objects from images is fundamental to robotics and AR/VR applications.",
+      "upvote_label": "1 upvote"
+    },
+    {
+      "report_date": "2026-05-28",
+      "paper_id": "2605.27766",
+      "title": "Got a Secret? LLM Agents Can't Keep It: Evaluating Privacy in Multi-Agent Systems",
+      "authors": [
+        "Aman Priyanshu",
+        "Supriti Vijay",
+        "Esha Pahwa"
+      ],
+      "abstract": "LLM safety evaluations predominantly test models in isolation, yet deployed AI agents increasingly operate within persistent social environments alongside other agents. We introduce a Moltbook-style simulation platform where thousands of LLM agents interact across communities over a simulated month, and use it to evaluate privacy as a downstream safety concern under varying degrees of social pressure. We find that shifting from single turn to multi turn social evaluation amplifies privacy violations (CIMemories 19.95% to Ours 45.30% across OpenAI models), that leakage is socially contagious, with agents 8 times more likely to disclose sensitive information after observing a peer do so, and that explicit privacy instructions reduce but do not eliminate this effect, leaving leakage rates above 37.8% even with safeguards. Our findings suggest that static chat based safety benchmarks systematically underestimate risks in agentic deployment, and that social context alone is sufficient to elicit sensitive disclosures that single turn evaluations would never surface.",
+      "hf_url": "https://huggingface.co/papers/2605.27766",
+      "arxiv_url": "https://arxiv.org/abs/2605.27766",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.27766",
+      "papers_cool_url": "https://papers.cool/arxiv/2605.27766",
+      "github_url": "",
+      "submitted_by": "Aman Priyanshu",
+      "submitted_at": "2026-05-28T00:00:00.000Z",
+      "upvotes": 1,
+      "comments": 3,
+      "topic_key": "agents_planning",
+      "topic_label": "Agents and Planning",
+      "matched_terms": [
+        "\\bmulti-agent\\b",
+        "\\bagents?\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "LLM safety evaluations predominantly test models in isolation, yet deployed AI agents increasingly operate within persistent social environments alongside other agents.",
       "upvote_label": "1 upvote"
     },
     {
@@ -4436,67 +4497,6 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Clark Hash is a small method for storing neural embeddings in less space.",
-      "upvote_label": "0 upvotes"
-    },
-    {
-      "report_date": "2026-05-28",
-      "paper_id": "2605.27766",
-      "title": "Got a Secret? LLM Agents Can't Keep It: Evaluating Privacy in Multi-Agent Systems",
-      "authors": [
-        "Aman Priyanshu",
-        "Supriti Vijay",
-        "Esha Pahwa"
-      ],
-      "abstract": "LLM safety evaluations predominantly test models in isolation, yet deployed AI agents increasingly operate within persistent social environments alongside other agents. We introduce a Moltbook-style simulation platform where thousands of LLM agents interact across communities over a simulated month, and use it to evaluate privacy as a downstream safety concern under varying degrees of social pressure. We find that shifting from single turn to multi turn social evaluation amplifies privacy violations (CIMemories 19.95% to Ours 45.30% across OpenAI models), that leakage is socially contagious, with agents 8 times more likely to disclose sensitive information after observing a peer do so, and that explicit privacy instructions reduce but do not eliminate this effect, leaving leakage rates above 37.8% even with safeguards. Our findings suggest that static chat based safety benchmarks systematically underestimate risks in agentic deployment, and that social context alone is sufficient to elicit sensitive disclosures that single turn evaluations would never surface.",
-      "hf_url": "https://huggingface.co/papers/2605.27766",
-      "arxiv_url": "https://arxiv.org/abs/2605.27766",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.27766",
-      "papers_cool_url": "https://papers.cool/arxiv/2605.27766",
-      "github_url": "",
-      "submitted_by": "Aman Priyanshu",
-      "submitted_at": "2026-05-28T00:00:00.000Z",
-      "upvotes": 0,
-      "comments": 2,
-      "topic_key": "agents_planning",
-      "topic_label": "Agents and Planning",
-      "matched_terms": [
-        "\\bmulti-agent\\b",
-        "\\bagents?\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "LLM safety evaluations predominantly test models in isolation, yet deployed AI agents increasingly operate within persistent social environments alongside other agents.",
-      "upvote_label": "0 upvotes"
-    },
-    {
-      "report_date": "2026-05-28",
-      "paper_id": "2605.27762",
-      "title": "PEAM: Parametric Embodied Agent Memory through Contrastive Internalization of Experience in Minecraft",
-      "authors": [
-        "Yuchen Guo",
-        "Junli Gong",
-        "Hongmin Cai",
-        "Yiu-ming Cheung",
-        "Weifeng Su"
-      ],
-      "abstract": "We present PEAM, a Parametric Embodied Agent Memory framework in Minecraft that transforms agent memory from inference-time retrieval into parameter-resident skills internalized through experience. PEAM pairs a slow deliberative LLM for open-ended reasoning with a fast parametric module for reflexive execution of consolidated skills. The fast module is a multimodal Mixture-of-Experts LoRA architecture with per-category physically isolated adapters, enabling parameter-level continual learning without catastrophic forgetting. We treat failure as a first-class training signal: failure--correction trajectory pairs are internalized through a joint behavioral-cloning and contrastive objective, so the agent learns not only what succeeds but also how corrected actions differ from failed ones. To govern consolidation, PEAM introduces a parameterization-worthiness score for deciding which experience should be internalized, and a scale-free self-triggered consolidation mechanism for deciding when to internalize without task-specific hand-tuned thresholds, making the agent self-evolving as the trigger transfers across task distributions without re-tuning. Experiments in Minecraft show that PEAM improves long-horizon task performance, mitigates forgetting on previously consolidated skills, and improves parametric-versus-retrieval efficiency over retrieval-based embodied agents and parametric memory variants.",
-      "hf_url": "https://huggingface.co/papers/2605.27762",
-      "arxiv_url": "https://arxiv.org/abs/2605.27762",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.27762",
-      "papers_cool_url": "https://papers.cool/arxiv/2605.27762",
-      "github_url": "",
-      "submitted_by": "taesiri",
-      "submitted_at": "2026-05-28T00:00:00.000Z",
-      "upvotes": 0,
-      "comments": 1,
-      "topic_key": "agents_planning",
-      "topic_label": "Agents and Planning",
-      "matched_terms": [
-        "\\bagents?\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "We present PEAM, a Parametric Embodied Agent Memory framework in Minecraft that transforms agent memory from inference-time retrieval into parameter-resident skills internalized through experience.",
       "upvote_label": "0 upvotes"
     },
     {
