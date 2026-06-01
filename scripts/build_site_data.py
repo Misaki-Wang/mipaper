@@ -58,6 +58,7 @@ def main() -> int:
             daily_result.manifest,
             hf_result.manifest,
             conference_result.manifest,
+            trending_result.manifest,
             magazine_result.manifest,
         ),
     )

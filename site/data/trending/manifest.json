@@ -1,10 +1,148 @@
 {
   "branch_key": "trending",
   "branch_label": "Trending",
-  "generated_at": "2026-05-25T08:00:08Z",
-  "reports_count": 15,
-  "default_report_path": "data/trending/reports/2026-05-25/trending-2026-05-25.json",
+  "generated_at": "2026-06-01T07:37:32Z",
+  "reports_count": 16,
+  "default_report_path": "data/trending/reports/2026-06-01/trending-2026-06-01.json",
   "reports": [
+    {
+      "branch_key": "trending",
+      "branch_label": "Trending",
+      "data_path": "data/trending/reports/2026-06-01/trending-2026-06-01.json",
+      "slug": "trending-2026-06-01",
+      "snapshot_date": "2026-06-01",
+      "since": "weekly",
+      "total_repositories": 19,
+      "generated_at": "2026-06-01T07:37:31Z",
+      "source_url": "https://github.com/trending?since=weekly&spoken_language_code=",
+      "top_languages": [
+        {
+          "language": "Python",
+          "count": 8,
+          "share": 42.10526315789473
+        },
+        {
+          "language": "Rust",
+          "count": 3,
+          "share": 15.789473684210526
+        },
+        {
+          "language": "TypeScript",
+          "count": 3,
+          "share": 15.789473684210526
+        },
+        {
+          "language": "Shell",
+          "count": 2,
+          "share": 10.526315789473683
+        },
+        {
+          "language": "HTML",
+          "count": 1,
+          "share": 5.263157894736842
+        }
+      ],
+      "top_repositories": [
+        {
+          "snapshot_date": "2026-06-01",
+          "repo_id": "lum1104/understand-anything",
+          "owner": "Lum1104",
+          "name": "Understand-Anything",
+          "full_name": "Lum1104/Understand-Anything",
+          "repo_url": "https://github.com/Lum1104/Understand-Anything",
+          "description": "Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex, Cursor, Copilot, Gemini CLI, and more.",
+          "language": "TypeScript",
+          "stars": 47828,
+          "forks": 3894,
+          "stars_this_week": 22750,
+          "built_by": [
+            "Lum1104",
+            "claude",
+            "berkcangumusisik",
+            "zhushen12580",
+            "fishinakleinbottle"
+          ]
+        },
+        {
+          "snapshot_date": "2026-06-01",
+          "repo_id": "harry0703/moneyprinterturbo",
+          "owner": "harry0703",
+          "name": "MoneyPrinterTurbo",
+          "full_name": "harry0703/MoneyPrinterTurbo",
+          "repo_url": "https://github.com/harry0703/MoneyPrinterTurbo",
+          "description": "利用AI大模型，一键生成高清短视频 Generate short videos with one click using AI LLM.",
+          "language": "Python",
+          "stars": 75583,
+          "forks": 10738,
+          "stars_this_week": 15955,
+          "built_by": [
+            "harry0703",
+            "yyhhyyyyyy",
+            "vuisme",
+            "KevinZhang19870314",
+            "claude"
+          ]
+        },
+        {
+          "snapshot_date": "2026-06-01",
+          "repo_id": "colbymchenry/codegraph",
+          "owner": "colbymchenry",
+          "name": "codegraph",
+          "full_name": "colbymchenry/codegraph",
+          "repo_url": "https://github.com/colbymchenry/codegraph",
+          "description": "Pre-indexed code knowledge graph for Claude Code, Codex, Gemini, Cursor, OpenCode, AntiGravity, Kiro, and Hermes Agent — fewer tokens, fewer tool calls, 100% local",
+          "language": "TypeScript",
+          "stars": 35942,
+          "forks": 2242,
+          "stars_this_week": 13925,
+          "built_by": [
+            "colbymchenry",
+            "claude",
+            "omonien",
+            "andreinknv",
+            "MO2k4"
+          ]
+        },
+        {
+          "snapshot_date": "2026-06-01",
+          "repo_id": "leonxlnx/taste-skill",
+          "owner": "Leonxlnx",
+          "name": "taste-skill",
+          "full_name": "Leonxlnx/taste-skill",
+          "repo_url": "https://github.com/Leonxlnx/taste-skill",
+          "description": "Taste-Skill - gives your AI good taste. stops the AI from generating boring, generic slop",
+          "language": "Shell",
+          "stars": 30248,
+          "forks": 2246,
+          "stars_this_week": 10813,
+          "built_by": [
+            "Leonxlnx",
+            "cursoragent",
+            "Blueemi"
+          ]
+        },
+        {
+          "snapshot_date": "2026-06-01",
+          "repo_id": "rohitg00/ai-engineering-from-scratch",
+          "owner": "rohitg00",
+          "name": "ai-engineering-from-scratch",
+          "full_name": "rohitg00/ai-engineering-from-scratch",
+          "repo_url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+          "description": "Learn it. Build it. Ship it for others.",
+          "language": "Python",
+          "stars": 26215,
+          "forks": 4256,
+          "stars_this_week": 10586,
+          "built_by": [
+            "rohitg00",
+            "github-actions",
+            "abhinav-m22",
+            "thereisnotime",
+            "pzy0006"
+          ]
+        }
+      ]
+    },
     {
       "branch_key": "trending",
       "branch_label": "Trending",
