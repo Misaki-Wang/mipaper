@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-01T19:00:09Z",
-  "reports_count": 236,
+  "generated_at": "2026-06-02T19:00:08Z",
+  "reports_count": 237,
   "branches": [
     {
       "branch_key": "daily",
@@ -12,8 +12,8 @@
     {
       "branch_key": "hf-daily",
       "branch_label": "HF Daily",
-      "reports_count": 68,
-      "default_report_path": "data/hf-daily/reports/2026-06-02/hf-daily-2026-06-02.json",
+      "reports_count": 69,
+      "default_report_path": "data/hf-daily/reports/2026-06-03/hf-daily-2026-06-03.json",
       "manifest_path": "data/hf-daily/manifest.json"
     },
     {
@@ -7956,6 +7956,87 @@
           "topic_label": "Datasets and Benchmarks",
           "count": 9,
           "share": 7.38
+        }
+      ]
+    },
+    {
+      "branch_key": "hf-daily",
+      "branch_label": "HF Daily",
+      "search_text": "hf-daily HF Daily hf-daily-2026-06-03 data/hf-daily/reports/2026-06-03/hf-daily-2026-06-03.json https://huggingface.co/papers/date/2026-06-03 rule 2026-06-03 Generative Foundations Multimodal Generative Modeling Multimodal Agents Agents and Planning Other AI LLMs and Language Reasoning, Alignment, and Evaluation Multimodal Understanding and Vision taesiri Barak Or yubol-bobo Adam Kovacs Ahan Chatterjee",
+      "data_path": "data/hf-daily/reports/2026-06-03/hf-daily-2026-06-03.json",
+      "slug": "hf-daily-2026-06-03",
+      "report_date": "2026-06-03",
+      "total_papers": 69,
+      "classifier": "rule",
+      "generated_at": "2026-06-02T19:00:07Z",
+      "source_url": "https://huggingface.co/papers/date/2026-06-03",
+      "focus_topics": [
+        {
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "count": 0,
+          "share": 0.0
+        },
+        {
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 2,
+          "share": 2.9
+        },
+        {
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "count": 0,
+          "share": 0.0
+        }
+      ],
+      "top_topics": [
+        {
+          "topic_label": "Agents and Planning",
+          "count": 13,
+          "share": 18.84
+        },
+        {
+          "topic_label": "Other AI",
+          "count": 13,
+          "share": 18.84
+        },
+        {
+          "topic_label": "LLMs and Language",
+          "count": 9,
+          "share": 13.04
+        },
+        {
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "count": 9,
+          "share": 13.04
+        },
+        {
+          "topic_label": "Multimodal Understanding and Vision",
+          "count": 8,
+          "share": 11.59
+        }
+      ],
+      "top_submitters": [
+        {
+          "submitted_by": "taesiri",
+          "count": 4
+        },
+        {
+          "submitted_by": "Barak Or",
+          "count": 2
+        },
+        {
+          "submitted_by": "yubol-bobo",
+          "count": 2
+        },
+        {
+          "submitted_by": "Adam Kovacs",
+          "count": 1
+        },
+        {
+          "submitted_by": "Ahan Chatterjee",
+          "count": 1
         }
       ]
     },
