@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-07T19:00:08Z",
-  "reports_count": 241,
+  "generated_at": "2026-06-08T08:00:08Z",
+  "reports_count": 242,
   "branches": [
     {
       "branch_key": "daily",
@@ -26,8 +26,8 @@
     {
       "branch_key": "trending",
       "branch_label": "Trending",
-      "reports_count": 16,
-      "default_report_path": "data/trending/reports/2026-06-01/trending-2026-06-01.json",
+      "reports_count": 17,
+      "default_report_path": "data/trending/reports/2026-06-08/trending-2026-06-08.json",
       "manifest_path": "data/trending/manifest.json"
     },
     {
@@ -14134,6 +14134,147 @@
           "topic_label": "Domain Applications",
           "count": 112,
           "share": 4.12
+        }
+      ]
+    },
+    {
+      "branch_key": "trending",
+      "branch_label": "Trending",
+      "search_text": "trending Trending trending-2026-06-08 data/trending/reports/2026-06-08/trending-2026-06-08.json https://github.com/trending?since=weekly&spoken_language_code= 2026-06-08",
+      "data_path": "data/trending/reports/2026-06-08/trending-2026-06-08.json",
+      "slug": "trending-2026-06-08",
+      "snapshot_date": "2026-06-08",
+      "since": "weekly",
+      "total_repositories": 19,
+      "generated_at": "2026-06-08T08:00:07Z",
+      "source_url": "https://github.com/trending?since=weekly&spoken_language_code=",
+      "top_languages": [
+        {
+          "language": "Python",
+          "count": 8,
+          "share": 42.10526315789473
+        },
+        {
+          "language": "TypeScript",
+          "count": 4,
+          "share": 21.052631578947366
+        },
+        {
+          "language": "JavaScript",
+          "count": 3,
+          "share": 15.789473684210526
+        },
+        {
+          "language": "Go",
+          "count": 1,
+          "share": 5.263157894736842
+        },
+        {
+          "language": "HTML",
+          "count": 1,
+          "share": 5.263157894736842
+        }
+      ],
+      "top_repositories": [
+        {
+          "snapshot_date": "2026-06-08",
+          "repo_id": "chopratejas/headroom",
+          "owner": "chopratejas",
+          "name": "headroom",
+          "full_name": "chopratejas/headroom",
+          "repo_url": "https://github.com/chopratejas/headroom",
+          "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 60-95% fewer tokens, same answers. Library, proxy, MCP server.",
+          "language": "Python",
+          "stars": 17419,
+          "forks": 1110,
+          "stars_this_week": 14272,
+          "built_by": [
+            "chopratejas",
+            "JerrettDavis",
+            "claude",
+            "Copilot",
+            "gglucass"
+          ]
+        },
+        {
+          "snapshot_date": "2026-06-08",
+          "repo_id": "microsoft/markitdown",
+          "owner": "microsoft",
+          "name": "markitdown",
+          "full_name": "microsoft/markitdown",
+          "repo_url": "https://github.com/microsoft/markitdown",
+          "description": "Python tool for converting files and office documents to Markdown.",
+          "language": "Python",
+          "stars": 147753,
+          "forks": 10126,
+          "stars_this_week": 13359,
+          "built_by": [
+            "afourney",
+            "gagb",
+            "sugatoray",
+            "PetrAPConsulting",
+            "l-lumin"
+          ]
+        },
+        {
+          "snapshot_date": "2026-06-08",
+          "repo_id": "nousresearch/hermes-agent",
+          "owner": "NousResearch",
+          "name": "hermes-agent",
+          "full_name": "NousResearch/hermes-agent",
+          "repo_url": "https://github.com/NousResearch/hermes-agent",
+          "description": "The agent that grows with you",
+          "language": "Python",
+          "stars": 186491,
+          "forks": 32083,
+          "stars_this_week": 11427,
+          "built_by": [
+            "teknium1",
+            "OutThisLife",
+            "kshitijk4poor",
+            "claude",
+            "0xbyt4"
+          ]
+        },
+        {
+          "snapshot_date": "2026-06-08",
+          "repo_id": "affaan-m/ecc",
+          "owner": "affaan-m",
+          "name": "ECC",
+          "full_name": "affaan-m/ECC",
+          "repo_url": "https://github.com/affaan-m/ECC",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "language": "JavaScript",
+          "stars": 210167,
+          "forks": 32229,
+          "stars_this_week": 10207,
+          "built_by": [
+            "affaan-m",
+            "claude",
+            "pangerlkr",
+            "greptile-apps",
+            "dependabot"
+          ]
+        },
+        {
+          "snapshot_date": "2026-06-08",
+          "repo_id": "harry0703/moneyprinterturbo",
+          "owner": "harry0703",
+          "name": "MoneyPrinterTurbo",
+          "full_name": "harry0703/MoneyPrinterTurbo",
+          "repo_url": "https://github.com/harry0703/MoneyPrinterTurbo",
+          "description": "利用AI大模型，一键生成高清短视频 Generate short videos with one click using AI LLM.",
+          "language": "Python",
+          "stars": 81534,
+          "forks": 11610,
+          "stars_this_week": 7992,
+          "built_by": [
+            "harry0703",
+            "yyhhyyyyyy",
+            "vuisme",
+            "KevinZhang19870314",
+            "claude"
+          ]
         }
       ]
     },
