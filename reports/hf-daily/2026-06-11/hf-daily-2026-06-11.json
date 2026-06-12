@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-11T19:00:05Z",
+  "generated_at": "2026-06-12T19:00:09Z",
   "report_kind": "hf_daily",
   "report_date": "2026-06-11",
   "source_url": "https://huggingface.co/papers/date/2026-06-11",
   "classifier": "rule",
-  "total_papers": 38,
+  "total_papers": 42,
   "focus_topics": [
     {
       "topic_key": "generative_foundations",
@@ -22,146 +22,135 @@
       "topic_key": "multimodal_agents",
       "topic_label": "Multimodal Agents",
       "count": 1,
-      "share": 2.63
+      "share": 2.38
     }
   ],
   "topic_distribution": [
     {
       "topic_label": "LLMs and Language",
-      "count": 11,
-      "share": 28.95
+      "count": 12,
+      "share": 28.57
     },
     {
       "topic_label": "Learning, Optimization, and Theory",
       "count": 7,
-      "share": 18.42
+      "share": 16.67
     },
     {
       "topic_label": "Other AI",
       "count": 5,
-      "share": 13.16
+      "share": 11.9
     },
     {
       "topic_label": "Reasoning, Alignment, and Evaluation",
-      "count": 4,
-      "share": 10.53
+      "count": 5,
+      "share": 11.9
     },
     {
       "topic_label": "Agents and Planning",
-      "count": 3,
-      "share": 7.89
+      "count": 4,
+      "share": 9.52
     },
     {
       "topic_label": "Datasets and Benchmarks",
       "count": 3,
-      "share": 7.89
+      "share": 7.14
     },
     {
       "topic_label": "Multimodal Understanding and Vision",
-      "count": 2,
-      "share": 5.26
+      "count": 3,
+      "share": 7.14
     },
     {
       "topic_label": "Domain Applications",
       "count": 1,
-      "share": 2.63
+      "share": 2.38
     },
     {
       "topic_label": "Multimodal Agents",
       "count": 1,
-      "share": 2.63
+      "share": 2.38
     },
     {
       "topic_label": "Robotics and Embodied AI",
       "count": 1,
-      "share": 2.63
+      "share": 2.38
     }
   ],
   "daily_digest": {
     "main_hotspots": [
-      "LLMs and Language: 11 papers (28.95%); representative paper: Agentic Environment Engineering for Large Language Models: A Survey of Environment Modeling, Synthesis, Evaluation, and Application.",
-      "Learning, Optimization, and Theory: 7 papers (18.42%); representative paper: Redesign Mixture-of-Experts Routers with Manifold Power Iteration.",
-      "Other AI: 5 papers (13.16%); representative paper: DeNovoSWE: Scaling Long-Horizon Environments for Generating Entire Repositories from Scratch."
+      "LLMs and Language: 12 papers (28.57%); representative paper: Agentic Environment Engineering for Large Language Models: A Survey of Environment Modeling, Synthesis, Evaluation, and Application.",
+      "Learning, Optimization, and Theory: 7 papers (16.67%); representative paper: Redesign Mixture-of-Experts Routers with Manifold Power Iteration.",
+      "Other AI: 5 papers (11.90%); representative paper: DeNovoSWE: Scaling Long-Horizon Environments for Generating Entire Repositories from Scratch."
     ],
-    "trend_summary": "Today's dominant clusters are LLMs and Language / Learning, Optimization, and Theory / Other AI; this suggests that attention is spread across application adaptation, evaluation, and model reliability. The strongest visible attention is on “Redesign Mixture-of-Experts Routers with Manifold Power Iteration” (74 upvotes).",
+    "trend_summary": "Today's dominant clusters are LLMs and Language / Learning, Optimization, and Theory / Other AI; this suggests that attention is spread across application adaptation, evaluation, and model reliability. The strongest visible attention is on “Toward Generalist Autonomous Research via Hypothesis-Tree Refinement” (102 upvotes).",
     "category_summaries": [
       {
         "topic_label": "LLMs and Language",
-        "count": 11,
-        "share": 28.95,
-        "summary": "LLMs and Language contributes 11 papers (28.95%), led by “Agentic Environment Engineering for Large Language Models: A Survey of Environment Modeling, Synthesis, Evaluation, and Application” with 55 upvotes."
+        "count": 12,
+        "share": 28.57,
+        "summary": "LLMs and Language contributes 12 papers (28.57%), led by “Agentic Environment Engineering for Large Language Models: A Survey of Environment Modeling, Synthesis, Evaluation, and Application” with 58 upvotes."
       },
       {
         "topic_label": "Learning, Optimization, and Theory",
         "count": 7,
-        "share": 18.42,
-        "summary": "Learning, Optimization, and Theory contributes 7 papers (18.42%), led by “Redesign Mixture-of-Experts Routers with Manifold Power Iteration” with 74 upvotes."
+        "share": 16.67,
+        "summary": "Learning, Optimization, and Theory contributes 7 papers (16.67%), led by “Redesign Mixture-of-Experts Routers with Manifold Power Iteration” with 80 upvotes."
       },
       {
         "topic_label": "Other AI",
         "count": 5,
-        "share": 13.16,
-        "summary": "Other AI contributes 5 papers (13.16%), led by “DeNovoSWE: Scaling Long-Horizon Environments for Generating Entire Repositories from Scratch” with 27 upvotes."
+        "share": 11.9,
+        "summary": "Other AI contributes 5 papers (11.90%), led by “DeNovoSWE: Scaling Long-Horizon Environments for Generating Entire Repositories from Scratch” with 30 upvotes."
       },
       {
         "topic_label": "Reasoning, Alignment, and Evaluation",
-        "count": 4,
-        "share": 10.53,
-        "summary": "Reasoning, Alignment, and Evaluation contributes 4 papers (10.53%), led by “Beyond Scalar Rewards by Internalizing Reasoning into Score Distributions” with 49 upvotes."
+        "count": 5,
+        "share": 11.9,
+        "summary": "Reasoning, Alignment, and Evaluation contributes 5 papers (11.90%), led by “Beyond Scalar Rewards by Internalizing Reasoning into Score Distributions” with 55 upvotes."
       },
       {
         "topic_label": "Agents and Planning",
-        "count": 3,
-        "share": 7.89,
-        "summary": "Agents and Planning contributes 3 papers (7.89%), led by “Toward Generalist Autonomous Research via Hypothesis-Tree Refinement” with 66 upvotes."
+        "count": 4,
+        "share": 9.52,
+        "summary": "Agents and Planning contributes 4 papers (9.52%), led by “Toward Generalist Autonomous Research via Hypothesis-Tree Refinement” with 102 upvotes."
       },
       {
         "topic_label": "Datasets and Benchmarks",
         "count": 3,
-        "share": 7.89,
-        "summary": "Datasets and Benchmarks contributes 3 papers (7.89%), led by “Claw-SWE-Bench: A Benchmark for Evaluating OpenClaw-style Agent Harnesses on Coding Tasks” with 55 upvotes."
+        "share": 7.14,
+        "summary": "Datasets and Benchmarks contributes 3 papers (7.14%), led by “Claw-SWE-Bench: A Benchmark for Evaluating OpenClaw-style Agent Harnesses on Coding Tasks” with 59 upvotes."
       },
       {
         "topic_label": "Multimodal Understanding and Vision",
-        "count": 2,
-        "share": 5.26,
-        "summary": "Multimodal Understanding and Vision contributes 2 papers (5.26%), led by “InternVideo3: Agentify Foundation Models with Multimodal Contextual Reasoning” with 17 upvotes."
+        "count": 3,
+        "share": 7.14,
+        "summary": "Multimodal Understanding and Vision contributes 3 papers (7.14%), led by “InternVideo3: Agentify Foundation Models with Multimodal Contextual Reasoning” with 20 upvotes."
       },
       {
         "topic_label": "Domain Applications",
         "count": 1,
-        "share": 2.63,
-        "summary": "Domain Applications contributes 1 papers (2.63%), led by “FlowLet: Conditional 3D Brain MRI Synthesis using Wavelet Flow Matching” with 1 upvote."
+        "share": 2.38,
+        "summary": "Domain Applications contributes 1 papers (2.38%), led by “FlowLet: Conditional 3D Brain MRI Synthesis using Wavelet Flow Matching” with 1 upvote."
       },
       {
         "topic_label": "Multimodal Agents",
         "count": 1,
-        "share": 2.63,
-        "summary": "Multimodal Agents contributes 1 papers (2.63%), led by “World Pilot: Steering Vision-Language-Action Models with World-Action Priors” with 22 upvotes."
+        "share": 2.38,
+        "summary": "Multimodal Agents contributes 1 papers (2.38%), led by “World Pilot: Steering Vision-Language-Action Models with World-Action Priors” with 23 upvotes."
       },
       {
         "topic_label": "Robotics and Embodied AI",
         "count": 1,
-        "share": 2.63,
-        "summary": "Robotics and Embodied AI contributes 1 papers (2.63%), led by “Embodied-R1.5: Evolving Physical Intelligence via Embodied Foundation Models” with 6 upvotes."
+        "share": 2.38,
+        "summary": "Robotics and Embodied AI contributes 1 papers (2.38%), led by “Embodied-R1.5: Evolving Physical Intelligence via Embodied Foundation Models” with 10 upvotes."
       }
     ],
     "top_papers": [
       {
-        "title": "Redesign Mixture-of-Experts Routers with Manifold Power Iteration",
-        "upvotes": 74,
-        "upvote_label": "74 upvotes",
-        "topic_label": "Learning, Optimization, and Theory",
-        "summary": "Router is the cornerstone component to the Mixture-of-Experts models.",
-        "hf_url": "https://huggingface.co/papers/2606.12397",
-        "arxiv_url": "https://arxiv.org/abs/2606.12397",
-        "arxiv_pdf_url": "https://arxiv.org/pdf/2606.12397",
-        "papers_cool_url": "https://papers.cool/arxiv/2606.12397"
-      },
-      {
         "title": "Toward Generalist Autonomous Research via Hypothesis-Tree Refinement",
-        "upvotes": 66,
-        "upvote_label": "66 upvotes",
+        "upvotes": 102,
+        "upvote_label": "102 upvotes",
         "topic_label": "Agents and Planning",
         "summary": "Scientific progress depends on a repeated loop of exploration, experimentation, and abstraction.",
         "hf_url": "https://huggingface.co/papers/2606.11926",
@@ -170,9 +159,20 @@
         "papers_cool_url": "https://papers.cool/arxiv/2606.11926"
       },
       {
+        "title": "Redesign Mixture-of-Experts Routers with Manifold Power Iteration",
+        "upvotes": 80,
+        "upvote_label": "80 upvotes",
+        "topic_label": "Learning, Optimization, and Theory",
+        "summary": "Router is the cornerstone component to the Mixture-of-Experts models.",
+        "hf_url": "https://huggingface.co/papers/2606.12397",
+        "arxiv_url": "https://arxiv.org/abs/2606.12397",
+        "arxiv_pdf_url": "https://arxiv.org/pdf/2606.12397",
+        "papers_cool_url": "https://papers.cool/arxiv/2606.12397"
+      },
+      {
         "title": "Claw-SWE-Bench: A Benchmark for Evaluating OpenClaw-style Agent Harnesses on Coding Tasks",
-        "upvotes": 55,
-        "upvote_label": "55 upvotes",
+        "upvotes": 59,
+        "upvote_label": "59 upvotes",
         "topic_label": "Datasets and Benchmarks",
         "summary": "General-purpose agents such as OpenClaw are increasingly used as autonomous tool users, but their coding ability is difficult to measure under SWE-bench: a generic agent does not by itself satisfy the clean Docker…",
         "hf_url": "https://huggingface.co/papers/2606.12344",
@@ -182,8 +182,8 @@
       },
       {
         "title": "Agentic Environment Engineering for Large Language Models: A Survey of Environment Modeling, Synthesis, Evaluation, and Application",
-        "upvotes": 55,
-        "upvote_label": "55 upvotes",
+        "upvotes": 58,
+        "upvote_label": "58 upvotes",
         "topic_label": "LLMs and Language",
         "summary": "Environments serve as interactive systems for large language model (LLM) based agents across diverse scenarios and play a crucial role in driving the continual evolution of model capabilities.",
         "hf_url": "https://huggingface.co/papers/2606.12191",
@@ -193,8 +193,8 @@
       },
       {
         "title": "Beyond Scalar Rewards by Internalizing Reasoning into Score Distributions",
-        "upvotes": 49,
-        "upvote_label": "49 upvotes",
+        "upvotes": 55,
+        "upvote_label": "55 upvotes",
         "topic_label": "Reasoning, Alignment, and Evaluation",
         "summary": "Reward models are central to text-to-image post-training, but visual preference is subjective and better represented as a distribution over rubric scores than as a deterministic scalar.",
         "hf_url": "https://huggingface.co/papers/2606.09076",
@@ -208,6 +208,10 @@
     {
       "submitted_by": "taesiri",
       "count": 5
+    },
+    {
+      "submitted_by": "Adam Nguyen",
+      "count": 1
     },
     {
       "submitted_by": "Amir El-Ghoussani",
@@ -224,43 +228,9 @@
     {
       "submitted_by": "Bharath Sivaram Narasimhan",
       "count": 1
-    },
-    {
-      "submitted_by": "Changyue Wang",
-      "count": 1
     }
   ],
   "top_upvoted": [
-    {
-      "report_date": "2026-06-11",
-      "paper_id": "2606.12397",
-      "title": "Redesign Mixture-of-Experts Routers with Manifold Power Iteration",
-      "authors": [
-        "Songhao Wu",
-        "Ang Lv",
-        "Ruobing Xie",
-        "Yankai Lin"
-      ],
-      "abstract": "Router is the cornerstone component to the Mixture-of-Experts models. Serving as expert proxies, the rows of the router matrix compute their similarity to the MoE inputs to determine which subset of experts is activated. Ideally, each router row is designed to encode the expert matrix into this representative vector, such that its dot-product with token can better reflect token-expert affinity. However, there exists no design principles to enforce this condensation. In this paper, we propose to align each router row with the principal singular direction of the associated expert, as this direction provides the most expressive mathematical description of a matrix. Based on this principle, we propose a router redesign with Manifold Power Iteration (MPI). Specifically, it introduces a \"Power-then-Retract\" paradigm, where a power iteration step is performed on the router weights, followed by a retraction to impose a norm constraint to ensure both efficiency and stability. Theoretically, we show that MPI drives router rows to converge toward the principal singular directions of associated experts. Empirically, we pretrain MoE model across scales from 1B to 11B parameters to confirm that this alignment facilitates more effective MoE models.",
-      "hf_url": "https://huggingface.co/papers/2606.12397",
-      "arxiv_url": "https://arxiv.org/abs/2606.12397",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.12397",
-      "papers_cool_url": "https://papers.cool/arxiv/2606.12397",
-      "github_url": "",
-      "submitted_by": "Songhao Wu",
-      "submitted_at": "2026-06-11T00:00:00.000Z",
-      "upvotes": 74,
-      "comments": 2,
-      "topic_key": "learning_theory",
-      "topic_label": "Learning, Optimization, and Theory",
-      "matched_terms": [
-        "\\bmixture\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Router is the cornerstone component to the Mixture-of-Experts models.",
-      "upvote_label": "74 upvotes"
-    },
     {
       "report_date": "2026-06-11",
       "paper_id": "2606.11926",
@@ -293,8 +263,8 @@
       "github_url": "",
       "submitted_by": "Yuyang Hu",
       "submitted_at": "2026-06-11T00:00:00.000Z",
-      "upvotes": 66,
-      "comments": 3,
+      "upvotes": 102,
+      "comments": 4,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
       "matched_terms": [
@@ -303,7 +273,37 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Scientific progress depends on a repeated loop of exploration, experimentation, and abstraction.",
-      "upvote_label": "66 upvotes"
+      "upvote_label": "102 upvotes"
+    },
+    {
+      "report_date": "2026-06-11",
+      "paper_id": "2606.12397",
+      "title": "Redesign Mixture-of-Experts Routers with Manifold Power Iteration",
+      "authors": [
+        "Songhao Wu",
+        "Ang Lv",
+        "Ruobing Xie",
+        "Yankai Lin"
+      ],
+      "abstract": "Router is the cornerstone component to the Mixture-of-Experts models. Serving as expert proxies, the rows of the router matrix compute their similarity to the MoE inputs to determine which subset of experts is activated. Ideally, each router row is designed to encode the expert matrix into this representative vector, such that its dot-product with token can better reflect token-expert affinity. However, there exists no design principles to enforce this condensation. In this paper, we propose to align each router row with the principal singular direction of the associated expert, as this direction provides the most expressive mathematical description of a matrix. Based on this principle, we propose a router redesign with Manifold Power Iteration (MPI). Specifically, it introduces a \"Power-then-Retract\" paradigm, where a power iteration step is performed on the router weights, followed by a retraction to impose a norm constraint to ensure both efficiency and stability. Theoretically, we show that MPI drives router rows to converge toward the principal singular directions of associated experts. Empirically, we pretrain MoE model across scales from 1B to 11B parameters to confirm that this alignment facilitates more effective MoE models.",
+      "hf_url": "https://huggingface.co/papers/2606.12397",
+      "arxiv_url": "https://arxiv.org/abs/2606.12397",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.12397",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.12397",
+      "github_url": "",
+      "submitted_by": "Songhao Wu",
+      "submitted_at": "2026-06-11T00:00:00.000Z",
+      "upvotes": 80,
+      "comments": 3,
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
+      "matched_terms": [
+        "\\bmixture\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Router is the cornerstone component to the Mixture-of-Experts models.",
+      "upvote_label": "80 upvotes"
     },
     {
       "report_date": "2026-06-11",
@@ -335,7 +335,7 @@
       "github_url": "",
       "submitted_by": "hankai",
       "submitted_at": "2026-06-11T00:00:00.000Z",
-      "upvotes": 55,
+      "upvotes": 59,
       "comments": 1,
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
@@ -345,7 +345,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "General-purpose agents such as OpenClaw are increasingly used as autonomous tool users, but their coding ability is difficult to measure under SWE-bench: a generic agent does not by itself satisfy the clean Docker…",
-      "upvote_label": "55 upvotes"
+      "upvote_label": "59 upvotes"
     },
     {
       "report_date": "2026-06-11",
@@ -376,7 +376,7 @@
       "github_url": "",
       "submitted_by": "Zhuoran Jin",
       "submitted_at": "2026-06-11T00:00:00.000Z",
-      "upvotes": 55,
+      "upvotes": 58,
       "comments": 1,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
@@ -387,7 +387,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Environments serve as interactive systems for large language model (LLM) based agents across diverse scenarios and play a crucial role in driving the continual evolution of model capabilities.",
-      "upvote_label": "55 upvotes"
+      "upvote_label": "58 upvotes"
     },
     {
       "report_date": "2026-06-11",
@@ -414,8 +414,8 @@
       "github_url": "",
       "submitted_by": "Huanqia Cai",
       "submitted_at": "2026-06-11T00:00:00.000Z",
-      "upvotes": 49,
-      "comments": 1,
+      "upvotes": 55,
+      "comments": 2,
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [
@@ -424,7 +424,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Reward models are central to text-to-image post-training, but visual preference is subjective and better represented as a distribution over rubric scores than as a deterministic scalar.",
-      "upvote_label": "49 upvotes"
+      "upvote_label": "55 upvotes"
     },
     {
       "report_date": "2026-06-11",
@@ -453,8 +453,8 @@
       "github_url": "",
       "submitted_by": "Wei Pang",
       "submitted_at": "2026-06-11T00:00:00.000Z",
-      "upvotes": 46,
-      "comments": 2,
+      "upvotes": 49,
+      "comments": 3,
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [
@@ -463,7 +463,38 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Tabular encoders are usually evaluated inside task-specific end-to-end pipelines, so models from different training paradigms are difficult to compare directly even when they operate on similar tabular signals.",
-      "upvote_label": "46 upvotes"
+      "upvote_label": "49 upvotes"
+    },
+    {
+      "report_date": "2026-06-11",
+      "paper_id": "2606.10728",
+      "title": "DeNovoSWE: Scaling Long-Horizon Environments for Generating Entire Repositories from Scratch",
+      "authors": [
+        "Jiale Zhao",
+        "Guoxin Chen",
+        "Fanzhe Meng",
+        "Wayne Xin Zhao",
+        "Ruihua Song",
+        "Ji-Rong Wen",
+        "Kai Jia"
+      ],
+      "abstract": "As the capabilities of LLM-based code agents continue to advance, their expected role is expanding beyond localized bug fixing in existing codebases toward architecting and implementing complete software repositories from high-level specifications. However, training agents for such long-horizon software engineering tasks remains difficult due to the scarcity of large-scale, verifiable whole-repository generation data. In this paper, we introduce DeNovoSWE, a large-scale dataset for whole-repository generation. DeNovoSWE comprises 4,818 high-quality instances, where each instance requires generating a complete repository from documentation. Our dataset is automatically constructed through a carefully designed sandboxed agentic workflow, enabling scalable curation without human annotation. DeNovoSWE is constructed with \"divide and conquer\" and critic-repair philosophy. To balance data quality and diversity, we further introduce a difficulty-aware trajectory filtering strategy. Fine-tuning Qwen3-30B-A3B on DeNovoSWE substantially improves long-horizon SWE performance, raising its score on the challenging BeyondSWE-Doc2Repo benchmark from 5.8% to 47.2%.",
+      "hf_url": "https://huggingface.co/papers/2606.10728",
+      "arxiv_url": "https://arxiv.org/abs/2606.10728",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.10728",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.10728",
+      "github_url": "",
+      "submitted_by": "Guoxin Chen",
+      "submitted_at": "2026-06-11T00:00:00.000Z",
+      "upvotes": 30,
+      "comments": 2,
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
+      "matched_terms": [],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "As the capabilities of LLM-based code agents continue to advance, their expected role is expanding beyond localized bug fixing in existing codebases toward architecting and implementing complete software repositories…",
+      "upvote_label": "30 upvotes"
     },
     {
       "report_date": "2026-06-11",
@@ -487,7 +518,7 @@
       "github_url": "",
       "submitted_by": "chaofanma",
       "submitted_at": "2026-06-11T00:00:00.000Z",
-      "upvotes": 27,
+      "upvotes": 28,
       "comments": 1,
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
@@ -497,46 +528,15 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Spatial reasoning from egocentric videos is inherently challenging because the observable evidence is constrained by the camera trajectory.",
-      "upvote_label": "27 upvotes"
-    },
-    {
-      "report_date": "2026-06-11",
-      "paper_id": "2606.10728",
-      "title": "DeNovoSWE: Scaling Long-Horizon Environments for Generating Entire Repositories from Scratch",
-      "authors": [
-        "Jiale Zhao",
-        "Guoxin Chen",
-        "Fanzhe Meng",
-        "Wayne Xin Zhao",
-        "Ruihua Song",
-        "Ji-Rong Wen",
-        "Kai Jia"
-      ],
-      "abstract": "As the capabilities of LLM-based code agents continue to advance, their expected role is expanding beyond localized bug fixing in existing codebases toward architecting and implementing complete software repositories from high-level specifications. However, training agents for such long-horizon software engineering tasks remains difficult due to the scarcity of large-scale, verifiable whole-repository generation data. In this paper, we introduce DeNovoSWE, a large-scale dataset for whole-repository generation. DeNovoSWE comprises 4,818 high-quality instances, where each instance requires generating a complete repository from documentation. Our dataset is automatically constructed through a carefully designed sandboxed agentic workflow, enabling scalable curation without human annotation. DeNovoSWE is constructed with \"divide and conquer\" and critic-repair philosophy. To balance data quality and diversity, we further introduce a difficulty-aware trajectory filtering strategy. Fine-tuning Qwen3-30B-A3B on DeNovoSWE substantially improves long-horizon SWE performance, raising its score on the challenging BeyondSWE-Doc2Repo benchmark from 5.8% to 47.2%.",
-      "hf_url": "https://huggingface.co/papers/2606.10728",
-      "arxiv_url": "https://arxiv.org/abs/2606.10728",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.10728",
-      "papers_cool_url": "https://papers.cool/arxiv/2606.10728",
-      "github_url": "",
-      "submitted_by": "Guoxin Chen",
-      "submitted_at": "2026-06-11T00:00:00.000Z",
-      "upvotes": 27,
-      "comments": 1,
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
-      "matched_terms": [],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "As the capabilities of LLM-based code agents continue to advance, their expected role is expanding beyond localized bug fixing in existing codebases toward architecting and implementing complete software repositories…",
-      "upvote_label": "27 upvotes"
+      "upvote_label": "28 upvotes"
     }
   ],
   "topics": [
     {
       "topic_label": "LLMs and Language",
-      "count": 11,
-      "share": 28.95,
-      "summary": "LLMs and Language contributes 11 papers (28.95%), led by “Agentic Environment Engineering for Large Language Models: A Survey of Environment Modeling, Synthesis, Evaluation, and Application” with 55 upvotes.",
+      "count": 12,
+      "share": 28.57,
+      "summary": "LLMs and Language contributes 12 papers (28.57%), led by “Agentic Environment Engineering for Large Language Models: A Survey of Environment Modeling, Synthesis, Evaluation, and Application” with 58 upvotes.",
       "papers": [
         {
           "report_date": "2026-06-11",
@@ -567,7 +567,7 @@
           "github_url": "",
           "submitted_by": "Zhuoran Jin",
           "submitted_at": "2026-06-11T00:00:00.000Z",
-          "upvotes": 55,
+          "upvotes": 58,
           "comments": 1,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
@@ -578,7 +578,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Environments serve as interactive systems for large language model (LLM) based agents across diverse scenarios and play a crucial role in driving the continual evolution of model capabilities.",
-          "upvote_label": "55 upvotes"
+          "upvote_label": "58 upvotes"
         },
         {
           "report_date": "2026-06-11",
@@ -598,7 +598,7 @@
           "submitted_by": "zhang",
           "submitted_at": "2026-06-11T00:00:00.000Z",
           "upvotes": 17,
-          "comments": 1,
+          "comments": 3,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
           "matched_terms": [
@@ -609,35 +609,6 @@
           "classification_confidence": null,
           "one_sentence_summary": "Large Language Models (LLMs) are increasingly used for code generation, raising concerns that they may be misused to produce malicious code.",
           "upvote_label": "17 upvotes"
-        },
-        {
-          "report_date": "2026-06-11",
-          "paper_id": "2606.11722",
-          "title": "ICA Lens: Interpreting Language Models Without Training Another Dictionary",
-          "authors": [
-            "Sida Liu",
-            "Feijiang Han"
-          ],
-          "abstract": "Finding interpretable directions in language-model representations is critical for understanding and controlling model behavior. Sparse autoencoders (SAEs) have become the standard tool for this purpose, but using them as the default first lens often requires training, storing, and evaluating large overcomplete dictionaries. This bottleneck limits rapid exploration and raises a fundamental question: how much interpretable structure is already visible from activation geometry before training another neural dictionary? Our intuition is simple: many interpretable directions are selective on tokens, and these directions should look less Gaussian than random directions. We therefore revisit independent component analysis (ICA), a classical method for finding non-Gaussian directions, as a compact lens for language-model interpretability. We find that ICA has been underestimated for LLM interpretability, because prior uses often relied on off-the-shelf ICA implementations that are brittle on LLM activations and lacked systematic tools for inspecting and evaluating the recovered directions. To bridge these gaps, we introduce ICALens, the first practical workflow for stable, efficient, and auditable ICA analysis of LLM representations. It combines an optimized GPU-parallel FastICA pipeline with LLM-specific stability recipes and better fitting diagnostics, enabling efficient and reliable layer-wise analysis. Across GPT-2 Small, Gemma 2 2B, and Qwen 3.5 2B Base, ICALens efficiently recovers compact, human-interpretable directions without per-layer gradient-based dictionary training. On SAEBench, ICA is competitive with public SAEs in sparse probing and outperforms them in targeted probe perturbation under small-to-medium budgets. These results suggest that ICA should not be viewed as a weak baseline, but as an efficient and complementary first lens for exploring language-model representations.",
-          "hf_url": "https://huggingface.co/papers/2606.11722",
-          "arxiv_url": "https://arxiv.org/abs/2606.11722",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2606.11722",
-          "papers_cool_url": "https://papers.cool/arxiv/2606.11722",
-          "github_url": "",
-          "submitted_by": "Feijiang Han",
-          "submitted_at": "2026-06-11T00:00:00.000Z",
-          "upvotes": 14,
-          "comments": 1,
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [
-            "\\blanguage models?\\b",
-            "\\blanguage\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null,
-          "one_sentence_summary": "Finding interpretable directions in language-model representations is critical for understanding and controlling model behavior.",
-          "upvote_label": "14 upvotes"
         },
         {
           "report_date": "2026-06-11",
@@ -656,8 +627,8 @@
           "github_url": "",
           "submitted_by": "Yu-Lun Liu",
           "submitted_at": "2026-06-11T00:00:00.000Z",
-          "upvotes": 13,
-          "comments": 1,
+          "upvotes": 15,
+          "comments": 2,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
           "matched_terms": [
@@ -668,7 +639,69 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Vision-language models (VLMs) project images into hundreds to thousands of visual tokens, making decoder inference expensive in both attention computation and KV-cache memory.",
-          "upvote_label": "13 upvotes"
+          "upvote_label": "15 upvotes"
+        },
+        {
+          "report_date": "2026-06-11",
+          "paper_id": "2606.11722",
+          "title": "ICA Lens: Interpreting Language Models Without Training Another Dictionary",
+          "authors": [
+            "Sida Liu",
+            "Feijiang Han"
+          ],
+          "abstract": "Finding interpretable directions in language-model representations is critical for understanding and controlling model behavior. Sparse autoencoders (SAEs) have become the standard tool for this purpose, but using them as the default first lens often requires training, storing, and evaluating large overcomplete dictionaries. This bottleneck limits rapid exploration and raises a fundamental question: how much interpretable structure is already visible from activation geometry before training another neural dictionary? Our intuition is simple: many interpretable directions are selective on tokens, and these directions should look less Gaussian than random directions. We therefore revisit independent component analysis (ICA), a classical method for finding non-Gaussian directions, as a compact lens for language-model interpretability. We find that ICA has been underestimated for LLM interpretability, because prior uses often relied on off-the-shelf ICA implementations that are brittle on LLM activations and lacked systematic tools for inspecting and evaluating the recovered directions. To bridge these gaps, we introduce ICALens, the first practical workflow for stable, efficient, and auditable ICA analysis of LLM representations. It combines an optimized GPU-parallel FastICA pipeline with LLM-specific stability recipes and better fitting diagnostics, enabling efficient and reliable layer-wise analysis. Across GPT-2 Small, Gemma 2 2B, and Qwen 3.5 2B Base, ICALens efficiently recovers compact, human-interpretable directions without per-layer gradient-based dictionary training. On SAEBench, ICA is competitive with public SAEs in sparse probing and outperforms them in targeted probe perturbation under small-to-medium budgets. These results suggest that ICA should not be viewed as a weak baseline, but as an efficient and complementary first lens for exploring language-model representations.",
+          "hf_url": "https://huggingface.co/papers/2606.11722",
+          "arxiv_url": "https://arxiv.org/abs/2606.11722",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2606.11722",
+          "papers_cool_url": "https://papers.cool/arxiv/2606.11722",
+          "github_url": "",
+          "submitted_by": "Feijiang Han",
+          "submitted_at": "2026-06-11T00:00:00.000Z",
+          "upvotes": 15,
+          "comments": 1,
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [
+            "\\blanguage models?\\b",
+            "\\blanguage\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "Finding interpretable directions in language-model representations is critical for understanding and controlling model behavior.",
+          "upvote_label": "15 upvotes"
+        },
+        {
+          "report_date": "2026-06-11",
+          "paper_id": "2606.05758",
+          "title": "DRIFT: A Residual Flow Adapter for Decoding Continuous Outputs in Vision-Language Models",
+          "authors": [
+            "Zhuoming Liu",
+            "Jinhong Lin",
+            "Kwan Man Cheng",
+            "Lin Zhang",
+            "Shayok Bagchi",
+            "Yin Li"
+          ],
+          "abstract": "Many modern vision-language models (VLMs) build on autoregressive decoding of discrete tokens. While text-based output interfaces enable scalable pretraining and strong zero-shot generalization across diverse tasks, they are poorly suited for problems that require precise continuous outputs, such as localizing temporal boundaries of events or generating robotic control actions. To address this challenge, we propose DRIFT, a general framework for adapting pretrained VLMs to continuous decoding tasks. DRIFT combines a base predictor, which provides a coarse estimate of the target output, with a generative refinement module based on flow matching that iteratively improves the prediction. This residual formulation transforms the generative modeling problem from learning a global output distribution to modeling a localized residual distribution around a strong prior, substantially simplifying optimization. We evaluate DRIFT on both perception and planning tasks, including visual grounding and robotic control. Across multiple tasks and architectures spanning MLLMs, VLAs, and WAMs, DRIFT consistently outperforms a strong set of regression- and generative-based solutions.",
+          "hf_url": "https://huggingface.co/papers/2606.05758",
+          "arxiv_url": "https://arxiv.org/abs/2606.05758",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2606.05758",
+          "papers_cool_url": "https://papers.cool/arxiv/2606.05758",
+          "github_url": "",
+          "submitted_by": "Zhuoming Liu",
+          "submitted_at": "2026-06-11T00:00:00.000Z",
+          "upvotes": 5,
+          "comments": 2,
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [
+            "\\blanguage models?\\b",
+            "\\blanguage\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "Many modern vision-language models (VLMs) build on autoregressive decoding of discrete tokens.",
+          "upvote_label": "5 upvotes"
         },
         {
           "report_date": "2026-06-11",
@@ -692,7 +725,7 @@
           "submitted_by": "Haochang Hao",
           "submitted_at": "2026-06-11T00:00:00.000Z",
           "upvotes": 4,
-          "comments": 1,
+          "comments": 2,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
           "matched_terms": [
@@ -721,7 +754,7 @@
           "submitted_by": "Mario Sanz",
           "submitted_at": "2026-06-11T00:00:00.000Z",
           "upvotes": 3,
-          "comments": 1,
+          "comments": 2,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
           "matched_terms": [
@@ -732,6 +765,35 @@
           "classification_confidence": null,
           "one_sentence_summary": "Prior work has shown that instruction-tuned large language models (LLMs) are less well calibrated than their base pre-trained counterparts.",
           "upvote_label": "3 upvotes"
+        },
+        {
+          "report_date": "2026-06-11",
+          "paper_id": "2606.12385",
+          "title": "Which Models Are Our Models Built On? Auditing Invisible Dependencies in Modern LLMs",
+          "authors": [
+            "Sanjay Adhikesaven",
+            "Haoxiang Sun",
+            "Sewon Min"
+          ],
+          "abstract": "Modern LLM training pipelines increasingly rely on other models to generate data, filter corpora, judge outputs, and guide development decisions. These dependencies are recursive: a model may depend on an upstream artifact whose own dependencies are documented only in separate releases and artifacts. As a result, the full dependency structure is fragmented across heterogeneous public artifacts, with complexity and recursive depth far outpacing humans' ability to trace. We introduce ModSleuth, an agentic system that recursively reconstructs LLM dependency graphs from public artifacts with source-grounded evidence. We find that the primary challenge is no longer information extraction, but defining what constitutes a dependency and reconciling artifact references across inconsistent documentation. We address these challenges through a formalization that distinguishes direct and indirect dependencies, represents heterogeneous pipeline roles through operation-centered relationships, and resolves artifact identities across names, versions, and repositories. Applying ModSleuth to four public-artifact-rich LLM releases, we recover 1,060 source-verified dependencies and construct large-scale dependency graphs of modern LLM development. These graphs reveal multi-hop license obligations, train-evaluation coupling, discrepancies between released and training-time artifacts, and documentation inconsistencies that would otherwise be difficult to uncover. We release ModSleuth and the resulting dependency graphs to support transparent analysis of the increasingly complex ecosystems underlying modern LLMs.",
+          "hf_url": "https://huggingface.co/papers/2606.12385",
+          "arxiv_url": "https://arxiv.org/abs/2606.12385",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2606.12385",
+          "papers_cool_url": "https://papers.cool/arxiv/2606.12385",
+          "github_url": "",
+          "submitted_by": "Haoxiang Sun",
+          "submitted_at": "2026-06-11T00:00:00.000Z",
+          "upvotes": 2,
+          "comments": 1,
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [
+            "\\b\\w*llms?\\w*\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "Modern LLM training pipelines increasingly rely on other models to generate data, filter corpora, judge outputs, and guide development decisions.",
+          "upvote_label": "2 upvotes"
         },
         {
           "report_date": "2026-06-11",
@@ -756,7 +818,7 @@
           "submitted_by": "Changyue Wang",
           "submitted_at": "2026-06-11T00:00:00.000Z",
           "upvotes": 2,
-          "comments": 1,
+          "comments": 2,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
           "matched_terms": [
@@ -767,68 +829,6 @@
           "classification_confidence": null,
           "one_sentence_summary": "Large language models (LLMs) are widely used to tackle complex tasks with autonomous workflows.",
           "upvote_label": "2 upvotes"
-        },
-        {
-          "report_date": "2026-06-11",
-          "paper_id": "2606.05758",
-          "title": "DRIFT: A Residual Flow Adapter for Decoding Continuous Outputs in Vision-Language Models",
-          "authors": [
-            "Zhuoming Liu",
-            "Jinhong Lin",
-            "Kwan Man Cheng",
-            "Lin Zhang",
-            "Shayok Bagchi",
-            "Yin Li"
-          ],
-          "abstract": "Many modern vision-language models (VLMs) build on autoregressive decoding of discrete tokens. While text-based output interfaces enable scalable pretraining and strong zero-shot generalization across diverse tasks, they are poorly suited for problems that require precise continuous outputs, such as localizing temporal boundaries of events or generating robotic control actions. To address this challenge, we propose DRIFT, a general framework for adapting pretrained VLMs to continuous decoding tasks. DRIFT combines a base predictor, which provides a coarse estimate of the target output, with a generative refinement module based on flow matching that iteratively improves the prediction. This residual formulation transforms the generative modeling problem from learning a global output distribution to modeling a localized residual distribution around a strong prior, substantially simplifying optimization. We evaluate DRIFT on both perception and planning tasks, including visual grounding and robotic control. Across multiple tasks and architectures spanning MLLMs, VLAs, and WAMs, DRIFT consistently outperforms a strong set of regression- and generative-based solutions.",
-          "hf_url": "https://huggingface.co/papers/2606.05758",
-          "arxiv_url": "https://arxiv.org/abs/2606.05758",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2606.05758",
-          "papers_cool_url": "https://papers.cool/arxiv/2606.05758",
-          "github_url": "",
-          "submitted_by": "Zhuoming Liu",
-          "submitted_at": "2026-06-11T00:00:00.000Z",
-          "upvotes": 2,
-          "comments": 1,
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [
-            "\\blanguage models?\\b",
-            "\\blanguage\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null,
-          "one_sentence_summary": "Many modern vision-language models (VLMs) build on autoregressive decoding of discrete tokens.",
-          "upvote_label": "2 upvotes"
-        },
-        {
-          "report_date": "2026-06-11",
-          "paper_id": "2606.12385",
-          "title": "Which Models Are Our Models Built On? Auditing Invisible Dependencies in Modern LLMs",
-          "authors": [
-            "Sanjay Adhikesaven",
-            "Haoxiang Sun",
-            "Sewon Min"
-          ],
-          "abstract": "Modern LLM training pipelines increasingly rely on other models to generate data, filter corpora, judge outputs, and guide development decisions. These dependencies are recursive: a model may depend on an upstream artifact whose own dependencies are documented only in separate releases and artifacts. As a result, the full dependency structure is fragmented across heterogeneous public artifacts, with complexity and recursive depth far outpacing humans' ability to trace. We introduce ModSleuth, an agentic system that recursively reconstructs LLM dependency graphs from public artifacts with source-grounded evidence. We find that the primary challenge is no longer information extraction, but defining what constitutes a dependency and reconciling artifact references across inconsistent documentation. We address these challenges through a formalization that distinguishes direct and indirect dependencies, represents heterogeneous pipeline roles through operation-centered relationships, and resolves artifact identities across names, versions, and repositories. Applying ModSleuth to four public-artifact-rich LLM releases, we recover 1,060 source-verified dependencies and construct large-scale dependency graphs of modern LLM development. These graphs reveal multi-hop license obligations, train-evaluation coupling, discrepancies between released and training-time artifacts, and documentation inconsistencies that would otherwise be difficult to uncover. We release ModSleuth and the resulting dependency graphs to support transparent analysis of the increasingly complex ecosystems underlying modern LLMs.",
-          "hf_url": "https://huggingface.co/papers/2606.12385",
-          "arxiv_url": "https://arxiv.org/abs/2606.12385",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2606.12385",
-          "papers_cool_url": "https://papers.cool/arxiv/2606.12385",
-          "github_url": "",
-          "submitted_by": "Haoxiang Sun",
-          "submitted_at": "2026-06-11T00:00:00.000Z",
-          "upvotes": 1,
-          "comments": 1,
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [
-            "\\b\\w*llms?\\w*\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null,
-          "one_sentence_summary": "Modern LLM training pipelines increasingly rely on other models to generate data, filter corpora, judge outputs, and guide development decisions.",
-          "upvote_label": "1 upvote"
         },
         {
           "report_date": "2026-06-11",
@@ -854,8 +854,8 @@
           "github_url": "",
           "submitted_by": "Parshin Shojaee",
           "submitted_at": "2026-06-11T00:00:00.000Z",
-          "upvotes": 1,
-          "comments": 1,
+          "upvotes": 2,
+          "comments": 2,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
           "matched_terms": [
@@ -865,7 +865,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Large language models (LLMs) are on the rise for accelerating scientific discovery, most recently in advanced tasks such as generating valid scientific hypotheses.",
-          "upvote_label": "1 upvote"
+          "upvote_label": "2 upvotes"
         },
         {
           "report_date": "2026-06-11",
@@ -886,8 +886,8 @@
           "github_url": "",
           "submitted_by": "N",
           "submitted_at": "2026-06-11T00:00:00.000Z",
-          "upvotes": 1,
-          "comments": 1,
+          "upvotes": 2,
+          "comments": 2,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
           "matched_terms": [
@@ -896,6 +896,37 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Post-training for reasoning models typically combines supervised fine-tuning with reinforcement learning from verifiable rewards, most commonly with GRPO.",
+          "upvote_label": "2 upvotes"
+        },
+        {
+          "report_date": "2026-06-11",
+          "paper_id": "2606.11482",
+          "title": "Building Social World Models with Large Language Models",
+          "authors": [
+            "Haofei Yu",
+            "Yining Zhao",
+            "Guanyu Lin",
+            "Jiaxuan You"
+          ],
+          "abstract": "Understanding and predicting how social beliefs evolve in response to events -- from policy changes to scientific breakthroughs -- remains a fundamental challenge in social science. Given LLMs' commonsense knowledge and social intelligence, we ask: Can LLMs model the dynamics of social beliefs following social events? In this work, we introduce the concept of the Social World Model (SWM), a general framework designed to capture how social beliefs evolve in response to major events. SWM learns state-transition functions for social beliefs by mining temporal patterns in social data and optimizing the evidence lower bound, without the need for explicit human annotations linking events to belief shifts, or for expensive census data. To evaluate SWM, we introduce a benchmark, SWM-bench, derived from real-world prediction markets, specifically Kalshi and Polymarket. SWM-bench includes over 12k data points for social belief prediction tasks spanning diverse domains such as politics, finance, and cryptocurrency. Our experimental results show that SWM significantly outperforms time-series foundation models, achieving state-of-the-art results on Kalshi data and demonstrating competitive performance on Polymarket data, while offering interpretable insights into the underlying mechanisms of social belief dynamics.",
+          "hf_url": "https://huggingface.co/papers/2606.11482",
+          "arxiv_url": "https://arxiv.org/abs/2606.11482",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2606.11482",
+          "papers_cool_url": "https://papers.cool/arxiv/2606.11482",
+          "github_url": "",
+          "submitted_by": "Haofei Yu",
+          "submitted_at": "2026-06-11T00:00:00.000Z",
+          "upvotes": 1,
+          "comments": 1,
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [
+            "\\blanguage models?\\b",
+            "\\blanguage\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "Understanding and predicting how social beliefs evolve in response to events -- from policy changes to scientific breakthroughs -- remains a fundamental challenge in social science.",
           "upvote_label": "1 upvote"
         }
       ]
@@ -903,8 +934,8 @@
     {
       "topic_label": "Learning, Optimization, and Theory",
       "count": 7,
-      "share": 18.42,
-      "summary": "Learning, Optimization, and Theory contributes 7 papers (18.42%), led by “Redesign Mixture-of-Experts Routers with Manifold Power Iteration” with 74 upvotes.",
+      "share": 16.67,
+      "summary": "Learning, Optimization, and Theory contributes 7 papers (16.67%), led by “Redesign Mixture-of-Experts Routers with Manifold Power Iteration” with 80 upvotes.",
       "papers": [
         {
           "report_date": "2026-06-11",
@@ -924,8 +955,8 @@
           "github_url": "",
           "submitted_by": "Songhao Wu",
           "submitted_at": "2026-06-11T00:00:00.000Z",
-          "upvotes": 74,
-          "comments": 2,
+          "upvotes": 80,
+          "comments": 3,
           "topic_key": "learning_theory",
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [
@@ -934,7 +965,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Router is the cornerstone component to the Mixture-of-Experts models.",
-          "upvote_label": "74 upvotes"
+          "upvote_label": "80 upvotes"
         },
         {
           "report_date": "2026-06-11",
@@ -967,7 +998,7 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-06-11T00:00:00.000Z",
-          "upvotes": 15,
+          "upvotes": 19,
           "comments": 3,
           "topic_key": "learning_theory",
           "topic_label": "Learning, Optimization, and Theory",
@@ -977,7 +1008,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Reinforcement learning (RL) has become a key component in modern large language models, yet the rollout stage remains the key bottleneck in RL training pipelines.",
-          "upvote_label": "15 upvotes"
+          "upvote_label": "19 upvotes"
         },
         {
           "report_date": "2026-06-11",
@@ -1002,8 +1033,8 @@
           "github_url": "",
           "submitted_by": "youyou",
           "submitted_at": "2026-06-11T00:00:00.000Z",
-          "upvotes": 9,
-          "comments": 1,
+          "upvotes": 10,
+          "comments": 2,
           "topic_key": "learning_theory",
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [
@@ -1013,37 +1044,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Autonomous LLM training is often framed as recipe search, which leaves the training harness largely static.",
-          "upvote_label": "9 upvotes"
-        },
-        {
-          "report_date": "2026-06-11",
-          "paper_id": "2606.07881",
-          "title": "Breaking the Bubble: Asynchronous Pipeline Parallel Training with Bounded Weight Inconsistency",
-          "authors": [
-            "Itay Elam",
-            "Eliron Rahimi",
-            "Avi Mendelson",
-            "Chaim Baskin"
-          ],
-          "abstract": "Pipeline parallelism is essential for training large neural networks, but existing schedules trade off throughput, memory, and optimization consistency. Synchronous pipelines preserve forward/backward weight consistency but suffer from bubbles; asynchronous pipelines remove bubbles but introduce weight-version mismatch, typically requiring weight stashing, prediction, or correction mechanisms. We introduce PACI (Pipeline Asynchronous training with Controlled Inconsistency), a bubble-free asynchronous pipeline method that bounds forward/backward version drift without weight stashing, prediction, additional parameter copies, or global synchronization. The key idea is to use local gradient accumulation as a version-control mechanism: by slowing parameter-version evolution relative to pipeline delay, PACI limits the number of optimizer updates crossed by any micro-batch while preserving steady-state utilization. In GPT-style language-model pretraining, PACI matches the stability and final perplexity of synchronous 1F1B-flush, retains the same peak memory footprint, achieves fully utilized pipeline throughput, and improves training time-to-accuracy by up to 1.69times over the fastest flush baseline. These results show that forward/backward inconsistency need not be eliminated: when explicitly bounded, it can be safely traded for substantial efficiency gains.",
-          "hf_url": "https://huggingface.co/papers/2606.07881",
-          "arxiv_url": "https://arxiv.org/abs/2606.07881",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2606.07881",
-          "papers_cool_url": "https://papers.cool/arxiv/2606.07881",
-          "github_url": "",
-          "submitted_by": "itay elam",
-          "submitted_at": "2026-06-11T00:00:00.000Z",
-          "upvotes": 6,
-          "comments": 1,
-          "topic_key": "learning_theory",
-          "topic_label": "Learning, Optimization, and Theory",
-          "matched_terms": [
-            "\\btraining\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null,
-          "one_sentence_summary": "Pipeline parallelism is essential for training large neural networks, but existing schedules trade off throughput, memory, and optimization consistency.",
-          "upvote_label": "6 upvotes"
+          "upvote_label": "10 upvotes"
         },
         {
           "report_date": "2026-06-11",
@@ -1063,7 +1064,7 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-06-11T00:00:00.000Z",
-          "upvotes": 5,
+          "upvotes": 7,
           "comments": 1,
           "topic_key": "learning_theory",
           "topic_label": "Learning, Optimization, and Theory",
@@ -1073,7 +1074,37 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Pretrained video generators are promising visual world models that exhibit emergent task-solving abilities; however, their reliance on detailed textual descriptions limits their direct use for planning and…",
-          "upvote_label": "5 upvotes"
+          "upvote_label": "7 upvotes"
+        },
+        {
+          "report_date": "2026-06-11",
+          "paper_id": "2606.07881",
+          "title": "Breaking the Bubble: Asynchronous Pipeline Parallel Training with Bounded Weight Inconsistency",
+          "authors": [
+            "Itay Elam",
+            "Eliron Rahimi",
+            "Avi Mendelson",
+            "Chaim Baskin"
+          ],
+          "abstract": "Pipeline parallelism is essential for training large neural networks, but existing schedules trade off throughput, memory, and optimization consistency. Synchronous pipelines preserve forward/backward weight consistency but suffer from bubbles; asynchronous pipelines remove bubbles but introduce weight-version mismatch, typically requiring weight stashing, prediction, or correction mechanisms. We introduce PACI (Pipeline Asynchronous training with Controlled Inconsistency), a bubble-free asynchronous pipeline method that bounds forward/backward version drift without weight stashing, prediction, additional parameter copies, or global synchronization. The key idea is to use local gradient accumulation as a version-control mechanism: by slowing parameter-version evolution relative to pipeline delay, PACI limits the number of optimizer updates crossed by any micro-batch while preserving steady-state utilization. In GPT-style language-model pretraining, PACI matches the stability and final perplexity of synchronous 1F1B-flush, retains the same peak memory footprint, achieves fully utilized pipeline throughput, and improves training time-to-accuracy by up to 1.69times over the fastest flush baseline. These results show that forward/backward inconsistency need not be eliminated: when explicitly bounded, it can be safely traded for substantial efficiency gains.",
+          "hf_url": "https://huggingface.co/papers/2606.07881",
+          "arxiv_url": "https://arxiv.org/abs/2606.07881",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2606.07881",
+          "papers_cool_url": "https://papers.cool/arxiv/2606.07881",
+          "github_url": "",
+          "submitted_by": "itay elam",
+          "submitted_at": "2026-06-11T00:00:00.000Z",
+          "upvotes": 7,
+          "comments": 2,
+          "topic_key": "learning_theory",
+          "topic_label": "Learning, Optimization, and Theory",
+          "matched_terms": [
+            "\\btraining\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "Pipeline parallelism is essential for training large neural networks, but existing schedules trade off throughput, memory, and optimization consistency.",
+          "upvote_label": "7 upvotes"
         },
         {
           "report_date": "2026-06-11",
@@ -1094,7 +1125,7 @@
           "submitted_by": "jinymusim",
           "submitted_at": "2026-06-11T00:00:00.000Z",
           "upvotes": 3,
-          "comments": 1,
+          "comments": 2,
           "topic_key": "learning_theory",
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [
@@ -1125,8 +1156,8 @@
           "github_url": "",
           "submitted_by": "Yaosheng Fu",
           "submitted_at": "2026-06-11T00:00:00.000Z",
-          "upvotes": 1,
-          "comments": 1,
+          "upvotes": 3,
+          "comments": 2,
           "topic_key": "learning_theory",
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [
@@ -1136,15 +1167,15 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Sparse attention reduces compute and memory bandwidth for long-context LLM inference.",
-          "upvote_label": "1 upvote"
+          "upvote_label": "3 upvotes"
         }
       ]
     },
     {
       "topic_label": "Other AI",
       "count": 5,
-      "share": 13.16,
-      "summary": "Other AI contributes 5 papers (13.16%), led by “DeNovoSWE: Scaling Long-Horizon Environments for Generating Entire Repositories from Scratch” with 27 upvotes.",
+      "share": 11.9,
+      "summary": "Other AI contributes 5 papers (11.90%), led by “DeNovoSWE: Scaling Long-Horizon Environments for Generating Entire Repositories from Scratch” with 30 upvotes.",
       "papers": [
         {
           "report_date": "2026-06-11",
@@ -1167,15 +1198,15 @@
           "github_url": "",
           "submitted_by": "Guoxin Chen",
           "submitted_at": "2026-06-11T00:00:00.000Z",
-          "upvotes": 27,
-          "comments": 1,
+          "upvotes": 30,
+          "comments": 2,
           "topic_key": "other_ai",
           "topic_label": "Other AI",
           "matched_terms": [],
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "As the capabilities of LLM-based code agents continue to advance, their expected role is expanding beyond localized bug fixing in existing codebases toward architecting and implementing complete software repositories…",
-          "upvote_label": "27 upvotes"
+          "upvote_label": "30 upvotes"
         },
         {
           "report_date": "2026-06-11",
@@ -1200,7 +1231,7 @@
           "github_url": "",
           "submitted_by": "Anamaria-Roberta Hartl",
           "submitted_at": "2026-06-11T00:00:00.000Z",
-          "upvotes": 20,
+          "upvotes": 22,
           "comments": 2,
           "topic_key": "other_ai",
           "topic_label": "Other AI",
@@ -1208,7 +1239,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Transformers dominate modern sequence modeling, but their quadratic attention incurs substantial computational cost.",
-          "upvote_label": "20 upvotes"
+          "upvote_label": "22 upvotes"
         },
         {
           "report_date": "2026-06-11",
@@ -1296,9 +1327,9 @@
     },
     {
       "topic_label": "Reasoning, Alignment, and Evaluation",
-      "count": 4,
-      "share": 10.53,
-      "summary": "Reasoning, Alignment, and Evaluation contributes 4 papers (10.53%), led by “Beyond Scalar Rewards by Internalizing Reasoning into Score Distributions” with 49 upvotes.",
+      "count": 5,
+      "share": 11.9,
+      "summary": "Reasoning, Alignment, and Evaluation contributes 5 papers (11.90%), led by “Beyond Scalar Rewards by Internalizing Reasoning into Score Distributions” with 55 upvotes.",
       "papers": [
         {
           "report_date": "2026-06-11",
@@ -1325,8 +1356,8 @@
           "github_url": "",
           "submitted_by": "Huanqia Cai",
           "submitted_at": "2026-06-11T00:00:00.000Z",
-          "upvotes": 49,
-          "comments": 1,
+          "upvotes": 55,
+          "comments": 2,
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [
@@ -1335,7 +1366,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Reward models are central to text-to-image post-training, but visual preference is subjective and better represented as a distribution over rubric scores than as a deterministic scalar.",
-          "upvote_label": "49 upvotes"
+          "upvote_label": "55 upvotes"
         },
         {
           "report_date": "2026-06-11",
@@ -1364,8 +1395,8 @@
           "github_url": "",
           "submitted_by": "Wei Pang",
           "submitted_at": "2026-06-11T00:00:00.000Z",
-          "upvotes": 46,
-          "comments": 2,
+          "upvotes": 49,
+          "comments": 3,
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [
@@ -1374,7 +1405,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Tabular encoders are usually evaluated inside task-specific end-to-end pipelines, so models from different training paradigms are difficult to compare directly even when they operate on similar tabular signals.",
-          "upvote_label": "46 upvotes"
+          "upvote_label": "49 upvotes"
         },
         {
           "report_date": "2026-06-11",
@@ -1398,7 +1429,7 @@
           "github_url": "",
           "submitted_by": "chaofanma",
           "submitted_at": "2026-06-11T00:00:00.000Z",
-          "upvotes": 27,
+          "upvotes": 28,
           "comments": 1,
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
@@ -1408,7 +1439,42 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Spatial reasoning from egocentric videos is inherently challenging because the observable evidence is constrained by the camera trajectory.",
-          "upvote_label": "27 upvotes"
+          "upvote_label": "28 upvotes"
+        },
+        {
+          "report_date": "2026-06-11",
+          "paper_id": "2606.08035",
+          "title": "DyCo-RL: Dynamic Cross-Modal Coordination for Visual Reasoning",
+          "authors": [
+            "Hangui Lin",
+            "Yan Shu",
+            "Zhengyang Liang",
+            "Chi Liu",
+            "Xiangrui Liu",
+            "Minghao Qin",
+            "Teng Long",
+            "Zheng Liu",
+            "Nicu Sebe"
+          ],
+          "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) has emerged as a leading paradigm for enhancing visual reasoning in Multimodal Large Language Models (MLLMs). However, existing RLVR methods optimize primarily for the reasoning outcome, fundamentally overlooking the fine-grained cross-modal coordination required during the generation process. Through token-level analyses and controlled interventions, we reveal that during Chain-of-Thought (CoT) reasoning, MLLMs frequently fail to dynamically alternate between extracting visual evidence and synthesizing textual context-a coordination breakdown that is causally linked to reasoning failures. Motivated by these findings, we propose DyCo-RL, which integrates dynamic cross-modal coordination into RLVR optimization. Specifically, DyCo-RL uses the Fisher-Rao geodesic distance to measure within-modality attention shifts, assigning tokens to either visually-oriented or text-oriented functional roles. It then evaluates the alignment between a token's actual attention allocation and its assigned role, leveraging this score for alignment-guided advantage reweighting during policy optimization. Extensive experiments demonstrate that the algorithm-agnostic DyCo-RL, when applied to Qwen2.5-VL-3B/7B, consistently improves four representative RLVR algorithms across seven benchmarks spanning visual-centric and mathematical reasoning.",
+          "hf_url": "https://huggingface.co/papers/2606.08035",
+          "arxiv_url": "https://arxiv.org/abs/2606.08035",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2606.08035",
+          "papers_cool_url": "https://papers.cool/arxiv/2606.08035",
+          "github_url": "",
+          "submitted_by": "Hangui Lin",
+          "submitted_at": "2026-06-11T00:00:00.000Z",
+          "upvotes": 13,
+          "comments": 2,
+          "topic_key": "reasoning_alignment_eval",
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "matched_terms": [
+            "\\breasoning\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "Reinforcement Learning with Verifiable Rewards (RLVR) has emerged as a leading paradigm for enhancing visual reasoning in Multimodal Large Language Models (MLLMs).",
+          "upvote_label": "13 upvotes"
         },
         {
           "report_date": "2026-06-11",
@@ -1435,7 +1501,7 @@
           "github_url": "",
           "submitted_by": "xianghao",
           "submitted_at": "2026-06-11T00:00:00.000Z",
-          "upvotes": 6,
+          "upvotes": 7,
           "comments": 1,
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
@@ -1445,15 +1511,15 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Reinforcement Learning (RL) with verifiable environments has emerged as a powerful approach for enhancing the reasoning capabilities of Large Language Models (LLMs).",
-          "upvote_label": "6 upvotes"
+          "upvote_label": "7 upvotes"
         }
       ]
     },
     {
       "topic_label": "Agents and Planning",
-      "count": 3,
-      "share": 7.89,
-      "summary": "Agents and Planning contributes 3 papers (7.89%), led by “Toward Generalist Autonomous Research via Hypothesis-Tree Refinement” with 66 upvotes.",
+      "count": 4,
+      "share": 9.52,
+      "summary": "Agents and Planning contributes 4 papers (9.52%), led by “Toward Generalist Autonomous Research via Hypothesis-Tree Refinement” with 102 upvotes.",
       "papers": [
         {
           "report_date": "2026-06-11",
@@ -1487,8 +1553,8 @@
           "github_url": "",
           "submitted_by": "Yuyang Hu",
           "submitted_at": "2026-06-11T00:00:00.000Z",
-          "upvotes": 66,
-          "comments": 3,
+          "upvotes": 102,
+          "comments": 4,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
           "matched_terms": [
@@ -1497,7 +1563,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Scientific progress depends on a repeated loop of exploration, experimentation, and abstraction.",
-          "upvote_label": "66 upvotes"
+          "upvote_label": "102 upvotes"
         },
         {
           "report_date": "2026-06-11",
@@ -1525,8 +1591,8 @@
           "github_url": "",
           "submitted_by": "Heming Zou",
           "submitted_at": "2026-06-11T00:00:00.000Z",
-          "upvotes": 15,
-          "comments": 1,
+          "upvotes": 17,
+          "comments": 3,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
           "matched_terms": [
@@ -1535,7 +1601,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Reinforcement learning with verifiable rewards (RLVR) is a promising approach for enhancing reasoning and agentic behavior in large language models.",
-          "upvote_label": "15 upvotes"
+          "upvote_label": "17 upvotes"
         },
         {
           "report_date": "2026-06-11",
@@ -1557,8 +1623,8 @@
           "github_url": "",
           "submitted_by": "Amirhossein Abaskohi",
           "submitted_at": "2026-06-11T00:00:00.000Z",
-          "upvotes": 1,
-          "comments": 1,
+          "upvotes": 4,
+          "comments": 2,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
           "matched_terms": [
@@ -1567,15 +1633,49 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Computer-use agents (CUAs) rely on visual observations of graphical user interfaces, where each screenshot is encoded into a large number of visual tokens.",
-          "upvote_label": "1 upvote"
+          "upvote_label": "4 upvotes"
+        },
+        {
+          "report_date": "2026-06-11",
+          "paper_id": "2606.04261",
+          "title": "Can Generalist Agents Automate Data Curation?",
+          "authors": [
+            "Feiyang Kang",
+            "Hanze Li",
+            "Adam Nguyen",
+            "Mahavir Dabas",
+            "Jiaqi W. Ma",
+            "Frederic Sala",
+            "Dawn Song",
+            "Ruoxi Jia"
+          ],
+          "abstract": "Curating training data is among the most consequential yet labor-intensive parts of modern AI development: practitioners iteratively propose, implement, evaluate, and revise data policies against noisy benchmark feedback. We ask whether generalist coding agents can automate this data-curation loop. We introduce *Curation-Bench*, an agent-centric benchmark that fixes the model, training recipe, and evaluation suite while giving agents command-line access to inspect data, implement policies, submit them to a fixed training/evaluation pipeline, and revise. In a vision-language instruction-tuning instantiation, out-of-the-box agents reach strong published data-selection baselines within ten iterations. However, trajectory analysis reveals a persistent *execution-research gap*: agents mainly tune local policy variants rather than explore new policy families, even when given strategy guides and paper references. Scaffolds requiring each iteration to cite, instantiate, and adapt a prior method shift agents toward method-guided exploration. The scaffolded agent autonomously composes -- without human design input -- a data-selection policy that outperforms strong published baselines at one-tenth their data budget. Overall, current agents can run the curation loop, but reliable data research requires scaffolded method adaptation, not open-ended prompting alone. Code and benchmark are open-sourced.",
+          "hf_url": "https://huggingface.co/papers/2606.04261",
+          "arxiv_url": "https://arxiv.org/abs/2606.04261",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2606.04261",
+          "papers_cool_url": "https://papers.cool/arxiv/2606.04261",
+          "github_url": "",
+          "submitted_by": "Adam Nguyen",
+          "submitted_at": "2026-06-11T00:00:00.000Z",
+          "upvotes": 2,
+          "comments": 2,
+          "topic_key": "agents_planning",
+          "topic_label": "Agents and Planning",
+          "matched_terms": [
+            "\\bagents?\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "Curating training data is among the most consequential yet labor-intensive parts of modern AI development: practitioners iteratively propose, implement, evaluate, and revise data policies against noisy benchmark…",
+          "upvote_label": "2 upvotes"
         }
       ]
     },
     {
       "topic_label": "Datasets and Benchmarks",
       "count": 3,
-      "share": 7.89,
-      "summary": "Datasets and Benchmarks contributes 3 papers (7.89%), led by “Claw-SWE-Bench: A Benchmark for Evaluating OpenClaw-style Agent Harnesses on Coding Tasks” with 55 upvotes.",
+      "share": 7.14,
+      "summary": "Datasets and Benchmarks contributes 3 papers (7.14%), led by “Claw-SWE-Bench: A Benchmark for Evaluating OpenClaw-style Agent Harnesses on Coding Tasks” with 59 upvotes.",
       "papers": [
         {
           "report_date": "2026-06-11",
@@ -1607,7 +1707,7 @@
           "github_url": "",
           "submitted_by": "hankai",
           "submitted_at": "2026-06-11T00:00:00.000Z",
-          "upvotes": 55,
+          "upvotes": 59,
           "comments": 1,
           "topic_key": "datasets_benchmarks",
           "topic_label": "Datasets and Benchmarks",
@@ -1617,7 +1717,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "General-purpose agents such as OpenClaw are increasingly used as autonomous tool users, but their coding ability is difficult to measure under SWE-bench: a generic agent does not by itself satisfy the clean Docker…",
-          "upvote_label": "55 upvotes"
+          "upvote_label": "59 upvotes"
         },
         {
           "report_date": "2026-06-11",
@@ -1652,7 +1752,7 @@
           "submitted_by": "Haoran Zhang",
           "submitted_at": "2026-06-11T00:00:00.000Z",
           "upvotes": 18,
-          "comments": 1,
+          "comments": 2,
           "topic_key": "datasets_benchmarks",
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [
@@ -1680,7 +1780,7 @@
           "submitted_by": "Bharath Sivaram Narasimhan",
           "submitted_at": "2026-06-11T00:00:00.000Z",
           "upvotes": 1,
-          "comments": 1,
+          "comments": 2,
           "topic_key": "datasets_benchmarks",
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [
@@ -1695,9 +1795,9 @@
     },
     {
       "topic_label": "Multimodal Understanding and Vision",
-      "count": 2,
-      "share": 5.26,
-      "summary": "Multimodal Understanding and Vision contributes 2 papers (5.26%), led by “InternVideo3: Agentify Foundation Models with Multimodal Contextual Reasoning” with 17 upvotes.",
+      "count": 3,
+      "share": 7.14,
+      "summary": "Multimodal Understanding and Vision contributes 3 papers (7.14%), led by “InternVideo3: Agentify Foundation Models with Multimodal Contextual Reasoning” with 20 upvotes.",
       "papers": [
         {
           "report_date": "2026-06-11",
@@ -1726,7 +1826,7 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-06-11T00:00:00.000Z",
-          "upvotes": 17,
+          "upvotes": 20,
           "comments": 1,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
@@ -1736,7 +1836,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Recent progress in foundation models has shifted toward agentic behavior involving multi-step reasoning and tool use.",
-          "upvote_label": "17 upvotes"
+          "upvote_label": "20 upvotes"
         },
         {
           "report_date": "2026-06-11",
@@ -1759,7 +1859,7 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-06-11T00:00:00.000Z",
-          "upvotes": 4,
+          "upvotes": 8,
           "comments": 1,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
@@ -1769,15 +1869,49 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Diffusion models have consistently driven progress in text-to-image generation.",
-          "upvote_label": "4 upvotes"
+          "upvote_label": "8 upvotes"
+        },
+        {
+          "report_date": "2026-06-11",
+          "paper_id": "2606.13674",
+          "title": "RepWAM: World Action Modeling with Representation Visual-Action Tokenizers",
+          "authors": [
+            "Junke Wang",
+            "Qihang Zhang",
+            "Shuai Yang",
+            "Yiming Luo",
+            "Yujun Shen",
+            "Zuxuan Wu",
+            "Yu-Gang Jiang",
+            "Yinghao Xu"
+          ],
+          "abstract": "This work presents RepWAM, a representation-centric world action model (WAM) built on representation visual-action tokenizers. Existing WAMs typically inherit reconstruction-oriented video tokenizers from pretrained video generation models. Although these tokenizers preserve visual fidelity, pixel reconstruction alone provides limited guidance for learning instruction-following dynamics that connect future prediction with robot control. To address this, we explore a semantic visual-action latent space for representation-centric world action modeling. Specifically, we train a representation visual-action tokenizer that maps visual inputs into aligned visual and latent action tokens. We then pretrain our WAM to jointly model future visual states and the latent actions that connect them under language instructions, followed by adaptation to real robot trajectories for closed-loop manipulation. Experiments on real-world manipulation tasks and simulation benchmarks show that RepWAM delivers strong performance across diverse manipulation settings, while ablations highlight the value of semantic visual-action tokenization over reconstruction-oriented alternatives. These results establish representation visual-action tokenization as a promising foundation for world action models and a step toward generalist robot policies. Code and weights will be available at https://github.com/wdrink/RepWAM.",
+          "hf_url": "https://huggingface.co/papers/2606.13674",
+          "arxiv_url": "https://arxiv.org/abs/2606.13674",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2606.13674",
+          "papers_cool_url": "https://papers.cool/arxiv/2606.13674",
+          "github_url": "",
+          "submitted_by": "Junke Wang",
+          "submitted_at": "2026-06-11T00:00:00.000Z",
+          "upvotes": 5,
+          "comments": 1,
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [
+            "\\bvisual\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "This work presents RepWAM, a representation-centric world action model (WAM) built on representation visual-action tokenizers.",
+          "upvote_label": "5 upvotes"
         }
       ]
     },
     {
       "topic_label": "Domain Applications",
       "count": 1,
-      "share": 2.63,
-      "summary": "Domain Applications contributes 1 papers (2.63%), led by “FlowLet: Conditional 3D Brain MRI Synthesis using Wavelet Flow Matching” with 1 upvote.",
+      "share": 2.38,
+      "summary": "Domain Applications contributes 1 papers (2.38%), led by “FlowLet: Conditional 3D Brain MRI Synthesis using Wavelet Flow Matching” with 1 upvote.",
       "papers": [
         {
           "report_date": "2026-06-11",
@@ -1799,7 +1933,7 @@
           "submitted_by": "Danilo Danese",
           "submitted_at": "2026-06-11T00:00:00.000Z",
           "upvotes": 1,
-          "comments": 1,
+          "comments": 2,
           "topic_key": "domain_applications",
           "topic_label": "Domain Applications",
           "matched_terms": [
@@ -1816,8 +1950,8 @@
     {
       "topic_label": "Multimodal Agents",
       "count": 1,
-      "share": 2.63,
-      "summary": "Multimodal Agents contributes 1 papers (2.63%), led by “World Pilot: Steering Vision-Language-Action Models with World-Action Priors” with 22 upvotes.",
+      "share": 2.38,
+      "summary": "Multimodal Agents contributes 1 papers (2.38%), led by “World Pilot: Steering Vision-Language-Action Models with World-Action Priors” with 23 upvotes.",
       "papers": [
         {
           "report_date": "2026-06-11",
@@ -1840,7 +1974,7 @@
           "github_url": "",
           "submitted_by": "Zefu Lin",
           "submitted_at": "2026-06-11T00:00:00.000Z",
-          "upvotes": 22,
+          "upvotes": 23,
           "comments": 1,
           "topic_key": "multimodal_agents",
           "topic_label": "Multimodal Agents",
@@ -1851,15 +1985,15 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Vision-Language-Action (VLA) models inherit semantic grounding from large-scale pretraining and perform competently across in-distribution manipulation tasks.",
-          "upvote_label": "22 upvotes"
+          "upvote_label": "23 upvotes"
         }
       ]
     },
     {
       "topic_label": "Robotics and Embodied AI",
       "count": 1,
-      "share": 2.63,
-      "summary": "Robotics and Embodied AI contributes 1 papers (2.63%), led by “Embodied-R1.5: Evolving Physical Intelligence via Embodied Foundation Models” with 6 upvotes.",
+      "share": 2.38,
+      "summary": "Robotics and Embodied AI contributes 1 papers (2.38%), led by “Embodied-R1.5: Evolving Physical Intelligence via Embodied Foundation Models” with 10 upvotes.",
       "papers": [
         {
           "report_date": "2026-06-11",
@@ -1898,7 +2032,7 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-06-11T00:00:00.000Z",
-          "upvotes": 6,
+          "upvotes": 10,
           "comments": 1,
           "topic_key": "robotics_embodied",
           "topic_label": "Robotics and Embodied AI",
@@ -1908,42 +2042,12 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "We introduce Embodied-R1.5, a unified Embodied Foundation Model (EFM) that integrates comprehensive embodied reasoning capabilities, spanning embodied cognition, task planning, correction, and pointing, within a…",
-          "upvote_label": "6 upvotes"
+          "upvote_label": "10 upvotes"
         }
       ]
     }
   ],
   "papers": [
-    {
-      "report_date": "2026-06-11",
-      "paper_id": "2606.12397",
-      "title": "Redesign Mixture-of-Experts Routers with Manifold Power Iteration",
-      "authors": [
-        "Songhao Wu",
-        "Ang Lv",
-        "Ruobing Xie",
-        "Yankai Lin"
-      ],
-      "abstract": "Router is the cornerstone component to the Mixture-of-Experts models. Serving as expert proxies, the rows of the router matrix compute their similarity to the MoE inputs to determine which subset of experts is activated. Ideally, each router row is designed to encode the expert matrix into this representative vector, such that its dot-product with token can better reflect token-expert affinity. However, there exists no design principles to enforce this condensation. In this paper, we propose to align each router row with the principal singular direction of the associated expert, as this direction provides the most expressive mathematical description of a matrix. Based on this principle, we propose a router redesign with Manifold Power Iteration (MPI). Specifically, it introduces a \"Power-then-Retract\" paradigm, where a power iteration step is performed on the router weights, followed by a retraction to impose a norm constraint to ensure both efficiency and stability. Theoretically, we show that MPI drives router rows to converge toward the principal singular directions of associated experts. Empirically, we pretrain MoE model across scales from 1B to 11B parameters to confirm that this alignment facilitates more effective MoE models.",
-      "hf_url": "https://huggingface.co/papers/2606.12397",
-      "arxiv_url": "https://arxiv.org/abs/2606.12397",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.12397",
-      "papers_cool_url": "https://papers.cool/arxiv/2606.12397",
-      "github_url": "",
-      "submitted_by": "Songhao Wu",
-      "submitted_at": "2026-06-11T00:00:00.000Z",
-      "upvotes": 74,
-      "comments": 2,
-      "topic_key": "learning_theory",
-      "topic_label": "Learning, Optimization, and Theory",
-      "matched_terms": [
-        "\\bmixture\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Router is the cornerstone component to the Mixture-of-Experts models.",
-      "upvote_label": "74 upvotes"
-    },
     {
       "report_date": "2026-06-11",
       "paper_id": "2606.11926",
@@ -1976,8 +2080,8 @@
       "github_url": "",
       "submitted_by": "Yuyang Hu",
       "submitted_at": "2026-06-11T00:00:00.000Z",
-      "upvotes": 66,
-      "comments": 3,
+      "upvotes": 102,
+      "comments": 4,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
       "matched_terms": [
@@ -1986,7 +2090,37 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Scientific progress depends on a repeated loop of exploration, experimentation, and abstraction.",
-      "upvote_label": "66 upvotes"
+      "upvote_label": "102 upvotes"
+    },
+    {
+      "report_date": "2026-06-11",
+      "paper_id": "2606.12397",
+      "title": "Redesign Mixture-of-Experts Routers with Manifold Power Iteration",
+      "authors": [
+        "Songhao Wu",
+        "Ang Lv",
+        "Ruobing Xie",
+        "Yankai Lin"
+      ],
+      "abstract": "Router is the cornerstone component to the Mixture-of-Experts models. Serving as expert proxies, the rows of the router matrix compute their similarity to the MoE inputs to determine which subset of experts is activated. Ideally, each router row is designed to encode the expert matrix into this representative vector, such that its dot-product with token can better reflect token-expert affinity. However, there exists no design principles to enforce this condensation. In this paper, we propose to align each router row with the principal singular direction of the associated expert, as this direction provides the most expressive mathematical description of a matrix. Based on this principle, we propose a router redesign with Manifold Power Iteration (MPI). Specifically, it introduces a \"Power-then-Retract\" paradigm, where a power iteration step is performed on the router weights, followed by a retraction to impose a norm constraint to ensure both efficiency and stability. Theoretically, we show that MPI drives router rows to converge toward the principal singular directions of associated experts. Empirically, we pretrain MoE model across scales from 1B to 11B parameters to confirm that this alignment facilitates more effective MoE models.",
+      "hf_url": "https://huggingface.co/papers/2606.12397",
+      "arxiv_url": "https://arxiv.org/abs/2606.12397",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.12397",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.12397",
+      "github_url": "",
+      "submitted_by": "Songhao Wu",
+      "submitted_at": "2026-06-11T00:00:00.000Z",
+      "upvotes": 80,
+      "comments": 3,
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
+      "matched_terms": [
+        "\\bmixture\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Router is the cornerstone component to the Mixture-of-Experts models.",
+      "upvote_label": "80 upvotes"
     },
     {
       "report_date": "2026-06-11",
@@ -2018,7 +2152,7 @@
       "github_url": "",
       "submitted_by": "hankai",
       "submitted_at": "2026-06-11T00:00:00.000Z",
-      "upvotes": 55,
+      "upvotes": 59,
       "comments": 1,
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
@@ -2028,7 +2162,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "General-purpose agents such as OpenClaw are increasingly used as autonomous tool users, but their coding ability is difficult to measure under SWE-bench: a generic agent does not by itself satisfy the clean Docker…",
-      "upvote_label": "55 upvotes"
+      "upvote_label": "59 upvotes"
     },
     {
       "report_date": "2026-06-11",
@@ -2059,7 +2193,7 @@
       "github_url": "",
       "submitted_by": "Zhuoran Jin",
       "submitted_at": "2026-06-11T00:00:00.000Z",
-      "upvotes": 55,
+      "upvotes": 58,
       "comments": 1,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
@@ -2070,7 +2204,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Environments serve as interactive systems for large language model (LLM) based agents across diverse scenarios and play a crucial role in driving the continual evolution of model capabilities.",
-      "upvote_label": "55 upvotes"
+      "upvote_label": "58 upvotes"
     },
     {
       "report_date": "2026-06-11",
@@ -2097,8 +2231,8 @@
       "github_url": "",
       "submitted_by": "Huanqia Cai",
       "submitted_at": "2026-06-11T00:00:00.000Z",
-      "upvotes": 49,
-      "comments": 1,
+      "upvotes": 55,
+      "comments": 2,
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [
@@ -2107,7 +2241,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Reward models are central to text-to-image post-training, but visual preference is subjective and better represented as a distribution over rubric scores than as a deterministic scalar.",
-      "upvote_label": "49 upvotes"
+      "upvote_label": "55 upvotes"
     },
     {
       "report_date": "2026-06-11",
@@ -2136,8 +2270,8 @@
       "github_url": "",
       "submitted_by": "Wei Pang",
       "submitted_at": "2026-06-11T00:00:00.000Z",
-      "upvotes": 46,
-      "comments": 2,
+      "upvotes": 49,
+      "comments": 3,
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [
@@ -2146,7 +2280,38 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Tabular encoders are usually evaluated inside task-specific end-to-end pipelines, so models from different training paradigms are difficult to compare directly even when they operate on similar tabular signals.",
-      "upvote_label": "46 upvotes"
+      "upvote_label": "49 upvotes"
+    },
+    {
+      "report_date": "2026-06-11",
+      "paper_id": "2606.10728",
+      "title": "DeNovoSWE: Scaling Long-Horizon Environments for Generating Entire Repositories from Scratch",
+      "authors": [
+        "Jiale Zhao",
+        "Guoxin Chen",
+        "Fanzhe Meng",
+        "Wayne Xin Zhao",
+        "Ruihua Song",
+        "Ji-Rong Wen",
+        "Kai Jia"
+      ],
+      "abstract": "As the capabilities of LLM-based code agents continue to advance, their expected role is expanding beyond localized bug fixing in existing codebases toward architecting and implementing complete software repositories from high-level specifications. However, training agents for such long-horizon software engineering tasks remains difficult due to the scarcity of large-scale, verifiable whole-repository generation data. In this paper, we introduce DeNovoSWE, a large-scale dataset for whole-repository generation. DeNovoSWE comprises 4,818 high-quality instances, where each instance requires generating a complete repository from documentation. Our dataset is automatically constructed through a carefully designed sandboxed agentic workflow, enabling scalable curation without human annotation. DeNovoSWE is constructed with \"divide and conquer\" and critic-repair philosophy. To balance data quality and diversity, we further introduce a difficulty-aware trajectory filtering strategy. Fine-tuning Qwen3-30B-A3B on DeNovoSWE substantially improves long-horizon SWE performance, raising its score on the challenging BeyondSWE-Doc2Repo benchmark from 5.8% to 47.2%.",
+      "hf_url": "https://huggingface.co/papers/2606.10728",
+      "arxiv_url": "https://arxiv.org/abs/2606.10728",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.10728",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.10728",
+      "github_url": "",
+      "submitted_by": "Guoxin Chen",
+      "submitted_at": "2026-06-11T00:00:00.000Z",
+      "upvotes": 30,
+      "comments": 2,
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
+      "matched_terms": [],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "As the capabilities of LLM-based code agents continue to advance, their expected role is expanding beyond localized bug fixing in existing codebases toward architecting and implementing complete software repositories…",
+      "upvote_label": "30 upvotes"
     },
     {
       "report_date": "2026-06-11",
@@ -2170,7 +2335,7 @@
       "github_url": "",
       "submitted_by": "chaofanma",
       "submitted_at": "2026-06-11T00:00:00.000Z",
-      "upvotes": 27,
+      "upvotes": 28,
       "comments": 1,
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
@@ -2180,38 +2345,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Spatial reasoning from egocentric videos is inherently challenging because the observable evidence is constrained by the camera trajectory.",
-      "upvote_label": "27 upvotes"
-    },
-    {
-      "report_date": "2026-06-11",
-      "paper_id": "2606.10728",
-      "title": "DeNovoSWE: Scaling Long-Horizon Environments for Generating Entire Repositories from Scratch",
-      "authors": [
-        "Jiale Zhao",
-        "Guoxin Chen",
-        "Fanzhe Meng",
-        "Wayne Xin Zhao",
-        "Ruihua Song",
-        "Ji-Rong Wen",
-        "Kai Jia"
-      ],
-      "abstract": "As the capabilities of LLM-based code agents continue to advance, their expected role is expanding beyond localized bug fixing in existing codebases toward architecting and implementing complete software repositories from high-level specifications. However, training agents for such long-horizon software engineering tasks remains difficult due to the scarcity of large-scale, verifiable whole-repository generation data. In this paper, we introduce DeNovoSWE, a large-scale dataset for whole-repository generation. DeNovoSWE comprises 4,818 high-quality instances, where each instance requires generating a complete repository from documentation. Our dataset is automatically constructed through a carefully designed sandboxed agentic workflow, enabling scalable curation without human annotation. DeNovoSWE is constructed with \"divide and conquer\" and critic-repair philosophy. To balance data quality and diversity, we further introduce a difficulty-aware trajectory filtering strategy. Fine-tuning Qwen3-30B-A3B on DeNovoSWE substantially improves long-horizon SWE performance, raising its score on the challenging BeyondSWE-Doc2Repo benchmark from 5.8% to 47.2%.",
-      "hf_url": "https://huggingface.co/papers/2606.10728",
-      "arxiv_url": "https://arxiv.org/abs/2606.10728",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.10728",
-      "papers_cool_url": "https://papers.cool/arxiv/2606.10728",
-      "github_url": "",
-      "submitted_by": "Guoxin Chen",
-      "submitted_at": "2026-06-11T00:00:00.000Z",
-      "upvotes": 27,
-      "comments": 1,
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
-      "matched_terms": [],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "As the capabilities of LLM-based code agents continue to advance, their expected role is expanding beyond localized bug fixing in existing codebases toward architecting and implementing complete software repositories…",
-      "upvote_label": "27 upvotes"
+      "upvote_label": "28 upvotes"
     },
     {
       "report_date": "2026-06-11",
@@ -2234,7 +2368,7 @@
       "github_url": "",
       "submitted_by": "Zefu Lin",
       "submitted_at": "2026-06-11T00:00:00.000Z",
-      "upvotes": 22,
+      "upvotes": 23,
       "comments": 1,
       "topic_key": "multimodal_agents",
       "topic_label": "Multimodal Agents",
@@ -2245,7 +2379,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Vision-Language-Action (VLA) models inherit semantic grounding from large-scale pretraining and perform competently across in-distribution manipulation tasks.",
-      "upvote_label": "22 upvotes"
+      "upvote_label": "23 upvotes"
     },
     {
       "report_date": "2026-06-11",
@@ -2270,7 +2404,7 @@
       "github_url": "",
       "submitted_by": "Anamaria-Roberta Hartl",
       "submitted_at": "2026-06-11T00:00:00.000Z",
-      "upvotes": 20,
+      "upvotes": 22,
       "comments": 2,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
@@ -2278,7 +2412,89 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Transformers dominate modern sequence modeling, but their quadratic attention incurs substantial computational cost.",
+      "upvote_label": "22 upvotes"
+    },
+    {
+      "report_date": "2026-06-11",
+      "paper_id": "2606.12195",
+      "title": "InternVideo3: Agentify Foundation Models with Multimodal Contextual Reasoning",
+      "authors": [
+        "Ziang Yan",
+        "Sheng Xia",
+        "Jiashuo Yu",
+        "Yue Wu",
+        "Tianxiang Jiang",
+        "Songze Li",
+        "Kanghui Tian",
+        "Yicheng Xu",
+        "Yinan He",
+        "Kai Chen",
+        "Limin Wang",
+        "Yu Qiao",
+        "Yi Wang"
+      ],
+      "abstract": "Recent progress in foundation models has shifted toward agentic behavior involving multi-step reasoning and tool use. However, open-source efforts largely focus on text-dominant settings, leaving long-horizon multimodal tasks underexplored. This gap is evident in video tasks requiring sustained temporal understanding and iterative interaction. We present InternVideo3, a framework enhancing these capabilities via Multimodal Contextual Reasoning (MCR). MCR treats understanding as a closed-loop process over a shared, evolving context containing observations, instructions, reasoning, tool actions, and memory. This frames long-video understanding as evidence accumulation and verification. To ensure efficiency, we introduce Multimodal Multi-head Latent Attention (M^2LA), a token-preserving reparameterization compressing KV-cache states while retaining the full token stream. Our staged training includes continued pretraining, short-to-long supervised fine-tuning, rule-based reinforcement learning, and on-policy distillation. Experiments show InternVideo3 achieves strong performance on benchmarks like Video-MME, MLVU, and EgoSchema. We further instantiate the model as a video agent with retrieval tools, demonstrating robust evidence-grounded behavior. Our results suggest that efficient context handling and closed-loop reasoning are vital for adapting open multimodal models toward long-horizon visually grounded agency.",
+      "hf_url": "https://huggingface.co/papers/2606.12195",
+      "arxiv_url": "https://arxiv.org/abs/2606.12195",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.12195",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.12195",
+      "github_url": "",
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-06-11T00:00:00.000Z",
+      "upvotes": 20,
+      "comments": 1,
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
+      "matched_terms": [
+        "\\bmultimodal\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Recent progress in foundation models has shifted toward agentic behavior involving multi-step reasoning and tool use.",
       "upvote_label": "20 upvotes"
+    },
+    {
+      "report_date": "2026-06-11",
+      "paper_id": "2606.12370",
+      "title": "Breaking Entropy Bounds: Accelerating RL Training via MTP with Rejection Sampling",
+      "authors": [
+        "Yucheng Li",
+        "Huiqiang Jiang",
+        "Yang Xu",
+        "Jianxin Yang",
+        "Yi Zhang",
+        "Yizhong Cao",
+        "Yuhao Shen",
+        "Fan Zhou",
+        "Rui Men",
+        "Jianwei Zhang",
+        "An Yang",
+        "Bowen Yu",
+        "Bo Zheng",
+        "Fei Huang",
+        "Junyang Lin",
+        "Dayiheng Liu",
+        "Jingren Zhou"
+      ],
+      "abstract": "Reinforcement learning (RL) has become a key component in modern large language models, yet the rollout stage remains the key bottleneck in RL training pipelines. Although Multi-Token Prediction (MTP) offers a natural solution to accelerate rollouts through speculative decoding, many studies have observed that MTP acceptance rates degrade significantly during RL training, leading to limited speedup performance. To address this bottleneck, we present Bebop, a systematic study of MTP in LLM post-training, and offer practical recipes to integrate MTP into large-scale RL pipelines. First, we reveal that the MTP acceptance rate is fundamentally bounded by the fluctuation of model entropy, which demonstrates a clear negative linear relationship with the rise of entropy in the RL stage. Second, we show that probabilistic rejection sampling largely alleviates the disturbance introduced by entropy in RL compared to greedy draft sampling. We further identify that the conventional MTP training objectives (cross-entropy or KL) are suboptimal in such settings, and therefore we propose a novel end-to-end TV loss that directly optimizes multi-step rejection sampling acceptance rate, yielding ~10% acceptance rate improvements, achieving up to 95% acceptance rates and up to 25% extra inference throughput gains across mathematical reasoning, code generation, and agentic tasks. Third, we test various online MTP training strategies during RL and show that pre-RL MTP training with e2e TV loss and rejection sampling achieves a consistent acceptance rate and speedup throughout the entire RL, eliminating the need for costly online MTP updating. We provide extensive experiments and analysis that validate our findings. Experimental results show our method achieves up to 1.8x end-to-end acceleration in async RL training of Qwen3.5, Qwen3.6, and Qwen3.7 models.",
+      "hf_url": "https://huggingface.co/papers/2606.12370",
+      "arxiv_url": "https://arxiv.org/abs/2606.12370",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.12370",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.12370",
+      "github_url": "",
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-06-11T00:00:00.000Z",
+      "upvotes": 19,
+      "comments": 3,
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
+      "matched_terms": [
+        "\\btraining\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Reinforcement learning (RL) has become a key component in modern large language models, yet the rollout stage remains the key bottleneck in RL training pipelines.",
+      "upvote_label": "19 upvotes"
     },
     {
       "report_date": "2026-06-11",
@@ -2313,7 +2529,7 @@
       "submitted_by": "Haoran Zhang",
       "submitted_at": "2026-06-11T00:00:00.000Z",
       "upvotes": 18,
-      "comments": 1,
+      "comments": 2,
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [
@@ -2342,7 +2558,7 @@
       "submitted_by": "zhang",
       "submitted_at": "2026-06-11T00:00:00.000Z",
       "upvotes": 17,
-      "comments": 1,
+      "comments": 3,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [
@@ -2353,88 +2569,6 @@
       "classification_confidence": null,
       "one_sentence_summary": "Large Language Models (LLMs) are increasingly used for code generation, raising concerns that they may be misused to produce malicious code.",
       "upvote_label": "17 upvotes"
-    },
-    {
-      "report_date": "2026-06-11",
-      "paper_id": "2606.12195",
-      "title": "InternVideo3: Agentify Foundation Models with Multimodal Contextual Reasoning",
-      "authors": [
-        "Ziang Yan",
-        "Sheng Xia",
-        "Jiashuo Yu",
-        "Yue Wu",
-        "Tianxiang Jiang",
-        "Songze Li",
-        "Kanghui Tian",
-        "Yicheng Xu",
-        "Yinan He",
-        "Kai Chen",
-        "Limin Wang",
-        "Yu Qiao",
-        "Yi Wang"
-      ],
-      "abstract": "Recent progress in foundation models has shifted toward agentic behavior involving multi-step reasoning and tool use. However, open-source efforts largely focus on text-dominant settings, leaving long-horizon multimodal tasks underexplored. This gap is evident in video tasks requiring sustained temporal understanding and iterative interaction. We present InternVideo3, a framework enhancing these capabilities via Multimodal Contextual Reasoning (MCR). MCR treats understanding as a closed-loop process over a shared, evolving context containing observations, instructions, reasoning, tool actions, and memory. This frames long-video understanding as evidence accumulation and verification. To ensure efficiency, we introduce Multimodal Multi-head Latent Attention (M^2LA), a token-preserving reparameterization compressing KV-cache states while retaining the full token stream. Our staged training includes continued pretraining, short-to-long supervised fine-tuning, rule-based reinforcement learning, and on-policy distillation. Experiments show InternVideo3 achieves strong performance on benchmarks like Video-MME, MLVU, and EgoSchema. We further instantiate the model as a video agent with retrieval tools, demonstrating robust evidence-grounded behavior. Our results suggest that efficient context handling and closed-loop reasoning are vital for adapting open multimodal models toward long-horizon visually grounded agency.",
-      "hf_url": "https://huggingface.co/papers/2606.12195",
-      "arxiv_url": "https://arxiv.org/abs/2606.12195",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.12195",
-      "papers_cool_url": "https://papers.cool/arxiv/2606.12195",
-      "github_url": "",
-      "submitted_by": "taesiri",
-      "submitted_at": "2026-06-11T00:00:00.000Z",
-      "upvotes": 17,
-      "comments": 1,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [
-        "\\bmultimodal\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Recent progress in foundation models has shifted toward agentic behavior involving multi-step reasoning and tool use.",
-      "upvote_label": "17 upvotes"
-    },
-    {
-      "report_date": "2026-06-11",
-      "paper_id": "2606.12370",
-      "title": "Breaking Entropy Bounds: Accelerating RL Training via MTP with Rejection Sampling",
-      "authors": [
-        "Yucheng Li",
-        "Huiqiang Jiang",
-        "Yang Xu",
-        "Jianxin Yang",
-        "Yi Zhang",
-        "Yizhong Cao",
-        "Yuhao Shen",
-        "Fan Zhou",
-        "Rui Men",
-        "Jianwei Zhang",
-        "An Yang",
-        "Bowen Yu",
-        "Bo Zheng",
-        "Fei Huang",
-        "Junyang Lin",
-        "Dayiheng Liu",
-        "Jingren Zhou"
-      ],
-      "abstract": "Reinforcement learning (RL) has become a key component in modern large language models, yet the rollout stage remains the key bottleneck in RL training pipelines. Although Multi-Token Prediction (MTP) offers a natural solution to accelerate rollouts through speculative decoding, many studies have observed that MTP acceptance rates degrade significantly during RL training, leading to limited speedup performance. To address this bottleneck, we present Bebop, a systematic study of MTP in LLM post-training, and offer practical recipes to integrate MTP into large-scale RL pipelines. First, we reveal that the MTP acceptance rate is fundamentally bounded by the fluctuation of model entropy, which demonstrates a clear negative linear relationship with the rise of entropy in the RL stage. Second, we show that probabilistic rejection sampling largely alleviates the disturbance introduced by entropy in RL compared to greedy draft sampling. We further identify that the conventional MTP training objectives (cross-entropy or KL) are suboptimal in such settings, and therefore we propose a novel end-to-end TV loss that directly optimizes multi-step rejection sampling acceptance rate, yielding ~10% acceptance rate improvements, achieving up to 95% acceptance rates and up to 25% extra inference throughput gains across mathematical reasoning, code generation, and agentic tasks. Third, we test various online MTP training strategies during RL and show that pre-RL MTP training with e2e TV loss and rejection sampling achieves a consistent acceptance rate and speedup throughout the entire RL, eliminating the need for costly online MTP updating. We provide extensive experiments and analysis that validate our findings. Experimental results show our method achieves up to 1.8x end-to-end acceleration in async RL training of Qwen3.5, Qwen3.6, and Qwen3.7 models.",
-      "hf_url": "https://huggingface.co/papers/2606.12370",
-      "arxiv_url": "https://arxiv.org/abs/2606.12370",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.12370",
-      "papers_cool_url": "https://papers.cool/arxiv/2606.12370",
-      "github_url": "",
-      "submitted_by": "taesiri",
-      "submitted_at": "2026-06-11T00:00:00.000Z",
-      "upvotes": 15,
-      "comments": 3,
-      "topic_key": "learning_theory",
-      "topic_label": "Learning, Optimization, and Theory",
-      "matched_terms": [
-        "\\btraining\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Reinforcement learning (RL) has become a key component in modern large language models, yet the rollout stage remains the key bottleneck in RL training pipelines.",
-      "upvote_label": "15 upvotes"
     },
     {
       "report_date": "2026-06-11",
@@ -2462,8 +2596,8 @@
       "github_url": "",
       "submitted_by": "Heming Zou",
       "submitted_at": "2026-06-11T00:00:00.000Z",
-      "upvotes": 15,
-      "comments": 1,
+      "upvotes": 17,
+      "comments": 3,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
       "matched_terms": [
@@ -2472,36 +2606,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Reinforcement learning with verifiable rewards (RLVR) is a promising approach for enhancing reasoning and agentic behavior in large language models.",
-      "upvote_label": "15 upvotes"
-    },
-    {
-      "report_date": "2026-06-11",
-      "paper_id": "2606.11722",
-      "title": "ICA Lens: Interpreting Language Models Without Training Another Dictionary",
-      "authors": [
-        "Sida Liu",
-        "Feijiang Han"
-      ],
-      "abstract": "Finding interpretable directions in language-model representations is critical for understanding and controlling model behavior. Sparse autoencoders (SAEs) have become the standard tool for this purpose, but using them as the default first lens often requires training, storing, and evaluating large overcomplete dictionaries. This bottleneck limits rapid exploration and raises a fundamental question: how much interpretable structure is already visible from activation geometry before training another neural dictionary? Our intuition is simple: many interpretable directions are selective on tokens, and these directions should look less Gaussian than random directions. We therefore revisit independent component analysis (ICA), a classical method for finding non-Gaussian directions, as a compact lens for language-model interpretability. We find that ICA has been underestimated for LLM interpretability, because prior uses often relied on off-the-shelf ICA implementations that are brittle on LLM activations and lacked systematic tools for inspecting and evaluating the recovered directions. To bridge these gaps, we introduce ICALens, the first practical workflow for stable, efficient, and auditable ICA analysis of LLM representations. It combines an optimized GPU-parallel FastICA pipeline with LLM-specific stability recipes and better fitting diagnostics, enabling efficient and reliable layer-wise analysis. Across GPT-2 Small, Gemma 2 2B, and Qwen 3.5 2B Base, ICALens efficiently recovers compact, human-interpretable directions without per-layer gradient-based dictionary training. On SAEBench, ICA is competitive with public SAEs in sparse probing and outperforms them in targeted probe perturbation under small-to-medium budgets. These results suggest that ICA should not be viewed as a weak baseline, but as an efficient and complementary first lens for exploring language-model representations.",
-      "hf_url": "https://huggingface.co/papers/2606.11722",
-      "arxiv_url": "https://arxiv.org/abs/2606.11722",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.11722",
-      "papers_cool_url": "https://papers.cool/arxiv/2606.11722",
-      "github_url": "",
-      "submitted_by": "Feijiang Han",
-      "submitted_at": "2026-06-11T00:00:00.000Z",
-      "upvotes": 14,
-      "comments": 1,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
-      "matched_terms": [
-        "\\blanguage models?\\b",
-        "\\blanguage\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Finding interpretable directions in language-model representations is critical for understanding and controlling model behavior.",
-      "upvote_label": "14 upvotes"
+      "upvote_label": "17 upvotes"
     },
     {
       "report_date": "2026-06-11",
@@ -2520,8 +2625,8 @@
       "github_url": "",
       "submitted_by": "Yu-Lun Liu",
       "submitted_at": "2026-06-11T00:00:00.000Z",
-      "upvotes": 13,
-      "comments": 1,
+      "upvotes": 15,
+      "comments": 2,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [
@@ -2532,71 +2637,62 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Vision-language models (VLMs) project images into hundreds to thousands of visual tokens, making decoder inference expensive in both attention computation and KV-cache memory.",
-      "upvote_label": "13 upvotes"
+      "upvote_label": "15 upvotes"
     },
     {
       "report_date": "2026-06-11",
-      "paper_id": "2606.03108",
-      "title": "EvoTrainer: Co-Evolving LLM Policies and Training Harnesses for Autonomous Agentic Reinforcement Learning",
+      "paper_id": "2606.11722",
+      "title": "ICA Lens: Interpreting Language Models Without Training Another Dictionary",
       "authors": [
-        "Guhong Chen",
-        "Yingcheng Shi",
-        "Yongbin Li",
-        "Binhua Li",
-        "Xander Xu",
-        "Hu Wei",
-        "Shiwen Ni",
-        "Min Yang",
-        "Jieping Ye"
+        "Sida Liu",
+        "Feijiang Han"
       ],
-      "abstract": "Autonomous LLM training is often framed as recipe search, which leaves the training harness largely static. This limitation sharpens in agentic RL, where shifting bottlenecks and scalar rewards mask diverse failure modes. We introduce EvoTrainer, an autonomous training framework that co-evolves LLM policies and training-side harnesses through empirical feedback: it diagnoses rollout-level evidence, revises diagnostics, backtests interventions, and accumulates reusable skills. Evaluated on mathematical reasoning, competitive-programming code generation, and repository-level software engineering, EvoTrainer matches or exceeds the human-engineered RL references under the same data, codebase, and evaluation protocol, with the largest gain on long-horizon agentic SWE. Trajectory analyses show that retained strategies diverge across domains, evolving diagnostics prevent invalid high-scoring branches from being promoted, and reusable skills shape later search. Autonomous LLM RL should move beyond recipe search toward joint evolution of policies and the training harnesses that interpret them.",
-      "hf_url": "https://huggingface.co/papers/2606.03108",
-      "arxiv_url": "https://arxiv.org/abs/2606.03108",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.03108",
-      "papers_cool_url": "https://papers.cool/arxiv/2606.03108",
+      "abstract": "Finding interpretable directions in language-model representations is critical for understanding and controlling model behavior. Sparse autoencoders (SAEs) have become the standard tool for this purpose, but using them as the default first lens often requires training, storing, and evaluating large overcomplete dictionaries. This bottleneck limits rapid exploration and raises a fundamental question: how much interpretable structure is already visible from activation geometry before training another neural dictionary? Our intuition is simple: many interpretable directions are selective on tokens, and these directions should look less Gaussian than random directions. We therefore revisit independent component analysis (ICA), a classical method for finding non-Gaussian directions, as a compact lens for language-model interpretability. We find that ICA has been underestimated for LLM interpretability, because prior uses often relied on off-the-shelf ICA implementations that are brittle on LLM activations and lacked systematic tools for inspecting and evaluating the recovered directions. To bridge these gaps, we introduce ICALens, the first practical workflow for stable, efficient, and auditable ICA analysis of LLM representations. It combines an optimized GPU-parallel FastICA pipeline with LLM-specific stability recipes and better fitting diagnostics, enabling efficient and reliable layer-wise analysis. Across GPT-2 Small, Gemma 2 2B, and Qwen 3.5 2B Base, ICALens efficiently recovers compact, human-interpretable directions without per-layer gradient-based dictionary training. On SAEBench, ICA is competitive with public SAEs in sparse probing and outperforms them in targeted probe perturbation under small-to-medium budgets. These results suggest that ICA should not be viewed as a weak baseline, but as an efficient and complementary first lens for exploring language-model representations.",
+      "hf_url": "https://huggingface.co/papers/2606.11722",
+      "arxiv_url": "https://arxiv.org/abs/2606.11722",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.11722",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.11722",
       "github_url": "",
-      "submitted_by": "youyou",
+      "submitted_by": "Feijiang Han",
       "submitted_at": "2026-06-11T00:00:00.000Z",
-      "upvotes": 9,
+      "upvotes": 15,
       "comments": 1,
-      "topic_key": "learning_theory",
-      "topic_label": "Learning, Optimization, and Theory",
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
       "matched_terms": [
-        "\\blearning\\b",
-        "\\btraining\\b"
+        "\\blanguage models?\\b",
+        "\\blanguage\\b"
       ],
       "classification_source": "rule",
       "classification_confidence": null,
-      "one_sentence_summary": "Autonomous LLM training is often framed as recipe search, which leaves the training harness largely static.",
-      "upvote_label": "9 upvotes"
+      "one_sentence_summary": "Finding interpretable directions in language-model representations is critical for understanding and controlling model behavior.",
+      "upvote_label": "15 upvotes"
     },
     {
       "report_date": "2026-06-11",
-      "paper_id": "2606.12373",
-      "title": "Verifiable Environments Are LEGO Bricks: Recursive Composition for Reasoning Generalization",
+      "paper_id": "2606.08035",
+      "title": "DyCo-RL: Dynamic Cross-Modal Coordination for Visual Reasoning",
       "authors": [
-        "Hao Xiang",
-        "Qiaoyu Tang",
-        "Le Yu",
-        "Yaojie Lu",
-        "Xianpei Han",
-        "Ben He",
-        "Le Sun",
-        "Bowen Yu",
-        "Peng Wang",
-        "Hongyu Lin",
-        "Dayiheng Liu"
+        "Hangui Lin",
+        "Yan Shu",
+        "Zhengyang Liang",
+        "Chi Liu",
+        "Xiangrui Liu",
+        "Minghao Qin",
+        "Teng Long",
+        "Zheng Liu",
+        "Nicu Sebe"
       ],
-      "abstract": "Reinforcement Learning (RL) with verifiable environments has emerged as a powerful approach for enhancing the reasoning capabilities of Large Language Models (LLMs). While prior research demonstrates that scaling environment quantity improves RL performance, existing manual or individual construction methods suffer from linear scaling limits, thereby hindering scalable reasoning generalization. This paper introduces RACES (Recursive Automated Composition for Environment Scaling), a framework that conceptualizes verifiable environments as composable building blocks that can be recursively assembled. The key insight is that when the codomain (output type) of one environment matches the domain (input type) of another, they can be automatically fused into a new verifiable environment, enabling recursive composition. RACES is implemented with 300 individual environments and defines a set of composition operators (SEQUENTIAL, PARALLEL, SORT, and SELECT) that induce diverse reasoning patterns. Extensive experiments show that RL training on these composite environments consistently enhances reasoning generalization. Specifically, RACES improves DeepSeek-R1-Distill-Qwen-14B by an average of 3.1 points (from 48.2 to 51.3) and boosts Qwen3-14B performance from 58.8 to 61.1 on six benchmarks, which are unseen during the construction of training environments. Moreover, RACES achieves performance comparable to training on 300 individual environments using only 50 base environments, demonstrating significant efficiency in environment utilization.",
-      "hf_url": "https://huggingface.co/papers/2606.12373",
-      "arxiv_url": "https://arxiv.org/abs/2606.12373",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.12373",
-      "papers_cool_url": "https://papers.cool/arxiv/2606.12373",
+      "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) has emerged as a leading paradigm for enhancing visual reasoning in Multimodal Large Language Models (MLLMs). However, existing RLVR methods optimize primarily for the reasoning outcome, fundamentally overlooking the fine-grained cross-modal coordination required during the generation process. Through token-level analyses and controlled interventions, we reveal that during Chain-of-Thought (CoT) reasoning, MLLMs frequently fail to dynamically alternate between extracting visual evidence and synthesizing textual context-a coordination breakdown that is causally linked to reasoning failures. Motivated by these findings, we propose DyCo-RL, which integrates dynamic cross-modal coordination into RLVR optimization. Specifically, DyCo-RL uses the Fisher-Rao geodesic distance to measure within-modality attention shifts, assigning tokens to either visually-oriented or text-oriented functional roles. It then evaluates the alignment between a token's actual attention allocation and its assigned role, leveraging this score for alignment-guided advantage reweighting during policy optimization. Extensive experiments demonstrate that the algorithm-agnostic DyCo-RL, when applied to Qwen2.5-VL-3B/7B, consistently improves four representative RLVR algorithms across seven benchmarks spanning visual-centric and mathematical reasoning.",
+      "hf_url": "https://huggingface.co/papers/2606.08035",
+      "arxiv_url": "https://arxiv.org/abs/2606.08035",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.08035",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.08035",
       "github_url": "",
-      "submitted_by": "xianghao",
+      "submitted_by": "Hangui Lin",
       "submitted_at": "2026-06-11T00:00:00.000Z",
-      "upvotes": 6,
-      "comments": 1,
+      "upvotes": 13,
+      "comments": 2,
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [
@@ -2604,8 +2700,8 @@
       ],
       "classification_source": "rule",
       "classification_confidence": null,
-      "one_sentence_summary": "Reinforcement Learning (RL) with verifiable environments has emerged as a powerful approach for enhancing the reasoning capabilities of Large Language Models (LLMs).",
-      "upvote_label": "6 upvotes"
+      "one_sentence_summary": "Reinforcement Learning with Verifiable Rewards (RLVR) has emerged as a leading paradigm for enhancing visual reasoning in Multimodal Large Language Models (MLLMs).",
+      "upvote_label": "13 upvotes"
     },
     {
       "report_date": "2026-06-11",
@@ -2644,7 +2740,7 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-06-11T00:00:00.000Z",
-      "upvotes": 6,
+      "upvotes": 10,
       "comments": 1,
       "topic_key": "robotics_embodied",
       "topic_label": "Robotics and Embodied AI",
@@ -2654,67 +2750,43 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "We introduce Embodied-R1.5, a unified Embodied Foundation Model (EFM) that integrates comprehensive embodied reasoning capabilities, spanning embodied cognition, task planning, correction, and pointing, within a…",
-      "upvote_label": "6 upvotes"
+      "upvote_label": "10 upvotes"
     },
     {
       "report_date": "2026-06-11",
-      "paper_id": "2606.07881",
-      "title": "Breaking the Bubble: Asynchronous Pipeline Parallel Training with Bounded Weight Inconsistency",
+      "paper_id": "2606.03108",
+      "title": "EvoTrainer: Co-Evolving LLM Policies and Training Harnesses for Autonomous Agentic Reinforcement Learning",
       "authors": [
-        "Itay Elam",
-        "Eliron Rahimi",
-        "Avi Mendelson",
-        "Chaim Baskin"
+        "Guhong Chen",
+        "Yingcheng Shi",
+        "Yongbin Li",
+        "Binhua Li",
+        "Xander Xu",
+        "Hu Wei",
+        "Shiwen Ni",
+        "Min Yang",
+        "Jieping Ye"
       ],
-      "abstract": "Pipeline parallelism is essential for training large neural networks, but existing schedules trade off throughput, memory, and optimization consistency. Synchronous pipelines preserve forward/backward weight consistency but suffer from bubbles; asynchronous pipelines remove bubbles but introduce weight-version mismatch, typically requiring weight stashing, prediction, or correction mechanisms. We introduce PACI (Pipeline Asynchronous training with Controlled Inconsistency), a bubble-free asynchronous pipeline method that bounds forward/backward version drift without weight stashing, prediction, additional parameter copies, or global synchronization. The key idea is to use local gradient accumulation as a version-control mechanism: by slowing parameter-version evolution relative to pipeline delay, PACI limits the number of optimizer updates crossed by any micro-batch while preserving steady-state utilization. In GPT-style language-model pretraining, PACI matches the stability and final perplexity of synchronous 1F1B-flush, retains the same peak memory footprint, achieves fully utilized pipeline throughput, and improves training time-to-accuracy by up to 1.69times over the fastest flush baseline. These results show that forward/backward inconsistency need not be eliminated: when explicitly bounded, it can be safely traded for substantial efficiency gains.",
-      "hf_url": "https://huggingface.co/papers/2606.07881",
-      "arxiv_url": "https://arxiv.org/abs/2606.07881",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.07881",
-      "papers_cool_url": "https://papers.cool/arxiv/2606.07881",
+      "abstract": "Autonomous LLM training is often framed as recipe search, which leaves the training harness largely static. This limitation sharpens in agentic RL, where shifting bottlenecks and scalar rewards mask diverse failure modes. We introduce EvoTrainer, an autonomous training framework that co-evolves LLM policies and training-side harnesses through empirical feedback: it diagnoses rollout-level evidence, revises diagnostics, backtests interventions, and accumulates reusable skills. Evaluated on mathematical reasoning, competitive-programming code generation, and repository-level software engineering, EvoTrainer matches or exceeds the human-engineered RL references under the same data, codebase, and evaluation protocol, with the largest gain on long-horizon agentic SWE. Trajectory analyses show that retained strategies diverge across domains, evolving diagnostics prevent invalid high-scoring branches from being promoted, and reusable skills shape later search. Autonomous LLM RL should move beyond recipe search toward joint evolution of policies and the training harnesses that interpret them.",
+      "hf_url": "https://huggingface.co/papers/2606.03108",
+      "arxiv_url": "https://arxiv.org/abs/2606.03108",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.03108",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.03108",
       "github_url": "",
-      "submitted_by": "itay elam",
+      "submitted_by": "youyou",
       "submitted_at": "2026-06-11T00:00:00.000Z",
-      "upvotes": 6,
-      "comments": 1,
+      "upvotes": 10,
+      "comments": 2,
       "topic_key": "learning_theory",
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [
+        "\\blearning\\b",
         "\\btraining\\b"
       ],
       "classification_source": "rule",
       "classification_confidence": null,
-      "one_sentence_summary": "Pipeline parallelism is essential for training large neural networks, but existing schedules trade off throughput, memory, and optimization consistency.",
-      "upvote_label": "6 upvotes"
-    },
-    {
-      "report_date": "2026-06-11",
-      "paper_id": "2606.12072",
-      "title": "World Model Self-Distillation: Training World Models to Solve General Tasks",
-      "authors": [
-        "Sebastian Stapf",
-        "Pablo Acuaviva Huertos",
-        "Aram Davtyan",
-        "Paolo Favaro"
-      ],
-      "abstract": "Pretrained video generators are promising visual world models that exhibit emergent task-solving abilities; however, their reliance on detailed textual descriptions limits their direct use for planning and decision-making. Existing approaches either outsource this reasoning to language or vision-language models, or rely on supervised fine-tuning with paired task-execution videos, which are costly to collect and difficult to scale. We propose a scalable framework that elicits task-solving ability in such models by combining self-distillation with reinforcement learning. Given an unlabeled scene image, a vision-language model generates a candidate task and a detailed step-by-step solution. The solution conditions a pretrained video diffusion model, the Demonstrator; we distill its behavior into an Executor conditioned only on the image and a short task prompt. This transfers execution knowledge from caption-guided generation to instruction-conditioned task solving without curated task-video supervision. We further improve the Executor with reinforcement learning from VLM feedback, exploiting the asymmetry between judging whether a sampled video satisfies a task and generating the solution. Experiments on our proposed WorldTasks-Benchmark and the DreamGen robotics benchmark show that the Executor surpasses the Demonstrator under our VLM-based evaluation protocol and transfers competitively to robotic tasks.",
-      "hf_url": "https://huggingface.co/papers/2606.12072",
-      "arxiv_url": "https://arxiv.org/abs/2606.12072",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.12072",
-      "papers_cool_url": "https://papers.cool/arxiv/2606.12072",
-      "github_url": "",
-      "submitted_by": "taesiri",
-      "submitted_at": "2026-06-11T00:00:00.000Z",
-      "upvotes": 5,
-      "comments": 1,
-      "topic_key": "learning_theory",
-      "topic_label": "Learning, Optimization, and Theory",
-      "matched_terms": [
-        "\\btraining\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Pretrained video generators are promising visual world models that exhibit emergent task-solving abilities; however, their reliance on detailed textual descriptions limits their direct use for planning and…",
-      "upvote_label": "5 upvotes"
+      "one_sentence_summary": "Autonomous LLM training is often framed as recipe search, which leaves the training harness largely static.",
+      "upvote_label": "10 upvotes"
     },
     {
       "report_date": "2026-06-11",
@@ -2737,7 +2809,7 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-06-11T00:00:00.000Z",
-      "upvotes": 4,
+      "upvotes": 8,
       "comments": 1,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -2747,7 +2819,171 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Diffusion models have consistently driven progress in text-to-image generation.",
-      "upvote_label": "4 upvotes"
+      "upvote_label": "8 upvotes"
+    },
+    {
+      "report_date": "2026-06-11",
+      "paper_id": "2606.12373",
+      "title": "Verifiable Environments Are LEGO Bricks: Recursive Composition for Reasoning Generalization",
+      "authors": [
+        "Hao Xiang",
+        "Qiaoyu Tang",
+        "Le Yu",
+        "Yaojie Lu",
+        "Xianpei Han",
+        "Ben He",
+        "Le Sun",
+        "Bowen Yu",
+        "Peng Wang",
+        "Hongyu Lin",
+        "Dayiheng Liu"
+      ],
+      "abstract": "Reinforcement Learning (RL) with verifiable environments has emerged as a powerful approach for enhancing the reasoning capabilities of Large Language Models (LLMs). While prior research demonstrates that scaling environment quantity improves RL performance, existing manual or individual construction methods suffer from linear scaling limits, thereby hindering scalable reasoning generalization. This paper introduces RACES (Recursive Automated Composition for Environment Scaling), a framework that conceptualizes verifiable environments as composable building blocks that can be recursively assembled. The key insight is that when the codomain (output type) of one environment matches the domain (input type) of another, they can be automatically fused into a new verifiable environment, enabling recursive composition. RACES is implemented with 300 individual environments and defines a set of composition operators (SEQUENTIAL, PARALLEL, SORT, and SELECT) that induce diverse reasoning patterns. Extensive experiments show that RL training on these composite environments consistently enhances reasoning generalization. Specifically, RACES improves DeepSeek-R1-Distill-Qwen-14B by an average of 3.1 points (from 48.2 to 51.3) and boosts Qwen3-14B performance from 58.8 to 61.1 on six benchmarks, which are unseen during the construction of training environments. Moreover, RACES achieves performance comparable to training on 300 individual environments using only 50 base environments, demonstrating significant efficiency in environment utilization.",
+      "hf_url": "https://huggingface.co/papers/2606.12373",
+      "arxiv_url": "https://arxiv.org/abs/2606.12373",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.12373",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.12373",
+      "github_url": "",
+      "submitted_by": "xianghao",
+      "submitted_at": "2026-06-11T00:00:00.000Z",
+      "upvotes": 7,
+      "comments": 1,
+      "topic_key": "reasoning_alignment_eval",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "matched_terms": [
+        "\\breasoning\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Reinforcement Learning (RL) with verifiable environments has emerged as a powerful approach for enhancing the reasoning capabilities of Large Language Models (LLMs).",
+      "upvote_label": "7 upvotes"
+    },
+    {
+      "report_date": "2026-06-11",
+      "paper_id": "2606.12072",
+      "title": "World Model Self-Distillation: Training World Models to Solve General Tasks",
+      "authors": [
+        "Sebastian Stapf",
+        "Pablo Acuaviva Huertos",
+        "Aram Davtyan",
+        "Paolo Favaro"
+      ],
+      "abstract": "Pretrained video generators are promising visual world models that exhibit emergent task-solving abilities; however, their reliance on detailed textual descriptions limits their direct use for planning and decision-making. Existing approaches either outsource this reasoning to language or vision-language models, or rely on supervised fine-tuning with paired task-execution videos, which are costly to collect and difficult to scale. We propose a scalable framework that elicits task-solving ability in such models by combining self-distillation with reinforcement learning. Given an unlabeled scene image, a vision-language model generates a candidate task and a detailed step-by-step solution. The solution conditions a pretrained video diffusion model, the Demonstrator; we distill its behavior into an Executor conditioned only on the image and a short task prompt. This transfers execution knowledge from caption-guided generation to instruction-conditioned task solving without curated task-video supervision. We further improve the Executor with reinforcement learning from VLM feedback, exploiting the asymmetry between judging whether a sampled video satisfies a task and generating the solution. Experiments on our proposed WorldTasks-Benchmark and the DreamGen robotics benchmark show that the Executor surpasses the Demonstrator under our VLM-based evaluation protocol and transfers competitively to robotic tasks.",
+      "hf_url": "https://huggingface.co/papers/2606.12072",
+      "arxiv_url": "https://arxiv.org/abs/2606.12072",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.12072",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.12072",
+      "github_url": "",
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-06-11T00:00:00.000Z",
+      "upvotes": 7,
+      "comments": 1,
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
+      "matched_terms": [
+        "\\btraining\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Pretrained video generators are promising visual world models that exhibit emergent task-solving abilities; however, their reliance on detailed textual descriptions limits their direct use for planning and…",
+      "upvote_label": "7 upvotes"
+    },
+    {
+      "report_date": "2026-06-11",
+      "paper_id": "2606.07881",
+      "title": "Breaking the Bubble: Asynchronous Pipeline Parallel Training with Bounded Weight Inconsistency",
+      "authors": [
+        "Itay Elam",
+        "Eliron Rahimi",
+        "Avi Mendelson",
+        "Chaim Baskin"
+      ],
+      "abstract": "Pipeline parallelism is essential for training large neural networks, but existing schedules trade off throughput, memory, and optimization consistency. Synchronous pipelines preserve forward/backward weight consistency but suffer from bubbles; asynchronous pipelines remove bubbles but introduce weight-version mismatch, typically requiring weight stashing, prediction, or correction mechanisms. We introduce PACI (Pipeline Asynchronous training with Controlled Inconsistency), a bubble-free asynchronous pipeline method that bounds forward/backward version drift without weight stashing, prediction, additional parameter copies, or global synchronization. The key idea is to use local gradient accumulation as a version-control mechanism: by slowing parameter-version evolution relative to pipeline delay, PACI limits the number of optimizer updates crossed by any micro-batch while preserving steady-state utilization. In GPT-style language-model pretraining, PACI matches the stability and final perplexity of synchronous 1F1B-flush, retains the same peak memory footprint, achieves fully utilized pipeline throughput, and improves training time-to-accuracy by up to 1.69times over the fastest flush baseline. These results show that forward/backward inconsistency need not be eliminated: when explicitly bounded, it can be safely traded for substantial efficiency gains.",
+      "hf_url": "https://huggingface.co/papers/2606.07881",
+      "arxiv_url": "https://arxiv.org/abs/2606.07881",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.07881",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.07881",
+      "github_url": "",
+      "submitted_by": "itay elam",
+      "submitted_at": "2026-06-11T00:00:00.000Z",
+      "upvotes": 7,
+      "comments": 2,
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
+      "matched_terms": [
+        "\\btraining\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Pipeline parallelism is essential for training large neural networks, but existing schedules trade off throughput, memory, and optimization consistency.",
+      "upvote_label": "7 upvotes"
+    },
+    {
+      "report_date": "2026-06-11",
+      "paper_id": "2606.13674",
+      "title": "RepWAM: World Action Modeling with Representation Visual-Action Tokenizers",
+      "authors": [
+        "Junke Wang",
+        "Qihang Zhang",
+        "Shuai Yang",
+        "Yiming Luo",
+        "Yujun Shen",
+        "Zuxuan Wu",
+        "Yu-Gang Jiang",
+        "Yinghao Xu"
+      ],
+      "abstract": "This work presents RepWAM, a representation-centric world action model (WAM) built on representation visual-action tokenizers. Existing WAMs typically inherit reconstruction-oriented video tokenizers from pretrained video generation models. Although these tokenizers preserve visual fidelity, pixel reconstruction alone provides limited guidance for learning instruction-following dynamics that connect future prediction with robot control. To address this, we explore a semantic visual-action latent space for representation-centric world action modeling. Specifically, we train a representation visual-action tokenizer that maps visual inputs into aligned visual and latent action tokens. We then pretrain our WAM to jointly model future visual states and the latent actions that connect them under language instructions, followed by adaptation to real robot trajectories for closed-loop manipulation. Experiments on real-world manipulation tasks and simulation benchmarks show that RepWAM delivers strong performance across diverse manipulation settings, while ablations highlight the value of semantic visual-action tokenization over reconstruction-oriented alternatives. These results establish representation visual-action tokenization as a promising foundation for world action models and a step toward generalist robot policies. Code and weights will be available at https://github.com/wdrink/RepWAM.",
+      "hf_url": "https://huggingface.co/papers/2606.13674",
+      "arxiv_url": "https://arxiv.org/abs/2606.13674",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.13674",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.13674",
+      "github_url": "",
+      "submitted_by": "Junke Wang",
+      "submitted_at": "2026-06-11T00:00:00.000Z",
+      "upvotes": 5,
+      "comments": 1,
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
+      "matched_terms": [
+        "\\bvisual\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "This work presents RepWAM, a representation-centric world action model (WAM) built on representation visual-action tokenizers.",
+      "upvote_label": "5 upvotes"
+    },
+    {
+      "report_date": "2026-06-11",
+      "paper_id": "2606.05758",
+      "title": "DRIFT: A Residual Flow Adapter for Decoding Continuous Outputs in Vision-Language Models",
+      "authors": [
+        "Zhuoming Liu",
+        "Jinhong Lin",
+        "Kwan Man Cheng",
+        "Lin Zhang",
+        "Shayok Bagchi",
+        "Yin Li"
+      ],
+      "abstract": "Many modern vision-language models (VLMs) build on autoregressive decoding of discrete tokens. While text-based output interfaces enable scalable pretraining and strong zero-shot generalization across diverse tasks, they are poorly suited for problems that require precise continuous outputs, such as localizing temporal boundaries of events or generating robotic control actions. To address this challenge, we propose DRIFT, a general framework for adapting pretrained VLMs to continuous decoding tasks. DRIFT combines a base predictor, which provides a coarse estimate of the target output, with a generative refinement module based on flow matching that iteratively improves the prediction. This residual formulation transforms the generative modeling problem from learning a global output distribution to modeling a localized residual distribution around a strong prior, substantially simplifying optimization. We evaluate DRIFT on both perception and planning tasks, including visual grounding and robotic control. Across multiple tasks and architectures spanning MLLMs, VLAs, and WAMs, DRIFT consistently outperforms a strong set of regression- and generative-based solutions.",
+      "hf_url": "https://huggingface.co/papers/2606.05758",
+      "arxiv_url": "https://arxiv.org/abs/2606.05758",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.05758",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.05758",
+      "github_url": "",
+      "submitted_by": "Zhuoming Liu",
+      "submitted_at": "2026-06-11T00:00:00.000Z",
+      "upvotes": 5,
+      "comments": 2,
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [
+        "\\blanguage models?\\b",
+        "\\blanguage\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Many modern vision-language models (VLMs) build on autoregressive decoding of discrete tokens.",
+      "upvote_label": "5 upvotes"
     },
     {
       "report_date": "2026-06-11",
@@ -2771,7 +3007,7 @@
       "submitted_by": "Haochang Hao",
       "submitted_at": "2026-06-11T00:00:00.000Z",
       "upvotes": 4,
-      "comments": 1,
+      "comments": 2,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [
@@ -2780,6 +3016,38 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Agent skills provide a lightweight mechanism for extending general-purpose agents, but their open format exposes them to skill-poisoning attacks.",
+      "upvote_label": "4 upvotes"
+    },
+    {
+      "report_date": "2026-06-11",
+      "paper_id": "2605.11212",
+      "title": "ReVision: Scaling Computer-Use Agents via Temporal Visual Redundancy Reduction",
+      "authors": [
+        "Amirhossein Abaskohi",
+        "Yuhang He",
+        "Peter West",
+        "Giuseppe Carenini",
+        "Pranit Chawla",
+        "Vibhav Vineet"
+      ],
+      "abstract": "Computer-use agents (CUAs) rely on visual observations of graphical user interfaces, where each screenshot is encoded into a large number of visual tokens. As interaction trajectories grow, the token cost increases rapidly, limiting the amount of history that can be incorporated under fixed context and compute budgets. This has resulted in no or very limited improvement in the performance when using history unlike other domains. We address this inefficiency by introducing ReVision, which is used to train multimodal language models on trajectories where redundant visual patches are removed using a learned patch selector that compares patch representations across consecutive screenshots while preserving spatial structure required by the model. Across three benchmarks, OSWorld, WebTailBench, and AgentNetBench, when processing trajectories with 5 history screenshots using Qwen2.5-VL-7B, ReVision reduces token usage by 46% on average while improving success rate by 3% over the no drop baseline. This establishes a clear efficiency gain, enabling agents to process longer trajectories with fewer tokens. With this improved efficiency, we revisit the role of history in CUAs and find that performance continues to improve as more past observations are incorporated when redundancy is removed.",
+      "hf_url": "https://huggingface.co/papers/2605.11212",
+      "arxiv_url": "https://arxiv.org/abs/2605.11212",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.11212",
+      "papers_cool_url": "https://papers.cool/arxiv/2605.11212",
+      "github_url": "",
+      "submitted_by": "Amirhossein Abaskohi",
+      "submitted_at": "2026-06-11T00:00:00.000Z",
+      "upvotes": 4,
+      "comments": 2,
+      "topic_key": "agents_planning",
+      "topic_label": "Agents and Planning",
+      "matched_terms": [
+        "\\bagents?\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Computer-use agents (CUAs) rely on visual observations of graphical user interfaces, where each screenshot is encoded into a large number of visual tokens.",
       "upvote_label": "4 upvotes"
     },
     {
@@ -2801,7 +3069,7 @@
       "submitted_by": "jinymusim",
       "submitted_at": "2026-06-11T00:00:00.000Z",
       "upvotes": 3,
-      "comments": 1,
+      "comments": 2,
       "topic_key": "learning_theory",
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [
@@ -2843,6 +3111,38 @@
     },
     {
       "report_date": "2026-06-11",
+      "paper_id": "2606.04511",
+      "title": "SparDA: Sparse Decoupled Attention for Efficient Long-Context LLM Inference",
+      "authors": [
+        "Yaosheng Fu",
+        "Guangxuan Xiao",
+        "Xin Dong",
+        "Song Han",
+        "Oreste Villa"
+      ],
+      "abstract": "Sparse attention reduces compute and memory bandwidth for long-context LLM inference. However, two key challenges remain: (1) KV cache capacity still grows with sequence length, and offloading to CPU memory introduces a PCIe transfer bottleneck; (2) the sparse selection step itself retains O(T^2) complexity and can dominate attention cost at long contexts. We propose SparDA, a decoupled sparse attention architecture that introduces a fourth per-layer projection, the Forecast, alongside Query, Key, and Value. The Forecast predicts the KV blocks needed by the next layer, enabling lookahead selection that overlaps CPU-to-GPU prefetch with current-layer execution. Because Forecast is decoupled from the attention query, our GQA implementation uses one Forecast head per GQA group, reducing selection overhead versus the original multi-head selector. SparDA adds <0.5% parameters and trains only the Forecast projections by matching the original selector's attention distribution. On two sparse-pretrained 8B models, SparDA matches or slightly improves accuracy and delivers up to 1.25times prefill speedup and 1.7times decode speedup over the sparse-attention offload baseline. By enabling larger feasible batch sizes on a single GPU, SparDA further reaches up to 5.3times higher decode throughput than the non-offload sparse baseline. Our source code is available at https://github.com/NVlabs/SparDA.",
+      "hf_url": "https://huggingface.co/papers/2606.04511",
+      "arxiv_url": "https://arxiv.org/abs/2606.04511",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.04511",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.04511",
+      "github_url": "",
+      "submitted_by": "Yaosheng Fu",
+      "submitted_at": "2026-06-11T00:00:00.000Z",
+      "upvotes": 3,
+      "comments": 2,
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
+      "matched_terms": [
+        "\\bsparse\\b",
+        "\\battention\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Sparse attention reduces compute and memory bandwidth for long-context LLM inference.",
+      "upvote_label": "3 upvotes"
+    },
+    {
+      "report_date": "2026-06-11",
       "paper_id": "2606.03437",
       "title": "Large Language Models Are Overconfident in Their Own Responses",
       "authors": [
@@ -2859,7 +3159,7 @@
       "submitted_by": "Mario Sanz",
       "submitted_at": "2026-06-11T00:00:00.000Z",
       "upvotes": 3,
-      "comments": 1,
+      "comments": 2,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [
@@ -2870,6 +3170,35 @@
       "classification_confidence": null,
       "one_sentence_summary": "Prior work has shown that instruction-tuned large language models (LLMs) are less well calibrated than their base pre-trained counterparts.",
       "upvote_label": "3 upvotes"
+    },
+    {
+      "report_date": "2026-06-11",
+      "paper_id": "2606.12385",
+      "title": "Which Models Are Our Models Built On? Auditing Invisible Dependencies in Modern LLMs",
+      "authors": [
+        "Sanjay Adhikesaven",
+        "Haoxiang Sun",
+        "Sewon Min"
+      ],
+      "abstract": "Modern LLM training pipelines increasingly rely on other models to generate data, filter corpora, judge outputs, and guide development decisions. These dependencies are recursive: a model may depend on an upstream artifact whose own dependencies are documented only in separate releases and artifacts. As a result, the full dependency structure is fragmented across heterogeneous public artifacts, with complexity and recursive depth far outpacing humans' ability to trace. We introduce ModSleuth, an agentic system that recursively reconstructs LLM dependency graphs from public artifacts with source-grounded evidence. We find that the primary challenge is no longer information extraction, but defining what constitutes a dependency and reconciling artifact references across inconsistent documentation. We address these challenges through a formalization that distinguishes direct and indirect dependencies, represents heterogeneous pipeline roles through operation-centered relationships, and resolves artifact identities across names, versions, and repositories. Applying ModSleuth to four public-artifact-rich LLM releases, we recover 1,060 source-verified dependencies and construct large-scale dependency graphs of modern LLM development. These graphs reveal multi-hop license obligations, train-evaluation coupling, discrepancies between released and training-time artifacts, and documentation inconsistencies that would otherwise be difficult to uncover. We release ModSleuth and the resulting dependency graphs to support transparent analysis of the increasingly complex ecosystems underlying modern LLMs.",
+      "hf_url": "https://huggingface.co/papers/2606.12385",
+      "arxiv_url": "https://arxiv.org/abs/2606.12385",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.12385",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.12385",
+      "github_url": "",
+      "submitted_by": "Haoxiang Sun",
+      "submitted_at": "2026-06-11T00:00:00.000Z",
+      "upvotes": 2,
+      "comments": 1,
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [
+        "\\b\\w*llms?\\w*\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Modern LLM training pipelines increasingly rely on other models to generate data, filter corpora, judge outputs, and guide development decisions.",
+      "upvote_label": "2 upvotes"
     },
     {
       "report_date": "2026-06-11",
@@ -2894,7 +3223,7 @@
       "submitted_by": "Changyue Wang",
       "submitted_at": "2026-06-11T00:00:00.000Z",
       "upvotes": 2,
-      "comments": 1,
+      "comments": 2,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [
@@ -2935,26 +3264,30 @@
     },
     {
       "report_date": "2026-06-11",
-      "paper_id": "2606.05758",
-      "title": "DRIFT: A Residual Flow Adapter for Decoding Continuous Outputs in Vision-Language Models",
+      "paper_id": "2606.10587",
+      "title": "Towards Diverse Scientific Hypothesis Search with Large Language Models",
       "authors": [
-        "Zhuoming Liu",
-        "Jinhong Lin",
-        "Kwan Man Cheng",
-        "Lin Zhang",
-        "Shayok Bagchi",
-        "Yin Li"
+        "Haorui Wang",
+        "Parshin Shojaee",
+        "Kazem Meidani",
+        "Kunyang Sun",
+        "José Miguel Hernández-Lobato",
+        "Teresa Head-Gordon",
+        "Jiajun He",
+        "Chandan K. Reddy",
+        "Chao Zhang",
+        "Yuanqi Du"
       ],
-      "abstract": "Many modern vision-language models (VLMs) build on autoregressive decoding of discrete tokens. While text-based output interfaces enable scalable pretraining and strong zero-shot generalization across diverse tasks, they are poorly suited for problems that require precise continuous outputs, such as localizing temporal boundaries of events or generating robotic control actions. To address this challenge, we propose DRIFT, a general framework for adapting pretrained VLMs to continuous decoding tasks. DRIFT combines a base predictor, which provides a coarse estimate of the target output, with a generative refinement module based on flow matching that iteratively improves the prediction. This residual formulation transforms the generative modeling problem from learning a global output distribution to modeling a localized residual distribution around a strong prior, substantially simplifying optimization. We evaluate DRIFT on both perception and planning tasks, including visual grounding and robotic control. Across multiple tasks and architectures spanning MLLMs, VLAs, and WAMs, DRIFT consistently outperforms a strong set of regression- and generative-based solutions.",
-      "hf_url": "https://huggingface.co/papers/2606.05758",
-      "arxiv_url": "https://arxiv.org/abs/2606.05758",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.05758",
-      "papers_cool_url": "https://papers.cool/arxiv/2606.05758",
+      "abstract": "Large language models (LLMs) are on the rise for accelerating scientific discovery, most recently in advanced tasks such as generating valid scientific hypotheses. Yet in many discovery settings, the goal is not to identify a single best hypothesis since validation can be noisy and expensive, and scientists benefit from a set of high-quality alternative hypotheses that hedge against downstream uncertainty for the best solutions. Nevertheless, commonly used evolutionary search recipes tend to prioritize optimization over exploration in hypothesis generation, and the resulting selection pressure during the search process leads to diversity collapse. Motivated by these limitations, we formulate hypothesis search as a sampling problem, where the objective is to efficiently produce diverse, high-quality hypotheses under a fixed validation budget. Building on this perspective, we propose \\ours, an evolutionary framework inspired by the classical parallel tempering algorithm that searches hypotheses at multiple temperature levels and enables principled information exchange across temperatures to improve exploration without disrupting convergence. Across domains including molecular discovery, equation discovery, and algorithm discovery, our approach consistently improves both hypothesis quality and diversity under the same validation budget, and produces candidates that remain robust under more expensive downstream computational validations.",
+      "hf_url": "https://huggingface.co/papers/2606.10587",
+      "arxiv_url": "https://arxiv.org/abs/2606.10587",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.10587",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.10587",
       "github_url": "",
-      "submitted_by": "Zhuoming Liu",
+      "submitted_by": "Parshin Shojaee",
       "submitted_at": "2026-06-11T00:00:00.000Z",
       "upvotes": 2,
-      "comments": 1,
+      "comments": 2,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [
@@ -2963,7 +3296,72 @@
       ],
       "classification_source": "rule",
       "classification_confidence": null,
-      "one_sentence_summary": "Many modern vision-language models (VLMs) build on autoregressive decoding of discrete tokens.",
+      "one_sentence_summary": "Large language models (LLMs) are on the rise for accelerating scientific discovery, most recently in advanced tasks such as generating valid scientific hypotheses.",
+      "upvote_label": "2 upvotes"
+    },
+    {
+      "report_date": "2026-06-11",
+      "paper_id": "2606.04261",
+      "title": "Can Generalist Agents Automate Data Curation?",
+      "authors": [
+        "Feiyang Kang",
+        "Hanze Li",
+        "Adam Nguyen",
+        "Mahavir Dabas",
+        "Jiaqi W. Ma",
+        "Frederic Sala",
+        "Dawn Song",
+        "Ruoxi Jia"
+      ],
+      "abstract": "Curating training data is among the most consequential yet labor-intensive parts of modern AI development: practitioners iteratively propose, implement, evaluate, and revise data policies against noisy benchmark feedback. We ask whether generalist coding agents can automate this data-curation loop. We introduce *Curation-Bench*, an agent-centric benchmark that fixes the model, training recipe, and evaluation suite while giving agents command-line access to inspect data, implement policies, submit them to a fixed training/evaluation pipeline, and revise. In a vision-language instruction-tuning instantiation, out-of-the-box agents reach strong published data-selection baselines within ten iterations. However, trajectory analysis reveals a persistent *execution-research gap*: agents mainly tune local policy variants rather than explore new policy families, even when given strategy guides and paper references. Scaffolds requiring each iteration to cite, instantiate, and adapt a prior method shift agents toward method-guided exploration. The scaffolded agent autonomously composes -- without human design input -- a data-selection policy that outperforms strong published baselines at one-tenth their data budget. Overall, current agents can run the curation loop, but reliable data research requires scaffolded method adaptation, not open-ended prompting alone. Code and benchmark are open-sourced.",
+      "hf_url": "https://huggingface.co/papers/2606.04261",
+      "arxiv_url": "https://arxiv.org/abs/2606.04261",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.04261",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.04261",
+      "github_url": "",
+      "submitted_by": "Adam Nguyen",
+      "submitted_at": "2026-06-11T00:00:00.000Z",
+      "upvotes": 2,
+      "comments": 2,
+      "topic_key": "agents_planning",
+      "topic_label": "Agents and Planning",
+      "matched_terms": [
+        "\\bagents?\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Curating training data is among the most consequential yet labor-intensive parts of modern AI development: practitioners iteratively propose, implement, evaluate, and revise data policies against noisy benchmark…",
+      "upvote_label": "2 upvotes"
+    },
+    {
+      "report_date": "2026-06-11",
+      "paper_id": "2605.30861",
+      "title": "Distilling LLM Feedback for Lean Theorem Proving",
+      "authors": [
+        "Gaetan Narozniak",
+        "Gérard Biau",
+        "Rémi Munos",
+        "Ahmad Rammal",
+        "Pierre Marion"
+      ],
+      "abstract": "Post-training for reasoning models typically combines supervised fine-tuning with reinforcement learning from verifiable rewards, most commonly with GRPO. However, this algorithm suffers from sparse rewards, limited exploration, and mode collapse. Building upon recent works on self-distillation, we propose Feedback Distillation, a training method where the model is trained to match, at the token level, its own distribution conditioned on privileged feedback produced by a language model. Feedback Distillation offers token-level supervision and can inject external knowledge. Evaluating our method for Lean4 theorem-proving, we find that Feedback Distillation maintains greater diversity in generated trajectories than GRPO, yielding higher policy entropy and better pass@k scaling. The two methods are complementary: initializing GRPO from a Feedback Distillation checkpoint outperforms either method alone. All in all, our results suggest a promising avenue to improve post-training for complex reasoning.",
+      "hf_url": "https://huggingface.co/papers/2605.30861",
+      "arxiv_url": "https://arxiv.org/abs/2605.30861",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.30861",
+      "papers_cool_url": "https://papers.cool/arxiv/2605.30861",
+      "github_url": "",
+      "submitted_by": "N",
+      "submitted_at": "2026-06-11T00:00:00.000Z",
+      "upvotes": 2,
+      "comments": 2,
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [
+        "\\b\\w*llms?\\w*\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Post-training for reasoning models typically combines supervised fine-tuning with reinforcement learning from verifiable rewards, most commonly with GRPO.",
       "upvote_label": "2 upvotes"
     },
     {
@@ -2995,56 +3393,21 @@
     },
     {
       "report_date": "2026-06-11",
-      "paper_id": "2606.12385",
-      "title": "Which Models Are Our Models Built On? Auditing Invisible Dependencies in Modern LLMs",
+      "paper_id": "2606.11482",
+      "title": "Building Social World Models with Large Language Models",
       "authors": [
-        "Sanjay Adhikesaven",
-        "Haoxiang Sun",
-        "Sewon Min"
+        "Haofei Yu",
+        "Yining Zhao",
+        "Guanyu Lin",
+        "Jiaxuan You"
       ],
-      "abstract": "Modern LLM training pipelines increasingly rely on other models to generate data, filter corpora, judge outputs, and guide development decisions. These dependencies are recursive: a model may depend on an upstream artifact whose own dependencies are documented only in separate releases and artifacts. As a result, the full dependency structure is fragmented across heterogeneous public artifacts, with complexity and recursive depth far outpacing humans' ability to trace. We introduce ModSleuth, an agentic system that recursively reconstructs LLM dependency graphs from public artifacts with source-grounded evidence. We find that the primary challenge is no longer information extraction, but defining what constitutes a dependency and reconciling artifact references across inconsistent documentation. We address these challenges through a formalization that distinguishes direct and indirect dependencies, represents heterogeneous pipeline roles through operation-centered relationships, and resolves artifact identities across names, versions, and repositories. Applying ModSleuth to four public-artifact-rich LLM releases, we recover 1,060 source-verified dependencies and construct large-scale dependency graphs of modern LLM development. These graphs reveal multi-hop license obligations, train-evaluation coupling, discrepancies between released and training-time artifacts, and documentation inconsistencies that would otherwise be difficult to uncover. We release ModSleuth and the resulting dependency graphs to support transparent analysis of the increasingly complex ecosystems underlying modern LLMs.",
-      "hf_url": "https://huggingface.co/papers/2606.12385",
-      "arxiv_url": "https://arxiv.org/abs/2606.12385",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.12385",
-      "papers_cool_url": "https://papers.cool/arxiv/2606.12385",
+      "abstract": "Understanding and predicting how social beliefs evolve in response to events -- from policy changes to scientific breakthroughs -- remains a fundamental challenge in social science. Given LLMs' commonsense knowledge and social intelligence, we ask: Can LLMs model the dynamics of social beliefs following social events? In this work, we introduce the concept of the Social World Model (SWM), a general framework designed to capture how social beliefs evolve in response to major events. SWM learns state-transition functions for social beliefs by mining temporal patterns in social data and optimizing the evidence lower bound, without the need for explicit human annotations linking events to belief shifts, or for expensive census data. To evaluate SWM, we introduce a benchmark, SWM-bench, derived from real-world prediction markets, specifically Kalshi and Polymarket. SWM-bench includes over 12k data points for social belief prediction tasks spanning diverse domains such as politics, finance, and cryptocurrency. Our experimental results show that SWM significantly outperforms time-series foundation models, achieving state-of-the-art results on Kalshi data and demonstrating competitive performance on Polymarket data, while offering interpretable insights into the underlying mechanisms of social belief dynamics.",
+      "hf_url": "https://huggingface.co/papers/2606.11482",
+      "arxiv_url": "https://arxiv.org/abs/2606.11482",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.11482",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.11482",
       "github_url": "",
-      "submitted_by": "Haoxiang Sun",
-      "submitted_at": "2026-06-11T00:00:00.000Z",
-      "upvotes": 1,
-      "comments": 1,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
-      "matched_terms": [
-        "\\b\\w*llms?\\w*\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Modern LLM training pipelines increasingly rely on other models to generate data, filter corpora, judge outputs, and guide development decisions.",
-      "upvote_label": "1 upvote"
-    },
-    {
-      "report_date": "2026-06-11",
-      "paper_id": "2606.10587",
-      "title": "Towards Diverse Scientific Hypothesis Search with Large Language Models",
-      "authors": [
-        "Haorui Wang",
-        "Parshin Shojaee",
-        "Kazem Meidani",
-        "Kunyang Sun",
-        "José Miguel Hernández-Lobato",
-        "Teresa Head-Gordon",
-        "Jiajun He",
-        "Chandan K. Reddy",
-        "Chao Zhang",
-        "Yuanqi Du"
-      ],
-      "abstract": "Large language models (LLMs) are on the rise for accelerating scientific discovery, most recently in advanced tasks such as generating valid scientific hypotheses. Yet in many discovery settings, the goal is not to identify a single best hypothesis since validation can be noisy and expensive, and scientists benefit from a set of high-quality alternative hypotheses that hedge against downstream uncertainty for the best solutions. Nevertheless, commonly used evolutionary search recipes tend to prioritize optimization over exploration in hypothesis generation, and the resulting selection pressure during the search process leads to diversity collapse. Motivated by these limitations, we formulate hypothesis search as a sampling problem, where the objective is to efficiently produce diverse, high-quality hypotheses under a fixed validation budget. Building on this perspective, we propose \\ours, an evolutionary framework inspired by the classical parallel tempering algorithm that searches hypotheses at multiple temperature levels and enables principled information exchange across temperatures to improve exploration without disrupting convergence. Across domains including molecular discovery, equation discovery, and algorithm discovery, our approach consistently improves both hypothesis quality and diversity under the same validation budget, and produces candidates that remain robust under more expensive downstream computational validations.",
-      "hf_url": "https://huggingface.co/papers/2606.10587",
-      "arxiv_url": "https://arxiv.org/abs/2606.10587",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.10587",
-      "papers_cool_url": "https://papers.cool/arxiv/2606.10587",
-      "github_url": "",
-      "submitted_by": "Parshin Shojaee",
+      "submitted_by": "Haofei Yu",
       "submitted_at": "2026-06-11T00:00:00.000Z",
       "upvotes": 1,
       "comments": 1,
@@ -3056,7 +3419,7 @@
       ],
       "classification_source": "rule",
       "classification_confidence": null,
-      "one_sentence_summary": "Large language models (LLMs) are on the rise for accelerating scientific discovery, most recently in advanced tasks such as generating valid scientific hypotheses.",
+      "one_sentence_summary": "Understanding and predicting how social beliefs evolve in response to events -- from policy changes to scientific breakthroughs -- remains a fundamental challenge in social science.",
       "upvote_label": "1 upvote"
     },
     {
@@ -3076,7 +3439,7 @@
       "submitted_by": "Bharath Sivaram Narasimhan",
       "submitted_at": "2026-06-11T00:00:00.000Z",
       "upvotes": 1,
-      "comments": 1,
+      "comments": 2,
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [
@@ -3107,7 +3470,7 @@
       "submitted_by": "Danilo Danese",
       "submitted_at": "2026-06-11T00:00:00.000Z",
       "upvotes": 1,
-      "comments": 1,
+      "comments": 2,
       "topic_key": "domain_applications",
       "topic_label": "Domain Applications",
       "matched_terms": [
@@ -3117,101 +3480,6 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Brain Magnetic Resonance Imaging (MRI) plays a central role in studying neurological development, aging, and diseases.",
-      "upvote_label": "1 upvote"
-    },
-    {
-      "report_date": "2026-06-11",
-      "paper_id": "2605.11212",
-      "title": "ReVision: Scaling Computer-Use Agents via Temporal Visual Redundancy Reduction",
-      "authors": [
-        "Amirhossein Abaskohi",
-        "Yuhang He",
-        "Peter West",
-        "Giuseppe Carenini",
-        "Pranit Chawla",
-        "Vibhav Vineet"
-      ],
-      "abstract": "Computer-use agents (CUAs) rely on visual observations of graphical user interfaces, where each screenshot is encoded into a large number of visual tokens. As interaction trajectories grow, the token cost increases rapidly, limiting the amount of history that can be incorporated under fixed context and compute budgets. This has resulted in no or very limited improvement in the performance when using history unlike other domains. We address this inefficiency by introducing ReVision, which is used to train multimodal language models on trajectories where redundant visual patches are removed using a learned patch selector that compares patch representations across consecutive screenshots while preserving spatial structure required by the model. Across three benchmarks, OSWorld, WebTailBench, and AgentNetBench, when processing trajectories with 5 history screenshots using Qwen2.5-VL-7B, ReVision reduces token usage by 46% on average while improving success rate by 3% over the no drop baseline. This establishes a clear efficiency gain, enabling agents to process longer trajectories with fewer tokens. With this improved efficiency, we revisit the role of history in CUAs and find that performance continues to improve as more past observations are incorporated when redundancy is removed.",
-      "hf_url": "https://huggingface.co/papers/2605.11212",
-      "arxiv_url": "https://arxiv.org/abs/2605.11212",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.11212",
-      "papers_cool_url": "https://papers.cool/arxiv/2605.11212",
-      "github_url": "",
-      "submitted_by": "Amirhossein Abaskohi",
-      "submitted_at": "2026-06-11T00:00:00.000Z",
-      "upvotes": 1,
-      "comments": 1,
-      "topic_key": "agents_planning",
-      "topic_label": "Agents and Planning",
-      "matched_terms": [
-        "\\bagents?\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Computer-use agents (CUAs) rely on visual observations of graphical user interfaces, where each screenshot is encoded into a large number of visual tokens.",
-      "upvote_label": "1 upvote"
-    },
-    {
-      "report_date": "2026-06-11",
-      "paper_id": "2606.04511",
-      "title": "SparDA: Sparse Decoupled Attention for Efficient Long-Context LLM Inference",
-      "authors": [
-        "Yaosheng Fu",
-        "Guangxuan Xiao",
-        "Xin Dong",
-        "Song Han",
-        "Oreste Villa"
-      ],
-      "abstract": "Sparse attention reduces compute and memory bandwidth for long-context LLM inference. However, two key challenges remain: (1) KV cache capacity still grows with sequence length, and offloading to CPU memory introduces a PCIe transfer bottleneck; (2) the sparse selection step itself retains O(T^2) complexity and can dominate attention cost at long contexts. We propose SparDA, a decoupled sparse attention architecture that introduces a fourth per-layer projection, the Forecast, alongside Query, Key, and Value. The Forecast predicts the KV blocks needed by the next layer, enabling lookahead selection that overlaps CPU-to-GPU prefetch with current-layer execution. Because Forecast is decoupled from the attention query, our GQA implementation uses one Forecast head per GQA group, reducing selection overhead versus the original multi-head selector. SparDA adds <0.5% parameters and trains only the Forecast projections by matching the original selector's attention distribution. On two sparse-pretrained 8B models, SparDA matches or slightly improves accuracy and delivers up to 1.25times prefill speedup and 1.7times decode speedup over the sparse-attention offload baseline. By enabling larger feasible batch sizes on a single GPU, SparDA further reaches up to 5.3times higher decode throughput than the non-offload sparse baseline. Our source code is available at https://github.com/NVlabs/SparDA.",
-      "hf_url": "https://huggingface.co/papers/2606.04511",
-      "arxiv_url": "https://arxiv.org/abs/2606.04511",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.04511",
-      "papers_cool_url": "https://papers.cool/arxiv/2606.04511",
-      "github_url": "",
-      "submitted_by": "Yaosheng Fu",
-      "submitted_at": "2026-06-11T00:00:00.000Z",
-      "upvotes": 1,
-      "comments": 1,
-      "topic_key": "learning_theory",
-      "topic_label": "Learning, Optimization, and Theory",
-      "matched_terms": [
-        "\\bsparse\\b",
-        "\\battention\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Sparse attention reduces compute and memory bandwidth for long-context LLM inference.",
-      "upvote_label": "1 upvote"
-    },
-    {
-      "report_date": "2026-06-11",
-      "paper_id": "2605.30861",
-      "title": "Distilling LLM Feedback for Lean Theorem Proving",
-      "authors": [
-        "Gaetan Narozniak",
-        "Gérard Biau",
-        "Rémi Munos",
-        "Ahmad Rammal",
-        "Pierre Marion"
-      ],
-      "abstract": "Post-training for reasoning models typically combines supervised fine-tuning with reinforcement learning from verifiable rewards, most commonly with GRPO. However, this algorithm suffers from sparse rewards, limited exploration, and mode collapse. Building upon recent works on self-distillation, we propose Feedback Distillation, a training method where the model is trained to match, at the token level, its own distribution conditioned on privileged feedback produced by a language model. Feedback Distillation offers token-level supervision and can inject external knowledge. Evaluating our method for Lean4 theorem-proving, we find that Feedback Distillation maintains greater diversity in generated trajectories than GRPO, yielding higher policy entropy and better pass@k scaling. The two methods are complementary: initializing GRPO from a Feedback Distillation checkpoint outperforms either method alone. All in all, our results suggest a promising avenue to improve post-training for complex reasoning.",
-      "hf_url": "https://huggingface.co/papers/2605.30861",
-      "arxiv_url": "https://arxiv.org/abs/2605.30861",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2605.30861",
-      "papers_cool_url": "https://papers.cool/arxiv/2605.30861",
-      "github_url": "",
-      "submitted_by": "N",
-      "submitted_at": "2026-06-11T00:00:00.000Z",
-      "upvotes": 1,
-      "comments": 1,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
-      "matched_terms": [
-        "\\b\\w*llms?\\w*\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Post-training for reasoning models typically combines supervised fine-tuning with reinforcement learning from verifiable rewards, most commonly with GRPO.",
       "upvote_label": "1 upvote"
     }
   ]
