@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T19:00:08Z",
+  "generated_at": "2026-06-13T19:00:09Z",
   "report_kind": "hf_daily",
   "report_date": "2026-06-10",
   "source_url": "https://huggingface.co/papers/date/2026-06-10",
@@ -78,19 +78,19 @@
       "Multimodal Understanding and Vision: 7 papers (15.56%); representative paper: ABot-Earth 0.5: Generative 3D Earth Model.",
       "Reasoning, Alignment, and Evaluation: 7 papers (15.56%); representative paper: How Does Reasoning Flow? Tracing Attention-Induced Information Flow for Targeted RL in LLMs."
     ],
-    "trend_summary": "Today's dominant clusters are LLMs and Language / Multimodal Understanding and Vision / Reasoning, Alignment, and Evaluation; this suggests that multimodal work is moving from isolated perception toward generation, agents, and action. The strongest visible attention is on “ABot-Earth 0.5: Generative 3D Earth Model” (295 upvotes).",
+    "trend_summary": "Today's dominant clusters are LLMs and Language / Multimodal Understanding and Vision / Reasoning, Alignment, and Evaluation; this suggests that multimodal work is moving from isolated perception toward generation, agents, and action. The strongest visible attention is on “ABot-Earth 0.5: Generative 3D Earth Model” (462 upvotes).",
     "category_summaries": [
       {
         "topic_label": "LLMs and Language",
         "count": 9,
         "share": 20.0,
-        "summary": "LLMs and Language contributes 9 papers (20.00%), led by “Role-Agent: Bootstrapping LLM Agents via Dual-Role Evolution” with 73 upvotes."
+        "summary": "LLMs and Language contributes 9 papers (20.00%), led by “Role-Agent: Bootstrapping LLM Agents via Dual-Role Evolution” with 74 upvotes."
       },
       {
         "topic_label": "Multimodal Understanding and Vision",
         "count": 7,
         "share": 15.56,
-        "summary": "Multimodal Understanding and Vision contributes 7 papers (15.56%), led by “ABot-Earth 0.5: Generative 3D Earth Model” with 295 upvotes."
+        "summary": "Multimodal Understanding and Vision contributes 7 papers (15.56%), led by “ABot-Earth 0.5: Generative 3D Earth Model” with 462 upvotes."
       },
       {
         "topic_label": "Reasoning, Alignment, and Evaluation",
@@ -114,7 +114,7 @@
         "topic_label": "Other AI",
         "count": 5,
         "share": 11.11,
-        "summary": "Other AI contributes 5 papers (11.11%), led by “Kwai Keye-VL-2.0 Technical Report” with 180 upvotes."
+        "summary": "Other AI contributes 5 papers (11.11%), led by “Kwai Keye-VL-2.0 Technical Report” with 181 upvotes."
       },
       {
         "topic_label": "Retrieval, Knowledge, and RAG",
@@ -138,8 +138,8 @@
     "top_papers": [
       {
         "title": "ABot-Earth 0.5: Generative 3D Earth Model",
-        "upvotes": 295,
-        "upvote_label": "295 upvotes",
+        "upvotes": 462,
+        "upvote_label": "462 upvotes",
         "topic_label": "Multimodal Understanding and Vision",
         "summary": "We present ABot-Earth 0.5, a generative 3D framework designed to synthesize vast, seamless 3D environments from ubiquitous, geospatially referenced satellite imagery.",
         "hf_url": "https://huggingface.co/papers/2606.09967",
@@ -149,8 +149,8 @@
       },
       {
         "title": "Kwai Keye-VL-2.0 Technical Report",
-        "upvotes": 180,
-        "upvote_label": "180 upvotes",
+        "upvotes": 181,
+        "upvote_label": "181 upvotes",
         "topic_label": "Other AI",
         "summary": "We introduce Kwai Keye-VL-2.0-30B-A3B, an open-source Mixture-of-Experts (MoE) multimodal foundation model designed to advance long-video understanding and agentic intelligence.",
         "hf_url": "https://huggingface.co/papers/2606.10651",
@@ -160,8 +160,8 @@
       },
       {
         "title": "Role-Agent: Bootstrapping LLM Agents via Dual-Role Evolution",
-        "upvotes": 73,
-        "upvote_label": "73 upvotes",
+        "upvotes": 74,
+        "upvote_label": "74 upvotes",
         "topic_label": "LLMs and Language",
         "summary": "Although Large Language Model (LLM) agents have demonstrated strong performance on complex tasks, their learning is often limited by inefficient interaction feedback and static training environments, which hinder…",
         "hf_url": "https://huggingface.co/papers/2606.10917",
@@ -262,7 +262,7 @@
       "github_url": "",
       "submitted_by": "qian#143",
       "submitted_at": "2026-06-10T00:00:00.000Z",
-      "upvotes": 295,
+      "upvotes": 462,
       "comments": 7,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -272,7 +272,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "We present ABot-Earth 0.5, a generative 3D framework designed to synthesize vast, seamless 3D environments from ubiquitous, geospatially referenced satellite imagery.",
-      "upvote_label": "295 upvotes"
+      "upvote_label": "462 upvotes"
     },
     {
       "report_date": "2026-06-10",
@@ -341,7 +341,7 @@
       "github_url": "",
       "submitted_by": "Tianming Liang",
       "submitted_at": "2026-06-10T00:00:00.000Z",
-      "upvotes": 180,
+      "upvotes": 181,
       "comments": 3,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
@@ -349,7 +349,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "We introduce Kwai Keye-VL-2.0-30B-A3B, an open-source Mixture-of-Experts (MoE) multimodal foundation model designed to advance long-video understanding and agentic intelligence.",
-      "upvote_label": "180 upvotes"
+      "upvote_label": "181 upvotes"
     },
     {
       "report_date": "2026-06-10",
@@ -372,8 +372,8 @@
       "github_url": "",
       "submitted_by": "wangxucong",
       "submitted_at": "2026-06-10T00:00:00.000Z",
-      "upvotes": 73,
-      "comments": 4,
+      "upvotes": 74,
+      "comments": 5,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [
@@ -382,7 +382,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Although Large Language Model (LLM) agents have demonstrated strong performance on complex tasks, their learning is often limited by inefficient interaction feedback and static training environments, which hinder…",
-      "upvote_label": "73 upvotes"
+      "upvote_label": "74 upvotes"
     },
     {
       "report_date": "2026-06-10",
@@ -557,7 +557,7 @@
       "topic_label": "LLMs and Language",
       "count": 9,
       "share": 20.0,
-      "summary": "LLMs and Language contributes 9 papers (20.00%), led by “Role-Agent: Bootstrapping LLM Agents via Dual-Role Evolution” with 73 upvotes.",
+      "summary": "LLMs and Language contributes 9 papers (20.00%), led by “Role-Agent: Bootstrapping LLM Agents via Dual-Role Evolution” with 74 upvotes.",
       "papers": [
         {
           "report_date": "2026-06-10",
@@ -580,8 +580,8 @@
           "github_url": "",
           "submitted_by": "wangxucong",
           "submitted_at": "2026-06-10T00:00:00.000Z",
-          "upvotes": 73,
-          "comments": 4,
+          "upvotes": 74,
+          "comments": 5,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
           "matched_terms": [
@@ -590,7 +590,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Although Large Language Model (LLM) agents have demonstrated strong performance on complex tasks, their learning is often limited by inefficient interaction feedback and static training environments, which hinder…",
-          "upvote_label": "73 upvotes"
+          "upvote_label": "74 upvotes"
         },
         {
           "report_date": "2026-06-10",
@@ -878,7 +878,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "count": 7,
       "share": 15.56,
-      "summary": "Multimodal Understanding and Vision contributes 7 papers (15.56%), led by “ABot-Earth 0.5: Generative 3D Earth Model” with 295 upvotes.",
+      "summary": "Multimodal Understanding and Vision contributes 7 papers (15.56%), led by “ABot-Earth 0.5: Generative 3D Earth Model” with 462 upvotes.",
       "papers": [
         {
           "report_date": "2026-06-10",
@@ -922,7 +922,7 @@
           "github_url": "",
           "submitted_by": "qian#143",
           "submitted_at": "2026-06-10T00:00:00.000Z",
-          "upvotes": 295,
+          "upvotes": 462,
           "comments": 7,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
@@ -932,7 +932,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "We present ABot-Earth 0.5, a generative 3D framework designed to synthesize vast, seamless 3D environments from ubiquitous, geospatially referenced satellite imagery.",
-          "upvote_label": "295 upvotes"
+          "upvote_label": "462 upvotes"
         },
         {
           "report_date": "2026-06-10",
@@ -958,7 +958,7 @@
           "github_url": "",
           "submitted_by": "Yi Jung",
           "submitted_at": "2026-06-10T00:00:00.000Z",
-          "upvotes": 31,
+          "upvotes": 32,
           "comments": 2,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
@@ -968,7 +968,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Diffusion-based lip synchronization models achieve strong visual quality and audio-visual alignment, but full-sequence bidirectional attention and many denoising steps make them impractical for real-time inference.",
-          "upvote_label": "31 upvotes"
+          "upvote_label": "32 upvotes"
         },
         {
           "report_date": "2026-06-10",
@@ -1683,7 +1683,7 @@
           "github_url": "",
           "submitted_by": "Zhou",
           "submitted_at": "2026-06-10T00:00:00.000Z",
-          "upvotes": 14,
+          "upvotes": 15,
           "comments": 2,
           "topic_key": "learning_theory",
           "topic_label": "Learning, Optimization, and Theory",
@@ -1694,7 +1694,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Chain-of-thought (CoT) supervised fine-tuning (SFT) is widely adopted to improve reasoning ability, yet we find that it systematically degrades long-context recall in hybrid linear-attention models.",
-          "upvote_label": "14 upvotes"
+          "upvote_label": "15 upvotes"
         },
         {
           "report_date": "2026-06-10",
@@ -1753,7 +1753,7 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-06-10T00:00:00.000Z",
-          "upvotes": 4,
+          "upvotes": 5,
           "comments": 2,
           "topic_key": "learning_theory",
           "topic_label": "Learning, Optimization, and Theory",
@@ -1763,7 +1763,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "The scalability of Large Language Models (LLMs) to long contexts is fundamentally constrained by the quadratic complexity of standard attention, motivating the adoption of linear attention mechanisms with…",
-          "upvote_label": "4 upvotes"
+          "upvote_label": "5 upvotes"
         },
         {
           "report_date": "2026-06-10",
@@ -1835,7 +1835,7 @@
       "topic_label": "Other AI",
       "count": 5,
       "share": 11.11,
-      "summary": "Other AI contributes 5 papers (11.11%), led by “Kwai Keye-VL-2.0 Technical Report” with 180 upvotes.",
+      "summary": "Other AI contributes 5 papers (11.11%), led by “Kwai Keye-VL-2.0 Technical Report” with 181 upvotes.",
       "papers": [
         {
           "report_date": "2026-06-10",
@@ -1904,7 +1904,7 @@
           "github_url": "",
           "submitted_by": "Tianming Liang",
           "submitted_at": "2026-06-10T00:00:00.000Z",
-          "upvotes": 180,
+          "upvotes": 181,
           "comments": 3,
           "topic_key": "other_ai",
           "topic_label": "Other AI",
@@ -1912,7 +1912,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "We introduce Kwai Keye-VL-2.0-30B-A3B, an open-source Mixture-of-Experts (MoE) multimodal foundation model designed to advance long-video understanding and agentic intelligence.",
-          "upvote_label": "180 upvotes"
+          "upvote_label": "181 upvotes"
         },
         {
           "report_date": "2026-06-10",
@@ -1967,7 +1967,7 @@
           "github_url": "",
           "submitted_by": "yuke zhao",
           "submitted_at": "2026-06-10T00:00:00.000Z",
-          "upvotes": 29,
+          "upvotes": 30,
           "comments": 3,
           "topic_key": "other_ai",
           "topic_label": "Other AI",
@@ -1975,7 +1975,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "We introduce WorldOlympiad, a benchmark for diagnosing video-based world models across physical faithfulness, geometric consistency, and interaction fidelity.",
-          "upvote_label": "29 upvotes"
+          "upvote_label": "30 upvotes"
         },
         {
           "report_date": "2026-06-10",
@@ -2298,7 +2298,7 @@
       "github_url": "",
       "submitted_by": "qian#143",
       "submitted_at": "2026-06-10T00:00:00.000Z",
-      "upvotes": 295,
+      "upvotes": 462,
       "comments": 7,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -2308,7 +2308,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "We present ABot-Earth 0.5, a generative 3D framework designed to synthesize vast, seamless 3D environments from ubiquitous, geospatially referenced satellite imagery.",
-      "upvote_label": "295 upvotes"
+      "upvote_label": "462 upvotes"
     },
     {
       "report_date": "2026-06-10",
@@ -2377,7 +2377,7 @@
       "github_url": "",
       "submitted_by": "Tianming Liang",
       "submitted_at": "2026-06-10T00:00:00.000Z",
-      "upvotes": 180,
+      "upvotes": 181,
       "comments": 3,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
@@ -2385,7 +2385,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "We introduce Kwai Keye-VL-2.0-30B-A3B, an open-source Mixture-of-Experts (MoE) multimodal foundation model designed to advance long-video understanding and agentic intelligence.",
-      "upvote_label": "180 upvotes"
+      "upvote_label": "181 upvotes"
     },
     {
       "report_date": "2026-06-10",
@@ -2408,8 +2408,8 @@
       "github_url": "",
       "submitted_by": "wangxucong",
       "submitted_at": "2026-06-10T00:00:00.000Z",
-      "upvotes": 73,
-      "comments": 4,
+      "upvotes": 74,
+      "comments": 5,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [
@@ -2418,7 +2418,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Although Large Language Model (LLM) agents have demonstrated strong performance on complex tasks, their learning is often limited by inefficient interaction feedback and static training environments, which hinder…",
-      "upvote_label": "73 upvotes"
+      "upvote_label": "74 upvotes"
     },
     {
       "report_date": "2026-06-10",
@@ -2627,6 +2627,42 @@
     },
     {
       "report_date": "2026-06-10",
+      "paper_id": "2606.11180",
+      "title": "Lip Forcing: Few-Step Autoregressive Diffusion for Real-time Lip Synchronization",
+      "authors": [
+        "Paul Hyunbin Cho",
+        "Jinhyuk Jang",
+        "SeokYoung Lee",
+        "Joungbin Lee",
+        "Siyoon Jin",
+        "Heeseong Shin",
+        "Jung Yi",
+        "Yunjin Park",
+        "Chulmin Park",
+        "Seungryong Kim"
+      ],
+      "abstract": "Diffusion-based lip synchronization models achieve strong visual quality and audio-visual alignment, but full-sequence bidirectional attention and many denoising steps make them impractical for real-time inference. We present Lip Forcing, to our knowledge the first autoregressive diffusion method for video-to-video (V2V) lip synchronization, which distills a 14B audio-conditioned bidirectional video diffusion teacher into causal students. At inference, the students generate each chunk in only two denoising steps without inference-time CFG, enabling real-time lip synchronization. A lip-sync-specific teacher-trajectory analysis reveals a CFG fidelity-sync tradeoff: no-CFG predictions favor reference fidelity, whereas CFG-guided predictions favor synchronization within a mid-trajectory band. Lip Forcing translates this finding into three analysis-derived components: Sync-Window DMD, a two-step inference schedule, and a SyncNet-based reward. We validate Lip Forcing at two student scales, both distilled from the 14B teacher. The 1.3B student crosses into real-time streaming at 31 FPS, 17.6times faster than its same-scale bidirectional model. The 14B student, the largest diffusion model reported for V2V lip synchronization, runs 39.8times faster than its teacher at comparable reference fidelity. Time-to-first-frame is sub-millisecond at both scales, far below every diffusion baseline.",
+      "hf_url": "https://huggingface.co/papers/2606.11180",
+      "arxiv_url": "https://arxiv.org/abs/2606.11180",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.11180",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.11180",
+      "github_url": "",
+      "submitted_by": "Yi Jung",
+      "submitted_at": "2026-06-10T00:00:00.000Z",
+      "upvotes": 32,
+      "comments": 2,
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
+      "matched_terms": [
+        "\\bdiffusion\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Diffusion-based lip synchronization models achieve strong visual quality and audio-visual alignment, but full-sequence bidirectional attention and many denoising steps make them impractical for real-time inference.",
+      "upvote_label": "32 upvotes"
+    },
+    {
+      "report_date": "2026-06-10",
       "paper_id": "2606.09821",
       "title": "Rethinking the Divergence Regularization in LLM RL",
       "authors": [
@@ -2659,42 +2695,6 @@
     },
     {
       "report_date": "2026-06-10",
-      "paper_id": "2606.11180",
-      "title": "Lip Forcing: Few-Step Autoregressive Diffusion for Real-time Lip Synchronization",
-      "authors": [
-        "Paul Hyunbin Cho",
-        "Jinhyuk Jang",
-        "SeokYoung Lee",
-        "Joungbin Lee",
-        "Siyoon Jin",
-        "Heeseong Shin",
-        "Jung Yi",
-        "Yunjin Park",
-        "Chulmin Park",
-        "Seungryong Kim"
-      ],
-      "abstract": "Diffusion-based lip synchronization models achieve strong visual quality and audio-visual alignment, but full-sequence bidirectional attention and many denoising steps make them impractical for real-time inference. We present Lip Forcing, to our knowledge the first autoregressive diffusion method for video-to-video (V2V) lip synchronization, which distills a 14B audio-conditioned bidirectional video diffusion teacher into causal students. At inference, the students generate each chunk in only two denoising steps without inference-time CFG, enabling real-time lip synchronization. A lip-sync-specific teacher-trajectory analysis reveals a CFG fidelity-sync tradeoff: no-CFG predictions favor reference fidelity, whereas CFG-guided predictions favor synchronization within a mid-trajectory band. Lip Forcing translates this finding into three analysis-derived components: Sync-Window DMD, a two-step inference schedule, and a SyncNet-based reward. We validate Lip Forcing at two student scales, both distilled from the 14B teacher. The 1.3B student crosses into real-time streaming at 31 FPS, 17.6times faster than its same-scale bidirectional model. The 14B student, the largest diffusion model reported for V2V lip synchronization, runs 39.8times faster than its teacher at comparable reference fidelity. Time-to-first-frame is sub-millisecond at both scales, far below every diffusion baseline.",
-      "hf_url": "https://huggingface.co/papers/2606.11180",
-      "arxiv_url": "https://arxiv.org/abs/2606.11180",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.11180",
-      "papers_cool_url": "https://papers.cool/arxiv/2606.11180",
-      "github_url": "",
-      "submitted_by": "Yi Jung",
-      "submitted_at": "2026-06-10T00:00:00.000Z",
-      "upvotes": 31,
-      "comments": 2,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [
-        "\\bdiffusion\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Diffusion-based lip synchronization models achieve strong visual quality and audio-visual alignment, but full-sequence bidirectional attention and many denoising steps make them impractical for real-time inference.",
-      "upvote_label": "31 upvotes"
-    },
-    {
-      "report_date": "2026-06-10",
       "paper_id": "2606.11129",
       "title": "WorldOlympiad: Can Your World Model Survive a Triathlon?",
       "authors": [
@@ -2718,7 +2718,7 @@
       "github_url": "",
       "submitted_by": "yuke zhao",
       "submitted_at": "2026-06-10T00:00:00.000Z",
-      "upvotes": 29,
+      "upvotes": 30,
       "comments": 3,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
@@ -2726,7 +2726,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "We introduce WorldOlympiad, a benchmark for diagnosing video-based world models across physical faithfulness, geometric consistency, and interaction fidelity.",
-      "upvote_label": "29 upvotes"
+      "upvote_label": "30 upvotes"
     },
     {
       "report_date": "2026-06-10",
@@ -2940,7 +2940,7 @@
       "github_url": "",
       "submitted_by": "Zhou",
       "submitted_at": "2026-06-10T00:00:00.000Z",
-      "upvotes": 14,
+      "upvotes": 15,
       "comments": 2,
       "topic_key": "learning_theory",
       "topic_label": "Learning, Optimization, and Theory",
@@ -2951,7 +2951,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Chain-of-thought (CoT) supervised fine-tuning (SFT) is widely adopted to improve reasoning ability, yet we find that it systematically degrades long-context recall in hybrid linear-attention models.",
-      "upvote_label": "14 upvotes"
+      "upvote_label": "15 upvotes"
     },
     {
       "report_date": "2026-06-10",
@@ -3269,6 +3269,42 @@
     },
     {
       "report_date": "2026-06-10",
+      "paper_id": "2606.10650",
+      "title": "Dynamic Linear Attention",
+      "authors": [
+        "Xin Wang",
+        "Hui Shen",
+        "Boyuan Zheng",
+        "Xueshen Liu",
+        "Minkyoung Cho",
+        "Zhongwei Wan",
+        "Zesen Zhao",
+        "Zhuoqing Mao",
+        "Shen Yan",
+        "Mi Zhang"
+      ],
+      "abstract": "The scalability of Large Language Models (LLMs) to long contexts is fundamentally constrained by the quadratic complexity of standard attention, motivating the adoption of linear attention mechanisms with sub-quadratic cost. To improve representation capacity under long contexts, recent approaches organize memory in a multi-state manner. However, existing multi-state linear attention methods rely on fixed state merging policies that cannot adapt to dynamically varying token importance, irreversibly obscuring critical tokens and causing severe error accumulation over long sequences. To address this limitation, we propose DLA, a dynamic memory modeling framework for multi-state linear attention. DLA introduces (i) Information-Aware Dynamic State Merging, which adaptively determines state boundaries based on token-level information variation, preserving high-resolution representations around semantic transitions while aggressively summarizing stable regions, and (ii) Capacity-Bounded Memory Modeling, which maintains a fixed-size, chronologically ordered state cache by selectively merging adjacent low-information states to control memory growth with minimal information loss. We pre-train DLA on two different linear attention models and evaluate on 16 datasets across three categories. Experimental results demonstrate the superiority of DLA over state-of-the-art.",
+      "hf_url": "https://huggingface.co/papers/2606.10650",
+      "arxiv_url": "https://arxiv.org/abs/2606.10650",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.10650",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.10650",
+      "github_url": "",
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-06-10T00:00:00.000Z",
+      "upvotes": 5,
+      "comments": 2,
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
+      "matched_terms": [
+        "\\battention\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "The scalability of Large Language Models (LLMs) to long contexts is fundamentally constrained by the quadratic complexity of standard attention, motivating the adoption of linear attention mechanisms with…",
+      "upvote_label": "5 upvotes"
+    },
+    {
+      "report_date": "2026-06-10",
       "paper_id": "2606.07689",
       "title": "Struct-Searcher: Agentic Structural Thinking Advances Multimodal Deep Information Seeking",
       "authors": [
@@ -3397,42 +3433,6 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Existing deep learning models for Positron Emission Tomography (PET) image denoising often suffer from severe performance degradation under distribution shifts, fundamentally restricting their robust clinical deployment.",
-      "upvote_label": "4 upvotes"
-    },
-    {
-      "report_date": "2026-06-10",
-      "paper_id": "2606.10650",
-      "title": "Dynamic Linear Attention",
-      "authors": [
-        "Xin Wang",
-        "Hui Shen",
-        "Boyuan Zheng",
-        "Xueshen Liu",
-        "Minkyoung Cho",
-        "Zhongwei Wan",
-        "Zesen Zhao",
-        "Zhuoqing Mao",
-        "Shen Yan",
-        "Mi Zhang"
-      ],
-      "abstract": "The scalability of Large Language Models (LLMs) to long contexts is fundamentally constrained by the quadratic complexity of standard attention, motivating the adoption of linear attention mechanisms with sub-quadratic cost. To improve representation capacity under long contexts, recent approaches organize memory in a multi-state manner. However, existing multi-state linear attention methods rely on fixed state merging policies that cannot adapt to dynamically varying token importance, irreversibly obscuring critical tokens and causing severe error accumulation over long sequences. To address this limitation, we propose DLA, a dynamic memory modeling framework for multi-state linear attention. DLA introduces (i) Information-Aware Dynamic State Merging, which adaptively determines state boundaries based on token-level information variation, preserving high-resolution representations around semantic transitions while aggressively summarizing stable regions, and (ii) Capacity-Bounded Memory Modeling, which maintains a fixed-size, chronologically ordered state cache by selectively merging adjacent low-information states to control memory growth with minimal information loss. We pre-train DLA on two different linear attention models and evaluate on 16 datasets across three categories. Experimental results demonstrate the superiority of DLA over state-of-the-art.",
-      "hf_url": "https://huggingface.co/papers/2606.10650",
-      "arxiv_url": "https://arxiv.org/abs/2606.10650",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.10650",
-      "papers_cool_url": "https://papers.cool/arxiv/2606.10650",
-      "github_url": "",
-      "submitted_by": "taesiri",
-      "submitted_at": "2026-06-10T00:00:00.000Z",
-      "upvotes": 4,
-      "comments": 2,
-      "topic_key": "learning_theory",
-      "topic_label": "Learning, Optimization, and Theory",
-      "matched_terms": [
-        "\\battention\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "The scalability of Large Language Models (LLMs) to long contexts is fundamentally constrained by the quadratic complexity of standard attention, motivating the adoption of linear attention mechanisms with…",
       "upvote_label": "4 upvotes"
     },
     {

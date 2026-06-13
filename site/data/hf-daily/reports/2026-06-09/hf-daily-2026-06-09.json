@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T19:00:06Z",
+  "generated_at": "2026-06-13T19:00:08Z",
   "report_kind": "hf_daily",
   "report_date": "2026-06-09",
   "source_url": "https://huggingface.co/papers/date/2026-06-09",
@@ -83,13 +83,13 @@
       "Reasoning, Alignment, and Evaluation: 9 papers (15.25%); representative paper: Skill-3D: Evolving Scene-Aware Skills for Agentic 3D Spatial Reasoning.",
       "Agents and Planning: 8 papers (13.56%); representative paper: Agents' Last Exam."
     ],
-    "trend_summary": "Today's dominant clusters are Other AI / Reasoning, Alignment, and Evaluation / Agents and Planning; this suggests that agent papers emphasize tool use, planning, and deployable workflows. The strongest visible attention is on “Agents' Last Exam” (322 upvotes).",
+    "trend_summary": "Today's dominant clusters are Other AI / Reasoning, Alignment, and Evaluation / Agents and Planning; this suggests that agent papers emphasize tool use, planning, and deployable workflows. The strongest visible attention is on “Agents' Last Exam” (329 upvotes).",
     "category_summaries": [
       {
         "topic_label": "Other AI",
         "count": 9,
         "share": 15.25,
-        "summary": "Other AI contributes 9 papers (15.25%), led by “On the Geometry of On-Policy Distillation” with 68 upvotes."
+        "summary": "Other AI contributes 9 papers (15.25%), led by “On the Geometry of On-Policy Distillation” with 71 upvotes."
       },
       {
         "topic_label": "Reasoning, Alignment, and Evaluation",
@@ -101,31 +101,31 @@
         "topic_label": "Agents and Planning",
         "count": 8,
         "share": 13.56,
-        "summary": "Agents and Planning contributes 8 papers (13.56%), led by “Agents' Last Exam” with 322 upvotes."
+        "summary": "Agents and Planning contributes 8 papers (13.56%), led by “Agents' Last Exam” with 329 upvotes."
       },
       {
         "topic_label": "LLMs and Language",
         "count": 8,
         "share": 13.56,
-        "summary": "LLMs and Language contributes 8 papers (13.56%), led by “LatentSkill: From In-Context Textual Skills to In-Weight Latent Skills for LLM Agents” with 60 upvotes."
+        "summary": "LLMs and Language contributes 8 papers (13.56%), led by “LatentSkill: From In-Context Textual Skills to In-Weight Latent Skills for LLM Agents” with 62 upvotes."
       },
       {
         "topic_label": "Multimodal Understanding and Vision",
         "count": 7,
         "share": 11.86,
-        "summary": "Multimodal Understanding and Vision contributes 7 papers (11.86%), led by “Latent Spatial Memory for Video World Models” with 62 upvotes."
+        "summary": "Multimodal Understanding and Vision contributes 7 papers (11.86%), led by “Latent Spatial Memory for Video World Models” with 63 upvotes."
       },
       {
         "topic_label": "Learning, Optimization, and Theory",
         "count": 5,
         "share": 8.47,
-        "summary": "Learning, Optimization, and Theory contributes 5 papers (8.47%), led by “FlashMemory-DeepSeek-V4: Lightning Index Ultra-Long Context via Lookahead Sparse Attention” with 58 upvotes."
+        "summary": "Learning, Optimization, and Theory contributes 5 papers (8.47%), led by “FlashMemory-DeepSeek-V4: Lightning Index Ultra-Long Context via Lookahead Sparse Attention” with 60 upvotes."
       },
       {
         "topic_label": "Retrieval, Knowledge, and RAG",
         "count": 4,
         "share": 6.78,
-        "summary": "Retrieval, Knowledge, and RAG contributes 4 papers (6.78%), led by “Echo-Memory: A Controlled Study of Memory in Action World Models” with 31 upvotes."
+        "summary": "Retrieval, Knowledge, and RAG contributes 4 papers (6.78%), led by “Echo-Memory: A Controlled Study of Memory in Action World Models” with 32 upvotes."
       },
       {
         "topic_label": "Robotics and Embodied AI",
@@ -149,8 +149,8 @@
     "top_papers": [
       {
         "title": "Agents' Last Exam",
-        "upvotes": 322,
-        "upvote_label": "322 upvotes",
+        "upvotes": 329,
+        "upvote_label": "329 upvotes",
         "topic_label": "Agents and Planning",
         "summary": "Recent AI systems have achieved strong results on a wide range of benchmarks, yet these gains have not translated into economically meaningful deployment across many professional domains.",
         "hf_url": "https://huggingface.co/papers/2606.05405",
@@ -171,8 +171,8 @@
       },
       {
         "title": "On the Geometry of On-Policy Distillation",
-        "upvotes": 68,
-        "upvote_label": "68 upvotes",
+        "upvotes": 71,
+        "upvote_label": "71 upvotes",
         "topic_label": "Other AI",
         "summary": "On-policy distillation (OPD) is increasingly used to improve large language model reasoning, but its training dynamics remain poorly understood.",
         "hf_url": "https://huggingface.co/papers/2606.07082",
@@ -182,8 +182,8 @@
       },
       {
         "title": "Latent Spatial Memory for Video World Models",
-        "upvotes": 62,
-        "upvote_label": "62 upvotes",
+        "upvotes": 63,
+        "upvote_label": "63 upvotes",
         "topic_label": "Multimodal Understanding and Vision",
         "summary": "Video world models that maintain 3D spatial consistency across generated frames typically rely on explicit point cloud memory constructed in RGB space.",
         "hf_url": "https://huggingface.co/papers/2606.09828",
@@ -193,8 +193,8 @@
       },
       {
         "title": "LatentSkill: From In-Context Textual Skills to In-Weight Latent Skills for LLM Agents",
-        "upvotes": 60,
-        "upvote_label": "60 upvotes",
+        "upvotes": 62,
+        "upvote_label": "62 upvotes",
         "topic_label": "LLMs and Language",
         "summary": "Agent systems increasingly use textual skills to encode reusable task procedures, but injecting these skills into the prompt at every step incurs substantial context overhead and exposes skill content as plaintext.",
         "hf_url": "https://huggingface.co/papers/2606.06087",
@@ -553,7 +553,7 @@
       "github_url": "",
       "submitted_by": "Han",
       "submitted_at": "2026-06-09T00:00:00.000Z",
-      "upvotes": 322,
+      "upvotes": 329,
       "comments": 3,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -563,7 +563,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Recent AI systems have achieved strong results on a wide range of benchmarks, yet these gains have not translated into economically meaningful deployment across many professional domains.",
-      "upvote_label": "322 upvotes"
+      "upvote_label": "329 upvotes"
     },
     {
       "report_date": "2026-06-09",
@@ -625,7 +625,7 @@
       "github_url": "",
       "submitted_by": "Shenzhennan",
       "submitted_at": "2026-06-09T00:00:00.000Z",
-      "upvotes": 68,
+      "upvotes": 71,
       "comments": 3,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
@@ -633,7 +633,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "On-policy distillation (OPD) is increasingly used to improve large language model reasoning, but its training dynamics remain poorly understood.",
-      "upvote_label": "68 upvotes"
+      "upvote_label": "71 upvotes"
     },
     {
       "report_date": "2026-06-09",
@@ -659,7 +659,7 @@
       "github_url": "",
       "submitted_by": "Weijie Wang",
       "submitted_at": "2026-06-09T00:00:00.000Z",
-      "upvotes": 62,
+      "upvotes": 63,
       "comments": 3,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -669,7 +669,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Video world models that maintain 3D spatial consistency across generated frames typically rely on explicit point cloud memory constructed in RGB space.",
-      "upvote_label": "62 upvotes"
+      "upvote_label": "63 upvotes"
     },
     {
       "report_date": "2026-06-09",
@@ -696,7 +696,7 @@
       "github_url": "",
       "submitted_by": "Tianyi Xu",
       "submitted_at": "2026-06-09T00:00:00.000Z",
-      "upvotes": 60,
+      "upvotes": 62,
       "comments": 5,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
@@ -706,7 +706,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Agent systems increasingly use textual skills to encode reusable task procedures, but injecting these skills into the prompt at every step incurs substantial context overhead and exposes skill content as plaintext.",
-      "upvote_label": "60 upvotes"
+      "upvote_label": "62 upvotes"
     },
     {
       "report_date": "2026-06-09",
@@ -735,7 +735,7 @@
       "github_url": "",
       "submitted_by": "Yan Wang",
       "submitted_at": "2026-06-09T00:00:00.000Z",
-      "upvotes": 58,
+      "upvotes": 60,
       "comments": 5,
       "topic_key": "learning_theory",
       "topic_label": "Learning, Optimization, and Theory",
@@ -746,7 +746,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Conventional LLMs keep the full KV cache loaded during decoding, causing a severe GPU memory bottleneck for ultra-long context serving.",
-      "upvote_label": "58 upvotes"
+      "upvote_label": "60 upvotes"
     },
     {
       "report_date": "2026-06-09",
@@ -838,7 +838,7 @@
       "topic_label": "Other AI",
       "count": 9,
       "share": 15.25,
-      "summary": "Other AI contributes 9 papers (15.25%), led by “On the Geometry of On-Policy Distillation” with 68 upvotes.",
+      "summary": "Other AI contributes 9 papers (15.25%), led by “On the Geometry of On-Policy Distillation” with 71 upvotes.",
       "papers": [
         {
           "report_date": "2026-06-09",
@@ -863,7 +863,7 @@
           "github_url": "",
           "submitted_by": "Shenzhennan",
           "submitted_at": "2026-06-09T00:00:00.000Z",
-          "upvotes": 68,
+          "upvotes": 71,
           "comments": 3,
           "topic_key": "other_ai",
           "topic_label": "Other AI",
@@ -871,7 +871,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "On-policy distillation (OPD) is increasingly used to improve large language model reasoning, but its training dynamics remain poorly understood.",
-          "upvote_label": "68 upvotes"
+          "upvote_label": "71 upvotes"
         },
         {
           "report_date": "2026-06-09",
@@ -902,7 +902,7 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-06-09T00:00:00.000Z",
-          "upvotes": 23,
+          "upvotes": 24,
           "comments": 2,
           "topic_key": "other_ai",
           "topic_label": "Other AI",
@@ -910,7 +910,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Long-context language model inference is bottlenecked by memory, as the KV cache grows with context length.",
-          "upvote_label": "23 upvotes"
+          "upvote_label": "24 upvotes"
         },
         {
           "report_date": "2026-06-09",
@@ -1000,7 +1000,7 @@
           "github_url": "",
           "submitted_by": "Fengzhuo Zhang",
           "submitted_at": "2026-06-09T00:00:00.000Z",
-          "upvotes": 9,
+          "upvotes": 10,
           "comments": 4,
           "topic_key": "other_ai",
           "topic_label": "Other AI",
@@ -1008,7 +1008,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Muon improves training efficiency over Adam in large language-model training by about two times, but the local geometric source of this advantage remains unclear.",
-          "upvote_label": "9 upvotes"
+          "upvote_label": "10 upvotes"
         },
         {
           "report_date": "2026-06-09",
@@ -1463,7 +1463,7 @@
       "topic_label": "Agents and Planning",
       "count": 8,
       "share": 13.56,
-      "summary": "Agents and Planning contributes 8 papers (13.56%), led by “Agents' Last Exam” with 322 upvotes.",
+      "summary": "Agents and Planning contributes 8 papers (13.56%), led by “Agents' Last Exam” with 329 upvotes.",
       "papers": [
         {
           "report_date": "2026-06-09",
@@ -1787,7 +1787,7 @@
           "github_url": "",
           "submitted_by": "Han",
           "submitted_at": "2026-06-09T00:00:00.000Z",
-          "upvotes": 322,
+          "upvotes": 329,
           "comments": 3,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
@@ -1797,7 +1797,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Recent AI systems have achieved strong results on a wide range of benchmarks, yet these gains have not translated into economically meaningful deployment across many professional domains.",
-          "upvote_label": "322 upvotes"
+          "upvote_label": "329 upvotes"
         },
         {
           "report_date": "2026-06-09",
@@ -2051,7 +2051,7 @@
       "topic_label": "LLMs and Language",
       "count": 8,
       "share": 13.56,
-      "summary": "LLMs and Language contributes 8 papers (13.56%), led by “LatentSkill: From In-Context Textual Skills to In-Weight Latent Skills for LLM Agents” with 60 upvotes.",
+      "summary": "LLMs and Language contributes 8 papers (13.56%), led by “LatentSkill: From In-Context Textual Skills to In-Weight Latent Skills for LLM Agents” with 62 upvotes.",
       "papers": [
         {
           "report_date": "2026-06-09",
@@ -2078,7 +2078,7 @@
           "github_url": "",
           "submitted_by": "Tianyi Xu",
           "submitted_at": "2026-06-09T00:00:00.000Z",
-          "upvotes": 60,
+          "upvotes": 62,
           "comments": 5,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
@@ -2088,7 +2088,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Agent systems increasingly use textual skills to encode reusable task procedures, but injecting these skills into the prompt at every step incurs substantial context overhead and exposes skill content as plaintext.",
-          "upvote_label": "60 upvotes"
+          "upvote_label": "62 upvotes"
         },
         {
           "report_date": "2026-06-09",
@@ -2110,7 +2110,7 @@
           "github_url": "",
           "submitted_by": "Woojung Song",
           "submitted_at": "2026-06-09T00:00:00.000Z",
-          "upvotes": 33,
+          "upvotes": 34,
           "comments": 2,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
@@ -2120,7 +2120,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "We examine whether human psychometric questionnaires can serve as reliable tools for characterizing and predicting LLM behavior in everyday user interactions.",
-          "upvote_label": "33 upvotes"
+          "upvote_label": "34 upvotes"
         },
         {
           "report_date": "2026-06-09",
@@ -2322,7 +2322,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "count": 7,
       "share": 11.86,
-      "summary": "Multimodal Understanding and Vision contributes 7 papers (11.86%), led by “Latent Spatial Memory for Video World Models” with 62 upvotes.",
+      "summary": "Multimodal Understanding and Vision contributes 7 papers (11.86%), led by “Latent Spatial Memory for Video World Models” with 63 upvotes.",
       "papers": [
         {
           "report_date": "2026-06-09",
@@ -2348,7 +2348,7 @@
           "github_url": "",
           "submitted_by": "Weijie Wang",
           "submitted_at": "2026-06-09T00:00:00.000Z",
-          "upvotes": 62,
+          "upvotes": 63,
           "comments": 3,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
@@ -2358,7 +2358,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Video world models that maintain 3D spatial consistency across generated frames typically rely on explicit point cloud memory constructed in RGB space.",
-          "upvote_label": "62 upvotes"
+          "upvote_label": "63 upvotes"
         },
         {
           "report_date": "2026-06-09",
@@ -2564,7 +2564,7 @@
       "topic_label": "Learning, Optimization, and Theory",
       "count": 5,
       "share": 8.47,
-      "summary": "Learning, Optimization, and Theory contributes 5 papers (8.47%), led by “FlashMemory-DeepSeek-V4: Lightning Index Ultra-Long Context via Lookahead Sparse Attention” with 58 upvotes.",
+      "summary": "Learning, Optimization, and Theory contributes 5 papers (8.47%), led by “FlashMemory-DeepSeek-V4: Lightning Index Ultra-Long Context via Lookahead Sparse Attention” with 60 upvotes.",
       "papers": [
         {
           "report_date": "2026-06-09",
@@ -2593,7 +2593,7 @@
           "github_url": "",
           "submitted_by": "Yan Wang",
           "submitted_at": "2026-06-09T00:00:00.000Z",
-          "upvotes": 58,
+          "upvotes": 60,
           "comments": 5,
           "topic_key": "learning_theory",
           "topic_label": "Learning, Optimization, and Theory",
@@ -2604,7 +2604,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Conventional LLMs keep the full KV cache loaded during decoding, causing a severe GPU memory bottleneck for ultra-long context serving.",
-          "upvote_label": "58 upvotes"
+          "upvote_label": "60 upvotes"
         },
         {
           "report_date": "2026-06-09",
@@ -2652,7 +2652,7 @@
           "github_url": "",
           "submitted_by": "Georgii Aparin",
           "submitted_at": "2026-06-09T00:00:00.000Z",
-          "upvotes": 14,
+          "upvotes": 15,
           "comments": 3,
           "topic_key": "learning_theory",
           "topic_label": "Learning, Optimization, and Theory",
@@ -2663,7 +2663,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Whisper, a widely adopted ASR model, is known to suffer from hallucinations - coherent transcriptions generated for non-speech audio entirely disconnected from the input.",
-          "upvote_label": "14 upvotes"
+          "upvote_label": "15 upvotes"
         },
         {
           "report_date": "2026-06-09",
@@ -2728,7 +2728,7 @@
       "topic_label": "Retrieval, Knowledge, and RAG",
       "count": 4,
       "share": 6.78,
-      "summary": "Retrieval, Knowledge, and RAG contributes 4 papers (6.78%), led by “Echo-Memory: A Controlled Study of Memory in Action World Models” with 31 upvotes.",
+      "summary": "Retrieval, Knowledge, and RAG contributes 4 papers (6.78%), led by “Echo-Memory: A Controlled Study of Memory in Action World Models” with 32 upvotes.",
       "papers": [
         {
           "report_date": "2026-06-09",
@@ -2760,7 +2760,7 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-06-09T00:00:00.000Z",
-          "upvotes": 31,
+          "upvotes": 32,
           "comments": 2,
           "topic_key": "retrieval_knowledge",
           "topic_label": "Retrieval, Knowledge, and RAG",
@@ -2770,7 +2770,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "We present Echo-Memory, a controlled study of memory mechanisms in action-conditioned world models.",
-          "upvote_label": "31 upvotes"
+          "upvote_label": "32 upvotes"
         },
         {
           "report_date": "2026-06-09",
@@ -3536,7 +3536,7 @@
       "github_url": "",
       "submitted_by": "Han",
       "submitted_at": "2026-06-09T00:00:00.000Z",
-      "upvotes": 322,
+      "upvotes": 329,
       "comments": 3,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -3546,7 +3546,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Recent AI systems have achieved strong results on a wide range of benchmarks, yet these gains have not translated into economically meaningful deployment across many professional domains.",
-      "upvote_label": "322 upvotes"
+      "upvote_label": "329 upvotes"
     },
     {
       "report_date": "2026-06-09",
@@ -3608,7 +3608,7 @@
       "github_url": "",
       "submitted_by": "Shenzhennan",
       "submitted_at": "2026-06-09T00:00:00.000Z",
-      "upvotes": 68,
+      "upvotes": 71,
       "comments": 3,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
@@ -3616,7 +3616,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "On-policy distillation (OPD) is increasingly used to improve large language model reasoning, but its training dynamics remain poorly understood.",
-      "upvote_label": "68 upvotes"
+      "upvote_label": "71 upvotes"
     },
     {
       "report_date": "2026-06-09",
@@ -3642,7 +3642,7 @@
       "github_url": "",
       "submitted_by": "Weijie Wang",
       "submitted_at": "2026-06-09T00:00:00.000Z",
-      "upvotes": 62,
+      "upvotes": 63,
       "comments": 3,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -3652,7 +3652,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Video world models that maintain 3D spatial consistency across generated frames typically rely on explicit point cloud memory constructed in RGB space.",
-      "upvote_label": "62 upvotes"
+      "upvote_label": "63 upvotes"
     },
     {
       "report_date": "2026-06-09",
@@ -3679,7 +3679,7 @@
       "github_url": "",
       "submitted_by": "Tianyi Xu",
       "submitted_at": "2026-06-09T00:00:00.000Z",
-      "upvotes": 60,
+      "upvotes": 62,
       "comments": 5,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
@@ -3689,7 +3689,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Agent systems increasingly use textual skills to encode reusable task procedures, but injecting these skills into the prompt at every step incurs substantial context overhead and exposes skill content as plaintext.",
-      "upvote_label": "60 upvotes"
+      "upvote_label": "62 upvotes"
     },
     {
       "report_date": "2026-06-09",
@@ -3718,7 +3718,7 @@
       "github_url": "",
       "submitted_by": "Yan Wang",
       "submitted_at": "2026-06-09T00:00:00.000Z",
-      "upvotes": 58,
+      "upvotes": 60,
       "comments": 5,
       "topic_key": "learning_theory",
       "topic_label": "Learning, Optimization, and Theory",
@@ -3729,7 +3729,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Conventional LLMs keep the full KV cache loaded during decoding, causing a severe GPU memory bottleneck for ultra-long context serving.",
-      "upvote_label": "58 upvotes"
+      "upvote_label": "60 upvotes"
     },
     {
       "report_date": "2026-06-09",
@@ -3835,7 +3835,7 @@
       "github_url": "",
       "submitted_by": "Woojung Song",
       "submitted_at": "2026-06-09T00:00:00.000Z",
-      "upvotes": 33,
+      "upvotes": 34,
       "comments": 2,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
@@ -3845,7 +3845,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "We examine whether human psychometric questionnaires can serve as reliable tools for characterizing and predicting LLM behavior in everyday user interactions.",
-      "upvote_label": "33 upvotes"
+      "upvote_label": "34 upvotes"
     },
     {
       "report_date": "2026-06-09",
@@ -3877,7 +3877,7 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-06-09T00:00:00.000Z",
-      "upvotes": 31,
+      "upvotes": 32,
       "comments": 2,
       "topic_key": "retrieval_knowledge",
       "topic_label": "Retrieval, Knowledge, and RAG",
@@ -3887,7 +3887,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "We present Echo-Memory, a controlled study of memory mechanisms in action-conditioned world models.",
-      "upvote_label": "31 upvotes"
+      "upvote_label": "32 upvotes"
     },
     {
       "report_date": "2026-06-09",
@@ -3918,7 +3918,7 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-06-09T00:00:00.000Z",
-      "upvotes": 23,
+      "upvotes": 24,
       "comments": 2,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
@@ -3926,7 +3926,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Long-context language model inference is bottlenecked by memory, as the KV cache grows with context length.",
-      "upvote_label": "23 upvotes"
+      "upvote_label": "24 upvotes"
     },
     {
       "report_date": "2026-06-09",
@@ -4101,6 +4101,37 @@
     },
     {
       "report_date": "2026-06-09",
+      "paper_id": "2606.07473",
+      "title": "Whisper Hallucination Detection and Mitigation via Hidden Representation Steering and Sparse AutoEncoders",
+      "authors": [
+        "Georgii Aparin",
+        "Vadim Popov",
+        "Tasnima Sadekova",
+        "Assel Yermekova"
+      ],
+      "abstract": "Whisper, a widely adopted ASR model, is known to suffer from hallucinations - coherent transcriptions generated for non-speech audio entirely disconnected from the input. We investigate whether hallucinations can be detected and mitigated through Whisper's internal representations. We extract audio encoder activations and evaluate two representation spaces: raw Whisper activations and Sparse AutoEncoder (SAE) latents. We show that both spaces encode linearly separable hallucination-related information, with discriminative power concentrated in a sparse feature subset and increasing toward deeper encoder layers. We propose two steering strategies: activation-space steering and SAE latent-space steering. SAE-based steering reduces hallucination rate from 72.63% to 14.11% for Whisper small and from 86.88% to 27.33% for Whisper large-v3 on the full non-speech test set, with small WER degradation on speech data, approaching the performance of fine-tuning-based methods.",
+      "hf_url": "https://huggingface.co/papers/2606.07473",
+      "arxiv_url": "https://arxiv.org/abs/2606.07473",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.07473",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.07473",
+      "github_url": "",
+      "submitted_by": "Georgii Aparin",
+      "submitted_at": "2026-06-09T00:00:00.000Z",
+      "upvotes": 15,
+      "comments": 3,
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
+      "matched_terms": [
+        "\\bsparse\\b",
+        "\\brepresentation(s)?\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Whisper, a widely adopted ASR model, is known to suffer from hallucinations - coherent transcriptions generated for non-speech audio entirely disconnected from the input.",
+      "upvote_label": "15 upvotes"
+    },
+    {
+      "report_date": "2026-06-09",
       "paper_id": "2606.09811",
       "title": "AHA-WAM:Asynchronous Horizon-Adaptive World-Action Modeling with Observation-Guided Context Routing",
       "authors": [
@@ -4212,37 +4243,6 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "LLM agents increasingly rely on external inference conditions: prompts, tools, memory, SOPs, skills, and harness feedback.",
-      "upvote_label": "14 upvotes"
-    },
-    {
-      "report_date": "2026-06-09",
-      "paper_id": "2606.07473",
-      "title": "Whisper Hallucination Detection and Mitigation via Hidden Representation Steering and Sparse AutoEncoders",
-      "authors": [
-        "Georgii Aparin",
-        "Vadim Popov",
-        "Tasnima Sadekova",
-        "Assel Yermekova"
-      ],
-      "abstract": "Whisper, a widely adopted ASR model, is known to suffer from hallucinations - coherent transcriptions generated for non-speech audio entirely disconnected from the input. We investigate whether hallucinations can be detected and mitigated through Whisper's internal representations. We extract audio encoder activations and evaluate two representation spaces: raw Whisper activations and Sparse AutoEncoder (SAE) latents. We show that both spaces encode linearly separable hallucination-related information, with discriminative power concentrated in a sparse feature subset and increasing toward deeper encoder layers. We propose two steering strategies: activation-space steering and SAE latent-space steering. SAE-based steering reduces hallucination rate from 72.63% to 14.11% for Whisper small and from 86.88% to 27.33% for Whisper large-v3 on the full non-speech test set, with small WER degradation on speech data, approaching the performance of fine-tuning-based methods.",
-      "hf_url": "https://huggingface.co/papers/2606.07473",
-      "arxiv_url": "https://arxiv.org/abs/2606.07473",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.07473",
-      "papers_cool_url": "https://papers.cool/arxiv/2606.07473",
-      "github_url": "",
-      "submitted_by": "Georgii Aparin",
-      "submitted_at": "2026-06-09T00:00:00.000Z",
-      "upvotes": 14,
-      "comments": 3,
-      "topic_key": "learning_theory",
-      "topic_label": "Learning, Optimization, and Theory",
-      "matched_terms": [
-        "\\bsparse\\b",
-        "\\brepresentation(s)?\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Whisper, a widely adopted ASR model, is known to suffer from hallucinations - coherent transcriptions generated for non-speech audio entirely disconnected from the input.",
       "upvote_label": "14 upvotes"
     },
     {
@@ -4396,7 +4396,7 @@
       "github_url": "",
       "submitted_by": "Fengzhuo Zhang",
       "submitted_at": "2026-06-09T00:00:00.000Z",
-      "upvotes": 9,
+      "upvotes": 10,
       "comments": 4,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
@@ -4404,7 +4404,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Muon improves training efficiency over Adam in large language-model training by about two times, but the local geometric source of this advantage remains unclear.",
-      "upvote_label": "9 upvotes"
+      "upvote_label": "10 upvotes"
     },
     {
       "report_date": "2026-06-09",
