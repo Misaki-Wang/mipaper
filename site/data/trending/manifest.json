@@ -1,10 +1,150 @@
 {
   "branch_key": "trending",
   "branch_label": "Trending",
-  "generated_at": "2026-06-08T08:00:08Z",
-  "reports_count": 17,
-  "default_report_path": "data/trending/reports/2026-06-08/trending-2026-06-08.json",
+  "generated_at": "2026-06-15T08:00:08Z",
+  "reports_count": 18,
+  "default_report_path": "data/trending/reports/2026-06-15/trending-2026-06-15.json",
   "reports": [
+    {
+      "branch_key": "trending",
+      "branch_label": "Trending",
+      "data_path": "data/trending/reports/2026-06-15/trending-2026-06-15.json",
+      "slug": "trending-2026-06-15",
+      "snapshot_date": "2026-06-15",
+      "since": "weekly",
+      "total_repositories": 20,
+      "generated_at": "2026-06-15T08:00:06Z",
+      "source_url": "https://github.com/trending?since=weekly&spoken_language_code=",
+      "top_languages": [
+        {
+          "language": "Python",
+          "count": 9,
+          "share": 45.0
+        },
+        {
+          "language": "TypeScript",
+          "count": 3,
+          "share": 15.0
+        },
+        {
+          "language": "Shell",
+          "count": 2,
+          "share": 10.0
+        },
+        {
+          "language": "C",
+          "count": 1,
+          "share": 5.0
+        },
+        {
+          "language": "C++",
+          "count": 1,
+          "share": 5.0
+        }
+      ],
+      "top_repositories": [
+        {
+          "snapshot_date": "2026-06-15",
+          "repo_id": "mvanhorn/last30days-skill",
+          "owner": "mvanhorn",
+          "name": "last30days-skill",
+          "full_name": "mvanhorn/last30days-skill",
+          "repo_url": "https://github.com/mvanhorn/last30days-skill",
+          "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+          "language": "Python",
+          "stars": 42361,
+          "forks": 3447,
+          "stars_this_week": 12053,
+          "built_by": [
+            "mvanhorn",
+            "claude",
+            "tmchow",
+            "j-sperling",
+            "dinakars777"
+          ]
+        },
+        {
+          "snapshot_date": "2026-06-15",
+          "repo_id": "chopratejas/headroom",
+          "owner": "chopratejas",
+          "name": "headroom",
+          "full_name": "chopratejas/headroom",
+          "repo_url": "https://github.com/chopratejas/headroom",
+          "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 60-95% fewer tokens, same answers. Library, proxy, MCP server.",
+          "language": "Python",
+          "stars": 27961,
+          "forks": 1895,
+          "stars_this_week": 10653,
+          "built_by": [
+            "chopratejas",
+            "JerrettDavis",
+            "claude",
+            "Copilot",
+            "gglucass"
+          ]
+        },
+        {
+          "snapshot_date": "2026-06-15",
+          "repo_id": "addyosmani/agent-skills",
+          "owner": "addyosmani",
+          "name": "agent-skills",
+          "full_name": "addyosmani/agent-skills",
+          "repo_url": "https://github.com/addyosmani/agent-skills",
+          "description": "Production-grade engineering skills for AI coding agents.",
+          "language": "Shell",
+          "stars": 59805,
+          "forks": 6479,
+          "stars_this_week": 10445,
+          "built_by": [
+            "addyosmani",
+            "federicobartoli",
+            "nucliweb",
+            "claude",
+            "dj2313"
+          ]
+        },
+        {
+          "snapshot_date": "2026-06-15",
+          "repo_id": "apple/container",
+          "owner": "apple",
+          "name": "container",
+          "full_name": "apple/container",
+          "repo_url": "https://github.com/apple/container",
+          "description": "A tool for creating and running Linux containers using lightweight virtual machines on a Mac. It is written in Swift, and optimized for Apple silicon.",
+          "language": "Swift",
+          "stars": 37178,
+          "forks": 1066,
+          "stars_this_week": 10021,
+          "built_by": [
+            "jglogan",
+            "katiewasnothere",
+            "dcantah",
+            "dkovba",
+            "realrajaryan"
+          ]
+        },
+        {
+          "snapshot_date": "2026-06-15",
+          "repo_id": "leonxlnx/taste-skill",
+          "owner": "Leonxlnx",
+          "name": "taste-skill",
+          "full_name": "Leonxlnx/taste-skill",
+          "repo_url": "https://github.com/Leonxlnx/taste-skill",
+          "description": "Taste-Skill - gives your AI good taste. stops the AI from generating boring, generic slop",
+          "language": "Shell",
+          "stars": 44020,
+          "forks": 3072,
+          "stars_this_week": 7591,
+          "built_by": [
+            "Leonxlnx",
+            "cursoragent",
+            "claude",
+            "luojiyin1987",
+            "jkk442"
+          ]
+        }
+      ]
+    },
     {
       "branch_key": "trending",
       "branch_label": "Trending",
