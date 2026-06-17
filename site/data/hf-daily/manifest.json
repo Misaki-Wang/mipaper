@@ -1,10 +1,90 @@
 {
   "branch_key": "hf-daily",
   "branch_label": "HF Daily",
-  "generated_at": "2026-06-16T19:00:07Z",
-  "reports_count": 79,
-  "default_report_path": "data/hf-daily/reports/2026-06-17/hf-daily-2026-06-17.json",
+  "generated_at": "2026-06-17T19:00:08Z",
+  "reports_count": 80,
+  "default_report_path": "data/hf-daily/reports/2026-06-18/hf-daily-2026-06-18.json",
   "reports": [
+    {
+      "branch_key": "hf-daily",
+      "branch_label": "HF Daily",
+      "data_path": "data/hf-daily/reports/2026-06-18/hf-daily-2026-06-18.json",
+      "slug": "hf-daily-2026-06-18",
+      "report_date": "2026-06-18",
+      "total_papers": 29,
+      "classifier": "rule",
+      "generated_at": "2026-06-17T19:00:07Z",
+      "source_url": "https://huggingface.co/papers/date/2026-06-18",
+      "focus_topics": [
+        {
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "count": 0,
+          "share": 0.0
+        },
+        {
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 1,
+          "share": 3.45
+        },
+        {
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "count": 3,
+          "share": 10.34
+        }
+      ],
+      "top_topics": [
+        {
+          "topic_label": "Agents and Planning",
+          "count": 5,
+          "share": 17.24
+        },
+        {
+          "topic_label": "Other AI",
+          "count": 5,
+          "share": 17.24
+        },
+        {
+          "topic_label": "LLMs and Language",
+          "count": 4,
+          "share": 13.79
+        },
+        {
+          "topic_label": "Learning, Optimization, and Theory",
+          "count": 3,
+          "share": 10.34
+        },
+        {
+          "topic_label": "Multimodal Agents",
+          "count": 3,
+          "share": 10.34
+        }
+      ],
+      "top_submitters": [
+        {
+          "submitted_by": "taesiri",
+          "count": 5
+        },
+        {
+          "submitted_by": "Athrael Soju",
+          "count": 1
+        },
+        {
+          "submitted_by": "Bo",
+          "count": 1
+        },
+        {
+          "submitted_by": "Byung-Kwan Lee",
+          "count": 1
+        },
+        {
+          "submitted_by": "Börje Karlsson",
+          "count": 1
+        }
+      ]
+    },
     {
       "branch_key": "hf-daily",
       "branch_label": "HF Daily",
