@@ -1,10 +1,150 @@
 {
   "branch_key": "trending",
   "branch_label": "Trending",
-  "generated_at": "2026-06-15T08:00:08Z",
-  "reports_count": 18,
-  "default_report_path": "data/trending/reports/2026-06-15/trending-2026-06-15.json",
+  "generated_at": "2026-06-22T08:00:07Z",
+  "reports_count": 19,
+  "default_report_path": "data/trending/reports/2026-06-22/trending-2026-06-22.json",
   "reports": [
+    {
+      "branch_key": "trending",
+      "branch_label": "Trending",
+      "data_path": "data/trending/reports/2026-06-22/trending-2026-06-22.json",
+      "slug": "trending-2026-06-22",
+      "snapshot_date": "2026-06-22",
+      "since": "weekly",
+      "total_repositories": 18,
+      "generated_at": "2026-06-22T08:00:06Z",
+      "source_url": "https://github.com/trending?since=weekly&spoken_language_code=",
+      "top_languages": [
+        {
+          "language": "TypeScript",
+          "count": 6,
+          "share": 33.33333333333333
+        },
+        {
+          "language": "Python",
+          "count": 5,
+          "share": 27.77777777777778
+        },
+        {
+          "language": "Rust",
+          "count": 3,
+          "share": 16.666666666666664
+        },
+        {
+          "language": "C",
+          "count": 1,
+          "share": 5.555555555555555
+        },
+        {
+          "language": "JavaScript",
+          "count": 1,
+          "share": 5.555555555555555
+        }
+      ],
+      "top_repositories": [
+        {
+          "snapshot_date": "2026-06-22",
+          "repo_id": "panniantong/agent-reach",
+          "owner": "Panniantong",
+          "name": "Agent-Reach",
+          "full_name": "Panniantong/Agent-Reach",
+          "repo_url": "https://github.com/Panniantong/Agent-Reach",
+          "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+          "language": "Python",
+          "stars": 37259,
+          "forks": 2964,
+          "stars_this_week": 8233,
+          "built_by": [
+            "Panniantong",
+            "claude",
+            "kadaliao",
+            "hymansun",
+            "alfred1994"
+          ]
+        },
+        {
+          "snapshot_date": "2026-06-22",
+          "repo_id": "iptv-org/iptv",
+          "owner": "iptv-org",
+          "name": "iptv",
+          "full_name": "iptv-org/iptv",
+          "repo_url": "https://github.com/iptv-org/iptv",
+          "description": "Collection of publicly available IPTV channels from all over the world",
+          "language": "TypeScript",
+          "stars": 127256,
+          "forks": 6990,
+          "stars_this_week": 7266,
+          "built_by": [
+            "freearhey",
+            "iptv-bot",
+            "BellezaEmporium",
+            "Dum4G",
+            "UltraHDR"
+          ]
+        },
+        {
+          "snapshot_date": "2026-06-22",
+          "repo_id": "deusdata/codebase-memory-mcp",
+          "owner": "DeusData",
+          "name": "codebase-memory-mcp",
+          "full_name": "DeusData/codebase-memory-mcp",
+          "repo_url": "https://github.com/DeusData/codebase-memory-mcp",
+          "description": "High-performance code intelligence MCP server. Indexes codebases into a persistent knowledge graph — average repo in milliseconds. 158 languages, sub-ms queries, 99% fewer tokens. Single static binary, zero dependencies.",
+          "language": "C",
+          "stars": 10771,
+          "forks": 808,
+          "stars_this_week": 6372,
+          "built_by": [
+            "DeusData",
+            "claude",
+            "shanemccarron-maker",
+            "dependabot",
+            "dLo999"
+          ]
+        },
+        {
+          "snapshot_date": "2026-06-22",
+          "repo_id": "addyosmani/agent-skills",
+          "owner": "addyosmani",
+          "name": "agent-skills",
+          "full_name": "addyosmani/agent-skills",
+          "repo_url": "https://github.com/addyosmani/agent-skills",
+          "description": "Production-grade engineering skills for AI coding agents.",
+          "language": "Shell",
+          "stars": 65001,
+          "forks": 7019,
+          "stars_this_week": 5610,
+          "built_by": [
+            "addyosmani",
+            "federicobartoli",
+            "nucliweb",
+            "claude",
+            "dj2313"
+          ]
+        },
+        {
+          "snapshot_date": "2026-06-22",
+          "repo_id": "google-research/timesfm",
+          "owner": "google-research",
+          "name": "timesfm",
+          "full_name": "google-research/timesfm",
+          "repo_url": "https://github.com/google-research/timesfm",
+          "description": "TimesFM (Time Series Foundation Model) is a pretrained time-series foundation model developed by Google Research for time-series forecasting.",
+          "language": "Python",
+          "stars": 24980,
+          "forks": 2377,
+          "stars_this_week": 4114,
+          "built_by": [
+            "rajatsen91",
+            "siriuz42",
+            "misha-chertushkin",
+            "darkpowerxo",
+            "JustinGuese"
+          ]
+        }
+      ]
+    },
     {
       "branch_key": "trending",
       "branch_label": "Trending",
