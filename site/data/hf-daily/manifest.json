@@ -1,10 +1,90 @@
 {
   "branch_key": "hf-daily",
   "branch_label": "HF Daily",
-  "generated_at": "2026-06-21T19:00:07Z",
-  "reports_count": 82,
-  "default_report_path": "data/hf-daily/reports/2026-06-22/hf-daily-2026-06-22.json",
+  "generated_at": "2026-06-22T19:00:07Z",
+  "reports_count": 83,
+  "default_report_path": "data/hf-daily/reports/2026-06-23/hf-daily-2026-06-23.json",
   "reports": [
+    {
+      "branch_key": "hf-daily",
+      "branch_label": "HF Daily",
+      "data_path": "data/hf-daily/reports/2026-06-23/hf-daily-2026-06-23.json",
+      "slug": "hf-daily-2026-06-23",
+      "report_date": "2026-06-23",
+      "total_papers": 12,
+      "classifier": "rule",
+      "generated_at": "2026-06-22T19:00:06Z",
+      "source_url": "https://huggingface.co/papers/date/2026-06-23",
+      "focus_topics": [
+        {
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "count": 0,
+          "share": 0.0
+        },
+        {
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 1,
+          "share": 8.33
+        },
+        {
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "count": 0,
+          "share": 0.0
+        }
+      ],
+      "top_topics": [
+        {
+          "topic_label": "Agents and Planning",
+          "count": 3,
+          "share": 25.0
+        },
+        {
+          "topic_label": "Retrieval, Knowledge, and RAG",
+          "count": 2,
+          "share": 16.67
+        },
+        {
+          "topic_label": "Domain Applications",
+          "count": 1,
+          "share": 8.33
+        },
+        {
+          "topic_label": "LLMs and Language",
+          "count": 1,
+          "share": 8.33
+        },
+        {
+          "topic_label": "Learning, Optimization, and Theory",
+          "count": 1,
+          "share": 8.33
+        }
+      ],
+      "top_submitters": [
+        {
+          "submitted_by": "Amirhossein Abaskohi",
+          "count": 2
+        },
+        {
+          "submitted_by": "Zeyu Zhang",
+          "count": 2
+        },
+        {
+          "submitted_by": "Guy Rotman",
+          "count": 1
+        },
+        {
+          "submitted_by": "Max Van Puyvelde",
+          "count": 1
+        },
+        {
+          "submitted_by": "Tianyi Zhou",
+          "count": 1
+        }
+      ]
+    },
     {
       "branch_key": "hf-daily",
       "branch_label": "HF Daily",
