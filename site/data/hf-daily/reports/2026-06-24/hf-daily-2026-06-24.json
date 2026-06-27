@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T19:00:04Z",
+  "generated_at": "2026-06-27T19:00:06Z",
   "report_kind": "hf_daily",
   "report_date": "2026-06-24",
   "source_url": "https://huggingface.co/papers/date/2026-06-24",
@@ -78,31 +78,31 @@
       "Multimodal Understanding and Vision: 4 papers (13.79%); representative paper: Semantic Browsing: Controllable Diversity for Image Generation.",
       "Other AI: 4 papers (13.79%); representative paper: FLAT: Feedforward Latent Triangle Splatting for Geometrically Accurate Scene Generation."
     ],
-    "trend_summary": "Today's dominant clusters are Agents and Planning / Multimodal Understanding and Vision / Other AI; this suggests several parallel trends: multimodal work is moving from isolated perception toward generation, agents, and action; agent papers emphasize tool use, planning, and deployable workflows. The strongest visible attention is on “Qwen-AgentWorld: Language World Models for General Agents” (123 upvotes).",
+    "trend_summary": "Today's dominant clusters are Agents and Planning / Multimodal Understanding and Vision / Other AI; this suggests several parallel trends: multimodal work is moving from isolated perception toward generation, agents, and action; agent papers emphasize tool use, planning, and deployable workflows. The strongest visible attention is on “Qwen-AgentWorld: Language World Models for General Agents” (133 upvotes).",
     "category_summaries": [
       {
         "topic_label": "Agents and Planning",
         "count": 10,
         "share": 34.48,
-        "summary": "Agents and Planning contributes 10 papers (34.48%), led by “Qwen-AgentWorld: Language World Models for General Agents” with 123 upvotes."
+        "summary": "Agents and Planning contributes 10 papers (34.48%), led by “Qwen-AgentWorld: Language World Models for General Agents” with 133 upvotes."
       },
       {
         "topic_label": "Multimodal Understanding and Vision",
         "count": 4,
         "share": 13.79,
-        "summary": "Multimodal Understanding and Vision contributes 4 papers (13.79%), led by “Semantic Browsing: Controllable Diversity for Image Generation” with 17 upvotes."
+        "summary": "Multimodal Understanding and Vision contributes 4 papers (13.79%), led by “Semantic Browsing: Controllable Diversity for Image Generation” with 18 upvotes."
       },
       {
         "topic_label": "Other AI",
         "count": 4,
         "share": 13.79,
-        "summary": "Other AI contributes 4 papers (13.79%), led by “FLAT: Feedforward Latent Triangle Splatting for Geometrically Accurate Scene Generation” with 18 upvotes."
+        "summary": "Other AI contributes 4 papers (13.79%), led by “FLAT: Feedforward Latent Triangle Splatting for Geometrically Accurate Scene Generation” with 20 upvotes."
       },
       {
         "topic_label": "Multimodal Agents",
         "count": 3,
         "share": 10.34,
-        "summary": "Multimodal Agents contributes 3 papers (10.34%), led by “ReMMD: Realistic Multilingual Multi-Image Agentic Verification for Multimodal Misinformation Detection” with 3 upvotes."
+        "summary": "Multimodal Agents contributes 3 papers (10.34%), led by “EventVLA: Event-Driven Visual Evidence Memory for Long-Horizon Vision-Language-Action Policies” with 5 upvotes."
       },
       {
         "topic_label": "Datasets and Benchmarks",
@@ -120,7 +120,7 @@
         "topic_label": "Robotics and Embodied AI",
         "count": 2,
         "share": 6.9,
-        "summary": "Robotics and Embodied AI contributes 2 papers (6.90%), led by “World Value Models for Robotic Manipulation” with 3 upvotes."
+        "summary": "Robotics and Embodied AI contributes 2 papers (6.90%), led by “World Value Models for Robotic Manipulation” with 6 upvotes."
       },
       {
         "topic_label": "Domain Applications",
@@ -132,14 +132,14 @@
         "topic_label": "Learning, Optimization, and Theory",
         "count": 1,
         "share": 3.45,
-        "summary": "Learning, Optimization, and Theory contributes 1 papers (3.45%), led by “Holistic Data Scheduler for LLM Pre-training via Multi-Objective Reinforcement Learning” with 7 upvotes."
+        "summary": "Learning, Optimization, and Theory contributes 1 papers (3.45%), led by “Holistic Data Scheduler for LLM Pre-training via Multi-Objective Reinforcement Learning” with 8 upvotes."
       }
     ],
     "top_papers": [
       {
         "title": "Qwen-AgentWorld: Language World Models for General Agents",
-        "upvotes": 123,
-        "upvote_label": "123 upvotes",
+        "upvotes": 133,
+        "upvote_label": "133 upvotes",
         "topic_label": "Agents and Planning",
         "summary": "A world model predicts environment dynamics based on current observations and actions, serving as a core cognitive mechanism for reasoning and planning.",
         "hf_url": "https://huggingface.co/papers/2606.24597",
@@ -149,8 +149,8 @@
       },
       {
         "title": "NatureBench: Can Coding Agents Match the Published SOTA of Nature-Family Papers?",
-        "upvotes": 56,
-        "upvote_label": "56 upvotes",
+        "upvotes": 61,
+        "upvote_label": "61 upvotes",
         "topic_label": "Agents and Planning",
         "summary": "We introduce NatureBench, a cross-discipline benchmark of 90 tasks distilled from peer-reviewed Nature-family publications, designed to evaluate whether AI coding agents can move beyond reproduction toward discovery…",
         "hf_url": "https://huggingface.co/papers/2606.24530",
@@ -160,8 +160,8 @@
       },
       {
         "title": "Escaping the Self-Confirmation Trap: An Execute-Distill-Verify Paradigm for Agentic Experience Learning",
-        "upvotes": 48,
-        "upvote_label": "48 upvotes",
+        "upvotes": 51,
+        "upvote_label": "51 upvotes",
         "topic_label": "Agents and Planning",
         "summary": "Experience-driven self-evolution is critical for large language model (LLM) agents to improve through open-world interaction.",
         "hf_url": "https://huggingface.co/papers/2606.24428",
@@ -171,8 +171,8 @@
       },
       {
         "title": "OpenThoughts-Agent: Data Recipes for Agentic Models",
-        "upvotes": 40,
-        "upvote_label": "40 upvotes",
+        "upvotes": 43,
+        "upvote_label": "43 upvotes",
         "topic_label": "Agents and Planning",
         "summary": "Agentic language models dramatically expand the applications of AI yet little is publicly known about how to curate training data for broadly capable agents.",
         "hf_url": "https://huggingface.co/papers/2606.24855",
@@ -182,8 +182,8 @@
       },
       {
         "title": "MobileForge: Annotation-Free Adaptation for Mobile GUI Agents with Hierarchical Feedback-Guided Policy Optimization",
-        "upvotes": 39,
-        "upvote_label": "39 upvotes",
+        "upvotes": 42,
+        "upvote_label": "42 upvotes",
         "topic_label": "Agents and Planning",
         "summary": "MLLM-based mobile GUI agents have made substantial progress in UI understanding and action execution, but adapting them to real target apps remains costly because mobile apps are numerous, frequently updated, and hard…",
         "hf_url": "https://huggingface.co/papers/2606.19930",
@@ -267,7 +267,7 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-06-24T00:00:00.000Z",
-      "upvotes": 123,
+      "upvotes": 133,
       "comments": 4,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -277,7 +277,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "A world model predicts environment dynamics based on current observations and actions, serving as a core cognitive mechanism for reasoning and planning.",
-      "upvote_label": "123 upvotes"
+      "upvote_label": "133 upvotes"
     },
     {
       "report_date": "2026-06-24",
@@ -310,7 +310,7 @@
       "github_url": "",
       "submitted_by": "Kaiyan Zhang",
       "submitted_at": "2026-06-24T00:00:00.000Z",
-      "upvotes": 56,
+      "upvotes": 61,
       "comments": 1,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -320,7 +320,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "We introduce NatureBench, a cross-discipline benchmark of 90 tasks distilled from peer-reviewed Nature-family publications, designed to evaluate whether AI coding agents can move beyond reproduction toward discovery…",
-      "upvote_label": "56 upvotes"
+      "upvote_label": "61 upvotes"
     },
     {
       "report_date": "2026-06-24",
@@ -345,7 +345,7 @@
       "github_url": "",
       "submitted_by": "zhushiding",
       "submitted_at": "2026-06-24T00:00:00.000Z",
-      "upvotes": 48,
+      "upvotes": 51,
       "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -355,7 +355,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Experience-driven self-evolution is critical for large language model (LLM) agents to improve through open-world interaction.",
-      "upvote_label": "48 upvotes"
+      "upvote_label": "51 upvotes"
     },
     {
       "report_date": "2026-06-24",
@@ -421,7 +421,7 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-06-24T00:00:00.000Z",
-      "upvotes": 40,
+      "upvotes": 43,
       "comments": 0,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -432,7 +432,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Agentic language models dramatically expand the applications of AI yet little is publicly known about how to curate training data for broadly capable agents.",
-      "upvote_label": "40 upvotes"
+      "upvote_label": "43 upvotes"
     },
     {
       "report_date": "2026-06-24",
@@ -459,7 +459,7 @@
       "github_url": "",
       "submitted_by": "Guangyi Liu",
       "submitted_at": "2026-06-24T00:00:00.000Z",
-      "upvotes": 39,
+      "upvotes": 42,
       "comments": 1,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -469,7 +469,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "MLLM-based mobile GUI agents have made substantial progress in UI understanding and action execution, but adapting them to real target apps remains costly because mobile apps are numerous, frequently updated, and hard…",
-      "upvote_label": "39 upvotes"
+      "upvote_label": "42 upvotes"
     },
     {
       "report_date": "2026-06-24",
@@ -495,7 +495,7 @@
       "github_url": "",
       "submitted_by": "Guangyi Liu",
       "submitted_at": "2026-06-24T00:00:00.000Z",
-      "upvotes": 39,
+      "upvotes": 42,
       "comments": 1,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -505,7 +505,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "MLLM-based mobile GUI agents have made substantial progress on short-horizon tasks, yet remain unreliable on long-horizon tasks that require retaining intermediate facts across many steps and app transitions.",
-      "upvote_label": "39 upvotes"
+      "upvote_label": "42 upvotes"
     },
     {
       "report_date": "2026-06-24",
@@ -537,7 +537,7 @@
       "github_url": "",
       "submitted_by": "Zhao Shanhui",
       "submitted_at": "2026-06-24T00:00:00.000Z",
-      "upvotes": 28,
+      "upvotes": 30,
       "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -547,7 +547,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "AI agents are driving a new software paradigm, with the ability to autonomously call tools, extract information, manage memory, and complete tasks that span applications and data sources.",
-      "upvote_label": "28 upvotes"
+      "upvote_label": "30 upvotes"
     },
     {
       "report_date": "2026-06-24",
@@ -574,7 +574,7 @@
       "github_url": "",
       "submitted_by": "Xu Shihao",
       "submitted_at": "2026-06-24T00:00:00.000Z",
-      "upvotes": 22,
+      "upvotes": 23,
       "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -585,7 +585,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Mental disorders are highly prevalent worldwide, but the shortage of psychiatrists and the inherent subjectivity of interview-based diagnosis create substantial barriers to timely and consistent mental-health assessment.",
-      "upvote_label": "22 upvotes"
+      "upvote_label": "23 upvotes"
     }
   ],
   "topics": [
@@ -593,7 +593,7 @@
       "topic_label": "Agents and Planning",
       "count": 10,
       "share": 34.48,
-      "summary": "Agents and Planning contributes 10 papers (34.48%), led by “Qwen-AgentWorld: Language World Models for General Agents” with 123 upvotes.",
+      "summary": "Agents and Planning contributes 10 papers (34.48%), led by “Qwen-AgentWorld: Language World Models for General Agents” with 133 upvotes.",
       "papers": [
         {
           "report_date": "2026-06-24",
@@ -642,7 +642,7 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-06-24T00:00:00.000Z",
-          "upvotes": 123,
+          "upvotes": 133,
           "comments": 4,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
@@ -652,7 +652,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "A world model predicts environment dynamics based on current observations and actions, serving as a core cognitive mechanism for reasoning and planning.",
-          "upvote_label": "123 upvotes"
+          "upvote_label": "133 upvotes"
         },
         {
           "report_date": "2026-06-24",
@@ -685,7 +685,7 @@
           "github_url": "",
           "submitted_by": "Kaiyan Zhang",
           "submitted_at": "2026-06-24T00:00:00.000Z",
-          "upvotes": 56,
+          "upvotes": 61,
           "comments": 1,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
@@ -695,7 +695,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "We introduce NatureBench, a cross-discipline benchmark of 90 tasks distilled from peer-reviewed Nature-family publications, designed to evaluate whether AI coding agents can move beyond reproduction toward discovery…",
-          "upvote_label": "56 upvotes"
+          "upvote_label": "61 upvotes"
         },
         {
           "report_date": "2026-06-24",
@@ -720,7 +720,7 @@
           "github_url": "",
           "submitted_by": "zhushiding",
           "submitted_at": "2026-06-24T00:00:00.000Z",
-          "upvotes": 48,
+          "upvotes": 51,
           "comments": 2,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
@@ -730,7 +730,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Experience-driven self-evolution is critical for large language model (LLM) agents to improve through open-world interaction.",
-          "upvote_label": "48 upvotes"
+          "upvote_label": "51 upvotes"
         },
         {
           "report_date": "2026-06-24",
@@ -796,7 +796,7 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-06-24T00:00:00.000Z",
-          "upvotes": 40,
+          "upvotes": 43,
           "comments": 0,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
@@ -807,7 +807,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Agentic language models dramatically expand the applications of AI yet little is publicly known about how to curate training data for broadly capable agents.",
-          "upvote_label": "40 upvotes"
+          "upvote_label": "43 upvotes"
         },
         {
           "report_date": "2026-06-24",
@@ -833,7 +833,7 @@
           "github_url": "",
           "submitted_by": "Guangyi Liu",
           "submitted_at": "2026-06-24T00:00:00.000Z",
-          "upvotes": 39,
+          "upvotes": 42,
           "comments": 1,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
@@ -843,7 +843,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "MLLM-based mobile GUI agents have made substantial progress on short-horizon tasks, yet remain unreliable on long-horizon tasks that require retaining intermediate facts across many steps and app transitions.",
-          "upvote_label": "39 upvotes"
+          "upvote_label": "42 upvotes"
         },
         {
           "report_date": "2026-06-24",
@@ -870,7 +870,7 @@
           "github_url": "",
           "submitted_by": "Guangyi Liu",
           "submitted_at": "2026-06-24T00:00:00.000Z",
-          "upvotes": 39,
+          "upvotes": 42,
           "comments": 1,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
@@ -880,7 +880,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "MLLM-based mobile GUI agents have made substantial progress in UI understanding and action execution, but adapting them to real target apps remains costly because mobile apps are numerous, frequently updated, and hard…",
-          "upvote_label": "39 upvotes"
+          "upvote_label": "42 upvotes"
         },
         {
           "report_date": "2026-06-24",
@@ -912,7 +912,7 @@
           "github_url": "",
           "submitted_by": "Zhao Shanhui",
           "submitted_at": "2026-06-24T00:00:00.000Z",
-          "upvotes": 28,
+          "upvotes": 30,
           "comments": 2,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
@@ -922,7 +922,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "AI agents are driving a new software paradigm, with the ability to autonomously call tools, extract information, manage memory, and complete tasks that span applications and data sources.",
-          "upvote_label": "28 upvotes"
+          "upvote_label": "30 upvotes"
         },
         {
           "report_date": "2026-06-24",
@@ -949,7 +949,7 @@
           "github_url": "",
           "submitted_by": "Xu Shihao",
           "submitted_at": "2026-06-24T00:00:00.000Z",
-          "upvotes": 22,
+          "upvotes": 23,
           "comments": 2,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
@@ -960,7 +960,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Mental disorders are highly prevalent worldwide, but the shortage of psychiatrists and the inherent subjectivity of interview-based diagnosis create substantial barriers to timely and consistent mental-health assessment.",
-          "upvote_label": "22 upvotes"
+          "upvote_label": "23 upvotes"
         },
         {
           "report_date": "2026-06-24",
@@ -979,7 +979,7 @@
           "github_url": "",
           "submitted_by": "Mingkai Deng",
           "submitted_at": "2026-06-24T00:00:00.000Z",
-          "upvotes": 18,
+          "upvotes": 19,
           "comments": 1,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
@@ -989,7 +989,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "What is an agent? What constitutes agency?",
-          "upvote_label": "18 upvotes"
+          "upvote_label": "19 upvotes"
         },
         {
           "report_date": "2026-06-24",
@@ -1033,7 +1033,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "count": 4,
       "share": 13.79,
-      "summary": "Multimodal Understanding and Vision contributes 4 papers (13.79%), led by “Semantic Browsing: Controllable Diversity for Image Generation” with 17 upvotes.",
+      "summary": "Multimodal Understanding and Vision contributes 4 papers (13.79%), led by “Semantic Browsing: Controllable Diversity for Image Generation” with 18 upvotes.",
       "papers": [
         {
           "report_date": "2026-06-24",
@@ -1054,7 +1054,7 @@
           "github_url": "",
           "submitted_by": "Omer Dahary",
           "submitted_at": "2026-06-24T00:00:00.000Z",
-          "upvotes": 17,
+          "upvotes": 18,
           "comments": 1,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
@@ -1064,7 +1064,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Modern text-to-image models excel in visual fidelity and prompt adherence.",
-          "upvote_label": "17 upvotes"
+          "upvote_label": "18 upvotes"
         },
         {
           "report_date": "2026-06-24",
@@ -1170,7 +1170,7 @@
       "topic_label": "Other AI",
       "count": 4,
       "share": 13.79,
-      "summary": "Other AI contributes 4 papers (13.79%), led by “FLAT: Feedforward Latent Triangle Splatting for Geometrically Accurate Scene Generation” with 18 upvotes.",
+      "summary": "Other AI contributes 4 papers (13.79%), led by “FLAT: Feedforward Latent Triangle Splatting for Geometrically Accurate Scene Generation” with 20 upvotes.",
       "papers": [
         {
           "report_date": "2026-06-24",
@@ -1192,7 +1192,7 @@
           "github_url": "",
           "submitted_by": "Orest Kupyn",
           "submitted_at": "2026-06-24T00:00:00.000Z",
-          "upvotes": 18,
+          "upvotes": 20,
           "comments": 1,
           "topic_key": "other_ai",
           "topic_label": "Other AI",
@@ -1200,7 +1200,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Generating explorable 3D scenes from a single image requires strong generative priors and accurate geometric representations suitable for downstream use.",
-          "upvote_label": "18 upvotes"
+          "upvote_label": "20 upvotes"
         },
         {
           "report_date": "2026-06-24",
@@ -1294,8 +1294,48 @@
       "topic_label": "Multimodal Agents",
       "count": 3,
       "share": 10.34,
-      "summary": "Multimodal Agents contributes 3 papers (10.34%), led by “ReMMD: Realistic Multilingual Multi-Image Agentic Verification for Multimodal Misinformation Detection” with 3 upvotes.",
+      "summary": "Multimodal Agents contributes 3 papers (10.34%), led by “EventVLA: Event-Driven Visual Evidence Memory for Long-Horizon Vision-Language-Action Policies” with 5 upvotes.",
       "papers": [
+        {
+          "report_date": "2026-06-24",
+          "paper_id": "2606.20092",
+          "title": "EventVLA: Event-Driven Visual Evidence Memory for Long-Horizon Vision-Language-Action Policies",
+          "authors": [
+            "Ganlin Yang",
+            "Zhangzheng Tu",
+            "Yuqiang Yang",
+            "Sitong Mao",
+            "Junyi Dong",
+            "Tianxing Chen",
+            "Jiaqi Peng",
+            "Jing Xiong",
+            "Jiafei Cao",
+            "Jifeng Dai",
+            "Wengang Zhou",
+            "Yao Mu",
+            "Tai Wang"
+          ],
+          "abstract": "Memory remains a critical bottleneck for long-horizon robotic manipulation, as standard Vision-Language-Action (VLA) policies often fail when task-relevant cues become occluded or unobservable over time. While existing memory-augmented methods utilize historical context, they either suffer from severe information bottlenecks, incur high latency via decoupled dual systems, or rely on unselective buffers that accumulate massive visual redundancies. To address these limitations, we introduce EventVLA, an end-to-end framework founded on the concept of sparse visual evidence memory that comprises two core components: foundational visual anchors to retain initial and short-term contexts, and a dynamic Keyframe Evidence Memory (KEM) module. Specifically, KEM directly predicts future keyframe probabilities from the VLA's latent embeddings to autonomously capture and store sparse, task-critical visual events. This foresight-driven mechanism empowers the policy to dynamically evaluate the future causal utility of current observations, preserving transient visual evidence before it becomes unobservable. Furthermore, we propose RoboTwin-MeM, a diagnostic benchmark specifically designed to evaluate non-Markovian manipulation tasks with interactive visual evidence. Extensive evaluations show that across 17 memory-requiring simulation tasks and 4 real-world bimanual tasks, EventVLA achieves an average success rate improvement of +40% over state-of-the-art memory-augmented VLAs.",
+          "hf_url": "https://huggingface.co/papers/2606.20092",
+          "arxiv_url": "https://arxiv.org/abs/2606.20092",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2606.20092",
+          "papers_cool_url": "https://papers.cool/arxiv/2606.20092",
+          "github_url": "",
+          "submitted_by": "Ganlin Yang",
+          "submitted_at": "2026-06-24T00:00:00.000Z",
+          "upvotes": 5,
+          "comments": 1,
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "matched_terms": [
+            "\\bvision-language\\b",
+            "\\bvision-language-action\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "Memory remains a critical bottleneck for long-horizon robotic manipulation, as standard Vision-Language-Action (VLA) policies often fail when task-relevant cues become occluded or unobservable over time.",
+          "upvote_label": "5 upvotes"
+        },
         {
           "report_date": "2026-06-24",
           "paper_id": "2606.24112",
@@ -1327,46 +1367,6 @@
           "classification_confidence": null,
           "one_sentence_summary": "Multimodal misinformation detection is increasingly important because viral posts now combine long multilingual narratives, several images, mixed provenance, and subtle text--image framing errors.",
           "upvote_label": "3 upvotes"
-        },
-        {
-          "report_date": "2026-06-24",
-          "paper_id": "2606.20092",
-          "title": "EventVLA: Event-Driven Visual Evidence Memory for Long-Horizon Vision-Language-Action Policies",
-          "authors": [
-            "Ganlin Yang",
-            "Zhangzheng Tu",
-            "Yuqiang Yang",
-            "Sitong Mao",
-            "Junyi Dong",
-            "Tianxing Chen",
-            "Jiaqi Peng",
-            "Jing Xiong",
-            "Jiafei Cao",
-            "Jifeng Dai",
-            "Wengang Zhou",
-            "Yao Mu",
-            "Tai Wang"
-          ],
-          "abstract": "Memory remains a critical bottleneck for long-horizon robotic manipulation, as standard Vision-Language-Action (VLA) policies often fail when task-relevant cues become occluded or unobservable over time. While existing memory-augmented methods utilize historical context, they either suffer from severe information bottlenecks, incur high latency via decoupled dual systems, or rely on unselective buffers that accumulate massive visual redundancies. To address these limitations, we introduce EventVLA, an end-to-end framework founded on the concept of sparse visual evidence memory that comprises two core components: foundational visual anchors to retain initial and short-term contexts, and a dynamic Keyframe Evidence Memory (KEM) module. Specifically, KEM directly predicts future keyframe probabilities from the VLA's latent embeddings to autonomously capture and store sparse, task-critical visual events. This foresight-driven mechanism empowers the policy to dynamically evaluate the future causal utility of current observations, preserving transient visual evidence before it becomes unobservable. Furthermore, we propose RoboTwin-MeM, a diagnostic benchmark specifically designed to evaluate non-Markovian manipulation tasks with interactive visual evidence. Extensive evaluations show that across 17 memory-requiring simulation tasks and 4 real-world bimanual tasks, EventVLA achieves an average success rate improvement of +40% over state-of-the-art memory-augmented VLAs.",
-          "hf_url": "https://huggingface.co/papers/2606.20092",
-          "arxiv_url": "https://arxiv.org/abs/2606.20092",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2606.20092",
-          "papers_cool_url": "https://papers.cool/arxiv/2606.20092",
-          "github_url": "",
-          "submitted_by": "Ganlin Yang",
-          "submitted_at": "2026-06-24T00:00:00.000Z",
-          "upvotes": 2,
-          "comments": 1,
-          "topic_key": "multimodal_agents",
-          "topic_label": "Multimodal Agents",
-          "matched_terms": [
-            "\\bvision-language\\b",
-            "\\bvision-language-action\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null,
-          "one_sentence_summary": "Memory remains a critical bottleneck for long-horizon robotic manipulation, as standard Vision-Language-Action (VLA) policies often fail when task-relevant cues become occluded or unobservable over time.",
-          "upvote_label": "2 upvotes"
         },
         {
           "report_date": "2026-06-24",
@@ -1560,7 +1560,7 @@
       "topic_label": "Robotics and Embodied AI",
       "count": 2,
       "share": 6.9,
-      "summary": "Robotics and Embodied AI contributes 2 papers (6.90%), led by “World Value Models for Robotic Manipulation” with 3 upvotes.",
+      "summary": "Robotics and Embodied AI contributes 2 papers (6.90%), led by “World Value Models for Robotic Manipulation” with 6 upvotes.",
       "papers": [
         {
           "report_date": "2026-06-24",
@@ -1583,7 +1583,7 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-06-24T00:00:00.000Z",
-          "upvotes": 3,
+          "upvotes": 6,
           "comments": 0,
           "topic_key": "robotics_embodied",
           "topic_label": "Robotics and Embodied AI",
@@ -1594,7 +1594,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Generalist value models play a pivotal role in scaling robotic policy learning from large-scale, mixed-quality data.",
-          "upvote_label": "3 upvotes"
+          "upvote_label": "6 upvotes"
         },
         {
           "report_date": "2026-06-24",
@@ -1672,7 +1672,7 @@
       "topic_label": "Learning, Optimization, and Theory",
       "count": 1,
       "share": 3.45,
-      "summary": "Learning, Optimization, and Theory contributes 1 papers (3.45%), led by “Holistic Data Scheduler for LLM Pre-training via Multi-Objective Reinforcement Learning” with 7 upvotes.",
+      "summary": "Learning, Optimization, and Theory contributes 1 papers (3.45%), led by “Holistic Data Scheduler for LLM Pre-training via Multi-Objective Reinforcement Learning” with 8 upvotes.",
       "papers": [
         {
           "report_date": "2026-06-24",
@@ -1691,7 +1691,7 @@
           "github_url": "",
           "submitted_by": "Chenhao Dang",
           "submitted_at": "2026-06-24T00:00:00.000Z",
-          "upvotes": 7,
+          "upvotes": 8,
           "comments": 1,
           "topic_key": "learning_theory",
           "topic_label": "Learning, Optimization, and Theory",
@@ -1702,7 +1702,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "The composition of training data, governed by the diversity of sources and their mixing strategy, is a cornerstone of Large Language Model (LLM) pre-training.",
-          "upvote_label": "7 upvotes"
+          "upvote_label": "8 upvotes"
         }
       ]
     }
@@ -1755,7 +1755,7 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-06-24T00:00:00.000Z",
-      "upvotes": 123,
+      "upvotes": 133,
       "comments": 4,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -1765,7 +1765,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "A world model predicts environment dynamics based on current observations and actions, serving as a core cognitive mechanism for reasoning and planning.",
-      "upvote_label": "123 upvotes"
+      "upvote_label": "133 upvotes"
     },
     {
       "report_date": "2026-06-24",
@@ -1798,7 +1798,7 @@
       "github_url": "",
       "submitted_by": "Kaiyan Zhang",
       "submitted_at": "2026-06-24T00:00:00.000Z",
-      "upvotes": 56,
+      "upvotes": 61,
       "comments": 1,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -1808,7 +1808,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "We introduce NatureBench, a cross-discipline benchmark of 90 tasks distilled from peer-reviewed Nature-family publications, designed to evaluate whether AI coding agents can move beyond reproduction toward discovery…",
-      "upvote_label": "56 upvotes"
+      "upvote_label": "61 upvotes"
     },
     {
       "report_date": "2026-06-24",
@@ -1833,7 +1833,7 @@
       "github_url": "",
       "submitted_by": "zhushiding",
       "submitted_at": "2026-06-24T00:00:00.000Z",
-      "upvotes": 48,
+      "upvotes": 51,
       "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -1843,7 +1843,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Experience-driven self-evolution is critical for large language model (LLM) agents to improve through open-world interaction.",
-      "upvote_label": "48 upvotes"
+      "upvote_label": "51 upvotes"
     },
     {
       "report_date": "2026-06-24",
@@ -1909,7 +1909,7 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-06-24T00:00:00.000Z",
-      "upvotes": 40,
+      "upvotes": 43,
       "comments": 0,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -1920,7 +1920,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Agentic language models dramatically expand the applications of AI yet little is publicly known about how to curate training data for broadly capable agents.",
-      "upvote_label": "40 upvotes"
+      "upvote_label": "43 upvotes"
     },
     {
       "report_date": "2026-06-24",
@@ -1946,7 +1946,7 @@
       "github_url": "",
       "submitted_by": "Guangyi Liu",
       "submitted_at": "2026-06-24T00:00:00.000Z",
-      "upvotes": 39,
+      "upvotes": 42,
       "comments": 1,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -1956,7 +1956,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "MLLM-based mobile GUI agents have made substantial progress on short-horizon tasks, yet remain unreliable on long-horizon tasks that require retaining intermediate facts across many steps and app transitions.",
-      "upvote_label": "39 upvotes"
+      "upvote_label": "42 upvotes"
     },
     {
       "report_date": "2026-06-24",
@@ -1983,7 +1983,7 @@
       "github_url": "",
       "submitted_by": "Guangyi Liu",
       "submitted_at": "2026-06-24T00:00:00.000Z",
-      "upvotes": 39,
+      "upvotes": 42,
       "comments": 1,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -1993,7 +1993,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "MLLM-based mobile GUI agents have made substantial progress in UI understanding and action execution, but adapting them to real target apps remains costly because mobile apps are numerous, frequently updated, and hard…",
-      "upvote_label": "39 upvotes"
+      "upvote_label": "42 upvotes"
     },
     {
       "report_date": "2026-06-24",
@@ -2025,7 +2025,7 @@
       "github_url": "",
       "submitted_by": "Zhao Shanhui",
       "submitted_at": "2026-06-24T00:00:00.000Z",
-      "upvotes": 28,
+      "upvotes": 30,
       "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -2035,7 +2035,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "AI agents are driving a new software paradigm, with the ability to autonomously call tools, extract information, manage memory, and complete tasks that span applications and data sources.",
-      "upvote_label": "28 upvotes"
+      "upvote_label": "30 upvotes"
     },
     {
       "report_date": "2026-06-24",
@@ -2062,7 +2062,7 @@
       "github_url": "",
       "submitted_by": "Xu Shihao",
       "submitted_at": "2026-06-24T00:00:00.000Z",
-      "upvotes": 22,
+      "upvotes": 23,
       "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -2073,7 +2073,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Mental disorders are highly prevalent worldwide, but the shortage of psychiatrists and the inherent subjectivity of interview-based diagnosis create substantial barriers to timely and consistent mental-health assessment.",
-      "upvote_label": "22 upvotes"
+      "upvote_label": "23 upvotes"
     },
     {
       "report_date": "2026-06-24",
@@ -2095,7 +2095,7 @@
       "github_url": "",
       "submitted_by": "Orest Kupyn",
       "submitted_at": "2026-06-24T00:00:00.000Z",
-      "upvotes": 18,
+      "upvotes": 20,
       "comments": 1,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
@@ -2103,7 +2103,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Generating explorable 3D scenes from a single image requires strong generative priors and accurate geometric representations suitable for downstream use.",
-      "upvote_label": "18 upvotes"
+      "upvote_label": "20 upvotes"
     },
     {
       "report_date": "2026-06-24",
@@ -2122,7 +2122,7 @@
       "github_url": "",
       "submitted_by": "Mingkai Deng",
       "submitted_at": "2026-06-24T00:00:00.000Z",
-      "upvotes": 18,
+      "upvotes": 19,
       "comments": 1,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -2132,7 +2132,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "What is an agent? What constitutes agency?",
-      "upvote_label": "18 upvotes"
+      "upvote_label": "19 upvotes"
     },
     {
       "report_date": "2026-06-24",
@@ -2153,7 +2153,7 @@
       "github_url": "",
       "submitted_by": "Omer Dahary",
       "submitted_at": "2026-06-24T00:00:00.000Z",
-      "upvotes": 17,
+      "upvotes": 18,
       "comments": 1,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -2163,7 +2163,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Modern text-to-image models excel in visual fidelity and prompt adherence.",
-      "upvote_label": "17 upvotes"
+      "upvote_label": "18 upvotes"
     },
     {
       "report_date": "2026-06-24",
@@ -2229,6 +2229,36 @@
     },
     {
       "report_date": "2026-06-24",
+      "paper_id": "2606.24133",
+      "title": "Holistic Data Scheduler for LLM Pre-training via Multi-Objective Reinforcement Learning",
+      "authors": [
+        "Chenhao Dang",
+        "Jing Ma",
+        "Mingjie Liao"
+      ],
+      "abstract": "The composition of training data, governed by the diversity of sources and their mixing strategy, is a cornerstone of Large Language Model (LLM) pre-training. Online Data Mixing (ODM), the technique of adaptively adjusting data mixtures during training, has emerged as a promising direction to improve efficiency. However, existing methods are constrained by their reliance on a singular optimization perspective, which fundamentally overlooks the need for complex LLM pre-training to consider the dynamic data composition from multiple dimensions. To overcome this limitation, we introduce the Holistic Data Scheduler (HDS), a novel online data mixing framework. HDS formulates the data scheduling challenge as a reinforcement learning problem in a continuous control space and leverages the Soft Actor-Critic (SAC) algorithm for its stability and sample efficiency in exploring the high-dimensional policy space. At the core of HDS lies a novel multi-objective, holistic reward function that integrates three critical perspectives: a data-driven reward for quality, a loss-driven reward capturing inter-domain influence, and a model-driven reward based on weight norms. To validate our design and determine its optimal configuration, we conducted systematic experiments on LLMs of various sizes. On The Pile benchmark, HDS reaches the final validation perplexity of the next best method with 44% fewer training iterations. Furthermore, it achieves a 7.2% improvement on the MMLU 0-shot task along with consistent gains on other benchmarks, showcasing its ability to enhance both training efficiency and final model capability.",
+      "hf_url": "https://huggingface.co/papers/2606.24133",
+      "arxiv_url": "https://arxiv.org/abs/2606.24133",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.24133",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.24133",
+      "github_url": "",
+      "submitted_by": "Chenhao Dang",
+      "submitted_at": "2026-06-24T00:00:00.000Z",
+      "upvotes": 8,
+      "comments": 1,
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
+      "matched_terms": [
+        "\\blearning\\b",
+        "\\btraining\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "The composition of training data, governed by the diversity of sources and their mixing strategy, is a cornerstone of Large Language Model (LLM) pre-training.",
+      "upvote_label": "8 upvotes"
+    },
+    {
+      "report_date": "2026-06-24",
       "paper_id": "2606.24548",
       "title": "Are Text-to-Image Models Inductivist Turkeys? A Counterfactual Benchmark for Causal Reasoning",
       "authors": [
@@ -2266,33 +2296,37 @@
     },
     {
       "report_date": "2026-06-24",
-      "paper_id": "2606.24133",
-      "title": "Holistic Data Scheduler for LLM Pre-training via Multi-Objective Reinforcement Learning",
+      "paper_id": "2606.24742",
+      "title": "World Value Models for Robotic Manipulation",
       "authors": [
-        "Chenhao Dang",
-        "Jing Ma",
-        "Mingjie Liao"
+        "Zhihao Wang",
+        "Jianxiong Li",
+        "Yu Cui",
+        "Yuan Gao",
+        "Xianyuan Zhan",
+        "Junzhi Yu",
+        "Xiao Ma"
       ],
-      "abstract": "The composition of training data, governed by the diversity of sources and their mixing strategy, is a cornerstone of Large Language Model (LLM) pre-training. Online Data Mixing (ODM), the technique of adaptively adjusting data mixtures during training, has emerged as a promising direction to improve efficiency. However, existing methods are constrained by their reliance on a singular optimization perspective, which fundamentally overlooks the need for complex LLM pre-training to consider the dynamic data composition from multiple dimensions. To overcome this limitation, we introduce the Holistic Data Scheduler (HDS), a novel online data mixing framework. HDS formulates the data scheduling challenge as a reinforcement learning problem in a continuous control space and leverages the Soft Actor-Critic (SAC) algorithm for its stability and sample efficiency in exploring the high-dimensional policy space. At the core of HDS lies a novel multi-objective, holistic reward function that integrates three critical perspectives: a data-driven reward for quality, a loss-driven reward capturing inter-domain influence, and a model-driven reward based on weight norms. To validate our design and determine its optimal configuration, we conducted systematic experiments on LLMs of various sizes. On The Pile benchmark, HDS reaches the final validation perplexity of the next best method with 44% fewer training iterations. Furthermore, it achieves a 7.2% improvement on the MMLU 0-shot task along with consistent gains on other benchmarks, showcasing its ability to enhance both training efficiency and final model capability.",
-      "hf_url": "https://huggingface.co/papers/2606.24133",
-      "arxiv_url": "https://arxiv.org/abs/2606.24133",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.24133",
-      "papers_cool_url": "https://papers.cool/arxiv/2606.24133",
+      "abstract": "Generalist value models play a pivotal role in scaling robotic policy learning from large-scale, mixed-quality data. Mathematically, accurate value estimation demands deep temporal understanding, requiring models to both ground the current belief using historical context and plan over future outcomes. However, most existing robotic value models are built on Vision-Language Model (VLM) backbones that are pretrained primarily on static or temporally sparse visual observations, lacking the requisite temporal modeling capabilities for value estimation. Unlike VLMs, world models naturally excel at temporal modeling and future planning, making them ideal foundations for learning generalizable value functions. Driven by this insight, we marry world models with value estimation to construct a new generalist robotic value model, World Value Model (WVM), that offers accurate task progressions to assess data quality. On standard benchmarks, WVM delivers state-of-the-art (SOTA) Value-Order Correlation (VOC) results. Complementing standard evaluation suites that contains only expert data, we further introduce Suboptimal-Value-Bench, a multi-embodiment benchmark consisting of 800 suboptimal trajectories with high-fidelity, human-labeled frame annotations. Our evaluations show that WVM maintains its SOTA performance on Suboptimal-Value-Bench, establishing its robustness in handling both expert and suboptimal data. When deployed for policy learning, WVM improves manipulation performance across various policy extraction approaches in both simulated and real-world deployment, providing robust guidance for learning from mixed-quality data.",
+      "hf_url": "https://huggingface.co/papers/2606.24742",
+      "arxiv_url": "https://arxiv.org/abs/2606.24742",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.24742",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.24742",
       "github_url": "",
-      "submitted_by": "Chenhao Dang",
+      "submitted_by": "taesiri",
       "submitted_at": "2026-06-24T00:00:00.000Z",
-      "upvotes": 7,
-      "comments": 1,
-      "topic_key": "learning_theory",
-      "topic_label": "Learning, Optimization, and Theory",
+      "upvotes": 6,
+      "comments": 0,
+      "topic_key": "robotics_embodied",
+      "topic_label": "Robotics and Embodied AI",
       "matched_terms": [
-        "\\blearning\\b",
-        "\\btraining\\b"
+        "\\brobot(ic|ics)?\\b",
+        "\\bmanipulation\\b"
       ],
       "classification_source": "rule",
       "classification_confidence": null,
-      "one_sentence_summary": "The composition of training data, governed by the diversity of sources and their mixing strategy, is a cornerstone of Large Language Model (LLM) pre-training.",
-      "upvote_label": "7 upvotes"
+      "one_sentence_summary": "Generalist value models play a pivotal role in scaling robotic policy learning from large-scale, mixed-quality data.",
+      "upvote_label": "6 upvotes"
     },
     {
       "report_date": "2026-06-24",
@@ -2326,6 +2360,46 @@
       "classification_confidence": null,
       "one_sentence_summary": "Scaling reinforcement learning for visual mathematical reasoning requires more than generating harder questions: as data volume grows, the reward labels themselves must remain reliable.",
       "upvote_label": "6 upvotes"
+    },
+    {
+      "report_date": "2026-06-24",
+      "paper_id": "2606.20092",
+      "title": "EventVLA: Event-Driven Visual Evidence Memory for Long-Horizon Vision-Language-Action Policies",
+      "authors": [
+        "Ganlin Yang",
+        "Zhangzheng Tu",
+        "Yuqiang Yang",
+        "Sitong Mao",
+        "Junyi Dong",
+        "Tianxing Chen",
+        "Jiaqi Peng",
+        "Jing Xiong",
+        "Jiafei Cao",
+        "Jifeng Dai",
+        "Wengang Zhou",
+        "Yao Mu",
+        "Tai Wang"
+      ],
+      "abstract": "Memory remains a critical bottleneck for long-horizon robotic manipulation, as standard Vision-Language-Action (VLA) policies often fail when task-relevant cues become occluded or unobservable over time. While existing memory-augmented methods utilize historical context, they either suffer from severe information bottlenecks, incur high latency via decoupled dual systems, or rely on unselective buffers that accumulate massive visual redundancies. To address these limitations, we introduce EventVLA, an end-to-end framework founded on the concept of sparse visual evidence memory that comprises two core components: foundational visual anchors to retain initial and short-term contexts, and a dynamic Keyframe Evidence Memory (KEM) module. Specifically, KEM directly predicts future keyframe probabilities from the VLA's latent embeddings to autonomously capture and store sparse, task-critical visual events. This foresight-driven mechanism empowers the policy to dynamically evaluate the future causal utility of current observations, preserving transient visual evidence before it becomes unobservable. Furthermore, we propose RoboTwin-MeM, a diagnostic benchmark specifically designed to evaluate non-Markovian manipulation tasks with interactive visual evidence. Extensive evaluations show that across 17 memory-requiring simulation tasks and 4 real-world bimanual tasks, EventVLA achieves an average success rate improvement of +40% over state-of-the-art memory-augmented VLAs.",
+      "hf_url": "https://huggingface.co/papers/2606.20092",
+      "arxiv_url": "https://arxiv.org/abs/2606.20092",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.20092",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.20092",
+      "github_url": "",
+      "submitted_by": "Ganlin Yang",
+      "submitted_at": "2026-06-24T00:00:00.000Z",
+      "upvotes": 5,
+      "comments": 1,
+      "topic_key": "multimodal_agents",
+      "topic_label": "Multimodal Agents",
+      "matched_terms": [
+        "\\bvision-language\\b",
+        "\\bvision-language-action\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Memory remains a critical bottleneck for long-horizon robotic manipulation, as standard Vision-Language-Action (VLA) policies often fail when task-relevant cues become occluded or unobservable over time.",
+      "upvote_label": "5 upvotes"
     },
     {
       "report_date": "2026-06-24",
@@ -2385,40 +2459,6 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Multimodal misinformation detection is increasingly important because viral posts now combine long multilingual narratives, several images, mixed provenance, and subtle text--image framing errors.",
-      "upvote_label": "3 upvotes"
-    },
-    {
-      "report_date": "2026-06-24",
-      "paper_id": "2606.24742",
-      "title": "World Value Models for Robotic Manipulation",
-      "authors": [
-        "Zhihao Wang",
-        "Jianxiong Li",
-        "Yu Cui",
-        "Yuan Gao",
-        "Xianyuan Zhan",
-        "Junzhi Yu",
-        "Xiao Ma"
-      ],
-      "abstract": "Generalist value models play a pivotal role in scaling robotic policy learning from large-scale, mixed-quality data. Mathematically, accurate value estimation demands deep temporal understanding, requiring models to both ground the current belief using historical context and plan over future outcomes. However, most existing robotic value models are built on Vision-Language Model (VLM) backbones that are pretrained primarily on static or temporally sparse visual observations, lacking the requisite temporal modeling capabilities for value estimation. Unlike VLMs, world models naturally excel at temporal modeling and future planning, making them ideal foundations for learning generalizable value functions. Driven by this insight, we marry world models with value estimation to construct a new generalist robotic value model, World Value Model (WVM), that offers accurate task progressions to assess data quality. On standard benchmarks, WVM delivers state-of-the-art (SOTA) Value-Order Correlation (VOC) results. Complementing standard evaluation suites that contains only expert data, we further introduce Suboptimal-Value-Bench, a multi-embodiment benchmark consisting of 800 suboptimal trajectories with high-fidelity, human-labeled frame annotations. Our evaluations show that WVM maintains its SOTA performance on Suboptimal-Value-Bench, establishing its robustness in handling both expert and suboptimal data. When deployed for policy learning, WVM improves manipulation performance across various policy extraction approaches in both simulated and real-world deployment, providing robust guidance for learning from mixed-quality data.",
-      "hf_url": "https://huggingface.co/papers/2606.24742",
-      "arxiv_url": "https://arxiv.org/abs/2606.24742",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.24742",
-      "papers_cool_url": "https://papers.cool/arxiv/2606.24742",
-      "github_url": "",
-      "submitted_by": "taesiri",
-      "submitted_at": "2026-06-24T00:00:00.000Z",
-      "upvotes": 3,
-      "comments": 0,
-      "topic_key": "robotics_embodied",
-      "topic_label": "Robotics and Embodied AI",
-      "matched_terms": [
-        "\\brobot(ic|ics)?\\b",
-        "\\bmanipulation\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Generalist value models play a pivotal role in scaling robotic policy learning from large-scale, mixed-quality data.",
       "upvote_label": "3 upvotes"
     },
     {
@@ -2523,46 +2563,6 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Attention-based Multiple Instance Learning aggregators in medical imaging are prone to attention concentration, producing overconfident and unstable predictions.",
-      "upvote_label": "2 upvotes"
-    },
-    {
-      "report_date": "2026-06-24",
-      "paper_id": "2606.20092",
-      "title": "EventVLA: Event-Driven Visual Evidence Memory for Long-Horizon Vision-Language-Action Policies",
-      "authors": [
-        "Ganlin Yang",
-        "Zhangzheng Tu",
-        "Yuqiang Yang",
-        "Sitong Mao",
-        "Junyi Dong",
-        "Tianxing Chen",
-        "Jiaqi Peng",
-        "Jing Xiong",
-        "Jiafei Cao",
-        "Jifeng Dai",
-        "Wengang Zhou",
-        "Yao Mu",
-        "Tai Wang"
-      ],
-      "abstract": "Memory remains a critical bottleneck for long-horizon robotic manipulation, as standard Vision-Language-Action (VLA) policies often fail when task-relevant cues become occluded or unobservable over time. While existing memory-augmented methods utilize historical context, they either suffer from severe information bottlenecks, incur high latency via decoupled dual systems, or rely on unselective buffers that accumulate massive visual redundancies. To address these limitations, we introduce EventVLA, an end-to-end framework founded on the concept of sparse visual evidence memory that comprises two core components: foundational visual anchors to retain initial and short-term contexts, and a dynamic Keyframe Evidence Memory (KEM) module. Specifically, KEM directly predicts future keyframe probabilities from the VLA's latent embeddings to autonomously capture and store sparse, task-critical visual events. This foresight-driven mechanism empowers the policy to dynamically evaluate the future causal utility of current observations, preserving transient visual evidence before it becomes unobservable. Furthermore, we propose RoboTwin-MeM, a diagnostic benchmark specifically designed to evaluate non-Markovian manipulation tasks with interactive visual evidence. Extensive evaluations show that across 17 memory-requiring simulation tasks and 4 real-world bimanual tasks, EventVLA achieves an average success rate improvement of +40% over state-of-the-art memory-augmented VLAs.",
-      "hf_url": "https://huggingface.co/papers/2606.20092",
-      "arxiv_url": "https://arxiv.org/abs/2606.20092",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.20092",
-      "papers_cool_url": "https://papers.cool/arxiv/2606.20092",
-      "github_url": "",
-      "submitted_by": "Ganlin Yang",
-      "submitted_at": "2026-06-24T00:00:00.000Z",
-      "upvotes": 2,
-      "comments": 1,
-      "topic_key": "multimodal_agents",
-      "topic_label": "Multimodal Agents",
-      "matched_terms": [
-        "\\bvision-language\\b",
-        "\\bvision-language-action\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Memory remains a critical bottleneck for long-horizon robotic manipulation, as standard Vision-Language-Action (VLA) policies often fail when task-relevant cues become occluded or unobservable over time.",
       "upvote_label": "2 upvotes"
     },
     {

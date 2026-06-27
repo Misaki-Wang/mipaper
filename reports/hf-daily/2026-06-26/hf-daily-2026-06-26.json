@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-26T19:00:05Z",
+  "generated_at": "2026-06-27T19:00:08Z",
   "report_kind": "hf_daily",
   "report_date": "2026-06-26",
   "source_url": "https://huggingface.co/papers/date/2026-06-26",
   "classifier": "rule",
-  "total_papers": 23,
+  "total_papers": 25,
   "focus_topics": [
     {
       "topic_key": "generative_foundations",
@@ -29,95 +29,95 @@
     {
       "topic_label": "Agents and Planning",
       "count": 7,
-      "share": 30.43
+      "share": 28.0
     },
     {
       "topic_label": "Other AI",
       "count": 6,
-      "share": 26.09
+      "share": 24.0
     },
     {
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "count": 4,
-      "share": 17.39
+      "share": 16.0
+    },
+    {
+      "topic_label": "Multimodal Understanding and Vision",
+      "count": 3,
+      "share": 12.0
+    },
+    {
+      "topic_label": "LLMs and Language",
+      "count": 2,
+      "share": 8.0
     },
     {
       "topic_label": "Learning, Optimization, and Theory",
       "count": 2,
-      "share": 8.7
-    },
-    {
-      "topic_label": "Multimodal Understanding and Vision",
-      "count": 2,
-      "share": 8.7
-    },
-    {
-      "topic_label": "LLMs and Language",
-      "count": 1,
-      "share": 4.35
+      "share": 8.0
     },
     {
       "topic_label": "Robotics and Embodied AI",
       "count": 1,
-      "share": 4.35
+      "share": 4.0
     }
   ],
   "daily_digest": {
     "main_hotspots": [
-      "Agents and Planning: 7 papers (30.43%); representative paper: OPID: On-Policy Skill Distillation for Agentic Reinforcement Learning.",
-      "Other AI: 6 papers (26.09%); representative paper: DanceOPD: On-Policy Generative Field Distillation.",
-      "Reasoning, Alignment, and Evaluation: 4 papers (17.39%); representative paper: LISA: Likelihood Score Alignment for Visual-condition Controllable Generation."
+      "Agents and Planning: 7 papers (28.00%); representative paper: OPID: On-Policy Skill Distillation for Agentic Reinforcement Learning.",
+      "Other AI: 6 papers (24.00%); representative paper: DanceOPD: On-Policy Generative Field Distillation.",
+      "Reasoning, Alignment, and Evaluation: 4 papers (16.00%); representative paper: LISA: Likelihood Score Alignment for Visual-condition Controllable Generation."
     ],
-    "trend_summary": "Today's dominant clusters are Agents and Planning / Other AI / Reasoning, Alignment, and Evaluation; this suggests that agent papers emphasize tool use, planning, and deployable workflows. The strongest visible attention is on “DanceOPD: On-Policy Generative Field Distillation” (52 upvotes).",
+    "trend_summary": "Today's dominant clusters are Agents and Planning / Other AI / Reasoning, Alignment, and Evaluation; this suggests that agent papers emphasize tool use, planning, and deployable workflows. The strongest visible attention is on “DanceOPD: On-Policy Generative Field Distillation” (64 upvotes).",
     "category_summaries": [
       {
         "topic_label": "Agents and Planning",
         "count": 7,
-        "share": 30.43,
-        "summary": "Agents and Planning contributes 7 papers (30.43%), led by “OPID: On-Policy Skill Distillation for Agentic Reinforcement Learning” with 32 upvotes."
+        "share": 28.0,
+        "summary": "Agents and Planning contributes 7 papers (28.00%), led by “OPID: On-Policy Skill Distillation for Agentic Reinforcement Learning” with 40 upvotes."
       },
       {
         "topic_label": "Other AI",
         "count": 6,
-        "share": 26.09,
-        "summary": "Other AI contributes 6 papers (26.09%), led by “DanceOPD: On-Policy Generative Field Distillation” with 52 upvotes."
+        "share": 24.0,
+        "summary": "Other AI contributes 6 papers (24.00%), led by “DanceOPD: On-Policy Generative Field Distillation” with 64 upvotes."
       },
       {
         "topic_label": "Reasoning, Alignment, and Evaluation",
         "count": 4,
-        "share": 17.39,
-        "summary": "Reasoning, Alignment, and Evaluation contributes 4 papers (17.39%), led by “LISA: Likelihood Score Alignment for Visual-condition Controllable Generation” with 8 upvotes."
+        "share": 16.0,
+        "summary": "Reasoning, Alignment, and Evaluation contributes 4 papers (16.00%), led by “LISA: Likelihood Score Alignment for Visual-condition Controllable Generation” with 13 upvotes."
+      },
+      {
+        "topic_label": "Multimodal Understanding and Vision",
+        "count": 3,
+        "share": 12.0,
+        "summary": "Multimodal Understanding and Vision contributes 3 papers (12.00%), led by “ViQ: Text-Aligned Visual Quantized Representations at Any Resolution” with 37 upvotes."
+      },
+      {
+        "topic_label": "LLMs and Language",
+        "count": 2,
+        "share": 8.0,
+        "summary": "LLMs and Language contributes 2 papers (8.00%), led by “Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents” with 7 upvotes."
       },
       {
         "topic_label": "Learning, Optimization, and Theory",
         "count": 2,
-        "share": 8.7,
-        "summary": "Learning, Optimization, and Theory contributes 2 papers (8.70%), led by “Why Multi-Step Tool-Use Reinforcement Learning Collapses and How Supervisory Signals Fix It” with 10 upvotes."
-      },
-      {
-        "topic_label": "Multimodal Understanding and Vision",
-        "count": 2,
-        "share": 8.7,
-        "summary": "Multimodal Understanding and Vision contributes 2 papers (8.70%), led by “ViQ: Text-Aligned Visual Quantized Representations at Any Resolution” with 34 upvotes."
-      },
-      {
-        "topic_label": "LLMs and Language",
-        "count": 1,
-        "share": 4.35,
-        "summary": "LLMs and Language contributes 1 papers (4.35%), led by “When Does Combining Language Models Help? A Co-Failure Ceiling on Routing, Voting, and Mixture-of-Agents Across 67 Frontier Models” with 1 upvote."
+        "share": 8.0,
+        "summary": "Learning, Optimization, and Theory contributes 2 papers (8.00%), led by “Why Multi-Step Tool-Use Reinforcement Learning Collapses and How Supervisory Signals Fix It” with 15 upvotes."
       },
       {
         "topic_label": "Robotics and Embodied AI",
         "count": 1,
-        "share": 4.35,
-        "summary": "Robotics and Embodied AI contributes 1 papers (4.35%), led by “In-Context World Modeling for Robotic Control” with 6 upvotes."
+        "share": 4.0,
+        "summary": "Robotics and Embodied AI contributes 1 papers (4.00%), led by “In-Context World Modeling for Robotic Control” with 42 upvotes."
       }
     ],
     "top_papers": [
       {
         "title": "DanceOPD: On-Policy Generative Field Distillation",
-        "upvotes": 52,
-        "upvote_label": "52 upvotes",
+        "upvotes": 64,
+        "upvote_label": "64 upvotes",
         "topic_label": "Other AI",
         "summary": "Modern image generation demands a single model that unifies diverse capabilities, including text-to-image (T2I), local editing, and global editing.",
         "hf_url": "https://huggingface.co/papers/2606.27377",
@@ -126,20 +126,20 @@
         "papers_cool_url": "https://papers.cool/arxiv/2606.27377"
       },
       {
-        "title": "ViQ: Text-Aligned Visual Quantized Representations at Any Resolution",
-        "upvotes": 34,
-        "upvote_label": "34 upvotes",
-        "topic_label": "Multimodal Understanding and Vision",
-        "summary": "A unified representation for text and vision is a natural pursuit, as it enables simpler multimodal modeling and more efficient training.",
-        "hf_url": "https://huggingface.co/papers/2606.27313",
-        "arxiv_url": "https://arxiv.org/abs/2606.27313",
-        "arxiv_pdf_url": "https://arxiv.org/pdf/2606.27313",
-        "papers_cool_url": "https://papers.cool/arxiv/2606.27313"
+        "title": "In-Context World Modeling for Robotic Control",
+        "upvotes": 42,
+        "upvote_label": "42 upvotes",
+        "topic_label": "Robotics and Embodied AI",
+        "summary": "Modern Vision-Language-Action (VLA) models often fail to generalize to novel setups, such as altered camera viewpoints or robot morphologies, because they are typically conditioned only on current observations and…",
+        "hf_url": "https://huggingface.co/papers/2606.26025",
+        "arxiv_url": "https://arxiv.org/abs/2606.26025",
+        "arxiv_pdf_url": "https://arxiv.org/pdf/2606.26025",
+        "papers_cool_url": "https://papers.cool/arxiv/2606.26025"
       },
       {
         "title": "OPID: On-Policy Skill Distillation for Agentic Reinforcement Learning",
-        "upvotes": 32,
-        "upvote_label": "32 upvotes",
+        "upvotes": 40,
+        "upvote_label": "40 upvotes",
         "topic_label": "Agents and Planning",
         "summary": "Outcome-based reinforcement learning provides a stable optimization backbone for language agents, but its sparse trajectory-level rewards provide little guidance on which intermediate decisions should be reinforced or…",
         "hf_url": "https://huggingface.co/papers/2606.26790",
@@ -149,8 +149,8 @@
       },
       {
         "title": "Qwen-Image-Agent: Bridging the Context Gap in Real-World Image Generation",
-        "upvotes": 32,
-        "upvote_label": "32 upvotes",
+        "upvotes": 39,
+        "upvote_label": "39 upvotes",
         "topic_label": "Agents and Planning",
         "summary": "While text-to-image (T2I) models have achieved remarkable progress, they struggle with real-world requests that are often underspecified, implicit, or dependent on up-to-date knowledge.",
         "hf_url": "https://huggingface.co/papers/2606.26907",
@@ -160,8 +160,8 @@
       },
       {
         "title": "The Verification Horizon: No Silver Bullet for Coding Agent Rewards",
-        "upvotes": 30,
-        "upvote_label": "30 upvotes",
+        "upvotes": 38,
+        "upvote_label": "38 upvotes",
         "topic_label": "Agents and Planning",
         "summary": "A classical intuition holds that verifying a solution is easier than producing one.",
         "hf_url": "https://huggingface.co/papers/2606.26300",
@@ -177,6 +177,10 @@
       "count": 5
     },
     {
+      "submitted_by": "Changdae Oh",
+      "count": 1
+    },
+    {
       "submitted_by": "Issa Sugiura",
       "count": 1
     },
@@ -190,10 +194,6 @@
     },
     {
       "submitted_by": "Josef Chen",
-      "count": 1
-    },
-    {
-      "submitted_by": "Junwei Luo",
       "count": 1
     }
   ],
@@ -223,7 +223,7 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-06-26T00:00:00.000Z",
-      "upvotes": 52,
+      "upvotes": 64,
       "comments": 2,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
@@ -231,41 +231,41 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Modern image generation demands a single model that unifies diverse capabilities, including text-to-image (T2I), local editing, and global editing.",
-      "upvote_label": "52 upvotes"
+      "upvote_label": "64 upvotes"
     },
     {
       "report_date": "2026-06-26",
-      "paper_id": "2606.27313",
-      "title": "ViQ: Text-Aligned Visual Quantized Representations at Any Resolution",
+      "paper_id": "2606.26025",
+      "title": "In-Context World Modeling for Robotic Control",
       "authors": [
-        "Xumin Yu",
-        "Zuyan Liu",
-        "Zhenyu Yang",
-        "Yuhao Dong",
-        "Shengsheng Qian",
-        "Jiwen Lu",
-        "Han Hu",
-        "Yongming Rao"
+        "Siyin Wang",
+        "Junhao Shi",
+        "Senyu Fei",
+        "Zhaoyang Fu",
+        "Li Ji",
+        "Jingjing Gong",
+        "Xipeng Qiu"
       ],
-      "abstract": "A unified representation for text and vision is a natural pursuit, as it enables simpler multimodal modeling and more efficient training. However, representing images as discrete signals in the same way as text inevitably introduces severe information loss. Existing work struggles to balance low-level details and high-level semantics in discrete representations: reconstruction-oriented representations often lack semantic information, whereas semantically stronger features typically suffer from severe loss of detail. We present ViQ, a Visual Quantized Representations framework, which is designed to balance semantics and details in discrete representations while supporting inputs at native resolutions, thereby enabling it to serve as a unified and general discrete representation for arbitrary visual inputs. Our approach structures quantization learning into two stages: text-aligned pre-training and feature discretization. With text-aligned pre-training, we enhance the visual encoder semantic-rich supervision from the pretrained language model and enable it to process native-resolution visual inputs. During discretization, we propose a proximal representation learning strategy to progressively compact the feature space, along with a position-aware head-wise quantization mechanism that enables flexible processing of arbitrary resolutions. Extensive experiments on multimodal tasks demonstrate that ViQ achieves competitive performance compared to state-of-the-art multimodal vision encoders with continuous and high-dimensional visual features, while maintaining high precision in low-level reconstruction. We also show that multimodal training with visual quantized representations largely improves efficiency, yielding up to 20\\%-70\\% acceleration with different base LLMs and training recipes.",
-      "hf_url": "https://huggingface.co/papers/2606.27313",
-      "arxiv_url": "https://arxiv.org/abs/2606.27313",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.27313",
-      "papers_cool_url": "https://papers.cool/arxiv/2606.27313",
+      "abstract": "Modern Vision-Language-Action (VLA) models often fail to generalize to novel setups, such as altered camera viewpoints or robot morphologies, because they are typically conditioned only on current observations and language instructions. By ignoring the underlying system configuration as a variable, these models implicitly assume a fixed execution context encountered during training, necessitating data-intensive fine-tuning for any new environment. In this work, we introduce In-Context World Modeling (ICWM), a framework that treats system identification as an in-context adaptation problem. ICWM enables robot policies to autonomously infer essential system variables from a short history of self-generated, task-agnostic interactions. Unlike traditional In-Context Learning that uses demonstrations to specify what task to perform, ICWM leverages the context window to understand how the system operates. By processing these interactions before task execution, the model implicitly captures the world dynamics of the current system, enabling adaptation to novel configurations without parameter updates. Extensive experiments in simulation and on real-world robot platforms demonstrate that ICWM significantly outperforms standard VLA baselines on novel camera viewpoints.",
+      "hf_url": "https://huggingface.co/papers/2606.26025",
+      "arxiv_url": "https://arxiv.org/abs/2606.26025",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.26025",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.26025",
       "github_url": "",
-      "submitted_by": "liuzuyan",
+      "submitted_by": "Siyin Wang (SII)",
       "submitted_at": "2026-06-26T00:00:00.000Z",
-      "upvotes": 34,
+      "upvotes": 42,
       "comments": 1,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
+      "topic_key": "robotics_embodied",
+      "topic_label": "Robotics and Embodied AI",
       "matched_terms": [
-        "\\bvisual\\b"
+        "\\brobot(ic|ics)?\\b",
+        "\\bcontrol\\b"
       ],
       "classification_source": "rule",
       "classification_confidence": null,
-      "one_sentence_summary": "A unified representation for text and vision is a natural pursuit, as it enables simpler multimodal modeling and more efficient training.",
-      "upvote_label": "34 upvotes"
+      "one_sentence_summary": "Modern Vision-Language-Action (VLA) models often fail to generalize to novel setups, such as altered camera viewpoints or robot morphologies, because they are typically conditioned only on current observations and…",
+      "upvote_label": "42 upvotes"
     },
     {
       "report_date": "2026-06-26",
@@ -292,7 +292,7 @@
       "github_url": "",
       "submitted_by": "Jinyang Wu",
       "submitted_at": "2026-06-26T00:00:00.000Z",
-      "upvotes": 32,
+      "upvotes": 40,
       "comments": 1,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -302,7 +302,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Outcome-based reinforcement learning provides a stable optimization backbone for language agents, but its sparse trajectory-level rewards provide little guidance on which intermediate decisions should be reinforced or…",
-      "upvote_label": "32 upvotes"
+      "upvote_label": "40 upvotes"
     },
     {
       "report_date": "2026-06-26",
@@ -339,8 +339,8 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-06-26T00:00:00.000Z",
-      "upvotes": 32,
-      "comments": 0,
+      "upvotes": 39,
+      "comments": 3,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
       "matched_terms": [
@@ -349,7 +349,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "While text-to-image (T2I) models have achieved remarkable progress, they struggle with real-world requests that are often underspecified, implicit, or dependent on up-to-date knowledge.",
-      "upvote_label": "32 upvotes"
+      "upvote_label": "39 upvotes"
     },
     {
       "report_date": "2026-06-26",
@@ -377,7 +377,7 @@
       "github_url": "",
       "submitted_by": "zjj",
       "submitted_at": "2026-06-26T00:00:00.000Z",
-      "upvotes": 30,
+      "upvotes": 38,
       "comments": 3,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -387,7 +387,41 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "A classical intuition holds that verifying a solution is easier than producing one.",
-      "upvote_label": "30 upvotes"
+      "upvote_label": "38 upvotes"
+    },
+    {
+      "report_date": "2026-06-26",
+      "paper_id": "2606.27313",
+      "title": "ViQ: Text-Aligned Visual Quantized Representations at Any Resolution",
+      "authors": [
+        "Xumin Yu",
+        "Zuyan Liu",
+        "Zhenyu Yang",
+        "Yuhao Dong",
+        "Shengsheng Qian",
+        "Jiwen Lu",
+        "Han Hu",
+        "Yongming Rao"
+      ],
+      "abstract": "A unified representation for text and vision is a natural pursuit, as it enables simpler multimodal modeling and more efficient training. However, representing images as discrete signals in the same way as text inevitably introduces severe information loss. Existing work struggles to balance low-level details and high-level semantics in discrete representations: reconstruction-oriented representations often lack semantic information, whereas semantically stronger features typically suffer from severe loss of detail. We present ViQ, a Visual Quantized Representations framework, which is designed to balance semantics and details in discrete representations while supporting inputs at native resolutions, thereby enabling it to serve as a unified and general discrete representation for arbitrary visual inputs. Our approach structures quantization learning into two stages: text-aligned pre-training and feature discretization. With text-aligned pre-training, we enhance the visual encoder semantic-rich supervision from the pretrained language model and enable it to process native-resolution visual inputs. During discretization, we propose a proximal representation learning strategy to progressively compact the feature space, along with a position-aware head-wise quantization mechanism that enables flexible processing of arbitrary resolutions. Extensive experiments on multimodal tasks demonstrate that ViQ achieves competitive performance compared to state-of-the-art multimodal vision encoders with continuous and high-dimensional visual features, while maintaining high precision in low-level reconstruction. We also show that multimodal training with visual quantized representations largely improves efficiency, yielding up to 20\\%-70\\% acceleration with different base LLMs and training recipes.",
+      "hf_url": "https://huggingface.co/papers/2606.27313",
+      "arxiv_url": "https://arxiv.org/abs/2606.27313",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.27313",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.27313",
+      "github_url": "",
+      "submitted_by": "liuzuyan",
+      "submitted_at": "2026-06-26T00:00:00.000Z",
+      "upvotes": 37,
+      "comments": 1,
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
+      "matched_terms": [
+        "\\bvisual\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "A unified representation for text and vision is a natural pursuit, as it enables simpler multimodal modeling and more efficient training.",
+      "upvote_label": "37 upvotes"
     },
     {
       "report_date": "2026-06-26",
@@ -415,7 +449,7 @@
       "github_url": "",
       "submitted_by": "Lanxiang Hu",
       "submitted_at": "2026-06-26T00:00:00.000Z",
-      "upvotes": 19,
+      "upvotes": 27,
       "comments": 1,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
@@ -423,38 +457,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Speculative decoding (SD) accelerates autoregressive Large Language Models (LLMs) by drafting multiple tokens and verifying them in parallel, but it faces a scaling limitation: increasing the draft budget improves…",
-      "upvote_label": "19 upvotes"
-    },
-    {
-      "report_date": "2026-06-26",
-      "paper_id": "2606.26027",
-      "title": "Why Multi-Step Tool-Use Reinforcement Learning Collapses and How Supervisory Signals Fix It",
-      "authors": [
-        "Yupu Hao",
-        "Zhuoran Jin",
-        "Huanxuan Liao",
-        "Kang Liu",
-        "Jun Zhao"
-      ],
-      "abstract": "Tool use enables large language models (LLMs) to perform complex tasks, and recent agentic reinforcement learning (RL) methods show promise for enhancing model capabilities. However, RL alone often leads to instability or limited gains in tool-use tasks. In our experiments, some models exhibit catastrophic collapse, where performance abruptly drops and tool-invocation structures fail. The analysis reveals that these failures stem from unexpected probability spikes in specific control tokens, disrupting structured execution, yet the underlying tool-use capability remains intact, merely obscured by specific formats. To address this, we systematically investigate a diverse set of supervisory signals, including off-policy supervision, hint-based guidance, erroneous example supervision, and others, applied under both synchronous and interleaved training schemes. We find that interleaving supervised fine-tuning (SFT) with RL substantially improves stability, but exhibits degraded performance under format and content out-of-distribution (OOD) evaluation. We also analyze the impact of learning rates and generalization across settings. These results highlight the importance of understanding RL failures and demonstrate how diverse supervisory signals can guide exploratory learning, enabling robust training of LLMs for complex, multi-step tool-use tasks. Our Code is available at https://github.com/hypasd-art/Tool-RL-Box.",
-      "hf_url": "https://huggingface.co/papers/2606.26027",
-      "arxiv_url": "https://arxiv.org/abs/2606.26027",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.26027",
-      "papers_cool_url": "https://papers.cool/arxiv/2606.26027",
-      "github_url": "",
-      "submitted_by": "Zhuoran Jin",
-      "submitted_at": "2026-06-26T00:00:00.000Z",
-      "upvotes": 10,
-      "comments": 1,
-      "topic_key": "learning_theory",
-      "topic_label": "Learning, Optimization, and Theory",
-      "matched_terms": [
-        "\\blearning\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Tool use enables large language models (LLMs) to perform complex tasks, and recent agentic reinforcement learning (RL) methods show promise for enhancing model capabilities.",
-      "upvote_label": "10 upvotes"
+      "upvote_label": "27 upvotes"
     },
     {
       "report_date": "2026-06-26",
@@ -477,7 +480,7 @@
       "github_url": "",
       "submitted_by": "Xiao Zhou",
       "submitted_at": "2026-06-26T00:00:00.000Z",
-      "upvotes": 10,
+      "upvotes": 25,
       "comments": 1,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -487,15 +490,15 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Computer-use agents can execute software tasks through either graphical interfaces or programmatic command interfaces, but existing evaluations confound interaction modality with differences in tasks, initial states,…",
-      "upvote_label": "10 upvotes"
+      "upvote_label": "25 upvotes"
     }
   ],
   "topics": [
     {
       "topic_label": "Agents and Planning",
       "count": 7,
-      "share": 30.43,
-      "summary": "Agents and Planning contributes 7 papers (30.43%), led by “OPID: On-Policy Skill Distillation for Agentic Reinforcement Learning” with 32 upvotes.",
+      "share": 28.0,
+      "summary": "Agents and Planning contributes 7 papers (28.00%), led by “OPID: On-Policy Skill Distillation for Agentic Reinforcement Learning” with 40 upvotes.",
       "papers": [
         {
           "report_date": "2026-06-26",
@@ -522,7 +525,7 @@
           "github_url": "",
           "submitted_by": "Jinyang Wu",
           "submitted_at": "2026-06-26T00:00:00.000Z",
-          "upvotes": 32,
+          "upvotes": 40,
           "comments": 1,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
@@ -532,7 +535,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Outcome-based reinforcement learning provides a stable optimization backbone for language agents, but its sparse trajectory-level rewards provide little guidance on which intermediate decisions should be reinforced or…",
-          "upvote_label": "32 upvotes"
+          "upvote_label": "40 upvotes"
         },
         {
           "report_date": "2026-06-26",
@@ -569,8 +572,8 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-06-26T00:00:00.000Z",
-          "upvotes": 32,
-          "comments": 0,
+          "upvotes": 39,
+          "comments": 3,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
           "matched_terms": [
@@ -579,7 +582,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "While text-to-image (T2I) models have achieved remarkable progress, they struggle with real-world requests that are often underspecified, implicit, or dependent on up-to-date knowledge.",
-          "upvote_label": "32 upvotes"
+          "upvote_label": "39 upvotes"
         },
         {
           "report_date": "2026-06-26",
@@ -607,7 +610,7 @@
           "github_url": "",
           "submitted_by": "zjj",
           "submitted_at": "2026-06-26T00:00:00.000Z",
-          "upvotes": 30,
+          "upvotes": 38,
           "comments": 3,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
@@ -617,7 +620,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "A classical intuition holds that verifying a solution is easier than producing one.",
-          "upvote_label": "30 upvotes"
+          "upvote_label": "38 upvotes"
         },
         {
           "report_date": "2026-06-26",
@@ -640,7 +643,7 @@
           "github_url": "",
           "submitted_by": "Xiao Zhou",
           "submitted_at": "2026-06-26T00:00:00.000Z",
-          "upvotes": 10,
+          "upvotes": 25,
           "comments": 1,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
@@ -650,7 +653,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Computer-use agents can execute software tasks through either graphical interfaces or programmatic command interfaces, but existing evaluations confound interaction modality with differences in tasks, initial states,…",
-          "upvote_label": "10 upvotes"
+          "upvote_label": "25 upvotes"
         },
         {
           "report_date": "2026-06-26",
@@ -691,8 +694,8 @@
           "github_url": "",
           "submitted_by": "Runqi Lin",
           "submitted_at": "2026-06-26T00:00:00.000Z",
-          "upvotes": 9,
-          "comments": 1,
+          "upvotes": 15,
+          "comments": 2,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
           "matched_terms": [
@@ -701,7 +704,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "As agentic systems continue to evolve and are widely deployed in real-world scenarios, there is a growing demand to faithfully evaluate their capabilities.",
-          "upvote_label": "9 upvotes"
+          "upvote_label": "15 upvotes"
         },
         {
           "report_date": "2026-06-26",
@@ -725,8 +728,8 @@
           "github_url": "",
           "submitted_by": "Issa Sugiura",
           "submitted_at": "2026-06-26T00:00:00.000Z",
-          "upvotes": 4,
-          "comments": 1,
+          "upvotes": 7,
+          "comments": 2,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
           "matched_terms": [
@@ -736,7 +739,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "As LLM agents become capable of increasingly long-horizon tasks, evaluating their performance in economic systems is becoming increasingly important.",
-          "upvote_label": "4 upvotes"
+          "upvote_label": "7 upvotes"
         },
         {
           "report_date": "2026-06-26",
@@ -753,7 +756,7 @@
           "github_url": "",
           "submitted_by": "Minbyul Jeong",
           "submitted_at": "2026-06-26T00:00:00.000Z",
-          "upvotes": 1,
+          "upvotes": 3,
           "comments": 1,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
@@ -763,15 +766,15 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "A working citation looks like proof -- but the fact that a link resolves does not mean the cited paper supports the claim.",
-          "upvote_label": "1 upvote"
+          "upvote_label": "3 upvotes"
         }
       ]
     },
     {
       "topic_label": "Other AI",
       "count": 6,
-      "share": 26.09,
-      "summary": "Other AI contributes 6 papers (26.09%), led by “DanceOPD: On-Policy Generative Field Distillation” with 52 upvotes.",
+      "share": 24.0,
+      "summary": "Other AI contributes 6 papers (24.00%), led by “DanceOPD: On-Policy Generative Field Distillation” with 64 upvotes.",
       "papers": [
         {
           "report_date": "2026-06-26",
@@ -798,7 +801,7 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-06-26T00:00:00.000Z",
-          "upvotes": 52,
+          "upvotes": 64,
           "comments": 2,
           "topic_key": "other_ai",
           "topic_label": "Other AI",
@@ -806,7 +809,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Modern image generation demands a single model that unifies diverse capabilities, including text-to-image (T2I), local editing, and global editing.",
-          "upvote_label": "52 upvotes"
+          "upvote_label": "64 upvotes"
         },
         {
           "report_date": "2026-06-26",
@@ -834,7 +837,7 @@
           "github_url": "",
           "submitted_by": "Lanxiang Hu",
           "submitted_at": "2026-06-26T00:00:00.000Z",
-          "upvotes": 19,
+          "upvotes": 27,
           "comments": 1,
           "topic_key": "other_ai",
           "topic_label": "Other AI",
@@ -842,7 +845,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Speculative decoding (SD) accelerates autoregressive Large Language Models (LLMs) by drafting multiple tokens and verifying them in parallel, but it faces a scaling limitation: increasing the draft budget improves…",
-          "upvote_label": "19 upvotes"
+          "upvote_label": "27 upvotes"
         },
         {
           "report_date": "2026-06-26",
@@ -860,15 +863,15 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-06-26T00:00:00.000Z",
-          "upvotes": 10,
-          "comments": 0,
+          "upvotes": 22,
+          "comments": 1,
           "topic_key": "other_ai",
           "topic_label": "Other AI",
           "matched_terms": [],
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Joint-Embedding Predictive Architectures (JEPAs), including recent LeWorldModel (LeWM), have become a promising foundation for reconstruction-free visual world models.",
-          "upvote_label": "10 upvotes"
+          "upvote_label": "22 upvotes"
         },
         {
           "report_date": "2026-06-26",
@@ -891,7 +894,7 @@
           "github_url": "",
           "submitted_by": "Vijay Viswanathan",
           "submitted_at": "2026-06-26T00:00:00.000Z",
-          "upvotes": 3,
+          "upvotes": 6,
           "comments": 1,
           "topic_key": "other_ai",
           "topic_label": "Other AI",
@@ -899,37 +902,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Despite their widespread use, the role of reward models in shaping reinforcement learning is poorly understood.",
-          "upvote_label": "3 upvotes"
-        },
-        {
-          "report_date": "2026-06-26",
-          "paper_id": "2606.27277",
-          "title": "EO-WM: A Physically Informed World Model for Probabilistic Earth Observation Forecasting",
-          "authors": [
-            "Junwei Luo",
-            "Shuai Yuan",
-            "Zhenya Yang",
-            "Yansheng Li",
-            "Zhe Liu",
-            "Hengshuang Zhao"
-          ],
-          "abstract": "Earth Observation (EO) forecasting aims to predict future Earth surface dynamics from satellite observations under changing meteorological conditions. In this paper, we view this task as a partially observed, weather-driven world modeling problem, in which weather acts as a conditioning signal, while forecasting remains uncertain due to sparse observations and unobserved land-surface states. However, existing methods do not fully capture this setting: deterministic models collapse uncertainty into a single future prediction, while diffusion-based methods typically treat weather variables as undifferentiated conditioning signals, and existing benchmarks focus mainly on reconstruction accuracy rather than whether forecasts respond correctly to changed weather forcing.We introduce EO-WM, a video diffusion transformer for multispectral EO forecasting. EO-WM incorporates a physically informed conditioning framework that represents meteorological forcing through a climatological baseline, weather anomalies, and cumulative physical stress signals. Specifically, it separates baseline and anomaly through distinct conditioning pathways, and accumulates anomalous forcing over time to capture sustained heat and drought stress. To evaluate weather-response behavior beyond standard metrics, we introduce two diagnostic benchmarks: an Extreme Summer Benchmark for severity-aware prediction of vegetation degradation under extreme weather, and a Seasonal Matched-Pair Benchmark for testing response fidelity under changed weather forcing. Experiments show that EO-WM reduces the error in predicted Normalized Difference Vegetation Index (NDVI) decline amplitude by a relative 5.63% and improves directional hit rate by a relative 7.80%, while remaining competitive on standard pixel-level metrics. The benchmarks and model will be made open-source at https://github.com/Luo-Z13/EO-WM.",
-          "hf_url": "https://huggingface.co/papers/2606.27277",
-          "arxiv_url": "https://arxiv.org/abs/2606.27277",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2606.27277",
-          "papers_cool_url": "https://papers.cool/arxiv/2606.27277",
-          "github_url": "",
-          "submitted_by": "Junwei Luo",
-          "submitted_at": "2026-06-26T00:00:00.000Z",
-          "upvotes": 1,
-          "comments": 1,
-          "topic_key": "other_ai",
-          "topic_label": "Other AI",
-          "matched_terms": [],
-          "classification_source": "rule",
-          "classification_confidence": null,
-          "one_sentence_summary": "Earth Observation (EO) forecasting aims to predict future Earth surface dynamics from satellite observations under changing meteorological conditions.",
-          "upvote_label": "1 upvote"
+          "upvote_label": "6 upvotes"
         },
         {
           "report_date": "2026-06-26",
@@ -964,7 +937,7 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-06-26T00:00:00.000Z",
-          "upvotes": 1,
+          "upvotes": 4,
           "comments": 0,
           "topic_key": "other_ai",
           "topic_label": "Other AI",
@@ -972,15 +945,45 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "While generative AI has achieved remarkable success in solving problems with verifiable solutions, generating physical art that satisfies both strict geometric constraints and subjective visual aesthetics remains a…",
-          "upvote_label": "1 upvote"
+          "upvote_label": "4 upvotes"
+        },
+        {
+          "report_date": "2026-06-26",
+          "paper_id": "2606.27277",
+          "title": "EO-WM: A Physically Informed World Model for Probabilistic Earth Observation Forecasting",
+          "authors": [
+            "Junwei Luo",
+            "Shuai Yuan",
+            "Zhenya Yang",
+            "Yansheng Li",
+            "Zhe Liu",
+            "Hengshuang Zhao"
+          ],
+          "abstract": "Earth Observation (EO) forecasting aims to predict future Earth surface dynamics from satellite observations under changing meteorological conditions. In this paper, we view this task as a partially observed, weather-driven world modeling problem, in which weather acts as a conditioning signal, while forecasting remains uncertain due to sparse observations and unobserved land-surface states. However, existing methods do not fully capture this setting: deterministic models collapse uncertainty into a single future prediction, while diffusion-based methods typically treat weather variables as undifferentiated conditioning signals, and existing benchmarks focus mainly on reconstruction accuracy rather than whether forecasts respond correctly to changed weather forcing.We introduce EO-WM, a video diffusion transformer for multispectral EO forecasting. EO-WM incorporates a physically informed conditioning framework that represents meteorological forcing through a climatological baseline, weather anomalies, and cumulative physical stress signals. Specifically, it separates baseline and anomaly through distinct conditioning pathways, and accumulates anomalous forcing over time to capture sustained heat and drought stress. To evaluate weather-response behavior beyond standard metrics, we introduce two diagnostic benchmarks: an Extreme Summer Benchmark for severity-aware prediction of vegetation degradation under extreme weather, and a Seasonal Matched-Pair Benchmark for testing response fidelity under changed weather forcing. Experiments show that EO-WM reduces the error in predicted Normalized Difference Vegetation Index (NDVI) decline amplitude by a relative 5.63% and improves directional hit rate by a relative 7.80%, while remaining competitive on standard pixel-level metrics. The benchmarks and model will be made open-source at https://github.com/Luo-Z13/EO-WM.",
+          "hf_url": "https://huggingface.co/papers/2606.27277",
+          "arxiv_url": "https://arxiv.org/abs/2606.27277",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2606.27277",
+          "papers_cool_url": "https://papers.cool/arxiv/2606.27277",
+          "github_url": "",
+          "submitted_by": "Junwei Luo",
+          "submitted_at": "2026-06-26T00:00:00.000Z",
+          "upvotes": 2,
+          "comments": 1,
+          "topic_key": "other_ai",
+          "topic_label": "Other AI",
+          "matched_terms": [],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "Earth Observation (EO) forecasting aims to predict future Earth surface dynamics from satellite observations under changing meteorological conditions.",
+          "upvote_label": "2 upvotes"
         }
       ]
     },
     {
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "count": 4,
-      "share": 17.39,
-      "summary": "Reasoning, Alignment, and Evaluation contributes 4 papers (17.39%), led by “LISA: Likelihood Score Alignment for Visual-condition Controllable Generation” with 8 upvotes.",
+      "share": 16.0,
+      "summary": "Reasoning, Alignment, and Evaluation contributes 4 papers (16.00%), led by “LISA: Likelihood Score Alignment for Visual-condition Controllable Generation” with 13 upvotes.",
       "papers": [
         {
           "report_date": "2026-06-26",
@@ -1003,7 +1006,7 @@
           "github_url": "",
           "submitted_by": "Wang Yanghao",
           "submitted_at": "2026-06-26T00:00:00.000Z",
-          "upvotes": 8,
+          "upvotes": 13,
           "comments": 1,
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
@@ -1013,7 +1016,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "The prevalent dual-branch paradigm, i.e., training a side network to encode visual conditions and fusing its intermediate-layer features to a frozen pretrained main network, has shown remarkable success in…",
-          "upvote_label": "8 upvotes"
+          "upvote_label": "13 upvotes"
         },
         {
           "report_date": "2026-06-26",
@@ -1033,7 +1036,7 @@
           "github_url": "",
           "submitted_by": "kai",
           "submitted_at": "2026-06-26T00:00:00.000Z",
-          "upvotes": 2,
+          "upvotes": 9,
           "comments": 1,
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
@@ -1043,7 +1046,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Reasoning capability has advanced rapidly in large language models (LLMs), leading to an increasing size of key-value (KV) cache in both prefilling and decoding stages.",
-          "upvote_label": "2 upvotes"
+          "upvote_label": "9 upvotes"
         },
         {
           "report_date": "2026-06-26",
@@ -1061,7 +1064,7 @@
           "github_url": "",
           "submitted_by": "Nicklas Hansen",
           "submitted_at": "2026-06-26T00:00:00.000Z",
-          "upvotes": 2,
+          "upvotes": 8,
           "comments": 1,
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
@@ -1071,7 +1074,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Modern generative world models render increasingly realistic action-controllable futures, yet they frequently hallucinate: rollouts remain visually fluent while drifting from the ground-truth dynamics.",
-          "upvote_label": "2 upvotes"
+          "upvote_label": "8 upvotes"
         },
         {
           "report_date": "2026-06-26",
@@ -1095,8 +1098,8 @@
           "github_url": "",
           "submitted_by": "hlzhang109",
           "submitted_at": "2026-06-26T00:00:00.000Z",
-          "upvotes": 0,
-          "comments": 1,
+          "upvotes": 3,
+          "comments": 2,
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [
@@ -1105,83 +1108,15 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Scientific reasoning models for biology combine language models with foundation models trained on multimodal biological data, including DNA, RNA, and proteins.",
-          "upvote_label": "0 upvotes"
-        }
-      ]
-    },
-    {
-      "topic_label": "Learning, Optimization, and Theory",
-      "count": 2,
-      "share": 8.7,
-      "summary": "Learning, Optimization, and Theory contributes 2 papers (8.70%), led by “Why Multi-Step Tool-Use Reinforcement Learning Collapses and How Supervisory Signals Fix It” with 10 upvotes.",
-      "papers": [
-        {
-          "report_date": "2026-06-26",
-          "paper_id": "2606.26027",
-          "title": "Why Multi-Step Tool-Use Reinforcement Learning Collapses and How Supervisory Signals Fix It",
-          "authors": [
-            "Yupu Hao",
-            "Zhuoran Jin",
-            "Huanxuan Liao",
-            "Kang Liu",
-            "Jun Zhao"
-          ],
-          "abstract": "Tool use enables large language models (LLMs) to perform complex tasks, and recent agentic reinforcement learning (RL) methods show promise for enhancing model capabilities. However, RL alone often leads to instability or limited gains in tool-use tasks. In our experiments, some models exhibit catastrophic collapse, where performance abruptly drops and tool-invocation structures fail. The analysis reveals that these failures stem from unexpected probability spikes in specific control tokens, disrupting structured execution, yet the underlying tool-use capability remains intact, merely obscured by specific formats. To address this, we systematically investigate a diverse set of supervisory signals, including off-policy supervision, hint-based guidance, erroneous example supervision, and others, applied under both synchronous and interleaved training schemes. We find that interleaving supervised fine-tuning (SFT) with RL substantially improves stability, but exhibits degraded performance under format and content out-of-distribution (OOD) evaluation. We also analyze the impact of learning rates and generalization across settings. These results highlight the importance of understanding RL failures and demonstrate how diverse supervisory signals can guide exploratory learning, enabling robust training of LLMs for complex, multi-step tool-use tasks. Our Code is available at https://github.com/hypasd-art/Tool-RL-Box.",
-          "hf_url": "https://huggingface.co/papers/2606.26027",
-          "arxiv_url": "https://arxiv.org/abs/2606.26027",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2606.26027",
-          "papers_cool_url": "https://papers.cool/arxiv/2606.26027",
-          "github_url": "",
-          "submitted_by": "Zhuoran Jin",
-          "submitted_at": "2026-06-26T00:00:00.000Z",
-          "upvotes": 10,
-          "comments": 1,
-          "topic_key": "learning_theory",
-          "topic_label": "Learning, Optimization, and Theory",
-          "matched_terms": [
-            "\\blearning\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null,
-          "one_sentence_summary": "Tool use enables large language models (LLMs) to perform complex tasks, and recent agentic reinforcement learning (RL) methods show promise for enhancing model capabilities.",
-          "upvote_label": "10 upvotes"
-        },
-        {
-          "report_date": "2026-06-26",
-          "paper_id": "2606.27364",
-          "title": "PhysiFormer: Learning to Simulate Mechanics in World Space",
-          "authors": [
-            "Yiming Chen",
-            "Yushi Lan",
-            "Andrea Vedaldi"
-          ],
-          "abstract": "We present PhysiFormer, a diffusion transformer for physically-plausible 3D object motion. Unlike video world models that operate in view-dependent pixel space, PhysiFormer represents objects as 3D meshes expressed in world coordinates. Given the initial vertex positions and velocities, as well as object material type, rigid or elastic, the model samples future vertex trajectories. While related neural physics approaches build on ad-hoc latent spaces or explicitly enforce rigidity and causality, PhysiFormer shows that excellent results can be obtained without any such inductive biases, by casting vertex trajectory prediction as a single denoising diffusion process directly in world coordinates. The probabilistic formulation captures uncertainty in the learned dynamics, enabling diverse plausible futures from initial conditions, making this framework potentially useful for applications with unobserved uncertainty. The model features attention factorised over time, space, and objects for efficiency, enabling permutation-invariant multi-object reasoning without needing explicit object encoding. Trained on over 100k simulated trajectories, PhysiFormer generates rigid and elastic mechanics, and generalises to mixed-material settings, unseen real-world geometries, and larger object counts. It substantially outperforms autoregressive baselines in trajectory accuracy, rigidity preservation, and momentum-based physical consistency. Our results position coordinate-space diffusion as a promising step toward view-invariant, geometry-aware world modelling for robotics, graphics, and physical design. Visualisations, code, and models are available at https://yimingc9.github.io/physiformer.",
-          "hf_url": "https://huggingface.co/papers/2606.27364",
-          "arxiv_url": "https://arxiv.org/abs/2606.27364",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2606.27364",
-          "papers_cool_url": "https://papers.cool/arxiv/2606.27364",
-          "github_url": "",
-          "submitted_by": "taesiri",
-          "submitted_at": "2026-06-26T00:00:00.000Z",
-          "upvotes": 2,
-          "comments": 0,
-          "topic_key": "learning_theory",
-          "topic_label": "Learning, Optimization, and Theory",
-          "matched_terms": [
-            "\\blearning\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null,
-          "one_sentence_summary": "We present PhysiFormer, a diffusion transformer for physically-plausible 3D object motion.",
-          "upvote_label": "2 upvotes"
+          "upvote_label": "3 upvotes"
         }
       ]
     },
     {
       "topic_label": "Multimodal Understanding and Vision",
-      "count": 2,
-      "share": 8.7,
-      "summary": "Multimodal Understanding and Vision contributes 2 papers (8.70%), led by “ViQ: Text-Aligned Visual Quantized Representations at Any Resolution” with 34 upvotes.",
+      "count": 3,
+      "share": 12.0,
+      "summary": "Multimodal Understanding and Vision contributes 3 papers (12.00%), led by “ViQ: Text-Aligned Visual Quantized Representations at Any Resolution” with 37 upvotes.",
       "papers": [
         {
           "report_date": "2026-06-26",
@@ -1205,7 +1140,7 @@
           "github_url": "",
           "submitted_by": "liuzuyan",
           "submitted_at": "2026-06-26T00:00:00.000Z",
-          "upvotes": 34,
+          "upvotes": 37,
           "comments": 1,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
@@ -1215,7 +1150,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "A unified representation for text and vision is a natural pursuit, as it enables simpler multimodal modeling and more efficient training.",
-          "upvote_label": "34 upvotes"
+          "upvote_label": "37 upvotes"
         },
         {
           "report_date": "2026-06-26",
@@ -1234,7 +1169,7 @@
           "github_url": "",
           "submitted_by": "Jaehong Yoon",
           "submitted_at": "2026-06-26T00:00:00.000Z",
-          "upvotes": 6,
+          "upvotes": 9,
           "comments": 1,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
@@ -1244,16 +1179,77 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Video reasoning language models implicitly assume that every input frame is equally reliable.",
-          "upvote_label": "6 upvotes"
+          "upvote_label": "9 upvotes"
+        },
+        {
+          "report_date": "2026-06-26",
+          "paper_id": "2606.23835",
+          "title": "ABACUS: Adapting Unified Foundation Model for Bridging Image Count Understanding and Generation",
+          "authors": [
+            "Anindya Mondal",
+            "Sauradip Nag",
+            "Anjan Dutta"
+          ],
+          "abstract": "ABACUS is a unified vision-language model that handles object counting, crowd counting, referring-expression counting, and count-faithful image generation without any benchmark-specific training required. Our model is built on existing 3B-parameter unified foundation model and is adapted for object localization tasks using three key innovations: density-aware adaptive zooming with objectness maps for spatial grounding; a boundary-aware count policy via GRPO to eliminate crop-boundary errors; and a cycle-consistent GRPO strategy where the understanding branch self-critiques generated outputs, closing the understanding-generation gap without any external annotations. ABACUS achieves state-of-the-art results across seven benchmarks, outperforming both task-specific specialists and larger generalist models.",
+          "hf_url": "https://huggingface.co/papers/2606.23835",
+          "arxiv_url": "https://arxiv.org/abs/2606.23835",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2606.23835",
+          "papers_cool_url": "https://papers.cool/arxiv/2606.23835",
+          "github_url": "",
+          "submitted_by": "Sauradip Nag",
+          "submitted_at": "2026-06-26T00:00:00.000Z",
+          "upvotes": 3,
+          "comments": 1,
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [
+            "\\bimage\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "ABACUS is a unified vision-language model that handles object counting, crowd counting, referring-expression counting, and count-faithful image generation without any benchmark-specific training required.",
+          "upvote_label": "3 upvotes"
         }
       ]
     },
     {
       "topic_label": "LLMs and Language",
-      "count": 1,
-      "share": 4.35,
-      "summary": "LLMs and Language contributes 1 papers (4.35%), led by “When Does Combining Language Models Help? A Co-Failure Ceiling on Routing, Voting, and Mixture-of-Agents Across 67 Frontier Models” with 1 upvote.",
+      "count": 2,
+      "share": 8.0,
+      "summary": "LLMs and Language contributes 2 papers (8.00%), led by “Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents” with 7 upvotes.",
       "papers": [
+        {
+          "report_date": "2026-06-26",
+          "paper_id": "2606.26080",
+          "title": "Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents",
+          "authors": [
+            "Changdae Oh",
+            "Wendi Li",
+            "Seongheon Park",
+            "Samuel Yeh",
+            "Tanwi Mallick",
+            "Sharon Li"
+          ],
+          "abstract": "Process reward models enable fine-grained, step-level evaluation of LLMs, yet building them for agentic settings remains prohibitively difficult: long-horizon interactions, irreversible actions, and stochastic environment feedback make both human annotation and Monte Carlo estimation infeasible at scale. In this work, we show that reinforcement learning (RL) post-training already provides the ingredients for effective step-level scoring, eliminating the need for dedicated reward model training altogether. Concretely, we derive an implicit advantage under a general stochastic Markov decision process, which we term progress advantage -- log-probability ratio between the RL-trained policy and its reference policy exactly recovers the optimal advantage function. This formulation makes the resulting signal annotation-free, domain-agnostic, and available as a byproduct of the standard RL post-training pipeline. We validate the effectiveness of the progress advantage across three different applications: test-time scaling, uncertainty quantification, and failure attribution on five benchmarks and four model families. Across all settings, it consistently outperforms confidence-based baselines and, despite requiring no task-specific training, surpasses dedicated trained reward models. We complement these results with deeper analyses on characteristics of progress advantage, offering practical guidance for adoption in real-world agentic systems.",
+          "hf_url": "https://huggingface.co/papers/2606.26080",
+          "arxiv_url": "https://arxiv.org/abs/2606.26080",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2606.26080",
+          "papers_cool_url": "https://papers.cool/arxiv/2606.26080",
+          "github_url": "",
+          "submitted_by": "Changdae Oh",
+          "submitted_at": "2026-06-26T00:00:00.000Z",
+          "upvotes": 7,
+          "comments": 1,
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [
+            "\\b\\w*llms?\\w*\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "Process reward models enable fine-grained, step-level evaluation of LLMs, yet building them for agentic settings remains prohibitively difficult: long-horizon interactions, irreversible actions, and stochastic…",
+          "upvote_label": "7 upvotes"
+        },
         {
           "report_date": "2026-06-26",
           "paper_id": "2606.27288",
@@ -1269,7 +1265,7 @@
           "github_url": "",
           "submitted_by": "Josef Chen",
           "submitted_at": "2026-06-26T00:00:00.000Z",
-          "upvotes": 1,
+          "upvotes": 3,
           "comments": 1,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
@@ -1280,15 +1276,83 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Multi-model LLM systems such as routing, voting, cascades, fusion, and mixture-of-agents are used to beat single-model accuracy.",
-          "upvote_label": "1 upvote"
+          "upvote_label": "3 upvotes"
+        }
+      ]
+    },
+    {
+      "topic_label": "Learning, Optimization, and Theory",
+      "count": 2,
+      "share": 8.0,
+      "summary": "Learning, Optimization, and Theory contributes 2 papers (8.00%), led by “Why Multi-Step Tool-Use Reinforcement Learning Collapses and How Supervisory Signals Fix It” with 15 upvotes.",
+      "papers": [
+        {
+          "report_date": "2026-06-26",
+          "paper_id": "2606.26027",
+          "title": "Why Multi-Step Tool-Use Reinforcement Learning Collapses and How Supervisory Signals Fix It",
+          "authors": [
+            "Yupu Hao",
+            "Zhuoran Jin",
+            "Huanxuan Liao",
+            "Kang Liu",
+            "Jun Zhao"
+          ],
+          "abstract": "Tool use enables large language models (LLMs) to perform complex tasks, and recent agentic reinforcement learning (RL) methods show promise for enhancing model capabilities. However, RL alone often leads to instability or limited gains in tool-use tasks. In our experiments, some models exhibit catastrophic collapse, where performance abruptly drops and tool-invocation structures fail. The analysis reveals that these failures stem from unexpected probability spikes in specific control tokens, disrupting structured execution, yet the underlying tool-use capability remains intact, merely obscured by specific formats. To address this, we systematically investigate a diverse set of supervisory signals, including off-policy supervision, hint-based guidance, erroneous example supervision, and others, applied under both synchronous and interleaved training schemes. We find that interleaving supervised fine-tuning (SFT) with RL substantially improves stability, but exhibits degraded performance under format and content out-of-distribution (OOD) evaluation. We also analyze the impact of learning rates and generalization across settings. These results highlight the importance of understanding RL failures and demonstrate how diverse supervisory signals can guide exploratory learning, enabling robust training of LLMs for complex, multi-step tool-use tasks. Our Code is available at https://github.com/hypasd-art/Tool-RL-Box.",
+          "hf_url": "https://huggingface.co/papers/2606.26027",
+          "arxiv_url": "https://arxiv.org/abs/2606.26027",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2606.26027",
+          "papers_cool_url": "https://papers.cool/arxiv/2606.26027",
+          "github_url": "",
+          "submitted_by": "Zhuoran Jin",
+          "submitted_at": "2026-06-26T00:00:00.000Z",
+          "upvotes": 15,
+          "comments": 2,
+          "topic_key": "learning_theory",
+          "topic_label": "Learning, Optimization, and Theory",
+          "matched_terms": [
+            "\\blearning\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "Tool use enables large language models (LLMs) to perform complex tasks, and recent agentic reinforcement learning (RL) methods show promise for enhancing model capabilities.",
+          "upvote_label": "15 upvotes"
+        },
+        {
+          "report_date": "2026-06-26",
+          "paper_id": "2606.27364",
+          "title": "PhysiFormer: Learning to Simulate Mechanics in World Space",
+          "authors": [
+            "Yiming Chen",
+            "Yushi Lan",
+            "Andrea Vedaldi"
+          ],
+          "abstract": "We present PhysiFormer, a diffusion transformer for physically-plausible 3D object motion. Unlike video world models that operate in view-dependent pixel space, PhysiFormer represents objects as 3D meshes expressed in world coordinates. Given the initial vertex positions and velocities, as well as object material type, rigid or elastic, the model samples future vertex trajectories. While related neural physics approaches build on ad-hoc latent spaces or explicitly enforce rigidity and causality, PhysiFormer shows that excellent results can be obtained without any such inductive biases, by casting vertex trajectory prediction as a single denoising diffusion process directly in world coordinates. The probabilistic formulation captures uncertainty in the learned dynamics, enabling diverse plausible futures from initial conditions, making this framework potentially useful for applications with unobserved uncertainty. The model features attention factorised over time, space, and objects for efficiency, enabling permutation-invariant multi-object reasoning without needing explicit object encoding. Trained on over 100k simulated trajectories, PhysiFormer generates rigid and elastic mechanics, and generalises to mixed-material settings, unseen real-world geometries, and larger object counts. It substantially outperforms autoregressive baselines in trajectory accuracy, rigidity preservation, and momentum-based physical consistency. Our results position coordinate-space diffusion as a promising step toward view-invariant, geometry-aware world modelling for robotics, graphics, and physical design. Visualisations, code, and models are available at https://yimingc9.github.io/physiformer.",
+          "hf_url": "https://huggingface.co/papers/2606.27364",
+          "arxiv_url": "https://arxiv.org/abs/2606.27364",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2606.27364",
+          "papers_cool_url": "https://papers.cool/arxiv/2606.27364",
+          "github_url": "",
+          "submitted_by": "taesiri",
+          "submitted_at": "2026-06-26T00:00:00.000Z",
+          "upvotes": 9,
+          "comments": 0,
+          "topic_key": "learning_theory",
+          "topic_label": "Learning, Optimization, and Theory",
+          "matched_terms": [
+            "\\blearning\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "We present PhysiFormer, a diffusion transformer for physically-plausible 3D object motion.",
+          "upvote_label": "9 upvotes"
         }
       ]
     },
     {
       "topic_label": "Robotics and Embodied AI",
       "count": 1,
-      "share": 4.35,
-      "summary": "Robotics and Embodied AI contributes 1 papers (4.35%), led by “In-Context World Modeling for Robotic Control” with 6 upvotes.",
+      "share": 4.0,
+      "summary": "Robotics and Embodied AI contributes 1 papers (4.00%), led by “In-Context World Modeling for Robotic Control” with 42 upvotes.",
       "papers": [
         {
           "report_date": "2026-06-26",
@@ -1311,7 +1375,7 @@
           "github_url": "",
           "submitted_by": "Siyin Wang (SII)",
           "submitted_at": "2026-06-26T00:00:00.000Z",
-          "upvotes": 6,
+          "upvotes": 42,
           "comments": 1,
           "topic_key": "robotics_embodied",
           "topic_label": "Robotics and Embodied AI",
@@ -1322,7 +1386,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Modern Vision-Language-Action (VLA) models often fail to generalize to novel setups, such as altered camera viewpoints or robot morphologies, because they are typically conditioned only on current observations and…",
-          "upvote_label": "6 upvotes"
+          "upvote_label": "42 upvotes"
         }
       ]
     }
@@ -1353,7 +1417,7 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-06-26T00:00:00.000Z",
-      "upvotes": 52,
+      "upvotes": 64,
       "comments": 2,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
@@ -1361,41 +1425,41 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Modern image generation demands a single model that unifies diverse capabilities, including text-to-image (T2I), local editing, and global editing.",
-      "upvote_label": "52 upvotes"
+      "upvote_label": "64 upvotes"
     },
     {
       "report_date": "2026-06-26",
-      "paper_id": "2606.27313",
-      "title": "ViQ: Text-Aligned Visual Quantized Representations at Any Resolution",
+      "paper_id": "2606.26025",
+      "title": "In-Context World Modeling for Robotic Control",
       "authors": [
-        "Xumin Yu",
-        "Zuyan Liu",
-        "Zhenyu Yang",
-        "Yuhao Dong",
-        "Shengsheng Qian",
-        "Jiwen Lu",
-        "Han Hu",
-        "Yongming Rao"
+        "Siyin Wang",
+        "Junhao Shi",
+        "Senyu Fei",
+        "Zhaoyang Fu",
+        "Li Ji",
+        "Jingjing Gong",
+        "Xipeng Qiu"
       ],
-      "abstract": "A unified representation for text and vision is a natural pursuit, as it enables simpler multimodal modeling and more efficient training. However, representing images as discrete signals in the same way as text inevitably introduces severe information loss. Existing work struggles to balance low-level details and high-level semantics in discrete representations: reconstruction-oriented representations often lack semantic information, whereas semantically stronger features typically suffer from severe loss of detail. We present ViQ, a Visual Quantized Representations framework, which is designed to balance semantics and details in discrete representations while supporting inputs at native resolutions, thereby enabling it to serve as a unified and general discrete representation for arbitrary visual inputs. Our approach structures quantization learning into two stages: text-aligned pre-training and feature discretization. With text-aligned pre-training, we enhance the visual encoder semantic-rich supervision from the pretrained language model and enable it to process native-resolution visual inputs. During discretization, we propose a proximal representation learning strategy to progressively compact the feature space, along with a position-aware head-wise quantization mechanism that enables flexible processing of arbitrary resolutions. Extensive experiments on multimodal tasks demonstrate that ViQ achieves competitive performance compared to state-of-the-art multimodal vision encoders with continuous and high-dimensional visual features, while maintaining high precision in low-level reconstruction. We also show that multimodal training with visual quantized representations largely improves efficiency, yielding up to 20\\%-70\\% acceleration with different base LLMs and training recipes.",
-      "hf_url": "https://huggingface.co/papers/2606.27313",
-      "arxiv_url": "https://arxiv.org/abs/2606.27313",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.27313",
-      "papers_cool_url": "https://papers.cool/arxiv/2606.27313",
+      "abstract": "Modern Vision-Language-Action (VLA) models often fail to generalize to novel setups, such as altered camera viewpoints or robot morphologies, because they are typically conditioned only on current observations and language instructions. By ignoring the underlying system configuration as a variable, these models implicitly assume a fixed execution context encountered during training, necessitating data-intensive fine-tuning for any new environment. In this work, we introduce In-Context World Modeling (ICWM), a framework that treats system identification as an in-context adaptation problem. ICWM enables robot policies to autonomously infer essential system variables from a short history of self-generated, task-agnostic interactions. Unlike traditional In-Context Learning that uses demonstrations to specify what task to perform, ICWM leverages the context window to understand how the system operates. By processing these interactions before task execution, the model implicitly captures the world dynamics of the current system, enabling adaptation to novel configurations without parameter updates. Extensive experiments in simulation and on real-world robot platforms demonstrate that ICWM significantly outperforms standard VLA baselines on novel camera viewpoints.",
+      "hf_url": "https://huggingface.co/papers/2606.26025",
+      "arxiv_url": "https://arxiv.org/abs/2606.26025",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.26025",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.26025",
       "github_url": "",
-      "submitted_by": "liuzuyan",
+      "submitted_by": "Siyin Wang (SII)",
       "submitted_at": "2026-06-26T00:00:00.000Z",
-      "upvotes": 34,
+      "upvotes": 42,
       "comments": 1,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
+      "topic_key": "robotics_embodied",
+      "topic_label": "Robotics and Embodied AI",
       "matched_terms": [
-        "\\bvisual\\b"
+        "\\brobot(ic|ics)?\\b",
+        "\\bcontrol\\b"
       ],
       "classification_source": "rule",
       "classification_confidence": null,
-      "one_sentence_summary": "A unified representation for text and vision is a natural pursuit, as it enables simpler multimodal modeling and more efficient training.",
-      "upvote_label": "34 upvotes"
+      "one_sentence_summary": "Modern Vision-Language-Action (VLA) models often fail to generalize to novel setups, such as altered camera viewpoints or robot morphologies, because they are typically conditioned only on current observations and…",
+      "upvote_label": "42 upvotes"
     },
     {
       "report_date": "2026-06-26",
@@ -1422,7 +1486,7 @@
       "github_url": "",
       "submitted_by": "Jinyang Wu",
       "submitted_at": "2026-06-26T00:00:00.000Z",
-      "upvotes": 32,
+      "upvotes": 40,
       "comments": 1,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -1432,7 +1496,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Outcome-based reinforcement learning provides a stable optimization backbone for language agents, but its sparse trajectory-level rewards provide little guidance on which intermediate decisions should be reinforced or…",
-      "upvote_label": "32 upvotes"
+      "upvote_label": "40 upvotes"
     },
     {
       "report_date": "2026-06-26",
@@ -1469,8 +1533,8 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-06-26T00:00:00.000Z",
-      "upvotes": 32,
-      "comments": 0,
+      "upvotes": 39,
+      "comments": 3,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
       "matched_terms": [
@@ -1479,7 +1543,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "While text-to-image (T2I) models have achieved remarkable progress, they struggle with real-world requests that are often underspecified, implicit, or dependent on up-to-date knowledge.",
-      "upvote_label": "32 upvotes"
+      "upvote_label": "39 upvotes"
     },
     {
       "report_date": "2026-06-26",
@@ -1507,7 +1571,7 @@
       "github_url": "",
       "submitted_by": "zjj",
       "submitted_at": "2026-06-26T00:00:00.000Z",
-      "upvotes": 30,
+      "upvotes": 38,
       "comments": 3,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -1517,7 +1581,41 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "A classical intuition holds that verifying a solution is easier than producing one.",
-      "upvote_label": "30 upvotes"
+      "upvote_label": "38 upvotes"
+    },
+    {
+      "report_date": "2026-06-26",
+      "paper_id": "2606.27313",
+      "title": "ViQ: Text-Aligned Visual Quantized Representations at Any Resolution",
+      "authors": [
+        "Xumin Yu",
+        "Zuyan Liu",
+        "Zhenyu Yang",
+        "Yuhao Dong",
+        "Shengsheng Qian",
+        "Jiwen Lu",
+        "Han Hu",
+        "Yongming Rao"
+      ],
+      "abstract": "A unified representation for text and vision is a natural pursuit, as it enables simpler multimodal modeling and more efficient training. However, representing images as discrete signals in the same way as text inevitably introduces severe information loss. Existing work struggles to balance low-level details and high-level semantics in discrete representations: reconstruction-oriented representations often lack semantic information, whereas semantically stronger features typically suffer from severe loss of detail. We present ViQ, a Visual Quantized Representations framework, which is designed to balance semantics and details in discrete representations while supporting inputs at native resolutions, thereby enabling it to serve as a unified and general discrete representation for arbitrary visual inputs. Our approach structures quantization learning into two stages: text-aligned pre-training and feature discretization. With text-aligned pre-training, we enhance the visual encoder semantic-rich supervision from the pretrained language model and enable it to process native-resolution visual inputs. During discretization, we propose a proximal representation learning strategy to progressively compact the feature space, along with a position-aware head-wise quantization mechanism that enables flexible processing of arbitrary resolutions. Extensive experiments on multimodal tasks demonstrate that ViQ achieves competitive performance compared to state-of-the-art multimodal vision encoders with continuous and high-dimensional visual features, while maintaining high precision in low-level reconstruction. We also show that multimodal training with visual quantized representations largely improves efficiency, yielding up to 20\\%-70\\% acceleration with different base LLMs and training recipes.",
+      "hf_url": "https://huggingface.co/papers/2606.27313",
+      "arxiv_url": "https://arxiv.org/abs/2606.27313",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.27313",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.27313",
+      "github_url": "",
+      "submitted_by": "liuzuyan",
+      "submitted_at": "2026-06-26T00:00:00.000Z",
+      "upvotes": 37,
+      "comments": 1,
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
+      "matched_terms": [
+        "\\bvisual\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "A unified representation for text and vision is a natural pursuit, as it enables simpler multimodal modeling and more efficient training.",
+      "upvote_label": "37 upvotes"
     },
     {
       "report_date": "2026-06-26",
@@ -1545,7 +1643,7 @@
       "github_url": "",
       "submitted_by": "Lanxiang Hu",
       "submitted_at": "2026-06-26T00:00:00.000Z",
-      "upvotes": 19,
+      "upvotes": 27,
       "comments": 1,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
@@ -1553,64 +1651,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Speculative decoding (SD) accelerates autoregressive Large Language Models (LLMs) by drafting multiple tokens and verifying them in parallel, but it faces a scaling limitation: increasing the draft budget improves…",
-      "upvote_label": "19 upvotes"
-    },
-    {
-      "report_date": "2026-06-26",
-      "paper_id": "2606.26027",
-      "title": "Why Multi-Step Tool-Use Reinforcement Learning Collapses and How Supervisory Signals Fix It",
-      "authors": [
-        "Yupu Hao",
-        "Zhuoran Jin",
-        "Huanxuan Liao",
-        "Kang Liu",
-        "Jun Zhao"
-      ],
-      "abstract": "Tool use enables large language models (LLMs) to perform complex tasks, and recent agentic reinforcement learning (RL) methods show promise for enhancing model capabilities. However, RL alone often leads to instability or limited gains in tool-use tasks. In our experiments, some models exhibit catastrophic collapse, where performance abruptly drops and tool-invocation structures fail. The analysis reveals that these failures stem from unexpected probability spikes in specific control tokens, disrupting structured execution, yet the underlying tool-use capability remains intact, merely obscured by specific formats. To address this, we systematically investigate a diverse set of supervisory signals, including off-policy supervision, hint-based guidance, erroneous example supervision, and others, applied under both synchronous and interleaved training schemes. We find that interleaving supervised fine-tuning (SFT) with RL substantially improves stability, but exhibits degraded performance under format and content out-of-distribution (OOD) evaluation. We also analyze the impact of learning rates and generalization across settings. These results highlight the importance of understanding RL failures and demonstrate how diverse supervisory signals can guide exploratory learning, enabling robust training of LLMs for complex, multi-step tool-use tasks. Our Code is available at https://github.com/hypasd-art/Tool-RL-Box.",
-      "hf_url": "https://huggingface.co/papers/2606.26027",
-      "arxiv_url": "https://arxiv.org/abs/2606.26027",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.26027",
-      "papers_cool_url": "https://papers.cool/arxiv/2606.26027",
-      "github_url": "",
-      "submitted_by": "Zhuoran Jin",
-      "submitted_at": "2026-06-26T00:00:00.000Z",
-      "upvotes": 10,
-      "comments": 1,
-      "topic_key": "learning_theory",
-      "topic_label": "Learning, Optimization, and Theory",
-      "matched_terms": [
-        "\\blearning\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Tool use enables large language models (LLMs) to perform complex tasks, and recent agentic reinforcement learning (RL) methods show promise for enhancing model capabilities.",
-      "upvote_label": "10 upvotes"
-    },
-    {
-      "report_date": "2026-06-26",
-      "paper_id": "2606.26217",
-      "title": "Fast LeWorldModel",
-      "authors": [
-        "Yuntian Gao",
-        "Xiangyu Xu"
-      ],
-      "abstract": "Joint-Embedding Predictive Architectures (JEPAs), including recent LeWorldModel (LeWM), have become a promising foundation for reconstruction-free visual world models. For visual planning, however, LeWM evaluates candidate action sequences by repeatedly applying a local one-step latent transition model. This autoregressive rollout makes planning computationally expensive and exposes the predicted trajectory to accumulated latent errors as the horizon grows. We propose Fast LeWorldModel (Fast-LeWM), a fast latent world model that replaces repeated local rollout with action-prefix prediction. Given the current latent and a candidate action sequence, Fast-LeWM encodes its prefixes and predicts the future latents reached after executing those prefixes in parallel. By making action prefixes the basic prediction unit, Fast-LeWM directly models action effects accumulated to different extents over multiple horizons. This prefix-level supervision forces the model to learn how states continuously evolve under different action prefixes, rather than only fitting one-step state transitions. During planning, the predictor can use the last prefix token from the encoded action sequence to evaluate the corresponding future latent without explicitly rolling through each intermediate imagined state. Across multiple tasks, Fast-LeWM improves average success over LeWM while substantially reducing planning time, achieving lower open-loop latent loss whose growth becomes significantly slower as the rollout horizon increases.",
-      "hf_url": "https://huggingface.co/papers/2606.26217",
-      "arxiv_url": "https://arxiv.org/abs/2606.26217",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.26217",
-      "papers_cool_url": "https://papers.cool/arxiv/2606.26217",
-      "github_url": "",
-      "submitted_by": "taesiri",
-      "submitted_at": "2026-06-26T00:00:00.000Z",
-      "upvotes": 10,
-      "comments": 0,
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
-      "matched_terms": [],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Joint-Embedding Predictive Architectures (JEPAs), including recent LeWorldModel (LeWM), have become a promising foundation for reconstruction-free visual world models.",
-      "upvote_label": "10 upvotes"
+      "upvote_label": "27 upvotes"
     },
     {
       "report_date": "2026-06-26",
@@ -1633,7 +1674,7 @@
       "github_url": "",
       "submitted_by": "Xiao Zhou",
       "submitted_at": "2026-06-26T00:00:00.000Z",
-      "upvotes": 10,
+      "upvotes": 25,
       "comments": 1,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -1643,7 +1684,33 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Computer-use agents can execute software tasks through either graphical interfaces or programmatic command interfaces, but existing evaluations confound interaction modality with differences in tasks, initial states,…",
-      "upvote_label": "10 upvotes"
+      "upvote_label": "25 upvotes"
+    },
+    {
+      "report_date": "2026-06-26",
+      "paper_id": "2606.26217",
+      "title": "Fast LeWorldModel",
+      "authors": [
+        "Yuntian Gao",
+        "Xiangyu Xu"
+      ],
+      "abstract": "Joint-Embedding Predictive Architectures (JEPAs), including recent LeWorldModel (LeWM), have become a promising foundation for reconstruction-free visual world models. For visual planning, however, LeWM evaluates candidate action sequences by repeatedly applying a local one-step latent transition model. This autoregressive rollout makes planning computationally expensive and exposes the predicted trajectory to accumulated latent errors as the horizon grows. We propose Fast LeWorldModel (Fast-LeWM), a fast latent world model that replaces repeated local rollout with action-prefix prediction. Given the current latent and a candidate action sequence, Fast-LeWM encodes its prefixes and predicts the future latents reached after executing those prefixes in parallel. By making action prefixes the basic prediction unit, Fast-LeWM directly models action effects accumulated to different extents over multiple horizons. This prefix-level supervision forces the model to learn how states continuously evolve under different action prefixes, rather than only fitting one-step state transitions. During planning, the predictor can use the last prefix token from the encoded action sequence to evaluate the corresponding future latent without explicitly rolling through each intermediate imagined state. Across multiple tasks, Fast-LeWM improves average success over LeWM while substantially reducing planning time, achieving lower open-loop latent loss whose growth becomes significantly slower as the rollout horizon increases.",
+      "hf_url": "https://huggingface.co/papers/2606.26217",
+      "arxiv_url": "https://arxiv.org/abs/2606.26217",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.26217",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.26217",
+      "github_url": "",
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-06-26T00:00:00.000Z",
+      "upvotes": 22,
+      "comments": 1,
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
+      "matched_terms": [],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Joint-Embedding Predictive Architectures (JEPAs), including recent LeWorldModel (LeWM), have become a promising foundation for reconstruction-free visual world models.",
+      "upvote_label": "22 upvotes"
     },
     {
       "report_date": "2026-06-26",
@@ -1684,8 +1751,8 @@
       "github_url": "",
       "submitted_by": "Runqi Lin",
       "submitted_at": "2026-06-26T00:00:00.000Z",
-      "upvotes": 9,
-      "comments": 1,
+      "upvotes": 15,
+      "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
       "matched_terms": [
@@ -1694,7 +1761,38 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "As agentic systems continue to evolve and are widely deployed in real-world scenarios, there is a growing demand to faithfully evaluate their capabilities.",
-      "upvote_label": "9 upvotes"
+      "upvote_label": "15 upvotes"
+    },
+    {
+      "report_date": "2026-06-26",
+      "paper_id": "2606.26027",
+      "title": "Why Multi-Step Tool-Use Reinforcement Learning Collapses and How Supervisory Signals Fix It",
+      "authors": [
+        "Yupu Hao",
+        "Zhuoran Jin",
+        "Huanxuan Liao",
+        "Kang Liu",
+        "Jun Zhao"
+      ],
+      "abstract": "Tool use enables large language models (LLMs) to perform complex tasks, and recent agentic reinforcement learning (RL) methods show promise for enhancing model capabilities. However, RL alone often leads to instability or limited gains in tool-use tasks. In our experiments, some models exhibit catastrophic collapse, where performance abruptly drops and tool-invocation structures fail. The analysis reveals that these failures stem from unexpected probability spikes in specific control tokens, disrupting structured execution, yet the underlying tool-use capability remains intact, merely obscured by specific formats. To address this, we systematically investigate a diverse set of supervisory signals, including off-policy supervision, hint-based guidance, erroneous example supervision, and others, applied under both synchronous and interleaved training schemes. We find that interleaving supervised fine-tuning (SFT) with RL substantially improves stability, but exhibits degraded performance under format and content out-of-distribution (OOD) evaluation. We also analyze the impact of learning rates and generalization across settings. These results highlight the importance of understanding RL failures and demonstrate how diverse supervisory signals can guide exploratory learning, enabling robust training of LLMs for complex, multi-step tool-use tasks. Our Code is available at https://github.com/hypasd-art/Tool-RL-Box.",
+      "hf_url": "https://huggingface.co/papers/2606.26027",
+      "arxiv_url": "https://arxiv.org/abs/2606.26027",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.26027",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.26027",
+      "github_url": "",
+      "submitted_by": "Zhuoran Jin",
+      "submitted_at": "2026-06-26T00:00:00.000Z",
+      "upvotes": 15,
+      "comments": 2,
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
+      "matched_terms": [
+        "\\blearning\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Tool use enables large language models (LLMs) to perform complex tasks, and recent agentic reinforcement learning (RL) methods show promise for enhancing model capabilities.",
+      "upvote_label": "15 upvotes"
     },
     {
       "report_date": "2026-06-26",
@@ -1717,7 +1815,7 @@
       "github_url": "",
       "submitted_by": "Wang Yanghao",
       "submitted_at": "2026-06-26T00:00:00.000Z",
-      "upvotes": 8,
+      "upvotes": 13,
       "comments": 1,
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
@@ -1727,41 +1825,37 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "The prevalent dual-branch paradigm, i.e., training a side network to encode visual conditions and fusing its intermediate-layer features to a frozen pretrained main network, has shown remarkable success in…",
-      "upvote_label": "8 upvotes"
+      "upvote_label": "13 upvotes"
     },
     {
       "report_date": "2026-06-26",
-      "paper_id": "2606.26025",
-      "title": "In-Context World Modeling for Robotic Control",
+      "paper_id": "2606.26875",
+      "title": "Information-Aware KV Cache Compression for Long Reasoning",
       "authors": [
-        "Siyin Wang",
-        "Junhao Shi",
-        "Senyu Fei",
-        "Zhaoyang Fu",
-        "Li Ji",
-        "Jingjing Gong",
-        "Xipeng Qiu"
+        "Jushi Kai",
+        "Zhuiri Xiao",
+        "Alexandra Birch",
+        "Zhouhan Lin"
       ],
-      "abstract": "Modern Vision-Language-Action (VLA) models often fail to generalize to novel setups, such as altered camera viewpoints or robot morphologies, because they are typically conditioned only on current observations and language instructions. By ignoring the underlying system configuration as a variable, these models implicitly assume a fixed execution context encountered during training, necessitating data-intensive fine-tuning for any new environment. In this work, we introduce In-Context World Modeling (ICWM), a framework that treats system identification as an in-context adaptation problem. ICWM enables robot policies to autonomously infer essential system variables from a short history of self-generated, task-agnostic interactions. Unlike traditional In-Context Learning that uses demonstrations to specify what task to perform, ICWM leverages the context window to understand how the system operates. By processing these interactions before task execution, the model implicitly captures the world dynamics of the current system, enabling adaptation to novel configurations without parameter updates. Extensive experiments in simulation and on real-world robot platforms demonstrate that ICWM significantly outperforms standard VLA baselines on novel camera viewpoints.",
-      "hf_url": "https://huggingface.co/papers/2606.26025",
-      "arxiv_url": "https://arxiv.org/abs/2606.26025",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.26025",
-      "papers_cool_url": "https://papers.cool/arxiv/2606.26025",
+      "abstract": "Reasoning capability has advanced rapidly in large language models (LLMs), leading to an increasing size of key-value (KV) cache in both prefilling and decoding stages. Existing KV cache compression methods mainly rely on attention weights to estimate token importance. While attention effectively captures contextual relevance, it overlooks complementary information-theoretic signals related to predictive uncertainty and token informativeness. In this paper, we revisit token importance from a forward-looking perspective and introduce Forward Influence, a metric that measures how compressed tokens affect future contexts. Our analysis reveals that tokens selected by attention scores mainly influence nearby contexts, whereas tokens associated with high predictive uncertainty exhibit substantially stronger influence on distant future contexts. Based on the observation, we propose InfoKV, an entropy-aware KV cache compression framework that incorporates information-theoretic signals. It combines token-level predictive uncertainty with layer-wise representation evolution and integrates the resulting entropy scores with attention scores during reasoning. Experiments on long-context reasoning benchmarks with Llama-3.1, Llama-3.2, and DeepSeek-R1 demonstrate that InfoKV consistently outperforms existing attention-based KV compression methods in both long prefilling and decoding scenarios.",
+      "hf_url": "https://huggingface.co/papers/2606.26875",
+      "arxiv_url": "https://arxiv.org/abs/2606.26875",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.26875",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.26875",
       "github_url": "",
-      "submitted_by": "Siyin Wang (SII)",
+      "submitted_by": "kai",
       "submitted_at": "2026-06-26T00:00:00.000Z",
-      "upvotes": 6,
+      "upvotes": 9,
       "comments": 1,
-      "topic_key": "robotics_embodied",
-      "topic_label": "Robotics and Embodied AI",
+      "topic_key": "reasoning_alignment_eval",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [
-        "\\brobot(ic|ics)?\\b",
-        "\\bcontrol\\b"
+        "\\breasoning\\b"
       ],
       "classification_source": "rule",
       "classification_confidence": null,
-      "one_sentence_summary": "Modern Vision-Language-Action (VLA) models often fail to generalize to novel setups, such as altered camera viewpoints or robot morphologies, because they are typically conditioned only on current observations and…",
-      "upvote_label": "6 upvotes"
+      "one_sentence_summary": "Reasoning capability has advanced rapidly in large language models (LLMs), leading to an increasing size of key-value (KV) cache in both prefilling and decoding stages.",
+      "upvote_label": "9 upvotes"
     },
     {
       "report_date": "2026-06-26",
@@ -1780,7 +1874,7 @@
       "github_url": "",
       "submitted_by": "Jaehong Yoon",
       "submitted_at": "2026-06-26T00:00:00.000Z",
-      "upvotes": 6,
+      "upvotes": 9,
       "comments": 1,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -1790,7 +1884,96 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Video reasoning language models implicitly assume that every input frame is equally reliable.",
-      "upvote_label": "6 upvotes"
+      "upvote_label": "9 upvotes"
+    },
+    {
+      "report_date": "2026-06-26",
+      "paper_id": "2606.27364",
+      "title": "PhysiFormer: Learning to Simulate Mechanics in World Space",
+      "authors": [
+        "Yiming Chen",
+        "Yushi Lan",
+        "Andrea Vedaldi"
+      ],
+      "abstract": "We present PhysiFormer, a diffusion transformer for physically-plausible 3D object motion. Unlike video world models that operate in view-dependent pixel space, PhysiFormer represents objects as 3D meshes expressed in world coordinates. Given the initial vertex positions and velocities, as well as object material type, rigid or elastic, the model samples future vertex trajectories. While related neural physics approaches build on ad-hoc latent spaces or explicitly enforce rigidity and causality, PhysiFormer shows that excellent results can be obtained without any such inductive biases, by casting vertex trajectory prediction as a single denoising diffusion process directly in world coordinates. The probabilistic formulation captures uncertainty in the learned dynamics, enabling diverse plausible futures from initial conditions, making this framework potentially useful for applications with unobserved uncertainty. The model features attention factorised over time, space, and objects for efficiency, enabling permutation-invariant multi-object reasoning without needing explicit object encoding. Trained on over 100k simulated trajectories, PhysiFormer generates rigid and elastic mechanics, and generalises to mixed-material settings, unseen real-world geometries, and larger object counts. It substantially outperforms autoregressive baselines in trajectory accuracy, rigidity preservation, and momentum-based physical consistency. Our results position coordinate-space diffusion as a promising step toward view-invariant, geometry-aware world modelling for robotics, graphics, and physical design. Visualisations, code, and models are available at https://yimingc9.github.io/physiformer.",
+      "hf_url": "https://huggingface.co/papers/2606.27364",
+      "arxiv_url": "https://arxiv.org/abs/2606.27364",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.27364",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.27364",
+      "github_url": "",
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-06-26T00:00:00.000Z",
+      "upvotes": 9,
+      "comments": 0,
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
+      "matched_terms": [
+        "\\blearning\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "We present PhysiFormer, a diffusion transformer for physically-plausible 3D object motion.",
+      "upvote_label": "9 upvotes"
+    },
+    {
+      "report_date": "2026-06-26",
+      "paper_id": "2606.27326",
+      "title": "Hallucination in World Models is Predictable and Preventable",
+      "authors": [
+        "Nicklas Hansen",
+        "Xiaolong Wang"
+      ],
+      "abstract": "Modern generative world models render increasingly realistic action-controllable futures, yet they frequently hallucinate: rollouts remain visually fluent while drifting from the ground-truth dynamics. We hypothesize that hallucination concentrates in low-coverage regions of the state-action space, where lightweight data-centric signals can both detect it and guide mitigation. To test this, we introduce MMBench2, a 427-hour, 210-task dataset for visual world modeling with ground-truth actions, rewards, and live simulators, and train a 350M-parameter world model on it. We identify three distinct hallucination modes: perceptual, action-marginalized, and scene-diverging -- each anchored to a different stage of the pipeline, and develop three signals that accurately predict where the model will fail. To close coverage gaps at training time, we develop a coverage-aware sampling technique; to close them online, our hallucination predictors serve as curiosity rewards for targeted data collection, yielding a data-efficient finetuning recipe that adapts the pretrained world model to entirely unseen environments with as few as 50 real environment trajectories. Overall, our findings reveal that hallucination in world models is inherently a data coverage issue, and that the same signals used to detect it can also be used for mitigation. An interactive web version of our paper is available at https://www.nicklashansen.com/mmbench2",
+      "hf_url": "https://huggingface.co/papers/2606.27326",
+      "arxiv_url": "https://arxiv.org/abs/2606.27326",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.27326",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.27326",
+      "github_url": "",
+      "submitted_by": "Nicklas Hansen",
+      "submitted_at": "2026-06-26T00:00:00.000Z",
+      "upvotes": 8,
+      "comments": 1,
+      "topic_key": "reasoning_alignment_eval",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "matched_terms": [
+        "\\bhallucination\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Modern generative world models render increasingly realistic action-controllable futures, yet they frequently hallucinate: rollouts remain visually fluent while drifting from the ground-truth dynamics.",
+      "upvote_label": "8 upvotes"
+    },
+    {
+      "report_date": "2026-06-26",
+      "paper_id": "2606.26080",
+      "title": "Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents",
+      "authors": [
+        "Changdae Oh",
+        "Wendi Li",
+        "Seongheon Park",
+        "Samuel Yeh",
+        "Tanwi Mallick",
+        "Sharon Li"
+      ],
+      "abstract": "Process reward models enable fine-grained, step-level evaluation of LLMs, yet building them for agentic settings remains prohibitively difficult: long-horizon interactions, irreversible actions, and stochastic environment feedback make both human annotation and Monte Carlo estimation infeasible at scale. In this work, we show that reinforcement learning (RL) post-training already provides the ingredients for effective step-level scoring, eliminating the need for dedicated reward model training altogether. Concretely, we derive an implicit advantage under a general stochastic Markov decision process, which we term progress advantage -- log-probability ratio between the RL-trained policy and its reference policy exactly recovers the optimal advantage function. This formulation makes the resulting signal annotation-free, domain-agnostic, and available as a byproduct of the standard RL post-training pipeline. We validate the effectiveness of the progress advantage across three different applications: test-time scaling, uncertainty quantification, and failure attribution on five benchmarks and four model families. Across all settings, it consistently outperforms confidence-based baselines and, despite requiring no task-specific training, surpasses dedicated trained reward models. We complement these results with deeper analyses on characteristics of progress advantage, offering practical guidance for adoption in real-world agentic systems.",
+      "hf_url": "https://huggingface.co/papers/2606.26080",
+      "arxiv_url": "https://arxiv.org/abs/2606.26080",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.26080",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.26080",
+      "github_url": "",
+      "submitted_by": "Changdae Oh",
+      "submitted_at": "2026-06-26T00:00:00.000Z",
+      "upvotes": 7,
+      "comments": 1,
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [
+        "\\b\\w*llms?\\w*\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Process reward models enable fine-grained, step-level evaluation of LLMs, yet building them for agentic settings remains prohibitively difficult: long-horizon interactions, irreversible actions, and stochastic…",
+      "upvote_label": "7 upvotes"
     },
     {
       "report_date": "2026-06-26",
@@ -1814,8 +1997,8 @@
       "github_url": "",
       "submitted_by": "Issa Sugiura",
       "submitted_at": "2026-06-26T00:00:00.000Z",
-      "upvotes": 4,
-      "comments": 1,
+      "upvotes": 7,
+      "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
       "matched_terms": [
@@ -1825,7 +2008,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "As LLM agents become capable of increasingly long-horizon tasks, evaluating their performance in economic systems is becoming increasingly important.",
-      "upvote_label": "4 upvotes"
+      "upvote_label": "7 upvotes"
     },
     {
       "report_date": "2026-06-26",
@@ -1848,7 +2031,7 @@
       "github_url": "",
       "submitted_by": "Vijay Viswanathan",
       "submitted_at": "2026-06-26T00:00:00.000Z",
-      "upvotes": 3,
+      "upvotes": 6,
       "comments": 1,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
@@ -1856,152 +2039,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Despite their widespread use, the role of reward models in shaping reinforcement learning is poorly understood.",
-      "upvote_label": "3 upvotes"
-    },
-    {
-      "report_date": "2026-06-26",
-      "paper_id": "2606.26875",
-      "title": "Information-Aware KV Cache Compression for Long Reasoning",
-      "authors": [
-        "Jushi Kai",
-        "Zhuiri Xiao",
-        "Alexandra Birch",
-        "Zhouhan Lin"
-      ],
-      "abstract": "Reasoning capability has advanced rapidly in large language models (LLMs), leading to an increasing size of key-value (KV) cache in both prefilling and decoding stages. Existing KV cache compression methods mainly rely on attention weights to estimate token importance. While attention effectively captures contextual relevance, it overlooks complementary information-theoretic signals related to predictive uncertainty and token informativeness. In this paper, we revisit token importance from a forward-looking perspective and introduce Forward Influence, a metric that measures how compressed tokens affect future contexts. Our analysis reveals that tokens selected by attention scores mainly influence nearby contexts, whereas tokens associated with high predictive uncertainty exhibit substantially stronger influence on distant future contexts. Based on the observation, we propose InfoKV, an entropy-aware KV cache compression framework that incorporates information-theoretic signals. It combines token-level predictive uncertainty with layer-wise representation evolution and integrates the resulting entropy scores with attention scores during reasoning. Experiments on long-context reasoning benchmarks with Llama-3.1, Llama-3.2, and DeepSeek-R1 demonstrate that InfoKV consistently outperforms existing attention-based KV compression methods in both long prefilling and decoding scenarios.",
-      "hf_url": "https://huggingface.co/papers/2606.26875",
-      "arxiv_url": "https://arxiv.org/abs/2606.26875",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.26875",
-      "papers_cool_url": "https://papers.cool/arxiv/2606.26875",
-      "github_url": "",
-      "submitted_by": "kai",
-      "submitted_at": "2026-06-26T00:00:00.000Z",
-      "upvotes": 2,
-      "comments": 1,
-      "topic_key": "reasoning_alignment_eval",
-      "topic_label": "Reasoning, Alignment, and Evaluation",
-      "matched_terms": [
-        "\\breasoning\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Reasoning capability has advanced rapidly in large language models (LLMs), leading to an increasing size of key-value (KV) cache in both prefilling and decoding stages.",
-      "upvote_label": "2 upvotes"
-    },
-    {
-      "report_date": "2026-06-26",
-      "paper_id": "2606.27326",
-      "title": "Hallucination in World Models is Predictable and Preventable",
-      "authors": [
-        "Nicklas Hansen",
-        "Xiaolong Wang"
-      ],
-      "abstract": "Modern generative world models render increasingly realistic action-controllable futures, yet they frequently hallucinate: rollouts remain visually fluent while drifting from the ground-truth dynamics. We hypothesize that hallucination concentrates in low-coverage regions of the state-action space, where lightweight data-centric signals can both detect it and guide mitigation. To test this, we introduce MMBench2, a 427-hour, 210-task dataset for visual world modeling with ground-truth actions, rewards, and live simulators, and train a 350M-parameter world model on it. We identify three distinct hallucination modes: perceptual, action-marginalized, and scene-diverging -- each anchored to a different stage of the pipeline, and develop three signals that accurately predict where the model will fail. To close coverage gaps at training time, we develop a coverage-aware sampling technique; to close them online, our hallucination predictors serve as curiosity rewards for targeted data collection, yielding a data-efficient finetuning recipe that adapts the pretrained world model to entirely unseen environments with as few as 50 real environment trajectories. Overall, our findings reveal that hallucination in world models is inherently a data coverage issue, and that the same signals used to detect it can also be used for mitigation. An interactive web version of our paper is available at https://www.nicklashansen.com/mmbench2",
-      "hf_url": "https://huggingface.co/papers/2606.27326",
-      "arxiv_url": "https://arxiv.org/abs/2606.27326",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.27326",
-      "papers_cool_url": "https://papers.cool/arxiv/2606.27326",
-      "github_url": "",
-      "submitted_by": "Nicklas Hansen",
-      "submitted_at": "2026-06-26T00:00:00.000Z",
-      "upvotes": 2,
-      "comments": 1,
-      "topic_key": "reasoning_alignment_eval",
-      "topic_label": "Reasoning, Alignment, and Evaluation",
-      "matched_terms": [
-        "\\bhallucination\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Modern generative world models render increasingly realistic action-controllable futures, yet they frequently hallucinate: rollouts remain visually fluent while drifting from the ground-truth dynamics.",
-      "upvote_label": "2 upvotes"
-    },
-    {
-      "report_date": "2026-06-26",
-      "paper_id": "2606.27364",
-      "title": "PhysiFormer: Learning to Simulate Mechanics in World Space",
-      "authors": [
-        "Yiming Chen",
-        "Yushi Lan",
-        "Andrea Vedaldi"
-      ],
-      "abstract": "We present PhysiFormer, a diffusion transformer for physically-plausible 3D object motion. Unlike video world models that operate in view-dependent pixel space, PhysiFormer represents objects as 3D meshes expressed in world coordinates. Given the initial vertex positions and velocities, as well as object material type, rigid or elastic, the model samples future vertex trajectories. While related neural physics approaches build on ad-hoc latent spaces or explicitly enforce rigidity and causality, PhysiFormer shows that excellent results can be obtained without any such inductive biases, by casting vertex trajectory prediction as a single denoising diffusion process directly in world coordinates. The probabilistic formulation captures uncertainty in the learned dynamics, enabling diverse plausible futures from initial conditions, making this framework potentially useful for applications with unobserved uncertainty. The model features attention factorised over time, space, and objects for efficiency, enabling permutation-invariant multi-object reasoning without needing explicit object encoding. Trained on over 100k simulated trajectories, PhysiFormer generates rigid and elastic mechanics, and generalises to mixed-material settings, unseen real-world geometries, and larger object counts. It substantially outperforms autoregressive baselines in trajectory accuracy, rigidity preservation, and momentum-based physical consistency. Our results position coordinate-space diffusion as a promising step toward view-invariant, geometry-aware world modelling for robotics, graphics, and physical design. Visualisations, code, and models are available at https://yimingc9.github.io/physiformer.",
-      "hf_url": "https://huggingface.co/papers/2606.27364",
-      "arxiv_url": "https://arxiv.org/abs/2606.27364",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.27364",
-      "papers_cool_url": "https://papers.cool/arxiv/2606.27364",
-      "github_url": "",
-      "submitted_by": "taesiri",
-      "submitted_at": "2026-06-26T00:00:00.000Z",
-      "upvotes": 2,
-      "comments": 0,
-      "topic_key": "learning_theory",
-      "topic_label": "Learning, Optimization, and Theory",
-      "matched_terms": [
-        "\\blearning\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "We present PhysiFormer, a diffusion transformer for physically-plausible 3D object motion.",
-      "upvote_label": "2 upvotes"
-    },
-    {
-      "report_date": "2026-06-26",
-      "paper_id": "2606.27277",
-      "title": "EO-WM: A Physically Informed World Model for Probabilistic Earth Observation Forecasting",
-      "authors": [
-        "Junwei Luo",
-        "Shuai Yuan",
-        "Zhenya Yang",
-        "Yansheng Li",
-        "Zhe Liu",
-        "Hengshuang Zhao"
-      ],
-      "abstract": "Earth Observation (EO) forecasting aims to predict future Earth surface dynamics from satellite observations under changing meteorological conditions. In this paper, we view this task as a partially observed, weather-driven world modeling problem, in which weather acts as a conditioning signal, while forecasting remains uncertain due to sparse observations and unobserved land-surface states. However, existing methods do not fully capture this setting: deterministic models collapse uncertainty into a single future prediction, while diffusion-based methods typically treat weather variables as undifferentiated conditioning signals, and existing benchmarks focus mainly on reconstruction accuracy rather than whether forecasts respond correctly to changed weather forcing.We introduce EO-WM, a video diffusion transformer for multispectral EO forecasting. EO-WM incorporates a physically informed conditioning framework that represents meteorological forcing through a climatological baseline, weather anomalies, and cumulative physical stress signals. Specifically, it separates baseline and anomaly through distinct conditioning pathways, and accumulates anomalous forcing over time to capture sustained heat and drought stress. To evaluate weather-response behavior beyond standard metrics, we introduce two diagnostic benchmarks: an Extreme Summer Benchmark for severity-aware prediction of vegetation degradation under extreme weather, and a Seasonal Matched-Pair Benchmark for testing response fidelity under changed weather forcing. Experiments show that EO-WM reduces the error in predicted Normalized Difference Vegetation Index (NDVI) decline amplitude by a relative 5.63% and improves directional hit rate by a relative 7.80%, while remaining competitive on standard pixel-level metrics. The benchmarks and model will be made open-source at https://github.com/Luo-Z13/EO-WM.",
-      "hf_url": "https://huggingface.co/papers/2606.27277",
-      "arxiv_url": "https://arxiv.org/abs/2606.27277",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.27277",
-      "papers_cool_url": "https://papers.cool/arxiv/2606.27277",
-      "github_url": "",
-      "submitted_by": "Junwei Luo",
-      "submitted_at": "2026-06-26T00:00:00.000Z",
-      "upvotes": 1,
-      "comments": 1,
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
-      "matched_terms": [],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Earth Observation (EO) forecasting aims to predict future Earth surface dynamics from satellite observations under changing meteorological conditions.",
-      "upvote_label": "1 upvote"
-    },
-    {
-      "report_date": "2026-06-26",
-      "paper_id": "2606.27288",
-      "title": "When Does Combining Language Models Help? A Co-Failure Ceiling on Routing, Voting, and Mixture-of-Agents Across 67 Frontier Models",
-      "authors": [
-        "Josef Chen"
-      ],
-      "abstract": "Multi-model LLM systems such as routing, voting, cascades, fusion, and mixture-of-agents are used to beat single-model accuracy. We show that their gain is capped by a quantity the field rarely reports. For any policy whose output is one member model answer, accuracy cannot exceed one minus beta, where beta is the rate at which every model is wrong on the same query. In contrast, the usual diagnostic, average pairwise error correlation rho, cannot identify beta: error laws with identical marginals and pairwise correlations can have different all-wrong rates. A Clopper-Pearson bound on beta gives a finite-sample certificate on the largest gain any router, vote, or cascade could deliver before training a router. Across 67 models from 21 providers, a tetrachoric-calibrated single-factor model still underprices the all-wrong tail: on open-ended mathematics, observed beta is 0.052 versus 0.023 under the full 67-model Gaussian copula, about 2.5 times underpricing, with 90 percent CI 1.7 to 3.4 and k equals 17. The effect recurs on execution-graded code, where beta is 0.079. Re-asking the same GPQA-Diamond questions in free-response rather than multiple-choice form reopens the tail, with beta 0.127 and a five-judge panel with kappa 0.73 to 0.92, locating co-failure in answer format rather than subject. At matched quality, low-rho heterogeneous ensembles beat high-rho Self-MoA, but on checkable tasks in our pool, combining models rarely beats the single best model without a strong query-level routing signal. Gains come from models failing on different questions, not from adding more models.",
-      "hf_url": "https://huggingface.co/papers/2606.27288",
-      "arxiv_url": "https://arxiv.org/abs/2606.27288",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.27288",
-      "papers_cool_url": "https://papers.cool/arxiv/2606.27288",
-      "github_url": "",
-      "submitted_by": "Josef Chen",
-      "submitted_at": "2026-06-26T00:00:00.000Z",
-      "upvotes": 1,
-      "comments": 1,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
-      "matched_terms": [
-        "\\blanguage models?\\b",
-        "\\blanguage\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Multi-model LLM systems such as routing, voting, cascades, fusion, and mixture-of-agents are used to beat single-model accuracy.",
-      "upvote_label": "1 upvote"
+      "upvote_label": "6 upvotes"
     },
     {
       "report_date": "2026-06-26",
@@ -2036,7 +2074,7 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-06-26T00:00:00.000Z",
-      "upvotes": 1,
+      "upvotes": 4,
       "comments": 0,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
@@ -2044,7 +2082,64 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "While generative AI has achieved remarkable success in solving problems with verifiable solutions, generating physical art that satisfies both strict geometric constraints and subjective visual aesthetics remains a…",
-      "upvote_label": "1 upvote"
+      "upvote_label": "4 upvotes"
+    },
+    {
+      "report_date": "2026-06-26",
+      "paper_id": "2606.27288",
+      "title": "When Does Combining Language Models Help? A Co-Failure Ceiling on Routing, Voting, and Mixture-of-Agents Across 67 Frontier Models",
+      "authors": [
+        "Josef Chen"
+      ],
+      "abstract": "Multi-model LLM systems such as routing, voting, cascades, fusion, and mixture-of-agents are used to beat single-model accuracy. We show that their gain is capped by a quantity the field rarely reports. For any policy whose output is one member model answer, accuracy cannot exceed one minus beta, where beta is the rate at which every model is wrong on the same query. In contrast, the usual diagnostic, average pairwise error correlation rho, cannot identify beta: error laws with identical marginals and pairwise correlations can have different all-wrong rates. A Clopper-Pearson bound on beta gives a finite-sample certificate on the largest gain any router, vote, or cascade could deliver before training a router. Across 67 models from 21 providers, a tetrachoric-calibrated single-factor model still underprices the all-wrong tail: on open-ended mathematics, observed beta is 0.052 versus 0.023 under the full 67-model Gaussian copula, about 2.5 times underpricing, with 90 percent CI 1.7 to 3.4 and k equals 17. The effect recurs on execution-graded code, where beta is 0.079. Re-asking the same GPQA-Diamond questions in free-response rather than multiple-choice form reopens the tail, with beta 0.127 and a five-judge panel with kappa 0.73 to 0.92, locating co-failure in answer format rather than subject. At matched quality, low-rho heterogeneous ensembles beat high-rho Self-MoA, but on checkable tasks in our pool, combining models rarely beats the single best model without a strong query-level routing signal. Gains come from models failing on different questions, not from adding more models.",
+      "hf_url": "https://huggingface.co/papers/2606.27288",
+      "arxiv_url": "https://arxiv.org/abs/2606.27288",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.27288",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.27288",
+      "github_url": "",
+      "submitted_by": "Josef Chen",
+      "submitted_at": "2026-06-26T00:00:00.000Z",
+      "upvotes": 3,
+      "comments": 1,
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [
+        "\\blanguage models?\\b",
+        "\\blanguage\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Multi-model LLM systems such as routing, voting, cascades, fusion, and mixture-of-agents are used to beat single-model accuracy.",
+      "upvote_label": "3 upvotes"
+    },
+    {
+      "report_date": "2026-06-26",
+      "paper_id": "2606.23835",
+      "title": "ABACUS: Adapting Unified Foundation Model for Bridging Image Count Understanding and Generation",
+      "authors": [
+        "Anindya Mondal",
+        "Sauradip Nag",
+        "Anjan Dutta"
+      ],
+      "abstract": "ABACUS is a unified vision-language model that handles object counting, crowd counting, referring-expression counting, and count-faithful image generation without any benchmark-specific training required. Our model is built on existing 3B-parameter unified foundation model and is adapted for object localization tasks using three key innovations: density-aware adaptive zooming with objectness maps for spatial grounding; a boundary-aware count policy via GRPO to eliminate crop-boundary errors; and a cycle-consistent GRPO strategy where the understanding branch self-critiques generated outputs, closing the understanding-generation gap without any external annotations. ABACUS achieves state-of-the-art results across seven benchmarks, outperforming both task-specific specialists and larger generalist models.",
+      "hf_url": "https://huggingface.co/papers/2606.23835",
+      "arxiv_url": "https://arxiv.org/abs/2606.23835",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.23835",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.23835",
+      "github_url": "",
+      "submitted_by": "Sauradip Nag",
+      "submitted_at": "2026-06-26T00:00:00.000Z",
+      "upvotes": 3,
+      "comments": 1,
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
+      "matched_terms": [
+        "\\bimage\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "ABACUS is a unified vision-language model that handles object counting, crowd counting, referring-expression counting, and count-faithful image generation without any benchmark-specific training required.",
+      "upvote_label": "3 upvotes"
     },
     {
       "report_date": "2026-06-26",
@@ -2061,7 +2156,7 @@
       "github_url": "",
       "submitted_by": "Minbyul Jeong",
       "submitted_at": "2026-06-26T00:00:00.000Z",
-      "upvotes": 1,
+      "upvotes": 3,
       "comments": 1,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -2071,7 +2166,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "A working citation looks like proof -- but the fact that a link resolves does not mean the cited paper supports the claim.",
-      "upvote_label": "1 upvote"
+      "upvote_label": "3 upvotes"
     },
     {
       "report_date": "2026-06-26",
@@ -2095,8 +2190,8 @@
       "github_url": "",
       "submitted_by": "hlzhang109",
       "submitted_at": "2026-06-26T00:00:00.000Z",
-      "upvotes": 0,
-      "comments": 1,
+      "upvotes": 3,
+      "comments": 2,
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [
@@ -2105,7 +2200,37 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Scientific reasoning models for biology combine language models with foundation models trained on multimodal biological data, including DNA, RNA, and proteins.",
-      "upvote_label": "0 upvotes"
+      "upvote_label": "3 upvotes"
+    },
+    {
+      "report_date": "2026-06-26",
+      "paper_id": "2606.27277",
+      "title": "EO-WM: A Physically Informed World Model for Probabilistic Earth Observation Forecasting",
+      "authors": [
+        "Junwei Luo",
+        "Shuai Yuan",
+        "Zhenya Yang",
+        "Yansheng Li",
+        "Zhe Liu",
+        "Hengshuang Zhao"
+      ],
+      "abstract": "Earth Observation (EO) forecasting aims to predict future Earth surface dynamics from satellite observations under changing meteorological conditions. In this paper, we view this task as a partially observed, weather-driven world modeling problem, in which weather acts as a conditioning signal, while forecasting remains uncertain due to sparse observations and unobserved land-surface states. However, existing methods do not fully capture this setting: deterministic models collapse uncertainty into a single future prediction, while diffusion-based methods typically treat weather variables as undifferentiated conditioning signals, and existing benchmarks focus mainly on reconstruction accuracy rather than whether forecasts respond correctly to changed weather forcing.We introduce EO-WM, a video diffusion transformer for multispectral EO forecasting. EO-WM incorporates a physically informed conditioning framework that represents meteorological forcing through a climatological baseline, weather anomalies, and cumulative physical stress signals. Specifically, it separates baseline and anomaly through distinct conditioning pathways, and accumulates anomalous forcing over time to capture sustained heat and drought stress. To evaluate weather-response behavior beyond standard metrics, we introduce two diagnostic benchmarks: an Extreme Summer Benchmark for severity-aware prediction of vegetation degradation under extreme weather, and a Seasonal Matched-Pair Benchmark for testing response fidelity under changed weather forcing. Experiments show that EO-WM reduces the error in predicted Normalized Difference Vegetation Index (NDVI) decline amplitude by a relative 5.63% and improves directional hit rate by a relative 7.80%, while remaining competitive on standard pixel-level metrics. The benchmarks and model will be made open-source at https://github.com/Luo-Z13/EO-WM.",
+      "hf_url": "https://huggingface.co/papers/2606.27277",
+      "arxiv_url": "https://arxiv.org/abs/2606.27277",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.27277",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.27277",
+      "github_url": "",
+      "submitted_by": "Junwei Luo",
+      "submitted_at": "2026-06-26T00:00:00.000Z",
+      "upvotes": 2,
+      "comments": 1,
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
+      "matched_terms": [],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Earth Observation (EO) forecasting aims to predict future Earth surface dynamics from satellite observations under changing meteorological conditions.",
+      "upvote_label": "2 upvotes"
     }
   ]
 }
