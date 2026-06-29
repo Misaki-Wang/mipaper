@@ -1,10 +1,90 @@
 {
   "branch_key": "hf-daily",
   "branch_label": "HF Daily",
-  "generated_at": "2026-06-28T19:00:04Z",
-  "reports_count": 87,
-  "default_report_path": "data/hf-daily/reports/2026-06-29/hf-daily-2026-06-29.json",
+  "generated_at": "2026-06-29T19:00:03Z",
+  "reports_count": 88,
+  "default_report_path": "data/hf-daily/reports/2026-06-30/hf-daily-2026-06-30.json",
   "reports": [
+    {
+      "branch_key": "hf-daily",
+      "branch_label": "HF Daily",
+      "data_path": "data/hf-daily/reports/2026-06-30/hf-daily-2026-06-30.json",
+      "slug": "hf-daily-2026-06-30",
+      "report_date": "2026-06-30",
+      "total_papers": 26,
+      "classifier": "rule",
+      "generated_at": "2026-06-29T19:00:02Z",
+      "source_url": "https://huggingface.co/papers/date/2026-06-30",
+      "focus_topics": [
+        {
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "count": 0,
+          "share": 0.0
+        },
+        {
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 0,
+          "share": 0.0
+        },
+        {
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "count": 1,
+          "share": 3.85
+        }
+      ],
+      "top_topics": [
+        {
+          "topic_label": "Agents and Planning",
+          "count": 7,
+          "share": 26.92
+        },
+        {
+          "topic_label": "LLMs and Language",
+          "count": 5,
+          "share": 19.23
+        },
+        {
+          "topic_label": "Multimodal Understanding and Vision",
+          "count": 3,
+          "share": 11.54
+        },
+        {
+          "topic_label": "Robotics and Embodied AI",
+          "count": 3,
+          "share": 11.54
+        },
+        {
+          "topic_label": "Datasets and Benchmarks",
+          "count": 2,
+          "share": 7.69
+        }
+      ],
+      "top_submitters": [
+        {
+          "submitted_by": "taesiri",
+          "count": 4
+        },
+        {
+          "submitted_by": "Xiong-Hui Chen",
+          "count": 2
+        },
+        {
+          "submitted_by": "Zhihao Lin",
+          "count": 2
+        },
+        {
+          "submitted_by": "Atsuki Yamaguchi",
+          "count": 1
+        },
+        {
+          "submitted_by": "Fahd Seddik",
+          "count": 1
+        }
+      ]
+    },
     {
       "branch_key": "hf-daily",
       "branch_label": "HF Daily",
