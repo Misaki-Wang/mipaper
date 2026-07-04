@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-03T19:00:08Z",
+  "generated_at": "2026-07-04T19:00:08Z",
   "report_kind": "hf_daily",
   "report_date": "2026-07-03",
   "source_url": "https://huggingface.co/papers/date/2026-07-03",
   "classifier": "rule",
-  "total_papers": 26,
+  "total_papers": 27,
   "focus_topics": [
     {
       "topic_key": "generative_foundations",
@@ -29,106 +29,106 @@
     {
       "topic_label": "Multimodal Understanding and Vision",
       "count": 6,
-      "share": 23.08
+      "share": 22.22
     },
     {
       "topic_label": "Agents and Planning",
       "count": 5,
-      "share": 19.23
+      "share": 18.52
     },
     {
       "topic_label": "Learning, Optimization, and Theory",
       "count": 4,
-      "share": 15.38
+      "share": 14.81
+    },
+    {
+      "topic_label": "Retrieval, Knowledge, and RAG",
+      "count": 4,
+      "share": 14.81
     },
     {
       "topic_label": "Other AI",
       "count": 3,
-      "share": 11.54
-    },
-    {
-      "topic_label": "Retrieval, Knowledge, and RAG",
-      "count": 3,
-      "share": 11.54
+      "share": 11.11
     },
     {
       "topic_label": "Datasets and Benchmarks",
       "count": 2,
-      "share": 7.69
+      "share": 7.41
     },
     {
       "topic_label": "LLMs and Language",
       "count": 2,
-      "share": 7.69
+      "share": 7.41
     },
     {
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "count": 1,
-      "share": 3.85
+      "share": 3.7
     }
   ],
   "daily_digest": {
     "main_hotspots": [
-      "Multimodal Understanding and Vision: 6 papers (23.08%); representative paper: Multi-Resolution Flow Matching: Training-Free Diffusion Acceleration via Staged Sampling.",
-      "Agents and Planning: 5 papers (19.23%); representative paper: EvoPolicyGym: Evaluating Autonomous Policy Evolution in Interactive Environments.",
-      "Learning, Optimization, and Theory: 4 papers (15.38%); representative paper: Morphing into Hybrid Attention Models."
+      "Multimodal Understanding and Vision: 6 papers (22.22%); representative paper: Multi-Resolution Flow Matching: Training-Free Diffusion Acceleration via Staged Sampling.",
+      "Agents and Planning: 5 papers (18.52%); representative paper: EvoPolicyGym: Evaluating Autonomous Policy Evolution in Interactive Environments.",
+      "Learning, Optimization, and Theory: 4 papers (14.81%); representative paper: Morphing into Hybrid Attention Models."
     ],
-    "trend_summary": "Today's dominant clusters are Multimodal Understanding and Vision / Agents and Planning / Learning, Optimization, and Theory; this suggests several parallel trends: multimodal work is moving from isolated perception toward generation, agents, and action; agent papers emphasize tool use, planning, and deployable workflows. The strongest visible attention is on “Program-as-Weights: A Programming Paradigm for Fuzzy Functions” (48 upvotes).",
+    "trend_summary": "Today's dominant clusters are Multimodal Understanding and Vision / Agents and Planning / Learning, Optimization, and Theory; this suggests several parallel trends: multimodal work is moving from isolated perception toward generation, agents, and action; agent papers emphasize tool use, planning, and deployable workflows. The strongest visible attention is on “Program-as-Weights: A Programming Paradigm for Fuzzy Functions” (68 upvotes).",
     "category_summaries": [
       {
         "topic_label": "Multimodal Understanding and Vision",
         "count": 6,
-        "share": 23.08,
-        "summary": "Multimodal Understanding and Vision contributes 6 papers (23.08%), led by “Multi-Resolution Flow Matching: Training-Free Diffusion Acceleration via Staged Sampling” with 20 upvotes."
+        "share": 22.22,
+        "summary": "Multimodal Understanding and Vision contributes 6 papers (22.22%), led by “Multi-Resolution Flow Matching: Training-Free Diffusion Acceleration via Staged Sampling” with 26 upvotes."
       },
       {
         "topic_label": "Agents and Planning",
         "count": 5,
-        "share": 19.23,
-        "summary": "Agents and Planning contributes 5 papers (19.23%), led by “EvoPolicyGym: Evaluating Autonomous Policy Evolution in Interactive Environments” with 39 upvotes."
+        "share": 18.52,
+        "summary": "Agents and Planning contributes 5 papers (18.52%), led by “EvoPolicyGym: Evaluating Autonomous Policy Evolution in Interactive Environments” with 41 upvotes."
       },
       {
         "topic_label": "Learning, Optimization, and Theory",
         "count": 4,
-        "share": 15.38,
-        "summary": "Learning, Optimization, and Theory contributes 4 papers (15.38%), led by “Morphing into Hybrid Attention Models” with 30 upvotes."
+        "share": 14.81,
+        "summary": "Learning, Optimization, and Theory contributes 4 papers (14.81%), led by “Morphing into Hybrid Attention Models” with 36 upvotes."
+      },
+      {
+        "topic_label": "Retrieval, Knowledge, and RAG",
+        "count": 4,
+        "share": 14.81,
+        "summary": "Retrieval, Knowledge, and RAG contributes 4 papers (14.81%), led by “WorldDirector: Building Controllable World Simulators with Persistent Dynamic Memory” with 20 upvotes."
       },
       {
         "topic_label": "Other AI",
         "count": 3,
-        "share": 11.54,
-        "summary": "Other AI contributes 3 papers (11.54%), led by “Program-as-Weights: A Programming Paradigm for Fuzzy Functions” with 48 upvotes."
-      },
-      {
-        "topic_label": "Retrieval, Knowledge, and RAG",
-        "count": 3,
-        "share": 11.54,
-        "summary": "Retrieval, Knowledge, and RAG contributes 3 papers (11.54%), led by “WorldDirector: Building Controllable World Simulators with Persistent Dynamic Memory” with 16 upvotes."
+        "share": 11.11,
+        "summary": "Other AI contributes 3 papers (11.11%), led by “Program-as-Weights: A Programming Paradigm for Fuzzy Functions” with 68 upvotes."
       },
       {
         "topic_label": "Datasets and Benchmarks",
         "count": 2,
-        "share": 7.69,
-        "summary": "Datasets and Benchmarks contributes 2 papers (7.69%), led by “AgenticDataBench: A Comprehensive Benchmark for Data Agents” with 21 upvotes."
+        "share": 7.41,
+        "summary": "Datasets and Benchmarks contributes 2 papers (7.41%), led by “AgenticDataBench: A Comprehensive Benchmark for Data Agents” with 25 upvotes."
       },
       {
         "topic_label": "LLMs and Language",
         "count": 2,
-        "share": 7.69,
-        "summary": "LLMs and Language contributes 2 papers (7.69%), led by “AgenticSTS: A Bounded-Memory Testbed for Long-Horizon LLM Agents” with 39 upvotes."
+        "share": 7.41,
+        "summary": "LLMs and Language contributes 2 papers (7.41%), led by “AgenticSTS: A Bounded-Memory Testbed for Long-Horizon LLM Agents” with 43 upvotes."
       },
       {
         "topic_label": "Reasoning, Alignment, and Evaluation",
         "count": 1,
-        "share": 3.85,
-        "summary": "Reasoning, Alignment, and Evaluation contributes 1 papers (3.85%), led by “Transferability for General Reasoning: An Automated Curriculum for Multi-Domain RLVR” with 3 upvotes."
+        "share": 3.7,
+        "summary": "Reasoning, Alignment, and Evaluation contributes 1 papers (3.70%), led by “Transferability for General Reasoning: An Automated Curriculum for Multi-Domain RLVR” with 3 upvotes."
       }
     ],
     "top_papers": [
       {
         "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
-        "upvotes": 48,
-        "upvote_label": "48 upvotes",
+        "upvotes": 68,
+        "upvote_label": "68 upvotes",
         "topic_label": "Other AI",
         "summary": "Many everyday programming tasks resist clean rule-based implementation, such as alerting on important log lines, repairing malformed JSON, or ranking search results by intent, and are increasingly outsourced to large…",
         "hf_url": "https://huggingface.co/papers/2607.02512",
@@ -138,8 +138,8 @@
       },
       {
         "title": "AgenticSTS: A Bounded-Memory Testbed for Long-Horizon LLM Agents",
-        "upvotes": 39,
-        "upvote_label": "39 upvotes",
+        "upvotes": 43,
+        "upvote_label": "43 upvotes",
         "topic_label": "LLMs and Language",
         "summary": "Memory for a long-horizon LLM agent is a contract about what each future decision is allowed to see.",
         "hf_url": "https://huggingface.co/papers/2607.02255",
@@ -149,8 +149,8 @@
       },
       {
         "title": "EvoPolicyGym: Evaluating Autonomous Policy Evolution in Interactive Environments",
-        "upvotes": 39,
-        "upvote_label": "39 upvotes",
+        "upvotes": 41,
+        "upvote_label": "41 upvotes",
         "topic_label": "Agents and Planning",
         "summary": "Autonomous agents are increasingly expected to improve executable policies through feedback, yet existing evaluations often collapse this process into a final score or confound it with open-ended software-engineering…",
         "hf_url": "https://huggingface.co/papers/2607.02440",
@@ -160,8 +160,8 @@
       },
       {
         "title": "Morphing into Hybrid Attention Models",
-        "upvotes": 30,
-        "upvote_label": "30 upvotes",
+        "upvotes": 36,
+        "upvote_label": "36 upvotes",
         "topic_label": "Learning, Optimization, and Theory",
         "summary": "Hybrid attention models improve long-context efficiency by retaining only a subset of full-attention layers and replacing the remaining layers with linear attention.",
         "hf_url": "https://huggingface.co/papers/2606.30562",
@@ -170,15 +170,15 @@
         "papers_cool_url": "https://papers.cool/arxiv/2606.30562"
       },
       {
-        "title": "AgenticDataBench: A Comprehensive Benchmark for Data Agents",
-        "upvotes": 21,
-        "upvote_label": "21 upvotes",
-        "topic_label": "Datasets and Benchmarks",
-        "summary": "Data science aims to derive actionable insights from heterogeneous raw data, unlocking the value of the massive amounts of data generated in modern society.",
-        "hf_url": "https://huggingface.co/papers/2607.01647",
-        "arxiv_url": "https://arxiv.org/abs/2607.01647",
-        "arxiv_pdf_url": "https://arxiv.org/pdf/2607.01647",
-        "papers_cool_url": "https://papers.cool/arxiv/2607.01647"
+        "title": "Multi-Resolution Flow Matching: Training-Free Diffusion Acceleration via Staged Sampling",
+        "upvotes": 26,
+        "upvote_label": "26 upvotes",
+        "topic_label": "Multimodal Understanding and Vision",
+        "summary": "Hardware-agnostic strategies for accelerating text-to-image diffusion, such as timestep distillation and feature caching, can reduce inference time without custom kernels or system-level optimization.",
+        "hf_url": "https://huggingface.co/papers/2607.01642",
+        "arxiv_url": "https://arxiv.org/abs/2607.01642",
+        "arxiv_pdf_url": "https://arxiv.org/pdf/2607.01642",
+        "papers_cool_url": "https://papers.cool/arxiv/2607.01642"
       }
     ]
   },
@@ -229,15 +229,15 @@
       "github_url": "",
       "submitted_by": "Yuntian Deng",
       "submitted_at": "2026-07-03T00:00:00.000Z",
-      "upvotes": 48,
-      "comments": 2,
+      "upvotes": 68,
+      "comments": 3,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
       "matched_terms": [],
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Many everyday programming tasks resist clean rule-based implementation, such as alerting on important log lines, repairing malformed JSON, or ranking search results by intent, and are increasingly outsourced to large…",
-      "upvote_label": "48 upvotes"
+      "upvote_label": "68 upvotes"
     },
     {
       "report_date": "2026-07-03",
@@ -263,8 +263,8 @@
       "github_url": "",
       "submitted_by": "kaipeng",
       "submitted_at": "2026-07-03T00:00:00.000Z",
-      "upvotes": 39,
-      "comments": 2,
+      "upvotes": 43,
+      "comments": 3,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [
@@ -273,7 +273,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Memory for a long-horizon LLM agent is a contract about what each future decision is allowed to see.",
-      "upvote_label": "39 upvotes"
+      "upvote_label": "43 upvotes"
     },
     {
       "report_date": "2026-07-03",
@@ -305,8 +305,8 @@
       "github_url": "",
       "submitted_by": "MikaStars39",
       "submitted_at": "2026-07-03T00:00:00.000Z",
-      "upvotes": 39,
-      "comments": 1,
+      "upvotes": 41,
+      "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
       "matched_terms": [
@@ -315,7 +315,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Autonomous agents are increasingly expected to improve executable policies through feedback, yet existing evaluations often collapse this process into a final score or confound it with open-ended software-engineering…",
-      "upvote_label": "39 upvotes"
+      "upvote_label": "41 upvotes"
     },
     {
       "report_date": "2026-07-03",
@@ -339,8 +339,8 @@
       "github_url": "",
       "submitted_by": "Disen Lan",
       "submitted_at": "2026-07-03T00:00:00.000Z",
-      "upvotes": 30,
-      "comments": 3,
+      "upvotes": 36,
+      "comments": 5,
       "topic_key": "learning_theory",
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [
@@ -349,7 +349,40 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Hybrid attention models improve long-context efficiency by retaining only a subset of full-attention layers and replacing the remaining layers with linear attention.",
-      "upvote_label": "30 upvotes"
+      "upvote_label": "36 upvotes"
+    },
+    {
+      "report_date": "2026-07-03",
+      "paper_id": "2607.01642",
+      "title": "Multi-Resolution Flow Matching: Training-Free Diffusion Acceleration via Staged Sampling",
+      "authors": [
+        "Xingyu Zheng",
+        "Xianglong Liu",
+        "Yifu Ding",
+        "Weilun Feng",
+        "Junqing Lin",
+        "Jinyang Guo",
+        "Haotong Qin"
+      ],
+      "abstract": "Hardware-agnostic strategies for accelerating text-to-image diffusion, such as timestep distillation and feature caching, can reduce inference time without custom kernels or system-level optimization. Among them, multi-resolution generation strategies have recently received broad attention, attaining more than 5x speedup without any training. However, the design of performing upsampling in the latent space, together with the selective modification of partial regions, causes these methods to exhibit noticeable blurring or artifacts. To this end, we propose MrFlow, a training-free multi-resolution acceleration strategy for pretrained flow-matching models built upon a staged low-to-high-resolution pipeline. MrFlow first rapidly generates the main structure at low resolution, then performs super-resolution in the pixel space using a lightweight pretrained GAN-based model, subsequently injects low-strength noise to enable high-frequency resampling, and finally refines the details at high resolution. Quantitative and qualitative results on FLUX.1-dev and Qwen-Image show that MrFlow exploits the quadratic token reduction and reduced step requirement of low-resolution sampling to achieve 10x end-to-end acceleration while keeping OneIG within a 1% gap relative to that before acceleration, significantly surpassing other training-free acceleration strategies, and requiring no training or runtime dynamic identification whatsoever. MrFlow can further be directly combined orthogonally with pre-trained timestep distillation strategies, achieving even higher generation acceleration of up to 25x.",
+      "hf_url": "https://huggingface.co/papers/2607.01642",
+      "arxiv_url": "https://arxiv.org/abs/2607.01642",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.01642",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.01642",
+      "github_url": "",
+      "submitted_by": "Xingyu Zheng",
+      "submitted_at": "2026-07-03T00:00:00.000Z",
+      "upvotes": 26,
+      "comments": 2,
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
+      "matched_terms": [
+        "\\bdiffusion\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Hardware-agnostic strategies for accelerating text-to-image diffusion, such as timestep distillation and feature caching, can reduce inference time without custom kernels or system-level optimization.",
+      "upvote_label": "26 upvotes"
     },
     {
       "report_date": "2026-07-03",
@@ -378,8 +411,8 @@
       "github_url": "",
       "submitted_by": "Zhaoyan Sun",
       "submitted_at": "2026-07-03T00:00:00.000Z",
-      "upvotes": 21,
-      "comments": 1,
+      "upvotes": 25,
+      "comments": 2,
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [
@@ -388,40 +421,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Data science aims to derive actionable insights from heterogeneous raw data, unlocking the value of the massive amounts of data generated in modern society.",
-      "upvote_label": "21 upvotes"
-    },
-    {
-      "report_date": "2026-07-03",
-      "paper_id": "2607.01642",
-      "title": "Multi-Resolution Flow Matching: Training-Free Diffusion Acceleration via Staged Sampling",
-      "authors": [
-        "Xingyu Zheng",
-        "Xianglong Liu",
-        "Yifu Ding",
-        "Weilun Feng",
-        "Junqing Lin",
-        "Jinyang Guo",
-        "Haotong Qin"
-      ],
-      "abstract": "Hardware-agnostic strategies for accelerating text-to-image diffusion, such as timestep distillation and feature caching, can reduce inference time without custom kernels or system-level optimization. Among them, multi-resolution generation strategies have recently received broad attention, attaining more than 5x speedup without any training. However, the design of performing upsampling in the latent space, together with the selective modification of partial regions, causes these methods to exhibit noticeable blurring or artifacts. To this end, we propose MrFlow, a training-free multi-resolution acceleration strategy for pretrained flow-matching models built upon a staged low-to-high-resolution pipeline. MrFlow first rapidly generates the main structure at low resolution, then performs super-resolution in the pixel space using a lightweight pretrained GAN-based model, subsequently injects low-strength noise to enable high-frequency resampling, and finally refines the details at high resolution. Quantitative and qualitative results on FLUX.1-dev and Qwen-Image show that MrFlow exploits the quadratic token reduction and reduced step requirement of low-resolution sampling to achieve 10x end-to-end acceleration while keeping OneIG within a 1% gap relative to that before acceleration, significantly surpassing other training-free acceleration strategies, and requiring no training or runtime dynamic identification whatsoever. MrFlow can further be directly combined orthogonally with pre-trained timestep distillation strategies, achieving even higher generation acceleration of up to 25x.",
-      "hf_url": "https://huggingface.co/papers/2607.01642",
-      "arxiv_url": "https://arxiv.org/abs/2607.01642",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.01642",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.01642",
-      "github_url": "",
-      "submitted_by": "Xingyu Zheng",
-      "submitted_at": "2026-07-03T00:00:00.000Z",
-      "upvotes": 20,
-      "comments": 1,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [
-        "\\bdiffusion\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Hardware-agnostic strategies for accelerating text-to-image diffusion, such as timestep distillation and feature caching, can reduce inference time without custom kernels or system-level optimization.",
-      "upvote_label": "20 upvotes"
+      "upvote_label": "25 upvotes"
     },
     {
       "report_date": "2026-07-03",
@@ -450,8 +450,8 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-07-03T00:00:00.000Z",
-      "upvotes": 16,
-      "comments": 1,
+      "upvotes": 20,
+      "comments": 2,
       "topic_key": "retrieval_knowledge",
       "topic_label": "Retrieval, Knowledge, and RAG",
       "matched_terms": [
@@ -460,7 +460,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "We present WorldDirector, a highly controllable video world model framework designed for persistent dynamic object memory and unrestricted viewpoint exploration.",
-      "upvote_label": "16 upvotes"
+      "upvote_label": "20 upvotes"
     },
     {
       "report_date": "2026-07-03",
@@ -484,8 +484,8 @@
       "github_url": "",
       "submitted_by": "Minbyul Jeong",
       "submitted_at": "2026-07-03T00:00:00.000Z",
-      "upvotes": 13,
-      "comments": 1,
+      "upvotes": 17,
+      "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [
@@ -494,15 +494,15 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Recent multimodal large language models have shown great promise in clinical image reasoning, but existing post-training pipelines remain predominantly outcome-centric, relying on final answer correctness or…",
-      "upvote_label": "13 upvotes"
+      "upvote_label": "17 upvotes"
     }
   ],
   "topics": [
     {
       "topic_label": "Multimodal Understanding and Vision",
       "count": 6,
-      "share": 23.08,
-      "summary": "Multimodal Understanding and Vision contributes 6 papers (23.08%), led by “Multi-Resolution Flow Matching: Training-Free Diffusion Acceleration via Staged Sampling” with 20 upvotes.",
+      "share": 22.22,
+      "summary": "Multimodal Understanding and Vision contributes 6 papers (22.22%), led by “Multi-Resolution Flow Matching: Training-Free Diffusion Acceleration via Staged Sampling” with 26 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-03",
@@ -525,8 +525,8 @@
           "github_url": "",
           "submitted_by": "Xingyu Zheng",
           "submitted_at": "2026-07-03T00:00:00.000Z",
-          "upvotes": 20,
-          "comments": 1,
+          "upvotes": 26,
+          "comments": 2,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [
@@ -535,7 +535,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Hardware-agnostic strategies for accelerating text-to-image diffusion, such as timestep distillation and feature caching, can reduce inference time without custom kernels or system-level optimization.",
-          "upvote_label": "20 upvotes"
+          "upvote_label": "26 upvotes"
         },
         {
           "report_date": "2026-07-03",
@@ -559,8 +559,8 @@
           "github_url": "",
           "submitted_by": "Minbyul Jeong",
           "submitted_at": "2026-07-03T00:00:00.000Z",
-          "upvotes": 13,
-          "comments": 1,
+          "upvotes": 17,
+          "comments": 2,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [
@@ -569,7 +569,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Recent multimodal large language models have shown great promise in clinical image reasoning, but existing post-training pipelines remain predominantly outcome-centric, relying on final answer correctness or…",
-          "upvote_label": "13 upvotes"
+          "upvote_label": "17 upvotes"
         },
         {
           "report_date": "2026-07-03",
@@ -592,8 +592,8 @@
           "github_url": "",
           "submitted_by": "Ruihang Li",
           "submitted_at": "2026-07-03T00:00:00.000Z",
-          "upvotes": 12,
-          "comments": 2,
+          "upvotes": 13,
+          "comments": 3,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [
@@ -602,7 +602,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Conventional reinforcement learning strategies for visual generation typically employ sample-wise reward functions, yet this practice frequently results in reward hacking that degrades image diversity and introduces…",
-          "upvote_label": "12 upvotes"
+          "upvote_label": "13 upvotes"
         },
         {
           "report_date": "2026-07-03",
@@ -626,7 +626,7 @@
           "submitted_by": "liuxiaoyu",
           "submitted_at": "2026-07-03T00:00:00.000Z",
           "upvotes": 8,
-          "comments": 2,
+          "comments": 4,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [
@@ -661,7 +661,7 @@
           "submitted_by": "Ryo Hachiuma",
           "submitted_at": "2026-07-03T00:00:00.000Z",
           "upvotes": 7,
-          "comments": 1,
+          "comments": 2,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [
@@ -693,7 +693,7 @@
           "submitted_by": "taesiri",
           "submitted_at": "2026-07-03T00:00:00.000Z",
           "upvotes": 4,
-          "comments": 0,
+          "comments": 1,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [
@@ -709,8 +709,8 @@
     {
       "topic_label": "Agents and Planning",
       "count": 5,
-      "share": 19.23,
-      "summary": "Agents and Planning contributes 5 papers (19.23%), led by “EvoPolicyGym: Evaluating Autonomous Policy Evolution in Interactive Environments” with 39 upvotes.",
+      "share": 18.52,
+      "summary": "Agents and Planning contributes 5 papers (18.52%), led by “EvoPolicyGym: Evaluating Autonomous Policy Evolution in Interactive Environments” with 41 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-03",
@@ -742,8 +742,8 @@
           "github_url": "",
           "submitted_by": "MikaStars39",
           "submitted_at": "2026-07-03T00:00:00.000Z",
-          "upvotes": 39,
-          "comments": 1,
+          "upvotes": 41,
+          "comments": 2,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
           "matched_terms": [
@@ -752,7 +752,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Autonomous agents are increasingly expected to improve executable policies through feedback, yet existing evaluations often collapse this process into a final score or confound it with open-ended software-engineering…",
-          "upvote_label": "39 upvotes"
+          "upvote_label": "41 upvotes"
         },
         {
           "report_date": "2026-07-03",
@@ -775,8 +775,8 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-07-03T00:00:00.000Z",
-          "upvotes": 12,
-          "comments": 0,
+          "upvotes": 14,
+          "comments": 1,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
           "matched_terms": [
@@ -785,7 +785,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Skills are becoming a reusable operational layer for LLM agents, encoding SOPs, domain rules, tool workflows, scripts, and validation routines.",
-          "upvote_label": "12 upvotes"
+          "upvote_label": "14 upvotes"
         },
         {
           "report_date": "2026-07-03",
@@ -807,8 +807,8 @@
           "github_url": "",
           "submitted_by": "ZH",
           "submitted_at": "2026-07-03T00:00:00.000Z",
-          "upvotes": 7,
-          "comments": 1,
+          "upvotes": 8,
+          "comments": 2,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
           "matched_terms": [
@@ -817,7 +817,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Search agents powered by large language models (LLMs) are increasingly used to solve complex information-seeking tasks, requiring multi-step retrieval and reasoning to fulfill user goals.",
-          "upvote_label": "7 upvotes"
+          "upvote_label": "8 upvotes"
         },
         {
           "report_date": "2026-07-03",
@@ -844,8 +844,8 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-07-03T00:00:00.000Z",
-          "upvotes": 5,
-          "comments": 0,
+          "upvotes": 6,
+          "comments": 1,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
           "matched_terms": [
@@ -854,7 +854,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Evaluating LLM agents on benchmarks like SWE-Bench and GAIA can be expensive, time-consuming, and requires complex infrastructure.",
-          "upvote_label": "5 upvotes"
+          "upvote_label": "6 upvotes"
         },
         {
           "report_date": "2026-07-03",
@@ -879,8 +879,8 @@
           "github_url": "",
           "submitted_by": "Ondrej Bohdal",
           "submitted_at": "2026-07-03T00:00:00.000Z",
-          "upvotes": 3,
-          "comments": 1,
+          "upvotes": 4,
+          "comments": 2,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
           "matched_terms": [
@@ -889,15 +889,15 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Large Language Model (LLM)-based agents can solve complex procedural tasks by interacting with environments over multiple turns, but this ability typically depends on large models, long contexts, and repeated…",
-          "upvote_label": "3 upvotes"
+          "upvote_label": "4 upvotes"
         }
       ]
     },
     {
       "topic_label": "Learning, Optimization, and Theory",
       "count": 4,
-      "share": 15.38,
-      "summary": "Learning, Optimization, and Theory contributes 4 papers (15.38%), led by “Morphing into Hybrid Attention Models” with 30 upvotes.",
+      "share": 14.81,
+      "summary": "Learning, Optimization, and Theory contributes 4 papers (14.81%), led by “Morphing into Hybrid Attention Models” with 36 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-03",
@@ -921,8 +921,8 @@
           "github_url": "",
           "submitted_by": "Disen Lan",
           "submitted_at": "2026-07-03T00:00:00.000Z",
-          "upvotes": 30,
-          "comments": 3,
+          "upvotes": 36,
+          "comments": 5,
           "topic_key": "learning_theory",
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [
@@ -931,7 +931,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Hybrid attention models improve long-context efficiency by retaining only a subset of full-attention layers and replacing the remaining layers with linear attention.",
-          "upvote_label": "30 upvotes"
+          "upvote_label": "36 upvotes"
         },
         {
           "report_date": "2026-07-03",
@@ -953,8 +953,8 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-07-03T00:00:00.000Z",
-          "upvotes": 4,
-          "comments": 0,
+          "upvotes": 5,
+          "comments": 1,
           "topic_key": "learning_theory",
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [
@@ -963,6 +963,36 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Vision-Language-Action (VLA) models are fundamentally bottlenecked by the scarcity of expert demonstrations -- triplets of observations, instructions, and actions that are costly to collect at scale.",
+          "upvote_label": "5 upvotes"
+        },
+        {
+          "report_date": "2026-07-03",
+          "paper_id": "2607.01686",
+          "title": "WARP: Weight-Space Analysis for Recovering Training Data Portfolios",
+          "authors": [
+            "Tzu-Heng Huang",
+            "Aditya Goyal",
+            "John Cooper",
+            "Frederic Sala"
+          ],
+          "abstract": "Foundation models are routinely released to the public, yet the data recipes used to train them -- such as domain mixture weights that determine how different sources are sampled -- are rarely disclosed. This creates an access asymmetry: researchers study the resulting models but lack visibility into the training distribution that produces them. Prior works for inferring training data, such as membership inference, detect at the level of individual samples and thus cannot characterize the global composition of the training corpus. We introduce WARP, a framework that recovers a fine-tuned model's training mixtures directly from its released weights. WARP interpolates between the base and fine-tuned models using model merging, generating pseudo-checkpoints that approximate the missing training trajectory and expose a geometric footprint of the training data in the weight space. From these simulated footprints, WARP extracts geometric features and maps them to domain proportions using either a parameter-free softmax readout or an MLP projector trained on synthetic mixtures. In controlled experiments with BERT and GPT-2, WARP recovers domain mixtures with an average MAE as low as 0.046 and 0.104 respectively, outperforming membership inference and a variant with access to the true training trajectory.",
+          "hf_url": "https://huggingface.co/papers/2607.01686",
+          "arxiv_url": "https://arxiv.org/abs/2607.01686",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2607.01686",
+          "papers_cool_url": "https://papers.cool/arxiv/2607.01686",
+          "github_url": "",
+          "submitted_by": "Tzu-Heng Huang",
+          "submitted_at": "2026-07-03T00:00:00.000Z",
+          "upvotes": 4,
+          "comments": 2,
+          "topic_key": "learning_theory",
+          "topic_label": "Learning, Optimization, and Theory",
+          "matched_terms": [
+            "\\btraining\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "Foundation models are routinely released to the public, yet the data recipes used to train them -- such as domain mixture weights that determine how different sources are sampled -- are rarely disclosed.",
           "upvote_label": "4 upvotes"
         },
         {
@@ -990,7 +1020,7 @@
           "submitted_by": "Meng Wang",
           "submitted_at": "2026-07-03T00:00:00.000Z",
           "upvotes": 4,
-          "comments": 1,
+          "comments": 2,
           "topic_key": "learning_theory",
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [
@@ -1000,140 +1030,14 @@
           "classification_confidence": null,
           "one_sentence_summary": "Continual post-training enables foundation models to acquire new knowledge while preserving existing capabilities.",
           "upvote_label": "4 upvotes"
-        },
-        {
-          "report_date": "2026-07-03",
-          "paper_id": "2607.01686",
-          "title": "WARP: Weight-Space Analysis for Recovering Training Data Portfolios",
-          "authors": [
-            "Tzu-Heng Huang",
-            "Aditya Goyal",
-            "John Cooper",
-            "Frederic Sala"
-          ],
-          "abstract": "Foundation models are routinely released to the public, yet the data recipes used to train them -- such as domain mixture weights that determine how different sources are sampled -- are rarely disclosed. This creates an access asymmetry: researchers study the resulting models but lack visibility into the training distribution that produces them. Prior works for inferring training data, such as membership inference, detect at the level of individual samples and thus cannot characterize the global composition of the training corpus. We introduce WARP, a framework that recovers a fine-tuned model's training mixtures directly from its released weights. WARP interpolates between the base and fine-tuned models using model merging, generating pseudo-checkpoints that approximate the missing training trajectory and expose a geometric footprint of the training data in the weight space. From these simulated footprints, WARP extracts geometric features and maps them to domain proportions using either a parameter-free softmax readout or an MLP projector trained on synthetic mixtures. In controlled experiments with BERT and GPT-2, WARP recovers domain mixtures with an average MAE as low as 0.046 and 0.104 respectively, outperforming membership inference and a variant with access to the true training trajectory.",
-          "hf_url": "https://huggingface.co/papers/2607.01686",
-          "arxiv_url": "https://arxiv.org/abs/2607.01686",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2607.01686",
-          "papers_cool_url": "https://papers.cool/arxiv/2607.01686",
-          "github_url": "",
-          "submitted_by": "Tzu-Heng Huang",
-          "submitted_at": "2026-07-03T00:00:00.000Z",
-          "upvotes": 2,
-          "comments": 1,
-          "topic_key": "learning_theory",
-          "topic_label": "Learning, Optimization, and Theory",
-          "matched_terms": [
-            "\\btraining\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null,
-          "one_sentence_summary": "Foundation models are routinely released to the public, yet the data recipes used to train them -- such as domain mixture weights that determine how different sources are sampled -- are rarely disclosed.",
-          "upvote_label": "2 upvotes"
-        }
-      ]
-    },
-    {
-      "topic_label": "Other AI",
-      "count": 3,
-      "share": 11.54,
-      "summary": "Other AI contributes 3 papers (11.54%), led by “Program-as-Weights: A Programming Paradigm for Fuzzy Functions” with 48 upvotes.",
-      "papers": [
-        {
-          "report_date": "2026-07-03",
-          "paper_id": "2607.02512",
-          "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
-          "authors": [
-            "Wentao Zhang",
-            "Liliana Hotsko",
-            "Woojeong Kim",
-            "Pengyu Nie",
-            "Stuart Shieber",
-            "Yuntian Deng"
-          ],
-          "abstract": "Many everyday programming tasks resist clean rule-based implementation, such as alerting on important log lines, repairing malformed JSON, or ranking search results by intent, and are increasingly outsourced to large language model APIs at the cost of locality, reproducibility, and price. We propose fuzzy-function programming: compiling such a function from a natural-language specification into a compact, locally-executable neural artifact. We instantiate this paradigm with Program-as-Weights (PAW), in which a 4B compiler trained on FuzzyBench, a 10M-example dataset we release, emits parameter-efficient adapters for a frozen, lightweight interpreter. A 0.6B Qwen3 interpreter executing PAW programs matches the performance of direct prompting of Qwen3-32B, while using roughly one fiftieth of the inference memory and running at 30 tokens/s on a MacBook M3. PAW reframes the foundation model from a per-input problem solver into a tool builder: invoked once per function definition, it produces a small reusable artifact whose subsequent calls per function application are cheap and offline.",
-          "hf_url": "https://huggingface.co/papers/2607.02512",
-          "arxiv_url": "https://arxiv.org/abs/2607.02512",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2607.02512",
-          "papers_cool_url": "https://papers.cool/arxiv/2607.02512",
-          "github_url": "",
-          "submitted_by": "Yuntian Deng",
-          "submitted_at": "2026-07-03T00:00:00.000Z",
-          "upvotes": 48,
-          "comments": 2,
-          "topic_key": "other_ai",
-          "topic_label": "Other AI",
-          "matched_terms": [],
-          "classification_source": "rule",
-          "classification_confidence": null,
-          "one_sentence_summary": "Many everyday programming tasks resist clean rule-based implementation, such as alerting on important log lines, repairing malformed JSON, or ranking search results by intent, and are increasingly outsourced to large…",
-          "upvote_label": "48 upvotes"
-        },
-        {
-          "report_date": "2026-07-03",
-          "paper_id": "2607.02508",
-          "title": "From SRA to Self-Flow: Data Augmentation or Self-Supervision?",
-          "authors": [
-            "Dengyang Jiang",
-            "Mengmeng Wang",
-            "Harry Yang",
-            "Jingdong Wang"
-          ],
-          "abstract": "Representation alignment has become an effective way to accelerate diffusion transformer training and improve generation quality. Recent self-alignment methods, such as SRA and Self-Flow, further remove the dependency on external pretrained encoders by constructing alignment within the diffusion model itself. However, the mechanism behind the improvement from SRA to Self-Flow, dual-time scheduling, remains under-examined: Self-Flow attributes its gain to interactions between tokens at different noise levels, where cleaner tokens help infer noisier ones. In this work, we revisit this explanation and ask whether the gain instead comes from data augmentation along the noise dimension. To disentangle these factors, we introduce Attention Separation, which preserves the same dual-timestep input as Self-Flow while blocking attention between tokens assigned to different noise levels. Surprisingly, removing such interaction does not degrade performance and can even improve it, suggesting that the improvement from SRA to Self-Flow mainly comes from data augmentation. Furthermore,We show that Attention Separation itself provides an augmentation effect by splitting a single image into multiple effective training parts to expand the training data. Based on these observations, we combine self-representation alignment with dual-timestep and attention-separation augmentation, and demonstrate the effectiveness of this design on ImageNet.",
-          "hf_url": "https://huggingface.co/papers/2607.02508",
-          "arxiv_url": "https://arxiv.org/abs/2607.02508",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2607.02508",
-          "papers_cool_url": "https://papers.cool/arxiv/2607.02508",
-          "github_url": "",
-          "submitted_by": "Dengyang Jiang",
-          "submitted_at": "2026-07-03T00:00:00.000Z",
-          "upvotes": 10,
-          "comments": 1,
-          "topic_key": "other_ai",
-          "topic_label": "Other AI",
-          "matched_terms": [],
-          "classification_source": "rule",
-          "classification_confidence": null,
-          "one_sentence_summary": "Representation alignment has become an effective way to accelerate diffusion transformer training and improve generation quality.",
-          "upvote_label": "10 upvotes"
-        },
-        {
-          "report_date": "2026-07-03",
-          "paper_id": "2606.27821",
-          "title": "Parameter-Efficient Quantum-Inspired Fast Weight Programmers for Traffic-Matrix Forecasting",
-          "authors": [
-            "Kuo-Chung Peng",
-            "Jiun-Cheng Jiang",
-            "Chun-Hua Lin",
-            "Tai-Yue Li",
-            "Nan-Yow Chen",
-            "Samuel Yen-Chi Chen"
-          ],
-          "abstract": "Traffic matrices (TMs) capture network-wide origin-destination demand and are central to traffic engineering, yet accurate whole-matrix forecasting remains challenging when prediction must be performed under the memory, update, and training-budget constraints of online network control. This paper investigates whether compact quantum-inspired recurrent models can provide effective TM forecasts without relying on dedicated graph, transformer, or diffusion modules. We adapt gated quantum-inspired Kolmogorov-Arnold network fast-weight programmers (QKAN-FWPs) to direct multi-step Abilene TM forecasting, where each model predicts the next 20 five-minute frames of a 144-channel origin-destination (OD) matrix from a two-hour history. We benchmark three QKAN placement variants against a matched-size long short-term memory (LSTM) network, a larger LSTM, and a classical gated fast-weight programmer under a shared fixed-budget training protocol. Among the evaluated recurrent models, G-QKANFWP achieves the best pooled root-mean-square error (RMSE), while using only 22.4% of the larger LSTM. It also outperforms both the matched-size LSTM and the classical G-FWP baseline, indicating that the gain is not due to gated fast-weight framework alone. Convergence and channel-wise analyses further show that the quantum-inspired variants obtain lower validation-loss area under the learning curve (AULC) than matched-size recurrent baselines, while G-QKANFWP and GQKAN-FWP achieve substantially more OD-channel wins. These results identify a classical slow programmer with a quantum-inspired fast programmer as a promising accuracy-efficiency design for resource-conscious network traffic-matrix forecasting.",
-          "hf_url": "https://huggingface.co/papers/2606.27821",
-          "arxiv_url": "https://arxiv.org/abs/2606.27821",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2606.27821",
-          "papers_cool_url": "https://papers.cool/arxiv/2606.27821",
-          "github_url": "",
-          "submitted_by": "Jiun-Cheng Jiang",
-          "submitted_at": "2026-07-03T00:00:00.000Z",
-          "upvotes": 1,
-          "comments": 1,
-          "topic_key": "other_ai",
-          "topic_label": "Other AI",
-          "matched_terms": [],
-          "classification_source": "rule",
-          "classification_confidence": null,
-          "one_sentence_summary": "Traffic matrices (TMs) capture network-wide origin-destination demand and are central to traffic engineering, yet accurate whole-matrix forecasting remains challenging when prediction must be performed under the…",
-          "upvote_label": "1 upvote"
         }
       ]
     },
     {
       "topic_label": "Retrieval, Knowledge, and RAG",
-      "count": 3,
-      "share": 11.54,
-      "summary": "Retrieval, Knowledge, and RAG contributes 3 papers (11.54%), led by “WorldDirector: Building Controllable World Simulators with Persistent Dynamic Memory” with 16 upvotes.",
+      "count": 4,
+      "share": 14.81,
+      "summary": "Retrieval, Knowledge, and RAG contributes 4 papers (14.81%), led by “WorldDirector: Building Controllable World Simulators with Persistent Dynamic Memory” with 20 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-03",
@@ -1162,8 +1066,8 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-07-03T00:00:00.000Z",
-          "upvotes": 16,
-          "comments": 1,
+          "upvotes": 20,
+          "comments": 2,
           "topic_key": "retrieval_knowledge",
           "topic_label": "Retrieval, Knowledge, and RAG",
           "matched_terms": [
@@ -1172,7 +1076,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "We present WorldDirector, a highly controllable video world model framework designed for persistent dynamic object memory and unrestricted viewpoint exploration.",
-          "upvote_label": "16 upvotes"
+          "upvote_label": "20 upvotes"
         },
         {
           "report_date": "2026-07-03",
@@ -1191,8 +1095,8 @@
           "github_url": "",
           "submitted_by": "Pasquale Minervini",
           "submitted_at": "2026-07-03T00:00:00.000Z",
-          "upvotes": 11,
-          "comments": 1,
+          "upvotes": 14,
+          "comments": 2,
           "topic_key": "retrieval_knowledge",
           "topic_label": "Retrieval, Knowledge, and RAG",
           "matched_terms": [
@@ -1201,7 +1105,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "In long-context use, large language models frequently synthesize answers from the meaning of a relevant context span rather than literally copy-pasting them.",
-          "upvote_label": "11 upvotes"
+          "upvote_label": "14 upvotes"
         },
         {
           "report_date": "2026-07-03",
@@ -1222,8 +1126,8 @@
           "github_url": "",
           "submitted_by": "Shengguang Wu",
           "submitted_at": "2026-07-03T00:00:00.000Z",
-          "upvotes": 5,
-          "comments": 1,
+          "upvotes": 12,
+          "comments": 3,
           "topic_key": "retrieval_knowledge",
           "topic_label": "Retrieval, Knowledge, and RAG",
           "matched_terms": [
@@ -1232,15 +1136,144 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Memory expertise is a learned skill: knowing what to encode, when to retrieve, and how to organize knowledge--a capacity known in cognitive science as metamemory.",
-          "upvote_label": "5 upvotes"
+          "upvote_label": "12 upvotes"
+        },
+        {
+          "report_date": "2026-07-03",
+          "paper_id": "2607.01283",
+          "title": "Scaling Laws for Grid-Based Approximate Nearest Neighbor Search in High Dimensions",
+          "authors": [
+            "Matthew J Liu",
+            "Wei Hang Zheng",
+            "Vidhan Purohit",
+            "Siqi Xie",
+            "Chieh-En Li",
+            "Jerry Li",
+            "Noah Flynn"
+          ],
+          "abstract": "Grid-based approaches to approximate nearest neighbor (ANN) search have been absent from modern scaling analyses. We present a systematic characterization of a multiprobe grid algorithm with respect to dataset size N and dimensionality d. Our experiments reveal a previously unreported d-scaling crossover on the GloVe embedding family, in which multiprobe grid search maintains an approximately constant dimensional scaling exponent while other graph-, tree-, and partitioning-based methods exhibit degrading throughput. The advantage comes with near-linear query scaling in N, but also with lower indexing cost than competing ANN methods. Our results suggest that grid-based methods such as multiprobe grid may be competitive in rebuild-heavy or high-dimensional settings where indexing cost and dimensional robustness dictate performance. More broadly, recent work has formalized self-attention as an ANN operation. Thus, the N- and d-scaling properties of ANN algorithms may guide cost analysis of efficient transformer architectures. Code is available at: https://github.com/weiz345/MultiProbeANN.",
+          "hf_url": "https://huggingface.co/papers/2607.01283",
+          "arxiv_url": "https://arxiv.org/abs/2607.01283",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2607.01283",
+          "papers_cool_url": "https://papers.cool/arxiv/2607.01283",
+          "github_url": "",
+          "submitted_by": "Noah Flynn",
+          "submitted_at": "2026-07-03T00:00:00.000Z",
+          "upvotes": 1,
+          "comments": 2,
+          "topic_key": "retrieval_knowledge",
+          "topic_label": "Retrieval, Knowledge, and RAG",
+          "matched_terms": [
+            "\\bsearch\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "Grid-based approaches to approximate nearest neighbor (ANN) search have been absent from modern scaling analyses.",
+          "upvote_label": "1 upvote"
+        }
+      ]
+    },
+    {
+      "topic_label": "Other AI",
+      "count": 3,
+      "share": 11.11,
+      "summary": "Other AI contributes 3 papers (11.11%), led by “Program-as-Weights: A Programming Paradigm for Fuzzy Functions” with 68 upvotes.",
+      "papers": [
+        {
+          "report_date": "2026-07-03",
+          "paper_id": "2607.02512",
+          "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
+          "authors": [
+            "Wentao Zhang",
+            "Liliana Hotsko",
+            "Woojeong Kim",
+            "Pengyu Nie",
+            "Stuart Shieber",
+            "Yuntian Deng"
+          ],
+          "abstract": "Many everyday programming tasks resist clean rule-based implementation, such as alerting on important log lines, repairing malformed JSON, or ranking search results by intent, and are increasingly outsourced to large language model APIs at the cost of locality, reproducibility, and price. We propose fuzzy-function programming: compiling such a function from a natural-language specification into a compact, locally-executable neural artifact. We instantiate this paradigm with Program-as-Weights (PAW), in which a 4B compiler trained on FuzzyBench, a 10M-example dataset we release, emits parameter-efficient adapters for a frozen, lightweight interpreter. A 0.6B Qwen3 interpreter executing PAW programs matches the performance of direct prompting of Qwen3-32B, while using roughly one fiftieth of the inference memory and running at 30 tokens/s on a MacBook M3. PAW reframes the foundation model from a per-input problem solver into a tool builder: invoked once per function definition, it produces a small reusable artifact whose subsequent calls per function application are cheap and offline.",
+          "hf_url": "https://huggingface.co/papers/2607.02512",
+          "arxiv_url": "https://arxiv.org/abs/2607.02512",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2607.02512",
+          "papers_cool_url": "https://papers.cool/arxiv/2607.02512",
+          "github_url": "",
+          "submitted_by": "Yuntian Deng",
+          "submitted_at": "2026-07-03T00:00:00.000Z",
+          "upvotes": 68,
+          "comments": 3,
+          "topic_key": "other_ai",
+          "topic_label": "Other AI",
+          "matched_terms": [],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "Many everyday programming tasks resist clean rule-based implementation, such as alerting on important log lines, repairing malformed JSON, or ranking search results by intent, and are increasingly outsourced to large…",
+          "upvote_label": "68 upvotes"
+        },
+        {
+          "report_date": "2026-07-03",
+          "paper_id": "2607.02508",
+          "title": "From SRA to Self-Flow: Data Augmentation or Self-Supervision?",
+          "authors": [
+            "Dengyang Jiang",
+            "Mengmeng Wang",
+            "Harry Yang",
+            "Jingdong Wang"
+          ],
+          "abstract": "Representation alignment has become an effective way to accelerate diffusion transformer training and improve generation quality. Recent self-alignment methods, such as SRA and Self-Flow, further remove the dependency on external pretrained encoders by constructing alignment within the diffusion model itself. However, the mechanism behind the improvement from SRA to Self-Flow, dual-time scheduling, remains under-examined: Self-Flow attributes its gain to interactions between tokens at different noise levels, where cleaner tokens help infer noisier ones. In this work, we revisit this explanation and ask whether the gain instead comes from data augmentation along the noise dimension. To disentangle these factors, we introduce Attention Separation, which preserves the same dual-timestep input as Self-Flow while blocking attention between tokens assigned to different noise levels. Surprisingly, removing such interaction does not degrade performance and can even improve it, suggesting that the improvement from SRA to Self-Flow mainly comes from data augmentation. Furthermore,We show that Attention Separation itself provides an augmentation effect by splitting a single image into multiple effective training parts to expand the training data. Based on these observations, we combine self-representation alignment with dual-timestep and attention-separation augmentation, and demonstrate the effectiveness of this design on ImageNet.",
+          "hf_url": "https://huggingface.co/papers/2607.02508",
+          "arxiv_url": "https://arxiv.org/abs/2607.02508",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2607.02508",
+          "papers_cool_url": "https://papers.cool/arxiv/2607.02508",
+          "github_url": "",
+          "submitted_by": "Dengyang Jiang",
+          "submitted_at": "2026-07-03T00:00:00.000Z",
+          "upvotes": 10,
+          "comments": 2,
+          "topic_key": "other_ai",
+          "topic_label": "Other AI",
+          "matched_terms": [],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "Representation alignment has become an effective way to accelerate diffusion transformer training and improve generation quality.",
+          "upvote_label": "10 upvotes"
+        },
+        {
+          "report_date": "2026-07-03",
+          "paper_id": "2606.27821",
+          "title": "Parameter-Efficient Quantum-Inspired Fast Weight Programmers for Traffic-Matrix Forecasting",
+          "authors": [
+            "Kuo-Chung Peng",
+            "Jiun-Cheng Jiang",
+            "Chun-Hua Lin",
+            "Tai-Yue Li",
+            "Nan-Yow Chen",
+            "Samuel Yen-Chi Chen"
+          ],
+          "abstract": "Traffic matrices (TMs) capture network-wide origin-destination demand and are central to traffic engineering, yet accurate whole-matrix forecasting remains challenging when prediction must be performed under the memory, update, and training-budget constraints of online network control. This paper investigates whether compact quantum-inspired recurrent models can provide effective TM forecasts without relying on dedicated graph, transformer, or diffusion modules. We adapt gated quantum-inspired Kolmogorov-Arnold network fast-weight programmers (QKAN-FWPs) to direct multi-step Abilene TM forecasting, where each model predicts the next 20 five-minute frames of a 144-channel origin-destination (OD) matrix from a two-hour history. We benchmark three QKAN placement variants against a matched-size long short-term memory (LSTM) network, a larger LSTM, and a classical gated fast-weight programmer under a shared fixed-budget training protocol. Among the evaluated recurrent models, G-QKANFWP achieves the best pooled root-mean-square error (RMSE), while using only 22.4% of the larger LSTM. It also outperforms both the matched-size LSTM and the classical G-FWP baseline, indicating that the gain is not due to gated fast-weight framework alone. Convergence and channel-wise analyses further show that the quantum-inspired variants obtain lower validation-loss area under the learning curve (AULC) than matched-size recurrent baselines, while G-QKANFWP and GQKAN-FWP achieve substantially more OD-channel wins. These results identify a classical slow programmer with a quantum-inspired fast programmer as a promising accuracy-efficiency design for resource-conscious network traffic-matrix forecasting.",
+          "hf_url": "https://huggingface.co/papers/2606.27821",
+          "arxiv_url": "https://arxiv.org/abs/2606.27821",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2606.27821",
+          "papers_cool_url": "https://papers.cool/arxiv/2606.27821",
+          "github_url": "",
+          "submitted_by": "Jiun-Cheng Jiang",
+          "submitted_at": "2026-07-03T00:00:00.000Z",
+          "upvotes": 2,
+          "comments": 2,
+          "topic_key": "other_ai",
+          "topic_label": "Other AI",
+          "matched_terms": [],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "Traffic matrices (TMs) capture network-wide origin-destination demand and are central to traffic engineering, yet accurate whole-matrix forecasting remains challenging when prediction must be performed under the…",
+          "upvote_label": "2 upvotes"
         }
       ]
     },
     {
       "topic_label": "Datasets and Benchmarks",
       "count": 2,
-      "share": 7.69,
-      "summary": "Datasets and Benchmarks contributes 2 papers (7.69%), led by “AgenticDataBench: A Comprehensive Benchmark for Data Agents” with 21 upvotes.",
+      "share": 7.41,
+      "summary": "Datasets and Benchmarks contributes 2 papers (7.41%), led by “AgenticDataBench: A Comprehensive Benchmark for Data Agents” with 25 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-03",
@@ -1269,8 +1302,8 @@
           "github_url": "",
           "submitted_by": "Zhaoyan Sun",
           "submitted_at": "2026-07-03T00:00:00.000Z",
-          "upvotes": 21,
-          "comments": 1,
+          "upvotes": 25,
+          "comments": 2,
           "topic_key": "datasets_benchmarks",
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [
@@ -1279,7 +1312,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Data science aims to derive actionable insights from heterogeneous raw data, unlocking the value of the massive amounts of data generated in modern society.",
-          "upvote_label": "21 upvotes"
+          "upvote_label": "25 upvotes"
         },
         {
           "report_date": "2026-07-03",
@@ -1302,8 +1335,8 @@
           "github_url": "",
           "submitted_by": "Xin Jin",
           "submitted_at": "2026-07-03T00:00:00.000Z",
-          "upvotes": 9,
-          "comments": 1,
+          "upvotes": 13,
+          "comments": 2,
           "topic_key": "datasets_benchmarks",
           "topic_label": "Datasets and Benchmarks",
           "matched_terms": [
@@ -1312,15 +1345,15 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Vein recognition is a secure biometric technology often constrained by limited annotated data and imaging variations.",
-          "upvote_label": "9 upvotes"
+          "upvote_label": "13 upvotes"
         }
       ]
     },
     {
       "topic_label": "LLMs and Language",
       "count": 2,
-      "share": 7.69,
-      "summary": "LLMs and Language contributes 2 papers (7.69%), led by “AgenticSTS: A Bounded-Memory Testbed for Long-Horizon LLM Agents” with 39 upvotes.",
+      "share": 7.41,
+      "summary": "LLMs and Language contributes 2 papers (7.41%), led by “AgenticSTS: A Bounded-Memory Testbed for Long-Horizon LLM Agents” with 43 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-03",
@@ -1346,8 +1379,8 @@
           "github_url": "",
           "submitted_by": "kaipeng",
           "submitted_at": "2026-07-03T00:00:00.000Z",
-          "upvotes": 39,
-          "comments": 2,
+          "upvotes": 43,
+          "comments": 3,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
           "matched_terms": [
@@ -1356,7 +1389,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Memory for a long-horizon LLM agent is a contract about what each future decision is allowed to see.",
-          "upvote_label": "39 upvotes"
+          "upvote_label": "43 upvotes"
         },
         {
           "report_date": "2026-07-03",
@@ -1377,7 +1410,7 @@
           "submitted_by": "Max Van Puyvelde",
           "submitted_at": "2026-07-03T00:00:00.000Z",
           "upvotes": 4,
-          "comments": 1,
+          "comments": 2,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
           "matched_terms": [
@@ -1394,8 +1427,8 @@
     {
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "count": 1,
-      "share": 3.85,
-      "summary": "Reasoning, Alignment, and Evaluation contributes 1 papers (3.85%), led by “Transferability for General Reasoning: An Automated Curriculum for Multi-Domain RLVR” with 3 upvotes.",
+      "share": 3.7,
+      "summary": "Reasoning, Alignment, and Evaluation contributes 1 papers (3.70%), led by “Transferability for General Reasoning: An Automated Curriculum for Multi-Domain RLVR” with 3 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-03",
@@ -1418,7 +1451,7 @@
           "submitted_by": "Yang Yongjin",
           "submitted_at": "2026-07-03T00:00:00.000Z",
           "upvotes": 3,
-          "comments": 1,
+          "comments": 2,
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [
@@ -1453,15 +1486,51 @@
       "github_url": "",
       "submitted_by": "Yuntian Deng",
       "submitted_at": "2026-07-03T00:00:00.000Z",
-      "upvotes": 48,
-      "comments": 2,
+      "upvotes": 68,
+      "comments": 3,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
       "matched_terms": [],
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Many everyday programming tasks resist clean rule-based implementation, such as alerting on important log lines, repairing malformed JSON, or ranking search results by intent, and are increasingly outsourced to large…",
-      "upvote_label": "48 upvotes"
+      "upvote_label": "68 upvotes"
+    },
+    {
+      "report_date": "2026-07-03",
+      "paper_id": "2607.02255",
+      "title": "AgenticSTS: A Bounded-Memory Testbed for Long-Horizon LLM Agents",
+      "authors": [
+        "Xiangchen Cheng",
+        "Yunwei Jiang",
+        "Jianwen Sun",
+        "Zizhen Li",
+        "Chuanhao Li",
+        "Xiangcheng Cao",
+        "Yihao Liu",
+        "Fanrui Zhang",
+        "Li Jin",
+        "Kaipeng Zhang"
+      ],
+      "abstract": "Memory for a long-horizon LLM agent is a contract about what each future decision is allowed to see. The simplest contract appends past observations, tool calls, and reflections to every prompt, which makes prior context easy to access but also turns it into a jumbled mixture in which the effect of any single memory component is hard to isolate. We introduce and instrument an alternative bounded contract: every decision is made from a fresh user message assembled by typed retrieval, with no raw cross-decision transcript appended. The prompt thus stays bounded across runs of any length, and any single layer can be ablated in isolation. We instantiate the contract in Slay the Spire 2, a closed-rule stochastic deck-building game whose runs require hundreds of tactical and strategic decisions. A public online benchmark of frontier LLMs on the same game reports zero wins at the lowest difficulty across five configurations, and the developer-reported human win rate at the same difficulty is 16%; the task is hard but not saturated. Within our harness, a fixed-A0 ablation shows the largest observed difference when triggered strategic skills are enabled: the no-store baseline wins 3/10 games and adding the skill layer 6/10. At this sample size the comparison is directional rather than statistically decisive (Fisher exact p\\approx0.37); a cross-backbone probe and public accumulating-context baselines are reported as operational comparisons rather than controlled tests of the contract variable itself. We release a reproducible testbed: 298 completed trajectories with condition tags, frozen memory/skill snapshots, prompt records, and analysis scripts -- an agent design and a validated, reusable methodology for studying how explicit memory layers shape long-horizon LLM-agent decisions.",
+      "hf_url": "https://huggingface.co/papers/2607.02255",
+      "arxiv_url": "https://arxiv.org/abs/2607.02255",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.02255",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.02255",
+      "github_url": "",
+      "submitted_by": "kaipeng",
+      "submitted_at": "2026-07-03T00:00:00.000Z",
+      "upvotes": 43,
+      "comments": 3,
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [
+        "\\b\\w*llms?\\w*\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Memory for a long-horizon LLM agent is a contract about what each future decision is allowed to see.",
+      "upvote_label": "43 upvotes"
     },
     {
       "report_date": "2026-07-03",
@@ -1493,8 +1562,8 @@
       "github_url": "",
       "submitted_by": "MikaStars39",
       "submitted_at": "2026-07-03T00:00:00.000Z",
-      "upvotes": 39,
-      "comments": 1,
+      "upvotes": 41,
+      "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
       "matched_terms": [
@@ -1503,43 +1572,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Autonomous agents are increasingly expected to improve executable policies through feedback, yet existing evaluations often collapse this process into a final score or confound it with open-ended software-engineering…",
-      "upvote_label": "39 upvotes"
-    },
-    {
-      "report_date": "2026-07-03",
-      "paper_id": "2607.02255",
-      "title": "AgenticSTS: A Bounded-Memory Testbed for Long-Horizon LLM Agents",
-      "authors": [
-        "Xiangchen Cheng",
-        "Yunwei Jiang",
-        "Jianwen Sun",
-        "Zizhen Li",
-        "Chuanhao Li",
-        "Xiangcheng Cao",
-        "Yihao Liu",
-        "Fanrui Zhang",
-        "Li Jin",
-        "Kaipeng Zhang"
-      ],
-      "abstract": "Memory for a long-horizon LLM agent is a contract about what each future decision is allowed to see. The simplest contract appends past observations, tool calls, and reflections to every prompt, which makes prior context easy to access but also turns it into a jumbled mixture in which the effect of any single memory component is hard to isolate. We introduce and instrument an alternative bounded contract: every decision is made from a fresh user message assembled by typed retrieval, with no raw cross-decision transcript appended. The prompt thus stays bounded across runs of any length, and any single layer can be ablated in isolation. We instantiate the contract in Slay the Spire 2, a closed-rule stochastic deck-building game whose runs require hundreds of tactical and strategic decisions. A public online benchmark of frontier LLMs on the same game reports zero wins at the lowest difficulty across five configurations, and the developer-reported human win rate at the same difficulty is 16%; the task is hard but not saturated. Within our harness, a fixed-A0 ablation shows the largest observed difference when triggered strategic skills are enabled: the no-store baseline wins 3/10 games and adding the skill layer 6/10. At this sample size the comparison is directional rather than statistically decisive (Fisher exact p\\approx0.37); a cross-backbone probe and public accumulating-context baselines are reported as operational comparisons rather than controlled tests of the contract variable itself. We release a reproducible testbed: 298 completed trajectories with condition tags, frozen memory/skill snapshots, prompt records, and analysis scripts -- an agent design and a validated, reusable methodology for studying how explicit memory layers shape long-horizon LLM-agent decisions.",
-      "hf_url": "https://huggingface.co/papers/2607.02255",
-      "arxiv_url": "https://arxiv.org/abs/2607.02255",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.02255",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.02255",
-      "github_url": "",
-      "submitted_by": "kaipeng",
-      "submitted_at": "2026-07-03T00:00:00.000Z",
-      "upvotes": 39,
-      "comments": 2,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
-      "matched_terms": [
-        "\\b\\w*llms?\\w*\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Memory for a long-horizon LLM agent is a contract about what each future decision is allowed to see.",
-      "upvote_label": "39 upvotes"
+      "upvote_label": "41 upvotes"
     },
     {
       "report_date": "2026-07-03",
@@ -1563,8 +1596,8 @@
       "github_url": "",
       "submitted_by": "Disen Lan",
       "submitted_at": "2026-07-03T00:00:00.000Z",
-      "upvotes": 30,
-      "comments": 3,
+      "upvotes": 36,
+      "comments": 5,
       "topic_key": "learning_theory",
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [
@@ -1573,7 +1606,40 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Hybrid attention models improve long-context efficiency by retaining only a subset of full-attention layers and replacing the remaining layers with linear attention.",
-      "upvote_label": "30 upvotes"
+      "upvote_label": "36 upvotes"
+    },
+    {
+      "report_date": "2026-07-03",
+      "paper_id": "2607.01642",
+      "title": "Multi-Resolution Flow Matching: Training-Free Diffusion Acceleration via Staged Sampling",
+      "authors": [
+        "Xingyu Zheng",
+        "Xianglong Liu",
+        "Yifu Ding",
+        "Weilun Feng",
+        "Junqing Lin",
+        "Jinyang Guo",
+        "Haotong Qin"
+      ],
+      "abstract": "Hardware-agnostic strategies for accelerating text-to-image diffusion, such as timestep distillation and feature caching, can reduce inference time without custom kernels or system-level optimization. Among them, multi-resolution generation strategies have recently received broad attention, attaining more than 5x speedup without any training. However, the design of performing upsampling in the latent space, together with the selective modification of partial regions, causes these methods to exhibit noticeable blurring or artifacts. To this end, we propose MrFlow, a training-free multi-resolution acceleration strategy for pretrained flow-matching models built upon a staged low-to-high-resolution pipeline. MrFlow first rapidly generates the main structure at low resolution, then performs super-resolution in the pixel space using a lightweight pretrained GAN-based model, subsequently injects low-strength noise to enable high-frequency resampling, and finally refines the details at high resolution. Quantitative and qualitative results on FLUX.1-dev and Qwen-Image show that MrFlow exploits the quadratic token reduction and reduced step requirement of low-resolution sampling to achieve 10x end-to-end acceleration while keeping OneIG within a 1% gap relative to that before acceleration, significantly surpassing other training-free acceleration strategies, and requiring no training or runtime dynamic identification whatsoever. MrFlow can further be directly combined orthogonally with pre-trained timestep distillation strategies, achieving even higher generation acceleration of up to 25x.",
+      "hf_url": "https://huggingface.co/papers/2607.01642",
+      "arxiv_url": "https://arxiv.org/abs/2607.01642",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.01642",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.01642",
+      "github_url": "",
+      "submitted_by": "Xingyu Zheng",
+      "submitted_at": "2026-07-03T00:00:00.000Z",
+      "upvotes": 26,
+      "comments": 2,
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
+      "matched_terms": [
+        "\\bdiffusion\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Hardware-agnostic strategies for accelerating text-to-image diffusion, such as timestep distillation and feature caching, can reduce inference time without custom kernels or system-level optimization.",
+      "upvote_label": "26 upvotes"
     },
     {
       "report_date": "2026-07-03",
@@ -1602,8 +1668,8 @@
       "github_url": "",
       "submitted_by": "Zhaoyan Sun",
       "submitted_at": "2026-07-03T00:00:00.000Z",
-      "upvotes": 21,
-      "comments": 1,
+      "upvotes": 25,
+      "comments": 2,
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [
@@ -1612,40 +1678,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Data science aims to derive actionable insights from heterogeneous raw data, unlocking the value of the massive amounts of data generated in modern society.",
-      "upvote_label": "21 upvotes"
-    },
-    {
-      "report_date": "2026-07-03",
-      "paper_id": "2607.01642",
-      "title": "Multi-Resolution Flow Matching: Training-Free Diffusion Acceleration via Staged Sampling",
-      "authors": [
-        "Xingyu Zheng",
-        "Xianglong Liu",
-        "Yifu Ding",
-        "Weilun Feng",
-        "Junqing Lin",
-        "Jinyang Guo",
-        "Haotong Qin"
-      ],
-      "abstract": "Hardware-agnostic strategies for accelerating text-to-image diffusion, such as timestep distillation and feature caching, can reduce inference time without custom kernels or system-level optimization. Among them, multi-resolution generation strategies have recently received broad attention, attaining more than 5x speedup without any training. However, the design of performing upsampling in the latent space, together with the selective modification of partial regions, causes these methods to exhibit noticeable blurring or artifacts. To this end, we propose MrFlow, a training-free multi-resolution acceleration strategy for pretrained flow-matching models built upon a staged low-to-high-resolution pipeline. MrFlow first rapidly generates the main structure at low resolution, then performs super-resolution in the pixel space using a lightweight pretrained GAN-based model, subsequently injects low-strength noise to enable high-frequency resampling, and finally refines the details at high resolution. Quantitative and qualitative results on FLUX.1-dev and Qwen-Image show that MrFlow exploits the quadratic token reduction and reduced step requirement of low-resolution sampling to achieve 10x end-to-end acceleration while keeping OneIG within a 1% gap relative to that before acceleration, significantly surpassing other training-free acceleration strategies, and requiring no training or runtime dynamic identification whatsoever. MrFlow can further be directly combined orthogonally with pre-trained timestep distillation strategies, achieving even higher generation acceleration of up to 25x.",
-      "hf_url": "https://huggingface.co/papers/2607.01642",
-      "arxiv_url": "https://arxiv.org/abs/2607.01642",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.01642",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.01642",
-      "github_url": "",
-      "submitted_by": "Xingyu Zheng",
-      "submitted_at": "2026-07-03T00:00:00.000Z",
-      "upvotes": 20,
-      "comments": 1,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [
-        "\\bdiffusion\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Hardware-agnostic strategies for accelerating text-to-image diffusion, such as timestep distillation and feature caching, can reduce inference time without custom kernels or system-level optimization.",
-      "upvote_label": "20 upvotes"
+      "upvote_label": "25 upvotes"
     },
     {
       "report_date": "2026-07-03",
@@ -1674,8 +1707,8 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-07-03T00:00:00.000Z",
-      "upvotes": 16,
-      "comments": 1,
+      "upvotes": 20,
+      "comments": 2,
       "topic_key": "retrieval_knowledge",
       "topic_label": "Retrieval, Knowledge, and RAG",
       "matched_terms": [
@@ -1684,7 +1717,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "We present WorldDirector, a highly controllable video world model framework designed for persistent dynamic object memory and unrestricted viewpoint exploration.",
-      "upvote_label": "16 upvotes"
+      "upvote_label": "20 upvotes"
     },
     {
       "report_date": "2026-07-03",
@@ -1708,8 +1741,8 @@
       "github_url": "",
       "submitted_by": "Minbyul Jeong",
       "submitted_at": "2026-07-03T00:00:00.000Z",
-      "upvotes": 13,
-      "comments": 1,
+      "upvotes": 17,
+      "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [
@@ -1718,7 +1751,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Recent multimodal large language models have shown great promise in clinical image reasoning, but existing post-training pipelines remain predominantly outcome-centric, relying on final answer correctness or…",
-      "upvote_label": "13 upvotes"
+      "upvote_label": "17 upvotes"
     },
     {
       "report_date": "2026-07-03",
@@ -1741,8 +1774,8 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-07-03T00:00:00.000Z",
-      "upvotes": 12,
-      "comments": 0,
+      "upvotes": 14,
+      "comments": 1,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
       "matched_terms": [
@@ -1751,40 +1784,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Skills are becoming a reusable operational layer for LLM agents, encoding SOPs, domain rules, tool workflows, scripts, and validation routines.",
-      "upvote_label": "12 upvotes"
-    },
-    {
-      "report_date": "2026-07-03",
-      "paper_id": "2607.02291",
-      "title": "Optimizing Visual Generative Models via Distribution-wise Rewards",
-      "authors": [
-        "Ruihang Li",
-        "Mengde Xu",
-        "Shuyang Gu",
-        "Leigang Qu",
-        "Fuli Feng",
-        "Han Hu",
-        "Wenjie Wang"
-      ],
-      "abstract": "Conventional reinforcement learning strategies for visual generation typically employ sample-wise reward functions, yet this practice frequently results in reward hacking that degrades image diversity and introduces visual anomalies. To address these limitations, we present a novel framework that finetunes generative models using distribution-wise rewards, ensuring better alignment with real-world data distributions. Unlike rewards that evaluate samples individually, distribution-wise reward accounts for the data distribution of the samples, mitigating the mode collapse problem that occurs when all samples optimize towards the same direction independently. To overcome the prohibitive computational cost of estimating these rewards, we introduce a subset-replace strategy that efficiently provides reward signals by updating only a small subset of a generated reference set. Additionally, we apply RL to optimize post-hoc model merging coefficients, potentially mitigating the train-inference inconsistency caused by introducing stochastic differential equation (SDE) in regular RL practices. Extensive experiments show our approach significantly improves FID-50K across various base models, from 8.30 to 5.77 for SiT and from 3.74 to 3.52 for EDM2. Qualitative evaluation also confirms that our method enhances perceptual quality while preserving sample diversity.",
-      "hf_url": "https://huggingface.co/papers/2607.02291",
-      "arxiv_url": "https://arxiv.org/abs/2607.02291",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.02291",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.02291",
-      "github_url": "",
-      "submitted_by": "Ruihang Li",
-      "submitted_at": "2026-07-03T00:00:00.000Z",
-      "upvotes": 12,
-      "comments": 2,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [
-        "\\bvisual\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Conventional reinforcement learning strategies for visual generation typically employ sample-wise reward functions, yet this practice frequently results in reward hacking that degrades image diversity and introduces…",
-      "upvote_label": "12 upvotes"
+      "upvote_label": "14 upvotes"
     },
     {
       "report_date": "2026-07-03",
@@ -1803,8 +1803,8 @@
       "github_url": "",
       "submitted_by": "Pasquale Minervini",
       "submitted_at": "2026-07-03T00:00:00.000Z",
-      "upvotes": 11,
-      "comments": 1,
+      "upvotes": 14,
+      "comments": 2,
       "topic_key": "retrieval_knowledge",
       "topic_label": "Retrieval, Knowledge, and RAG",
       "matched_terms": [
@@ -1813,35 +1813,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "In long-context use, large language models frequently synthesize answers from the meaning of a relevant context span rather than literally copy-pasting them.",
-      "upvote_label": "11 upvotes"
-    },
-    {
-      "report_date": "2026-07-03",
-      "paper_id": "2607.02508",
-      "title": "From SRA to Self-Flow: Data Augmentation or Self-Supervision?",
-      "authors": [
-        "Dengyang Jiang",
-        "Mengmeng Wang",
-        "Harry Yang",
-        "Jingdong Wang"
-      ],
-      "abstract": "Representation alignment has become an effective way to accelerate diffusion transformer training and improve generation quality. Recent self-alignment methods, such as SRA and Self-Flow, further remove the dependency on external pretrained encoders by constructing alignment within the diffusion model itself. However, the mechanism behind the improvement from SRA to Self-Flow, dual-time scheduling, remains under-examined: Self-Flow attributes its gain to interactions between tokens at different noise levels, where cleaner tokens help infer noisier ones. In this work, we revisit this explanation and ask whether the gain instead comes from data augmentation along the noise dimension. To disentangle these factors, we introduce Attention Separation, which preserves the same dual-timestep input as Self-Flow while blocking attention between tokens assigned to different noise levels. Surprisingly, removing such interaction does not degrade performance and can even improve it, suggesting that the improvement from SRA to Self-Flow mainly comes from data augmentation. Furthermore,We show that Attention Separation itself provides an augmentation effect by splitting a single image into multiple effective training parts to expand the training data. Based on these observations, we combine self-representation alignment with dual-timestep and attention-separation augmentation, and demonstrate the effectiveness of this design on ImageNet.",
-      "hf_url": "https://huggingface.co/papers/2607.02508",
-      "arxiv_url": "https://arxiv.org/abs/2607.02508",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.02508",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.02508",
-      "github_url": "",
-      "submitted_by": "Dengyang Jiang",
-      "submitted_at": "2026-07-03T00:00:00.000Z",
-      "upvotes": 10,
-      "comments": 1,
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
-      "matched_terms": [],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Representation alignment has become an effective way to accelerate diffusion transformer training and improve generation quality.",
-      "upvote_label": "10 upvotes"
+      "upvote_label": "14 upvotes"
     },
     {
       "report_date": "2026-07-03",
@@ -1864,8 +1836,8 @@
       "github_url": "",
       "submitted_by": "Xin Jin",
       "submitted_at": "2026-07-03T00:00:00.000Z",
-      "upvotes": 9,
-      "comments": 1,
+      "upvotes": 13,
+      "comments": 2,
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
       "matched_terms": [
@@ -1874,7 +1846,99 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Vein recognition is a secure biometric technology often constrained by limited annotated data and imaging variations.",
-      "upvote_label": "9 upvotes"
+      "upvote_label": "13 upvotes"
+    },
+    {
+      "report_date": "2026-07-03",
+      "paper_id": "2607.02291",
+      "title": "Optimizing Visual Generative Models via Distribution-wise Rewards",
+      "authors": [
+        "Ruihang Li",
+        "Mengde Xu",
+        "Shuyang Gu",
+        "Leigang Qu",
+        "Fuli Feng",
+        "Han Hu",
+        "Wenjie Wang"
+      ],
+      "abstract": "Conventional reinforcement learning strategies for visual generation typically employ sample-wise reward functions, yet this practice frequently results in reward hacking that degrades image diversity and introduces visual anomalies. To address these limitations, we present a novel framework that finetunes generative models using distribution-wise rewards, ensuring better alignment with real-world data distributions. Unlike rewards that evaluate samples individually, distribution-wise reward accounts for the data distribution of the samples, mitigating the mode collapse problem that occurs when all samples optimize towards the same direction independently. To overcome the prohibitive computational cost of estimating these rewards, we introduce a subset-replace strategy that efficiently provides reward signals by updating only a small subset of a generated reference set. Additionally, we apply RL to optimize post-hoc model merging coefficients, potentially mitigating the train-inference inconsistency caused by introducing stochastic differential equation (SDE) in regular RL practices. Extensive experiments show our approach significantly improves FID-50K across various base models, from 8.30 to 5.77 for SiT and from 3.74 to 3.52 for EDM2. Qualitative evaluation also confirms that our method enhances perceptual quality while preserving sample diversity.",
+      "hf_url": "https://huggingface.co/papers/2607.02291",
+      "arxiv_url": "https://arxiv.org/abs/2607.02291",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.02291",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.02291",
+      "github_url": "",
+      "submitted_by": "Ruihang Li",
+      "submitted_at": "2026-07-03T00:00:00.000Z",
+      "upvotes": 13,
+      "comments": 3,
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
+      "matched_terms": [
+        "\\bvisual\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Conventional reinforcement learning strategies for visual generation typically employ sample-wise reward functions, yet this practice frequently results in reward hacking that degrades image diversity and introduces…",
+      "upvote_label": "13 upvotes"
+    },
+    {
+      "report_date": "2026-07-03",
+      "paper_id": "2607.01224",
+      "title": "AutoMem: Automated Learning of Memory as a Cognitive Skill",
+      "authors": [
+        "Shengguang Wu",
+        "Hao Zhu",
+        "Yuhui Zhang",
+        "Xiaohan Wang",
+        "Serena Yeung-Levy"
+      ],
+      "abstract": "Memory expertise is a learned skill: knowing what to encode, when to retrieve, and how to organize knowledge--a capacity known in cognitive science as metamemory. We bring this perspective to LLMs by treating memory management as a trainable skill. We promote file-system operations to first-class memory actions alongside task actions, letting the model itself decide how to manage its memory. This memory skill improves along two axes: the structure that supports it (prompts, file schemas, action vocabulary), and the proficiency of the model exercising it. Both axes resist manual optimization: episodes in long-horizon tasks run for thousands of steps, and a single memory mistake can hide long before it surfaces, making human review of full trajectories impractical. We introduce AutoMem, a framework that automates both axes. In the first loop, a strong LLM reviews complete agent trajectories and iteratively revises the memory structure that shapes how the agent interacts with its memory files. In the second loop, the agent's own good memory decisions are identified from many episodes and used as training signal to sharpen the model's memory proficiency directly. Across three procedurally generated long-horizon games (Crafter, MiniHack, and NetHack), optimizing memory alone--without modifying the model's task-action behavior--improved the base agent's performance ~2x-4x, bringing a 32B open-weight model competitive with frontier systems such as Claude Opus 4.5 and Gemini 3.1 Pro Thinking. Our results show that memory management is an independently learnable skill, and a high-leverage objective yielding large gains on long-horizon tasks.",
+      "hf_url": "https://huggingface.co/papers/2607.01224",
+      "arxiv_url": "https://arxiv.org/abs/2607.01224",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.01224",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.01224",
+      "github_url": "",
+      "submitted_by": "Shengguang Wu",
+      "submitted_at": "2026-07-03T00:00:00.000Z",
+      "upvotes": 12,
+      "comments": 3,
+      "topic_key": "retrieval_knowledge",
+      "topic_label": "Retrieval, Knowledge, and RAG",
+      "matched_terms": [
+        "\\bmemory\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Memory expertise is a learned skill: knowing what to encode, when to retrieve, and how to organize knowledge--a capacity known in cognitive science as metamemory.",
+      "upvote_label": "12 upvotes"
+    },
+    {
+      "report_date": "2026-07-03",
+      "paper_id": "2607.02508",
+      "title": "From SRA to Self-Flow: Data Augmentation or Self-Supervision?",
+      "authors": [
+        "Dengyang Jiang",
+        "Mengmeng Wang",
+        "Harry Yang",
+        "Jingdong Wang"
+      ],
+      "abstract": "Representation alignment has become an effective way to accelerate diffusion transformer training and improve generation quality. Recent self-alignment methods, such as SRA and Self-Flow, further remove the dependency on external pretrained encoders by constructing alignment within the diffusion model itself. However, the mechanism behind the improvement from SRA to Self-Flow, dual-time scheduling, remains under-examined: Self-Flow attributes its gain to interactions between tokens at different noise levels, where cleaner tokens help infer noisier ones. In this work, we revisit this explanation and ask whether the gain instead comes from data augmentation along the noise dimension. To disentangle these factors, we introduce Attention Separation, which preserves the same dual-timestep input as Self-Flow while blocking attention between tokens assigned to different noise levels. Surprisingly, removing such interaction does not degrade performance and can even improve it, suggesting that the improvement from SRA to Self-Flow mainly comes from data augmentation. Furthermore,We show that Attention Separation itself provides an augmentation effect by splitting a single image into multiple effective training parts to expand the training data. Based on these observations, we combine self-representation alignment with dual-timestep and attention-separation augmentation, and demonstrate the effectiveness of this design on ImageNet.",
+      "hf_url": "https://huggingface.co/papers/2607.02508",
+      "arxiv_url": "https://arxiv.org/abs/2607.02508",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.02508",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.02508",
+      "github_url": "",
+      "submitted_by": "Dengyang Jiang",
+      "submitted_at": "2026-07-03T00:00:00.000Z",
+      "upvotes": 10,
+      "comments": 2,
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
+      "matched_terms": [],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Representation alignment has become an effective way to accelerate diffusion transformer training and improve generation quality.",
+      "upvote_label": "10 upvotes"
     },
     {
       "report_date": "2026-07-03",
@@ -1898,7 +1962,7 @@
       "submitted_by": "liuxiaoyu",
       "submitted_at": "2026-07-03T00:00:00.000Z",
       "upvotes": 8,
-      "comments": 2,
+      "comments": 4,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [
@@ -1907,6 +1971,38 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Controllable image generation methods, such as ControlNet, have demonstrated a remarkable capacity to introduce visual conditions(e.g., depth maps) to guide image generation.",
+      "upvote_label": "8 upvotes"
+    },
+    {
+      "report_date": "2026-07-03",
+      "paper_id": "2606.27669",
+      "title": "When Search Agents Should Ask: DiscoBench for Clarification-Aware Deep Search",
+      "authors": [
+        "Yiling Tao",
+        "Shihan Deng",
+        "Meiling Tao",
+        "Pengzhi Wei",
+        "Zhichao Hu",
+        "Zhihao Zhu"
+      ],
+      "abstract": "Search agents powered by large language models (LLMs) are increasingly used to solve complex information-seeking tasks, requiring multi-step retrieval and reasoning to fulfill user goals. However, existing benchmarks often assume that user queries are complete and explicit, overlooking the fact that real-world search requests are frequently vague, underspecified, or even factually incorrect. In deep search scenarios, such ambiguity can propagate along multi-step reasoning chains and lead agents toward incorrect search trajectories. To address this gap, we introduce DiscoBench, a benchmark for clarification-aware deep search, designed to evaluate whether search agents can proactively identify ambiguity, ask effective clarification questions, and recover correct reasoning paths through user interaction. DiscoBench contains 211 samples and 463 ambiguity instances across 11 real-world domains, covering four ambiguity types. We further design a user simulator for multi-turn interaction and evaluate model performance from four perspectives: task utility, ambiguity detection, interaction strategy, and cost efficiency. Experiments on representative LLMs show that ambiguity detection and effective clarification are distinct capabilities, and that repeatedly searching instead of asking for clarification often performs worse than direct guessing, highlighting a critical gap between retrieval ability and interactive problem-solving in current search agents.",
+      "hf_url": "https://huggingface.co/papers/2606.27669",
+      "arxiv_url": "https://arxiv.org/abs/2606.27669",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.27669",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.27669",
+      "github_url": "",
+      "submitted_by": "ZH",
+      "submitted_at": "2026-07-03T00:00:00.000Z",
+      "upvotes": 8,
+      "comments": 2,
+      "topic_key": "agents_planning",
+      "topic_label": "Agents and Planning",
+      "matched_terms": [
+        "\\bagents?\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Search agents powered by large language models (LLMs) are increasingly used to solve complex information-seeking tasks, requiring multi-step retrieval and reasoning to fulfill user goals.",
       "upvote_label": "8 upvotes"
     },
     {
@@ -1933,7 +2029,7 @@
       "submitted_by": "Ryo Hachiuma",
       "submitted_at": "2026-07-03T00:00:00.000Z",
       "upvotes": 7,
-      "comments": 1,
+      "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [
@@ -1943,38 +2039,6 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Vision-Language Models (VLMs) have demonstrated immense promise in Spatio-Temporal Video Grounding (STVG).",
-      "upvote_label": "7 upvotes"
-    },
-    {
-      "report_date": "2026-07-03",
-      "paper_id": "2606.27669",
-      "title": "When Search Agents Should Ask: DiscoBench for Clarification-Aware Deep Search",
-      "authors": [
-        "Yiling Tao",
-        "Shihan Deng",
-        "Meiling Tao",
-        "Pengzhi Wei",
-        "Zhichao Hu",
-        "Zhihao Zhu"
-      ],
-      "abstract": "Search agents powered by large language models (LLMs) are increasingly used to solve complex information-seeking tasks, requiring multi-step retrieval and reasoning to fulfill user goals. However, existing benchmarks often assume that user queries are complete and explicit, overlooking the fact that real-world search requests are frequently vague, underspecified, or even factually incorrect. In deep search scenarios, such ambiguity can propagate along multi-step reasoning chains and lead agents toward incorrect search trajectories. To address this gap, we introduce DiscoBench, a benchmark for clarification-aware deep search, designed to evaluate whether search agents can proactively identify ambiguity, ask effective clarification questions, and recover correct reasoning paths through user interaction. DiscoBench contains 211 samples and 463 ambiguity instances across 11 real-world domains, covering four ambiguity types. We further design a user simulator for multi-turn interaction and evaluate model performance from four perspectives: task utility, ambiguity detection, interaction strategy, and cost efficiency. Experiments on representative LLMs show that ambiguity detection and effective clarification are distinct capabilities, and that repeatedly searching instead of asking for clarification often performs worse than direct guessing, highlighting a critical gap between retrieval ability and interactive problem-solving in current search agents.",
-      "hf_url": "https://huggingface.co/papers/2606.27669",
-      "arxiv_url": "https://arxiv.org/abs/2606.27669",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.27669",
-      "papers_cool_url": "https://papers.cool/arxiv/2606.27669",
-      "github_url": "",
-      "submitted_by": "ZH",
-      "submitted_at": "2026-07-03T00:00:00.000Z",
-      "upvotes": 7,
-      "comments": 1,
-      "topic_key": "agents_planning",
-      "topic_label": "Agents and Planning",
-      "matched_terms": [
-        "\\bagents?\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Search agents powered by large language models (LLMs) are increasingly used to solve complex information-seeking tasks, requiring multi-step retrieval and reasoning to fulfill user goals.",
       "upvote_label": "7 upvotes"
     },
     {
@@ -2002,8 +2066,8 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-07-03T00:00:00.000Z",
-      "upvotes": 5,
-      "comments": 0,
+      "upvotes": 6,
+      "comments": 1,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
       "matched_terms": [
@@ -2012,69 +2076,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Evaluating LLM agents on benchmarks like SWE-Bench and GAIA can be expensive, time-consuming, and requires complex infrastructure.",
-      "upvote_label": "5 upvotes"
-    },
-    {
-      "report_date": "2026-07-03",
-      "paper_id": "2607.01224",
-      "title": "AutoMem: Automated Learning of Memory as a Cognitive Skill",
-      "authors": [
-        "Shengguang Wu",
-        "Hao Zhu",
-        "Yuhui Zhang",
-        "Xiaohan Wang",
-        "Serena Yeung-Levy"
-      ],
-      "abstract": "Memory expertise is a learned skill: knowing what to encode, when to retrieve, and how to organize knowledge--a capacity known in cognitive science as metamemory. We bring this perspective to LLMs by treating memory management as a trainable skill. We promote file-system operations to first-class memory actions alongside task actions, letting the model itself decide how to manage its memory. This memory skill improves along two axes: the structure that supports it (prompts, file schemas, action vocabulary), and the proficiency of the model exercising it. Both axes resist manual optimization: episodes in long-horizon tasks run for thousands of steps, and a single memory mistake can hide long before it surfaces, making human review of full trajectories impractical. We introduce AutoMem, a framework that automates both axes. In the first loop, a strong LLM reviews complete agent trajectories and iteratively revises the memory structure that shapes how the agent interacts with its memory files. In the second loop, the agent's own good memory decisions are identified from many episodes and used as training signal to sharpen the model's memory proficiency directly. Across three procedurally generated long-horizon games (Crafter, MiniHack, and NetHack), optimizing memory alone--without modifying the model's task-action behavior--improved the base agent's performance ~2x-4x, bringing a 32B open-weight model competitive with frontier systems such as Claude Opus 4.5 and Gemini 3.1 Pro Thinking. Our results show that memory management is an independently learnable skill, and a high-leverage objective yielding large gains on long-horizon tasks.",
-      "hf_url": "https://huggingface.co/papers/2607.01224",
-      "arxiv_url": "https://arxiv.org/abs/2607.01224",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.01224",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.01224",
-      "github_url": "",
-      "submitted_by": "Shengguang Wu",
-      "submitted_at": "2026-07-03T00:00:00.000Z",
-      "upvotes": 5,
-      "comments": 1,
-      "topic_key": "retrieval_knowledge",
-      "topic_label": "Retrieval, Knowledge, and RAG",
-      "matched_terms": [
-        "\\bmemory\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Memory expertise is a learned skill: knowing what to encode, when to retrieve, and how to organize knowledge--a capacity known in cognitive science as metamemory.",
-      "upvote_label": "5 upvotes"
-    },
-    {
-      "report_date": "2026-07-03",
-      "paper_id": "2607.02375",
-      "title": "Representation Distribution Matching for One-Step Visual Generation",
-      "authors": [
-        "Lan Feng",
-        "Wuyang Li",
-        "Eloi Zablocki",
-        "Matthieu Cord",
-        "Alexandre Alahi"
-      ],
-      "abstract": "We elucidate the design space of Representation Distribution Matching (RDM), our name for the paradigm that trains a one-step image generator by matching generated and reference feature distributions under frozen pretrained encoders. We identify two design axes, how the distributions are compared and the representations they are compared in, and controlled studies along them yield three findings. First, the classical MMD, which could not train convincing generators a decade ago, becomes a strong and scalable objective once estimated right. Second, the generated batch is then the operative variable, with an optimum above 2048, far beyond customary batch sizes. Third, any single representation can be gamed, driven below the real score while images stay visibly fake, so we match against a balanced battery of encoders and evaluate with SW_r14, a Sliced-Wasserstein distance over 14 encoders that is independent of the training loss and resists gaming. Combining the preferred choices yields improved RDM (iRDM): it sets the one-step state of the art on ImageNet at SW_r14 1.30, corroborated by PickScore, a human-preference proxy our objective never optimizes, which prefers it over the prior best one-step generator on 71.2% of matched samples. The same recipe post-trains the four-step FLUX.2 [klein] into a one-step generator, surpassing the four-step version on GenEval, 0.826 to 0.794, and on PickScore, 22.76 to 22.58, in 90 H200 GPU-hours. Project page: https://alan-lanfeng.github.io/rdm/.",
-      "hf_url": "https://huggingface.co/papers/2607.02375",
-      "arxiv_url": "https://arxiv.org/abs/2607.02375",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.02375",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.02375",
-      "github_url": "",
-      "submitted_by": "taesiri",
-      "submitted_at": "2026-07-03T00:00:00.000Z",
-      "upvotes": 4,
-      "comments": 0,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [
-        "\\bvisual\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "We elucidate the design space of Representation Distribution Matching (RDM), our name for the paradigm that trains a one-step image generator by matching generated and reference feature distributions under frozen…",
-      "upvote_label": "4 upvotes"
+      "upvote_label": "6 upvotes"
     },
     {
       "report_date": "2026-07-03",
@@ -2096,8 +2098,8 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-07-03T00:00:00.000Z",
-      "upvotes": 4,
-      "comments": 0,
+      "upvotes": 5,
+      "comments": 1,
       "topic_key": "learning_theory",
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [
@@ -2106,6 +2108,67 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Vision-Language-Action (VLA) models are fundamentally bottlenecked by the scarcity of expert demonstrations -- triplets of observations, instructions, and actions that are costly to collect at scale.",
+      "upvote_label": "5 upvotes"
+    },
+    {
+      "report_date": "2026-07-03",
+      "paper_id": "2607.01686",
+      "title": "WARP: Weight-Space Analysis for Recovering Training Data Portfolios",
+      "authors": [
+        "Tzu-Heng Huang",
+        "Aditya Goyal",
+        "John Cooper",
+        "Frederic Sala"
+      ],
+      "abstract": "Foundation models are routinely released to the public, yet the data recipes used to train them -- such as domain mixture weights that determine how different sources are sampled -- are rarely disclosed. This creates an access asymmetry: researchers study the resulting models but lack visibility into the training distribution that produces them. Prior works for inferring training data, such as membership inference, detect at the level of individual samples and thus cannot characterize the global composition of the training corpus. We introduce WARP, a framework that recovers a fine-tuned model's training mixtures directly from its released weights. WARP interpolates between the base and fine-tuned models using model merging, generating pseudo-checkpoints that approximate the missing training trajectory and expose a geometric footprint of the training data in the weight space. From these simulated footprints, WARP extracts geometric features and maps them to domain proportions using either a parameter-free softmax readout or an MLP projector trained on synthetic mixtures. In controlled experiments with BERT and GPT-2, WARP recovers domain mixtures with an average MAE as low as 0.046 and 0.104 respectively, outperforming membership inference and a variant with access to the true training trajectory.",
+      "hf_url": "https://huggingface.co/papers/2607.01686",
+      "arxiv_url": "https://arxiv.org/abs/2607.01686",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.01686",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.01686",
+      "github_url": "",
+      "submitted_by": "Tzu-Heng Huang",
+      "submitted_at": "2026-07-03T00:00:00.000Z",
+      "upvotes": 4,
+      "comments": 2,
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
+      "matched_terms": [
+        "\\btraining\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Foundation models are routinely released to the public, yet the data recipes used to train them -- such as domain mixture weights that determine how different sources are sampled -- are rarely disclosed.",
+      "upvote_label": "4 upvotes"
+    },
+    {
+      "report_date": "2026-07-03",
+      "paper_id": "2607.02375",
+      "title": "Representation Distribution Matching for One-Step Visual Generation",
+      "authors": [
+        "Lan Feng",
+        "Wuyang Li",
+        "Eloi Zablocki",
+        "Matthieu Cord",
+        "Alexandre Alahi"
+      ],
+      "abstract": "We elucidate the design space of Representation Distribution Matching (RDM), our name for the paradigm that trains a one-step image generator by matching generated and reference feature distributions under frozen pretrained encoders. We identify two design axes, how the distributions are compared and the representations they are compared in, and controlled studies along them yield three findings. First, the classical MMD, which could not train convincing generators a decade ago, becomes a strong and scalable objective once estimated right. Second, the generated batch is then the operative variable, with an optimum above 2048, far beyond customary batch sizes. Third, any single representation can be gamed, driven below the real score while images stay visibly fake, so we match against a balanced battery of encoders and evaluate with SW_r14, a Sliced-Wasserstein distance over 14 encoders that is independent of the training loss and resists gaming. Combining the preferred choices yields improved RDM (iRDM): it sets the one-step state of the art on ImageNet at SW_r14 1.30, corroborated by PickScore, a human-preference proxy our objective never optimizes, which prefers it over the prior best one-step generator on 71.2% of matched samples. The same recipe post-trains the four-step FLUX.2 [klein] into a one-step generator, surpassing the four-step version on GenEval, 0.826 to 0.794, and on PickScore, 22.76 to 22.58, in 90 H200 GPU-hours. Project page: https://alan-lanfeng.github.io/rdm/.",
+      "hf_url": "https://huggingface.co/papers/2607.02375",
+      "arxiv_url": "https://arxiv.org/abs/2607.02375",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.02375",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.02375",
+      "github_url": "",
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-07-03T00:00:00.000Z",
+      "upvotes": 4,
+      "comments": 1,
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
+      "matched_terms": [
+        "\\bvisual\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "We elucidate the design space of Representation Distribution Matching (RDM), our name for the paradigm that trains a one-step image generator by matching generated and reference feature distributions under frozen…",
       "upvote_label": "4 upvotes"
     },
     {
@@ -2133,7 +2196,7 @@
       "submitted_by": "Meng Wang",
       "submitted_at": "2026-07-03T00:00:00.000Z",
       "upvotes": 4,
-      "comments": 1,
+      "comments": 2,
       "topic_key": "learning_theory",
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [
@@ -2163,7 +2226,7 @@
       "submitted_by": "Max Van Puyvelde",
       "submitted_at": "2026-07-03T00:00:00.000Z",
       "upvotes": 4,
-      "comments": 1,
+      "comments": 2,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [
@@ -2198,8 +2261,8 @@
       "github_url": "",
       "submitted_by": "Ondrej Bohdal",
       "submitted_at": "2026-07-03T00:00:00.000Z",
-      "upvotes": 3,
-      "comments": 1,
+      "upvotes": 4,
+      "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
       "matched_terms": [
@@ -2208,7 +2271,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Large Language Model (LLM)-based agents can solve complex procedural tasks by interacting with environments over multiple turns, but this ability typically depends on large models, long contexts, and repeated…",
-      "upvote_label": "3 upvotes"
+      "upvote_label": "4 upvotes"
     },
     {
       "report_date": "2026-07-03",
@@ -2231,7 +2294,7 @@
       "submitted_by": "Yang Yongjin",
       "submitted_at": "2026-07-03T00:00:00.000Z",
       "upvotes": 3,
-      "comments": 1,
+      "comments": 2,
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [
@@ -2241,36 +2304,6 @@
       "classification_confidence": null,
       "one_sentence_summary": "Reinforcement learning with verifiable rewards (RLVR) has been extended from single-domain training to multi-domain reasoning suites spanning mathematics, programming, and science.",
       "upvote_label": "3 upvotes"
-    },
-    {
-      "report_date": "2026-07-03",
-      "paper_id": "2607.01686",
-      "title": "WARP: Weight-Space Analysis for Recovering Training Data Portfolios",
-      "authors": [
-        "Tzu-Heng Huang",
-        "Aditya Goyal",
-        "John Cooper",
-        "Frederic Sala"
-      ],
-      "abstract": "Foundation models are routinely released to the public, yet the data recipes used to train them -- such as domain mixture weights that determine how different sources are sampled -- are rarely disclosed. This creates an access asymmetry: researchers study the resulting models but lack visibility into the training distribution that produces them. Prior works for inferring training data, such as membership inference, detect at the level of individual samples and thus cannot characterize the global composition of the training corpus. We introduce WARP, a framework that recovers a fine-tuned model's training mixtures directly from its released weights. WARP interpolates between the base and fine-tuned models using model merging, generating pseudo-checkpoints that approximate the missing training trajectory and expose a geometric footprint of the training data in the weight space. From these simulated footprints, WARP extracts geometric features and maps them to domain proportions using either a parameter-free softmax readout or an MLP projector trained on synthetic mixtures. In controlled experiments with BERT and GPT-2, WARP recovers domain mixtures with an average MAE as low as 0.046 and 0.104 respectively, outperforming membership inference and a variant with access to the true training trajectory.",
-      "hf_url": "https://huggingface.co/papers/2607.01686",
-      "arxiv_url": "https://arxiv.org/abs/2607.01686",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.01686",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.01686",
-      "github_url": "",
-      "submitted_by": "Tzu-Heng Huang",
-      "submitted_at": "2026-07-03T00:00:00.000Z",
-      "upvotes": 2,
-      "comments": 1,
-      "topic_key": "learning_theory",
-      "topic_label": "Learning, Optimization, and Theory",
-      "matched_terms": [
-        "\\btraining\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Foundation models are routinely released to the public, yet the data recipes used to train them -- such as domain mixture weights that determine how different sources are sampled -- are rarely disclosed.",
-      "upvote_label": "2 upvotes"
     },
     {
       "report_date": "2026-07-03",
@@ -2292,14 +2325,47 @@
       "github_url": "",
       "submitted_by": "Jiun-Cheng Jiang",
       "submitted_at": "2026-07-03T00:00:00.000Z",
-      "upvotes": 1,
-      "comments": 1,
+      "upvotes": 2,
+      "comments": 2,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
       "matched_terms": [],
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Traffic matrices (TMs) capture network-wide origin-destination demand and are central to traffic engineering, yet accurate whole-matrix forecasting remains challenging when prediction must be performed under the…",
+      "upvote_label": "2 upvotes"
+    },
+    {
+      "report_date": "2026-07-03",
+      "paper_id": "2607.01283",
+      "title": "Scaling Laws for Grid-Based Approximate Nearest Neighbor Search in High Dimensions",
+      "authors": [
+        "Matthew J Liu",
+        "Wei Hang Zheng",
+        "Vidhan Purohit",
+        "Siqi Xie",
+        "Chieh-En Li",
+        "Jerry Li",
+        "Noah Flynn"
+      ],
+      "abstract": "Grid-based approaches to approximate nearest neighbor (ANN) search have been absent from modern scaling analyses. We present a systematic characterization of a multiprobe grid algorithm with respect to dataset size N and dimensionality d. Our experiments reveal a previously unreported d-scaling crossover on the GloVe embedding family, in which multiprobe grid search maintains an approximately constant dimensional scaling exponent while other graph-, tree-, and partitioning-based methods exhibit degrading throughput. The advantage comes with near-linear query scaling in N, but also with lower indexing cost than competing ANN methods. Our results suggest that grid-based methods such as multiprobe grid may be competitive in rebuild-heavy or high-dimensional settings where indexing cost and dimensional robustness dictate performance. More broadly, recent work has formalized self-attention as an ANN operation. Thus, the N- and d-scaling properties of ANN algorithms may guide cost analysis of efficient transformer architectures. Code is available at: https://github.com/weiz345/MultiProbeANN.",
+      "hf_url": "https://huggingface.co/papers/2607.01283",
+      "arxiv_url": "https://arxiv.org/abs/2607.01283",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.01283",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.01283",
+      "github_url": "",
+      "submitted_by": "Noah Flynn",
+      "submitted_at": "2026-07-03T00:00:00.000Z",
+      "upvotes": 1,
+      "comments": 2,
+      "topic_key": "retrieval_knowledge",
+      "topic_label": "Retrieval, Knowledge, and RAG",
+      "matched_terms": [
+        "\\bsearch\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Grid-based approaches to approximate nearest neighbor (ANN) search have been absent from modern scaling analyses.",
       "upvote_label": "1 upvote"
     }
   ]

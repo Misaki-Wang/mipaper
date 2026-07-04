@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-03T19:00:08Z",
+  "generated_at": "2026-07-04T19:00:08Z",
   "report_kind": "hf_daily",
   "report_date": "2026-07-02",
   "source_url": "https://huggingface.co/papers/date/2026-07-02",
@@ -83,13 +83,13 @@
       "Agents and Planning: 5 papers (15.15%); representative paper: MemSyco-Bench: Benchmarking Sycophancy in Agent Memory.",
       "Multimodal Understanding and Vision: 5 papers (15.15%); representative paper: PerceptionRubrics: Calibrating Multimodal Evaluation to Human Perception."
     ],
-    "trend_summary": "Today's dominant clusters are Other AI / Agents and Planning / Multimodal Understanding and Vision; this suggests several parallel trends: multimodal work is moving from isolated perception toward generation, agents, and action; agent papers emphasize tool use, planning, and deployable workflows. The strongest visible attention is on “PerceptionRubrics: Calibrating Multimodal Evaluation to Human Perception” (36 upvotes).",
+    "trend_summary": "Today's dominant clusters are Other AI / Agents and Planning / Multimodal Understanding and Vision; this suggests several parallel trends: multimodal work is moving from isolated perception toward generation, agents, and action; agent papers emphasize tool use, planning, and deployable workflows. The strongest visible attention is on “PerceptionRubrics: Calibrating Multimodal Evaluation to Human Perception” (38 upvotes).",
     "category_summaries": [
       {
         "topic_label": "Other AI",
         "count": 7,
         "share": 21.21,
-        "summary": "Other AI contributes 7 papers (21.21%), led by “ELDR: Expert-Locality-Aware Decode Routing for PD-Disaggregated MoE Serving” with 23 upvotes."
+        "summary": "Other AI contributes 7 papers (21.21%), led by “ELDR: Expert-Locality-Aware Decode Routing for PD-Disaggregated MoE Serving” with 24 upvotes."
       },
       {
         "topic_label": "Agents and Planning",
@@ -101,7 +101,7 @@
         "topic_label": "Multimodal Understanding and Vision",
         "count": 5,
         "share": 15.15,
-        "summary": "Multimodal Understanding and Vision contributes 5 papers (15.15%), led by “PerceptionRubrics: Calibrating Multimodal Evaluation to Human Perception” with 36 upvotes."
+        "summary": "Multimodal Understanding and Vision contributes 5 papers (15.15%), led by “PerceptionRubrics: Calibrating Multimodal Evaluation to Human Perception” with 38 upvotes."
       },
       {
         "topic_label": "Datasets and Benchmarks",
@@ -113,7 +113,7 @@
         "topic_label": "LLMs and Language",
         "count": 3,
         "share": 9.09,
-        "summary": "LLMs and Language contributes 3 papers (9.09%), led by “AutoTrainess: Teaching Language Models to Improve Language Models Autonomously” with 13 upvotes."
+        "summary": "LLMs and Language contributes 3 papers (9.09%), led by “AutoTrainess: Teaching Language Models to Improve Language Models Autonomously” with 14 upvotes."
       },
       {
         "topic_label": "Learning, Optimization, and Theory",
@@ -125,13 +125,13 @@
         "topic_label": "Reasoning, Alignment, and Evaluation",
         "count": 2,
         "share": 6.06,
-        "summary": "Reasoning, Alignment, and Evaluation contributes 2 papers (6.06%), led by “Perceive-to-Reason: Decoupling Perception and Reasoning for Fine-Grained Visual Reasoning” with 12 upvotes."
+        "summary": "Reasoning, Alignment, and Evaluation contributes 2 papers (6.06%), led by “Perceive-to-Reason: Decoupling Perception and Reasoning for Fine-Grained Visual Reasoning” with 13 upvotes."
       },
       {
         "topic_label": "Robotics and Embodied AI",
         "count": 2,
         "share": 6.06,
-        "summary": "Robotics and Embodied AI contributes 2 papers (6.06%), led by “ASPIRE: Agentic /Skills Discovery for Robotics” with 16 upvotes."
+        "summary": "Robotics and Embodied AI contributes 2 papers (6.06%), led by “ASPIRE: Agentic /Skills Discovery for Robotics” with 18 upvotes."
       },
       {
         "topic_label": "Domain Applications",
@@ -149,8 +149,8 @@
     "top_papers": [
       {
         "title": "PerceptionRubrics: Calibrating Multimodal Evaluation to Human Perception",
-        "upvotes": 36,
-        "upvote_label": "36 upvotes",
+        "upvotes": 38,
+        "upvote_label": "38 upvotes",
         "topic_label": "Multimodal Understanding and Vision",
         "summary": "We introduce PerceptionRubrics, a rubric-based evaluation framework that addresses the gap between saturated benchmark scores and real-world brittleness.",
         "hf_url": "https://huggingface.co/papers/2606.28322",
@@ -171,8 +171,8 @@
       },
       {
         "title": "ELDR: Expert-Locality-Aware Decode Routing for PD-Disaggregated MoE Serving",
-        "upvotes": 23,
-        "upvote_label": "23 upvotes",
+        "upvotes": 24,
+        "upvote_label": "24 upvotes",
         "topic_label": "Other AI",
         "summary": "In prefill-decode (PD) disaggregated LLM serving, each request is assigned to a decode worker after prefill.",
         "hf_url": "https://huggingface.co/papers/2607.00466",
@@ -262,7 +262,7 @@
       "github_url": "",
       "submitted_by": "Yana Wei",
       "submitted_at": "2026-07-02T00:00:00.000Z",
-      "upvotes": 36,
+      "upvotes": 38,
       "comments": 3,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -272,7 +272,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "We introduce PerceptionRubrics, a rubric-based evaluation framework that addresses the gap between saturated benchmark scores and real-world brittleness.",
-      "upvote_label": "36 upvotes"
+      "upvote_label": "38 upvotes"
     },
     {
       "report_date": "2026-07-02",
@@ -328,7 +328,7 @@
       "github_url": "",
       "submitted_by": "Sukmin Cho",
       "submitted_at": "2026-07-02T00:00:00.000Z",
-      "upvotes": 23,
+      "upvotes": 24,
       "comments": 3,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
@@ -336,7 +336,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "In prefill-decode (PD) disaggregated LLM serving, each request is assigned to a decode worker after prefill.",
-      "upvote_label": "23 upvotes"
+      "upvote_label": "24 upvotes"
     },
     {
       "report_date": "2026-07-02",
@@ -451,7 +451,7 @@
       "github_url": "",
       "submitted_by": "Taewook Kang",
       "submitted_at": "2026-07-02T00:00:00.000Z",
-      "upvotes": 19,
+      "upvotes": 20,
       "comments": 2,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
@@ -459,44 +459,47 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Vision-Language-Action (VLA) models often fail to perform the same learned tasks under environmental shifts, such as changes in camera pose and shifts to a different but similar robot (e.g., from Panda to UR5e).",
-      "upvote_label": "19 upvotes"
+      "upvote_label": "20 upvotes"
     },
     {
       "report_date": "2026-07-02",
-      "paper_id": "2607.01104",
-      "title": "CausalMix: Data Mixture as Causal Inference for Language Model Training",
+      "paper_id": "2607.00272",
+      "title": "ASPIRE: Agentic /Skills Discovery for Robotics",
       "authors": [
-        "Zinan Tang",
-        "Yukun Zhang",
-        "Shaomian Zheng",
-        "Zhuoshi Pan",
-        "Qizhi Pei",
-        "Dingnan Jin",
-        "Jun Zhou",
-        "Yujun Wang",
-        "Biqing Huang"
+        "Runyu Lu",
+        "Yubo Wu",
+        "Ethan Kou",
+        "Letian Fu",
+        "Wenli Xiao",
+        "Ajay Mandlekar",
+        "Yinzhen Xu",
+        "Guanya Shi",
+        "Ken Goldberg",
+        "Ang Chen",
+        "Mosharaf Chowdhury",
+        "Yuke Zhu",
+        "Linxi \"Jim\" Fan",
+        "Guanzhi Wang"
       ],
-      "abstract": "In Large Language Model (LLM) training, data mixing plays a pivotal role in determining model performance. Recent methods optimize mixture weights via proxy models, but they rely on the assumption of static data distributions. As a result, when the underlying data pool shifts, these methods require costly retraining from scratch. This limitation restricts their ability to scale seamlessly from small settings to larger data pools and model sizes. In this paper, we propose CausalMix to address this limitation by casting data mixture optimization as a causal inference problem. We formulate the statistical features of the data pool as covariates and the domain mixture as the treatment. After fitting a causal model on 512 runs of Qwen2.5-0.5B to estimate the Conditional Average Treatment Effect (CATE), we extrapolate the optimal mixture for an 800K data pool and apply it to train a 7B model. Furthermore, we successfully generalize the framework to long chain-of-thought data on Qwen3-4B-Base. By leveraging causal modeling to isolate confounding biases, CausalMix dynamically infers state-dependent optimal data mixtures. Extensive experiments show that the mixture guided by CausalMix consistently improves performance across multiple downstream tasks, outperforming RegMix and other baselines. In addition, we use the CATE Interpreter to provide visual analysis of the learned mixing strategy. Overall, CausalMix offers a causal and interpretable framework for optimizing LLM data mixtures.",
-      "hf_url": "https://huggingface.co/papers/2607.01104",
-      "arxiv_url": "https://arxiv.org/abs/2607.01104",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.01104",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.01104",
+      "abstract": "Traditional robot programming is challenging: it requires orchestrating multimodal perception, managing physical contact dynamics, and handling diverse configurations and execution failures. We introduce ASPIRE (Agentic Skill Programming through Iterative Robot Exploration), a continual learning system that autonomously writes and refines robot control programs in a code-as-policy paradigm while compounding experience into a reusable skill library. ASPIRE discovers skills that persist across tasks, simulation and real-world settings, and embodiments. It operates in an open-ended loop with three components: (1) a closed-loop robot execution engine that exposes fine-grained multimodal traces, enabling autonomous failure diagnosis, repair synthesis, and validation; (2) a continually expanding skill library that distills validated fixes into reusable, transferable knowledge; and (3) evolutionary search that generates diverse task sequences and control programs to explore beyond single-trajectory refinement. ASPIRE surpasses prior methods by up to 77% on LIBERO-Pro manipulation under perturbation, 72% on Robosuite bimanual handover, and 32% on BEHAVIOR-1K long-horizon household tasks. Its accumulated library also enables zero-shot generalization to unseen long-horizon tasks: on LIBERO-Pro Long, ASPIRE achieves 31% success versus 4% for prior methods despite their use of test-time reasoning and retries. Finally, simulation-discovered skills provide initial evidence of sim-to-real transfer, substantially reducing real-robot programming effort across different embodiments and robot APIs.",
+      "hf_url": "https://huggingface.co/papers/2607.00272",
+      "arxiv_url": "https://arxiv.org/abs/2607.00272",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.00272",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.00272",
       "github_url": "",
-      "submitted_by": "Zinan Tang",
+      "submitted_by": "taesiri",
       "submitted_at": "2026-07-02T00:00:00.000Z",
-      "upvotes": 17,
-      "comments": 2,
-      "topic_key": "learning_theory",
-      "topic_label": "Learning, Optimization, and Theory",
+      "upvotes": 18,
+      "comments": 1,
+      "topic_key": "robotics_embodied",
+      "topic_label": "Robotics and Embodied AI",
       "matched_terms": [
-        "\\btraining\\b",
-        "\\bcausal\\b",
-        "\\bmixture\\b"
+        "\\brobot(ic|ics)?\\b"
       ],
       "classification_source": "rule",
       "classification_confidence": null,
-      "one_sentence_summary": "In Large Language Model (LLM) training, data mixing plays a pivotal role in determining model performance.",
-      "upvote_label": "17 upvotes"
+      "one_sentence_summary": "Traditional robot programming is challenging: it requires orchestrating multimodal perception, managing physical contact dynamics, and handling diverse configurations and execution failures.",
+      "upvote_label": "18 upvotes"
     }
   ],
   "topics": [
@@ -504,7 +507,7 @@
       "topic_label": "Other AI",
       "count": 7,
       "share": 21.21,
-      "summary": "Other AI contributes 7 papers (21.21%), led by “ELDR: Expert-Locality-Aware Decode Routing for PD-Disaggregated MoE Serving” with 23 upvotes.",
+      "summary": "Other AI contributes 7 papers (21.21%), led by “ELDR: Expert-Locality-Aware Decode Routing for PD-Disaggregated MoE Serving” with 24 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-02",
@@ -526,7 +529,7 @@
           "github_url": "",
           "submitted_by": "Sukmin Cho",
           "submitted_at": "2026-07-02T00:00:00.000Z",
-          "upvotes": 23,
+          "upvotes": 24,
           "comments": 3,
           "topic_key": "other_ai",
           "topic_label": "Other AI",
@@ -534,7 +537,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "In prefill-decode (PD) disaggregated LLM serving, each request is assigned to a decode worker after prefill.",
-          "upvote_label": "23 upvotes"
+          "upvote_label": "24 upvotes"
         },
         {
           "report_date": "2026-07-02",
@@ -579,7 +582,7 @@
           "github_url": "",
           "submitted_by": "Taewook Kang",
           "submitted_at": "2026-07-02T00:00:00.000Z",
-          "upvotes": 19,
+          "upvotes": 20,
           "comments": 2,
           "topic_key": "other_ai",
           "topic_label": "Other AI",
@@ -587,7 +590,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Vision-Language-Action (VLA) models often fail to perform the same learned tasks under environmental shifts, such as changes in camera pose and shifts to a different but similar robot (e.g., from Panda to UR5e).",
-          "upvote_label": "19 upvotes"
+          "upvote_label": "20 upvotes"
         },
         {
           "report_date": "2026-07-02",
@@ -879,7 +882,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "count": 5,
       "share": 15.15,
-      "summary": "Multimodal Understanding and Vision contributes 5 papers (15.15%), led by “PerceptionRubrics: Calibrating Multimodal Evaluation to Human Perception” with 36 upvotes.",
+      "summary": "Multimodal Understanding and Vision contributes 5 papers (15.15%), led by “PerceptionRubrics: Calibrating Multimodal Evaluation to Human Perception” with 38 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-02",
@@ -912,7 +915,7 @@
           "github_url": "",
           "submitted_by": "Yana Wei",
           "submitted_at": "2026-07-02T00:00:00.000Z",
-          "upvotes": 36,
+          "upvotes": 38,
           "comments": 3,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
@@ -922,7 +925,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "We introduce PerceptionRubrics, a rubric-based evaluation framework that addresses the gap between saturated benchmark scores and real-world brittleness.",
-          "upvote_label": "36 upvotes"
+          "upvote_label": "38 upvotes"
         },
         {
           "report_date": "2026-07-02",
@@ -974,7 +977,7 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-07-02T00:00:00.000Z",
-          "upvotes": 9,
+          "upvotes": 10,
           "comments": 1,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
@@ -984,7 +987,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "World models can enable Model Predictive Control (MPC), but this requires dynamics prediction that is both fast enough for online use and expressive enough to represent uncertain futures.",
-          "upvote_label": "9 upvotes"
+          "upvote_label": "10 upvotes"
         },
         {
           "report_date": "2026-07-02",
@@ -1201,7 +1204,7 @@
       "topic_label": "LLMs and Language",
       "count": 3,
       "share": 9.09,
-      "summary": "LLMs and Language contributes 3 papers (9.09%), led by “AutoTrainess: Teaching Language Models to Improve Language Models Autonomously” with 13 upvotes.",
+      "summary": "LLMs and Language contributes 3 papers (9.09%), led by “AutoTrainess: Teaching Language Models to Improve Language Models Autonomously” with 14 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-02",
@@ -1223,7 +1226,7 @@
           "github_url": "",
           "submitted_by": "Zhaojian Yu",
           "submitted_at": "2026-07-02T00:00:00.000Z",
-          "upvotes": 13,
+          "upvotes": 14,
           "comments": 3,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
@@ -1234,7 +1237,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Training language models (LMs) remains a highly human-intensive process, even as frontier language model agents become increasingly capable at software engineering and other long-horizon tasks.",
-          "upvote_label": "13 upvotes"
+          "upvote_label": "14 upvotes"
         },
         {
           "report_date": "2026-07-02",
@@ -1258,7 +1261,7 @@
           "github_url": "",
           "submitted_by": "Yuqing Yang",
           "submitted_at": "2026-07-02T00:00:00.000Z",
-          "upvotes": 6,
+          "upvotes": 7,
           "comments": 2,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
@@ -1268,7 +1271,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "While large language models (LLMs) perform well on table tasks, they still make data referencing errors (DREs), i.e., incorrectly citing or omitting table values, despite understanding the table structure.",
-          "upvote_label": "6 upvotes"
+          "upvote_label": "7 upvotes"
         },
         {
           "report_date": "2026-07-02",
@@ -1349,6 +1352,36 @@
         },
         {
           "report_date": "2026-07-02",
+          "paper_id": "2607.00924",
+          "title": "Graph-Native Reinforcement Learning Enables Traceable Scientific Hypothesis Generation through Conceptual Recombination",
+          "authors": [
+            "Subhadeep Pal",
+            "Shashwat Sourav",
+            "Tirthankar Ghosal",
+            "Markus J. Buehler"
+          ],
+          "abstract": "Accelerating materials discovery requires AI systems that can generate scientifically valid hypotheses through multi-step, domain-grounded reasoning. Standard large language models often produce fluent but weakly traceable responses to open-ended materials design problems, making it difficult to determine whether final answers are supported by coherent intermediate reasoning. We develop Graph-PRefLexOR, a family of graph-native reasoning models fine-tuned with Group Relative Policy Optimization (GRPO) to organize reasoning into explicit phases for mechanism exploration, graph construction, pattern extraction, and hypothesis synthesis. This design links neural language generation with symbolic relational structure, enabling causal connections to be constructed, inspected, and reused. On 100 open-ended questions from materials science and mechanics literature, Graph-PRefLexOR achieves 40-65% improvements over corresponding base models, with the largest gains in reasoning traceability. Embedding analyses show broader semantic exploration and approximately 2-3 times greater semantic diversity than baselines. Semantic backtracking and layer-wise hidden-state analyses further show stronger alignment between structured reasoning and final answers. Finally, test-time graph expansion reveals that additional compute primarily increases long-range conceptual recombination within a bounded semantic space, rather than simply expanding semantic coverage. These results establish graph-native reinforcement learning as a pathway toward interpretable AI systems for scientific hypothesis generation in materials design and other scientific applications.",
+          "hf_url": "https://huggingface.co/papers/2607.00924",
+          "arxiv_url": "https://arxiv.org/abs/2607.00924",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2607.00924",
+          "papers_cool_url": "https://papers.cool/arxiv/2607.00924",
+          "github_url": "",
+          "submitted_by": "Markus Buehler",
+          "submitted_at": "2026-07-02T00:00:00.000Z",
+          "upvotes": 9,
+          "comments": 2,
+          "topic_key": "learning_theory",
+          "topic_label": "Learning, Optimization, and Theory",
+          "matched_terms": [
+            "\\blearning\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "Accelerating materials discovery requires AI systems that can generate scientifically valid hypotheses through multi-step, domain-grounded reasoning.",
+          "upvote_label": "9 upvotes"
+        },
+        {
+          "report_date": "2026-07-02",
           "paper_id": "2607.00553",
           "title": "Cross-Domain Generalization Failure in Lightweight Intrusion Detection Models for IIoT Networks",
           "authors": [
@@ -1375,36 +1408,6 @@
           "classification_confidence": null,
           "one_sentence_summary": "Lightweight machine learning models are increasingly proposed for intrusion detection in Industrial Internet of Things (IIoT) networks due to their suitability for resource-constrained edge deployment.",
           "upvote_label": "7 upvotes"
-        },
-        {
-          "report_date": "2026-07-02",
-          "paper_id": "2607.00924",
-          "title": "Graph-Native Reinforcement Learning Enables Traceable Scientific Hypothesis Generation through Conceptual Recombination",
-          "authors": [
-            "Subhadeep Pal",
-            "Shashwat Sourav",
-            "Tirthankar Ghosal",
-            "Markus J. Buehler"
-          ],
-          "abstract": "Accelerating materials discovery requires AI systems that can generate scientifically valid hypotheses through multi-step, domain-grounded reasoning. Standard large language models often produce fluent but weakly traceable responses to open-ended materials design problems, making it difficult to determine whether final answers are supported by coherent intermediate reasoning. We develop Graph-PRefLexOR, a family of graph-native reasoning models fine-tuned with Group Relative Policy Optimization (GRPO) to organize reasoning into explicit phases for mechanism exploration, graph construction, pattern extraction, and hypothesis synthesis. This design links neural language generation with symbolic relational structure, enabling causal connections to be constructed, inspected, and reused. On 100 open-ended questions from materials science and mechanics literature, Graph-PRefLexOR achieves 40-65% improvements over corresponding base models, with the largest gains in reasoning traceability. Embedding analyses show broader semantic exploration and approximately 2-3 times greater semantic diversity than baselines. Semantic backtracking and layer-wise hidden-state analyses further show stronger alignment between structured reasoning and final answers. Finally, test-time graph expansion reveals that additional compute primarily increases long-range conceptual recombination within a bounded semantic space, rather than simply expanding semantic coverage. These results establish graph-native reinforcement learning as a pathway toward interpretable AI systems for scientific hypothesis generation in materials design and other scientific applications.",
-          "hf_url": "https://huggingface.co/papers/2607.00924",
-          "arxiv_url": "https://arxiv.org/abs/2607.00924",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2607.00924",
-          "papers_cool_url": "https://papers.cool/arxiv/2607.00924",
-          "github_url": "",
-          "submitted_by": "Markus Buehler",
-          "submitted_at": "2026-07-02T00:00:00.000Z",
-          "upvotes": 7,
-          "comments": 2,
-          "topic_key": "learning_theory",
-          "topic_label": "Learning, Optimization, and Theory",
-          "matched_terms": [
-            "\\blearning\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null,
-          "one_sentence_summary": "Accelerating materials discovery requires AI systems that can generate scientifically valid hypotheses through multi-step, domain-grounded reasoning.",
-          "upvote_label": "7 upvotes"
         }
       ]
     },
@@ -1412,7 +1415,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "count": 2,
       "share": 6.06,
-      "summary": "Reasoning, Alignment, and Evaluation contributes 2 papers (6.06%), led by “Perceive-to-Reason: Decoupling Perception and Reasoning for Fine-Grained Visual Reasoning” with 12 upvotes.",
+      "summary": "Reasoning, Alignment, and Evaluation contributes 2 papers (6.06%), led by “Perceive-to-Reason: Decoupling Perception and Reasoning for Fine-Grained Visual Reasoning” with 13 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-02",
@@ -1442,7 +1445,7 @@
           "github_url": "",
           "submitted_by": "Hongxing Li",
           "submitted_at": "2026-07-02T00:00:00.000Z",
-          "upvotes": 12,
+          "upvotes": 13,
           "comments": 2,
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
@@ -1452,7 +1455,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Fine-grained visual reasoning remains challenging for vision-language models, especially when small but critical visual cues are buried in high-resolution images.",
-          "upvote_label": "12 upvotes"
+          "upvote_label": "13 upvotes"
         },
         {
           "report_date": "2026-07-02",
@@ -1500,7 +1503,7 @@
       "topic_label": "Robotics and Embodied AI",
       "count": 2,
       "share": 6.06,
-      "summary": "Robotics and Embodied AI contributes 2 papers (6.06%), led by “ASPIRE: Agentic /Skills Discovery for Robotics” with 16 upvotes.",
+      "summary": "Robotics and Embodied AI contributes 2 papers (6.06%), led by “ASPIRE: Agentic /Skills Discovery for Robotics” with 18 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-02",
@@ -1530,7 +1533,7 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-07-02T00:00:00.000Z",
-          "upvotes": 16,
+          "upvotes": 18,
           "comments": 1,
           "topic_key": "robotics_embodied",
           "topic_label": "Robotics and Embodied AI",
@@ -1540,7 +1543,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Traditional robot programming is challenging: it requires orchestrating multimodal perception, managing physical contact dynamics, and handling diverse configurations and execution failures.",
-          "upvote_label": "16 upvotes"
+          "upvote_label": "18 upvotes"
         },
         {
           "report_date": "2026-07-02",
@@ -1714,7 +1717,7 @@
       "github_url": "",
       "submitted_by": "Yana Wei",
       "submitted_at": "2026-07-02T00:00:00.000Z",
-      "upvotes": 36,
+      "upvotes": 38,
       "comments": 3,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -1724,7 +1727,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "We introduce PerceptionRubrics, a rubric-based evaluation framework that addresses the gap between saturated benchmark scores and real-world brittleness.",
-      "upvote_label": "36 upvotes"
+      "upvote_label": "38 upvotes"
     },
     {
       "report_date": "2026-07-02",
@@ -1780,7 +1783,7 @@
       "github_url": "",
       "submitted_by": "Sukmin Cho",
       "submitted_at": "2026-07-02T00:00:00.000Z",
-      "upvotes": 23,
+      "upvotes": 24,
       "comments": 3,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
@@ -1788,7 +1791,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "In prefill-decode (PD) disaggregated LLM serving, each request is assigned to a decode worker after prefill.",
-      "upvote_label": "23 upvotes"
+      "upvote_label": "24 upvotes"
     },
     {
       "report_date": "2026-07-02",
@@ -1903,7 +1906,7 @@
       "github_url": "",
       "submitted_by": "Taewook Kang",
       "submitted_at": "2026-07-02T00:00:00.000Z",
-      "upvotes": 19,
+      "upvotes": 20,
       "comments": 2,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
@@ -1911,7 +1914,47 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Vision-Language-Action (VLA) models often fail to perform the same learned tasks under environmental shifts, such as changes in camera pose and shifts to a different but similar robot (e.g., from Panda to UR5e).",
-      "upvote_label": "19 upvotes"
+      "upvote_label": "20 upvotes"
+    },
+    {
+      "report_date": "2026-07-02",
+      "paper_id": "2607.00272",
+      "title": "ASPIRE: Agentic /Skills Discovery for Robotics",
+      "authors": [
+        "Runyu Lu",
+        "Yubo Wu",
+        "Ethan Kou",
+        "Letian Fu",
+        "Wenli Xiao",
+        "Ajay Mandlekar",
+        "Yinzhen Xu",
+        "Guanya Shi",
+        "Ken Goldberg",
+        "Ang Chen",
+        "Mosharaf Chowdhury",
+        "Yuke Zhu",
+        "Linxi \"Jim\" Fan",
+        "Guanzhi Wang"
+      ],
+      "abstract": "Traditional robot programming is challenging: it requires orchestrating multimodal perception, managing physical contact dynamics, and handling diverse configurations and execution failures. We introduce ASPIRE (Agentic Skill Programming through Iterative Robot Exploration), a continual learning system that autonomously writes and refines robot control programs in a code-as-policy paradigm while compounding experience into a reusable skill library. ASPIRE discovers skills that persist across tasks, simulation and real-world settings, and embodiments. It operates in an open-ended loop with three components: (1) a closed-loop robot execution engine that exposes fine-grained multimodal traces, enabling autonomous failure diagnosis, repair synthesis, and validation; (2) a continually expanding skill library that distills validated fixes into reusable, transferable knowledge; and (3) evolutionary search that generates diverse task sequences and control programs to explore beyond single-trajectory refinement. ASPIRE surpasses prior methods by up to 77% on LIBERO-Pro manipulation under perturbation, 72% on Robosuite bimanual handover, and 32% on BEHAVIOR-1K long-horizon household tasks. Its accumulated library also enables zero-shot generalization to unseen long-horizon tasks: on LIBERO-Pro Long, ASPIRE achieves 31% success versus 4% for prior methods despite their use of test-time reasoning and retries. Finally, simulation-discovered skills provide initial evidence of sim-to-real transfer, substantially reducing real-robot programming effort across different embodiments and robot APIs.",
+      "hf_url": "https://huggingface.co/papers/2607.00272",
+      "arxiv_url": "https://arxiv.org/abs/2607.00272",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.00272",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.00272",
+      "github_url": "",
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-07-02T00:00:00.000Z",
+      "upvotes": 18,
+      "comments": 1,
+      "topic_key": "robotics_embodied",
+      "topic_label": "Robotics and Embodied AI",
+      "matched_terms": [
+        "\\brobot(ic|ics)?\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Traditional robot programming is challenging: it requires orchestrating multimodal perception, managing physical contact dynamics, and handling diverse configurations and execution failures.",
+      "upvote_label": "18 upvotes"
     },
     {
       "report_date": "2026-07-02",
@@ -1952,43 +1995,76 @@
     },
     {
       "report_date": "2026-07-02",
-      "paper_id": "2607.00272",
-      "title": "ASPIRE: Agentic /Skills Discovery for Robotics",
+      "paper_id": "2606.31551",
+      "title": "AutoTrainess: Teaching Language Models to Improve Language Models Autonomously",
       "authors": [
-        "Runyu Lu",
-        "Yubo Wu",
-        "Ethan Kou",
-        "Letian Fu",
-        "Wenli Xiao",
-        "Ajay Mandlekar",
-        "Yinzhen Xu",
-        "Guanya Shi",
-        "Ken Goldberg",
-        "Ang Chen",
-        "Mosharaf Chowdhury",
-        "Yuke Zhu",
-        "Linxi \"Jim\" Fan",
-        "Guanzhi Wang"
+        "Zhaojian Yu",
+        "Penghao Yin",
+        "Shuzheng Gao",
+        "Shilin He",
+        "Kai Cai",
+        "Xiao-Ping Zhang"
       ],
-      "abstract": "Traditional robot programming is challenging: it requires orchestrating multimodal perception, managing physical contact dynamics, and handling diverse configurations and execution failures. We introduce ASPIRE (Agentic Skill Programming through Iterative Robot Exploration), a continual learning system that autonomously writes and refines robot control programs in a code-as-policy paradigm while compounding experience into a reusable skill library. ASPIRE discovers skills that persist across tasks, simulation and real-world settings, and embodiments. It operates in an open-ended loop with three components: (1) a closed-loop robot execution engine that exposes fine-grained multimodal traces, enabling autonomous failure diagnosis, repair synthesis, and validation; (2) a continually expanding skill library that distills validated fixes into reusable, transferable knowledge; and (3) evolutionary search that generates diverse task sequences and control programs to explore beyond single-trajectory refinement. ASPIRE surpasses prior methods by up to 77% on LIBERO-Pro manipulation under perturbation, 72% on Robosuite bimanual handover, and 32% on BEHAVIOR-1K long-horizon household tasks. Its accumulated library also enables zero-shot generalization to unseen long-horizon tasks: on LIBERO-Pro Long, ASPIRE achieves 31% success versus 4% for prior methods despite their use of test-time reasoning and retries. Finally, simulation-discovered skills provide initial evidence of sim-to-real transfer, substantially reducing real-robot programming effort across different embodiments and robot APIs.",
-      "hf_url": "https://huggingface.co/papers/2607.00272",
-      "arxiv_url": "https://arxiv.org/abs/2607.00272",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.00272",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.00272",
+      "abstract": "Training language models (LMs) remains a highly human-intensive process, even as frontier language model agents become increasingly capable at software engineering and other long-horizon tasks. A central challenge is that autonomous post-training is not just a coding problem: it requires the agent to repeatedly plan iterations, construct benchmark-aligned data, run stable training jobs, evaluate checkpoints, and preserve experiment state across many hours of interaction. We present AutoTrainess, a LM agent that exposes these operations as a repository of agent-computer interfaces for planning, data preparation, training, evaluation, and logging. Rather than leaving the agent to operate in a raw CLI environment with an underspecified action space, AutoTrainess externalizes prior human experience as explicit workflows, rules, and execution constraints that guide the agent toward effective and reliable training behavior. On PostTrainBench, AutoTrainess consistently outperforms CLI-only baselines, achieving 26.94 average score with GPT-5.4 (Codex) versus 23.21 for CLI-only. It also generalizes across models and harnesses, improving DeepSeek-V4-Flash (OpenCode) from 12.13 to 19.58.",
+      "hf_url": "https://huggingface.co/papers/2606.31551",
+      "arxiv_url": "https://arxiv.org/abs/2606.31551",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.31551",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.31551",
       "github_url": "",
-      "submitted_by": "taesiri",
+      "submitted_by": "Zhaojian Yu",
       "submitted_at": "2026-07-02T00:00:00.000Z",
-      "upvotes": 16,
-      "comments": 1,
-      "topic_key": "robotics_embodied",
-      "topic_label": "Robotics and Embodied AI",
+      "upvotes": 14,
+      "comments": 3,
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
       "matched_terms": [
-        "\\brobot(ic|ics)?\\b"
+        "\\blanguage models?\\b",
+        "\\blanguage\\b"
       ],
       "classification_source": "rule",
       "classification_confidence": null,
-      "one_sentence_summary": "Traditional robot programming is challenging: it requires orchestrating multimodal perception, managing physical contact dynamics, and handling diverse configurations and execution failures.",
-      "upvote_label": "16 upvotes"
+      "one_sentence_summary": "Training language models (LMs) remains a highly human-intensive process, even as frontier language model agents become increasingly capable at software engineering and other long-horizon tasks.",
+      "upvote_label": "14 upvotes"
+    },
+    {
+      "report_date": "2026-07-02",
+      "paper_id": "2607.01191",
+      "title": "Perceive-to-Reason: Decoupling Perception and Reasoning for Fine-Grained Visual Reasoning",
+      "authors": [
+        "Hongxing Li",
+        "Xiufeng Huang",
+        "Dingming Li",
+        "Wenjing Jiang",
+        "Zixuan Wang",
+        "Haolei Xu",
+        "Hanrong Zhang",
+        "Haiwen Hong",
+        "Longtao Huang",
+        "Hui Xue",
+        "Weiming Lu",
+        "Jun Xiao",
+        "Yueting Zhuang",
+        "Yongliang Shen"
+      ],
+      "abstract": "Fine-grained visual reasoning remains challenging for vision-language models, especially when small but critical visual cues are buried in high-resolution images. Existing approaches rely on repeated cropping or test-time visual search to introduce local evidence, but they typically do not explicitly distinguish perception from reasoning. In this paper, we propose Perceive-to-Reason (P2R), a unified framework that formulates fine-grained visual reasoning as a two-stage process: the model first localizes question-relevant evidence as a Perceiver, and then answers the question as a Reasoner based on the annotated image and cropped regions. To better align training with this decoupled formulation, we further introduce Perception-Reasoning Alternating GRPO (PRA-GRPO), a role-aware reinforcement learning strategy that alternates between perception-focused and reasoning-focused updates using only final-answer supervision. Built on top of Qwen3-VL-Instruct-2B/4B/8B, P2R consistently improves performance across model scales. In particular, P2R-4B achieves 93.2% on V-Star, 81.9% on HR-Bench-4K, and 80.5% on HR-Bench-8K, substantially outperforming its corresponding backbone. Further experiments show that the benefits of P2R extend beyond high-resolution benchmarks to broader multimodal reasoning tasks. These results suggest that explicitly decoupling perception from reasoning provides an effective framework for fine-grained visual reasoning.",
+      "hf_url": "https://huggingface.co/papers/2607.01191",
+      "arxiv_url": "https://arxiv.org/abs/2607.01191",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.01191",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.01191",
+      "github_url": "",
+      "submitted_by": "Hongxing Li",
+      "submitted_at": "2026-07-02T00:00:00.000Z",
+      "upvotes": 13,
+      "comments": 2,
+      "topic_key": "reasoning_alignment_eval",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "matched_terms": [
+        "\\breasoning\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Fine-grained visual reasoning remains challenging for vision-language models, especially when small but critical visual cues are buried in high-resolution images.",
+      "upvote_label": "13 upvotes"
     },
     {
       "report_date": "2026-07-02",
@@ -2039,79 +2115,6 @@
     },
     {
       "report_date": "2026-07-02",
-      "paper_id": "2606.31551",
-      "title": "AutoTrainess: Teaching Language Models to Improve Language Models Autonomously",
-      "authors": [
-        "Zhaojian Yu",
-        "Penghao Yin",
-        "Shuzheng Gao",
-        "Shilin He",
-        "Kai Cai",
-        "Xiao-Ping Zhang"
-      ],
-      "abstract": "Training language models (LMs) remains a highly human-intensive process, even as frontier language model agents become increasingly capable at software engineering and other long-horizon tasks. A central challenge is that autonomous post-training is not just a coding problem: it requires the agent to repeatedly plan iterations, construct benchmark-aligned data, run stable training jobs, evaluate checkpoints, and preserve experiment state across many hours of interaction. We present AutoTrainess, a LM agent that exposes these operations as a repository of agent-computer interfaces for planning, data preparation, training, evaluation, and logging. Rather than leaving the agent to operate in a raw CLI environment with an underspecified action space, AutoTrainess externalizes prior human experience as explicit workflows, rules, and execution constraints that guide the agent toward effective and reliable training behavior. On PostTrainBench, AutoTrainess consistently outperforms CLI-only baselines, achieving 26.94 average score with GPT-5.4 (Codex) versus 23.21 for CLI-only. It also generalizes across models and harnesses, improving DeepSeek-V4-Flash (OpenCode) from 12.13 to 19.58.",
-      "hf_url": "https://huggingface.co/papers/2606.31551",
-      "arxiv_url": "https://arxiv.org/abs/2606.31551",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.31551",
-      "papers_cool_url": "https://papers.cool/arxiv/2606.31551",
-      "github_url": "",
-      "submitted_by": "Zhaojian Yu",
-      "submitted_at": "2026-07-02T00:00:00.000Z",
-      "upvotes": 13,
-      "comments": 3,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
-      "matched_terms": [
-        "\\blanguage models?\\b",
-        "\\blanguage\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Training language models (LMs) remains a highly human-intensive process, even as frontier language model agents become increasingly capable at software engineering and other long-horizon tasks.",
-      "upvote_label": "13 upvotes"
-    },
-    {
-      "report_date": "2026-07-02",
-      "paper_id": "2607.01191",
-      "title": "Perceive-to-Reason: Decoupling Perception and Reasoning for Fine-Grained Visual Reasoning",
-      "authors": [
-        "Hongxing Li",
-        "Xiufeng Huang",
-        "Dingming Li",
-        "Wenjing Jiang",
-        "Zixuan Wang",
-        "Haolei Xu",
-        "Hanrong Zhang",
-        "Haiwen Hong",
-        "Longtao Huang",
-        "Hui Xue",
-        "Weiming Lu",
-        "Jun Xiao",
-        "Yueting Zhuang",
-        "Yongliang Shen"
-      ],
-      "abstract": "Fine-grained visual reasoning remains challenging for vision-language models, especially when small but critical visual cues are buried in high-resolution images. Existing approaches rely on repeated cropping or test-time visual search to introduce local evidence, but they typically do not explicitly distinguish perception from reasoning. In this paper, we propose Perceive-to-Reason (P2R), a unified framework that formulates fine-grained visual reasoning as a two-stage process: the model first localizes question-relevant evidence as a Perceiver, and then answers the question as a Reasoner based on the annotated image and cropped regions. To better align training with this decoupled formulation, we further introduce Perception-Reasoning Alternating GRPO (PRA-GRPO), a role-aware reinforcement learning strategy that alternates between perception-focused and reasoning-focused updates using only final-answer supervision. Built on top of Qwen3-VL-Instruct-2B/4B/8B, P2R consistently improves performance across model scales. In particular, P2R-4B achieves 93.2% on V-Star, 81.9% on HR-Bench-4K, and 80.5% on HR-Bench-8K, substantially outperforming its corresponding backbone. Further experiments show that the benefits of P2R extend beyond high-resolution benchmarks to broader multimodal reasoning tasks. These results suggest that explicitly decoupling perception from reasoning provides an effective framework for fine-grained visual reasoning.",
-      "hf_url": "https://huggingface.co/papers/2607.01191",
-      "arxiv_url": "https://arxiv.org/abs/2607.01191",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.01191",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.01191",
-      "github_url": "",
-      "submitted_by": "Hongxing Li",
-      "submitted_at": "2026-07-02T00:00:00.000Z",
-      "upvotes": 12,
-      "comments": 2,
-      "topic_key": "reasoning_alignment_eval",
-      "topic_label": "Reasoning, Alignment, and Evaluation",
-      "matched_terms": [
-        "\\breasoning\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Fine-grained visual reasoning remains challenging for vision-language models, especially when small but critical visual cues are buried in high-resolution images.",
-      "upvote_label": "12 upvotes"
-    },
-    {
-      "report_date": "2026-07-02",
       "paper_id": "2607.00917",
       "title": "Valdi: Value Diffusion World Models",
       "authors": [
@@ -2126,7 +2129,7 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-07-02T00:00:00.000Z",
-      "upvotes": 9,
+      "upvotes": 10,
       "comments": 1,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -2136,6 +2139,36 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "World models can enable Model Predictive Control (MPC), but this requires dynamics prediction that is both fast enough for online use and expressive enough to represent uncertain futures.",
+      "upvote_label": "10 upvotes"
+    },
+    {
+      "report_date": "2026-07-02",
+      "paper_id": "2607.00924",
+      "title": "Graph-Native Reinforcement Learning Enables Traceable Scientific Hypothesis Generation through Conceptual Recombination",
+      "authors": [
+        "Subhadeep Pal",
+        "Shashwat Sourav",
+        "Tirthankar Ghosal",
+        "Markus J. Buehler"
+      ],
+      "abstract": "Accelerating materials discovery requires AI systems that can generate scientifically valid hypotheses through multi-step, domain-grounded reasoning. Standard large language models often produce fluent but weakly traceable responses to open-ended materials design problems, making it difficult to determine whether final answers are supported by coherent intermediate reasoning. We develop Graph-PRefLexOR, a family of graph-native reasoning models fine-tuned with Group Relative Policy Optimization (GRPO) to organize reasoning into explicit phases for mechanism exploration, graph construction, pattern extraction, and hypothesis synthesis. This design links neural language generation with symbolic relational structure, enabling causal connections to be constructed, inspected, and reused. On 100 open-ended questions from materials science and mechanics literature, Graph-PRefLexOR achieves 40-65% improvements over corresponding base models, with the largest gains in reasoning traceability. Embedding analyses show broader semantic exploration and approximately 2-3 times greater semantic diversity than baselines. Semantic backtracking and layer-wise hidden-state analyses further show stronger alignment between structured reasoning and final answers. Finally, test-time graph expansion reveals that additional compute primarily increases long-range conceptual recombination within a bounded semantic space, rather than simply expanding semantic coverage. These results establish graph-native reinforcement learning as a pathway toward interpretable AI systems for scientific hypothesis generation in materials design and other scientific applications.",
+      "hf_url": "https://huggingface.co/papers/2607.00924",
+      "arxiv_url": "https://arxiv.org/abs/2607.00924",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.00924",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.00924",
+      "github_url": "",
+      "submitted_by": "Markus Buehler",
+      "submitted_at": "2026-07-02T00:00:00.000Z",
+      "upvotes": 9,
+      "comments": 2,
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
+      "matched_terms": [
+        "\\blearning\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Accelerating materials discovery requires AI systems that can generate scientifically valid hypotheses through multi-step, domain-grounded reasoning.",
       "upvote_label": "9 upvotes"
     },
     {
@@ -2236,36 +2269,6 @@
     },
     {
       "report_date": "2026-07-02",
-      "paper_id": "2607.00924",
-      "title": "Graph-Native Reinforcement Learning Enables Traceable Scientific Hypothesis Generation through Conceptual Recombination",
-      "authors": [
-        "Subhadeep Pal",
-        "Shashwat Sourav",
-        "Tirthankar Ghosal",
-        "Markus J. Buehler"
-      ],
-      "abstract": "Accelerating materials discovery requires AI systems that can generate scientifically valid hypotheses through multi-step, domain-grounded reasoning. Standard large language models often produce fluent but weakly traceable responses to open-ended materials design problems, making it difficult to determine whether final answers are supported by coherent intermediate reasoning. We develop Graph-PRefLexOR, a family of graph-native reasoning models fine-tuned with Group Relative Policy Optimization (GRPO) to organize reasoning into explicit phases for mechanism exploration, graph construction, pattern extraction, and hypothesis synthesis. This design links neural language generation with symbolic relational structure, enabling causal connections to be constructed, inspected, and reused. On 100 open-ended questions from materials science and mechanics literature, Graph-PRefLexOR achieves 40-65% improvements over corresponding base models, with the largest gains in reasoning traceability. Embedding analyses show broader semantic exploration and approximately 2-3 times greater semantic diversity than baselines. Semantic backtracking and layer-wise hidden-state analyses further show stronger alignment between structured reasoning and final answers. Finally, test-time graph expansion reveals that additional compute primarily increases long-range conceptual recombination within a bounded semantic space, rather than simply expanding semantic coverage. These results establish graph-native reinforcement learning as a pathway toward interpretable AI systems for scientific hypothesis generation in materials design and other scientific applications.",
-      "hf_url": "https://huggingface.co/papers/2607.00924",
-      "arxiv_url": "https://arxiv.org/abs/2607.00924",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.00924",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.00924",
-      "github_url": "",
-      "submitted_by": "Markus Buehler",
-      "submitted_at": "2026-07-02T00:00:00.000Z",
-      "upvotes": 7,
-      "comments": 2,
-      "topic_key": "learning_theory",
-      "topic_label": "Learning, Optimization, and Theory",
-      "matched_terms": [
-        "\\blearning\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Accelerating materials discovery requires AI systems that can generate scientifically valid hypotheses through multi-step, domain-grounded reasoning.",
-      "upvote_label": "7 upvotes"
-    },
-    {
-      "report_date": "2026-07-02",
       "paper_id": "2607.00115",
       "title": "PixelEyes: Decoupling Perception and Reasoning for Pinpoint Visual Evidence Seeking",
       "authors": [
@@ -2306,6 +2309,40 @@
     },
     {
       "report_date": "2026-07-02",
+      "paper_id": "2606.32029",
+      "title": "When LLMs Read Tables Carelessly: Measuring and Reducing Data Referencing Errors",
+      "authors": [
+        "Yuqing Yang",
+        "Qi Zhu",
+        "Zhen Han",
+        "Boran Han",
+        "Zhengyuan Shen",
+        "Shuai Wang",
+        "Vassilis N. Ioannidis",
+        "Huzefa Rangwala"
+      ],
+      "abstract": "While large language models (LLMs) perform well on table tasks, they still make data referencing errors (DREs), i.e., incorrectly citing or omitting table values, despite understanding the table structure. Beyond final-answer accuracy, DREs directly compromise the correctness and reliability of intermediate reasoning steps. Yet prior studies have only offered limited, small-scale analyses. In this work, we present the first systematic evaluation of tabular data referencing errors across different models and tasks. Our results show that DREs occur across all tested models (1.7B to 20B parameters). Furthermore, we demonstrate that incorporating data referencing as a critic significantly improves answer accuracy up to 12.0%, through critic-based filtering and rejection sampling. Finally, we trained a lightweight 4B-parameter critic model that achieves an average F1 score of 78.2% in detecting both in-distribution and out-of-distribution DREs, and effectively assists inference for larger models.",
+      "hf_url": "https://huggingface.co/papers/2606.32029",
+      "arxiv_url": "https://arxiv.org/abs/2606.32029",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.32029",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.32029",
+      "github_url": "",
+      "submitted_by": "Yuqing Yang",
+      "submitted_at": "2026-07-02T00:00:00.000Z",
+      "upvotes": 7,
+      "comments": 2,
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [
+        "\\b\\w*llms?\\w*\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "While large language models (LLMs) perform well on table tasks, they still make data referencing errors (DREs), i.e., incorrectly citing or omitting table values, despite understanding the table structure.",
+      "upvote_label": "7 upvotes"
+    },
+    {
+      "report_date": "2026-07-02",
       "paper_id": "2607.01211",
       "title": "Are Performance-Optimization Benchmarks Reliably Measuring Coding Agents?",
       "authors": [
@@ -2333,40 +2370,6 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Repository-level performance-optimization benchmarks such as GSO, SWE-Perf and SWE-fficiency evaluate coding agents by applying patches to real repositories and comparing runtime against unoptimized baselines and…",
-      "upvote_label": "6 upvotes"
-    },
-    {
-      "report_date": "2026-07-02",
-      "paper_id": "2606.32029",
-      "title": "When LLMs Read Tables Carelessly: Measuring and Reducing Data Referencing Errors",
-      "authors": [
-        "Yuqing Yang",
-        "Qi Zhu",
-        "Zhen Han",
-        "Boran Han",
-        "Zhengyuan Shen",
-        "Shuai Wang",
-        "Vassilis N. Ioannidis",
-        "Huzefa Rangwala"
-      ],
-      "abstract": "While large language models (LLMs) perform well on table tasks, they still make data referencing errors (DREs), i.e., incorrectly citing or omitting table values, despite understanding the table structure. Beyond final-answer accuracy, DREs directly compromise the correctness and reliability of intermediate reasoning steps. Yet prior studies have only offered limited, small-scale analyses. In this work, we present the first systematic evaluation of tabular data referencing errors across different models and tasks. Our results show that DREs occur across all tested models (1.7B to 20B parameters). Furthermore, we demonstrate that incorporating data referencing as a critic significantly improves answer accuracy up to 12.0%, through critic-based filtering and rejection sampling. Finally, we trained a lightweight 4B-parameter critic model that achieves an average F1 score of 78.2% in detecting both in-distribution and out-of-distribution DREs, and effectively assists inference for larger models.",
-      "hf_url": "https://huggingface.co/papers/2606.32029",
-      "arxiv_url": "https://arxiv.org/abs/2606.32029",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.32029",
-      "papers_cool_url": "https://papers.cool/arxiv/2606.32029",
-      "github_url": "",
-      "submitted_by": "Yuqing Yang",
-      "submitted_at": "2026-07-02T00:00:00.000Z",
-      "upvotes": 6,
-      "comments": 2,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
-      "matched_terms": [
-        "\\b\\w*llms?\\w*\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "While large language models (LLMs) perform well on table tasks, they still make data referencing errors (DREs), i.e., incorrectly citing or omitting table values, despite understanding the table structure.",
       "upvote_label": "6 upvotes"
     },
     {

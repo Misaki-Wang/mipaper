@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-03T19:00:07Z",
+  "generated_at": "2026-07-04T19:00:07Z",
   "report_kind": "hf_daily",
   "report_date": "2026-07-01",
   "source_url": "https://huggingface.co/papers/date/2026-07-01",
@@ -78,37 +78,37 @@
       "LLMs and Language: 8 papers (21.05%); representative paper: Multi-Block Diffusion Language Models.",
       "Agents and Planning: 7 papers (18.42%); representative paper: Dockerless: Environment-Free Program Verifier for Coding Agents."
     ],
-    "trend_summary": "Today's dominant clusters are Multimodal Understanding and Vision / LLMs and Language / Agents and Planning; this suggests several parallel trends: multimodal work is moving from isolated perception toward generation, agents, and action; agent papers emphasize tool use, planning, and deployable workflows. The strongest visible attention is on “Orca: The World is in Your Mind” (199 upvotes).",
+    "trend_summary": "Today's dominant clusters are Multimodal Understanding and Vision / LLMs and Language / Agents and Planning; this suggests several parallel trends: multimodal work is moving from isolated perception toward generation, agents, and action; agent papers emphasize tool use, planning, and deployable workflows. The strongest visible attention is on “Orca: The World is in Your Mind” (229 upvotes).",
     "category_summaries": [
       {
         "topic_label": "Multimodal Understanding and Vision",
         "count": 9,
         "share": 23.68,
-        "summary": "Multimodal Understanding and Vision contributes 9 papers (23.68%), led by “BlockPilot: Instance-Adaptive Policy Learning for Diffusion-based Speculative Decoding” with 71 upvotes."
+        "summary": "Multimodal Understanding and Vision contributes 9 papers (23.68%), led by “BlockPilot: Instance-Adaptive Policy Learning for Diffusion-based Speculative Decoding” with 73 upvotes."
       },
       {
         "topic_label": "LLMs and Language",
         "count": 8,
         "share": 21.05,
-        "summary": "LLMs and Language contributes 8 papers (21.05%), led by “Multi-Block Diffusion Language Models” with 30 upvotes."
+        "summary": "LLMs and Language contributes 8 papers (21.05%), led by “Multi-Block Diffusion Language Models” with 31 upvotes."
       },
       {
         "topic_label": "Agents and Planning",
         "count": 7,
         "share": 18.42,
-        "summary": "Agents and Planning contributes 7 papers (18.42%), led by “Dockerless: Environment-Free Program Verifier for Coding Agents” with 101 upvotes."
+        "summary": "Agents and Planning contributes 7 papers (18.42%), led by “Dockerless: Environment-Free Program Verifier for Coding Agents” with 103 upvotes."
       },
       {
         "topic_label": "Other AI",
         "count": 5,
         "share": 13.16,
-        "summary": "Other AI contributes 5 papers (13.16%), led by “Orca: The World is in Your Mind” with 199 upvotes."
+        "summary": "Other AI contributes 5 papers (13.16%), led by “Orca: The World is in Your Mind” with 229 upvotes."
       },
       {
         "topic_label": "Learning, Optimization, and Theory",
         "count": 3,
         "share": 7.89,
-        "summary": "Learning, Optimization, and Theory contributes 3 papers (7.89%), led by “Evolution Fine-Tuning: Learning to Discover Across 371 Optimization Tasks” with 30 upvotes."
+        "summary": "Learning, Optimization, and Theory contributes 3 papers (7.89%), led by “Evolution Fine-Tuning: Learning to Discover Across 371 Optimization Tasks” with 31 upvotes."
       },
       {
         "topic_label": "Datasets and Benchmarks",
@@ -126,7 +126,7 @@
         "topic_label": "Multimodal Agents",
         "count": 1,
         "share": 2.63,
-        "summary": "Multimodal Agents contributes 1 papers (2.63%), led by “Does VLA Even Know the Basics? Measuring Commonsense and World Knowledge Retention in Vision-Language-Action Models” with 64 upvotes."
+        "summary": "Multimodal Agents contributes 1 papers (2.63%), led by “Does VLA Even Know the Basics? Measuring Commonsense and World Knowledge Retention in Vision-Language-Action Models” with 68 upvotes."
       },
       {
         "topic_label": "Retrieval, Knowledge, and RAG",
@@ -138,8 +138,8 @@
     "top_papers": [
       {
         "title": "Orca: The World is in Your Mind",
-        "upvotes": 199,
-        "upvote_label": "199 upvotes",
+        "upvotes": 229,
+        "upvote_label": "229 upvotes",
         "topic_label": "Other AI",
         "summary": "We introduce Orca, an initial instantiation of a general world foundation model.",
         "hf_url": "https://huggingface.co/papers/2606.30534",
@@ -149,8 +149,8 @@
       },
       {
         "title": "Dockerless: Environment-Free Program Verifier for Coding Agents",
-        "upvotes": 101,
-        "upvote_label": "101 upvotes",
+        "upvotes": 103,
+        "upvote_label": "103 upvotes",
         "topic_label": "Agents and Planning",
         "summary": "Program verifiers play a central role in training coding agents, including selecting trajectories for supervised fine-tuning (SFT) and providing rewards for reinforcement learning (RL).",
         "hf_url": "https://huggingface.co/papers/2606.28436",
@@ -171,8 +171,8 @@
       },
       {
         "title": "BlockPilot: Instance-Adaptive Policy Learning for Diffusion-based Speculative Decoding",
-        "upvotes": 71,
-        "upvote_label": "71 upvotes",
+        "upvotes": 73,
+        "upvote_label": "73 upvotes",
         "topic_label": "Multimodal Understanding and Vision",
         "summary": "Speculative decoding accelerates inference by using a lightweight draft model to generate candidate tokens in parallel, and are then verified by the target model, enabling lossless acceleration.",
         "hf_url": "https://huggingface.co/papers/2606.31315",
@@ -182,8 +182,8 @@
       },
       {
         "title": "Does VLA Even Know the Basics? Measuring Commonsense and World Knowledge Retention in Vision-Language-Action Models",
-        "upvotes": 64,
-        "upvote_label": "64 upvotes",
+        "upvotes": 68,
+        "upvote_label": "68 upvotes",
         "topic_label": "Multimodal Agents",
         "summary": "Embodied Vision-Language-Action (VLA) models are typically obtained by fine-tuning powerful pretrained VLMs on robotics data, yet it is unclear how much commonsense and factual knowledge they retain after adaptation.",
         "hf_url": "https://huggingface.co/papers/2606.19297",
@@ -291,7 +291,7 @@
       "github_url": "",
       "submitted_by": "yh-wang",
       "submitted_at": "2026-07-01T00:00:00.000Z",
-      "upvotes": 199,
+      "upvotes": 229,
       "comments": 6,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
@@ -299,7 +299,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "We introduce Orca, an initial instantiation of a general world foundation model.",
-      "upvote_label": "199 upvotes"
+      "upvote_label": "229 upvotes"
     },
     {
       "report_date": "2026-07-01",
@@ -328,7 +328,7 @@
       "github_url": "",
       "submitted_by": "Yuling",
       "submitted_at": "2026-07-01T00:00:00.000Z",
-      "upvotes": 101,
+      "upvotes": 103,
       "comments": 3,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -338,7 +338,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Program verifiers play a central role in training coding agents, including selecting trajectories for supervised fine-tuning (SFT) and providing rewards for reinforcement learning (RL).",
-      "upvote_label": "101 upvotes"
+      "upvote_label": "103 upvotes"
     },
     {
       "report_date": "2026-07-01",
@@ -400,7 +400,7 @@
       "github_url": "",
       "submitted_by": "Wang Yong",
       "submitted_at": "2026-07-01T00:00:00.000Z",
-      "upvotes": 71,
+      "upvotes": 73,
       "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -410,7 +410,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Speculative decoding accelerates inference by using a lightweight draft model to generate candidate tokens in parallel, and are then verified by the target model, enabling lossless acceleration.",
-      "upvote_label": "71 upvotes"
+      "upvote_label": "73 upvotes"
     },
     {
       "report_date": "2026-07-01",
@@ -439,7 +439,7 @@
       "github_url": "",
       "submitted_by": "Nikita",
       "submitted_at": "2026-07-01T00:00:00.000Z",
-      "upvotes": 64,
+      "upvotes": 68,
       "comments": 2,
       "topic_key": "multimodal_agents",
       "topic_label": "Multimodal Agents",
@@ -451,7 +451,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Embodied Vision-Language-Action (VLA) models are typically obtained by fine-tuning powerful pretrained VLMs on robotics data, yet it is unclear how much commonsense and factual knowledge they retain after adaptation.",
-      "upvote_label": "64 upvotes"
+      "upvote_label": "68 upvotes"
     },
     {
       "report_date": "2026-07-01",
@@ -473,7 +473,7 @@
       "github_url": "",
       "submitted_by": "Mijin Yoo",
       "submitted_at": "2026-07-01T00:00:00.000Z",
-      "upvotes": 48,
+      "upvotes": 49,
       "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -483,44 +483,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "A 3D scene is understood through its objects, not the primitives that compose them.",
-      "upvote_label": "48 upvotes"
-    },
-    {
-      "report_date": "2026-07-01",
-      "paper_id": "2606.32039",
-      "title": "GEAR: Guided End-to-End AutoRegression for Image Synthesis",
-      "authors": [
-        "Bin Lin",
-        "Zheyuan Liu",
-        "Chenguo Lin",
-        "Sixiang Chen",
-        "Yunyang Ge",
-        "Yunlong Lin",
-        "Jianwei Zhang",
-        "Miles Yang",
-        "Zhao Zhong",
-        "Liefeng Bo",
-        "Li Yuan"
-      ],
-      "abstract": "Visual generative models are typically trained in two stages. A tokenizer is first trained for reconstruction and then frozen, after which a generator is trained on its discrete indices or continuous latents. This decoupling leaves the tokenizer unaware of what the generator finds easy to model. We present GEAR (Guided End-to-end AutoRegression), which trains a vector-quantized (VQ) tokenizer and an autoregressive (AR) generator jointly and end-to-end, guided by representation alignment. The key obstacle is that the VQ index fed to the AR model is non-differentiable, so gradients cannot reach the tokenizer, and a straight-through estimator collapses. GEAR resolves this with a dual read-out of the codebook assignment. A hard, one-hot branch trains the AR with next-token prediction, while a differentiable soft branch carries a representation-alignment loss that flows back to guide only the tokenizer. The AR model thereby steers its tokenizer toward an index distribution it can predict more easily. This shifts the alignment burden from the tokenizer to the AR: the tokenizer's own features become less DINOv2-like while the AR's become more so, the opposite of diffusion-side recipes that make the latent itself semantic. GEAR speeds up ImageNet gFID convergence by up to 10x relative to the strong LlamaGen-REPA baseline, learns markedly better patch-level and spatially-coherent features, and generalizes across quantizers (VQVAE, LFQ, IBQ) and to text-to-image generation.",
-      "hf_url": "https://huggingface.co/papers/2606.32039",
-      "arxiv_url": "https://arxiv.org/abs/2606.32039",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.32039",
-      "papers_cool_url": "https://papers.cool/arxiv/2606.32039",
-      "github_url": "",
-      "submitted_by": "linbin",
-      "submitted_at": "2026-07-01T00:00:00.000Z",
-      "upvotes": 30,
-      "comments": 8,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [
-        "\\bimage\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Visual generative models are typically trained in two stages.",
-      "upvote_label": "30 upvotes"
+      "upvote_label": "49 upvotes"
     },
     {
       "report_date": "2026-07-01",
@@ -547,7 +510,7 @@
       "github_url": "",
       "submitted_by": "Yijie Jin",
       "submitted_at": "2026-07-01T00:00:00.000Z",
-      "upvotes": 30,
+      "upvotes": 31,
       "comments": 2,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
@@ -558,7 +521,43 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Block Diffusion Language Models (BD-LMs) improve diffusion-based text generation with KV caching and flexible-length generation.",
-      "upvote_label": "30 upvotes"
+      "upvote_label": "31 upvotes"
+    },
+    {
+      "report_date": "2026-07-01",
+      "paper_id": "2606.29082",
+      "title": "Evolution Fine-Tuning: Learning to Discover Across 371 Optimization Tasks",
+      "authors": [
+        "Young-Jun Lee",
+        "Seungone Kim",
+        "Minki Kang",
+        "Alistair Cheong Liang Chuen",
+        "Zerui Chen",
+        "Seungho Han",
+        "Taehee Jung",
+        "Dongyeop Kang"
+      ],
+      "abstract": "Would experience designing faster GPU kernels also help close in on a long-standing open mathematical conjecture? Large Language Models (LLMs) integrated into evolutionary search have recently produced state-of-the-art solutions on optimization tasks, including open mathematical conjectures, GPU kernel design, scientific law discovery, and combinatorial puzzles. To achieve this, prior work applied search scaffolds to one target task at a time, so every new problem is approached from scratch and the experience accumulated during search is discarded once the model finishes its attempt. This leaves the capability of iteratively evolving a solution (e.g., knowing which part to mutate and how, deciding when to backtrack) entirely in the scaffold rather than in the model itself. Whether the model itself could acquire this capability and reuse it across different tasks has been largely unexamined. To address this, we introduce Evolution Fine-Tuning (EFT), a mid-training paradigm that teaches LLMs to evolve solutions across tasks by converting evolutionary search trajectories into supervision. We construct Finch Collection, a 156K-trajectory dataset spanning 10 domains and 371 optimization tasks, and fine-tune open-source LLMs from 2B to 9B parameters. Empirically, EFT confers cross-task generalization: across 22 held-out tasks, our models surpass their base counterparts by 10.22% on average. Furthermore, when paired with test-time RL, our model matches state-of-the-art performance on two circle-packing tasks and outperforms its base-model counterpart on the Erdős minimum-overlap problem. EFT thus serves as a \"practice phase\" for general-purpose discovery agents that do not solve new problems from scratch.",
+      "hf_url": "https://huggingface.co/papers/2606.29082",
+      "arxiv_url": "https://arxiv.org/abs/2606.29082",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.29082",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.29082",
+      "github_url": "",
+      "submitted_by": "Young-Jun Lee",
+      "submitted_at": "2026-07-01T00:00:00.000Z",
+      "upvotes": 31,
+      "comments": 2,
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
+      "matched_terms": [
+        "\\blearning\\b",
+        "\\boptimization\\b",
+        "\\bfine-tuning\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Would experience designing faster GPU kernels also help close in on a long-standing open mathematical conjecture?",
+      "upvote_label": "31 upvotes"
     }
   ],
   "topics": [
@@ -566,7 +565,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "count": 9,
       "share": 23.68,
-      "summary": "Multimodal Understanding and Vision contributes 9 papers (23.68%), led by “BlockPilot: Instance-Adaptive Policy Learning for Diffusion-based Speculative Decoding” with 71 upvotes.",
+      "summary": "Multimodal Understanding and Vision contributes 9 papers (23.68%), led by “BlockPilot: Instance-Adaptive Policy Learning for Diffusion-based Speculative Decoding” with 73 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-01",
@@ -588,7 +587,7 @@
           "github_url": "",
           "submitted_by": "Wang Yong",
           "submitted_at": "2026-07-01T00:00:00.000Z",
-          "upvotes": 71,
+          "upvotes": 73,
           "comments": 2,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
@@ -598,7 +597,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Speculative decoding accelerates inference by using a lightweight draft model to generate candidate tokens in parallel, and are then verified by the target model, enabling lossless acceleration.",
-          "upvote_label": "71 upvotes"
+          "upvote_label": "73 upvotes"
         },
         {
           "report_date": "2026-07-01",
@@ -620,7 +619,7 @@
           "github_url": "",
           "submitted_by": "Mijin Yoo",
           "submitted_at": "2026-07-01T00:00:00.000Z",
-          "upvotes": 48,
+          "upvotes": 49,
           "comments": 2,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
@@ -630,7 +629,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "A 3D scene is understood through its objects, not the primitives that compose them.",
-          "upvote_label": "48 upvotes"
+          "upvote_label": "49 upvotes"
         },
         {
           "report_date": "2026-07-01",
@@ -874,7 +873,7 @@
       "topic_label": "LLMs and Language",
       "count": 8,
       "share": 21.05,
-      "summary": "LLMs and Language contributes 8 papers (21.05%), led by “Multi-Block Diffusion Language Models” with 30 upvotes.",
+      "summary": "LLMs and Language contributes 8 papers (21.05%), led by “Multi-Block Diffusion Language Models” with 31 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-01",
@@ -901,7 +900,7 @@
           "github_url": "",
           "submitted_by": "Yijie Jin",
           "submitted_at": "2026-07-01T00:00:00.000Z",
-          "upvotes": 30,
+          "upvotes": 31,
           "comments": 2,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
@@ -912,7 +911,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Block Diffusion Language Models (BD-LMs) improve diffusion-based text generation with KV caching and flexible-length generation.",
-          "upvote_label": "30 upvotes"
+          "upvote_label": "31 upvotes"
         },
         {
           "report_date": "2026-07-01",
@@ -933,7 +932,7 @@
           "github_url": "",
           "submitted_by": "John Chih Liu",
           "submitted_at": "2026-07-01T00:00:00.000Z",
-          "upvotes": 21,
+          "upvotes": 22,
           "comments": 2,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
@@ -943,7 +942,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Metacognition is a critical component of intelligence that describes the ability to monitor and regulate one's own cognitive processes.",
-          "upvote_label": "21 upvotes"
+          "upvote_label": "22 upvotes"
         },
         {
           "report_date": "2026-07-01",
@@ -966,7 +965,7 @@
           "github_url": "",
           "submitted_by": "Davydenko Grigorii",
           "submitted_at": "2026-07-01T00:00:00.000Z",
-          "upvotes": 20,
+          "upvotes": 21,
           "comments": 3,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
@@ -976,40 +975,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Procedural memory is increasingly used to improve LLM agents on recurring workplace tasks, yet its ability to produce reusable skills remains poorly understood.",
-          "upvote_label": "20 upvotes"
-        },
-        {
-          "report_date": "2026-07-01",
-          "paper_id": "2606.30062",
-          "title": "Little Brains, Big Feats: Exploring Compact Language Models",
-          "authors": [
-            "Dari Baturova",
-            "Elena Bruches",
-            "Ivan Chernov",
-            "Roman Derunets",
-            "Arsenii Fomin",
-            "Andrey Kostin"
-          ],
-          "abstract": "While large language models have been dominating the research landscape recently, small language models remain highly relevant across various domains; yet, they receive far less attention. In this study, we investigate how smaller language models perform during the generation stage within a Retrieval-Augmented Generation (RAG) system. To benchmark these models effectively, we utilised both open-source and proprietary datasets covering diverse subject areas and question types. Our findings demonstrate that a RAG system with small language models can be executed directly on-device without requiring any GPU hardware within a reasonable time. The experimental code and links to the supplementary materials can be accessed through the GitHub repository: https://github.com/SibNN/SLM-RAG-EVAL.",
-          "hf_url": "https://huggingface.co/papers/2606.30062",
-          "arxiv_url": "https://arxiv.org/abs/2606.30062",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2606.30062",
-          "papers_cool_url": "https://papers.cool/arxiv/2606.30062",
-          "github_url": "",
-          "submitted_by": "Roman Derunets",
-          "submitted_at": "2026-07-01T00:00:00.000Z",
-          "upvotes": 12,
-          "comments": 2,
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [
-            "\\blanguage models?\\b",
-            "\\blanguage\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null,
-          "one_sentence_summary": "While large language models have been dominating the research landscape recently, small language models remain highly relevant across various domains; yet, they receive far less attention.",
-          "upvote_label": "12 upvotes"
+          "upvote_label": "21 upvotes"
         },
         {
           "report_date": "2026-07-01",
@@ -1038,7 +1004,7 @@
           "github_url": "",
           "submitted_by": "Adina Yakefu",
           "submitted_at": "2026-07-01T00:00:00.000Z",
-          "upvotes": 11,
+          "upvotes": 13,
           "comments": 2,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
@@ -1048,7 +1014,40 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Modern large language models (LLMs) rely on reinforcement learning during post-training to push specific capabilities, yet integrating multiple capabilities into one model remains hard.",
-          "upvote_label": "11 upvotes"
+          "upvote_label": "13 upvotes"
+        },
+        {
+          "report_date": "2026-07-01",
+          "paper_id": "2606.30062",
+          "title": "Little Brains, Big Feats: Exploring Compact Language Models",
+          "authors": [
+            "Dari Baturova",
+            "Elena Bruches",
+            "Ivan Chernov",
+            "Roman Derunets",
+            "Arsenii Fomin",
+            "Andrey Kostin"
+          ],
+          "abstract": "While large language models have been dominating the research landscape recently, small language models remain highly relevant across various domains; yet, they receive far less attention. In this study, we investigate how smaller language models perform during the generation stage within a Retrieval-Augmented Generation (RAG) system. To benchmark these models effectively, we utilised both open-source and proprietary datasets covering diverse subject areas and question types. Our findings demonstrate that a RAG system with small language models can be executed directly on-device without requiring any GPU hardware within a reasonable time. The experimental code and links to the supplementary materials can be accessed through the GitHub repository: https://github.com/SibNN/SLM-RAG-EVAL.",
+          "hf_url": "https://huggingface.co/papers/2606.30062",
+          "arxiv_url": "https://arxiv.org/abs/2606.30062",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2606.30062",
+          "papers_cool_url": "https://papers.cool/arxiv/2606.30062",
+          "github_url": "",
+          "submitted_by": "Roman Derunets",
+          "submitted_at": "2026-07-01T00:00:00.000Z",
+          "upvotes": 13,
+          "comments": 2,
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [
+            "\\blanguage models?\\b",
+            "\\blanguage\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "While large language models have been dominating the research landscape recently, small language models remain highly relevant across various domains; yet, they receive far less attention.",
+          "upvote_label": "13 upvotes"
         },
         {
           "report_date": "2026-07-01",
@@ -1160,7 +1159,7 @@
       "topic_label": "Agents and Planning",
       "count": 7,
       "share": 18.42,
-      "summary": "Agents and Planning contributes 7 papers (18.42%), led by “Dockerless: Environment-Free Program Verifier for Coding Agents” with 101 upvotes.",
+      "summary": "Agents and Planning contributes 7 papers (18.42%), led by “Dockerless: Environment-Free Program Verifier for Coding Agents” with 103 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-01",
@@ -1189,7 +1188,7 @@
           "github_url": "",
           "submitted_by": "Yuling",
           "submitted_at": "2026-07-01T00:00:00.000Z",
-          "upvotes": 101,
+          "upvotes": 103,
           "comments": 3,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
@@ -1199,7 +1198,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Program verifiers play a central role in training coding agents, including selecting trajectories for supervised fine-tuning (SFT) and providing rewards for reinforcement learning (RL).",
-          "upvote_label": "101 upvotes"
+          "upvote_label": "103 upvotes"
         },
         {
           "report_date": "2026-07-01",
@@ -1217,7 +1216,7 @@
           "github_url": "",
           "submitted_by": "Zhiwei Li",
           "submitted_at": "2026-07-01T00:00:00.000Z",
-          "upvotes": 26,
+          "upvotes": 27,
           "comments": 2,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
@@ -1227,7 +1226,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Agent skills extend language-model agents with task-specific procedures, scripts, and references, but the tasks and environments they target continually change.",
-          "upvote_label": "26 upvotes"
+          "upvote_label": "27 upvotes"
         },
         {
           "report_date": "2026-07-01",
@@ -1248,7 +1247,7 @@
           "github_url": "",
           "submitted_by": "caoshuo",
           "submitted_at": "2026-07-01T00:00:00.000Z",
-          "upvotes": 22,
+          "upvotes": 23,
           "comments": 2,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
@@ -1259,7 +1258,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Text-rich image generation is one of the most challenging settings in image generation, since models must simultaneously produce visually realistic images and render legible, semantically aligned, and…",
-          "upvote_label": "22 upvotes"
+          "upvote_label": "23 upvotes"
         },
         {
           "report_date": "2026-07-01",
@@ -1386,7 +1385,7 @@
       "topic_label": "Other AI",
       "count": 5,
       "share": 13.16,
-      "summary": "Other AI contributes 5 papers (13.16%), led by “Orca: The World is in Your Mind” with 199 upvotes.",
+      "summary": "Other AI contributes 5 papers (13.16%), led by “Orca: The World is in Your Mind” with 229 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-01",
@@ -1459,7 +1458,7 @@
           "github_url": "",
           "submitted_by": "yh-wang",
           "submitted_at": "2026-07-01T00:00:00.000Z",
-          "upvotes": 199,
+          "upvotes": 229,
           "comments": 6,
           "topic_key": "other_ai",
           "topic_label": "Other AI",
@@ -1467,7 +1466,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "We introduce Orca, an initial instantiation of a general world foundation model.",
-          "upvote_label": "199 upvotes"
+          "upvote_label": "229 upvotes"
         },
         {
           "report_date": "2026-07-01",
@@ -1633,7 +1632,7 @@
       "topic_label": "Learning, Optimization, and Theory",
       "count": 3,
       "share": 7.89,
-      "summary": "Learning, Optimization, and Theory contributes 3 papers (7.89%), led by “Evolution Fine-Tuning: Learning to Discover Across 371 Optimization Tasks” with 30 upvotes.",
+      "summary": "Learning, Optimization, and Theory contributes 3 papers (7.89%), led by “Evolution Fine-Tuning: Learning to Discover Across 371 Optimization Tasks” with 31 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-01",
@@ -1657,7 +1656,7 @@
           "github_url": "",
           "submitted_by": "Young-Jun Lee",
           "submitted_at": "2026-07-01T00:00:00.000Z",
-          "upvotes": 30,
+          "upvotes": 31,
           "comments": 2,
           "topic_key": "learning_theory",
           "topic_label": "Learning, Optimization, and Theory",
@@ -1669,7 +1668,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Would experience designing faster GPU kernels also help close in on a long-standing open mathematical conjecture?",
-          "upvote_label": "30 upvotes"
+          "upvote_label": "31 upvotes"
         },
         {
           "report_date": "2026-07-01",
@@ -1887,7 +1886,7 @@
       "topic_label": "Multimodal Agents",
       "count": 1,
       "share": 2.63,
-      "summary": "Multimodal Agents contributes 1 papers (2.63%), led by “Does VLA Even Know the Basics? Measuring Commonsense and World Knowledge Retention in Vision-Language-Action Models” with 64 upvotes.",
+      "summary": "Multimodal Agents contributes 1 papers (2.63%), led by “Does VLA Even Know the Basics? Measuring Commonsense and World Knowledge Retention in Vision-Language-Action Models” with 68 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-01",
@@ -1916,7 +1915,7 @@
           "github_url": "",
           "submitted_by": "Nikita",
           "submitted_at": "2026-07-01T00:00:00.000Z",
-          "upvotes": 64,
+          "upvotes": 68,
           "comments": 2,
           "topic_key": "multimodal_agents",
           "topic_label": "Multimodal Agents",
@@ -1928,7 +1927,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Embodied Vision-Language-Action (VLA) models are typically obtained by fine-tuning powerful pretrained VLMs on robotics data, yet it is unclear how much commonsense and factual knowledge they retain after adaptation.",
-          "upvote_label": "64 upvotes"
+          "upvote_label": "68 upvotes"
         }
       ]
     },
@@ -2044,7 +2043,7 @@
       "github_url": "",
       "submitted_by": "yh-wang",
       "submitted_at": "2026-07-01T00:00:00.000Z",
-      "upvotes": 199,
+      "upvotes": 229,
       "comments": 6,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
@@ -2052,7 +2051,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "We introduce Orca, an initial instantiation of a general world foundation model.",
-      "upvote_label": "199 upvotes"
+      "upvote_label": "229 upvotes"
     },
     {
       "report_date": "2026-07-01",
@@ -2081,7 +2080,7 @@
       "github_url": "",
       "submitted_by": "Yuling",
       "submitted_at": "2026-07-01T00:00:00.000Z",
-      "upvotes": 101,
+      "upvotes": 103,
       "comments": 3,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -2091,7 +2090,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Program verifiers play a central role in training coding agents, including selecting trajectories for supervised fine-tuning (SFT) and providing rewards for reinforcement learning (RL).",
-      "upvote_label": "101 upvotes"
+      "upvote_label": "103 upvotes"
     },
     {
       "report_date": "2026-07-01",
@@ -2153,7 +2152,7 @@
       "github_url": "",
       "submitted_by": "Wang Yong",
       "submitted_at": "2026-07-01T00:00:00.000Z",
-      "upvotes": 71,
+      "upvotes": 73,
       "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -2163,7 +2162,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Speculative decoding accelerates inference by using a lightweight draft model to generate candidate tokens in parallel, and are then verified by the target model, enabling lossless acceleration.",
-      "upvote_label": "71 upvotes"
+      "upvote_label": "73 upvotes"
     },
     {
       "report_date": "2026-07-01",
@@ -2192,7 +2191,7 @@
       "github_url": "",
       "submitted_by": "Nikita",
       "submitted_at": "2026-07-01T00:00:00.000Z",
-      "upvotes": 64,
+      "upvotes": 68,
       "comments": 2,
       "topic_key": "multimodal_agents",
       "topic_label": "Multimodal Agents",
@@ -2204,7 +2203,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Embodied Vision-Language-Action (VLA) models are typically obtained by fine-tuning powerful pretrained VLMs on robotics data, yet it is unclear how much commonsense and factual knowledge they retain after adaptation.",
-      "upvote_label": "64 upvotes"
+      "upvote_label": "68 upvotes"
     },
     {
       "report_date": "2026-07-01",
@@ -2226,7 +2225,7 @@
       "github_url": "",
       "submitted_by": "Mijin Yoo",
       "submitted_at": "2026-07-01T00:00:00.000Z",
-      "upvotes": 48,
+      "upvotes": 49,
       "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -2236,7 +2235,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "A 3D scene is understood through its objects, not the primitives that compose them.",
-      "upvote_label": "48 upvotes"
+      "upvote_label": "49 upvotes"
     },
     {
       "report_date": "2026-07-01",
@@ -2263,7 +2262,7 @@
       "github_url": "",
       "submitted_by": "Yijie Jin",
       "submitted_at": "2026-07-01T00:00:00.000Z",
-      "upvotes": 30,
+      "upvotes": 31,
       "comments": 2,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
@@ -2274,7 +2273,43 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Block Diffusion Language Models (BD-LMs) improve diffusion-based text generation with KV caching and flexible-length generation.",
-      "upvote_label": "30 upvotes"
+      "upvote_label": "31 upvotes"
+    },
+    {
+      "report_date": "2026-07-01",
+      "paper_id": "2606.29082",
+      "title": "Evolution Fine-Tuning: Learning to Discover Across 371 Optimization Tasks",
+      "authors": [
+        "Young-Jun Lee",
+        "Seungone Kim",
+        "Minki Kang",
+        "Alistair Cheong Liang Chuen",
+        "Zerui Chen",
+        "Seungho Han",
+        "Taehee Jung",
+        "Dongyeop Kang"
+      ],
+      "abstract": "Would experience designing faster GPU kernels also help close in on a long-standing open mathematical conjecture? Large Language Models (LLMs) integrated into evolutionary search have recently produced state-of-the-art solutions on optimization tasks, including open mathematical conjectures, GPU kernel design, scientific law discovery, and combinatorial puzzles. To achieve this, prior work applied search scaffolds to one target task at a time, so every new problem is approached from scratch and the experience accumulated during search is discarded once the model finishes its attempt. This leaves the capability of iteratively evolving a solution (e.g., knowing which part to mutate and how, deciding when to backtrack) entirely in the scaffold rather than in the model itself. Whether the model itself could acquire this capability and reuse it across different tasks has been largely unexamined. To address this, we introduce Evolution Fine-Tuning (EFT), a mid-training paradigm that teaches LLMs to evolve solutions across tasks by converting evolutionary search trajectories into supervision. We construct Finch Collection, a 156K-trajectory dataset spanning 10 domains and 371 optimization tasks, and fine-tune open-source LLMs from 2B to 9B parameters. Empirically, EFT confers cross-task generalization: across 22 held-out tasks, our models surpass their base counterparts by 10.22% on average. Furthermore, when paired with test-time RL, our model matches state-of-the-art performance on two circle-packing tasks and outperforms its base-model counterpart on the Erdős minimum-overlap problem. EFT thus serves as a \"practice phase\" for general-purpose discovery agents that do not solve new problems from scratch.",
+      "hf_url": "https://huggingface.co/papers/2606.29082",
+      "arxiv_url": "https://arxiv.org/abs/2606.29082",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.29082",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.29082",
+      "github_url": "",
+      "submitted_by": "Young-Jun Lee",
+      "submitted_at": "2026-07-01T00:00:00.000Z",
+      "upvotes": 31,
+      "comments": 2,
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
+      "matched_terms": [
+        "\\blearning\\b",
+        "\\boptimization\\b",
+        "\\bfine-tuning\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Would experience designing faster GPU kernels also help close in on a long-standing open mathematical conjecture?",
+      "upvote_label": "31 upvotes"
     },
     {
       "report_date": "2026-07-01",
@@ -2315,42 +2350,6 @@
     },
     {
       "report_date": "2026-07-01",
-      "paper_id": "2606.29082",
-      "title": "Evolution Fine-Tuning: Learning to Discover Across 371 Optimization Tasks",
-      "authors": [
-        "Young-Jun Lee",
-        "Seungone Kim",
-        "Minki Kang",
-        "Alistair Cheong Liang Chuen",
-        "Zerui Chen",
-        "Seungho Han",
-        "Taehee Jung",
-        "Dongyeop Kang"
-      ],
-      "abstract": "Would experience designing faster GPU kernels also help close in on a long-standing open mathematical conjecture? Large Language Models (LLMs) integrated into evolutionary search have recently produced state-of-the-art solutions on optimization tasks, including open mathematical conjectures, GPU kernel design, scientific law discovery, and combinatorial puzzles. To achieve this, prior work applied search scaffolds to one target task at a time, so every new problem is approached from scratch and the experience accumulated during search is discarded once the model finishes its attempt. This leaves the capability of iteratively evolving a solution (e.g., knowing which part to mutate and how, deciding when to backtrack) entirely in the scaffold rather than in the model itself. Whether the model itself could acquire this capability and reuse it across different tasks has been largely unexamined. To address this, we introduce Evolution Fine-Tuning (EFT), a mid-training paradigm that teaches LLMs to evolve solutions across tasks by converting evolutionary search trajectories into supervision. We construct Finch Collection, a 156K-trajectory dataset spanning 10 domains and 371 optimization tasks, and fine-tune open-source LLMs from 2B to 9B parameters. Empirically, EFT confers cross-task generalization: across 22 held-out tasks, our models surpass their base counterparts by 10.22% on average. Furthermore, when paired with test-time RL, our model matches state-of-the-art performance on two circle-packing tasks and outperforms its base-model counterpart on the Erdős minimum-overlap problem. EFT thus serves as a \"practice phase\" for general-purpose discovery agents that do not solve new problems from scratch.",
-      "hf_url": "https://huggingface.co/papers/2606.29082",
-      "arxiv_url": "https://arxiv.org/abs/2606.29082",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.29082",
-      "papers_cool_url": "https://papers.cool/arxiv/2606.29082",
-      "github_url": "",
-      "submitted_by": "Young-Jun Lee",
-      "submitted_at": "2026-07-01T00:00:00.000Z",
-      "upvotes": 30,
-      "comments": 2,
-      "topic_key": "learning_theory",
-      "topic_label": "Learning, Optimization, and Theory",
-      "matched_terms": [
-        "\\blearning\\b",
-        "\\boptimization\\b",
-        "\\bfine-tuning\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Would experience designing faster GPU kernels also help close in on a long-standing open mathematical conjecture?",
-      "upvote_label": "30 upvotes"
-    },
-    {
-      "report_date": "2026-07-01",
       "paper_id": "2606.08671",
       "title": "SkillHone: A Harness for Continual Agent Skill Evolution Through Persistent Decision History",
       "authors": [
@@ -2365,7 +2364,7 @@
       "github_url": "",
       "submitted_by": "Zhiwei Li",
       "submitted_at": "2026-07-01T00:00:00.000Z",
-      "upvotes": 26,
+      "upvotes": 27,
       "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -2375,7 +2374,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Agent skills extend language-model agents with task-specific procedures, scripts, and references, but the tasks and environments they target continually change.",
-      "upvote_label": "26 upvotes"
+      "upvote_label": "27 upvotes"
     },
     {
       "report_date": "2026-07-01",
@@ -2426,7 +2425,7 @@
       "github_url": "",
       "submitted_by": "caoshuo",
       "submitted_at": "2026-07-01T00:00:00.000Z",
-      "upvotes": 22,
+      "upvotes": 23,
       "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -2437,6 +2436,37 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Text-rich image generation is one of the most challenging settings in image generation, since models must simultaneously produce visually realistic images and render legible, semantically aligned, and…",
+      "upvote_label": "23 upvotes"
+    },
+    {
+      "report_date": "2026-07-01",
+      "paper_id": "2606.32032",
+      "title": "Reinforcement Learning with Metacognitive Feedback Elicits Faithful Uncertainty Expression in LLMs",
+      "authors": [
+        "Gabrielle Kaili-May Liu",
+        "Avi Caciularu",
+        "Gal Yona",
+        "Idan Szpektor",
+        "Arman Cohan"
+      ],
+      "abstract": "Metacognition is a critical component of intelligence that describes the ability to monitor and regulate one's own cognitive processes. Yet LLMs exhibit systemic deficiencies in key metacognitive faculties: they hallucinate with high confidence, fail to recognize knowledge boundaries, and misrepresent their internal uncertainty--undermining trustworthiness and reliability. Since monitoring task performance and adapting behavior accordingly are central to metacognition, we posit that models capable of accurately judging their own performance are better positioned to improve it. We operationalize this idea via two novel mechanisms: reinforcement learning with metacognitive feedback (RLMF), a paradigm to refine completion rankings during preference optimization based on the quality of a model's self-judgments of performance, and metacognitive data selection, which uses similar self-judgments to identify high-value training examples, outperforming naive active learning. We apply these innovations to the problem of faithful calibration (FC), a task that is itself fundamentally metacognitive: the goal is to align expressed with intrinsic uncertainty, difficult even for frontier LLMs. We adopt a two-stage, decoupled approach, first using these methods to calibrate the faithfulness of models' self-reported confidence scores, then mapping to natural, context-adaptable linguistic uncertainty via targeted output editing. Extensive experiments show RLMF achieves generalizable, state-of-the-art FC on diverse tasks while preserving accuracy. Further, RLMF surpasses standard RL by up to 63% while enhancing models' ability to assess and express their own capability limits. This positions RLMF as a promising paradigm to enhance LLM metacognition toward improved abilities and alignment, and suggests metacognitive performance as an effective RL signal to overcome limits of prior intrinsic feedback methods.",
+      "hf_url": "https://huggingface.co/papers/2606.32032",
+      "arxiv_url": "https://arxiv.org/abs/2606.32032",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.32032",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.32032",
+      "github_url": "",
+      "submitted_by": "John Chih Liu",
+      "submitted_at": "2026-07-01T00:00:00.000Z",
+      "upvotes": 22,
+      "comments": 2,
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [
+        "\\b\\w*llms?\\w*\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Metacognition is a critical component of intelligence that describes the ability to monitor and regulate one's own cognitive processes.",
       "upvote_label": "22 upvotes"
     },
     {
@@ -2477,37 +2507,6 @@
     },
     {
       "report_date": "2026-07-01",
-      "paper_id": "2606.32032",
-      "title": "Reinforcement Learning with Metacognitive Feedback Elicits Faithful Uncertainty Expression in LLMs",
-      "authors": [
-        "Gabrielle Kaili-May Liu",
-        "Avi Caciularu",
-        "Gal Yona",
-        "Idan Szpektor",
-        "Arman Cohan"
-      ],
-      "abstract": "Metacognition is a critical component of intelligence that describes the ability to monitor and regulate one's own cognitive processes. Yet LLMs exhibit systemic deficiencies in key metacognitive faculties: they hallucinate with high confidence, fail to recognize knowledge boundaries, and misrepresent their internal uncertainty--undermining trustworthiness and reliability. Since monitoring task performance and adapting behavior accordingly are central to metacognition, we posit that models capable of accurately judging their own performance are better positioned to improve it. We operationalize this idea via two novel mechanisms: reinforcement learning with metacognitive feedback (RLMF), a paradigm to refine completion rankings during preference optimization based on the quality of a model's self-judgments of performance, and metacognitive data selection, which uses similar self-judgments to identify high-value training examples, outperforming naive active learning. We apply these innovations to the problem of faithful calibration (FC), a task that is itself fundamentally metacognitive: the goal is to align expressed with intrinsic uncertainty, difficult even for frontier LLMs. We adopt a two-stage, decoupled approach, first using these methods to calibrate the faithfulness of models' self-reported confidence scores, then mapping to natural, context-adaptable linguistic uncertainty via targeted output editing. Extensive experiments show RLMF achieves generalizable, state-of-the-art FC on diverse tasks while preserving accuracy. Further, RLMF surpasses standard RL by up to 63% while enhancing models' ability to assess and express their own capability limits. This positions RLMF as a promising paradigm to enhance LLM metacognition toward improved abilities and alignment, and suggests metacognitive performance as an effective RL signal to overcome limits of prior intrinsic feedback methods.",
-      "hf_url": "https://huggingface.co/papers/2606.32032",
-      "arxiv_url": "https://arxiv.org/abs/2606.32032",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.32032",
-      "papers_cool_url": "https://papers.cool/arxiv/2606.32032",
-      "github_url": "",
-      "submitted_by": "John Chih Liu",
-      "submitted_at": "2026-07-01T00:00:00.000Z",
-      "upvotes": 21,
-      "comments": 2,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
-      "matched_terms": [
-        "\\b\\w*llms?\\w*\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Metacognition is a critical component of intelligence that describes the ability to monitor and regulate one's own cognitive processes.",
-      "upvote_label": "21 upvotes"
-    },
-    {
-      "report_date": "2026-07-01",
       "paper_id": "2606.23127",
       "title": "Managing Procedural Memory in LLM Agents: Control, Adaptation, and Evaluation",
       "authors": [
@@ -2527,7 +2526,7 @@
       "github_url": "",
       "submitted_by": "Davydenko Grigorii",
       "submitted_at": "2026-07-01T00:00:00.000Z",
-      "upvotes": 20,
+      "upvotes": 21,
       "comments": 3,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
@@ -2537,7 +2536,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Procedural memory is increasingly used to improve LLM agents on recurring workplace tasks, yet its ability to produce reusable skills remains poorly understood.",
-      "upvote_label": "20 upvotes"
+      "upvote_label": "21 upvotes"
     },
     {
       "report_date": "2026-07-01",
@@ -2601,6 +2600,78 @@
       "classification_confidence": null,
       "one_sentence_summary": "As video corpora continue to expand in both scale and task complexity, there is increasing demand for approaches that retrieve relevant videos from large-scale corpora (inter-video reasoning) and subsequently perform…",
       "upvote_label": "16 upvotes"
+    },
+    {
+      "report_date": "2026-07-01",
+      "paper_id": "2606.30406",
+      "title": "MOPD: Multi-Teacher On-Policy Distillation for Capability Integration in LLM Post-Training",
+      "authors": [
+        "Wenhan Ma",
+        "Jianyu Wei",
+        "Liang Zhao",
+        "Hailin Zhang",
+        "Bangjun Xiao",
+        "Lei Li",
+        "Qibin Yang",
+        "Bofei Gao",
+        "Yudong Wang",
+        "Rang Li",
+        "Jinhao Dong",
+        "Zhifang Sui",
+        "Fuli Luo"
+      ],
+      "abstract": "Modern large language models (LLMs) rely on reinforcement learning during post-training to push specific capabilities, yet integrating multiple capabilities into one model remains hard. Existing methods, such as Off-Policy Finetune and Mix-RL, are either inefficient or lose performance. In this work, we propose Multi-teacher On-Policy Distillation (MOPD), a post-training paradigm for combining the capabilities of multiple domain RL teachers: we first run per-domain specialised RL to obtain a set of domain teachers, then distill these teachers into the student on its own rollouts. This eliminates exposure bias and provides a dense optimization signal. On Qwen3-30B-A3B, MOPD outperforms Mix-RL, Cascade RL, Off-Policy Finetune, and Param-Merge baselines, inheriting nearly all of each teacher's capability. MOPD also enables parallel, independent development of domain teachers, removing the cross-domain coupling typical of multi-domain post-training. MOPD has been deployed in the post-training of MiMo-V2-Flash, an industrial-scale frontier model, demonstrating its practical value for capability integration in frontier-scale LLMs.",
+      "hf_url": "https://huggingface.co/papers/2606.30406",
+      "arxiv_url": "https://arxiv.org/abs/2606.30406",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.30406",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.30406",
+      "github_url": "",
+      "submitted_by": "Adina Yakefu",
+      "submitted_at": "2026-07-01T00:00:00.000Z",
+      "upvotes": 13,
+      "comments": 2,
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [
+        "\\b\\w*llms?\\w*\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Modern large language models (LLMs) rely on reinforcement learning during post-training to push specific capabilities, yet integrating multiple capabilities into one model remains hard.",
+      "upvote_label": "13 upvotes"
+    },
+    {
+      "report_date": "2026-07-01",
+      "paper_id": "2606.30062",
+      "title": "Little Brains, Big Feats: Exploring Compact Language Models",
+      "authors": [
+        "Dari Baturova",
+        "Elena Bruches",
+        "Ivan Chernov",
+        "Roman Derunets",
+        "Arsenii Fomin",
+        "Andrey Kostin"
+      ],
+      "abstract": "While large language models have been dominating the research landscape recently, small language models remain highly relevant across various domains; yet, they receive far less attention. In this study, we investigate how smaller language models perform during the generation stage within a Retrieval-Augmented Generation (RAG) system. To benchmark these models effectively, we utilised both open-source and proprietary datasets covering diverse subject areas and question types. Our findings demonstrate that a RAG system with small language models can be executed directly on-device without requiring any GPU hardware within a reasonable time. The experimental code and links to the supplementary materials can be accessed through the GitHub repository: https://github.com/SibNN/SLM-RAG-EVAL.",
+      "hf_url": "https://huggingface.co/papers/2606.30062",
+      "arxiv_url": "https://arxiv.org/abs/2606.30062",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.30062",
+      "papers_cool_url": "https://papers.cool/arxiv/2606.30062",
+      "github_url": "",
+      "submitted_by": "Roman Derunets",
+      "submitted_at": "2026-07-01T00:00:00.000Z",
+      "upvotes": 13,
+      "comments": 2,
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [
+        "\\blanguage models?\\b",
+        "\\blanguage\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "While large language models have been dominating the research landscape recently, small language models remain highly relevant across various domains; yet, they receive far less attention.",
+      "upvote_label": "13 upvotes"
     },
     {
       "report_date": "2026-07-01",
@@ -2715,78 +2786,6 @@
       "classification_confidence": null,
       "one_sentence_summary": "Graphical user interface (GUI) agents build on vision-language models to complete user tasks end-to-end in real applications through interface actions such as tapping, swiping, text entry, and navigation.",
       "upvote_label": "12 upvotes"
-    },
-    {
-      "report_date": "2026-07-01",
-      "paper_id": "2606.30062",
-      "title": "Little Brains, Big Feats: Exploring Compact Language Models",
-      "authors": [
-        "Dari Baturova",
-        "Elena Bruches",
-        "Ivan Chernov",
-        "Roman Derunets",
-        "Arsenii Fomin",
-        "Andrey Kostin"
-      ],
-      "abstract": "While large language models have been dominating the research landscape recently, small language models remain highly relevant across various domains; yet, they receive far less attention. In this study, we investigate how smaller language models perform during the generation stage within a Retrieval-Augmented Generation (RAG) system. To benchmark these models effectively, we utilised both open-source and proprietary datasets covering diverse subject areas and question types. Our findings demonstrate that a RAG system with small language models can be executed directly on-device without requiring any GPU hardware within a reasonable time. The experimental code and links to the supplementary materials can be accessed through the GitHub repository: https://github.com/SibNN/SLM-RAG-EVAL.",
-      "hf_url": "https://huggingface.co/papers/2606.30062",
-      "arxiv_url": "https://arxiv.org/abs/2606.30062",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.30062",
-      "papers_cool_url": "https://papers.cool/arxiv/2606.30062",
-      "github_url": "",
-      "submitted_by": "Roman Derunets",
-      "submitted_at": "2026-07-01T00:00:00.000Z",
-      "upvotes": 12,
-      "comments": 2,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
-      "matched_terms": [
-        "\\blanguage models?\\b",
-        "\\blanguage\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "While large language models have been dominating the research landscape recently, small language models remain highly relevant across various domains; yet, they receive far less attention.",
-      "upvote_label": "12 upvotes"
-    },
-    {
-      "report_date": "2026-07-01",
-      "paper_id": "2606.30406",
-      "title": "MOPD: Multi-Teacher On-Policy Distillation for Capability Integration in LLM Post-Training",
-      "authors": [
-        "Wenhan Ma",
-        "Jianyu Wei",
-        "Liang Zhao",
-        "Hailin Zhang",
-        "Bangjun Xiao",
-        "Lei Li",
-        "Qibin Yang",
-        "Bofei Gao",
-        "Yudong Wang",
-        "Rang Li",
-        "Jinhao Dong",
-        "Zhifang Sui",
-        "Fuli Luo"
-      ],
-      "abstract": "Modern large language models (LLMs) rely on reinforcement learning during post-training to push specific capabilities, yet integrating multiple capabilities into one model remains hard. Existing methods, such as Off-Policy Finetune and Mix-RL, are either inefficient or lose performance. In this work, we propose Multi-teacher On-Policy Distillation (MOPD), a post-training paradigm for combining the capabilities of multiple domain RL teachers: we first run per-domain specialised RL to obtain a set of domain teachers, then distill these teachers into the student on its own rollouts. This eliminates exposure bias and provides a dense optimization signal. On Qwen3-30B-A3B, MOPD outperforms Mix-RL, Cascade RL, Off-Policy Finetune, and Param-Merge baselines, inheriting nearly all of each teacher's capability. MOPD also enables parallel, independent development of domain teachers, removing the cross-domain coupling typical of multi-domain post-training. MOPD has been deployed in the post-training of MiMo-V2-Flash, an industrial-scale frontier model, demonstrating its practical value for capability integration in frontier-scale LLMs.",
-      "hf_url": "https://huggingface.co/papers/2606.30406",
-      "arxiv_url": "https://arxiv.org/abs/2606.30406",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2606.30406",
-      "papers_cool_url": "https://papers.cool/arxiv/2606.30406",
-      "github_url": "",
-      "submitted_by": "Adina Yakefu",
-      "submitted_at": "2026-07-01T00:00:00.000Z",
-      "upvotes": 11,
-      "comments": 2,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
-      "matched_terms": [
-        "\\b\\w*llms?\\w*\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Modern large language models (LLMs) rely on reinforcement learning during post-training to push specific capabilities, yet integrating multiple capabilities into one model remains hard.",
-      "upvote_label": "11 upvotes"
     },
     {
       "report_date": "2026-07-01",
