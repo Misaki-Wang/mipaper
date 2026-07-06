@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-05T19:00:08Z",
-  "reports_count": 268,
+  "generated_at": "2026-07-06T08:00:07Z",
+  "reports_count": 269,
   "branches": [
     {
       "branch_key": "daily",
@@ -26,8 +26,8 @@
     {
       "branch_key": "trending",
       "branch_label": "Trending",
-      "reports_count": 20,
-      "default_report_path": "data/trending/reports/2026-06-29/trending-2026-06-29.json",
+      "reports_count": 21,
+      "default_report_path": "data/trending/reports/2026-07-06/trending-2026-07-06.json",
       "manifest_path": "data/trending/manifest.json"
     },
     {
@@ -15754,6 +15754,147 @@
           "topic_label": "Domain Applications",
           "count": 112,
           "share": 4.12
+        }
+      ]
+    },
+    {
+      "branch_key": "trending",
+      "branch_label": "Trending",
+      "search_text": "trending Trending trending-2026-07-06 data/trending/reports/2026-07-06/trending-2026-07-06.json https://github.com/trending?since=weekly&spoken_language_code= 2026-07-06",
+      "data_path": "data/trending/reports/2026-07-06/trending-2026-07-06.json",
+      "slug": "trending-2026-07-06",
+      "snapshot_date": "2026-07-06",
+      "since": "weekly",
+      "total_repositories": 21,
+      "generated_at": "2026-07-06T08:00:06Z",
+      "source_url": "https://github.com/trending?since=weekly&spoken_language_code=",
+      "top_languages": [
+        {
+          "language": "Python",
+          "count": 8,
+          "share": 38.095238095238095
+        },
+        {
+          "language": "TypeScript",
+          "count": 5,
+          "share": 23.809523809523807
+        },
+        {
+          "language": "Rust",
+          "count": 2,
+          "share": 9.523809523809524
+        },
+        {
+          "language": "C",
+          "count": 1,
+          "share": 4.761904761904762
+        },
+        {
+          "language": "Haskell",
+          "count": 1,
+          "share": 4.761904761904762
+        }
+      ],
+      "top_repositories": [
+        {
+          "snapshot_date": "2026-07-06",
+          "repo_id": "msitarzewski/agency-agents",
+          "owner": "msitarzewski",
+          "name": "agency-agents",
+          "full_name": "msitarzewski/agency-agents",
+          "repo_url": "https://github.com/msitarzewski/agency-agents",
+          "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+          "language": "Shell",
+          "stars": 127712,
+          "forks": 20734,
+          "stars_this_week": 10637,
+          "built_by": [
+            "msitarzewski",
+            "claude",
+            "epowelljr",
+            "4shil",
+            "hedonnn"
+          ]
+        },
+        {
+          "snapshot_date": "2026-07-06",
+          "repo_id": "usestrix/strix",
+          "owner": "usestrix",
+          "name": "strix",
+          "full_name": "usestrix/strix",
+          "repo_url": "https://github.com/usestrix/strix",
+          "description": "Open-source AI penetration testing tool to find and fix your app’s vulnerabilities.",
+          "language": "Python",
+          "stars": 37486,
+          "forks": 3804,
+          "stars_this_week": 10338,
+          "built_by": [
+            "0xallam",
+            "claude",
+            "dependabot",
+            "bearsyankees",
+            "octovimmer"
+          ]
+        },
+        {
+          "snapshot_date": "2026-07-06",
+          "repo_id": "deusdata/codebase-memory-mcp",
+          "owner": "DeusData",
+          "name": "codebase-memory-mcp",
+          "full_name": "DeusData/codebase-memory-mcp",
+          "repo_url": "https://github.com/DeusData/codebase-memory-mcp",
+          "description": "High-performance code intelligence MCP server. Indexes codebases into a persistent knowledge graph — average repo in milliseconds. 158 languages, sub-ms queries, 99% fewer tokens. Single static binary, zero dependencies.",
+          "language": "C",
+          "stars": 26962,
+          "forks": 2000,
+          "stars_this_week": 7945,
+          "built_by": [
+            "DeusData",
+            "claude",
+            "shanemccarron-maker",
+            "dependabot",
+            "mvanhorn"
+          ]
+        },
+        {
+          "snapshot_date": "2026-07-06",
+          "repo_id": "calesthio/openmontage",
+          "owner": "calesthio",
+          "name": "OpenMontage",
+          "full_name": "calesthio/OpenMontage",
+          "repo_url": "https://github.com/calesthio/OpenMontage",
+          "description": "World's first open-source, agentic video production system. 12 pipelines, 52 tools, 500+ agent skills. Turn your AI coding assistant into a full video production studio.",
+          "language": "Python",
+          "stars": 33908,
+          "forks": 3883,
+          "stars_this_week": 7353,
+          "built_by": [
+            "calesthio",
+            "0xDevNinja",
+            "claude",
+            "yiyabo",
+            "martimramos"
+          ]
+        },
+        {
+          "snapshot_date": "2026-07-06",
+          "repo_id": "xbtlin/ai-berkshire",
+          "owner": "xbtlin",
+          "name": "ai-berkshire",
+          "full_name": "xbtlin/ai-berkshire",
+          "repo_url": "https://github.com/xbtlin/ai-berkshire",
+          "description": "AI 时代的伯克希尔：基于 Claude Code / Codex 的价值投资研究框架。巴菲特·芒格·段永平·李录四大师方法论 + 多Agent并行研究。| AI-era Berkshire: a value investing research framework built for Claude Code / Codex. 4 masters' methodologies + multi-agent adversarial analysis.",
+          "language": "Python",
+          "stars": 10700,
+          "forks": 1371,
+          "stars_this_week": 5038,
+          "built_by": [
+            "claude",
+            "xbtlin",
+            "mvanhorn",
+            "CooperSheroy",
+            "rickytan"
+          ]
         }
       ]
     },
