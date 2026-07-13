@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-12T19:00:06Z",
-  "reports_count": 275,
+  "generated_at": "2026-07-13T08:00:07Z",
+  "reports_count": 276,
   "branches": [
     {
       "branch_key": "daily",
@@ -26,8 +26,8 @@
     {
       "branch_key": "trending",
       "branch_label": "Trending",
-      "reports_count": 21,
-      "default_report_path": "data/trending/reports/2026-07-06/trending-2026-07-06.json",
+      "reports_count": 22,
+      "default_report_path": "data/trending/reports/2026-07-13/trending-2026-07-13.json",
       "manifest_path": "data/trending/manifest.json"
     },
     {
@@ -16159,6 +16159,147 @@
           "topic_label": "Domain Applications",
           "count": 112,
           "share": 4.12
+        }
+      ]
+    },
+    {
+      "branch_key": "trending",
+      "branch_label": "Trending",
+      "search_text": "trending Trending trending-2026-07-13 data/trending/reports/2026-07-13/trending-2026-07-13.json https://github.com/trending?since=weekly&spoken_language_code= 2026-07-13",
+      "data_path": "data/trending/reports/2026-07-13/trending-2026-07-13.json",
+      "slug": "trending-2026-07-13",
+      "snapshot_date": "2026-07-13",
+      "since": "weekly",
+      "total_repositories": 21,
+      "generated_at": "2026-07-13T08:00:06Z",
+      "source_url": "https://github.com/trending?since=weekly&spoken_language_code=",
+      "top_languages": [
+        {
+          "language": "TypeScript",
+          "count": 6,
+          "share": 28.57142857142857
+        },
+        {
+          "language": "JavaScript",
+          "count": 5,
+          "share": 23.809523809523807
+        },
+        {
+          "language": "Rust",
+          "count": 4,
+          "share": 19.047619047619047
+        },
+        {
+          "language": "Python",
+          "count": 3,
+          "share": 14.285714285714285
+        },
+        {
+          "language": "C#",
+          "count": 1,
+          "share": 4.761904761904762
+        }
+      ],
+      "top_repositories": [
+        {
+          "snapshot_date": "2026-07-13",
+          "repo_id": "zackriya-solutions/meetily",
+          "owner": "Zackriya-Solutions",
+          "name": "meetily",
+          "full_name": "Zackriya-Solutions/meetily",
+          "repo_url": "https://github.com/Zackriya-Solutions/meetily",
+          "description": "Privacy first, AI meeting assistant with 4x faster Parakeet/Whisper live transcription, speaker diarization, and Ollama summarization built on Rust. 100% local processing. no cloud required. Meetily (Meetly Ai - https://meetily.ai ) is the #1 Self-hosted, Open-source Ai meeting note taker for macOS & Windows. Understand How to write meeting minutes",
+          "language": "Rust",
+          "stars": 23767,
+          "forks": 2496,
+          "stars_this_week": 7440,
+          "built_by": [
+            "sujithatzackriya",
+            "safvanatzack",
+            "mohammedsafvan",
+            "athulchandroth",
+            "p-s-vishnu"
+          ]
+        },
+        {
+          "snapshot_date": "2026-07-13",
+          "repo_id": "asgeirtj/system_prompts_leaks",
+          "owner": "asgeirtj",
+          "name": "system_prompts_leaks",
+          "full_name": "asgeirtj/system_prompts_leaks",
+          "repo_url": "https://github.com/asgeirtj/system_prompts_leaks",
+          "description": "Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code, Claude Design. OpenAI - ChatGPT GPT-5.6, Codex GPT-5.6, GPT-5.5. Google - Gemini 3.5 Flash, 3.1 Pro, Antigravity. xAI - Grok, Cursor, Copilot, VS Code, Perplexity, and more. Updated regularly.",
+          "language": "JavaScript",
+          "stars": 56908,
+          "forks": 9411,
+          "stars_this_week": 7155,
+          "built_by": [
+            "asgeirtj",
+            "claude",
+            "awrreny",
+            "anonymous619259",
+            "lcebot"
+          ]
+        },
+        {
+          "snapshot_date": "2026-07-13",
+          "repo_id": "iofficeai/officecli",
+          "owner": "iOfficeAI",
+          "name": "OfficeCLI",
+          "full_name": "iOfficeAI/OfficeCLI",
+          "repo_url": "https://github.com/iOfficeAI/OfficeCLI",
+          "description": "OfficeCLI is the first and best Office suite purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
+          "language": "C#",
+          "stars": 15673,
+          "forks": 1065,
+          "stars_this_week": 6978,
+          "built_by": [
+            "goworm",
+            "IceyLiu",
+            "claude",
+            "ringringlin",
+            "Copilot"
+          ]
+        },
+        {
+          "snapshot_date": "2026-07-13",
+          "repo_id": "diegosouzapw/omniroute",
+          "owner": "diegosouzapw",
+          "name": "OmniRoute",
+          "full_name": "diegosouzapw/OmniRoute",
+          "repo_url": "https://github.com/diegosouzapw/OmniRoute",
+          "description": "Never stop coding. Free AI gateway: one endpoint, 231+ providers (50+ free), connect Claude Code, Codex, Cursor, Cline & Copilot to FREE Claude/GPT/Gemini. RTK+Caveman stacked compression saves 15-95% tokens, smart auto-fallback, MCP/A2A, multimodal APIs, Desktop/PWA.",
+          "language": "TypeScript",
+          "stars": 16396,
+          "forks": 2494,
+          "stars_this_week": 4506,
+          "built_by": [
+            "diegosouzapw",
+            "oyi77",
+            "claude",
+            "dependabot",
+            "rdself"
+          ]
+        },
+        {
+          "snapshot_date": "2026-07-13",
+          "repo_id": "stablyai/orca",
+          "owner": "stablyai",
+          "name": "orca",
+          "full_name": "stablyai/orca",
+          "repo_url": "https://github.com/stablyai/orca",
+          "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
+          "language": "TypeScript",
+          "stars": 17497,
+          "forks": 1381,
+          "stars_this_week": 4481,
+          "built_by": [
+            "nwparker",
+            "orca-ide",
+            "AmethystLiang",
+            "Jinwoo-H",
+            "brennanb2025"
+          ]
         }
       ]
     },
