@@ -1,10 +1,90 @@
 {
   "branch_key": "hf-daily",
   "branch_label": "HF Daily",
-  "generated_at": "2026-07-14T19:00:06Z",
-  "reports_count": 99,
-  "default_report_path": "data/hf-daily/reports/2026-07-15/hf-daily-2026-07-15.json",
+  "generated_at": "2026-07-15T19:00:06Z",
+  "reports_count": 100,
+  "default_report_path": "data/hf-daily/reports/2026-07-16/hf-daily-2026-07-16.json",
   "reports": [
+    {
+      "branch_key": "hf-daily",
+      "branch_label": "HF Daily",
+      "data_path": "data/hf-daily/reports/2026-07-16/hf-daily-2026-07-16.json",
+      "slug": "hf-daily-2026-07-16",
+      "report_date": "2026-07-16",
+      "total_papers": 11,
+      "classifier": "rule",
+      "generated_at": "2026-07-15T19:00:05Z",
+      "source_url": "https://huggingface.co/papers/date/2026-07-16",
+      "focus_topics": [
+        {
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "count": 0,
+          "share": 0.0
+        },
+        {
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 0,
+          "share": 0.0
+        },
+        {
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "count": 0,
+          "share": 0.0
+        }
+      ],
+      "top_topics": [
+        {
+          "topic_label": "Multimodal Understanding and Vision",
+          "count": 3,
+          "share": 27.27
+        },
+        {
+          "topic_label": "LLMs and Language",
+          "count": 2,
+          "share": 18.18
+        },
+        {
+          "topic_label": "Retrieval, Knowledge, and RAG",
+          "count": 2,
+          "share": 18.18
+        },
+        {
+          "topic_label": "Datasets and Benchmarks",
+          "count": 1,
+          "share": 9.09
+        },
+        {
+          "topic_label": "Domain Applications",
+          "count": 1,
+          "share": 9.09
+        }
+      ],
+      "top_submitters": [
+        {
+          "submitted_by": "Amelie Royer",
+          "count": 1
+        },
+        {
+          "submitted_by": "Amit Kumar Saha",
+          "count": 1
+        },
+        {
+          "submitted_by": "Chengkun Li",
+          "count": 1
+        },
+        {
+          "submitted_by": "Cong Wei",
+          "count": 1
+        },
+        {
+          "submitted_by": "Ezgi Korkmaz",
+          "count": 1
+        }
+      ]
+    },
     {
       "branch_key": "hf-daily",
       "branch_label": "HF Daily",
