@@ -1,7 +1,7 @@
 {
   "branch_key": "hf-daily",
   "branch_label": "HF Daily",
-  "generated_at": "2026-07-16T19:00:07Z",
+  "generated_at": "2026-07-17T19:00:08Z",
   "reports_count": 101,
   "default_report_path": "data/hf-daily/reports/2026-07-17/hf-daily-2026-07-17.json",
   "reports": [
@@ -11,10 +11,90 @@
       "data_path": "data/hf-daily/reports/2026-07-17/hf-daily-2026-07-17.json",
       "slug": "hf-daily-2026-07-17",
       "report_date": "2026-07-17",
-      "total_papers": 23,
+      "total_papers": 27,
       "classifier": "rule",
-      "generated_at": "2026-07-16T19:00:06Z",
+      "generated_at": "2026-07-17T19:00:07Z",
       "source_url": "https://huggingface.co/papers/date/2026-07-17",
+      "focus_topics": [
+        {
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "count": 0,
+          "share": 0.0
+        },
+        {
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 0,
+          "share": 0.0
+        },
+        {
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "count": 0,
+          "share": 0.0
+        }
+      ],
+      "top_topics": [
+        {
+          "topic_label": "Multimodal Understanding and Vision",
+          "count": 6,
+          "share": 22.22
+        },
+        {
+          "topic_label": "Other AI",
+          "count": 6,
+          "share": 22.22
+        },
+        {
+          "topic_label": "LLMs and Language",
+          "count": 5,
+          "share": 18.52
+        },
+        {
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "count": 4,
+          "share": 14.81
+        },
+        {
+          "topic_label": "Retrieval, Knowledge, and RAG",
+          "count": 3,
+          "share": 11.11
+        }
+      ],
+      "top_submitters": [
+        {
+          "submitted_by": "taesiri",
+          "count": 4
+        },
+        {
+          "submitted_by": "Yang Shi",
+          "count": 2
+        },
+        {
+          "submitted_by": "Franck Dernoncourt",
+          "count": 1
+        },
+        {
+          "submitted_by": "Haotian Liang",
+          "count": 1
+        },
+        {
+          "submitted_by": "Huan-ang Gao",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "branch_key": "hf-daily",
+      "branch_label": "HF Daily",
+      "data_path": "data/hf-daily/reports/2026-07-16/hf-daily-2026-07-16.json",
+      "slug": "hf-daily-2026-07-16",
+      "report_date": "2026-07-16",
+      "total_papers": 24,
+      "classifier": "rule",
+      "generated_at": "2026-07-17T19:00:07Z",
+      "source_url": "https://huggingface.co/papers/date/2026-07-16",
       "focus_topics": [
         {
           "topic_key": "generative_foundations",
@@ -39,27 +119,27 @@
         {
           "topic_label": "Agents and Planning",
           "count": 6,
-          "share": 26.09
+          "share": 25.0
         },
         {
           "topic_label": "Other AI",
           "count": 6,
-          "share": 26.09
+          "share": 25.0
         },
         {
           "topic_label": "Multimodal Understanding and Vision",
           "count": 5,
-          "share": 21.74
+          "share": 20.83
+        },
+        {
+          "topic_label": "LLMs and Language",
+          "count": 2,
+          "share": 8.33
         },
         {
           "topic_label": "Robotics and Embodied AI",
           "count": 2,
-          "share": 8.7
-        },
-        {
-          "topic_label": "LLMs and Language",
-          "count": 1,
-          "share": 4.35
+          "share": 8.33
         }
       ],
       "top_submitters": [
@@ -88,92 +168,12 @@
     {
       "branch_key": "hf-daily",
       "branch_label": "HF Daily",
-      "data_path": "data/hf-daily/reports/2026-07-16/hf-daily-2026-07-16.json",
-      "slug": "hf-daily-2026-07-16",
-      "report_date": "2026-07-16",
-      "total_papers": 11,
-      "classifier": "rule",
-      "generated_at": "2026-07-15T19:00:05Z",
-      "source_url": "https://huggingface.co/papers/date/2026-07-16",
-      "focus_topics": [
-        {
-          "topic_key": "generative_foundations",
-          "topic_label": "Generative Foundations",
-          "count": 0,
-          "share": 0.0
-        },
-        {
-          "topic_key": "multimodal_generative",
-          "topic_label": "Multimodal Generative Modeling",
-          "count": 0,
-          "share": 0.0
-        },
-        {
-          "topic_key": "multimodal_agents",
-          "topic_label": "Multimodal Agents",
-          "count": 0,
-          "share": 0.0
-        }
-      ],
-      "top_topics": [
-        {
-          "topic_label": "Multimodal Understanding and Vision",
-          "count": 3,
-          "share": 27.27
-        },
-        {
-          "topic_label": "LLMs and Language",
-          "count": 2,
-          "share": 18.18
-        },
-        {
-          "topic_label": "Retrieval, Knowledge, and RAG",
-          "count": 2,
-          "share": 18.18
-        },
-        {
-          "topic_label": "Datasets and Benchmarks",
-          "count": 1,
-          "share": 9.09
-        },
-        {
-          "topic_label": "Domain Applications",
-          "count": 1,
-          "share": 9.09
-        }
-      ],
-      "top_submitters": [
-        {
-          "submitted_by": "Amelie Royer",
-          "count": 1
-        },
-        {
-          "submitted_by": "Amit Kumar Saha",
-          "count": 1
-        },
-        {
-          "submitted_by": "Chengkun Li",
-          "count": 1
-        },
-        {
-          "submitted_by": "Cong Wei",
-          "count": 1
-        },
-        {
-          "submitted_by": "Ezgi Korkmaz",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "branch_key": "hf-daily",
-      "branch_label": "HF Daily",
       "data_path": "data/hf-daily/reports/2026-07-15/hf-daily-2026-07-15.json",
       "slug": "hf-daily-2026-07-15",
       "report_date": "2026-07-15",
-      "total_papers": 17,
+      "total_papers": 15,
       "classifier": "rule",
-      "generated_at": "2026-07-14T19:00:05Z",
+      "generated_at": "2026-07-17T19:00:06Z",
       "source_url": "https://huggingface.co/papers/date/2026-07-15",
       "focus_topics": [
         {
@@ -191,35 +191,115 @@
         {
           "topic_key": "multimodal_agents",
           "topic_label": "Multimodal Agents",
-          "count": 1,
-          "share": 5.88
+          "count": 0,
+          "share": 0.0
         }
       ],
       "top_topics": [
         {
           "topic_label": "LLMs and Language",
           "count": 3,
-          "share": 17.65
+          "share": 20.0
         },
         {
           "topic_label": "Multimodal Understanding and Vision",
           "count": 3,
-          "share": 17.65
+          "share": 20.0
+        },
+        {
+          "topic_label": "Agents and Planning",
+          "count": 2,
+          "share": 13.33
+        },
+        {
+          "topic_label": "Datasets and Benchmarks",
+          "count": 2,
+          "share": 13.33
+        },
+        {
+          "topic_label": "Retrieval, Knowledge, and RAG",
+          "count": 2,
+          "share": 13.33
+        }
+      ],
+      "top_submitters": [
+        {
+          "submitted_by": "Yushi SUN",
+          "count": 2
+        },
+        {
+          "submitted_by": "Amelie Royer",
+          "count": 1
+        },
+        {
+          "submitted_by": "Amit Kumar Saha",
+          "count": 1
+        },
+        {
+          "submitted_by": "Chengkun Li",
+          "count": 1
+        },
+        {
+          "submitted_by": "Cong Wei",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "branch_key": "hf-daily",
+      "branch_label": "HF Daily",
+      "data_path": "data/hf-daily/reports/2026-07-14/hf-daily-2026-07-14.json",
+      "slug": "hf-daily-2026-07-14",
+      "report_date": "2026-07-14",
+      "total_papers": 19,
+      "classifier": "rule",
+      "generated_at": "2026-07-17T19:00:05Z",
+      "source_url": "https://huggingface.co/papers/date/2026-07-14",
+      "focus_topics": [
+        {
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "count": 0,
+          "share": 0.0
+        },
+        {
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 0,
+          "share": 0.0
+        },
+        {
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "count": 1,
+          "share": 5.26
+        }
+      ],
+      "top_topics": [
+        {
+          "topic_label": "Multimodal Understanding and Vision",
+          "count": 4,
+          "share": 21.05
+        },
+        {
+          "topic_label": "LLMs and Language",
+          "count": 3,
+          "share": 15.79
         },
         {
           "topic_label": "Robotics and Embodied AI",
           "count": 3,
-          "share": 17.65
+          "share": 15.79
         },
         {
           "topic_label": "Learning, Optimization, and Theory",
           "count": 2,
-          "share": 11.76
+          "share": 10.53
         },
         {
           "topic_label": "Other AI",
           "count": 2,
-          "share": 11.76
+          "share": 10.53
         }
       ],
       "top_submitters": [
@@ -248,13 +328,13 @@
     {
       "branch_key": "hf-daily",
       "branch_label": "HF Daily",
-      "data_path": "data/hf-daily/reports/2026-07-14/hf-daily-2026-07-14.json",
-      "slug": "hf-daily-2026-07-14",
-      "report_date": "2026-07-14",
+      "data_path": "data/hf-daily/reports/2026-07-13/hf-daily-2026-07-13.json",
+      "slug": "hf-daily-2026-07-13",
+      "report_date": "2026-07-13",
       "total_papers": 14,
       "classifier": "rule",
-      "generated_at": "2026-07-13T19:00:07Z",
-      "source_url": "https://huggingface.co/papers/date/2026-07-14",
+      "generated_at": "2026-07-17T19:00:05Z",
+      "source_url": "https://huggingface.co/papers/date/2026-07-13",
       "focus_topics": [
         {
           "topic_key": "generative_foundations",
@@ -321,86 +401,6 @@
         },
         {
           "submitted_by": "Insta360-Research",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "branch_key": "hf-daily",
-      "branch_label": "HF Daily",
-      "data_path": "data/hf-daily/reports/2026-07-13/hf-daily-2026-07-13.json",
-      "slug": "hf-daily-2026-07-13",
-      "report_date": "2026-07-13",
-      "total_papers": 23,
-      "classifier": "rule",
-      "generated_at": "2026-07-12T19:00:05Z",
-      "source_url": "https://huggingface.co/papers/date/2026-07-13",
-      "focus_topics": [
-        {
-          "topic_key": "generative_foundations",
-          "topic_label": "Generative Foundations",
-          "count": 0,
-          "share": 0.0
-        },
-        {
-          "topic_key": "multimodal_generative",
-          "topic_label": "Multimodal Generative Modeling",
-          "count": 1,
-          "share": 4.35
-        },
-        {
-          "topic_key": "multimodal_agents",
-          "topic_label": "Multimodal Agents",
-          "count": 0,
-          "share": 0.0
-        }
-      ],
-      "top_topics": [
-        {
-          "topic_label": "Multimodal Understanding and Vision",
-          "count": 9,
-          "share": 39.13
-        },
-        {
-          "topic_label": "Other AI",
-          "count": 4,
-          "share": 17.39
-        },
-        {
-          "topic_label": "Learning, Optimization, and Theory",
-          "count": 3,
-          "share": 13.04
-        },
-        {
-          "topic_label": "LLMs and Language",
-          "count": 2,
-          "share": 8.7
-        },
-        {
-          "topic_label": "Reasoning, Alignment, and Evaluation",
-          "count": 2,
-          "share": 8.7
-        }
-      ],
-      "top_submitters": [
-        {
-          "submitted_by": "taesiri",
-          "count": 4
-        },
-        {
-          "submitted_by": "Ali Motahharynia",
-          "count": 1
-        },
-        {
-          "submitted_by": "Andrej Leban",
-          "count": 1
-        },
-        {
-          "submitted_by": "Chongyu Fan",
-          "count": 1
-        },
-        {
-          "submitted_by": "Diogo R. Ferreira",
           "count": 1
         }
       ]
