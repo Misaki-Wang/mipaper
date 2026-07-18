@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T19:00:06Z",
+  "generated_at": "2026-07-18T19:00:04Z",
   "report_kind": "hf_daily",
   "report_date": "2026-07-15",
   "source_url": "https://huggingface.co/papers/date/2026-07-15",
@@ -73,62 +73,62 @@
       "Multimodal Understanding and Vision: 3 papers (20.00%); representative paper: Blind-Spots-Bench: Evaluating Blind Spots in Multimodal Models.",
       "Agents and Planning: 2 papers (13.33%); representative paper: Function-Aware Fill-in-the-Middle as Mid-Training for Coding Agent Foundation Models."
     ],
-    "trend_summary": "Today's dominant clusters are LLMs and Language / Multimodal Understanding and Vision / Agents and Planning; this suggests several parallel trends: multimodal work is moving from isolated perception toward generation, agents, and action; agent papers emphasize tool use, planning, and deployable workflows. The strongest visible attention is on “Function-Aware Fill-in-the-Middle as Mid-Training for Coding Agent Foundation Models” (95 upvotes).",
+    "trend_summary": "Today's dominant clusters are LLMs and Language / Multimodal Understanding and Vision / Agents and Planning; this suggests several parallel trends: multimodal work is moving from isolated perception toward generation, agents, and action; agent papers emphasize tool use, planning, and deployable workflows. The strongest visible attention is on “Function-Aware Fill-in-the-Middle as Mid-Training for Coding Agent Foundation Models” (99 upvotes).",
     "category_summaries": [
       {
         "topic_label": "LLMs and Language",
         "count": 3,
         "share": 20.0,
-        "summary": "LLMs and Language contributes 3 papers (20.00%), led by “Read It Back: Pretrained MLLMs Are Zero-Shot Reward Models for Text-to-Image Generation” with 73 upvotes."
+        "summary": "LLMs and Language contributes 3 papers (20.00%), led by “Read It Back: Pretrained MLLMs Are Zero-Shot Reward Models for Text-to-Image Generation” with 76 upvotes."
       },
       {
         "topic_label": "Multimodal Understanding and Vision",
         "count": 3,
         "share": 20.0,
-        "summary": "Multimodal Understanding and Vision contributes 3 papers (20.00%), led by “Blind-Spots-Bench: Evaluating Blind Spots in Multimodal Models” with 28 upvotes."
+        "summary": "Multimodal Understanding and Vision contributes 3 papers (20.00%), led by “Blind-Spots-Bench: Evaluating Blind Spots in Multimodal Models” with 30 upvotes."
       },
       {
         "topic_label": "Agents and Planning",
         "count": 2,
         "share": 13.33,
-        "summary": "Agents and Planning contributes 2 papers (13.33%), led by “Function-Aware Fill-in-the-Middle as Mid-Training for Coding Agent Foundation Models” with 95 upvotes."
+        "summary": "Agents and Planning contributes 2 papers (13.33%), led by “Function-Aware Fill-in-the-Middle as Mid-Training for Coding Agent Foundation Models” with 99 upvotes."
       },
       {
         "topic_label": "Datasets and Benchmarks",
         "count": 2,
         "share": 13.33,
-        "summary": "Datasets and Benchmarks contributes 2 papers (13.33%), led by “SynthDocBench: Controlled Benchmark for Long-Context Visual Document Understanding” with 66 upvotes."
+        "summary": "Datasets and Benchmarks contributes 2 papers (13.33%), led by “SynthDocBench: Controlled Benchmark for Long-Context Visual Document Understanding” with 68 upvotes."
       },
       {
         "topic_label": "Retrieval, Knowledge, and RAG",
         "count": 2,
         "share": 13.33,
-        "summary": "Retrieval, Knowledge, and RAG contributes 2 papers (13.33%), led by “Search Beyond What Can Be Taught: Evolving the Knowledge Boundary in Agentic Visual Generation” with 78 upvotes."
+        "summary": "Retrieval, Knowledge, and RAG contributes 2 papers (13.33%), led by “Search Beyond What Can Be Taught: Evolving the Knowledge Boundary in Agentic Visual Generation” with 82 upvotes."
       },
       {
         "topic_label": "Domain Applications",
         "count": 1,
         "share": 6.67,
-        "summary": "Domain Applications contributes 1 papers (6.67%), led by “Towards Autonomous and Auditable Medical Imaging Model Development” with 16 upvotes."
+        "summary": "Domain Applications contributes 1 papers (6.67%), led by “Towards Autonomous and Auditable Medical Imaging Model Development” with 17 upvotes."
       },
       {
         "topic_label": "Other AI",
         "count": 1,
         "share": 6.67,
-        "summary": "Other AI contributes 1 papers (6.67%), led by “MuScriptor: An Open Model for Multi-Instrument Music Transcription” with 12 upvotes."
+        "summary": "Other AI contributes 1 papers (6.67%), led by “MuScriptor: An Open Model for Multi-Instrument Music Transcription” with 17 upvotes."
       },
       {
         "topic_label": "Reasoning, Alignment, and Evaluation",
         "count": 1,
         "share": 6.67,
-        "summary": "Reasoning, Alignment, and Evaluation contributes 1 papers (6.67%), led by “Principled Analysis of Deep Reinforcement Learning Evaluation and Design Paradigms” with 7 upvotes."
+        "summary": "Reasoning, Alignment, and Evaluation contributes 1 papers (6.67%), led by “Principled Analysis of Deep Reinforcement Learning Evaluation and Design Paradigms” with 8 upvotes."
       }
     ],
     "top_papers": [
       {
         "title": "Function-Aware Fill-in-the-Middle as Mid-Training for Coding Agent Foundation Models",
-        "upvotes": 95,
-        "upvote_label": "95 upvotes",
+        "upvotes": 99,
+        "upvote_label": "99 upvotes",
         "topic_label": "Agents and Planning",
         "summary": "Coding agents must integrate external tool returns into ongoing reasoning - a capability that standard left-to-right pretraining on code exposes only in its forward direction.",
         "hf_url": "https://huggingface.co/papers/2607.12463",
@@ -138,8 +138,8 @@
       },
       {
         "title": "Search Beyond What Can Be Taught: Evolving the Knowledge Boundary in Agentic Visual Generation",
-        "upvotes": 78,
-        "upvote_label": "78 upvotes",
+        "upvotes": 82,
+        "upvote_label": "82 upvotes",
         "topic_label": "Retrieval, Knowledge, and RAG",
         "summary": "Visual generators excel at rendering, but they confidently fabricate what they do not know.",
         "hf_url": "https://huggingface.co/papers/2607.05382",
@@ -149,8 +149,8 @@
       },
       {
         "title": "Read It Back: Pretrained MLLMs Are Zero-Shot Reward Models for Text-to-Image Generation",
-        "upvotes": 73,
-        "upvote_label": "73 upvotes",
+        "upvotes": 76,
+        "upvote_label": "76 upvotes",
         "topic_label": "LLMs and Language",
         "summary": "In this paper, we propose SpectraReward, a training-free reward function that turns pretrained MLLMs into off-the-shelf reward models for image-generation reinforcement learning.",
         "hf_url": "https://huggingface.co/papers/2607.11886",
@@ -160,8 +160,8 @@
       },
       {
         "title": "SynthDocBench: Controlled Benchmark for Long-Context Visual Document Understanding",
-        "upvotes": 66,
-        "upvote_label": "66 upvotes",
+        "upvotes": 68,
+        "upvote_label": "68 upvotes",
         "topic_label": "Datasets and Benchmarks",
         "summary": "Vision language models (VLMs) have achieved strong performance on visual document understanding benchmarks such as DocVQA, ChartQA, and MMLongBench-Doc.",
         "hf_url": "https://huggingface.co/papers/2607.10400",
@@ -171,8 +171,8 @@
       },
       {
         "title": "Blind-Spots-Bench: Evaluating Blind Spots in Multimodal Models",
-        "upvotes": 28,
-        "upvote_label": "28 upvotes",
+        "upvotes": 30,
+        "upvote_label": "30 upvotes",
         "topic_label": "Multimodal Understanding and Vision",
         "summary": "Modern AI models achieve strong performance on many established benchmarks, yet they still fail on tasks that humans find almost trivial, such as manipulating a string or drawing a dog with five legs.",
         "hf_url": "https://huggingface.co/papers/2607.08317",
@@ -231,7 +231,7 @@
       "github_url": "",
       "submitted_by": "Yubo Wang",
       "submitted_at": "2026-07-15T00:00:00.000Z",
-      "upvotes": 95,
+      "upvotes": 99,
       "comments": 3,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -241,7 +241,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Coding agents must integrate external tool returns into ongoing reasoning - a capability that standard left-to-right pretraining on code exposes only in its forward direction.",
-      "upvote_label": "95 upvotes"
+      "upvote_label": "99 upvotes"
     },
     {
       "report_date": "2026-07-15",
@@ -268,7 +268,7 @@
       "github_url": "",
       "submitted_by": "Cong Wei",
       "submitted_at": "2026-07-15T00:00:00.000Z",
-      "upvotes": 78,
+      "upvotes": 82,
       "comments": 4,
       "topic_key": "retrieval_knowledge",
       "topic_label": "Retrieval, Knowledge, and RAG",
@@ -279,7 +279,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Visual generators excel at rendering, but they confidently fabricate what they do not know.",
-      "upvote_label": "78 upvotes"
+      "upvote_label": "82 upvotes"
     },
     {
       "report_date": "2026-07-15",
@@ -301,7 +301,7 @@
       "github_url": "",
       "submitted_by": "huangrh9",
       "submitted_at": "2026-07-15T00:00:00.000Z",
-      "upvotes": 73,
+      "upvotes": 76,
       "comments": 3,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
@@ -312,7 +312,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "In this paper, we propose SpectraReward, a training-free reward function that turns pretrained MLLMs into off-the-shelf reward models for image-generation reinforcement learning.",
-      "upvote_label": "73 upvotes"
+      "upvote_label": "76 upvotes"
     },
     {
       "report_date": "2026-07-15",
@@ -335,7 +335,7 @@
       "github_url": "",
       "submitted_by": "Amit Kumar Saha",
       "submitted_at": "2026-07-15T00:00:00.000Z",
-      "upvotes": 66,
+      "upvotes": 68,
       "comments": 2,
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
@@ -345,7 +345,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Vision language models (VLMs) have achieved strong performance on visual document understanding benchmarks such as DocVQA, ChartQA, and MMLongBench-Doc.",
-      "upvote_label": "66 upvotes"
+      "upvote_label": "68 upvotes"
     },
     {
       "report_date": "2026-07-15",
@@ -369,7 +369,7 @@
       "github_url": "",
       "submitted_by": "Chengkun Li",
       "submitted_at": "2026-07-15T00:00:00.000Z",
-      "upvotes": 28,
+      "upvotes": 30,
       "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -379,7 +379,36 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Modern AI models achieve strong performance on many established benchmarks, yet they still fail on tasks that humans find almost trivial, such as manipulating a string or drawing a dog with five legs.",
-      "upvote_label": "28 upvotes"
+      "upvote_label": "30 upvotes"
+    },
+    {
+      "report_date": "2026-07-15",
+      "paper_id": "2607.08168",
+      "title": "MuScriptor: An Open Model for Multi-Instrument Music Transcription",
+      "authors": [
+        "Simon Rouard",
+        "Michael Krause",
+        "Axel Roebel",
+        "Carl-Johann Simon-Gabriel",
+        "Alexandre Défossez"
+      ],
+      "abstract": "Existing methods for automatic music transcription are often limited to single-instrument recordings or fail on complex, real music mixes. Although previous work utilizes synthetic training data, the resulting models generalize poorly, leading to largely unusable transcription output in realistic, multi-instrument settings. In this work, we analyze the effectiveness of synthetic data for pre-training while combining it with fine-tuning on real music audio and post-training using reinforcement learning. We further introduce conditioning on instrument presence to customize transcriptions. Finally, we release MuScriptor, an open-weight multi-instrument music transcription model that works on real-world music recordings from across a diverse range of musical genres.",
+      "hf_url": "https://huggingface.co/papers/2607.08168",
+      "arxiv_url": "https://arxiv.org/abs/2607.08168",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.08168",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.08168",
+      "github_url": "",
+      "submitted_by": "Amelie Royer",
+      "submitted_at": "2026-07-15T00:00:00.000Z",
+      "upvotes": 17,
+      "comments": 3,
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
+      "matched_terms": [],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Existing methods for automatic music transcription are often limited to single-instrument recordings or fail on complex, real music mixes.",
+      "upvote_label": "17 upvotes"
     },
     {
       "report_date": "2026-07-15",
@@ -406,7 +435,7 @@
       "github_url": "",
       "submitted_by": "Shengyuan Liu",
       "submitted_at": "2026-07-15T00:00:00.000Z",
-      "upvotes": 16,
+      "upvotes": 17,
       "comments": 2,
       "topic_key": "domain_applications",
       "topic_label": "Domain Applications",
@@ -416,36 +445,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Large language model (LLM) agents are beginning to automate machine learning engineering (MLE) by coupling planning, code execution, debugging, and empirical feedback.",
-      "upvote_label": "16 upvotes"
-    },
-    {
-      "report_date": "2026-07-15",
-      "paper_id": "2607.08168",
-      "title": "MuScriptor: An Open Model for Multi-Instrument Music Transcription",
-      "authors": [
-        "Simon Rouard",
-        "Michael Krause",
-        "Axel Roebel",
-        "Carl-Johann Simon-Gabriel",
-        "Alexandre Défossez"
-      ],
-      "abstract": "Existing methods for automatic music transcription are often limited to single-instrument recordings or fail on complex, real music mixes. Although previous work utilizes synthetic training data, the resulting models generalize poorly, leading to largely unusable transcription output in realistic, multi-instrument settings. In this work, we analyze the effectiveness of synthetic data for pre-training while combining it with fine-tuning on real music audio and post-training using reinforcement learning. We further introduce conditioning on instrument presence to customize transcriptions. Finally, we release MuScriptor, an open-weight multi-instrument music transcription model that works on real-world music recordings from across a diverse range of musical genres.",
-      "hf_url": "https://huggingface.co/papers/2607.08168",
-      "arxiv_url": "https://arxiv.org/abs/2607.08168",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.08168",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.08168",
-      "github_url": "",
-      "submitted_by": "Amelie Royer",
-      "submitted_at": "2026-07-15T00:00:00.000Z",
-      "upvotes": 12,
-      "comments": 3,
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
-      "matched_terms": [],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Existing methods for automatic music transcription are often limited to single-instrument recordings or fail on complex, real music mixes.",
-      "upvote_label": "12 upvotes"
+      "upvote_label": "17 upvotes"
     },
     {
       "report_date": "2026-07-15",
@@ -475,7 +475,7 @@
       "github_url": "",
       "submitted_by": "Niels Rogge",
       "submitted_at": "2026-07-15T00:00:00.000Z",
-      "upvotes": 12,
+      "upvotes": 14,
       "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -485,7 +485,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Mainstream visual encoders are pretrained on natural images and cannot be effectively applied to document images without document-oriented adaptation, as dense text and fine-grained character strokes demand…",
-      "upvote_label": "12 upvotes"
+      "upvote_label": "14 upvotes"
     }
   ],
   "topics": [
@@ -493,7 +493,7 @@
       "topic_label": "LLMs and Language",
       "count": 3,
       "share": 20.0,
-      "summary": "LLMs and Language contributes 3 papers (20.00%), led by “Read It Back: Pretrained MLLMs Are Zero-Shot Reward Models for Text-to-Image Generation” with 73 upvotes.",
+      "summary": "LLMs and Language contributes 3 papers (20.00%), led by “Read It Back: Pretrained MLLMs Are Zero-Shot Reward Models for Text-to-Image Generation” with 76 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-15",
@@ -515,7 +515,7 @@
           "github_url": "",
           "submitted_by": "huangrh9",
           "submitted_at": "2026-07-15T00:00:00.000Z",
-          "upvotes": 73,
+          "upvotes": 76,
           "comments": 3,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
@@ -526,7 +526,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "In this paper, we propose SpectraReward, a training-free reward function that turns pretrained MLLMs into off-the-shelf reward models for image-generation reinforcement learning.",
-          "upvote_label": "73 upvotes"
+          "upvote_label": "76 upvotes"
         },
         {
           "report_date": "2026-07-15",
@@ -548,7 +548,7 @@
           "github_url": "",
           "submitted_by": "Pratyush Ranjan Tiwari",
           "submitted_at": "2026-07-15T00:00:00.000Z",
-          "upvotes": 10,
+          "upvotes": 11,
           "comments": 2,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
@@ -558,7 +558,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Large language models fine-tuned for forecasting can be accurate yet poorly calibrated, and their chain-of-thought (CoT) reasoning may not faithfully reflect the evidence behind a forecast.",
-          "upvote_label": "10 upvotes"
+          "upvote_label": "11 upvotes"
         },
         {
           "report_date": "2026-07-15",
@@ -579,7 +579,7 @@
           "github_url": "",
           "submitted_by": "Yuxuan Wan",
           "submitted_at": "2026-07-15T00:00:00.000Z",
-          "upvotes": 4,
+          "upvotes": 5,
           "comments": 2,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
@@ -590,7 +590,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Multi-scene navigation (clearing an objective in one bounded space and then crossing a portal into the next) is a defining feature of contemporary 3D games, but authoring it is laborious: every portal must have…",
-          "upvote_label": "4 upvotes"
+          "upvote_label": "5 upvotes"
         }
       ]
     },
@@ -598,7 +598,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "count": 3,
       "share": 20.0,
-      "summary": "Multimodal Understanding and Vision contributes 3 papers (20.00%), led by “Blind-Spots-Bench: Evaluating Blind Spots in Multimodal Models” with 28 upvotes.",
+      "summary": "Multimodal Understanding and Vision contributes 3 papers (20.00%), led by “Blind-Spots-Bench: Evaluating Blind Spots in Multimodal Models” with 30 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-15",
@@ -622,7 +622,7 @@
           "github_url": "",
           "submitted_by": "Chengkun Li",
           "submitted_at": "2026-07-15T00:00:00.000Z",
-          "upvotes": 28,
+          "upvotes": 30,
           "comments": 2,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
@@ -632,7 +632,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Modern AI models achieve strong performance on many established benchmarks, yet they still fail on tasks that humans find almost trivial, such as manipulating a string or drawing a dog with five legs.",
-          "upvote_label": "28 upvotes"
+          "upvote_label": "30 upvotes"
         },
         {
           "report_date": "2026-07-15",
@@ -662,7 +662,7 @@
           "github_url": "",
           "submitted_by": "Niels Rogge",
           "submitted_at": "2026-07-15T00:00:00.000Z",
-          "upvotes": 12,
+          "upvotes": 14,
           "comments": 2,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
@@ -672,7 +672,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Mainstream visual encoders are pretrained on natural images and cannot be effectively applied to document images without document-oriented adaptation, as dense text and fine-grained character strokes demand…",
-          "upvote_label": "12 upvotes"
+          "upvote_label": "14 upvotes"
         },
         {
           "report_date": "2026-07-15",
@@ -720,7 +720,7 @@
       "topic_label": "Agents and Planning",
       "count": 2,
       "share": 13.33,
-      "summary": "Agents and Planning contributes 2 papers (13.33%), led by “Function-Aware Fill-in-the-Middle as Mid-Training for Coding Agent Foundation Models” with 95 upvotes.",
+      "summary": "Agents and Planning contributes 2 papers (13.33%), led by “Function-Aware Fill-in-the-Middle as Mid-Training for Coding Agent Foundation Models” with 99 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-15",
@@ -744,7 +744,7 @@
           "github_url": "",
           "submitted_by": "Yubo Wang",
           "submitted_at": "2026-07-15T00:00:00.000Z",
-          "upvotes": 95,
+          "upvotes": 99,
           "comments": 3,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
@@ -754,7 +754,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Coding agents must integrate external tool returns into ongoing reasoning - a capability that standard left-to-right pretraining on code exposes only in its forward direction.",
-          "upvote_label": "95 upvotes"
+          "upvote_label": "99 upvotes"
         },
         {
           "report_date": "2026-07-15",
@@ -778,7 +778,7 @@
           "github_url": "",
           "submitted_by": "Yushi SUN",
           "submitted_at": "2026-07-15T00:00:00.000Z",
-          "upvotes": 8,
+          "upvotes": 10,
           "comments": 2,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
@@ -788,7 +788,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Despite the success of Vision-Language Models (VLMs), misleading charts remain a significant challenge due to their deceptive visual structures and distorted data representations.",
-          "upvote_label": "8 upvotes"
+          "upvote_label": "10 upvotes"
         }
       ]
     },
@@ -796,7 +796,7 @@
       "topic_label": "Datasets and Benchmarks",
       "count": 2,
       "share": 13.33,
-      "summary": "Datasets and Benchmarks contributes 2 papers (13.33%), led by “SynthDocBench: Controlled Benchmark for Long-Context Visual Document Understanding” with 66 upvotes.",
+      "summary": "Datasets and Benchmarks contributes 2 papers (13.33%), led by “SynthDocBench: Controlled Benchmark for Long-Context Visual Document Understanding” with 68 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-15",
@@ -819,7 +819,7 @@
           "github_url": "",
           "submitted_by": "Amit Kumar Saha",
           "submitted_at": "2026-07-15T00:00:00.000Z",
-          "upvotes": 66,
+          "upvotes": 68,
           "comments": 2,
           "topic_key": "datasets_benchmarks",
           "topic_label": "Datasets and Benchmarks",
@@ -829,7 +829,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Vision language models (VLMs) have achieved strong performance on visual document understanding benchmarks such as DocVQA, ChartQA, and MMLongBench-Doc.",
-          "upvote_label": "66 upvotes"
+          "upvote_label": "68 upvotes"
         },
         {
           "report_date": "2026-07-15",
@@ -851,7 +851,7 @@
           "github_url": "",
           "submitted_by": "Yushi SUN",
           "submitted_at": "2026-07-15T00:00:00.000Z",
-          "upvotes": 6,
+          "upvotes": 7,
           "comments": 2,
           "topic_key": "datasets_benchmarks",
           "topic_label": "Datasets and Benchmarks",
@@ -861,7 +861,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Existing benchmarks for scientific data analysis evaluate LLMs primarily on code execution or workflow completion, overlooking that scientific analysis serves to support distinct types of scientific claims: hypothesis…",
-          "upvote_label": "6 upvotes"
+          "upvote_label": "7 upvotes"
         }
       ]
     },
@@ -869,7 +869,7 @@
       "topic_label": "Retrieval, Knowledge, and RAG",
       "count": 2,
       "share": 13.33,
-      "summary": "Retrieval, Knowledge, and RAG contributes 2 papers (13.33%), led by “Search Beyond What Can Be Taught: Evolving the Knowledge Boundary in Agentic Visual Generation” with 78 upvotes.",
+      "summary": "Retrieval, Knowledge, and RAG contributes 2 papers (13.33%), led by “Search Beyond What Can Be Taught: Evolving the Knowledge Boundary in Agentic Visual Generation” with 82 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-15",
@@ -896,7 +896,7 @@
           "github_url": "",
           "submitted_by": "Cong Wei",
           "submitted_at": "2026-07-15T00:00:00.000Z",
-          "upvotes": 78,
+          "upvotes": 82,
           "comments": 4,
           "topic_key": "retrieval_knowledge",
           "topic_label": "Retrieval, Knowledge, and RAG",
@@ -907,7 +907,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Visual generators excel at rendering, but they confidently fabricate what they do not know.",
-          "upvote_label": "78 upvotes"
+          "upvote_label": "82 upvotes"
         },
         {
           "report_date": "2026-07-15",
@@ -934,7 +934,7 @@
           "github_url": "",
           "submitted_by": "Silin Chen",
           "submitted_at": "2026-07-15T00:00:00.000Z",
-          "upvotes": 12,
+          "upvotes": 14,
           "comments": 2,
           "topic_key": "retrieval_knowledge",
           "topic_label": "Retrieval, Knowledge, and RAG",
@@ -944,7 +944,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "LLM-based coding agents have significantly advanced automated software issue resolution, yet they remain highly prone to factual errors caused by insufficient repository understanding.",
-          "upvote_label": "12 upvotes"
+          "upvote_label": "14 upvotes"
         }
       ]
     },
@@ -952,7 +952,7 @@
       "topic_label": "Domain Applications",
       "count": 1,
       "share": 6.67,
-      "summary": "Domain Applications contributes 1 papers (6.67%), led by “Towards Autonomous and Auditable Medical Imaging Model Development” with 16 upvotes.",
+      "summary": "Domain Applications contributes 1 papers (6.67%), led by “Towards Autonomous and Auditable Medical Imaging Model Development” with 17 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-15",
@@ -979,7 +979,7 @@
           "github_url": "",
           "submitted_by": "Shengyuan Liu",
           "submitted_at": "2026-07-15T00:00:00.000Z",
-          "upvotes": 16,
+          "upvotes": 17,
           "comments": 2,
           "topic_key": "domain_applications",
           "topic_label": "Domain Applications",
@@ -989,7 +989,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Large language model (LLM) agents are beginning to automate machine learning engineering (MLE) by coupling planning, code execution, debugging, and empirical feedback.",
-          "upvote_label": "16 upvotes"
+          "upvote_label": "17 upvotes"
         }
       ]
     },
@@ -997,7 +997,7 @@
       "topic_label": "Other AI",
       "count": 1,
       "share": 6.67,
-      "summary": "Other AI contributes 1 papers (6.67%), led by “MuScriptor: An Open Model for Multi-Instrument Music Transcription” with 12 upvotes.",
+      "summary": "Other AI contributes 1 papers (6.67%), led by “MuScriptor: An Open Model for Multi-Instrument Music Transcription” with 17 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-15",
@@ -1018,7 +1018,7 @@
           "github_url": "",
           "submitted_by": "Amelie Royer",
           "submitted_at": "2026-07-15T00:00:00.000Z",
-          "upvotes": 12,
+          "upvotes": 17,
           "comments": 3,
           "topic_key": "other_ai",
           "topic_label": "Other AI",
@@ -1026,7 +1026,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Existing methods for automatic music transcription are often limited to single-instrument recordings or fail on complex, real music mixes.",
-          "upvote_label": "12 upvotes"
+          "upvote_label": "17 upvotes"
         }
       ]
     },
@@ -1034,7 +1034,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "count": 1,
       "share": 6.67,
-      "summary": "Reasoning, Alignment, and Evaluation contributes 1 papers (6.67%), led by “Principled Analysis of Deep Reinforcement Learning Evaluation and Design Paradigms” with 7 upvotes.",
+      "summary": "Reasoning, Alignment, and Evaluation contributes 1 papers (6.67%), led by “Principled Analysis of Deep Reinforcement Learning Evaluation and Design Paradigms” with 8 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-15",
@@ -1051,7 +1051,7 @@
           "github_url": "",
           "submitted_by": "Ezgi Korkmaz",
           "submitted_at": "2026-07-15T00:00:00.000Z",
-          "upvotes": 7,
+          "upvotes": 8,
           "comments": 2,
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
@@ -1061,7 +1061,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Starting from the utilization of deep neural networks to approximate the state-action value function that led to winning one of the most challenging games, to algorithmic advancements that allowed solving problems…",
-          "upvote_label": "7 upvotes"
+          "upvote_label": "8 upvotes"
         }
       ]
     }
@@ -1089,7 +1089,7 @@
       "github_url": "",
       "submitted_by": "Yubo Wang",
       "submitted_at": "2026-07-15T00:00:00.000Z",
-      "upvotes": 95,
+      "upvotes": 99,
       "comments": 3,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -1099,7 +1099,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Coding agents must integrate external tool returns into ongoing reasoning - a capability that standard left-to-right pretraining on code exposes only in its forward direction.",
-      "upvote_label": "95 upvotes"
+      "upvote_label": "99 upvotes"
     },
     {
       "report_date": "2026-07-15",
@@ -1126,7 +1126,7 @@
       "github_url": "",
       "submitted_by": "Cong Wei",
       "submitted_at": "2026-07-15T00:00:00.000Z",
-      "upvotes": 78,
+      "upvotes": 82,
       "comments": 4,
       "topic_key": "retrieval_knowledge",
       "topic_label": "Retrieval, Knowledge, and RAG",
@@ -1137,7 +1137,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Visual generators excel at rendering, but they confidently fabricate what they do not know.",
-      "upvote_label": "78 upvotes"
+      "upvote_label": "82 upvotes"
     },
     {
       "report_date": "2026-07-15",
@@ -1159,7 +1159,7 @@
       "github_url": "",
       "submitted_by": "huangrh9",
       "submitted_at": "2026-07-15T00:00:00.000Z",
-      "upvotes": 73,
+      "upvotes": 76,
       "comments": 3,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
@@ -1170,7 +1170,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "In this paper, we propose SpectraReward, a training-free reward function that turns pretrained MLLMs into off-the-shelf reward models for image-generation reinforcement learning.",
-      "upvote_label": "73 upvotes"
+      "upvote_label": "76 upvotes"
     },
     {
       "report_date": "2026-07-15",
@@ -1193,7 +1193,7 @@
       "github_url": "",
       "submitted_by": "Amit Kumar Saha",
       "submitted_at": "2026-07-15T00:00:00.000Z",
-      "upvotes": 66,
+      "upvotes": 68,
       "comments": 2,
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
@@ -1203,7 +1203,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Vision language models (VLMs) have achieved strong performance on visual document understanding benchmarks such as DocVQA, ChartQA, and MMLongBench-Doc.",
-      "upvote_label": "66 upvotes"
+      "upvote_label": "68 upvotes"
     },
     {
       "report_date": "2026-07-15",
@@ -1227,7 +1227,7 @@
       "github_url": "",
       "submitted_by": "Chengkun Li",
       "submitted_at": "2026-07-15T00:00:00.000Z",
-      "upvotes": 28,
+      "upvotes": 30,
       "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -1237,7 +1237,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Modern AI models achieve strong performance on many established benchmarks, yet they still fail on tasks that humans find almost trivial, such as manipulating a string or drawing a dog with five legs.",
-      "upvote_label": "28 upvotes"
+      "upvote_label": "30 upvotes"
     },
     {
       "report_date": "2026-07-15",
@@ -1264,7 +1264,7 @@
       "github_url": "",
       "submitted_by": "Shengyuan Liu",
       "submitted_at": "2026-07-15T00:00:00.000Z",
-      "upvotes": 16,
+      "upvotes": 17,
       "comments": 2,
       "topic_key": "domain_applications",
       "topic_label": "Domain Applications",
@@ -1274,7 +1274,36 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Large language model (LLM) agents are beginning to automate machine learning engineering (MLE) by coupling planning, code execution, debugging, and empirical feedback.",
-      "upvote_label": "16 upvotes"
+      "upvote_label": "17 upvotes"
+    },
+    {
+      "report_date": "2026-07-15",
+      "paper_id": "2607.08168",
+      "title": "MuScriptor: An Open Model for Multi-Instrument Music Transcription",
+      "authors": [
+        "Simon Rouard",
+        "Michael Krause",
+        "Axel Roebel",
+        "Carl-Johann Simon-Gabriel",
+        "Alexandre Défossez"
+      ],
+      "abstract": "Existing methods for automatic music transcription are often limited to single-instrument recordings or fail on complex, real music mixes. Although previous work utilizes synthetic training data, the resulting models generalize poorly, leading to largely unusable transcription output in realistic, multi-instrument settings. In this work, we analyze the effectiveness of synthetic data for pre-training while combining it with fine-tuning on real music audio and post-training using reinforcement learning. We further introduce conditioning on instrument presence to customize transcriptions. Finally, we release MuScriptor, an open-weight multi-instrument music transcription model that works on real-world music recordings from across a diverse range of musical genres.",
+      "hf_url": "https://huggingface.co/papers/2607.08168",
+      "arxiv_url": "https://arxiv.org/abs/2607.08168",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.08168",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.08168",
+      "github_url": "",
+      "submitted_by": "Amelie Royer",
+      "submitted_at": "2026-07-15T00:00:00.000Z",
+      "upvotes": 17,
+      "comments": 3,
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
+      "matched_terms": [],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Existing methods for automatic music transcription are often limited to single-instrument recordings or fail on complex, real music mixes.",
+      "upvote_label": "17 upvotes"
     },
     {
       "report_date": "2026-07-15",
@@ -1301,7 +1330,7 @@
       "github_url": "",
       "submitted_by": "Silin Chen",
       "submitted_at": "2026-07-15T00:00:00.000Z",
-      "upvotes": 12,
+      "upvotes": 14,
       "comments": 2,
       "topic_key": "retrieval_knowledge",
       "topic_label": "Retrieval, Knowledge, and RAG",
@@ -1311,7 +1340,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "LLM-based coding agents have significantly advanced automated software issue resolution, yet they remain highly prone to factual errors caused by insufficient repository understanding.",
-      "upvote_label": "12 upvotes"
+      "upvote_label": "14 upvotes"
     },
     {
       "report_date": "2026-07-15",
@@ -1341,7 +1370,7 @@
       "github_url": "",
       "submitted_by": "Niels Rogge",
       "submitted_at": "2026-07-15T00:00:00.000Z",
-      "upvotes": 12,
+      "upvotes": 14,
       "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -1351,36 +1380,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Mainstream visual encoders are pretrained on natural images and cannot be effectively applied to document images without document-oriented adaptation, as dense text and fine-grained character strokes demand…",
-      "upvote_label": "12 upvotes"
-    },
-    {
-      "report_date": "2026-07-15",
-      "paper_id": "2607.08168",
-      "title": "MuScriptor: An Open Model for Multi-Instrument Music Transcription",
-      "authors": [
-        "Simon Rouard",
-        "Michael Krause",
-        "Axel Roebel",
-        "Carl-Johann Simon-Gabriel",
-        "Alexandre Défossez"
-      ],
-      "abstract": "Existing methods for automatic music transcription are often limited to single-instrument recordings or fail on complex, real music mixes. Although previous work utilizes synthetic training data, the resulting models generalize poorly, leading to largely unusable transcription output in realistic, multi-instrument settings. In this work, we analyze the effectiveness of synthetic data for pre-training while combining it with fine-tuning on real music audio and post-training using reinforcement learning. We further introduce conditioning on instrument presence to customize transcriptions. Finally, we release MuScriptor, an open-weight multi-instrument music transcription model that works on real-world music recordings from across a diverse range of musical genres.",
-      "hf_url": "https://huggingface.co/papers/2607.08168",
-      "arxiv_url": "https://arxiv.org/abs/2607.08168",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.08168",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.08168",
-      "github_url": "",
-      "submitted_by": "Amelie Royer",
-      "submitted_at": "2026-07-15T00:00:00.000Z",
-      "upvotes": 12,
-      "comments": 3,
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
-      "matched_terms": [],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Existing methods for automatic music transcription are often limited to single-instrument recordings or fail on complex, real music mixes.",
-      "upvote_label": "12 upvotes"
+      "upvote_label": "14 upvotes"
     },
     {
       "report_date": "2026-07-15",
@@ -1402,7 +1402,7 @@
       "github_url": "",
       "submitted_by": "Pratyush Ranjan Tiwari",
       "submitted_at": "2026-07-15T00:00:00.000Z",
-      "upvotes": 10,
+      "upvotes": 11,
       "comments": 2,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
@@ -1412,7 +1412,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Large language models fine-tuned for forecasting can be accurate yet poorly calibrated, and their chain-of-thought (CoT) reasoning may not faithfully reflect the evidence behind a forecast.",
-      "upvote_label": "10 upvotes"
+      "upvote_label": "11 upvotes"
     },
     {
       "report_date": "2026-07-15",
@@ -1436,7 +1436,7 @@
       "github_url": "",
       "submitted_by": "Yushi SUN",
       "submitted_at": "2026-07-15T00:00:00.000Z",
-      "upvotes": 8,
+      "upvotes": 10,
       "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -1446,7 +1446,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Despite the success of Vision-Language Models (VLMs), misleading charts remain a significant challenge due to their deceptive visual structures and distorted data representations.",
-      "upvote_label": "8 upvotes"
+      "upvote_label": "10 upvotes"
     },
     {
       "report_date": "2026-07-15",
@@ -1503,7 +1503,7 @@
       "github_url": "",
       "submitted_by": "Ezgi Korkmaz",
       "submitted_at": "2026-07-15T00:00:00.000Z",
-      "upvotes": 7,
+      "upvotes": 8,
       "comments": 2,
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
@@ -1513,7 +1513,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Starting from the utilization of deep neural networks to approximate the state-action value function that led to winning one of the most challenging games, to algorithmic advancements that allowed solving problems…",
-      "upvote_label": "7 upvotes"
+      "upvote_label": "8 upvotes"
     },
     {
       "report_date": "2026-07-15",
@@ -1535,7 +1535,7 @@
       "github_url": "",
       "submitted_by": "Yushi SUN",
       "submitted_at": "2026-07-15T00:00:00.000Z",
-      "upvotes": 6,
+      "upvotes": 7,
       "comments": 2,
       "topic_key": "datasets_benchmarks",
       "topic_label": "Datasets and Benchmarks",
@@ -1545,7 +1545,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Existing benchmarks for scientific data analysis evaluate LLMs primarily on code execution or workflow completion, overlooking that scientific analysis serves to support distinct types of scientific claims: hypothesis…",
-      "upvote_label": "6 upvotes"
+      "upvote_label": "7 upvotes"
     },
     {
       "report_date": "2026-07-15",
@@ -1566,7 +1566,7 @@
       "github_url": "",
       "submitted_by": "Yuxuan Wan",
       "submitted_at": "2026-07-15T00:00:00.000Z",
-      "upvotes": 4,
+      "upvotes": 5,
       "comments": 2,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
@@ -1577,7 +1577,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Multi-scene navigation (clearing an objective in one bounded space and then crossing a portal into the next) is a defining feature of contemporary 3D games, but authoring it is laborious: every portal must have…",
-      "upvote_label": "4 upvotes"
+      "upvote_label": "5 upvotes"
     }
   ]
 }

@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-17T19:00:07Z",
+  "generated_at": "2026-07-18T19:00:05Z",
   "report_kind": "hf_daily",
   "report_date": "2026-07-17",
   "source_url": "https://huggingface.co/papers/date/2026-07-17",
   "classifier": "rule",
-  "total_papers": 27,
+  "total_papers": 29,
   "focus_topics": [
     {
       "topic_key": "generative_foundations",
@@ -29,95 +29,106 @@
     {
       "topic_label": "Multimodal Understanding and Vision",
       "count": 6,
-      "share": 22.22
+      "share": 20.69
     },
     {
       "topic_label": "Other AI",
       "count": 6,
-      "share": 22.22
+      "share": 20.69
     },
     {
       "topic_label": "LLMs and Language",
       "count": 5,
-      "share": 18.52
+      "share": 17.24
     },
     {
       "topic_label": "Reasoning, Alignment, and Evaluation",
-      "count": 4,
-      "share": 14.81
+      "count": 5,
+      "share": 17.24
+    },
+    {
+      "topic_label": "Agents and Planning",
+      "count": 3,
+      "share": 10.34
     },
     {
       "topic_label": "Retrieval, Knowledge, and RAG",
       "count": 3,
-      "share": 11.11
-    },
-    {
-      "topic_label": "Agents and Planning",
-      "count": 2,
-      "share": 7.41
+      "share": 10.34
     },
     {
       "topic_label": "Robotics and Embodied AI",
       "count": 1,
-      "share": 3.7
+      "share": 3.45
     }
   ],
   "daily_digest": {
     "main_hotspots": [
-      "Multimodal Understanding and Vision: 6 papers (22.22%); representative paper: KeyFrame-Compass: Towards Comprehensive Evaluation of Keyframe-Conditioned Video Generation.",
-      "Other AI: 6 papers (22.22%); representative paper: BadWAM: When World-Action Models Dream Right but Act Wrong.",
-      "LLMs and Language: 5 papers (18.52%); representative paper: VideoChat3: Fully Open Video MLLM for Efficient and Generalist Video Understanding."
+      "Multimodal Understanding and Vision: 6 papers (20.69%); representative paper: KeyFrame-Compass: Towards Comprehensive Evaluation of Keyframe-Conditioned Video Generation.",
+      "Other AI: 6 papers (20.69%); representative paper: BadWAM: When World-Action Models Dream Right but Act Wrong.",
+      "LLMs and Language: 5 papers (17.24%); representative paper: LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget."
     ],
-    "trend_summary": "Today's dominant clusters are Multimodal Understanding and Vision / Other AI / LLMs and Language; this suggests that multimodal work is moving from isolated perception toward generation, agents, and action. The strongest visible attention is on “VideoChat3: Fully Open Video MLLM for Efficient and Generalist Video Understanding” (106 upvotes).",
+    "trend_summary": "Today's dominant clusters are Multimodal Understanding and Vision / Other AI / LLMs and Language; this suggests that multimodal work is moving from isolated perception toward generation, agents, and action. The strongest visible attention is on “LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget” (166 upvotes).",
     "category_summaries": [
       {
         "topic_label": "Multimodal Understanding and Vision",
         "count": 6,
-        "share": 22.22,
-        "summary": "Multimodal Understanding and Vision contributes 6 papers (22.22%), led by “KeyFrame-Compass: Towards Comprehensive Evaluation of Keyframe-Conditioned Video Generation” with 30 upvotes."
+        "share": 20.69,
+        "summary": "Multimodal Understanding and Vision contributes 6 papers (20.69%), led by “KeyFrame-Compass: Towards Comprehensive Evaluation of Keyframe-Conditioned Video Generation” with 34 upvotes."
       },
       {
         "topic_label": "Other AI",
         "count": 6,
-        "share": 22.22,
-        "summary": "Other AI contributes 6 papers (22.22%), led by “BadWAM: When World-Action Models Dream Right but Act Wrong” with 36 upvotes."
+        "share": 20.69,
+        "summary": "Other AI contributes 6 papers (20.69%), led by “BadWAM: When World-Action Models Dream Right but Act Wrong” with 41 upvotes."
       },
       {
         "topic_label": "LLMs and Language",
         "count": 5,
-        "share": 18.52,
-        "summary": "LLMs and Language contributes 5 papers (18.52%), led by “VideoChat3: Fully Open Video MLLM for Efficient and Generalist Video Understanding” with 106 upvotes."
+        "share": 17.24,
+        "summary": "LLMs and Language contributes 5 papers (17.24%), led by “LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget” with 166 upvotes."
       },
       {
         "topic_label": "Reasoning, Alignment, and Evaluation",
-        "count": 4,
-        "share": 14.81,
-        "summary": "Reasoning, Alignment, and Evaluation contributes 4 papers (14.81%), led by “UniVR: Thinking in Visual Space for Unified Visual Reasoning” with 20 upvotes."
+        "count": 5,
+        "share": 17.24,
+        "summary": "Reasoning, Alignment, and Evaluation contributes 5 papers (17.24%), led by “UniVR: Thinking in Visual Space for Unified Visual Reasoning” with 27 upvotes."
+      },
+      {
+        "topic_label": "Agents and Planning",
+        "count": 3,
+        "share": 10.34,
+        "summary": "Agents and Planning contributes 3 papers (10.34%), led by “SEED: Self-Evolving On-Policy Distillation for Agentic Reinforcement Learning” with 79 upvotes."
       },
       {
         "topic_label": "Retrieval, Knowledge, and RAG",
         "count": 3,
-        "share": 11.11,
-        "summary": "Retrieval, Knowledge, and RAG contributes 3 papers (11.11%), led by “Smarter and Cheaper at Once: Byte-Exact KV-Cache Grafting Turns a Frozen Small Model into a Verified-Knowledge Flywheel” with 5 upvotes."
-      },
-      {
-        "topic_label": "Agents and Planning",
-        "count": 2,
-        "share": 7.41,
-        "summary": "Agents and Planning contributes 2 papers (7.41%), led by “SEED: Self-Evolving On-Policy Distillation for Agentic Reinforcement Learning” with 65 upvotes."
+        "share": 10.34,
+        "summary": "Retrieval, Knowledge, and RAG contributes 3 papers (10.34%), led by “Smarter and Cheaper at Once: Byte-Exact KV-Cache Grafting Turns a Frozen Small Model into a Verified-Knowledge Flywheel” with 7 upvotes."
       },
       {
         "topic_label": "Robotics and Embodied AI",
         "count": 1,
-        "share": 3.7,
-        "summary": "Robotics and Embodied AI contributes 1 papers (3.70%), led by “RoboTTT: Context Scaling for Robot Policies” with 12 upvotes."
+        "share": 3.45,
+        "summary": "Robotics and Embodied AI contributes 1 papers (3.45%), led by “RoboTTT: Context Scaling for Robot Policies” with 15 upvotes."
       }
     ],
     "top_papers": [
       {
+        "title": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
+        "upvotes": 166,
+        "upvote_label": "166 upvotes",
+        "topic_label": "LLMs and Language",
+        "summary": "A growing gap separates inference context lengths from RL post-training: inference systems are approaching million-token contexts, while post-training workloads often remain at 256K tokens or below and rely on length…",
+        "hf_url": "https://huggingface.co/papers/2607.14952",
+        "arxiv_url": "https://arxiv.org/abs/2607.14952",
+        "arxiv_pdf_url": "https://arxiv.org/pdf/2607.14952",
+        "papers_cool_url": "https://papers.cool/arxiv/2607.14952"
+      },
+      {
         "title": "VideoChat3: Fully Open Video MLLM for Efficient and Generalist Video Understanding",
-        "upvotes": 106,
-        "upvote_label": "106 upvotes",
+        "upvotes": 117,
+        "upvote_label": "117 upvotes",
         "topic_label": "LLMs and Language",
         "summary": "Recent advances in video understanding have spanned motion, long video, and streaming interaction, driving this field toward real-world applications.",
         "hf_url": "https://huggingface.co/papers/2607.14935",
@@ -127,8 +138,8 @@
       },
       {
         "title": "SEED: Self-Evolving On-Policy Distillation for Agentic Reinforcement Learning",
-        "upvotes": 65,
-        "upvote_label": "65 upvotes",
+        "upvotes": 79,
+        "upvote_label": "79 upvotes",
         "topic_label": "Agents and Planning",
         "summary": "Large language models are increasingly trained as interactive agents for long-horizon tasks involving multi-turn interaction, tool use, and environment feedback.",
         "hf_url": "https://huggingface.co/papers/2607.14777",
@@ -138,8 +149,8 @@
       },
       {
         "title": "SearchOS-V1: Towards Robust Open-Domain Information-Seeking Agent Collaboration",
-        "upvotes": 48,
-        "upvote_label": "48 upvotes",
+        "upvotes": 56,
+        "upvote_label": "56 upvotes",
         "topic_label": "Agents and Planning",
         "summary": "Recent advances in Tool-Integrated Large Language Models have made web search a core capability of information-seeking agents.",
         "hf_url": "https://huggingface.co/papers/2607.15257",
@@ -149,25 +160,14 @@
       },
       {
         "title": "BadWAM: When World-Action Models Dream Right but Act Wrong",
-        "upvotes": 36,
-        "upvote_label": "36 upvotes",
+        "upvotes": 41,
+        "upvote_label": "41 upvotes",
         "topic_label": "Other AI",
         "summary": "World-action models (WAMs) are emerging as a promising foundation for embodied control: rather than predicting actions alone, they learn representations that couple action generation with future world prediction.",
         "hf_url": "https://huggingface.co/papers/2607.15207",
         "arxiv_url": "https://arxiv.org/abs/2607.15207",
         "arxiv_pdf_url": "https://arxiv.org/pdf/2607.15207",
         "papers_cool_url": "https://papers.cool/arxiv/2607.15207"
-      },
-      {
-        "title": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
-        "upvotes": 35,
-        "upvote_label": "35 upvotes",
-        "topic_label": "LLMs and Language",
-        "summary": "A growing gap separates inference context lengths from RL post-training: inference systems are approaching million-token contexts, while post-training workloads often remain at 256K tokens or below and rely on length…",
-        "hf_url": "https://huggingface.co/papers/2607.14952",
-        "arxiv_url": "https://arxiv.org/abs/2607.14952",
-        "arxiv_pdf_url": "https://arxiv.org/pdf/2607.14952",
-        "papers_cool_url": "https://papers.cool/arxiv/2607.14952"
       }
     ]
   },
@@ -198,6 +198,52 @@
     }
   ],
   "top_upvoted": [
+    {
+      "report_date": "2026-07-17",
+      "paper_id": "2607.14952",
+      "title": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
+      "authors": [
+        "Changhai Zhou",
+        "Kieran Liu",
+        "Yuhua Zhou",
+        "Qian Qiao",
+        "Jun Gao",
+        "Harry Zhang",
+        "Irvine Lu",
+        "Nolan Ho",
+        "Lucian Li",
+        "Andrew Lei",
+        "Cleon Cheng",
+        "Steven Chiang",
+        "Yihang Zeng",
+        "Di Zhang",
+        "Rio Yang",
+        "Kaijie Chen",
+        "Andrew Chen",
+        "Pony Ma",
+        "Weizhong Zhang",
+        "Cheng Jin"
+      ],
+      "abstract": "A growing gap separates inference context lengths from RL post-training: inference systems are approaching million-token contexts, while post-training workloads often remain at 256K tokens or below and rely on length generalization at deployment. The gap is especially important for AI agents, whose observations, tool outputs, documents, and prior decisions accumulate over long trajectories. LongStraw is an architecture-aware execution stack for million-token RL post-training under a fixed GPU budget, instantiated with Group Relative Policy Optimization (GRPO). It evaluates the shared prompt without autograd, retains only model-specific state needed by later tokens, and replays short response branches one at a time, reducing the live training graph at the cost of additional replay time. We implement it for the hybrid recurrent and full-attention Qwen3.6-27B and the compressed-attention mixture-of-experts GLM-5.2. On eight H20 GPUs, LongStraw completes grouped Qwen scoring and response backward at 2.1M positions for groups of 2 and 8; increasing the group size adds only 0.21 GB of peak allocated memory, while a separate stress test reaches 4.46M positions. On 32 H20 GPUs, we validate the end-to-end LongStraw execution path for a 2.1M-token prompt across all 78 layers of GLM-5.2. These experiments establish execution capacity rather than complete training correctness because the captured prompt state is detached and some distributed forward and gradient composition paths remain incomplete.",
+      "hf_url": "https://huggingface.co/papers/2607.14952",
+      "arxiv_url": "https://arxiv.org/abs/2607.14952",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.14952",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.14952",
+      "github_url": "",
+      "submitted_by": "Xiaoteng Ma",
+      "submitted_at": "2026-07-17T00:00:00.000Z",
+      "upvotes": 166,
+      "comments": 3,
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [
+        "\\btoken(s)?\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "A growing gap separates inference context lengths from RL post-training: inference systems are approaching million-token contexts, while post-training workloads often remain at 256K tokens or below and rely on length…",
+      "upvote_label": "166 upvotes"
+    },
     {
       "report_date": "2026-07-17",
       "paper_id": "2607.14935",
@@ -239,8 +285,8 @@
       "github_url": "",
       "submitted_by": "Limin Wang",
       "submitted_at": "2026-07-17T00:00:00.000Z",
-      "upvotes": 106,
-      "comments": 1,
+      "upvotes": 117,
+      "comments": 2,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [
@@ -249,7 +295,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Recent advances in video understanding have spanned motion, long video, and streaming interaction, driving this field toward real-world applications.",
-      "upvote_label": "106 upvotes"
+      "upvote_label": "117 upvotes"
     },
     {
       "report_date": "2026-07-17",
@@ -276,8 +322,8 @@
       "github_url": "",
       "submitted_by": "Jinyang Wu",
       "submitted_at": "2026-07-17T00:00:00.000Z",
-      "upvotes": 65,
-      "comments": 1,
+      "upvotes": 79,
+      "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
       "matched_terms": [
@@ -286,7 +332,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Large language models are increasingly trained as interactive agents for long-horizon tasks involving multi-turn interaction, tool use, and environment feedback.",
-      "upvote_label": "65 upvotes"
+      "upvote_label": "79 upvotes"
     },
     {
       "report_date": "2026-07-17",
@@ -316,8 +362,8 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-07-17T00:00:00.000Z",
-      "upvotes": 48,
-      "comments": 0,
+      "upvotes": 56,
+      "comments": 1,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
       "matched_terms": [
@@ -326,7 +372,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Recent advances in Tool-Integrated Large Language Models have made web search a core capability of information-seeking agents.",
-      "upvote_label": "48 upvotes"
+      "upvote_label": "56 upvotes"
     },
     {
       "report_date": "2026-07-17",
@@ -345,61 +391,15 @@
       "github_url": "",
       "submitted_by": "LIQIIIII",
       "submitted_at": "2026-07-17T00:00:00.000Z",
-      "upvotes": 36,
-      "comments": 2,
+      "upvotes": 41,
+      "comments": 3,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
       "matched_terms": [],
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "World-action models (WAMs) are emerging as a promising foundation for embodied control: rather than predicting actions alone, they learn representations that couple action generation with future world prediction.",
-      "upvote_label": "36 upvotes"
-    },
-    {
-      "report_date": "2026-07-17",
-      "paper_id": "2607.14952",
-      "title": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
-      "authors": [
-        "Changhai Zhou",
-        "Kieran Liu",
-        "Yuhua Zhou",
-        "Qian Qiao",
-        "Jun Gao",
-        "Harry Zhang",
-        "Irvine Lu",
-        "Nolan Ho",
-        "Lucian Li",
-        "Andrew Lei",
-        "Cleon Cheng",
-        "Steven Chiang",
-        "Yihang Zeng",
-        "Di Zhang",
-        "Rio Yang",
-        "Kaijie Chen",
-        "Andrew Chen",
-        "Pony Ma",
-        "Weizhong Zhang",
-        "Cheng Jin"
-      ],
-      "abstract": "A growing gap separates inference context lengths from RL post-training: inference systems are approaching million-token contexts, while post-training workloads often remain at 256K tokens or below and rely on length generalization at deployment. The gap is especially important for AI agents, whose observations, tool outputs, documents, and prior decisions accumulate over long trajectories. LongStraw is an architecture-aware execution stack for million-token RL post-training under a fixed GPU budget, instantiated with Group Relative Policy Optimization (GRPO). It evaluates the shared prompt without autograd, retains only model-specific state needed by later tokens, and replays short response branches one at a time, reducing the live training graph at the cost of additional replay time. We implement it for the hybrid recurrent and full-attention Qwen3.6-27B and the compressed-attention mixture-of-experts GLM-5.2. On eight H20 GPUs, LongStraw completes grouped Qwen scoring and response backward at 2.1M positions for groups of 2 and 8; increasing the group size adds only 0.21 GB of peak allocated memory, while a separate stress test reaches 4.46M positions. On 32 H20 GPUs, we validate the end-to-end LongStraw execution path for a 2.1M-token prompt across all 78 layers of GLM-5.2. These experiments establish execution capacity rather than complete training correctness because the captured prompt state is detached and some distributed forward and gradient composition paths remain incomplete.",
-      "hf_url": "https://huggingface.co/papers/2607.14952",
-      "arxiv_url": "https://arxiv.org/abs/2607.14952",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.14952",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.14952",
-      "github_url": "",
-      "submitted_by": "Xiaoteng Ma",
-      "submitted_at": "2026-07-17T00:00:00.000Z",
-      "upvotes": 35,
-      "comments": 2,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
-      "matched_terms": [
-        "\\btoken(s)?\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "A growing gap separates inference context lengths from RL post-training: inference systems are approaching million-token contexts, while post-training workloads often remain at 256K tokens or below and rely on length…",
-      "upvote_label": "35 upvotes"
+      "upvote_label": "41 upvotes"
     },
     {
       "report_date": "2026-07-17",
@@ -436,8 +436,8 @@
       "github_url": "",
       "submitted_by": "Yang Shi",
       "submitted_at": "2026-07-17T00:00:00.000Z",
-      "upvotes": 30,
-      "comments": 1,
+      "upvotes": 34,
+      "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [
@@ -446,7 +446,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Video generation increasingly relies on keyframe-based workflows, where creators specify a sequence of reference images to guide generation.",
-      "upvote_label": "30 upvotes"
+      "upvote_label": "34 upvotes"
     },
     {
       "report_date": "2026-07-17",
@@ -474,8 +474,8 @@
       "github_url": "",
       "submitted_by": "Yang Shi",
       "submitted_at": "2026-07-17T00:00:00.000Z",
-      "upvotes": 29,
-      "comments": 1,
+      "upvotes": 31,
+      "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [
@@ -485,46 +485,49 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Multi-reference-to-audio-video (MR2AV) generation aims to generate coherent audio-video content conditioned on multiple references and textual instructions.",
-      "upvote_label": "29 upvotes"
+      "upvote_label": "31 upvotes"
     },
     {
       "report_date": "2026-07-17",
-      "paper_id": "2607.14076",
-      "title": "From Pixels to States: Rethinking Interactive World Models as Game Engines",
+      "paper_id": "2607.12800",
+      "title": "UniVR: Thinking in Visual Space for Unified Visual Reasoning",
       "authors": [
-        "Zhen Li",
-        "Zian Meng",
-        "Shuwei Shi",
-        "Mingliang Zhai",
-        "Jiaming Tan",
-        "Chuanhao Li",
-        "Kaipeng Zhang"
+        "Zhongwei Ren",
+        "Yunchao Wei",
+        "Yao Zhao",
+        "Weibo Gong",
+        "Xiao Liu",
+        "Anran Wang",
+        "Xiangtai Li",
+        "Xiaojie Jin"
       ],
-      "abstract": "Building interactive worlds that respond coherently to player actions has long been a shared goal of computer graphics, games, and artificial intelligence. Recent video generative models provide a data-driven route toward this goal by predicting future observations conditioned on user actions, and are increasingly regarded as potential next-generation game engines. Realizing a genuinely interactive game world, however, requires interaction outcomes that follow rules over evolving game conditions, consequences that persist over long horizons, and a generation loop that operates in real time. Conventional game engines realize these properties through a recurrent action-state-observation loop, in which player actions update an explicit game state according to predefined rules and observations are rendered from the resulting state. Taking this loop as an organizing lens, this paper examines interactive game world modeling along four dimensions: player action control, game state dynamics, state-observation persistence, and real-time interactive generation. For each dimension, we start from the capabilities required by an interactive game world, group existing approaches into representative families, and discuss the strengths and trade-offs of each family. Complementing this analysis, we present a scalable data engine for Black Myth: Wukong that collects over 90 hours of gameplay with frame-aligned player actions, ground-truth game states, and visual observations, together with structured and semantic annotations, as a resource for state-aware game world modeling. We hope this paper offers a clear picture of where the field stands and fosters progress toward interactive game worlds.",
-      "hf_url": "https://huggingface.co/papers/2607.14076",
-      "arxiv_url": "https://arxiv.org/abs/2607.14076",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.14076",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.14076",
+      "abstract": "Learning broad world knowledge directly from raw visual data is a fundamental capability of intelligence. We introduce UniVR, the first investigation into simultaneously learning complex reasoning, fine-grained physical dynamics, and long-term planning from pure visual demonstrations. At its core, UniVR features VR-GRPO, a reinforcement learning paradigm with complementary global and step-level rewards. This approach enforces logical coherence and physical consistency throughout the reasoning process without requiring task-specific heuristics or image-text pairs. To train and evaluate UniVR, we construct VR-X, a large-scale benchmark curated from 16 diverse sources spanning long-horizon manipulation, spatial puzzles, and physical reasoning. It is the first comprehensive suite to assess these heterogeneous capabilities under a purely visual protocol. Remarkably, UniVR achieves up to a 25% improvement on VR-X, and its superior visual reasoning also boosts performance on various multimodal understanding benchmarks. These findings underscore the vast potential of reasoning within visual spaces, with all code, data, and models are open-sourced for further research.",
+      "hf_url": "https://huggingface.co/papers/2607.12800",
+      "arxiv_url": "https://arxiv.org/abs/2607.12800",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.12800",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.12800",
       "github_url": "",
-      "submitted_by": "kaipeng",
+      "submitted_by": "rzw",
       "submitted_at": "2026-07-17T00:00:00.000Z",
-      "upvotes": 23,
-      "comments": 1,
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
-      "matched_terms": [],
+      "upvotes": 27,
+      "comments": 3,
+      "topic_key": "reasoning_alignment_eval",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "matched_terms": [
+        "\\breasoning\\b"
+      ],
       "classification_source": "rule",
       "classification_confidence": null,
-      "one_sentence_summary": "Building interactive worlds that respond coherently to player actions has long been a shared goal of computer graphics, games, and artificial intelligence.",
-      "upvote_label": "23 upvotes"
+      "one_sentence_summary": "Learning broad world knowledge directly from raw visual data is a fundamental capability of intelligence.",
+      "upvote_label": "27 upvotes"
     }
   ],
   "topics": [
     {
       "topic_label": "Multimodal Understanding and Vision",
       "count": 6,
-      "share": 22.22,
-      "summary": "Multimodal Understanding and Vision contributes 6 papers (22.22%), led by “KeyFrame-Compass: Towards Comprehensive Evaluation of Keyframe-Conditioned Video Generation” with 30 upvotes.",
+      "share": 20.69,
+      "summary": "Multimodal Understanding and Vision contributes 6 papers (20.69%), led by “KeyFrame-Compass: Towards Comprehensive Evaluation of Keyframe-Conditioned Video Generation” with 34 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-17",
@@ -561,8 +564,8 @@
           "github_url": "",
           "submitted_by": "Yang Shi",
           "submitted_at": "2026-07-17T00:00:00.000Z",
-          "upvotes": 30,
-          "comments": 1,
+          "upvotes": 34,
+          "comments": 2,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [
@@ -571,7 +574,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Video generation increasingly relies on keyframe-based workflows, where creators specify a sequence of reference images to guide generation.",
-          "upvote_label": "30 upvotes"
+          "upvote_label": "34 upvotes"
         },
         {
           "report_date": "2026-07-17",
@@ -599,8 +602,8 @@
           "github_url": "",
           "submitted_by": "Yang Shi",
           "submitted_at": "2026-07-17T00:00:00.000Z",
-          "upvotes": 29,
-          "comments": 1,
+          "upvotes": 31,
+          "comments": 2,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [
@@ -610,7 +613,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Multi-reference-to-audio-video (MR2AV) generation aims to generate coherent audio-video content conditioned on multiple references and textual instructions.",
-          "upvote_label": "29 upvotes"
+          "upvote_label": "31 upvotes"
         },
         {
           "report_date": "2026-07-17",
@@ -636,8 +639,8 @@
           "github_url": "",
           "submitted_by": "Minh-Quan Le",
           "submitted_at": "2026-07-17T00:00:00.000Z",
-          "upvotes": 22,
-          "comments": 1,
+          "upvotes": 27,
+          "comments": 2,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [
@@ -646,7 +649,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Human cognition does not separate understanding and generation.",
-          "upvote_label": "22 upvotes"
+          "upvote_label": "27 upvotes"
         },
         {
           "report_date": "2026-07-17",
@@ -689,8 +692,8 @@
           "github_url": "",
           "submitted_by": "Lianghua Huang",
           "submitted_at": "2026-07-17T00:00:00.000Z",
-          "upvotes": 13,
-          "comments": 2,
+          "upvotes": 17,
+          "comments": 3,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [
@@ -699,7 +702,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "We present Wan-Streamer v0.3, which reframes our native-streaming interaction model under a single organizing view: a video is a world plus an event stream.",
-          "upvote_label": "13 upvotes"
+          "upvote_label": "17 upvotes"
         },
         {
           "report_date": "2026-07-17",
@@ -723,8 +726,8 @@
           "github_url": "",
           "submitted_by": "Xiangyu Zeng",
           "submitted_at": "2026-07-17T00:00:00.000Z",
-          "upvotes": 7,
-          "comments": 1,
+          "upvotes": 8,
+          "comments": 2,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [
@@ -734,7 +737,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Visually impaired individuals (VIIs) encounter significant daily challenges due to limited access to visual information.",
-          "upvote_label": "7 upvotes"
+          "upvote_label": "8 upvotes"
         },
         {
           "report_date": "2026-07-17",
@@ -757,8 +760,8 @@
           "github_url": "",
           "submitted_by": "zzhongyj",
           "submitted_at": "2026-07-17T00:00:00.000Z",
-          "upvotes": 4,
-          "comments": 1,
+          "upvotes": 6,
+          "comments": 2,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [
@@ -767,15 +770,15 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Recent generalizable 3D Gaussian Splatting models have advanced long-sequence novel view synthesis (NVS), but at the cost of substantial redundant computation.",
-          "upvote_label": "4 upvotes"
+          "upvote_label": "6 upvotes"
         }
       ]
     },
     {
       "topic_label": "Other AI",
       "count": 6,
-      "share": 22.22,
-      "summary": "Other AI contributes 6 papers (22.22%), led by “BadWAM: When World-Action Models Dream Right but Act Wrong” with 36 upvotes.",
+      "share": 20.69,
+      "summary": "Other AI contributes 6 papers (20.69%), led by “BadWAM: When World-Action Models Dream Right but Act Wrong” with 41 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-17",
@@ -794,15 +797,15 @@
           "github_url": "",
           "submitted_by": "LIQIIIII",
           "submitted_at": "2026-07-17T00:00:00.000Z",
-          "upvotes": 36,
-          "comments": 2,
+          "upvotes": 41,
+          "comments": 3,
           "topic_key": "other_ai",
           "topic_label": "Other AI",
           "matched_terms": [],
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "World-action models (WAMs) are emerging as a promising foundation for embodied control: rather than predicting actions alone, they learn representations that couple action generation with future world prediction.",
-          "upvote_label": "36 upvotes"
+          "upvote_label": "41 upvotes"
         },
         {
           "report_date": "2026-07-17",
@@ -825,15 +828,15 @@
           "github_url": "",
           "submitted_by": "kaipeng",
           "submitted_at": "2026-07-17T00:00:00.000Z",
-          "upvotes": 23,
-          "comments": 1,
+          "upvotes": 26,
+          "comments": 2,
           "topic_key": "other_ai",
           "topic_label": "Other AI",
           "matched_terms": [],
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Building interactive worlds that respond coherently to player actions has long been a shared goal of computer graphics, games, and artificial intelligence.",
-          "upvote_label": "23 upvotes"
+          "upvote_label": "26 upvotes"
         },
         {
           "report_date": "2026-07-17",
@@ -857,15 +860,15 @@
           "github_url": "",
           "submitted_by": "Huan-ang Gao",
           "submitted_at": "2026-07-17T00:00:00.000Z",
-          "upvotes": 18,
-          "comments": 2,
+          "upvotes": 21,
+          "comments": 5,
           "topic_key": "other_ai",
           "topic_label": "Other AI",
           "matched_terms": [],
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Reinforcement learning has become a standard post-training recipe for large language models, but dense full-parameter updates create two deployment-relevant bottlenecks: suppressed reasoning performance, often…",
-          "upvote_label": "18 upvotes"
+          "upvote_label": "21 upvotes"
         },
         {
           "report_date": "2026-07-17",
@@ -888,43 +891,15 @@
           "github_url": "",
           "submitted_by": "WANG Rui",
           "submitted_at": "2026-07-17T00:00:00.000Z",
-          "upvotes": 14,
-          "comments": 1,
+          "upvotes": 16,
+          "comments": 2,
           "topic_key": "other_ai",
           "topic_label": "Other AI",
           "matched_terms": [],
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "On-policy distillation (OPD) has become a key paradigm in LLM post-training, yet its training dynamics remain poorly understood.",
-          "upvote_label": "14 upvotes"
-        },
-        {
-          "report_date": "2026-07-17",
-          "paper_id": "2607.14749",
-          "title": "WanSong v1.0 Technical Report",
-          "authors": [
-            "Binghui Chen",
-            "Pandeng Li",
-            "Yu Liu",
-            "Jingren Zhou"
-          ],
-          "abstract": "Music generation foundation models have recently attracted significant industry attention. However, achieving efficient generation and high-fidelity long-form audio while supporting controllability remains challenging. To address these needs, we present WanSong, a simple yet powerful approach for long-form, commercial-grade song generation. Unlike autoregressive (AR) and cascaded multi-stage pipelines (\\eg, AR followed by diffusion), WanSong is a pure diffusion-based model that directly generates high-fidelity, multilingual songs up to 5 minutes and outputs dual stems (vocals and background music) in a single run. In addition, our diffusion framework enables faster inference through step-distillation, and offers an efficient pathway for fine-tuning and customization to support downstream editing tasks.",
-          "hf_url": "https://huggingface.co/papers/2607.14749",
-          "arxiv_url": "https://arxiv.org/abs/2607.14749",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2607.14749",
-          "papers_cool_url": "https://papers.cool/arxiv/2607.14749",
-          "github_url": "",
-          "submitted_by": "taesiri",
-          "submitted_at": "2026-07-17T00:00:00.000Z",
-          "upvotes": 8,
-          "comments": 1,
-          "topic_key": "other_ai",
-          "topic_label": "Other AI",
-          "matched_terms": [],
-          "classification_source": "rule",
-          "classification_confidence": null,
-          "one_sentence_summary": "Music generation foundation models have recently attracted significant industry attention.",
-          "upvote_label": "8 upvotes"
+          "upvote_label": "16 upvotes"
         },
         {
           "report_date": "2026-07-17",
@@ -945,24 +920,98 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-07-17T00:00:00.000Z",
-          "upvotes": 8,
-          "comments": 0,
+          "upvotes": 12,
+          "comments": 1,
           "topic_key": "other_ai",
           "topic_label": "Other AI",
           "matched_terms": [],
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "MeanFlow generators achieve fast few-step sampling by predicting average velocities over time intervals, making them attractive for efficient generation.",
-          "upvote_label": "8 upvotes"
+          "upvote_label": "12 upvotes"
+        },
+        {
+          "report_date": "2026-07-17",
+          "paper_id": "2607.14749",
+          "title": "WanSong v1.0 Technical Report",
+          "authors": [
+            "Binghui Chen",
+            "Pandeng Li",
+            "Yu Liu",
+            "Jingren Zhou"
+          ],
+          "abstract": "Music generation foundation models have recently attracted significant industry attention. However, achieving efficient generation and high-fidelity long-form audio while supporting controllability remains challenging. To address these needs, we present WanSong, a simple yet powerful approach for long-form, commercial-grade song generation. Unlike autoregressive (AR) and cascaded multi-stage pipelines (\\eg, AR followed by diffusion), WanSong is a pure diffusion-based model that directly generates high-fidelity, multilingual songs up to 5 minutes and outputs dual stems (vocals and background music) in a single run. In addition, our diffusion framework enables faster inference through step-distillation, and offers an efficient pathway for fine-tuning and customization to support downstream editing tasks.",
+          "hf_url": "https://huggingface.co/papers/2607.14749",
+          "arxiv_url": "https://arxiv.org/abs/2607.14749",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2607.14749",
+          "papers_cool_url": "https://papers.cool/arxiv/2607.14749",
+          "github_url": "",
+          "submitted_by": "taesiri",
+          "submitted_at": "2026-07-17T00:00:00.000Z",
+          "upvotes": 10,
+          "comments": 3,
+          "topic_key": "other_ai",
+          "topic_label": "Other AI",
+          "matched_terms": [],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "Music generation foundation models have recently attracted significant industry attention.",
+          "upvote_label": "10 upvotes"
         }
       ]
     },
     {
       "topic_label": "LLMs and Language",
       "count": 5,
-      "share": 18.52,
-      "summary": "LLMs and Language contributes 5 papers (18.52%), led by “VideoChat3: Fully Open Video MLLM for Efficient and Generalist Video Understanding” with 106 upvotes.",
+      "share": 17.24,
+      "summary": "LLMs and Language contributes 5 papers (17.24%), led by “LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget” with 166 upvotes.",
       "papers": [
+        {
+          "report_date": "2026-07-17",
+          "paper_id": "2607.14952",
+          "title": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
+          "authors": [
+            "Changhai Zhou",
+            "Kieran Liu",
+            "Yuhua Zhou",
+            "Qian Qiao",
+            "Jun Gao",
+            "Harry Zhang",
+            "Irvine Lu",
+            "Nolan Ho",
+            "Lucian Li",
+            "Andrew Lei",
+            "Cleon Cheng",
+            "Steven Chiang",
+            "Yihang Zeng",
+            "Di Zhang",
+            "Rio Yang",
+            "Kaijie Chen",
+            "Andrew Chen",
+            "Pony Ma",
+            "Weizhong Zhang",
+            "Cheng Jin"
+          ],
+          "abstract": "A growing gap separates inference context lengths from RL post-training: inference systems are approaching million-token contexts, while post-training workloads often remain at 256K tokens or below and rely on length generalization at deployment. The gap is especially important for AI agents, whose observations, tool outputs, documents, and prior decisions accumulate over long trajectories. LongStraw is an architecture-aware execution stack for million-token RL post-training under a fixed GPU budget, instantiated with Group Relative Policy Optimization (GRPO). It evaluates the shared prompt without autograd, retains only model-specific state needed by later tokens, and replays short response branches one at a time, reducing the live training graph at the cost of additional replay time. We implement it for the hybrid recurrent and full-attention Qwen3.6-27B and the compressed-attention mixture-of-experts GLM-5.2. On eight H20 GPUs, LongStraw completes grouped Qwen scoring and response backward at 2.1M positions for groups of 2 and 8; increasing the group size adds only 0.21 GB of peak allocated memory, while a separate stress test reaches 4.46M positions. On 32 H20 GPUs, we validate the end-to-end LongStraw execution path for a 2.1M-token prompt across all 78 layers of GLM-5.2. These experiments establish execution capacity rather than complete training correctness because the captured prompt state is detached and some distributed forward and gradient composition paths remain incomplete.",
+          "hf_url": "https://huggingface.co/papers/2607.14952",
+          "arxiv_url": "https://arxiv.org/abs/2607.14952",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2607.14952",
+          "papers_cool_url": "https://papers.cool/arxiv/2607.14952",
+          "github_url": "",
+          "submitted_by": "Xiaoteng Ma",
+          "submitted_at": "2026-07-17T00:00:00.000Z",
+          "upvotes": 166,
+          "comments": 3,
+          "topic_key": "llm_language",
+          "topic_label": "LLMs and Language",
+          "matched_terms": [
+            "\\btoken(s)?\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "A growing gap separates inference context lengths from RL post-training: inference systems are approaching million-token contexts, while post-training workloads often remain at 256K tokens or below and rely on length…",
+          "upvote_label": "166 upvotes"
+        },
         {
           "report_date": "2026-07-17",
           "paper_id": "2607.14935",
@@ -1004,8 +1053,8 @@
           "github_url": "",
           "submitted_by": "Limin Wang",
           "submitted_at": "2026-07-17T00:00:00.000Z",
-          "upvotes": 106,
-          "comments": 1,
+          "upvotes": 117,
+          "comments": 2,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
           "matched_terms": [
@@ -1014,53 +1063,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Recent advances in video understanding have spanned motion, long video, and streaming interaction, driving this field toward real-world applications.",
-          "upvote_label": "106 upvotes"
-        },
-        {
-          "report_date": "2026-07-17",
-          "paper_id": "2607.14952",
-          "title": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
-          "authors": [
-            "Changhai Zhou",
-            "Kieran Liu",
-            "Yuhua Zhou",
-            "Qian Qiao",
-            "Jun Gao",
-            "Harry Zhang",
-            "Irvine Lu",
-            "Nolan Ho",
-            "Lucian Li",
-            "Andrew Lei",
-            "Cleon Cheng",
-            "Steven Chiang",
-            "Yihang Zeng",
-            "Di Zhang",
-            "Rio Yang",
-            "Kaijie Chen",
-            "Andrew Chen",
-            "Pony Ma",
-            "Weizhong Zhang",
-            "Cheng Jin"
-          ],
-          "abstract": "A growing gap separates inference context lengths from RL post-training: inference systems are approaching million-token contexts, while post-training workloads often remain at 256K tokens or below and rely on length generalization at deployment. The gap is especially important for AI agents, whose observations, tool outputs, documents, and prior decisions accumulate over long trajectories. LongStraw is an architecture-aware execution stack for million-token RL post-training under a fixed GPU budget, instantiated with Group Relative Policy Optimization (GRPO). It evaluates the shared prompt without autograd, retains only model-specific state needed by later tokens, and replays short response branches one at a time, reducing the live training graph at the cost of additional replay time. We implement it for the hybrid recurrent and full-attention Qwen3.6-27B and the compressed-attention mixture-of-experts GLM-5.2. On eight H20 GPUs, LongStraw completes grouped Qwen scoring and response backward at 2.1M positions for groups of 2 and 8; increasing the group size adds only 0.21 GB of peak allocated memory, while a separate stress test reaches 4.46M positions. On 32 H20 GPUs, we validate the end-to-end LongStraw execution path for a 2.1M-token prompt across all 78 layers of GLM-5.2. These experiments establish execution capacity rather than complete training correctness because the captured prompt state is detached and some distributed forward and gradient composition paths remain incomplete.",
-          "hf_url": "https://huggingface.co/papers/2607.14952",
-          "arxiv_url": "https://arxiv.org/abs/2607.14952",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2607.14952",
-          "papers_cool_url": "https://papers.cool/arxiv/2607.14952",
-          "github_url": "",
-          "submitted_by": "Xiaoteng Ma",
-          "submitted_at": "2026-07-17T00:00:00.000Z",
-          "upvotes": 35,
-          "comments": 2,
-          "topic_key": "llm_language",
-          "topic_label": "LLMs and Language",
-          "matched_terms": [
-            "\\btoken(s)?\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null,
-          "one_sentence_summary": "A growing gap separates inference context lengths from RL post-training: inference systems are approaching million-token contexts, while post-training workloads often remain at 256K tokens or below and rely on length…",
-          "upvote_label": "35 upvotes"
+          "upvote_label": "117 upvotes"
         },
         {
           "report_date": "2026-07-17",
@@ -1081,8 +1084,8 @@
           "github_url": "",
           "submitted_by": "Yifan Zhang",
           "submitted_at": "2026-07-17T00:00:00.000Z",
-          "upvotes": 7,
-          "comments": 1,
+          "upvotes": 11,
+          "comments": 2,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
           "matched_terms": [
@@ -1091,7 +1094,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Looped Transformers scale sequential computation by applying a compact stack of physical blocks for multiple rounds, increasing unrolled depth without increasing stored parameters.",
-          "upvote_label": "7 upvotes"
+          "upvote_label": "11 upvotes"
         },
         {
           "report_date": "2026-07-17",
@@ -1111,8 +1114,8 @@
           "github_url": "",
           "submitted_by": "Patrik Wolf",
           "submitted_at": "2026-07-17T00:00:00.000Z",
-          "upvotes": 4,
-          "comments": 1,
+          "upvotes": 5,
+          "comments": 2,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
           "matched_terms": [
@@ -1123,7 +1126,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "In-context learning is commonly interpreted as a form of conditional inference, in which the prompt specifies a context and the model's output is treated as an estimate of the corresponding conditional distribution.",
-          "upvote_label": "4 upvotes"
+          "upvote_label": "5 upvotes"
         },
         {
           "report_date": "2026-07-17",
@@ -1141,8 +1144,8 @@
           "github_url": "",
           "submitted_by": "Parikshit Bansal",
           "submitted_at": "2026-07-17T00:00:00.000Z",
-          "upvotes": 1,
-          "comments": 1,
+          "upvotes": 3,
+          "comments": 2,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
           "matched_terms": [
@@ -1152,15 +1155,15 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "In this paper we introduce token time continuous diffusion (TTCD), a new diffusion language model which (a) operates in continuous space, deterministically mapping Gaussian noise to a final token canvas with no…",
-          "upvote_label": "1 upvote"
+          "upvote_label": "3 upvotes"
         }
       ]
     },
     {
       "topic_label": "Reasoning, Alignment, and Evaluation",
-      "count": 4,
-      "share": 14.81,
-      "summary": "Reasoning, Alignment, and Evaluation contributes 4 papers (14.81%), led by “UniVR: Thinking in Visual Space for Unified Visual Reasoning” with 20 upvotes.",
+      "count": 5,
+      "share": 17.24,
+      "summary": "Reasoning, Alignment, and Evaluation contributes 5 papers (17.24%), led by “UniVR: Thinking in Visual Space for Unified Visual Reasoning” with 27 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-17",
@@ -1184,8 +1187,8 @@
           "github_url": "",
           "submitted_by": "rzw",
           "submitted_at": "2026-07-17T00:00:00.000Z",
-          "upvotes": 20,
-          "comments": 1,
+          "upvotes": 27,
+          "comments": 3,
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [
@@ -1194,38 +1197,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Learning broad world knowledge directly from raw visual data is a fundamental capability of intelligence.",
-          "upvote_label": "20 upvotes"
-        },
-        {
-          "report_date": "2026-07-17",
-          "paper_id": "2607.15058",
-          "title": "SUFLECA: Scaling Up Feature Learning for CAD-to-image Alignment",
-          "authors": [
-            "Saad Ejaz",
-            "Miguel Fernandez-Cortizas",
-            "Javier Civera",
-            "Holger Voos",
-            "Jose Luis Sanchez-Lopez"
-          ],
-          "abstract": "CAD-to-image alignment aims to estimate an object's 9D pose (rotation, translation, and anisotropic scale) from a single RGB image, enabling applications in robotics and augmented reality. Recent zero-shot methods use visual foundation models to match image regions to CAD models, yet typically their correspondences are appearance-driven and degrade under occlusion or sim-to-real domain shift. To address these limitations, we introduce SUFLECA (Scaling Up Feature LEarning for CAD Alignment), a weakly-supervised framework for zero-shot CAD alignment with two key contributions. First, SUFLECA scales up geometry-grounded feature learning from pretrained visual representations through Normalized Object Coordinates (NOCs) supervision on 674K images spanning 12 real and synthetic datasets, learning compact geometry-aware features that generalize across domains. Second, we propose a geometrically consistent matching algorithm that establishes reliable one-to-one CAD-to-image correspondences. Together, these contributions enable accurate, sub-second alignment per object instance without iterative pose refinement. On ScanNet25k, SUFLECA achieves 33.4%/42.3% category/instance accuracy, outperforming, with a smaller computational footprint, the strongest zero-shot baseline by 10.3/12.2 percentage points and, for the first time on this benchmark, even surpassing fully supervised methods. Code is available at: https://github.com/snt-arg/SUFLECA",
-          "hf_url": "https://huggingface.co/papers/2607.15058",
-          "arxiv_url": "https://arxiv.org/abs/2607.15058",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2607.15058",
-          "papers_cool_url": "https://papers.cool/arxiv/2607.15058",
-          "github_url": "",
-          "submitted_by": "Saad Ejaz",
-          "submitted_at": "2026-07-17T00:00:00.000Z",
-          "upvotes": 3,
-          "comments": 1,
-          "topic_key": "reasoning_alignment_eval",
-          "topic_label": "Reasoning, Alignment, and Evaluation",
-          "matched_terms": [
-            "\\balignment\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null,
-          "one_sentence_summary": "CAD-to-image alignment aims to estimate an object's 9D pose (rotation, translation, and anisotropic scale) from a single RGB image, enabling applications in robotics and augmented reality.",
-          "upvote_label": "3 upvotes"
+          "upvote_label": "27 upvotes"
         },
         {
           "report_date": "2026-07-17",
@@ -1271,8 +1243,8 @@
           "github_url": "",
           "submitted_by": "Haotian Liang",
           "submitted_at": "2026-07-17T00:00:00.000Z",
-          "upvotes": 3,
-          "comments": 1,
+          "upvotes": 20,
+          "comments": 2,
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [
@@ -1281,7 +1253,38 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Embodied cognition requires agents to connect high-level task reasoning with the physical states to be achieved.",
-          "upvote_label": "3 upvotes"
+          "upvote_label": "20 upvotes"
+        },
+        {
+          "report_date": "2026-07-17",
+          "paper_id": "2607.15058",
+          "title": "SUFLECA: Scaling Up Feature Learning for CAD-to-image Alignment",
+          "authors": [
+            "Saad Ejaz",
+            "Miguel Fernandez-Cortizas",
+            "Javier Civera",
+            "Holger Voos",
+            "Jose Luis Sanchez-Lopez"
+          ],
+          "abstract": "CAD-to-image alignment aims to estimate an object's 9D pose (rotation, translation, and anisotropic scale) from a single RGB image, enabling applications in robotics and augmented reality. Recent zero-shot methods use visual foundation models to match image regions to CAD models, yet typically their correspondences are appearance-driven and degrade under occlusion or sim-to-real domain shift. To address these limitations, we introduce SUFLECA (Scaling Up Feature LEarning for CAD Alignment), a weakly-supervised framework for zero-shot CAD alignment with two key contributions. First, SUFLECA scales up geometry-grounded feature learning from pretrained visual representations through Normalized Object Coordinates (NOCs) supervision on 674K images spanning 12 real and synthetic datasets, learning compact geometry-aware features that generalize across domains. Second, we propose a geometrically consistent matching algorithm that establishes reliable one-to-one CAD-to-image correspondences. Together, these contributions enable accurate, sub-second alignment per object instance without iterative pose refinement. On ScanNet25k, SUFLECA achieves 33.4%/42.3% category/instance accuracy, outperforming, with a smaller computational footprint, the strongest zero-shot baseline by 10.3/12.2 percentage points and, for the first time on this benchmark, even surpassing fully supervised methods. Code is available at: https://github.com/snt-arg/SUFLECA",
+          "hf_url": "https://huggingface.co/papers/2607.15058",
+          "arxiv_url": "https://arxiv.org/abs/2607.15058",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2607.15058",
+          "papers_cool_url": "https://papers.cool/arxiv/2607.15058",
+          "github_url": "",
+          "submitted_by": "Saad Ejaz",
+          "submitted_at": "2026-07-17T00:00:00.000Z",
+          "upvotes": 4,
+          "comments": 2,
+          "topic_key": "reasoning_alignment_eval",
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "matched_terms": [
+            "\\balignment\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "CAD-to-image alignment aims to estimate an object's 9D pose (rotation, translation, and anisotropic scale) from a single RGB image, enabling applications in robotics and augmented reality.",
+          "upvote_label": "4 upvotes"
         },
         {
           "report_date": "2026-07-17",
@@ -1309,8 +1312,8 @@
           "github_url": "",
           "submitted_by": "Maijunxian Wang",
           "submitted_at": "2026-07-17T00:00:00.000Z",
-          "upvotes": 1,
-          "comments": 1,
+          "upvotes": 3,
+          "comments": 2,
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [
@@ -1319,116 +1322,47 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Video models are evolving into vision foundation models, yet they still lack human-like multi-step reasoning.",
+          "upvote_label": "3 upvotes"
+        },
+        {
+          "report_date": "2026-07-17",
+          "paper_id": "2607.09061",
+          "title": "On Locality and Length Generalization in Visual Reasoning",
+          "authors": [
+            "Pulkit Madan",
+            "Sanjay Haresh",
+            "Reza Ebrahimi",
+            "Sunny Panchal",
+            "Apratim Bhattacharyya",
+            "Roland Memisevic"
+          ],
+          "abstract": "A striking feature of the human visual system is that it ingests visual information through a series of local foveated glimpses, rather than a single global computation. This makes human vision distinctly different from most popular computer vision models in use today, which input images globally and in a single shot. A natural question therefore is whether local, sequential vision models may provide any fundamental computational benefits in addition to being biologically more plausible than global models. In this work, we investigate this question from the perspective of visual state tracking and length generalization. Inspired by recent studies of length generalization in language models, we study the behavior of vision models trained on simple vision tasks that require the aggregation of local information across an image. Our experiments reveal that, similar to language models, vision models can learn to exploit global shortcuts and thereby fail to generalize over task length or complexity. We also show that recurrent vision policies based on strictly local perception can mitigate these failures, thereby allowing models to generalize on these tasks. Our results show that local attention may be an essential overlooked requirement for robust compositional generalization.",
+          "hf_url": "https://huggingface.co/papers/2607.09061",
+          "arxiv_url": "https://arxiv.org/abs/2607.09061",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2607.09061",
+          "papers_cool_url": "https://papers.cool/arxiv/2607.09061",
+          "github_url": "",
+          "submitted_by": "M.Reza Ebrahimi",
+          "submitted_at": "2026-07-17T00:00:00.000Z",
+          "upvotes": 1,
+          "comments": 2,
+          "topic_key": "reasoning_alignment_eval",
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "matched_terms": [
+            "\\breasoning\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "A striking feature of the human visual system is that it ingests visual information through a series of local foveated glimpses, rather than a single global computation.",
           "upvote_label": "1 upvote"
         }
       ]
     },
     {
-      "topic_label": "Retrieval, Knowledge, and RAG",
-      "count": 3,
-      "share": 11.11,
-      "summary": "Retrieval, Knowledge, and RAG contributes 3 papers (11.11%), led by “Smarter and Cheaper at Once: Byte-Exact KV-Cache Grafting Turns a Frozen Small Model into a Verified-Knowledge Flywheel” with 5 upvotes.",
-      "papers": [
-        {
-          "report_date": "2026-07-17",
-          "paper_id": "2607.14431",
-          "title": "Smarter and Cheaper at Once: Byte-Exact KV-Cache Grafting Turns a Frozen Small Model into a Verified-Knowledge Flywheel",
-          "authors": [
-            "Sietse Schelpe"
-          ],
-          "abstract": "We report a way to make a frozen small language model both more capable and dramatically cheaper at once, without changing any weights. Verified knowledge is deposited once as a byte-exact key-value (KV) state artifact and later restored, by graft, into a fresh inference context. The restore is bit-exact: under a pinned deterministic configuration, the grafted logits are byte-for-byte identical to a fresh computation (SHA-256 equality), with zero KL divergence and 100% argmax agreement over fifty samples. We show that own-position graft is the unique numerically exact operating point on a model with floating-point rotary encoding, and we verify byte-exactness on two model scales (12B, 31B) and two GPU targets, one through a pre-registered replay. On AIME 2025, a frozen Gemma-4-12B moves from 80.0% to 93.3% once a verified solution library is grafted, above its own 77.5% and its 31B sibling's 89.2% published anchors. On the recurring case, eight problems the base model never solves within a 401,026-token budget are answered from cached verified solutions in 61 total decode tokens, a factor of 6,574 fewer tokens and about 8,700x less energy; the capability claim proper rests on held-out transfer (7 of 7 at 31B). The same byte-exact store widens usable context from 32,768 to 2,854,766 tokens at zero extra accelerator memory, and moves byte-identical between machines of the same architecture. We describe the system at the behavior level; the engine is proprietary, and every reported number is backed by committed input and output hashes so the scoring can be re-checked without it.",
-          "hf_url": "https://huggingface.co/papers/2607.14431",
-          "arxiv_url": "https://arxiv.org/abs/2607.14431",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2607.14431",
-          "papers_cool_url": "https://papers.cool/arxiv/2607.14431",
-          "github_url": "",
-          "submitted_by": "sietse schelpe",
-          "submitted_at": "2026-07-17T00:00:00.000Z",
-          "upvotes": 5,
-          "comments": 1,
-          "topic_key": "retrieval_knowledge",
-          "topic_label": "Retrieval, Knowledge, and RAG",
-          "matched_terms": [
-            "\\bknowledge\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null,
-          "one_sentence_summary": "We report a way to make a frozen small language model both more capable and dramatically cheaper at once, without changing any weights.",
-          "upvote_label": "5 upvotes"
-        },
-        {
-          "report_date": "2026-07-17",
-          "paper_id": "2607.10463",
-          "title": "GRASP: GRanularity-Aware Search Policy for Agentic RAG",
-          "authors": [
-            "Varun Gandhi",
-            "Jaewook Lee",
-            "Shantanu Todmal",
-            "Franck Dernoncourt",
-            "Ryan Rossi",
-            "Zichao Wang",
-            "Andrew Lan"
-          ],
-          "abstract": "Agentic retrieval-augmented generation (RAG) extends static RAG by allowing language models to iteratively reason, generate search queries, retrieve evidence, and predict answers. However, it remains challenging for models to decide when to retrieve, whether to use lexical matching or semantic similarity, and how to control context granularity to prevent irrelevant tokens from interfering with agent reasoning. In this paper, we introduce GRASP, a reinforcement learning (RL) framework for training agents to adaptively coordinate complementary retrieval tools during multi-step reasoning. GRASP provides the agent with semantic search, keyword search, and paragraph-reading actions, enabling it to retrieve sentence-level evidence and expand further context only when needed. We train the policy with a reward that jointly accounts for answer accuracy, grounded reading, complementary search, and turn efficiency. Experiments on multi-hop reasoning benchmarks show that GRASP improves both retrieval recall and downstream question answering performance compared with single-step retrieval, prompting-based agentic RAG, and RL-based retrieval baselines. Qualitative and ablation analyses show that the learned policy develops interpretable skimming and scanning behavior: it uses semantic search for broad exploration, paragraph reading for local verification, and keyword search for entity-specific evidence. These results suggest that learning to coordinate retrieval signals and context granularity is critical for agent's correct reasoning.",
-          "hf_url": "https://huggingface.co/papers/2607.10463",
-          "arxiv_url": "https://arxiv.org/abs/2607.10463",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2607.10463",
-          "papers_cool_url": "https://papers.cool/arxiv/2607.10463",
-          "github_url": "",
-          "submitted_by": "Franck Dernoncourt",
-          "submitted_at": "2026-07-17T00:00:00.000Z",
-          "upvotes": 4,
-          "comments": 1,
-          "topic_key": "retrieval_knowledge",
-          "topic_label": "Retrieval, Knowledge, and RAG",
-          "matched_terms": [
-            "\\brag\\b",
-            "\\bsearch\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null,
-          "one_sentence_summary": "Agentic retrieval-augmented generation (RAG) extends static RAG by allowing language models to iteratively reason, generate search queries, retrieve evidence, and predict answers.",
-          "upvote_label": "4 upvotes"
-        },
-        {
-          "report_date": "2026-07-17",
-          "paper_id": "2607.14387",
-          "title": "Chat2Scenic: An Iterative RAG-Based Framework for Scenario Generation in Autonomous Driving",
-          "authors": [
-            "Yuan Gao",
-            "Wenting Miao",
-            "Mattia Piccinini",
-            "Haoyu Wang",
-            "Qunying Song",
-            "Johannes Betz"
-          ],
-          "abstract": "Validating autonomous driving systems requires diverse, regulation-compliant test scenarios. In simulation-based testing, scenarios are defined as executable scripts. Yet automatically generating such scripts from regulatory descriptions remains an open challenge, and existing approaches face fundamental trade-offs. Retrieval-assemble methods achieve reasonable compilation rates but lack scalability, whereas retrieval-based full-script generation suffers from low compilation success rates. We present Chat2Scenic, the first iterative retrieval-augmented framework to generate scenario scripts in Domain Specific Language (DSL). Specifically, Chat2Scenic provides a chatbot interface that supports interactive scenario refinement and integrates Retrieval-augmented Generation (RAG) to ground scenario generation in regulatory knowledge and DSL syntax. Furthermore, we propose an open benchmark for scenario generation comprising 123 scenarios from various regulations, including NHTSA and United Nations Vehicle Regulations, as well as other sources. Extensive evaluation with State-of-the-Art (SOTA) Large Language Models (LLMs) demonstrates that Chat2Scenic achieves 76.42% Compilation Success Rate (CSR) and 58.17% Framework Accuracy (FA), outperforming existing methods (Retrieval Assemble with 30.08% CSR, 11.03% FA and Retrieval full script generation with 16.26% CSR, 10.86% FA). To facilitate future research, we release our code as open source at https://github.com/TUM-AVS/chat2scenic.",
-          "hf_url": "https://huggingface.co/papers/2607.14387",
-          "arxiv_url": "https://arxiv.org/abs/2607.14387",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2607.14387",
-          "papers_cool_url": "https://papers.cool/arxiv/2607.14387",
-          "github_url": "",
-          "submitted_by": "Yuan Gao",
-          "submitted_at": "2026-07-17T00:00:00.000Z",
-          "upvotes": 0,
-          "comments": 1,
-          "topic_key": "retrieval_knowledge",
-          "topic_label": "Retrieval, Knowledge, and RAG",
-          "matched_terms": [
-            "\\brag\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null,
-          "one_sentence_summary": "Validating autonomous driving systems requires diverse, regulation-compliant test scenarios.",
-          "upvote_label": "0 upvotes"
-        }
-      ]
-    },
-    {
       "topic_label": "Agents and Planning",
-      "count": 2,
-      "share": 7.41,
-      "summary": "Agents and Planning contributes 2 papers (7.41%), led by “SEED: Self-Evolving On-Policy Distillation for Agentic Reinforcement Learning” with 65 upvotes.",
+      "count": 3,
+      "share": 10.34,
+      "summary": "Agents and Planning contributes 3 papers (10.34%), led by “SEED: Self-Evolving On-Policy Distillation for Agentic Reinforcement Learning” with 79 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-17",
@@ -1455,8 +1389,8 @@
           "github_url": "",
           "submitted_by": "Jinyang Wu",
           "submitted_at": "2026-07-17T00:00:00.000Z",
-          "upvotes": 65,
-          "comments": 1,
+          "upvotes": 79,
+          "comments": 2,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
           "matched_terms": [
@@ -1465,7 +1399,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Large language models are increasingly trained as interactive agents for long-horizon tasks involving multi-turn interaction, tool use, and environment feedback.",
-          "upvote_label": "65 upvotes"
+          "upvote_label": "79 upvotes"
         },
         {
           "report_date": "2026-07-17",
@@ -1495,8 +1429,8 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-07-17T00:00:00.000Z",
-          "upvotes": 48,
-          "comments": 0,
+          "upvotes": 56,
+          "comments": 1,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
           "matched_terms": [
@@ -1505,15 +1439,152 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Recent advances in Tool-Integrated Large Language Models have made web search a core capability of information-seeking agents.",
-          "upvote_label": "48 upvotes"
+          "upvote_label": "56 upvotes"
+        },
+        {
+          "report_date": "2026-07-17",
+          "paper_id": "2607.12227",
+          "title": "Rethinking the Evaluation of Harness Evolution for Agents",
+          "authors": [
+            "Yike Wang",
+            "Huaisheng Zhu",
+            "Zhengyu Hu",
+            "Yige Yuan",
+            "Zhengyu Chen",
+            "Shakti Senthil",
+            "Hannaneh Hajishirzi",
+            "Yulia Tsvetkov",
+            "Pradeep Dasigi",
+            "Teng Xiao"
+          ],
+          "abstract": "We revisit the evaluation of automatic harness evolution for LLM agents. Existing harness evolution methods use unit test cases to search for harness configurations and then report final performance on the same public benchmark. This protocol raises two fundamental concerns. First, harness evolution is itself an iterative search procedure that repeatedly evaluates and revises candidate harnesses using task feedback. As in agentic test-time scaling, it should therefore be compared with simple task-level search baselines under matched feedback and inference budgets to determine whether its gains arise from improved harness design or from additional search alone. Second, because the search and the final evaluation share the same benchmark, the reported gains risk overfitting to that specific task set. To address these concerns, we conduct an extensive evaluation comparing harness evolution with simple test-time scaling and discovery baselines under comparable feedback and inference budgets, and also evaluate evolved harnesses on held-out tasks to assess whether the discovered improvements generalize. Experiments on Terminal-Bench 2.1 with GPT-5.4 and Claude Opus 4.6 show that automatic harness evolution does not consistently outperform simple test-time scaling methods and exhibits limited generalization. Our results raise important questions about the effectiveness of automatic harness evolution and highlight the need for fairer evaluation protocols and benchmarks for automatic harness design. Our code is available at https://github.com/rethinking-harness-evolution.",
+          "hf_url": "https://huggingface.co/papers/2607.12227",
+          "arxiv_url": "https://arxiv.org/abs/2607.12227",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2607.12227",
+          "papers_cool_url": "https://papers.cool/arxiv/2607.12227",
+          "github_url": "",
+          "submitted_by": "TengXiao",
+          "submitted_at": "2026-07-17T00:00:00.000Z",
+          "upvotes": 4,
+          "comments": 2,
+          "topic_key": "agents_planning",
+          "topic_label": "Agents and Planning",
+          "matched_terms": [
+            "\\bagents?\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "We revisit the evaluation of automatic harness evolution for LLM agents.",
+          "upvote_label": "4 upvotes"
+        }
+      ]
+    },
+    {
+      "topic_label": "Retrieval, Knowledge, and RAG",
+      "count": 3,
+      "share": 10.34,
+      "summary": "Retrieval, Knowledge, and RAG contributes 3 papers (10.34%), led by “Smarter and Cheaper at Once: Byte-Exact KV-Cache Grafting Turns a Frozen Small Model into a Verified-Knowledge Flywheel” with 7 upvotes.",
+      "papers": [
+        {
+          "report_date": "2026-07-17",
+          "paper_id": "2607.14431",
+          "title": "Smarter and Cheaper at Once: Byte-Exact KV-Cache Grafting Turns a Frozen Small Model into a Verified-Knowledge Flywheel",
+          "authors": [
+            "Sietse Schelpe"
+          ],
+          "abstract": "We report a way to make a frozen small language model both more capable and dramatically cheaper at once, without changing any weights. Verified knowledge is deposited once as a byte-exact key-value (KV) state artifact and later restored, by graft, into a fresh inference context. The restore is bit-exact: under a pinned deterministic configuration, the grafted logits are byte-for-byte identical to a fresh computation (SHA-256 equality), with zero KL divergence and 100% argmax agreement over fifty samples. We show that own-position graft is the unique numerically exact operating point on a model with floating-point rotary encoding, and we verify byte-exactness on two model scales (12B, 31B) and two GPU targets, one through a pre-registered replay. On AIME 2025, a frozen Gemma-4-12B moves from 80.0% to 93.3% once a verified solution library is grafted, above its own 77.5% and its 31B sibling's 89.2% published anchors. On the recurring case, eight problems the base model never solves within a 401,026-token budget are answered from cached verified solutions in 61 total decode tokens, a factor of 6,574 fewer tokens and about 8,700x less energy; the capability claim proper rests on held-out transfer (7 of 7 at 31B). The same byte-exact store widens usable context from 32,768 to 2,854,766 tokens at zero extra accelerator memory, and moves byte-identical between machines of the same architecture. We describe the system at the behavior level; the engine is proprietary, and every reported number is backed by committed input and output hashes so the scoring can be re-checked without it.",
+          "hf_url": "https://huggingface.co/papers/2607.14431",
+          "arxiv_url": "https://arxiv.org/abs/2607.14431",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2607.14431",
+          "papers_cool_url": "https://papers.cool/arxiv/2607.14431",
+          "github_url": "",
+          "submitted_by": "sietse schelpe",
+          "submitted_at": "2026-07-17T00:00:00.000Z",
+          "upvotes": 7,
+          "comments": 2,
+          "topic_key": "retrieval_knowledge",
+          "topic_label": "Retrieval, Knowledge, and RAG",
+          "matched_terms": [
+            "\\bknowledge\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "We report a way to make a frozen small language model both more capable and dramatically cheaper at once, without changing any weights.",
+          "upvote_label": "7 upvotes"
+        },
+        {
+          "report_date": "2026-07-17",
+          "paper_id": "2607.10463",
+          "title": "GRASP: GRanularity-Aware Search Policy for Agentic RAG",
+          "authors": [
+            "Varun Gandhi",
+            "Jaewook Lee",
+            "Shantanu Todmal",
+            "Franck Dernoncourt",
+            "Ryan Rossi",
+            "Zichao Wang",
+            "Andrew Lan"
+          ],
+          "abstract": "Agentic retrieval-augmented generation (RAG) extends static RAG by allowing language models to iteratively reason, generate search queries, retrieve evidence, and predict answers. However, it remains challenging for models to decide when to retrieve, whether to use lexical matching or semantic similarity, and how to control context granularity to prevent irrelevant tokens from interfering with agent reasoning. In this paper, we introduce GRASP, a reinforcement learning (RL) framework for training agents to adaptively coordinate complementary retrieval tools during multi-step reasoning. GRASP provides the agent with semantic search, keyword search, and paragraph-reading actions, enabling it to retrieve sentence-level evidence and expand further context only when needed. We train the policy with a reward that jointly accounts for answer accuracy, grounded reading, complementary search, and turn efficiency. Experiments on multi-hop reasoning benchmarks show that GRASP improves both retrieval recall and downstream question answering performance compared with single-step retrieval, prompting-based agentic RAG, and RL-based retrieval baselines. Qualitative and ablation analyses show that the learned policy develops interpretable skimming and scanning behavior: it uses semantic search for broad exploration, paragraph reading for local verification, and keyword search for entity-specific evidence. These results suggest that learning to coordinate retrieval signals and context granularity is critical for agent's correct reasoning.",
+          "hf_url": "https://huggingface.co/papers/2607.10463",
+          "arxiv_url": "https://arxiv.org/abs/2607.10463",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2607.10463",
+          "papers_cool_url": "https://papers.cool/arxiv/2607.10463",
+          "github_url": "",
+          "submitted_by": "Franck Dernoncourt",
+          "submitted_at": "2026-07-17T00:00:00.000Z",
+          "upvotes": 5,
+          "comments": 2,
+          "topic_key": "retrieval_knowledge",
+          "topic_label": "Retrieval, Knowledge, and RAG",
+          "matched_terms": [
+            "\\brag\\b",
+            "\\bsearch\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "Agentic retrieval-augmented generation (RAG) extends static RAG by allowing language models to iteratively reason, generate search queries, retrieve evidence, and predict answers.",
+          "upvote_label": "5 upvotes"
+        },
+        {
+          "report_date": "2026-07-17",
+          "paper_id": "2607.14387",
+          "title": "Chat2Scenic: An Iterative RAG-Based Framework for Scenario Generation in Autonomous Driving",
+          "authors": [
+            "Yuan Gao",
+            "Wenting Miao",
+            "Mattia Piccinini",
+            "Haoyu Wang",
+            "Qunying Song",
+            "Johannes Betz"
+          ],
+          "abstract": "Validating autonomous driving systems requires diverse, regulation-compliant test scenarios. In simulation-based testing, scenarios are defined as executable scripts. Yet automatically generating such scripts from regulatory descriptions remains an open challenge, and existing approaches face fundamental trade-offs. Retrieval-assemble methods achieve reasonable compilation rates but lack scalability, whereas retrieval-based full-script generation suffers from low compilation success rates. We present Chat2Scenic, the first iterative retrieval-augmented framework to generate scenario scripts in Domain Specific Language (DSL). Specifically, Chat2Scenic provides a chatbot interface that supports interactive scenario refinement and integrates Retrieval-augmented Generation (RAG) to ground scenario generation in regulatory knowledge and DSL syntax. Furthermore, we propose an open benchmark for scenario generation comprising 123 scenarios from various regulations, including NHTSA and United Nations Vehicle Regulations, as well as other sources. Extensive evaluation with State-of-the-Art (SOTA) Large Language Models (LLMs) demonstrates that Chat2Scenic achieves 76.42% Compilation Success Rate (CSR) and 58.17% Framework Accuracy (FA), outperforming existing methods (Retrieval Assemble with 30.08% CSR, 11.03% FA and Retrieval full script generation with 16.26% CSR, 10.86% FA). To facilitate future research, we release our code as open source at https://github.com/TUM-AVS/chat2scenic.",
+          "hf_url": "https://huggingface.co/papers/2607.14387",
+          "arxiv_url": "https://arxiv.org/abs/2607.14387",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2607.14387",
+          "papers_cool_url": "https://papers.cool/arxiv/2607.14387",
+          "github_url": "",
+          "submitted_by": "Yuan Gao",
+          "submitted_at": "2026-07-17T00:00:00.000Z",
+          "upvotes": 3,
+          "comments": 2,
+          "topic_key": "retrieval_knowledge",
+          "topic_label": "Retrieval, Knowledge, and RAG",
+          "matched_terms": [
+            "\\brag\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "Validating autonomous driving systems requires diverse, regulation-compliant test scenarios.",
+          "upvote_label": "3 upvotes"
         }
       ]
     },
     {
       "topic_label": "Robotics and Embodied AI",
       "count": 1,
-      "share": 3.7,
-      "summary": "Robotics and Embodied AI contributes 1 papers (3.70%), led by “RoboTTT: Context Scaling for Robot Policies” with 12 upvotes.",
+      "share": 3.45,
+      "summary": "Robotics and Embodied AI contributes 1 papers (3.45%), led by “RoboTTT: Context Scaling for Robot Policies” with 15 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-17",
@@ -1540,8 +1611,8 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-07-17T00:00:00.000Z",
-          "upvotes": 12,
-          "comments": 0,
+          "upvotes": 15,
+          "comments": 1,
           "topic_key": "robotics_embodied",
           "topic_label": "Robotics and Embodied AI",
           "matched_terms": [
@@ -1550,12 +1621,58 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Recent robot foundation models operate with single-step or short-history visuomotor context.",
-          "upvote_label": "12 upvotes"
+          "upvote_label": "15 upvotes"
         }
       ]
     }
   ],
   "papers": [
+    {
+      "report_date": "2026-07-17",
+      "paper_id": "2607.14952",
+      "title": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
+      "authors": [
+        "Changhai Zhou",
+        "Kieran Liu",
+        "Yuhua Zhou",
+        "Qian Qiao",
+        "Jun Gao",
+        "Harry Zhang",
+        "Irvine Lu",
+        "Nolan Ho",
+        "Lucian Li",
+        "Andrew Lei",
+        "Cleon Cheng",
+        "Steven Chiang",
+        "Yihang Zeng",
+        "Di Zhang",
+        "Rio Yang",
+        "Kaijie Chen",
+        "Andrew Chen",
+        "Pony Ma",
+        "Weizhong Zhang",
+        "Cheng Jin"
+      ],
+      "abstract": "A growing gap separates inference context lengths from RL post-training: inference systems are approaching million-token contexts, while post-training workloads often remain at 256K tokens or below and rely on length generalization at deployment. The gap is especially important for AI agents, whose observations, tool outputs, documents, and prior decisions accumulate over long trajectories. LongStraw is an architecture-aware execution stack for million-token RL post-training under a fixed GPU budget, instantiated with Group Relative Policy Optimization (GRPO). It evaluates the shared prompt without autograd, retains only model-specific state needed by later tokens, and replays short response branches one at a time, reducing the live training graph at the cost of additional replay time. We implement it for the hybrid recurrent and full-attention Qwen3.6-27B and the compressed-attention mixture-of-experts GLM-5.2. On eight H20 GPUs, LongStraw completes grouped Qwen scoring and response backward at 2.1M positions for groups of 2 and 8; increasing the group size adds only 0.21 GB of peak allocated memory, while a separate stress test reaches 4.46M positions. On 32 H20 GPUs, we validate the end-to-end LongStraw execution path for a 2.1M-token prompt across all 78 layers of GLM-5.2. These experiments establish execution capacity rather than complete training correctness because the captured prompt state is detached and some distributed forward and gradient composition paths remain incomplete.",
+      "hf_url": "https://huggingface.co/papers/2607.14952",
+      "arxiv_url": "https://arxiv.org/abs/2607.14952",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.14952",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.14952",
+      "github_url": "",
+      "submitted_by": "Xiaoteng Ma",
+      "submitted_at": "2026-07-17T00:00:00.000Z",
+      "upvotes": 166,
+      "comments": 3,
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [
+        "\\btoken(s)?\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "A growing gap separates inference context lengths from RL post-training: inference systems are approaching million-token contexts, while post-training workloads often remain at 256K tokens or below and rely on length…",
+      "upvote_label": "166 upvotes"
+    },
     {
       "report_date": "2026-07-17",
       "paper_id": "2607.14935",
@@ -1597,8 +1714,8 @@
       "github_url": "",
       "submitted_by": "Limin Wang",
       "submitted_at": "2026-07-17T00:00:00.000Z",
-      "upvotes": 106,
-      "comments": 1,
+      "upvotes": 117,
+      "comments": 2,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [
@@ -1607,7 +1724,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Recent advances in video understanding have spanned motion, long video, and streaming interaction, driving this field toward real-world applications.",
-      "upvote_label": "106 upvotes"
+      "upvote_label": "117 upvotes"
     },
     {
       "report_date": "2026-07-17",
@@ -1634,8 +1751,8 @@
       "github_url": "",
       "submitted_by": "Jinyang Wu",
       "submitted_at": "2026-07-17T00:00:00.000Z",
-      "upvotes": 65,
-      "comments": 1,
+      "upvotes": 79,
+      "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
       "matched_terms": [
@@ -1644,7 +1761,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Large language models are increasingly trained as interactive agents for long-horizon tasks involving multi-turn interaction, tool use, and environment feedback.",
-      "upvote_label": "65 upvotes"
+      "upvote_label": "79 upvotes"
     },
     {
       "report_date": "2026-07-17",
@@ -1674,8 +1791,8 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-07-17T00:00:00.000Z",
-      "upvotes": 48,
-      "comments": 0,
+      "upvotes": 56,
+      "comments": 1,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
       "matched_terms": [
@@ -1684,7 +1801,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Recent advances in Tool-Integrated Large Language Models have made web search a core capability of information-seeking agents.",
-      "upvote_label": "48 upvotes"
+      "upvote_label": "56 upvotes"
     },
     {
       "report_date": "2026-07-17",
@@ -1703,61 +1820,15 @@
       "github_url": "",
       "submitted_by": "LIQIIIII",
       "submitted_at": "2026-07-17T00:00:00.000Z",
-      "upvotes": 36,
-      "comments": 2,
+      "upvotes": 41,
+      "comments": 3,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
       "matched_terms": [],
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "World-action models (WAMs) are emerging as a promising foundation for embodied control: rather than predicting actions alone, they learn representations that couple action generation with future world prediction.",
-      "upvote_label": "36 upvotes"
-    },
-    {
-      "report_date": "2026-07-17",
-      "paper_id": "2607.14952",
-      "title": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
-      "authors": [
-        "Changhai Zhou",
-        "Kieran Liu",
-        "Yuhua Zhou",
-        "Qian Qiao",
-        "Jun Gao",
-        "Harry Zhang",
-        "Irvine Lu",
-        "Nolan Ho",
-        "Lucian Li",
-        "Andrew Lei",
-        "Cleon Cheng",
-        "Steven Chiang",
-        "Yihang Zeng",
-        "Di Zhang",
-        "Rio Yang",
-        "Kaijie Chen",
-        "Andrew Chen",
-        "Pony Ma",
-        "Weizhong Zhang",
-        "Cheng Jin"
-      ],
-      "abstract": "A growing gap separates inference context lengths from RL post-training: inference systems are approaching million-token contexts, while post-training workloads often remain at 256K tokens or below and rely on length generalization at deployment. The gap is especially important for AI agents, whose observations, tool outputs, documents, and prior decisions accumulate over long trajectories. LongStraw is an architecture-aware execution stack for million-token RL post-training under a fixed GPU budget, instantiated with Group Relative Policy Optimization (GRPO). It evaluates the shared prompt without autograd, retains only model-specific state needed by later tokens, and replays short response branches one at a time, reducing the live training graph at the cost of additional replay time. We implement it for the hybrid recurrent and full-attention Qwen3.6-27B and the compressed-attention mixture-of-experts GLM-5.2. On eight H20 GPUs, LongStraw completes grouped Qwen scoring and response backward at 2.1M positions for groups of 2 and 8; increasing the group size adds only 0.21 GB of peak allocated memory, while a separate stress test reaches 4.46M positions. On 32 H20 GPUs, we validate the end-to-end LongStraw execution path for a 2.1M-token prompt across all 78 layers of GLM-5.2. These experiments establish execution capacity rather than complete training correctness because the captured prompt state is detached and some distributed forward and gradient composition paths remain incomplete.",
-      "hf_url": "https://huggingface.co/papers/2607.14952",
-      "arxiv_url": "https://arxiv.org/abs/2607.14952",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.14952",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.14952",
-      "github_url": "",
-      "submitted_by": "Xiaoteng Ma",
-      "submitted_at": "2026-07-17T00:00:00.000Z",
-      "upvotes": 35,
-      "comments": 2,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
-      "matched_terms": [
-        "\\btoken(s)?\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "A growing gap separates inference context lengths from RL post-training: inference systems are approaching million-token contexts, while post-training workloads often remain at 256K tokens or below and rely on length…",
-      "upvote_label": "35 upvotes"
+      "upvote_label": "41 upvotes"
     },
     {
       "report_date": "2026-07-17",
@@ -1794,8 +1865,8 @@
       "github_url": "",
       "submitted_by": "Yang Shi",
       "submitted_at": "2026-07-17T00:00:00.000Z",
-      "upvotes": 30,
-      "comments": 1,
+      "upvotes": 34,
+      "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [
@@ -1804,7 +1875,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Video generation increasingly relies on keyframe-based workflows, where creators specify a sequence of reference images to guide generation.",
-      "upvote_label": "30 upvotes"
+      "upvote_label": "34 upvotes"
     },
     {
       "report_date": "2026-07-17",
@@ -1832,8 +1903,8 @@
       "github_url": "",
       "submitted_by": "Yang Shi",
       "submitted_at": "2026-07-17T00:00:00.000Z",
-      "upvotes": 29,
-      "comments": 1,
+      "upvotes": 31,
+      "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [
@@ -1843,38 +1914,41 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Multi-reference-to-audio-video (MR2AV) generation aims to generate coherent audio-video content conditioned on multiple references and textual instructions.",
-      "upvote_label": "29 upvotes"
+      "upvote_label": "31 upvotes"
     },
     {
       "report_date": "2026-07-17",
-      "paper_id": "2607.14076",
-      "title": "From Pixels to States: Rethinking Interactive World Models as Game Engines",
+      "paper_id": "2607.12800",
+      "title": "UniVR: Thinking in Visual Space for Unified Visual Reasoning",
       "authors": [
-        "Zhen Li",
-        "Zian Meng",
-        "Shuwei Shi",
-        "Mingliang Zhai",
-        "Jiaming Tan",
-        "Chuanhao Li",
-        "Kaipeng Zhang"
+        "Zhongwei Ren",
+        "Yunchao Wei",
+        "Yao Zhao",
+        "Weibo Gong",
+        "Xiao Liu",
+        "Anran Wang",
+        "Xiangtai Li",
+        "Xiaojie Jin"
       ],
-      "abstract": "Building interactive worlds that respond coherently to player actions has long been a shared goal of computer graphics, games, and artificial intelligence. Recent video generative models provide a data-driven route toward this goal by predicting future observations conditioned on user actions, and are increasingly regarded as potential next-generation game engines. Realizing a genuinely interactive game world, however, requires interaction outcomes that follow rules over evolving game conditions, consequences that persist over long horizons, and a generation loop that operates in real time. Conventional game engines realize these properties through a recurrent action-state-observation loop, in which player actions update an explicit game state according to predefined rules and observations are rendered from the resulting state. Taking this loop as an organizing lens, this paper examines interactive game world modeling along four dimensions: player action control, game state dynamics, state-observation persistence, and real-time interactive generation. For each dimension, we start from the capabilities required by an interactive game world, group existing approaches into representative families, and discuss the strengths and trade-offs of each family. Complementing this analysis, we present a scalable data engine for Black Myth: Wukong that collects over 90 hours of gameplay with frame-aligned player actions, ground-truth game states, and visual observations, together with structured and semantic annotations, as a resource for state-aware game world modeling. We hope this paper offers a clear picture of where the field stands and fosters progress toward interactive game worlds.",
-      "hf_url": "https://huggingface.co/papers/2607.14076",
-      "arxiv_url": "https://arxiv.org/abs/2607.14076",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.14076",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.14076",
+      "abstract": "Learning broad world knowledge directly from raw visual data is a fundamental capability of intelligence. We introduce UniVR, the first investigation into simultaneously learning complex reasoning, fine-grained physical dynamics, and long-term planning from pure visual demonstrations. At its core, UniVR features VR-GRPO, a reinforcement learning paradigm with complementary global and step-level rewards. This approach enforces logical coherence and physical consistency throughout the reasoning process without requiring task-specific heuristics or image-text pairs. To train and evaluate UniVR, we construct VR-X, a large-scale benchmark curated from 16 diverse sources spanning long-horizon manipulation, spatial puzzles, and physical reasoning. It is the first comprehensive suite to assess these heterogeneous capabilities under a purely visual protocol. Remarkably, UniVR achieves up to a 25% improvement on VR-X, and its superior visual reasoning also boosts performance on various multimodal understanding benchmarks. These findings underscore the vast potential of reasoning within visual spaces, with all code, data, and models are open-sourced for further research.",
+      "hf_url": "https://huggingface.co/papers/2607.12800",
+      "arxiv_url": "https://arxiv.org/abs/2607.12800",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.12800",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.12800",
       "github_url": "",
-      "submitted_by": "kaipeng",
+      "submitted_by": "rzw",
       "submitted_at": "2026-07-17T00:00:00.000Z",
-      "upvotes": 23,
-      "comments": 1,
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
-      "matched_terms": [],
+      "upvotes": 27,
+      "comments": 3,
+      "topic_key": "reasoning_alignment_eval",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "matched_terms": [
+        "\\breasoning\\b"
+      ],
       "classification_source": "rule",
       "classification_confidence": null,
-      "one_sentence_summary": "Building interactive worlds that respond coherently to player actions has long been a shared goal of computer graphics, games, and artificial intelligence.",
-      "upvote_label": "23 upvotes"
+      "one_sentence_summary": "Learning broad world knowledge directly from raw visual data is a fundamental capability of intelligence.",
+      "upvote_label": "27 upvotes"
     },
     {
       "report_date": "2026-07-17",
@@ -1900,8 +1974,8 @@
       "github_url": "",
       "submitted_by": "Minh-Quan Le",
       "submitted_at": "2026-07-17T00:00:00.000Z",
-      "upvotes": 22,
-      "comments": 1,
+      "upvotes": 27,
+      "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [
@@ -1910,41 +1984,38 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Human cognition does not separate understanding and generation.",
-      "upvote_label": "22 upvotes"
+      "upvote_label": "27 upvotes"
     },
     {
       "report_date": "2026-07-17",
-      "paper_id": "2607.12800",
-      "title": "UniVR: Thinking in Visual Space for Unified Visual Reasoning",
+      "paper_id": "2607.14076",
+      "title": "From Pixels to States: Rethinking Interactive World Models as Game Engines",
       "authors": [
-        "Zhongwei Ren",
-        "Yunchao Wei",
-        "Yao Zhao",
-        "Weibo Gong",
-        "Xiao Liu",
-        "Anran Wang",
-        "Xiangtai Li",
-        "Xiaojie Jin"
+        "Zhen Li",
+        "Zian Meng",
+        "Shuwei Shi",
+        "Mingliang Zhai",
+        "Jiaming Tan",
+        "Chuanhao Li",
+        "Kaipeng Zhang"
       ],
-      "abstract": "Learning broad world knowledge directly from raw visual data is a fundamental capability of intelligence. We introduce UniVR, the first investigation into simultaneously learning complex reasoning, fine-grained physical dynamics, and long-term planning from pure visual demonstrations. At its core, UniVR features VR-GRPO, a reinforcement learning paradigm with complementary global and step-level rewards. This approach enforces logical coherence and physical consistency throughout the reasoning process without requiring task-specific heuristics or image-text pairs. To train and evaluate UniVR, we construct VR-X, a large-scale benchmark curated from 16 diverse sources spanning long-horizon manipulation, spatial puzzles, and physical reasoning. It is the first comprehensive suite to assess these heterogeneous capabilities under a purely visual protocol. Remarkably, UniVR achieves up to a 25% improvement on VR-X, and its superior visual reasoning also boosts performance on various multimodal understanding benchmarks. These findings underscore the vast potential of reasoning within visual spaces, with all code, data, and models are open-sourced for further research.",
-      "hf_url": "https://huggingface.co/papers/2607.12800",
-      "arxiv_url": "https://arxiv.org/abs/2607.12800",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.12800",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.12800",
+      "abstract": "Building interactive worlds that respond coherently to player actions has long been a shared goal of computer graphics, games, and artificial intelligence. Recent video generative models provide a data-driven route toward this goal by predicting future observations conditioned on user actions, and are increasingly regarded as potential next-generation game engines. Realizing a genuinely interactive game world, however, requires interaction outcomes that follow rules over evolving game conditions, consequences that persist over long horizons, and a generation loop that operates in real time. Conventional game engines realize these properties through a recurrent action-state-observation loop, in which player actions update an explicit game state according to predefined rules and observations are rendered from the resulting state. Taking this loop as an organizing lens, this paper examines interactive game world modeling along four dimensions: player action control, game state dynamics, state-observation persistence, and real-time interactive generation. For each dimension, we start from the capabilities required by an interactive game world, group existing approaches into representative families, and discuss the strengths and trade-offs of each family. Complementing this analysis, we present a scalable data engine for Black Myth: Wukong that collects over 90 hours of gameplay with frame-aligned player actions, ground-truth game states, and visual observations, together with structured and semantic annotations, as a resource for state-aware game world modeling. We hope this paper offers a clear picture of where the field stands and fosters progress toward interactive game worlds.",
+      "hf_url": "https://huggingface.co/papers/2607.14076",
+      "arxiv_url": "https://arxiv.org/abs/2607.14076",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.14076",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.14076",
       "github_url": "",
-      "submitted_by": "rzw",
+      "submitted_by": "kaipeng",
       "submitted_at": "2026-07-17T00:00:00.000Z",
-      "upvotes": 20,
-      "comments": 1,
-      "topic_key": "reasoning_alignment_eval",
-      "topic_label": "Reasoning, Alignment, and Evaluation",
-      "matched_terms": [
-        "\\breasoning\\b"
-      ],
+      "upvotes": 26,
+      "comments": 2,
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
+      "matched_terms": [],
       "classification_source": "rule",
       "classification_confidence": null,
-      "one_sentence_summary": "Learning broad world knowledge directly from raw visual data is a fundamental capability of intelligence.",
-      "upvote_label": "20 upvotes"
+      "one_sentence_summary": "Building interactive worlds that respond coherently to player actions has long been a shared goal of computer graphics, games, and artificial intelligence.",
+      "upvote_label": "26 upvotes"
     },
     {
       "report_date": "2026-07-17",
@@ -1968,416 +2039,15 @@
       "github_url": "",
       "submitted_by": "Huan-ang Gao",
       "submitted_at": "2026-07-17T00:00:00.000Z",
-      "upvotes": 18,
-      "comments": 2,
+      "upvotes": 21,
+      "comments": 5,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
       "matched_terms": [],
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Reinforcement learning has become a standard post-training recipe for large language models, but dense full-parameter updates create two deployment-relevant bottlenecks: suppressed reasoning performance, often…",
-      "upvote_label": "18 upvotes"
-    },
-    {
-      "report_date": "2026-07-17",
-      "paper_id": "2607.13399",
-      "title": "Demystifying On-Policy Distillation: Roles, Pathologies, and Regulations",
-      "authors": [
-        "Rui Wang",
-        "Hongru Wang",
-        "Yi Chen",
-        "Boyang Xue",
-        "Tianqing Fang",
-        "Wenhao Yu",
-        "Kam-Fai Wong"
-      ],
-      "abstract": "On-policy distillation (OPD) has become a key paradigm in LLM post-training, yet its training dynamics remain poorly understood. We present a systematic study examining the role, pathologies, and regulations of OPD. We first clarify the role of OPD as an exploration catalyst: it steers the student toward correct reasoning paths via dense token-level guidance, without expanding capability ceiling. We confirm this by showing that prompt diversity matters more than per-problem sampling numbers, and critically, that the effectiveness of OPD hinges entirely on the quality of its guiding signal. This dependency exposes two pathologies that derail exploration. The Student-Teacher Mismatch occurs when a large teacher-student distributional gap causes the guiding signal to misalign with task correctness, steering exploration in counterproductive directions. Length Exploitation arises when the aggregated token-level objective creates length-dependent shortcuts, allowing the student to game the reward landscape through response truncation or redundant padding, exploring degenerate length modes rather than reasoning strategies. To tame these pathologies, we investigate lightweight signal regulations: advantage clipping and log-scale compression, ensuring exploration is guided by faithful signals. Experiments across seven benchmarks demonstrate that these regulations alleviate length exploitation and enable effective distillation, stably surpassing OPD variants and RLVR baselines, thereby confirming that well-regulated signal quality, rather than mere teacher scale, governs successful exploration in OPD.",
-      "hf_url": "https://huggingface.co/papers/2607.13399",
-      "arxiv_url": "https://arxiv.org/abs/2607.13399",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.13399",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.13399",
-      "github_url": "",
-      "submitted_by": "WANG Rui",
-      "submitted_at": "2026-07-17T00:00:00.000Z",
-      "upvotes": 14,
-      "comments": 1,
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
-      "matched_terms": [],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "On-policy distillation (OPD) has become a key paradigm in LLM post-training, yet its training dynamics remain poorly understood.",
-      "upvote_label": "14 upvotes"
-    },
-    {
-      "report_date": "2026-07-17",
-      "paper_id": "2607.15038",
-      "title": "Video = World + Event Stream",
-      "authors": [
-        "Lianghua Huang",
-        "Zhi-Fan Wu",
-        "Yupeng Shi",
-        "Wei Wang",
-        "Mengyang Feng",
-        "Cheng Yu",
-        "Chen Liang",
-        "Junjie He",
-        "Chen-Wei Xie",
-        "Yu Liu",
-        "Jingren Zhou",
-        "Ang Wang",
-        "Bang Zhang",
-        "Baole Ai",
-        "Chongyang Zhong",
-        "Jinwei Qi",
-        "Kai Zhu",
-        "Pandeng Li",
-        "Peng Zhang",
-        "Wenyuan Zhang",
-        "Xinhua Cheng",
-        "Yitong Huang",
-        "Yun Zheng",
-        "Yuxiang Bao",
-        "Yuzheng Wang",
-        "Zhiwei Lin",
-        "Zoubin Bi"
-      ],
-      "abstract": "We present Wan-Streamer v0.3, which reframes our native-streaming interaction model under a single organizing view: a video is a world plus an event stream. The world is the persistent context in which a video unfolds, including the environment, scene, subjects, ambient acoustic conditions, voice characteristics, and other relatively stable conditions. The event stream is everything that changes over time within that world, including scene or environmental changes, subject behavior, speech, and other sounds. This yields a general-purpose pretraining task over large amounts of real video: given a world and incoming input, predict how the world moves, changes, and responds in real time. The resulting competence can be specialized to a broad family of real-time downstream tasks. We instantiate it on real-time full-duplex audio-visual interaction, where the event stream is the agent's speech together with free-form behavior. Functionally, the model's multimodal understanding process is vision-language-action-like: it maps multimodal user input to language-form speech and behavior actions. Wan-Streamer v0.3 preserves the v0.2 operating point: 640x368 video at 25 FPS, a 160 ms streaming unit, approximately 200 ms model-side response latency, and approximately 550 ms total interaction latency under a 350 ms bidirectional network budget.",
-      "hf_url": "https://huggingface.co/papers/2607.15038",
-      "arxiv_url": "https://arxiv.org/abs/2607.15038",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.15038",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.15038",
-      "github_url": "",
-      "submitted_by": "Lianghua Huang",
-      "submitted_at": "2026-07-17T00:00:00.000Z",
-      "upvotes": 13,
-      "comments": 2,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [
-        "\\bvideo\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "We present Wan-Streamer v0.3, which reframes our native-streaming interaction model under a single organizing view: a video is a world plus an event stream.",
-      "upvote_label": "13 upvotes"
-    },
-    {
-      "report_date": "2026-07-17",
-      "paper_id": "2607.15275",
-      "title": "RoboTTT: Context Scaling for Robot Policies",
-      "authors": [
-        "Yunfan Jiang",
-        "Yevgen Chebotar",
-        "Ruijie Zheng",
-        "Fengyuan Hu",
-        "Yunhao Ge",
-        "Jimmy Wu",
-        "Tianyuan Dai",
-        "Scott Reed",
-        "Li Fei-Fei",
-        "Yuke Zhu",
-        "Linxi \"Jim\" Fan"
-      ],
-      "abstract": "Recent robot foundation models operate with single-step or short-history visuomotor context. We introduce Test-Time-Training Robot Policies (RoboTTT), a robot model and training recipe that scale visuomotor context to 8K timesteps, three orders of magnitude beyond state-of-the-art policies, without growing inference latency. At this context length, we unlock new robot capabilities: one-shot in-context imitation from human video demonstrations, on-the-fly policy improvement, robustness to perturbations, and stronger performance on multi-stage, long-horizon tasks. We also observe, for the first time, steady gains in closed-loop performance as pretraining context length scales. At its core, RoboTTT integrates Test-Time Training into robot foundation models such as Vision-Language-Action policies, yielding a sequence model whose recurrent state consists of fast weights, parameters updated by gradient descent during both training and inference, compressing histories into weight space and retrieving contextual information for long-context conditioning. To scale training context length, the recipe combines sequence action forcing with truncated backpropagation through time. On challenging real-robot manipulation tasks, RoboTTT improves overall performance by 87% over the single-step context baseline and fully completes a five-minute, ten-stage assembly task, which no baseline ever does. RoboTTT trained with 8K-timestep context outperforms the same model pretrained with 1K timesteps by 62%, suggesting context length as a new scaling axis for robot foundation models. Videos are available at https://research.nvidia.com/labs/gear/robottt/",
-      "hf_url": "https://huggingface.co/papers/2607.15275",
-      "arxiv_url": "https://arxiv.org/abs/2607.15275",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.15275",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.15275",
-      "github_url": "",
-      "submitted_by": "taesiri",
-      "submitted_at": "2026-07-17T00:00:00.000Z",
-      "upvotes": 12,
-      "comments": 0,
-      "topic_key": "robotics_embodied",
-      "topic_label": "Robotics and Embodied AI",
-      "matched_terms": [
-        "\\brobot(ic|ics)?\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Recent robot foundation models operate with single-step or short-history visuomotor context.",
-      "upvote_label": "12 upvotes"
-    },
-    {
-      "report_date": "2026-07-17",
-      "paper_id": "2607.14749",
-      "title": "WanSong v1.0 Technical Report",
-      "authors": [
-        "Binghui Chen",
-        "Pandeng Li",
-        "Yu Liu",
-        "Jingren Zhou"
-      ],
-      "abstract": "Music generation foundation models have recently attracted significant industry attention. However, achieving efficient generation and high-fidelity long-form audio while supporting controllability remains challenging. To address these needs, we present WanSong, a simple yet powerful approach for long-form, commercial-grade song generation. Unlike autoregressive (AR) and cascaded multi-stage pipelines (\\eg, AR followed by diffusion), WanSong is a pure diffusion-based model that directly generates high-fidelity, multilingual songs up to 5 minutes and outputs dual stems (vocals and background music) in a single run. In addition, our diffusion framework enables faster inference through step-distillation, and offers an efficient pathway for fine-tuning and customization to support downstream editing tasks.",
-      "hf_url": "https://huggingface.co/papers/2607.14749",
-      "arxiv_url": "https://arxiv.org/abs/2607.14749",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.14749",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.14749",
-      "github_url": "",
-      "submitted_by": "taesiri",
-      "submitted_at": "2026-07-17T00:00:00.000Z",
-      "upvotes": 8,
-      "comments": 1,
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
-      "matched_terms": [],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Music generation foundation models have recently attracted significant industry attention.",
-      "upvote_label": "8 upvotes"
-    },
-    {
-      "report_date": "2026-07-17",
-      "paper_id": "2607.15273",
-      "title": "MeanFlowNFT: Bringing Forward-Process RL to Average-Velocity Generators",
-      "authors": [
-        "Yushi Huang",
-        "Xiangxin Zhou",
-        "Jun Zhang",
-        "Liefeng Bo",
-        "Tianyu Pang"
-      ],
-      "abstract": "MeanFlow generators achieve fast few-step sampling by predicting average velocities over time intervals, making them attractive for efficient generation. Reinforcement learning (RL) has become a powerful way to align diffusion and flow models with human preferences and task-specific objectives. In particular, DiffusionNFT offers an efficient forward-process RL framework that does not require reverse-process trajectories or likelihood estimation. However, applying such RL methods to MeanFlow remains underexplored. DiffusionNFT optimizes instantaneous velocities, whereas MeanFlow samples with average velocities. To bridge this gap, we introduce MeanFlowNFT. Inspired by the MeanFlow identity, which bridges average and instantaneous velocities, we construct an induced instantaneous-velocity predictor. We apply the DiffusionNFT objective to this predictor, making reward optimization well-defined for MeanFlow. Sampling remains based on the average velocity, preserving MeanFlow's fast few-step generation. We further prove that MeanFlowNFT inherits DiffusionNFT's strict policy-improvement guarantee. Experiments on image and video generation show that MeanFlowNFT consistently improves baselines. Moreover, it outperforms prior state-of-the-art RL-tuned few-step generators on most metrics (6 of 8 on SD3.5-M), and can even surpass multi-step RL-tuned diffusion while using only a few sampling steps. For instance, on Wan 2.1, 4-step MeanFlowNFT reaches a VBench score of 84.33, surpassing 50-step LongCat-Video RL (82.57).",
-      "hf_url": "https://huggingface.co/papers/2607.15273",
-      "arxiv_url": "https://arxiv.org/abs/2607.15273",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.15273",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.15273",
-      "github_url": "",
-      "submitted_by": "taesiri",
-      "submitted_at": "2026-07-17T00:00:00.000Z",
-      "upvotes": 8,
-      "comments": 0,
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
-      "matched_terms": [],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "MeanFlow generators achieve fast few-step sampling by predicting average velocities over time intervals, making them attractive for efficient generation.",
-      "upvote_label": "8 upvotes"
-    },
-    {
-      "report_date": "2026-07-17",
-      "paper_id": "2607.14660",
-      "title": "VIABench: A Comprehensive Video Benchmark Collected from Blind Individuals for Visual Impairment Assistance",
-      "authors": [
-        "Yunfeng Liu",
-        "Yuandong Yang",
-        "Jiarui Han",
-        "Zhenpeng Huang",
-        "Yuqing Tang",
-        "Xiangyu Zeng",
-        "Gangshan Wu",
-        "Limin Wang"
-      ],
-      "abstract": "Visually impaired individuals (VIIs) encounter significant daily challenges due to limited access to visual information. Although Multimodal Large Language Models (MLLMs) have achieved impressive results on general vision and language tasks, their practical utility in real-world blind assistance still remains largely underexplored. To fill this gap, we introduce VIABench, a comprehensive video benchmark specifically designed to evaluate MLLMs in Visually Impaired Assistance scenarios using first-person videos recorded or shared by VIIs themselves. VIABench defines three core tasks, each targeting a distinct requirement in visual assistance. Proactive Reminder: Assesses the model's ability to interpret ongoing video content while proactively anticipating and verbally describing upcoming navigation-critical events; Visual Question Answering (VQA): Evaluates the model's capacity to answer user-posed questions about the environment or objects within the video; Vision-Guided Interaction: Tests context-aware reasoning to accomplish intentional interactions between user and environment. To ensure a robust and fair evaluation, we propose a rigorous benchmarking pipeline that supports both online (real-time) and offline settings. Our experiments demonstrate that current MLLMs still struggle to deliver comprehensive support for VIIs, especially in the Proactive Reminder task, which demands accurate anticipation and real-time responsiveness. We hope VIABench will drive future research toward developing customized MLLMs for real-world assistance, ultimately improving navigation and interaction experiences for visually impaired individuals. Code and data will be released at https://github.com/MCG-NJU/VIABench.",
-      "hf_url": "https://huggingface.co/papers/2607.14660",
-      "arxiv_url": "https://arxiv.org/abs/2607.14660",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.14660",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.14660",
-      "github_url": "",
-      "submitted_by": "Xiangyu Zeng",
-      "submitted_at": "2026-07-17T00:00:00.000Z",
-      "upvotes": 7,
-      "comments": 1,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [
-        "\\bvisual\\b",
-        "\\bvideo\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Visually impaired individuals (VIIs) encounter significant daily challenges due to limited access to visual information.",
-      "upvote_label": "7 upvotes"
-    },
-    {
-      "report_date": "2026-07-17",
-      "paper_id": "2607.13491",
-      "title": "DeepLoop: Depth Scaling for Looped Transformers",
-      "authors": [
-        "Shuzhen Li",
-        "Yifan Zhang",
-        "Jiacheng Guo",
-        "Quanquan Gu",
-        "Mengdi Wang"
-      ],
-      "abstract": "Looped Transformers scale sequential computation by applying a compact stack of physical blocks for multiple rounds, increasing unrolled depth without increasing stored parameters. This reuse changes the residual-scaling problem: in an untied Transformer, each residual branch receives and applies its own parameter update, whereas in a looped Transformer one shared update aggregates gradients from repeated visits and is read back by those same visits in the next linearized forward pass. We formalize this tied-depth effect through a first-order perturbation bound controlled by a visit-alignment coefficient κ_R. The bound recovers the DeepNorm exponent when visits decorrelate, but in the conservative aligned regime it requires the exponent to increase from 1/4 to 1/2 as loop count grows at fixed physical depth. The resulting method, DeepLoop, keeps the Post-LN DeepNorm architecture and sets α=(2N)^{1/2} and β=(8N)^{-1/2} for unrolled depth N. On GPT-style looped language models at GPT-2 small and GPT-2 medium scale, DeepLoop is neutral when no physical block is revisited and improves validation loss and downstream accuracy once recurrent depth is activated. These results show that stable recurrent depth requires residual scaling rules that account for parameter visits, not only nominal layer count.",
-      "hf_url": "https://huggingface.co/papers/2607.13491",
-      "arxiv_url": "https://arxiv.org/abs/2607.13491",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.13491",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.13491",
-      "github_url": "",
-      "submitted_by": "Yifan Zhang",
-      "submitted_at": "2026-07-17T00:00:00.000Z",
-      "upvotes": 7,
-      "comments": 1,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
-      "matched_terms": [
-        "\\btransformer(s)?\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Looped Transformers scale sequential computation by applying a compact stack of physical blocks for multiple rounds, increasing unrolled depth without increasing stored parameters.",
-      "upvote_label": "7 upvotes"
-    },
-    {
-      "report_date": "2026-07-17",
-      "paper_id": "2607.14431",
-      "title": "Smarter and Cheaper at Once: Byte-Exact KV-Cache Grafting Turns a Frozen Small Model into a Verified-Knowledge Flywheel",
-      "authors": [
-        "Sietse Schelpe"
-      ],
-      "abstract": "We report a way to make a frozen small language model both more capable and dramatically cheaper at once, without changing any weights. Verified knowledge is deposited once as a byte-exact key-value (KV) state artifact and later restored, by graft, into a fresh inference context. The restore is bit-exact: under a pinned deterministic configuration, the grafted logits are byte-for-byte identical to a fresh computation (SHA-256 equality), with zero KL divergence and 100% argmax agreement over fifty samples. We show that own-position graft is the unique numerically exact operating point on a model with floating-point rotary encoding, and we verify byte-exactness on two model scales (12B, 31B) and two GPU targets, one through a pre-registered replay. On AIME 2025, a frozen Gemma-4-12B moves from 80.0% to 93.3% once a verified solution library is grafted, above its own 77.5% and its 31B sibling's 89.2% published anchors. On the recurring case, eight problems the base model never solves within a 401,026-token budget are answered from cached verified solutions in 61 total decode tokens, a factor of 6,574 fewer tokens and about 8,700x less energy; the capability claim proper rests on held-out transfer (7 of 7 at 31B). The same byte-exact store widens usable context from 32,768 to 2,854,766 tokens at zero extra accelerator memory, and moves byte-identical between machines of the same architecture. We describe the system at the behavior level; the engine is proprietary, and every reported number is backed by committed input and output hashes so the scoring can be re-checked without it.",
-      "hf_url": "https://huggingface.co/papers/2607.14431",
-      "arxiv_url": "https://arxiv.org/abs/2607.14431",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.14431",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.14431",
-      "github_url": "",
-      "submitted_by": "sietse schelpe",
-      "submitted_at": "2026-07-17T00:00:00.000Z",
-      "upvotes": 5,
-      "comments": 1,
-      "topic_key": "retrieval_knowledge",
-      "topic_label": "Retrieval, Knowledge, and RAG",
-      "matched_terms": [
-        "\\bknowledge\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "We report a way to make a frozen small language model both more capable and dramatically cheaper at once, without changing any weights.",
-      "upvote_label": "5 upvotes"
-    },
-    {
-      "report_date": "2026-07-17",
-      "paper_id": "2607.15277",
-      "title": "Partition, Prompt, Aggregate: Statistical Self-Consistency in Language Models",
-      "authors": [
-        "Patrik Wolf",
-        "Thomas Kleine Buening",
-        "Andreas Krause",
-        "Celestine Mendler-Dünner"
-      ],
-      "abstract": "In-context learning is commonly interpreted as a form of conditional inference, in which the prompt specifies a context and the model's output is treated as an estimate of the corresponding conditional distribution. If this interpretation holds, then LLM estimates should satisfy basic probabilistic identities. In particular, the law of total probability asserts that prior-weighted conditional distributions aggregate into population-level marginals over any valid partition of the population. In this work, we investigate to what extent LLM estimates adhere to this self-consistency principle. We use binary trees as an evaluation scaffold to recursively partition a population into increasingly fine-grained subpopulations. We then prompt LLMs with verbalized subpopulation descriptions in context, aggregate the resulting estimates back into population-level estimates, and compare them across partitions of varying granularity. Applying this protocol across problem domains and state-of-the-art frontier models, we show widespread violations of basic consistency properties. An in-depth study of persona prompting reveals a pattern we call the macro fallacy: estimates reconstructed from more fine-grained subpopulation responses are often better aligned with human reference data than direct population-level estimates. This effect persists across variations in tree structure and estimation task, and can be partially recovered through implicit prompting. Together, these findings suggest that models possess relevant subpopulation knowledge but do not reliably propagate it into aggregate estimates. This gap establishes statistical self-consistency as an unsaturated, reference-free criterion for evaluating LLMs.",
-      "hf_url": "https://huggingface.co/papers/2607.15277",
-      "arxiv_url": "https://arxiv.org/abs/2607.15277",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.15277",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.15277",
-      "github_url": "",
-      "submitted_by": "Patrik Wolf",
-      "submitted_at": "2026-07-17T00:00:00.000Z",
-      "upvotes": 4,
-      "comments": 1,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
-      "matched_terms": [
-        "\\blanguage models?\\b",
-        "\\bprompt(ing)?\\b",
-        "\\blanguage\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "In-context learning is commonly interpreted as a form of conditional inference, in which the prompt specifies a context and the model's output is treated as an estimate of the corresponding conditional distribution.",
-      "upvote_label": "4 upvotes"
-    },
-    {
-      "report_date": "2026-07-17",
-      "paper_id": "2607.10995",
-      "title": "AsySplat: Efficient Asymmetric 3D Gaussian Splatting for Long-Sequence Scene Modeling",
-      "authors": [
-        "Yingji Zhong",
-        "Dave Zhenyu Chen",
-        "Fuzhao Ou",
-        "Youyu Chen",
-        "Zhihao Li",
-        "Lanqing Hong",
-        "Dan Xu"
-      ],
-      "abstract": "Recent generalizable 3D Gaussian Splatting models have advanced long-sequence novel view synthesis (NVS), but at the cost of substantial redundant computation. We identify that the redundancy can be mitigated based on two observations: (i) high-precision geometry is not strictly required for high-quality NVS; (ii) appearance learning is generally easier than geometry recovery. Motivated by these insights, we propose an asymmetric architecture that decouples geometry and appearance modeling. The geometry branch processes coarse-grained tokens with most of the parameters for multi-view reconstruction, while the appearance branch operates on fine-grained tokens to capture details using significantly fewer parameters. The two branches interact through bilateral connections, enabling mutual guidance for their respective tasks. This task-aware asymmetry reduces the computational redundancy and allocates the computation more judiciously, thereby increasing parameter efficiency and enabling smaller models to achieve strong performance. On 32-view 960P inputs, our model matches optimization-based methods while delivering nearly 800x speedup, and surpasses the zero-shot performance of state-of-the-art generalizable models with markedly fewer parameters and reduced training/inference overhead, achieving an overall efficiency improvement.",
-      "hf_url": "https://huggingface.co/papers/2607.10995",
-      "arxiv_url": "https://arxiv.org/abs/2607.10995",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.10995",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.10995",
-      "github_url": "",
-      "submitted_by": "zzhongyj",
-      "submitted_at": "2026-07-17T00:00:00.000Z",
-      "upvotes": 4,
-      "comments": 1,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [
-        "\\b3d\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Recent generalizable 3D Gaussian Splatting models have advanced long-sequence novel view synthesis (NVS), but at the cost of substantial redundant computation.",
-      "upvote_label": "4 upvotes"
-    },
-    {
-      "report_date": "2026-07-17",
-      "paper_id": "2607.10463",
-      "title": "GRASP: GRanularity-Aware Search Policy for Agentic RAG",
-      "authors": [
-        "Varun Gandhi",
-        "Jaewook Lee",
-        "Shantanu Todmal",
-        "Franck Dernoncourt",
-        "Ryan Rossi",
-        "Zichao Wang",
-        "Andrew Lan"
-      ],
-      "abstract": "Agentic retrieval-augmented generation (RAG) extends static RAG by allowing language models to iteratively reason, generate search queries, retrieve evidence, and predict answers. However, it remains challenging for models to decide when to retrieve, whether to use lexical matching or semantic similarity, and how to control context granularity to prevent irrelevant tokens from interfering with agent reasoning. In this paper, we introduce GRASP, a reinforcement learning (RL) framework for training agents to adaptively coordinate complementary retrieval tools during multi-step reasoning. GRASP provides the agent with semantic search, keyword search, and paragraph-reading actions, enabling it to retrieve sentence-level evidence and expand further context only when needed. We train the policy with a reward that jointly accounts for answer accuracy, grounded reading, complementary search, and turn efficiency. Experiments on multi-hop reasoning benchmarks show that GRASP improves both retrieval recall and downstream question answering performance compared with single-step retrieval, prompting-based agentic RAG, and RL-based retrieval baselines. Qualitative and ablation analyses show that the learned policy develops interpretable skimming and scanning behavior: it uses semantic search for broad exploration, paragraph reading for local verification, and keyword search for entity-specific evidence. These results suggest that learning to coordinate retrieval signals and context granularity is critical for agent's correct reasoning.",
-      "hf_url": "https://huggingface.co/papers/2607.10463",
-      "arxiv_url": "https://arxiv.org/abs/2607.10463",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.10463",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.10463",
-      "github_url": "",
-      "submitted_by": "Franck Dernoncourt",
-      "submitted_at": "2026-07-17T00:00:00.000Z",
-      "upvotes": 4,
-      "comments": 1,
-      "topic_key": "retrieval_knowledge",
-      "topic_label": "Retrieval, Knowledge, and RAG",
-      "matched_terms": [
-        "\\brag\\b",
-        "\\bsearch\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Agentic retrieval-augmented generation (RAG) extends static RAG by allowing language models to iteratively reason, generate search queries, retrieve evidence, and predict answers.",
-      "upvote_label": "4 upvotes"
-    },
-    {
-      "report_date": "2026-07-17",
-      "paper_id": "2607.15058",
-      "title": "SUFLECA: Scaling Up Feature Learning for CAD-to-image Alignment",
-      "authors": [
-        "Saad Ejaz",
-        "Miguel Fernandez-Cortizas",
-        "Javier Civera",
-        "Holger Voos",
-        "Jose Luis Sanchez-Lopez"
-      ],
-      "abstract": "CAD-to-image alignment aims to estimate an object's 9D pose (rotation, translation, and anisotropic scale) from a single RGB image, enabling applications in robotics and augmented reality. Recent zero-shot methods use visual foundation models to match image regions to CAD models, yet typically their correspondences are appearance-driven and degrade under occlusion or sim-to-real domain shift. To address these limitations, we introduce SUFLECA (Scaling Up Feature LEarning for CAD Alignment), a weakly-supervised framework for zero-shot CAD alignment with two key contributions. First, SUFLECA scales up geometry-grounded feature learning from pretrained visual representations through Normalized Object Coordinates (NOCs) supervision on 674K images spanning 12 real and synthetic datasets, learning compact geometry-aware features that generalize across domains. Second, we propose a geometrically consistent matching algorithm that establishes reliable one-to-one CAD-to-image correspondences. Together, these contributions enable accurate, sub-second alignment per object instance without iterative pose refinement. On ScanNet25k, SUFLECA achieves 33.4%/42.3% category/instance accuracy, outperforming, with a smaller computational footprint, the strongest zero-shot baseline by 10.3/12.2 percentage points and, for the first time on this benchmark, even surpassing fully supervised methods. Code is available at: https://github.com/snt-arg/SUFLECA",
-      "hf_url": "https://huggingface.co/papers/2607.15058",
-      "arxiv_url": "https://arxiv.org/abs/2607.15058",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.15058",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.15058",
-      "github_url": "",
-      "submitted_by": "Saad Ejaz",
-      "submitted_at": "2026-07-17T00:00:00.000Z",
-      "upvotes": 3,
-      "comments": 1,
-      "topic_key": "reasoning_alignment_eval",
-      "topic_label": "Reasoning, Alignment, and Evaluation",
-      "matched_terms": [
-        "\\balignment\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "CAD-to-image alignment aims to estimate an object's 9D pose (rotation, translation, and anisotropic scale) from a single RGB image, enabling applications in robotics and augmented reality.",
-      "upvote_label": "3 upvotes"
+      "upvote_label": "21 upvotes"
     },
     {
       "report_date": "2026-07-17",
@@ -2423,8 +2093,8 @@
       "github_url": "",
       "submitted_by": "Haotian Liang",
       "submitted_at": "2026-07-17T00:00:00.000Z",
-      "upvotes": 3,
-      "comments": 1,
+      "upvotes": 20,
+      "comments": 2,
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [
@@ -2433,7 +2103,444 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Embodied cognition requires agents to connect high-level task reasoning with the physical states to be achieved.",
-      "upvote_label": "3 upvotes"
+      "upvote_label": "20 upvotes"
+    },
+    {
+      "report_date": "2026-07-17",
+      "paper_id": "2607.15038",
+      "title": "Video = World + Event Stream",
+      "authors": [
+        "Lianghua Huang",
+        "Zhi-Fan Wu",
+        "Yupeng Shi",
+        "Wei Wang",
+        "Mengyang Feng",
+        "Cheng Yu",
+        "Chen Liang",
+        "Junjie He",
+        "Chen-Wei Xie",
+        "Yu Liu",
+        "Jingren Zhou",
+        "Ang Wang",
+        "Bang Zhang",
+        "Baole Ai",
+        "Chongyang Zhong",
+        "Jinwei Qi",
+        "Kai Zhu",
+        "Pandeng Li",
+        "Peng Zhang",
+        "Wenyuan Zhang",
+        "Xinhua Cheng",
+        "Yitong Huang",
+        "Yun Zheng",
+        "Yuxiang Bao",
+        "Yuzheng Wang",
+        "Zhiwei Lin",
+        "Zoubin Bi"
+      ],
+      "abstract": "We present Wan-Streamer v0.3, which reframes our native-streaming interaction model under a single organizing view: a video is a world plus an event stream. The world is the persistent context in which a video unfolds, including the environment, scene, subjects, ambient acoustic conditions, voice characteristics, and other relatively stable conditions. The event stream is everything that changes over time within that world, including scene or environmental changes, subject behavior, speech, and other sounds. This yields a general-purpose pretraining task over large amounts of real video: given a world and incoming input, predict how the world moves, changes, and responds in real time. The resulting competence can be specialized to a broad family of real-time downstream tasks. We instantiate it on real-time full-duplex audio-visual interaction, where the event stream is the agent's speech together with free-form behavior. Functionally, the model's multimodal understanding process is vision-language-action-like: it maps multimodal user input to language-form speech and behavior actions. Wan-Streamer v0.3 preserves the v0.2 operating point: 640x368 video at 25 FPS, a 160 ms streaming unit, approximately 200 ms model-side response latency, and approximately 550 ms total interaction latency under a 350 ms bidirectional network budget.",
+      "hf_url": "https://huggingface.co/papers/2607.15038",
+      "arxiv_url": "https://arxiv.org/abs/2607.15038",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.15038",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.15038",
+      "github_url": "",
+      "submitted_by": "Lianghua Huang",
+      "submitted_at": "2026-07-17T00:00:00.000Z",
+      "upvotes": 17,
+      "comments": 3,
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
+      "matched_terms": [
+        "\\bvideo\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "We present Wan-Streamer v0.3, which reframes our native-streaming interaction model under a single organizing view: a video is a world plus an event stream.",
+      "upvote_label": "17 upvotes"
+    },
+    {
+      "report_date": "2026-07-17",
+      "paper_id": "2607.13399",
+      "title": "Demystifying On-Policy Distillation: Roles, Pathologies, and Regulations",
+      "authors": [
+        "Rui Wang",
+        "Hongru Wang",
+        "Yi Chen",
+        "Boyang Xue",
+        "Tianqing Fang",
+        "Wenhao Yu",
+        "Kam-Fai Wong"
+      ],
+      "abstract": "On-policy distillation (OPD) has become a key paradigm in LLM post-training, yet its training dynamics remain poorly understood. We present a systematic study examining the role, pathologies, and regulations of OPD. We first clarify the role of OPD as an exploration catalyst: it steers the student toward correct reasoning paths via dense token-level guidance, without expanding capability ceiling. We confirm this by showing that prompt diversity matters more than per-problem sampling numbers, and critically, that the effectiveness of OPD hinges entirely on the quality of its guiding signal. This dependency exposes two pathologies that derail exploration. The Student-Teacher Mismatch occurs when a large teacher-student distributional gap causes the guiding signal to misalign with task correctness, steering exploration in counterproductive directions. Length Exploitation arises when the aggregated token-level objective creates length-dependent shortcuts, allowing the student to game the reward landscape through response truncation or redundant padding, exploring degenerate length modes rather than reasoning strategies. To tame these pathologies, we investigate lightweight signal regulations: advantage clipping and log-scale compression, ensuring exploration is guided by faithful signals. Experiments across seven benchmarks demonstrate that these regulations alleviate length exploitation and enable effective distillation, stably surpassing OPD variants and RLVR baselines, thereby confirming that well-regulated signal quality, rather than mere teacher scale, governs successful exploration in OPD.",
+      "hf_url": "https://huggingface.co/papers/2607.13399",
+      "arxiv_url": "https://arxiv.org/abs/2607.13399",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.13399",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.13399",
+      "github_url": "",
+      "submitted_by": "WANG Rui",
+      "submitted_at": "2026-07-17T00:00:00.000Z",
+      "upvotes": 16,
+      "comments": 2,
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
+      "matched_terms": [],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "On-policy distillation (OPD) has become a key paradigm in LLM post-training, yet its training dynamics remain poorly understood.",
+      "upvote_label": "16 upvotes"
+    },
+    {
+      "report_date": "2026-07-17",
+      "paper_id": "2607.15275",
+      "title": "RoboTTT: Context Scaling for Robot Policies",
+      "authors": [
+        "Yunfan Jiang",
+        "Yevgen Chebotar",
+        "Ruijie Zheng",
+        "Fengyuan Hu",
+        "Yunhao Ge",
+        "Jimmy Wu",
+        "Tianyuan Dai",
+        "Scott Reed",
+        "Li Fei-Fei",
+        "Yuke Zhu",
+        "Linxi \"Jim\" Fan"
+      ],
+      "abstract": "Recent robot foundation models operate with single-step or short-history visuomotor context. We introduce Test-Time-Training Robot Policies (RoboTTT), a robot model and training recipe that scale visuomotor context to 8K timesteps, three orders of magnitude beyond state-of-the-art policies, without growing inference latency. At this context length, we unlock new robot capabilities: one-shot in-context imitation from human video demonstrations, on-the-fly policy improvement, robustness to perturbations, and stronger performance on multi-stage, long-horizon tasks. We also observe, for the first time, steady gains in closed-loop performance as pretraining context length scales. At its core, RoboTTT integrates Test-Time Training into robot foundation models such as Vision-Language-Action policies, yielding a sequence model whose recurrent state consists of fast weights, parameters updated by gradient descent during both training and inference, compressing histories into weight space and retrieving contextual information for long-context conditioning. To scale training context length, the recipe combines sequence action forcing with truncated backpropagation through time. On challenging real-robot manipulation tasks, RoboTTT improves overall performance by 87% over the single-step context baseline and fully completes a five-minute, ten-stage assembly task, which no baseline ever does. RoboTTT trained with 8K-timestep context outperforms the same model pretrained with 1K timesteps by 62%, suggesting context length as a new scaling axis for robot foundation models. Videos are available at https://research.nvidia.com/labs/gear/robottt/",
+      "hf_url": "https://huggingface.co/papers/2607.15275",
+      "arxiv_url": "https://arxiv.org/abs/2607.15275",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.15275",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.15275",
+      "github_url": "",
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-07-17T00:00:00.000Z",
+      "upvotes": 15,
+      "comments": 1,
+      "topic_key": "robotics_embodied",
+      "topic_label": "Robotics and Embodied AI",
+      "matched_terms": [
+        "\\brobot(ic|ics)?\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Recent robot foundation models operate with single-step or short-history visuomotor context.",
+      "upvote_label": "15 upvotes"
+    },
+    {
+      "report_date": "2026-07-17",
+      "paper_id": "2607.15273",
+      "title": "MeanFlowNFT: Bringing Forward-Process RL to Average-Velocity Generators",
+      "authors": [
+        "Yushi Huang",
+        "Xiangxin Zhou",
+        "Jun Zhang",
+        "Liefeng Bo",
+        "Tianyu Pang"
+      ],
+      "abstract": "MeanFlow generators achieve fast few-step sampling by predicting average velocities over time intervals, making them attractive for efficient generation. Reinforcement learning (RL) has become a powerful way to align diffusion and flow models with human preferences and task-specific objectives. In particular, DiffusionNFT offers an efficient forward-process RL framework that does not require reverse-process trajectories or likelihood estimation. However, applying such RL methods to MeanFlow remains underexplored. DiffusionNFT optimizes instantaneous velocities, whereas MeanFlow samples with average velocities. To bridge this gap, we introduce MeanFlowNFT. Inspired by the MeanFlow identity, which bridges average and instantaneous velocities, we construct an induced instantaneous-velocity predictor. We apply the DiffusionNFT objective to this predictor, making reward optimization well-defined for MeanFlow. Sampling remains based on the average velocity, preserving MeanFlow's fast few-step generation. We further prove that MeanFlowNFT inherits DiffusionNFT's strict policy-improvement guarantee. Experiments on image and video generation show that MeanFlowNFT consistently improves baselines. Moreover, it outperforms prior state-of-the-art RL-tuned few-step generators on most metrics (6 of 8 on SD3.5-M), and can even surpass multi-step RL-tuned diffusion while using only a few sampling steps. For instance, on Wan 2.1, 4-step MeanFlowNFT reaches a VBench score of 84.33, surpassing 50-step LongCat-Video RL (82.57).",
+      "hf_url": "https://huggingface.co/papers/2607.15273",
+      "arxiv_url": "https://arxiv.org/abs/2607.15273",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.15273",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.15273",
+      "github_url": "",
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-07-17T00:00:00.000Z",
+      "upvotes": 12,
+      "comments": 1,
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
+      "matched_terms": [],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "MeanFlow generators achieve fast few-step sampling by predicting average velocities over time intervals, making them attractive for efficient generation.",
+      "upvote_label": "12 upvotes"
+    },
+    {
+      "report_date": "2026-07-17",
+      "paper_id": "2607.13491",
+      "title": "DeepLoop: Depth Scaling for Looped Transformers",
+      "authors": [
+        "Shuzhen Li",
+        "Yifan Zhang",
+        "Jiacheng Guo",
+        "Quanquan Gu",
+        "Mengdi Wang"
+      ],
+      "abstract": "Looped Transformers scale sequential computation by applying a compact stack of physical blocks for multiple rounds, increasing unrolled depth without increasing stored parameters. This reuse changes the residual-scaling problem: in an untied Transformer, each residual branch receives and applies its own parameter update, whereas in a looped Transformer one shared update aggregates gradients from repeated visits and is read back by those same visits in the next linearized forward pass. We formalize this tied-depth effect through a first-order perturbation bound controlled by a visit-alignment coefficient κ_R. The bound recovers the DeepNorm exponent when visits decorrelate, but in the conservative aligned regime it requires the exponent to increase from 1/4 to 1/2 as loop count grows at fixed physical depth. The resulting method, DeepLoop, keeps the Post-LN DeepNorm architecture and sets α=(2N)^{1/2} and β=(8N)^{-1/2} for unrolled depth N. On GPT-style looped language models at GPT-2 small and GPT-2 medium scale, DeepLoop is neutral when no physical block is revisited and improves validation loss and downstream accuracy once recurrent depth is activated. These results show that stable recurrent depth requires residual scaling rules that account for parameter visits, not only nominal layer count.",
+      "hf_url": "https://huggingface.co/papers/2607.13491",
+      "arxiv_url": "https://arxiv.org/abs/2607.13491",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.13491",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.13491",
+      "github_url": "",
+      "submitted_by": "Yifan Zhang",
+      "submitted_at": "2026-07-17T00:00:00.000Z",
+      "upvotes": 11,
+      "comments": 2,
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [
+        "\\btransformer(s)?\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Looped Transformers scale sequential computation by applying a compact stack of physical blocks for multiple rounds, increasing unrolled depth without increasing stored parameters.",
+      "upvote_label": "11 upvotes"
+    },
+    {
+      "report_date": "2026-07-17",
+      "paper_id": "2607.14749",
+      "title": "WanSong v1.0 Technical Report",
+      "authors": [
+        "Binghui Chen",
+        "Pandeng Li",
+        "Yu Liu",
+        "Jingren Zhou"
+      ],
+      "abstract": "Music generation foundation models have recently attracted significant industry attention. However, achieving efficient generation and high-fidelity long-form audio while supporting controllability remains challenging. To address these needs, we present WanSong, a simple yet powerful approach for long-form, commercial-grade song generation. Unlike autoregressive (AR) and cascaded multi-stage pipelines (\\eg, AR followed by diffusion), WanSong is a pure diffusion-based model that directly generates high-fidelity, multilingual songs up to 5 minutes and outputs dual stems (vocals and background music) in a single run. In addition, our diffusion framework enables faster inference through step-distillation, and offers an efficient pathway for fine-tuning and customization to support downstream editing tasks.",
+      "hf_url": "https://huggingface.co/papers/2607.14749",
+      "arxiv_url": "https://arxiv.org/abs/2607.14749",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.14749",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.14749",
+      "github_url": "",
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-07-17T00:00:00.000Z",
+      "upvotes": 10,
+      "comments": 3,
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
+      "matched_terms": [],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Music generation foundation models have recently attracted significant industry attention.",
+      "upvote_label": "10 upvotes"
+    },
+    {
+      "report_date": "2026-07-17",
+      "paper_id": "2607.14660",
+      "title": "VIABench: A Comprehensive Video Benchmark Collected from Blind Individuals for Visual Impairment Assistance",
+      "authors": [
+        "Yunfeng Liu",
+        "Yuandong Yang",
+        "Jiarui Han",
+        "Zhenpeng Huang",
+        "Yuqing Tang",
+        "Xiangyu Zeng",
+        "Gangshan Wu",
+        "Limin Wang"
+      ],
+      "abstract": "Visually impaired individuals (VIIs) encounter significant daily challenges due to limited access to visual information. Although Multimodal Large Language Models (MLLMs) have achieved impressive results on general vision and language tasks, their practical utility in real-world blind assistance still remains largely underexplored. To fill this gap, we introduce VIABench, a comprehensive video benchmark specifically designed to evaluate MLLMs in Visually Impaired Assistance scenarios using first-person videos recorded or shared by VIIs themselves. VIABench defines three core tasks, each targeting a distinct requirement in visual assistance. Proactive Reminder: Assesses the model's ability to interpret ongoing video content while proactively anticipating and verbally describing upcoming navigation-critical events; Visual Question Answering (VQA): Evaluates the model's capacity to answer user-posed questions about the environment or objects within the video; Vision-Guided Interaction: Tests context-aware reasoning to accomplish intentional interactions between user and environment. To ensure a robust and fair evaluation, we propose a rigorous benchmarking pipeline that supports both online (real-time) and offline settings. Our experiments demonstrate that current MLLMs still struggle to deliver comprehensive support for VIIs, especially in the Proactive Reminder task, which demands accurate anticipation and real-time responsiveness. We hope VIABench will drive future research toward developing customized MLLMs for real-world assistance, ultimately improving navigation and interaction experiences for visually impaired individuals. Code and data will be released at https://github.com/MCG-NJU/VIABench.",
+      "hf_url": "https://huggingface.co/papers/2607.14660",
+      "arxiv_url": "https://arxiv.org/abs/2607.14660",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.14660",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.14660",
+      "github_url": "",
+      "submitted_by": "Xiangyu Zeng",
+      "submitted_at": "2026-07-17T00:00:00.000Z",
+      "upvotes": 8,
+      "comments": 2,
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
+      "matched_terms": [
+        "\\bvisual\\b",
+        "\\bvideo\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Visually impaired individuals (VIIs) encounter significant daily challenges due to limited access to visual information.",
+      "upvote_label": "8 upvotes"
+    },
+    {
+      "report_date": "2026-07-17",
+      "paper_id": "2607.14431",
+      "title": "Smarter and Cheaper at Once: Byte-Exact KV-Cache Grafting Turns a Frozen Small Model into a Verified-Knowledge Flywheel",
+      "authors": [
+        "Sietse Schelpe"
+      ],
+      "abstract": "We report a way to make a frozen small language model both more capable and dramatically cheaper at once, without changing any weights. Verified knowledge is deposited once as a byte-exact key-value (KV) state artifact and later restored, by graft, into a fresh inference context. The restore is bit-exact: under a pinned deterministic configuration, the grafted logits are byte-for-byte identical to a fresh computation (SHA-256 equality), with zero KL divergence and 100% argmax agreement over fifty samples. We show that own-position graft is the unique numerically exact operating point on a model with floating-point rotary encoding, and we verify byte-exactness on two model scales (12B, 31B) and two GPU targets, one through a pre-registered replay. On AIME 2025, a frozen Gemma-4-12B moves from 80.0% to 93.3% once a verified solution library is grafted, above its own 77.5% and its 31B sibling's 89.2% published anchors. On the recurring case, eight problems the base model never solves within a 401,026-token budget are answered from cached verified solutions in 61 total decode tokens, a factor of 6,574 fewer tokens and about 8,700x less energy; the capability claim proper rests on held-out transfer (7 of 7 at 31B). The same byte-exact store widens usable context from 32,768 to 2,854,766 tokens at zero extra accelerator memory, and moves byte-identical between machines of the same architecture. We describe the system at the behavior level; the engine is proprietary, and every reported number is backed by committed input and output hashes so the scoring can be re-checked without it.",
+      "hf_url": "https://huggingface.co/papers/2607.14431",
+      "arxiv_url": "https://arxiv.org/abs/2607.14431",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.14431",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.14431",
+      "github_url": "",
+      "submitted_by": "sietse schelpe",
+      "submitted_at": "2026-07-17T00:00:00.000Z",
+      "upvotes": 7,
+      "comments": 2,
+      "topic_key": "retrieval_knowledge",
+      "topic_label": "Retrieval, Knowledge, and RAG",
+      "matched_terms": [
+        "\\bknowledge\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "We report a way to make a frozen small language model both more capable and dramatically cheaper at once, without changing any weights.",
+      "upvote_label": "7 upvotes"
+    },
+    {
+      "report_date": "2026-07-17",
+      "paper_id": "2607.10995",
+      "title": "AsySplat: Efficient Asymmetric 3D Gaussian Splatting for Long-Sequence Scene Modeling",
+      "authors": [
+        "Yingji Zhong",
+        "Dave Zhenyu Chen",
+        "Fuzhao Ou",
+        "Youyu Chen",
+        "Zhihao Li",
+        "Lanqing Hong",
+        "Dan Xu"
+      ],
+      "abstract": "Recent generalizable 3D Gaussian Splatting models have advanced long-sequence novel view synthesis (NVS), but at the cost of substantial redundant computation. We identify that the redundancy can be mitigated based on two observations: (i) high-precision geometry is not strictly required for high-quality NVS; (ii) appearance learning is generally easier than geometry recovery. Motivated by these insights, we propose an asymmetric architecture that decouples geometry and appearance modeling. The geometry branch processes coarse-grained tokens with most of the parameters for multi-view reconstruction, while the appearance branch operates on fine-grained tokens to capture details using significantly fewer parameters. The two branches interact through bilateral connections, enabling mutual guidance for their respective tasks. This task-aware asymmetry reduces the computational redundancy and allocates the computation more judiciously, thereby increasing parameter efficiency and enabling smaller models to achieve strong performance. On 32-view 960P inputs, our model matches optimization-based methods while delivering nearly 800x speedup, and surpasses the zero-shot performance of state-of-the-art generalizable models with markedly fewer parameters and reduced training/inference overhead, achieving an overall efficiency improvement.",
+      "hf_url": "https://huggingface.co/papers/2607.10995",
+      "arxiv_url": "https://arxiv.org/abs/2607.10995",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.10995",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.10995",
+      "github_url": "",
+      "submitted_by": "zzhongyj",
+      "submitted_at": "2026-07-17T00:00:00.000Z",
+      "upvotes": 6,
+      "comments": 2,
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
+      "matched_terms": [
+        "\\b3d\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Recent generalizable 3D Gaussian Splatting models have advanced long-sequence novel view synthesis (NVS), but at the cost of substantial redundant computation.",
+      "upvote_label": "6 upvotes"
+    },
+    {
+      "report_date": "2026-07-17",
+      "paper_id": "2607.15277",
+      "title": "Partition, Prompt, Aggregate: Statistical Self-Consistency in Language Models",
+      "authors": [
+        "Patrik Wolf",
+        "Thomas Kleine Buening",
+        "Andreas Krause",
+        "Celestine Mendler-Dünner"
+      ],
+      "abstract": "In-context learning is commonly interpreted as a form of conditional inference, in which the prompt specifies a context and the model's output is treated as an estimate of the corresponding conditional distribution. If this interpretation holds, then LLM estimates should satisfy basic probabilistic identities. In particular, the law of total probability asserts that prior-weighted conditional distributions aggregate into population-level marginals over any valid partition of the population. In this work, we investigate to what extent LLM estimates adhere to this self-consistency principle. We use binary trees as an evaluation scaffold to recursively partition a population into increasingly fine-grained subpopulations. We then prompt LLMs with verbalized subpopulation descriptions in context, aggregate the resulting estimates back into population-level estimates, and compare them across partitions of varying granularity. Applying this protocol across problem domains and state-of-the-art frontier models, we show widespread violations of basic consistency properties. An in-depth study of persona prompting reveals a pattern we call the macro fallacy: estimates reconstructed from more fine-grained subpopulation responses are often better aligned with human reference data than direct population-level estimates. This effect persists across variations in tree structure and estimation task, and can be partially recovered through implicit prompting. Together, these findings suggest that models possess relevant subpopulation knowledge but do not reliably propagate it into aggregate estimates. This gap establishes statistical self-consistency as an unsaturated, reference-free criterion for evaluating LLMs.",
+      "hf_url": "https://huggingface.co/papers/2607.15277",
+      "arxiv_url": "https://arxiv.org/abs/2607.15277",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.15277",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.15277",
+      "github_url": "",
+      "submitted_by": "Patrik Wolf",
+      "submitted_at": "2026-07-17T00:00:00.000Z",
+      "upvotes": 5,
+      "comments": 2,
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [
+        "\\blanguage models?\\b",
+        "\\bprompt(ing)?\\b",
+        "\\blanguage\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "In-context learning is commonly interpreted as a form of conditional inference, in which the prompt specifies a context and the model's output is treated as an estimate of the corresponding conditional distribution.",
+      "upvote_label": "5 upvotes"
+    },
+    {
+      "report_date": "2026-07-17",
+      "paper_id": "2607.10463",
+      "title": "GRASP: GRanularity-Aware Search Policy for Agentic RAG",
+      "authors": [
+        "Varun Gandhi",
+        "Jaewook Lee",
+        "Shantanu Todmal",
+        "Franck Dernoncourt",
+        "Ryan Rossi",
+        "Zichao Wang",
+        "Andrew Lan"
+      ],
+      "abstract": "Agentic retrieval-augmented generation (RAG) extends static RAG by allowing language models to iteratively reason, generate search queries, retrieve evidence, and predict answers. However, it remains challenging for models to decide when to retrieve, whether to use lexical matching or semantic similarity, and how to control context granularity to prevent irrelevant tokens from interfering with agent reasoning. In this paper, we introduce GRASP, a reinforcement learning (RL) framework for training agents to adaptively coordinate complementary retrieval tools during multi-step reasoning. GRASP provides the agent with semantic search, keyword search, and paragraph-reading actions, enabling it to retrieve sentence-level evidence and expand further context only when needed. We train the policy with a reward that jointly accounts for answer accuracy, grounded reading, complementary search, and turn efficiency. Experiments on multi-hop reasoning benchmarks show that GRASP improves both retrieval recall and downstream question answering performance compared with single-step retrieval, prompting-based agentic RAG, and RL-based retrieval baselines. Qualitative and ablation analyses show that the learned policy develops interpretable skimming and scanning behavior: it uses semantic search for broad exploration, paragraph reading for local verification, and keyword search for entity-specific evidence. These results suggest that learning to coordinate retrieval signals and context granularity is critical for agent's correct reasoning.",
+      "hf_url": "https://huggingface.co/papers/2607.10463",
+      "arxiv_url": "https://arxiv.org/abs/2607.10463",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.10463",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.10463",
+      "github_url": "",
+      "submitted_by": "Franck Dernoncourt",
+      "submitted_at": "2026-07-17T00:00:00.000Z",
+      "upvotes": 5,
+      "comments": 2,
+      "topic_key": "retrieval_knowledge",
+      "topic_label": "Retrieval, Knowledge, and RAG",
+      "matched_terms": [
+        "\\brag\\b",
+        "\\bsearch\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Agentic retrieval-augmented generation (RAG) extends static RAG by allowing language models to iteratively reason, generate search queries, retrieve evidence, and predict answers.",
+      "upvote_label": "5 upvotes"
+    },
+    {
+      "report_date": "2026-07-17",
+      "paper_id": "2607.15058",
+      "title": "SUFLECA: Scaling Up Feature Learning for CAD-to-image Alignment",
+      "authors": [
+        "Saad Ejaz",
+        "Miguel Fernandez-Cortizas",
+        "Javier Civera",
+        "Holger Voos",
+        "Jose Luis Sanchez-Lopez"
+      ],
+      "abstract": "CAD-to-image alignment aims to estimate an object's 9D pose (rotation, translation, and anisotropic scale) from a single RGB image, enabling applications in robotics and augmented reality. Recent zero-shot methods use visual foundation models to match image regions to CAD models, yet typically their correspondences are appearance-driven and degrade under occlusion or sim-to-real domain shift. To address these limitations, we introduce SUFLECA (Scaling Up Feature LEarning for CAD Alignment), a weakly-supervised framework for zero-shot CAD alignment with two key contributions. First, SUFLECA scales up geometry-grounded feature learning from pretrained visual representations through Normalized Object Coordinates (NOCs) supervision on 674K images spanning 12 real and synthetic datasets, learning compact geometry-aware features that generalize across domains. Second, we propose a geometrically consistent matching algorithm that establishes reliable one-to-one CAD-to-image correspondences. Together, these contributions enable accurate, sub-second alignment per object instance without iterative pose refinement. On ScanNet25k, SUFLECA achieves 33.4%/42.3% category/instance accuracy, outperforming, with a smaller computational footprint, the strongest zero-shot baseline by 10.3/12.2 percentage points and, for the first time on this benchmark, even surpassing fully supervised methods. Code is available at: https://github.com/snt-arg/SUFLECA",
+      "hf_url": "https://huggingface.co/papers/2607.15058",
+      "arxiv_url": "https://arxiv.org/abs/2607.15058",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.15058",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.15058",
+      "github_url": "",
+      "submitted_by": "Saad Ejaz",
+      "submitted_at": "2026-07-17T00:00:00.000Z",
+      "upvotes": 4,
+      "comments": 2,
+      "topic_key": "reasoning_alignment_eval",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "matched_terms": [
+        "\\balignment\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "CAD-to-image alignment aims to estimate an object's 9D pose (rotation, translation, and anisotropic scale) from a single RGB image, enabling applications in robotics and augmented reality.",
+      "upvote_label": "4 upvotes"
+    },
+    {
+      "report_date": "2026-07-17",
+      "paper_id": "2607.12227",
+      "title": "Rethinking the Evaluation of Harness Evolution for Agents",
+      "authors": [
+        "Yike Wang",
+        "Huaisheng Zhu",
+        "Zhengyu Hu",
+        "Yige Yuan",
+        "Zhengyu Chen",
+        "Shakti Senthil",
+        "Hannaneh Hajishirzi",
+        "Yulia Tsvetkov",
+        "Pradeep Dasigi",
+        "Teng Xiao"
+      ],
+      "abstract": "We revisit the evaluation of automatic harness evolution for LLM agents. Existing harness evolution methods use unit test cases to search for harness configurations and then report final performance on the same public benchmark. This protocol raises two fundamental concerns. First, harness evolution is itself an iterative search procedure that repeatedly evaluates and revises candidate harnesses using task feedback. As in agentic test-time scaling, it should therefore be compared with simple task-level search baselines under matched feedback and inference budgets to determine whether its gains arise from improved harness design or from additional search alone. Second, because the search and the final evaluation share the same benchmark, the reported gains risk overfitting to that specific task set. To address these concerns, we conduct an extensive evaluation comparing harness evolution with simple test-time scaling and discovery baselines under comparable feedback and inference budgets, and also evaluate evolved harnesses on held-out tasks to assess whether the discovered improvements generalize. Experiments on Terminal-Bench 2.1 with GPT-5.4 and Claude Opus 4.6 show that automatic harness evolution does not consistently outperform simple test-time scaling methods and exhibits limited generalization. Our results raise important questions about the effectiveness of automatic harness evolution and highlight the need for fairer evaluation protocols and benchmarks for automatic harness design. Our code is available at https://github.com/rethinking-harness-evolution.",
+      "hf_url": "https://huggingface.co/papers/2607.12227",
+      "arxiv_url": "https://arxiv.org/abs/2607.12227",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.12227",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.12227",
+      "github_url": "",
+      "submitted_by": "TengXiao",
+      "submitted_at": "2026-07-17T00:00:00.000Z",
+      "upvotes": 4,
+      "comments": 2,
+      "topic_key": "agents_planning",
+      "topic_label": "Agents and Planning",
+      "matched_terms": [
+        "\\bagents?\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "We revisit the evaluation of automatic harness evolution for LLM agents.",
+      "upvote_label": "4 upvotes"
     },
     {
       "report_date": "2026-07-17",
@@ -2461,8 +2568,8 @@
       "github_url": "",
       "submitted_by": "Maijunxian Wang",
       "submitted_at": "2026-07-17T00:00:00.000Z",
-      "upvotes": 1,
-      "comments": 1,
+      "upvotes": 3,
+      "comments": 2,
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [
@@ -2471,36 +2578,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Video models are evolving into vision foundation models, yet they still lack human-like multi-step reasoning.",
-      "upvote_label": "1 upvote"
-    },
-    {
-      "report_date": "2026-07-17",
-      "paper_id": "2607.14106",
-      "title": "Token Time Continuous Diffusion for Language Modeling",
-      "authors": [
-        "Parikshit Bansal",
-        "Sujay Sanghavi"
-      ],
-      "abstract": "In this paper we introduce token time continuous diffusion (TTCD), a new diffusion language model which (a) operates in continuous space, deterministically mapping Gaussian noise to a final token canvas with no further sampling, and crucially (b) incorporates a new notion of per-token times, with some tokens proceeding from noise to token at a faster rate than others. Continuous space modeling helps TTCD avoid the parallel sampling of multiple tokens, which is a key source of inaccuracy at high speedups for models that iterate purely in discrete space. The notion of per-token times helps TTCD to better model conditional generation, allows for more sure tokens to proceed at a faster rate, and allows for differentiated inter-token influences during refinement. TTCD outperforms discrete models at high speedups. We train a 160M parameter TTCD model on OpenWebText, and then self-distill it; we find that at high speedups we are comparable in unconditional generation quality, and outperform in conditional generation, several existing models of similar size trained, on the same data, and self-distilled. We achieve similar gains in Sudoku solving as well.",
-      "hf_url": "https://huggingface.co/papers/2607.14106",
-      "arxiv_url": "https://arxiv.org/abs/2607.14106",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.14106",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.14106",
-      "github_url": "",
-      "submitted_by": "Parikshit Bansal",
-      "submitted_at": "2026-07-17T00:00:00.000Z",
-      "upvotes": 1,
-      "comments": 1,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
-      "matched_terms": [
-        "\\btoken(s)?\\b",
-        "\\blanguage\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "In this paper we introduce token time continuous diffusion (TTCD), a new diffusion language model which (a) operates in continuous space, deterministically mapping Gaussian noise to a final token canvas with no…",
-      "upvote_label": "1 upvote"
+      "upvote_label": "3 upvotes"
     },
     {
       "report_date": "2026-07-17",
@@ -2522,8 +2600,8 @@
       "github_url": "",
       "submitted_by": "Yuan Gao",
       "submitted_at": "2026-07-17T00:00:00.000Z",
-      "upvotes": 0,
-      "comments": 1,
+      "upvotes": 3,
+      "comments": 2,
       "topic_key": "retrieval_knowledge",
       "topic_label": "Retrieval, Knowledge, and RAG",
       "matched_terms": [
@@ -2532,7 +2610,68 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Validating autonomous driving systems requires diverse, regulation-compliant test scenarios.",
-      "upvote_label": "0 upvotes"
+      "upvote_label": "3 upvotes"
+    },
+    {
+      "report_date": "2026-07-17",
+      "paper_id": "2607.14106",
+      "title": "Token Time Continuous Diffusion for Language Modeling",
+      "authors": [
+        "Parikshit Bansal",
+        "Sujay Sanghavi"
+      ],
+      "abstract": "In this paper we introduce token time continuous diffusion (TTCD), a new diffusion language model which (a) operates in continuous space, deterministically mapping Gaussian noise to a final token canvas with no further sampling, and crucially (b) incorporates a new notion of per-token times, with some tokens proceeding from noise to token at a faster rate than others. Continuous space modeling helps TTCD avoid the parallel sampling of multiple tokens, which is a key source of inaccuracy at high speedups for models that iterate purely in discrete space. The notion of per-token times helps TTCD to better model conditional generation, allows for more sure tokens to proceed at a faster rate, and allows for differentiated inter-token influences during refinement. TTCD outperforms discrete models at high speedups. We train a 160M parameter TTCD model on OpenWebText, and then self-distill it; we find that at high speedups we are comparable in unconditional generation quality, and outperform in conditional generation, several existing models of similar size trained, on the same data, and self-distilled. We achieve similar gains in Sudoku solving as well.",
+      "hf_url": "https://huggingface.co/papers/2607.14106",
+      "arxiv_url": "https://arxiv.org/abs/2607.14106",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.14106",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.14106",
+      "github_url": "",
+      "submitted_by": "Parikshit Bansal",
+      "submitted_at": "2026-07-17T00:00:00.000Z",
+      "upvotes": 3,
+      "comments": 2,
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [
+        "\\btoken(s)?\\b",
+        "\\blanguage\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "In this paper we introduce token time continuous diffusion (TTCD), a new diffusion language model which (a) operates in continuous space, deterministically mapping Gaussian noise to a final token canvas with no…",
+      "upvote_label": "3 upvotes"
+    },
+    {
+      "report_date": "2026-07-17",
+      "paper_id": "2607.09061",
+      "title": "On Locality and Length Generalization in Visual Reasoning",
+      "authors": [
+        "Pulkit Madan",
+        "Sanjay Haresh",
+        "Reza Ebrahimi",
+        "Sunny Panchal",
+        "Apratim Bhattacharyya",
+        "Roland Memisevic"
+      ],
+      "abstract": "A striking feature of the human visual system is that it ingests visual information through a series of local foveated glimpses, rather than a single global computation. This makes human vision distinctly different from most popular computer vision models in use today, which input images globally and in a single shot. A natural question therefore is whether local, sequential vision models may provide any fundamental computational benefits in addition to being biologically more plausible than global models. In this work, we investigate this question from the perspective of visual state tracking and length generalization. Inspired by recent studies of length generalization in language models, we study the behavior of vision models trained on simple vision tasks that require the aggregation of local information across an image. Our experiments reveal that, similar to language models, vision models can learn to exploit global shortcuts and thereby fail to generalize over task length or complexity. We also show that recurrent vision policies based on strictly local perception can mitigate these failures, thereby allowing models to generalize on these tasks. Our results show that local attention may be an essential overlooked requirement for robust compositional generalization.",
+      "hf_url": "https://huggingface.co/papers/2607.09061",
+      "arxiv_url": "https://arxiv.org/abs/2607.09061",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.09061",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.09061",
+      "github_url": "",
+      "submitted_by": "M.Reza Ebrahimi",
+      "submitted_at": "2026-07-17T00:00:00.000Z",
+      "upvotes": 1,
+      "comments": 2,
+      "topic_key": "reasoning_alignment_eval",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "matched_terms": [
+        "\\breasoning\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "A striking feature of the human visual system is that it ingests visual information through a series of local foveated glimpses, rather than a single global computation.",
+      "upvote_label": "1 upvote"
     }
   ]
 }
