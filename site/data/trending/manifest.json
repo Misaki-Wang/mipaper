@@ -1,10 +1,149 @@
 {
   "branch_key": "trending",
   "branch_label": "Trending",
-  "generated_at": "2026-07-13T08:00:07Z",
-  "reports_count": 22,
-  "default_report_path": "data/trending/reports/2026-07-13/trending-2026-07-13.json",
+  "generated_at": "2026-07-20T08:00:08Z",
+  "reports_count": 23,
+  "default_report_path": "data/trending/reports/2026-07-20/trending-2026-07-20.json",
   "reports": [
+    {
+      "branch_key": "trending",
+      "branch_label": "Trending",
+      "data_path": "data/trending/reports/2026-07-20/trending-2026-07-20.json",
+      "slug": "trending-2026-07-20",
+      "snapshot_date": "2026-07-20",
+      "since": "weekly",
+      "total_repositories": 15,
+      "generated_at": "2026-07-20T08:00:06Z",
+      "source_url": "https://github.com/trending?since=weekly&spoken_language_code=",
+      "top_languages": [
+        {
+          "language": "Python",
+          "count": 5,
+          "share": 33.33333333333333
+        },
+        {
+          "language": "TypeScript",
+          "count": 4,
+          "share": 26.666666666666668
+        },
+        {
+          "language": "Rust",
+          "count": 2,
+          "share": 13.333333333333334
+        },
+        {
+          "language": "C#",
+          "count": 1,
+          "share": 6.666666666666667
+        },
+        {
+          "language": "CSS",
+          "count": 1,
+          "share": 6.666666666666667
+        }
+      ],
+      "top_repositories": [
+        {
+          "snapshot_date": "2026-07-20",
+          "repo_id": "opencut-app/opencut",
+          "owner": "OpenCut-app",
+          "name": "OpenCut",
+          "full_name": "OpenCut-app/OpenCut",
+          "repo_url": "https://github.com/OpenCut-app/OpenCut",
+          "description": "The open-source CapCut alternative",
+          "language": "TypeScript",
+          "stars": 76074,
+          "forks": 7641,
+          "stars_this_week": 12743,
+          "built_by": [
+            "mazeincoding",
+            "izadoesdev",
+            "anwarulislam",
+            "khanguyen74",
+            "DevloperAmanSingh"
+          ]
+        },
+        {
+          "snapshot_date": "2026-07-20",
+          "repo_id": "mattpocock/skills",
+          "owner": "mattpocock",
+          "name": "skills",
+          "full_name": "mattpocock/skills",
+          "repo_url": "https://github.com/mattpocock/skills",
+          "description": "Skills for Real Engineers. Straight from my .agents directory.",
+          "language": "Shell",
+          "stars": 178042,
+          "forks": 15249,
+          "stars_this_week": 10983,
+          "built_by": [
+            "mattpocock",
+            "claude",
+            "github-actions",
+            "gabimoncha"
+          ]
+        },
+        {
+          "snapshot_date": "2026-07-20",
+          "repo_id": "nutlope/hallmark",
+          "owner": "Nutlope",
+          "name": "hallmark",
+          "full_name": "Nutlope/hallmark",
+          "repo_url": "https://github.com/Nutlope/hallmark",
+          "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+          "language": "CSS",
+          "stars": 13654,
+          "forks": 689,
+          "stars_this_week": 9193,
+          "built_by": [
+            "Luffixos",
+            "Nutlope",
+            "claude",
+            "riccardogiorato",
+            "JaySmith502"
+          ]
+        },
+        {
+          "snapshot_date": "2026-07-20",
+          "repo_id": "shubhamsaboo/awesome-llm-apps",
+          "owner": "Shubhamsaboo",
+          "name": "awesome-llm-apps",
+          "full_name": "Shubhamsaboo/awesome-llm-apps",
+          "repo_url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+          "description": "100+ AI Agent & RAG apps you can actually run — clone, customize, ship.",
+          "language": "Python",
+          "stars": 124754,
+          "forks": 18424,
+          "stars_this_week": 6211,
+          "built_by": [
+            "Shubhamsaboo",
+            "Madhuvod",
+            "claude",
+            "onestardao",
+            "libw0430"
+          ]
+        },
+        {
+          "snapshot_date": "2026-07-20",
+          "repo_id": "hkuds/vibe-trading",
+          "owner": "HKUDS",
+          "name": "Vibe-Trading",
+          "full_name": "HKUDS/Vibe-Trading",
+          "repo_url": "https://github.com/HKUDS/Vibe-Trading",
+          "description": "\"Vibe-Trading: Your Personal Trading Agent\"",
+          "language": "Python",
+          "stars": 25427,
+          "forks": 4184,
+          "stars_this_week": 5228,
+          "built_by": [
+            "warren618",
+            "xkam7ar",
+            "shadowinlife",
+            "claude",
+            "Elfsa-Miranda"
+          ]
+        }
+      ]
+    },
     {
       "branch_key": "trending",
       "branch_label": "Trending",
