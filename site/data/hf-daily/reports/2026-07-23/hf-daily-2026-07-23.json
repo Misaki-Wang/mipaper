@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-24T19:00:05Z",
+  "generated_at": "2026-07-25T19:00:11Z",
   "report_kind": "hf_daily",
   "report_date": "2026-07-23",
   "source_url": "https://huggingface.co/papers/date/2026-07-23",
@@ -78,13 +78,13 @@
       "Other AI: 4 papers (20.00%); representative paper: An Exam for Active Observers.",
       "Learning, Optimization, and Theory: 3 papers (15.00%); representative paper: SLAI T-Rex: Full-Parameter Post-training of the DeepSeek-V4 Family on Ascend SuperPOD."
     ],
-    "trend_summary": "Today's dominant clusters are LLMs and Language / Other AI / Learning, Optimization, and Theory; this suggests that attention is spread across application adaptation, evaluation, and model reliability. The strongest visible attention is on “SLAI T-Rex: Full-Parameter Post-training of the DeepSeek-V4 Family on Ascend SuperPOD” (55 upvotes).",
+    "trend_summary": "Today's dominant clusters are LLMs and Language / Other AI / Learning, Optimization, and Theory; this suggests that attention is spread across application adaptation, evaluation, and model reliability. The strongest visible attention is on “SLAI T-Rex: Full-Parameter Post-training of the DeepSeek-V4 Family on Ascend SuperPOD” (56 upvotes).",
     "category_summaries": [
       {
         "topic_label": "LLMs and Language",
         "count": 4,
         "share": 20.0,
-        "summary": "LLMs and Language contributes 4 papers (20.00%), led by “Scaling Laws for Hypernetwork-Based Knowledge Injection in Large Language Models” with 13 upvotes."
+        "summary": "LLMs and Language contributes 4 papers (20.00%), led by “Scaling Laws for Hypernetwork-Based Knowledge Injection in Large Language Models” with 14 upvotes."
       },
       {
         "topic_label": "Other AI",
@@ -96,7 +96,7 @@
         "topic_label": "Learning, Optimization, and Theory",
         "count": 3,
         "share": 15.0,
-        "summary": "Learning, Optimization, and Theory contributes 3 papers (15.00%), led by “SLAI T-Rex: Full-Parameter Post-training of the DeepSeek-V4 Family on Ascend SuperPOD” with 55 upvotes."
+        "summary": "Learning, Optimization, and Theory contributes 3 papers (15.00%), led by “SLAI T-Rex: Full-Parameter Post-training of the DeepSeek-V4 Family on Ascend SuperPOD” with 56 upvotes."
       },
       {
         "topic_label": "Reasoning, Alignment, and Evaluation",
@@ -126,7 +126,7 @@
         "topic_label": "Retrieval, Knowledge, and RAG",
         "count": 1,
         "share": 5.0,
-        "summary": "Retrieval, Knowledge, and RAG contributes 1 papers (5.00%), led by “Beyond Relevance-Centric Retrieval: Rubric-Oriented Document Set Selection and Ranking” with 27 upvotes."
+        "summary": "Retrieval, Knowledge, and RAG contributes 1 papers (5.00%), led by “Beyond Relevance-Centric Retrieval: Rubric-Oriented Document Set Selection and Ranking” with 28 upvotes."
       },
       {
         "topic_label": "Robotics and Embodied AI",
@@ -138,8 +138,8 @@
     "top_papers": [
       {
         "title": "SLAI T-Rex: Full-Parameter Post-training of the DeepSeek-V4 Family on Ascend SuperPOD",
-        "upvotes": 55,
-        "upvote_label": "55 upvotes",
+        "upvotes": 56,
+        "upvote_label": "56 upvotes",
         "topic_label": "Learning, Optimization, and Theory",
         "summary": "Full-parameter post-training of trillion-parameter-scale MoE models introduces substantial system-level challenges for large-scale distributed training, including severe memory pressure, non-overlapped communication…",
         "hf_url": "https://huggingface.co/papers/2607.20145",
@@ -160,8 +160,8 @@
       },
       {
         "title": "Beyond Relevance-Centric Retrieval: Rubric-Oriented Document Set Selection and Ranking",
-        "upvotes": 27,
-        "upvote_label": "27 upvotes",
+        "upvotes": 28,
+        "upvote_label": "28 upvotes",
         "topic_label": "Retrieval, Knowledge, and RAG",
         "summary": "As large language models and AI agents become the primary consumers of search results, document set quality determines the upper bound of downstream generation.",
         "hf_url": "https://huggingface.co/papers/2607.19747",
@@ -181,15 +181,15 @@
         "papers_cool_url": "https://papers.cool/arxiv/2607.16165"
       },
       {
-        "title": "Generalizable VLA Finetuning via Representation Anchoring and Language-Action Alignment",
-        "upvotes": 13,
-        "upvote_label": "13 upvotes",
-        "topic_label": "Reasoning, Alignment, and Evaluation",
-        "summary": "Finetuning a pretrained vision-language model (VLM) on robot demonstrations via behavior cloning (BC) has become the standard recipe for vision-language-action (VLA) policies.",
-        "hf_url": "https://huggingface.co/papers/2607.13429",
-        "arxiv_url": "https://arxiv.org/abs/2607.13429",
-        "arxiv_pdf_url": "https://arxiv.org/pdf/2607.13429",
-        "papers_cool_url": "https://papers.cool/arxiv/2607.13429"
+        "title": "Scaling Laws for Hypernetwork-Based Knowledge Injection in Large Language Models",
+        "upvotes": 14,
+        "upvote_label": "14 upvotes",
+        "topic_label": "LLMs and Language",
+        "summary": "Injecting factual knowledge into large language models (LLMs) reliably and at scale remains an open challenge.",
+        "hf_url": "https://huggingface.co/papers/2607.19604",
+        "arxiv_url": "https://arxiv.org/abs/2607.19604",
+        "arxiv_pdf_url": "https://arxiv.org/pdf/2607.19604",
+        "papers_cool_url": "https://papers.cool/arxiv/2607.19604"
       }
     ]
   },
@@ -299,7 +299,7 @@
       "github_url": "",
       "submitted_by": "Dongfang Li",
       "submitted_at": "2026-07-23T00:00:00.000Z",
-      "upvotes": 55,
+      "upvotes": 56,
       "comments": 2,
       "topic_key": "learning_theory",
       "topic_label": "Learning, Optimization, and Theory",
@@ -309,7 +309,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Full-parameter post-training of trillion-parameter-scale MoE models introduces substantial system-level challenges for large-scale distributed training, including severe memory pressure, non-overlapped communication…",
-      "upvote_label": "55 upvotes"
+      "upvote_label": "56 upvotes"
     },
     {
       "report_date": "2026-07-23",
@@ -376,7 +376,7 @@
       "github_url": "",
       "submitted_by": "Kailin Jiang",
       "submitted_at": "2026-07-23T00:00:00.000Z",
-      "upvotes": 27,
+      "upvotes": 28,
       "comments": 6,
       "topic_key": "retrieval_knowledge",
       "topic_label": "Retrieval, Knowledge, and RAG",
@@ -386,7 +386,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "As large language models and AI agents become the primary consumers of search results, document set quality determines the upper bound of downstream generation.",
-      "upvote_label": "27 upvotes"
+      "upvote_label": "28 upvotes"
     },
     {
       "report_date": "2026-07-23",
@@ -417,6 +417,36 @@
       "classification_confidence": null,
       "one_sentence_summary": "Human vision is a closed loop: gaze is continuously redirected by intermediate hypotheses rather than a single snapshot.",
       "upvote_label": "24 upvotes"
+    },
+    {
+      "report_date": "2026-07-23",
+      "paper_id": "2607.19604",
+      "title": "Scaling Laws for Hypernetwork-Based Knowledge Injection in Large Language Models",
+      "authors": [
+        "Nischay Dhankhar",
+        "Dos Baha",
+        "Abulhair Saparov"
+      ],
+      "abstract": "Injecting factual knowledge into large language models (LLMs) reliably and at scale remains an open challenge. Hypernetworks provide a promising solution to large-scale knowledge injection. Although hypernetworks are typically applied for test-time adaptation, we explore their use in train-time knowledge injection, where, given a large corpus of facts, we train a hypernetwork to generate a fixed LoRA adapter that, when inserted into the target model, enable the model to answer questions about those facts. In this work, we investigate whether hypernetworks can be used to perform train-time knowledge injection and how this ability varies with scale. The scaling behavior of hypernetworks remains largely unstudied. Our design decouples the hypernetwork's injection capacity from the target model's general capability, enabling, for the first time, a rigorous study of scaling laws for hypernetwork architectures. We characterize how loss, reasoning accuracy, and out-of-distribution (OOD) generalization vary with hypernetwork depth, width, and target network size. We construct a large-scale dataset, called MegaWikiQA, containing tens of millions of multi-hop question-answer examples across 39 domains constructed from examples in Wikidata5M. Our results reveal: (i) hypernetwork-based injection exhibits broadly predictive power law scaling along all architecture axes; and (ii) hypernetworks are capable of reliable OOD generalization at increasing scales, suggesting that hypernetwork provides a promising alternative to other train-time adaptation methods such as LoRA finetuning and full fine-tuning, exhibiting steeper scaling exponents in all OOD evaluations. Together, these results establish hypernetworks as a principled and scalable substrate for train-time adaptation, and provide the first empirically grounded scaling laws to guide hypernetworks for factual reasoning in large language models.",
+      "hf_url": "https://huggingface.co/papers/2607.19604",
+      "arxiv_url": "https://arxiv.org/abs/2607.19604",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.19604",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.19604",
+      "github_url": "",
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-07-23T00:00:00.000Z",
+      "upvotes": 14,
+      "comments": 1,
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [
+        "\\blanguage models?\\b",
+        "\\blanguage\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Injecting factual knowledge into large language models (LLMs) reliably and at scale remains an open challenge.",
+      "upvote_label": "14 upvotes"
     },
     {
       "report_date": "2026-07-23",
@@ -452,36 +482,6 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Finetuning a pretrained vision-language model (VLM) on robot demonstrations via behavior cloning (BC) has become the standard recipe for vision-language-action (VLA) policies.",
-      "upvote_label": "13 upvotes"
-    },
-    {
-      "report_date": "2026-07-23",
-      "paper_id": "2607.19604",
-      "title": "Scaling Laws for Hypernetwork-Based Knowledge Injection in Large Language Models",
-      "authors": [
-        "Nischay Dhankhar",
-        "Dos Baha",
-        "Abulhair Saparov"
-      ],
-      "abstract": "Injecting factual knowledge into large language models (LLMs) reliably and at scale remains an open challenge. Hypernetworks provide a promising solution to large-scale knowledge injection. Although hypernetworks are typically applied for test-time adaptation, we explore their use in train-time knowledge injection, where, given a large corpus of facts, we train a hypernetwork to generate a fixed LoRA adapter that, when inserted into the target model, enable the model to answer questions about those facts. In this work, we investigate whether hypernetworks can be used to perform train-time knowledge injection and how this ability varies with scale. The scaling behavior of hypernetworks remains largely unstudied. Our design decouples the hypernetwork's injection capacity from the target model's general capability, enabling, for the first time, a rigorous study of scaling laws for hypernetwork architectures. We characterize how loss, reasoning accuracy, and out-of-distribution (OOD) generalization vary with hypernetwork depth, width, and target network size. We construct a large-scale dataset, called MegaWikiQA, containing tens of millions of multi-hop question-answer examples across 39 domains constructed from examples in Wikidata5M. Our results reveal: (i) hypernetwork-based injection exhibits broadly predictive power law scaling along all architecture axes; and (ii) hypernetworks are capable of reliable OOD generalization at increasing scales, suggesting that hypernetwork provides a promising alternative to other train-time adaptation methods such as LoRA finetuning and full fine-tuning, exhibiting steeper scaling exponents in all OOD evaluations. Together, these results establish hypernetworks as a principled and scalable substrate for train-time adaptation, and provide the first empirically grounded scaling laws to guide hypernetworks for factual reasoning in large language models.",
-      "hf_url": "https://huggingface.co/papers/2607.19604",
-      "arxiv_url": "https://arxiv.org/abs/2607.19604",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.19604",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.19604",
-      "github_url": "",
-      "submitted_by": "taesiri",
-      "submitted_at": "2026-07-23T00:00:00.000Z",
-      "upvotes": 13,
-      "comments": 1,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
-      "matched_terms": [
-        "\\blanguage models?\\b",
-        "\\blanguage\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Injecting factual knowledge into large language models (LLMs) reliably and at scale remains an open challenge.",
       "upvote_label": "13 upvotes"
     },
     {
@@ -560,7 +560,7 @@
       "topic_label": "LLMs and Language",
       "count": 4,
       "share": 20.0,
-      "summary": "LLMs and Language contributes 4 papers (20.00%), led by “Scaling Laws for Hypernetwork-Based Knowledge Injection in Large Language Models” with 13 upvotes.",
+      "summary": "LLMs and Language contributes 4 papers (20.00%), led by “Scaling Laws for Hypernetwork-Based Knowledge Injection in Large Language Models” with 14 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-23",
@@ -579,7 +579,7 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-07-23T00:00:00.000Z",
-          "upvotes": 13,
+          "upvotes": 14,
           "comments": 1,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
@@ -590,7 +590,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Injecting factual knowledge into large language models (LLMs) reliably and at scale remains an open challenge.",
-          "upvote_label": "13 upvotes"
+          "upvote_label": "14 upvotes"
         },
         {
           "report_date": "2026-07-23",
@@ -644,7 +644,7 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-07-23T00:00:00.000Z",
-          "upvotes": 7,
+          "upvotes": 8,
           "comments": 1,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
@@ -654,7 +654,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "3D Gaussian Splatting (3DGS) achieves high-quality novel-view synthesis by optimizing freely placed primitives in 3D and adaptively densifying them in under-reconstructed regions.",
-          "upvote_label": "7 upvotes"
+          "upvote_label": "8 upvotes"
         },
         {
           "report_date": "2026-07-23",
@@ -799,7 +799,7 @@
           "github_url": "",
           "submitted_by": "Yaroslav Prytula",
           "submitted_at": "2026-07-23T00:00:00.000Z",
-          "upvotes": 1,
+          "upvotes": 2,
           "comments": 2,
           "topic_key": "other_ai",
           "topic_label": "Other AI",
@@ -807,7 +807,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Simultaneous localization and mapping (SLAM) is one of the fundamental problems in robotics, as it enables autonomous operations in real-world scenarios.",
-          "upvote_label": "1 upvote"
+          "upvote_label": "2 upvotes"
         }
       ]
     },
@@ -815,7 +815,7 @@
       "topic_label": "Learning, Optimization, and Theory",
       "count": 3,
       "share": 15.0,
-      "summary": "Learning, Optimization, and Theory contributes 3 papers (15.00%), led by “SLAI T-Rex: Full-Parameter Post-training of the DeepSeek-V4 Family on Ascend SuperPOD” with 55 upvotes.",
+      "summary": "Learning, Optimization, and Theory contributes 3 papers (15.00%), led by “SLAI T-Rex: Full-Parameter Post-training of the DeepSeek-V4 Family on Ascend SuperPOD” with 56 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-23",
@@ -896,7 +896,7 @@
           "github_url": "",
           "submitted_by": "Dongfang Li",
           "submitted_at": "2026-07-23T00:00:00.000Z",
-          "upvotes": 55,
+          "upvotes": 56,
           "comments": 2,
           "topic_key": "learning_theory",
           "topic_label": "Learning, Optimization, and Theory",
@@ -906,7 +906,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Full-parameter post-training of trillion-parameter-scale MoE models introduces substantial system-level challenges for large-scale distributed training, including severe memory pressure, non-overlapped communication…",
-          "upvote_label": "55 upvotes"
+          "upvote_label": "56 upvotes"
         },
         {
           "report_date": "2026-07-23",
@@ -1143,7 +1143,7 @@
           "submitted_by": "zhongyuan peng",
           "submitted_at": "2026-07-23T00:00:00.000Z",
           "upvotes": 5,
-          "comments": 1,
+          "comments": 2,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
           "matched_terms": [
@@ -1247,7 +1247,7 @@
       "topic_label": "Retrieval, Knowledge, and RAG",
       "count": 1,
       "share": 5.0,
-      "summary": "Retrieval, Knowledge, and RAG contributes 1 papers (5.00%), led by “Beyond Relevance-Centric Retrieval: Rubric-Oriented Document Set Selection and Ranking” with 27 upvotes.",
+      "summary": "Retrieval, Knowledge, and RAG contributes 1 papers (5.00%), led by “Beyond Relevance-Centric Retrieval: Rubric-Oriented Document Set Selection and Ranking” with 28 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-23",
@@ -1274,7 +1274,7 @@
           "github_url": "",
           "submitted_by": "Kailin Jiang",
           "submitted_at": "2026-07-23T00:00:00.000Z",
-          "upvotes": 27,
+          "upvotes": 28,
           "comments": 6,
           "topic_key": "retrieval_knowledge",
           "topic_label": "Retrieval, Knowledge, and RAG",
@@ -1284,7 +1284,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "As large language models and AI agents become the primary consumers of search results, document set quality determines the upper bound of downstream generation.",
-          "upvote_label": "27 upvotes"
+          "upvote_label": "28 upvotes"
         }
       ]
     },
@@ -1409,7 +1409,7 @@
       "github_url": "",
       "submitted_by": "Dongfang Li",
       "submitted_at": "2026-07-23T00:00:00.000Z",
-      "upvotes": 55,
+      "upvotes": 56,
       "comments": 2,
       "topic_key": "learning_theory",
       "topic_label": "Learning, Optimization, and Theory",
@@ -1419,7 +1419,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Full-parameter post-training of trillion-parameter-scale MoE models introduces substantial system-level challenges for large-scale distributed training, including severe memory pressure, non-overlapped communication…",
-      "upvote_label": "55 upvotes"
+      "upvote_label": "56 upvotes"
     },
     {
       "report_date": "2026-07-23",
@@ -1486,7 +1486,7 @@
       "github_url": "",
       "submitted_by": "Kailin Jiang",
       "submitted_at": "2026-07-23T00:00:00.000Z",
-      "upvotes": 27,
+      "upvotes": 28,
       "comments": 6,
       "topic_key": "retrieval_knowledge",
       "topic_label": "Retrieval, Knowledge, and RAG",
@@ -1496,7 +1496,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "As large language models and AI agents become the primary consumers of search results, document set quality determines the upper bound of downstream generation.",
-      "upvote_label": "27 upvotes"
+      "upvote_label": "28 upvotes"
     },
     {
       "report_date": "2026-07-23",
@@ -1545,7 +1545,7 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-07-23T00:00:00.000Z",
-      "upvotes": 13,
+      "upvotes": 14,
       "comments": 1,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
@@ -1556,7 +1556,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Injecting factual knowledge into large language models (LLMs) reliably and at scale remains an open challenge.",
-      "upvote_label": "13 upvotes"
+      "upvote_label": "14 upvotes"
     },
     {
       "report_date": "2026-07-23",
@@ -1629,6 +1629,37 @@
     },
     {
       "report_date": "2026-07-23",
+      "paper_id": "2607.20417",
+      "title": "ATSplat: Compact Feed-forward 3D Gaussian Splatting with Adaptive Token Expansion",
+      "authors": [
+        "Cho In",
+        "Jeonghwan Cho",
+        "Mijin Yoo",
+        "Gim Hee Lee",
+        "Seon Joo Kim"
+      ],
+      "abstract": "3D Gaussian Splatting (3DGS) achieves high-quality novel-view synthesis by optimizing freely placed primitives in 3D and adaptively densifying them in under-reconstructed regions. However, this scene-adaptive capacity allocation is largely lost in existing feed-forward 3DGS methods, which commonly regress Gaussians at input pixels and lift them along camera rays. Such pixel-aligned formulations make the number and placement of primitives depend on image resolution and input viewpoints rather than scene complexity, resulting in dense and often redundant Gaussian sets. We present ATSplat, a feed-forward 3DGS framework that restores the adaptive allocation capability of 3DGS optimization through Adaptive 3D Tokens. ATSplat first lifts coarse patch-level depth and camera cues into sparse 3D anchor tokens, forming a compact scaffold of the scene. Each token is then regressed into local Gaussians with learnable 3D offsets, decoupling primitive placement from input image grids. An Adaptive Token Expansion module predicts a token-level uncertainty score, supervised by rendering error maps, and selectively expands high-uncertainty tokens through learnable expansion layers. This sparse-to-adaptive formulation enables ATSplat to concentrate primitives in challenging regions while maintaining a compact representation. Experiments on two representative datasets, RealEstate10K and DL3DV, show that ATSplat achieves state-of-the-art rendering quality while reducing the number of Gaussians by more than 5.7times compared with dense feed-forward 3DGS methods. From 12 input images at 512 times 960 resolution, ATSplat completes reconstruction in less than a second using a single commercial GPU, and renders high-quality novel views at 1136 FPS (512 times 960) with only 311K Gaussians.",
+      "hf_url": "https://huggingface.co/papers/2607.20417",
+      "arxiv_url": "https://arxiv.org/abs/2607.20417",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.20417",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.20417",
+      "github_url": "",
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-07-23T00:00:00.000Z",
+      "upvotes": 8,
+      "comments": 1,
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [
+        "\\btoken(s)?\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "3D Gaussian Splatting (3DGS) achieves high-quality novel-view synthesis by optimizing freely placed primitives in 3D and adaptively densifying them in under-reconstructed regions.",
+      "upvote_label": "8 upvotes"
+    },
+    {
+      "report_date": "2026-07-23",
       "paper_id": "2607.16190",
       "title": "FVAttn: Adaptive Sparse Attention with Runtime Load Balancing for Video Generation",
       "authors": [
@@ -1663,37 +1694,6 @@
       "classification_confidence": null,
       "one_sentence_summary": "Video Diffusion Transformers process long spatio-temporal sequences, making self-attention the main bottleneck in high-resolution video generation.",
       "upvote_label": "8 upvotes"
-    },
-    {
-      "report_date": "2026-07-23",
-      "paper_id": "2607.20417",
-      "title": "ATSplat: Compact Feed-forward 3D Gaussian Splatting with Adaptive Token Expansion",
-      "authors": [
-        "Cho In",
-        "Jeonghwan Cho",
-        "Mijin Yoo",
-        "Gim Hee Lee",
-        "Seon Joo Kim"
-      ],
-      "abstract": "3D Gaussian Splatting (3DGS) achieves high-quality novel-view synthesis by optimizing freely placed primitives in 3D and adaptively densifying them in under-reconstructed regions. However, this scene-adaptive capacity allocation is largely lost in existing feed-forward 3DGS methods, which commonly regress Gaussians at input pixels and lift them along camera rays. Such pixel-aligned formulations make the number and placement of primitives depend on image resolution and input viewpoints rather than scene complexity, resulting in dense and often redundant Gaussian sets. We present ATSplat, a feed-forward 3DGS framework that restores the adaptive allocation capability of 3DGS optimization through Adaptive 3D Tokens. ATSplat first lifts coarse patch-level depth and camera cues into sparse 3D anchor tokens, forming a compact scaffold of the scene. Each token is then regressed into local Gaussians with learnable 3D offsets, decoupling primitive placement from input image grids. An Adaptive Token Expansion module predicts a token-level uncertainty score, supervised by rendering error maps, and selectively expands high-uncertainty tokens through learnable expansion layers. This sparse-to-adaptive formulation enables ATSplat to concentrate primitives in challenging regions while maintaining a compact representation. Experiments on two representative datasets, RealEstate10K and DL3DV, show that ATSplat achieves state-of-the-art rendering quality while reducing the number of Gaussians by more than 5.7times compared with dense feed-forward 3DGS methods. From 12 input images at 512 times 960 resolution, ATSplat completes reconstruction in less than a second using a single commercial GPU, and renders high-quality novel views at 1136 FPS (512 times 960) with only 311K Gaussians.",
-      "hf_url": "https://huggingface.co/papers/2607.20417",
-      "arxiv_url": "https://arxiv.org/abs/2607.20417",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.20417",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.20417",
-      "github_url": "",
-      "submitted_by": "taesiri",
-      "submitted_at": "2026-07-23T00:00:00.000Z",
-      "upvotes": 7,
-      "comments": 1,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
-      "matched_terms": [
-        "\\btoken(s)?\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "3D Gaussian Splatting (3DGS) achieves high-quality novel-view synthesis by optimizing freely placed primitives in 3D and adaptively densifying them in under-reconstructed regions.",
-      "upvote_label": "7 upvotes"
     },
     {
       "report_date": "2026-07-23",
@@ -1757,7 +1757,7 @@
       "submitted_by": "zhongyuan peng",
       "submitted_at": "2026-07-23T00:00:00.000Z",
       "upvotes": 5,
-      "comments": 1,
+      "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
       "matched_terms": [
@@ -1973,6 +1973,34 @@
     },
     {
       "report_date": "2026-07-23",
+      "paper_id": "2607.17699",
+      "title": "SLAM in Low-Light Environments: Project Report",
+      "authors": [
+        "Oleh Basystyi",
+        "Anna Stasyshyn",
+        "Oleksandr Kosovan",
+        "Yaroslav Prytula"
+      ],
+      "abstract": "Simultaneous localization and mapping (SLAM) is one of the fundamental problems in robotics, as it enables autonomous operations in real-world scenarios. Under low illumination, reduced contrast, sensor noise, and motion blur degrade both feature extraction and feature matching, while compensating with LiDAR, depth, or thermal sensors raises cost, power draw, and integration complexity. Existing benchmarks remain dominated by well-lit indoor or daylight sequences, leaving open how far SLAM with standard RGB cameras can be pushed in the dark. We benchmark six systems spanning the feature-based, direct, filter-based, and learning-based paradigms - ORB-SLAM3, DSO, Kimera-VIO, OpenVINS, DPVO, and DPV-SLAM - on five LaMARia sequences of varying difficulty and illumination, reporting absolute and relative pose error alongside control-point recall. Kimera-VIO is the only system to track all five sequences to completion, combining the lowest relative pose error with steadily growing absolute error due to the absence of loop closure; DPVO and DPV-SLAM never lose tracking but incur absolute errors of roughly 100 m under low light; and the classical monocular pipelines (ORB-SLAM3, DSO) together with the filter-based OpenVINS fail outright or diverge on most of the harder and low-light sequences. The results suggest that RGB-only SLAM maintains stable low-light tracking only when both inertial fusion and global optimization are present. Closing the remaining gap will likely require low-light-specific learned front-ends or a return to complementary sensing.",
+      "hf_url": "https://huggingface.co/papers/2607.17699",
+      "arxiv_url": "https://arxiv.org/abs/2607.17699",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.17699",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.17699",
+      "github_url": "",
+      "submitted_by": "Yaroslav Prytula",
+      "submitted_at": "2026-07-23T00:00:00.000Z",
+      "upvotes": 2,
+      "comments": 2,
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
+      "matched_terms": [],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Simultaneous localization and mapping (SLAM) is one of the fundamental problems in robotics, as it enables autonomous operations in real-world scenarios.",
+      "upvote_label": "2 upvotes"
+    },
+    {
+      "report_date": "2026-07-23",
       "paper_id": "2607.18789",
       "title": "Moving Alphabet: A Controlled Study of Training Data for Text-to-Video Generation",
       "authors": [
@@ -2000,34 +2028,6 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Text-to-video generation has advanced significantly over the past five years through scaling of model size, data, and compute.",
-      "upvote_label": "1 upvote"
-    },
-    {
-      "report_date": "2026-07-23",
-      "paper_id": "2607.17699",
-      "title": "SLAM in Low-Light Environments: Project Report",
-      "authors": [
-        "Oleh Basystyi",
-        "Anna Stasyshyn",
-        "Oleksandr Kosovan",
-        "Yaroslav Prytula"
-      ],
-      "abstract": "Simultaneous localization and mapping (SLAM) is one of the fundamental problems in robotics, as it enables autonomous operations in real-world scenarios. Under low illumination, reduced contrast, sensor noise, and motion blur degrade both feature extraction and feature matching, while compensating with LiDAR, depth, or thermal sensors raises cost, power draw, and integration complexity. Existing benchmarks remain dominated by well-lit indoor or daylight sequences, leaving open how far SLAM with standard RGB cameras can be pushed in the dark. We benchmark six systems spanning the feature-based, direct, filter-based, and learning-based paradigms - ORB-SLAM3, DSO, Kimera-VIO, OpenVINS, DPVO, and DPV-SLAM - on five LaMARia sequences of varying difficulty and illumination, reporting absolute and relative pose error alongside control-point recall. Kimera-VIO is the only system to track all five sequences to completion, combining the lowest relative pose error with steadily growing absolute error due to the absence of loop closure; DPVO and DPV-SLAM never lose tracking but incur absolute errors of roughly 100 m under low light; and the classical monocular pipelines (ORB-SLAM3, DSO) together with the filter-based OpenVINS fail outright or diverge on most of the harder and low-light sequences. The results suggest that RGB-only SLAM maintains stable low-light tracking only when both inertial fusion and global optimization are present. Closing the remaining gap will likely require low-light-specific learned front-ends or a return to complementary sensing.",
-      "hf_url": "https://huggingface.co/papers/2607.17699",
-      "arxiv_url": "https://arxiv.org/abs/2607.17699",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.17699",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.17699",
-      "github_url": "",
-      "submitted_by": "Yaroslav Prytula",
-      "submitted_at": "2026-07-23T00:00:00.000Z",
-      "upvotes": 1,
-      "comments": 2,
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
-      "matched_terms": [],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Simultaneous localization and mapping (SLAM) is one of the fundamental problems in robotics, as it enables autonomous operations in real-world scenarios.",
       "upvote_label": "1 upvote"
     }
   ]

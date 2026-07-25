@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-24T19:00:03Z",
+  "generated_at": "2026-07-25T19:00:08Z",
   "report_kind": "hf_daily",
   "report_date": "2026-07-21",
   "source_url": "https://huggingface.co/papers/date/2026-07-21",
@@ -78,7 +78,7 @@
       "Multimodal Understanding and Vision: 9 papers (24.32%); representative paper: TimeLens2: Generalist Video Temporal Grounding with Multimodal LLMs.",
       "Agents and Planning: 5 papers (13.51%); representative paper: DeepSearch-World: Self-Distillation for Deep Search Agents in a Verifiable Environment."
     ],
-    "trend_summary": "Today's dominant clusters are LLMs and Language / Multimodal Understanding and Vision / Agents and Planning; this suggests several parallel trends: multimodal work is moving from isolated perception toward generation, agents, and action; agent papers emphasize tool use, planning, and deployable workflows. The strongest visible attention is on “RynnBrain 1.1: Towards More Capable and Generalizable Embodied Foundation Model” (195 upvotes).",
+    "trend_summary": "Today's dominant clusters are LLMs and Language / Multimodal Understanding and Vision / Agents and Planning; this suggests several parallel trends: multimodal work is moving from isolated perception toward generation, agents, and action; agent papers emphasize tool use, planning, and deployable workflows. The strongest visible attention is on “RynnBrain 1.1: Towards More Capable and Generalizable Embodied Foundation Model” (196 upvotes).",
     "category_summaries": [
       {
         "topic_label": "LLMs and Language",
@@ -90,13 +90,13 @@
         "topic_label": "Multimodal Understanding and Vision",
         "count": 9,
         "share": 24.32,
-        "summary": "Multimodal Understanding and Vision contributes 9 papers (24.32%), led by “TimeLens2: Generalist Video Temporal Grounding with Multimodal LLMs” with 164 upvotes."
+        "summary": "Multimodal Understanding and Vision contributes 9 papers (24.32%), led by “TimeLens2: Generalist Video Temporal Grounding with Multimodal LLMs” with 165 upvotes."
       },
       {
         "topic_label": "Agents and Planning",
         "count": 5,
         "share": 13.51,
-        "summary": "Agents and Planning contributes 5 papers (13.51%), led by “DeepSearch-World: Self-Distillation for Deep Search Agents in a Verifiable Environment” with 88 upvotes."
+        "summary": "Agents and Planning contributes 5 papers (13.51%), led by “DeepSearch-World: Self-Distillation for Deep Search Agents in a Verifiable Environment” with 89 upvotes."
       },
       {
         "topic_label": "Learning, Optimization, and Theory",
@@ -120,7 +120,7 @@
         "topic_label": "Robotics and Embodied AI",
         "count": 2,
         "share": 5.41,
-        "summary": "Robotics and Embodied AI contributes 2 papers (5.41%), led by “RynnBrain 1.1: Towards More Capable and Generalizable Embodied Foundation Model” with 195 upvotes."
+        "summary": "Robotics and Embodied AI contributes 2 papers (5.41%), led by “RynnBrain 1.1: Towards More Capable and Generalizable Embodied Foundation Model” with 196 upvotes."
       },
       {
         "topic_label": "Datasets and Benchmarks",
@@ -138,8 +138,8 @@
     "top_papers": [
       {
         "title": "RynnBrain 1.1: Towards More Capable and Generalizable Embodied Foundation Model",
-        "upvotes": 195,
-        "upvote_label": "195 upvotes",
+        "upvotes": 196,
+        "upvote_label": "196 upvotes",
         "topic_label": "Robotics and Embodied AI",
         "summary": "We present RynnBrain 1.1, a family of embodied foundation models spanning 2B, 9B, and 122B-A10B scales.",
         "hf_url": "https://huggingface.co/papers/2607.17977",
@@ -149,8 +149,8 @@
       },
       {
         "title": "TimeLens2: Generalist Video Temporal Grounding with Multimodal LLMs",
-        "upvotes": 164,
-        "upvote_label": "164 upvotes",
+        "upvotes": 165,
+        "upvote_label": "165 upvotes",
         "topic_label": "Multimodal Understanding and Vision",
         "summary": "Video multimodal large language models (MLLMs) can describe what happens in a video, but rarely identify when the supporting evidence occurs.",
         "hf_url": "https://huggingface.co/papers/2607.17423",
@@ -160,8 +160,8 @@
       },
       {
         "title": "DeepSearch-World: Self-Distillation for Deep Search Agents in a Verifiable Environment",
-        "upvotes": 88,
-        "upvote_label": "88 upvotes",
+        "upvotes": 89,
+        "upvote_label": "89 upvotes",
         "topic_label": "Agents and Planning",
         "summary": "Training tool-use agents to improve from their own experience remains challenging, as supervised fine-tuning relies on fixed teacher-distilled trajectories, while sparse-reward reinforcement learning provides weak…",
         "hf_url": "https://huggingface.co/papers/2607.07820",
@@ -264,7 +264,7 @@
       "github_url": "",
       "submitted_by": "Siteng Huang",
       "submitted_at": "2026-07-21T00:00:00.000Z",
-      "upvotes": 195,
+      "upvotes": 196,
       "comments": 3,
       "topic_key": "robotics_embodied",
       "topic_label": "Robotics and Embodied AI",
@@ -274,7 +274,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "We present RynnBrain 1.1, a family of embodied foundation models spanning 2B, 9B, and 122B-A10B scales.",
-      "upvote_label": "195 upvotes"
+      "upvote_label": "196 upvotes"
     },
     {
       "report_date": "2026-07-21",
@@ -305,7 +305,7 @@
       "github_url": "",
       "submitted_by": "Xiangyu Zeng",
       "submitted_at": "2026-07-21T00:00:00.000Z",
-      "upvotes": 164,
+      "upvotes": 165,
       "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -316,7 +316,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Video multimodal large language models (MLLMs) can describe what happens in a video, but rarely identify when the supporting evidence occurs.",
-      "upvote_label": "164 upvotes"
+      "upvote_label": "165 upvotes"
     },
     {
       "report_date": "2026-07-21",
@@ -342,7 +342,7 @@
       "github_url": "",
       "submitted_by": "Geng Xinyu",
       "submitted_at": "2026-07-21T00:00:00.000Z",
-      "upvotes": 88,
+      "upvotes": 89,
       "comments": 4,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -352,7 +352,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Training tool-use agents to improve from their own experience remains challenging, as supervised fine-tuning relies on fixed teacher-distilled trajectories, while sparse-reward reinforcement learning provides weak…",
-      "upvote_label": "88 upvotes"
+      "upvote_label": "89 upvotes"
     },
     {
       "report_date": "2026-07-21",
@@ -504,7 +504,7 @@
       "github_url": "",
       "submitted_by": "Nan Chen",
       "submitted_at": "2026-07-21T00:00:00.000Z",
-      "upvotes": 56,
+      "upvotes": 57,
       "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -515,47 +515,37 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Human-object centric video personalization (HOCVP) is a core task within subject-driven video generation.",
-      "upvote_label": "56 upvotes"
+      "upvote_label": "57 upvotes"
     },
     {
       "report_date": "2026-07-21",
-      "paper_id": "2607.16401",
-      "title": "Apple-π: Benchmarking Thinking with Video Towards Law-Grounded Physical Intelligence",
+      "paper_id": "2607.18227",
+      "title": "FlowMimic: Mask-free Visual Editing and Generation with Pixel-pair Warped Flow Field for Online Video Editing Data Generation and Modality Mimicry",
       "authors": [
-        "Runmao Yao",
-        "Kairui Hu",
-        "Yukang Cao",
-        "Ruisi Wang",
-        "Shulin Tian",
-        "Ziang Cao",
-        "Weichen Fan",
-        "Ziqi Huang",
-        "Yuhao Dong",
-        "Hao Li",
-        "Zhaoxi Chen",
-        "Zhongang Cai",
-        "Lei Yang",
-        "Ziwei Liu"
+        "Dingyun Zhang",
+        "Lixue Gong",
+        "Wei Liu"
       ],
-      "abstract": "Modern video generation models are increasingly hailed as emerging world models with an internalized grasp of physical law. Yet existing benchmarks largely evaluate physical plausibility only at the output level, without verifying whether the model arrives there through a faithful, law-grounded reasoning process. We introduce Apple-PI, the first benchmark that anchors video-model evaluation explicitly in physical laws. Apple-PI comprises three components. 1) Orchard: a dataset of 400 videos covering ten canonical tasks in classical mechanics. It separates single-law tasks for confounder-free diagnosis from multi-law tasks for probing generalization. 2) Benchmark Protocol: a three-stage protocol based on scientific reasoning, including Perception, Formulation, and Deduction. It uses chain-of-frames prompting on infographic-annotated first frames, treating the generated video as the model's visible reasoning trace. 3) Evaluation Suite: a hybrid evaluation suite that combines MLLM-based subjective scoring with physics-law-grounded objective measures. This enables stage-resolved diagnosis of not only whether a model fails, but where it fails. Benchmarking 11 models shows that current video models remain far from reliable law-grounded world simulators, with the best video model scoring only 0.473. Our stage-, pillar-, and source-resolved analyses further expose a Perception-to-Formulation-to-Deduction bottleneck, weak multi-law state transfer, and a persistent Sim-to-Real gap. These findings position Apple-PI as a diagnostic foundation for guiding future video models toward world models with law-grounded physical intelligence.",
-      "hf_url": "https://huggingface.co/papers/2607.16401",
-      "arxiv_url": "https://arxiv.org/abs/2607.16401",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.16401",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.16401",
+      "abstract": "In line with the prevailing direction of vision research, we explore the integration of both generation and editing capabilities for video and image modalities within a single model. Current approaches to collecting video editing data typically depend on labour-intensive, time-consuming curated procedures--involving object mask annotation, the use of error-introducing pair synthesis via I2V model and ControlNet-like guidance, and VLM-based quality filtering or refinement--and demonstrate limited task scalability. As a result, the diversity of editing tasks remains substantially narrower than that available for image editing models. We develop a pixel-pair temporal warped flow field that can directly generate corresponding video editing samples in real time from image editing samples, and we demonstrate across multiple levels of video editing tasks that a model can learn video editing using only such data. We regard the image modality as a particular form of the video modality. Accordingly, we design a modality mimic generation loss and a modality mimic editing loss to relatively align the capabilities--and thereby the output distributions--of the two modalities through mutual imitation. Moreover, language-based visual editing entails the comprehension of the editing instruction and the reference visual content, the localization of the region corresponding to that instruction within the reference visual contents, and the modification of that region alone. Existing approaches predominantly rely on external aids, such as fine-tuning an additional MLLM or explicitly supplying a mask sequence as auxiliary input during inference. In contrast, we aspire for the model to internalize this capability. To that end, we introduce sense-related tasks--for instance, referring expression segmentation--along with corresponding editing-region-aware latent-level loss and attention-level loss.",
+      "hf_url": "https://huggingface.co/papers/2607.18227",
+      "arxiv_url": "https://arxiv.org/abs/2607.18227",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.18227",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.18227",
       "github_url": "",
-      "submitted_by": "leoli",
+      "submitted_by": "yichen he",
       "submitted_at": "2026-07-21T00:00:00.000Z",
-      "upvotes": 42,
-      "comments": 2,
+      "upvotes": 45,
+      "comments": 3,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [
+        "\\bvisual\\b",
         "\\bvideo\\b"
       ],
       "classification_source": "rule",
       "classification_confidence": null,
-      "one_sentence_summary": "Modern video generation models are increasingly hailed as emerging world models with an internalized grasp of physical law.",
-      "upvote_label": "42 upvotes"
+      "one_sentence_summary": "In line with the prevailing direction of vision research, we explore the integration of both generation and editing capabilities for video and image modalities within a single model.",
+      "upvote_label": "45 upvotes"
     }
   ],
   "topics": [
@@ -867,7 +857,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "count": 9,
       "share": 24.32,
-      "summary": "Multimodal Understanding and Vision contributes 9 papers (24.32%), led by “TimeLens2: Generalist Video Temporal Grounding with Multimodal LLMs” with 164 upvotes.",
+      "summary": "Multimodal Understanding and Vision contributes 9 papers (24.32%), led by “TimeLens2: Generalist Video Temporal Grounding with Multimodal LLMs” with 165 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-21",
@@ -898,7 +888,7 @@
           "github_url": "",
           "submitted_by": "Xiangyu Zeng",
           "submitted_at": "2026-07-21T00:00:00.000Z",
-          "upvotes": 164,
+          "upvotes": 165,
           "comments": 2,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
@@ -909,7 +899,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Video multimodal large language models (MLLMs) can describe what happens in a video, but rarely identify when the supporting evidence occurs.",
-          "upvote_label": "164 upvotes"
+          "upvote_label": "165 upvotes"
         },
         {
           "report_date": "2026-07-21",
@@ -936,7 +926,7 @@
           "github_url": "",
           "submitted_by": "Nan Chen",
           "submitted_at": "2026-07-21T00:00:00.000Z",
-          "upvotes": 56,
+          "upvotes": 57,
           "comments": 2,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
@@ -947,7 +937,37 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Human-object centric video personalization (HOCVP) is a core task within subject-driven video generation.",
-          "upvote_label": "56 upvotes"
+          "upvote_label": "57 upvotes"
+        },
+        {
+          "report_date": "2026-07-21",
+          "paper_id": "2607.18227",
+          "title": "FlowMimic: Mask-free Visual Editing and Generation with Pixel-pair Warped Flow Field for Online Video Editing Data Generation and Modality Mimicry",
+          "authors": [
+            "Dingyun Zhang",
+            "Lixue Gong",
+            "Wei Liu"
+          ],
+          "abstract": "In line with the prevailing direction of vision research, we explore the integration of both generation and editing capabilities for video and image modalities within a single model. Current approaches to collecting video editing data typically depend on labour-intensive, time-consuming curated procedures--involving object mask annotation, the use of error-introducing pair synthesis via I2V model and ControlNet-like guidance, and VLM-based quality filtering or refinement--and demonstrate limited task scalability. As a result, the diversity of editing tasks remains substantially narrower than that available for image editing models. We develop a pixel-pair temporal warped flow field that can directly generate corresponding video editing samples in real time from image editing samples, and we demonstrate across multiple levels of video editing tasks that a model can learn video editing using only such data. We regard the image modality as a particular form of the video modality. Accordingly, we design a modality mimic generation loss and a modality mimic editing loss to relatively align the capabilities--and thereby the output distributions--of the two modalities through mutual imitation. Moreover, language-based visual editing entails the comprehension of the editing instruction and the reference visual content, the localization of the region corresponding to that instruction within the reference visual contents, and the modification of that region alone. Existing approaches predominantly rely on external aids, such as fine-tuning an additional MLLM or explicitly supplying a mask sequence as auxiliary input during inference. In contrast, we aspire for the model to internalize this capability. To that end, we introduce sense-related tasks--for instance, referring expression segmentation--along with corresponding editing-region-aware latent-level loss and attention-level loss.",
+          "hf_url": "https://huggingface.co/papers/2607.18227",
+          "arxiv_url": "https://arxiv.org/abs/2607.18227",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2607.18227",
+          "papers_cool_url": "https://papers.cool/arxiv/2607.18227",
+          "github_url": "",
+          "submitted_by": "yichen he",
+          "submitted_at": "2026-07-21T00:00:00.000Z",
+          "upvotes": 45,
+          "comments": 3,
+          "topic_key": "multimodal_vision",
+          "topic_label": "Multimodal Understanding and Vision",
+          "matched_terms": [
+            "\\bvisual\\b",
+            "\\bvideo\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "In line with the prevailing direction of vision research, we explore the integration of both generation and editing capabilities for video and image modalities within a single model.",
+          "upvote_label": "45 upvotes"
         },
         {
           "report_date": "2026-07-21",
@@ -977,7 +997,7 @@
           "github_url": "",
           "submitted_by": "leoli",
           "submitted_at": "2026-07-21T00:00:00.000Z",
-          "upvotes": 42,
+          "upvotes": 43,
           "comments": 2,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
@@ -987,37 +1007,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Modern video generation models are increasingly hailed as emerging world models with an internalized grasp of physical law.",
-          "upvote_label": "42 upvotes"
-        },
-        {
-          "report_date": "2026-07-21",
-          "paper_id": "2607.18227",
-          "title": "FlowMimic: Mask-free Visual Editing and Generation with Pixel-pair Warped Flow Field for Online Video Editing Data Generation and Modality Mimicry",
-          "authors": [
-            "Dingyun Zhang",
-            "Lixue Gong",
-            "Wei Liu"
-          ],
-          "abstract": "In line with the prevailing direction of vision research, we explore the integration of both generation and editing capabilities for video and image modalities within a single model. Current approaches to collecting video editing data typically depend on labour-intensive, time-consuming curated procedures--involving object mask annotation, the use of error-introducing pair synthesis via I2V model and ControlNet-like guidance, and VLM-based quality filtering or refinement--and demonstrate limited task scalability. As a result, the diversity of editing tasks remains substantially narrower than that available for image editing models. We develop a pixel-pair temporal warped flow field that can directly generate corresponding video editing samples in real time from image editing samples, and we demonstrate across multiple levels of video editing tasks that a model can learn video editing using only such data. We regard the image modality as a particular form of the video modality. Accordingly, we design a modality mimic generation loss and a modality mimic editing loss to relatively align the capabilities--and thereby the output distributions--of the two modalities through mutual imitation. Moreover, language-based visual editing entails the comprehension of the editing instruction and the reference visual content, the localization of the region corresponding to that instruction within the reference visual contents, and the modification of that region alone. Existing approaches predominantly rely on external aids, such as fine-tuning an additional MLLM or explicitly supplying a mask sequence as auxiliary input during inference. In contrast, we aspire for the model to internalize this capability. To that end, we introduce sense-related tasks--for instance, referring expression segmentation--along with corresponding editing-region-aware latent-level loss and attention-level loss.",
-          "hf_url": "https://huggingface.co/papers/2607.18227",
-          "arxiv_url": "https://arxiv.org/abs/2607.18227",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2607.18227",
-          "papers_cool_url": "https://papers.cool/arxiv/2607.18227",
-          "github_url": "",
-          "submitted_by": "yichen he",
-          "submitted_at": "2026-07-21T00:00:00.000Z",
-          "upvotes": 41,
-          "comments": 3,
-          "topic_key": "multimodal_vision",
-          "topic_label": "Multimodal Understanding and Vision",
-          "matched_terms": [
-            "\\bvisual\\b",
-            "\\bvideo\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null,
-          "one_sentence_summary": "In line with the prevailing direction of vision research, we explore the integration of both generation and editing capabilities for video and image modalities within a single model.",
-          "upvote_label": "41 upvotes"
+          "upvote_label": "43 upvotes"
         },
         {
           "report_date": "2026-07-21",
@@ -1190,8 +1180,44 @@
       "topic_label": "Agents and Planning",
       "count": 5,
       "share": 13.51,
-      "summary": "Agents and Planning contributes 5 papers (13.51%), led by “DeepSearch-World: Self-Distillation for Deep Search Agents in a Verifiable Environment” with 88 upvotes.",
+      "summary": "Agents and Planning contributes 5 papers (13.51%), led by “DeepSearch-World: Self-Distillation for Deep Search Agents in a Verifiable Environment” with 89 upvotes.",
       "papers": [
+        {
+          "report_date": "2026-07-21",
+          "paper_id": "2607.07820",
+          "title": "DeepSearch-World: Self-Distillation for Deep Search Agents in a Verifiable Environment",
+          "authors": [
+            "Xinyu Geng",
+            "Xuanhua He",
+            "Sixiang Chen",
+            "Yanjing Xiao",
+            "Fan Zhang",
+            "Shijue Huang",
+            "Haitao Mi",
+            "Zhenwen Liang",
+            "Tianqing Fang",
+            "Yi R. Fung"
+          ],
+          "abstract": "Training tool-use agents to improve from their own experience remains challenging, as supervised fine-tuning relies on fixed teacher-distilled trajectories, while sparse-reward reinforcement learning provides weak supervision for long-horizon interactions. We present DeepSearch-Evolve, a self-distillation framework for web agents built on DeepSearch-World, a deterministic and verifiable environment with reproducible search and page-reading tools. DeepSearch-World contains 420K multi-hop QA tasks constructed from entity-level random walks and supports key agentic cognitive behaviors useful for self-evolving, including progress verification, grounded reflection, and failure recovery. DeepSearch-Evolve iteratively performs trajectory generation, filtering, data mixing, and fine-tuning to train stronger agents. Without distillation from more capable models, DeepSearch-World-9B achieves competitive performance compared with open-source agents, reaching 31.2% on BrowseComp, 61.5% on GAIA, and 93.4% on HotpotQA, showing that verifiable environments enable scalable self-evolution for long-horizon web agents. We will release the environment, 420K training pool, validation set, model, and code to facilitate future research on self-improving deep search agents.",
+          "hf_url": "https://huggingface.co/papers/2607.07820",
+          "arxiv_url": "https://arxiv.org/abs/2607.07820",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2607.07820",
+          "papers_cool_url": "https://papers.cool/arxiv/2607.07820",
+          "github_url": "",
+          "submitted_by": "Geng Xinyu",
+          "submitted_at": "2026-07-21T00:00:00.000Z",
+          "upvotes": 89,
+          "comments": 4,
+          "topic_key": "agents_planning",
+          "topic_label": "Agents and Planning",
+          "matched_terms": [
+            "\\bagents?\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "Training tool-use agents to improve from their own experience remains challenging, as supervised fine-tuning relies on fixed teacher-distilled trajectories, while sparse-reward reinforcement learning provides weak…",
+          "upvote_label": "89 upvotes"
+        },
         {
           "report_date": "2026-07-21",
           "paper_id": "2607.17250",
@@ -1221,42 +1247,6 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "This paper introduces EvolvingWorld, a framework and benchmark for character and world co-evolution in interactive literary worlds.",
-          "upvote_label": "88 upvotes"
-        },
-        {
-          "report_date": "2026-07-21",
-          "paper_id": "2607.07820",
-          "title": "DeepSearch-World: Self-Distillation for Deep Search Agents in a Verifiable Environment",
-          "authors": [
-            "Xinyu Geng",
-            "Xuanhua He",
-            "Sixiang Chen",
-            "Yanjing Xiao",
-            "Fan Zhang",
-            "Shijue Huang",
-            "Haitao Mi",
-            "Zhenwen Liang",
-            "Tianqing Fang",
-            "Yi R. Fung"
-          ],
-          "abstract": "Training tool-use agents to improve from their own experience remains challenging, as supervised fine-tuning relies on fixed teacher-distilled trajectories, while sparse-reward reinforcement learning provides weak supervision for long-horizon interactions. We present DeepSearch-Evolve, a self-distillation framework for web agents built on DeepSearch-World, a deterministic and verifiable environment with reproducible search and page-reading tools. DeepSearch-World contains 420K multi-hop QA tasks constructed from entity-level random walks and supports key agentic cognitive behaviors useful for self-evolving, including progress verification, grounded reflection, and failure recovery. DeepSearch-Evolve iteratively performs trajectory generation, filtering, data mixing, and fine-tuning to train stronger agents. Without distillation from more capable models, DeepSearch-World-9B achieves competitive performance compared with open-source agents, reaching 31.2% on BrowseComp, 61.5% on GAIA, and 93.4% on HotpotQA, showing that verifiable environments enable scalable self-evolution for long-horizon web agents. We will release the environment, 420K training pool, validation set, model, and code to facilitate future research on self-improving deep search agents.",
-          "hf_url": "https://huggingface.co/papers/2607.07820",
-          "arxiv_url": "https://arxiv.org/abs/2607.07820",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2607.07820",
-          "papers_cool_url": "https://papers.cool/arxiv/2607.07820",
-          "github_url": "",
-          "submitted_by": "Geng Xinyu",
-          "submitted_at": "2026-07-21T00:00:00.000Z",
-          "upvotes": 88,
-          "comments": 4,
-          "topic_key": "agents_planning",
-          "topic_label": "Agents and Planning",
-          "matched_terms": [
-            "\\bagents?\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null,
-          "one_sentence_summary": "Training tool-use agents to improve from their own experience remains challenging, as supervised fine-tuning relies on fixed teacher-distilled trajectories, while sparse-reward reinforcement learning provides weak…",
           "upvote_label": "88 upvotes"
         },
         {
@@ -1565,7 +1555,7 @@
           "github_url": "",
           "submitted_by": "An Luo",
           "submitted_at": "2026-07-21T00:00:00.000Z",
-          "upvotes": 5,
+          "upvotes": 6,
           "comments": 2,
           "topic_key": "other_ai",
           "topic_label": "Other AI",
@@ -1573,7 +1563,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "As generative AI is increasingly applied to automate multi-step and high-stake workflows, human judgment and involvement remain essential for ensuring the quality of AI-generated outputs.",
-          "upvote_label": "5 upvotes"
+          "upvote_label": "6 upvotes"
         },
         {
           "report_date": "2026-07-21",
@@ -1718,7 +1708,7 @@
       "topic_label": "Robotics and Embodied AI",
       "count": 2,
       "share": 5.41,
-      "summary": "Robotics and Embodied AI contributes 2 papers (5.41%), led by “RynnBrain 1.1: Towards More Capable and Generalizable Embodied Foundation Model” with 195 upvotes.",
+      "summary": "Robotics and Embodied AI contributes 2 papers (5.41%), led by “RynnBrain 1.1: Towards More Capable and Generalizable Embodied Foundation Model” with 196 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-21",
@@ -1764,7 +1754,7 @@
           "github_url": "",
           "submitted_by": "Siteng Huang",
           "submitted_at": "2026-07-21T00:00:00.000Z",
-          "upvotes": 195,
+          "upvotes": 196,
           "comments": 3,
           "topic_key": "robotics_embodied",
           "topic_label": "Robotics and Embodied AI",
@@ -1774,7 +1764,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "We present RynnBrain 1.1, a family of embodied foundation models spanning 2B, 9B, and 122B-A10B scales.",
-          "upvote_label": "195 upvotes"
+          "upvote_label": "196 upvotes"
         },
         {
           "report_date": "2026-07-21",
@@ -1962,7 +1952,7 @@
       "github_url": "",
       "submitted_by": "Siteng Huang",
       "submitted_at": "2026-07-21T00:00:00.000Z",
-      "upvotes": 195,
+      "upvotes": 196,
       "comments": 3,
       "topic_key": "robotics_embodied",
       "topic_label": "Robotics and Embodied AI",
@@ -1972,7 +1962,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "We present RynnBrain 1.1, a family of embodied foundation models spanning 2B, 9B, and 122B-A10B scales.",
-      "upvote_label": "195 upvotes"
+      "upvote_label": "196 upvotes"
     },
     {
       "report_date": "2026-07-21",
@@ -2003,7 +1993,7 @@
       "github_url": "",
       "submitted_by": "Xiangyu Zeng",
       "submitted_at": "2026-07-21T00:00:00.000Z",
-      "upvotes": 164,
+      "upvotes": 165,
       "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -2014,7 +2004,43 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Video multimodal large language models (MLLMs) can describe what happens in a video, but rarely identify when the supporting evidence occurs.",
-      "upvote_label": "164 upvotes"
+      "upvote_label": "165 upvotes"
+    },
+    {
+      "report_date": "2026-07-21",
+      "paper_id": "2607.07820",
+      "title": "DeepSearch-World: Self-Distillation for Deep Search Agents in a Verifiable Environment",
+      "authors": [
+        "Xinyu Geng",
+        "Xuanhua He",
+        "Sixiang Chen",
+        "Yanjing Xiao",
+        "Fan Zhang",
+        "Shijue Huang",
+        "Haitao Mi",
+        "Zhenwen Liang",
+        "Tianqing Fang",
+        "Yi R. Fung"
+      ],
+      "abstract": "Training tool-use agents to improve from their own experience remains challenging, as supervised fine-tuning relies on fixed teacher-distilled trajectories, while sparse-reward reinforcement learning provides weak supervision for long-horizon interactions. We present DeepSearch-Evolve, a self-distillation framework for web agents built on DeepSearch-World, a deterministic and verifiable environment with reproducible search and page-reading tools. DeepSearch-World contains 420K multi-hop QA tasks constructed from entity-level random walks and supports key agentic cognitive behaviors useful for self-evolving, including progress verification, grounded reflection, and failure recovery. DeepSearch-Evolve iteratively performs trajectory generation, filtering, data mixing, and fine-tuning to train stronger agents. Without distillation from more capable models, DeepSearch-World-9B achieves competitive performance compared with open-source agents, reaching 31.2% on BrowseComp, 61.5% on GAIA, and 93.4% on HotpotQA, showing that verifiable environments enable scalable self-evolution for long-horizon web agents. We will release the environment, 420K training pool, validation set, model, and code to facilitate future research on self-improving deep search agents.",
+      "hf_url": "https://huggingface.co/papers/2607.07820",
+      "arxiv_url": "https://arxiv.org/abs/2607.07820",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.07820",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.07820",
+      "github_url": "",
+      "submitted_by": "Geng Xinyu",
+      "submitted_at": "2026-07-21T00:00:00.000Z",
+      "upvotes": 89,
+      "comments": 4,
+      "topic_key": "agents_planning",
+      "topic_label": "Agents and Planning",
+      "matched_terms": [
+        "\\bagents?\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Training tool-use agents to improve from their own experience remains challenging, as supervised fine-tuning relies on fixed teacher-distilled trajectories, while sparse-reward reinforcement learning provides weak…",
+      "upvote_label": "89 upvotes"
     },
     {
       "report_date": "2026-07-21",
@@ -2045,42 +2071,6 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "This paper introduces EvolvingWorld, a framework and benchmark for character and world co-evolution in interactive literary worlds.",
-      "upvote_label": "88 upvotes"
-    },
-    {
-      "report_date": "2026-07-21",
-      "paper_id": "2607.07820",
-      "title": "DeepSearch-World: Self-Distillation for Deep Search Agents in a Verifiable Environment",
-      "authors": [
-        "Xinyu Geng",
-        "Xuanhua He",
-        "Sixiang Chen",
-        "Yanjing Xiao",
-        "Fan Zhang",
-        "Shijue Huang",
-        "Haitao Mi",
-        "Zhenwen Liang",
-        "Tianqing Fang",
-        "Yi R. Fung"
-      ],
-      "abstract": "Training tool-use agents to improve from their own experience remains challenging, as supervised fine-tuning relies on fixed teacher-distilled trajectories, while sparse-reward reinforcement learning provides weak supervision for long-horizon interactions. We present DeepSearch-Evolve, a self-distillation framework for web agents built on DeepSearch-World, a deterministic and verifiable environment with reproducible search and page-reading tools. DeepSearch-World contains 420K multi-hop QA tasks constructed from entity-level random walks and supports key agentic cognitive behaviors useful for self-evolving, including progress verification, grounded reflection, and failure recovery. DeepSearch-Evolve iteratively performs trajectory generation, filtering, data mixing, and fine-tuning to train stronger agents. Without distillation from more capable models, DeepSearch-World-9B achieves competitive performance compared with open-source agents, reaching 31.2% on BrowseComp, 61.5% on GAIA, and 93.4% on HotpotQA, showing that verifiable environments enable scalable self-evolution for long-horizon web agents. We will release the environment, 420K training pool, validation set, model, and code to facilitate future research on self-improving deep search agents.",
-      "hf_url": "https://huggingface.co/papers/2607.07820",
-      "arxiv_url": "https://arxiv.org/abs/2607.07820",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.07820",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.07820",
-      "github_url": "",
-      "submitted_by": "Geng Xinyu",
-      "submitted_at": "2026-07-21T00:00:00.000Z",
-      "upvotes": 88,
-      "comments": 4,
-      "topic_key": "agents_planning",
-      "topic_label": "Agents and Planning",
-      "matched_terms": [
-        "\\bagents?\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Training tool-use agents to improve from their own experience remains challenging, as supervised fine-tuning relies on fixed teacher-distilled trajectories, while sparse-reward reinforcement learning provides weak…",
       "upvote_label": "88 upvotes"
     },
     {
@@ -2202,7 +2192,7 @@
       "github_url": "",
       "submitted_by": "Nan Chen",
       "submitted_at": "2026-07-21T00:00:00.000Z",
-      "upvotes": 56,
+      "upvotes": 57,
       "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -2213,7 +2203,37 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Human-object centric video personalization (HOCVP) is a core task within subject-driven video generation.",
-      "upvote_label": "56 upvotes"
+      "upvote_label": "57 upvotes"
+    },
+    {
+      "report_date": "2026-07-21",
+      "paper_id": "2607.18227",
+      "title": "FlowMimic: Mask-free Visual Editing and Generation with Pixel-pair Warped Flow Field for Online Video Editing Data Generation and Modality Mimicry",
+      "authors": [
+        "Dingyun Zhang",
+        "Lixue Gong",
+        "Wei Liu"
+      ],
+      "abstract": "In line with the prevailing direction of vision research, we explore the integration of both generation and editing capabilities for video and image modalities within a single model. Current approaches to collecting video editing data typically depend on labour-intensive, time-consuming curated procedures--involving object mask annotation, the use of error-introducing pair synthesis via I2V model and ControlNet-like guidance, and VLM-based quality filtering or refinement--and demonstrate limited task scalability. As a result, the diversity of editing tasks remains substantially narrower than that available for image editing models. We develop a pixel-pair temporal warped flow field that can directly generate corresponding video editing samples in real time from image editing samples, and we demonstrate across multiple levels of video editing tasks that a model can learn video editing using only such data. We regard the image modality as a particular form of the video modality. Accordingly, we design a modality mimic generation loss and a modality mimic editing loss to relatively align the capabilities--and thereby the output distributions--of the two modalities through mutual imitation. Moreover, language-based visual editing entails the comprehension of the editing instruction and the reference visual content, the localization of the region corresponding to that instruction within the reference visual contents, and the modification of that region alone. Existing approaches predominantly rely on external aids, such as fine-tuning an additional MLLM or explicitly supplying a mask sequence as auxiliary input during inference. In contrast, we aspire for the model to internalize this capability. To that end, we introduce sense-related tasks--for instance, referring expression segmentation--along with corresponding editing-region-aware latent-level loss and attention-level loss.",
+      "hf_url": "https://huggingface.co/papers/2607.18227",
+      "arxiv_url": "https://arxiv.org/abs/2607.18227",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.18227",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.18227",
+      "github_url": "",
+      "submitted_by": "yichen he",
+      "submitted_at": "2026-07-21T00:00:00.000Z",
+      "upvotes": 45,
+      "comments": 3,
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
+      "matched_terms": [
+        "\\bvisual\\b",
+        "\\bvideo\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "In line with the prevailing direction of vision research, we explore the integration of both generation and editing capabilities for video and image modalities within a single model.",
+      "upvote_label": "45 upvotes"
     },
     {
       "report_date": "2026-07-21",
@@ -2243,7 +2263,7 @@
       "github_url": "",
       "submitted_by": "leoli",
       "submitted_at": "2026-07-21T00:00:00.000Z",
-      "upvotes": 42,
+      "upvotes": 43,
       "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -2253,37 +2273,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Modern video generation models are increasingly hailed as emerging world models with an internalized grasp of physical law.",
-      "upvote_label": "42 upvotes"
-    },
-    {
-      "report_date": "2026-07-21",
-      "paper_id": "2607.18227",
-      "title": "FlowMimic: Mask-free Visual Editing and Generation with Pixel-pair Warped Flow Field for Online Video Editing Data Generation and Modality Mimicry",
-      "authors": [
-        "Dingyun Zhang",
-        "Lixue Gong",
-        "Wei Liu"
-      ],
-      "abstract": "In line with the prevailing direction of vision research, we explore the integration of both generation and editing capabilities for video and image modalities within a single model. Current approaches to collecting video editing data typically depend on labour-intensive, time-consuming curated procedures--involving object mask annotation, the use of error-introducing pair synthesis via I2V model and ControlNet-like guidance, and VLM-based quality filtering or refinement--and demonstrate limited task scalability. As a result, the diversity of editing tasks remains substantially narrower than that available for image editing models. We develop a pixel-pair temporal warped flow field that can directly generate corresponding video editing samples in real time from image editing samples, and we demonstrate across multiple levels of video editing tasks that a model can learn video editing using only such data. We regard the image modality as a particular form of the video modality. Accordingly, we design a modality mimic generation loss and a modality mimic editing loss to relatively align the capabilities--and thereby the output distributions--of the two modalities through mutual imitation. Moreover, language-based visual editing entails the comprehension of the editing instruction and the reference visual content, the localization of the region corresponding to that instruction within the reference visual contents, and the modification of that region alone. Existing approaches predominantly rely on external aids, such as fine-tuning an additional MLLM or explicitly supplying a mask sequence as auxiliary input during inference. In contrast, we aspire for the model to internalize this capability. To that end, we introduce sense-related tasks--for instance, referring expression segmentation--along with corresponding editing-region-aware latent-level loss and attention-level loss.",
-      "hf_url": "https://huggingface.co/papers/2607.18227",
-      "arxiv_url": "https://arxiv.org/abs/2607.18227",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.18227",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.18227",
-      "github_url": "",
-      "submitted_by": "yichen he",
-      "submitted_at": "2026-07-21T00:00:00.000Z",
-      "upvotes": 41,
-      "comments": 3,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [
-        "\\bvisual\\b",
-        "\\bvideo\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "In line with the prevailing direction of vision research, we explore the integration of both generation and editing capabilities for video and image modalities within a single model.",
-      "upvote_label": "41 upvotes"
+      "upvote_label": "43 upvotes"
     },
     {
       "report_date": "2026-07-21",
@@ -2888,6 +2878,32 @@
     },
     {
       "report_date": "2026-07-21",
+      "paper_id": "2607.16530",
+      "title": "Nonuniformity Principle in Human-AI Coworking",
+      "authors": [
+        "An Luo",
+        "Jie Ding"
+      ],
+      "abstract": "As generative AI is increasingly applied to automate multi-step and high-stake workflows, human judgment and involvement remain essential for ensuring the quality of AI-generated outputs. In practice, while it is desirable for human experts to provide oversight on AI regularly, often by reviewing intermediate outputs, giving feedback, making corrections, and steering subsequent steps, such oversight is constrained by the time and resources that humans can afford. This creates a tension between the need for human oversight and AI's efficiency in delivering more output with less intervention. An important but underexplored question, then, is how to optimally engage humans in human-AI coworking. This work was originally motivated by our empirical observation that in long AI workflows, human oversight often improves user satisfaction while reducing unnecessary rework and token consumption. From there, we formulate the problem of where to place oversight stages in human-AI coworking. Under reasonable assumptions, we then develop the nonuniformity principle, which states that the optimal schedule places oversight stages with non-decreasing gaps along the workflow. We empirically validate this principle in two common AI agent workflows: writing literature reviews and constructing websites.",
+      "hf_url": "https://huggingface.co/papers/2607.16530",
+      "arxiv_url": "https://arxiv.org/abs/2607.16530",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.16530",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.16530",
+      "github_url": "",
+      "submitted_by": "An Luo",
+      "submitted_at": "2026-07-21T00:00:00.000Z",
+      "upvotes": 6,
+      "comments": 2,
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
+      "matched_terms": [],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "As generative AI is increasingly applied to automate multi-step and high-stake workflows, human judgment and involvement remain essential for ensuring the quality of AI-generated outputs.",
+      "upvote_label": "6 upvotes"
+    },
+    {
+      "report_date": "2026-07-21",
       "paper_id": "2607.18084",
       "title": "WorldCupArena: Fine-Grained Evaluation of Language Models and Deep-Research Agents on Football Forecasting",
       "authors": [
@@ -3010,32 +3026,6 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "We present a continuous geometric framework that models the discrete algebraic operations of the Transformer architecture as an integro-differential equation (IDE) on a semantic fiber bundle calE = calM times R^d.",
-      "upvote_label": "5 upvotes"
-    },
-    {
-      "report_date": "2026-07-21",
-      "paper_id": "2607.16530",
-      "title": "Nonuniformity Principle in Human-AI Coworking",
-      "authors": [
-        "An Luo",
-        "Jie Ding"
-      ],
-      "abstract": "As generative AI is increasingly applied to automate multi-step and high-stake workflows, human judgment and involvement remain essential for ensuring the quality of AI-generated outputs. In practice, while it is desirable for human experts to provide oversight on AI regularly, often by reviewing intermediate outputs, giving feedback, making corrections, and steering subsequent steps, such oversight is constrained by the time and resources that humans can afford. This creates a tension between the need for human oversight and AI's efficiency in delivering more output with less intervention. An important but underexplored question, then, is how to optimally engage humans in human-AI coworking. This work was originally motivated by our empirical observation that in long AI workflows, human oversight often improves user satisfaction while reducing unnecessary rework and token consumption. From there, we formulate the problem of where to place oversight stages in human-AI coworking. Under reasonable assumptions, we then develop the nonuniformity principle, which states that the optimal schedule places oversight stages with non-decreasing gaps along the workflow. We empirically validate this principle in two common AI agent workflows: writing literature reviews and constructing websites.",
-      "hf_url": "https://huggingface.co/papers/2607.16530",
-      "arxiv_url": "https://arxiv.org/abs/2607.16530",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.16530",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.16530",
-      "github_url": "",
-      "submitted_by": "An Luo",
-      "submitted_at": "2026-07-21T00:00:00.000Z",
-      "upvotes": 5,
-      "comments": 2,
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
-      "matched_terms": [],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "As generative AI is increasingly applied to automate multi-step and high-stake workflows, human judgment and involvement remain essential for ensuring the quality of AI-generated outputs.",
       "upvote_label": "5 upvotes"
     },
     {

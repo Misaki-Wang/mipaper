@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-24T19:00:04Z",
+  "generated_at": "2026-07-25T19:00:09Z",
   "report_kind": "hf_daily",
   "report_date": "2026-07-22",
   "source_url": "https://huggingface.co/papers/date/2026-07-22",
@@ -73,13 +73,13 @@
       "LLMs and Language: 5 papers (20.00%); representative paper: DataFlow-Harness: A Grounded Code-Agent Platform for Constructing Editable LLM Data Pipelines.",
       "Learning, Optimization, and Theory: 3 papers (12.00%); representative paper: AutoIndex: Learning Representation Programs for Retrieval."
     ],
-    "trend_summary": "Today's dominant clusters are Other AI / LLMs and Language / Learning, Optimization, and Theory; this suggests that attention is spread across application adaptation, evaluation, and model reliability. The strongest visible attention is on “ABot-World-0: Infinite Interactive World Rollout on a Single Desktop GPU” (207 upvotes).",
+    "trend_summary": "Today's dominant clusters are Other AI / LLMs and Language / Learning, Optimization, and Theory; this suggests that attention is spread across application adaptation, evaluation, and model reliability. The strongest visible attention is on “ABot-World-0: Infinite Interactive World Rollout on a Single Desktop GPU” (291 upvotes).",
     "category_summaries": [
       {
         "topic_label": "Other AI",
         "count": 9,
         "share": 36.0,
-        "summary": "Other AI contributes 9 papers (36.00%), led by “ABot-World-0: Infinite Interactive World Rollout on a Single Desktop GPU” with 207 upvotes."
+        "summary": "Other AI contributes 9 papers (36.00%), led by “ABot-World-0: Infinite Interactive World Rollout on a Single Desktop GPU” with 291 upvotes."
       },
       {
         "topic_label": "LLMs and Language",
@@ -97,7 +97,7 @@
         "topic_label": "Reasoning, Alignment, and Evaluation",
         "count": 3,
         "share": 12.0,
-        "summary": "Reasoning, Alignment, and Evaluation contributes 3 papers (12.00%), led by “Stale but Stable: Staleness-Adaptive Trust Regions for Stabilizing Asynchronous Reinforcement Learning” with 34 upvotes."
+        "summary": "Reasoning, Alignment, and Evaluation contributes 3 papers (12.00%), led by “Stale but Stable: Staleness-Adaptive Trust Regions for Stabilizing Asynchronous Reinforcement Learning” with 35 upvotes."
       },
       {
         "topic_label": "Multimodal Understanding and Vision",
@@ -115,7 +115,7 @@
         "topic_label": "Generative Foundations",
         "count": 1,
         "share": 4.0,
-        "summary": "Generative Foundations contributes 1 papers (4.00%), led by “Mage-Flow: An Efficient Native-Resolution Foundation Model for Image Generation and Editing” with 63 upvotes."
+        "summary": "Generative Foundations contributes 1 papers (4.00%), led by “Mage-Flow: An Efficient Native-Resolution Foundation Model for Image Generation and Editing” with 66 upvotes."
       },
       {
         "topic_label": "Multimodal Generative Modeling",
@@ -127,8 +127,8 @@
     "top_papers": [
       {
         "title": "ABot-World-0: Infinite Interactive World Rollout on a Single Desktop GPU",
-        "upvotes": 207,
-        "upvote_label": "207 upvotes",
+        "upvotes": 291,
+        "upvote_label": "291 upvotes",
         "topic_label": "Other AI",
         "summary": "We present ABot-World-0, an action-conditioned video world model for real-time, long-horizon closed-loop interaction, supported by a multi-source data infrastructure spanning AAA games, simulation engines, and…",
         "hf_url": "https://huggingface.co/papers/2607.19191",
@@ -148,6 +148,17 @@
         "papers_cool_url": "https://papers.cool/arxiv/2607.16617"
       },
       {
+        "title": "Generative World Renderer at the Speed of Play",
+        "upvotes": 73,
+        "upvote_label": "73 upvotes",
+        "topic_label": "Other AI",
+        "summary": "Generative world renderer AlayaRenderer receives structured world states exported from physics engines and synthesizes RGB frames.",
+        "hf_url": "https://huggingface.co/papers/2607.18703",
+        "arxiv_url": "https://arxiv.org/abs/2607.18703",
+        "arxiv_pdf_url": "https://arxiv.org/pdf/2607.18703",
+        "papers_cool_url": "https://papers.cool/arxiv/2607.18703"
+      },
+      {
         "title": "Text Template Tokens Are Implicit Semantic Registers in Diffusion Transformers",
         "upvotes": 72,
         "upvote_label": "72 upvotes",
@@ -159,20 +170,9 @@
         "papers_cool_url": "https://papers.cool/arxiv/2607.19139"
       },
       {
-        "title": "Generative World Renderer at the Speed of Play",
-        "upvotes": 72,
-        "upvote_label": "72 upvotes",
-        "topic_label": "Other AI",
-        "summary": "Generative world renderer AlayaRenderer receives structured world states exported from physics engines and synthesizes RGB frames.",
-        "hf_url": "https://huggingface.co/papers/2607.18703",
-        "arxiv_url": "https://arxiv.org/abs/2607.18703",
-        "arxiv_pdf_url": "https://arxiv.org/pdf/2607.18703",
-        "papers_cool_url": "https://papers.cool/arxiv/2607.18703"
-      },
-      {
         "title": "Mage-Flow: An Efficient Native-Resolution Foundation Model for Image Generation and Editing",
-        "upvotes": 63,
-        "upvote_label": "63 upvotes",
+        "upvotes": 66,
+        "upvote_label": "66 upvotes",
         "topic_label": "Generative Foundations",
         "summary": "Large-scale visual generators are increasingly capable but costly to train, fine-tune, and deploy.",
         "hf_url": "https://huggingface.co/papers/2607.19064",
@@ -264,7 +264,7 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-07-22T00:00:00.000Z",
-      "upvotes": 207,
+      "upvotes": 291,
       "comments": 5,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
@@ -272,7 +272,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "We present ABot-World-0, an action-conditioned video world model for real-time, long-horizon closed-loop interaction, supported by a multi-source data infrastructure spanning AAA games, simulation engines, and…",
-      "upvote_label": "207 upvotes"
+      "upvote_label": "291 upvotes"
     },
     {
       "report_date": "2026-07-22",
@@ -307,6 +307,36 @@
       "classification_confidence": null,
       "one_sentence_summary": "Large language models (LLMs) are increasingly used to automate data-processing workflows, yet coding agents typically produce scripts that are not automatically materialized as persistent, editable platform artifacts.",
       "upvote_label": "134 upvotes"
+    },
+    {
+      "report_date": "2026-07-22",
+      "paper_id": "2607.18703",
+      "title": "Generative World Renderer at the Speed of Play",
+      "authors": [
+        "Guixu Lin",
+        "Zheng-Hui Huang",
+        "Siqi Yang",
+        "Ming-Hsuan Yang",
+        "Kaipeng Zhang",
+        "Zhixiang Wang"
+      ],
+      "abstract": "Generative world renderer AlayaRenderer receives structured world states exported from physics engines and synthesizes RGB frames. Unlike models that generate frames from text/control-hints prompts, AlayaRenderer preserves scene structure without altering the underlying world dynamics. This demonstrates an alternative path toward interactive world modeling and user-controllable play. However, the original AlayaRenderer is too computationally expensive for real-time deployment. This technical report introduces AlayaRenderer-Flash, a real-time-oriented generative forward world renderer that pushes AlayaRenderer from 0.56 FPS to 31.54 FPS, reaching the speed of play. AlayaRenderer-Flash reformulates the original renderer as a few-step autoregressive streaming model and introduces lightweight distilled codecs for efficient latent encoding and frame reconstruction. It retains the teacher model's G-buffer and text-prompt interfaces while enabling continuous rendering over input streams of unbounded length. We evaluate AlayaRenderer-Flash on G-buffer streams across content preservation, temporal consistency, cross-window stability, prompt controllability, and runtime efficiency. Our results show that AlayaRenderer-Flash substantially reduces inference cost while preserving the core rendering capabilities of the teacher model. By integrating AlayaRenderer-Flash with a physics engine, we build a fully playable generative world running at 30 FPS.",
+      "hf_url": "https://huggingface.co/papers/2607.18703",
+      "arxiv_url": "https://arxiv.org/abs/2607.18703",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.18703",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.18703",
+      "github_url": "",
+      "submitted_by": "Zhixiang Wang",
+      "submitted_at": "2026-07-22T00:00:00.000Z",
+      "upvotes": 73,
+      "comments": 2,
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
+      "matched_terms": [],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Generative world renderer AlayaRenderer receives structured world states exported from physics engines and synthesizes RGB frames.",
+      "upvote_label": "73 upvotes"
     },
     {
       "report_date": "2026-07-22",
@@ -351,36 +381,6 @@
     },
     {
       "report_date": "2026-07-22",
-      "paper_id": "2607.18703",
-      "title": "Generative World Renderer at the Speed of Play",
-      "authors": [
-        "Guixu Lin",
-        "Zheng-Hui Huang",
-        "Siqi Yang",
-        "Ming-Hsuan Yang",
-        "Kaipeng Zhang",
-        "Zhixiang Wang"
-      ],
-      "abstract": "Generative world renderer AlayaRenderer receives structured world states exported from physics engines and synthesizes RGB frames. Unlike models that generate frames from text/control-hints prompts, AlayaRenderer preserves scene structure without altering the underlying world dynamics. This demonstrates an alternative path toward interactive world modeling and user-controllable play. However, the original AlayaRenderer is too computationally expensive for real-time deployment. This technical report introduces AlayaRenderer-Flash, a real-time-oriented generative forward world renderer that pushes AlayaRenderer from 0.56 FPS to 31.54 FPS, reaching the speed of play. AlayaRenderer-Flash reformulates the original renderer as a few-step autoregressive streaming model and introduces lightweight distilled codecs for efficient latent encoding and frame reconstruction. It retains the teacher model's G-buffer and text-prompt interfaces while enabling continuous rendering over input streams of unbounded length. We evaluate AlayaRenderer-Flash on G-buffer streams across content preservation, temporal consistency, cross-window stability, prompt controllability, and runtime efficiency. Our results show that AlayaRenderer-Flash substantially reduces inference cost while preserving the core rendering capabilities of the teacher model. By integrating AlayaRenderer-Flash with a physics engine, we build a fully playable generative world running at 30 FPS.",
-      "hf_url": "https://huggingface.co/papers/2607.18703",
-      "arxiv_url": "https://arxiv.org/abs/2607.18703",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.18703",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.18703",
-      "github_url": "",
-      "submitted_by": "Zhixiang Wang",
-      "submitted_at": "2026-07-22T00:00:00.000Z",
-      "upvotes": 72,
-      "comments": 2,
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
-      "matched_terms": [],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Generative world renderer AlayaRenderer receives structured world states exported from physics engines and synthesizes RGB frames.",
-      "upvote_label": "72 upvotes"
-    },
-    {
-      "report_date": "2026-07-22",
       "paper_id": "2607.19064",
       "title": "Mage-Flow: An Efficient Native-Resolution Foundation Model for Image Generation and Editing",
       "authors": [
@@ -417,7 +417,7 @@
       "github_url": "",
       "submitted_by": "Xinjie",
       "submitted_at": "2026-07-22T00:00:00.000Z",
-      "upvotes": 63,
+      "upvotes": 66,
       "comments": 2,
       "topic_key": "generative_foundations",
       "topic_label": "Generative Foundations",
@@ -428,7 +428,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Large-scale visual generators are increasingly capable but costly to train, fine-tune, and deploy.",
-      "upvote_label": "63 upvotes"
+      "upvote_label": "66 upvotes"
     },
     {
       "report_date": "2026-07-22",
@@ -462,7 +462,7 @@
       "github_url": "",
       "submitted_by": "kaipeng",
       "submitted_at": "2026-07-22T00:00:00.000Z",
-      "upvotes": 52,
+      "upvotes": 54,
       "comments": 2,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
@@ -470,7 +470,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Unlike conventional video game development, which relies on labor-intensive pipelines for asset production, animation, physics, and programming, video world models generate interactive environments from user inputs…",
-      "upvote_label": "52 upvotes"
+      "upvote_label": "54 upvotes"
     },
     {
       "report_date": "2026-07-22",
@@ -534,7 +534,7 @@
       "github_url": "",
       "submitted_by": "LZX",
       "submitted_at": "2026-07-22T00:00:00.000Z",
-      "upvotes": 34,
+      "upvotes": 35,
       "comments": 2,
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
@@ -544,7 +544,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Asynchronous reinforcement learning improves throughput by decoupling rollout generation from optimization, but staleness is an inevitable byproduct compounded by policy lag, engine delays, and mixture-of-experts…",
-      "upvote_label": "34 upvotes"
+      "upvote_label": "35 upvotes"
     }
   ],
   "topics": [
@@ -552,7 +552,7 @@
       "topic_label": "Other AI",
       "count": 9,
       "share": 36.0,
-      "summary": "Other AI contributes 9 papers (36.00%), led by “ABot-World-0: Infinite Interactive World Rollout on a Single Desktop GPU” with 207 upvotes.",
+      "summary": "Other AI contributes 9 papers (36.00%), led by “ABot-World-0: Infinite Interactive World Rollout on a Single Desktop GPU” with 291 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-22",
@@ -609,7 +609,7 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-07-22T00:00:00.000Z",
-          "upvotes": 207,
+          "upvotes": 291,
           "comments": 5,
           "topic_key": "other_ai",
           "topic_label": "Other AI",
@@ -617,7 +617,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "We present ABot-World-0, an action-conditioned video world model for real-time, long-horizon closed-loop interaction, supported by a multi-source data infrastructure spanning AAA games, simulation engines, and…",
-          "upvote_label": "207 upvotes"
+          "upvote_label": "291 upvotes"
         },
         {
           "report_date": "2026-07-22",
@@ -639,7 +639,7 @@
           "github_url": "",
           "submitted_by": "Zhixiang Wang",
           "submitted_at": "2026-07-22T00:00:00.000Z",
-          "upvotes": 72,
+          "upvotes": 73,
           "comments": 2,
           "topic_key": "other_ai",
           "topic_label": "Other AI",
@@ -647,7 +647,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Generative world renderer AlayaRenderer receives structured world states exported from physics engines and synthesizes RGB frames.",
-          "upvote_label": "72 upvotes"
+          "upvote_label": "73 upvotes"
         },
         {
           "report_date": "2026-07-22",
@@ -681,7 +681,7 @@
           "github_url": "",
           "submitted_by": "kaipeng",
           "submitted_at": "2026-07-22T00:00:00.000Z",
-          "upvotes": 52,
+          "upvotes": 54,
           "comments": 2,
           "topic_key": "other_ai",
           "topic_label": "Other AI",
@@ -689,7 +689,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Unlike conventional video game development, which relies on labor-intensive pipelines for asset production, animation, physics, and programming, video world models generate interactive environments from user inputs…",
-          "upvote_label": "52 upvotes"
+          "upvote_label": "54 upvotes"
         },
         {
           "report_date": "2026-07-22",
@@ -1026,7 +1026,7 @@
           "github_url": "",
           "submitted_by": "Kunlun_Zhu",
           "submitted_at": "2026-07-22T00:00:00.000Z",
-          "upvotes": 23,
+          "upvotes": 24,
           "comments": 4,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
@@ -1036,7 +1036,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "LLM agent failures are difficult to debug because the step where an error surfaces is often not the one that caused it.",
-          "upvote_label": "23 upvotes"
+          "upvote_label": "24 upvotes"
         },
         {
           "report_date": "2026-07-22",
@@ -1178,7 +1178,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "count": 3,
       "share": 12.0,
-      "summary": "Reasoning, Alignment, and Evaluation contributes 3 papers (12.00%), led by “Stale but Stable: Staleness-Adaptive Trust Regions for Stabilizing Asynchronous Reinforcement Learning” with 34 upvotes.",
+      "summary": "Reasoning, Alignment, and Evaluation contributes 3 papers (12.00%), led by “Stale but Stable: Staleness-Adaptive Trust Regions for Stabilizing Asynchronous Reinforcement Learning” with 35 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-22",
@@ -1203,7 +1203,7 @@
           "github_url": "",
           "submitted_by": "LZX",
           "submitted_at": "2026-07-22T00:00:00.000Z",
-          "upvotes": 34,
+          "upvotes": 35,
           "comments": 2,
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
@@ -1213,7 +1213,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Asynchronous reinforcement learning improves throughput by decoupling rollout generation from optimization, but staleness is an inevitable byproduct compounded by policy lag, engine delays, and mixture-of-experts…",
-          "upvote_label": "34 upvotes"
+          "upvote_label": "35 upvotes"
         },
         {
           "report_date": "2026-07-22",
@@ -1400,7 +1400,7 @@
       "topic_label": "Generative Foundations",
       "count": 1,
       "share": 4.0,
-      "summary": "Generative Foundations contributes 1 papers (4.00%), led by “Mage-Flow: An Efficient Native-Resolution Foundation Model for Image Generation and Editing” with 63 upvotes.",
+      "summary": "Generative Foundations contributes 1 papers (4.00%), led by “Mage-Flow: An Efficient Native-Resolution Foundation Model for Image Generation and Editing” with 66 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-22",
@@ -1440,7 +1440,7 @@
           "github_url": "",
           "submitted_by": "Xinjie",
           "submitted_at": "2026-07-22T00:00:00.000Z",
-          "upvotes": 63,
+          "upvotes": 66,
           "comments": 2,
           "topic_key": "generative_foundations",
           "topic_label": "Generative Foundations",
@@ -1451,7 +1451,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Large-scale visual generators are increasingly capable but costly to train, fine-tune, and deploy.",
-          "upvote_label": "63 upvotes"
+          "upvote_label": "66 upvotes"
         }
       ]
     },
@@ -1552,7 +1552,7 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-07-22T00:00:00.000Z",
-      "upvotes": 207,
+      "upvotes": 291,
       "comments": 5,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
@@ -1560,7 +1560,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "We present ABot-World-0, an action-conditioned video world model for real-time, long-horizon closed-loop interaction, supported by a multi-source data infrastructure spanning AAA games, simulation engines, and…",
-      "upvote_label": "207 upvotes"
+      "upvote_label": "291 upvotes"
     },
     {
       "report_date": "2026-07-22",
@@ -1616,7 +1616,7 @@
       "github_url": "",
       "submitted_by": "Zhixiang Wang",
       "submitted_at": "2026-07-22T00:00:00.000Z",
-      "upvotes": 72,
+      "upvotes": 73,
       "comments": 2,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
@@ -1624,7 +1624,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Generative world renderer AlayaRenderer receives structured world states exported from physics engines and synthesizes RGB frames.",
-      "upvote_label": "72 upvotes"
+      "upvote_label": "73 upvotes"
     },
     {
       "report_date": "2026-07-22",
@@ -1705,7 +1705,7 @@
       "github_url": "",
       "submitted_by": "Xinjie",
       "submitted_at": "2026-07-22T00:00:00.000Z",
-      "upvotes": 63,
+      "upvotes": 66,
       "comments": 2,
       "topic_key": "generative_foundations",
       "topic_label": "Generative Foundations",
@@ -1716,7 +1716,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Large-scale visual generators are increasingly capable but costly to train, fine-tune, and deploy.",
-      "upvote_label": "63 upvotes"
+      "upvote_label": "66 upvotes"
     },
     {
       "report_date": "2026-07-22",
@@ -1750,7 +1750,7 @@
       "github_url": "",
       "submitted_by": "kaipeng",
       "submitted_at": "2026-07-22T00:00:00.000Z",
-      "upvotes": 52,
+      "upvotes": 54,
       "comments": 2,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
@@ -1758,7 +1758,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Unlike conventional video game development, which relies on labor-intensive pipelines for asset production, animation, physics, and programming, video world models generate interactive environments from user inputs…",
-      "upvote_label": "52 upvotes"
+      "upvote_label": "54 upvotes"
     },
     {
       "report_date": "2026-07-22",
@@ -1822,7 +1822,7 @@
       "github_url": "",
       "submitted_by": "LZX",
       "submitted_at": "2026-07-22T00:00:00.000Z",
-      "upvotes": 34,
+      "upvotes": 35,
       "comments": 2,
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
@@ -1832,7 +1832,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Asynchronous reinforcement learning improves throughput by decoupling rollout generation from optimization, but staleness is an inevitable byproduct compounded by policy lag, engine delays, and mixture-of-experts…",
-      "upvote_label": "34 upvotes"
+      "upvote_label": "35 upvotes"
     },
     {
       "report_date": "2026-07-22",
@@ -1860,7 +1860,7 @@
       "github_url": "",
       "submitted_by": "Kunlun_Zhu",
       "submitted_at": "2026-07-22T00:00:00.000Z",
-      "upvotes": 23,
+      "upvotes": 24,
       "comments": 4,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
@@ -1870,7 +1870,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "LLM agent failures are difficult to debug because the step where an error surfaces is often not the one that caused it.",
-      "upvote_label": "23 upvotes"
+      "upvote_label": "24 upvotes"
     },
     {
       "report_date": "2026-07-22",
