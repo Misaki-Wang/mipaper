@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-25T19:00:13Z",
-  "reports_count": 288,
+  "generated_at": "2026-07-26T19:00:04Z",
+  "reports_count": 289,
   "branches": [
     {
       "branch_key": "daily",
@@ -12,8 +12,8 @@
     {
       "branch_key": "hf-daily",
       "branch_label": "HF Daily",
-      "reports_count": 106,
-      "default_report_path": "data/hf-daily/reports/2026-07-24/hf-daily-2026-07-24.json",
+      "reports_count": 107,
+      "default_report_path": "data/hf-daily/reports/2026-07-27/hf-daily-2026-07-27.json",
       "manifest_path": "data/hf-daily/manifest.json"
     },
     {
@@ -7956,6 +7956,87 @@
           "topic_label": "Datasets and Benchmarks",
           "count": 9,
           "share": 7.38
+        }
+      ]
+    },
+    {
+      "branch_key": "hf-daily",
+      "branch_label": "HF Daily",
+      "search_text": "hf-daily HF Daily hf-daily-2026-07-27 data/hf-daily/reports/2026-07-27/hf-daily-2026-07-27.json https://huggingface.co/papers/date/2026-07-27 rule 2026-07-27 Generative Foundations Multimodal Generative Modeling Multimodal Agents Agents and Planning Datasets and Benchmarks LLMs and Language Multimodal Understanding and Vision Other AI taesiri Baohao Liao Baolin Peng Chen Chenhui Gou",
+      "data_path": "data/hf-daily/reports/2026-07-27/hf-daily-2026-07-27.json",
+      "slug": "hf-daily-2026-07-27",
+      "report_date": "2026-07-27",
+      "total_papers": 22,
+      "classifier": "rule",
+      "generated_at": "2026-07-26T19:00:03Z",
+      "source_url": "https://huggingface.co/papers/date/2026-07-27",
+      "focus_topics": [
+        {
+          "topic_key": "generative_foundations",
+          "topic_label": "Generative Foundations",
+          "count": 0,
+          "share": 0.0
+        },
+        {
+          "topic_key": "multimodal_generative",
+          "topic_label": "Multimodal Generative Modeling",
+          "count": 0,
+          "share": 0.0
+        },
+        {
+          "topic_key": "multimodal_agents",
+          "topic_label": "Multimodal Agents",
+          "count": 0,
+          "share": 0.0
+        }
+      ],
+      "top_topics": [
+        {
+          "topic_label": "Agents and Planning",
+          "count": 5,
+          "share": 22.73
+        },
+        {
+          "topic_label": "Datasets and Benchmarks",
+          "count": 3,
+          "share": 13.64
+        },
+        {
+          "topic_label": "LLMs and Language",
+          "count": 3,
+          "share": 13.64
+        },
+        {
+          "topic_label": "Multimodal Understanding and Vision",
+          "count": 3,
+          "share": 13.64
+        },
+        {
+          "topic_label": "Other AI",
+          "count": 3,
+          "share": 13.64
+        }
+      ],
+      "top_submitters": [
+        {
+          "submitted_by": "taesiri",
+          "count": 5
+        },
+        {
+          "submitted_by": "Baohao Liao",
+          "count": 1
+        },
+        {
+          "submitted_by": "Baolin Peng",
+          "count": 1
+        },
+        {
+          "submitted_by": "Chen",
+          "count": 1
+        },
+        {
+          "submitted_by": "Chenhui Gou",
+          "count": 1
         }
       ]
     },
