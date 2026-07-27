@@ -1,10 +1,149 @@
 {
   "branch_key": "trending",
   "branch_label": "Trending",
-  "generated_at": "2026-07-20T08:00:08Z",
-  "reports_count": 23,
-  "default_report_path": "data/trending/reports/2026-07-20/trending-2026-07-20.json",
+  "generated_at": "2026-07-27T08:00:04Z",
+  "reports_count": 24,
+  "default_report_path": "data/trending/reports/2026-07-27/trending-2026-07-27.json",
   "reports": [
+    {
+      "branch_key": "trending",
+      "branch_label": "Trending",
+      "data_path": "data/trending/reports/2026-07-27/trending-2026-07-27.json",
+      "slug": "trending-2026-07-27",
+      "snapshot_date": "2026-07-27",
+      "since": "weekly",
+      "total_repositories": 23,
+      "generated_at": "2026-07-27T08:00:03Z",
+      "source_url": "https://github.com/trending?since=weekly&spoken_language_code=",
+      "top_languages": [
+        {
+          "language": "TypeScript",
+          "count": 9,
+          "share": 39.130434782608695
+        },
+        {
+          "language": "Python",
+          "count": 7,
+          "share": 30.434782608695656
+        },
+        {
+          "language": "Rust",
+          "count": 3,
+          "share": 13.043478260869565
+        },
+        {
+          "language": "CSS",
+          "count": 1,
+          "share": 4.3478260869565215
+        },
+        {
+          "language": "Go",
+          "count": 1,
+          "share": 4.3478260869565215
+        }
+      ],
+      "top_repositories": [
+        {
+          "snapshot_date": "2026-07-27",
+          "repo_id": "bojieli/ai-agent-book",
+          "owner": "bojieli",
+          "name": "ai-agent-book",
+          "full_name": "bojieli/ai-agent-book",
+          "repo_url": "https://github.com/bojieli/ai-agent-book",
+          "description": "《深入理解 AI Agent：设计原理与工程实践》（李博杰 著）开源主仓库：全书正文、编译版 PDF 与按章配套代码",
+          "language": "Python",
+          "stars": 21829,
+          "forks": 2181,
+          "stars_this_week": 15909,
+          "built_by": [
+            "bojieli",
+            "claude",
+            "santhreal",
+            "thejesh23",
+            "phaethix"
+          ]
+        },
+        {
+          "snapshot_date": "2026-07-27",
+          "repo_id": "koala73/worldmonitor",
+          "owner": "koala73",
+          "name": "worldmonitor",
+          "full_name": "koala73/worldmonitor",
+          "repo_url": "https://github.com/koala73/worldmonitor",
+          "description": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
+          "language": "TypeScript",
+          "stars": 75003,
+          "forks": 11263,
+          "stars_this_week": 12615,
+          "built_by": [
+            "koala73",
+            "claude",
+            "SebastienMelki",
+            "NewCoder3294",
+            "lspassos1"
+          ]
+        },
+        {
+          "snapshot_date": "2026-07-27",
+          "repo_id": "mattpocock/skills",
+          "owner": "mattpocock",
+          "name": "skills",
+          "full_name": "mattpocock/skills",
+          "repo_url": "https://github.com/mattpocock/skills",
+          "description": "Skills for Real Engineers. Straight from my .agents directory.",
+          "language": "Shell",
+          "stars": 190302,
+          "forks": 16348,
+          "stars_this_week": 12238,
+          "built_by": [
+            "mattpocock",
+            "claude",
+            "github-actions",
+            "gabimoncha"
+          ]
+        },
+        {
+          "snapshot_date": "2026-07-27",
+          "repo_id": "diegosouzapw/omniroute",
+          "owner": "diegosouzapw",
+          "name": "OmniRoute",
+          "full_name": "diegosouzapw/OmniRoute",
+          "repo_url": "https://github.com/diegosouzapw/OmniRoute",
+          "description": "Never stop coding. Free MIT AI gateway: one endpoint, 290+ providers (90+ free), 500+ models — Kimi, Claude, GPT, OpenAI, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Cline & Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, Desktop/PWA. Built by 500+ contributors",
+          "language": "TypeScript",
+          "stars": 31417,
+          "forks": 4067,
+          "stars_this_week": 10912,
+          "built_by": [
+            "diegosouzapw",
+            "oyi77",
+            "claude",
+            "dependabot",
+            "rdself"
+          ]
+        },
+        {
+          "snapshot_date": "2026-07-27",
+          "repo_id": "stablyai/orca",
+          "owner": "stablyai",
+          "name": "orca",
+          "full_name": "stablyai/orca",
+          "repo_url": "https://github.com/stablyai/orca",
+          "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop, mobile and VPS.",
+          "language": "TypeScript",
+          "stars": 30152,
+          "forks": 2132,
+          "stars_this_week": 7392,
+          "built_by": [
+            "nwparker",
+            "orca-ide",
+            "AmethystLiang",
+            "Jinwoo-H",
+            "brennanb2025"
+          ]
+        }
+      ]
+    },
     {
       "branch_key": "trending",
       "branch_label": "Trending",
