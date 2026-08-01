@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-31T19:00:08Z",
+  "generated_at": "2026-08-01T19:00:04Z",
   "report_kind": "hf_daily",
   "report_date": "2026-07-29",
   "source_url": "https://huggingface.co/papers/date/2026-07-29",
@@ -68,7 +68,7 @@
       "Other AI: 6 papers (20.69%); representative paper: Pass the Baton: Trajectory-Relayed On-Policy Distillation.",
       "Agents and Planning: 5 papers (17.24%); representative paper: CodeNib: A Multi-View Data System for Serving Repository Context to Coding Agents."
     ],
-    "trend_summary": "Today's dominant clusters are Multimodal Understanding and Vision / Other AI / Agents and Planning; this suggests several parallel trends: multimodal work is moving from isolated perception toward generation, agents, and action; agent papers emphasize tool use, planning, and deployable workflows. The strongest visible attention is on “HiFi-UMI: Learning Deployable Manipulation Policies from High-Fidelity UMI Data Alone” (143 upvotes).",
+    "trend_summary": "Today's dominant clusters are Multimodal Understanding and Vision / Other AI / Agents and Planning; this suggests several parallel trends: multimodal work is moving from isolated perception toward generation, agents, and action; agent papers emphasize tool use, planning, and deployable workflows. The strongest visible attention is on “HiFi-UMI: Learning Deployable Manipulation Policies from High-Fidelity UMI Data Alone” (145 upvotes).",
     "category_summaries": [
       {
         "topic_label": "Multimodal Understanding and Vision",
@@ -86,7 +86,7 @@
         "topic_label": "Agents and Planning",
         "count": 5,
         "share": 17.24,
-        "summary": "Agents and Planning contributes 5 papers (17.24%), led by “CodeNib: A Multi-View Data System for Serving Repository Context to Coding Agents” with 92 upvotes."
+        "summary": "Agents and Planning contributes 5 papers (17.24%), led by “CodeNib: A Multi-View Data System for Serving Repository Context to Coding Agents” with 100 upvotes."
       },
       {
         "topic_label": "LLMs and Language",
@@ -110,14 +110,14 @@
         "topic_label": "Robotics and Embodied AI",
         "count": 1,
         "share": 3.45,
-        "summary": "Robotics and Embodied AI contributes 1 papers (3.45%), led by “HiFi-UMI: Learning Deployable Manipulation Policies from High-Fidelity UMI Data Alone” with 143 upvotes."
+        "summary": "Robotics and Embodied AI contributes 1 papers (3.45%), led by “HiFi-UMI: Learning Deployable Manipulation Policies from High-Fidelity UMI Data Alone” with 145 upvotes."
       }
     ],
     "top_papers": [
       {
         "title": "HiFi-UMI: Learning Deployable Manipulation Policies from High-Fidelity UMI Data Alone",
-        "upvotes": 143,
-        "upvote_label": "143 upvotes",
+        "upvotes": 145,
+        "upvote_label": "145 upvotes",
         "topic_label": "Robotics and Embodied AI",
         "summary": "Learning deployable manipulation policies is bottlenecked by the scarcity of data that is both high-fidelity and scalable.",
         "hf_url": "https://huggingface.co/papers/2607.25895",
@@ -127,8 +127,8 @@
       },
       {
         "title": "CodeNib: A Multi-View Data System for Serving Repository Context to Coding Agents",
-        "upvotes": 92,
-        "upvote_label": "92 upvotes",
+        "upvotes": 100,
+        "upvote_label": "100 upvotes",
         "topic_label": "Agents and Planning",
         "summary": "Coding agents repeatedly search, navigate, and retain context from evolving repositories, but disconnected indexes, language servers, and task-local histories force repeated discovery and obscure lifecycle costs.",
         "hf_url": "https://huggingface.co/papers/2607.25431",
@@ -138,8 +138,8 @@
       },
       {
         "title": "A New Role for Relevance: Guiding Corpus Interaction in Agentic Search",
-        "upvotes": 90,
-        "upvote_label": "90 upvotes",
+        "upvotes": 91,
+        "upvote_label": "91 upvotes",
         "topic_label": "Agents and Planning",
         "summary": "Relevance is a query-dependent estimate of whether a document or excerpt contains useful evidence.",
         "hf_url": "https://huggingface.co/papers/2607.24223",
@@ -149,8 +149,8 @@
       },
       {
         "title": "ReDesign: Recovering Editable Design Structures from Images via Agentic Decomposition",
-        "upvotes": 59,
-        "upvote_label": "59 upvotes",
+        "upvotes": 60,
+        "upvote_label": "60 upvotes",
         "topic_label": "Agents and Planning",
         "summary": "Recovering an editable design file from a raster image is a common and costly bottleneck in modern design workflows, yet remains challenging since editability depends on recovering multi-modal attributes, such as…",
         "hf_url": "https://huggingface.co/papers/2607.25565",
@@ -230,7 +230,7 @@
       "github_url": "",
       "submitted_by": "Jiawei Wang",
       "submitted_at": "2026-07-29T00:00:00.000Z",
-      "upvotes": 143,
+      "upvotes": 145,
       "comments": 2,
       "topic_key": "robotics_embodied",
       "topic_label": "Robotics and Embodied AI",
@@ -240,7 +240,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Learning deployable manipulation policies is bottlenecked by the scarcity of data that is both high-fidelity and scalable.",
-      "upvote_label": "143 upvotes"
+      "upvote_label": "145 upvotes"
     },
     {
       "report_date": "2026-07-29",
@@ -271,7 +271,7 @@
       "github_url": "",
       "submitted_by": "Zhongming Yu",
       "submitted_at": "2026-07-29T00:00:00.000Z",
-      "upvotes": 92,
+      "upvotes": 100,
       "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -281,7 +281,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Coding agents repeatedly search, navigate, and retain context from evolving repositories, but disconnected indexes, language servers, and task-local histories force repeated discovery and obscure lifecycle costs.",
-      "upvote_label": "92 upvotes"
+      "upvote_label": "100 upvotes"
     },
     {
       "report_date": "2026-07-29",
@@ -302,7 +302,7 @@
       "github_url": "",
       "submitted_by": "Yuqing Li",
       "submitted_at": "2026-07-29T00:00:00.000Z",
-      "upvotes": 90,
+      "upvotes": 91,
       "comments": 5,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -312,7 +312,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Relevance is a query-dependent estimate of whether a document or excerpt contains useful evidence.",
-      "upvote_label": "90 upvotes"
+      "upvote_label": "91 upvotes"
     },
     {
       "report_date": "2026-07-29",
@@ -334,7 +334,7 @@
       "github_url": "",
       "submitted_by": "Jooyeol Yun",
       "submitted_at": "2026-07-29T00:00:00.000Z",
-      "upvotes": 59,
+      "upvotes": 60,
       "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -344,7 +344,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Recovering an editable design file from a raster image is a common and costly bottleneck in modern design workflows, yet remains challenging since editability depends on recovering multi-modal attributes, such as…",
-      "upvote_label": "59 upvotes"
+      "upvote_label": "60 upvotes"
     },
     {
       "report_date": "2026-07-29",
@@ -602,7 +602,7 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-07-29T00:00:00.000Z",
-          "upvotes": 16,
+          "upvotes": 17,
           "comments": 2,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
@@ -613,7 +613,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "In the age of foundation models, a model is only as good as its prompt.",
-          "upvote_label": "16 upvotes"
+          "upvote_label": "17 upvotes"
         },
         {
           "report_date": "2026-07-29",
@@ -662,7 +662,7 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-07-29T00:00:00.000Z",
-          "upvotes": 13,
+          "upvotes": 15,
           "comments": 1,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
@@ -673,7 +673,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "We introduce PerceptionBench, a benchmark specifically designed to evaluate the atomic visual perception capabilities of Multimodal Large Language Models (MLLMs).",
-          "upvote_label": "13 upvotes"
+          "upvote_label": "15 upvotes"
         },
         {
           "report_date": "2026-07-29",
@@ -915,6 +915,33 @@
         },
         {
           "report_date": "2026-07-29",
+          "paper_id": "2607.25310",
+          "title": "Human-in-the-Loop Signature Bootstrapping for UAV Hyperspectral PFM-1 Mine Detection",
+          "authors": [
+            "Sagar Lekhak",
+            "Prasanna Reddy Pulakurthi",
+            "Emmett J. Ientilucci"
+          ],
+          "abstract": "Hyperspectral imaging (HSI) is useful for material discrimination, but operational mine screening also depends on how many false alarms must be inspected before targets are found. This paper studies PFM-1 landmine detection in unmanned aerial vehicle (UAV) visible and near-infrared (VNIR) HSI using spectral angle mapper (SAM), matched filter (MF), adaptive coherence estimator (ACE), and constrained energy minimization (CEM). We compare a ground-measured SVC signature, a fully informed in-scene core-pixel signature, and a simulated human-in-the-loop signature bootstrap. Besides receiver operating characteristic area under the curve and average precision, we report target-discovery curves and spatial candidate-review counts. Full-review bootstrapping reaches the fully informed in-scene signature case after all seven target regions are verified, but the required inspection effort varies strongly: ACE confirms all regions in two rounds and nine candidate inspections, whereas the SAM variants need thousands of candidate reviews for their final target locations. Code is available at https://github.com/SagarLekhak/IEEE_WHISPERS_2026_UAV_HSI_PFM1.",
+          "hf_url": "https://huggingface.co/papers/2607.25310",
+          "arxiv_url": "https://arxiv.org/abs/2607.25310",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2607.25310",
+          "papers_cool_url": "https://papers.cool/arxiv/2607.25310",
+          "github_url": "",
+          "submitted_by": "Prasanna Reddy Pulakurthi",
+          "submitted_at": "2026-07-29T00:00:00.000Z",
+          "upvotes": 3,
+          "comments": 2,
+          "topic_key": "other_ai",
+          "topic_label": "Other AI",
+          "matched_terms": [],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "Hyperspectral imaging (HSI) is useful for material discrimination, but operational mine screening also depends on how many false alarms must be inspected before targets are found.",
+          "upvote_label": "3 upvotes"
+        },
+        {
+          "report_date": "2026-07-29",
           "paper_id": "2607.19712",
           "title": "How Fast Can Reward Models Score? A Systems Study of C++ and PyTorch Inference Runtimes for RLHF",
           "authors": [
@@ -939,33 +966,6 @@
           "classification_confidence": null,
           "one_sentence_summary": "In RLHF pipelines, reward scoring blocks policy updates.",
           "upvote_label": "3 upvotes"
-        },
-        {
-          "report_date": "2026-07-29",
-          "paper_id": "2607.25310",
-          "title": "Human-in-the-Loop Signature Bootstrapping for UAV Hyperspectral PFM-1 Mine Detection",
-          "authors": [
-            "Sagar Lekhak",
-            "Prasanna Reddy Pulakurthi",
-            "Emmett J. Ientilucci"
-          ],
-          "abstract": "Hyperspectral imaging (HSI) is useful for material discrimination, but operational mine screening also depends on how many false alarms must be inspected before targets are found. This paper studies PFM-1 landmine detection in unmanned aerial vehicle (UAV) visible and near-infrared (VNIR) HSI using spectral angle mapper (SAM), matched filter (MF), adaptive coherence estimator (ACE), and constrained energy minimization (CEM). We compare a ground-measured SVC signature, a fully informed in-scene core-pixel signature, and a simulated human-in-the-loop signature bootstrap. Besides receiver operating characteristic area under the curve and average precision, we report target-discovery curves and spatial candidate-review counts. Full-review bootstrapping reaches the fully informed in-scene signature case after all seven target regions are verified, but the required inspection effort varies strongly: ACE confirms all regions in two rounds and nine candidate inspections, whereas the SAM variants need thousands of candidate reviews for their final target locations. Code is available at https://github.com/SagarLekhak/IEEE_WHISPERS_2026_UAV_HSI_PFM1.",
-          "hf_url": "https://huggingface.co/papers/2607.25310",
-          "arxiv_url": "https://arxiv.org/abs/2607.25310",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2607.25310",
-          "papers_cool_url": "https://papers.cool/arxiv/2607.25310",
-          "github_url": "",
-          "submitted_by": "Prasanna Reddy Pulakurthi",
-          "submitted_at": "2026-07-29T00:00:00.000Z",
-          "upvotes": 2,
-          "comments": 2,
-          "topic_key": "other_ai",
-          "topic_label": "Other AI",
-          "matched_terms": [],
-          "classification_source": "rule",
-          "classification_confidence": null,
-          "one_sentence_summary": "Hyperspectral imaging (HSI) is useful for material discrimination, but operational mine screening also depends on how many false alarms must be inspected before targets are found.",
-          "upvote_label": "2 upvotes"
         },
         {
           "report_date": "2026-07-29",
@@ -998,7 +998,7 @@
       "topic_label": "Agents and Planning",
       "count": 5,
       "share": 17.24,
-      "summary": "Agents and Planning contributes 5 papers (17.24%), led by “CodeNib: A Multi-View Data System for Serving Repository Context to Coding Agents” with 92 upvotes.",
+      "summary": "Agents and Planning contributes 5 papers (17.24%), led by “CodeNib: A Multi-View Data System for Serving Repository Context to Coding Agents” with 100 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-29",
@@ -1029,7 +1029,7 @@
           "github_url": "",
           "submitted_by": "Zhongming Yu",
           "submitted_at": "2026-07-29T00:00:00.000Z",
-          "upvotes": 92,
+          "upvotes": 100,
           "comments": 2,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
@@ -1039,7 +1039,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Coding agents repeatedly search, navigate, and retain context from evolving repositories, but disconnected indexes, language servers, and task-local histories force repeated discovery and obscure lifecycle costs.",
-          "upvote_label": "92 upvotes"
+          "upvote_label": "100 upvotes"
         },
         {
           "report_date": "2026-07-29",
@@ -1060,7 +1060,7 @@
           "github_url": "",
           "submitted_by": "Yuqing Li",
           "submitted_at": "2026-07-29T00:00:00.000Z",
-          "upvotes": 90,
+          "upvotes": 91,
           "comments": 5,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
@@ -1070,7 +1070,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Relevance is a query-dependent estimate of whether a document or excerpt contains useful evidence.",
-          "upvote_label": "90 upvotes"
+          "upvote_label": "91 upvotes"
         },
         {
           "report_date": "2026-07-29",
@@ -1092,7 +1092,7 @@
           "github_url": "",
           "submitted_by": "Jooyeol Yun",
           "submitted_at": "2026-07-29T00:00:00.000Z",
-          "upvotes": 59,
+          "upvotes": 60,
           "comments": 2,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
@@ -1102,7 +1102,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Recovering an editable design file from a raster image is a common and costly bottleneck in modern design workflows, yet remains challenging since editability depends on recovering multi-modal attributes, such as…",
-          "upvote_label": "59 upvotes"
+          "upvote_label": "60 upvotes"
         },
         {
           "report_date": "2026-07-29",
@@ -1231,7 +1231,7 @@
           "github_url": "",
           "submitted_by": "Md Rezwanul Haque",
           "submitted_at": "2026-07-29T00:00:00.000Z",
-          "upvotes": 5,
+          "upvotes": 6,
           "comments": 2,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
@@ -1242,7 +1242,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "The alignment of Small Language Models (SLMs) in the 70--500M parameter range using reinforcement learning is often considered unstable, though the underlying failure mechanisms have not been systematically investigated.",
-          "upvote_label": "5 upvotes"
+          "upvote_label": "6 upvotes"
         },
         {
           "report_date": "2026-07-29",
@@ -1469,7 +1469,7 @@
       "topic_label": "Robotics and Embodied AI",
       "count": 1,
       "share": 3.45,
-      "summary": "Robotics and Embodied AI contributes 1 papers (3.45%), led by “HiFi-UMI: Learning Deployable Manipulation Policies from High-Fidelity UMI Data Alone” with 143 upvotes.",
+      "summary": "Robotics and Embodied AI contributes 1 papers (3.45%), led by “HiFi-UMI: Learning Deployable Manipulation Policies from High-Fidelity UMI Data Alone” with 145 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-29",
@@ -1503,7 +1503,7 @@
           "github_url": "",
           "submitted_by": "Jiawei Wang",
           "submitted_at": "2026-07-29T00:00:00.000Z",
-          "upvotes": 143,
+          "upvotes": 145,
           "comments": 2,
           "topic_key": "robotics_embodied",
           "topic_label": "Robotics and Embodied AI",
@@ -1513,7 +1513,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Learning deployable manipulation policies is bottlenecked by the scarcity of data that is both high-fidelity and scalable.",
-          "upvote_label": "143 upvotes"
+          "upvote_label": "145 upvotes"
         }
       ]
     }
@@ -1551,7 +1551,7 @@
       "github_url": "",
       "submitted_by": "Jiawei Wang",
       "submitted_at": "2026-07-29T00:00:00.000Z",
-      "upvotes": 143,
+      "upvotes": 145,
       "comments": 2,
       "topic_key": "robotics_embodied",
       "topic_label": "Robotics and Embodied AI",
@@ -1561,7 +1561,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Learning deployable manipulation policies is bottlenecked by the scarcity of data that is both high-fidelity and scalable.",
-      "upvote_label": "143 upvotes"
+      "upvote_label": "145 upvotes"
     },
     {
       "report_date": "2026-07-29",
@@ -1592,7 +1592,7 @@
       "github_url": "",
       "submitted_by": "Zhongming Yu",
       "submitted_at": "2026-07-29T00:00:00.000Z",
-      "upvotes": 92,
+      "upvotes": 100,
       "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -1602,7 +1602,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Coding agents repeatedly search, navigate, and retain context from evolving repositories, but disconnected indexes, language servers, and task-local histories force repeated discovery and obscure lifecycle costs.",
-      "upvote_label": "92 upvotes"
+      "upvote_label": "100 upvotes"
     },
     {
       "report_date": "2026-07-29",
@@ -1623,7 +1623,7 @@
       "github_url": "",
       "submitted_by": "Yuqing Li",
       "submitted_at": "2026-07-29T00:00:00.000Z",
-      "upvotes": 90,
+      "upvotes": 91,
       "comments": 5,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -1633,7 +1633,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Relevance is a query-dependent estimate of whether a document or excerpt contains useful evidence.",
-      "upvote_label": "90 upvotes"
+      "upvote_label": "91 upvotes"
     },
     {
       "report_date": "2026-07-29",
@@ -1655,7 +1655,7 @@
       "github_url": "",
       "submitted_by": "Jooyeol Yun",
       "submitted_at": "2026-07-29T00:00:00.000Z",
-      "upvotes": 59,
+      "upvotes": 60,
       "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -1665,7 +1665,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Recovering an editable design file from a raster image is a common and costly bottleneck in modern design workflows, yet remains challenging since editability depends on recovering multi-modal attributes, such as…",
-      "upvote_label": "59 upvotes"
+      "upvote_label": "60 upvotes"
     },
     {
       "report_date": "2026-07-29",
@@ -1834,7 +1834,7 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-07-29T00:00:00.000Z",
-      "upvotes": 16,
+      "upvotes": 17,
       "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -1845,7 +1845,67 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "In the age of foundation models, a model is only as good as its prompt.",
-      "upvote_label": "16 upvotes"
+      "upvote_label": "17 upvotes"
+    },
+    {
+      "report_date": "2026-07-29",
+      "paper_id": "2607.24957",
+      "title": "PerceptionBench: Evaluating Atomic Visual Perception in Multimodal Large Language Models",
+      "authors": [
+        "Zichao Lin",
+        "Yifeng Xie",
+        "Bowen Qu",
+        "Haiming Wang",
+        "Jia Li",
+        "Haoning Wu",
+        "Yuhao Dong",
+        "Zuhao Yang",
+        "Jinguo Zhu",
+        "Haoyu Lu",
+        "Zijia Zhao",
+        "Tongtian Yue",
+        "Zhangyang Qi",
+        "Junwei Yang",
+        "Mengfan Dong",
+        "Peizhou Cao",
+        "Chenzhuang Du",
+        "Zaida Zhou",
+        "Haotian Yao",
+        "Hao Yang",
+        "Hongcheng Gao",
+        "Lin Sui",
+        "Weihong Li",
+        "Xinxing Zu",
+        "Jia Chen",
+        "Yao Wang",
+        "Xiaoxue Wu",
+        "Yalin Wang",
+        "Y. Charles",
+        "Yiping Bao",
+        "Yangyang Liu",
+        "Zhiqi Huang",
+        "Xinyu Zhou"
+      ],
+      "abstract": "We introduce PerceptionBench, a benchmark specifically designed to evaluate the atomic visual perception capabilities of Multimodal Large Language Models (MLLMs). Existing benchmarks often fail to isolate perception: holistic evaluations conflate perceptual errors with failures in reasoning or domain knowledge, while application-driven benchmarks only cover narrow, fragmented domains shaped by heuristic designs. To address these limitations, PerceptionBench adopts a bottom-up approach: by diagnosing the earliest failure points in the responses of frontier MLLMs across 42 existing benchmarks, we construct an error taxonomy whose perception branch defines ten atomic perceptual capabilities. Guided by this taxonomy, we construct 3,000 verified questions with short, unambiguous answers, each isolating a single capability, with difficulty stemming from perception rather than reasoning or knowledge. Benchmark results across sixteen frontier MLLMs reveal that atomic perception remains largely unsolved---no model reaches 60\\% accuracy, perception-related hallucination is the weakest capability on average, and similar overall scores conceal sharply divergent capability profiles. PerceptionBench thus provides a capability-level standard for measuring and diagnosing the visual perception boundaries of MLLMs.",
+      "hf_url": "https://huggingface.co/papers/2607.24957",
+      "arxiv_url": "https://arxiv.org/abs/2607.24957",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.24957",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.24957",
+      "github_url": "",
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-07-29T00:00:00.000Z",
+      "upvotes": 15,
+      "comments": 1,
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
+      "matched_terms": [
+        "\\bmultimodal\\b",
+        "\\bvisual\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "We introduce PerceptionBench, a benchmark specifically designed to evaluate the atomic visual perception capabilities of Multimodal Large Language Models (MLLMs).",
+      "upvote_label": "15 upvotes"
     },
     {
       "report_date": "2026-07-29",
@@ -1918,66 +1978,6 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Any-to-any models predict any modality from any combination of others within a single network, a formulation used in multimodal vision and vision-language models, and increasingly in scientific domains such as ecology…",
-      "upvote_label": "13 upvotes"
-    },
-    {
-      "report_date": "2026-07-29",
-      "paper_id": "2607.24957",
-      "title": "PerceptionBench: Evaluating Atomic Visual Perception in Multimodal Large Language Models",
-      "authors": [
-        "Zichao Lin",
-        "Yifeng Xie",
-        "Bowen Qu",
-        "Haiming Wang",
-        "Jia Li",
-        "Haoning Wu",
-        "Yuhao Dong",
-        "Zuhao Yang",
-        "Jinguo Zhu",
-        "Haoyu Lu",
-        "Zijia Zhao",
-        "Tongtian Yue",
-        "Zhangyang Qi",
-        "Junwei Yang",
-        "Mengfan Dong",
-        "Peizhou Cao",
-        "Chenzhuang Du",
-        "Zaida Zhou",
-        "Haotian Yao",
-        "Hao Yang",
-        "Hongcheng Gao",
-        "Lin Sui",
-        "Weihong Li",
-        "Xinxing Zu",
-        "Jia Chen",
-        "Yao Wang",
-        "Xiaoxue Wu",
-        "Yalin Wang",
-        "Y. Charles",
-        "Yiping Bao",
-        "Yangyang Liu",
-        "Zhiqi Huang",
-        "Xinyu Zhou"
-      ],
-      "abstract": "We introduce PerceptionBench, a benchmark specifically designed to evaluate the atomic visual perception capabilities of Multimodal Large Language Models (MLLMs). Existing benchmarks often fail to isolate perception: holistic evaluations conflate perceptual errors with failures in reasoning or domain knowledge, while application-driven benchmarks only cover narrow, fragmented domains shaped by heuristic designs. To address these limitations, PerceptionBench adopts a bottom-up approach: by diagnosing the earliest failure points in the responses of frontier MLLMs across 42 existing benchmarks, we construct an error taxonomy whose perception branch defines ten atomic perceptual capabilities. Guided by this taxonomy, we construct 3,000 verified questions with short, unambiguous answers, each isolating a single capability, with difficulty stemming from perception rather than reasoning or knowledge. Benchmark results across sixteen frontier MLLMs reveal that atomic perception remains largely unsolved---no model reaches 60\\% accuracy, perception-related hallucination is the weakest capability on average, and similar overall scores conceal sharply divergent capability profiles. PerceptionBench thus provides a capability-level standard for measuring and diagnosing the visual perception boundaries of MLLMs.",
-      "hf_url": "https://huggingface.co/papers/2607.24957",
-      "arxiv_url": "https://arxiv.org/abs/2607.24957",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.24957",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.24957",
-      "github_url": "",
-      "submitted_by": "taesiri",
-      "submitted_at": "2026-07-29T00:00:00.000Z",
-      "upvotes": 13,
-      "comments": 1,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
-      "matched_terms": [
-        "\\bmultimodal\\b",
-        "\\bvisual\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "We introduce PerceptionBench, a benchmark specifically designed to evaluate the atomic visual perception capabilities of Multimodal Large Language Models (MLLMs).",
       "upvote_label": "13 upvotes"
     },
     {
@@ -2121,6 +2121,36 @@
     },
     {
       "report_date": "2026-07-29",
+      "paper_id": "2607.25091",
+      "title": "Towards Robust Reinforcement Learning for Small-Scale Language Model Agents",
+      "authors": [
+        "Md Rezwanul Haque",
+        "Md. Milon Islam",
+        "Fakhri Karray"
+      ],
+      "abstract": "The alignment of Small Language Models (SLMs) in the 70--500M parameter range using reinforcement learning is often considered unstable, though the underlying failure mechanisms have not been systematically investigated. In the State-of-the-Art (SOTA) research, fifteen (model, corpus) configurations were trained using Proximal Policy Optimization (PPO). The experiments included Pythia-70M, 160M, 410M and SmolLM2-135M, 360M on the TinyStories, CNN/DailyMail, and Wikitext-103 corpora. Three reproducible failure modes were identified in small-scale language models: silent LoRA parameter freezing in standard PEFT/TRL pipelines, numerical overflow in importance ratios when using bfloat16, and catastrophic policy collapse due to reward-model error. These issues were addressed using a merge-and-reinitialize adapter technique, float32 precision during PPO updates, and a three-layer safety mechanism comprising reward whitening, importance-ratio guarding, and weight rollback. In this paper, a capacity-headroom hypothesis is proposed, which states that PPO performance at the SLM scale depends on both a fluent supervised model (PPL<20) and a discriminative reward signal, rather than on the number of model parameters. The proposed system converged stably in all experiments and improved preference win rate over the SFT baseline in configurations with a fluent prior and an informative reward signal. Furthermore, it outperformed instruction-tuned baselines while requiring significantly less training data. All checkpoints, preference datasets, and training scripts are publicly released^§.",
+      "hf_url": "https://huggingface.co/papers/2607.25091",
+      "arxiv_url": "https://arxiv.org/abs/2607.25091",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.25091",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.25091",
+      "github_url": "",
+      "submitted_by": "Md Rezwanul Haque",
+      "submitted_at": "2026-07-29T00:00:00.000Z",
+      "upvotes": 6,
+      "comments": 2,
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [
+        "\\blanguage models?\\b",
+        "\\blanguage\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "The alignment of Small Language Models (SLMs) in the 70--500M parameter range using reinforcement learning is often considered unstable, though the underlying failure mechanisms have not been systematically investigated.",
+      "upvote_label": "6 upvotes"
+    },
+    {
+      "report_date": "2026-07-29",
       "paper_id": "2607.25337",
       "title": "Temporal-Distance JEPA: Plan-Aware Representation Learning for Latent World Model Predictive Control",
       "authors": [
@@ -2146,36 +2176,6 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Joint-Embedding Predictive Architectures (JEPAs) learn world models by predicting in representation space rather than reconstructing pixels, making them a natural backbone for latent model predictive control from…",
-      "upvote_label": "5 upvotes"
-    },
-    {
-      "report_date": "2026-07-29",
-      "paper_id": "2607.25091",
-      "title": "Towards Robust Reinforcement Learning for Small-Scale Language Model Agents",
-      "authors": [
-        "Md Rezwanul Haque",
-        "Md. Milon Islam",
-        "Fakhri Karray"
-      ],
-      "abstract": "The alignment of Small Language Models (SLMs) in the 70--500M parameter range using reinforcement learning is often considered unstable, though the underlying failure mechanisms have not been systematically investigated. In the State-of-the-Art (SOTA) research, fifteen (model, corpus) configurations were trained using Proximal Policy Optimization (PPO). The experiments included Pythia-70M, 160M, 410M and SmolLM2-135M, 360M on the TinyStories, CNN/DailyMail, and Wikitext-103 corpora. Three reproducible failure modes were identified in small-scale language models: silent LoRA parameter freezing in standard PEFT/TRL pipelines, numerical overflow in importance ratios when using bfloat16, and catastrophic policy collapse due to reward-model error. These issues were addressed using a merge-and-reinitialize adapter technique, float32 precision during PPO updates, and a three-layer safety mechanism comprising reward whitening, importance-ratio guarding, and weight rollback. In this paper, a capacity-headroom hypothesis is proposed, which states that PPO performance at the SLM scale depends on both a fluent supervised model (PPL<20) and a discriminative reward signal, rather than on the number of model parameters. The proposed system converged stably in all experiments and improved preference win rate over the SFT baseline in configurations with a fluent prior and an informative reward signal. Furthermore, it outperformed instruction-tuned baselines while requiring significantly less training data. All checkpoints, preference datasets, and training scripts are publicly released^§.",
-      "hf_url": "https://huggingface.co/papers/2607.25091",
-      "arxiv_url": "https://arxiv.org/abs/2607.25091",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.25091",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.25091",
-      "github_url": "",
-      "submitted_by": "Md Rezwanul Haque",
-      "submitted_at": "2026-07-29T00:00:00.000Z",
-      "upvotes": 5,
-      "comments": 2,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
-      "matched_terms": [
-        "\\blanguage models?\\b",
-        "\\blanguage\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "The alignment of Small Language Models (SLMs) in the 70--500M parameter range using reinforcement learning is often considered unstable, though the underlying failure mechanisms have not been systematically investigated.",
       "upvote_label": "5 upvotes"
     },
     {
@@ -2234,6 +2234,33 @@
       "classification_confidence": null,
       "one_sentence_summary": "Compressed short-text generators can fail in two different places: the codec may discard information before generation starts, or the latent generator may produce weak codes.",
       "upvote_label": "4 upvotes"
+    },
+    {
+      "report_date": "2026-07-29",
+      "paper_id": "2607.25310",
+      "title": "Human-in-the-Loop Signature Bootstrapping for UAV Hyperspectral PFM-1 Mine Detection",
+      "authors": [
+        "Sagar Lekhak",
+        "Prasanna Reddy Pulakurthi",
+        "Emmett J. Ientilucci"
+      ],
+      "abstract": "Hyperspectral imaging (HSI) is useful for material discrimination, but operational mine screening also depends on how many false alarms must be inspected before targets are found. This paper studies PFM-1 landmine detection in unmanned aerial vehicle (UAV) visible and near-infrared (VNIR) HSI using spectral angle mapper (SAM), matched filter (MF), adaptive coherence estimator (ACE), and constrained energy minimization (CEM). We compare a ground-measured SVC signature, a fully informed in-scene core-pixel signature, and a simulated human-in-the-loop signature bootstrap. Besides receiver operating characteristic area under the curve and average precision, we report target-discovery curves and spatial candidate-review counts. Full-review bootstrapping reaches the fully informed in-scene signature case after all seven target regions are verified, but the required inspection effort varies strongly: ACE confirms all regions in two rounds and nine candidate inspections, whereas the SAM variants need thousands of candidate reviews for their final target locations. Code is available at https://github.com/SagarLekhak/IEEE_WHISPERS_2026_UAV_HSI_PFM1.",
+      "hf_url": "https://huggingface.co/papers/2607.25310",
+      "arxiv_url": "https://arxiv.org/abs/2607.25310",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.25310",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.25310",
+      "github_url": "",
+      "submitted_by": "Prasanna Reddy Pulakurthi",
+      "submitted_at": "2026-07-29T00:00:00.000Z",
+      "upvotes": 3,
+      "comments": 2,
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
+      "matched_terms": [],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Hyperspectral imaging (HSI) is useful for material discrimination, but operational mine screening also depends on how many false alarms must be inspected before targets are found.",
+      "upvote_label": "3 upvotes"
     },
     {
       "report_date": "2026-07-29",
@@ -2346,33 +2373,6 @@
       "classification_confidence": null,
       "one_sentence_summary": "A language model p_θ(y mid x) trained on reasoning tasks learns to solve problems via multiple distinct strategies, yet these strategies are implicit and entangled within the model's response distribution.",
       "upvote_label": "3 upvotes"
-    },
-    {
-      "report_date": "2026-07-29",
-      "paper_id": "2607.25310",
-      "title": "Human-in-the-Loop Signature Bootstrapping for UAV Hyperspectral PFM-1 Mine Detection",
-      "authors": [
-        "Sagar Lekhak",
-        "Prasanna Reddy Pulakurthi",
-        "Emmett J. Ientilucci"
-      ],
-      "abstract": "Hyperspectral imaging (HSI) is useful for material discrimination, but operational mine screening also depends on how many false alarms must be inspected before targets are found. This paper studies PFM-1 landmine detection in unmanned aerial vehicle (UAV) visible and near-infrared (VNIR) HSI using spectral angle mapper (SAM), matched filter (MF), adaptive coherence estimator (ACE), and constrained energy minimization (CEM). We compare a ground-measured SVC signature, a fully informed in-scene core-pixel signature, and a simulated human-in-the-loop signature bootstrap. Besides receiver operating characteristic area under the curve and average precision, we report target-discovery curves and spatial candidate-review counts. Full-review bootstrapping reaches the fully informed in-scene signature case after all seven target regions are verified, but the required inspection effort varies strongly: ACE confirms all regions in two rounds and nine candidate inspections, whereas the SAM variants need thousands of candidate reviews for their final target locations. Code is available at https://github.com/SagarLekhak/IEEE_WHISPERS_2026_UAV_HSI_PFM1.",
-      "hf_url": "https://huggingface.co/papers/2607.25310",
-      "arxiv_url": "https://arxiv.org/abs/2607.25310",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.25310",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.25310",
-      "github_url": "",
-      "submitted_by": "Prasanna Reddy Pulakurthi",
-      "submitted_at": "2026-07-29T00:00:00.000Z",
-      "upvotes": 2,
-      "comments": 2,
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
-      "matched_terms": [],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Hyperspectral imaging (HSI) is useful for material discrimination, but operational mine screening also depends on how many false alarms must be inspected before targets are found.",
-      "upvote_label": "2 upvotes"
     },
     {
       "report_date": "2026-07-29",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-31T19:00:09Z",
+  "generated_at": "2026-08-01T19:00:05Z",
   "report_kind": "hf_daily",
   "report_date": "2026-07-30",
   "source_url": "https://huggingface.co/papers/date/2026-07-30",
@@ -73,7 +73,7 @@
       "LLMs and Language: 6 papers (26.09%); representative paper: HumanCLAW: Can Vision-Language Models Act Through a Body?.",
       "Other AI: 4 papers (17.39%); representative paper: StatePlay: State-Aware Game World Models for Mechanics-Consistent Generation."
     ],
-    "trend_summary": "Today's dominant clusters are Agents and Planning / LLMs and Language / Other AI; this suggests that agent papers emphasize tool use, planning, and deployable workflows. The strongest visible attention is on “TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with <1 GB VRAM” (122 upvotes).",
+    "trend_summary": "Today's dominant clusters are Agents and Planning / LLMs and Language / Other AI; this suggests that agent papers emphasize tool use, planning, and deployable workflows. The strongest visible attention is on “TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with <1 GB VRAM” (127 upvotes).",
     "category_summaries": [
       {
         "topic_label": "Agents and Planning",
@@ -85,31 +85,31 @@
         "topic_label": "LLMs and Language",
         "count": 6,
         "share": 26.09,
-        "summary": "LLMs and Language contributes 6 papers (26.09%), led by “HumanCLAW: Can Vision-Language Models Act Through a Body?” with 68 upvotes."
+        "summary": "LLMs and Language contributes 6 papers (26.09%), led by “HumanCLAW: Can Vision-Language Models Act Through a Body?” with 69 upvotes."
       },
       {
         "topic_label": "Other AI",
         "count": 4,
         "share": 17.39,
-        "summary": "Other AI contributes 4 papers (17.39%), led by “StatePlay: State-Aware Game World Models for Mechanics-Consistent Generation” with 15 upvotes."
+        "summary": "Other AI contributes 4 papers (17.39%), led by “StatePlay: State-Aware Game World Models for Mechanics-Consistent Generation” with 16 upvotes."
       },
       {
         "topic_label": "Multimodal Understanding and Vision",
         "count": 2,
         "share": 8.7,
-        "summary": "Multimodal Understanding and Vision contributes 2 papers (8.70%), led by “DistillAlign: Coordinating Mode Covering and Mode Seeking in Autoregressive Video Distillation” with 87 upvotes."
+        "summary": "Multimodal Understanding and Vision contributes 2 papers (8.70%), led by “DistillAlign: Coordinating Mode Covering and Mode Seeking in Autoregressive Video Distillation” with 88 upvotes."
       },
       {
         "topic_label": "Learning, Optimization, and Theory",
         "count": 1,
         "share": 4.35,
-        "summary": "Learning, Optimization, and Theory contributes 1 papers (4.35%), led by “CoRT: Counterfactual Replay for Token-Level Rubric-Guided Policy Optimization” with 79 upvotes."
+        "summary": "Learning, Optimization, and Theory contributes 1 papers (4.35%), led by “CoRT: Counterfactual Replay for Token-Level Rubric-Guided Policy Optimization” with 80 upvotes."
       },
       {
         "topic_label": "Multimodal Agents",
         "count": 1,
         "share": 4.35,
-        "summary": "Multimodal Agents contributes 1 papers (4.35%), led by “TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with <1 GB VRAM” with 122 upvotes."
+        "summary": "Multimodal Agents contributes 1 papers (4.35%), led by “TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with <1 GB VRAM” with 127 upvotes."
       },
       {
         "topic_label": "Reasoning, Alignment, and Evaluation",
@@ -121,14 +121,14 @@
         "topic_label": "Retrieval, Knowledge, and RAG",
         "count": 1,
         "share": 4.35,
-        "summary": "Retrieval, Knowledge, and RAG contributes 1 papers (4.35%), led by “CLBench-V: Evaluating Multimodal Context Learning from Grounding to Knowledge Acquisition” with 42 upvotes."
+        "summary": "Retrieval, Knowledge, and RAG contributes 1 papers (4.35%), led by “CLBench-V: Evaluating Multimodal Context Learning from Grounding to Knowledge Acquisition” with 43 upvotes."
       }
     ],
     "top_papers": [
       {
         "title": "TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with <1 GB VRAM",
-        "upvotes": 122,
-        "upvote_label": "122 upvotes",
+        "upvotes": 127,
+        "upvote_label": "127 upvotes",
         "topic_label": "Multimodal Agents",
         "summary": "Vision-language-action (VLA) models commonly adopt an LLM-centric V to L to A pathway, where visual observations are projected into the representation space of a large language model before being decoded into robot…",
         "hf_url": "https://huggingface.co/papers/2607.27205",
@@ -138,8 +138,8 @@
       },
       {
         "title": "DistillAlign: Coordinating Mode Covering and Mode Seeking in Autoregressive Video Distillation",
-        "upvotes": 87,
-        "upvote_label": "87 upvotes",
+        "upvotes": 88,
+        "upvote_label": "88 upvotes",
         "topic_label": "Multimodal Understanding and Vision",
         "summary": "Existing autoregressive video distillation methods commonly adopt a Distribution Matching Distillation (DMD)-based multi-stage pipeline.",
         "hf_url": "https://huggingface.co/papers/2607.26811",
@@ -149,8 +149,8 @@
       },
       {
         "title": "CoRT: Counterfactual Replay for Token-Level Rubric-Guided Policy Optimization",
-        "upvotes": 79,
-        "upvote_label": "79 upvotes",
+        "upvotes": 80,
+        "upvote_label": "80 upvotes",
         "topic_label": "Learning, Optimization, and Theory",
         "summary": "Rubric-based reinforcement learning enriches language model training by evaluating model outputs against explicit criteria.",
         "hf_url": "https://huggingface.co/papers/2607.25659",
@@ -160,8 +160,8 @@
       },
       {
         "title": "HumanCLAW: Can Vision-Language Models Act Through a Body?",
-        "upvotes": 68,
-        "upvote_label": "68 upvotes",
+        "upvotes": 69,
+        "upvote_label": "69 upvotes",
         "topic_label": "LLMs and Language",
         "summary": "Evaluating whether a vision-language model (VLM) can act through a physical body is challenging.",
         "hf_url": "https://huggingface.co/papers/2607.27180",
@@ -233,7 +233,7 @@
       "github_url": "",
       "submitted_by": "Dingkang Liang",
       "submitted_at": "2026-07-30T00:00:00.000Z",
-      "upvotes": 122,
+      "upvotes": 127,
       "comments": 2,
       "topic_key": "multimodal_agents",
       "topic_label": "Multimodal Agents",
@@ -244,7 +244,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Vision-language-action (VLA) models commonly adopt an LLM-centric V to L to A pathway, where visual observations are projected into the representation space of a large language model before being decoded into robot…",
-      "upvote_label": "122 upvotes"
+      "upvote_label": "127 upvotes"
     },
     {
       "report_date": "2026-07-30",
@@ -270,7 +270,7 @@
       "github_url": "",
       "submitted_by": "Li Jiaxing",
       "submitted_at": "2026-07-30T00:00:00.000Z",
-      "upvotes": 87,
+      "upvotes": 88,
       "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -280,7 +280,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Existing autoregressive video distillation methods commonly adopt a Distribution Matching Distillation (DMD)-based multi-stage pipeline.",
-      "upvote_label": "87 upvotes"
+      "upvote_label": "88 upvotes"
     },
     {
       "report_date": "2026-07-30",
@@ -304,7 +304,7 @@
       "github_url": "",
       "submitted_by": "quinn",
       "submitted_at": "2026-07-30T00:00:00.000Z",
-      "upvotes": 79,
+      "upvotes": 80,
       "comments": 3,
       "topic_key": "learning_theory",
       "topic_label": "Learning, Optimization, and Theory",
@@ -314,7 +314,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Rubric-based reinforcement learning enriches language model training by evaluating model outputs against explicit criteria.",
-      "upvote_label": "79 upvotes"
+      "upvote_label": "80 upvotes"
     },
     {
       "report_date": "2026-07-30",
@@ -348,7 +348,7 @@
       "github_url": "",
       "submitted_by": "Jiawei Gu",
       "submitted_at": "2026-07-30T00:00:00.000Z",
-      "upvotes": 68,
+      "upvotes": 69,
       "comments": 5,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
@@ -359,7 +359,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Evaluating whether a vision-language model (VLM) can act through a physical body is challenging.",
-      "upvote_label": "68 upvotes"
+      "upvote_label": "69 upvotes"
     },
     {
       "report_date": "2026-07-30",
@@ -420,7 +420,7 @@
       "github_url": "",
       "submitted_by": "Lai Wei",
       "submitted_at": "2026-07-30T00:00:00.000Z",
-      "upvotes": 42,
+      "upvotes": 43,
       "comments": 2,
       "topic_key": "retrieval_knowledge",
       "topic_label": "Retrieval, Knowledge, and RAG",
@@ -431,7 +431,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Real-world tasks often require models to learn from task-specific context rather than relying only on pre-trained knowledge.",
-      "upvote_label": "42 upvotes"
+      "upvote_label": "43 upvotes"
     },
     {
       "report_date": "2026-07-30",
@@ -458,7 +458,7 @@
       "github_url": "",
       "submitted_by": "Yu Wang",
       "submitted_at": "2026-07-30T00:00:00.000Z",
-      "upvotes": 36,
+      "upvotes": 37,
       "comments": 2,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
@@ -468,7 +468,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Training large language models (LLMs) to act in long-horizon games is a promising step toward generalist decision-making, yet reinforcement learning with verifiable rewards (RLVR) relies on sparse final rewards that…",
-      "upvote_label": "36 upvotes"
+      "upvote_label": "37 upvotes"
     },
     {
       "report_date": "2026-07-30",
@@ -776,7 +776,7 @@
       "topic_label": "LLMs and Language",
       "count": 6,
       "share": 26.09,
-      "summary": "LLMs and Language contributes 6 papers (26.09%), led by “HumanCLAW: Can Vision-Language Models Act Through a Body?” with 68 upvotes.",
+      "summary": "LLMs and Language contributes 6 papers (26.09%), led by “HumanCLAW: Can Vision-Language Models Act Through a Body?” with 69 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-30",
@@ -810,7 +810,7 @@
           "github_url": "",
           "submitted_by": "Jiawei Gu",
           "submitted_at": "2026-07-30T00:00:00.000Z",
-          "upvotes": 68,
+          "upvotes": 69,
           "comments": 5,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
@@ -821,7 +821,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Evaluating whether a vision-language model (VLM) can act through a physical body is challenging.",
-          "upvote_label": "68 upvotes"
+          "upvote_label": "69 upvotes"
         },
         {
           "report_date": "2026-07-30",
@@ -887,7 +887,7 @@
           "github_url": "",
           "submitted_by": "Yu Wang",
           "submitted_at": "2026-07-30T00:00:00.000Z",
-          "upvotes": 36,
+          "upvotes": 37,
           "comments": 2,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
@@ -897,7 +897,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Training large language models (LLMs) to act in long-horizon games is a promising step toward generalist decision-making, yet reinforcement learning with verifiable rewards (RLVR) relies on sparse final rewards that…",
-          "upvote_label": "36 upvotes"
+          "upvote_label": "37 upvotes"
         },
         {
           "report_date": "2026-07-30",
@@ -920,8 +920,8 @@
           "github_url": "",
           "submitted_by": "Boyuan Chen",
           "submitted_at": "2026-07-30T00:00:00.000Z",
-          "upvotes": 20,
-          "comments": 2,
+          "upvotes": 22,
+          "comments": 3,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
           "matched_terms": [
@@ -931,7 +931,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Coding agents have made substantial progress on software engineering tasks that modify existing codebases, including bug fixing and feature implementation.",
-          "upvote_label": "20 upvotes"
+          "upvote_label": "22 upvotes"
         },
         {
           "report_date": "2026-07-30",
@@ -1011,7 +1011,7 @@
       "topic_label": "Other AI",
       "count": 4,
       "share": 17.39,
-      "summary": "Other AI contributes 4 papers (17.39%), led by “StatePlay: State-Aware Game World Models for Mechanics-Consistent Generation” with 15 upvotes.",
+      "summary": "Other AI contributes 4 papers (17.39%), led by “StatePlay: State-Aware Game World Models for Mechanics-Consistent Generation” with 16 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-30",
@@ -1032,7 +1032,7 @@
           "github_url": "",
           "submitted_by": "ZIJUN LIN",
           "submitted_at": "2026-07-30T00:00:00.000Z",
-          "upvotes": 15,
+          "upvotes": 16,
           "comments": 2,
           "topic_key": "other_ai",
           "topic_label": "Other AI",
@@ -1040,7 +1040,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Recent game world models can generate visually realistic and interactive environments conditioned on player actions.",
-          "upvote_label": "15 upvotes"
+          "upvote_label": "16 upvotes"
         },
         {
           "report_date": "2026-07-30",
@@ -1064,7 +1064,7 @@
           "submitted_by": "Kaiyu Li",
           "submitted_at": "2026-07-30T00:00:00.000Z",
           "upvotes": 12,
-          "comments": 1,
+          "comments": 2,
           "topic_key": "other_ai",
           "topic_label": "Other AI",
           "matched_terms": [],
@@ -1147,7 +1147,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "count": 2,
       "share": 8.7,
-      "summary": "Multimodal Understanding and Vision contributes 2 papers (8.70%), led by “DistillAlign: Coordinating Mode Covering and Mode Seeking in Autoregressive Video Distillation” with 87 upvotes.",
+      "summary": "Multimodal Understanding and Vision contributes 2 papers (8.70%), led by “DistillAlign: Coordinating Mode Covering and Mode Seeking in Autoregressive Video Distillation” with 88 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-30",
@@ -1173,7 +1173,7 @@
           "github_url": "",
           "submitted_by": "Li Jiaxing",
           "submitted_at": "2026-07-30T00:00:00.000Z",
-          "upvotes": 87,
+          "upvotes": 88,
           "comments": 2,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
@@ -1183,7 +1183,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Existing autoregressive video distillation methods commonly adopt a Distribution Matching Distillation (DMD)-based multi-stage pipeline.",
-          "upvote_label": "87 upvotes"
+          "upvote_label": "88 upvotes"
         },
         {
           "report_date": "2026-07-30",
@@ -1220,7 +1220,7 @@
       "topic_label": "Learning, Optimization, and Theory",
       "count": 1,
       "share": 4.35,
-      "summary": "Learning, Optimization, and Theory contributes 1 papers (4.35%), led by “CoRT: Counterfactual Replay for Token-Level Rubric-Guided Policy Optimization” with 79 upvotes.",
+      "summary": "Learning, Optimization, and Theory contributes 1 papers (4.35%), led by “CoRT: Counterfactual Replay for Token-Level Rubric-Guided Policy Optimization” with 80 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-30",
@@ -1244,7 +1244,7 @@
           "github_url": "",
           "submitted_by": "quinn",
           "submitted_at": "2026-07-30T00:00:00.000Z",
-          "upvotes": 79,
+          "upvotes": 80,
           "comments": 3,
           "topic_key": "learning_theory",
           "topic_label": "Learning, Optimization, and Theory",
@@ -1254,7 +1254,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Rubric-based reinforcement learning enriches language model training by evaluating model outputs against explicit criteria.",
-          "upvote_label": "79 upvotes"
+          "upvote_label": "80 upvotes"
         }
       ]
     },
@@ -1262,7 +1262,7 @@
       "topic_label": "Multimodal Agents",
       "count": 1,
       "share": 4.35,
-      "summary": "Multimodal Agents contributes 1 papers (4.35%), led by “TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with <1 GB VRAM” with 122 upvotes.",
+      "summary": "Multimodal Agents contributes 1 papers (4.35%), led by “TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with <1 GB VRAM” with 127 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-30",
@@ -1288,7 +1288,7 @@
           "github_url": "",
           "submitted_by": "Dingkang Liang",
           "submitted_at": "2026-07-30T00:00:00.000Z",
-          "upvotes": 122,
+          "upvotes": 127,
           "comments": 2,
           "topic_key": "multimodal_agents",
           "topic_label": "Multimodal Agents",
@@ -1299,7 +1299,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Vision-language-action (VLA) models commonly adopt an LLM-centric V to L to A pathway, where visual observations are projected into the representation space of a large language model before being decoded into robot…",
-          "upvote_label": "122 upvotes"
+          "upvote_label": "127 upvotes"
         }
       ]
     },
@@ -1343,7 +1343,7 @@
       "topic_label": "Retrieval, Knowledge, and RAG",
       "count": 1,
       "share": 4.35,
-      "summary": "Retrieval, Knowledge, and RAG contributes 1 papers (4.35%), led by “CLBench-V: Evaluating Multimodal Context Learning from Grounding to Knowledge Acquisition” with 42 upvotes.",
+      "summary": "Retrieval, Knowledge, and RAG contributes 1 papers (4.35%), led by “CLBench-V: Evaluating Multimodal Context Learning from Grounding to Knowledge Acquisition” with 43 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-30",
@@ -1365,7 +1365,7 @@
           "github_url": "",
           "submitted_by": "Lai Wei",
           "submitted_at": "2026-07-30T00:00:00.000Z",
-          "upvotes": 42,
+          "upvotes": 43,
           "comments": 2,
           "topic_key": "retrieval_knowledge",
           "topic_label": "Retrieval, Knowledge, and RAG",
@@ -1376,7 +1376,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Real-world tasks often require models to learn from task-specific context rather than relying only on pre-trained knowledge.",
-          "upvote_label": "42 upvotes"
+          "upvote_label": "43 upvotes"
         }
       ]
     }
@@ -1406,7 +1406,7 @@
       "github_url": "",
       "submitted_by": "Dingkang Liang",
       "submitted_at": "2026-07-30T00:00:00.000Z",
-      "upvotes": 122,
+      "upvotes": 127,
       "comments": 2,
       "topic_key": "multimodal_agents",
       "topic_label": "Multimodal Agents",
@@ -1417,7 +1417,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Vision-language-action (VLA) models commonly adopt an LLM-centric V to L to A pathway, where visual observations are projected into the representation space of a large language model before being decoded into robot…",
-      "upvote_label": "122 upvotes"
+      "upvote_label": "127 upvotes"
     },
     {
       "report_date": "2026-07-30",
@@ -1443,7 +1443,7 @@
       "github_url": "",
       "submitted_by": "Li Jiaxing",
       "submitted_at": "2026-07-30T00:00:00.000Z",
-      "upvotes": 87,
+      "upvotes": 88,
       "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
@@ -1453,7 +1453,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Existing autoregressive video distillation methods commonly adopt a Distribution Matching Distillation (DMD)-based multi-stage pipeline.",
-      "upvote_label": "87 upvotes"
+      "upvote_label": "88 upvotes"
     },
     {
       "report_date": "2026-07-30",
@@ -1477,7 +1477,7 @@
       "github_url": "",
       "submitted_by": "quinn",
       "submitted_at": "2026-07-30T00:00:00.000Z",
-      "upvotes": 79,
+      "upvotes": 80,
       "comments": 3,
       "topic_key": "learning_theory",
       "topic_label": "Learning, Optimization, and Theory",
@@ -1487,7 +1487,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Rubric-based reinforcement learning enriches language model training by evaluating model outputs against explicit criteria.",
-      "upvote_label": "79 upvotes"
+      "upvote_label": "80 upvotes"
     },
     {
       "report_date": "2026-07-30",
@@ -1521,7 +1521,7 @@
       "github_url": "",
       "submitted_by": "Jiawei Gu",
       "submitted_at": "2026-07-30T00:00:00.000Z",
-      "upvotes": 68,
+      "upvotes": 69,
       "comments": 5,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
@@ -1532,7 +1532,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Evaluating whether a vision-language model (VLM) can act through a physical body is challenging.",
-      "upvote_label": "68 upvotes"
+      "upvote_label": "69 upvotes"
     },
     {
       "report_date": "2026-07-30",
@@ -1593,7 +1593,7 @@
       "github_url": "",
       "submitted_by": "Lai Wei",
       "submitted_at": "2026-07-30T00:00:00.000Z",
-      "upvotes": 42,
+      "upvotes": 43,
       "comments": 2,
       "topic_key": "retrieval_knowledge",
       "topic_label": "Retrieval, Knowledge, and RAG",
@@ -1604,7 +1604,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Real-world tasks often require models to learn from task-specific context rather than relying only on pre-trained knowledge.",
-      "upvote_label": "42 upvotes"
+      "upvote_label": "43 upvotes"
     },
     {
       "report_date": "2026-07-30",
@@ -1631,7 +1631,7 @@
       "github_url": "",
       "submitted_by": "Yu Wang",
       "submitted_at": "2026-07-30T00:00:00.000Z",
-      "upvotes": 36,
+      "upvotes": 37,
       "comments": 2,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
@@ -1641,7 +1641,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Training large language models (LLMs) to act in long-horizon games is a promising step toward generalist decision-making, yet reinforcement learning with verifiable rewards (RLVR) relies on sparse final rewards that…",
-      "upvote_label": "36 upvotes"
+      "upvote_label": "37 upvotes"
     },
     {
       "report_date": "2026-07-30",
@@ -1706,8 +1706,8 @@
       "github_url": "",
       "submitted_by": "Boyuan Chen",
       "submitted_at": "2026-07-30T00:00:00.000Z",
-      "upvotes": 20,
-      "comments": 2,
+      "upvotes": 22,
+      "comments": 3,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [
@@ -1717,7 +1717,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Coding agents have made substantial progress on software engineering tasks that modify existing codebases, including bug fixing and feature implementation.",
-      "upvote_label": "20 upvotes"
+      "upvote_label": "22 upvotes"
     },
     {
       "report_date": "2026-07-30",
@@ -1771,7 +1771,7 @@
       "github_url": "",
       "submitted_by": "ZIJUN LIN",
       "submitted_at": "2026-07-30T00:00:00.000Z",
-      "upvotes": 15,
+      "upvotes": 16,
       "comments": 2,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
@@ -1779,7 +1779,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Recent game world models can generate visually realistic and interactive environments conditioned on player actions.",
-      "upvote_label": "15 upvotes"
+      "upvote_label": "16 upvotes"
     },
     {
       "report_date": "2026-07-30",
@@ -1853,7 +1853,7 @@
       "submitted_by": "Kaiyu Li",
       "submitted_at": "2026-07-30T00:00:00.000Z",
       "upvotes": 12,
-      "comments": 1,
+      "comments": 2,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
       "matched_terms": [],

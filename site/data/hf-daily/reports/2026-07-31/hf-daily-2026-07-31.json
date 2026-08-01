@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-31T19:00:09Z",
+  "generated_at": "2026-08-01T19:00:06Z",
   "report_kind": "hf_daily",
   "report_date": "2026-07-31",
   "source_url": "https://huggingface.co/papers/date/2026-07-31",
@@ -78,55 +78,55 @@
       "Learning, Optimization, and Theory: 6 papers (15.79%); representative paper: Frontis-MA1: Training an AI4AI Model towards Recursive Self-Improvement in Machine Learning Engineering.",
       "Agents and Planning: 5 papers (13.16%); representative paper: Qwen-UI-Agent Technical Report: Toward Next-Generation Real-World Centric Foundation GUI Agents."
     ],
-    "trend_summary": "Today's dominant clusters are Retrieval, Knowledge, and RAG / Learning, Optimization, and Theory / Agents and Planning; this suggests that agent papers emphasize tool use, planning, and deployable workflows. The strongest visible attention is on “Qwen-UI-Agent Technical Report: Toward Next-Generation Real-World Centric Foundation GUI Agents” (252 upvotes).",
+    "trend_summary": "Today's dominant clusters are Retrieval, Knowledge, and RAG / Learning, Optimization, and Theory / Agents and Planning; this suggests that agent papers emphasize tool use, planning, and deployable workflows. The strongest visible attention is on “AskChem: Claim-Centered Infrastructure for Chemistry Literature Synthesis” (290 upvotes).",
     "category_summaries": [
       {
         "topic_label": "Retrieval, Knowledge, and RAG",
         "count": 7,
         "share": 18.42,
-        "summary": "Retrieval, Knowledge, and RAG contributes 7 papers (18.42%), led by “Metis: Memory Foundation Model” with 211 upvotes."
+        "summary": "Retrieval, Knowledge, and RAG contributes 7 papers (18.42%), led by “Metis: Memory Foundation Model” with 252 upvotes."
       },
       {
         "topic_label": "Learning, Optimization, and Theory",
         "count": 6,
         "share": 15.79,
-        "summary": "Learning, Optimization, and Theory contributes 6 papers (15.79%), led by “Frontis-MA1: Training an AI4AI Model towards Recursive Self-Improvement in Machine Learning Engineering” with 121 upvotes."
+        "summary": "Learning, Optimization, and Theory contributes 6 papers (15.79%), led by “Frontis-MA1: Training an AI4AI Model towards Recursive Self-Improvement in Machine Learning Engineering” with 161 upvotes."
       },
       {
         "topic_label": "Agents and Planning",
         "count": 5,
         "share": 13.16,
-        "summary": "Agents and Planning contributes 5 papers (13.16%), led by “Qwen-UI-Agent Technical Report: Toward Next-Generation Real-World Centric Foundation GUI Agents” with 252 upvotes."
+        "summary": "Agents and Planning contributes 5 papers (13.16%), led by “Qwen-UI-Agent Technical Report: Toward Next-Generation Real-World Centric Foundation GUI Agents” with 277 upvotes."
       },
       {
         "topic_label": "LLMs and Language",
         "count": 5,
         "share": 13.16,
-        "summary": "LLMs and Language contributes 5 papers (13.16%), led by “PhiZero: A World Model Built Around Physical Language” with 148 upvotes."
+        "summary": "LLMs and Language contributes 5 papers (13.16%), led by “PhiZero: A World Model Built Around Physical Language” with 155 upvotes."
       },
       {
         "topic_label": "Other AI",
         "count": 5,
         "share": 13.16,
-        "summary": "Other AI contributes 5 papers (13.16%), led by “AskChem: Claim-Centered Infrastructure for Chemistry Literature Synthesis” with 199 upvotes."
+        "summary": "Other AI contributes 5 papers (13.16%), led by “AskChem: Claim-Centered Infrastructure for Chemistry Literature Synthesis” with 290 upvotes."
       },
       {
         "topic_label": "Multimodal Understanding and Vision",
         "count": 4,
         "share": 10.53,
-        "summary": "Multimodal Understanding and Vision contributes 4 papers (10.53%), led by “RefCaptioner: Multi-Reference Image-Grounded Video Captioning” with 24 upvotes."
+        "summary": "Multimodal Understanding and Vision contributes 4 papers (10.53%), led by “RefCaptioner: Multi-Reference Image-Grounded Video Captioning” with 25 upvotes."
       },
       {
         "topic_label": "Reasoning, Alignment, and Evaluation",
         "count": 4,
         "share": 10.53,
-        "summary": "Reasoning, Alignment, and Evaluation contributes 4 papers (10.53%), led by “Beacon: Knowing When and How to Perform Agentic Visual Reasoning” with 44 upvotes."
+        "summary": "Reasoning, Alignment, and Evaluation contributes 4 papers (10.53%), led by “Beacon: Knowing When and How to Perform Agentic Visual Reasoning” with 46 upvotes."
       },
       {
         "topic_label": "Multimodal Agents",
         "count": 1,
         "share": 2.63,
-        "summary": "Multimodal Agents contributes 1 papers (2.63%), led by “LEDGERMIND: Provenance-Constrained Multimodal Agentic Reasoning with a Structured Evidence Ledger” with 9 upvotes."
+        "summary": "Multimodal Agents contributes 1 papers (2.63%), led by “LEDGERMIND: Provenance-Constrained Multimodal Agentic Reasoning with a Structured Evidence Ledger” with 10 upvotes."
       },
       {
         "topic_label": "Robotics and Embodied AI",
@@ -137,9 +137,20 @@
     ],
     "top_papers": [
       {
+        "title": "AskChem: Claim-Centered Infrastructure for Chemistry Literature Synthesis",
+        "upvotes": 290,
+        "upvote_label": "290 upvotes",
+        "topic_label": "Other AI",
+        "summary": "Chemistry literature synthesis often requires assembling specific findings scattered across many publications, yet existing literature-search systems primarily return ranked document lists.",
+        "hf_url": "https://huggingface.co/papers/2607.28618",
+        "arxiv_url": "https://arxiv.org/abs/2607.28618",
+        "arxiv_pdf_url": "https://arxiv.org/pdf/2607.28618",
+        "papers_cool_url": "https://papers.cool/arxiv/2607.28618"
+      },
+      {
         "title": "Qwen-UI-Agent Technical Report: Toward Next-Generation Real-World Centric Foundation GUI Agents",
-        "upvotes": 252,
-        "upvote_label": "252 upvotes",
+        "upvotes": 277,
+        "upvote_label": "277 upvotes",
         "topic_label": "Agents and Planning",
         "summary": "GUI agents have the potential to become a general purpose executor over existing digital devices.",
         "hf_url": "https://huggingface.co/papers/2607.28227",
@@ -149,8 +160,8 @@
       },
       {
         "title": "Metis: Memory Foundation Model",
-        "upvotes": 211,
-        "upvote_label": "211 upvotes",
+        "upvotes": 252,
+        "upvote_label": "252 upvotes",
         "topic_label": "Retrieval, Knowledge, and RAG",
         "summary": "Recent advances in AI agents have increasingly internalized native capabilities into their underlying foundation models, giving rise to multimodal foundation models and large reasoning models.",
         "hf_url": "https://huggingface.co/papers/2607.26760",
@@ -159,37 +170,26 @@
         "papers_cool_url": "https://papers.cool/arxiv/2607.26760"
       },
       {
-        "title": "AskChem: Claim-Centered Infrastructure for Chemistry Literature Synthesis",
-        "upvotes": 199,
-        "upvote_label": "199 upvotes",
-        "topic_label": "Other AI",
-        "summary": "Chemistry literature synthesis often requires assembling specific findings scattered across many publications, yet existing literature-search systems primarily return ranked document lists.",
-        "hf_url": "https://huggingface.co/papers/2607.28618",
-        "arxiv_url": "https://arxiv.org/abs/2607.28618",
-        "arxiv_pdf_url": "https://arxiv.org/pdf/2607.28618",
-        "papers_cool_url": "https://papers.cool/arxiv/2607.28618"
-      },
-      {
-        "title": "PhiZero: A World Model Built Around Physical Language",
-        "upvotes": 148,
-        "upvote_label": "148 upvotes",
-        "topic_label": "LLMs and Language",
-        "summary": "We introduce PhiZero, a physical world model built around physical language, a compact discrete representation of world-state transitions.",
-        "hf_url": "https://huggingface.co/papers/2607.28624",
-        "arxiv_url": "https://arxiv.org/abs/2607.28624",
-        "arxiv_pdf_url": "https://arxiv.org/pdf/2607.28624",
-        "papers_cool_url": "https://papers.cool/arxiv/2607.28624"
-      },
-      {
         "title": "Frontis-MA1: Training an AI4AI Model towards Recursive Self-Improvement in Machine Learning Engineering",
-        "upvotes": 121,
-        "upvote_label": "121 upvotes",
+        "upvotes": 161,
+        "upvote_label": "161 upvotes",
         "topic_label": "Learning, Optimization, and Theory",
         "summary": "Recursive self-improvement (RSI) requires AI systems that improve the process of building AI (i.e., AI4AI); machine learning engineering (MLE) offers a concrete, executable testbed for studying this capability.",
         "hf_url": "https://huggingface.co/papers/2607.28568",
         "arxiv_url": "https://arxiv.org/abs/2607.28568",
         "arxiv_pdf_url": "https://arxiv.org/pdf/2607.28568",
         "papers_cool_url": "https://papers.cool/arxiv/2607.28568"
+      },
+      {
+        "title": "PhiZero: A World Model Built Around Physical Language",
+        "upvotes": 155,
+        "upvote_label": "155 upvotes",
+        "topic_label": "LLMs and Language",
+        "summary": "We introduce PhiZero, a physical world model built around physical language, a compact discrete representation of world-state transitions.",
+        "hf_url": "https://huggingface.co/papers/2607.28624",
+        "arxiv_url": "https://arxiv.org/abs/2607.28624",
+        "arxiv_pdf_url": "https://arxiv.org/pdf/2607.28624",
+        "papers_cool_url": "https://papers.cool/arxiv/2607.28624"
       }
     ]
   },
@@ -222,6 +222,34 @@
   "top_upvoted": [
     {
       "report_date": "2026-07-31",
+      "paper_id": "2607.28618",
+      "title": "AskChem: Claim-Centered Infrastructure for Chemistry Literature Synthesis",
+      "authors": [
+        "Bing Yan",
+        "Gregory Wolfe",
+        "Stefano Martiniani",
+        "Kyunghyun Cho"
+      ],
+      "abstract": "Chemistry literature synthesis often requires assembling specific findings scattered across many publications, yet existing literature-search systems primarily return ranked document lists. As a result, scientists and AI agents need to locate relevant information, verify their provenance, and assemble cross-paper answers manually. We present AskChem, a claim-centered infrastructure for cross-paper chemistry search. AskChem changes the unit of retrieval from the paper to the provenance-carrying claim: each paper is converted into atomic, typed claims, each grounded by a source DOI and a verbatim quote or an explicit evidence locator. Over this shared claim store, AskChem exposes complementary structures for search and synthesis: a stabilized faceted taxonomy for hierarchical retrieval and browsing, an evidence graph linking claims through relations, and an exploratory living taxonomy that situates indexed papers under scientific principles. AskChem currently indexes 2.4M claims from 147K papers and provides a web interface, as well as REST, SDK, and MCP access for AI agents. On AskChem-Bench, grounding a GPT-5.5 reader in AskChem yields 100% resolvable DOIs, compared with 88.3% without retrieval, and the highest citation density among five tested systems. AskChem is live at https://askchem.org.",
+      "hf_url": "https://huggingface.co/papers/2607.28618",
+      "arxiv_url": "https://arxiv.org/abs/2607.28618",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.28618",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.28618",
+      "github_url": "",
+      "submitted_by": "Bing Yan",
+      "submitted_at": "2026-07-31T00:00:00.000Z",
+      "upvotes": 290,
+      "comments": 2,
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
+      "matched_terms": [],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Chemistry literature synthesis often requires assembling specific findings scattered across many publications, yet existing literature-search systems primarily return ranked document lists.",
+      "upvote_label": "290 upvotes"
+    },
+    {
+      "report_date": "2026-07-31",
       "paper_id": "2607.28227",
       "title": "Qwen-UI-Agent Technical Report: Toward Next-Generation Real-World Centric Foundation GUI Agents",
       "authors": [
@@ -250,8 +278,8 @@
       "github_url": "",
       "submitted_by": "Quyu Kong",
       "submitted_at": "2026-07-31T00:00:00.000Z",
-      "upvotes": 252,
-      "comments": 3,
+      "upvotes": 277,
+      "comments": 7,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
       "matched_terms": [
@@ -260,7 +288,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "GUI agents have the potential to become a general purpose executor over existing digital devices.",
-      "upvote_label": "252 upvotes"
+      "upvote_label": "277 upvotes"
     },
     {
       "report_date": "2026-07-31",
@@ -293,8 +321,8 @@
       "github_url": "",
       "submitted_by": "Xichong Zhang",
       "submitted_at": "2026-07-31T00:00:00.000Z",
-      "upvotes": 211,
-      "comments": 2,
+      "upvotes": 252,
+      "comments": 3,
       "topic_key": "retrieval_knowledge",
       "topic_label": "Retrieval, Knowledge, and RAG",
       "matched_terms": [
@@ -303,68 +331,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Recent advances in AI agents have increasingly internalized native capabilities into their underlying foundation models, giving rise to multimodal foundation models and large reasoning models.",
-      "upvote_label": "211 upvotes"
-    },
-    {
-      "report_date": "2026-07-31",
-      "paper_id": "2607.28618",
-      "title": "AskChem: Claim-Centered Infrastructure for Chemistry Literature Synthesis",
-      "authors": [
-        "Bing Yan",
-        "Gregory Wolfe",
-        "Stefano Martiniani",
-        "Kyunghyun Cho"
-      ],
-      "abstract": "Chemistry literature synthesis often requires assembling specific findings scattered across many publications, yet existing literature-search systems primarily return ranked document lists. As a result, scientists and AI agents need to locate relevant information, verify their provenance, and assemble cross-paper answers manually. We present AskChem, a claim-centered infrastructure for cross-paper chemistry search. AskChem changes the unit of retrieval from the paper to the provenance-carrying claim: each paper is converted into atomic, typed claims, each grounded by a source DOI and a verbatim quote or an explicit evidence locator. Over this shared claim store, AskChem exposes complementary structures for search and synthesis: a stabilized faceted taxonomy for hierarchical retrieval and browsing, an evidence graph linking claims through relations, and an exploratory living taxonomy that situates indexed papers under scientific principles. AskChem currently indexes 2.4M claims from 147K papers and provides a web interface, as well as REST, SDK, and MCP access for AI agents. On AskChem-Bench, grounding a GPT-5.5 reader in AskChem yields 100% resolvable DOIs, compared with 88.3% without retrieval, and the highest citation density among five tested systems. AskChem is live at https://askchem.org.",
-      "hf_url": "https://huggingface.co/papers/2607.28618",
-      "arxiv_url": "https://arxiv.org/abs/2607.28618",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.28618",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.28618",
-      "github_url": "",
-      "submitted_by": "Bing Yan",
-      "submitted_at": "2026-07-31T00:00:00.000Z",
-      "upvotes": 199,
-      "comments": 1,
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
-      "matched_terms": [],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Chemistry literature synthesis often requires assembling specific findings scattered across many publications, yet existing literature-search systems primarily return ranked document lists.",
-      "upvote_label": "199 upvotes"
-    },
-    {
-      "report_date": "2026-07-31",
-      "paper_id": "2607.28624",
-      "title": "PhiZero: A World Model Built Around Physical Language",
-      "authors": [
-        "Shuyao Shang",
-        "Yuqi Wang",
-        "Ruopeng Gao",
-        "Xu Chen",
-        "Tieniu Tan",
-        "Lue Fan",
-        "Zhaoxiang Zhang"
-      ],
-      "abstract": "We introduce PhiZero, a physical world model built around physical language, a compact discrete representation of world-state transitions. Existing physical world models typically predict future videos directly in pixel space, leaving the underlying world dynamics implicit within high-dimensional visual predictors. Motivated by humans' ability to abstract predictive structure from visual experience and organize it in natural language for explicit reasoning, we learn physical language from in-the-wild videos through self-supervision and use it to explicitly reason about how the physical world evolves. Accordingly, PhiZero adopts a reason-then-render paradigm: it first infers future world evolution as a physical-language sequence and then renders the inferred transitions into videos. Extensive experiments across generation and understanding benchmarks validate the ability of PhiZero to model physically coherent world evolution. We further show its potential for realistic and interactive world modeling, fine-grained action-conditioned simulation, and zero-shot motion transfer.",
-      "hf_url": "https://huggingface.co/papers/2607.28624",
-      "arxiv_url": "https://arxiv.org/abs/2607.28624",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.28624",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.28624",
-      "github_url": "",
-      "submitted_by": "taesiri",
-      "submitted_at": "2026-07-31T00:00:00.000Z",
-      "upvotes": 148,
-      "comments": 1,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
-      "matched_terms": [
-        "\\blanguage\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "We introduce PhiZero, a physical world model built around physical language, a compact discrete representation of world-state transitions.",
-      "upvote_label": "148 upvotes"
+      "upvote_label": "252 upvotes"
     },
     {
       "report_date": "2026-07-31",
@@ -404,8 +371,8 @@
       "github_url": "",
       "submitted_by": "Kaiyan Zhang",
       "submitted_at": "2026-07-31T00:00:00.000Z",
-      "upvotes": 121,
-      "comments": 1,
+      "upvotes": 161,
+      "comments": 2,
       "topic_key": "learning_theory",
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [
@@ -415,7 +382,40 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Recursive self-improvement (RSI) requires AI systems that improve the process of building AI (i.e., AI4AI); machine learning engineering (MLE) offers a concrete, executable testbed for studying this capability.",
-      "upvote_label": "121 upvotes"
+      "upvote_label": "161 upvotes"
+    },
+    {
+      "report_date": "2026-07-31",
+      "paper_id": "2607.28624",
+      "title": "PhiZero: A World Model Built Around Physical Language",
+      "authors": [
+        "Shuyao Shang",
+        "Yuqi Wang",
+        "Ruopeng Gao",
+        "Xu Chen",
+        "Tieniu Tan",
+        "Lue Fan",
+        "Zhaoxiang Zhang"
+      ],
+      "abstract": "We introduce PhiZero, a physical world model built around physical language, a compact discrete representation of world-state transitions. Existing physical world models typically predict future videos directly in pixel space, leaving the underlying world dynamics implicit within high-dimensional visual predictors. Motivated by humans' ability to abstract predictive structure from visual experience and organize it in natural language for explicit reasoning, we learn physical language from in-the-wild videos through self-supervision and use it to explicitly reason about how the physical world evolves. Accordingly, PhiZero adopts a reason-then-render paradigm: it first infers future world evolution as a physical-language sequence and then renders the inferred transitions into videos. Extensive experiments across generation and understanding benchmarks validate the ability of PhiZero to model physically coherent world evolution. We further show its potential for realistic and interactive world modeling, fine-grained action-conditioned simulation, and zero-shot motion transfer.",
+      "hf_url": "https://huggingface.co/papers/2607.28624",
+      "arxiv_url": "https://arxiv.org/abs/2607.28624",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.28624",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.28624",
+      "github_url": "",
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-07-31T00:00:00.000Z",
+      "upvotes": 155,
+      "comments": 3,
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [
+        "\\blanguage\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "We introduce PhiZero, a physical world model built around physical language, a compact discrete representation of world-state transitions.",
+      "upvote_label": "155 upvotes"
     },
     {
       "report_date": "2026-07-31",
@@ -459,8 +459,8 @@
       "github_url": "",
       "submitted_by": "Lin Chen",
       "submitted_at": "2026-07-31T00:00:00.000Z",
-      "upvotes": 61,
-      "comments": 1,
+      "upvotes": 64,
+      "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
       "matched_terms": [
@@ -469,7 +469,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Text-to-video models have achieved remarkable visual quality, yet they still struggle to generate physically consistent dynamics because the temporal evolution of a scene must be inferred implicitly from a highly…",
-      "upvote_label": "61 upvotes"
+      "upvote_label": "64 upvotes"
     },
     {
       "report_date": "2026-07-31",
@@ -492,8 +492,8 @@
       "github_url": "",
       "submitted_by": "Rubin Wei",
       "submitted_at": "2026-07-31T00:00:00.000Z",
-      "upvotes": 44,
-      "comments": 1,
+      "upvotes": 48,
+      "comments": 2,
       "topic_key": "retrieval_knowledge",
       "topic_label": "Retrieval, Knowledge, and RAG",
       "matched_terms": [
@@ -502,7 +502,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Decoder-only language models entangle long-term memory and reasoning in a single parameter set, making it difficult to scale memory capacity independently.",
-      "upvote_label": "44 upvotes"
+      "upvote_label": "48 upvotes"
     },
     {
       "report_date": "2026-07-31",
@@ -532,8 +532,8 @@
       "github_url": "",
       "submitted_by": "Yang Shi",
       "submitted_at": "2026-07-31T00:00:00.000Z",
-      "upvotes": 44,
-      "comments": 1,
+      "upvotes": 46,
+      "comments": 2,
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [
@@ -542,7 +542,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "The fundamental goal of agentic visual reasoning is to improve the success rate of multimodal large language models (MLLMs) on complex tasks, rather than merely equipping them with a sophisticated yet inefficient…",
-      "upvote_label": "44 upvotes"
+      "upvote_label": "46 upvotes"
     }
   ],
   "topics": [
@@ -550,7 +550,7 @@
       "topic_label": "Retrieval, Knowledge, and RAG",
       "count": 7,
       "share": 18.42,
-      "summary": "Retrieval, Knowledge, and RAG contributes 7 papers (18.42%), led by “Metis: Memory Foundation Model” with 211 upvotes.",
+      "summary": "Retrieval, Knowledge, and RAG contributes 7 papers (18.42%), led by “Metis: Memory Foundation Model” with 252 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-31",
@@ -583,8 +583,8 @@
           "github_url": "",
           "submitted_by": "Xichong Zhang",
           "submitted_at": "2026-07-31T00:00:00.000Z",
-          "upvotes": 211,
-          "comments": 2,
+          "upvotes": 252,
+          "comments": 3,
           "topic_key": "retrieval_knowledge",
           "topic_label": "Retrieval, Knowledge, and RAG",
           "matched_terms": [
@@ -593,7 +593,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Recent advances in AI agents have increasingly internalized native capabilities into their underlying foundation models, giving rise to multimodal foundation models and large reasoning models.",
-          "upvote_label": "211 upvotes"
+          "upvote_label": "252 upvotes"
         },
         {
           "report_date": "2026-07-31",
@@ -616,8 +616,8 @@
           "github_url": "",
           "submitted_by": "Rubin Wei",
           "submitted_at": "2026-07-31T00:00:00.000Z",
-          "upvotes": 44,
-          "comments": 1,
+          "upvotes": 48,
+          "comments": 2,
           "topic_key": "retrieval_knowledge",
           "topic_label": "Retrieval, Knowledge, and RAG",
           "matched_terms": [
@@ -626,7 +626,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Decoder-only language models entangle long-term memory and reasoning in a single parameter set, making it difficult to scale memory capacity independently.",
-          "upvote_label": "44 upvotes"
+          "upvote_label": "48 upvotes"
         },
         {
           "report_date": "2026-07-31",
@@ -649,8 +649,8 @@
           "github_url": "",
           "submitted_by": "wangpengyu",
           "submitted_at": "2026-07-31T00:00:00.000Z",
-          "upvotes": 38,
-          "comments": 3,
+          "upvotes": 40,
+          "comments": 4,
           "topic_key": "retrieval_knowledge",
           "topic_label": "Retrieval, Knowledge, and RAG",
           "matched_terms": [
@@ -659,7 +659,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Retrieval-augmented generation (RAG) spans lexical and dense retrieval, graph-based indexing, and agentic search, but these paradigms are usually evaluated on different benchmarks at one corpus size, leaving their…",
-          "upvote_label": "38 upvotes"
+          "upvote_label": "40 upvotes"
         },
         {
           "report_date": "2026-07-31",
@@ -689,7 +689,7 @@
           "submitted_by": "Rong Wu",
           "submitted_at": "2026-07-31T00:00:00.000Z",
           "upvotes": 13,
-          "comments": 1,
+          "comments": 2,
           "topic_key": "retrieval_knowledge",
           "topic_label": "Retrieval, Knowledge, and RAG",
           "matched_terms": [
@@ -717,8 +717,8 @@
           "github_url": "",
           "submitted_by": "Junhan Sun",
           "submitted_at": "2026-07-31T00:00:00.000Z",
-          "upvotes": 11,
-          "comments": 2,
+          "upvotes": 12,
+          "comments": 3,
           "topic_key": "retrieval_knowledge",
           "topic_label": "Retrieval, Knowledge, and RAG",
           "matched_terms": [
@@ -727,37 +727,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Forward latent world models predict how actions change a scene, but recover actions for a desired change only through expensive test-time search.",
-          "upvote_label": "11 upvotes"
-        },
-        {
-          "report_date": "2026-07-31",
-          "paper_id": "2607.20891",
-          "title": "Is Deep Research Reliable? Misleading Knowledge Induces False Conclusions",
-          "authors": [
-            "Pengyu Zhu",
-            "Lijun Li",
-            "Longju Yang",
-            "Sen Su"
-          ],
-          "abstract": "Deep Research agents extend LLM-based assistants into long-horizon workflows involving planning, retrieval, evidence synthesis, and report generation, yet their reliability in open information environments remains underexplored. A key concern is whether apparently credible but factually misleading knowledge encountered in such environments can propagate through these workflows and be adopted as false conclusions in final reports. To study this failure mode, we introduce MisKnow-Agent, a framework for constructing and validating misleading knowledge for Deep Research tasks. MisKnow-Agent generates misleading instances with controllable authority levels and styles, yielding 5,933 quality-controlled instances built on DeepResearch Benchmark tasks. Extensive experiments across open-source and closed-source Deep Research agents show that even limited exposure to misleading knowledge can induce false-conclusion adoption in final reports, revealing a broad reliability vulnerability in current Deep Research agents. Although search-enabled verifier models consistently identify the retained instances as misleading during focused corpus validation, the same instances can still be adopted during long-horizon research, revealing a disconnect between focused verification and workflow-level evidence use. Finally, we evaluate pre- and post-research defenses, both individually and in combination, finding that all three configurations mitigate but do not fully prevent false-conclusion adoption. Our findings suggest that reliable Deep Research requires evidence verification and correction capabilities at both the model and framework levels, beyond improvements in planning, retrieval, evidence integration, or report-generation abilities.",
-          "hf_url": "https://huggingface.co/papers/2607.20891",
-          "arxiv_url": "https://arxiv.org/abs/2607.20891",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2607.20891",
-          "papers_cool_url": "https://papers.cool/arxiv/2607.20891",
-          "github_url": "",
-          "submitted_by": "zhupengyu",
-          "submitted_at": "2026-07-31T00:00:00.000Z",
-          "upvotes": 3,
-          "comments": 1,
-          "topic_key": "retrieval_knowledge",
-          "topic_label": "Retrieval, Knowledge, and RAG",
-          "matched_terms": [
-            "\\bknowledge\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null,
-          "one_sentence_summary": "Deep Research agents extend LLM-based assistants into long-horizon workflows involving planning, retrieval, evidence synthesis, and report generation, yet their reliability in open information environments remains…",
-          "upvote_label": "3 upvotes"
+          "upvote_label": "12 upvotes"
         },
         {
           "report_date": "2026-07-31",
@@ -782,8 +752,8 @@
           "github_url": "",
           "submitted_by": "YanningHou",
           "submitted_at": "2026-07-31T00:00:00.000Z",
-          "upvotes": 2,
-          "comments": 1,
+          "upvotes": 3,
+          "comments": 2,
           "topic_key": "retrieval_knowledge",
           "topic_label": "Retrieval, Knowledge, and RAG",
           "matched_terms": [
@@ -793,7 +763,37 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Reinforcement learning (RL) search agents commonly model retrieval as free-form natural-language query generation and optimize multi-turn interactions using final-answer rewards.",
-          "upvote_label": "2 upvotes"
+          "upvote_label": "3 upvotes"
+        },
+        {
+          "report_date": "2026-07-31",
+          "paper_id": "2607.20891",
+          "title": "Is Deep Research Reliable? Misleading Knowledge Induces False Conclusions",
+          "authors": [
+            "Pengyu Zhu",
+            "Lijun Li",
+            "Longju Yang",
+            "Sen Su"
+          ],
+          "abstract": "Deep Research agents extend LLM-based assistants into long-horizon workflows involving planning, retrieval, evidence synthesis, and report generation, yet their reliability in open information environments remains underexplored. A key concern is whether apparently credible but factually misleading knowledge encountered in such environments can propagate through these workflows and be adopted as false conclusions in final reports. To study this failure mode, we introduce MisKnow-Agent, a framework for constructing and validating misleading knowledge for Deep Research tasks. MisKnow-Agent generates misleading instances with controllable authority levels and styles, yielding 5,933 quality-controlled instances built on DeepResearch Benchmark tasks. Extensive experiments across open-source and closed-source Deep Research agents show that even limited exposure to misleading knowledge can induce false-conclusion adoption in final reports, revealing a broad reliability vulnerability in current Deep Research agents. Although search-enabled verifier models consistently identify the retained instances as misleading during focused corpus validation, the same instances can still be adopted during long-horizon research, revealing a disconnect between focused verification and workflow-level evidence use. Finally, we evaluate pre- and post-research defenses, both individually and in combination, finding that all three configurations mitigate but do not fully prevent false-conclusion adoption. Our findings suggest that reliable Deep Research requires evidence verification and correction capabilities at both the model and framework levels, beyond improvements in planning, retrieval, evidence integration, or report-generation abilities.",
+          "hf_url": "https://huggingface.co/papers/2607.20891",
+          "arxiv_url": "https://arxiv.org/abs/2607.20891",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2607.20891",
+          "papers_cool_url": "https://papers.cool/arxiv/2607.20891",
+          "github_url": "",
+          "submitted_by": "zhupengyu",
+          "submitted_at": "2026-07-31T00:00:00.000Z",
+          "upvotes": 3,
+          "comments": 2,
+          "topic_key": "retrieval_knowledge",
+          "topic_label": "Retrieval, Knowledge, and RAG",
+          "matched_terms": [
+            "\\bknowledge\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "Deep Research agents extend LLM-based assistants into long-horizon workflows involving planning, retrieval, evidence synthesis, and report generation, yet their reliability in open information environments remains…",
+          "upvote_label": "3 upvotes"
         }
       ]
     },
@@ -801,7 +801,7 @@
       "topic_label": "Learning, Optimization, and Theory",
       "count": 6,
       "share": 15.79,
-      "summary": "Learning, Optimization, and Theory contributes 6 papers (15.79%), led by “Frontis-MA1: Training an AI4AI Model towards Recursive Self-Improvement in Machine Learning Engineering” with 121 upvotes.",
+      "summary": "Learning, Optimization, and Theory contributes 6 papers (15.79%), led by “Frontis-MA1: Training an AI4AI Model towards Recursive Self-Improvement in Machine Learning Engineering” with 161 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-31",
@@ -841,8 +841,8 @@
           "github_url": "",
           "submitted_by": "Kaiyan Zhang",
           "submitted_at": "2026-07-31T00:00:00.000Z",
-          "upvotes": 121,
-          "comments": 1,
+          "upvotes": 161,
+          "comments": 2,
           "topic_key": "learning_theory",
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [
@@ -852,7 +852,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Recursive self-improvement (RSI) requires AI systems that improve the process of building AI (i.e., AI4AI); machine learning engineering (MLE) offers a concrete, executable testbed for studying this capability.",
-          "upvote_label": "121 upvotes"
+          "upvote_label": "161 upvotes"
         },
         {
           "report_date": "2026-07-31",
@@ -882,7 +882,7 @@
           "submitted_by": "YANG ZHOU",
           "submitted_at": "2026-07-31T00:00:00.000Z",
           "upvotes": 21,
-          "comments": 1,
+          "comments": 2,
           "topic_key": "learning_theory",
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [
@@ -892,36 +892,6 @@
           "classification_confidence": null,
           "one_sentence_summary": "Vision-language models (VLMs) are increasingly used in embodied agents to interpret visual inputs, reason about spatial relationships, and make task-level decisions based on that reasoning.",
           "upvote_label": "21 upvotes"
-        },
-        {
-          "report_date": "2026-07-31",
-          "paper_id": "2607.28362",
-          "title": "ShadowDancer: Teaching Video World Models Any Action by Learning Unified Dynamics Representations from a Video and Its Shadow",
-          "authors": [
-            "Jin Cao",
-            "Zian Meng",
-            "Kaipeng Zhang"
-          ],
-          "abstract": "We present ShadowDancer, a novel approach to any-action, frame-level control of interactive video world models. The obstacle is representational: existing interfaces either encode an action loosely, leaving how it unfolds for the model to improvise, or encode it exactly through structured signals that serve one family and are hard to acquire, so precise control across diverse dynamics remains impractical. Demonstration videos are the natural remedy, specifying any dynamics frame by frame; yet a video shows its dynamics only through one particular appearance, a single shadow of the underlying dynamics, so actions learned from demonstrations transfer poorly to new scenes. ShadowDancer addresses this with two key innovations: (1) shadow pairs, video pairs that replay the same dynamics under independently resampled appearance, constructed at scale by our Shadow Library, so that a dynamics family becomes controllable exactly when such pairs can be constructed for it; and (2) cross-shadow prediction, which learns actions by predicting one shadow from the other, so that whatever the pairing resamples is discarded by construction and whatever it preserves becomes the action, yielding a unified dynamics representation that drives a block-causal world model. Any demonstrated clip thus becomes a reusable action asset, replayed in new environments without action labels, motion estimators, or fine-tuning. Experiments demonstrate improved action transfer and long action rollout over strong latent-action and interactive world model baselines across diverse dynamics families, with an average blinded win rate of 86% in rollout comparisons. We show video results at https://ShadowDancer-1.github.io",
-          "hf_url": "https://huggingface.co/papers/2607.28362",
-          "arxiv_url": "https://arxiv.org/abs/2607.28362",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2607.28362",
-          "papers_cool_url": "https://papers.cool/arxiv/2607.28362",
-          "github_url": "",
-          "submitted_by": "kaipeng",
-          "submitted_at": "2026-07-31T00:00:00.000Z",
-          "upvotes": 16,
-          "comments": 2,
-          "topic_key": "learning_theory",
-          "topic_label": "Learning, Optimization, and Theory",
-          "matched_terms": [
-            "\\blearning\\b",
-            "\\brepresentation(s)?\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null,
-          "one_sentence_summary": "We present ShadowDancer, a novel approach to any-action, frame-level control of interactive video world models.",
-          "upvote_label": "16 upvotes"
         },
         {
           "report_date": "2026-07-31",
@@ -942,8 +912,8 @@
           "github_url": "",
           "submitted_by": "Minghui Liu",
           "submitted_at": "2026-07-31T00:00:00.000Z",
-          "upvotes": 13,
-          "comments": 1,
+          "upvotes": 17,
+          "comments": 2,
           "topic_key": "learning_theory",
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [
@@ -953,7 +923,37 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "On-policy self-distillation (OPSD) is a promising approach to improve reasoning language models, but it remains brittle in practice: making it work reliably often requires substantial engineering effort.",
-          "upvote_label": "13 upvotes"
+          "upvote_label": "17 upvotes"
+        },
+        {
+          "report_date": "2026-07-31",
+          "paper_id": "2607.28362",
+          "title": "ShadowDancer: Teaching Video World Models Any Action by Learning Unified Dynamics Representations from a Video and Its Shadow",
+          "authors": [
+            "Jin Cao",
+            "Zian Meng",
+            "Kaipeng Zhang"
+          ],
+          "abstract": "We present ShadowDancer, a novel approach to any-action, frame-level control of interactive video world models. The obstacle is representational: existing interfaces either encode an action loosely, leaving how it unfolds for the model to improvise, or encode it exactly through structured signals that serve one family and are hard to acquire, so precise control across diverse dynamics remains impractical. Demonstration videos are the natural remedy, specifying any dynamics frame by frame; yet a video shows its dynamics only through one particular appearance, a single shadow of the underlying dynamics, so actions learned from demonstrations transfer poorly to new scenes. ShadowDancer addresses this with two key innovations: (1) shadow pairs, video pairs that replay the same dynamics under independently resampled appearance, constructed at scale by our Shadow Library, so that a dynamics family becomes controllable exactly when such pairs can be constructed for it; and (2) cross-shadow prediction, which learns actions by predicting one shadow from the other, so that whatever the pairing resamples is discarded by construction and whatever it preserves becomes the action, yielding a unified dynamics representation that drives a block-causal world model. Any demonstrated clip thus becomes a reusable action asset, replayed in new environments without action labels, motion estimators, or fine-tuning. Experiments demonstrate improved action transfer and long action rollout over strong latent-action and interactive world model baselines across diverse dynamics families, with an average blinded win rate of 86% in rollout comparisons. We show video results at https://ShadowDancer-1.github.io",
+          "hf_url": "https://huggingface.co/papers/2607.28362",
+          "arxiv_url": "https://arxiv.org/abs/2607.28362",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2607.28362",
+          "papers_cool_url": "https://papers.cool/arxiv/2607.28362",
+          "github_url": "",
+          "submitted_by": "kaipeng",
+          "submitted_at": "2026-07-31T00:00:00.000Z",
+          "upvotes": 16,
+          "comments": 3,
+          "topic_key": "learning_theory",
+          "topic_label": "Learning, Optimization, and Theory",
+          "matched_terms": [
+            "\\blearning\\b",
+            "\\brepresentation(s)?\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "We present ShadowDancer, a novel approach to any-action, frame-level control of interactive video world models.",
+          "upvote_label": "16 upvotes"
         },
         {
           "report_date": "2026-07-31",
@@ -972,8 +972,8 @@
           "github_url": "",
           "submitted_by": "chengluo",
           "submitted_at": "2026-07-31T00:00:00.000Z",
-          "upvotes": 6,
-          "comments": 2,
+          "upvotes": 8,
+          "comments": 3,
           "topic_key": "learning_theory",
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [
@@ -982,7 +982,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Transformers propagate information across depth through a single additive residual stream: every sublayer reads only the most recent state.",
-          "upvote_label": "6 upvotes"
+          "upvote_label": "8 upvotes"
         },
         {
           "report_date": "2026-07-31",
@@ -1001,8 +1001,8 @@
           "github_url": "",
           "submitted_by": "Huiyuan Tian",
           "submitted_at": "2026-07-31T00:00:00.000Z",
-          "upvotes": 1,
-          "comments": 1,
+          "upvotes": 2,
+          "comments": 2,
           "topic_key": "learning_theory",
           "topic_label": "Learning, Optimization, and Theory",
           "matched_terms": [
@@ -1012,7 +1012,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Sparse mixture-of-experts (MoE) language models route each token to multiple experts, suggesting a geometric account of their benefit: co-selected experts should contribute distinct representation directions.",
-          "upvote_label": "1 upvote"
+          "upvote_label": "2 upvotes"
         }
       ]
     },
@@ -1020,7 +1020,7 @@
       "topic_label": "Agents and Planning",
       "count": 5,
       "share": 13.16,
-      "summary": "Agents and Planning contributes 5 papers (13.16%), led by “Qwen-UI-Agent Technical Report: Toward Next-Generation Real-World Centric Foundation GUI Agents” with 252 upvotes.",
+      "summary": "Agents and Planning contributes 5 papers (13.16%), led by “Qwen-UI-Agent Technical Report: Toward Next-Generation Real-World Centric Foundation GUI Agents” with 277 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-31",
@@ -1052,8 +1052,8 @@
           "github_url": "",
           "submitted_by": "Quyu Kong",
           "submitted_at": "2026-07-31T00:00:00.000Z",
-          "upvotes": 252,
-          "comments": 3,
+          "upvotes": 277,
+          "comments": 7,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
           "matched_terms": [
@@ -1062,7 +1062,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "GUI agents have the potential to become a general purpose executor over existing digital devices.",
-          "upvote_label": "252 upvotes"
+          "upvote_label": "277 upvotes"
         },
         {
           "report_date": "2026-07-31",
@@ -1106,8 +1106,8 @@
           "github_url": "",
           "submitted_by": "Lin Chen",
           "submitted_at": "2026-07-31T00:00:00.000Z",
-          "upvotes": 61,
-          "comments": 1,
+          "upvotes": 64,
+          "comments": 2,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
           "matched_terms": [
@@ -1116,7 +1116,37 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Text-to-video models have achieved remarkable visual quality, yet they still struggle to generate physically consistent dynamics because the temporal evolution of a scene must be inferred implicitly from a highly…",
-          "upvote_label": "61 upvotes"
+          "upvote_label": "64 upvotes"
+        },
+        {
+          "report_date": "2026-07-31",
+          "paper_id": "2607.27958",
+          "title": "Σ-Mem: An Online Reliability Memory for LLM-based Multi-Agent Systems",
+          "authors": [
+            "Peilin Feng",
+            "Suorong Yang",
+            "Soujanya Poria"
+          ],
+          "abstract": "Memory is central to long-horizon LLM agents, yet existing memory systems primarily preserve interaction content rather than modeling which agents can be trusted and under what conditions. This limitation is particularly important in multi-agent systems, where a central model may be unable to directly verify plausible or correlated peer responses. We introduce Σ-Mem, an online reliability memory that records historical competence evidence for individual peers and peer relationship evidence across the peer set. Both forms of evidence are maintained as real symmetric states and updated from post-decision correctness feedback. By Weyl's inequality, the spectral change caused by each event-level update is bounded, enabling stable online adaptation without retraining the underlying models. Σ-Mem provides a general write-and-read interface: the same memory can be used for residual steering of a central model, response-free peer routing, or reliability-weighted voting. Across five Qwen-family models, Σ-Mem adapts to counterfactual reliability shifts and generalizes to unseen peers and task domains. Direct memory readouts also outperform majority voting and the best fixed peer over the full OOD evaluation set. Moreover, performance improves consistently as more correctness feedback becomes available, indicating that Σ-Mem progressively accumulates actionable reliability information. These results establish reliability memory as a reusable foundation for adaptive coordination in LLM-based multi-agent systems.",
+          "hf_url": "https://huggingface.co/papers/2607.27958",
+          "arxiv_url": "https://arxiv.org/abs/2607.27958",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2607.27958",
+          "papers_cool_url": "https://papers.cool/arxiv/2607.27958",
+          "github_url": "",
+          "submitted_by": "Suorong Yang",
+          "submitted_at": "2026-07-31T00:00:00.000Z",
+          "upvotes": 12,
+          "comments": 2,
+          "topic_key": "agents_planning",
+          "topic_label": "Agents and Planning",
+          "matched_terms": [
+            "\\bmulti-agent\\b",
+            "\\bagents?\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "Memory is central to long-horizon LLM agents, yet existing memory systems primarily preserve interaction content rather than modeling which agents can be trusted and under what conditions.",
+          "upvote_label": "12 upvotes"
         },
         {
           "report_date": "2026-07-31",
@@ -1146,7 +1176,7 @@
           "submitted_by": "Akshay Nambi",
           "submitted_at": "2026-07-31T00:00:00.000Z",
           "upvotes": 9,
-          "comments": 1,
+          "comments": 2,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
           "matched_terms": [
@@ -1156,36 +1186,6 @@
           "classification_confidence": null,
           "one_sentence_summary": "Computer-use agents learn from what their actions change, so training one needs applications it can act on, break and reset.",
           "upvote_label": "9 upvotes"
-        },
-        {
-          "report_date": "2026-07-31",
-          "paper_id": "2607.27958",
-          "title": "Σ-Mem: An Online Reliability Memory for LLM-based Multi-Agent Systems",
-          "authors": [
-            "Peilin Feng",
-            "Suorong Yang",
-            "Soujanya Poria"
-          ],
-          "abstract": "Memory is central to long-horizon LLM agents, yet existing memory systems primarily preserve interaction content rather than modeling which agents can be trusted and under what conditions. This limitation is particularly important in multi-agent systems, where a central model may be unable to directly verify plausible or correlated peer responses. We introduce Σ-Mem, an online reliability memory that records historical competence evidence for individual peers and peer relationship evidence across the peer set. Both forms of evidence are maintained as real symmetric states and updated from post-decision correctness feedback. By Weyl's inequality, the spectral change caused by each event-level update is bounded, enabling stable online adaptation without retraining the underlying models. Σ-Mem provides a general write-and-read interface: the same memory can be used for residual steering of a central model, response-free peer routing, or reliability-weighted voting. Across five Qwen-family models, Σ-Mem adapts to counterfactual reliability shifts and generalizes to unseen peers and task domains. Direct memory readouts also outperform majority voting and the best fixed peer over the full OOD evaluation set. Moreover, performance improves consistently as more correctness feedback becomes available, indicating that Σ-Mem progressively accumulates actionable reliability information. These results establish reliability memory as a reusable foundation for adaptive coordination in LLM-based multi-agent systems.",
-          "hf_url": "https://huggingface.co/papers/2607.27958",
-          "arxiv_url": "https://arxiv.org/abs/2607.27958",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2607.27958",
-          "papers_cool_url": "https://papers.cool/arxiv/2607.27958",
-          "github_url": "",
-          "submitted_by": "Suorong Yang",
-          "submitted_at": "2026-07-31T00:00:00.000Z",
-          "upvotes": 7,
-          "comments": 1,
-          "topic_key": "agents_planning",
-          "topic_label": "Agents and Planning",
-          "matched_terms": [
-            "\\bmulti-agent\\b",
-            "\\bagents?\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null,
-          "one_sentence_summary": "Memory is central to long-horizon LLM agents, yet existing memory systems primarily preserve interaction content rather than modeling which agents can be trusted and under what conditions.",
-          "upvote_label": "7 upvotes"
         },
         {
           "report_date": "2026-07-31",
@@ -1202,8 +1202,8 @@
           "github_url": "",
           "submitted_by": "Daisuke Kikuta",
           "submitted_at": "2026-07-31T00:00:00.000Z",
-          "upvotes": 2,
-          "comments": 1,
+          "upvotes": 3,
+          "comments": 2,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
           "matched_terms": [
@@ -1213,7 +1213,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "This paper proposes AI Tour Meeting, a group travel planning framework powered by multiple Large Language Model (LLM)-based agents.",
-          "upvote_label": "2 upvotes"
+          "upvote_label": "3 upvotes"
         }
       ]
     },
@@ -1221,7 +1221,7 @@
       "topic_label": "LLMs and Language",
       "count": 5,
       "share": 13.16,
-      "summary": "LLMs and Language contributes 5 papers (13.16%), led by “PhiZero: A World Model Built Around Physical Language” with 148 upvotes.",
+      "summary": "LLMs and Language contributes 5 papers (13.16%), led by “PhiZero: A World Model Built Around Physical Language” with 155 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-31",
@@ -1244,8 +1244,8 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-07-31T00:00:00.000Z",
-          "upvotes": 148,
-          "comments": 1,
+          "upvotes": 155,
+          "comments": 3,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
           "matched_terms": [
@@ -1254,7 +1254,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "We introduce PhiZero, a physical world model built around physical language, a compact discrete representation of world-state transitions.",
-          "upvote_label": "148 upvotes"
+          "upvote_label": "155 upvotes"
         },
         {
           "report_date": "2026-07-31",
@@ -1280,8 +1280,8 @@
           "github_url": "",
           "submitted_by": "Zhen Yang",
           "submitted_at": "2026-07-31T00:00:00.000Z",
-          "upvotes": 12,
-          "comments": 1,
+          "upvotes": 14,
+          "comments": 2,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
           "matched_terms": [
@@ -1291,7 +1291,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Parent-order execution is a core problem in algorithmic trading, where the goal is to split a large order into smaller orders while reducing execution costs.",
-          "upvote_label": "12 upvotes"
+          "upvote_label": "14 upvotes"
         },
         {
           "report_date": "2026-07-31",
@@ -1319,7 +1319,7 @@
           "submitted_by": "Sizhe Zhou",
           "submitted_at": "2026-07-31T00:00:00.000Z",
           "upvotes": 6,
-          "comments": 1,
+          "comments": 2,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
           "matched_terms": [
@@ -1348,10 +1348,10 @@
           "arxiv_pdf_url": "https://arxiv.org/pdf/2607.23193",
           "papers_cool_url": "https://papers.cool/arxiv/2607.23193",
           "github_url": "",
-          "submitted_by": "Consonnm",
+          "submitted_by": "Jinsen Su",
           "submitted_at": "2026-07-31T00:00:00.000Z",
-          "upvotes": 2,
-          "comments": 1,
+          "upvotes": 3,
+          "comments": 2,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
           "matched_terms": [
@@ -1362,7 +1362,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Existing token compression methods for omnimodal large language models typically rely on one modality to determine what to retain in the other.",
-          "upvote_label": "2 upvotes"
+          "upvote_label": "3 upvotes"
         },
         {
           "report_date": "2026-07-31",
@@ -1384,8 +1384,8 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-07-31T00:00:00.000Z",
-          "upvotes": 1,
-          "comments": 0,
+          "upvotes": 2,
+          "comments": 1,
           "topic_key": "llm_language",
           "topic_label": "LLMs and Language",
           "matched_terms": [
@@ -1396,7 +1396,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Long visual context poses a challenge for vision-language models: performance degrades as the number of distractors grows, and processing all tokens at once is computationally infeasible under GPU memory constraints.",
-          "upvote_label": "1 upvote"
+          "upvote_label": "2 upvotes"
         }
       ]
     },
@@ -1404,7 +1404,7 @@
       "topic_label": "Other AI",
       "count": 5,
       "share": 13.16,
-      "summary": "Other AI contributes 5 papers (13.16%), led by “AskChem: Claim-Centered Infrastructure for Chemistry Literature Synthesis” with 199 upvotes.",
+      "summary": "Other AI contributes 5 papers (13.16%), led by “AskChem: Claim-Centered Infrastructure for Chemistry Literature Synthesis” with 290 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-31",
@@ -1424,15 +1424,15 @@
           "github_url": "",
           "submitted_by": "Bing Yan",
           "submitted_at": "2026-07-31T00:00:00.000Z",
-          "upvotes": 199,
-          "comments": 1,
+          "upvotes": 290,
+          "comments": 2,
           "topic_key": "other_ai",
           "topic_label": "Other AI",
           "matched_terms": [],
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Chemistry literature synthesis often requires assembling specific findings scattered across many publications, yet existing literature-search systems primarily return ranked document lists.",
-          "upvote_label": "199 upvotes"
+          "upvote_label": "290 upvotes"
         },
         {
           "report_date": "2026-07-31",
@@ -1461,15 +1461,15 @@
           "github_url": "",
           "submitted_by": "Yuran Wang",
           "submitted_at": "2026-07-31T00:00:00.000Z",
-          "upvotes": 35,
-          "comments": 1,
+          "upvotes": 39,
+          "comments": 2,
           "topic_key": "other_ai",
           "topic_label": "Other AI",
           "matched_terms": [],
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Large language model training in open-ended domains lacks verifiable rewards, making task preferences difficult to formalize as effective supervision.",
-          "upvote_label": "35 upvotes"
+          "upvote_label": "39 upvotes"
         },
         {
           "report_date": "2026-07-31",
@@ -1490,15 +1490,42 @@
           "github_url": "",
           "submitted_by": "Mingxuan Du",
           "submitted_at": "2026-07-31T00:00:00.000Z",
-          "upvotes": 35,
-          "comments": 1,
+          "upvotes": 37,
+          "comments": 2,
           "topic_key": "other_ai",
           "topic_label": "Other AI",
           "matched_terms": [],
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Text-to-image and personalized editing models now synthesize high-fidelity single-subject images with ease.",
-          "upvote_label": "35 upvotes"
+          "upvote_label": "37 upvotes"
+        },
+        {
+          "report_date": "2026-07-31",
+          "paper_id": "2607.27372",
+          "title": "Explorative Modeling: Unlocking a Third Pretraining Axis and End-to-End Generation",
+          "authors": [
+            "Alexi Gladstone",
+            "Heng Ji",
+            "Yilun Du"
+          ],
+          "abstract": "The deep learning revolution, kicked off by AlexNet, taught us that end-to-end training beats decomposing a problem into hand-designed stages. Generative modeling, however, has remained the exception-despite generative models being remarkably capable, they are still not trained end-to-end. This is because, at its core, generative modeling is about handling distributions with many modes, and existing scalable approaches handle this the same way, by factoring the generation procedure, which prevents end-to-end generation. In this work, we introduce Explorative Modeling, a new paradigm that instead factors the training loop, exploring K candidate matches between model generations and data, and training on the best, so predictions commit to modes rather than blurring them. We find Explorative Models (XMs) useful in two settings. First, increasing exploration adds a third pretraining axis beyond parameters and data for existing generative models-where scaling exploration monotonically improves performance across both continuous and discrete domains (images, video, and language). Notably, gains from exploration increase with scale, climbing from 7% to 36% as data scales and from 13% to 23% as models grow, with efficiency gains more than doubling at 3x the compute. Concretely, exploration improves FLOP efficiency by 4.1x, sample efficiency by 6.2x, parameter efficiency by 47%, lifts the strongest of image-generation recipes to a near-state-of-the-art 1.43 FID on ImageNet without guidance, enables scaling how end-to-end existing models are, and unlocks scaling generalization. Second, XMs enable end-to-end reconstructive generative modeling, matching diffusion on control tasks with 16-256x fewer inference steps. Together, these results establish XMs as both a new pretraining axis for existing generative models and a standalone end-to-end generative modeling paradigm.",
+          "hf_url": "https://huggingface.co/papers/2607.27372",
+          "arxiv_url": "https://arxiv.org/abs/2607.27372",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2607.27372",
+          "papers_cool_url": "https://papers.cool/arxiv/2607.27372",
+          "github_url": "",
+          "submitted_by": "Alexi Gladstone",
+          "submitted_at": "2026-07-31T00:00:00.000Z",
+          "upvotes": 11,
+          "comments": 2,
+          "topic_key": "other_ai",
+          "topic_label": "Other AI",
+          "matched_terms": [],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "The deep learning revolution, kicked off by AlexNet, taught us that end-to-end training beats decomposing a problem into hand-designed stages.",
+          "upvote_label": "11 upvotes"
         },
         {
           "report_date": "2026-07-31",
@@ -1521,7 +1548,7 @@
           "submitted_by": "Tianyu Wang",
           "submitted_at": "2026-07-31T00:00:00.000Z",
           "upvotes": 4,
-          "comments": 1,
+          "comments": 2,
           "topic_key": "other_ai",
           "topic_label": "Other AI",
           "matched_terms": [],
@@ -1529,33 +1556,6 @@
           "classification_confidence": null,
           "one_sentence_summary": "Speculative Decoding (SD) accelerates large language model inference by allowing a lightweight draft model to propose tokens that are subsequently verified in parallel by a larger target model.",
           "upvote_label": "4 upvotes"
-        },
-        {
-          "report_date": "2026-07-31",
-          "paper_id": "2607.27372",
-          "title": "Explorative Modeling: Unlocking a Third Pretraining Axis and End-to-End Generation",
-          "authors": [
-            "Alexi Gladstone",
-            "Heng Ji",
-            "Yilun Du"
-          ],
-          "abstract": "The deep learning revolution, kicked off by AlexNet, taught us that end-to-end training beats decomposing a problem into hand-designed stages. Generative modeling, however, has remained the exception-despite generative models being remarkably capable, they are still not trained end-to-end. This is because, at its core, generative modeling is about handling distributions with many modes, and existing scalable approaches handle this the same way, by factoring the generation procedure, which prevents end-to-end generation. In this work, we introduce Explorative Modeling, a new paradigm that instead factors the training loop, exploring K candidate matches between model generations and data, and training on the best, so predictions commit to modes rather than blurring them. We find Explorative Models (XMs) useful in two settings. First, increasing exploration adds a third pretraining axis beyond parameters and data for existing generative models-where scaling exploration monotonically improves performance across both continuous and discrete domains (images, video, and language). Notably, gains from exploration increase with scale, climbing from 7% to 36% as data scales and from 13% to 23% as models grow, with efficiency gains more than doubling at 3x the compute. Concretely, exploration improves FLOP efficiency by 4.1x, sample efficiency by 6.2x, parameter efficiency by 47%, lifts the strongest of image-generation recipes to a near-state-of-the-art 1.43 FID on ImageNet without guidance, enables scaling how end-to-end existing models are, and unlocks scaling generalization. Second, XMs enable end-to-end reconstructive generative modeling, matching diffusion on control tasks with 16-256x fewer inference steps. Together, these results establish XMs as both a new pretraining axis for existing generative models and a standalone end-to-end generative modeling paradigm.",
-          "hf_url": "https://huggingface.co/papers/2607.27372",
-          "arxiv_url": "https://arxiv.org/abs/2607.27372",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2607.27372",
-          "papers_cool_url": "https://papers.cool/arxiv/2607.27372",
-          "github_url": "",
-          "submitted_by": "Alexi Gladstone",
-          "submitted_at": "2026-07-31T00:00:00.000Z",
-          "upvotes": 2,
-          "comments": 1,
-          "topic_key": "other_ai",
-          "topic_label": "Other AI",
-          "matched_terms": [],
-          "classification_source": "rule",
-          "classification_confidence": null,
-          "one_sentence_summary": "The deep learning revolution, kicked off by AlexNet, taught us that end-to-end training beats decomposing a problem into hand-designed stages.",
-          "upvote_label": "2 upvotes"
         }
       ]
     },
@@ -1563,7 +1563,7 @@
       "topic_label": "Multimodal Understanding and Vision",
       "count": 4,
       "share": 10.53,
-      "summary": "Multimodal Understanding and Vision contributes 4 papers (10.53%), led by “RefCaptioner: Multi-Reference Image-Grounded Video Captioning” with 24 upvotes.",
+      "summary": "Multimodal Understanding and Vision contributes 4 papers (10.53%), led by “RefCaptioner: Multi-Reference Image-Grounded Video Captioning” with 25 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-31",
@@ -1598,8 +1598,8 @@
           "github_url": "",
           "submitted_by": "Yang Shi",
           "submitted_at": "2026-07-31T00:00:00.000Z",
-          "upvotes": 24,
-          "comments": 1,
+          "upvotes": 25,
+          "comments": 2,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [
@@ -1609,7 +1609,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Existing video captioning models generate natural descriptions of video content but cannot explicitly ground local visual elements to multiple reference images.",
-          "upvote_label": "24 upvotes"
+          "upvote_label": "25 upvotes"
         },
         {
           "report_date": "2026-07-31",
@@ -1638,8 +1638,8 @@
           "github_url": "",
           "submitted_by": "Siyu Yan",
           "submitted_at": "2026-07-31T00:00:00.000Z",
-          "upvotes": 21,
-          "comments": 1,
+          "upvotes": 22,
+          "comments": 2,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [
@@ -1649,7 +1649,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Multimodal large language models increasingly use sketches, annotations, tools, and intermediate images during reasoning, but it remains unclear whether they truly rely on these visual states.",
-          "upvote_label": "21 upvotes"
+          "upvote_label": "22 upvotes"
         },
         {
           "report_date": "2026-07-31",
@@ -1678,7 +1678,7 @@
           "submitted_by": "taesiri",
           "submitted_at": "2026-07-31T00:00:00.000Z",
           "upvotes": 16,
-          "comments": 0,
+          "comments": 1,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [
@@ -1713,7 +1713,7 @@
           "submitted_by": "Yi-Cheng Lin",
           "submitted_at": "2026-07-31T00:00:00.000Z",
           "upvotes": 0,
-          "comments": 1,
+          "comments": 2,
           "topic_key": "multimodal_vision",
           "topic_label": "Multimodal Understanding and Vision",
           "matched_terms": [
@@ -1730,7 +1730,7 @@
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "count": 4,
       "share": 10.53,
-      "summary": "Reasoning, Alignment, and Evaluation contributes 4 papers (10.53%), led by “Beacon: Knowing When and How to Perform Agentic Visual Reasoning” with 44 upvotes.",
+      "summary": "Reasoning, Alignment, and Evaluation contributes 4 papers (10.53%), led by “Beacon: Knowing When and How to Perform Agentic Visual Reasoning” with 46 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-31",
@@ -1760,8 +1760,8 @@
           "github_url": "",
           "submitted_by": "Yang Shi",
           "submitted_at": "2026-07-31T00:00:00.000Z",
-          "upvotes": 44,
-          "comments": 1,
+          "upvotes": 46,
+          "comments": 2,
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [
@@ -1770,7 +1770,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "The fundamental goal of agentic visual reasoning is to improve the success rate of multimodal large language models (MLLMs) on complex tasks, rather than merely equipping them with a sophisticated yet inefficient…",
-          "upvote_label": "44 upvotes"
+          "upvote_label": "46 upvotes"
         },
         {
           "report_date": "2026-07-31",
@@ -1793,7 +1793,7 @@
           "submitted_by": "Mingxuan Du",
           "submitted_at": "2026-07-31T00:00:00.000Z",
           "upvotes": 30,
-          "comments": 1,
+          "comments": 2,
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [
@@ -1822,7 +1822,7 @@
           "submitted_by": "Pere Martra",
           "submitted_at": "2026-07-31T00:00:00.000Z",
           "upvotes": 2,
-          "comments": 2,
+          "comments": 3,
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [
@@ -1858,7 +1858,7 @@
           "submitted_by": "S M Jubaer",
           "submitted_at": "2026-07-31T00:00:00.000Z",
           "upvotes": 0,
-          "comments": 1,
+          "comments": 2,
           "topic_key": "reasoning_alignment_eval",
           "topic_label": "Reasoning, Alignment, and Evaluation",
           "matched_terms": [
@@ -1875,7 +1875,7 @@
       "topic_label": "Multimodal Agents",
       "count": 1,
       "share": 2.63,
-      "summary": "Multimodal Agents contributes 1 papers (2.63%), led by “LEDGERMIND: Provenance-Constrained Multimodal Agentic Reasoning with a Structured Evidence Ledger” with 9 upvotes.",
+      "summary": "Multimodal Agents contributes 1 papers (2.63%), led by “LEDGERMIND: Provenance-Constrained Multimodal Agentic Reasoning with a Structured Evidence Ledger” with 10 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-31",
@@ -1898,8 +1898,8 @@
           "github_url": "",
           "submitted_by": "Enjun Du",
           "submitted_at": "2026-07-31T00:00:00.000Z",
-          "upvotes": 9,
-          "comments": 1,
+          "upvotes": 10,
+          "comments": 2,
           "topic_key": "multimodal_agents",
           "topic_label": "Multimodal Agents",
           "matched_terms": [
@@ -1909,7 +1909,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Multimodal agents for visual question answering increasingly operate as multi-step trajectories that interleave perception, retrieval, and reasoning, yet evaluation still largely reduces to final-answer accuracy.",
-          "upvote_label": "9 upvotes"
+          "upvote_label": "10 upvotes"
         }
       ]
     },
@@ -1950,7 +1950,7 @@
           "submitted_by": "taesiri",
           "submitted_at": "2026-07-31T00:00:00.000Z",
           "upvotes": 34,
-          "comments": 0,
+          "comments": 1,
           "topic_key": "robotics_embodied",
           "topic_label": "Robotics and Embodied AI",
           "matched_terms": [
@@ -1965,6 +1965,34 @@
     }
   ],
   "papers": [
+    {
+      "report_date": "2026-07-31",
+      "paper_id": "2607.28618",
+      "title": "AskChem: Claim-Centered Infrastructure for Chemistry Literature Synthesis",
+      "authors": [
+        "Bing Yan",
+        "Gregory Wolfe",
+        "Stefano Martiniani",
+        "Kyunghyun Cho"
+      ],
+      "abstract": "Chemistry literature synthesis often requires assembling specific findings scattered across many publications, yet existing literature-search systems primarily return ranked document lists. As a result, scientists and AI agents need to locate relevant information, verify their provenance, and assemble cross-paper answers manually. We present AskChem, a claim-centered infrastructure for cross-paper chemistry search. AskChem changes the unit of retrieval from the paper to the provenance-carrying claim: each paper is converted into atomic, typed claims, each grounded by a source DOI and a verbatim quote or an explicit evidence locator. Over this shared claim store, AskChem exposes complementary structures for search and synthesis: a stabilized faceted taxonomy for hierarchical retrieval and browsing, an evidence graph linking claims through relations, and an exploratory living taxonomy that situates indexed papers under scientific principles. AskChem currently indexes 2.4M claims from 147K papers and provides a web interface, as well as REST, SDK, and MCP access for AI agents. On AskChem-Bench, grounding a GPT-5.5 reader in AskChem yields 100% resolvable DOIs, compared with 88.3% without retrieval, and the highest citation density among five tested systems. AskChem is live at https://askchem.org.",
+      "hf_url": "https://huggingface.co/papers/2607.28618",
+      "arxiv_url": "https://arxiv.org/abs/2607.28618",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.28618",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.28618",
+      "github_url": "",
+      "submitted_by": "Bing Yan",
+      "submitted_at": "2026-07-31T00:00:00.000Z",
+      "upvotes": 290,
+      "comments": 2,
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
+      "matched_terms": [],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Chemistry literature synthesis often requires assembling specific findings scattered across many publications, yet existing literature-search systems primarily return ranked document lists.",
+      "upvote_label": "290 upvotes"
+    },
     {
       "report_date": "2026-07-31",
       "paper_id": "2607.28227",
@@ -1995,8 +2023,8 @@
       "github_url": "",
       "submitted_by": "Quyu Kong",
       "submitted_at": "2026-07-31T00:00:00.000Z",
-      "upvotes": 252,
-      "comments": 3,
+      "upvotes": 277,
+      "comments": 7,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
       "matched_terms": [
@@ -2005,7 +2033,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "GUI agents have the potential to become a general purpose executor over existing digital devices.",
-      "upvote_label": "252 upvotes"
+      "upvote_label": "277 upvotes"
     },
     {
       "report_date": "2026-07-31",
@@ -2038,8 +2066,8 @@
       "github_url": "",
       "submitted_by": "Xichong Zhang",
       "submitted_at": "2026-07-31T00:00:00.000Z",
-      "upvotes": 211,
-      "comments": 2,
+      "upvotes": 252,
+      "comments": 3,
       "topic_key": "retrieval_knowledge",
       "topic_label": "Retrieval, Knowledge, and RAG",
       "matched_terms": [
@@ -2048,68 +2076,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Recent advances in AI agents have increasingly internalized native capabilities into their underlying foundation models, giving rise to multimodal foundation models and large reasoning models.",
-      "upvote_label": "211 upvotes"
-    },
-    {
-      "report_date": "2026-07-31",
-      "paper_id": "2607.28618",
-      "title": "AskChem: Claim-Centered Infrastructure for Chemistry Literature Synthesis",
-      "authors": [
-        "Bing Yan",
-        "Gregory Wolfe",
-        "Stefano Martiniani",
-        "Kyunghyun Cho"
-      ],
-      "abstract": "Chemistry literature synthesis often requires assembling specific findings scattered across many publications, yet existing literature-search systems primarily return ranked document lists. As a result, scientists and AI agents need to locate relevant information, verify their provenance, and assemble cross-paper answers manually. We present AskChem, a claim-centered infrastructure for cross-paper chemistry search. AskChem changes the unit of retrieval from the paper to the provenance-carrying claim: each paper is converted into atomic, typed claims, each grounded by a source DOI and a verbatim quote or an explicit evidence locator. Over this shared claim store, AskChem exposes complementary structures for search and synthesis: a stabilized faceted taxonomy for hierarchical retrieval and browsing, an evidence graph linking claims through relations, and an exploratory living taxonomy that situates indexed papers under scientific principles. AskChem currently indexes 2.4M claims from 147K papers and provides a web interface, as well as REST, SDK, and MCP access for AI agents. On AskChem-Bench, grounding a GPT-5.5 reader in AskChem yields 100% resolvable DOIs, compared with 88.3% without retrieval, and the highest citation density among five tested systems. AskChem is live at https://askchem.org.",
-      "hf_url": "https://huggingface.co/papers/2607.28618",
-      "arxiv_url": "https://arxiv.org/abs/2607.28618",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.28618",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.28618",
-      "github_url": "",
-      "submitted_by": "Bing Yan",
-      "submitted_at": "2026-07-31T00:00:00.000Z",
-      "upvotes": 199,
-      "comments": 1,
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
-      "matched_terms": [],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Chemistry literature synthesis often requires assembling specific findings scattered across many publications, yet existing literature-search systems primarily return ranked document lists.",
-      "upvote_label": "199 upvotes"
-    },
-    {
-      "report_date": "2026-07-31",
-      "paper_id": "2607.28624",
-      "title": "PhiZero: A World Model Built Around Physical Language",
-      "authors": [
-        "Shuyao Shang",
-        "Yuqi Wang",
-        "Ruopeng Gao",
-        "Xu Chen",
-        "Tieniu Tan",
-        "Lue Fan",
-        "Zhaoxiang Zhang"
-      ],
-      "abstract": "We introduce PhiZero, a physical world model built around physical language, a compact discrete representation of world-state transitions. Existing physical world models typically predict future videos directly in pixel space, leaving the underlying world dynamics implicit within high-dimensional visual predictors. Motivated by humans' ability to abstract predictive structure from visual experience and organize it in natural language for explicit reasoning, we learn physical language from in-the-wild videos through self-supervision and use it to explicitly reason about how the physical world evolves. Accordingly, PhiZero adopts a reason-then-render paradigm: it first infers future world evolution as a physical-language sequence and then renders the inferred transitions into videos. Extensive experiments across generation and understanding benchmarks validate the ability of PhiZero to model physically coherent world evolution. We further show its potential for realistic and interactive world modeling, fine-grained action-conditioned simulation, and zero-shot motion transfer.",
-      "hf_url": "https://huggingface.co/papers/2607.28624",
-      "arxiv_url": "https://arxiv.org/abs/2607.28624",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.28624",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.28624",
-      "github_url": "",
-      "submitted_by": "taesiri",
-      "submitted_at": "2026-07-31T00:00:00.000Z",
-      "upvotes": 148,
-      "comments": 1,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
-      "matched_terms": [
-        "\\blanguage\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "We introduce PhiZero, a physical world model built around physical language, a compact discrete representation of world-state transitions.",
-      "upvote_label": "148 upvotes"
+      "upvote_label": "252 upvotes"
     },
     {
       "report_date": "2026-07-31",
@@ -2149,8 +2116,8 @@
       "github_url": "",
       "submitted_by": "Kaiyan Zhang",
       "submitted_at": "2026-07-31T00:00:00.000Z",
-      "upvotes": 121,
-      "comments": 1,
+      "upvotes": 161,
+      "comments": 2,
       "topic_key": "learning_theory",
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [
@@ -2160,7 +2127,40 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Recursive self-improvement (RSI) requires AI systems that improve the process of building AI (i.e., AI4AI); machine learning engineering (MLE) offers a concrete, executable testbed for studying this capability.",
-      "upvote_label": "121 upvotes"
+      "upvote_label": "161 upvotes"
+    },
+    {
+      "report_date": "2026-07-31",
+      "paper_id": "2607.28624",
+      "title": "PhiZero: A World Model Built Around Physical Language",
+      "authors": [
+        "Shuyao Shang",
+        "Yuqi Wang",
+        "Ruopeng Gao",
+        "Xu Chen",
+        "Tieniu Tan",
+        "Lue Fan",
+        "Zhaoxiang Zhang"
+      ],
+      "abstract": "We introduce PhiZero, a physical world model built around physical language, a compact discrete representation of world-state transitions. Existing physical world models typically predict future videos directly in pixel space, leaving the underlying world dynamics implicit within high-dimensional visual predictors. Motivated by humans' ability to abstract predictive structure from visual experience and organize it in natural language for explicit reasoning, we learn physical language from in-the-wild videos through self-supervision and use it to explicitly reason about how the physical world evolves. Accordingly, PhiZero adopts a reason-then-render paradigm: it first infers future world evolution as a physical-language sequence and then renders the inferred transitions into videos. Extensive experiments across generation and understanding benchmarks validate the ability of PhiZero to model physically coherent world evolution. We further show its potential for realistic and interactive world modeling, fine-grained action-conditioned simulation, and zero-shot motion transfer.",
+      "hf_url": "https://huggingface.co/papers/2607.28624",
+      "arxiv_url": "https://arxiv.org/abs/2607.28624",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.28624",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.28624",
+      "github_url": "",
+      "submitted_by": "taesiri",
+      "submitted_at": "2026-07-31T00:00:00.000Z",
+      "upvotes": 155,
+      "comments": 3,
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
+      "matched_terms": [
+        "\\blanguage\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "We introduce PhiZero, a physical world model built around physical language, a compact discrete representation of world-state transitions.",
+      "upvote_label": "155 upvotes"
     },
     {
       "report_date": "2026-07-31",
@@ -2204,8 +2204,8 @@
       "github_url": "",
       "submitted_by": "Lin Chen",
       "submitted_at": "2026-07-31T00:00:00.000Z",
-      "upvotes": 61,
-      "comments": 1,
+      "upvotes": 64,
+      "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
       "matched_terms": [
@@ -2214,7 +2214,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Text-to-video models have achieved remarkable visual quality, yet they still struggle to generate physically consistent dynamics because the temporal evolution of a scene must be inferred implicitly from a highly…",
-      "upvote_label": "61 upvotes"
+      "upvote_label": "64 upvotes"
     },
     {
       "report_date": "2026-07-31",
@@ -2237,8 +2237,8 @@
       "github_url": "",
       "submitted_by": "Rubin Wei",
       "submitted_at": "2026-07-31T00:00:00.000Z",
-      "upvotes": 44,
-      "comments": 1,
+      "upvotes": 48,
+      "comments": 2,
       "topic_key": "retrieval_knowledge",
       "topic_label": "Retrieval, Knowledge, and RAG",
       "matched_terms": [
@@ -2247,7 +2247,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Decoder-only language models entangle long-term memory and reasoning in a single parameter set, making it difficult to scale memory capacity independently.",
-      "upvote_label": "44 upvotes"
+      "upvote_label": "48 upvotes"
     },
     {
       "report_date": "2026-07-31",
@@ -2277,8 +2277,8 @@
       "github_url": "",
       "submitted_by": "Yang Shi",
       "submitted_at": "2026-07-31T00:00:00.000Z",
-      "upvotes": 44,
-      "comments": 1,
+      "upvotes": 46,
+      "comments": 2,
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [
@@ -2287,7 +2287,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "The fundamental goal of agentic visual reasoning is to improve the success rate of multimodal large language models (MLLMs) on complex tasks, rather than merely equipping them with a sophisticated yet inefficient…",
-      "upvote_label": "44 upvotes"
+      "upvote_label": "46 upvotes"
     },
     {
       "report_date": "2026-07-31",
@@ -2310,8 +2310,8 @@
       "github_url": "",
       "submitted_by": "wangpengyu",
       "submitted_at": "2026-07-31T00:00:00.000Z",
-      "upvotes": 38,
-      "comments": 3,
+      "upvotes": 40,
+      "comments": 4,
       "topic_key": "retrieval_knowledge",
       "topic_label": "Retrieval, Knowledge, and RAG",
       "matched_terms": [
@@ -2320,7 +2320,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Retrieval-augmented generation (RAG) spans lexical and dense retrieval, graph-based indexing, and agentic search, but these paradigms are usually evaluated on different benchmarks at one corpus size, leaving their…",
-      "upvote_label": "38 upvotes"
+      "upvote_label": "40 upvotes"
     },
     {
       "report_date": "2026-07-31",
@@ -2349,15 +2349,15 @@
       "github_url": "",
       "submitted_by": "Yuran Wang",
       "submitted_at": "2026-07-31T00:00:00.000Z",
-      "upvotes": 35,
-      "comments": 1,
+      "upvotes": 39,
+      "comments": 2,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
       "matched_terms": [],
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Large language model training in open-ended domains lacks verifiable rewards, making task preferences difficult to formalize as effective supervision.",
-      "upvote_label": "35 upvotes"
+      "upvote_label": "39 upvotes"
     },
     {
       "report_date": "2026-07-31",
@@ -2378,15 +2378,15 @@
       "github_url": "",
       "submitted_by": "Mingxuan Du",
       "submitted_at": "2026-07-31T00:00:00.000Z",
-      "upvotes": 35,
-      "comments": 1,
+      "upvotes": 37,
+      "comments": 2,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
       "matched_terms": [],
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Text-to-image and personalized editing models now synthesize high-fidelity single-subject images with ease.",
-      "upvote_label": "35 upvotes"
+      "upvote_label": "37 upvotes"
     },
     {
       "report_date": "2026-07-31",
@@ -2419,7 +2419,7 @@
       "submitted_by": "taesiri",
       "submitted_at": "2026-07-31T00:00:00.000Z",
       "upvotes": 34,
-      "comments": 0,
+      "comments": 1,
       "topic_key": "robotics_embodied",
       "topic_label": "Robotics and Embodied AI",
       "matched_terms": [
@@ -2451,7 +2451,7 @@
       "submitted_by": "Mingxuan Du",
       "submitted_at": "2026-07-31T00:00:00.000Z",
       "upvotes": 30,
-      "comments": 1,
+      "comments": 2,
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [
@@ -2495,8 +2495,8 @@
       "github_url": "",
       "submitted_by": "Yang Shi",
       "submitted_at": "2026-07-31T00:00:00.000Z",
-      "upvotes": 24,
-      "comments": 1,
+      "upvotes": 25,
+      "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [
@@ -2506,7 +2506,47 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Existing video captioning models generate natural descriptions of video content but cannot explicitly ground local visual elements to multiple reference images.",
-      "upvote_label": "24 upvotes"
+      "upvote_label": "25 upvotes"
+    },
+    {
+      "report_date": "2026-07-31",
+      "paper_id": "2607.26769",
+      "title": "See2Think: Do Multimodal Models Really Use Intermediate Visual States?",
+      "authors": [
+        "Siyu Yan",
+        "Zhuoran Yan",
+        "Haiying Xu",
+        "Panhao Zhou",
+        "Jingyu Chen",
+        "Chenhao Ji",
+        "Shuo Cao",
+        "Yongheng Zhang",
+        "Haoze Liu",
+        "Siyu Zhang",
+        "Xiwen Gu",
+        "Yihao Liu",
+        "Alex Jinpeng Wang"
+      ],
+      "abstract": "Multimodal large language models increasingly use sketches, annotations, tools, and intermediate images during reasoning, but it remains unclear whether they truly rely on these visual states. Existing benchmarks are limited both by task collections with narrow coverage or partially text-solvable samples and by evaluations that emphasize final answers without diagnosing how intermediate visual states are generated, rendered, and used. We introduce See2Think, a unified evaluation framework comprising See2ThinkBench and Visual Action-of-Thought (VAoT). See2ThinkBench contains 1,200 open-ended, visually dependent problems across 12 task categories spanning 2D structured, 3D scene, and real-world reasoning. VAoT records textual thoughts, visual actions, rendered states, and subsequent reasoning under four controlled inference settings. Evaluating representative proprietary and open-source multimodal models, we find that visual reasoning is strongly model- and environment-dependent, with no single setting consistently dominating across tasks. Process analysis further shows that models usually select relevant visual operations, while faithful rendering remains the clearest bottleneck and high feedback uptake does not necessarily translate into accuracy gains. Under task-relevant corrupted feedback, models exhibit behavioral dependence on visual states, with accuracy dropping by over 10 percentage points in controlled interventions.",
+      "hf_url": "https://huggingface.co/papers/2607.26769",
+      "arxiv_url": "https://arxiv.org/abs/2607.26769",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.26769",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.26769",
+      "github_url": "",
+      "submitted_by": "Siyu Yan",
+      "submitted_at": "2026-07-31T00:00:00.000Z",
+      "upvotes": 22,
+      "comments": 2,
+      "topic_key": "multimodal_vision",
+      "topic_label": "Multimodal Understanding and Vision",
+      "matched_terms": [
+        "\\bmultimodal\\b",
+        "\\bvisual\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Multimodal large language models increasingly use sketches, annotations, tools, and intermediate images during reasoning, but it remains unclear whether they truly rely on these visual states.",
+      "upvote_label": "22 upvotes"
     },
     {
       "report_date": "2026-07-31",
@@ -2536,7 +2576,7 @@
       "submitted_by": "YANG ZHOU",
       "submitted_at": "2026-07-31T00:00:00.000Z",
       "upvotes": 21,
-      "comments": 1,
+      "comments": 2,
       "topic_key": "learning_theory",
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [
@@ -2549,43 +2589,35 @@
     },
     {
       "report_date": "2026-07-31",
-      "paper_id": "2607.26769",
-      "title": "See2Think: Do Multimodal Models Really Use Intermediate Visual States?",
+      "paper_id": "2607.28582",
+      "title": "β-OPSD: Deriving with Policy Optimization, Training with Self-Distillation",
       "authors": [
-        "Siyu Yan",
-        "Zhuoran Yan",
-        "Haiying Xu",
-        "Panhao Zhou",
-        "Jingyu Chen",
-        "Chenhao Ji",
-        "Shuo Cao",
-        "Yongheng Zhang",
-        "Haoze Liu",
-        "Siyu Zhang",
-        "Xiwen Gu",
-        "Yihao Liu",
-        "Alex Jinpeng Wang"
+        "Jiawei Xu",
+        "Minghui Liu",
+        "Juzheng Zhang",
+        "Tom Goldstein",
+        "Furong Huang"
       ],
-      "abstract": "Multimodal large language models increasingly use sketches, annotations, tools, and intermediate images during reasoning, but it remains unclear whether they truly rely on these visual states. Existing benchmarks are limited both by task collections with narrow coverage or partially text-solvable samples and by evaluations that emphasize final answers without diagnosing how intermediate visual states are generated, rendered, and used. We introduce See2Think, a unified evaluation framework comprising See2ThinkBench and Visual Action-of-Thought (VAoT). See2ThinkBench contains 1,200 open-ended, visually dependent problems across 12 task categories spanning 2D structured, 3D scene, and real-world reasoning. VAoT records textual thoughts, visual actions, rendered states, and subsequent reasoning under four controlled inference settings. Evaluating representative proprietary and open-source multimodal models, we find that visual reasoning is strongly model- and environment-dependent, with no single setting consistently dominating across tasks. Process analysis further shows that models usually select relevant visual operations, while faithful rendering remains the clearest bottleneck and high feedback uptake does not necessarily translate into accuracy gains. Under task-relevant corrupted feedback, models exhibit behavioral dependence on visual states, with accuracy dropping by over 10 percentage points in controlled interventions.",
-      "hf_url": "https://huggingface.co/papers/2607.26769",
-      "arxiv_url": "https://arxiv.org/abs/2607.26769",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.26769",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.26769",
+      "abstract": "On-policy self-distillation (OPSD) is a promising approach to improve reasoning language models, but it remains brittle in practice: making it work reliably often requires substantial engineering effort. We identify a structural source of this difficulty: vanilla OPSD is precisely the β=1 member of a broader policy-optimization family, where β weights the KL penalty anchoring the student to a reference policy. This equivalence turns β from an implicit value fixed at one into a controllable regularization parameter, yielding a more general formulation that trades off proximity to a reference policy against privileged teacher guidance. We introduce β-OPSD and derive its optimal policy as a geometric interpolation between the reference policy and the privileged teacher. Directly optimizing this objective with reinforcement learning, however, would be costly and high-variance. Rather than optimize the RL objective directly, we turn its closed-form solution into a distillation target. Each value of β selects a target along the reference-to-teacher path, which we implement efficiently by mixing their token-level logits. In this way, inexpensive distillation approximates the solution of expensive policy optimization. Return-to-go credit assignment further aligns token updates with the sequence-level objective while retaining the simplicity of OPSD. Experiments on mathematical reasoning benchmarks show that β-OPSD consistently outperforms vanilla OPSD, improving optimization stability and downstream reasoning performance. Our results provide a principled route from self-distillation to policy optimization and back without sacrificing the efficiency that makes OPSD practical.",
+      "hf_url": "https://huggingface.co/papers/2607.28582",
+      "arxiv_url": "https://arxiv.org/abs/2607.28582",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.28582",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.28582",
       "github_url": "",
-      "submitted_by": "Siyu Yan",
+      "submitted_by": "Minghui Liu",
       "submitted_at": "2026-07-31T00:00:00.000Z",
-      "upvotes": 21,
-      "comments": 1,
-      "topic_key": "multimodal_vision",
-      "topic_label": "Multimodal Understanding and Vision",
+      "upvotes": 17,
+      "comments": 2,
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [
-        "\\bmultimodal\\b",
-        "\\bvisual\\b"
+        "\\btraining\\b",
+        "\\boptimization\\b"
       ],
       "classification_source": "rule",
       "classification_confidence": null,
-      "one_sentence_summary": "Multimodal large language models increasingly use sketches, annotations, tools, and intermediate images during reasoning, but it remains unclear whether they truly rely on these visual states.",
-      "upvote_label": "21 upvotes"
+      "one_sentence_summary": "On-policy self-distillation (OPSD) is a promising approach to improve reasoning language models, but it remains brittle in practice: making it work reliably often requires substantial engineering effort.",
+      "upvote_label": "17 upvotes"
     },
     {
       "report_date": "2026-07-31",
@@ -2614,7 +2646,7 @@
       "submitted_by": "taesiri",
       "submitted_at": "2026-07-31T00:00:00.000Z",
       "upvotes": 16,
-      "comments": 0,
+      "comments": 1,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [
@@ -2644,7 +2676,7 @@
       "submitted_by": "kaipeng",
       "submitted_at": "2026-07-31T00:00:00.000Z",
       "upvotes": 16,
-      "comments": 2,
+      "comments": 3,
       "topic_key": "learning_theory",
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [
@@ -2658,35 +2690,40 @@
     },
     {
       "report_date": "2026-07-31",
-      "paper_id": "2607.28582",
-      "title": "β-OPSD: Deriving with Policy Optimization, Training with Self-Distillation",
+      "paper_id": "2607.28410",
+      "title": "Can Large Language Models Execute Parent Orders?",
       "authors": [
-        "Jiawei Xu",
-        "Minghui Liu",
-        "Juzheng Zhang",
-        "Tom Goldstein",
-        "Furong Huang"
+        "Zane Shen",
+        "Xinli Xu",
+        "Guangyi Zhang",
+        "Jialong Chen",
+        "Jinsong Zhou",
+        "Cong Chen",
+        "Guibao Shen",
+        "Dongyu Yan",
+        "Luozhou Wang",
+        "Zhen Yang"
       ],
-      "abstract": "On-policy self-distillation (OPSD) is a promising approach to improve reasoning language models, but it remains brittle in practice: making it work reliably often requires substantial engineering effort. We identify a structural source of this difficulty: vanilla OPSD is precisely the β=1 member of a broader policy-optimization family, where β weights the KL penalty anchoring the student to a reference policy. This equivalence turns β from an implicit value fixed at one into a controllable regularization parameter, yielding a more general formulation that trades off proximity to a reference policy against privileged teacher guidance. We introduce β-OPSD and derive its optimal policy as a geometric interpolation between the reference policy and the privileged teacher. Directly optimizing this objective with reinforcement learning, however, would be costly and high-variance. Rather than optimize the RL objective directly, we turn its closed-form solution into a distillation target. Each value of β selects a target along the reference-to-teacher path, which we implement efficiently by mixing their token-level logits. In this way, inexpensive distillation approximates the solution of expensive policy optimization. Return-to-go credit assignment further aligns token updates with the sequence-level objective while retaining the simplicity of OPSD. Experiments on mathematical reasoning benchmarks show that β-OPSD consistently outperforms vanilla OPSD, improving optimization stability and downstream reasoning performance. Our results provide a principled route from self-distillation to policy optimization and back without sacrificing the efficiency that makes OPSD practical.",
-      "hf_url": "https://huggingface.co/papers/2607.28582",
-      "arxiv_url": "https://arxiv.org/abs/2607.28582",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.28582",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.28582",
+      "abstract": "Parent-order execution is a core problem in algorithmic trading, where the goal is to split a large order into smaller orders while reducing execution costs. Existing approaches either rely on pre-specified market assumptions that may not hold in practice, or require task-specific training that limits adaptability to new settings. To overcome these limitations, we present the first systematic study of large language models (LLMs) for parent-order execution. This extends the use of LLMs in finance from what to trade to how to execute. We propose PACE (Plan-Ahead Controlled Execution), a hierarchical framework that decomposes parent-order execution into long-horizon planning and short-horizon execution, requiring neither explicit market assumptions nor task-specific training. Experiments on Shenzhen Stock Exchange Level-1 data show that PACE outperforms TWAP, Almgren-Chriss, and learning-based baselines, exceeding the strongest baseline by 0.65 bps. Behavioral analysis reveals that LLMs make execution decisions differently from human investors: higher model confidence predicts better performance rather than worse returns, and the model trades earlier rather than procrastinating toward the deadline. These findings suggest that LLMs can complement human traders in execution decisions.",
+      "hf_url": "https://huggingface.co/papers/2607.28410",
+      "arxiv_url": "https://arxiv.org/abs/2607.28410",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.28410",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.28410",
       "github_url": "",
-      "submitted_by": "Minghui Liu",
+      "submitted_by": "Zhen Yang",
       "submitted_at": "2026-07-31T00:00:00.000Z",
-      "upvotes": 13,
-      "comments": 1,
-      "topic_key": "learning_theory",
-      "topic_label": "Learning, Optimization, and Theory",
+      "upvotes": 14,
+      "comments": 2,
+      "topic_key": "llm_language",
+      "topic_label": "LLMs and Language",
       "matched_terms": [
-        "\\btraining\\b",
-        "\\boptimization\\b"
+        "\\blanguage models?\\b",
+        "\\blanguage\\b"
       ],
       "classification_source": "rule",
       "classification_confidence": null,
-      "one_sentence_summary": "On-policy self-distillation (OPSD) is a promising approach to improve reasoning language models, but it remains brittle in practice: making it work reliably often requires substantial engineering effort.",
-      "upvote_label": "13 upvotes"
+      "one_sentence_summary": "Parent-order execution is a core problem in algorithmic trading, where the goal is to split a large order into smaller orders while reducing execution costs.",
+      "upvote_label": "14 upvotes"
     },
     {
       "report_date": "2026-07-31",
@@ -2716,7 +2753,7 @@
       "submitted_by": "Rong Wu",
       "submitted_at": "2026-07-31T00:00:00.000Z",
       "upvotes": 13,
-      "comments": 1,
+      "comments": 2,
       "topic_key": "retrieval_knowledge",
       "topic_label": "Retrieval, Knowledge, and RAG",
       "matched_terms": [
@@ -2729,39 +2766,32 @@
     },
     {
       "report_date": "2026-07-31",
-      "paper_id": "2607.28410",
-      "title": "Can Large Language Models Execute Parent Orders?",
+      "paper_id": "2607.27958",
+      "title": "Σ-Mem: An Online Reliability Memory for LLM-based Multi-Agent Systems",
       "authors": [
-        "Zane Shen",
-        "Xinli Xu",
-        "Guangyi Zhang",
-        "Jialong Chen",
-        "Jinsong Zhou",
-        "Cong Chen",
-        "Guibao Shen",
-        "Dongyu Yan",
-        "Luozhou Wang",
-        "Zhen Yang"
+        "Peilin Feng",
+        "Suorong Yang",
+        "Soujanya Poria"
       ],
-      "abstract": "Parent-order execution is a core problem in algorithmic trading, where the goal is to split a large order into smaller orders while reducing execution costs. Existing approaches either rely on pre-specified market assumptions that may not hold in practice, or require task-specific training that limits adaptability to new settings. To overcome these limitations, we present the first systematic study of large language models (LLMs) for parent-order execution. This extends the use of LLMs in finance from what to trade to how to execute. We propose PACE (Plan-Ahead Controlled Execution), a hierarchical framework that decomposes parent-order execution into long-horizon planning and short-horizon execution, requiring neither explicit market assumptions nor task-specific training. Experiments on Shenzhen Stock Exchange Level-1 data show that PACE outperforms TWAP, Almgren-Chriss, and learning-based baselines, exceeding the strongest baseline by 0.65 bps. Behavioral analysis reveals that LLMs make execution decisions differently from human investors: higher model confidence predicts better performance rather than worse returns, and the model trades earlier rather than procrastinating toward the deadline. These findings suggest that LLMs can complement human traders in execution decisions.",
-      "hf_url": "https://huggingface.co/papers/2607.28410",
-      "arxiv_url": "https://arxiv.org/abs/2607.28410",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.28410",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.28410",
+      "abstract": "Memory is central to long-horizon LLM agents, yet existing memory systems primarily preserve interaction content rather than modeling which agents can be trusted and under what conditions. This limitation is particularly important in multi-agent systems, where a central model may be unable to directly verify plausible or correlated peer responses. We introduce Σ-Mem, an online reliability memory that records historical competence evidence for individual peers and peer relationship evidence across the peer set. Both forms of evidence are maintained as real symmetric states and updated from post-decision correctness feedback. By Weyl's inequality, the spectral change caused by each event-level update is bounded, enabling stable online adaptation without retraining the underlying models. Σ-Mem provides a general write-and-read interface: the same memory can be used for residual steering of a central model, response-free peer routing, or reliability-weighted voting. Across five Qwen-family models, Σ-Mem adapts to counterfactual reliability shifts and generalizes to unseen peers and task domains. Direct memory readouts also outperform majority voting and the best fixed peer over the full OOD evaluation set. Moreover, performance improves consistently as more correctness feedback becomes available, indicating that Σ-Mem progressively accumulates actionable reliability information. These results establish reliability memory as a reusable foundation for adaptive coordination in LLM-based multi-agent systems.",
+      "hf_url": "https://huggingface.co/papers/2607.27958",
+      "arxiv_url": "https://arxiv.org/abs/2607.27958",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.27958",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.27958",
       "github_url": "",
-      "submitted_by": "Zhen Yang",
+      "submitted_by": "Suorong Yang",
       "submitted_at": "2026-07-31T00:00:00.000Z",
       "upvotes": 12,
-      "comments": 1,
-      "topic_key": "llm_language",
-      "topic_label": "LLMs and Language",
+      "comments": 2,
+      "topic_key": "agents_planning",
+      "topic_label": "Agents and Planning",
       "matched_terms": [
-        "\\blanguage models?\\b",
-        "\\blanguage\\b"
+        "\\bmulti-agent\\b",
+        "\\bagents?\\b"
       ],
       "classification_source": "rule",
       "classification_confidence": null,
-      "one_sentence_summary": "Parent-order execution is a core problem in algorithmic trading, where the goal is to split a large order into smaller orders while reducing execution costs.",
+      "one_sentence_summary": "Memory is central to long-horizon LLM agents, yet existing memory systems primarily preserve interaction content rather than modeling which agents can be trusted and under what conditions.",
       "upvote_label": "12 upvotes"
     },
     {
@@ -2781,8 +2811,8 @@
       "github_url": "",
       "submitted_by": "Junhan Sun",
       "submitted_at": "2026-07-31T00:00:00.000Z",
-      "upvotes": 11,
-      "comments": 2,
+      "upvotes": 12,
+      "comments": 3,
       "topic_key": "retrieval_knowledge",
       "topic_label": "Retrieval, Knowledge, and RAG",
       "matched_terms": [
@@ -2791,6 +2821,33 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Forward latent world models predict how actions change a scene, but recover actions for a desired change only through expensive test-time search.",
+      "upvote_label": "12 upvotes"
+    },
+    {
+      "report_date": "2026-07-31",
+      "paper_id": "2607.27372",
+      "title": "Explorative Modeling: Unlocking a Third Pretraining Axis and End-to-End Generation",
+      "authors": [
+        "Alexi Gladstone",
+        "Heng Ji",
+        "Yilun Du"
+      ],
+      "abstract": "The deep learning revolution, kicked off by AlexNet, taught us that end-to-end training beats decomposing a problem into hand-designed stages. Generative modeling, however, has remained the exception-despite generative models being remarkably capable, they are still not trained end-to-end. This is because, at its core, generative modeling is about handling distributions with many modes, and existing scalable approaches handle this the same way, by factoring the generation procedure, which prevents end-to-end generation. In this work, we introduce Explorative Modeling, a new paradigm that instead factors the training loop, exploring K candidate matches between model generations and data, and training on the best, so predictions commit to modes rather than blurring them. We find Explorative Models (XMs) useful in two settings. First, increasing exploration adds a third pretraining axis beyond parameters and data for existing generative models-where scaling exploration monotonically improves performance across both continuous and discrete domains (images, video, and language). Notably, gains from exploration increase with scale, climbing from 7% to 36% as data scales and from 13% to 23% as models grow, with efficiency gains more than doubling at 3x the compute. Concretely, exploration improves FLOP efficiency by 4.1x, sample efficiency by 6.2x, parameter efficiency by 47%, lifts the strongest of image-generation recipes to a near-state-of-the-art 1.43 FID on ImageNet without guidance, enables scaling how end-to-end existing models are, and unlocks scaling generalization. Second, XMs enable end-to-end reconstructive generative modeling, matching diffusion on control tasks with 16-256x fewer inference steps. Together, these results establish XMs as both a new pretraining axis for existing generative models and a standalone end-to-end generative modeling paradigm.",
+      "hf_url": "https://huggingface.co/papers/2607.27372",
+      "arxiv_url": "https://arxiv.org/abs/2607.27372",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.27372",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.27372",
+      "github_url": "",
+      "submitted_by": "Alexi Gladstone",
+      "submitted_at": "2026-07-31T00:00:00.000Z",
+      "upvotes": 11,
+      "comments": 2,
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
+      "matched_terms": [],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "The deep learning revolution, kicked off by AlexNet, taught us that end-to-end training beats decomposing a problem into hand-designed stages.",
       "upvote_label": "11 upvotes"
     },
     {
@@ -2814,8 +2871,8 @@
       "github_url": "",
       "submitted_by": "Enjun Du",
       "submitted_at": "2026-07-31T00:00:00.000Z",
-      "upvotes": 9,
-      "comments": 1,
+      "upvotes": 10,
+      "comments": 2,
       "topic_key": "multimodal_agents",
       "topic_label": "Multimodal Agents",
       "matched_terms": [
@@ -2825,7 +2882,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Multimodal agents for visual question answering increasingly operate as multi-step trajectories that interleave perception, retrieval, and reasoning, yet evaluation still largely reduces to final-answer accuracy.",
-      "upvote_label": "9 upvotes"
+      "upvote_label": "10 upvotes"
     },
     {
       "report_date": "2026-07-31",
@@ -2855,7 +2912,7 @@
       "submitted_by": "Akshay Nambi",
       "submitted_at": "2026-07-31T00:00:00.000Z",
       "upvotes": 9,
-      "comments": 1,
+      "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
       "matched_terms": [
@@ -2868,33 +2925,32 @@
     },
     {
       "report_date": "2026-07-31",
-      "paper_id": "2607.27958",
-      "title": "Σ-Mem: An Online Reliability Memory for LLM-based Multi-Agent Systems",
+      "paper_id": "2607.27230",
+      "title": "Multi-Head Attention Residuals",
       "authors": [
-        "Peilin Feng",
-        "Suorong Yang",
-        "Soujanya Poria"
+        "Cheng Luo",
+        "Zefan Cai",
+        "Junjie Hu"
       ],
-      "abstract": "Memory is central to long-horizon LLM agents, yet existing memory systems primarily preserve interaction content rather than modeling which agents can be trusted and under what conditions. This limitation is particularly important in multi-agent systems, where a central model may be unable to directly verify plausible or correlated peer responses. We introduce Σ-Mem, an online reliability memory that records historical competence evidence for individual peers and peer relationship evidence across the peer set. Both forms of evidence are maintained as real symmetric states and updated from post-decision correctness feedback. By Weyl's inequality, the spectral change caused by each event-level update is bounded, enabling stable online adaptation without retraining the underlying models. Σ-Mem provides a general write-and-read interface: the same memory can be used for residual steering of a central model, response-free peer routing, or reliability-weighted voting. Across five Qwen-family models, Σ-Mem adapts to counterfactual reliability shifts and generalizes to unseen peers and task domains. Direct memory readouts also outperform majority voting and the best fixed peer over the full OOD evaluation set. Moreover, performance improves consistently as more correctness feedback becomes available, indicating that Σ-Mem progressively accumulates actionable reliability information. These results establish reliability memory as a reusable foundation for adaptive coordination in LLM-based multi-agent systems.",
-      "hf_url": "https://huggingface.co/papers/2607.27958",
-      "arxiv_url": "https://arxiv.org/abs/2607.27958",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.27958",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.27958",
+      "abstract": "Transformers propagate information across depth through a single additive residual stream: every sublayer reads only the most recent state. Attention residuals relax this by letting each sublayer attend, through a learned softmax. However, that read uses a single query shared across the entire width, so every feature subspace must read the depth history through one distribution. The cost of this forced compromise grows with how much the subspaces disagree about which layers to read, and disagreement grows with model width. We introduce Multi-Head Attention Residuals (MHAR): the routing query is reshaped into H per-subspace heads, each with its own softmax over the depth history. The read becomes block-diagonal, the reshape adds zero parameters and negligible compute, and H = 1 recovers attention residuals exactly. Trained from scratch on a deduplicated Nemotron-based anneal corpus that is quality-filtered and STEM- and code-heavy, MHAR improves validation loss over a standard Transformer at 100M, 350M, and 1B (-0.061, -0.149, and -0.140). It achieves the best result among four methods in every setting, with the gain increasing from 100M to the larger scales. The head count is a real design axis rather than a free knob: validation loss is U-shaped with respect to H, with a flat optimum at H = 4 or H = 8 across scales. We adopt H = 8 for large-scale models; over-splitting beyond this point (H = 16) consistently gives back part of the gain. A direct probe of the trained queries confirms that learned subspace disagreement is the underlying driver. Fused Triton routing kernels increase attention-residual training throughput from 0.2-0.5x to 0.55-0.88x of the baseline while maintaining near-baseline peak memory. An identity-preserving conversion using delta attention residuals supports 8B mid-training, yielding improvements of +3.2 on GSM8K and +3.1 on GPQA.",
+      "hf_url": "https://huggingface.co/papers/2607.27230",
+      "arxiv_url": "https://arxiv.org/abs/2607.27230",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.27230",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.27230",
       "github_url": "",
-      "submitted_by": "Suorong Yang",
+      "submitted_by": "chengluo",
       "submitted_at": "2026-07-31T00:00:00.000Z",
-      "upvotes": 7,
-      "comments": 1,
-      "topic_key": "agents_planning",
-      "topic_label": "Agents and Planning",
+      "upvotes": 8,
+      "comments": 3,
+      "topic_key": "learning_theory",
+      "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [
-        "\\bmulti-agent\\b",
-        "\\bagents?\\b"
+        "\\battention\\b"
       ],
       "classification_source": "rule",
       "classification_confidence": null,
-      "one_sentence_summary": "Memory is central to long-horizon LLM agents, yet existing memory systems primarily preserve interaction content rather than modeling which agents can be trusted and under what conditions.",
-      "upvote_label": "7 upvotes"
+      "one_sentence_summary": "Transformers propagate information across depth through a single additive residual stream: every sublayer reads only the most recent state.",
+      "upvote_label": "8 upvotes"
     },
     {
       "report_date": "2026-07-31",
@@ -2922,7 +2978,7 @@
       "submitted_by": "Sizhe Zhou",
       "submitted_at": "2026-07-31T00:00:00.000Z",
       "upvotes": 6,
-      "comments": 1,
+      "comments": 2,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [
@@ -2931,35 +2987,6 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Deployed LLM agents increasingly keep their long-term memory as a filesystem: a directory tree of markdown files that the agent itself reads, writes, and reorganizes through generic file tools.",
-      "upvote_label": "6 upvotes"
-    },
-    {
-      "report_date": "2026-07-31",
-      "paper_id": "2607.27230",
-      "title": "Multi-Head Attention Residuals",
-      "authors": [
-        "Cheng Luo",
-        "Zefan Cai",
-        "Junjie Hu"
-      ],
-      "abstract": "Transformers propagate information across depth through a single additive residual stream: every sublayer reads only the most recent state. Attention residuals relax this by letting each sublayer attend, through a learned softmax. However, that read uses a single query shared across the entire width, so every feature subspace must read the depth history through one distribution. The cost of this forced compromise grows with how much the subspaces disagree about which layers to read, and disagreement grows with model width. We introduce Multi-Head Attention Residuals (MHAR): the routing query is reshaped into H per-subspace heads, each with its own softmax over the depth history. The read becomes block-diagonal, the reshape adds zero parameters and negligible compute, and H = 1 recovers attention residuals exactly. Trained from scratch on a deduplicated Nemotron-based anneal corpus that is quality-filtered and STEM- and code-heavy, MHAR improves validation loss over a standard Transformer at 100M, 350M, and 1B (-0.061, -0.149, and -0.140). It achieves the best result among four methods in every setting, with the gain increasing from 100M to the larger scales. The head count is a real design axis rather than a free knob: validation loss is U-shaped with respect to H, with a flat optimum at H = 4 or H = 8 across scales. We adopt H = 8 for large-scale models; over-splitting beyond this point (H = 16) consistently gives back part of the gain. A direct probe of the trained queries confirms that learned subspace disagreement is the underlying driver. Fused Triton routing kernels increase attention-residual training throughput from 0.2-0.5x to 0.55-0.88x of the baseline while maintaining near-baseline peak memory. An identity-preserving conversion using delta attention residuals supports 8B mid-training, yielding improvements of +3.2 on GSM8K and +3.1 on GPQA.",
-      "hf_url": "https://huggingface.co/papers/2607.27230",
-      "arxiv_url": "https://arxiv.org/abs/2607.27230",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.27230",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.27230",
-      "github_url": "",
-      "submitted_by": "chengluo",
-      "submitted_at": "2026-07-31T00:00:00.000Z",
-      "upvotes": 6,
-      "comments": 2,
-      "topic_key": "learning_theory",
-      "topic_label": "Learning, Optimization, and Theory",
-      "matched_terms": [
-        "\\battention\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Transformers propagate information across depth through a single additive residual stream: every sublayer reads only the most recent state.",
       "upvote_label": "6 upvotes"
     },
     {
@@ -2983,7 +3010,7 @@
       "submitted_by": "Tianyu Wang",
       "submitted_at": "2026-07-31T00:00:00.000Z",
       "upvotes": 4,
-      "comments": 1,
+      "comments": 2,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
       "matched_terms": [],
@@ -2991,36 +3018,6 @@
       "classification_confidence": null,
       "one_sentence_summary": "Speculative Decoding (SD) accelerates large language model inference by allowing a lightweight draft model to propose tokens that are subsequently verified in parallel by a larger target model.",
       "upvote_label": "4 upvotes"
-    },
-    {
-      "report_date": "2026-07-31",
-      "paper_id": "2607.20891",
-      "title": "Is Deep Research Reliable? Misleading Knowledge Induces False Conclusions",
-      "authors": [
-        "Pengyu Zhu",
-        "Lijun Li",
-        "Longju Yang",
-        "Sen Su"
-      ],
-      "abstract": "Deep Research agents extend LLM-based assistants into long-horizon workflows involving planning, retrieval, evidence synthesis, and report generation, yet their reliability in open information environments remains underexplored. A key concern is whether apparently credible but factually misleading knowledge encountered in such environments can propagate through these workflows and be adopted as false conclusions in final reports. To study this failure mode, we introduce MisKnow-Agent, a framework for constructing and validating misleading knowledge for Deep Research tasks. MisKnow-Agent generates misleading instances with controllable authority levels and styles, yielding 5,933 quality-controlled instances built on DeepResearch Benchmark tasks. Extensive experiments across open-source and closed-source Deep Research agents show that even limited exposure to misleading knowledge can induce false-conclusion adoption in final reports, revealing a broad reliability vulnerability in current Deep Research agents. Although search-enabled verifier models consistently identify the retained instances as misleading during focused corpus validation, the same instances can still be adopted during long-horizon research, revealing a disconnect between focused verification and workflow-level evidence use. Finally, we evaluate pre- and post-research defenses, both individually and in combination, finding that all three configurations mitigate but do not fully prevent false-conclusion adoption. Our findings suggest that reliable Deep Research requires evidence verification and correction capabilities at both the model and framework levels, beyond improvements in planning, retrieval, evidence integration, or report-generation abilities.",
-      "hf_url": "https://huggingface.co/papers/2607.20891",
-      "arxiv_url": "https://arxiv.org/abs/2607.20891",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.20891",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.20891",
-      "github_url": "",
-      "submitted_by": "zhupengyu",
-      "submitted_at": "2026-07-31T00:00:00.000Z",
-      "upvotes": 3,
-      "comments": 1,
-      "topic_key": "retrieval_knowledge",
-      "topic_label": "Retrieval, Knowledge, and RAG",
-      "matched_terms": [
-        "\\bknowledge\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Deep Research agents extend LLM-based assistants into long-horizon workflows involving planning, retrieval, evidence synthesis, and report generation, yet their reliability in open information environments remains…",
-      "upvote_label": "3 upvotes"
     },
     {
       "report_date": "2026-07-31",
@@ -3045,8 +3042,8 @@
       "github_url": "",
       "submitted_by": "YanningHou",
       "submitted_at": "2026-07-31T00:00:00.000Z",
-      "upvotes": 2,
-      "comments": 1,
+      "upvotes": 3,
+      "comments": 2,
       "topic_key": "retrieval_knowledge",
       "topic_label": "Retrieval, Knowledge, and RAG",
       "matched_terms": [
@@ -3056,64 +3053,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Reinforcement learning (RL) search agents commonly model retrieval as free-form natural-language query generation and optimize multi-turn interactions using final-answer rewards.",
-      "upvote_label": "2 upvotes"
-    },
-    {
-      "report_date": "2026-07-31",
-      "paper_id": "2607.28319",
-      "title": "Fairness Pruning: Locating Demographic Bias in GLU-MLP Layers via Differential Activations",
-      "authors": [
-        "Pere Martra",
-        "Eugenio Martínez Cámara",
-        "Alfonso Ureña López"
-      ],
-      "abstract": "This work presents Fairness Pruning, a lightweight structural intervention method designed for the management and future mitigation of demographic bias in large language models (LLMs). As a foundational empirical validation of this method, this work focuses on causal bias localization. Using minimally contrastive prompt pairs and inference-time activation capture, the method identifies neurons that react differentially when processing demographic attributes in GLU architectures, evaluating the signal at the down_proj input. Empirical evaluation was conducted on models of up to 3 billion parameters (Llama-3.2 family and Salamandra-2B), combining standardized benchmark evaluation with qualitative text generation experiments. Results demonstrate that zeroing the identified neurons alters how the model responds to associated demographic variables. However, rather than producing flat mitigation, the intervention causes bidirectional bias destabilization: because BiasScore is unsigned, candidate sets mix neurons that push toward and against the stereotype, and the net effect on aggregate bias depends on which sign dominates. The intervention is extremely surgical: zeroing at most 40 neurons in Llama-3.2-1B (less than 0.031% of total MLP width) achieves a mean retention of 99.49% in reasoning and general knowledge capabilities. These findings empirically confirm that demographic bias processing and model capabilities operate on dissociable circuits, establishing the methodological foundations for transitioning from blind zeroing toward directional behavior modulation.",
-      "hf_url": "https://huggingface.co/papers/2607.28319",
-      "arxiv_url": "https://arxiv.org/abs/2607.28319",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.28319",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.28319",
-      "github_url": "",
-      "submitted_by": "Pere Martra",
-      "submitted_at": "2026-07-31T00:00:00.000Z",
-      "upvotes": 2,
-      "comments": 2,
-      "topic_key": "reasoning_alignment_eval",
-      "topic_label": "Reasoning, Alignment, and Evaluation",
-      "matched_terms": [
-        "\\bbias\\b",
-        "\\bfairness\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "This work presents Fairness Pruning, a lightweight structural intervention method designed for the management and future mitigation of demographic bias in large language models (LLMs).",
-      "upvote_label": "2 upvotes"
-    },
-    {
-      "report_date": "2026-07-31",
-      "paper_id": "2607.27372",
-      "title": "Explorative Modeling: Unlocking a Third Pretraining Axis and End-to-End Generation",
-      "authors": [
-        "Alexi Gladstone",
-        "Heng Ji",
-        "Yilun Du"
-      ],
-      "abstract": "The deep learning revolution, kicked off by AlexNet, taught us that end-to-end training beats decomposing a problem into hand-designed stages. Generative modeling, however, has remained the exception-despite generative models being remarkably capable, they are still not trained end-to-end. This is because, at its core, generative modeling is about handling distributions with many modes, and existing scalable approaches handle this the same way, by factoring the generation procedure, which prevents end-to-end generation. In this work, we introduce Explorative Modeling, a new paradigm that instead factors the training loop, exploring K candidate matches between model generations and data, and training on the best, so predictions commit to modes rather than blurring them. We find Explorative Models (XMs) useful in two settings. First, increasing exploration adds a third pretraining axis beyond parameters and data for existing generative models-where scaling exploration monotonically improves performance across both continuous and discrete domains (images, video, and language). Notably, gains from exploration increase with scale, climbing from 7% to 36% as data scales and from 13% to 23% as models grow, with efficiency gains more than doubling at 3x the compute. Concretely, exploration improves FLOP efficiency by 4.1x, sample efficiency by 6.2x, parameter efficiency by 47%, lifts the strongest of image-generation recipes to a near-state-of-the-art 1.43 FID on ImageNet without guidance, enables scaling how end-to-end existing models are, and unlocks scaling generalization. Second, XMs enable end-to-end reconstructive generative modeling, matching diffusion on control tasks with 16-256x fewer inference steps. Together, these results establish XMs as both a new pretraining axis for existing generative models and a standalone end-to-end generative modeling paradigm.",
-      "hf_url": "https://huggingface.co/papers/2607.27372",
-      "arxiv_url": "https://arxiv.org/abs/2607.27372",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.27372",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.27372",
-      "github_url": "",
-      "submitted_by": "Alexi Gladstone",
-      "submitted_at": "2026-07-31T00:00:00.000Z",
-      "upvotes": 2,
-      "comments": 1,
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
-      "matched_terms": [],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "The deep learning revolution, kicked off by AlexNet, taught us that end-to-end training beats decomposing a problem into hand-designed stages.",
-      "upvote_label": "2 upvotes"
+      "upvote_label": "3 upvotes"
     },
     {
       "report_date": "2026-07-31",
@@ -3133,10 +3073,10 @@
       "arxiv_pdf_url": "https://arxiv.org/pdf/2607.23193",
       "papers_cool_url": "https://papers.cool/arxiv/2607.23193",
       "github_url": "",
-      "submitted_by": "Consonnm",
+      "submitted_by": "Jinsen Su",
       "submitted_at": "2026-07-31T00:00:00.000Z",
-      "upvotes": 2,
-      "comments": 1,
+      "upvotes": 3,
+      "comments": 2,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [
@@ -3147,7 +3087,37 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Existing token compression methods for omnimodal large language models typically rely on one modality to determine what to retain in the other.",
-      "upvote_label": "2 upvotes"
+      "upvote_label": "3 upvotes"
+    },
+    {
+      "report_date": "2026-07-31",
+      "paper_id": "2607.20891",
+      "title": "Is Deep Research Reliable? Misleading Knowledge Induces False Conclusions",
+      "authors": [
+        "Pengyu Zhu",
+        "Lijun Li",
+        "Longju Yang",
+        "Sen Su"
+      ],
+      "abstract": "Deep Research agents extend LLM-based assistants into long-horizon workflows involving planning, retrieval, evidence synthesis, and report generation, yet their reliability in open information environments remains underexplored. A key concern is whether apparently credible but factually misleading knowledge encountered in such environments can propagate through these workflows and be adopted as false conclusions in final reports. To study this failure mode, we introduce MisKnow-Agent, a framework for constructing and validating misleading knowledge for Deep Research tasks. MisKnow-Agent generates misleading instances with controllable authority levels and styles, yielding 5,933 quality-controlled instances built on DeepResearch Benchmark tasks. Extensive experiments across open-source and closed-source Deep Research agents show that even limited exposure to misleading knowledge can induce false-conclusion adoption in final reports, revealing a broad reliability vulnerability in current Deep Research agents. Although search-enabled verifier models consistently identify the retained instances as misleading during focused corpus validation, the same instances can still be adopted during long-horizon research, revealing a disconnect between focused verification and workflow-level evidence use. Finally, we evaluate pre- and post-research defenses, both individually and in combination, finding that all three configurations mitigate but do not fully prevent false-conclusion adoption. Our findings suggest that reliable Deep Research requires evidence verification and correction capabilities at both the model and framework levels, beyond improvements in planning, retrieval, evidence integration, or report-generation abilities.",
+      "hf_url": "https://huggingface.co/papers/2607.20891",
+      "arxiv_url": "https://arxiv.org/abs/2607.20891",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.20891",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.20891",
+      "github_url": "",
+      "submitted_by": "zhupengyu",
+      "submitted_at": "2026-07-31T00:00:00.000Z",
+      "upvotes": 3,
+      "comments": 2,
+      "topic_key": "retrieval_knowledge",
+      "topic_label": "Retrieval, Knowledge, and RAG",
+      "matched_terms": [
+        "\\bknowledge\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Deep Research agents extend LLM-based assistants into long-horizon workflows involving planning, retrieval, evidence synthesis, and report generation, yet their reliability in open information environments remains…",
+      "upvote_label": "3 upvotes"
     },
     {
       "report_date": "2026-07-31",
@@ -3164,8 +3134,8 @@
       "github_url": "",
       "submitted_by": "Daisuke Kikuta",
       "submitted_at": "2026-07-31T00:00:00.000Z",
-      "upvotes": 2,
-      "comments": 1,
+      "upvotes": 3,
+      "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
       "matched_terms": [
@@ -3175,7 +3145,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "This paper proposes AI Tour Meeting, a group travel planning framework powered by multiple Large Language Model (LLM)-based agents.",
-      "upvote_label": "2 upvotes"
+      "upvote_label": "3 upvotes"
     },
     {
       "report_date": "2026-07-31",
@@ -3194,8 +3164,8 @@
       "github_url": "",
       "submitted_by": "Huiyuan Tian",
       "submitted_at": "2026-07-31T00:00:00.000Z",
-      "upvotes": 1,
-      "comments": 1,
+      "upvotes": 2,
+      "comments": 2,
       "topic_key": "learning_theory",
       "topic_label": "Learning, Optimization, and Theory",
       "matched_terms": [
@@ -3205,7 +3175,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Sparse mixture-of-experts (MoE) language models route each token to multiple experts, suggesting a geometric account of their benefit: co-selected experts should contribute distinct representation directions.",
-      "upvote_label": "1 upvote"
+      "upvote_label": "2 upvotes"
     },
     {
       "report_date": "2026-07-31",
@@ -3227,8 +3197,8 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-07-31T00:00:00.000Z",
-      "upvotes": 1,
-      "comments": 0,
+      "upvotes": 2,
+      "comments": 1,
       "topic_key": "llm_language",
       "topic_label": "LLMs and Language",
       "matched_terms": [
@@ -3239,7 +3209,37 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Long visual context poses a challenge for vision-language models: performance degrades as the number of distractors grows, and processing all tokens at once is computationally infeasible under GPU memory constraints.",
-      "upvote_label": "1 upvote"
+      "upvote_label": "2 upvotes"
+    },
+    {
+      "report_date": "2026-07-31",
+      "paper_id": "2607.28319",
+      "title": "Fairness Pruning: Locating Demographic Bias in GLU-MLP Layers via Differential Activations",
+      "authors": [
+        "Pere Martra",
+        "Eugenio Martínez Cámara",
+        "Alfonso Ureña López"
+      ],
+      "abstract": "This work presents Fairness Pruning, a lightweight structural intervention method designed for the management and future mitigation of demographic bias in large language models (LLMs). As a foundational empirical validation of this method, this work focuses on causal bias localization. Using minimally contrastive prompt pairs and inference-time activation capture, the method identifies neurons that react differentially when processing demographic attributes in GLU architectures, evaluating the signal at the down_proj input. Empirical evaluation was conducted on models of up to 3 billion parameters (Llama-3.2 family and Salamandra-2B), combining standardized benchmark evaluation with qualitative text generation experiments. Results demonstrate that zeroing the identified neurons alters how the model responds to associated demographic variables. However, rather than producing flat mitigation, the intervention causes bidirectional bias destabilization: because BiasScore is unsigned, candidate sets mix neurons that push toward and against the stereotype, and the net effect on aggregate bias depends on which sign dominates. The intervention is extremely surgical: zeroing at most 40 neurons in Llama-3.2-1B (less than 0.031% of total MLP width) achieves a mean retention of 99.49% in reasoning and general knowledge capabilities. These findings empirically confirm that demographic bias processing and model capabilities operate on dissociable circuits, establishing the methodological foundations for transitioning from blind zeroing toward directional behavior modulation.",
+      "hf_url": "https://huggingface.co/papers/2607.28319",
+      "arxiv_url": "https://arxiv.org/abs/2607.28319",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.28319",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.28319",
+      "github_url": "",
+      "submitted_by": "Pere Martra",
+      "submitted_at": "2026-07-31T00:00:00.000Z",
+      "upvotes": 2,
+      "comments": 3,
+      "topic_key": "reasoning_alignment_eval",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "matched_terms": [
+        "\\bbias\\b",
+        "\\bfairness\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "This work presents Fairness Pruning, a lightweight structural intervention method designed for the management and future mitigation of demographic bias in large language models (LLMs).",
+      "upvote_label": "2 upvotes"
     },
     {
       "report_date": "2026-07-31",
@@ -3264,7 +3264,7 @@
       "submitted_by": "Yi-Cheng Lin",
       "submitted_at": "2026-07-31T00:00:00.000Z",
       "upvotes": 0,
-      "comments": 1,
+      "comments": 2,
       "topic_key": "multimodal_vision",
       "topic_label": "Multimodal Understanding and Vision",
       "matched_terms": [
@@ -3299,7 +3299,7 @@
       "submitted_by": "S M Jubaer",
       "submitted_at": "2026-07-31T00:00:00.000Z",
       "upvotes": 0,
-      "comments": 1,
+      "comments": 2,
       "topic_key": "reasoning_alignment_eval",
       "topic_label": "Reasoning, Alignment, and Evaluation",
       "matched_terms": [

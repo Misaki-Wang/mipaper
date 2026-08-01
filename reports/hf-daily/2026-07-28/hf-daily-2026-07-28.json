@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-31T19:00:07Z",
+  "generated_at": "2026-08-01T19:00:04Z",
   "report_kind": "hf_daily",
   "report_date": "2026-07-28",
   "source_url": "https://huggingface.co/papers/date/2026-07-28",
@@ -88,7 +88,7 @@
       "Other AI: 5 papers (16.13%); representative paper: Kimi K3: Open Frontier Intelligence.",
       "Agents and Planning: 4 papers (12.90%); representative paper: From Proprietary to Open-Source: Bridging the Distribution Gap via Multi-Agent Protocol Distillation in Agentic Search."
     ],
-    "trend_summary": "Today's dominant clusters are Multimodal Understanding and Vision / Other AI / Agents and Planning; this suggests several parallel trends: multimodal work is moving from isolated perception toward generation, agents, and action; agent papers emphasize tool use, planning, and deployable workflows. The strongest visible attention is on “Kimi K3: Open Frontier Intelligence” (408 upvotes).",
+    "trend_summary": "Today's dominant clusters are Multimodal Understanding and Vision / Other AI / Agents and Planning; this suggests several parallel trends: multimodal work is moving from isolated perception toward generation, agents, and action; agent papers emphasize tool use, planning, and deployable workflows. The strongest visible attention is on “Kimi K3: Open Frontier Intelligence” (425 upvotes).",
     "category_summaries": [
       {
         "topic_label": "Multimodal Understanding and Vision",
@@ -100,7 +100,7 @@
         "topic_label": "Other AI",
         "count": 5,
         "share": 16.13,
-        "summary": "Other AI contributes 5 papers (16.13%), led by “Kimi K3: Open Frontier Intelligence” with 408 upvotes."
+        "summary": "Other AI contributes 5 papers (16.13%), led by “Kimi K3: Open Frontier Intelligence” with 425 upvotes."
       },
       {
         "topic_label": "Agents and Planning",
@@ -148,7 +148,7 @@
         "topic_label": "Multimodal Agents",
         "count": 1,
         "share": 3.23,
-        "summary": "Multimodal Agents contributes 1 papers (3.23%), led by “JarvisHub: An Open Harness for Canvas-Native Multimodal Creative Agents” with 120 upvotes."
+        "summary": "Multimodal Agents contributes 1 papers (3.23%), led by “JarvisHub: An Open Harness for Canvas-Native Multimodal Creative Agents” with 121 upvotes."
       },
       {
         "topic_label": "Multimodal Generative Modeling",
@@ -160,8 +160,8 @@
     "top_papers": [
       {
         "title": "Kimi K3: Open Frontier Intelligence",
-        "upvotes": 408,
-        "upvote_label": "408 upvotes",
+        "upvotes": 425,
+        "upvote_label": "425 upvotes",
         "topic_label": "Other AI",
         "summary": "We introduce Kimi K3, a 2.8T parameter Mixture-of-Experts model with 104 billion activated parameters, native vision capabilities, and a 1-million-token context window.",
         "hf_url": "https://huggingface.co/papers/2607.24653",
@@ -182,8 +182,8 @@
       },
       {
         "title": "JarvisHub: An Open Harness for Canvas-Native Multimodal Creative Agents",
-        "upvotes": 120,
-        "upvote_label": "120 upvotes",
+        "upvotes": 121,
+        "upvote_label": "121 upvotes",
         "topic_label": "Multimodal Agents",
         "summary": "Creative AI is moving from single-step asset generation toward long-horizon multimodal production.",
         "hf_url": "https://huggingface.co/papers/2607.23588",
@@ -658,15 +658,15 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-07-28T00:00:00.000Z",
-      "upvotes": 408,
-      "comments": 8,
+      "upvotes": 425,
+      "comments": 9,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
       "matched_terms": [],
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "We introduce Kimi K3, a 2.8T parameter Mixture-of-Experts model with 104 billion activated parameters, native vision capabilities, and a 1-million-token context window.",
-      "upvote_label": "408 upvotes"
+      "upvote_label": "425 upvotes"
     },
     {
       "report_date": "2026-07-28",
@@ -745,7 +745,7 @@
       "github_url": "",
       "submitted_by": "Yunlong Lin",
       "submitted_at": "2026-07-28T00:00:00.000Z",
-      "upvotes": 120,
+      "upvotes": 121,
       "comments": 2,
       "topic_key": "multimodal_agents",
       "topic_label": "Multimodal Agents",
@@ -756,7 +756,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Creative AI is moving from single-step asset generation toward long-horizon multimodal production.",
-      "upvote_label": "120 upvotes"
+      "upvote_label": "121 upvotes"
     },
     {
       "report_date": "2026-07-28",
@@ -854,7 +854,7 @@
       "github_url": "",
       "submitted_by": "Ziyang Luo",
       "submitted_at": "2026-07-28T00:00:00.000Z",
-      "upvotes": 58,
+      "upvotes": 60,
       "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -864,7 +864,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Computer-use agents are usually improved by strengthening perception: better models for reading a screenshot and choosing where to click.",
-      "upvote_label": "58 upvotes"
+      "upvote_label": "60 upvotes"
     },
     {
       "report_date": "2026-07-28",
@@ -909,7 +909,7 @@
       "github_url": "",
       "submitted_by": "Lingdong Kong",
       "submitted_at": "2026-07-28T00:00:00.000Z",
-      "upvotes": 35,
+      "upvotes": 36,
       "comments": 2,
       "topic_key": "robotics_embodied",
       "topic_label": "Robotics and Embodied AI",
@@ -920,7 +920,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Multimodal foundation models learned to see and to speak by consuming the whole internet.",
-      "upvote_label": "35 upvotes"
+      "upvote_label": "36 upvotes"
     },
     {
       "report_date": "2026-07-28",
@@ -1244,7 +1244,7 @@
       "topic_label": "Other AI",
       "count": 5,
       "share": 16.13,
-      "summary": "Other AI contributes 5 papers (16.13%), led by “Kimi K3: Open Frontier Intelligence” with 408 upvotes.",
+      "summary": "Other AI contributes 5 papers (16.13%), led by “Kimi K3: Open Frontier Intelligence” with 425 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-28",
@@ -1662,15 +1662,15 @@
           "github_url": "",
           "submitted_by": "taesiri",
           "submitted_at": "2026-07-28T00:00:00.000Z",
-          "upvotes": 408,
-          "comments": 8,
+          "upvotes": 425,
+          "comments": 9,
           "topic_key": "other_ai",
           "topic_label": "Other AI",
           "matched_terms": [],
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "We introduce Kimi K3, a 2.8T parameter Mixture-of-Experts model with 104 billion activated parameters, native vision capabilities, and a 1-million-token context window.",
-          "upvote_label": "408 upvotes"
+          "upvote_label": "425 upvotes"
         },
         {
           "report_date": "2026-07-28",
@@ -1756,7 +1756,7 @@
           "github_url": "",
           "submitted_by": "Alpin",
           "submitted_at": "2026-07-28T00:00:00.000Z",
-          "upvotes": 6,
+          "upvotes": 7,
           "comments": 2,
           "topic_key": "other_ai",
           "topic_label": "Other AI",
@@ -1764,7 +1764,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Since Volta introduced Independent Thread Scheduling (ITS), NVIDIA GPUs have been widely assumed to handle warp divergence in a fixed manner.",
-          "upvote_label": "6 upvotes"
+          "upvote_label": "7 upvotes"
         },
         {
           "report_date": "2026-07-28",
@@ -1889,7 +1889,7 @@
           "github_url": "",
           "submitted_by": "Ziyang Luo",
           "submitted_at": "2026-07-28T00:00:00.000Z",
-          "upvotes": 58,
+          "upvotes": 60,
           "comments": 2,
           "topic_key": "agents_planning",
           "topic_label": "Agents and Planning",
@@ -1899,7 +1899,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Computer-use agents are usually improved by strengthening perception: better models for reading a screenshot and choosing where to click.",
-          "upvote_label": "58 upvotes"
+          "upvote_label": "60 upvotes"
         },
         {
           "report_date": "2026-07-28",
@@ -2161,6 +2161,38 @@
       "papers": [
         {
           "report_date": "2026-07-28",
+          "paper_id": "2607.22098",
+          "title": "Reasoning Denoiser: Denoising Reasoning Traces for Hallucination Detection in Large Reasoning Models",
+          "authors": [
+            "Junlin Fang",
+            "Do Nguyen-Thanh",
+            "Xiaogang Xu",
+            "Zhen Fang",
+            "Sean Du"
+          ],
+          "abstract": "Large reasoning models (LRMs) generate long reasoning traces before producing final answers. While these traces may contain useful signals for hallucination detection, harnessing them is non-trivial because long trajectories often include noisy steps that obscure the cues relevant to truthfulness assessment. In this paper, we identify two prevalent forms of reasoning noises, i.e., irrelevant steps and repetitive steps, and show that both substantially degrade hallucination detection performance. Existing confidence-based scores and naive embedding-based filtering fail to reliably separate noisy from informative steps. To address this challenge, we propose REDE, a novel learning framework for denoising reasoning traces for hallucination detection. Specifically, REDE leverages final-answer attention as an automatic supervision signal to shape the step-level representation space, yielding refined embeddings in which noisy steps can be reliably identified and filtered. REDE can be readily plugged into diverse hallucination detectors by operating on the filtered reasoning trajectory after removing noisy steps. Extensive experiments on multiple reasoning benchmarks show that REDE consistently improves detection performance over competitive baselines.",
+          "hf_url": "https://huggingface.co/papers/2607.22098",
+          "arxiv_url": "https://arxiv.org/abs/2607.22098",
+          "arxiv_pdf_url": "https://arxiv.org/pdf/2607.22098",
+          "papers_cool_url": "https://papers.cool/arxiv/2607.22098",
+          "github_url": "",
+          "submitted_by": "Sean Du",
+          "submitted_at": "2026-07-28T00:00:00.000Z",
+          "upvotes": 8,
+          "comments": 2,
+          "topic_key": "reasoning_alignment_eval",
+          "topic_label": "Reasoning, Alignment, and Evaluation",
+          "matched_terms": [
+            "\\breasoning\\b",
+            "\\bhallucination\\b"
+          ],
+          "classification_source": "rule",
+          "classification_confidence": null,
+          "one_sentence_summary": "Large reasoning models (LRMs) generate long reasoning traces before producing final answers.",
+          "upvote_label": "8 upvotes"
+        },
+        {
+          "report_date": "2026-07-28",
           "paper_id": "2607.22561",
           "title": "Codifying the Judge: Scalable Evaluation via Program Distillation",
           "authors": [
@@ -2188,38 +2220,6 @@
           "classification_confidence": null,
           "one_sentence_summary": "LLM-as-a-judge has become the standard for automated evaluation, but it suffers from high cost, significant latency, and opaque decisions -- limitations that undermine its scalability and reliability.",
           "upvote_label": "8 upvotes"
-        },
-        {
-          "report_date": "2026-07-28",
-          "paper_id": "2607.22098",
-          "title": "Reasoning Denoiser: Denoising Reasoning Traces for Hallucination Detection in Large Reasoning Models",
-          "authors": [
-            "Junlin Fang",
-            "Do Nguyen-Thanh",
-            "Xiaogang Xu",
-            "Zhen Fang",
-            "Sean Du"
-          ],
-          "abstract": "Large reasoning models (LRMs) generate long reasoning traces before producing final answers. While these traces may contain useful signals for hallucination detection, harnessing them is non-trivial because long trajectories often include noisy steps that obscure the cues relevant to truthfulness assessment. In this paper, we identify two prevalent forms of reasoning noises, i.e., irrelevant steps and repetitive steps, and show that both substantially degrade hallucination detection performance. Existing confidence-based scores and naive embedding-based filtering fail to reliably separate noisy from informative steps. To address this challenge, we propose REDE, a novel learning framework for denoising reasoning traces for hallucination detection. Specifically, REDE leverages final-answer attention as an automatic supervision signal to shape the step-level representation space, yielding refined embeddings in which noisy steps can be reliably identified and filtered. REDE can be readily plugged into diverse hallucination detectors by operating on the filtered reasoning trajectory after removing noisy steps. Extensive experiments on multiple reasoning benchmarks show that REDE consistently improves detection performance over competitive baselines.",
-          "hf_url": "https://huggingface.co/papers/2607.22098",
-          "arxiv_url": "https://arxiv.org/abs/2607.22098",
-          "arxiv_pdf_url": "https://arxiv.org/pdf/2607.22098",
-          "papers_cool_url": "https://papers.cool/arxiv/2607.22098",
-          "github_url": "",
-          "submitted_by": "Sean Du",
-          "submitted_at": "2026-07-28T00:00:00.000Z",
-          "upvotes": 7,
-          "comments": 2,
-          "topic_key": "reasoning_alignment_eval",
-          "topic_label": "Reasoning, Alignment, and Evaluation",
-          "matched_terms": [
-            "\\breasoning\\b",
-            "\\bhallucination\\b"
-          ],
-          "classification_source": "rule",
-          "classification_confidence": null,
-          "one_sentence_summary": "Large reasoning models (LRMs) generate long reasoning traces before producing final answers.",
-          "upvote_label": "7 upvotes"
         }
       ]
     },
@@ -2378,7 +2378,7 @@
           "github_url": "",
           "submitted_by": "Lingdong Kong",
           "submitted_at": "2026-07-28T00:00:00.000Z",
-          "upvotes": 35,
+          "upvotes": 36,
           "comments": 2,
           "topic_key": "robotics_embodied",
           "topic_label": "Robotics and Embodied AI",
@@ -2389,7 +2389,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Multimodal foundation models learned to see and to speak by consuming the whole internet.",
-          "upvote_label": "35 upvotes"
+          "upvote_label": "36 upvotes"
         }
       ]
     },
@@ -2438,7 +2438,7 @@
       "topic_label": "Multimodal Agents",
       "count": 1,
       "share": 3.23,
-      "summary": "Multimodal Agents contributes 1 papers (3.23%), led by “JarvisHub: An Open Harness for Canvas-Native Multimodal Creative Agents” with 120 upvotes.",
+      "summary": "Multimodal Agents contributes 1 papers (3.23%), led by “JarvisHub: An Open Harness for Canvas-Native Multimodal Creative Agents” with 121 upvotes.",
       "papers": [
         {
           "report_date": "2026-07-28",
@@ -2480,7 +2480,7 @@
           "github_url": "",
           "submitted_by": "Yunlong Lin",
           "submitted_at": "2026-07-28T00:00:00.000Z",
-          "upvotes": 120,
+          "upvotes": 121,
           "comments": 2,
           "topic_key": "multimodal_agents",
           "topic_label": "Multimodal Agents",
@@ -2491,7 +2491,7 @@
           "classification_source": "rule",
           "classification_confidence": null,
           "one_sentence_summary": "Creative AI is moving from single-step asset generation toward long-horizon multimodal production.",
-          "upvote_label": "120 upvotes"
+          "upvote_label": "121 upvotes"
         }
       ]
     },
@@ -2976,15 +2976,15 @@
       "github_url": "",
       "submitted_by": "taesiri",
       "submitted_at": "2026-07-28T00:00:00.000Z",
-      "upvotes": 408,
-      "comments": 8,
+      "upvotes": 425,
+      "comments": 9,
       "topic_key": "other_ai",
       "topic_label": "Other AI",
       "matched_terms": [],
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "We introduce Kimi K3, a 2.8T parameter Mixture-of-Experts model with 104 billion activated parameters, native vision capabilities, and a 1-million-token context window.",
-      "upvote_label": "408 upvotes"
+      "upvote_label": "425 upvotes"
     },
     {
       "report_date": "2026-07-28",
@@ -3063,7 +3063,7 @@
       "github_url": "",
       "submitted_by": "Yunlong Lin",
       "submitted_at": "2026-07-28T00:00:00.000Z",
-      "upvotes": 120,
+      "upvotes": 121,
       "comments": 2,
       "topic_key": "multimodal_agents",
       "topic_label": "Multimodal Agents",
@@ -3074,7 +3074,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Creative AI is moving from single-step asset generation toward long-horizon multimodal production.",
-      "upvote_label": "120 upvotes"
+      "upvote_label": "121 upvotes"
     },
     {
       "report_date": "2026-07-28",
@@ -3172,7 +3172,7 @@
       "github_url": "",
       "submitted_by": "Ziyang Luo",
       "submitted_at": "2026-07-28T00:00:00.000Z",
-      "upvotes": 58,
+      "upvotes": 60,
       "comments": 2,
       "topic_key": "agents_planning",
       "topic_label": "Agents and Planning",
@@ -3182,7 +3182,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Computer-use agents are usually improved by strengthening perception: better models for reading a screenshot and choosing where to click.",
-      "upvote_label": "58 upvotes"
+      "upvote_label": "60 upvotes"
     },
     {
       "report_date": "2026-07-28",
@@ -3227,7 +3227,7 @@
       "github_url": "",
       "submitted_by": "Lingdong Kong",
       "submitted_at": "2026-07-28T00:00:00.000Z",
-      "upvotes": 35,
+      "upvotes": 36,
       "comments": 2,
       "topic_key": "robotics_embodied",
       "topic_label": "Robotics and Embodied AI",
@@ -3238,7 +3238,7 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Multimodal foundation models learned to see and to speak by consuming the whole internet.",
-      "upvote_label": "35 upvotes"
+      "upvote_label": "36 upvotes"
     },
     {
       "report_date": "2026-07-28",
@@ -3547,6 +3547,38 @@
     },
     {
       "report_date": "2026-07-28",
+      "paper_id": "2607.22098",
+      "title": "Reasoning Denoiser: Denoising Reasoning Traces for Hallucination Detection in Large Reasoning Models",
+      "authors": [
+        "Junlin Fang",
+        "Do Nguyen-Thanh",
+        "Xiaogang Xu",
+        "Zhen Fang",
+        "Sean Du"
+      ],
+      "abstract": "Large reasoning models (LRMs) generate long reasoning traces before producing final answers. While these traces may contain useful signals for hallucination detection, harnessing them is non-trivial because long trajectories often include noisy steps that obscure the cues relevant to truthfulness assessment. In this paper, we identify two prevalent forms of reasoning noises, i.e., irrelevant steps and repetitive steps, and show that both substantially degrade hallucination detection performance. Existing confidence-based scores and naive embedding-based filtering fail to reliably separate noisy from informative steps. To address this challenge, we propose REDE, a novel learning framework for denoising reasoning traces for hallucination detection. Specifically, REDE leverages final-answer attention as an automatic supervision signal to shape the step-level representation space, yielding refined embeddings in which noisy steps can be reliably identified and filtered. REDE can be readily plugged into diverse hallucination detectors by operating on the filtered reasoning trajectory after removing noisy steps. Extensive experiments on multiple reasoning benchmarks show that REDE consistently improves detection performance over competitive baselines.",
+      "hf_url": "https://huggingface.co/papers/2607.22098",
+      "arxiv_url": "https://arxiv.org/abs/2607.22098",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.22098",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.22098",
+      "github_url": "",
+      "submitted_by": "Sean Du",
+      "submitted_at": "2026-07-28T00:00:00.000Z",
+      "upvotes": 8,
+      "comments": 2,
+      "topic_key": "reasoning_alignment_eval",
+      "topic_label": "Reasoning, Alignment, and Evaluation",
+      "matched_terms": [
+        "\\breasoning\\b",
+        "\\bhallucination\\b"
+      ],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Large reasoning models (LRMs) generate long reasoning traces before producing final answers.",
+      "upvote_label": "8 upvotes"
+    },
+    {
+      "report_date": "2026-07-28",
       "paper_id": "2607.22561",
       "title": "Codifying the Judge: Scalable Evaluation via Program Distillation",
       "authors": [
@@ -3610,6 +3642,31 @@
     },
     {
       "report_date": "2026-07-28",
+      "paper_id": "2607.23402",
+      "title": "Characterizing Warp Divergence from Pascal to Blackwell",
+      "authors": [
+        "Alpin Dale"
+      ],
+      "abstract": "Since Volta introduced Independent Thread Scheduling (ITS), NVIDIA GPUs have been widely assumed to handle warp divergence in a fixed manner. We test this assumption across Ampere, Hopper, and datacenter and consumer Blackwell GPUs, using pre-ITS Pascal as a baseline. Combining cycle-accurate microbenchmarks, hardware counters, and static analysis of compiler-generated SASS, we separate stable behavior from architectural change. Across all tested generations, divergent paths serialize linearly with the number of paths k, following T(k) approx sk with no super-linear reconvergence penalty. Warp execution efficiency falls as 32/k, the penalty is independent of occupancy, and predication removes the serialization cost. The same behavior appears on Pascal, showing that this programmer-visible cost model predates ITS. The compiler-emitted reconvergence machinery, however, has changed substantially. Pascal uses a per-warp SSY/SYNC instruction stack, whereas later generations use barrier-register instructions. Deferred reconvergence beyond the immediate post-dominator falls from 29 cases on Ampere to 2 on Blackwell. Blackwell also introduces a two-tier convergence-barrier classification, uniform-branch instructions, and explicit partial-mask warp synchronization, none of which appear on Ampere or Hopper. Controlled bit-flip experiments indicate that the new barrier class is a static compiler classification with no observable runtime effect in our tests. Thus, divergence retains a stable and predictable performance cost even as NVIDIA's control-flow ISA and reconvergence mechanisms continue to evolve.",
+      "hf_url": "https://huggingface.co/papers/2607.23402",
+      "arxiv_url": "https://arxiv.org/abs/2607.23402",
+      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.23402",
+      "papers_cool_url": "https://papers.cool/arxiv/2607.23402",
+      "github_url": "",
+      "submitted_by": "Alpin",
+      "submitted_at": "2026-07-28T00:00:00.000Z",
+      "upvotes": 7,
+      "comments": 2,
+      "topic_key": "other_ai",
+      "topic_label": "Other AI",
+      "matched_terms": [],
+      "classification_source": "rule",
+      "classification_confidence": null,
+      "one_sentence_summary": "Since Volta introduced Independent Thread Scheduling (ITS), NVIDIA GPUs have been widely assumed to handle warp divergence in a fixed manner.",
+      "upvote_label": "7 upvotes"
+    },
+    {
+      "report_date": "2026-07-28",
       "paper_id": "2607.23806",
       "title": "A Frozen 12B Beats Frontier Models on Verified Work: 100% Accuracy, 0 Tokens, Bit-Exact, Forever",
       "authors": [
@@ -3633,38 +3690,6 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Improving a language model today means retraining it: enormous compute, a new opaque model each cycle, non-deterministic output.",
-      "upvote_label": "7 upvotes"
-    },
-    {
-      "report_date": "2026-07-28",
-      "paper_id": "2607.22098",
-      "title": "Reasoning Denoiser: Denoising Reasoning Traces for Hallucination Detection in Large Reasoning Models",
-      "authors": [
-        "Junlin Fang",
-        "Do Nguyen-Thanh",
-        "Xiaogang Xu",
-        "Zhen Fang",
-        "Sean Du"
-      ],
-      "abstract": "Large reasoning models (LRMs) generate long reasoning traces before producing final answers. While these traces may contain useful signals for hallucination detection, harnessing them is non-trivial because long trajectories often include noisy steps that obscure the cues relevant to truthfulness assessment. In this paper, we identify two prevalent forms of reasoning noises, i.e., irrelevant steps and repetitive steps, and show that both substantially degrade hallucination detection performance. Existing confidence-based scores and naive embedding-based filtering fail to reliably separate noisy from informative steps. To address this challenge, we propose REDE, a novel learning framework for denoising reasoning traces for hallucination detection. Specifically, REDE leverages final-answer attention as an automatic supervision signal to shape the step-level representation space, yielding refined embeddings in which noisy steps can be reliably identified and filtered. REDE can be readily plugged into diverse hallucination detectors by operating on the filtered reasoning trajectory after removing noisy steps. Extensive experiments on multiple reasoning benchmarks show that REDE consistently improves detection performance over competitive baselines.",
-      "hf_url": "https://huggingface.co/papers/2607.22098",
-      "arxiv_url": "https://arxiv.org/abs/2607.22098",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.22098",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.22098",
-      "github_url": "",
-      "submitted_by": "Sean Du",
-      "submitted_at": "2026-07-28T00:00:00.000Z",
-      "upvotes": 7,
-      "comments": 2,
-      "topic_key": "reasoning_alignment_eval",
-      "topic_label": "Reasoning, Alignment, and Evaluation",
-      "matched_terms": [
-        "\\breasoning\\b",
-        "\\bhallucination\\b"
-      ],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Large reasoning models (LRMs) generate long reasoning traces before producing final answers.",
       "upvote_label": "7 upvotes"
     },
     {
@@ -3721,31 +3746,6 @@
       "classification_source": "rule",
       "classification_confidence": null,
       "one_sentence_summary": "Progress in video generation keeps narrowing the visual gap between AI-generated and professionally produced footage, yet most benchmarks still draw prompts from web sources or LLM templates and score them with…",
-      "upvote_label": "6 upvotes"
-    },
-    {
-      "report_date": "2026-07-28",
-      "paper_id": "2607.23402",
-      "title": "Characterizing Warp Divergence from Pascal to Blackwell",
-      "authors": [
-        "Alpin Dale"
-      ],
-      "abstract": "Since Volta introduced Independent Thread Scheduling (ITS), NVIDIA GPUs have been widely assumed to handle warp divergence in a fixed manner. We test this assumption across Ampere, Hopper, and datacenter and consumer Blackwell GPUs, using pre-ITS Pascal as a baseline. Combining cycle-accurate microbenchmarks, hardware counters, and static analysis of compiler-generated SASS, we separate stable behavior from architectural change. Across all tested generations, divergent paths serialize linearly with the number of paths k, following T(k) approx sk with no super-linear reconvergence penalty. Warp execution efficiency falls as 32/k, the penalty is independent of occupancy, and predication removes the serialization cost. The same behavior appears on Pascal, showing that this programmer-visible cost model predates ITS. The compiler-emitted reconvergence machinery, however, has changed substantially. Pascal uses a per-warp SSY/SYNC instruction stack, whereas later generations use barrier-register instructions. Deferred reconvergence beyond the immediate post-dominator falls from 29 cases on Ampere to 2 on Blackwell. Blackwell also introduces a two-tier convergence-barrier classification, uniform-branch instructions, and explicit partial-mask warp synchronization, none of which appear on Ampere or Hopper. Controlled bit-flip experiments indicate that the new barrier class is a static compiler classification with no observable runtime effect in our tests. Thus, divergence retains a stable and predictable performance cost even as NVIDIA's control-flow ISA and reconvergence mechanisms continue to evolve.",
-      "hf_url": "https://huggingface.co/papers/2607.23402",
-      "arxiv_url": "https://arxiv.org/abs/2607.23402",
-      "arxiv_pdf_url": "https://arxiv.org/pdf/2607.23402",
-      "papers_cool_url": "https://papers.cool/arxiv/2607.23402",
-      "github_url": "",
-      "submitted_by": "Alpin",
-      "submitted_at": "2026-07-28T00:00:00.000Z",
-      "upvotes": 6,
-      "comments": 2,
-      "topic_key": "other_ai",
-      "topic_label": "Other AI",
-      "matched_terms": [],
-      "classification_source": "rule",
-      "classification_confidence": null,
-      "one_sentence_summary": "Since Volta introduced Independent Thread Scheduling (ITS), NVIDIA GPUs have been widely assumed to handle warp divergence in a fixed manner.",
       "upvote_label": "6 upvotes"
     },
     {
