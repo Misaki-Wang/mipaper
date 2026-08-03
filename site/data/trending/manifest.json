@@ -1,10 +1,150 @@
 {
   "branch_key": "trending",
   "branch_label": "Trending",
-  "generated_at": "2026-07-27T08:00:04Z",
-  "reports_count": 24,
-  "default_report_path": "data/trending/reports/2026-07-27/trending-2026-07-27.json",
+  "generated_at": "2026-08-03T08:00:08Z",
+  "reports_count": 25,
+  "default_report_path": "data/trending/reports/2026-08-03/trending-2026-08-03.json",
   "reports": [
+    {
+      "branch_key": "trending",
+      "branch_label": "Trending",
+      "data_path": "data/trending/reports/2026-08-03/trending-2026-08-03.json",
+      "slug": "trending-2026-08-03",
+      "snapshot_date": "2026-08-03",
+      "since": "weekly",
+      "total_repositories": 18,
+      "generated_at": "2026-08-03T08:00:07Z",
+      "source_url": "https://github.com/trending?since=weekly&spoken_language_code=",
+      "top_languages": [
+        {
+          "language": "TypeScript",
+          "count": 6,
+          "share": 33.33333333333333
+        },
+        {
+          "language": "Python",
+          "count": 4,
+          "share": 22.22222222222222
+        },
+        {
+          "language": "JavaScript",
+          "count": 2,
+          "share": 11.11111111111111
+        },
+        {
+          "language": "Rust",
+          "count": 2,
+          "share": 11.11111111111111
+        },
+        {
+          "language": "Go",
+          "count": 1,
+          "share": 5.555555555555555
+        }
+      ],
+      "top_repositories": [
+        {
+          "snapshot_date": "2026-08-03",
+          "repo_id": "block/buzz",
+          "owner": "block",
+          "name": "buzz",
+          "full_name": "block/buzz",
+          "repo_url": "https://github.com/block/buzz",
+          "description": "A hive mind communication platform",
+          "language": "Rust",
+          "stars": 21370,
+          "forks": 2294,
+          "stars_this_week": 8217,
+          "built_by": [
+            "wesbillman",
+            "wpfleger96",
+            "tlongwell-block",
+            "claude",
+            "klopez4212"
+          ]
+        },
+        {
+          "snapshot_date": "2026-08-03",
+          "repo_id": "diegosouzapw/omniroute",
+          "owner": "diegosouzapw",
+          "name": "OmniRoute",
+          "full_name": "diegosouzapw/OmniRoute",
+          "repo_url": "https://github.com/diegosouzapw/OmniRoute",
+          "description": "Never stop coding. Free MIT AI gateway: one endpoint, 290+ providers (90+ free), 500+ models — Kimi, Claude, GPT, OpenAI, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Cline & Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, Desktop/PWA. Built by 500+ contributors",
+          "language": "TypeScript",
+          "stars": 38170,
+          "forks": 5010,
+          "stars_this_week": 7141,
+          "built_by": [
+            "diegosouzapw",
+            "oyi77",
+            "claude",
+            "dependabot",
+            "rdself"
+          ]
+        },
+        {
+          "snapshot_date": "2026-08-03",
+          "repo_id": "microsoft/ai-for-beginners",
+          "owner": "microsoft",
+          "name": "AI-For-Beginners",
+          "full_name": "microsoft/AI-For-Beginners",
+          "repo_url": "https://github.com/microsoft/AI-For-Beginners",
+          "description": "12 Weeks, 24 Lessons, AI for All!",
+          "language": "Jupyter Notebook",
+          "stars": 59890,
+          "forks": 11741,
+          "stars_this_week": 5601,
+          "built_by": [
+            "leestott",
+            "skytin1004",
+            "jlooper",
+            "shwars",
+            "BethanyJep"
+          ]
+        },
+        {
+          "snapshot_date": "2026-08-03",
+          "repo_id": "ayghri/i-have-adhd",
+          "owner": "ayghri",
+          "name": "i-have-adhd",
+          "full_name": "ayghri/i-have-adhd",
+          "repo_url": "https://github.com/ayghri/i-have-adhd",
+          "description": "A skill to stop your coding agent from burying the answer. ADHD-friendly output.",
+          "language": "Python",
+          "stars": 15905,
+          "forks": 885,
+          "stars_this_week": 5225,
+          "built_by": [
+            "ayghri",
+            "thejesh23",
+            "jabrahamtech",
+            "claude",
+            "isatimur"
+          ]
+        },
+        {
+          "snapshot_date": "2026-08-03",
+          "repo_id": "virgiliojr94/book-to-skill",
+          "owner": "virgiliojr94",
+          "name": "book-to-skill",
+          "full_name": "virgiliojr94/book-to-skill",
+          "repo_url": "https://github.com/virgiliojr94/book-to-skill",
+          "description": "Turn any technical book PDF into a Claude Code skill — ready to study, reference, and use while you work.",
+          "language": "Python",
+          "stars": 15589,
+          "forks": 1677,
+          "stars_this_week": 5223,
+          "built_by": [
+            "virgiliojr94",
+            "claude",
+            "dex0shubham",
+            "Copilot",
+            "Marcelluxx"
+          ]
+        }
+      ]
+    },
     {
       "branch_key": "trending",
       "branch_label": "Trending",
